@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Null value &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Null value</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+<a href="/autumn/topics/type">type</a>
+   <h2 id="go">Go</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n1</span> []<span style="color:#66d9ef">int</span>
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n2</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>
+   <span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n3</span> <span style="color:#66d9ef">interface</span>{}
+   <span style="color:#75715e">// example 4
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n4</span> <span style="color:#66d9ef">func</span>()
+   <span style="color:#75715e">// print
+</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">n1</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">n3</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">n4</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/ref/spec#Predeclared_identifiers">https://golang.org/ref/spec#Predeclared_identifiers</a></p>
+<h2 id="javascript">JavaScript</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span>);
+</code></pre></div>
+<p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/null">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/null</a></p>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e"># php &gt; define(&#39;null&#39;, 11);
+</span><span style="color:#75715e"># PHP Notice:  Constant null already defined in php shell code on line 1
+</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+<span style="color:#a6e22e">var_export</span>($n1);
+</code></pre></div>
+<p><a href="https://php.net/language.types.null">https://php.net/language.types.null</a></p>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">n1 <span style="color:#f92672">=</span> None
+<span style="color:#66d9ef">print</span>(n1)
+</code></pre></div>
+<p><a href="https://docs.python.org/library/constants.html#None">https://docs.python.org/library/constants.html#None</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://hyperpolyglot.org/c#null">http://hyperpolyglot.org/c#null</a></li>
+<li><a href="http://hyperpolyglot.org/scripting#null">http://hyperpolyglot.org/scripting#null</a></li>
+<li><a href="https://rosettacode.org/wiki/Null_object">https://rosettacode.org/wiki/Null_object</a></li>
+</ul>
+
+
+</body>
+</html>

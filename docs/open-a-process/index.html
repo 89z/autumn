@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open a process &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Open a process</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+<a href="/autumn/topics/input-output">input-output</a>
+   <h2 id="d">D</h2>
+<p><a href="https://dlang.org/phobos/std_stdio#.File.popen">https://dlang.org/phobos/std_stdio#.File.popen</a></p>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">u_open</span>(<span style="color:#f92672">...</span>$a1) {
+   $a2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_map</span>(<span style="color:#e6db74">&#39;escapeshellarg&#39;</span>, $a1);
+   $s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">implode</span>(<span style="color:#e6db74">&#39; &#39;</span>, $a2);
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">popen</span>($s1, <span style="color:#e6db74">&#39;r&#39;</span>);
+}
+$r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">u_open</span>(<span style="color:#e6db74">&#39;cal&#39;</span>, <span style="color:#e6db74">&#39;2019&#39;</span>);
+<span style="color:#a6e22e">print_r</span>($r1);
+</code></pre></div>
+<p><a href="https://php.net/function.popen">https://php.net/function.popen</a></p>
+<h2 id="python">Python</h2>
+<p><a href="https://docs.python.org/library/subprocess.html#subprocess.Popen">https://docs.python.org/library/subprocess.html#subprocess.Popen</a></p>
+<h2 id="references">References</h2>
+<p><a href="https://rosettacode.org/wiki/Execute_a_system_command">https://rosettacode.org/wiki/Execute_a_system_command</a></p>
+
+
+</body>
+</html>

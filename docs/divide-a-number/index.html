@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divide a number &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Divide a number</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+<a href="/autumn/topics/number">number</a>
+   <h2 id="javascript">JavaScript</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// float
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">19</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>;
+<span style="color:#75715e">// remainder
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n2</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">19</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>;
+<span style="color:#75715e">// print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>);
+</code></pre></div>
+<ul>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Math/round">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Math/round</a>
+</li>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division">https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division</a>
+</li>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder">https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder</a>
+</li>
+</ul>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e"># float
+</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">19</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>;
+<span style="color:#75715e"># remainder
+</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">19</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>;
+<span style="color:#75715e"># truncate
+</span><span style="color:#75715e"></span>$n3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">intdiv</span>(<span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">10</span>);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1, $n2, $n3);
+</code></pre></div>
+<ul>
+<li><a href="https://php.net/function.intdiv">https://php.net/function.intdiv</a></li>
+<li><a href="https://php.net/function.round">https://php.net/function.round</a></li>
+<li><a href="https://php.net/operators.arithmetic">https://php.net/operators.arithmetic</a></li>
+</ul>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># float</span>
+n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">19</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>
+<span style="color:#75715e"># remainder</span>
+n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">19</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>
+<span style="color:#75715e"># floor</span>
+n3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">19</span> <span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>
+<span style="color:#75715e"># print</span>
+<span style="color:#66d9ef">print</span>(n1, n2, n3)
+</code></pre></div>
+<ul>
+<li><a href="https://docs.python.org/library/functions.html#round">https://docs.python.org/library/functions.html#round</a></li>
+<li><a href="https://docs.python.org/reference/expressions.html#binary">https://docs.python.org/reference/expressions.html#binary</a></li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://hyperpolyglot.org/scripting#arith-op">http://hyperpolyglot.org/scripting#arith-op</a></li>
+<li><a href="https://rosettacode.org/wiki/Arithmetic/Integer">https://rosettacode.org/wiki/Arithmetic/Integer</a></li>
+</ul>
+
+
+</body>
+</html>

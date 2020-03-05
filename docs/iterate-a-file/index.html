@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iterate a file &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Iterate a file</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+<a href="/autumn/topics/iterate">iterate</a>
+<a href="/autumn/topics/input-output">input-output</a>
+   <h2 id="d">D</h2>
+<p><a href="https://dlang.org/phobos/std_stdio#.lines">https://dlang.org/phobos/std_stdio#.lines</a></p>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
+<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+   $s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgets</span>($r1);
+   <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">feof</span>($r1)) {
+      <span style="color:#66d9ef">break</span>;
+   }
+   <span style="color:#a6e22e">var_dump</span>($s1);
+}
+</code></pre></div>
+<p><code>feof</code> is triggered after <code>fgets</code>. Further, <code>trim</code> expects a string, so we
+cannot use it until we are certain that we have a string.</p>
+<p><a href="https://php.net/function.feof">https://php.net/function.feof</a></p>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">for</span> s1 <span style="color:#f92672">in</span> open(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">a.txt</span><span style="color:#e6db74">&#39;</span>):
+   <span style="color:#66d9ef">print</span>(s1)
+</code></pre></div>
+<p><a href="https://docs.python.org/reference/compound_stmts.html#for">https://docs.python.org/reference/compound_stmts.html#for</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://hyperpolyglot.org/scripting2#iterate-by-line">http://hyperpolyglot.org/scripting2#iterate-by-line</a></li>
+<li><a href="https://rosettacode.org/wiki/Read_a_file_line_by_line">https://rosettacode.org/wiki/Read_a_file_line_by_line</a></li>
+</ul>
+
+
+</body>
+</html>

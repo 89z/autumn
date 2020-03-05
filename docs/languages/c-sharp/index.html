@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C# &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>C#</h1><h2 id="examples">Examples</h2>
+<p>Invoke a file:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># example 1</span>
+csc.exe sunday.cs
+<span style="color:#75715e"># example 2</span>
+mcs.bat sunday.cs
+</code></pre></div>
+<p>Write to console:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      Console.WriteLine(<span style="color:#e6db74">&#34;sunday monday&#34;</span>);
+   }
+}
+</code></pre></div>
+<h2 id="issues">Issues</h2>
+<dl>
+<dt>Print array</dt>
+<dd><a href="https://github.com/dotnet/runtime/issues/425">https://github.com/dotnet/runtime/issues/425</a></dd>
+<dd><a href="https://github.com/mono/mono/issues/19073">https://github.com/mono/mono/issues/19073</a></dd>
+<dt>String representation</dt>
+<dd><a href="https://github.com/dotnet/runtime/issues/33007">https://github.com/dotnet/runtime/issues/33007</a></dd>
+</dl>
+<h2 id="setup">Setup</h2>
+<pre><code>lessmsi x mono-*.msi
+</code></pre><ul>
+<li><a href="https://docs.microsoft.com/dotnet/api?view=netframework-4.8">https://docs.microsoft.com/dotnet/api?view=netframework-4.8</a></li>
+<li><a href="https://mono-project.com/download">https://mono-project.com/download</a></li>
+<li><a href="https://nuget.org/packages/Microsoft.Net.Compilers">https://nuget.org/packages/Microsoft.Net.Compilers</a></li>
+</ul>
+<h2 id="stars">Stars</h2>
+<p><a href="https://github.com/shadowsocks/shadowsocks-windows">https://github.com/shadowsocks/shadowsocks-windows</a></p>
+
+
+</body>
+</html>

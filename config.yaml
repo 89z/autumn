@@ -1,0 +1,21 @@
+baseURL: https://cup.github.io/autumn
+disableKinds:
+- RSS
+- sitemap
+enableGitInfo: true
+ignoreFiles:
+- \.[^m]
+- \.m[^d]
+- \.md.
+markup:
+   goldmark:
+      extensions:
+         linkify: false
+params:
+   themeColor: theme-base-08
+publishDir: docs
+pygmentsCodefences: true
+taxonomies:
+   language: languages
+   topic: topics
+title: Autumn

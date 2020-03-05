@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digit grouping &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Digit grouping</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+   <h2 id="go">Go</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">u_group</span>(<span style="color:#a6e22e">s_in</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n_neg</span> = <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">LastIndex</span>(<span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s_in</span>, <span style="color:#e6db74">&#34;-&#34;</span>)
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n_dot</span> = <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Index</span>(<span style="color:#a6e22e">s_in</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.&#34;</span>, <span style="color:#e6db74">&#34;.&#34;</span>)
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s_out</span> <span style="color:#66d9ef">string</span>
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">n_pos</span>, <span style="color:#a6e22e">s_pos</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">s_in</span> {
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">n_neg</span> &lt; <span style="color:#a6e22e">n_pos</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">n_pos</span> &lt; <span style="color:#a6e22e">n_dot</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">n_pos</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">n_dot</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> {
+         <span style="color:#a6e22e">s_out</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;,&#34;</span>
+      }
+      <span style="color:#a6e22e">s_out</span> <span style="color:#f92672">+=</span> string(<span style="color:#a6e22e">s_pos</span>)
+   }
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s_out</span>
+}
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;123&#34;</span>, <span style="color:#e6db74">&#34;1234&#34;</span>, <span style="color:#e6db74">&#34;-123&#34;</span>, <span style="color:#e6db74">&#34;-1234&#34;</span>, <span style="color:#e6db74">&#34;123.4&#34;</span>, <span style="color:#e6db74">&#34;1234.5&#34;</span>}
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">a1</span> {
+      println(<span style="color:#a6e22e">u_group</span>(<span style="color:#a6e22e">s1</span>))
+   }
+}
+</code></pre></div>
+<h2 id="javascript">JavaScript</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f_group</span>(<span style="color:#a6e22e">s_in</span>) {
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n_neg</span> <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#39;-&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s_in</span>).<span style="color:#a6e22e">lastIndexOf</span>(<span style="color:#e6db74">&#39;-&#39;</span>);
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n_dot</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">s_in</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.&#39;</span>).<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#39;.&#39;</span>);
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_out</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+   <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">n_pos</span>, <span style="color:#a6e22e">s_pos</span>] <span style="color:#66d9ef">of</span> Object.<span style="color:#a6e22e">entries</span>(<span style="color:#a6e22e">s_in</span>)) {
+      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">n_neg</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">n_pos</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">n_pos</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">n_dot</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">n_pos</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">n_dot</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span>) {
+         <span style="color:#a6e22e">s_out</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;,&#39;</span>;
+      }
+      <span style="color:#a6e22e">s_out</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">s_pos</span>;
+   }
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s_out</span>;
+}
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a1</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;123&#39;</span>, <span style="color:#e6db74">&#39;1234&#39;</span>, <span style="color:#e6db74">&#39;-123&#39;</span>, <span style="color:#e6db74">&#39;-1234&#39;</span>, <span style="color:#e6db74">&#39;123.4&#39;</span>, <span style="color:#e6db74">&#39;1234.5&#39;</span>];
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">a1</span>) {
+   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">f_group</span>(<span style="color:#a6e22e">s1</span>));
+}
+</code></pre></div>
+<h2 id="nim">Nim</h2>
+<p><a href="https://github.com/kaushalmodi/strfmt">https://github.com/kaushalmodi/strfmt</a></p>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">u_group</span>($s_in) {
+   $n_neg <span style="color:#f92672">=</span> <span style="color:#a6e22e">strrpos</span>(<span style="color:#e6db74">&#34;-</span><span style="color:#e6db74">$s_in</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">&#39;-&#39;</span>);
+   $n_dot <span style="color:#f92672">=</span> <span style="color:#a6e22e">strpos</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">$s_in</span><span style="color:#e6db74">.&#34;</span>, <span style="color:#e6db74">&#39;.&#39;</span>);
+   $s_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+   <span style="color:#66d9ef">foreach</span> (<span style="color:#a6e22e">str_split</span>($s_in) <span style="color:#66d9ef">as</span> $n_pos <span style="color:#f92672">=&gt;</span> $s_pos) {
+      <span style="color:#66d9ef">if</span> ($n_neg <span style="color:#f92672">&lt;</span> $n_pos <span style="color:#f92672">&amp;&amp;</span> $n_pos <span style="color:#f92672">&lt;</span> $n_dot <span style="color:#f92672">&amp;&amp;</span> $n_pos <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">==</span> $n_dot <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span>) {
+         $s_out <span style="color:#f92672">.=</span> <span style="color:#e6db74">&#39;,&#39;</span>;
+      }
+      $s_out <span style="color:#f92672">.=</span> $s_pos;
+   }
+   <span style="color:#66d9ef">return</span> $s_out;
+}
+$a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;123&#39;</span>, <span style="color:#e6db74">&#39;1234&#39;</span>, <span style="color:#e6db74">&#39;-123&#39;</span>, <span style="color:#e6db74">&#39;-1234&#39;</span>, <span style="color:#e6db74">&#39;123.4&#39;</span>, <span style="color:#e6db74">&#39;1234.5&#39;</span>];
+<span style="color:#66d9ef">foreach</span> ($a1 <span style="color:#66d9ef">as</span> $s1) {
+   <span style="color:#a6e22e">var_dump</span>(<span style="color:#a6e22e">u_group</span>($s1));
+}
+</code></pre></div>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">u_group</span>(s_in):
+   n_neg <span style="color:#f92672">=</span> (<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">-</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">+</span> s_in)<span style="color:#f92672">.</span>rfind(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">-</span><span style="color:#e6db74">&#39;</span>)
+   n_dot <span style="color:#f92672">=</span> (s_in <span style="color:#f92672">+</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">.</span><span style="color:#e6db74">&#39;</span>)<span style="color:#f92672">.</span>find(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">.</span><span style="color:#e6db74">&#39;</span>)
+   s_out <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#39;</span>
+   <span style="color:#66d9ef">for</span> n_pos, s_pos <span style="color:#f92672">in</span> enumerate(s_in):
+      <span style="color:#66d9ef">if</span> n_neg <span style="color:#f92672">&lt;</span> n_pos <span style="color:#f92672">and</span> n_pos <span style="color:#f92672">&lt;</span> n_dot <span style="color:#f92672">and</span> n_pos <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">==</span> n_dot <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span>:
+         s_out <span style="color:#f92672">+</span><span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">,</span><span style="color:#e6db74">&#39;</span>
+      s_out <span style="color:#f92672">+</span><span style="color:#f92672">=</span> s_pos
+   <span style="color:#66d9ef">return</span> s_out
+a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">123</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">1234</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">-123</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">-1234</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">123.4</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">1234.5</span><span style="color:#e6db74">&#39;</span>]
+<span style="color:#66d9ef">for</span> s1 <span style="color:#f92672">in</span> a1:
+   <span style="color:#66d9ef">print</span>(u_group(s1))
+</code></pre></div>
+<p><a href="https://codegolf.stackexchange.com/questions/4499/-/4527">https://codegolf.stackexchange.com/questions/4499/-/4527</a></p>
+
+
+</body>
+</html>

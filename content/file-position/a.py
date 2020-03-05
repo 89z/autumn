@@ -1,0 +1,5 @@
+r1 = open('a.txt')
+s1 = r1.read()
+r1.seek(0)
+s2 = r1.read()
+print([s1, s2])

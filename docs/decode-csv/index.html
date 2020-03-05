@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decode CSV &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Decode CSV</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+<a href="/autumn/topics/decode">decode</a>
+   
+
+
+<pre><code class="language-csv" data-lang="csv">city,country
+london,england
+nice,france
+</code></pre>
+<h2 id="go">Go</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;encoding/csv&#34;</span>
+   <span style="color:#e6db74">&#34;os&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">r1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.csv&#34;</span>)
+   <span style="color:#a6e22e">r2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">csv</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">r1</span>)
+   <span style="color:#a6e22e">m1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{}
+   <span style="color:#66d9ef">for</span> {
+      <span style="color:#a6e22e">a1</span>, <span style="color:#a6e22e">e1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r2</span>.<span style="color:#a6e22e">Read</span>()
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e1</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+         <span style="color:#66d9ef">break</span>
+      }
+      <span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">m1</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
+         <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">a1</span> {
+            <span style="color:#a6e22e">m1</span>[<span style="color:#a6e22e">s1</span>] = <span style="color:#a6e22e">n1</span>
+         }
+         <span style="color:#66d9ef">continue</span>
+      }
+      println(<span style="color:#a6e22e">a1</span>[<span style="color:#a6e22e">m1</span>[<span style="color:#e6db74">&#34;city&#34;</span>]])
+   }
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/encoding/csv#Reader.Read">https://golang.org/pkg/encoding/csv#Reader.Read</a></p>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.csv&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
+$a1 <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+   $a2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgetcsv</span>($r1);
+   <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">feof</span>($r1)) {
+      <span style="color:#66d9ef">break</span>;
+   }
+   <span style="color:#66d9ef">if</span> ($a1 <span style="color:#f92672">==</span> []) {
+      $a1 <span style="color:#f92672">=</span> $a2;
+      <span style="color:#66d9ef">continue</span>;
+   }
+   $m1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_combine</span>($a1, $a2);
+   <span style="color:#66d9ef">echo</span> $m1[<span style="color:#e6db74">&#39;city&#39;</span>], <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+}
+</code></pre></div>
+<ul>
+<li><a href="https://php.net/function.array-combine">https://php.net/function.array-combine</a></li>
+<li><a href="https://php.net/function.fgetcsv">https://php.net/function.fgetcsv</a></li>
+</ul>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> csv
+r1 <span style="color:#f92672">=</span> open(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">a.csv</span><span style="color:#e6db74">&#39;</span>)
+r2 <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>DictReader(r1)
+<span style="color:#66d9ef">for</span> m1 <span style="color:#f92672">in</span> r2:
+   <span style="color:#66d9ef">print</span>(m1[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">city</span><span style="color:#e6db74">&#39;</span>])
+</code></pre></div>
+<p><a href="https://docs.python.org/library/csv.html">https://docs.python.org/library/csv.html</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://hyperpolyglot.org/scripting2#parse-csv">http://hyperpolyglot.org/scripting2#parse-csv</a></li>
+<li><a href="https://rosettacode.org/wiki/Hash_from_two_arrays">https://rosettacode.org/wiki/Hash_from_two_arrays</a></li>
+</ul>
+
+
+</body>
+</html>

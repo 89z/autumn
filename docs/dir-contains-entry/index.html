@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Directory contains entry &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Directory contains entry</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+<a href="/autumn/topics/system">system</a>
+   <h2 id="go">Go</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os&#34;</span>
+
+<span style="color:#a6e22e">fi</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stat</span>(<span style="color:#e6db74">&#34;/tmp/foo&#34;</span>)
+<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">IsNotExist</span>(<span style="color:#a6e22e">err</span>) {
+  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Does not exit\n&#34;</span>)
+} <span style="color:#66d9ef">else</span> {
+  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Exists\n&#34;</span>)
+  <span style="color:#a6e22e">fm</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fi</span>.<span style="color:#a6e22e">Mode</span>()
+  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">fm</span>.<span style="color:#a6e22e">IsRegular</span>() {
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Is Regular&#34;</span>)
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Is Not Regular&#34;</span>)
+  }
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/os#FileMode.IsRegular">https://golang.org/pkg/os#FileMode.IsRegular</a></p>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">file_exists</span>(<span style="color:#e6db74">&#39;/etc/shells&#39;</span>);
+<span style="color:#a6e22e">filetype</span>(<span style="color:#e6db74">&#39;/etc/shells&#39;</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;file&#39;</span>;
+<span style="color:#a6e22e">filetype</span>(<span style="color:#e6db74">&#39;/etc/shells&#39;</span>);
+<span style="color:#a6e22e">is_file</span>(<span style="color:#e6db74">&#39;/etc/shells&#39;</span>);
+<span style="color:#a6e22e">stat</span>(<span style="color:#e6db74">&#39;/etc/shells&#39;</span>);
+</code></pre></div>
+<ul>
+<li><a href="https://php.net/function.filetype">https://php.net/function.filetype</a></li>
+<li><a href="https://php.net/function.is-file">https://php.net/function.is-file</a></li>
+</ul>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> os<span style="color:#f92672">,</span> stat
+os<span style="color:#f92672">.</span>access(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">/etc/shells</span><span style="color:#e6db74">&#39;</span>, os<span style="color:#f92672">.</span>F_OK)
+os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>exists(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">/etc/shells</span><span style="color:#e6db74">&#39;</span>)
+os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>isfile(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">/etc/shells</span><span style="color:#e6db74">&#39;</span>)
+stat<span style="color:#f92672">.</span>S_IFMT(os<span style="color:#f92672">.</span>stat(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">/etc/shells</span><span style="color:#e6db74">&#39;</span>)<span style="color:#f92672">.</span>st_mode) <span style="color:#f92672">==</span> stat<span style="color:#f92672">.</span>S_IFREG
+stat<span style="color:#f92672">.</span>S_ISREG(os<span style="color:#f92672">.</span>stat(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">/etc/shells</span><span style="color:#e6db74">&#39;</span>)<span style="color:#f92672">.</span>st_mode)
+</code></pre></div>
+<ul>
+<li><a href="https://docs.python.org/library/os.html#os.access">https://docs.python.org/library/os.html#os.access</a></li>
+<li><a href="https://docs.python.org/library/os.html#os.stat">https://docs.python.org/library/os.html#os.stat</a></li>
+<li><a href="https://docs.python.org/library/os.path.html#os.path.isfile">https://docs.python.org/library/os.path.html#os.path.isfile</a></li>
+<li><a href="https://docs.python.org/library/stat.html#stat.S_IFREG">https://docs.python.org/library/stat.html#stat.S_IFREG</a></li>
+<li><a href="https://docs.python.org/library/stat.html#stat.S_ISREG">https://docs.python.org/library/stat.html#stat.S_ISREG</a></li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://hyperpolyglot.org/c#file-test">http://hyperpolyglot.org/c#file-test</a></li>
+<li><a href="http://hyperpolyglot.org/scripting2#file-test">http://hyperpolyglot.org/scripting2#file-test</a></li>
+<li><a href="https://www.programming-idioms.org/idiom/144/check-if-file-exists">https://www.programming-idioms.org/idiom/144/check-if-file-exists</a></li>
+<li><a href="https://rosettacode.org/wiki/Check_that_file_exists">https://rosettacode.org/wiki/Check_that_file_exists</a></li>
+</ul>
+
+
+</body>
+</html>

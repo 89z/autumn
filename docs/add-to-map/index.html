@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add to map &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Add to map</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+<a href="/autumn/topics/map">map</a>
+   <h2 id="d">D</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#66d9ef">string</span><span style="color:#f92672">]</span> m1<span style="color:#f92672">;</span>
+   m1<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;sun&#34;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">;</span>
+   m1<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+<p><a href="https://dlang.org/spec/hash-map.html">https://dlang.org/spec/hash-map.html</a></p>
+<h2 id="go">Go</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">m1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{<span style="color:#e6db74">&#34;sun&#34;</span>: <span style="color:#ae81ff">10</span>}
+   <span style="color:#a6e22e">m1</span>[<span style="color:#e6db74">&#34;mon&#34;</span>] = <span style="color:#ae81ff">11</span>
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m1</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/ref/spec#Assignments">https://golang.org/ref/spec#Assignments</a></p>
+<h2 id="javascript">JavaScript</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">m1</span> <span style="color:#f92672">=</span> {sun<span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>};
+<span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">m1</span>[<span style="color:#e6db74">&#39;mon&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">11</span>;
+<span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">m1</span>.<span style="color:#a6e22e">tue</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>;
+<span style="color:#75715e">// print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">m1</span>);
+</code></pre></div>
+<a href="https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Property_Accessors">https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Property_Accessors</a>
+
+<h2 id="julia">Julia</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jl" data-lang="jl">m1<span style="color:#f92672"></span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">Dict</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">s</span><span style="color:#e6db74">u</span><span style="color:#e6db74">n</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>)
+setindex!<span style="color:#f92672"></span>(m1<span style="color:#f92672"></span>, <span style="color:#ae81ff">11</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">m</span><span style="color:#e6db74">o</span><span style="color:#e6db74">n</span><span style="color:#e6db74">&#34;</span>)
+println<span style="color:#f92672"></span>(m1<span style="color:#f92672"></span>)
+</code></pre></div>
+<p><a href="https://docs.julialang.org/en/v1/base/collections#Base.setindex!">https://docs.julialang.org/en/v1/base/collections#Base.setindex!</a></p>
+<h2 id="nim">Nim</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> tables
+<span style="color:#66d9ef">var</span> m1 <span style="color:#f92672">=</span> initTable<span style="color:#f92672">[</span><span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span><span style="color:#f92672">]</span>()
+m1<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">sun</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+echo m1
+</code></pre></div>
+<p><a href="https://nim-lang.github.io/Nim/tables#%5B%5D=,Table%5BA,B%5D,A,B">https://nim-lang.github.io/Nim/tables#[]=,Table[A,B],A,B</a></p>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e"># initialisation not needed
+</span><span style="color:#75715e"></span>$m1[<span style="color:#e6db74">&#39;sun&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+<span style="color:#a6e22e">print_r</span>($m1);
+</code></pre></div>
+<p><a href="https://php.net/language.types.array">https://php.net/language.types.array</a></p>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">m1 <span style="color:#f92672">=</span> {}
+m1[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">sun</span><span style="color:#e6db74">&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+<span style="color:#66d9ef">print</span>(m1)
+</code></pre></div>
+<p><a href="https://docs.python.org/library/stdtypes.html#dict">https://docs.python.org/library/stdtypes.html#dict</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://hyperpolyglot.org/scripting#dict-update">http://hyperpolyglot.org/scripting#dict-update</a></li>
+<li><a href="https://www.programming-idioms.org/idiom/172/insert-entry-in-map">https://www.programming-idioms.org/idiom/172/insert-entry-in-map</a></li>
+<li><a href="https://rosettacode.org/wiki/Associative_array/Creation">https://rosettacode.org/wiki/Associative_array/Creation</a></li>
+</ul>
+
+
+</body>
+</html>

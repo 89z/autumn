@@ -1,0 +1,22 @@
+{{ define "main" }}
+<main>
+   <article>
+   {{- range (.Paginate .Pages.ByLastmod.Reverse 24).Pages }}
+      <section>
+         <h2>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+         </h2>
+         <time>{{ .Lastmod.Format "Mon Jan 2 15:04:05 2006" }}</time>
+         <nav>
+      {{ range .Params.topics }}
+            <a href="/autumn/topics/{{ . }}">{{ . }}</a>
+      {{ end }}
+         </nav>
+      </section>
+   {{ end }}
+   </article>
+</main>
+<footer>
+   {{ template "_internal/pagination.html" . }}
+</footer>
+{{ end }}

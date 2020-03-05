@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Length of array &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Length of array</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+<a href="/autumn/topics/array">array</a>
+   <h2 id="d">D</h2>
+<ul>
+<li><a href="https://dlang.org/phobos/std_container_array.html#.Array.length">https://dlang.org/phobos/std_container_array.html#.Array.length</a></li>
+<li><a href="https://dlang.org/phobos/std_range_primitives.html#.walkLength">https://dlang.org/phobos/std_range_primitives.html#.walkLength</a></li>
+</ul>
+<h2 id="go">Go</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>}
+   <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> len(<span style="color:#a6e22e">a1</span>)
+   println(<span style="color:#a6e22e">n1</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/builtin#len">https://golang.org/pkg/builtin#len</a></p>
+<h2 id="javascript">JavaScript</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a1</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a1</span>.<span style="color:#a6e22e">length</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span>);
+</code></pre></div>
+<a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/length">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/length</a>
+
+<h2 id="julia">Julia</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jl" data-lang="jl">a1<span style="color:#f92672"></span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>]
+n1<span style="color:#f92672"></span> <span style="color:#f92672">=</span> length<span style="color:#f92672"></span>(a1<span style="color:#f92672"></span>)
+println<span style="color:#f92672"></span>(n1<span style="color:#f92672"></span>)
+</code></pre></div>
+<h2 id="nim">Nim</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">let</span> a1 <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span><span style="color:#f92672">]</span>
+<span style="color:#66d9ef">let</span> n1 <span style="color:#f92672">=</span> a1.len
+echo n1
+</code></pre></div>
+<p><a href="https://nim-lang.github.io/Nim/system#system-module-seqs">https://nim-lang.github.io/Nim/system#system-module-seqs</a></p>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$a1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>];
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">count</span>($a1);
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">sizeof</span>($a1);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1, $n2);
+</code></pre></div>
+<ul>
+<li><a href="https://php.net/function.count">https://php.net/function.count</a></li>
+<li><a href="https://php.net/function.sizeof">https://php.net/function.sizeof</a></li>
+</ul>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>]
+n1 <span style="color:#f92672">=</span> len(a1)
+<span style="color:#66d9ef">print</span>(n1)
+</code></pre></div>
+<p><a href="https://docs.python.org/library/functions.html#len">https://docs.python.org/library/functions.html#len</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://hyperpolyglot.org/c#array-size">http://hyperpolyglot.org/c#array-size</a></li>
+<li><a href="http://hyperpolyglot.org/numerical-analysis#array-size">http://hyperpolyglot.org/numerical-analysis#array-size</a></li>
+<li><a href="http://hyperpolyglot.org/scripting#array-size">http://hyperpolyglot.org/scripting#array-size</a></li>
+<li><a href="https://www.programming-idioms.org/idiom/117/get-list-size">https://www.programming-idioms.org/idiom/117/get-list-size</a></li>
+<li><a href="https://rosettacode.org/wiki/Array_length">https://rosettacode.org/wiki/Array_length</a></li>
+</ul>
+
+
+</body>
+</html>

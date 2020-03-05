@@ -1,0 +1,36 @@
+---
+title: Logical operators
+topics: [condition]
+languages: [go, javascript, php, python]
+---
+
+## Go
+
+{{< r "a.go" >}}
+
+<https://golang.org/ref/spec#Logical_operators>
+
+## JavaScript
+
+{{< r "a.js" >}}
+
+{{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Operators/
+Logical_Operators` >}}
+
+## PHP
+
+{{< r "a.php" >}}
+
+<https://php.net/language.operators.logical>
+
+## Python
+
+{{< r "a.py" >}}
+
+<https://docs.python.org/reference/expressions.html#boolean-operations>
+
+## References
+
+- <http://hyperpolyglot.org/c#logical-op>
+- <http://hyperpolyglot.org/scripting#logical-op>
+- <https://rosettacode.org/wiki/Logical_operations>

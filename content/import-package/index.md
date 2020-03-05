@@ -1,0 +1,40 @@
+---
+title: Import package
+topics: [reference]
+languages: [d, go, julia, nim, python]
+---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/spec/module.html#import-declaration>
+
+## Go
+
+{{< r "a.go" >}}
+
+<https://golang.org/ref/spec#Import_declarations>
+
+## Julia
+
+{{< r "a.jl" >}}
+
+## Nim
+
+{{< r "a.nim" >}}
+
+<https://nim-lang.github.io/Nim/manual#modules-import-statement>
+
+## Python
+
+{{< r "a.py" >}}
+{{< r "a2.py" >}}
+
+<https://docs.python.org/reference/simple_stmts.html#import>
+
+## References
+
+- <http://hyperpolyglot.org/c#alias-namespace>
+- <http://hyperpolyglot.org/scripting2#load-lib>
+- <https://rosettacode.org/wiki/Include_a_file>

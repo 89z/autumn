@@ -1,0 +1,53 @@
+---
+title: Comments
+topics: [reference]
+languages: [d, go, javascript, julia, nim, php, python]
+---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/spec/lex.html#comment>
+
+## Go
+
+{{< r "a.go" >}}
+
+<https://golang.org/ref/spec#Comments>
+
+## JavaScript
+
+{{< r "a.js" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Lexical_grammar>
+
+## Julia
+
+{{< r "a.jl" >}}
+
+## Nim
+
+{{< r "a.nim" >}}
+
+- <https://nim-lang.github.io/Nim/manual#lexical-analysis-comments>
+- <https://nim-lang.github.io/Nim/manual#lexical-analysis-multiline-comments>
+
+## PHP
+
+{{< r "a.php" >}}
+
+<https://php.net/language.basic-syntax.comments>
+
+## Python
+
+{{< r "a.py" >}}
+
+- <https://docs.python.org/reference/lexical_analysis.html#comments>
+- <https://docs.python.org/reference/lexical_analysis.html#strings>
+
+## References
+
+- <http://hyperpolyglot.org/numerical-analysis#eol-comment>
+- <http://hyperpolyglot.org/scripting#eol-comment>
+- <https://rosettacode.org/wiki/Comments>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Read from console &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Read from console</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+<a href="/autumn/topics/input-output">input-output</a>
+   <h2 id="go">Go</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;bufio&#34;</span>
+   <span style="color:#e6db74">&#34;os&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">r1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdin</span>)
+   <span style="color:#a6e22e">r1</span>.<span style="color:#a6e22e">Scan</span>()
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r1</span>.<span style="color:#a6e22e">Text</span>()
+   println(<span style="color:#a6e22e">s1</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/os#pkg-variables">https://golang.org/pkg/os#pkg-variables</a></p>
+<h2 id="julia">Julia</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jl" data-lang="jl">s1<span style="color:#f92672"></span> <span style="color:#f92672">=</span> readline<span style="color:#f92672"></span>()
+show<span style="color:#f92672"></span>(s1<span style="color:#f92672"></span>)
+</code></pre></div>
+<h2 id="nim">Nim</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim">stdin
+stdout
+stderr
+</code></pre></div>
+<ul>
+<li><a href="https://nim-lang.github.io/Nim/io#stderr">https://nim-lang.github.io/Nim/io#stderr</a></li>
+<li><a href="https://nim-lang.github.io/Nim/io#stdin">https://nim-lang.github.io/Nim/io#stdin</a></li>
+<li><a href="https://nim-lang.github.io/Nim/io#stdout">https://nim-lang.github.io/Nim/io#stdout</a></li>
+</ul>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgets</span>(<span style="color:#a6e22e">STDIN</span>);
+<span style="color:#a6e22e">var_dump</span>($s1);
+</code></pre></div>
+<p><a href="https://php.net/features.commandline.io-streams">https://php.net/features.commandline.io-streams</a></p>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> sys
+sys<span style="color:#f92672">.</span>stdin
+</code></pre></div>
+<ul>
+<li><a href="https://docs.python.org/library/sys.html#sys.stderr">https://docs.python.org/library/sys.html#sys.stderr</a></li>
+<li><a href="https://docs.python.org/library/sys.html#sys.stdin">https://docs.python.org/library/sys.html#sys.stdin</a></li>
+<li><a href="https://docs.python.org/library/sys.html#sys.stdout">https://docs.python.org/library/sys.html#sys.stdout</a></li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://hyperpolyglot.org/c#std-file-handles">http://hyperpolyglot.org/c#std-file-handles</a></li>
+<li><a href="http://hyperpolyglot.org/numerical-analysis#read-line-stdin">http://hyperpolyglot.org/numerical-analysis#read-line-stdin</a></li>
+</ul>
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+---
+title: Length of array
+topics: [array]
+languages: [d, go, javascript, julia, nim, php, python]
+---
+
+## D
+
+- <https://dlang.org/phobos/std_container_array.html#.Array.length>
+- <https://dlang.org/phobos/std_range_primitives.html#.walkLength>
+
+## Go
+
+{{< r "a.go" >}}
+
+<https://golang.org/pkg/builtin#len>
+
+## JavaScript
+
+{{< r "a.js" >}}
+
+{{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/
+Array/length` >}}
+
+## Julia
+
+{{< r "a.jl" >}}
+
+## Nim
+
+{{< r "a.nim" >}}
+
+<https://nim-lang.github.io/Nim/system#system-module-seqs>
+
+## PHP
+
+{{< r "a.php" >}}
+
+- <https://php.net/function.count>
+- <https://php.net/function.sizeof>
+
+## Python
+
+{{< r "a.py" >}}
+
+<https://docs.python.org/library/functions.html#len>
+
+## References
+
+- <http://hyperpolyglot.org/c#array-size>
+- <http://hyperpolyglot.org/numerical-analysis#array-size>
+- <http://hyperpolyglot.org/scripting#array-size>
+- <https://www.programming-idioms.org/idiom/117/get-list-size>
+- <https://rosettacode.org/wiki/Array_length>

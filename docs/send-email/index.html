@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Send Email &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Send Email</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+<a href="/autumn/topics/network">network</a>
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">From: Sunday &lt;sunday@gmail.com&gt;
+To: Monday &lt;monday@gmail.com&gt;
+Subject: Day
+
+Tuesday Wednesday
+</code></pre></div>
+<h2 id="go">Go</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;net/smtp&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">auth</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">smtp</span>.<span style="color:#a6e22e">PlainAuth</span>(
+      <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;user@example.com&#34;</span>, <span style="color:#e6db74">&#34;password&#34;</span>, <span style="color:#e6db74">&#34;mail.example.com&#34;</span>
+   )
+   <span style="color:#a6e22e">to</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;recipient@example.net&#34;</span>}
+   <span style="color:#a6e22e">msg</span> <span style="color:#f92672">:=</span> []byte(
+      <span style="color:#e6db74">&#34;To: recipient@example.net\r\n&#34;</span> <span style="color:#f92672">+</span>
+      <span style="color:#e6db74">&#34;Subject: discount Gophers!\r\n&#34;</span> <span style="color:#f92672">+</span>
+      <span style="color:#e6db74">&#34;\r\n&#34;</span> <span style="color:#f92672">+</span>
+      <span style="color:#e6db74">&#34;This is the email body.\r\n&#34;</span>
+   )
+   <span style="color:#a6e22e">smtp</span>.<span style="color:#a6e22e">SendMail</span>(<span style="color:#e6db74">&#34;mail.example.com:25&#34;</span>, <span style="color:#a6e22e">auth</span>, <span style="color:#e6db74">&#34;sender@example.org&#34;</span>, <span style="color:#a6e22e">to</span>, <span style="color:#a6e22e">msg</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/net/smtp">https://golang.org/pkg/net/smtp</a></p>
+<h2 id="julia">Julia</h2>
+<p><a href="https://github.com/JuliaWeb/LibCURL.jl">https://github.com/JuliaWeb/LibCURL.jl</a></p>
+<h2 id="nim">Nim</h2>
+<p><a href="https://christine.website/blog/how-send-email-nim-2019-08-28">https://christine.website/blog/how-send-email-nim-2019-08-28</a></p>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
+$r2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>(<span style="color:#e6db74">&#39;smtps://smtp.gmail.com&#39;</span>);
+<span style="color:#a6e22e">curl_setopt</span>($r2, <span style="color:#a6e22e">CURLOPT_MAIL_RCPT</span>, [<span style="color:#e6db74">&#39;monday@gmail.com&#39;</span>]);
+<span style="color:#a6e22e">curl_setopt</span>($r2, <span style="color:#a6e22e">CURLOPT_NETRC</span>, <span style="color:#66d9ef">true</span>);
+<span style="color:#a6e22e">curl_setopt</span>($r2, <span style="color:#a6e22e">CURLOPT_READDATA</span>, $r1);
+<span style="color:#a6e22e">curl_setopt</span>($r2, <span style="color:#a6e22e">CURLOPT_UPLOAD</span>, <span style="color:#66d9ef">true</span>);
+<span style="color:#a6e22e">curl_exec</span>($r2);
+</code></pre></div>
+<p><a href="https://php.net/function.curl-init">https://php.net/function.curl-init</a></p>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> email.message<span style="color:#f92672">,</span> smtplib
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">m_send</span>(m_from, m_to, m_subject, m_content):
+   msg <span style="color:#f92672">=</span> email<span style="color:#f92672">.</span>message<span style="color:#f92672">.</span>EmailMessage()
+   msg[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">From</span><span style="color:#e6db74">&#39;</span>] <span style="color:#f92672">=</span> m_from
+   msg[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">To</span><span style="color:#e6db74">&#39;</span>] <span style="color:#f92672">=</span> m_to
+   msg[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Subject</span><span style="color:#e6db74">&#39;</span>] <span style="color:#f92672">=</span> m_subject
+   msg<span style="color:#f92672">.</span>set_content(m_content)
+   pword <span style="color:#f92672">=</span> input(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">password: </span><span style="color:#e6db74">&#39;</span>)
+   mua <span style="color:#f92672">=</span> smtplib<span style="color:#f92672">.</span>SMTP(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">smtp.gmail.com</span><span style="color:#e6db74">&#39;</span>)
+   mua<span style="color:#f92672">.</span>starttls()
+   mua<span style="color:#f92672">.</span>login(m_from, pword)
+   mua<span style="color:#f92672">.</span>send_message(msg)
+</code></pre></div>
+<ul>
+<li><a href="https://docs.python.org/library/email.examples.html">https://docs.python.org/library/email.examples.html</a></li>
+<li><a href="https://docs.python.org/library/smtplib.html#smtplib.SMTP.sendmail">https://docs.python.org/library/smtplib.html#smtplib.SMTP.sendmail</a></li>
+</ul>
+<h2 id="references">References</h2>
+<p><a href="https://rosettacode.org/wiki/Send_email">https://rosettacode.org/wiki/Send_email</a></p>
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iterate a set &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Iterate a set</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+<a href="/autumn/topics/iterate">iterate</a>
+<a href="/autumn/topics/set">set</a>
+   <h2 id="javascript">JavaScript</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">c1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Set</span>([<span style="color:#e6db74">&#39;sun&#39;</span>, <span style="color:#e6db74">&#39;mon&#39;</span>]);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">c2</span> <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;sun&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">&#39;mon&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>};
+<span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">c1</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">s1</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>));
+<span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">c1</span>) {
+   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>);
+}
+<span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">c2</span>) {
+   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>);
+}
+</code></pre></div>
+<ul>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for...in">https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for...in</a></li>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for...of">https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for...of</a></li>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Set/forEach">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Set/forEach</a>
+</li>
+</ul>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$c1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;sun&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">&#39;mon&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>];
+<span style="color:#66d9ef">foreach</span> (<span style="color:#a6e22e">array_keys</span>($c1) <span style="color:#66d9ef">as</span> $s1) {
+   <span style="color:#a6e22e">var_dump</span>($s1);
+}
+</code></pre></div>
+
+
+</body>
+</html>

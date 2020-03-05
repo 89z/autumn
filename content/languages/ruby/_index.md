@@ -1,0 +1,49 @@
+---
+title: Ruby
+stars: 44204
+---
+
+## Issues
+
+<https://en.wikipedia.org/wiki/There's_more_than_one_way_to_do_it>
+
+Append to array 1:
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/Array.html#method-i-2B>
+
+Append to array 2:
+
+{{< r "a2.rb" >}}
+
+<https://ruby-doc.org/core/Array.html#method-i-3C-3C>
+
+Append to array 3:
+
+{{< r "a3.rb" >}}
+
+<https://ruby-doc.org/core/Array.html#method-i-concat>
+
+Append to array 4:
+
+{{< r "a4.rb" >}}
+
+<https://ruby-doc.org/core/Array.html#method-i-insert>
+
+Append to array 5:
+
+{{< r "a5.rb" >}}
+
+<https://ruby-doc.org/core/Array.html#method-i-push>
+
+Append to array 6:
+
+{{< r "a6.rb" >}}
+
+{{< a `https://ruby-doc.org/core/doc/syntax/assignment_rdoc.html#
+label-Implicit+Array+Assignment` >}}
+
+## Stars
+
+<https://github.com/rails/rails>

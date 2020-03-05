@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iterate a map &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Iterate a map</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+<a href="/autumn/topics/iterate">iterate</a>
+<a href="/autumn/topics/map">map</a>
+   <h2 id="go">Go</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">m1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{<span style="color:#e6db74">&#34;sun&#34;</span>: <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;mon&#34;</span>: <span style="color:#ae81ff">11</span>}
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">m1</span> {
+      println(<span style="color:#a6e22e">s1</span>)
+   }
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">m1</span> {
+      println(<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">n1</span>)
+   }
+}
+</code></pre></div>
+<p><a href="https://golang.org/ref/spec#RangeClause">https://golang.org/ref/spec#RangeClause</a></p>
+<h2 id="javascript">JavaScript</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">m1</span> <span style="color:#f92672">=</span> {sun<span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>, <span style="color:#a6e22e">mon</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">11</span>};
+<span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">m1</span>) {
+   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>);
+}
+<span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">n1</span>] <span style="color:#66d9ef">of</span> Object.<span style="color:#a6e22e">entries</span>(<span style="color:#a6e22e">m1</span>)) {
+   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">n1</span>);
+}
+</code></pre></div>
+<ul>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for...in">https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for...in</a></li>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Object/entries">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Object/entries</a>
+</li>
+</ul>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$m1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;sun&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;mon&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">11</span>];
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">foreach</span> ($m1 <span style="color:#66d9ef">as</span> $n1) {
+   <span style="color:#a6e22e">var_dump</span>($n1);
+}
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">end</span>($m1);
+<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+   $s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">key</span>($m1);
+   <span style="color:#66d9ef">if</span> ($s1 <span style="color:#f92672">===</span> <span style="color:#66d9ef">null</span>) {
+      <span style="color:#66d9ef">break</span>;
+   }
+   $n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">current</span>($m1);
+   <span style="color:#a6e22e">var_dump</span>($s1, $n1);
+   <span style="color:#a6e22e">prev</span>($m1);
+}
+</code></pre></div>
+<ul>
+<li><a href="https://php.net/control-structures.foreach">https://php.net/control-structures.foreach</a></li>
+<li><a href="https://php.net/function.prev">https://php.net/function.prev</a></li>
+</ul>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> d<span style="color:#f92672">.</span>items():
+   <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">value at {} is {}</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>format(k, v)
+</code></pre></div>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://hyperpolyglot.org/c#dict-iter">http://hyperpolyglot.org/c#dict-iter</a></li>
+<li><a href="http://hyperpolyglot.org/scripting#dict-iter">http://hyperpolyglot.org/scripting#dict-iter</a></li>
+</ul>
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Import package &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Import package</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+<a href="/autumn/topics/reference">reference</a>
+   <h2 id="d">D</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.string<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+<p><a href="https://dlang.org/spec/module.html#import-declaration">https://dlang.org/spec/module.html#import-declaration</a></p>
+<h2 id="go">Go</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#e6db74">&#34;os&#34;</span>
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">ft</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">ft</span>.<span style="color:#a6e22e">Fprintln</span>(<span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stderr</span>, <span style="color:#e6db74">&#34;one two three&#34;</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/ref/spec#Import_declarations">https://golang.org/ref/spec#Import_declarations</a></p>
+<h2 id="julia">Julia</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jl" data-lang="jl"><span style="color:#66d9ef">using</span> Base64<span style="color:#f92672"></span>
+s1<span style="color:#f92672"></span> <span style="color:#f92672">=</span> base64encode<span style="color:#f92672"></span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">s</span><span style="color:#e6db74">u</span><span style="color:#e6db74">n</span><span style="color:#e6db74">d</span><span style="color:#e6db74">a</span><span style="color:#e6db74">y</span><span style="color:#e6db74">&#34;</span>)
+println<span style="color:#f92672"></span>(s1<span style="color:#f92672"></span>)
+</code></pre></div>
+<h2 id="nim">Nim</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> strformat, strutils
+</code></pre></div>
+<p><a href="https://nim-lang.github.io/Nim/manual#modules-import-statement">https://nim-lang.github.io/Nim/manual#modules-import-statement</a></p>
+<h2 id="python">Python</h2>
+<p>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> sys
+<span style="color:#66d9ef">print</span>(sys)
+</code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> sys<span style="color:#f92672">,</span> os
+</code></pre></div></p>
+<p><a href="https://docs.python.org/reference/simple_stmts.html#import">https://docs.python.org/reference/simple_stmts.html#import</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://hyperpolyglot.org/c#alias-namespace">http://hyperpolyglot.org/c#alias-namespace</a></li>
+<li><a href="http://hyperpolyglot.org/scripting2#load-lib">http://hyperpolyglot.org/scripting2#load-lib</a></li>
+<li><a href="https://rosettacode.org/wiki/Include_a_file">https://rosettacode.org/wiki/Include_a_file</a></li>
+</ul>
+
+
+</body>
+</html>

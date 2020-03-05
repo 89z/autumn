@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>List directory entries &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>List directory entries</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+<a href="/autumn/topics/system">system</a>
+   <h2 id="d">D</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.file<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> a1 <span style="color:#f92672">=</span> dirEntries<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">,</span> SpanMode<span style="color:#f92672">.</span><span style="color:#a6e22e">shallow</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+   a1<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+<p><a href="https://dlang.org/phobos/std_file.html#.dirEntries">https://dlang.org/phobos/std_file.html#.dirEntries</a></p>
+<h2 id="go">Go</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">a1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadDir</span>(<span style="color:#e6db74">&#34;.&#34;</span>)
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">a1</span> {
+      <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Name</span>()
+      println(<span style="color:#a6e22e">s1</span>)
+   }
+}
+</code></pre></div>
+<ul>
+<li><a href="https://golang.org/pkg/io/ioutil#ReadDir">https://golang.org/pkg/io/ioutil#ReadDir</a></li>
+<li><a href="https://golang.org/pkg/path/filepath#Glob">https://golang.org/pkg/path/filepath#Glob</a></li>
+</ul>
+<h2 id="julia">Julia</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jl" data-lang="jl"><span style="color:#75715e"># example 1</span>
+<span style="color:#66d9ef">for</span> s1<span style="color:#f92672"></span> <span style="color:#66d9ef">in</span> readdir<span style="color:#f92672"></span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">.</span><span style="color:#e6db74">&#34;</span>)
+   println<span style="color:#f92672"></span>(s1<span style="color:#f92672"></span>)
+<span style="color:#66d9ef">end</span>
+<span style="color:#75715e"># example 2</span>
+<span style="color:#66d9ef">for</span> s1<span style="color:#f92672"></span> <span style="color:#66d9ef">in</span> readdir<span style="color:#f92672"></span>()
+   println<span style="color:#f92672"></span>(s1<span style="color:#f92672"></span>)
+<span style="color:#66d9ef">end</span>
+</code></pre></div>
+<h2 id="nim">Nim</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> os
+<span style="color:#66d9ef">for</span> s1 <span style="color:#f92672">in</span> walkFiles(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">a.*</span><span style="color:#e6db74">&#34;</span>):
+   echo s1
+</code></pre></div>
+<p><a href="https://nim-lang.github.io/Nim/os#walkFiles.i,string">https://nim-lang.github.io/Nim/os#walkFiles.i,string</a></p>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$a1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">scandir</span>(<span style="color:#e6db74">&#39;.&#39;</span>);
+<span style="color:#a6e22e">print_r</span>($a1);
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span>$r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">opendir</span>(<span style="color:#e6db74">&#39;.&#39;</span>);
+<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+   $s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">readdir</span>($r1);
+   <span style="color:#66d9ef">if</span> ($s1 <span style="color:#f92672">===</span> <span style="color:#66d9ef">false</span>) {
+      <span style="color:#66d9ef">break</span>;
+   }
+   <span style="color:#a6e22e">var_dump</span>($s1);
+}
+<span style="color:#75715e"># example 3
+</span><span style="color:#75715e"></span>$a2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">glob</span>(<span style="color:#e6db74">&#39;a.*&#39;</span>);
+<span style="color:#a6e22e">print_r</span>($a2);
+</code></pre></div>
+<ul>
+<li><a href="https://php.net/function.glob">https://php.net/function.glob</a></li>
+<li><a href="https://php.net/function.opendir">https://php.net/function.opendir</a></li>
+<li><a href="https://php.net/function.scandir">https://php.net/function.scandir</a></li>
+</ul>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> os
+a1 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>listdir(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">.</span><span style="color:#e6db74">&#39;</span>)
+<span style="color:#66d9ef">print</span>(a1)
+</code></pre></div>
+<p><a href="https://docs.python.org/library/os.html#os.listdir">https://docs.python.org/library/os.html#os.listdir</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://hyperpolyglot.org/scripting2#dir-iterate">http://hyperpolyglot.org/scripting2#dir-iterate</a></li>
+<li><a href="https://www.programming-idioms.org/idiom/180/list-files-in-directory">https://www.programming-idioms.org/idiom/180/list-files-in-directory</a></li>
+<li><a href="https://rosettacode.org/wiki/Unix/ls">https://rosettacode.org/wiki/Unix/ls</a></li>
+<li><a href="https://rosettacode.org/wiki/Walk_a_directory/Non-recursively">https://rosettacode.org/wiki/Walk_a_directory/Non-recursively</a></li>
+</ul>
+
+
+</body>
+</html>

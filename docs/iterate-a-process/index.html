@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iterate a process &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Iterate a process</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+<a href="/autumn/topics/iterate">iterate</a>
+<a href="/autumn/topics/input-output">input-output</a>
+   <h2 id="go">Go</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;bufio&#34;</span>
+   <span style="color:#e6db74">&#34;os/exec&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">r1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;cal&#34;</span>)
+   <span style="color:#a6e22e">r2</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r1</span>.<span style="color:#a6e22e">StdoutPipe</span>()
+   <span style="color:#a6e22e">r1</span>.<span style="color:#a6e22e">Start</span>()
+   <span style="color:#a6e22e">r3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">r2</span>)
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">r3</span>.<span style="color:#a6e22e">Scan</span>() {
+      println(<span style="color:#a6e22e">r3</span>.<span style="color:#a6e22e">Text</span>())
+   }
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/bufio">https://golang.org/pkg/bufio</a></p>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$p1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">popen</span>(<span style="color:#e6db74">&#39;cal&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
+<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+   $s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgets</span>($p1);
+   <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">feof</span>($p1)) {
+      <span style="color:#66d9ef">break</span>;
+   }
+   <span style="color:#66d9ef">echo</span> $s1;
+}
+</code></pre></div>
+<ul>
+<li><a href="https://php.net/function.feof">https://php.net/function.feof</a></li>
+<li><a href="https://php.net/function.fgets">https://php.net/function.fgets</a></li>
+</ul>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> subprocess
+p1 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>Popen(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">cal</span><span style="color:#e6db74">&#39;</span>, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE, text<span style="color:#f92672">=</span>True)
+<span style="color:#66d9ef">for</span> s1 <span style="color:#f92672">in</span> p1<span style="color:#f92672">.</span>stdout:
+   <span style="color:#66d9ef">print</span>(s1, end<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#39;</span>)
+</code></pre></div>
+<ul>
+<li><a href="https://docs.python.org/library/subprocess.html#subprocess.check_output">https://docs.python.org/library/subprocess.html#subprocess.check_output</a></li>
+<li><a href="https://docs.python.org/library/subprocess.html#subprocess.Popen">https://docs.python.org/library/subprocess.html#subprocess.Popen</a></li>
+</ul>
+
+
+</body>
+</html>

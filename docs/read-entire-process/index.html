@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Read entire process &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Read entire process</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+<a href="/autumn/topics/input-output">input-output</a>
+   <h2 id="d">D</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.process<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">const</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;cal&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">const</span> s2 <span style="color:#f92672">=</span> executeShell<span style="color:#f92672">(</span>s1<span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">output</span><span style="color:#f92672">;</span>
+   write<span style="color:#f92672">(</span>s2<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+<p><a href="https://dlang.org/phobos/std_process.html#.executeShell">https://dlang.org/phobos/std_process.html#.executeShell</a></p>
+<h2 id="go">Go</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;os/exec&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">t1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;cal&#34;</span>)
+   <span style="color:#a6e22e">a1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">t1</span>.<span style="color:#a6e22e">Output</span>()
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s&#34;</span>, <span style="color:#a6e22e">a1</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/os/exec#Cmd.Output">https://golang.org/pkg/os/exec#Cmd.Output</a></p>
+<h2 id="julia">Julia</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jl" data-lang="jl">s1<span style="color:#f92672"></span> <span style="color:#f92672">=</span> read<span style="color:#f92672"></span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">c</span><span style="color:#e6db74">a</span><span style="color:#e6db74">l</span><span style="color:#e6db74">`</span>, String<span style="color:#f92672"></span>)
+print<span style="color:#f92672"></span>(s1<span style="color:#f92672"></span>)
+</code></pre></div>
+<p><a href="https://docs.julialang.org/en/v1/manual/running-external-programs">https://docs.julialang.org/en/v1/manual/running-external-programs</a></p>
+<h2 id="nim">Nim</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> osproc
+<span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">cal</span><span style="color:#e6db74">&#34;</span>.execCmdEx
+<span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> o1.output
+stdout.write s1
+</code></pre></div>
+<p><a href="https://nim-lang.github.io/Nim/osproc#execCmdEx,string,set%5BProcessOption%5D">https://nim-lang.github.io/Nim/osproc#execCmdEx,string,set[ProcessOption]</a></p>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">`cal`</span>;
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">shell_exec</span>(<span style="color:#e6db74">&#39;cal&#39;</span>);
+<span style="color:#75715e"># example 3
+</span><span style="color:#75715e"></span>$p1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">popen</span>(<span style="color:#e6db74">&#39;cal&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
+$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_contents</span>($p1);
+<span style="color:#75715e"># example 4
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">exec</span>(<span style="color:#e6db74">&#39;cal&#39;</span>, $a1);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1, $s2, $s3, $a1);
+</code></pre></div>
+<ul>
+<li><a href="https://php.net/function.exec">https://php.net/function.exec</a></li>
+<li><a href="https://php.net/function.shell-exec">https://php.net/function.shell-exec</a></li>
+<li><a href="https://php.net/function.stream-get-contents">https://php.net/function.stream-get-contents</a></li>
+<li><a href="https://php.net/language.operators.execution">https://php.net/language.operators.execution</a></li>
+</ul>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> subprocess
+s1 <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">cal</span><span style="color:#e6db74">&#39;</span>
+<span style="color:#75715e"># example 1</span>
+p1 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>check_output(s1)
+s2 <span style="color:#f92672">=</span> p1<span style="color:#f92672">.</span>decode()
+<span style="color:#75715e"># example 2</span>
+p2 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>Popen(s1, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE)
+s3 <span style="color:#f92672">=</span> p2<span style="color:#f92672">.</span>stdout<span style="color:#f92672">.</span>read()
+<span style="color:#75715e"># example 3</span>
+p3 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>Popen(s1, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE)
+a1 <span style="color:#f92672">=</span> p3<span style="color:#f92672">.</span>stdout<span style="color:#f92672">.</span>readlines()
+<span style="color:#75715e"># print</span>
+<span style="color:#66d9ef">print</span>(s2, s3, a1)
+</code></pre></div>
+<p><a href="https://docs.python.org/library/subprocess.html#subprocess.check_output">https://docs.python.org/library/subprocess.html#subprocess.check_output</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://hyperpolyglot.org/scripting2#cmd-subst">http://hyperpolyglot.org/scripting2#cmd-subst</a></li>
+<li><a href="https://rosettacode.org/wiki/Get_system_command_output">https://rosettacode.org/wiki/Get_system_command_output</a></li>
+</ul>
+
+
+</body>
+</html>

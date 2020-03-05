@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open a file &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Open a file</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+<a href="/autumn/topics/input-output">input-output</a>
+   <h2 id="d">D</h2>
+<p><a href="https://dlang.org/phobos/std_stdio#.File.open">https://dlang.org/phobos/std_stdio#.File.open</a></p>
+<h2 id="go">Go</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">r1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">r2</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
+   <span style="color:#75715e">// print
+</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">r1</span>, <span style="color:#a6e22e">r2</span>)
+}
+</code></pre></div>
+<ul>
+<li><a href="https://golang.org/pkg/os#Create">https://golang.org/pkg/os#Create</a></li>
+<li><a href="https://golang.org/pkg/os#Open">https://golang.org/pkg/os#Open</a></li>
+</ul>
+<h2 id="julia">Julia</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jl" data-lang="jl">r1<span style="color:#f92672"></span> <span style="color:#f92672">=</span> open<span style="color:#f92672"></span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">a</span><span style="color:#e6db74">.</span><span style="color:#e6db74">t</span><span style="color:#e6db74">x</span><span style="color:#e6db74">t</span><span style="color:#e6db74">&#34;</span>)
+show<span style="color:#f92672"></span>(r1<span style="color:#f92672"></span>)
+</code></pre></div>
+<h2 id="nim">Nim</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#75715e"># example 1</span>
+<span style="color:#66d9ef">var</span> r1 <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">a.txt</span><span style="color:#e6db74">&#34;</span>)
+<span style="color:#75715e"># example 2</span>
+<span style="color:#66d9ef">var</span> r2 <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">a.txt</span><span style="color:#e6db74">&#34;</span>, fmRead)
+<span style="color:#75715e"># example 3</span>
+<span style="color:#66d9ef">var</span> r3 <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">a.txt</span><span style="color:#e6db74">&#34;</span>, fmWrite)
+</code></pre></div>
+<p><a href="https://nim-lang.github.io/Nim/io#open,string,FileMode,int">https://nim-lang.github.io/Nim/io#open,string,FileMode,int</a></p>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e"># read
+</span><span style="color:#75715e"></span>$r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
+<span style="color:#75715e"># read and write
+</span><span style="color:#75715e"></span>$r2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>, <span style="color:#e6db74">&#39;r+&#39;</span>);
+<span style="color:#75715e"># write
+</span><span style="color:#75715e"></span>$r3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($r1, $r2, $r3);
+</code></pre></div>
+<p><a href="https://php.net/function.fopen">https://php.net/function.fopen</a></p>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># example 1</span>
+r1 <span style="color:#f92672">=</span> open(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">a.txt</span><span style="color:#e6db74">&#39;</span>)
+<span style="color:#75715e"># example 2</span>
+r2 <span style="color:#f92672">=</span> open(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">a.txt</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">w</span><span style="color:#e6db74">&#39;</span>)
+<span style="color:#75715e"># print</span>
+<span style="color:#66d9ef">print</span>(r1, r2, sep<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+</code></pre></div>
+<p><a href="https://docs.python.org/library/functions.html#open">https://docs.python.org/library/functions.html#open</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://hyperpolyglot.org/scripting2#open-read-bytes">http://hyperpolyglot.org/scripting2#open-read-bytes</a></li>
+<li><a href="http://hyperpolyglot.org/scripting2#open-write-bytes">http://hyperpolyglot.org/scripting2#open-write-bytes</a></li>
+</ul>
+
+
+</body>
+</html>

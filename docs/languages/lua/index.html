@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lua &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Lua</h1><h2 id="examples">Examples</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua">r1 <span style="color:#f92672">=</span> require(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">curl</span><span style="color:#e6db74">&#39;</span>)
+s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">http://speedtest.lax.hivelocity.net/100mb.file</span><span style="color:#e6db74">&#39;</span>
+r2 <span style="color:#f92672">=</span> io.open(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">100mb.file</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">w</span><span style="color:#e6db74">&#39;</span>)
+r1.easy{noprogress <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>, url <span style="color:#f92672">=</span> s1, writefunction <span style="color:#f92672">=</span> r2}:perform()
+</code></pre></div>
+<h2 id="issues">Issues</h2>
+<p>Better binary support for Windows</p>
+<p>BOUNTY $800 2020-03-02</p>
+<p><a href="https://github.com/luarocks/luarocks/issues/788">https://github.com/luarocks/luarocks/issues/788</a></p>
+<h2 id="setup">Setup</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">export LUA_PATH<span style="color:#f92672">=</span>/usr/local/share/lua/5.3/?.lua
+export LUA_CPATH<span style="color:#f92672">=</span>/usr/local/lib/lua/5.3/?.so
+</code></pre></div>
+<ul>
+<li><a href="https://github.com/luarocks/luarocks/wiki/Installation-instructions-for-Unix">https://github.com/luarocks/luarocks/wiki/Installation-instructions-for-Unix</a></li>
+<li><a href="https://github.com/luarocks/luarocks/wiki/Using-LuaRocks">https://github.com/luarocks/luarocks/wiki/Using-LuaRocks</a></li>
+<li><a href="https://sourceforge.net/projects/luabinaries/files">https://sourceforge.net/projects/luabinaries/files</a></li>
+</ul>
+<h2 id="stars">Stars</h2>
+<p><a href="https://github.com/Kong/kong">https://github.com/Kong/kong</a></p>
+
+
+</body>
+</html>

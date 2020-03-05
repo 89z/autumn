@@ -1,0 +1,8 @@
+{{ define "main" -}}
+<h1>{{ .Title }}</h1>
+<time>{{ .Lastmod.Format "Mon Jan 2 15:04:05 2006" }}</time>
+   {{- range .Params.topics }}
+<a href="/autumn/topics/{{ . }}">{{ . }}</a>
+   {{- end }}
+   {{ .Content }}
+{{ end }}

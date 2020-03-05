@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Format time &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Format time</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+<a href="/autumn/topics/time">time</a>
+   <h2 id="go">Go</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;time&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Now</span>()
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">String</span>()
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Format</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">ANSIC</span>)
+   <span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Format</span>(<span style="color:#e6db74">&#34;Mon Jan 2 2006 15:04:05&#34;</span>)
+   <span style="color:#75715e">// example 4
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">a1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">MarshalText</span>()
+   <span style="color:#a6e22e">s4</span> <span style="color:#f92672">:=</span> string(<span style="color:#a6e22e">a1</span>)
+   <span style="color:#75715e">// print
+</span><span style="color:#75715e"></span>   print(<span style="color:#a6e22e">s1</span>, <span style="color:#e6db74">&#34;\n&#34;</span>, <span style="color:#a6e22e">s2</span>, <span style="color:#e6db74">&#34;\n&#34;</span>, <span style="color:#a6e22e">s3</span>, <span style="color:#e6db74">&#34;\n&#34;</span>, <span style="color:#a6e22e">s4</span>, <span style="color:#e6db74">&#34;\n&#34;</span>)
+}
+</code></pre></div>
+<ul>
+<li><a href="https://golang.org/pkg/time#ANSIC">https://golang.org/pkg/time#ANSIC</a></li>
+<li><a href="https://golang.org/pkg/time#Time.Format">https://golang.org/pkg/time#Time.Format</a></li>
+<li><a href="https://golang.org/pkg/time#Time.MarshalText">https://golang.org/pkg/time#Time.MarshalText</a></li>
+</ul>
+<h2 id="javascript">JavaScript</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">86400</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">o1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#a6e22e">n1</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>);
+<span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">toString</span>();
+<span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">toISOString</span>();
+<span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">toDateString</span>();
+<span style="color:#75715e">// example 4
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s4</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">toLocaleString</span>();
+<span style="color:#75715e">// print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">s3</span>, <span style="color:#a6e22e">s4</span>);
+</code></pre></div>
+<ul>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toDateString">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toDateString</a>
+</li>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toISOString">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toISOString</a>
+</li>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString</a>
+</li>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toString">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toString</a>
+</li>
+</ul>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strftime</span>(<span style="color:#e6db74">&#39;%F&#39;</span>);
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">date</span>(<span style="color:#a6e22e">DATE_W3C</span>, <span style="color:#ae81ff">86400</span>);
+<span style="color:#75715e"># example 3
+</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">date</span>(<span style="color:#e6db74">&#39;c&#39;</span>);
+<span style="color:#75715e"># example 4
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">date_default_timezone_set</span>(<span style="color:#a6e22e">getenv</span>(<span style="color:#e6db74">&#39;TZ&#39;</span>));
+$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">date</span>(<span style="color:#e6db74">&#39;c&#39;</span>);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1, $s2, $s3, $s4);
+</code></pre></div>
+<ul>
+<li><a href="https://php.net/function.date">https://php.net/function.date</a></li>
+<li><a href="https://php.net/function.date-format">https://php.net/function.date-format</a></li>
+<li><a href="https://php.net/function.gmdate">https://php.net/function.gmdate</a></li>
+<li><a href="https://php.net/function.gmstrftime">https://php.net/function.gmstrftime</a></li>
+<li><a href="https://php.net/function.strftime">https://php.net/function.strftime</a></li>
+</ul>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> datetime<span style="color:#f92672">,</span> email.utils<span style="color:#f92672">,</span> time
+m1 <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>date
+m2 <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>datetime
+m3 <span style="color:#f92672">=</span> email<span style="color:#f92672">.</span>utils
+s1 <span style="color:#f92672">=</span> m1<span style="color:#f92672">.</span>today()<span style="color:#f92672">.</span>isoformat()
+s2 <span style="color:#f92672">=</span> m2<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>isoformat()
+s3 <span style="color:#f92672">=</span> m2<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>astimezone()<span style="color:#f92672">.</span>isoformat()
+s4 <span style="color:#f92672">=</span> m3<span style="color:#f92672">.</span>formatdate(localtime <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>)
+s5 <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>asctime()
+t<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%</span><span style="color:#e6db74">Y-</span><span style="color:#e6db74">%</span><span style="color:#e6db74">m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%</span><span style="color:#e6db74">H:</span><span style="color:#e6db74">%</span><span style="color:#e6db74">M:</span><span style="color:#e6db74">%</span><span style="color:#e6db74">S</span><span style="color:#e6db74">&#39;</span>)
+</code></pre></div>
+<ul>
+<li><a href="https://docs.python.org/library/datetime.html#datetime.date.isoformat">https://docs.python.org/library/datetime.html#datetime.date.isoformat</a></li>
+<li><a href="https://docs.python.org/library/datetime.html#datetime.date.strftime">https://docs.python.org/library/datetime.html#datetime.date.strftime</a></li>
+<li><a href="https://docs.python.org/library/datetime.html#datetime.datetime.isoformat">https://docs.python.org/library/datetime.html#datetime.datetime.isoformat</a></li>
+<li><a href="https://docs.python.org/library/email.utils.html#email.utils.formatdate">https://docs.python.org/library/email.utils.html#email.utils.formatdate</a></li>
+<li><a href="https://docs.python.org/library/time.html#time.asctime">https://docs.python.org/library/time.html#time.asctime</a></li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://hyperpolyglot.org/c#fmt-datetime">http://hyperpolyglot.org/c#fmt-datetime</a></li>
+<li><a href="http://hyperpolyglot.org/scripting#fmt-datetime">http://hyperpolyglot.org/scripting#fmt-datetime</a></li>
+<li><a href="https://www.programming-idioms.org/idiom/99/format-date">https://www.programming-idioms.org/idiom/99/format-date</a></li>
+<li><a href="https://rosettacode.org/wiki/Date_format">https://rosettacode.org/wiki/Date_format</a></li>
+<li><a href="https://rosettacode.org/wiki/Show_the_epoch">https://rosettacode.org/wiki/Show_the_epoch</a></li>
+</ul>
+
+
+</body>
+</html>

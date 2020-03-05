@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D cURL static &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>D cURL static</h1>
+<time>Wed Mar 4 18:45:59 2020</time>
+   <p>The first choice for this task is <code>std.net.curl</code>. However D does not provide a
+static library:</p>
+<p><a href="https://issues.dlang.org/show_bug.cgi?id=15841">https://issues.dlang.org/show_bug.cgi?id=15841</a></p>
+<p>We can build cURL ourself:</p>
+<pre><code>./buildconf
+./configure --host=x86_64-w64-mingw32 --disable-shared
+make LDFLAGS=-all-static
+</code></pre><h2 id="references">References</h2>
+<ul>
+<li><a href="https://dlang.org/blog/2017/10/25/dmd-windows-and-c">https://dlang.org/blog/2017/10/25/dmd-windows-and-c</a></li>
+<li><a href="https://github.com/ldc-developers/ldc/issues/3260">https://github.com/ldc-developers/ldc/issues/3260</a></li>
+</ul>
+
+
+</body>
+</html>

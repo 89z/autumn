@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/cup/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>R</h1><h2 id="examples">Examples</h2>
+<p>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">install.packages</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">RCurl&#34;</span>,repos <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">http://cran.us.r-project.org&#34;</span>)
+</code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">RCurl&#39;</span>)
+webpage <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">getURL</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">http://speedtest.lax.hivelocity.net&#34;</span>)
+<span style="color:#a6e22e">cat</span>(webpage)
+</code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">cat</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">sunday\n&#34;</span>)
+<span style="color:#a6e22e">message</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">monday&#34;</span>)
+<span style="color:#a6e22e">writeLines</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">tuesday&#34;</span>)
+</code></pre></div></p>
+<h2 id="issues">Issues</h2>
+<dl>
+<dt>R_base</dt>
+<dd><a href="https://cygwin.com/ml/cygwin/2019-12/msg00117.html">https://cygwin.com/ml/cygwin/2019-12/msg00117.html</a></dd>
+<dt>Setting LC_CTYPE=en_US.UTF-8 failed</dt>
+<dd><a href="https://hypatia.math.ethz.ch/pipermail/r-devel/2019-June/077955.html">https://hypatia.math.ethz.ch/pipermail/r-devel/2019-June/077955.html</a></dd>
+</dl>
+<h2 id="setup">Setup</h2>
+<p>Mingw:</p>
+<pre><code>innoextract R-*-win.exe
+</code></pre><p><a href="https://cran.cnr.berkeley.edu/bin/windows/base">https://cran.cnr.berkeley.edu/bin/windows/base</a></p>
+<p>Cygwin:</p>
+<pre><code>libgomp1
+libicu65
+liblapack0
+libopenblas
+libtirpc3
+R
+</code></pre><pre><code>PATH=$PATH:/usr/lib/lapack
+</code></pre><h2 id="stars">Stars</h2>
+<p><a href="https://github.com/tidyverse/ggplot2">https://github.com/tidyverse/ggplot2</a></p>
+
+
+</body>
+</html>

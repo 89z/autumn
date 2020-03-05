@@ -1,0 +1,34 @@
+---
+title: URL parts
+topics: [string]
+languages: [go, javascript, php, python]
+---
+
+## Go
+
+{{< r "a.go" >}}
+
+<https://golang.org/pkg/net/url#Parse>
+
+## JavaScript
+
+{{< r "a.js" >}}
+
+<https://developer.mozilla.org/Web/API/URL/URL>
+
+## PHP
+
+{{< r "a.php" >}}
+
+<https://php.net/function.parse-url>
+
+## Python
+
+{{< r "a.py" >}}
+
+<https://docs.python.org/library/urllib.parse.html#urllib.parse.urlparse>
+
+## References
+
+- <http://hyperpolyglot.org/scripting2#parse-url>
+- <https://rosettacode.org/wiki/URL_parser>
