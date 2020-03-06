@@ -2,7 +2,10 @@
 title: New language
 ---
 
-<https://github.com/search?q=stars:%3E=1000+pushed:%3E=2020-01-03>
+~~~
+stars:>=1000
+pushed:>=2020-02-05
+~~~
 
 ## JavaScript 308921 freeCodeCamp/freeCodeCamp
 

@@ -21,10 +21,6 @@ Setting LC_CTYPE=en_US.UTF-8 failed
 
 Mingw:
 
-~~~
-innoextract R-*-win.exe
-~~~
-
 <https://cran.cnr.berkeley.edu/bin/windows/base>
 
 Cygwin:

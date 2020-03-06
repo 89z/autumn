@@ -9,10 +9,6 @@ stars: 23867
 
 ## Install
 
-~~~
-innoextract julia-latest-win64.exe
-~~~
-
 - <https://github.com/JuliaLang/julia/issues/34047>
 - <https://julialang.org/downloads/nightlies>
 

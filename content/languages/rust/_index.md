@@ -3,25 +3,29 @@ title: Rust
 stars: 39407
 ---
 
-## Examples
+Rust does not have Map literals:
+
+<https://github.com/rust-lang/rfcs/issues/542>
+
+but it does have `struct`:
 
 {{< r "a.rs" >}}
 
 <https://doc.rust-lang.org/book/ch05-02-example-structs.html>
 
-## Issues
+and `match`:
 
-Add hashmap, hashset, treemap, and treeset macros
+<https://doc.rust-lang.org/book/match.html>
 
-BOUNTY $800 2020-03-02
+Go `struct` allows missing fields:
 
-<https://github.com/rust-lang/rfcs/issues/542>
+{{< r "a.go" >}}
+
+However Rust does not:
+
+{{< r "a.rs" >}}
 
 ## Setup
-
-~~~
-lessmsi x rust-*-x86_64-pc-windows-gnu.msi
-~~~
 
 <https://forge.rust-lang.org/infra/other-installation-methods>
 

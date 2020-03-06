@@ -15,18 +15,11 @@ Write to console:
 
 ## Issues
 
-Print array
-: <https://github.com/dotnet/runtime/issues/425>
-: <https://github.com/mono/mono/issues/19073>
+String literal escaping
 
-String representation
-: <https://github.com/dotnet/runtime/issues/33007>
+<https://google.com/search?q=cache:oBpT_uJnrL0J:https://github.com>
 
 ## Setup
-
-~~~
-lessmsi x mono-*.msi
-~~~
 
 - <https://docs.microsoft.com/dotnet/api?view=netframework-4.8>
 - <https://mono-project.com/download>

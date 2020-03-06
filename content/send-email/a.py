@@ -1,12 +1,12 @@
 import email.message, smtplib
-def m_send(m_from, m_to, m_subject, m_content):
+def f_send(s_from, s_to, s_subject, s_content):
    msg = email.message.EmailMessage()
-   msg['From'] = m_from
-   msg['To'] = m_to
-   msg['Subject'] = m_subject
-   msg.set_content(m_content)
+   msg['From'] = s_from
+   msg['To'] = s_to
+   msg['Subject'] = s_subject
+   msg.set_content(s_content)
    pword = input('password: ')
    mua = smtplib.SMTP('smtp.gmail.com')
    mua.starttls()
-   mua.login(m_from, pword)
+   mua.login(s_from, pword)
    mua.send_message(msg)
