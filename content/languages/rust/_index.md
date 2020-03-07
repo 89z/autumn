@@ -1,6 +1,6 @@
 ---
 title: Rust
-stars: 39407
+stars: 43062
 ---
 
 Rust does not have Map literals:
@@ -23,7 +23,13 @@ Go `struct` allows missing fields:
 
 However Rust does not:
 
-{{< r "a.rs" >}}
+{{< r "a2.rs" >}}
+
+Instead requiring something like this:
+
+{{< r "a3.rs" >}}
+
+<https://github.com/rust-lang/rfcs/issues/2875>
 
 ## Setup
 

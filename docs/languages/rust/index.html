@@ -31,10 +31,8 @@
    <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Pref</span> {
       k: String,
       n: <span style="color:#66d9ef">u8</span>,
-      b: <span style="color:#66d9ef">bool</span>
    }
-   <span style="color:#75715e">// error[E0063]: missing field `b` in initializer of `main::Pref`
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> Pref { k: <span style="color:#e6db74">&#34;Sun&#34;</span>.to_string(), n: <span style="color:#ae81ff">10</span> };
+   <span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> Pref { k: <span style="color:#e6db74">&#34;Sun&#34;</span>.to_string(), n: <span style="color:#ae81ff">10</span> };
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o1);
 }
 </code></pre></div>
@@ -48,12 +46,12 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Pref</span> <span style="color:#66d9ef">struct</span>{
+   <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Pref</span> <span style="color:#66d9ef">struct</span> {
       <span style="color:#a6e22e">k</span> <span style="color:#66d9ef">string</span>
       <span style="color:#a6e22e">n</span> <span style="color:#66d9ef">int</span>
       <span style="color:#a6e22e">b</span> <span style="color:#66d9ef">bool</span>
    }
-   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pref</span>{ <span style="color:#a6e22e">k</span>: <span style="color:#e6db74">&#34;Sun&#34;</span>, <span style="color:#a6e22e">n</span>: <span style="color:#ae81ff">10</span> }
+   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pref</span> { <span style="color:#a6e22e">k</span>: <span style="color:#e6db74">&#34;Sun&#34;</span>, <span style="color:#a6e22e">n</span>: <span style="color:#ae81ff">10</span> }
    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%+v\n&#34;</span>, <span style="color:#a6e22e">o1</span>)
 }
 </code></pre></div>
@@ -73,6 +71,22 @@
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o1);
 }
 </code></pre></div>
+<p>Instead requiring something like this:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#75715e">#[</span><span style="color:#75715e">derive(Debug, Default)</span><span style="color:#75715e">]</span>
+   <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Pref</span> {
+      k: String,
+      n: <span style="color:#66d9ef">u8</span>,
+      b: <span style="color:#66d9ef">bool</span>
+   }
+   <span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> Pref { k: <span style="color:#e6db74">&#34;Sun&#34;</span>.to_string(), n: <span style="color:#ae81ff">10</span>, ..Default::default() };
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o1);
+}
+</code></pre></div>
+<p><a href="https://github.com/rust-lang/rfcs/issues/2875">https://github.com/rust-lang/rfcs/issues/2875</a></p>
 <h2 id="setup">Setup</h2>
 <p><a href="https://forge.rust-lang.org/infra/other-installation-methods">https://forge.rust-lang.org/infra/other-installation-methods</a></p>
 <h2 id="stars">Stars</h2>
