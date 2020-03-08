@@ -206,9 +206,7 @@ Not a compiled language.
 
 ## Groovy 10208 gradle/gradle
 
-native-image: allow Clang or GCC with Windows
-
-<https://github.com/oracle/graal/issues/2206>
+[native-image: allow Clang or GCC with Windows](/autumn/languages/java)
 
 ## PowerShell 9764 lukesampson/scoop
 
@@ -264,9 +262,23 @@ Old
 
 ## Reason 6361 revery-ui/revery
 
-Transpile to Ocaml
+Looking here:
 
-<https://github.com/facebook/reason/issues/2548>
+<https://en.wikipedia.org/wiki/Reason_(syntax_extension_for_OCaml)>
+
+I see this:
+
+> Reason offers a syntax familiar to JavaScript programmers, and transpiles to
+> OCaml.
+
+However I am having trouble finding instruction on how to transpile Reason to
+Ocaml. I look here:
+
+<https://reasonml.github.io/docs/en/installation>
+
+but everything seems to be about JavaScript.
+
+<https://github.com/facebook/reason>
 
 ## Roff 6218 max2max/freess
 

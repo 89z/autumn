@@ -20,16 +20,26 @@
          <a href="https://github.com/muv1/autumn">Repo</a>
       </nav>
    </header>
-<h1>Kotlin</h1><h2 id="examples">Examples</h2>
-<p>Invoke a file:</p>
-<pre><code>kotlinc.bat
-</code></pre><p>Write to console:</p>
+<h1>Kotlin</h1><h2 id="write-to-console">Write to console</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">fun <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
    println<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sunday&#34;</span><span style="color:#f92672">)</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><h2 id="issues">Issues</h2>
-<p>Choice of C compiler</p>
-<p><a href="https://github.com/JetBrains/kotlin-native/issues/3844">https://github.com/JetBrains/kotlin-native/issues/3844</a></p>
+<p>I tried running a command like this:</p>
+<pre><code>kotlinc.bat a.kt
+</code></pre><p>and I get this result:</p>
+<pre><code>Downloading native dependencies (LLVM, sysroot etc). This is a one-time action 
+performed only on the first run of the compiler.
+Downloading dependency: https://download.jetbrains.com/kotlin/native/
+   msys2-mingw-w64-x86_64-clang-llvm-lld-compiler_rt-8.0.1.zip
+   (206.7 MiB/900.5 MiB).
+</code></pre><p>This raises a couple of questions. First, why is this dependency 900 MB? Other
+options are under 100 MB:</p>
+<p><a href="https://musl.cc">https://musl.cc</a></p>
+<p>Second, should I choose to use my own C compiler, why cant I? It seems no option
+is currently available to do that.
+Choice of C compiler</p>
+<p><a href="https://github.com/JetBrains/kotlin-native">https://github.com/JetBrains/kotlin-native</a></p>
 <h2 id="setup">Setup</h2>
 <ul>
 <li><a href="https://github.com/JetBrains/kotlin/releases/latest">https://github.com/JetBrains/kotlin/releases/latest</a></li>

@@ -32,9 +32,9 @@ Access is denied.
 
 ## MLton
 
-New release
+The project has no recent release.
 
-<https://github.com/MLton/mlton/issues/370>
+<https://github.com/MLton/mlton>
 
 ## Poly/ML
 
@@ -44,9 +44,9 @@ polyc
 
 ## Moscow ML
 
-New release
+The project has no recent release.
 
-<https://github.com/kfl/mosml/issues/59>
+<https://github.com/kfl/mosml>
 
 ## MLKit
 

@@ -53,8 +53,42 @@
 <pre><code>error: can't find main(String[]) method in class: app
 </code></pre><p><a href="https://google.com/search?tbs=qdr:m&amp;q=java+hello+world">https://google.com/search?tbs=qdr:m&amp;q=java+hello+world</a></p>
 <h2 id="graal">Graal</h2>
-<p>native-image: allow Clang or GCC with Windows</p>
-<p><a href="https://github.com/oracle/graal/issues/2206">https://github.com/oracle/graal/issues/2206</a></p>
+<p>If I try to use <code>native-image</code>, I get this:</p>
+<pre><code>&gt; type HelloWorld.java
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println(&quot;Hello, World!&quot;);
+  }
+}
+
+&gt; bin\javac HelloWorld.java
+
+&gt; bin\native-image HelloWorld
+[helloworld:2924]    classlist:     960.11 ms,  1.19 GB
+[helloworld:2924]        (cap):      84.78 ms,  1.19 GB
+[helloworld:2924]        setup:     327.89 ms,  1.19 GB
+Error: Unable to compile C-ABI query code. Make sure native software development
+toolchain is installed on your system.
+</code></pre><p>Running again gives this:</p>
+<pre><code>&gt; bin\native-image -H:+ReportExceptionStackTraces HelloWorld
+[...]
+Caused by: java.io.IOException: Cannot run program &quot;CL&quot; (in directory
+&quot;C:\Users\Steven\AppData\Local\Temp\SVM-8913641224192734383&quot;): CreateProcess
+error=2, The system cannot find the file specified
+   at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+   at com.oracle.svm.hosted.c.codegen.CCompilerInvoker.
+   startCommand(CCompilerInvoker.java:158)
+</code></pre><p>Its true, I dont have <code>CL.exe</code> on my system, but I do have Clang and GCC:</p>
+<ul>
+<li><a href="https://github.com/mstorsjo/llvm-mingw">https://github.com/mstorsjo/llvm-mingw</a></li>
+<li><a href="https://musl.cc">https://musl.cc</a></li>
+</ul>
+<p>It seems currently, with Windows only the MSVC compiler is allowed:</p>
+<p><a href="https://docs.microsoft.com/cpp/build/reference/compiling-a-c-cpp-program">https://docs.microsoft.com/cpp/build/reference/compiling-a-c-cpp-program</a></p>
+<a href="https://github.com/oracle/graal/blob/fb9b1d3b/substratevm/src/com.oracle.svm.hosted/src/com/oracle/svm/hosted/c/codegen/CCompilerInvoker.java#L106-L108">https://github.com/oracle/graal/blob/fb9b1d3b/substratevm/src/com.oracle.svm.hosted/src/com/oracle/svm/hosted/c/codegen/CCompilerInvoker.java#L106-L108</a>
+
+<p>I think people should be able to choose what compiler they use.
+native-image: allow Clang or GCC with Windows</p>
 <h2 id="setup">Setup</h2>
 <p><a href="https://jdk.java.net">https://jdk.java.net</a></p>
 <h2 id="stars">Stars</h2>
