@@ -38,9 +38,13 @@ The project has no recent release.
 
 ## Poly/ML
 
-polyc
+This page says I can use `polyc` to build stand-alone application:
 
-<https://github.com/polyml/polyml/issues/124>
+<https://polyml.org/FAQ#standalone>
+
+but this release does not have that file:
+
+<https://github.com/polyml/polyml/releases/download/v5.8/PolyML5.8-64bit.msi>
 
 ## Moscow ML
 

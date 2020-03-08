@@ -20,35 +20,29 @@
          <a href="https://github.com/muv1/autumn">Repo</a>
       </nav>
    </header>
-<h1>Pascal</h1><h2 id="examples">Examples</h2>
-<p>HTTP GET to console:</p>
-
-
-
-<pre><code class="language-pas" data-lang="pas">uses fphttpclient;
-var m1: TFPHTTPClient;
-var s1: string;
+<h1>Pascal</h1><h2 id="free-pascal">Free Pascal</h2>
+<p>Old</p>
+<p><a href="https://sourceforge.net/projects/freepascal/files/Win32">https://sourceforge.net/projects/freepascal/files/Win32</a></p>
+<h2 id="xd-pascal">XD Pascal</h2>
+<p>First, binary files should be moved out of version control:</p>
+<p><a href="https://github.com/vtereshkov/xdpw">https://github.com/vtereshkov/xdpw</a></p>
+<p>Second, with a file like this:</p>
+<pre><code>program Hello;
+uses fphttpclient;
 begin
-   m1 := TFPHTTPClient.Create(nil);
-   s1 := m1.get('https://speedtest.lax.hivelocity.net');
-   writeln(s1);
+   WriteLn('hello world!');
 end.
-</code></pre>
-<p>Compiler:</p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">i386-win32/fpc -Fu<span style="color:#e6db74">&#39;../units/i386-win32/*&#39;</span> a.pas
-</code></pre></div>
-<h2 id="issues">Issues</h2>
-<dl>
-<dt>Move binary files out of version control</dt>
-<dd><a href="https://github.com/vtereshkov/xdpw/issues/13">https://github.com/vtereshkov/xdpw/issues/13</a></dd>
-<dt>Old</dt>
-<dd><a href="https://sourceforge.net/projects/freepascal/files/Win32">https://sourceforge.net/projects/freepascal/files/Win32</a></dd>
-<dt>uses - unable to open source file</dt>
-<dd><a href="https://github.com/vtereshkov/xdpw/issues/14">https://github.com/vtereshkov/xdpw/issues/14</a></dd>
-</dl>
+</code></pre><p>I get this result:</p>
+<pre><code>$ xdpw a.pas
+XD Pascal for Windows 0.11
+Copyright (c) 2009-2010, 2019-2020, Vasiliy Tereshkov
+Compiling system.pas
+a.pas (3) Error: Unable to open source file FPHTTPCLIENT.pas
+</code></pre><p>but this is confusing as that file doesnt exist:</p>
+<pre><code>units\i386-win32\fcl-web\fphttpclient.o
+units\i386-win32\fcl-web\fphttpclient.ppu
+units\i386-win32\fcl-web\fphttpclient.rsj
+</code></pre><p><a href="https://sourceforge.net/projects/freepascal">https://sourceforge.net/projects/freepascal</a></p>
 <h2 id="setup">Setup</h2>
 <ul>
 <li><a href="https://freepascal.org/docs-html/current/user/usersu7.html">https://freepascal.org/docs-html/current/user/usersu7.html</a></li>
