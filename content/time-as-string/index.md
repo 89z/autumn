@@ -1,5 +1,5 @@
 ---
-title: Format time
+title: Time as a string
 topics: [time]
 languages: [go, javascript, php, python]
 ---

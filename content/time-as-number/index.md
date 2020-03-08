@@ -1,5 +1,5 @@
 ---
-title: Time to number
+title: Time as a number
 topics: [time, number]
 languages: [go, javascript, php, python]
 ---

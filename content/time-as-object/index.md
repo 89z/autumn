@@ -1,5 +1,5 @@
 ---
-title: Time types
+title: Time as an object
 topics: [time, type]
 languages: [d, go, javascript, php, python]
 ---
