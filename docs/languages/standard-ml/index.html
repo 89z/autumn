@@ -21,8 +21,18 @@
       </nav>
    </header>
 <h1>Standard ML</h1><h2 id="cakeml">CakeML</h2>
-<p>Mingw</p>
-<p><a href="https://github.com/CakeML/cakeml/issues/729">https://github.com/CakeML/cakeml/issues/729</a></p>
+<p>If I compile like this:</p>
+<pre><code>$ make CC=x86_64-w64-mingw32-gcc
+x86_64-w64-mingw32-gcc    -c -o cake.o cake.S
+x86_64-w64-mingw32-gcc    -c -o basis_ffi.o basis_ffi.c
+x86_64-w64-mingw32-gcc  cake.o basis_ffi.o   -o cake.exe
+</code></pre><p>I get this result in a Cygwin console:</p>
+<pre><code>$ ./cake
+sh: ./cake: cannot execute binary file: Exec format error
+</code></pre><p>and this result in a Windows console:</p>
+<pre><code>cake.exe is not a valid Win32 application.
+Access is denied.
+</code></pre><p><a href="https://github.com/CakeML/cakeml">https://github.com/CakeML/cakeml</a></p>
 <h2 id="mlton">MLton</h2>
 <p>New release</p>
 <p><a href="https://github.com/MLton/mlton/issues/370">https://github.com/MLton/mlton/issues/370</a></p>
@@ -33,8 +43,8 @@
 <p>New release</p>
 <p><a href="https://github.com/kfl/mosml/issues/59">https://github.com/kfl/mosml/issues/59</a></p>
 <h2 id="mlkit">MLKit</h2>
-<p>Windows</p>
-<p><a href="https://github.com/melsman/mlkit/issues/36">https://github.com/melsman/mlkit/issues/36</a></p>
+<p>A Windows version is not available.</p>
+<p><a href="https://github.com/melsman/mlkit">https://github.com/melsman/mlkit</a></p>
 <h2 id="setup">Setup</h2>
 <p><a href="https://cs.lmu.edu/~ray/notes/introml">https://cs.lmu.edu/~ray/notes/introml</a></p>
 <h2 id="stars">Stars</h2>

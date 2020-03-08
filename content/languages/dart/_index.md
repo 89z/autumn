@@ -3,22 +3,29 @@ title: Dart
 stars: 80588
 ---
 
-## Download
+Dart can print a string:
 
-<https://dart.dev/tools/sdk/archive>
+~~~dart
+main () {
+   var s1 = 'sunday';
+   print(s1); // sunday
+}
+~~~
 
-## Issues
+but it seems to have no way to print a string representation. Other languages
+can do this, like Python:
 
-Dart platform size
-: <https://github.com/dart-lang/sdk/issues/39439>
+~~~py
+s1 = repr('sunday')
+print(s1) # 'sunday'
+~~~
 
-String representation
-: BOUNTY $800 2020-03-02
-: <https://github.com/dart-lang/sdk/issues/40555>
+<https://github.com/dart-lang/sdk>
 
-## Reference
+## Setup
 
-<https://api.dartlang.org>
+- <https://api.dartlang.org>
+- <https://dart.dev/tools/sdk/archive>
 
 ## Stars
 

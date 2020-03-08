@@ -3,27 +3,42 @@ title: C#
 stars: 43133
 ---
 
-## Examples
+## DotNet
 
-Invoke a file:
+<https://docs.microsoft.com/dotnet/api?view=netframework-4.8>
 
-{{< r "cs.sh" >}}
+## Mono
 
-Write to console:
+~~~
+mcs.bat a.cs
+~~~
+
+<https://mono-project.com/download>
+
+## Roslyn
+
+Using this file:
 
 {{< r "a.cs" >}}
 
-## Issues
+I can compile like this:
 
-String literal escaping
+~~~
+tools/csc /r:tools/Microsoft.CodeAnalysis.CSharp.dll \
+/r:C:/Windows/Microsoft.NET/Framework64/v4.0.30319/netstandard.dll a.cs
+~~~
 
-<https://google.com/search?q=cache:oBpT_uJnrL0J:https://github.com>
+whats interesting is the resultant file requires these to be in the same
+directory:
 
-## Setup
+~~~
+Microsoft.CodeAnalysis.dll
+Microsoft.CodeAnalysis.CSharp.dll
+~~~
 
-- <https://docs.microsoft.com/dotnet/api?view=netframework-4.8>
-- <https://mono-project.com/download>
-- <https://nuget.org/packages/Microsoft.Net.Compilers>
+even just having them in the PATH doesnt seem to do it.
+
+<https://nuget.org/packages/Microsoft.Net.Compilers>
 
 ## Stars
 
