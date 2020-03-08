@@ -24,7 +24,7 @@
 <p><a href="https://github.com/login">https://github.com/login</a></p>
 <p>part of it looks like this:</p>
 <pre><code>name=&quot;authenticity_token&quot; value=&quot;WwmEvmIUMYN6m1cxUDh7GgeCKEwkAnGPRYcE2N/HAv5g7A&quot;
-</code></pre><p>what are different way to get the value? The obvious choice would be HTML:</p>
+</code></pre><p>what are different ways to get the value? The obvious choice would be HTML:</p>
 
 
 
@@ -49,7 +49,9 @@ $o1<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">loadHTMLF
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>(<span style="color:#e6db74">&#39;https://github.com/login&#39;</span>);
+$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_repeat</span>(<span style="color:#e6db74">&#39;Sunday&#34;&#39;</span>, <span style="color:#ae81ff">2</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">18</span>);
+$s1 <span style="color:#f92672">.=</span> <span style="color:#a6e22e">file_get_contents</span>(<span style="color:#e6db74">&#39;https://github.com/login&#39;</span>);
+$t1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
 $s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtok</span>($s1, <span style="color:#e6db74">&#39;&#34;&#39;</span>);
 <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
    <span style="color:#66d9ef">if</span> ($s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;authenticity_token&#39;</span>) {
@@ -59,14 +61,17 @@ $s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtok</spa
    }
    $s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtok</span>(<span style="color:#e6db74">&#39;&#34;&#39;</span>);
 }
-<span style="color:#66d9ef">echo</span> $s3, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+$t2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
+<span style="color:#66d9ef">echo</span> $t2 <span style="color:#f92672">-</span> $t1, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&#34;</span>, $s3, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 </code></pre></div>
-<p>Another option is to split into array:</p>
+<p>Another option is to <code>foreach</code> an array:</p>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>(<span style="color:#e6db74">&#39;https://github.com/login&#39;</span>);
+$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_repeat</span>(<span style="color:#e6db74">&#39;Sunday&#34;&#39;</span>, <span style="color:#ae81ff">2</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">18</span>);
+$s1 <span style="color:#f92672">.=</span> <span style="color:#a6e22e">file_get_contents</span>(<span style="color:#e6db74">&#39;https://github.com/login&#39;</span>);
+$t1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
 $a1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">explode</span>(<span style="color:#e6db74">&#39;&#34;&#39;</span>, $s1);
 <span style="color:#66d9ef">foreach</span> ($a1 <span style="color:#66d9ef">as</span> $n1 <span style="color:#f92672">=&gt;</span> $s2) {
    <span style="color:#66d9ef">if</span> ($s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;authenticity_token&#39;</span>) {
@@ -74,9 +79,42 @@ $a1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">explode</sp
       <span style="color:#66d9ef">break</span>;
    }
 }
-<span style="color:#66d9ef">echo</span> $s3, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+$t2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
+<span style="color:#66d9ef">echo</span> $t2 <span style="color:#f92672">-</span> $t1, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&#34;</span>, $s3, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 </code></pre></div>
-<h2 id="reference">Reference</h2>
+<p>Another option is to <code>array_search</code>:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_repeat</span>(<span style="color:#e6db74">&#39;Sunday&#34;&#39;</span>, <span style="color:#ae81ff">2</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">18</span>);
+$s1 <span style="color:#f92672">.=</span> <span style="color:#a6e22e">file_get_contents</span>(<span style="color:#e6db74">&#39;https://github.com/login&#39;</span>);
+$t1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
+$a1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">explode</span>(<span style="color:#e6db74">&#39;&#34;&#39;</span>, $s1);
+$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_search</span>(<span style="color:#e6db74">&#39;authenticity_token&#39;</span>, $a1);
+$s2 <span style="color:#f92672">=</span> $a1[$n1 <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>];
+$t2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
+<span style="color:#66d9ef">echo</span> $t2 <span style="color:#f92672">-</span> $t1, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&#34;</span>, $s2, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</code></pre></div>
+<p>Another option is regular expression:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_repeat</span>(<span style="color:#e6db74">&#39;Sunday &#39;</span>, <span style="color:#ae81ff">2</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">18</span>);
+$s1 <span style="color:#f92672">.=</span> <span style="color:#a6e22e">file_get_contents</span>(<span style="color:#e6db74">&#39;https://github.com/login&#39;</span>);
+$t1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
+<span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/name=&#34;authenticity_token&#34; value=&#34;([^&#34;]*)&#34;/&#39;</span>, $s1, $a1);
+$s2 <span style="color:#f92672">=</span> $a1[<span style="color:#ae81ff">1</span>];
+$t2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
+<span style="color:#66d9ef">echo</span> $t2 <span style="color:#f92672">-</span> $t1, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&#34;</span>, $s2, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</code></pre></div>
+<p>Interestingly, regular expression is shortest code and fastest:</p>
+<pre><code>0.015600204467773 preg_match
+0.029999971389771 strtok
+0.03000020980835 foreach
+0.031199932098389 array_search
+</code></pre><h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://php.net/funcref">https://php.net/funcref</a></li>
 <li><a href="https://stitcher.io/blog/short-closures-in-php">https://stitcher.io/blog/short-closures-in-php</a></li>
