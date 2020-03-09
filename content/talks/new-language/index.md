@@ -2,85 +2,6 @@
 title: New language
 ---
 
-~~~
-stars:>=1000
-pushed:>=2020-02-05
-~~~
-
-## JavaScript 308921 freeCodeCamp/freeCodeCamp
-
-Not a programming language.
-
-## Rust 249140 996icu/996.ICU
-
-Add hashmap, hashset, treemap, and treeset macros
-
-<https://github.com/rust-lang/rfcs/issues/542>
-
-## C++ 141432 tensorflow/tensorflow
-
-[Unicode](/autumn/languages/c-plus-plus#unicode)
-
-## Shell 104188 ohmyzsh/ohmyzsh
-
-Not a programming language.
-
-## Java 92194 CyC2018/CS-Notes
-
-[Boilerplate code](/autumn/languages/java#issues)
-
-## TypeScript 92150 microsoft/vscode
-
-Not a programming language.
-
-## Dart 87567 flutter/flutter
-
-String representation
-
-<https://github.com/dart-lang/sdk/issues/40555>
-
-## C 87168 torvalds/linux
-
-<https://stackoverflow.com/questions/17307275/printf-format-specifier-for-bool>
-
-## Python 84090 donnemartin/system-design-primer
-
-Interpreted language 1.
-
-## Jupyter Notebook 79153 jackfrued/Python-100-Days
-
-Not a programming language.
-
-## Go 69447 golang/go
-
-Compiled language 1.
-
-## CSS 65039 daneden/animate.css
-
-Not a programming language.
-
-## PHP 57789 laravel/laravel
-
-Interpreted language 2.
-
-## Vue 49847 PanJiaChen/vue-element-admin
-
-Not a programming language.
-
-## C# 47844 shadowsocks/shadowsocks-windows
-
-String representation
-
-<https://github.com/dotnet/runtime/issues/33007>
-
-## Assembly 46750 chrislgarry/Apollo-11
-
-Not a programming language.
-
-## Ruby 45105 rails/rails
-
-[TMTOWTDI](/autumn/languages/ruby#issues)
-
 ## Clojure 44798 tonsky/FiraCode
 
 <https://github.com/clojure/tools.deps.alpha/wiki/clj-on-Windows>
@@ -95,9 +16,7 @@ Not a programming language.
 
 ## Kotlin 35603 android/architecture-samples
 
-Choice of C compiler
-
-<https://github.com/JetBrains/kotlin-native/issues/3844>
+[Choice of C compiler](/autumn/languages/kotlin)
 
 ## Vim script 35422 neovim/neovim
 
@@ -156,9 +75,7 @@ Haskell platform size
 
 ## Standard ML 16722 komeiji-satori/Dress
 
-Mingw
-
-<https://github.com/CakeML/cakeml/issues/729>
+[Standard ML](/autumn/languages/standard-ml)
 
 ## Elixir 16558 elixir-lang/elixir
 
@@ -166,9 +83,7 @@ Not a compiled language.
 
 ## V 15910 vlang/v
 
-field designator 'tm_gmtoff' does not refer to any field
-
-<https://github.com/vlang/v/issues/3888>
+[designator 'tm_gmtoff' does not refer to any field](/autumn/languages/v)
 
 ## CoffeeScript 15495 jashkenas/coffeescript
 
@@ -234,9 +149,7 @@ Not a compiled language.
 
 ## Erlang 8205 erlang/otp
 
-HiPE Windows
-
-<https://github.com/erlang/eep/issues/11>
+[HiPE Windows](/autumn/languages/elixir)
 
 ## CMake 8116 microsoft/vcpkg
 
