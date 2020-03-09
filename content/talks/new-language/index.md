@@ -2,57 +2,6 @@
 title: New language
 ---
 
-## Clojure 44798 tonsky/FiraCode
-
-<https://github.com/clojure/tools.deps.alpha/wiki/clj-on-Windows>
-
-## HTML 43744 h5bp/Front-end-Developer-Interview-Questions
-
-Not a programming language.
-
-## Dockerfile 38342 kelseyhightower/nocode
-
-Not a programming language.
-
-## Kotlin 35603 android/architecture-samples
-
-[Choice of C compiler](/autumn/languages/kotlin)
-
-## Vim script 35422 neovim/neovim
-
-Not a programming language.
-
-## Swift 34206 vsouza/awesome-ios
-
-Windows builds are broken
-
-- <https://github.com/compnerd/swift-win32/issues/12>
-- <https://google.com/search?tbs=qdr:m&q=swift+windows>
-
-## Objective-C 32608 AFNetworking/AFNetworking
-
-How to print Boolean flag:
-
-<https://stackoverflow.com/questions/6358349/how-to-print-boolean-flag>
-
-## Julia 25616 JuliaLang/julia
-
-Interpreted language 3.
-
-## Scala 25239 apache/spark
-
-Windows support
-
-<https://github.com/scala-native/scala-native/issues/113>
-
-## Lua 24979 Kong/kong
-
-Not a compiled language.
-
-## TeX 22012 lib-pku/libpku
-
-Not a programming language.
-
 ## OCaml 20441 facebook/flow
 
 Windows Console Unicode Support

@@ -3,15 +3,7 @@ title: Kotlin
 stars: 35066
 ---
 
-## Write to console
-
-~~~java
-fun main() {
-   println("sunday")
-}
-~~~
-
-## Issues
+## Choice of C compiler
 
 I tried running a command like this:
 
@@ -36,12 +28,18 @@ options are under 100 MB:
 
 Second, should I choose to use my own C compiler, why cant I? It seems no option
 is currently available to do that.
-Choice of C compiler
 
-<https://github.com/JetBrains/kotlin-native>
+## Write to console
+
+~~~java
+fun main() {
+   println("sunday")
+}
+~~~
 
 ## Setup
 
+- <https://github.com/JetBrains/kotlin-native>
 - <https://github.com/JetBrains/kotlin/releases/latest>
 - <https://jdk.java.net>
 
