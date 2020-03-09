@@ -31,6 +31,12 @@ This is close, but fails if the size is too small:
 
 <https://stackoverflow.com/questions/45575863/-/45622802>
 
+This fails too:
+
+{{< r "a6.cpp" >}}
+
+<https://sourceforge.net/p/mingw-w64/wiki2/Unicode%20apps>
+
 ## Setup
 
 ~~~

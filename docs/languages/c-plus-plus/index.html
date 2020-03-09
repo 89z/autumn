@@ -64,7 +64,7 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">pragma execution_character_set(&#34;utf-8&#34;)</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>main() {
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
    std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">☺</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>endl;
 }
 </code></pre></div>
@@ -80,6 +80,20 @@
 }
 </code></pre></div>
 <p><a href="https://stackoverflow.com/questions/45575863/-/45622802">https://stackoverflow.com/questions/45575863/-/45622802</a></p>
+<p>This fails too:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;fcntl.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;io.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>wmain() {
+   _setmode(_fileno(stdout), _O_U16TEXT);
+   std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>wcout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> <span style="color:#e6db74">L</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">☺☺</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>endl;
+   <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div>
+<p><a href="https://sourceforge.net/p/mingw-w64/wiki2/Unicode%20apps">https://sourceforge.net/p/mingw-w64/wiki2/Unicode%20apps</a></p>
 <h2 id="setup">Setup</h2>
 <pre><code>x86_64-w64-mingw32-g++ -s -static -std=c++17 a.cpp
 </code></pre><h2 id="stars">Stars</h2>
