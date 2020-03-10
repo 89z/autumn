@@ -3,45 +3,21 @@ title: C++
 stars: 134910
 ---
 
-If you have a Go file like this:
+## Issues
 
-{{< r "a.go" >}}
+Cygwin Mingw compiler fails with Unicode under "cmd.exe":
 
-You get expected output. If you have a C++ file like this:
-
-{{< r "a.cpp" >}}
-
-You get gibberish output. Same with this:
-
-{{< r "a2.cpp" >}}
-
-Same with this:
-
-{{< r "a3.cpp" >}}
-
-This only works with Visual Studio:
-
-{{< r "a4.cpp" >}}
-
-<https://stackoverflow.com/questions/19987448/-/20005850>
-
-This is close, but fails if the size is too small:
-
-{{< r "a5.cpp" >}}
-
-<https://stackoverflow.com/questions/45575863/-/45622802>
-
-This fails too:
-
-{{< r "a6.cpp" >}}
-
-<https://sourceforge.net/p/mingw-w64/wiki2/Unicode%20apps>
+<https://sourceware.org/pipermail/cygwin/2020-March/243989.html>
 
 ## Setup
+
+{{< r "cout.cpp" >}}
 
 ~~~
 x86_64-w64-mingw32-g++ -s -static -std=c++17 a.cpp
 ~~~
+
+<https://github.com/mstorsjo/llvm-mingw>
 
 ## Stars
 
