@@ -11,7 +11,7 @@ Cygwin Mingw compiler fails with Unicode under "cmd.exe":
 
 ## Setup
 
-{{< r "cout.cpp" >}}
+{{< r "a.cpp" >}}
 
 ~~~
 x86_64-w64-mingw32-g++ -s -static -std=c++17 a.cpp

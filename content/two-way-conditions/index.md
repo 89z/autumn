@@ -39,9 +39,7 @@ languages: [d, go, javascript, julia, nim, php, python]
 
 {{< r "a.php" >}}
 
-- <https://php.net/control-structures.else>
 - <https://php.net/control-structures.elseif>
-- <https://php.net/control-structures.if>
 - <https://php.net/operators.comparison#language.operators.comparison.ternary>
 
 ## Python
