@@ -58,7 +58,7 @@ A Windows version is not available.
 
 <https://github.com/melsman/mlkit>
 
-## Setup
+## Introduction
 
 <https://cs.lmu.edu/~ray/notes/introml>
 
