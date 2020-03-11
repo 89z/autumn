@@ -1,4 +1,4 @@
 #include <iostream>
-main() {
+int main() {
    std::cout << "☺☺" << std::endl;
 }

@@ -17,28 +17,10 @@ mcs.bat a.cs
 
 ## Roslyn
 
-Using this file:
+Could not load file or assembly
 
-{{< r "a.cs" >}}
-
-I can compile like this:
-
-~~~
-tools/csc /r:tools/Microsoft.CodeAnalysis.CSharp.dll \
-/r:C:/Windows/Microsoft.NET/Framework64/v4.0.30319/netstandard.dll a.cs
-~~~
-
-whats interesting is the resultant file requires these to be in the same
-directory:
-
-~~~
-Microsoft.CodeAnalysis.dll
-Microsoft.CodeAnalysis.CSharp.dll
-~~~
-
-even just having them in the PATH doesnt seem to do it.
-
-<https://nuget.org/packages/Microsoft.Net.Compilers>
+- <https://github.com/dotnet/roslyn/issues/42330>
+- <https://nuget.org/packages/Microsoft.Net.Compilers>
 
 ## Stars
 

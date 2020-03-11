@@ -20,20 +20,36 @@
          <a href="https://github.com/muv1/autumn">Repo</a>
       </nav>
    </header>
-<h1>C&#43;&#43;</h1><h2 id="issues">Issues</h2>
-<p>Cygwin Mingw compiler fails with Unicode under &ldquo;cmd.exe&rdquo;:</p>
-<p><a href="https://sourceware.org/pipermail/cygwin/2020-March/243989.html">https://sourceware.org/pipermail/cygwin/2020-March/243989.html</a></p>
-<h2 id="setup">Setup</h2>
+<h1>C&#43;&#43;</h1><h2 id="examples">Examples</h2>
+<p>Write to console:</p>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>main() {
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
    std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">☺☺</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>endl;
 }
 </code></pre></div>
-<pre><code>x86_64-w64-mingw32-g++ -s -static -std=c++17 a.cpp
+<p>Map types:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;map&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;string&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>map<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>string, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> m1 <span style="color:#f92672">=</span> {{<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Sun</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">10</span>}, {<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Mon</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">11</span>}};
+   <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>[s1, n1]<span style="color:#f92672">:</span> m1) {
+      std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> s1 <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">,</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> n1 <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>endl;
+   }
+}
+</code></pre></div>
+<p><a href="https://stackoverflow.com/questions/14070940/-/55278718">https://stackoverflow.com/questions/14070940/-/55278718</a></p>
+<h2 id="setup">Setup</h2>
+<pre><code>clang++ -s -static -std=c++17 a.cpp
 </code></pre><p><a href="https://github.com/mstorsjo/llvm-mingw">https://github.com/mstorsjo/llvm-mingw</a></p>
+<p>Cygwin Mingw compiler fails with Unicode under &ldquo;cmd.exe&rdquo;:</p>
+<p><a href="https://sourceware.org/pipermail/cygwin/2020-March/243989.html">https://sourceware.org/pipermail/cygwin/2020-March/243989.html</a></p>
 <h2 id="stars">Stars</h2>
 <p><a href="https://github.com/tensorflow/tensorflow">https://github.com/tensorflow/tensorflow</a></p>
 
