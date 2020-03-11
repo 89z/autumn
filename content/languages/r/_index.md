@@ -3,27 +3,7 @@ title: R
 stars: 4027
 ---
 
-## Examples
-
-{{< r "a.r" >}}
-{{< r "a2.r" >}}
-{{< r "a3.r" >}}
-
-## Issues
-
-R_base
-: <https://cygwin.com/ml/cygwin/2019-12/msg00117.html>
-
-Setting LC_CTYPE=en_US.UTF-8 failed
-: <https://hypatia.math.ethz.ch/pipermail/r-devel/2019-June/077955.html>
-
-## Setup
-
-Mingw:
-
-<https://cran.cnr.berkeley.edu/bin/windows/base>
-
-Cygwin:
+## Cygwin
 
 ~~~
 libgomp1
@@ -37,6 +17,18 @@ R
 ~~~
 PATH=$PATH:/usr/lib/lapack
 ~~~
+
+R_base:
+
+<https://cygwin.com/ml/cygwin/2019-12/msg00117.html>
+
+## Mingw
+
+<https://cran.mtu.edu/bin/windows/base>
+
+Setting LC_CTYPE=en_US.UTF-8 failed:
+
+<https://hypatia.math.ethz.ch/pipermail/r-devel/2019-June/077955.html>
 
 ## Stars
 

@@ -20,37 +20,7 @@
          <a href="https://github.com/muv1/autumn">Repo</a>
       </nav>
    </header>
-<h1>R</h1><h2 id="examples">Examples</h2>
-<p>
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">install.packages</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">RCurl&#34;</span>,repos <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">http://cran.us.r-project.org&#34;</span>)
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">RCurl&#39;</span>)
-webpage <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">getURL</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">http://speedtest.lax.hivelocity.net&#34;</span>)
-<span style="color:#a6e22e">cat</span>(webpage)
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">cat</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">sunday\n&#34;</span>)
-<span style="color:#a6e22e">message</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">monday&#34;</span>)
-<span style="color:#a6e22e">writeLines</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">tuesday&#34;</span>)
-</code></pre></div></p>
-<h2 id="issues">Issues</h2>
-<dl>
-<dt>R_base</dt>
-<dd><a href="https://cygwin.com/ml/cygwin/2019-12/msg00117.html">https://cygwin.com/ml/cygwin/2019-12/msg00117.html</a></dd>
-<dt>Setting LC_CTYPE=en_US.UTF-8 failed</dt>
-<dd><a href="https://hypatia.math.ethz.ch/pipermail/r-devel/2019-June/077955.html">https://hypatia.math.ethz.ch/pipermail/r-devel/2019-June/077955.html</a></dd>
-</dl>
-<h2 id="setup">Setup</h2>
-<p>Mingw:</p>
-<p><a href="https://cran.cnr.berkeley.edu/bin/windows/base">https://cran.cnr.berkeley.edu/bin/windows/base</a></p>
-<p>Cygwin:</p>
+<h1>R</h1><h2 id="cygwin">Cygwin</h2>
 <pre><code>libgomp1
 libicu65
 liblapack0
@@ -58,7 +28,13 @@ libopenblas
 libtirpc3
 R
 </code></pre><pre><code>PATH=$PATH:/usr/lib/lapack
-</code></pre><h2 id="stars">Stars</h2>
+</code></pre><p>R_base:</p>
+<p><a href="https://cygwin.com/ml/cygwin/2019-12/msg00117.html">https://cygwin.com/ml/cygwin/2019-12/msg00117.html</a></p>
+<h2 id="mingw">Mingw</h2>
+<p><a href="https://cran.mtu.edu/bin/windows/base">https://cran.mtu.edu/bin/windows/base</a></p>
+<p>Setting LC_CTYPE=en_US.UTF-8 failed:</p>
+<p><a href="https://hypatia.math.ethz.ch/pipermail/r-devel/2019-June/077955.html">https://hypatia.math.ethz.ch/pipermail/r-devel/2019-June/077955.html</a></p>
+<h2 id="stars">Stars</h2>
 <p><a href="https://github.com/tidyverse/ggplot2">https://github.com/tidyverse/ggplot2</a></p>
 
 

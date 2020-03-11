@@ -7,8 +7,6 @@ stars: 20068
 
 Windows Console Unicode Support
 
-BOUNTY $800 2020-03-02
-
 <https://github.com/ocaml/ocaml/pull/1408>
 
 ## Setup

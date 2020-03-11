@@ -6,59 +6,77 @@ We can use this page to just compile problems with other languages. Avoid
 putting any links here, as we can keep sources and detailed information under
 the Languages folder.
 
-- common-lisp
-- c-plus-plus
-- crystal
 - c-sharp
-- d
 - dart
 - elixir
-- f-sharp
 - haskell
-- java
-- kotlin
 - lua
-- nim
-- ocaml
-- pascal
-- perl
-- pony
-- r
-- racket
-- reason
-- red
-- ruby
-- rust
 
 ## Booleans
 
 Language should be able to print Booleans and Numbers differently. These
 currently fail that test:
 
-C
+- C
+- Perl
 
-## HTTP client
+## Code bloat
 
-Language should have built in HTTP client, or at least an up to date package.
-These currently fail that test:
+Language should have 5 or less pieces of boilerplate code. Also language should
+have 5 or less ways to perform a task. These currently fail that test:
 
-Zig
+- Java
+- Ruby
 
 ## Good
 
+- C++
 - Clojure
+- Common-lisp
+- F#
 - Go
-- Javascript
 - Julia
+- Nim
 - PHP
 - Python
+- Racket
 - Scheme
+
+## HTTP client
+
+Language should have built in HTTP client, or at least an up to date package
+without major bugs. These currently fail that test:
+
+- D
+- Zig
+
+## JavaScript
+
+Language should not be JavaScript or any variant. These currently fail that
+test:
+
+- Javascript
+- Reason
+
+## Map literal
+
+This should be part of the language, not a package. These currently fail that
+test:
+
+Rust
 
 ## Windows
 
 Native Windows version should be available. Release should be in the last year.
-Release should be without major bugs. These currently fail that test:
+Release should be without major issues. These currently fail that test:
 
+- Crystal
+- Kotlin
+- Pascal
+- Ocaml
+- Pony
+- R
+- Red
 - Scala
 - Standard-ML
 - Swift

@@ -34,8 +34,6 @@ $ red-13feb20-d513c8f9 -r sunday.red
 ...output file      : C:\red\sunday.exe
 ~~~
 
-BOUNTY $800 2020-03-02
-
 <https://github.com/red/red/issues/3412>
 
 ## Stars
