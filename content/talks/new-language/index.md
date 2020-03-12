@@ -6,12 +6,6 @@ We can use this page to just compile problems with other languages. Avoid
 putting any links here, as we can keep sources and detailed information under
 the Languages folder.
 
-- c-sharp
-- dart
-- elixir
-- haskell
-- lua
-
 ## Booleans
 
 Language should be able to print Booleans and Numbers differently. These
@@ -58,22 +52,33 @@ test:
 - Javascript
 - Reason
 
-## Map literal
+## Map literals
 
 This should be part of the language, not a package. These currently fail that
 test:
 
 Rust
 
+## Strings
+
+Language should be able to print a string representation, JSON is not
+acceptable. These currently fail that test:
+
+Dart
+
 ## Windows
 
 Native Windows version should be available. Release should be in the last year.
 Release should be without major issues. These currently fail that test:
 
+- C#
 - Crystal
+- Elixir
+- Haskell
 - Kotlin
-- Pascal
+- Lua
 - Ocaml
+- Pascal
 - Pony
 - R
 - Red

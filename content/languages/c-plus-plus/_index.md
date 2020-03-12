@@ -3,23 +3,23 @@ title: C++
 stars: 134910
 ---
 
-Here is writing to the console:
-
-{{< r "a.cpp" >}}
-
-Here is creating a map:
-
-{{< r "a2.cpp" >}}
-
-<https://stackoverflow.com/questions/14070940/-/55278718>
-
 Regarding booleans, it is not ideal that numbers are printed by default:
 
-{{< r "a3.cpp" >}}
+{{< r "a2.cpp" >}}
 
 but to be fair, other languages have similar issues. Here is Go:
 
 {{< r "a.go" >}}
+
+Here is creating a map:
+
+{{< r "a.cpp" >}}
+
+<https://stackoverflow.com/questions/14070940/-/55278718>
+
+HTTP GET:
+
+<https://curl.haxx.se/libcurl/c/simple.html>
 
 ## Setup
 

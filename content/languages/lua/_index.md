@@ -11,8 +11,6 @@ stars: 23535
 
 Better binary support for Windows
 
-BOUNTY $800 2020-03-02
-
 <https://github.com/luarocks/luarocks/issues/788>
 
 ## Setup

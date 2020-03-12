@@ -20,31 +20,7 @@
          <a href="https://github.com/muv1/autumn">Repo</a>
       </nav>
    </header>
-<h1>C&#43;&#43;</h1><p>Here is writing to the console:</p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-   std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">☺☺</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>endl;
-}
-</code></pre></div>
-<p>Here is creating a map:</p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;map&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;string&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-   std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>map<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>string, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> m1 <span style="color:#f92672">=</span> {{<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Sun</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">10</span>}, {<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Mon</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">11</span>}};
-   <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>[s1, n1]<span style="color:#f92672">:</span> m1) {
-      std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> s1 <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">,</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> n1 <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>endl;
-   }
-}
-</code></pre></div>
-<p><a href="https://stackoverflow.com/questions/14070940/-/55278718">https://stackoverflow.com/questions/14070940/-/55278718</a></p>
-<p>Regarding booleans, it is not ideal that numbers are printed by default:</p>
+<h1>C&#43;&#43;</h1><p>Regarding booleans, it is not ideal that numbers are printed by default:</p>
 
 
 
@@ -73,6 +49,23 @@
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, <span style="color:#a6e22e">a1</span>)
 }
 </code></pre></div>
+<p>Here is creating a map:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;map&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;string&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>map<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>string, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> m1 <span style="color:#f92672">=</span> {{<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Sun</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">10</span>}, {<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Mon</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">11</span>}};
+   <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>[s1, n1]<span style="color:#f92672">:</span> m1) {
+      std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> s1 <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">,</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> n1 <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>endl;
+   }
+}
+</code></pre></div>
+<p><a href="https://stackoverflow.com/questions/14070940/-/55278718">https://stackoverflow.com/questions/14070940/-/55278718</a></p>
+<p>HTTP GET:</p>
+<p><a href="https://curl.haxx.se/libcurl/c/simple.html">https://curl.haxx.se/libcurl/c/simple.html</a></p>
 <h2 id="setup">Setup</h2>
 <pre><code>clang++ -s -static -std=c++17 a.cpp
 </code></pre><p><a href="https://github.com/mstorsjo/llvm-mingw">https://github.com/mstorsjo/llvm-mingw</a></p>
