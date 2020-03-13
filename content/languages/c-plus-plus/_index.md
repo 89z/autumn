@@ -19,7 +19,7 @@ Here is creating a map:
 
 HTTP GET:
 
-<https://curl.haxx.se/libcurl/c/simple.html>
+<https://github.com/mstorsjo/llvm-mingw/issues/95>
 
 ## Setup
 
