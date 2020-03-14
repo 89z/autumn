@@ -1,3 +1,3 @@
-a1 = [10, 20]
-append!(a1, 30)
+a1 = [10, 11]
+append!(a1, 12)
 println(a1)

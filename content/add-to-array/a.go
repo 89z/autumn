@@ -2,11 +2,11 @@ package main
 import "fmt"
 func main() {
    // example 1
-   var a1 = []int{10, 20}
-   a1 = append(a1, 30)
+   var a1 = []int{10, 11}
+   a1 = append(a1, 12)
    // example 2
-   var a2 = []int{10, 20}
-   a2 = append(a2, []int{30, 40}...)
+   var a2 = []int{10, 11}
+   a2 = append(a2, []int{12, 13}...)
    // print
    fmt.Println(a1, a2)
 }

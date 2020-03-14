@@ -1,4 +1,4 @@
-let a1 = [10, 20]
+let a1 = [10, 11]
 # example 1
 for n1 in items(a1):
    echo n1
