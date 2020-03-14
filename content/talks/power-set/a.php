@@ -1,5 +1,5 @@
 <?php
-function f1($a_in) {
+function powerset($a_in) {
    $a_out = [[]];
    foreach ($a_in as $a_elem) {
       foreach ($a_out as $a_comb) {
@@ -9,5 +9,5 @@ function f1($a_in) {
    return $a_out;
 }
 $a1 = [10, 11, 12];
-$a2 = f1($a1);
+$a2 = powerset($a1);
 var_export($a2);
