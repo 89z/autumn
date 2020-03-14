@@ -1,13 +1,13 @@
 import std.stdio;
 void main() {
-   int n1 = 10;
-   int n2;
-   if (n1 > 30) {
-      n2 = 30;
-   } else if (n1 > 20) {
-      n2 = 20;
+   int n1 = 0;
+   string s1;
+   if (n1 > 0) {
+      s1 = "positive";
+   } else if (n1 < 0) {
+      s1 = "negative";
    } else {
-      n2 = n1;
+      s1 = "zero";
    }
-   n2.writeln;
+   s1.writeln;
 }

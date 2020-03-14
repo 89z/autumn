@@ -1,4 +1,4 @@
-a1 = ["sun", "day"]
+a1 = ["Sun", "Mon"]
 # example 1
 s1 = join(a1, ",")
 # example 2
