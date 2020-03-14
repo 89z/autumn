@@ -1,20 +1,22 @@
 <?php
-$n1 = 10;
+$n1 = 0;
 # example 1
-if ($n1 > 40) {
-   var_dump(40);
-} else if ($n1 > 30) {
-   var_dump(30);
+if ($n1 > 0) {
+   $s1 = 'positive';
+} else if ($n1 < 0) {
+   $s1 = 'negative';
 } else {
-   var_dump(20);
+   $s1 = 'zero';
 }
 # example 2
-if ($n1 > 40) {
-   var_dump(40);
-} elseif ($n1 > 30) {
-   var_dump(30);
+if ($n1 > 0) {
+   $s2 = 'positive';
+} elseif ($n1 < 0) {
+   $s2 = 'negative';
 } else {
-   var_dump(20);
+   $s2 = 'zero';
 }
 # example 3
-$n2 = $n1 != 0 ? $n1 : 20;
+$s3 = $n1 < 0 ? 'negative' : 'positive';
+# print
+var_dump($s1, $s2, $s3);

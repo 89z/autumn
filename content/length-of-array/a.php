@@ -1,5 +1,5 @@
 <?php
-$a1 = [10, 20];
+$a1 = [10, 11];
 # example 1
 $n1 = count($a1);
 # example 2

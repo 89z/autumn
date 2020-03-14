@@ -1,14 +1,14 @@
-let n1 = 10;
+let n1 = 0;
 // example 1
-let n2 = n1 == 0 ? 20 : n1;
-// example 2
-let n3;
-if (n1 > 30) {
-   n3 = 30;
-} else if (n1 > 20) {
-   n3 = 20;
+let s1;
+if (n1 > 0) {
+   s1 = 'positive';
+} else if (n1 < 0) {
+   s1 = 'negative';
 } else {
-   n3 = n1;
+   s1 = 'zero';
 }
+// example 2
+let s2 = n1 < 0 ? 'negative' : 'positive';
 // print
-console.log(n2, n3);
+console.log(s1, s2);

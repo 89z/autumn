@@ -1,12 +1,12 @@
-n1 = 10
+n1 = 0
 # example 1
-n2 = 20 if n1 == 0 else n1
-# example 2
-if n1 > 30:
-   n3 = 30
-elif n1 > 20:
-   n3 = 20
+if n1 > 0:
+   s1 = 'positive'
+elif n1 < 0:
+   s1 = 'negative'
 else:
-   n3 = n1
+   s1 = 'zero'
+# example 2
+s2 = 'negative' if n1 < 0 else 'positive'
 # print
-print(n2, n3)
+print(s1, s2)

@@ -3,17 +3,16 @@ title: Nim
 stars: 8038
 ---
 
-## Install
+## Setup
 
-<https://nim-lang.org/install_windows.html>
+- <https://github.com/mstorsjo/llvm-mingw>
+- <https://nim-lang.org/install_windows.html>
 
 ## Run
 
 ~~~nim
 # %APPDATA%\nim\config.nims
 import os
-switch("gcc.exe", "x86_64-w64-mingw32-gcc")
-switch("gcc.linkerexe", "x86_64-w64-mingw32-gcc")
 task run, "run":
    setCommand("compile")
    switch("run")
