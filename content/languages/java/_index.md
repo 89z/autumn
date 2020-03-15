@@ -102,7 +102,6 @@ com.oracle.svm.hosted/src/com/oracle/svm/hosted/c/codegen/
 CCompilerInvoker.java#L106-L108` >}}
 
 I think people should be able to choose what compiler they use.
-native-image: allow Clang or GCC with Windows
 
 ## Setup
 

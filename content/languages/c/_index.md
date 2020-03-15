@@ -7,7 +7,8 @@ stars: 80840
 
 Clang:
 
-<https://github.com/mstorsjo/llvm-mingw>
+- <https://github.com/mstorsjo/llvm-mingw/issues/98>
+- <https://releases.llvm.org/download.html>
 
 GCC:
 
