@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Path parts</h1>
-<time>Wed Mar 4 20:38:27 2020</time>
+<time>Sun Mar 15 18:17:22 2020</time>
 <a href="/autumn/topics/string">string</a>
    <h2 id="go">Go</h2>
 
@@ -58,10 +58,16 @@ $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/sunda
 </span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s1, <span style="color:#a6e22e">PATHINFO_DIRNAME</span>);
 <span style="color:#75715e"># example 4
 </span><span style="color:#75715e"></span>$s5 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s1, <span style="color:#a6e22e">PATHINFO_BASENAME</span>);
+<span style="color:#75715e"># example 5
+</span><span style="color:#75715e"></span>$s6 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s1, <span style="color:#a6e22e">PATHINFO_EXTENSION</span>);
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2, $s3, $s4, $s5);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2, $s3, $s4, $s5, $s6);
 </code></pre></div>
-<p><a href="https://php.net/function.pathinfo">https://php.net/function.pathinfo</a></p>
+<ul>
+<li><a href="https://php.net/function.basename">https://php.net/function.basename</a></li>
+<li><a href="https://php.net/function.dirname">https://php.net/function.dirname</a></li>
+<li><a href="https://php.net/function.pathinfo">https://php.net/function.pathinfo</a></li>
+</ul>
 <h2 id="python">Python</h2>
 
 

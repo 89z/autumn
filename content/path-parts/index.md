@@ -16,7 +16,9 @@ languages: [go, julia, php, python]
 
 {{< r "a.php" >}}
 
-<https://php.net/function.pathinfo>
+- <https://php.net/function.basename>
+- <https://php.net/function.dirname>
+- <https://php.net/function.pathinfo>
 
 ## Python
 
