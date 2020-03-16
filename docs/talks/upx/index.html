@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UPX &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/muv1/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>UPX</h1>
+<time>Mon Mar 16 18:27:33 2020</time>
+   <p>Input:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   println(<span style="color:#e6db74">&#34;sunday&#34;</span>)
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ upx --best sunday.exe
+$ wc -c sunday.exe
+<span style="color:#ae81ff">619008</span> sunday.exe
+
+$ upx -9 sunday.exe
+$ wc -c sunday.exe
+<span style="color:#ae81ff">621056</span> sunday.exe
+
+$ upx sunday.exe
+$ wc -c sunday.exe
+<span style="color:#ae81ff">623616</span> sunday.exe
+</code></pre></div><p><a href="https://en.wikipedia.org/wiki/UPX">https://en.wikipedia.org/wiki/UPX</a></p>
+
+
+</body>
+</html>

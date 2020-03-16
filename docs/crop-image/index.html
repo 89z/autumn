@@ -3,7 +3,7 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Image crop &middot; Autumn</title>
+<title>Crop image &middot; Autumn</title>
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/autumn.css">
 </head>
@@ -20,8 +20,8 @@
          <a href="https://github.com/muv1/autumn">Repo</a>
       </nav>
    </header>
-<h1>Image crop</h1>
-<time>Mon Mar 16 16:31:42 2020</time>
+<h1>Crop image</h1>
+<time>Mon Mar 16 18:27:33 2020</time>
 <a href="/autumn/topics/image">image</a>
    <h2 id="go">Go</h2>
 
@@ -66,15 +66,18 @@ $i2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">imagecrop</
 <p>Warning, this requires <code>php-gd</code> package, which pulls in 23 other packages.</p>
 <p><a href="https://php.net/function.imagecrop">https://php.net/function.imagecrop</a></p>
 <h2 id="shell">Shell</h2>
-<p>FFmpeg:</p>
-<p>Size is 67.2 MB</p>
-<ul>
-<li><a href="https://ffmpeg.zeranoe.com">https://ffmpeg.zeranoe.com</a></li>
-<li><a href="https://unix.stackexchange.com/questions/233832/-/437044">https://unix.stackexchange.com/questions/233832/-/437044</a></li>
-</ul>
-<p>GraphicsMagick: <a href="http://graphicsmagick.org">http://graphicsmagick.org</a></p>
-<p>ImageMagick: <a href="https://imagemagick.org">https://imagemagick.org</a></p>
-<p>VIPS: <a href="https://github.com/libvips/libvips">https://github.com/libvips/libvips</a></p>
+<pre><code>$ cygcheck gm.exe | sed '/Found/d;/Windows/d;/90\./d;s/\.\\//' | xargs wc -c
+2,389,504 total
+</code></pre><p><a href="https://sourceforge.net/projects/graphicsmagick">https://sourceforge.net/projects/graphicsmagick</a></p>
+<pre><code>$ wc -c magick.exe
+14,735,424 magick.exe
+</code></pre><p><a href="https://imagemagick.org">https://imagemagick.org</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ cygcheck vips.exe | sed <span style="color:#e6db74">&#39;/Found/d;/Windows/d;s/\.\\//&#39;</span> | xargs wc -c
+17,543,219 total
+</code></pre></div><p><a href="https://github.com/libvips/libvips">https://github.com/libvips/libvips</a></p>
+<pre><code>$ wc -c ffmpeg.exe
+65,644,544 ffmpeg.exe
+</code></pre><p><a href="https://ffmpeg.zeranoe.com">https://ffmpeg.zeranoe.com</a></p>
 
 
 </body>
