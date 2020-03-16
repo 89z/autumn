@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>LibCurl</h1>
-<time>Sat Mar 14 17:01:56 2020</time>
+<time>Sun Mar 15 19:17:20 2020</time>
    <p>So using these:</p>
 <ul>
 <li><a href="https://curl.haxx.se/windows">https://curl.haxx.se/windows</a></li>
@@ -44,7 +44,14 @@
 -lz \
 -static \
 simple.c
-</code></pre><p>but if you build LibCurl, it is simpler to link:</p>
+</code></pre><p>but if you build LibCurl:</p>
+<pre><code>git clone --depth 1 git://github.com/curl/curl
+cd curl
+mingw32-make -C lib -f Makefile.m32 -j 5
+mkdir -p /Path/llvm-mingw/lib /Path/llvm-mingw/include/curl
+cp lib/libcurl.a /Path/llvm-mingw/lib
+cp include/curl/*.h /Path/llvm-mingw/include/curl
+</code></pre><p>it is simpler to link:</p>
 <pre><code>clang \
 -DCURL_STATICLIB \
 -lcrypt32 \
