@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>LibCurl</h1>
-<time>Sun Mar 15 19:17:20 2020</time>
+<time>Mon Mar 16 06:06:28 2020</time>
    <p>So using these:</p>
 <ul>
 <li><a href="https://curl.haxx.se/windows">https://curl.haxx.se/windows</a></li>
@@ -47,19 +47,38 @@ simple.c
 </code></pre><p>but if you build LibCurl:</p>
 <pre><code>git clone --depth 1 git://github.com/curl/curl
 cd curl
-mingw32-make -C lib -f Makefile.m32 -j 5
+mingw32-make -C lib -f Makefile.m32 -j 5 CFG=-winssl
 mkdir -p /Path/llvm-mingw/lib /Path/llvm-mingw/include/curl
 cp lib/libcurl.a /Path/llvm-mingw/lib
 cp include/curl/*.h /Path/llvm-mingw/include/curl
 </code></pre><p>it is simpler to link:</p>
-<pre><code>clang \
--DCURL_STATICLIB \
--lcrypt32 \
--lcurl \
--lwldap32 \
--lws2_32 \
-simple.c
-</code></pre>
+<p>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;curl/curl.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>s1 <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://speedtest.lax.hivelocity.net</span><span style="color:#e6db74">&#34;</span>;
+   CURL <span style="color:#f92672">*</span>r1 <span style="color:#f92672">=</span> curl_easy_init();
+   curl_easy_setopt(r1, CURLOPT_URL, s1);
+   curl_easy_perform(r1);
+}
+</code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/dash
+</span><span style="color:#75715e"></span>set -e -u
+clang <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-DCURL_STATICLIB <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-I C:/Path/llvm-mingw/include <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-L C:/Path/llvm-mingw/lib <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-lcrypt32 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-lcurl <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-lwldap32 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-lws2_32 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>a.c
+</code></pre></div></p>
+
 
 </body>
 </html>

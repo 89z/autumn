@@ -24,6 +24,7 @@ have 5 or less ways to perform a task. These currently fail that test:
 
 ## Good
 
+- C++
 - Clojure
 - Common-lisp
 - F#
@@ -40,7 +41,6 @@ have 5 or less ways to perform a task. These currently fail that test:
 Language should have built in HTTP client, or at least an up to date package
 without major bugs. These currently fail that test:
 
-- C++
 - D
 - Zig
 
