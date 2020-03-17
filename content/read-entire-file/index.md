@@ -13,6 +13,7 @@ languages: [d, go, julia, nim, php, python]
 {{< r "a.go" >}}
 {{< r "a2.go" >}}
 {{< r "a3.go" >}}
+{{< r "a4.go" >}}
 
 - <https://golang.org/pkg/bufio>
 - <https://golang.org/pkg/io>
