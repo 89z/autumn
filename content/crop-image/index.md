@@ -7,8 +7,10 @@ languages: [go, php]
 ## Go
 
 {{< r "a.go" >}}
+{{< r "a2.go" >}}
 
-<https://golang.org/pkg/image>
+- <https://golang.org/pkg/image#YCbCr.SubImage>
+- <https://golang.org/pkg/image/draw#Draw>
 
 ## PHP
 

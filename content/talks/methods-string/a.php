@@ -1,5 +1,5 @@
 <?php
-$s1 = str_repeat('sunday ', 2 ** 19);
+$s1 = str_repeat('Sunday ', 2 ** 19);
 # example 1
 $t1 = microtime(true);
 $a1 = explode(' ', $s1);
