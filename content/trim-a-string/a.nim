@@ -1,5 +1,5 @@
 import strutils
-var s1 = "sun mon tue\n"
+var s1 = " Sun Mon "
 # example 1
 var s2 = s1.strip
 # example 2

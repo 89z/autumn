@@ -4,25 +4,22 @@ title: UPX
 
 Input:
 
-~~~go
-package main
-func main() {
-   println("sunday")
-}
-~~~
+{{< r "a.go" >}}
+
+Result:
 
 ~~~sh
-$ upx --best sunday.exe
-$ wc -c sunday.exe
-619008 sunday.exe
+$ upx --best a.exe
+$ wc -c a.exe
+619008 a.exe
 
-$ upx -9 sunday.exe
-$ wc -c sunday.exe
-621056 sunday.exe
+$ upx -9 a.exe
+$ wc -c a.exe
+621056 a.exe
 
-$ upx sunday.exe
-$ wc -c sunday.exe
-623616 sunday.exe
+$ upx a.exe
+$ wc -c a.exe
+623616 a.exe
 ~~~
 
 <https://en.wikipedia.org/wiki/UPX>

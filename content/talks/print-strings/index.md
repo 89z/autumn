@@ -2,16 +2,9 @@
 title: Print strings
 ---
 
-For output, PHP has `echo` and `print`, They require explicit newline:
-
-{{< r "a.php" >}}
-
-and Go does not support interpolation:
-
-{{< r "a.go" >}}
-
-To save time, with each language we should just use the shortest method
-available.
+For output, PHP has `echo` and `print`, They require explicit newline. Go does
+not support interpolation. To save time, with each language we should just use
+the shortest method available.
 
 ## References
 

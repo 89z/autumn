@@ -1,5 +1,5 @@
 <?php
-$s1 = "sun mon tue\n";
+$s1 = "Sunday\n";
 # example 1
 file_put_contents('e1.txt', $s1);
 # example 2

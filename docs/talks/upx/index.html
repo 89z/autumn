@@ -21,23 +21,29 @@
       </nav>
    </header>
 <h1>UPX</h1>
-<time>Mon Mar 16 18:27:33 2020</time>
+<time>Mon Mar 16 19:36:41 2020</time>
    <p>Input:</p>
+
+
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   println(<span style="color:#e6db74">&#34;sunday&#34;</span>)
+   println(<span style="color:#e6db74">&#34;Sunday&#34;</span>)
 }
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ upx --best sunday.exe
-$ wc -c sunday.exe
-<span style="color:#ae81ff">619008</span> sunday.exe
 
-$ upx -9 sunday.exe
-$ wc -c sunday.exe
-<span style="color:#ae81ff">621056</span> sunday.exe
+</code></pre></div>
+<p>Result:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ upx --best a.exe
+$ wc -c a.exe
+<span style="color:#ae81ff">619008</span> a.exe
 
-$ upx sunday.exe
-$ wc -c sunday.exe
-<span style="color:#ae81ff">623616</span> sunday.exe
+$ upx -9 a.exe
+$ wc -c a.exe
+<span style="color:#ae81ff">621056</span> a.exe
+
+$ upx a.exe
+$ wc -c a.exe
+<span style="color:#ae81ff">623616</span> a.exe
 </code></pre></div><p><a href="https://en.wikipedia.org/wiki/UPX">https://en.wikipedia.org/wiki/UPX</a></p>
 
 

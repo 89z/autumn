@@ -1,4 +1,4 @@
-let s1 = ' sun mon tue ';
+let s1 = ' Sun Mon ';
 // example 1
 let s2 = s1.trimStart();
 // example 2

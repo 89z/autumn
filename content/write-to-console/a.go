@@ -5,9 +5,9 @@ import (
 )
 func main() {
    // example 1
-   println("sunday")
+   println("Sunday")
    // example 2
-   fmt.Println("sunday")
+   fmt.Println("Sunday")
    // example 3
-   fmt.Fprintln(os.Stderr, "sunday")
+   fmt.Fprintln(os.Stderr, "Sunday")
 }

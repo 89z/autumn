@@ -1,5 +1,5 @@
 <?php
-$s1 = ' sun mon tue ';
+$s1 = ' Sun Mon ';
 # example 1
 $s2 = ltrim($s1);
 # example 2

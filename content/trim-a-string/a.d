@@ -1,6 +1,6 @@
 import std.string, std.stdio;
 void main() {
-   auto s1 = " sun mon tue ";
+   auto s1 = " Sun Mon ";
    // example 1
    auto s2 = s1.stripLeft;
    // example 2
