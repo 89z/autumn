@@ -1,5 +1,5 @@
 import std.stdio;
 void main() {
-   const m1 = ["sun": 10, "mon": 11];
+   auto m1 = ["Sun": 10, "Mon": 11];
    m1.writeln;
 }

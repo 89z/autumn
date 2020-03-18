@@ -1,3 +1,3 @@
-m1 = {'sun': 10, 'mon': 11}
-b1 = 'mon' in m1
+m1 = {'Sun': 10, 'Mon': 11}
+b1 = 'Mon' in m1
 print(b1)

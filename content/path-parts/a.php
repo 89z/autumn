@@ -1,5 +1,5 @@
 <?php
-$s1 = '/sunday/monday.txt';
+$s1 = '/Sunday/Monday.txt';
 # example 1
 $s2 = dirname($s1);
 # example 2

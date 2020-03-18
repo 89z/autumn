@@ -1,14 +1,14 @@
 <?php
 # example 1
-class jan {
-   public $sun = 10;
-   public $mon = 11;
+class Jan {
+   public $Sun = 10;
+   public $Mon = 11;
 }
-$o1 = new jan;
+$o1 = new Jan;
 # example 2
 $o2 = new class{
-   public $sun = 10;
-   public $mon = 11;
+   public $Sun = 10;
+   public $Son = 11;
 };
 # print
 var_dump($o1, $o2);

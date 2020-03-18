@@ -1,2 +1,2 @@
-m1 = Dict("sun" => 10, "mon" => 11)
+m1 = Dict("Sun" => 10, "Mon" => 11)
 println(m1)

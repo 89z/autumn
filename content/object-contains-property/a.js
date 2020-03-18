@@ -1,11 +1,11 @@
-class day {
-   sun = 10;
-   mon = 11;
+class Day {
+   Sun = 10;
+   Mon = 11;
 }
-let o1 = new day;
+let o1 = new Day;
 // example 1
-let b1 = 'sun' in o1;
+let b1 = 'Sun' in o1;
 // example 2
-let b2 = o1.hasOwnProperty('sun');
+let b2 = o1.hasOwnProperty('Sun');
 // print
 console.log(b1, b2);

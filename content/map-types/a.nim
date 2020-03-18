@@ -1,8 +1,8 @@
 # example 1
 import tables
-let m1 = {"sun": 10, "mon": 11}.toTable
+let m1 = {"Sun": 10, "Mon": 11}.toTable
 # example 2
 import strtabs
-let m2 = {"sun": "ten", "mon": "eleven"}.newStringTable
+let m2 = {"one": "odd", "two": "even"}.newStringTable
 # print
 echo m1, m2

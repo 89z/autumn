@@ -1,13 +1,13 @@
 // example 1
-class jan {
-   sun = 10;
-   mon = 11;
+class Jan {
+   Sun = 10;
+   Mon = 11;
 }
-let o1 = new jan;
+let o1 = new Jan;
 // example 2
 let o2 = new class {
-   sun = 10;
-   mon = 11;
+   Sun = 10;
+   Mon = 11;
 };
 // print
 console.log(o1, o2);

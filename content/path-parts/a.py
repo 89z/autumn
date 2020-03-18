@@ -1,5 +1,5 @@
 from os import path
-s1 = '/sunday/monday.txt'
+s1 = '/Sunday/Monday.txt'
 # example 1
 s2 = path.dirname(s1)
 # example 2

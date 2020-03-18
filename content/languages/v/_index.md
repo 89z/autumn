@@ -24,8 +24,8 @@ If I have a file like this, everything is fine:
 
 ~~~v
 fn main() {
-   mut m2 := {'sun': 10, 'mon': 11}
-   m2['tue'] = 12
+   mut m2 := {'Sun': 10, 'Mon': 11}
+   m2['Tue'] = 12
    println("Sunday")
 }
 ~~~
@@ -34,8 +34,8 @@ If I remove `mut`, it will cause a problem:
 
 ~~~v
 fn main() {
-   m2 := {'sun': 10, 'mon': 11}
-   m2['tue'] = 12
+   m2 := {'Sun': 10, 'Mon': 11}
+   m2['Tue'] = 12
    println("Sunday")
 }
 ~~~
