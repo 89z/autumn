@@ -1,4 +1,4 @@
-let s1 = 'sunday';
+let s1 = 'Sunday';
 // example 1
 let s2 = s1[3];
 // example 2

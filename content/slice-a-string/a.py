@@ -1,4 +1,4 @@
-s1 = 'sunday'
+s1 = 'Sunday'
 # example 1
 s2 = s1[3]
 # example 2

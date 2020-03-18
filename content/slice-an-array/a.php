@@ -1,5 +1,5 @@
 <?php
-$a1 = ['sun', 'mon', 'tue'];
+$a1 = ['Sun', 'Mon', 'Tue'];
 # example 1
 $s1 = $a1[0];
 # example 2

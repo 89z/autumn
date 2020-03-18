@@ -1,4 +1,4 @@
-let a1 = ["sun", "mon", "tue"]
+let a1 = ["Sun", "Mon", "Tue"]
 # string from front
 let s1 = a1[0]
 # string from back

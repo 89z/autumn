@@ -1,3 +1,3 @@
-let a1 = ['sun', 'mon'];
+let a1 = ['Sun', 'Mon'];
 a1.sort();
 console.log(a1);

@@ -1,15 +1,15 @@
 <?php
 # example 1
-$a1 = ['sun', 'mon'];
+$a1 = ['Sun', 'Mon'];
 sort($a1);
 # example 2
-$a2 = ['mon', 'tue'];
+$a2 = ['Mon', 'Tue'];
 rsort($a2);
 # example 3
-$a3 = ['monday', 'tue'];
+$a3 = ['Monday', 'Tue'];
 array_multisort(array_map('strlen', $a3), $a3);
 # example 4
-$a4 = ['monday', 'tue'];
+$a4 = ['Monday', 'Tue'];
 usort($a4, function ($s1, $s2) {
    return strlen($s1) - strlen($s2);
 });

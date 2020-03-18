@@ -1,2 +1,2 @@
-sun mon tue
-wed the fri
+Sunday
+Monday

@@ -1,5 +1,5 @@
 <?php
-$s1 = 'sun mon tue';
+$s1 = 'Sun Mon Tue';
 # example 1
 $a1 = explode(' ', $s1);
 var_dump($a1);

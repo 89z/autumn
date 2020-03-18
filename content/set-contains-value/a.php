@@ -1,4 +1,4 @@
 <?php
-$c1 = ['sun' => true, 'mon' => true];
-$b1 = array_key_exists('mon', $c1);
+$c1 = ['Sun' => true, 'Mon' => true];
+$b1 = array_key_exists('Mon', $c1);
 var_dump($b1);

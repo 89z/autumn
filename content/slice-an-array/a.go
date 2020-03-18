@@ -1,7 +1,7 @@
 package main
 import "fmt"
 func main() {
-   a1 := []string{"sun", "mon", "tue"}
+   a1 := []string{"Sun", "Mon", "Tue"}
    // string from front
    s1 := a1[0]
    // string from back
