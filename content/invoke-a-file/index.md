@@ -32,7 +32,7 @@ languages: [d, go, julia, nim, php, python]
 ## PHP
 
 {{< r "a.php" >}}
-{{< r "a2.php" >}}
+{{< r "b.php" >}}
 {{< r "php.sh" >}}
 
 - <https://php.net/features.commandline.usage>

@@ -15,31 +15,31 @@ Append to array 1:
 
 Append to array 2:
 
-{{< r "a2.rb" >}}
+{{< r "b.rb" >}}
 
 <https://ruby-doc.org/core/Array.html#method-i-3C-3C>
 
 Append to array 3:
 
-{{< r "a3.rb" >}}
+{{< r "c.rb" >}}
 
 <https://ruby-doc.org/core/Array.html#method-i-concat>
 
 Append to array 4:
 
-{{< r "a4.rb" >}}
+{{< r "d.rb" >}}
 
 <https://ruby-doc.org/core/Array.html#method-i-insert>
 
 Append to array 5:
 
-{{< r "a5.rb" >}}
+{{< r "e.rb" >}}
 
 <https://ruby-doc.org/core/Array.html#method-i-push>
 
 Append to array 6:
 
-{{< r "a6.rb" >}}
+{{< r "f.rb" >}}
 
 {{< a `https://ruby-doc.org/core/doc/syntax/assignment_rdoc.html#
 label-Implicit+Array+Assignment` >}}

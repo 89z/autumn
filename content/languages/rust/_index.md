@@ -23,11 +23,11 @@ Go `struct` allows missing fields:
 
 However Rust does not:
 
-{{< r "a2.rs" >}}
+{{< r "b.rs" >}}
 
 Instead requiring something like this:
 
-{{< r "a3.rs" >}}
+{{< r "c.rs" >}}
 
 <https://github.com/rust-lang/rfcs/issues/2875>
 

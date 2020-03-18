@@ -1,4 +1,4 @@
-import a1;
+import b;
 void main() {
    f1();
 }

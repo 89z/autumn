@@ -13,7 +13,7 @@ languages: [go, php, python]
 ## PHP
 
 {{< r "a.php" >}}
-{{< r "a2.php" >}}
+{{< r "b.php" >}}
 
 - <https://php.net/function.curl-getinfo>
 - <https://php.net/function.curl-setopt>

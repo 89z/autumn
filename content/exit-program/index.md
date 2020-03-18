@@ -7,7 +7,7 @@ languages: [go, php, python]
 ## Go
 
 {{< r "a.go" >}}
-{{< r "a2.go" >}}
+{{< r "b.go" >}}
 
 - <https://golang.org/pkg/os#Exit>
 - <https://golang.org/ref/spec#Return_statements>
@@ -15,7 +15,7 @@ languages: [go, php, python]
 ## PHP
 
 {{< r "a.php" >}}
-{{< r "a2.php" >}}
+{{< r "b.php" >}}
 
 - <https://php.net/function.exit>
 - <https://php.net/function.trigger-error>

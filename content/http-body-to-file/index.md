@@ -11,7 +11,7 @@ languages: [julia, nim, php, python]
 ## Nim
 
 {{< r "a.nim" >}}
-{{< r "a2.nim" >}}
+{{< r "b.nim" >}}
 
 {{< a `https://nim-lang.github.io/Nim/httpclient#
 downloadFile,HttpClient,string,string` >}}
@@ -19,7 +19,7 @@ downloadFile,HttpClient,string,string` >}}
 ## PHP
 
 {{< r "a.php" >}}
-{{< r "a2.php" >}}
+{{< r "b.php" >}}
 
 - <https://php.net/function.copy>
 - <https://php.net/function.curl-init>

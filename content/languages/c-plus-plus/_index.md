@@ -5,7 +5,7 @@ stars: 134910
 
 Regarding booleans, it is not ideal that numbers are printed by default:
 
-{{< r "a2.cpp" >}}
+{{< r "b.cpp" >}}
 
 but to be fair, other languages have similar issues. Here is Go:
 

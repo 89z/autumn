@@ -25,7 +25,7 @@ PHP Warning: DOMDocument::loadHTMLFile(): Tag svg invalid
 
 If you try this you get the same warning:
 
-{{< r "a2.php" >}}
+{{< r "b.php" >}}
 
 This was supposedly fixed in 2017:
 
@@ -33,19 +33,19 @@ This was supposedly fixed in 2017:
 
 Another option is `strtok`, but syntax is awkward:
 
-{{< r "a3.php" >}}
+{{< r "c.php" >}}
 
 Another option is to `foreach` an array:
 
-{{< r "a4.php" >}}
+{{< r "d.php" >}}
 
 Another option is to `array_search`:
 
-{{< r "a5.php" >}}
+{{< r "e.php" >}}
 
 Another option is regular expression:
 
-{{< r "a6.php" >}}
+{{< r "f.php" >}}
 
 Interestingly, regular expression is shortest code and fastest:
 

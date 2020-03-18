@@ -17,8 +17,8 @@ So as shown above, when using Byte Slices, they shall be declared with `a1` or
 similar identifiers, not `s1` or similar. When printing Byte Slices, we could
 use one of these:
 
-{{< r "a2.go" >}}
-{{< r "a3.go" >}}
+{{< r "b.go" >}}
+{{< r "c.go" >}}
 
 but we are adding an extra line just so that we can use a function that is not
 guaranteed to exist:
@@ -30,4 +30,4 @@ guaranteed to exist:
 
 This is the better option:
 
-{{< r "a4.go" >}}
+{{< r "d.go" >}}

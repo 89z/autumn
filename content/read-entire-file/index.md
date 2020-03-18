@@ -11,9 +11,9 @@ languages: [d, go, julia, nim, php, python]
 ## Go
 
 {{< r "a.go" >}}
-{{< r "a2.go" >}}
-{{< r "a3.go" >}}
-{{< r "a4.go" >}}
+{{< r "b.go" >}}
+{{< r "c.go" >}}
+{{< r "d.go" >}}
 
 - <https://golang.org/pkg/bufio>
 - <https://golang.org/pkg/io>

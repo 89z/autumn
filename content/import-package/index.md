@@ -29,7 +29,7 @@ languages: [d, go, julia, nim, python]
 ## Python
 
 {{< r "a.py" >}}
-{{< r "a2.py" >}}
+{{< r "b.py" >}}
 
 <https://docs.python.org/reference/simple_stmts.html#import>
 

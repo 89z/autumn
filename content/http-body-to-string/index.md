@@ -20,9 +20,9 @@ languages: [go, javascript, php, python]
 ## PHP
 
 {{< r "a.php" >}}
-{{< r "a2.php" >}}
-{{< r "a3.php" >}}
-{{< r "a4.php" >}}
+{{< r "b.php" >}}
+{{< r "c.php" >}}
+{{< r "d.php" >}}
 
 Some examples require `php-curl` package.
 

@@ -24,15 +24,15 @@ Array search is usually a footgun. Using this input:
 
 Here is a naive example:
 
-{{< r "a2.php" >}}
+{{< r "b.php" >}}
 
 Better to create map from the keys:
 
-{{< r "a3.php" >}}
+{{< r "c.php" >}}
 
 Best to create map from the keys and values:
 
-{{< r "a4.php" >}}
+{{< r "d.php" >}}
 
 Note the difference will be more pronounced on language like Go, as it does
 not have an search function. You would need to iterate the header each time

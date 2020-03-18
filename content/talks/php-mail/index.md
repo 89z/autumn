@@ -12,7 +12,7 @@ seems pretty desirable upon first glance. Doing this:
 
 is much simpler than doing this:
 
-{{< r "a2.php" >}}
+{{< r "b.php" >}}
 
 but what that page doesnt says is that `mail` requires `sendmail`:
 
