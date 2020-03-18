@@ -21,29 +21,17 @@
       </nav>
    </header>
 <h1>Set types</h1>
-<time>Wed Mar 4 18:45:59 2020</time>
+<time>Wed Mar 18 18:31:22 2020</time>
 <a href="/autumn/topics/set">set</a>
 <a href="/autumn/topics/type">type</a>
-   <h2 id="d">D</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.container.rbtree<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> redBlackTree<span style="color:#f92672">(</span><span style="color:#ae81ff">10</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">11</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-   s1<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
-<p><a href="https://dlang.org/phobos/std_container_rbtree.html#.RedBlackTree">https://dlang.org/phobos/std_container_rbtree.html#.RedBlackTree</a></p>
-<h2 id="go">Go</h2>
+   <h2 id="go">Go</h2>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#75715e">// duplicate key 20 in map literal
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">c1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">int</span>]<span style="color:#66d9ef">bool</span>{<span style="color:#ae81ff">10</span>: <span style="color:#66d9ef">true</span>, <span style="color:#ae81ff">20</span>: <span style="color:#66d9ef">true</span>}
+   <span style="color:#a6e22e">c1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">bool</span>{<span style="color:#e6db74">&#34;Sun&#34;</span>: <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">&#34;Mon&#34;</span>: <span style="color:#66d9ef">true</span>}
    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">c1</span>)
 }
 </code></pre></div>
@@ -67,7 +55,7 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jl" data-lang="jl">c1<span style="color:#f92672"></span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">Set</span>([<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>])
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jl" data-lang="jl">c1<span style="color:#f92672"></span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">Set</span>([<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">S</span><span style="color:#e6db74">u</span><span style="color:#e6db74">n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">M</span><span style="color:#e6db74">o</span><span style="color:#e6db74">n</span><span style="color:#e6db74">&#34;</span>])
 println<span style="color:#f92672"></span>(c1<span style="color:#f92672"></span>)
 </code></pre></div>
 <p><a href="https://docs.julialang.org/en/v1/base/collections#Base.Set">https://docs.julialang.org/en/v1/base/collections#Base.Set</a></p>

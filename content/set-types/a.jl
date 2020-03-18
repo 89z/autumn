@@ -1,2 +1,2 @@
-c1 = Set([10, 11])
+c1 = Set(["Sun", "Mon"])
 println(c1)

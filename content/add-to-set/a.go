@@ -1,7 +1,7 @@
 package main
 import "fmt"
 func main() {
-   c1 := map[string]bool{}
-   c1["sun"] = true
+   c1 := map[string]bool{"Sun": true}
+   c1["Mon"] = true
    fmt.Println(c1)
 }

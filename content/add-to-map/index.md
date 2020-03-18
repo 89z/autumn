@@ -1,14 +1,8 @@
 ---
 title: Add to map
 topics: [map]
-languages: [d, go, javascript, julia, nim, php, python]
+languages: [go, javascript, julia, nim, php, python]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/spec/hash-map.html>
 
 ## Go
 

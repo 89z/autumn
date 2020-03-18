@@ -1,14 +1,8 @@
 ---
 title: Set types
 topics: [set, type]
-languages: [d, go, javascript, julia, nim, php, python]
+languages: [go, javascript, julia, nim, php, python]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/phobos/std_container_rbtree.html#.RedBlackTree>
 
 ## Go
 
