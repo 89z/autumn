@@ -1,2 +1,2 @@
 import os
-"sunday".createDir
+"Sunday".createDir

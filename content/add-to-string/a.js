@@ -1,14 +1,14 @@
 // example 1
-var s1 = 'sun';
-s1 = s1 + ' mon';
+let s1 = 'Sun';
+s2 = s1 + 'day';
 // example 2
-var s2 = 'sun';
-s2 += ' mon';
+let s2 = 'Sun';
+s2 += 'day';
 // example 3
-var s3 = 'sun';
-s3 = `${s3} mon`;
+let s3 = 'Sun';
+s3 = `${s3}day`;
 // example 4
-var s4 = 'sun';
-s4 = s4.concat(' mon');
+let s4 = 'Sun';
+s4 = s4.concat('day');
 // print
 console.log([s1, s2, s3, s4]);

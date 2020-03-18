@@ -1,2 +1,2 @@
-a1 = ['sun', 'mon, tue']
+a1 = ['Sun', 'Mon']
 print(a1)

@@ -1,6 +1,5 @@
-module main;
 import std.stdio;
 void main() {
-   auto a1 = ["sun", "mon, tue"];
+   auto a1 = ["Sun", "Mon"];
    a1.writeln;
 }

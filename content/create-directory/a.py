@@ -1,2 +1,2 @@
 import os
-os.makedirs('sunday')
+os.makedirs('Sunday')

@@ -1,15 +1,15 @@
 <?php
 # example 1
-$s1 = 'sun';
-$s1 = $s1 . ' mon';
+$s1 = 'Sun';
+$s1 = $s1 . 'day';
 # example 2
-$s2 = 'sun';
-$s2 .= ' mon';
+$s2 = 'Sun';
+$s2 .= 'day';
 # example 3
-$s3 = 'sun';
-$s3 = "${s3} mon";
+$s3 = 'Sun';
+$s3 = "${s3}day";
 # example 4
-$s4 = 'sun';
-$s4 = "$s4 mon";
+$s4 = 'Sun';
+$s4 = "$s4 Mon";
 # print
 var_dump($s1, $s2, $s3, $s4);

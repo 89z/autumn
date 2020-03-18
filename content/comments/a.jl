@@ -1,6 +1,6 @@
-# sunday monday
+# Sunday Monday
 
 #=
-sunday
-monday
+Sunday
+Monday
 =#

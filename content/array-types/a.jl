@@ -1,2 +1,2 @@
-a1 = ["sun", "mon"]
+a1 = ["Sun", "Mon"]
 println(a1)

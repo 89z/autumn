@@ -1,1 +1,1 @@
-mkpath("sunday")
+mkpath("Sunday")

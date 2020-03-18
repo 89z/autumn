@@ -8,7 +8,7 @@ import (
 func main() {
    // files
    f1, _ := os.Open("a.jpg")
-   f2, _ := os.Create("a2.jpg")
+   f2, _ := os.Create("b.jpg")
    // rectangle
    r1 := image.Rect(800, 800, 1400, 1400)
    // images

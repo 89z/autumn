@@ -30,11 +30,11 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;sun&#34;</span><span style="color:#f92672">;</span>
-   s1 <span style="color:#f92672">=</span> s1 <span style="color:#f92672">~</span> <span style="color:#e6db74">&#34; mon&#34;</span><span style="color:#f92672">;</span>
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sun&#34;</span><span style="color:#f92672">;</span>
+   s1 <span style="color:#f92672">=</span> s1 <span style="color:#f92672">~</span> <span style="color:#e6db74">&#34;day&#34;</span><span style="color:#f92672">;</span>
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;sun&#34;</span><span style="color:#f92672">;</span>
-   s2 <span style="color:#f92672">~</span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34; mon&#34;</span><span style="color:#f92672">;</span>
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sun&#34;</span><span style="color:#f92672">;</span>
+   s2 <span style="color:#f92672">~</span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;day&#34;</span><span style="color:#f92672">;</span>
    <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span>   <span style="color:#f92672">[</span>s1<span style="color:#f92672">,</span> s2<span style="color:#f92672">]</span><span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
@@ -51,18 +51,18 @@
 )
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s1</span> = <span style="color:#e6db74">&#34;sun&#34;</span>
-   <span style="color:#a6e22e">s1</span> = <span style="color:#a6e22e">s1</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; mon&#34;</span>
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s1</span> = <span style="color:#e6db74">&#34;Sun&#34;</span>
+   <span style="color:#a6e22e">s1</span> = <span style="color:#a6e22e">s1</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;day&#34;</span>
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s2</span> = <span style="color:#e6db74">&#34;sun&#34;</span>
-   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34; mon&#34;</span>
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s2</span> = <span style="color:#e6db74">&#34;Sun&#34;</span>
+   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;day&#34;</span>
    <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s3</span> = <span style="color:#e6db74">&#34;sun&#34;</span>
-   <span style="color:#a6e22e">s3</span> = <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%s mon&#34;</span>, <span style="color:#a6e22e">s3</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s3</span> = <span style="color:#e6db74">&#34;Sun&#34;</span>
+   <span style="color:#a6e22e">s3</span> = <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%s Mon&#34;</span>, <span style="color:#a6e22e">s3</span>)
    <span style="color:#75715e">// example 4
 </span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s4</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>
-   <span style="color:#a6e22e">s4</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#e6db74">&#34;sun&#34;</span>)
-   <span style="color:#a6e22e">s4</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#e6db74">&#34; mon&#34;</span>)
+   <span style="color:#a6e22e">s4</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#e6db74">&#34;Sun&#34;</span>)
+   <span style="color:#a6e22e">s4</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#e6db74">&#34;day&#34;</span>)
    <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, []<span style="color:#66d9ef">string</span>{<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">s3</span>, <span style="color:#a6e22e">s4</span>.<span style="color:#a6e22e">String</span>()})
 }
@@ -76,17 +76,17 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;sun&#39;</span>;
-<span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; mon&#39;</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sun&#39;</span>;
+<span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;day&#39;</span>;
 <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;sun&#39;</span>;
-<span style="color:#a6e22e">s2</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39; mon&#39;</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sun&#39;</span>;
+<span style="color:#a6e22e">s2</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;day&#39;</span>;
 <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s3</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;sun&#39;</span>;
-<span style="color:#a6e22e">s3</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">s3</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> mon</span><span style="color:#e6db74">`</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s3</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sun&#39;</span>;
+<span style="color:#a6e22e">s3</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">s3</span><span style="color:#e6db74">}</span><span style="color:#e6db74">day</span><span style="color:#e6db74">`</span>;
 <span style="color:#75715e">// example 4
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s4</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;sun&#39;</span>;
-<span style="color:#a6e22e">s4</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s4</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#e6db74">&#39; mon&#39;</span>);
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s4</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sun&#39;</span>;
+<span style="color:#a6e22e">s4</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s4</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#e6db74">&#39;day&#39;</span>);
 <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>([<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">s3</span>, <span style="color:#a6e22e">s4</span>]);
 </code></pre></div>
@@ -117,9 +117,14 @@ println<span style="color:#f92672"></span>(s1<span style="color:#f92672"></span>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">var</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">sun</span><span style="color:#e6db74">&#34;</span>
-s1 <span style="color:#f92672">=</span> s1 <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74"> mon</span><span style="color:#e6db74">&#34;</span>
-echo s1
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#75715e"># example 1</span>
+<span style="color:#66d9ef">var</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Sun</span><span style="color:#e6db74">&#34;</span>
+s1 <span style="color:#f92672">=</span> s1 <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">day</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#75715e"># example 2</span>
+<span style="color:#66d9ef">var</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Sun</span><span style="color:#e6db74">&#34;</span>
+s2 <span style="color:#f92672">&amp;</span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">day</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#75715e"># print</span>
+echo <span style="color:#f92672">[</span>s1, s2<span style="color:#f92672">]</span>
 </code></pre></div>
 <p><a href="https://nim-lang.github.io/Nim/manual#types-string-type">https://nim-lang.github.io/Nim/manual#types-string-type</a></p>
 <h2 id="php">PHP</h2>
@@ -128,17 +133,17 @@ echo s1
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;sun&#39;</span>;
-$s1 <span style="color:#f92672">=</span> $s1 <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39; mon&#39;</span>;
+</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sun&#39;</span>;
+$s1 <span style="color:#f92672">=</span> $s1 <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;day&#39;</span>;
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;sun&#39;</span>;
-$s2 <span style="color:#f92672">.=</span> <span style="color:#e6db74">&#39; mon&#39;</span>;
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sun&#39;</span>;
+$s2 <span style="color:#f92672">.=</span> <span style="color:#e6db74">&#39;day&#39;</span>;
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;sun&#39;</span>;
-$s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>s3<span style="color:#e6db74">}</span><span style="color:#e6db74"> mon&#34;</span>;
+</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sun&#39;</span>;
+$s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>s3<span style="color:#e6db74">}</span><span style="color:#e6db74">day&#34;</span>;
 <span style="color:#75715e"># example 4
-</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;sun&#39;</span>;
-$s4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">$s4</span><span style="color:#e6db74"> mon&#34;</span>;
+</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sun&#39;</span>;
+$s4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">$s4</span><span style="color:#e6db74"> Mon&#34;</span>;
 <span style="color:#75715e"># print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1, $s2, $s3, $s4);
 </code></pre></div>
@@ -151,13 +156,13 @@ $s4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># example 1</span>
-s1 <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">sun</span><span style="color:#e6db74">&#39;</span>
+s1 <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Sun</span><span style="color:#e6db74">&#39;</span>
 s1 <span style="color:#f92672">=</span> s1 <span style="color:#f92672">+</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">day</span><span style="color:#e6db74">&#39;</span>
 <span style="color:#75715e"># example 2</span>
-s2 <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">sun</span><span style="color:#e6db74">&#39;</span>
+s2 <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Sun</span><span style="color:#e6db74">&#39;</span>
 s2 <span style="color:#f92672">+</span><span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">day</span><span style="color:#e6db74">&#39;</span>
 <span style="color:#75715e"># example 2</span>
-s3 <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">sun</span><span style="color:#e6db74">&#39;</span>
+s3 <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Sun</span><span style="color:#e6db74">&#39;</span>
 s3 <span style="color:#f92672">=</span> f<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{s3}day</span><span style="color:#e6db74">&#39;</span>
 <span style="color:#75715e"># print</span>
 <span style="color:#66d9ef">print</span>(s1, s2, s3)

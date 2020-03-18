@@ -1,5 +1,5 @@
 package main
 import "os"
 func main() {
-   os.Mkdir("sunday", os.ModePerm)
+   os.Mkdir("Sunday", os.ModePerm)
 }
