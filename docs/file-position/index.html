@@ -34,7 +34,7 @@
 )
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">r1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
-   <span style="color:#a6e22e">r1</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#e6db74">&#34;sun mon tue\n&#34;</span>)
+   <span style="color:#a6e22e">r1</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#e6db74">&#34;Sunday\n&#34;</span>)
    <span style="color:#a6e22e">r1</span>.<span style="color:#a6e22e">Seek</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>)
    <span style="color:#a6e22e">r2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">r1</span>)
    <span style="color:#a6e22e">r2</span>.<span style="color:#a6e22e">Scan</span>()
