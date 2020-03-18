@@ -4,9 +4,8 @@ import (
    "strings"
 )
 func main() {
-   s1 := `sun mon tue
-wed thu fri
-`
+   s1 := `Sunday
+Monday`
    o1 := bufio.NewScanner(strings.NewReader(s1))
    for o1.Scan() {
       println(o1.Text())

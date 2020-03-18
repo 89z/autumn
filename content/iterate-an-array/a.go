@@ -1,6 +1,6 @@
 package main
 func main() {
-   a1 := []string{"sun", "mon"}
+   a1 := []string{"Sun", "Mon"}
    // example 1
    for _, s1 := range a1 {
       println(s1)

@@ -1,4 +1,4 @@
-a1 = ['sun', 'mon']
+a1 = ['Sun', 'Mon']
 # example 1
 for s1 in a1:
    print(s1)

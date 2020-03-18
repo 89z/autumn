@@ -1,3 +1,3 @@
 <?php
-echo "sunday monday\n";
+echo "Sunday\n";
 ?>

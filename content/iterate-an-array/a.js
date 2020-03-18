@@ -1,4 +1,4 @@
-let a1 = ['sun', 'mon'];
+let a1 = ['Sun', 'Mon'];
 // example 1
 for (let n1 = 0; n1 < a1.length; n1++) {
    console.log(a1[n1]);

@@ -10,7 +10,7 @@ Here is a minimal program:
 ~~~java
 class a1 {
    public static void main(String[] a2) {
-      System.out.println("sunday monday");
+      System.out.println("Sunday");
    }
 }
 ~~~

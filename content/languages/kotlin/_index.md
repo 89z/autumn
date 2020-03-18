@@ -29,14 +29,6 @@ options are under 100 MB:
 Second, should I choose to use my own C compiler, why cant I? It seems no option
 is currently available to do that.
 
-## Write to console
-
-~~~java
-fun main() {
-   println("sunday")
-}
-~~~
-
 ## Setup
 
 - <https://github.com/JetBrains/kotlin-native>

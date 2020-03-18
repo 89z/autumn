@@ -1,5 +1,5 @@
 <?php
-$a1 = ['sun', 'mon'];
+$a1 = ['Sun', 'Mon'];
 # example 1
 foreach ($a1 as $s1) {
    var_dump($s1);

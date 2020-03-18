@@ -1,4 +1,4 @@
-let m1 = {sun: 10, mon: 11};
+let m1 = {Sun: 10, Mon: 11};
 // example 1
 for (let s1 in m1) {
    console.log(s1);
