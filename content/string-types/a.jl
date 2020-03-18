@@ -1,2 +1,2 @@
-s1 = "sunday"
+s1 = "Sunday"
 println(s1)

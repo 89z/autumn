@@ -1,10 +1,10 @@
 import std.stdio;
 void main() {
    // example 1
-   const s1 = "sun mon tue";
+   auto s1 = "Sunday";
    // example 2
-   const s2 = `sun mon tue
-wed thu fri`;
+   auto s2 = `Sunday
+Monday`;
    // print
-   writeln(s1, "\n", s2);
+   [s1, s2].writeln;
 }

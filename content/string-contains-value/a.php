@@ -1,12 +1,12 @@
 <?php
 # example 1
-$b1 = strpos('sunday', 'und') !== false;
+$b1 = strpos('Sunday', 'und') !== false;
 # example 2
-$b2 = strpos('sunday', 'sun') === 0;
+$b2 = strpos('Sunday', 'Sun') === 0;
 # example 3
-$a1 = explode('day', 'sunday');
+$s1 = explode('day', 'Sunday');
 $b3 = end($a1) === '';
 # example 4
-$b4 = 'sunday'[0] == 's';
+$b4 = 'Sunday'[0] == 'S';
 # print
 var_dump($b1, $b2, $b3, $b4);

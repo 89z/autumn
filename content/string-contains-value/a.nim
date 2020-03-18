@@ -1,5 +1,5 @@
 import strutils
-let s1 = "sunday"
+let s1 = "Sunday"
 # example 1
 let b1 = s1.contains("und")
 # example 2

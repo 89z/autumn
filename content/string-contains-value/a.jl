@@ -1,4 +1,4 @@
-s1 = "sunday"
+s1 = "Sunday"
 # example 1
 b1 = occursin("und", s1)
 # example 2

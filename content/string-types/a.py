@@ -1,12 +1,12 @@
 # example 1
-s1 = 'sun mon tue'
+s1 = 'Sunday'
 # example 2
-s2 = "sun mon tue"
+s2 = "Sunday"
 # example 3
-s3 = '''sun mon tue
-wed thu fri'''
+s3 = '''Sunday
+Monday'''
 # example 4
-s4 = """sun mon tue
-wed thu fri"""
+s4 = """Sunday
+Monday"""
 # print
 print(s1, s2, s3, s4)
