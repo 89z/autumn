@@ -9,7 +9,8 @@ Always include the `.html`:
 
 ## Setup
 
-<https://python.org/downloads/windows>
+- <https://python.org/downloads/windows>
+- <https://sourceware.org/pipermail/cygwin/2020-March/244118.html>
 
 ## Stars
 

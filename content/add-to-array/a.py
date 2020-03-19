@@ -1,14 +1,14 @@
 # example 1
-a1 = [10, 11]
-a1.append(12)
+a1 = ['Sun']
+a1.append('Mon')
 # exmaple 2
-a2 = [10, 11]
-a2.extend([12, 13])
+a2 = ['Sun']
+a2.extend(['Mon'])
 # example 3
-a3 = [10, 11]
-a3 = [*a3, 12]
+a3 = ['Sun']
+a3 = [*a3, 'Mon']
 # example 4
-a4 = [10, 11]
-a4 += [12, 13]
+a4 = ['Sun']
+a4 += ['Mon']
 # print
 print(a1, a2, a3, a4)

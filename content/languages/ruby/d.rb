@@ -1,3 +1,3 @@
-a1 = [10, 11]
-a1.insert(-1, 12)
+a1 = ['Sun']
+a1.insert(-1, 'Mon')
 p a1

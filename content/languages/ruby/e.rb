@@ -1,3 +1,3 @@
-a1 = [10, 11]
-a1.push(12)
+a1 = ['Sun']
+a1.push('Mon')
 p a1

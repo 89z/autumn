@@ -1,3 +1,3 @@
-a1 = [10, 11]
-append!(a1, 12)
+a1 = ["Sun"]
+append!(a1, "Mon")
 println(a1)

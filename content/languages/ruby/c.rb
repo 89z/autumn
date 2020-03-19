@@ -1,3 +1,3 @@
-a1 = [10, 11]
-a1.concat([12, 13])
+a1 = ['Sun']
+a1.concat(['Mon'])
 p a1

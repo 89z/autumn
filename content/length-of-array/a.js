@@ -1,3 +1,3 @@
-let a1 = [10, 11];
+let a1 = ['Sun', 'Mon'];
 let n1 = a1.length;
 console.log(n1);

@@ -1,18 +1,29 @@
 package main
 import "fmt"
 func main() {
-   // example 1
+   // normal
    type Jan struct {
-      Sun, Mon int
+      Sun int
+      Mon bool
    }
-   o1 := Jan{10, 11}
-   // example 2
+   o1 := Jan{10, true}
+   // omit value
    type Feb struct {
-      Sun, Mon, Tue int
+      Sun int
+      Mon bool
    }
-   o2 := Feb{Mon: 11, Tue: 12}
-   // example 3
-   o3 := struct{Sun, Mon int}{10, 11}
+   o2 := Feb{Mon: true}
+   // omit key
+   type Mar struct {
+      int
+      bool
+   }
+   o3 := Mar{10, true}
+   // omit type
+   o4 := struct {
+      Sun int
+      Mon bool
+   }{10, true}
    // print
-   fmt.Println(o1, o2, o3)
+   fmt.Println(o1, o2, o3, o4)
 }

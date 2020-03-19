@@ -1,5 +1,5 @@
 <?php
-$a1 = [10, 11];
+$a1 = ['Sun', 'Mon'];
 # example 1
 $n1 = count($a1);
 # example 2

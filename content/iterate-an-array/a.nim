@@ -1,7 +1,7 @@
-let a1 = [10, 11]
+let a1 = ["Sun", "Mon"]
 # example 1
-for n1 in items(a1):
-   echo n1
+for s1 in items(a1):
+   echo s1
 # example 2
-for n1 in a1.items:
-   echo n1
+for s1 in a1.items:
+   echo s1
