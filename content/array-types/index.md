@@ -1,14 +1,8 @@
 ---
 title: Array types
 topics: [array, type]
-languages: [d, go, javascript, julia, nim, php, python]
+languages: [go, javascript, julia, nim, php, python]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/spec/arrays.html>
 
 ## Go
 

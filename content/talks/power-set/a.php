@@ -8,6 +8,6 @@ function powerset($a_in) {
    }
    return $a_out;
 }
-$a1 = [10, 11, 12];
+$a1 = ['Sun', 'Mon', 'Tue'];
 $a2 = powerset($a1);
 var_export($a2);

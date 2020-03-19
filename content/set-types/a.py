@@ -1,8 +1,8 @@
 # example 1
-s1 = {10, 11}
+c1 = {'Sun', 'Mon'}
 # example 2
-s2 = set([10, 11])
+c2 = set(['Sun', 'Mon'])
 # example 3
-s3 = dict.fromkeys([10, 11], True)
+c3 = dict.fromkeys(['Sun', 'Mon'], True)
 # print
-print(s1, s2, s3)
+print(c1, c2, c3)

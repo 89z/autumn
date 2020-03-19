@@ -41,9 +41,9 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Set</span>([<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>]);
-<span style="color:#75715e">// example 4
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> {<span style="color:#ae81ff">10</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#ae81ff">11</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>};
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">c1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Set</span>([<span style="color:#e6db74">&#39;Sun&#39;</span>, <span style="color:#e6db74">&#39;Mon&#39;</span>]);
+<span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">c2</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">Sun</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#a6e22e">Mon</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>};
 <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>);
 </code></pre></div>
@@ -66,8 +66,8 @@ println<span style="color:#f92672"></span>(c1<span style="color:#f92672"></span>
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>, <span style="color:#ae81ff">20</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>, <span style="color:#ae81ff">20</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>];
-<span style="color:#a6e22e">var_export</span>($s1);
+$c1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">&#39;Mon&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>];
+<span style="color:#a6e22e">var_export</span>($c1);
 </code></pre></div>
 <p><a href="https://php.net/language.types.array">https://php.net/language.types.array</a></p>
 <h2 id="python">Python</h2>
@@ -75,13 +75,13 @@ $s1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span> 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># example 1</span>
-s1 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>}
+c1 <span style="color:#f92672">=</span> {<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Sun</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Mon</span><span style="color:#e6db74">&#39;</span>}
 <span style="color:#75715e"># example 2</span>
-s2 <span style="color:#f92672">=</span> set([<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>])
+c2 <span style="color:#f92672">=</span> set([<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Sun</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Mon</span><span style="color:#e6db74">&#39;</span>])
 <span style="color:#75715e"># example 3</span>
-s3 <span style="color:#f92672">=</span> dict<span style="color:#f92672">.</span>fromkeys([<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>], True)
+c3 <span style="color:#f92672">=</span> dict<span style="color:#f92672">.</span>fromkeys([<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Sun</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Mon</span><span style="color:#e6db74">&#39;</span>], True)
 <span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(s1, s2, s3)
+<span style="color:#66d9ef">print</span>(c1, c2, c3)
 </code></pre></div>
 <ul>
 <li><a href="https://docs.python.org/library/stdtypes.html#dict.fromkeys">https://docs.python.org/library/stdtypes.html#dict.fromkeys</a></li>

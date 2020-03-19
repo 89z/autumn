@@ -1,4 +1,4 @@
 <?php
-# initialisation not needed
-$c1['sun'] = true;
+$c1 = ['Sun' => true];
+$c1['Mon'] = true;
 print_r($c1);

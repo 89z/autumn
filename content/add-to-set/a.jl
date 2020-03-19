@@ -1,3 +1,3 @@
-c1 = Set([10, 11])
-push!(c1, 12)
+c1 = Set(["Sun"])
+push!(c1, "Mon")
 println(c1)

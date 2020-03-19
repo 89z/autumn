@@ -1,3 +1,3 @@
-c1 = set()
-c1.add('Sunday')
+c1 = {'Sun'}
+c1.add('Mon')
 print(c1)

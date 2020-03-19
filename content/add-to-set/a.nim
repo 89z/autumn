@@ -1,3 +1,3 @@
-var c1 = {10, 11}
-c1.incl(12)
+var c1 = {"Sun"}
+c1.incl("Mon")
 echo c1
