@@ -1,1 +1,4 @@
-extern(C) void f1();
+import std.stdio;
+void f1() {
+   "Hello World".writeln;
+}

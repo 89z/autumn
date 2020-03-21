@@ -2,34 +2,6 @@
 title: D cURL static
 ---
 
-First, a C Hello World with statically linked library:
-
-{{< r "1/hello.c" >}}
-{{< r "1/hello.h" >}}
-{{< r "1/test.c" >}}
-{{< r "1/test_1.sh" >}}
-{{< r "1/test_2.sh" >}}
-
-Next, a DMD Hello World with statically linked D library:
-
-Next, a DMD Hello World with statically linked C library:
-
-{{< r "3/hello.c" >}}
-{{< r "3/hello.d" >}}
-{{< r "3/test.d" >}}
-{{< r "3/test.sh" >}}
-
-Result:
-
-~~~
-dmd
-OPTLINK (R) for Win32  Release 8.00.17
-Copyright (C) Digital Mars 1989-2013  All rights reserved.
-http://www.digitalmars.com/ctg/optlink.html
-hello.lib
- Error 43: Not a Valid Library File
-~~~
-
 DMD only offers the shared library:
 
 ~~~
@@ -54,16 +26,10 @@ Next we need to post or link to issues about missing static library:
 - <https://issues.dlang.org/show_bug.cgi?id=15841>
 - <https://issues.dlang.org/show_bug.cgi?id=20690>
 
-Next we will build our own static library:
-
-{{< r "4/curl.sh" >}}
-
-Next we can try to use static library with `std.net.curl` and `etc.c.curl`.
-
-{{< r "4/etc_c_curl.d" >}}
-
 ## References
 
 - <https://dlang.org/blog/2017/10/25/dmd-windows-and-c>
 - <https://github.com/ldc-developers/ldc/issues/3260>
 - <https://lld.llvm.org>
+- <https://stackoverflow.com/questions/2734719>
+- <https://support.microsoft.com/help/2977003>

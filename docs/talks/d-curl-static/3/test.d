@@ -1,4 +1,4 @@
 import hello;
 void main() {
-   f1();
+   f1;
 }
