@@ -30,16 +30,9 @@ simple.c
 
 but if you build LibCurl:
 
-~~~
-git clone --depth 1 git://github.com/curl/curl
-cd curl
-mingw32-make -C lib -f Makefile.m32 -j 5 CFG=-winssl
-mkdir -p /Path/llvm-mingw/lib /Path/llvm-mingw/include/curl
-cp lib/libcurl.a /Path/llvm-mingw/lib
-cp include/curl/*.h /Path/llvm-mingw/include/curl
-~~~
+{{< r "build-https.sh" >}}
 
 it is simpler to link:
 
-{{< r "a.c" >}}
-{{< r "c.sh" >}}
+{{< r "https.c" >}}
+{{< r "c-https.sh" >}}

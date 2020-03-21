@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>LibCurl</h1>
-<time>Mon Mar 16 06:06:28 2020</time>
+<time>Sat Mar 21 01:48:52 2020</time>
    <p>So using these:</p>
 <ul>
 <li><a href="https://curl.haxx.se/windows">https://curl.haxx.se/windows</a></li>
@@ -45,13 +45,19 @@
 -static \
 simple.c
 </code></pre><p>but if you build LibCurl:</p>
-<pre><code>git clone --depth 1 git://github.com/curl/curl
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/dash
+</span><span style="color:#75715e"></span>set -e -u
+git clone --depth <span style="color:#ae81ff">1</span> git://github.com/curl/curl
 cd curl
-mingw32-make -C lib -f Makefile.m32 -j 5 CFG=-winssl
+mingw32-make -C lib -f Makefile.m32 -j <span style="color:#ae81ff">5</span> CFG<span style="color:#f92672">=</span>-winssl
 mkdir -p /Path/llvm-mingw/lib /Path/llvm-mingw/include/curl
 cp lib/libcurl.a /Path/llvm-mingw/lib
 cp include/curl/*.h /Path/llvm-mingw/include/curl
-</code></pre><p>it is simpler to link:</p>
+</code></pre></div>
+<p>it is simpler to link:</p>
 <p>
 
 
@@ -76,7 +82,7 @@ clang <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>-lcurl <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>-lwldap32 <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>-lws2_32 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>a.c
+</span><span style="color:#ae81ff"></span>https.c
 </code></pre></div></p>
 
 
