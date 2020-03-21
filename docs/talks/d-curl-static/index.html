@@ -21,8 +21,52 @@
       </nav>
    </header>
 <h1>D cURL static</h1>
-<time>Sat Mar 21 14:12:53 2020</time>
-   <p>First a Hello World with DMD and statically linked C library:</p>
+<time>Sat Mar 21 15:20:58 2020</time>
+   <p>First, a C Hello World with statically linked library:</p>
+<p>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">f1</span>() {
+   puts(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Hello World</span><span style="color:#e6db74">&#34;</span>);
+}
+</code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-h" data-lang="h"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">f1</span>();
+</code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&#34;hello.h&#34;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   f1();
+}
+</code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/dash
+</span><span style="color:#75715e"></span>clang -c hello.c
+llvm-ar r hello.a hello.o
+clang test.c hello.a
+./a
+rm a.exe hello.a hello.o
+</code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/dash
+</span><span style="color:#75715e"></span>clang -c hello.c
+llvm-ar r hello.a hello.o
+clang -c test.c
+clang test.o hello.a
+./a
+rm a.exe hello.a hello.o test.o
+</code></pre></div></p>
+<p>Next, a DMD Hello World with statically linked D library:</p>
+<p>Next, a DMD Hello World with statically linked C library:</p>
 <p>
 
 
@@ -48,13 +92,10 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/dash
-</span><span style="color:#75715e"></span>echo clang
-clang -c hello.c
-echo llvm-ar
-llvm-ar r hello.lib hello.o
-echo dmd
-/Root/dmd2/windows/bin64/dmd hello_test.d hello.lib
-rm hello.lib hello.o hello_test.obj
+</span><span style="color:#75715e"></span>clang -c hello.c
+llvm-ar r hello.a hello.o
+dmd hello_test.d hello.a <span style="color:#75715e"># Error: unrecognized file extension a</span>
+rm hello.a hello.o
 </code></pre></div></p>
 <p>Result:</p>
 <pre><code>dmd

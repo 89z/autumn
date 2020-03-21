@@ -2,12 +2,22 @@
 title: D cURL static
 ---
 
-First a Hello World with DMD and statically linked C library:
+First, a C Hello World with statically linked library:
 
-{{< r "hello/hello.c" >}}
-{{< r "hello/hello.d" >}}
-{{< r "hello/hello_test.d" >}}
-{{< r "hello/hello.sh" >}}
+{{< r "1/hello.c" >}}
+{{< r "1/hello.h" >}}
+{{< r "1/test.c" >}}
+{{< r "1/test_1.sh" >}}
+{{< r "1/test_2.sh" >}}
+
+Next, a DMD Hello World with statically linked D library:
+
+Next, a DMD Hello World with statically linked C library:
+
+{{< r "3/hello.c" >}}
+{{< r "3/hello.d" >}}
+{{< r "3/test.d" >}}
+{{< r "3/test.sh" >}}
 
 Result:
 
@@ -46,11 +56,11 @@ Next we need to post or link to issues about missing static library:
 
 Next we will build our own static library:
 
-{{< r "curl/curl.sh" >}}
+{{< r "4/curl.sh" >}}
 
 Next we can try to use static library with `std.net.curl` and `etc.c.curl`.
 
-{{< r "curl/etc_c_curl.d" >}}
+{{< r "4/etc_c_curl.d" >}}
 
 ## References
 
