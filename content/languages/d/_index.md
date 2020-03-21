@@ -5,11 +5,10 @@ stars: 3655
 
 ## Issues
 
-lld-link: error: undefined symbol
-: <https://github.com/ldc-developers/ldc/issues/3260>
+Static LibCurl
 
-Segmentation fault
-: <https://github.com/ldc-developers/ldc/issues/3178>
+- <https://github.com/ldc-developers/ldc/issues/3376>
+- <https://issues.dlang.org/show_bug.cgi?id=20690>
 
 ## References
 

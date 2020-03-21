@@ -21,18 +21,89 @@
       </nav>
    </header>
 <h1>D cURL static</h1>
-<time>Wed Mar 4 18:45:59 2020</time>
-   <p>The first choice for this task is <code>std.net.curl</code>. However D does not provide a
-static library:</p>
-<p><a href="https://issues.dlang.org/show_bug.cgi?id=15841">https://issues.dlang.org/show_bug.cgi?id=15841</a></p>
-<p>We can build cURL ourself:</p>
-<pre><code>./buildconf
-./configure --host=x86_64-w64-mingw32 --disable-shared
-make LDFLAGS=-all-static
-</code></pre><h2 id="references">References</h2>
+<time>Sat Mar 21 14:12:53 2020</time>
+   <p>First a Hello World with DMD and statically linked C library:</p>
+<p>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">f1</span>() {
+   puts(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Hello World</span><span style="color:#e6db74">&#34;</span>);
+}
+</code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d">extern<span style="color:#f92672">(</span>C<span style="color:#f92672">)</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">f1</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+</code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> hello<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+   f1<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/dash
+</span><span style="color:#75715e"></span>echo clang
+clang -c hello.c
+echo llvm-ar
+llvm-ar r hello.lib hello.o
+echo dmd
+/Root/dmd2/windows/bin64/dmd hello_test.d hello.lib
+rm hello.lib hello.o hello_test.obj
+</code></pre></div></p>
+<p>Result:</p>
+<pre><code>dmd
+OPTLINK (R) for Win32  Release 8.00.17
+Copyright (C) Digital Mars 1989-2013  All rights reserved.
+http://www.digitalmars.com/ctg/optlink.html
+hello.lib
+ Error 43: Not a Valid Library File
+</code></pre><p>DMD only offers the shared library:</p>
+<pre><code>windows\bin\libcurl.dll
+windows\bin64\libcurl.dll
+</code></pre><p>Next we can try GDC. This is not viable as last release is 2016:</p>
+<p><a href="https://gdcproject.org/downloads">https://gdcproject.org/downloads</a></p>
+<p>Next we can try LDC. LDC only offers the shared library:</p>
+<pre><code>bin\libcurl.dll
+lib\libcurl.dll
+</code></pre><p>Next we need to post or link to issues about missing static library:</p>
+<ul>
+<li><a href="https://github.com/ldc-developers/ldc/issues/3376">https://github.com/ldc-developers/ldc/issues/3376</a></li>
+<li><a href="https://issues.dlang.org/show_bug.cgi?id=15841">https://issues.dlang.org/show_bug.cgi?id=15841</a></li>
+<li><a href="https://issues.dlang.org/show_bug.cgi?id=20690">https://issues.dlang.org/show_bug.cgi?id=20690</a></li>
+</ul>
+<p>Next we will build our own static library:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/dash
+</span><span style="color:#75715e"></span>set -e -u
+git clone --depth <span style="color:#ae81ff">1</span> git://github.com/curl/curl
+cd curl
+mingw32-make -C lib -f Makefile.m32 -j <span style="color:#ae81ff">5</span>
+mkdir -p /Path/llvm-mingw/lib /Path/llvm-mingw/include/curl
+cp lib/libcurl.a /Path/llvm-mingw/lib
+cp include/curl/*.h /Path/llvm-mingw/include/curl
+</code></pre></div>
+<p>Next we can try to use static library with <code>std.net.curl</code> and <code>etc.c.curl</code>.</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> etc.c.curl<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+   curl_easy_init<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+<h2 id="references">References</h2>
 <ul>
 <li><a href="https://dlang.org/blog/2017/10/25/dmd-windows-and-c">https://dlang.org/blog/2017/10/25/dmd-windows-and-c</a></li>
 <li><a href="https://github.com/ldc-developers/ldc/issues/3260">https://github.com/ldc-developers/ldc/issues/3260</a></li>
+<li><a href="https://lld.llvm.org">https://lld.llvm.org</a></li>
 </ul>
 
 
