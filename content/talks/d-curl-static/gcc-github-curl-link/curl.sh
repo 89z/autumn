@@ -22,4 +22,4 @@ fi
 
 mkdir -p /Path/include/curl /Path/lib
 cp include/curl/*.h /Path/include/curl
-cp lib/libcurl.a /Path/lib/curl.lib
+cp lib/libcurl.a /Path/lib

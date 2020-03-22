@@ -1,21 +1,11 @@
 #!/bin/dash
-
-
-x86_64-w64-mingw32-gcc test.c
-
-exit
-ldc2 test.d C:/Path/lib/curl.lib wldap32.lib
-
-
-
-rm test.obj
-
-
-exit
-ldc2 -L/OPT:NOICF test.d C:/Path/lib/curl.lib wldap32.lib
-
-
-
-
-
-
+set -e -u
+x86_64-w64-mingw32-gcc -v test.c \
+-DCURL_STATICLIB \
+-I /Path/include \
+-L /Path/lib \
+-lcurl \
+-lwldap32 \
+-lws2_32
+./a
+rm a.exe
