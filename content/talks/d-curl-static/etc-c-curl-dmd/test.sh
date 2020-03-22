@@ -2,4 +2,4 @@
 cp /Path/lib/libcurl.a curl.lib
 dmd -m64 test.d curl.lib advapi32.lib ucrtbase.lib wldap32.lib
 ./test.exe
-rm curl.lib test.exe test.lib test.obj
+rm -f curl.lib test.exe test.lib test.obj

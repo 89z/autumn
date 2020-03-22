@@ -55,8 +55,8 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jl" data-lang="jl">m1<span style="color:#f92672"></span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">Dict</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">S</span><span style="color:#e6db74">u</span><span style="color:#e6db74">n</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">M</span><span style="color:#e6db74">o</span><span style="color:#e6db74">n</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">11</span>)
-println<span style="color:#f92672"></span>(m1<span style="color:#f92672"></span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jl" data-lang="jl">m1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">Dict</span>(<span style="color:#e6db74">&#34;Sun&#34;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;Mon&#34;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">11</span>)
+println(m1)
 </code></pre></div>
 <p><a href="https://docs.julialang.org/en/v1/base/collections#Base.Dict">https://docs.julialang.org/en/v1/base/collections#Base.Dict</a></p>
 <h2 id="nim">Nim</h2>
@@ -65,10 +65,10 @@ println<span style="color:#f92672"></span>(m1<span style="color:#f92672"></span>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#75715e"># example 1</span>
 <span style="color:#f92672">import</span> tables
-<span style="color:#66d9ef">let</span> m1 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Sun</span><span style="color:#e6db74">&#34;</span>: <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Mon</span><span style="color:#e6db74">&#34;</span>: <span style="color:#ae81ff">11</span>}.toTable
+<span style="color:#66d9ef">let</span> m1 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;Sun&#34;</span>: <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;Mon&#34;</span>: <span style="color:#ae81ff">11</span>}.toTable
 <span style="color:#75715e"># example 2</span>
 <span style="color:#f92672">import</span> strtabs
-<span style="color:#66d9ef">let</span> m2 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">one</span><span style="color:#e6db74">&#34;</span>: <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">odd</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">two</span><span style="color:#e6db74">&#34;</span>: <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">even</span><span style="color:#e6db74">&#34;</span>}.newStringTable
+<span style="color:#66d9ef">let</span> m2 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;one&#34;</span>: <span style="color:#e6db74">&#34;odd&#34;</span>, <span style="color:#e6db74">&#34;two&#34;</span>: <span style="color:#e6db74">&#34;even&#34;</span>}.newStringTable
 <span style="color:#75715e"># print</span>
 echo m1, m2
 </code></pre></div>
@@ -97,7 +97,7 @@ echo m1, m2
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># example 1</span>
-m1 <span style="color:#f92672">=</span> {<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Sun</span><span style="color:#e6db74">&#39;</span>: <span style="color:#ae81ff">10</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Mon</span><span style="color:#e6db74">&#39;</span>: <span style="color:#ae81ff">11</span>}
+m1 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Sun&#39;</span>: <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;Mon&#39;</span>: <span style="color:#ae81ff">11</span>}
 <span style="color:#75715e"># example 2</span>
 m2 <span style="color:#f92672">=</span> dict(Sun <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>, Mon <span style="color:#f92672">=</span> <span style="color:#ae81ff">11</span>)
 <span style="color:#75715e"># print</span>

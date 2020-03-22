@@ -61,9 +61,9 @@ cp include/curl/*.h /Path/llvm-mingw/include/curl
 <p>
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;curl/curl.h&gt;</span><span style="color:#75715e">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;curl/curl.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>s1 <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://speedtest.lax.hivelocity.net</span><span style="color:#e6db74">&#34;</span>;
+   <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>;
    CURL <span style="color:#f92672">*</span>r1 <span style="color:#f92672">=</span> curl_easy_init();
    curl_easy_setopt(r1, CURLOPT_URL, s1);
    curl_easy_perform(r1);

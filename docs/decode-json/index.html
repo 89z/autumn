@@ -35,9 +35,9 @@
    <span style="color:#e6db74">&#34;fmt&#34;</span>
 )
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">`</span><span style="color:#e6db74">
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#34;Sunday&#34;: 10, &#34;Monday&#34;: 11}
-</span><span style="color:#e6db74"></span><span style="color:#e6db74">`</span>)
+   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">`
+</span><span style="color:#e6db74">{&#34;Sunday&#34;: 10, &#34;Monday&#34;: 11}
+</span><span style="color:#e6db74">`</span>)
    <span style="color:#75715e">// example 1
 </span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">m1</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>
    <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">a1</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m1</span>)
@@ -88,7 +88,7 @@ $n2 <span style="color:#f92672">=</span> $m1[<span style="color:#e6db74">&#39;Su
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> json
-s1 <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Sun</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">: 10, </span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Mon</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">: 11}</span><span style="color:#e6db74">&#39;</span>
+s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{&#34;Sun&#34;: 10, &#34;Mon&#34;: 11}&#39;</span>
 m1 <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(s1)
 <span style="color:#66d9ef">print</span>(m1)
 </code></pre></div>

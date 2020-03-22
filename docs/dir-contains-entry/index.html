@@ -63,11 +63,11 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> os<span style="color:#f92672">,</span> stat
-os<span style="color:#f92672">.</span>access(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">/etc/shells</span><span style="color:#e6db74">&#39;</span>, os<span style="color:#f92672">.</span>F_OK)
-os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>exists(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">/etc/shells</span><span style="color:#e6db74">&#39;</span>)
-os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>isfile(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">/etc/shells</span><span style="color:#e6db74">&#39;</span>)
-stat<span style="color:#f92672">.</span>S_IFMT(os<span style="color:#f92672">.</span>stat(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">/etc/shells</span><span style="color:#e6db74">&#39;</span>)<span style="color:#f92672">.</span>st_mode) <span style="color:#f92672">==</span> stat<span style="color:#f92672">.</span>S_IFREG
-stat<span style="color:#f92672">.</span>S_ISREG(os<span style="color:#f92672">.</span>stat(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">/etc/shells</span><span style="color:#e6db74">&#39;</span>)<span style="color:#f92672">.</span>st_mode)
+os<span style="color:#f92672">.</span>access(<span style="color:#e6db74">&#39;/etc/shells&#39;</span>, os<span style="color:#f92672">.</span>F_OK)
+os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>exists(<span style="color:#e6db74">&#39;/etc/shells&#39;</span>)
+os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>isfile(<span style="color:#e6db74">&#39;/etc/shells&#39;</span>)
+stat<span style="color:#f92672">.</span>S_IFMT(os<span style="color:#f92672">.</span>stat(<span style="color:#e6db74">&#39;/etc/shells&#39;</span>)<span style="color:#f92672">.</span>st_mode) <span style="color:#f92672">==</span> stat<span style="color:#f92672">.</span>S_IFREG
+stat<span style="color:#f92672">.</span>S_ISREG(os<span style="color:#f92672">.</span>stat(<span style="color:#e6db74">&#39;/etc/shells&#39;</span>)<span style="color:#f92672">.</span>st_mode)
 </code></pre></div>
 <ul>
 <li><a href="https://docs.python.org/library/os.html#os.access">https://docs.python.org/library/os.html#os.access</a></li>

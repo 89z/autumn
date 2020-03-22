@@ -34,8 +34,8 @@
    <span style="color:#e6db74">&#34;strings&#34;</span>
 )
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">Sunday
-</span><span style="color:#e6db74">Monday</span><span style="color:#e6db74">`</span>
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`Sunday
+</span><span style="color:#e6db74">Monday`</span>
    <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">s1</span>))
    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Scan</span>() {
       println(<span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Text</span>())

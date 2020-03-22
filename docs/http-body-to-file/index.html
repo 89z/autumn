@@ -30,21 +30,21 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> httpclient
-<span style="color:#66d9ef">var</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">http://speedtest.lax.hivelocity.net</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">var</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>
 <span style="color:#66d9ef">var</span> o1 <span style="color:#f92672">=</span> newHttpClient()
-o1.downloadFile(s1, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">index.html</span><span style="color:#e6db74">&#34;</span>)
+o1.downloadFile(s1, <span style="color:#e6db74">&#34;index.html&#34;</span>)
 </code></pre></div>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> asyncdispatch, httpclient, strformat
 <span style="color:#66d9ef">proc </span><span style="color:#a6e22e">f1</span>(n1, n2, n3: <span style="color:#66d9ef">int64</span>) {.async.} <span style="color:#f92672">=</span>
-   echo <span style="color:#f92672">&amp;</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">total: {n1}, received: {n2}, speed: {n3 div 1000}k</span><span style="color:#e6db74">&#34;</span>
+   echo <span style="color:#f92672">&amp;</span><span style="color:#e6db74">&#34;total: {n1}, received: {n2}, speed: {n3 div 1000}k&#34;</span>
 <span style="color:#66d9ef">proc </span><span style="color:#a6e22e">f2</span>(s3: <span style="color:#66d9ef">string</span>) {.async.} <span style="color:#f92672">=</span>
    <span style="color:#66d9ef">var</span> o1 <span style="color:#f92672">=</span> newAsyncHttpClient()
    o1.onProgressChanged <span style="color:#f92672">=</span> f1
-   await o1.downloadFile(s3, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">100mb.file</span><span style="color:#e6db74">&#34;</span>)
-<span style="color:#66d9ef">var</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">http://speedtest.lax.hivelocity.net/100mb.file</span><span style="color:#e6db74">&#34;</span>
+   await o1.downloadFile(s3, <span style="color:#e6db74">&#34;100mb.file&#34;</span>)
+<span style="color:#66d9ef">var</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net/100mb.file&#34;</span>
 waitFor f2(s2)
 </code></pre></div></p>
 <a href="https://nim-lang.github.io/Nim/httpclient#downloadFile,HttpClient,string,string">https://nim-lang.github.io/Nim/httpclient#downloadFile,HttpClient,string,string</a>
@@ -82,7 +82,7 @@ $r2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> urllib.request <span style="color:#f92672">as</span> r1
-r1<span style="color:#f92672">.</span>urlretrieve(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">http://speedtest.lax.hivelocity.net</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">a.html</span><span style="color:#e6db74">&#39;</span>)
+r1<span style="color:#f92672">.</span>urlretrieve(<span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>, <span style="color:#e6db74">&#39;a.html&#39;</span>)
 </code></pre></div>
 <p><a href="https://docs.python.org/library/urllib.request.html#urllib.request.urlretrieve">https://docs.python.org/library/urllib.request.html#urllib.request.urlretrieve</a></p>
 <h2 id="references">References</h2>

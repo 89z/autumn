@@ -88,8 +88,8 @@ $m1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_getinf
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> urllib.request <span style="color:#f92672">as</span> v1
-s1 <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">http://speedtest.lax.hivelocity.net/100mb.file</span><span style="color:#e6db74">&#39;</span>
-v2 <span style="color:#f92672">=</span> v1<span style="color:#f92672">.</span>Request(s1, method<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">HEAD</span><span style="color:#e6db74">&#39;</span>)
+s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net/100mb.file&#39;</span>
+v2 <span style="color:#f92672">=</span> v1<span style="color:#f92672">.</span>Request(s1, method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;HEAD&#39;</span>)
 <span style="color:#75715e"># example 1</span>
 o1 <span style="color:#f92672">=</span> v1<span style="color:#f92672">.</span>urlopen(v2)<span style="color:#f92672">.</span>info()
 <span style="color:#75715e"># example 2</span>

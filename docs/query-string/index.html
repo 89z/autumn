@@ -91,10 +91,10 @@ $s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">http_build_
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> urllib.parse <span style="color:#f92672">as</span> o1
 <span style="color:#75715e"># example 1</span>
-s1 <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">one=odd&amp;two=even</span><span style="color:#e6db74">&#39;</span>
+s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;one=odd&amp;two=even&#39;</span>
 m1 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>parse_qs(s1)
 <span style="color:#75715e"># example 2</span>
-m2 <span style="color:#f92672">=</span> {<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">one</span><span style="color:#e6db74">&#39;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">odd</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">two</span><span style="color:#e6db74">&#39;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">even</span><span style="color:#e6db74">&#39;</span>}
+m2 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;one&#39;</span>: <span style="color:#e6db74">&#39;odd&#39;</span>, <span style="color:#e6db74">&#39;two&#39;</span>: <span style="color:#e6db74">&#39;even&#39;</span>}
 s2 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>urlencode(m2)
 <span style="color:#75715e"># print</span>
 <span style="color:#66d9ef">print</span>(m1, s2)

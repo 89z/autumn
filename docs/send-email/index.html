@@ -78,12 +78,12 @@ $r2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> email.message<span style="color:#f92672">,</span> smtplib
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f_send</span>(s_from, s_to, s_subject, s_content):
    msg <span style="color:#f92672">=</span> email<span style="color:#f92672">.</span>message<span style="color:#f92672">.</span>EmailMessage()
-   msg[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">From</span><span style="color:#e6db74">&#39;</span>] <span style="color:#f92672">=</span> s_from
-   msg[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">To</span><span style="color:#e6db74">&#39;</span>] <span style="color:#f92672">=</span> s_to
-   msg[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Subject</span><span style="color:#e6db74">&#39;</span>] <span style="color:#f92672">=</span> s_subject
+   msg[<span style="color:#e6db74">&#39;From&#39;</span>] <span style="color:#f92672">=</span> s_from
+   msg[<span style="color:#e6db74">&#39;To&#39;</span>] <span style="color:#f92672">=</span> s_to
+   msg[<span style="color:#e6db74">&#39;Subject&#39;</span>] <span style="color:#f92672">=</span> s_subject
    msg<span style="color:#f92672">.</span>set_content(s_content)
-   pword <span style="color:#f92672">=</span> input(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">password: </span><span style="color:#e6db74">&#39;</span>)
-   mua <span style="color:#f92672">=</span> smtplib<span style="color:#f92672">.</span>SMTP(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">smtp.gmail.com</span><span style="color:#e6db74">&#39;</span>)
+   pword <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#39;password: &#39;</span>)
+   mua <span style="color:#f92672">=</span> smtplib<span style="color:#f92672">.</span>SMTP(<span style="color:#e6db74">&#39;smtp.gmail.com&#39;</span>)
    mua<span style="color:#f92672">.</span>starttls()
    mua<span style="color:#f92672">.</span>login(s_from, pword)
    mua<span style="color:#f92672">.</span>send_message(msg)

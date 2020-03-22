@@ -69,9 +69,9 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jl" data-lang="jl">a1<span style="color:#f92672"></span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">S</span><span style="color:#e6db74">u</span><span style="color:#e6db74">n</span><span style="color:#e6db74">&#34;</span>]
-append!<span style="color:#f92672"></span>(a1<span style="color:#f92672"></span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">M</span><span style="color:#e6db74">o</span><span style="color:#e6db74">n</span><span style="color:#e6db74">&#34;</span>)
-println<span style="color:#f92672"></span>(a1<span style="color:#f92672"></span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jl" data-lang="jl">a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Sun&#34;</span>]
+append!(a1, <span style="color:#e6db74">&#34;Mon&#34;</span>)
+println(a1)
 </code></pre></div>
 <h2 id="php">PHP</h2>
 
@@ -100,17 +100,17 @@ $a3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_merge
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># example 1</span>
-a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Sun</span><span style="color:#e6db74">&#39;</span>]
-a1<span style="color:#f92672">.</span>append(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Mon</span><span style="color:#e6db74">&#39;</span>)
+a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span>]
+a1<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#39;Mon&#39;</span>)
 <span style="color:#75715e"># exmaple 2</span>
-a2 <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Sun</span><span style="color:#e6db74">&#39;</span>]
-a2<span style="color:#f92672">.</span>extend([<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Mon</span><span style="color:#e6db74">&#39;</span>])
+a2 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span>]
+a2<span style="color:#f92672">.</span>extend([<span style="color:#e6db74">&#39;Mon&#39;</span>])
 <span style="color:#75715e"># example 3</span>
-a3 <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Sun</span><span style="color:#e6db74">&#39;</span>]
-a3 <span style="color:#f92672">=</span> [<span style="color:#f92672">*</span>a3, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Mon</span><span style="color:#e6db74">&#39;</span>]
+a3 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span>]
+a3 <span style="color:#f92672">=</span> [<span style="color:#f92672">*</span>a3, <span style="color:#e6db74">&#39;Mon&#39;</span>]
 <span style="color:#75715e"># example 4</span>
-a4 <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Sun</span><span style="color:#e6db74">&#39;</span>]
-a4 <span style="color:#f92672">+</span><span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Mon</span><span style="color:#e6db74">&#39;</span>]
+a4 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span>]
+a4 <span style="color:#f92672">+=</span> [<span style="color:#e6db74">&#39;Mon&#39;</span>]
 <span style="color:#75715e"># print</span>
 <span style="color:#66d9ef">print</span>(a1, a2, a3, a4)
 </code></pre></div>

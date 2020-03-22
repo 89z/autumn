@@ -20,14 +20,16 @@
          <a href="https://github.com/muv1/autumn">Repo</a>
       </nav>
    </header>
-<h1>Rust</h1><p>Rust does not have Map literals:</p>
+<h1>Rust</h1>
+<time>Sat Mar 21 20:49:50 2020</time>
+   <p>Rust does not have Map literals:</p>
 <p><a href="https://github.com/rust-lang/rfcs/issues/542">https://github.com/rust-lang/rfcs/issues/542</a></p>
 <p>but it does have <code>struct</code>:</p>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#75715e">#[</span><span style="color:#75715e">derive(Debug)</span><span style="color:#75715e">]</span>
+   <span style="color:#75715e">#[derive(Debug)]</span>
    <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Pref</span> {
       k: String,
       n: <span style="color:#66d9ef">u8</span>,
@@ -60,7 +62,7 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#75715e">#[</span><span style="color:#75715e">derive(Debug)</span><span style="color:#75715e">]</span>
+   <span style="color:#75715e">#[derive(Debug)]</span>
    <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Pref</span> {
       k: String,
       n: <span style="color:#66d9ef">u8</span>,
@@ -76,7 +78,7 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#75715e">#[</span><span style="color:#75715e">derive(Debug, Default)</span><span style="color:#75715e">]</span>
+   <span style="color:#75715e">#[derive(Debug, Default)]</span>
    <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Pref</span> {
       k: String,
       n: <span style="color:#66d9ef">u8</span>,

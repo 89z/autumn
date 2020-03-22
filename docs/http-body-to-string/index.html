@@ -119,10 +119,10 @@ $s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_exec</
    m2 <span style="color:#f92672">=</span> http<span style="color:#f92672">.</span>client
    m3 <span style="color:#f92672">=</span> m1<span style="color:#f92672">.</span>urlparse(s_link)
    m4 <span style="color:#f92672">=</span> m2<span style="color:#f92672">.</span>HTTPConnection(m3<span style="color:#f92672">.</span>hostname)
-   m4<span style="color:#f92672">.</span>request(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">GET</span><span style="color:#e6db74">&#39;</span>, m3<span style="color:#f92672">.</span>path)
+   m4<span style="color:#f92672">.</span>request(<span style="color:#e6db74">&#39;GET&#39;</span>, m3<span style="color:#f92672">.</span>path)
    <span style="color:#66d9ef">return</span> m4<span style="color:#f92672">.</span>getresponse()<span style="color:#f92672">.</span>read()<span style="color:#f92672">.</span>decode()
-s1 <span style="color:#f92672">=</span> get_1(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">http://speedtest.lax.hivelocity.net</span><span style="color:#e6db74">&#39;</span>)
-s2 <span style="color:#f92672">=</span> get_2(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">http://speedtest.lax.hivelocity.net</span><span style="color:#e6db74">&#39;</span>)
+s1 <span style="color:#f92672">=</span> get_1(<span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>)
+s2 <span style="color:#f92672">=</span> get_2(<span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>)
 <span style="color:#66d9ef">print</span>(s1, s2)
 </code></pre></div>
 <ul>
