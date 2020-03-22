@@ -7,9 +7,10 @@ title: C and C++ compilers
 ## musl GCC
 
 This includes the GCC C compiler `gcc.exe` and C++ compiler `g++.exe`. It also
-includes the musl C standard library.
+includes the musl C standard library. However it does not include a linker.
 
-<https://musl.cc>
+- <https://git.zv.io/toolchains/musl-cross-make/issues/1>
+- <https://musl.cc>
 
 ## LLVM
 
