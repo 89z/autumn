@@ -39,7 +39,7 @@ Some examples require `php-curl` package.
 
 ## References
 
-- <http://hyperpolyglot.org/c#http-get>
-- <http://hyperpolyglot.org/scripting2#http-get>
+- <https://hyperpolyglot.org/c#http-get>
+- <https://hyperpolyglot.org/scripting2#http-get>
 - <https://www.programming-idioms.org/idiom/101/load-from-http-get>
 - <https://rosettacode.org/wiki/HTTP>

@@ -34,7 +34,7 @@ Exclude `range` as it is ambiguous.
 
 ## References
 
-- <http://hyperpolyglot.org/scripting#execution-control>
+- <https://hyperpolyglot.org/scripting#execution-control>
 - <https://www.programming-idioms.org/idiom/2/print-hello-10-times>
 - <https://rosettacode.org/wiki/Loops/For>
 - <https://rosettacode.org/wiki/Loops/While>

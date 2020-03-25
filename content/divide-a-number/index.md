@@ -32,5 +32,5 @@ languages: [javascript, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/scripting#arith-op>
+- <https://hyperpolyglot.org/scripting#arith-op>
 - <https://rosettacode.org/wiki/Arithmetic/Integer>

@@ -41,6 +41,6 @@ languages: [d, go, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/numerical-analysis#write-str>
+- <https://hyperpolyglot.org/numerical-analysis#write-str>
 - <https://rosettacode.org/wiki/Write_entire_file>
 - <https://rosettacode.org/wiki/Create_a_file>

@@ -31,5 +31,5 @@ languages: [go, javascript, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#dict-iter>
-- <http://hyperpolyglot.org/scripting#dict-iter>
+- <https://hyperpolyglot.org/c#dict-iter>
+- <https://hyperpolyglot.org/scripting#dict-iter>

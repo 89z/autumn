@@ -36,7 +36,7 @@ languages: [go, javascript, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/scripting2#write-stdout>
+- <https://hyperpolyglot.org/scripting2#write-stdout>
 - <https://www.programming-idioms.org/idiom/1>
 - <https://rosettacode.org/wiki/Hello_world/Newline_omission>
 - <https://rosettacode.org/wiki/Hello_world/Standard_error>

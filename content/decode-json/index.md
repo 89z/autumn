@@ -46,6 +46,6 @@ Requires `php-json` package.
 
 ## References
 
-- <http://hyperpolyglot.org/scripting2#parse-json>
+- <https://hyperpolyglot.org/scripting2#parse-json>
 - <https://www.programming-idioms.org/idiom/91/load-json-file-into-struct>
 - <https://rosettacode.org/wiki/JSON>

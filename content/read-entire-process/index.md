@@ -45,5 +45,5 @@ languages: [d, go, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/scripting2#cmd-subst>
+- <https://hyperpolyglot.org/scripting2#cmd-subst>
 - <https://rosettacode.org/wiki/Get_system_command_output>

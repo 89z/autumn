@@ -53,8 +53,8 @@ languages: [d, go, javascript, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#resizable-array-lookup>
-- <http://hyperpolyglot.org/numerical-analysis#array-lookup>
-- <http://hyperpolyglot.org/scripting#array-lookup>
+- <https://hyperpolyglot.org/c#resizable-array-lookup>
+- <https://hyperpolyglot.org/numerical-analysis#array-lookup>
+- <https://hyperpolyglot.org/scripting#array-lookup>
 - <https://www.programming-idioms.org/idiom/165/last-element>
 - <https://rosettacode.org/wiki/Arrays>

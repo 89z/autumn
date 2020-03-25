@@ -39,7 +39,7 @@ languages: [d, go, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/numerical-analysis#cmd-line-arg>
-- <http://hyperpolyglot.org/scripting2#cmd-line-arg>
+- <https://hyperpolyglot.org/numerical-analysis#cmd-line-arg>
+- <https://hyperpolyglot.org/scripting2#cmd-line-arg>
 - <https://www.programming-idioms.org/idiom/60/read-command-line-arg>
 - <https://rosettacode.org/wiki/Command-line_arguments>

@@ -52,8 +52,8 @@ String/split` >}}
 
 ## References
 
-- <http://hyperpolyglot.org/c#split>
-- <http://hyperpolyglot.org/numerical-analysis#split>
-- <http://hyperpolyglot.org/scripting#split>
+- <https://hyperpolyglot.org/c#split>
+- <https://hyperpolyglot.org/numerical-analysis#split>
+- <https://hyperpolyglot.org/scripting#split>
 - <https://www.programming-idioms.org/idiom/49/split-string>
 - <https://rosettacode.org/wiki/Tokenize_a_string>

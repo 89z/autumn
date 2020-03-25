@@ -22,5 +22,5 @@ languages: [go, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#symlink>
-- <http://hyperpolyglot.org/scripting2#symlink>
+- <https://hyperpolyglot.org/c#symlink>
+- <https://hyperpolyglot.org/scripting2#symlink>

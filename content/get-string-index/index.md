@@ -58,7 +58,7 @@ Base.findfirst-Tuple{AbstractString,AbstractString}` >}}
 
 ## References
 
-- <http://hyperpolyglot.org/c#index-substr>
-- <http://hyperpolyglot.org/scripting#index-substr>
+- <https://hyperpolyglot.org/c#index-substr>
+- <https://hyperpolyglot.org/scripting#index-substr>
 - <https://www.programming-idioms.org/idiom/62/find-substring-position>
 - <https://rosettacode.org/wiki/String_matching>

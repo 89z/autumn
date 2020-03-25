@@ -36,6 +36,6 @@ Exclude `range` as it is ambiguous.
 
 ## References
 
-- <http://hyperpolyglot.org/scripting#while>
+- <https://hyperpolyglot.org/scripting#while>
 - <https://www.programming-idioms.org/idiom/78/do-while-loop>
 - <https://rosettacode.org/wiki/Loops/Do-while>

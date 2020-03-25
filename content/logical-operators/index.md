@@ -31,6 +31,6 @@ Logical_Operators` >}}
 
 ## References
 
-- <http://hyperpolyglot.org/c#logical-op>
-- <http://hyperpolyglot.org/scripting#logical-op>
+- <https://hyperpolyglot.org/c#logical-op>
+- <https://hyperpolyglot.org/scripting#logical-op>
 - <https://rosettacode.org/wiki/Logical_operations>

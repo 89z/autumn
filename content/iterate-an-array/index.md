@@ -48,7 +48,7 @@ languages: [go, javascript, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/numerical-analysis#array-iteration>
+- <https://hyperpolyglot.org/numerical-analysis#array-iteration>
 - <https://www.programming-idioms.org/idiom/6/iterate-over-list-val>
 - <https://www.programming-idioms.org/idiom/7/iterate-over-list-indexes-val>
 - <https://rosettacode.org/wiki/Loop_Structures>

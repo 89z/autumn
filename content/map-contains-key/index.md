@@ -34,7 +34,7 @@ languages: [go, javascript, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#dict-is-key-present>
-- <http://hyperpolyglot.org/scripting#dict-key-check>
+- <https://hyperpolyglot.org/c#dict-is-key-present>
+- <https://hyperpolyglot.org/scripting#dict-key-check>
 - <https://www.programming-idioms.org/idiom/51/check-if-map-contains-key>
 - <https://rosettacode.org/wiki/Associative_array/Creation>

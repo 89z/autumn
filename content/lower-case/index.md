@@ -47,7 +47,7 @@ Some examples require `php-mbstring`.
 
 ## References
 
-- <http://hyperpolyglot.org/numerical-analysis#case-manipulation>
-- <http://hyperpolyglot.org/scripting#translate-case>
+- <https://hyperpolyglot.org/numerical-analysis#case-manipulation>
+- <https://hyperpolyglot.org/scripting#translate-case>
 - <https://www.programming-idioms.org/idiom/133/case-insensitive-string-contains>
 - <https://rosettacode.org/wiki/String_case>

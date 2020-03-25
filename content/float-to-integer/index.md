@@ -41,8 +41,8 @@ languages: [go, javascript, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#float-truncation>
-- <http://hyperpolyglot.org/scripting#float-truncation>
+- <https://hyperpolyglot.org/c#float-truncation>
+- <https://hyperpolyglot.org/scripting#float-truncation>
 - <https://www.programming-idioms.org/idiom/80/truncate-float>
 - <https://www.programming-idioms.org/idiom/81/round-float>
 - <https://rosettacode.org/wiki/Real_constants_and_functions>

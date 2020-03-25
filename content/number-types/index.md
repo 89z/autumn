@@ -49,4 +49,4 @@ languages: [d, go, javascript, julia, nim, php, python]
 
 ## References
 
-<http://hyperpolyglot.org/c#int-type>
+<https://hyperpolyglot.org/c#int-type>

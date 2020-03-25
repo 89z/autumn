@@ -34,6 +34,6 @@ languages: [go, javascript, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/scripting#map>
+- <https://hyperpolyglot.org/scripting#map>
 - <https://www.programming-idioms.org/idiom/161/multiply-all-elements>
 - <https://rosettacode.org/wiki/Apply_a_callback_to_an_array>

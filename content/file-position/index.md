@@ -35,4 +35,4 @@ languages: [go, julia, nim, php, python]
 
 ## References
 
-<http://hyperpolyglot.org/scripting2#seek>
+<https://hyperpolyglot.org/scripting2#seek>

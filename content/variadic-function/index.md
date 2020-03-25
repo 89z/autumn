@@ -33,5 +33,5 @@ languages: [go, javascript, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/scripting#variadic-func>
+- <https://hyperpolyglot.org/scripting#variadic-func>
 - <https://rosettacode.org/wiki/Variadic_function>

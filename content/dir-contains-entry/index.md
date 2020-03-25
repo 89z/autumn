@@ -29,7 +29,7 @@ languages: [go, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#file-test>
-- <http://hyperpolyglot.org/scripting2#file-test>
+- <https://hyperpolyglot.org/c#file-test>
+- <https://hyperpolyglot.org/scripting2#file-test>
 - <https://www.programming-idioms.org/idiom/144/check-if-file-exists>
 - <https://rosettacode.org/wiki/Check_that_file_exists>

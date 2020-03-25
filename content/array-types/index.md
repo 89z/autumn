@@ -41,6 +41,6 @@ languages: [go, javascript, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/scripting#arrays>
+- <https://hyperpolyglot.org/scripting#arrays>
 - <https://www.programming-idioms.org/idiom/134/create-a-new-list>
 - <https://rosettacode.org/wiki/Arrays>

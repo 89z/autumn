@@ -16,5 +16,5 @@ languages: [php]
 
 ## References
 
-- <http://hyperpolyglot.org/scripting2#parse-xml>
+- <https://hyperpolyglot.org/scripting2#parse-xml>
 - <https://www.programming-idioms.org/idiom/103/load-xml-file-into-struct>

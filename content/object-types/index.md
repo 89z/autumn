@@ -32,5 +32,5 @@ languages: [go, javascript, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#def-class>
-- <http://hyperpolyglot.org/scripting2#def-class>
+- <https://hyperpolyglot.org/c#def-class>
+- <https://hyperpolyglot.org/scripting2#def-class>

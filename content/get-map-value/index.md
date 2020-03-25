@@ -42,6 +42,6 @@ Property_Accessors` >}}
 
 ## References
 
-- <http://hyperpolyglot.org/c#dict-lookup>
-- <http://hyperpolyglot.org/scripting#dict-lookup>
+- <https://hyperpolyglot.org/c#dict-lookup>
+- <https://hyperpolyglot.org/scripting#dict-lookup>
 - <https://rosettacode.org/wiki/Collections>

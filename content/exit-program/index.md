@@ -30,7 +30,7 @@ languages: [go, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#exit>
-- <http://hyperpolyglot.org/scripting2#exit>
+- <https://hyperpolyglot.org/c#exit>
+- <https://hyperpolyglot.org/scripting2#exit>
 - <https://www.programming-idioms.org/idiom/87/stop-program>
 - <https://rosettacode.org/wiki/Program_termination>

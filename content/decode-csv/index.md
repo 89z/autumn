@@ -27,5 +27,5 @@ languages: [go, javascript, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/scripting2#parse-csv>
+- <https://hyperpolyglot.org/scripting2#parse-csv>
 - <https://rosettacode.org/wiki/Hash_from_two_arrays>

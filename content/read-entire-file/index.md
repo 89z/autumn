@@ -47,7 +47,7 @@ languages: [d, go, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#read-file-str>
-- <http://hyperpolyglot.org/scripting2#read-file-str>
+- <https://hyperpolyglot.org/c#read-file-str>
+- <https://hyperpolyglot.org/scripting2#read-file-str>
 - <https://www.programming-idioms.org/idiom/58/extract-file-content>
 - <https://rosettacode.org/wiki/Read_entire_file>

@@ -24,6 +24,6 @@ languages: [go, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#working-dir>
-- <http://hyperpolyglot.org/scripting2#working-dir>
+- <https://hyperpolyglot.org/c#working-dir>
+- <https://hyperpolyglot.org/scripting2#working-dir>
 - <https://www.programming-idioms.org/idiom/106/get-program-working-directory>

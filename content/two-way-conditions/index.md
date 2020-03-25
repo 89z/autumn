@@ -51,9 +51,9 @@ languages: [d, go, javascript, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#if>
-- <http://hyperpolyglot.org/numerical-analysis#if>
-- <http://hyperpolyglot.org/scripting#if>
+- <https://hyperpolyglot.org/c#if>
+- <https://hyperpolyglot.org/numerical-analysis#if>
+- <https://hyperpolyglot.org/scripting#if>
 - <https://www.programming-idioms.org/idiom/131/successive-condition>
 - <https://rosettacode.org/wiki/Conditional_structures>
 - <https://rosettacode.org/wiki/Short-circuit_evaluation>

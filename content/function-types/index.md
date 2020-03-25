@@ -50,7 +50,7 @@ languages: [d, go, javascript, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/numerical-analysis#def-func>
-- <http://hyperpolyglot.org/scripting#def-func>
+- <https://hyperpolyglot.org/numerical-analysis#def-func>
+- <https://hyperpolyglot.org/scripting#def-func>
 - <https://www.programming-idioms.org/idiom/4/create-a-function>
 - <https://rosettacode.org/wiki/Function_definition>

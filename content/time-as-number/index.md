@@ -32,7 +32,7 @@ languages: [go, javascript, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#current-unix-epoch>
-- <http://hyperpolyglot.org/scripting#current-unix-epoch>
-- <http://hyperpolyglot.org/scripting#microseconds>
+- <https://hyperpolyglot.org/c#current-unix-epoch>
+- <https://hyperpolyglot.org/scripting#current-unix-epoch>
+- <https://hyperpolyglot.org/scripting#microseconds>
 - <https://rosettacode.org/wiki/System_time>

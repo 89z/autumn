@@ -40,7 +40,7 @@ languages: [d, go, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#mkdir>
-- <http://hyperpolyglot.org/scripting2#mkdir>
+- <https://hyperpolyglot.org/c#mkdir>
+- <https://hyperpolyglot.org/scripting2#mkdir>
 - <https://www.programming-idioms.org/idiom/211/create-folder>
 - <https://rosettacode.org/wiki/Make_directory_path>

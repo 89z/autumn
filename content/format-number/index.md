@@ -56,7 +56,7 @@ Number/toLocaleString` >}}
 
 ## References
 
-- <http://hyperpolyglot.org/numerical-analysis#sprintf>
+- <https://hyperpolyglot.org/numerical-analysis#sprintf>
 - <https://www.programming-idioms.org/idiom/173/format-number-group>
 - <https://www.programming-idioms.org/idiom/65/format-decimal-number>
 - <https://rosettacode.org/wiki/Commatizing_numbers>

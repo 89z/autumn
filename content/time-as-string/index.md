@@ -47,8 +47,8 @@ languages: [go, javascript, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#fmt-datetime>
-- <http://hyperpolyglot.org/scripting#fmt-datetime>
+- <https://hyperpolyglot.org/c#fmt-datetime>
+- <https://hyperpolyglot.org/scripting#fmt-datetime>
 - <https://www.programming-idioms.org/idiom/99/format-date>
 - <https://rosettacode.org/wiki/Date_format>
 - <https://rosettacode.org/wiki/Show_the_epoch>

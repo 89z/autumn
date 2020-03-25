@@ -30,5 +30,5 @@ python3 -m http.server --bind localhost 10
 
 ## References
 
-- <http://hyperpolyglot.org/scripting2#serve-pwd>
+- <https://hyperpolyglot.org/scripting2#serve-pwd>
 - <https://rosettacode.org/wiki/Hello_world/Web_server>

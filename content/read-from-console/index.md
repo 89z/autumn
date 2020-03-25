@@ -38,5 +38,5 @@ languages: [go, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#std-file-handles>
-- <http://hyperpolyglot.org/numerical-analysis#read-line-stdin>
+- <https://hyperpolyglot.org/c#std-file-handles>
+- <https://hyperpolyglot.org/numerical-analysis#read-line-stdin>

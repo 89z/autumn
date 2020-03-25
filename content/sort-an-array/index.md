@@ -34,6 +34,6 @@ Array/sort` >}}
 
 ## References
 
-- <http://hyperpolyglot.org/c#sort-resizable-array>
+- <https://hyperpolyglot.org/c#sort-resizable-array>
 - <https://www.programming-idioms.org/idiom/100/sort-by-comparator>
 - <https://rosettacode.org/wiki/Sort_using_a_custom_comparator>

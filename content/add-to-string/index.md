@@ -55,8 +55,8 @@ languages: [d, go, javascript, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/numerical-analysis#str-concat>
-- <http://hyperpolyglot.org/scripting#var-interpolation>
+- <https://hyperpolyglot.org/numerical-analysis#str-concat>
+- <https://hyperpolyglot.org/scripting#var-interpolation>
 - <https://rosettacode.org/wiki/String_append>
 - <https://rosettacode.org/wiki/String_concatenation>
 - <https://rosettacode.org/wiki/String_interpolation_(included)>

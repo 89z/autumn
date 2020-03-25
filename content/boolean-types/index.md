@@ -41,6 +41,6 @@ languages: [d, go, javascript, julia, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/numerical-analysis#true-false>
-- <http://hyperpolyglot.org/scripting#true-false>
+- <https://hyperpolyglot.org/numerical-analysis#true-false>
+- <https://hyperpolyglot.org/scripting#true-false>
 - <https://rosettacode.org/wiki/Boolean_values>

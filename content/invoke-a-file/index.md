@@ -46,5 +46,5 @@ languages: [d, go, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/scripting#interpreter>
+- <https://hyperpolyglot.org/scripting#interpreter>
 - <https://rosettacode.org/wiki/Hello_world/Newbie>

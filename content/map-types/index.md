@@ -45,7 +45,7 @@ languages: [go, javascript, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/numerical-analysis#dict-literal>
-- <http://hyperpolyglot.org/scripting#dict-literal>
+- <https://hyperpolyglot.org/numerical-analysis#dict-literal>
+- <https://hyperpolyglot.org/scripting#dict-literal>
 - <https://www.programming-idioms.org/idiom/8/initialize-a-new-map>
 - <https://rosettacode.org/wiki/Associative_array/Creation>

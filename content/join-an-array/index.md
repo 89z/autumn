@@ -48,7 +48,7 @@ Array/join` >}}
 
 ## References
 
-- <http://hyperpolyglot.org/numerical-analysis#join>
-- <http://hyperpolyglot.org/scripting#str-join>
+- <https://hyperpolyglot.org/numerical-analysis#join>
+- <https://hyperpolyglot.org/scripting#str-join>
 - <https://www.programming-idioms.org/idiom/53/join-a-list>
 - <https://rosettacode.org/wiki/Arrays>

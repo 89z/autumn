@@ -41,6 +41,6 @@ languages: [go, javascript, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#power>
-- <http://hyperpolyglot.org/scripting#power>
+- <https://hyperpolyglot.org/c#power>
+- <https://hyperpolyglot.org/scripting#power>
 - <https://rosettacode.org/wiki/Real_constants_and_functions>

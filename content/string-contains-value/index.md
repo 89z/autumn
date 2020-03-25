@@ -53,7 +53,7 @@ languages: [go, javascript, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/scripting#prefix-suffix-test>
+- <https://hyperpolyglot.org/scripting#prefix-suffix-test>
 - <https://rosettacode.org/wiki/String_matching>
 - <https://www.programming-idioms.org/idiom/39/str-contains>
 - <https://www.programming-idioms.org/idiom/96/check-string-prefix>

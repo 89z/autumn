@@ -47,8 +47,8 @@ Array/length` >}}
 
 ## References
 
-- <http://hyperpolyglot.org/c#array-size>
-- <http://hyperpolyglot.org/numerical-analysis#array-size>
-- <http://hyperpolyglot.org/scripting#array-size>
+- <https://hyperpolyglot.org/c#array-size>
+- <https://hyperpolyglot.org/numerical-analysis#array-size>
+- <https://hyperpolyglot.org/scripting#array-size>
 - <https://www.programming-idioms.org/idiom/117/get-list-size>
 - <https://rosettacode.org/wiki/Array_length>

@@ -33,6 +33,6 @@ languages: [go, javascript, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/scripting2#parse-url>
+- <https://hyperpolyglot.org/scripting2#parse-url>
 - <https://www.programming-idioms.org/idiom/183/make-http-put-request>
 - <https://rosettacode.org/wiki/URL_parser>

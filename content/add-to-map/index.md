@@ -43,6 +43,6 @@ Property_Accessors` >}}
 
 ## References
 
-- <http://hyperpolyglot.org/scripting#dict-update>
+- <https://hyperpolyglot.org/scripting#dict-update>
 - <https://www.programming-idioms.org/idiom/172/insert-entry-in-map>
 - <https://rosettacode.org/wiki/Associative_array/Creation>

@@ -34,4 +34,4 @@ languages: [d, go, javascript, julia, nim]
 
 ## References
 
-<http://hyperpolyglot.org/scripting#const>
+<https://hyperpolyglot.org/scripting#const>

@@ -30,6 +30,6 @@ languages: [go, javascript, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#null>
-- <http://hyperpolyglot.org/scripting#null>
+- <https://hyperpolyglot.org/c#null>
+- <https://hyperpolyglot.org/scripting#null>
 - <https://rosettacode.org/wiki/Null_object>

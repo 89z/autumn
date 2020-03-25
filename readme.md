@@ -14,6 +14,6 @@ Steven Penny
 
 ## See also
 
-- [Hyperpolyglot](http://hyperpolyglot.org)
+- [Hyperpolyglot](https://hyperpolyglot.org)
 - [Programming Idioms](https://www.programming-idioms.org)
 - [Rosetta Code](https://rosettacode.org)

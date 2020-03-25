@@ -42,7 +42,7 @@ languages: [d, go, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/numerical-analysis#env-var>
-- <http://hyperpolyglot.org/scripting2#env-var>
+- <https://hyperpolyglot.org/numerical-analysis#env-var>
+- <https://hyperpolyglot.org/scripting2#env-var>
 - <https://www.programming-idioms.org/idiom/205/get-an-environment-variable>
 - <https://rosettacode.org/wiki/Environment_variables>

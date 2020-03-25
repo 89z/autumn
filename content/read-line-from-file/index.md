@@ -43,7 +43,7 @@ languages: [d, go, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#read-line>
-- <http://hyperpolyglot.org/numerical-analysis#read-line>
-- <http://hyperpolyglot.org/scripting2#read-line>
+- <https://hyperpolyglot.org/c#read-line>
+- <https://hyperpolyglot.org/numerical-analysis#read-line>
+- <https://hyperpolyglot.org/scripting2#read-line>
 - <https://www.programming-idioms.org/idiom/58/extract-file-content>

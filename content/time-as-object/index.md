@@ -40,6 +40,6 @@ datetime.datetime.utcfromtimestamp` >}}
 
 ## References
 
-- <http://hyperpolyglot.org/c#unix-epoch-to-broken-down-datetime>
-- <http://hyperpolyglot.org/scripting#unix-epoch-to-broken-down-datetime>
+- <https://hyperpolyglot.org/c#unix-epoch-to-broken-down-datetime>
+- <https://hyperpolyglot.org/scripting#unix-epoch-to-broken-down-datetime>
 - <https://www.programming-idioms.org/idiom/98/epoch-seconds-to-date-object>

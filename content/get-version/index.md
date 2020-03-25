@@ -46,6 +46,6 @@ languages: [d, go, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/scripting#version>
+- <https://hyperpolyglot.org/scripting#version>
 - <https://www.programming-idioms.org/idiom/210/compiler-version>
 - <https://rosettacode.org/wiki/Introspection>

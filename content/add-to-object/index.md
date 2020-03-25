@@ -12,4 +12,4 @@ languages: [php]
 
 ## References
 
-<http://hyperpolyglot.org/scripting2#getter-setter>
+<https://hyperpolyglot.org/scripting2#getter-setter>

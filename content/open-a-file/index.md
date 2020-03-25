@@ -39,5 +39,5 @@ languages: [d, go, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/scripting2#open-read-bytes>
-- <http://hyperpolyglot.org/scripting2#open-write-bytes>
+- <https://hyperpolyglot.org/scripting2#open-read-bytes>
+- <https://hyperpolyglot.org/scripting2#open-write-bytes>

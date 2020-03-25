@@ -29,4 +29,4 @@ languages: [go, julia, nim, php, python]
 
 ## References
 
-<http://hyperpolyglot.org/scripting2#pkg-management>
+<https://hyperpolyglot.org/scripting2#pkg-management>

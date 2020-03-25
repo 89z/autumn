@@ -35,6 +35,6 @@ languages: [d, go, julia, nim, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#alias-namespace>
-- <http://hyperpolyglot.org/scripting2#load-lib>
+- <https://hyperpolyglot.org/c#alias-namespace>
+- <https://hyperpolyglot.org/scripting2#load-lib>
 - <https://rosettacode.org/wiki/Include_a_file>

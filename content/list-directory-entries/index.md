@@ -43,7 +43,7 @@ languages: [d, go, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/scripting2#dir-iterate>
+- <https://hyperpolyglot.org/scripting2#dir-iterate>
 - <https://www.programming-idioms.org/idiom/180/list-files-in-directory>
 - <https://rosettacode.org/wiki/Unix/ls>
 - <https://rosettacode.org/wiki/Walk_a_directory/Non-recursively>

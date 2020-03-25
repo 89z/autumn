@@ -38,7 +38,7 @@ Note the difference will be more pronounced on language like Go, as it does
 not have an search function. You would need to iterate the header each time
 you read another row.
 
-- <http://hyperpolyglot.org/scripting#array-element-index>
+- <https://hyperpolyglot.org/scripting#array-element-index>
 - <https://rosettacode.org/wiki/Search_a_list>
 
 ## Iterate array

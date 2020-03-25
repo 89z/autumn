@@ -39,7 +39,7 @@ languages: [d, go, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/c#unused-file-name>
-- <http://hyperpolyglot.org/scripting2#tmp-file>
+- <https://hyperpolyglot.org/c#unused-file-name>
+- <https://hyperpolyglot.org/scripting2#tmp-file>
 - <https://www.programming-idioms.org/idiom/138/create-temp-file>
 - <https://rosettacode.org/wiki/Secure_temporary_file>

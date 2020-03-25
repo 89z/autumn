@@ -48,6 +48,6 @@ languages: [d, go, javascript, julia, nim, php, python]
 
 ## References
 
-- <http://hyperpolyglot.org/numerical-analysis#eol-comment>
-- <http://hyperpolyglot.org/scripting#eol-comment>
+- <https://hyperpolyglot.org/numerical-analysis#eol-comment>
+- <https://hyperpolyglot.org/scripting#eol-comment>
 - <https://rosettacode.org/wiki/Comments>
