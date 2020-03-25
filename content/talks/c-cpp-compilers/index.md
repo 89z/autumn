@@ -42,6 +42,12 @@ compatible C and C++ compiler.
 
 <https://github.com/mstorsjo/llvm-mingw>
 
+## MSVC
+
+Small build tools
+
+<https://github.com/microsoft/msbuild/issues/5197>
+
 ## References
 
 - <https://clang.llvm.org>

@@ -52,6 +52,7 @@ Use one of these inputs, in order of preference:
 
 ## References
 
+- <https://hyperpolyglot.org/c#str-to-num>
 - <https://rosettacode.org/wiki/Increment_a_numerical_string>
 - <https://www.programming-idioms.org/idiom/146/convert-string-to-float>
 - <https://www.programming-idioms.org/idiom/22/convert-string-to-int>
