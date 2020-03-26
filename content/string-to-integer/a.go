@@ -4,11 +4,14 @@ import (
    "strconv"
 )
 func main() {
+   var s1 = "10"
+   // example 1
+   var n1, _ = strconv.ParseInt(s1, 10, 0)
    // example 2
-   n2, _ := strconv.ParseInt("11", 10, 0)
+   var n2, _ = strconv.Atoi(s1)
    // example 3
-   n3, _ := strconv.Atoi("11")
-   // example 4
-   var n4 int
-   fmt.Sscan("11", &n4)
+   var n3 int
+   fmt.Sscan(s1, &n3)
+   // print
+   fmt.Println(n1, n2, n3)
 }

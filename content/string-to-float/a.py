@@ -1,5 +1,8 @@
-import locale
+s1 = '1.1'
+# example 1
+n1 = float(s1)
 # example 2
-n2 = float('01.2')
-# example 4
-n4 = locale.atof('01.2')
+import locale
+n2 = locale.atof(s1)
+# print
+print(n1, n2)

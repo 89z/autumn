@@ -14,14 +14,19 @@ languages: [go, javascript, php, python]
 
 {{< r "a.js" >}}
 
-{{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/
-Number/parseFloat` >}}
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number>
+- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
+   Global_Objects/Number/parseFloat` >}}
+- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
+   Operators/Arithmetic_Operators` >}}
 
 ## PHP
 
 {{< r "a.php" >}}
 
-<https://php.net/function.floatval>
+- <https://php.net/function.floatval>
+- <https://php.net/language.operators.arithmetic>
+- <https://php.net/language.types.type-juggling>
 
 ## Python
 

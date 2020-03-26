@@ -8,6 +8,7 @@ languages: [go, javascript, php, python]
 
 {{< r "a.go" >}}
 
+- <https://golang.org/pkg/fmt#Sscan>
 - <https://golang.org/pkg/strconv#Atoi>
 - <https://golang.org/pkg/strconv#ParseInt>
 
