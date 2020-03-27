@@ -8,6 +8,9 @@ languages: [go, javascript, php, python]
 
 {{< r "a.go" >}}
 
+Note: if you have a choice, use `strconv` over `fmt` as it produces smaller
+executables.
+
 - <https://golang.org/pkg/fmt#Sscan>
 - <https://golang.org/pkg/strconv#Atoi>
 - <https://golang.org/pkg/strconv#ParseInt>
