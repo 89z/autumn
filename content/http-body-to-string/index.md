@@ -28,6 +28,7 @@ Some examples require `php-curl` package.
 
 - <https://php.net/function.curl-init>
 - <https://php.net/function.file-get-contents>
+- <https://php.net/function.stream-get-contents>
 
 ## Python
 
