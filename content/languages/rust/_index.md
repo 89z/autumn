@@ -31,6 +31,10 @@ Instead requiring something like this:
 
 <https://github.com/rust-lang/rfcs/issues/2875>
 
+## HTTP
+
+<https://github.com/sbstp/attohttpc>
+
 ## Setup
 
 <https://forge.rust-lang.org/infra/other-installation-methods>
