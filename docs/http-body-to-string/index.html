@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>HTTP body to string</h1>
-<time>Sat Mar 28 12:24:43 2020</time>
+<time>Sat Mar 28 21:33:51 2020</time>
 <a href="/autumn/topics/network">network</a>
    <h2 id="go">Go</h2>
 
@@ -62,45 +62,28 @@
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Operators/await">https://developer.mozilla.org/Web/JavaScript/Reference/Operators/await</a></li>
 </ul>
 <h2 id="php">PHP</h2>
-<p>
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>;
-$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>($s1);
-<span style="color:#66d9ef">echo</span> $s2;
-</code></pre></div>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>;
-$r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>($s1, <span style="color:#e6db74">&#39;r&#39;</span>);
-$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_contents</span>($r1);
-<span style="color:#66d9ef">echo</span> $s2;
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>($s1);
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span>$r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>($s1, <span style="color:#e6db74">&#39;r&#39;</span>);
+$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_contents</span>($r1);
+<span style="color:#75715e"># example 3
+</span><span style="color:#75715e"></span>$r2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>();
+<span style="color:#a6e22e">curl_setopt</span>($r2, <span style="color:#a6e22e">CURLOPT_RETURNTRANSFER</span>, <span style="color:#66d9ef">true</span>);
+<span style="color:#a6e22e">curl_setopt</span>($r2, <span style="color:#a6e22e">CURLOPT_URL</span>, $s1);
+$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_exec</span>($r2);
+<span style="color:#75715e"># example 4
+</span><span style="color:#75715e"></span>$r3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>($s1);
+<span style="color:#a6e22e">curl_setopt</span>($r3, <span style="color:#a6e22e">CURLOPT_RETURNTRANSFER</span>, <span style="color:#66d9ef">true</span>);
+$s5 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_exec</span>($r3);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2, $s3, $s4, $s5);
 </code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>;
-$r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>($s1);
-<span style="color:#a6e22e">curl_setopt</span>($r1, <span style="color:#a6e22e">CURLOPT_RETURNTRANSFER</span>, <span style="color:#66d9ef">true</span>);
-$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_exec</span>($r1);
-<span style="color:#66d9ef">echo</span> $s2;
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>();
-<span style="color:#a6e22e">curl_setopt</span>($r1, <span style="color:#a6e22e">CURLOPT_RETURNTRANSFER</span>, <span style="color:#66d9ef">true</span>);
-<span style="color:#a6e22e">curl_setopt</span>($r1, <span style="color:#a6e22e">CURLOPT_URL</span>, <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>);
-$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_exec</span>($r1);
-<span style="color:#a6e22e">curl_setopt</span>($r1, <span style="color:#a6e22e">CURLOPT_URL</span>, <span style="color:#e6db74">&#39;http://speedtest.nyc.hivelocity.net&#39;</span>);
-$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_exec</span>($r1);
-<span style="color:#a6e22e">var_dump</span>($s1, $s2);
-</code></pre></div></p>
 <p>Some examples require <code>php-curl</code> package.</p>
 <ul>
 <li><a href="https://php.net/function.curl-init">https://php.net/function.curl-init</a></li>

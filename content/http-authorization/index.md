@@ -18,4 +18,5 @@ Some examples require `php-curl` package.
 
 ## References
 
-<https://rosettacode.org/wiki/HTTPS/Authenticated>
+- <https://musicbrainz.org/doc/XML_Web_Service/Rate_Limiting>
+- <https://rosettacode.org/wiki/HTTPS/Authenticated>
