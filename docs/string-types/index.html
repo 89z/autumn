@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>String types</h1>
-<time>Wed Mar 4 18:45:59 2020</time>
+<time>Sun Mar 29 14:51:11 2020</time>
 <a href="/autumn/topics/string">string</a>
 <a href="/autumn/topics/type">type</a>
    <h2 id="d">D</h2>
@@ -142,10 +142,17 @@ s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;&#
 <span style="color:#75715e"># example 4</span>
 s4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;Sunday
 </span><span style="color:#e6db74">Monday&#34;&#34;&#34;</span>
+<span style="color:#75715e"># example 5</span>
+<span style="color:#f92672">import</span> io
+o1 <span style="color:#f92672">=</span> io<span style="color:#f92672">.</span>StringIO(<span style="color:#e6db74">&#39;Sunday&#39;</span>)
+s5 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>getvalue()
 <span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(s1, s2, s3, s4)
+<span style="color:#66d9ef">print</span>([s1, s2, s3, s4, s5])
 </code></pre></div>
-<p><a href="https://docs.python.org/reference/lexical_analysis.html#strings">https://docs.python.org/reference/lexical_analysis.html#strings</a></p>
+<ul>
+<li><a href="https://docs.python.org/library/io.html#io.StringIO">https://docs.python.org/library/io.html#io.StringIO</a></li>
+<li><a href="https://docs.python.org/reference/lexical_analysis.html#strings">https://docs.python.org/reference/lexical_analysis.html#strings</a></li>
+</ul>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://www.programming-idioms.org/idiom/48/multi-line-string">https://www.programming-idioms.org/idiom/48/multi-line-string</a></li>

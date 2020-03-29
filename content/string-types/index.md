@@ -48,7 +48,8 @@ languages: [d, go, javascript, julia, nim, php, python]
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/reference/lexical_analysis.html#strings>
+- <https://docs.python.org/library/io.html#io.StringIO>
+- <https://docs.python.org/reference/lexical_analysis.html#strings>
 
 ## References
 

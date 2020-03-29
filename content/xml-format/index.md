@@ -1,10 +1,14 @@
 ---
-title: Decode XML
-topics: [decode]
-languages: [php]
+title: XML format
+topics: [format]
+languages: [go, php]
 ---
 
 {{< r "a.xml" >}}
+
+## Go
+
+<https://golang.org/pkg/encoding/xml>
 
 ## PHP
 
