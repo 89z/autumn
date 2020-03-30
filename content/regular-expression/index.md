@@ -1,8 +1,16 @@
 ---
 title: Regular expression
 topics: [string]
-languages: [javascript, julia, php, python]
+languages: [go, javascript, julia, php, python]
 ---
+
+## Go
+
+{{< r "a.go" >}}
+
+- <https://golang.org/pkg/regexp#Regexp.Find>
+- <https://golang.org/pkg/regexp#Regexp.FindAll>
+- <https://golang.org/pkg/regexp#Regexp.FindSubmatch>
 
 ## JavaScript
 
@@ -13,13 +21,15 @@ RegExp/exec` >}}
 
 {{< r "a.jl" >}}
 
-<https://docs.julialang.org/en/v1/base/strings#Base.match>
+- <https://docs.julialang.org/en/v1/base/strings#Base.eachmatch>
+- <https://docs.julialang.org/en/v1/base/strings#Base.match>
 
 ## PHP
 
 {{< r "a.php" >}}
 
-<https://php.net/function.preg-match>
+- <https://php.net/function.preg-match-all>
+- <https://php.net/function.preg-match>
 
 ## Python
 
