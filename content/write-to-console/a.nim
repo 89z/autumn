@@ -1,4 +1,4 @@
-var s1 = "☺"
+var s1 = "Sunday"
 # example 1
 echo s1
 # example 2

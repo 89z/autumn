@@ -1,7 +1,7 @@
 package main
 import "unicode/utf8"
 func main() {
-   s1 := "☺"
+   s1 := "♠"
    // bytes
    n1 := len(s1)
    // characters

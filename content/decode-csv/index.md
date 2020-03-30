@@ -1,6 +1,6 @@
 ---
 title: Decode CSV
-topics: [format]
+topics: [file-format]
 languages: [go, javascript, php, python]
 ---
 

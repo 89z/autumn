@@ -1,6 +1,6 @@
 ---
-title: JSON format
-topics: [format]
+title: Decode JSON
+topics: [file-format]
 languages: [d, go, javascript, julia, nim, php, python]
 ---
 

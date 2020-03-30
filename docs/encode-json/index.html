@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encode JSON &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/muv1/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Encode JSON</h1>
+<time>Sun Mar 29 20:06:04 2020</time>
+<a href="/autumn/topics/file-format">file-format</a>
+   <h2 id="go">Go</h2>
+<p><a href="https://golang.org/pkg/encoding/json">https://golang.org/pkg/encoding/json</a></p>
+<h2 id="javascript">JavaScript</h2>
+<a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/JSON">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/JSON</a>
+
+<h2 id="julia">Julia</h2>
+<p><a href="https://github.com/JuliaIO/JSON.jl">https://github.com/JuliaIO/JSON.jl</a></p>
+<h2 id="nim">Nim</h2>
+<p><a href="https://nim-lang.github.io/Nim/json">https://nim-lang.github.io/Nim/json</a></p>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$m1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;Mon&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">11</span>];
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">json_encode</span>($m1);
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">json_encode</span>($m1, <span style="color:#a6e22e">JSON_PRETTY_PRINT</span>);
+<span style="color:#75715e"># example 3
+</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">json_encode</span>($m1, <span style="color:#a6e22e">JSON_PRETTY_PRINT</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">JSON_UNESCAPED_UNICODE</span>);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1, $s2, $s3);
+</code></pre></div>
+<p>Requires <code>php-json</code> package.</p>
+<p><a href="https://php.net/function.json-encode">https://php.net/function.json-encode</a></p>
+<h2 id="python">Python</h2>
+<p><a href="https://docs.python.org/library/json.html">https://docs.python.org/library/json.html</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/scripting2#generate-json">https://hyperpolyglot.org/scripting2#generate-json</a></li>
+<li><a href="https://rosettacode.org/wiki/JSON">https://rosettacode.org/wiki/JSON</a></li>
+<li><a href="https://www.programming-idioms.org/idiom/92">https://www.programming-idioms.org/idiom/92</a></li>
+</ul>
+
+
+</body>
+</html>

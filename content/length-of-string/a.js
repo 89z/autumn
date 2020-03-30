@@ -1,4 +1,4 @@
-let s1 = '☺';
+let s1 = '♠';
 // bytes
 let n1 = new TextEncoder().encode(s1).length;
 // characters

@@ -1,5 +1,5 @@
 <?php
-$s1 = '☺';
+$s1 = '♠';
 # bytes
 $n1 = strlen($s1);
 # characters

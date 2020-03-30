@@ -11,7 +11,7 @@ func main() {
    // example 4
    s5 := s1[len(s1) - 3:]
    // example 5
-   s6 := []rune("☺ U+263A")[:1]
+   s6 := []rune("♠ U+2660")[:1]
    // print
    fmt.Printf("%q\n", []interface{}{s2, s3, s4, s5, s6})
 }

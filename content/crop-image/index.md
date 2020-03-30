@@ -1,6 +1,6 @@
 ---
 title: Crop image
-topics: [image]
+topics: [file-format]
 languages: [go, php]
 ---
 

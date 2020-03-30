@@ -1,6 +1,6 @@
 ---
-title: XML format
-topics: [format]
+title: Decode XML
+topics: [file-format]
 languages: [go, php]
 ---
 
