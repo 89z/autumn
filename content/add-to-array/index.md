@@ -1,7 +1,7 @@
 ---
 title: Add to array
 topics: [array]
-languages: [go, javascript, julia, php, python]
+languages: [go, javascript, julia, nim, php, python]
 ---
 
 ## Go
@@ -24,6 +24,10 @@ languages: [go, javascript, julia, php, python]
 ## Julia
 
 {{< r "a.jl" >}}
+
+## Nim
+
+{{< r "a.nim" >}}
 
 ## PHP
 
