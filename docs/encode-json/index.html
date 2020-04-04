@@ -41,7 +41,7 @@ $m1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">json_encode</span>($m1);
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">json_encode</span>($m1, <span style="color:#a6e22e">JSON_PRETTY_PRINT</span>);
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">json_encode</span>($m1, <span style="color:#a6e22e">JSON_UNESCAPED_SLASHES</span>);
 <span style="color:#75715e"># example 3
 </span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">json_encode</span>($m1, <span style="color:#a6e22e">JSON_PRETTY_PRINT</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">JSON_UNESCAPED_UNICODE</span>);
 <span style="color:#75715e"># print
