@@ -1,5 +1,5 @@
 ---
-title: String to integer
+title: Convert to integer
 topics: [number]
 languages: [go, javascript, php, python]
 ---
