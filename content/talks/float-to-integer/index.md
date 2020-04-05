@@ -30,4 +30,7 @@ however this is a misrepresentation of the problem. A closer example would be:
 
 {{< r "c.go" >}}
 
-which works fine.
+which works fine. Even this is a misrepresentation, as we want rounding rather
+than truncation. A closer example would be:
+
+{{< r "d.go" >}}

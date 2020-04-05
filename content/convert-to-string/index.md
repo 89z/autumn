@@ -14,6 +14,7 @@ languages: [julia, php]
 
 - <https://php.net/function.number-format>
 - <https://php.net/function.sprintf>
+- <https://php.net/function.strval>
 
 ## References
 
