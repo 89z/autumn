@@ -1,6 +1,9 @@
+let s1 = '10';
+// example 1
+let n1 = parseInt(s1);
 // example 2
-let n2 = parseInt('12a');
+let n2 = Number(s1);
 // example 3
-let n3 = Number('012');
-// example 4
-let n4 = + '012';
+let n3 = +(s1);
+// print
+console.log(n1, n2, n3);

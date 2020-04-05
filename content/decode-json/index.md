@@ -4,6 +4,8 @@ topics: [file-format]
 languages: [d, go, javascript, julia, nim, php, python]
 ---
 
+{{< r "a.json" >}}
+
 ## D
 
 <https://dlang.org/phobos/std_json.html>
@@ -42,7 +44,8 @@ Requires `php-json` package.
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/json.html#json.loads>
+- <https://docs.python.org/library/json.html#json.load>
+- <https://docs.python.org/library/json.html#json.loads>
 
 ## References
 

@@ -9,6 +9,6 @@ func main() {
    // example 1
    fmt.Printf("%5d\n", n1)
    // example 2
-   p1 := message.NewPrinter(language.English)
-   p1.Println(n1)
+   o1 := message.NewPrinter(language.English)
+   o1.Println(n1)
 }

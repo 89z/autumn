@@ -1,19 +1,8 @@
 ---
 title: Format number
 topics: [number]
-languages: [d, go, javascript, julia, nim, php, python]
+languages: [go, javascript, julia, nim, php, python]
 ---
-
-~~~
-1000 to " 1000"
-1000 to "1,000"
-~~~
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/phobos/std_format.html#.format>
 
 ## Go
 

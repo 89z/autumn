@@ -1,4 +1,10 @@
 import json
-s1 = '{"Sun": 10, "Mon": 11}'
-m1 = json.loads(s1)
-print(m1)
+# example 1
+r1 = open('a.json')
+m1 = json.load(r1)
+# example 2
+r2 = open('a.json')
+s1 = r2.read()
+m2 = json.loads(s1)
+# print
+print(m1, m2)

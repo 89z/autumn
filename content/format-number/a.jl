@@ -1,3 +1,4 @@
 using Printf
-s1 = @sprintf("%5d", 1000)
+n1 = 1000
+s1 = @sprintf("%5d", n1)
 show(s1)
