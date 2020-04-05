@@ -1,6 +1,6 @@
 ---
-title: String to float
-topics: [number, string]
+title: Convert to float
+topics: [number]
 languages: [go, javascript, php, python]
 ---
 

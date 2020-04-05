@@ -1,6 +1,6 @@
 ---
-title: Number to string
-topics: [number]
+title: Convert to string
+topics: [string]
 languages: [julia, php]
 ---
 
