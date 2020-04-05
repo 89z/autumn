@@ -1,5 +1,5 @@
 ---
-title: Byte slice
+title: Byte array
 ---
 
 Its important to note that a byte slice is *an array*, not a string:
