@@ -4,12 +4,16 @@ import (
    "strconv"
 )
 func main() {
-   var s1 = "1.1"
    // example 1
-   var n1, _ = strconv.ParseFloat(s1, 0)
+   var n1 = 10
+   var n2 = float64(n1)
    // example 2
-   var n2 float64
-   fmt.Sscan(s1, &n2)
+   var s1 = "1.9"
+   var n3, _ = strconv.ParseFloat(s1, 0)
+   // example 3
+   var s2 = "1.9"
+   var n4 float64
+   fmt.Sscan(s2, &n4)
    // print
-   fmt.Println(n1, n2)
+   println(n2, n3, n4)
 }

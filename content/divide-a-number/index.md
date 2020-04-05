@@ -1,8 +1,12 @@
 ---
 title: Divide a number
 topics: [number]
-languages: [javascript, php, python]
+languages: [go, javascript, php, python]
 ---
+
+## Go
+
+{{< r "a.go" >}}
 
 ## JavaScript
 

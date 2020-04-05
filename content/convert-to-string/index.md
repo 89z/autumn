@@ -12,7 +12,6 @@ languages: [julia, php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.number-format>
 - <https://php.net/function.sprintf>
 - <https://php.net/function.strval>
 

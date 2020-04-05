@@ -1,4 +1,4 @@
-let s1 = '1.2';
+let s1 = '1.9';
 // example 1
 let n1 = parseFloat(s1);
 // example 2

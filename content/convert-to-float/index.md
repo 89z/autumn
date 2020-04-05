@@ -14,11 +14,9 @@ languages: [go, javascript, php, python]
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number>
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/Number/parseFloat` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Operators/Arithmetic_Operators` >}}
+- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/parseFloat` >}}
+- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number` >}}
+- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators` >}}
 
 ## PHP
 
@@ -38,5 +36,4 @@ languages: [go, javascript, php, python]
 ## References
 
 - <https://hyperpolyglot.org/c#str-to-num>
-- <https://rosettacode.org/wiki/Increment_a_numerical_string>
 - <https://www.programming-idioms.org/idiom/146/convert-string-to-float>
