@@ -32,6 +32,8 @@ languages: [go, javascript, julia, php, python]
 
 {{< r "a.py" >}}
 
+<https://docs.python.org/library/functions.html#func-str>
+
 ## References
 
 - <https://hyperpolyglot.org/numerical-analysis#sprintf>

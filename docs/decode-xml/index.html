@@ -21,16 +21,9 @@
       </nav>
    </header>
 <h1>Decode XML</h1>
-<time>Sun Mar 29 20:06:04 2020</time>
+<time>Sun Apr 5 21:15:16 2020</time>
 <a href="/autumn/topics/file-format">file-format</a>
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;Sunday</span> <span style="color:#a6e22e">ten=</span><span style="color:#e6db74">&#34;even&#34;</span><span style="color:#f92672">&gt;</span>
-   <span style="color:#f92672">&lt;Monday</span> <span style="color:#a6e22e">eleven=</span><span style="color:#e6db74">&#34;odd&#34;</span><span style="color:#f92672">/&gt;</span>
-<span style="color:#f92672">&lt;/Sunday&gt;</span>
-</code></pre></div>
-<h2 id="go">Go</h2>
+   <h2 id="go">Go</h2>
 <p><a href="https://golang.org/pkg/encoding/xml">https://golang.org/pkg/encoding/xml</a></p>
 <h2 id="php">PHP</h2>
 
@@ -40,22 +33,18 @@
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span>$o1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">simplexml_load_file</span>(<span style="color:#e6db74">&#39;a.xml&#39;</span>);
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>(<span style="color:#e6db74">&#39;a.xml&#39;</span>);
+</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;&lt;</span><span style="color:#e6db74">eof</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">&lt;Sunday ten=&#34;even&#34;&gt;
+</span><span style="color:#e6db74">   &lt;Monday eleven=&#34;odd&#34;/&gt;
+</span><span style="color:#e6db74">&lt;/Sunday&gt;
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">eof</span>;
 $o2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">simplexml_load_string</span>($s1);
-<span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$o3 <span style="color:#f92672">=</span> $o1<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">Monday</span>;
-<span style="color:#75715e"># example 4
-</span><span style="color:#75715e"></span>$o4 <span style="color:#f92672">=</span> $o1[<span style="color:#e6db74">&#39;ten&#39;</span>];
-<span style="color:#75715e"># example 5
-</span><span style="color:#75715e"></span>$o5 <span style="color:#f92672">=</span> $o1[<span style="color:#e6db74">&#39;ten&#39;</span>];
-$s2 <span style="color:#f92672">=</span> (<span style="color:#a6e22e">string</span>)($o5);
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($o1, $o2, $o3, $o4, $s2);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($o1, $o2);
 </code></pre></div>
 <ul>
 <li><a href="https://php.net/function.simplexml-load-file">https://php.net/function.simplexml-load-file</a></li>
 <li><a href="https://php.net/function.simplexml-load-string">https://php.net/function.simplexml-load-string</a></li>
-<li><a href="https://php.net/simplexml.examples-basic">https://php.net/simplexml.examples-basic</a></li>
 </ul>
 <h2 id="references">References</h2>
 <ul>

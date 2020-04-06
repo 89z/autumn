@@ -1,8 +1,10 @@
 ---
-title: Decode XML
+title: Get XML value
 topics: [file-format]
 languages: [go, php]
 ---
+
+{{< r "a.xml" >}}
 
 ## Go
 
@@ -12,8 +14,7 @@ languages: [go, php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.simplexml-load-file>
-- <https://php.net/function.simplexml-load-string>
+<https://php.net/simplexml.examples-basic>
 
 ## References
 
