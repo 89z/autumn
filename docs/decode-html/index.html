@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Decode HTML</h1>
-<time>Sun Apr 5 21:15:16 2020</time>
+<time>Mon Apr 6 07:15:44 2020</time>
 <a href="/autumn/topics/file-format">file-format</a>
    <h2 id="php">PHP</h2>
 
@@ -29,16 +29,16 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://github.com/login&#39;</span>;
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$o1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DOMDocument</span>;
+$o1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DOMDocument</span>;
 <span style="color:#a6e22e">libxml_use_internal_errors</span>(<span style="color:#66d9ef">true</span>);
 $o1<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">loadHTMLFile</span>($s1);
-<span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$o2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DOMDocument</span>;
-$o2<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">loadHTMLFile</span>(<span style="color:#e6db74">&#39;https://github.com/login&#39;</span>, <span style="color:#a6e22e">LIBXML_NOERROR</span>);
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($o1, $o2);
+<span style="color:#a6e22e">var_dump</span>($o1);
 </code></pre></div>
+<p>Do not use <code>LIBXML_NOERROR</code>, as errors will be lost.</p>
+<ul>
+<li><a href="https://php.net/domdocument.loadhtmlfile">https://php.net/domdocument.loadhtmlfile</a></li>
+<li><a href="https://php.net/function.libxml-use-internal-errors">https://php.net/function.libxml-use-internal-errors</a></li>
+</ul>
 <h2 id="references">References</h2>
 <p><a href="https://hyperpolyglot.org/scripting2#parse-html">https://hyperpolyglot.org/scripting2#parse-html</a></p>
 
