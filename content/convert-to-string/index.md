@@ -1,8 +1,20 @@
 ---
 title: Convert to string
 topics: [string]
-languages: [julia, php]
+languages: [go, javascript, julia, php, python]
 ---
+
+## Go
+
+{{< r "a.go" >}}
+
+<https://golang.org/pkg/fmt>
+
+## JavaScript
+
+{{< r "a.js" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String>
 
 ## Julia
 
@@ -14,7 +26,13 @@ languages: [julia, php]
 
 - <https://php.net/function.sprintf>
 - <https://php.net/function.strval>
+- <https://php.net/language.types.type-juggling>
+
+## Python
+
+{{< r "a.py" >}}
 
 ## References
 
-<https://hyperpolyglot.org/numerical-analysis#sprintf>
+- <https://hyperpolyglot.org/numerical-analysis#sprintf>
+- <https://hyperpolyglot.org/scripting#format-str>
