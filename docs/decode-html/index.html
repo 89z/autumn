@@ -21,23 +21,42 @@
       </nav>
    </header>
 <h1>Decode HTML</h1>
-<time>Mon Apr 6 07:15:44 2020</time>
+<time>Mon Apr 6 22:11:35 2020</time>
 <a href="/autumn/topics/file-format">file-format</a>
-   <h2 id="php">PHP</h2>
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/sunday&#34;</span>&gt;
+   &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;a.jpg&#34;</span>&gt;
+&lt;/<span style="color:#f92672">a</span>&gt;
+</code></pre></div>
+<h2 id="php">PHP</h2>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://github.com/login&#39;</span>;
-$o1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DOMDocument</span>;
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$d1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DOMDocument</span>;
+$d1<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">loadHTMLFile</span>(<span style="color:#e6db74">&#39;a.html&#39;</span>);
+<span style="color:#75715e"># exmaple 2
+</span><span style="color:#75715e"></span>$d2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DOMDocument</span>;
 <span style="color:#a6e22e">libxml_use_internal_errors</span>(<span style="color:#66d9ef">true</span>);
-$o1<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">loadHTMLFile</span>($s1);
-<span style="color:#a6e22e">var_dump</span>($o1);
+$d2<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">loadHTMLFile</span>($s1);
+<span style="color:#75715e"># example 3
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>($s1);
+$t1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">tidy</span>;
+$t1<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">parseString</span>($s2);
+$d3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DOMDocument</span>;
+$d3<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">loadHTML</span>($t1);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($d1, $d2, $d3);
 </code></pre></div>
-<p>Do not use <code>LIBXML_NOERROR</code>, as errors will be lost.</p>
 <ul>
+<li><a href="https://php.net/book.tidy">https://php.net/book.tidy</a></li>
 <li><a href="https://php.net/domdocument.loadhtmlfile">https://php.net/domdocument.loadhtmlfile</a></li>
 <li><a href="https://php.net/function.libxml-use-internal-errors">https://php.net/function.libxml-use-internal-errors</a></li>
+<li><a href="https://stackoverflow.com/questions/3577641">https://stackoverflow.com/questions/3577641</a></li>
 </ul>
 <h2 id="references">References</h2>
 <p><a href="https://hyperpolyglot.org/scripting2#parse-html">https://hyperpolyglot.org/scripting2#parse-html</a></p>

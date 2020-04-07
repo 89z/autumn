@@ -1,7 +1,7 @@
 <?php
 function u_group($s_in) {
-   $n_neg = strrpos("-$s_in", '-');
-   $n_dot = strpos("$s_in.", '.');
+   $n_neg = strrpos('-' . $s_in, '-');
+   $n_dot = strpos($s_in . '.', '.');
    $s_out = '';
    foreach (str_split($s_in) as $n_pos => $s_pos) {
       if ($n_neg < $n_pos && $n_pos < $n_dot && $n_pos % 3 == $n_dot % 3) {
