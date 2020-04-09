@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Process &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talks">Talks</a>
+         <a href="https://github.com/muv1/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Process</h1>
+<time>Wed Apr 8 19:48:05 2020</time>
+   <p>I need a process to use with examples. Here is the list:</p>
+<p><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities">https://pubs.opengroup.org/onlinepubs/9699919799/utilities</a></p>
+<p>Select the correct column, then run this:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/sh
+</span><span style="color:#75715e"></span>set -u
+
+awk <span style="color:#e6db74">&#39;
+</span><span style="color:#e6db74">{
+</span><span style="color:#e6db74">   sub(&#34;\r&#34;, &#34;&#34;)
+</span><span style="color:#e6db74">   sub(&#34;.html&#34;, &#34;&#34;)
+</span><span style="color:#e6db74">   print
+</span><span style="color:#e6db74">}
+</span><span style="color:#e6db74">&#39;</span> /dev/clipboard |
+<span style="color:#66d9ef">while</span> read each
+<span style="color:#66d9ef">do</span>
+   type -a <span style="color:#e6db74">&#34;</span>$each<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">done</span> 2&gt;&amp;<span style="color:#ae81ff">1</span> |
+grep -v found |
+grep -v builtin |
+grep -v Root |
+awk <span style="color:#e6db74">&#39;{print $1}&#39;</span>
+</code></pre></div>
+<p>Result:</p>
+<pre><code>awk
+basename
+cal
+cat
+chgrp
+chmod
+chown
+cksum
+cmp
+comm
+cp
+csplit
+cut
+date
+dd
+df
+diff
+dirname
+du
+echo
+env
+ex
+expand
+expr
+false
+file
+find
+fold
+gencat
+getconf
+grep
+head
+iconv
+id
+ipcrm
+ipcs
+join
+kill
+link
+ln
+locale
+logger
+logname
+ls
+man
+mkdir
+mkfifo
+more
+mv
+nice
+nl
+nohup
+od
+paste
+pathchk
+pr
+printf
+ps
+pwd
+renice
+rm
+rmdir
+sed
+sh
+sleep
+sort
+split
+stty
+tabs
+tail
+tee
+test
+time
+touch
+tput
+tr
+true
+tsort
+tty
+uname
+unexpand
+uniq
+unlink
+vi
+wc
+who
+xargs
+zcat
+</code></pre>
+
+</body>
+</html>
