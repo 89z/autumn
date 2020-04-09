@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Process</h1>
-<time>Wed Apr 8 20:15:42 2020</time>
+<time>Wed Apr 8 21:25:15 2020</time>
    <p>I need a process to use with examples. Here is the list:</p>
 <p><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities">https://pubs.opengroup.org/onlinepubs/9699919799/utilities</a></p>
 <p>Select the correct column, then run this:</p>
@@ -47,11 +47,12 @@ grep -v builtin |
 grep -v Root |
 awk <span style="color:#e6db74">&#39;{print $1}&#39;</span>
 </code></pre></div>
-<p>Result:</p>
+<h2 id="numeric-argument">Numeric argument</h2>
+<p><code>cal</code></p>
+<h2 id="one-argument-problem">One argument problem</h2>
+<p>Either one argument is not possible, or it pulls from standard input:</p>
 <ul>
 <li><code>awk</code></li>
-<li><code>basename</code></li>
-<li><code>cal</code></li>
 <li><code>cat</code></li>
 <li><code>chgrp</code></li>
 <li><code>chmod</code></li>
@@ -62,43 +63,33 @@ awk <span style="color:#e6db74">&#39;{print $1}&#39;</span>
 <li><code>cp</code></li>
 <li><code>csplit</code></li>
 <li><code>cut</code></li>
-<li><code>date</code></li>
 <li><code>dd</code></li>
-<li><code>df</code></li>
 <li><code>diff</code></li>
 <li><code>dirname</code></li>
-<li><code>du</code></li>
 <li><code>echo</code></li>
-<li><code>env</code></li>
 <li><code>ex</code></li>
 <li><code>expand</code></li>
 <li><code>expr</code></li>
 <li><code>false</code></li>
 <li><code>file</code></li>
-<li><code>find</code></li>
 <li><code>fold</code></li>
 <li><code>gencat</code></li>
 <li><code>getconf</code></li>
 <li><code>grep</code></li>
 <li><code>head</code></li>
 <li><code>iconv</code></li>
-<li><code>id</code></li>
 <li><code>ipcrm</code></li>
 <li><code>ipcs</code></li>
 <li><code>join</code></li>
 <li><code>kill</code></li>
 <li><code>link</code></li>
 <li><code>ln</code></li>
-<li><code>locale</code></li>
 <li><code>logger</code></li>
-<li><code>logname</code></li>
-<li><code>ls</code></li>
 <li><code>man</code></li>
 <li><code>mkdir</code></li>
 <li><code>mkfifo</code></li>
 <li><code>more</code></li>
 <li><code>mv</code></li>
-<li><code>nice</code></li>
 <li><code>nl</code></li>
 <li><code>nohup</code></li>
 <li><code>od</code></li>
@@ -106,8 +97,6 @@ awk <span style="color:#e6db74">&#39;{print $1}&#39;</span>
 <li><code>pathchk</code></li>
 <li><code>pr</code></li>
 <li><code>printf</code></li>
-<li><code>ps</code></li>
-<li><code>pwd</code></li>
 <li><code>renice</code></li>
 <li><code>rm</code></li>
 <li><code>rmdir</code></li>
@@ -116,7 +105,6 @@ awk <span style="color:#e6db74">&#39;{print $1}&#39;</span>
 <li><code>sleep</code></li>
 <li><code>sort</code></li>
 <li><code>split</code></li>
-<li><code>stty</code></li>
 <li><code>tabs</code></li>
 <li><code>tail</code></li>
 <li><code>tee</code></li>
@@ -127,8 +115,6 @@ awk <span style="color:#e6db74">&#39;{print $1}&#39;</span>
 <li><code>tr</code></li>
 <li><code>true</code></li>
 <li><code>tsort</code></li>
-<li><code>tty</code></li>
-<li><code>uname</code></li>
 <li><code>unexpand</code></li>
 <li><code>uniq</code></li>
 <li><code>unlink</code></li>
@@ -138,7 +124,94 @@ awk <span style="color:#e6db74">&#39;{print $1}&#39;</span>
 <li><code>xargs</code></li>
 <li><code>zcat</code></li>
 </ul>
+<h2 id="single-line-output">Single line output</h2>
+<ul>
+<li><code>basename</code></li>
+<li><code>date</code></li>
+<li><code>du</code></li>
+<li><code>id</code></li>
+<li><code>logname</code></li>
+<li><code>ls</code></li>
+<li><code>nice</code></li>
+<li><code>pwd</code></li>
+<li><code>tty</code></li>
+<li><code>uname</code></li>
+</ul>
+<h2 id="result">Result</h2>
+<table>
+<thead>
+<tr>
+<th>Doc size</th>
+<th>Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14K</td>
+<td><code>env</code></td>
+</tr>
+<tr>
+<td>16K</td>
+<td><code>df</code></td>
+</tr>
+<tr>
+<td>20K</td>
+<td><code>locale</code></td>
+</tr>
+<tr>
+<td>32K</td>
+<td><code>ps</code></td>
+</tr>
+<tr>
+<td>38K</td>
+<td><code>find</code></td>
+</tr>
+<tr>
+<td>44K</td>
+<td><code>stty</code></td>
+</tr>
+</tbody>
+</table>
+<p>Out of these, I am liking <code>ps</code>, as we should be able to see the program itself
+in the list, or interpreter. Here are POSIX options that can be used without an
+argument:</p>
+<pre><code>-A
+-a
+-d
+-e
+-f
+-l
+</code></pre><p>Remove options not available with my version, result:</p>
+<pre><code>-a
+-e
+-f
+-l
+</code></pre><p>Now compare output:</p>
+<pre><code>$ ps
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1374       1    1374       4648  cons0     197608 21:24:27 /usr/bin/sh
+     1375    1374    1375       2204  cons0     197608 21:24:28 /usr/bin/ps
 
+$ ps -a
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1376    1374    1376       6304  cons0     197608 21:24:29 /usr/bin/ps
+     1374       1    1374       4648  cons0     197608 21:24:27 /usr/bin/sh
+
+$ ps -e
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1377    1374    1377       2980  cons0     197608 21:24:31 /usr/bin/ps
+     1374       1    1374       4648  cons0     197608 21:24:27 /usr/bin/sh
+
+$ ps -f
+     UID     PID    PPID  TTY        STIME COMMAND
+  Steven    1374       1 cons0    21:24:27 /usr/bin/sh
+  Steven    1378    1374 cons0    21:24:32 /usr/bin/ps
+
+$ ps -l
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1374       1    1374       4648  cons0     197608 21:24:27 /usr/bin/sh
+     1379    1374    1379      11236  cons0     197608 21:24:35 /usr/bin/ps
+</code></pre>
 
 </body>
 </html>
