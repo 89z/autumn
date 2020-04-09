@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Process</h1>
-<time>Wed Apr 8 21:25:15 2020</time>
+<time>Wed Apr 8 22:01:29 2020</time>
    <p>I need a process to use with examples. Here is the list:</p>
 <p><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities">https://pubs.opengroup.org/onlinepubs/9699919799/utilities</a></p>
 <p>Select the correct column, then run this:</p>
@@ -172,45 +172,13 @@ awk <span style="color:#e6db74">&#39;{print $1}&#39;</span>
 </tr>
 </tbody>
 </table>
-<p>Out of these, I am liking <code>ps</code>, as we should be able to see the program itself
-in the list, or interpreter. Here are POSIX options that can be used without an
-argument:</p>
-<pre><code>-A
--a
--d
--e
--f
--l
-</code></pre><p>Remove options not available with my version, result:</p>
-<pre><code>-a
--e
--f
--l
-</code></pre><p>Now compare output:</p>
-<pre><code>$ ps
-      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
-     1374       1    1374       4648  cons0     197608 21:24:27 /usr/bin/sh
-     1375    1374    1375       2204  cons0     197608 21:24:28 /usr/bin/ps
+<p>Out of these, I am liking locale. Here are POSIX options that can be used
+without an argument:</p>
+<pre><code>$ locale -a | wc -l
+458
 
-$ ps -a
-      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
-     1376    1374    1376       6304  cons0     197608 21:24:29 /usr/bin/ps
-     1374       1    1374       4648  cons0     197608 21:24:27 /usr/bin/sh
-
-$ ps -e
-      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
-     1377    1374    1377       2980  cons0     197608 21:24:31 /usr/bin/ps
-     1374       1    1374       4648  cons0     197608 21:24:27 /usr/bin/sh
-
-$ ps -f
-     UID     PID    PPID  TTY        STIME COMMAND
-  Steven    1374       1 cons0    21:24:27 /usr/bin/sh
-  Steven    1378    1374 cons0    21:24:32 /usr/bin/ps
-
-$ ps -l
-      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
-     1374       1    1374       4648  cons0     197608 21:24:27 /usr/bin/sh
-     1379    1374    1379      11236  cons0     197608 21:24:35 /usr/bin/ps
+$ locale -m | wc -l
+52
 </code></pre>
 
 </body>

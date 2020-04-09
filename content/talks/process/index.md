@@ -114,53 +114,13 @@ Doc size | Tool
 38K      | `find`
 44K      | `stty`
 
-Out of these, I am liking `ps`, as we should be able to see the program itself
-in the list, or interpreter. Here are POSIX options that can be used without an
-argument:
+Out of these, I am liking locale. Here are POSIX options that can be used
+without an argument:
 
 ~~~
--A
--a
--d
--e
--f
--l
-~~~
+$ locale -a | wc -l
+458
 
-Remove options not available with my version, result:
-
-~~~
--a
--e
--f
--l
-~~~
-
-Now compare output:
-
-~~~
-$ ps
-      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
-     1374       1    1374       4648  cons0     197608 21:24:27 /usr/bin/sh
-     1375    1374    1375       2204  cons0     197608 21:24:28 /usr/bin/ps
-
-$ ps -a
-      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
-     1376    1374    1376       6304  cons0     197608 21:24:29 /usr/bin/ps
-     1374       1    1374       4648  cons0     197608 21:24:27 /usr/bin/sh
-
-$ ps -e
-      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
-     1377    1374    1377       2980  cons0     197608 21:24:31 /usr/bin/ps
-     1374       1    1374       4648  cons0     197608 21:24:27 /usr/bin/sh
-
-$ ps -f
-     UID     PID    PPID  TTY        STIME COMMAND
-  Steven    1374       1 cons0    21:24:27 /usr/bin/sh
-  Steven    1378    1374 cons0    21:24:32 /usr/bin/ps
-
-$ ps -l
-      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
-     1374       1    1374       4648  cons0     197608 21:24:27 /usr/bin/sh
-     1379    1374    1379      11236  cons0     197608 21:24:35 /usr/bin/ps
+$ locale -m | wc -l
+52
 ~~~
