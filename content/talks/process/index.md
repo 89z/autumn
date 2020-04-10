@@ -114,13 +114,29 @@ Doc size | Tool
 38K      | `find`
 44K      | `stty`
 
-Out of these, I am liking locale. Here are POSIX options that can be used
-without an argument:
+Out of these, I am liking `find`. Here are POSIX options:
 
 ~~~
-$ locale -a | wc -l
-458
-
-$ locale -m | wc -l
-52
+-atime  n
+-ctime  n
+-depth
+-exec  utility_name  [argument ...]   {} +
+-exec  utility_name  [argument ...] ;
+-group  gname
+-links  n
+-mtime  n
+-name  pattern
+-newer  file
+-nogroup
+-nouser
+-ok  utility_name  [argument ...] ;
+-path  pattern
+-perm [-]mode
+-perm [-]onum
+-print
+-prune
+-size  n[c]
+-type  c
+-user  uname
+-xdev
 ~~~

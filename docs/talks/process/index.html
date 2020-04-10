@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Process</h1>
-<time>Wed Apr 8 22:01:29 2020</time>
+<time>Thu Apr 9 20:48:44 2020</time>
    <p>I need a process to use with examples. Here is the list:</p>
 <p><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities">https://pubs.opengroup.org/onlinepubs/9699919799/utilities</a></p>
 <p>Select the correct column, then run this:</p>
@@ -172,13 +172,29 @@ awk <span style="color:#e6db74">&#39;{print $1}&#39;</span>
 </tr>
 </tbody>
 </table>
-<p>Out of these, I am liking locale. Here are POSIX options that can be used
-without an argument:</p>
-<pre><code>$ locale -a | wc -l
-458
-
-$ locale -m | wc -l
-52
+<p>Out of these, I am liking <code>find</code>. Here are POSIX options:</p>
+<pre><code>-atime  n
+-ctime  n
+-depth
+-exec  utility_name  [argument ...]   {} +
+-exec  utility_name  [argument ...] ;
+-group  gname
+-links  n
+-mtime  n
+-name  pattern
+-newer  file
+-nogroup
+-nouser
+-ok  utility_name  [argument ...] ;
+-path  pattern
+-perm [-]mode
+-perm [-]onum
+-print
+-prune
+-size  n[c]
+-type  c
+-user  uname
+-xdev
 </code></pre>
 
 </body>
