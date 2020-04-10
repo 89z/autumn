@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Process</h1>
-<time>Thu Apr 9 20:48:44 2020</time>
+<time>Fri Apr 10 06:33:12 2020</time>
    <p>I need a process to use with examples. Here is the list:</p>
 <p><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities">https://pubs.opengroup.org/onlinepubs/9699919799/utilities</a></p>
 <p>Select the correct column, then run this:</p>
@@ -142,60 +142,44 @@ awk <span style="color:#e6db74">&#39;{print $1}&#39;</span>
 <thead>
 <tr>
 <th>Doc size</th>
-<th>Tool</th>
+<th>One arg</th>
+<th>Two arg</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>14K</td>
 <td><code>env</code></td>
+<td></td>
 </tr>
 <tr>
 <td>16K</td>
 <td><code>df</code></td>
+<td></td>
 </tr>
 <tr>
 <td>20K</td>
 <td><code>locale</code></td>
+<td><code>locale -m</code></td>
 </tr>
 <tr>
 <td>32K</td>
 <td><code>ps</code></td>
+<td></td>
 </tr>
 <tr>
 <td>38K</td>
 <td><code>find</code></td>
+<td><code>find type -f</code></td>
 </tr>
 <tr>
 <td>44K</td>
 <td><code>stty</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<p>Out of these, I am liking <code>find</code>. Here are POSIX options:</p>
-<pre><code>-atime  n
--ctime  n
--depth
--exec  utility_name  [argument ...]   {} +
--exec  utility_name  [argument ...] ;
--group  gname
--links  n
--mtime  n
--name  pattern
--newer  file
--nogroup
--nouser
--ok  utility_name  [argument ...] ;
--path  pattern
--perm [-]mode
--perm [-]onum
--print
--prune
--size  n[c]
--type  c
--user  uname
--xdev
-</code></pre>
+
 
 </body>
 </html>

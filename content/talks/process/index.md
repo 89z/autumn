@@ -105,38 +105,11 @@ Either one argument is not possible, or it pulls from standard input:
 
 ## Result
 
-Doc size | Tool
----------|-----
-14K      | `env`
-16K      | `df`
-20K      | `locale`
-32K      | `ps`
-38K      | `find`
-44K      | `stty`
-
-Out of these, I am liking `find`. Here are POSIX options:
-
-~~~
--atime  n
--ctime  n
--depth
--exec  utility_name  [argument ...]   {} +
--exec  utility_name  [argument ...] ;
--group  gname
--links  n
--mtime  n
--name  pattern
--newer  file
--nogroup
--nouser
--ok  utility_name  [argument ...] ;
--path  pattern
--perm [-]mode
--perm [-]onum
--print
--prune
--size  n[c]
--type  c
--user  uname
--xdev
-~~~
+Doc size | One arg  | Two arg
+---------|----------|--------
+14K      | `env`    |
+16K      | `df`     |
+20K      | `locale` | `locale -m`
+32K      | `ps`     |
+38K      | `find`   | `find type -f`
+44K      | `stty`   |
