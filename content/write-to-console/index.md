@@ -34,10 +34,12 @@ languages: [go, javascript, julia, nim, php, python]
 
 {{< r "a.py" >}}
 
+- <https://docs.python.org/library/functions.html#print>
+- <https://docs.python.org/library/io.html#io.TextIOBase.write>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting2#write-stdout>
 - <https://www.programming-idioms.org/idiom/1>
 - <https://rosettacode.org/wiki/Hello_world/Newline_omission>
-- <https://rosettacode.org/wiki/Hello_world/Standard_error>
 - <https://rosettacode.org/wiki/Hello_world/Text>

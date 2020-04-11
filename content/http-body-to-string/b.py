@@ -1,14 +1,8 @@
-import http.client, urllib.parse, urllib.request
-def get_1(s_link):
-   m1 = urllib.request
-   return m1.urlopen(s_link).read().decode()
-def get_2(s_link):
-   m1 = urllib.parse
-   m2 = http.client
-   m3 = m1.urlparse(s_link)
-   m4 = m2.HTTPConnection(m3.hostname)
-   m4.request('GET', m3.path)
-   return m4.getresponse().read().decode()
-s1 = get_1('http://speedtest.lax.hivelocity.net')
-s2 = get_2('http://speedtest.lax.hivelocity.net')
-print(s1, s2)
+import http.client as o1
+import urllib.parse as o2
+s1 = 'http://speedtest.lax.hivelocity.net'
+o3 = o2.urlparse(s1)
+o4 = o1.HTTPConnection(o3.hostname)
+o4.request('GET', o3.path)
+a1 = o4.getresponse().read()
+print(a1)

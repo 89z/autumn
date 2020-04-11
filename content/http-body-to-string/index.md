@@ -30,10 +30,12 @@ Some examples require `php-curl` package.
 ## Python
 
 {{< r "a.py" >}}
+{{< r "b.py" >}}
 
-- <https://docs.python.org/library/urllib.request.html#urllib.request.urlopen>
 - {{< a `https://docs.python.org/library/http.client.html#
    http.client.HTTPConnection.getresponse` >}}
+- {{< a `https://docs.python.org/library/urllib.request.html#
+   urllib.request.urlopen` >}}
 
 ## References
 

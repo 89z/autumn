@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>HTTP body to string</h1>
-<time>Sat Mar 28 21:33:51 2020</time>
+<time>Sat Apr 11 00:31:43 2020</time>
 <a href="/autumn/topics/network">network</a>
    <h2 id="go">Go</h2>
 
@@ -91,7 +91,7 @@ $s5 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_exec</
 <li><a href="https://php.net/function.stream-get-contents">https://php.net/function.stream-get-contents</a></li>
 </ul>
 <h2 id="python">Python</h2>
-
+<p>
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> request
@@ -100,9 +100,22 @@ o1 <span style="color:#f92672">=</span> request<span style="color:#f92672">.</sp
 a1 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>read()
 <span style="color:#66d9ef">print</span>(a1)
 </code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> http.client <span style="color:#f92672">as</span> o1
+<span style="color:#f92672">import</span> urllib.parse <span style="color:#f92672">as</span> o2
+s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>
+o3 <span style="color:#f92672">=</span> o2<span style="color:#f92672">.</span>urlparse(s1)
+o4 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>HTTPConnection(o3<span style="color:#f92672">.</span>hostname)
+o4<span style="color:#f92672">.</span>request(<span style="color:#e6db74">&#39;GET&#39;</span>, o3<span style="color:#f92672">.</span>path)
+a1 <span style="color:#f92672">=</span> o4<span style="color:#f92672">.</span>getresponse()<span style="color:#f92672">.</span>read()
+<span style="color:#66d9ef">print</span>(a1)
+</code></pre></div></p>
 <ul>
-<li><a href="https://docs.python.org/library/urllib.request.html#urllib.request.urlopen">https://docs.python.org/library/urllib.request.html#urllib.request.urlopen</a></li>
 <li><a href="https://docs.python.org/library/http.client.html#http.client.HTTPConnection.getresponse">https://docs.python.org/library/http.client.html#http.client.HTTPConnection.getresponse</a>
+</li>
+<li><a href="https://docs.python.org/library/urllib.request.html#urllib.request.urlopen">https://docs.python.org/library/urllib.request.html#urllib.request.urlopen</a>
 </li>
 </ul>
 <h2 id="references">References</h2>
