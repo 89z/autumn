@@ -1,9 +1,16 @@
 <?php
-$r1 = popen('locale', 'r');
+$s1 = 'ag -V';
+# example 1
+$r1 = popen($s1, 'r');
 while (true) {
-   $s1 = fgets($r1);
+   $s2 = fgets($r1);
    if (feof($r1)) {
       break;
    }
-   echo $s1;
+   var_dump($s2);
+}
+# example 2
+exec($s1, $a1);
+foreach ($a1 as $s2) {
+   var_dump($s2);
 }

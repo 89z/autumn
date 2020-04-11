@@ -94,20 +94,11 @@ $s5 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_exec</
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> http.client<span style="color:#f92672">,</span> urllib.parse<span style="color:#f92672">,</span> urllib.request
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_1</span>(s_link):
-   m1 <span style="color:#f92672">=</span> urllib<span style="color:#f92672">.</span>request
-   <span style="color:#66d9ef">return</span> m1<span style="color:#f92672">.</span>urlopen(s_link)<span style="color:#f92672">.</span>read()<span style="color:#f92672">.</span>decode()
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_2</span>(s_link):
-   m1 <span style="color:#f92672">=</span> urllib<span style="color:#f92672">.</span>parse
-   m2 <span style="color:#f92672">=</span> http<span style="color:#f92672">.</span>client
-   m3 <span style="color:#f92672">=</span> m1<span style="color:#f92672">.</span>urlparse(s_link)
-   m4 <span style="color:#f92672">=</span> m2<span style="color:#f92672">.</span>HTTPConnection(m3<span style="color:#f92672">.</span>hostname)
-   m4<span style="color:#f92672">.</span>request(<span style="color:#e6db74">&#39;GET&#39;</span>, m3<span style="color:#f92672">.</span>path)
-   <span style="color:#66d9ef">return</span> m4<span style="color:#f92672">.</span>getresponse()<span style="color:#f92672">.</span>read()<span style="color:#f92672">.</span>decode()
-s1 <span style="color:#f92672">=</span> get_1(<span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>)
-s2 <span style="color:#f92672">=</span> get_2(<span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>)
-<span style="color:#66d9ef">print</span>(s1, s2)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> request
+s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>
+o1 <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>urlopen(s1)
+a1 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>read()
+<span style="color:#66d9ef">print</span>(a1)
 </code></pre></div>
 <ul>
 <li><a href="https://docs.python.org/library/urllib.request.html#urllib.request.urlopen">https://docs.python.org/library/urllib.request.html#urllib.request.urlopen</a></li>

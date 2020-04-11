@@ -4,7 +4,7 @@ import (
    "os/exec"
 )
 func main() {
-   r1 := exec.Command("locale")
+   r1 := exec.Command("ag", "-V")
    r2, _ := r1.StdoutPipe()
    r1.Start()
    r3 := bufio.NewScanner(r2)

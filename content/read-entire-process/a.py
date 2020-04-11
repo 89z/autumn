@@ -1,13 +1,12 @@
 import subprocess
-s1 = 'cal'
+a1 = ['ag', '-V']
 # example 1
-p1 = subprocess.check_output(s1)
-s2 = p1.decode()
+a2 = subprocess.check_output(a1)
 # example 2
-p2 = subprocess.Popen(s1, stdout=subprocess.PIPE)
-s3 = p2.stdout.read()
+o1 = subprocess.Popen(a1, stdout=subprocess.PIPE)
+a3 = o1.stdout.read()
 # example 3
-p3 = subprocess.Popen(s1, stdout=subprocess.PIPE)
-a1 = p3.stdout.readlines()
+o2 = subprocess.Popen(a1, stdout=subprocess.PIPE)
+a4 = o2.stdout.readlines()
 # print
-print(s2, s3, a1)
+print(a2, a3, a4, sep='\n')

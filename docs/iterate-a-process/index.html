@@ -34,7 +34,7 @@
    <span style="color:#e6db74">&#34;os/exec&#34;</span>
 )
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">r1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;locale&#34;</span>)
+   <span style="color:#a6e22e">r1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;ag&#34;</span>, <span style="color:#e6db74">&#34;-V&#34;</span>)
    <span style="color:#a6e22e">r2</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r1</span>.<span style="color:#a6e22e">StdoutPipe</span>()
    <span style="color:#a6e22e">r1</span>.<span style="color:#a6e22e">Start</span>()
    <span style="color:#a6e22e">r3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">r2</span>)
@@ -50,13 +50,20 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">popen</span>(<span style="color:#e6db74">&#39;locale&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
+$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ag -V&#39;</span>;
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">popen</span>($s1, <span style="color:#e6db74">&#39;r&#39;</span>);
 <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
-   $s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgets</span>($r1);
+   $s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgets</span>($r1);
    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">feof</span>($r1)) {
       <span style="color:#66d9ef">break</span>;
    }
-   <span style="color:#66d9ef">echo</span> $s1;
+   <span style="color:#a6e22e">var_dump</span>($s2);
+}
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">exec</span>($s1, $a1);
+<span style="color:#66d9ef">foreach</span> ($a1 <span style="color:#66d9ef">as</span> $s2) {
+   <span style="color:#a6e22e">var_dump</span>($s2);
 }
 </code></pre></div>
 <ul>
@@ -68,15 +75,15 @@ $r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">popen</span
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> subprocess
+a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;ag&#39;</span>, <span style="color:#e6db74">&#39;-V&#39;</span>]
 <span style="color:#75715e"># example 1</span>
-r1 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>Popen(<span style="color:#e6db74">&#39;locale&#39;</span>, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE, text<span style="color:#f92672">=</span>True)
-<span style="color:#66d9ef">for</span> s1 <span style="color:#f92672">in</span> r1<span style="color:#f92672">.</span>stdout:
+o1 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>Popen(a1, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE, text<span style="color:#f92672">=</span>True)
+<span style="color:#66d9ef">for</span> s1 <span style="color:#f92672">in</span> o1<span style="color:#f92672">.</span>stdout:
    <span style="color:#66d9ef">print</span>(s1, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
 <span style="color:#75715e"># example 2</span>
-r1 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>Popen(<span style="color:#e6db74">&#39;locale&#39;</span>, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE)
-<span style="color:#66d9ef">for</span> a1 <span style="color:#f92672">in</span> r1<span style="color:#f92672">.</span>stdout:
-   s1 <span style="color:#f92672">=</span> a1<span style="color:#f92672">.</span>decode()
-   <span style="color:#66d9ef">print</span>(s1, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+o2 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>Popen(a1, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE)
+<span style="color:#66d9ef">for</span> a1 <span style="color:#f92672">in</span> o2<span style="color:#f92672">.</span>stdout:
+   <span style="color:#66d9ef">print</span>(a1)
 </code></pre></div>
 <ul>
 <li><a href="https://docs.python.org/library/subprocess.html#subprocess.check_output">https://docs.python.org/library/subprocess.html#subprocess.check_output</a></li>

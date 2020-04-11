@@ -86,18 +86,17 @@ $s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> subprocess
-s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;cal&#39;</span>
+a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;ag&#39;</span>, <span style="color:#e6db74">&#39;-V&#39;</span>]
 <span style="color:#75715e"># example 1</span>
-p1 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>check_output(s1)
-s2 <span style="color:#f92672">=</span> p1<span style="color:#f92672">.</span>decode()
+a2 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>check_output(a1)
 <span style="color:#75715e"># example 2</span>
-p2 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>Popen(s1, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE)
-s3 <span style="color:#f92672">=</span> p2<span style="color:#f92672">.</span>stdout<span style="color:#f92672">.</span>read()
+o1 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>Popen(a1, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE)
+a3 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>stdout<span style="color:#f92672">.</span>read()
 <span style="color:#75715e"># example 3</span>
-p3 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>Popen(s1, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE)
-a1 <span style="color:#f92672">=</span> p3<span style="color:#f92672">.</span>stdout<span style="color:#f92672">.</span>readlines()
+o2 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>Popen(a1, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE)
+a4 <span style="color:#f92672">=</span> o2<span style="color:#f92672">.</span>stdout<span style="color:#f92672">.</span>readlines()
 <span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(s2, s3, a1)
+<span style="color:#66d9ef">print</span>(a2, a3, a4, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
 </code></pre></div>
 <p><a href="https://docs.python.org/library/subprocess.html#subprocess.check_output">https://docs.python.org/library/subprocess.html#subprocess.check_output</a></p>
 <h2 id="references">References</h2>

@@ -43,7 +43,7 @@
    <span style="color:#e6db74">&#34;os/exec&#34;</span>
 )
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">r1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;cal&#34;</span>)
+   <span style="color:#a6e22e">r1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;ag&#34;</span>, <span style="color:#e6db74">&#34;-V&#34;</span>)
    <span style="color:#a6e22e">r1</span>.<span style="color:#a6e22e">Stdout</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>
    <span style="color:#a6e22e">r1</span>.<span style="color:#a6e22e">Run</span>()
 }
