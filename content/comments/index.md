@@ -1,14 +1,8 @@
 ---
 title: Comments
 topics: [reference]
-languages: [d, go, javascript, julia, nim, php, python]
+languages: [go, javascript, julia, nim, php, python]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/spec/lex.html#comment>
 
 ## Go
 

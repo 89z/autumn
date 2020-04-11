@@ -1,7 +1,8 @@
 <?php
-# one two three
+# example 1
 
-// one two three
+// example 2
 
-/* one two three
-four five six */
+/*
+example 3
+*/

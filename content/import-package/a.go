@@ -6,5 +6,5 @@ import (
    ft "fmt"
 )
 func main() {
-   ft.Fprintln(os.Stderr, "one two three")
+   ft.Fprintln(os.Stderr, "Sunday")
 }

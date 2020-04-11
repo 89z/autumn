@@ -1,2 +1,3 @@
 <?php
-trigger_error('one two three', E_USER_ERROR);
+die(1);
+echo "Sunday\n";

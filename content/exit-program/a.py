@@ -1,5 +1,3 @@
-import os, sys
-sys.exit()
+import sys
 sys.exit(1)
-sys.exit('failure')
-os.abort()
+print('Sunday')

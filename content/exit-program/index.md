@@ -17,12 +17,14 @@ languages: [go, php, python]
 {{< r "a.php" >}}
 {{< r "b.php" >}}
 
+- <https://php.net/function.die>
 - <https://php.net/function.exit>
-- <https://php.net/function.trigger-error>
 
 ## Python
 
 {{< r "a.py" >}}
+{{< r "b.py" >}}
+{{< r "c.py" >}}
 
 - <https://docs.python.org/library/constants.html#exit>
 - <https://docs.python.org/library/os.html#os.abort>

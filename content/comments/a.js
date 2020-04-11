@@ -1,4 +1,5 @@
-// one two three
+// example 1
 
-/* one two three
-four five six */
+/*
+example 2
+*/

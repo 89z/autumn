@@ -1,14 +1,8 @@
 ---
 title: Start process
 topics: [system]
-languages: [d, go, julia, nim, php, python]
+languages: [go, julia, nim, php, python]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/phobos/std_process#spawnProcess>
 
 ## Go
 
