@@ -1,12 +1,13 @@
 <?php
+$s1 = 'ag -V';
 # example 1
-$s1 = `cal`;
+$s2 = `$s1`;
 # example 2
-$s2 = shell_exec('cal');
+$s3 = shell_exec($s1);
 # example 3
-$p1 = popen('cal', 'r');
-$s3 = stream_get_contents($p1);
+$r1 = popen($s1, 'r');
+$s4 = stream_get_contents($r1);
 # example 4
-exec('cal', $a1);
+exec($s1, $a1);
 # print
-var_dump($s1, $s2, $s3, $a1);
+var_dump($s2, $s3, $s4, $a1);

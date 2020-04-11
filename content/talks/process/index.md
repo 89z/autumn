@@ -32,27 +32,3 @@ ag -V
 ~~~
 
 both run under standard output, so no problem.
-
-## Single line output
-
-- `basename`
-- `date`
-- `du`
-- `id`
-- `logname`
-- `ls`
-- `nice`
-- `pwd`
-- `tty`
-- `uname`
-
-## Result
-
-Doc size | One arg  | Two arg
----------|----------|--------
-14K      | `env`    |
-16K      | `df`     |
-20K      | `locale` | `locale -m`
-32K      | `ps`     |
-38K      | `find`   | `find type -f`
-44K      | `stty`   |

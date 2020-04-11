@@ -1,14 +1,8 @@
 ---
 title: Read entire process
 topics: [input-output]
-languages: [d, go, julia, nim, php, python]
+languages: [go, julia, nim, php, python]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/phobos/std_process.html#.executeShell>
 
 ## Go
 

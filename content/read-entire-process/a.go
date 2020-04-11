@@ -4,7 +4,7 @@ import (
    "os/exec"
 )
 func main() {
-   t1 := exec.Command("cal")
-   a1, _ := t1.Output()
+   o1 := exec.Command("ag")
+   a1, _ := o1.Output()
    fmt.Printf("%s", a1)
 }
