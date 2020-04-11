@@ -21,109 +21,24 @@
       </nav>
    </header>
 <h1>Process</h1>
-<time>Fri Apr 10 06:33:12 2020</time>
-   <p>I need a process to use with examples. Here is the list:</p>
+<time>Fri Apr 10 21:38:10 2020</time>
+   <p>So initially I was going to use something from this list:</p>
 <p><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities">https://pubs.opengroup.org/onlinepubs/9699919799/utilities</a></p>
-<p>Select the correct column, then run this:</p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/sh
-</span><span style="color:#75715e"></span>set -u
-
-awk <span style="color:#e6db74">&#39;
-</span><span style="color:#e6db74">{
-</span><span style="color:#e6db74">   sub(&#34;\r&#34;, &#34;&#34;)
-</span><span style="color:#e6db74">   sub(&#34;.html&#34;, &#34;&#34;)
-</span><span style="color:#e6db74">   print
-</span><span style="color:#e6db74">}
-</span><span style="color:#e6db74">&#39;</span> /dev/clipboard |
-<span style="color:#66d9ef">while</span> read each
-<span style="color:#66d9ef">do</span>
-   type -a <span style="color:#e6db74">&#34;</span>$each<span style="color:#e6db74">&#34;</span>
-<span style="color:#66d9ef">done</span> 2&gt;&amp;<span style="color:#ae81ff">1</span> |
-grep -v found |
-grep -v builtin |
-grep -v Root |
-awk <span style="color:#e6db74">&#39;{print $1}&#39;</span>
-</code></pre></div>
-<h2 id="numeric-argument">Numeric argument</h2>
-<p><code>cal</code></p>
-<h2 id="one-argument-problem">One argument problem</h2>
-<p>Either one argument is not possible, or it pulls from standard input:</p>
-<ul>
-<li><code>awk</code></li>
-<li><code>cat</code></li>
-<li><code>chgrp</code></li>
-<li><code>chmod</code></li>
-<li><code>chown</code></li>
-<li><code>cksum</code></li>
-<li><code>cmp</code></li>
-<li><code>comm</code></li>
-<li><code>cp</code></li>
-<li><code>csplit</code></li>
-<li><code>cut</code></li>
-<li><code>dd</code></li>
-<li><code>diff</code></li>
-<li><code>dirname</code></li>
-<li><code>echo</code></li>
-<li><code>ex</code></li>
-<li><code>expand</code></li>
-<li><code>expr</code></li>
-<li><code>false</code></li>
-<li><code>file</code></li>
-<li><code>fold</code></li>
-<li><code>gencat</code></li>
-<li><code>getconf</code></li>
-<li><code>grep</code></li>
-<li><code>head</code></li>
-<li><code>iconv</code></li>
-<li><code>ipcrm</code></li>
-<li><code>ipcs</code></li>
-<li><code>join</code></li>
-<li><code>kill</code></li>
-<li><code>link</code></li>
-<li><code>ln</code></li>
-<li><code>logger</code></li>
-<li><code>man</code></li>
-<li><code>mkdir</code></li>
-<li><code>mkfifo</code></li>
-<li><code>more</code></li>
-<li><code>mv</code></li>
-<li><code>nl</code></li>
-<li><code>nohup</code></li>
-<li><code>od</code></li>
-<li><code>paste</code></li>
-<li><code>pathchk</code></li>
-<li><code>pr</code></li>
-<li><code>printf</code></li>
-<li><code>renice</code></li>
-<li><code>rm</code></li>
-<li><code>rmdir</code></li>
-<li><code>sed</code></li>
-<li><code>sh</code></li>
-<li><code>sleep</code></li>
-<li><code>sort</code></li>
-<li><code>split</code></li>
-<li><code>tabs</code></li>
-<li><code>tail</code></li>
-<li><code>tee</code></li>
-<li><code>test</code></li>
-<li><code>time</code></li>
-<li><code>touch</code></li>
-<li><code>tput</code></li>
-<li><code>tr</code></li>
-<li><code>true</code></li>
-<li><code>tsort</code></li>
-<li><code>unexpand</code></li>
-<li><code>uniq</code></li>
-<li><code>unlink</code></li>
-<li><code>vi</code></li>
-<li><code>wc</code></li>
-<li><code>who</code></li>
-<li><code>xargs</code></li>
-<li><code>zcat</code></li>
-</ul>
+<p>but this list is not portable like the name suggests:</p>
+<pre><code>C:\&gt; sleep
+'sleep' is not recognized as an internal or external command,
+operable program or batch file.
+</code></pre><p>plus many of the tools are old and crappy, with crap ways of proposing issues or
+changes. I would rather promote tools that I actually use and care about. So I
+start with this search:</p>
+<p><a href="https://github.com/search?q=stars:%3E10000+size:%3C10000">https://github.com/search?q=stars:%3E10000+size:%3C10000</a></p>
+<p>and I came up with this:</p>
+<p><a href="https://github.com/ggreer/the_silver_searcher">https://github.com/ggreer/the_silver_searcher</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># example 1</span>
+ag
+<span style="color:#75715e"># exmaple 2</span>
+ag -V
+</code></pre></div><p>both run under standard output, so no problem.</p>
 <h2 id="single-line-output">Single line output</h2>
 <ul>
 <li><code>basename</code></li>

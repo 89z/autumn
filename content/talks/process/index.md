@@ -2,93 +2,36 @@
 title: Process
 ---
 
-I need a process to use with examples. Here is the list:
+So initially I was going to use something from this list:
 
 <https://pubs.opengroup.org/onlinepubs/9699919799/utilities>
 
-Select the correct column, then run this:
+but this list is not portable like the name suggests:
 
-{{< r "a.sh" >}}
+~~~
+C:\> sleep
+'sleep' is not recognized as an internal or external command,
+operable program or batch file.
+~~~
 
-## Numeric argument
+plus many of the tools are old and crappy, with crap ways of proposing issues or
+changes. I would rather promote tools that I actually use and care about. So I
+start with this search:
 
-`cal`
+<https://github.com/search?q=stars:%3E10000+size:%3C10000>
 
-## One argument problem
+and I came up with this:
 
-Either one argument is not possible, or it pulls from standard input:
+<https://github.com/ggreer/the_silver_searcher>
 
-- `awk`
-- `cat`
-- `chgrp`
-- `chmod`
-- `chown`
-- `cksum`
-- `cmp`
-- `comm`
-- `cp`
-- `csplit`
-- `cut`
-- `dd`
-- `diff`
-- `dirname`
-- `echo`
-- `ex`
-- `expand`
-- `expr`
-- `false`
-- `file`
-- `fold`
-- `gencat`
-- `getconf`
-- `grep`
-- `head`
-- `iconv`
-- `ipcrm`
-- `ipcs`
-- `join`
-- `kill`
-- `link`
-- `ln`
-- `logger`
-- `man`
-- `mkdir`
-- `mkfifo`
-- `more`
-- `mv`
-- `nl`
-- `nohup`
-- `od`
-- `paste`
-- `pathchk`
-- `pr`
-- `printf`
-- `renice`
-- `rm`
-- `rmdir`
-- `sed`
-- `sh`
-- `sleep`
-- `sort`
-- `split`
-- `tabs`
-- `tail`
-- `tee`
-- `test`
-- `time`
-- `touch`
-- `tput`
-- `tr`
-- `true`
-- `tsort`
-- `unexpand`
-- `uniq`
-- `unlink`
-- `vi`
-- `wc`
-- `who`
-- `xargs`
-- `zcat`
+~~~sh
+# example 1
+ag
+# exmaple 2
+ag -V
+~~~
+
+both run under standard output, so no problem.
 
 ## Single line output
 
