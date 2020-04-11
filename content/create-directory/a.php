@@ -1,5 +1,5 @@
 <?php
-$s1 = 'Sunday/Monday';
-if (! is_dir($s1)) {
-   mkdir($s1, 0, true);
-}
+# example 1
+mkdir('Sunday');
+# example 2
+mkdir('Monday/Tuesday', 0, true);

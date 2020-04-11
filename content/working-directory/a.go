@@ -1,2 +1,6 @@
+package main
 import "os"
-dir, err := os.Getwd()
+func main() {
+   s1, _ := os.Getwd()
+   println(s1)
+}

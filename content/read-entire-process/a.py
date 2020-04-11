@@ -2,11 +2,13 @@ import subprocess
 a1 = ['ag', '-V']
 # example 1
 a2 = subprocess.check_output(a1)
+s1 = a2.decode()
 # example 2
 o1 = subprocess.Popen(a1, stdout=subprocess.PIPE)
-a3 = o1.stdout.read()
+o2 = o1.stdout
+s2 = o2.read().decode()
 # example 3
-o2 = subprocess.Popen(a1, stdout=subprocess.PIPE)
-a4 = o2.stdout.readlines()
+o3 = subprocess.Popen(a1, stdout=subprocess.PIPE)
+a2 = o3.stdout.readlines()
 # print
-print(a2, a3, a4, sep='\n')
+print(s1, s2, a2)

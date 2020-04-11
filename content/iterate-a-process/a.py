@@ -6,5 +6,6 @@ for s1 in o1.stdout:
    print(s1, end='')
 # example 2
 o2 = subprocess.Popen(a1, stdout=subprocess.PIPE)
-for a1 in o2.stdout:
-   print(a1)
+for a2 in o2.stdout:
+   s2 = a2.decode()
+   print(s2, end='')

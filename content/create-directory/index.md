@@ -1,24 +1,21 @@
 ---
 title: Create directory
 topics: [system]
-languages: [d, go, julia, nim, php, python]
+languages: [go, julia, nim, php, python]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/phobos/std_file.html#.mkdir>
 
 ## Go
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/os#Mkdir>
+- <https://golang.org/pkg/os#Mkdir>
+- <https://golang.org/pkg/os#MkdirAll>
 
 ## Julia
 
 {{< r "a.jl" >}}
+
+<https://docs.julialang.org/en/v1/base/file#Base.Filesystem.mkpath>
 
 ## Nim
 

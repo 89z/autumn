@@ -36,8 +36,8 @@
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>
    <span style="color:#a6e22e">r1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">s1</span>)
-   <span style="color:#a6e22e">b1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#a6e22e">r1</span>.<span style="color:#a6e22e">Body</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s&#34;</span>, <span style="color:#a6e22e">b1</span>)
+   <span style="color:#a6e22e">a1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#a6e22e">r1</span>.<span style="color:#a6e22e">Body</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s&#34;</span>, <span style="color:#a6e22e">a1</span>)
 }
 </code></pre></div>
 <p><a href="https://golang.org/pkg/net/http#Get">https://golang.org/pkg/net/http#Get</a></p>
@@ -97,8 +97,8 @@ $s5 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_exec</
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> request
 s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>
 o1 <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>urlopen(s1)
-a1 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>read()
-<span style="color:#66d9ef">print</span>(a1)
+s1 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>read()<span style="color:#f92672">.</span>decode()
+<span style="color:#66d9ef">print</span>(s1)
 </code></pre></div>
 
 
@@ -109,8 +109,9 @@ s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://
 o3 <span style="color:#f92672">=</span> o2<span style="color:#f92672">.</span>urlparse(s1)
 o4 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>HTTPConnection(o3<span style="color:#f92672">.</span>hostname)
 o4<span style="color:#f92672">.</span>request(<span style="color:#e6db74">&#39;GET&#39;</span>, o3<span style="color:#f92672">.</span>path)
-a1 <span style="color:#f92672">=</span> o4<span style="color:#f92672">.</span>getresponse()<span style="color:#f92672">.</span>read()
-<span style="color:#66d9ef">print</span>(a1)
+o5 <span style="color:#f92672">=</span> o4<span style="color:#f92672">.</span>getresponse()
+s1 <span style="color:#f92672">=</span> o5<span style="color:#f92672">.</span>read()<span style="color:#f92672">.</span>decode()
+<span style="color:#66d9ef">print</span>(s1, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
 </code></pre></div></p>
 <ul>
 <li><a href="https://docs.python.org/library/http.client.html#http.client.HTTPConnection.getresponse">https://docs.python.org/library/http.client.html#http.client.HTTPConnection.getresponse</a>

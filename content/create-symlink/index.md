@@ -1,7 +1,7 @@
 ---
 title: Create symlink
 topics: [system]
-languages: [go, php, python]
+languages: [go, julia, php, python]
 ---
 
 ## Go
@@ -9,6 +9,10 @@ languages: [go, php, python]
 {{< r "a.go" >}}
 
 <https://golang.org/pkg/os>
+
+## Julia
+
+<https://docs.julialang.org/en/v1/base/file#Base.Filesystem.symlink>
 
 ## PHP
 

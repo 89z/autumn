@@ -8,7 +8,7 @@ languages: [go, php, python]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/os>
+<https://golang.org/pkg/os#Getwd>
 
 ## PHP
 

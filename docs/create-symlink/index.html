@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Create symlink</h1>
-<time>Wed Mar 25 10:17:37 2020</time>
+<time>Sat Apr 11 11:37:29 2020</time>
 <a href="/autumn/topics/system">system</a>
    <h2 id="go">Go</h2>
 
@@ -34,17 +34,19 @@
 }
 </code></pre></div>
 <p><a href="https://golang.org/pkg/os">https://golang.org/pkg/os</a></p>
+<h2 id="julia">Julia</h2>
+<p><a href="https://docs.julialang.org/en/v1/base/file#Base.Filesystem.symlink">https://docs.julialang.org/en/v1/base/file#Base.Filesystem.symlink</a></p>
 <h2 id="php">PHP</h2>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
-<span style="color:#a6e22e">symlink</span>($s1, <span style="color:#e6db74">&#39;/Desktop/index.md&#39;</span>);
-<span style="color:#75715e"># exmaple 2
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getcwd</span>();
-<span style="color:#a6e22e">symlink</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">$s2</span><span style="color:#e6db74">/index.md&#34;</span>, <span style="color:#e6db74">&#39;/Desktop/index.md&#39;</span>);
+</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getcwd</span>();
+<span style="color:#a6e22e">symlink</span>($s1 <span style="color:#f92672">.</span> <span style="color:#a6e22e">DIRECTORY_SEPARATOR</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;index.md&#39;</span>, <span style="color:#e6db74">&#39;a.md&#39;</span>);
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
+<span style="color:#a6e22e">symlink</span>($s2, <span style="color:#e6db74">&#39;b.md&#39;</span>);
 </code></pre></div>
 <p><a href="https://php.net/function.symlink">https://php.net/function.symlink</a></p>
 <h2 id="python">Python</h2>
