@@ -1,4 +1,8 @@
-from urllib.parse import urlparse
-s1 = 'http://sun.com/mon?tue=10'
-m1 = urlparse(s1)
-print(m1)
+from urllib import parse
+# example 1
+s1 = 'https://example.com/one?two=even'
+o1 = parse.urlparse(s1)
+print(o1)
+# example 2
+s2 = o1.geturl()
+print(s2)

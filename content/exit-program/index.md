@@ -1,7 +1,7 @@
 ---
 title: Exit program
 topics: [system]
-languages: [go, php, python]
+languages: [go, julia, php, python]
 ---
 
 ## Go
@@ -11,6 +11,10 @@ languages: [go, php, python]
 
 - <https://golang.org/pkg/os#Exit>
 - <https://golang.org/ref/spec#Return_statements>
+
+## Julia
+
+{{< r "a.jl" >}}
 
 ## PHP
 
@@ -33,6 +37,7 @@ languages: [go, php, python]
 ## References
 
 - <https://hyperpolyglot.org/c#exit>
+- <https://hyperpolyglot.org/numerical-analysis#exit>
 - <https://hyperpolyglot.org/scripting2#exit>
-- <https://www.programming-idioms.org/idiom/87/stop-program>
 - <https://rosettacode.org/wiki/Program_termination>
+- <https://www.programming-idioms.org/idiom/87/stop-program>

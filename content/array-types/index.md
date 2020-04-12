@@ -20,6 +20,8 @@ languages: [go, javascript, julia, nim, php, python]
 
 {{< r "a.jl" >}}
 
+<https://docs.julialang.org/en/v1/base/arrays>
+
 ## Nim
 
 {{< r "a.nim" >}}

@@ -20,7 +20,9 @@ languages: [go, julia, nim, php, python]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.github.io/Nim/osproc#execCmd,string>
+- {{< a `https://nim-lang.github.io/Nim/osproc#execCmd,string` >}}
+- {{< a `https://nim-lang.github.io/Nim/osproc#startProcess,string,string,
+   openArray[string],StringTableRef,set[ProcessOption]` >}}
 
 ## PHP
 
@@ -31,6 +33,7 @@ languages: [go, julia, nim, php, python]
 ## Python
 
 {{< r "a.py" >}}
+{{< r "b.py" >}}
 
 - <https://docs.python.org/library/os.html#os.system>
 - <https://docs.python.org/library/subprocess.html#subprocess.call>

@@ -26,7 +26,10 @@ languages: [go, javascript, php, python]
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/urllib.parse.html#urllib.parse.urlparse>
+- {{< a `https://docs.python.org/library/urllib.parse.html#
+   urllib.parse.urllib.parse.SplitResult.geturl` >}}
+- {{< a `https://docs.python.org/library/urllib.parse.html#
+   urllib.parse.urlparse` >}}
 
 ## References
 

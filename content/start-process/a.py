@@ -1,9 +1,8 @@
-import os, subprocess
+import subprocess
+a1 = ['ag', '-V']
 # example 1
-os.system('firefox example.com')
+subprocess.call(a1)
 # example 2
-subprocess.run(['firefox', 'example.com'])
+subprocess.check_call(a1)
 # example 3
-subprocess.call(['firefox', 'example.com'])
-# example 4
-subprocess.check_call(['firefox', 'example.com'])
+subprocess.run(a1)

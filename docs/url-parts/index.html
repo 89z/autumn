@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>URL parts</h1>
-<time>Wed Mar 25 10:17:37 2020</time>
+<time>Sat Apr 11 23:03:58 2020</time>
 <a href="/autumn/topics/string">string</a>
    <h2 id="go">Go</h2>
 
@@ -78,12 +78,21 @@ $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https:
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> urllib.parse <span style="color:#f92672">import</span> urlparse
-s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://sun.com/mon?tue=10&#39;</span>
-m1 <span style="color:#f92672">=</span> urlparse(s1)
-<span style="color:#66d9ef">print</span>(m1)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> parse
+<span style="color:#75715e"># example 1</span>
+s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>
+o1 <span style="color:#f92672">=</span> parse<span style="color:#f92672">.</span>urlparse(s1)
+<span style="color:#66d9ef">print</span>(o1)
+<span style="color:#75715e"># example 2</span>
+s2 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>geturl()
+<span style="color:#66d9ef">print</span>(s2)
 </code></pre></div>
-<p><a href="https://docs.python.org/library/urllib.parse.html#urllib.parse.urlparse">https://docs.python.org/library/urllib.parse.html#urllib.parse.urlparse</a></p>
+<ul>
+<li><a href="https://docs.python.org/library/urllib.parse.html#urllib.parse.urllib.parse.SplitResult.geturl">https://docs.python.org/library/urllib.parse.html#urllib.parse.urllib.parse.SplitResult.geturl</a>
+</li>
+<li><a href="https://docs.python.org/library/urllib.parse.html#urllib.parse.urlparse">https://docs.python.org/library/urllib.parse.html#urllib.parse.urlparse</a>
+</li>
+</ul>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#parse-url">https://hyperpolyglot.org/scripting2#parse-url</a></li>

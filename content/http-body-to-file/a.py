@@ -1,2 +1,3 @@
-import urllib.request as r1
-r1.urlretrieve('http://speedtest.lax.hivelocity.net', 'a.html')
+import urllib.request as o1
+s1 = 'http://speedtest.lax.hivelocity.net'
+o1.urlretrieve(s1, 'a.html')

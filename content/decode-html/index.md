@@ -1,7 +1,7 @@
 ---
 title: Decode HTML
 topics: [file-format]
-languages: [php]
+languages: [php, python]
 ---
 
 {{< r "a.html" >}}
@@ -13,7 +13,10 @@ languages: [php]
 - <https://php.net/book.tidy>
 - <https://php.net/domdocument.loadhtmlfile>
 - <https://php.net/function.libxml-use-internal-errors>
-- <https://stackoverflow.com/questions/3577641>
+
+## Python
+
+<https://docs.python.org/library/html.parser.html>
 
 ## References
 
