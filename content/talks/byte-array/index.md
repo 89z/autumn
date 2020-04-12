@@ -2,6 +2,8 @@
 title: Byte array
 ---
 
+## Go
+
 Its important to note that a byte slice is *an array*, not a string:
 
 > A slice is a descriptor for a contiguous segment of an underlying **array**
@@ -31,3 +33,32 @@ guaranteed to exist:
 This is the better option:
 
 {{< r "d.go" >}}
+
+## Python
+
+Python has 2 builtin libraries for HTTP:
+
+- <https://docs.python.org/library/http.client.html>
+- <https://docs.python.org/library/urllib.request.html>
+
+However both libraries return byte arrays:
+
+{{< r "a.py" >}}
+{{< r "b.py" >}}
+
+Running a process has a similar problem:
+
+{{< r "c.py" >}}
+
+but with a process, you can open in text mode:
+
+{{< r "d.py" >}}
+
+- {{< a `https://docs.python.org/library/http.client.html#
+   http.client.HTTPConnection.getresponse` >}}
+- {{< a `https://docs.python.org/library/http.client.html#
+   http.client.HTTPConnection.request` >}}
+- {{< a `https://docs.python.org/library/http.client.html#
+   http.client.HTTPConnection` >}}
+- {{< a `https://docs.python.org/library/urllib.request.html#
+   urllib.request.urlopen` >}}

@@ -35,7 +35,9 @@ languages: [go, julia, nim, php, python]
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/subprocess.html#subprocess.check_output>
+- <https://docs.python.org/library/subprocess.html#subprocess.Popen>
+- <https://docs.python.org/library/subprocess.html#subprocess.check_output>
+- <https://docs.python.org/library/subprocess.html#subprocess.run>
 
 ## References
 
