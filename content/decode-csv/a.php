@@ -1,15 +1,30 @@
 <?php
-$r1 = fopen('a.csv', 'r');
-$a1 = [];
+# example 1
+$r_file = fopen('a.csv', 'r');
+$m_head = [];
 while (true) {
-   $a2 = fgetcsv($r1);
-   if (feof($r1)) {
+   $a_body = fgetcsv($r_file);
+   if (feof($r_file)) {
       break;
    }
-   if ($a1 == []) {
-      $a1 = $a2;
+   if (count($m_head) == 0) {
+      $m_head = array_flip($a_body);
       continue;
    }
-   $m1 = array_combine($a1, $a2);
-   echo $m1['city'], "\n";
+   echo $a_body[$m_head['city']], "\n";
+}
+# exmaple 2
+$r_file = fopen('a.csv', 'r');
+$a_head = [];
+while (true) {
+   $a_body = fgetcsv($r_file);
+   if (feof($r_file)) {
+      break;
+   }
+   if (count($a_head) == 0) {
+      $a_head = $a_body;
+      continue;
+   }
+   $m_body = array_combine($a_head, $a_body);
+   echo $m_body['city'], "\n";
 }

@@ -1,5 +1,5 @@
 ---
-title: String to console
+title: Write to console
 topics: [input-output]
 languages: [go, javascript, julia, nim, php, python]
 ---

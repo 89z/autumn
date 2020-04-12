@@ -5,5 +5,3 @@ v2 = v1.Request(s1, method='HEAD')
 o1 = v1.urlopen(v2).info()
 # example 2
 m1 = dict(o1)
-# print
-print(o1, m1)

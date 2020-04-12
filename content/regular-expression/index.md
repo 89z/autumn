@@ -30,6 +30,7 @@ RegExp/exec` >}}
 
 - <https://php.net/function.preg-match-all>
 - <https://php.net/function.preg-match>
+- <https://php.net/regexp.reference.escape>
 
 ## Python
 
@@ -37,5 +38,5 @@ RegExp/exec` >}}
 
 ## References
 
-- <https://hyperpolyglot.org/numerical-analysis#group-capture>
-- <https://hyperpolyglot.org/scripting#group-capture>
+- <https://hyperpolyglot.org/numerical-analysis#regex-match>
+- <https://hyperpolyglot.org/scripting#regex-test>

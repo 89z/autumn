@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Byte array</h1>
-<time>Sun Apr 12 12:24:20 2020</time>
+<time>Sun Apr 12 14:41:37 2020</time>
    <h2 id="go">Go</h2>
 <p>Its important to note that a byte slice is <em>an array</em>, not a string:</p>
 <blockquote>
@@ -138,17 +138,37 @@ s1 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.<
 <li><a href="https://docs.python.org/library/urllib.request.html#urllib.request.urlopen">https://docs.python.org/library/urllib.request.html#urllib.request.urlopen</a>
 </li>
 </ul>
-<p>Workaround:</p>
+<p>Workarounds:</p>
+<p>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> request
+s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>
+o1 <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>urlopen(s1)
+a1 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>read()
+<span style="color:#f92672">from</span> sys <span style="color:#f92672">import</span> stdout
+stdout<span style="color:#f92672">.</span>buffer<span style="color:#f92672">.</span>write(a1)
+</code></pre></div>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> request
-<span style="color:#f92672">import</span> sys
 s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>
 o1 <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>urlopen(s1)
 a1 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>read()
-sys<span style="color:#f92672">.</span>stdout<span style="color:#f92672">.</span>buffer<span style="color:#f92672">.</span>write(a1)
-</code></pre></div>
+<span style="color:#f92672">import</span> os<span style="color:#f92672">,</span> sys
+os<span style="color:#f92672">.</span>write(sys<span style="color:#f92672">.</span>stdout<span style="color:#f92672">.</span>fileno(), a1)
+</code></pre></div></p>
+<p>Here are some topics:</p>
+<ul>
+<li>byte types</li>
+<li>bytes to console</li>
+<li>string to console</li>
+<li>string types</li>
+</ul>
+<p>before we go down this road again, we need to confront the fact that some
+languages have no bytes type, namely PHP. So as long as that is the case, any
+byte topics need to live in Rubber Duck Debug.</p>
 
 
 </body>

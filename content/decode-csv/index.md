@@ -17,6 +17,7 @@ languages: [go, javascript, php, python]
 {{< r "a.php" >}}
 
 - <https://php.net/function.array-combine>
+- <https://php.net/function.array-flip>
 - <https://php.net/function.fgetcsv>
 
 ## Python

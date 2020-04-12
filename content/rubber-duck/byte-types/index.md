@@ -65,6 +65,18 @@ None of the HTTP methods have a text option:
 - {{< a `https://docs.python.org/library/urllib.request.html#
    urllib.request.urlopen` >}}
 
-Workaround:
+Workarounds:
 
 {{< r "e.py" >}}
+{{< r "f.py" >}}
+
+Here are some topics:
+
+- byte types
+- bytes to console
+- string to console
+- string types
+
+before we go down this road again, we need to confront the fact that some
+languages have no bytes type, namely PHP. So as long as that is the case, any
+byte topics need to live in Rubber Duck Debug.

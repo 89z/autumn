@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Regular expression</h1>
-<time>Mon Mar 30 06:09:55 2020</time>
+<time>Sun Apr 12 14:41:37 2020</time>
 <a href="/autumn/topics/string">string</a>
    <h2 id="go">Go</h2>
 
@@ -84,24 +84,27 @@ println(a2)
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2020-03-29&#39;</span>;
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/-../&#39;</span>, $s1, $a1);
+</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/\d/&#39;</span>, $s1);
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">preg_match_all</span>(<span style="color:#e6db74">&#39;/-../&#39;</span>, $s1, $a2);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/-../&#39;</span>, $s1, $a1);
 <span style="color:#75715e"># example 3
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">preg_match_all</span>(<span style="color:#e6db74">&#39;/-../&#39;</span>, $s1, $a2);
+<span style="color:#75715e"># example 4
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/-(..)-(..)/&#39;</span>, $s1, $a3);
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($a1, $a2, $a3);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1, $a1, $a2, $a3);
 </code></pre></div>
 <ul>
 <li><a href="https://php.net/function.preg-match-all">https://php.net/function.preg-match-all</a></li>
 <li><a href="https://php.net/function.preg-match">https://php.net/function.preg-match</a></li>
+<li><a href="https://php.net/regexp.reference.escape">https://php.net/regexp.reference.escape</a></li>
 </ul>
 <h2 id="python">Python</h2>
 <p><a href="https://docs.python.org/library/re.html">https://docs.python.org/library/re.html</a></p>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://hyperpolyglot.org/numerical-analysis#group-capture">https://hyperpolyglot.org/numerical-analysis#group-capture</a></li>
-<li><a href="https://hyperpolyglot.org/scripting#group-capture">https://hyperpolyglot.org/scripting#group-capture</a></li>
+<li><a href="https://hyperpolyglot.org/numerical-analysis#regex-match">https://hyperpolyglot.org/numerical-analysis#regex-match</a></li>
+<li><a href="https://hyperpolyglot.org/scripting#regex-test">https://hyperpolyglot.org/scripting#regex-test</a></li>
 </ul>
 
 
