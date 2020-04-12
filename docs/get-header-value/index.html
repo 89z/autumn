@@ -3,7 +3,7 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HTTP headers &middot; Autumn</title>
+<title>Get header value &middot; Autumn</title>
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/autumn.css">
 </head>
@@ -20,8 +20,8 @@
          <a href="https://github.com/muv1/autumn">Repo</a>
       </nav>
    </header>
-<h1>HTTP headers</h1>
-<time>Tue Mar 17 21:36:05 2020</time>
+<h1>Get header value</h1>
+<time>Sun Apr 12 16:52:32 2020</time>
 <a href="/autumn/topics/network">network</a>
    <h2 id="go">Go</h2>
 
@@ -72,7 +72,7 @@ $s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_exec</
 </span><span style="color:#75715e"></span>$r2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>($s1);
 <span style="color:#a6e22e">curl_setopt</span>($r2, <span style="color:#a6e22e">CURLOPT_NOBODY</span>, <span style="color:#66d9ef">true</span>);
 <span style="color:#a6e22e">curl_exec</span>($r2);
-$m1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_getinfo</span>($r1);
+$m1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_getinfo</span>($r2);
 <span style="color:#75715e"># print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2, $m1);
 </code></pre></div></p>
@@ -87,13 +87,16 @@ $m1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_getinf
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> urllib.request <span style="color:#f92672">as</span> v1
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> request
 s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net/100mb.file&#39;</span>
-v2 <span style="color:#f92672">=</span> v1<span style="color:#f92672">.</span>Request(s1, method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;HEAD&#39;</span>)
+o1 <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>Request(s1, method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;HEAD&#39;</span>)
 <span style="color:#75715e"># example 1</span>
-o1 <span style="color:#f92672">=</span> v1<span style="color:#f92672">.</span>urlopen(v2)<span style="color:#f92672">.</span>info()
+o2 <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>urlopen(o1)<span style="color:#f92672">.</span>info()
 <span style="color:#75715e"># example 2</span>
-m1 <span style="color:#f92672">=</span> dict(o1)
+o3 <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>urlopen(o1)<span style="color:#f92672">.</span>info()
+m1 <span style="color:#f92672">=</span> dict(o3)
+<span style="color:#75715e"># print</span>
+<span style="color:#66d9ef">print</span>(o2, m1)
 </code></pre></div>
 <ul>
 <li><a href="https://docs.python.org/library/email.compat32-message.html">https://docs.python.org/library/email.compat32-message.html</a></li>

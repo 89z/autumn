@@ -10,6 +10,6 @@ $s2 = curl_exec($r1);
 $r2 = curl_init($s1);
 curl_setopt($r2, CURLOPT_NOBODY, true);
 curl_exec($r2);
-$m1 = curl_getinfo($r1);
+$m1 = curl_getinfo($r2);
 # print
 var_dump($s2, $m1);
