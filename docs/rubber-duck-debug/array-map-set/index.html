@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Array Map Set &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/rubber-duck-debug">Rubber duck</a>
+         <a href="https://github.com/muv1/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Array Map Set</h1>
+<time>Sun Apr 12 12:22:05 2020</time>
+   <p>For Array, use string values. For Maps, use string keys and number values. For
+Sets, use string keys and boolean values.</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;Sun&#34;</span>, <span style="color:#e6db74">&#34;Mon&#34;</span>}
+   <span style="color:#a6e22e">m1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{<span style="color:#e6db74">&#34;Sun&#34;</span>: <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;Mon&#34;</span>: <span style="color:#ae81ff">11</span>}
+   <span style="color:#a6e22e">c2</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">bool</span>{<span style="color:#e6db74">&#34;Sun&#34;</span>: <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">&#34;Mon&#34;</span>: <span style="color:#66d9ef">true</span>}
+}
+</code></pre></div>
+<p>We can remember this, as each value starts with a string.</p>
+
+
+</body>
+</html>

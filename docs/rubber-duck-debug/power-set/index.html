@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power set &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/rubber-duck-debug">Rubber duck</a>
+         <a href="https://github.com/muv1/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Power set</h1>
+<time>Sun Apr 12 12:22:05 2020</time>
+   <h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">powerset</span>($a_in) {
+   $a_out <span style="color:#f92672">=</span> [[]];
+   <span style="color:#66d9ef">foreach</span> ($a_in <span style="color:#66d9ef">as</span> $a_elem) {
+      <span style="color:#66d9ef">foreach</span> ($a_out <span style="color:#66d9ef">as</span> $a_comb) {
+         $a_out[] <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_merge</span>([$a_elem], $a_comb);
+      }
+   }
+   <span style="color:#66d9ef">return</span> $a_out;
+}
+$a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span>, <span style="color:#e6db74">&#39;Mon&#39;</span>, <span style="color:#e6db74">&#39;Tue&#39;</span>];
+$a2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">powerset</span>($a1);
+<span style="color:#a6e22e">var_export</span>($a2);
+</code></pre></div>
+<p><a href="https://stackoverflow.com/questions/6092781/-/27968556">https://stackoverflow.com/questions/6092781/-/27968556</a></p>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">powerset</span>(a_in):
+   a_out <span style="color:#f92672">=</span> [[]]
+   <span style="color:#66d9ef">for</span> v_in <span style="color:#f92672">in</span> a_in:
+      a_out <span style="color:#f92672">+=</span> [a_each <span style="color:#f92672">+</span> [v_in] <span style="color:#66d9ef">for</span> a_each <span style="color:#f92672">in</span> a_out]
+   <span style="color:#66d9ef">return</span> a_out
+a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span>, <span style="color:#e6db74">&#39;Mon&#39;</span>, <span style="color:#e6db74">&#39;Tue&#39;</span>]
+a2 <span style="color:#f92672">=</span> powerset(a1)
+<span style="color:#66d9ef">print</span>(a2)
+</code></pre></div>
+<p><a href="https://codegolf.stackexchange.com/questions/9045/-/51675">https://codegolf.stackexchange.com/questions/9045/-/51675</a></p>
+
+
+</body>
+</html>

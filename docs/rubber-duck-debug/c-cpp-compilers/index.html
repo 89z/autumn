@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C and C&#43;&#43; compilers &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/rubber-duck-debug">Rubber duck</a>
+         <a href="https://github.com/muv1/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>C and C&#43;&#43; compilers</h1>
+<time>Sun Apr 12 12:22:05 2020</time>
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   puts(<span style="color:#e6db74">&#34;Sunday&#34;</span>);
+}
+</code></pre></div>
+<h2 id="musl-gcc">musl GCC</h2>
+<p>This includes the GCC C compiler <code>gcc.exe</code> and C++ compiler <code>g++.exe</code>. It also
+includes the musl C standard library. However it does not include a linker.</p>
+<ul>
+<li><a href="https://git.zv.io/toolchains/musl-cross-make/issues/1">https://git.zv.io/toolchains/musl-cross-make/issues/1</a></li>
+<li><a href="https://musl.cc">https://musl.cc</a></li>
+</ul>
+<h2 id="llvm">LLVM</h2>
+<p>This includes the GCC compatible C compiler <code>clang.exe</code> and C++ compiler
+<code>clang++.exe</code>. It also includes the MSVC compatible C and C++ compiler
+<code>clang-cl.exe</code>.</p>
+<p><a href="https://releases.llvm.org/download.html">https://releases.llvm.org/download.html</a></p>
+<p>You will need to add these to be able to compile:</p>
+<ul>
+<li><a href="https://packages.msys2.org/package/mingw-w64-x86_64-crt">https://packages.msys2.org/package/mingw-w64-x86_64-crt</a></li>
+<li><a href="https://packages.msys2.org/package/mingw-w64-x86_64-headers">https://packages.msys2.org/package/mingw-w64-x86_64-headers</a></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># example 1</span>
+clang -c -I include a.c
+lld-link -entry:main -defaultlib:lib/libmsvcrt.a a.o
+<span style="color:#75715e"># example 2</span>
+clang-cl /c /Zl /I include a.c
+lld-link /entry:main /defaultlib:lib/libmsvcrt.a a.obj
+</code></pre></div><h2 id="llvm-mingw">LLVM-MinGW</h2>
+<p>This includes the GCC compatible C compiler <code>clang.exe</code> and C++ compiler
+<code>clang++.exe</code>. You can also copy <code>clang.exe</code> to <code>clang-cl.exe</code> to get a MSVC
+compatible C and C++ compiler.</p>
+<p><a href="https://github.com/mstorsjo/llvm-mingw">https://github.com/mstorsjo/llvm-mingw</a></p>
+<h2 id="msvc">MSVC</h2>
+<p>Small build tools</p>
+<p><a href="https://github.com/microsoft/msbuild/issues/5197">https://github.com/microsoft/msbuild/issues/5197</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://clang.llvm.org">https://clang.llvm.org</a></li>
+<li><a href="https://stackoverflow.com/questions/58998975">https://stackoverflow.com/questions/58998975</a></li>
+</ul>
+
+
+</body>
+</html>
