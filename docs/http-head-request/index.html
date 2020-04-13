@@ -59,7 +59,7 @@ $r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</
 <span style="color:#a6e22e">curl_setopt</span>($r1, <span style="color:#a6e22e">CURLOPT_NOBODY</span>, <span style="color:#66d9ef">true</span>);
 <span style="color:#a6e22e">curl_exec</span>($r1);
 $m1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_getinfo</span>($r1);
-<span style="color:#a6e22e">var_dump</span>($m1);
+<span style="color:#a6e22e">print_r</span>($m1);
 </code></pre></div></p>
 <ul>
 <li><a href="https://php.net/function.curl-getinfo">https://php.net/function.curl-getinfo</a></li>

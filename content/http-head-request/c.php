@@ -5,5 +5,5 @@ curl_setopt($r1, CURLOPT_HEADER, true);
 curl_setopt($r1, CURLOPT_NOBODY, true);
 curl_setopt($r1, CURLOPT_RETURNTRANSFER, true);
 $s2 = curl_exec($r1);
-$a1 = iconv_mime_decode_headers($s2);
-var_dump($a1);
+$m1 = iconv_mime_decode_headers($s2);
+print_r($m1);
