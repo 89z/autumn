@@ -1,5 +1,5 @@
 ---
-title: HTTP timeout
+title: HTTP request timeout
 topics: [network]
 languages: [php, python]
 ---

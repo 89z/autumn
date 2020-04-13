@@ -1,5 +1,5 @@
 ---
-title: HTTP body to file
+title: Write HTTP body
 topics: [network]
 languages: [julia, nim, php, python]
 ---

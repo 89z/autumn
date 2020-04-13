@@ -1,5 +1,5 @@
 ---
-title: Get header value
+title: Get HTTP header
 topics: [network]
 languages: [go, php, python]
 ---

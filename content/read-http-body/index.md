@@ -1,5 +1,5 @@
 ---
-title: HTTP body to string
+title: Read HTTP body
 topics: [network]
 languages: [go, javascript, php, python]
 ---

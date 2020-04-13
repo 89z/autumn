@@ -1,5 +1,5 @@
 ---
-title: HTTP authorization
+title: HTTP authorization header
 topics: [network]
 languages: [go, php]
 ---
