@@ -8,9 +8,11 @@ languages: [go, javascript, julia, nim, php, python]
 
 {{< r "a.go" >}}
 
+- <https://golang.org/pkg/builtin#print>
 - <https://golang.org/pkg/builtin#println>
 - <https://golang.org/pkg/fmt#Fprintln>
 - <https://golang.org/pkg/fmt#Println>
+- <https://golang.org/pkg/os#File.WriteString>
 
 ## JavaScript
 

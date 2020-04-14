@@ -11,8 +11,10 @@ languages: [d, go, julia, nim, php, python]
 ## Go
 
 {{< r "a.go" >}}
+{{< r "b.go" >}}
 
-<https://golang.org/pkg/os#File.WriteString>
+- <https://golang.org/pkg/bytes#Buffer.WriteTo>
+- <https://golang.org/pkg/os#File.WriteString>
 
 ## Julia
 
