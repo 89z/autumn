@@ -49,19 +49,21 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/Sunday/Monday.txt&#39;</span>;
+$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/sunday/monday.tar.xz&#39;</span>;
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">dirname</span>($s1);
+</span><span style="color:#75715e"></span>$b1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">dirname</span>($s1) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;/sunday&#39;</span>;
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">basename</span>($s1);
+</span><span style="color:#75715e"></span>$b2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">basename</span>($s1) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;monday.tar.xz&#39;</span>;
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s1, <span style="color:#a6e22e">PATHINFO_DIRNAME</span>);
+</span><span style="color:#75715e"></span>$b3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s1, <span style="color:#a6e22e">PATHINFO_DIRNAME</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;/sunday&#39;</span>;
 <span style="color:#75715e"># example 4
-</span><span style="color:#75715e"></span>$s5 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s1, <span style="color:#a6e22e">PATHINFO_BASENAME</span>);
+</span><span style="color:#75715e"></span>$b4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s1, <span style="color:#a6e22e">PATHINFO_BASENAME</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;monday.tar.xz&#39;</span>;
 <span style="color:#75715e"># example 5
-</span><span style="color:#75715e"></span>$s6 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s1, <span style="color:#a6e22e">PATHINFO_EXTENSION</span>);
+</span><span style="color:#75715e"></span>$b5 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s1, <span style="color:#a6e22e">PATHINFO_FILENAME</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;monday.tar&#39;</span>;
+<span style="color:#75715e"># example 6
+</span><span style="color:#75715e"></span>$b6 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s1, <span style="color:#a6e22e">PATHINFO_EXTENSION</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;xz&#39;</span>;
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2, $s3, $s4, $s5, $s6);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($b1, $b2, $b3, $b4, $b5, $b6);
 </code></pre></div>
 <ul>
 <li><a href="https://php.net/function.basename">https://php.net/function.basename</a></li>
