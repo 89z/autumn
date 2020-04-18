@@ -1,11 +1,14 @@
-import "io/ioutil"
-import "net/http"
-
-resp, err := http.Get("http://www.google.com")
-if err == nil {
-  defer resp.Body.Close()
-  body, err := ioutil.ReadAll(resp.Body)
-  if err == nil {
-    fmt.Println(string(body))
-  }
+package main
+import (
+   "fmt"
+   "io/ioutil"
+   "net/http"
+)
+func main() {
+   // read
+   s1 := "http://speedtest.lax.hivelocity.net"
+   o1, _ := http.Get(s1)
+   a1, _ := ioutil.ReadAll(o1.Body)
+   // write
+   fmt.Printf("%s", a1)
 }
