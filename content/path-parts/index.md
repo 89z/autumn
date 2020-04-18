@@ -8,6 +8,18 @@ languages: [go, julia, php, python]
 
 {{< r "a.go" >}}
 
+- <https://golang.org/pkg/path#Base>
+- <https://golang.org/pkg/path#Dir>
+- <https://golang.org/pkg/path#Ext>
+- <https://golang.org/pkg/path#Split>
+
+{{< r "b.go" >}}
+
+- <https://golang.org/pkg/path/filepath#Base>
+- <https://golang.org/pkg/path/filepath#Dir>
+- <https://golang.org/pkg/path/filepath#Ext>
+- <https://golang.org/pkg/path/filepath#Split>
+
 ## Julia
 
 <https://docs.julialang.org/en/v1/base/file#Base.Filesystem.dirname>

@@ -14,8 +14,15 @@ languages: [d, go, julia, nim, php, python]
 
 {{< r "a.go" >}}
 
-- <https://golang.org/pkg/io/ioutil#ReadDir>
-- <https://golang.org/pkg/path/filepath#Glob>
+<https://golang.org/pkg/io/ioutil#ReadDir>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/os#File.Readdirnames>
+
+{{< r "c.go" >}}
+
+<https://golang.org/pkg/path/filepath#Glob>
 
 ## Julia
 
