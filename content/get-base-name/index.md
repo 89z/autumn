@@ -1,5 +1,5 @@
 ---
-title: Path parts
+title: Get base name
 topics: [string]
 languages: [go, julia, php, python]
 ---
@@ -9,14 +9,12 @@ languages: [go, julia, php, python]
 {{< r "a.go" >}}
 
 - <https://golang.org/pkg/path#Base>
-- <https://golang.org/pkg/path#Dir>
 - <https://golang.org/pkg/path#Ext>
 - <https://golang.org/pkg/path#Split>
 
 {{< r "b.go" >}}
 
 - <https://golang.org/pkg/path/filepath#Base>
-- <https://golang.org/pkg/path/filepath#Dir>
 - <https://golang.org/pkg/path/filepath#Ext>
 - <https://golang.org/pkg/path/filepath#Split>
 
@@ -29,7 +27,6 @@ languages: [go, julia, php, python]
 {{< r "a.php" >}}
 
 - <https://php.net/function.basename>
-- <https://php.net/function.dirname>
 - <https://php.net/function.pathinfo>
 
 ## Python
