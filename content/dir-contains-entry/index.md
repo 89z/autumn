@@ -8,7 +8,9 @@ languages: [go, php, python]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/os#FileMode.IsRegular>
+- <https://golang.org/pkg/os#FileMode.IsRegular>
+- <https://golang.org/pkg/os#IsNotExist>
+- <https://golang.org/pkg/os#Stat>
 
 ## PHP
 

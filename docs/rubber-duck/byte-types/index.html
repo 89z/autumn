@@ -3,7 +3,7 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Go bytes.Buffer &middot; Autumn</title>
+<title>Byte types &middot; Autumn</title>
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/autumn.css">
 </head>
@@ -20,16 +20,27 @@
          <a href="https://github.com/muv1/autumn">Repo</a>
       </nav>
    </header>
-<h1>Go bytes.Buffer</h1>
-<time>Sat Apr 18 23:15:42 2020</time>
-   <p>What is difference between <code>bytes.Buffer</code> and <code>strings.Builder</code>?</p>
-<h2 id="test-1">Test 1</h2>
+<h1>Byte types</h1>
+<time>Sun Apr 19 15:01:24 2020</time>
+   <h2 id="bytes-to-string">bytes to string</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">b1</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">byte</span>{<span style="color:#e6db74">&#39;S&#39;</span>, <span style="color:#e6db74">&#39;u&#39;</span>, <span style="color:#e6db74">&#39;n&#39;</span>}
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> string(<span style="color:#a6e22e">b1</span>)
+   println(<span style="color:#a6e22e">s1</span>)
+}
+</code></pre></div>
+<h2 id="bytesbuffer">bytes.Buffer</h2>
+<p>What is difference between <code>bytes.Buffer</code> and <code>strings.Builder</code>? Test 1:</p>
 <pre><code>String_Builder/1Write_NoGrow-4    20000000  60.4 ns/op   48 B/op  1 allocs/op
 String_ByteBuffer/1Write_NoGrow-4 10000000   125 ns/op  160 B/op  2 allocs/op
-</code></pre><h2 id="test-2">Test 2</h2>
+</code></pre><p>Test 2:</p>
 <pre><code>String_Builder/3Write_Grow-4      20000000   102 ns/op  112 B/op  1 allocs/op
 String_ByteBuffer/3Write_Grow-4    5000000   316 ns/op  336 B/op  3 allocs/op
-</code></pre><h2 id="test-3">Test 3</h2>
+</code></pre><p>Test 3:</p>
 <pre><code>String_Builder/3Write_NoGrow-4    10000000   230 ns/op  336 B/op  3 allocs/op
 String_ByteBuffer/3Write_NoGrow-4  5000000   339 ns/op  400 B/op  3 allocs/op
 </code></pre><p><a href="https://go-review.googlesource.com/c/go/+/96980">https://go-review.googlesource.com/c/go/+/96980</a></p>

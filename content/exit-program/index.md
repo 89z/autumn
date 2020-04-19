@@ -6,6 +6,10 @@ languages: [go, julia, php, python]
 
 ## Go
 
+{{< r "log.go" >}}
+
+<https://golang.org/pkg/log#Fatal>
+
 {{< r "exit.go" >}}
 
 <https://golang.org/pkg/os#Exit>
@@ -20,21 +24,24 @@ languages: [go, julia, php, python]
 
 ## PHP
 
-{{< r "a.php" >}}
-{{< r "b.php" >}}
+{{< r "exit.php" >}}
 
-- <https://php.net/function.die>
-- <https://php.net/function.exit>
+<https://php.net/function.exit>
+
+{{< r "die.php" >}}
+
+<https://php.net/function.die>
 
 ## Python
 
-{{< r "a.py" >}}
-{{< r "b.py" >}}
-{{< r "c.py" >}}
+{{< r "exit-num.py" >}}
+{{< r "exit-str.py" >}}
 
-- <https://docs.python.org/library/constants.html#exit>
-- <https://docs.python.org/library/os.html#os.abort>
-- <https://docs.python.org/library/sys.html#sys.exit>
+<https://docs.python.org/library/sys.html#sys.exit>
+
+{{< r "abort.py" >}}
+
+<https://docs.python.org/library/os.html#os.abort>
 
 ## References
 

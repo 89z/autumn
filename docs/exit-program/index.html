@@ -21,9 +21,20 @@
       </nav>
    </header>
 <h1>Exit program</h1>
-<time>Sun Apr 19 13:32:31 2020</time>
+<time>Sun Apr 19 15:01:24 2020</time>
 <a href="/autumn/topics/system">system</a>
    <h2 id="go">Go</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;log&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#e6db74">&#34;Sunday&#34;</span>)
+   println(<span style="color:#e6db74">&#34;Monday&#34;</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/log#Fatal">https://golang.org/pkg/log#Fatal</a></p>
 
 
 
@@ -56,31 +67,32 @@ exit(<span style="color:#ae81ff">1</span>)
 println(<span style="color:#e6db74">&#34;Monday&#34;</span>)
 </code></pre></div>
 <h2 id="php">PHP</h2>
-<p>
+
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Sunday</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 <span style="color:#66d9ef">exit</span>(<span style="color:#ae81ff">1</span>);
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Sunday</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Monday</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 </code></pre></div>
+<p><a href="https://php.net/function.exit">https://php.net/function.exit</a></p>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#66d9ef">die</span>(<span style="color:#ae81ff">1</span>);
 <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Sunday</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-</code></pre></div></p>
-<ul>
-<li><a href="https://php.net/function.die">https://php.net/function.die</a></li>
-<li><a href="https://php.net/function.exit">https://php.net/function.exit</a></li>
-</ul>
+<span style="color:#66d9ef">die</span>(<span style="color:#ae81ff">1</span>);
+<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Monday</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</code></pre></div>
+<p><a href="https://php.net/function.die">https://php.net/function.die</a></p>
 <h2 id="python">Python</h2>
 <p>
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> sys
-sys<span style="color:#f92672">.</span>exit(<span style="color:#ae81ff">1</span>)
 <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Sunday&#39;</span>)
+sys<span style="color:#f92672">.</span>exit(<span style="color:#ae81ff">1</span>)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Monday&#39;</span>)
 </code></pre></div>
 
 
@@ -88,19 +100,17 @@ sys<span style="color:#f92672">.</span>exit(<span style="color:#ae81ff">1</span>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> sys
 sys<span style="color:#f92672">.</span>exit(<span style="color:#e6db74">&#39;Sunday&#39;</span>)
 <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Monday&#39;</span>)
-</code></pre></div>
+</code></pre></div></p>
+<p><a href="https://docs.python.org/library/sys.html#sys.exit">https://docs.python.org/library/sys.html#sys.exit</a></p>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> os
-os<span style="color:#f92672">.</span>abort()
 <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Sunday&#39;</span>)
-</code></pre></div></p>
-<ul>
-<li><a href="https://docs.python.org/library/constants.html#exit">https://docs.python.org/library/constants.html#exit</a></li>
-<li><a href="https://docs.python.org/library/os.html#os.abort">https://docs.python.org/library/os.html#os.abort</a></li>
-<li><a href="https://docs.python.org/library/sys.html#sys.exit">https://docs.python.org/library/sys.html#sys.exit</a></li>
-</ul>
+os<span style="color:#f92672">.</span>abort()
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Monday&#39;</span>)
+</code></pre></div>
+<p><a href="https://docs.python.org/library/os.html#os.abort">https://docs.python.org/library/os.html#os.abort</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#exit">https://hyperpolyglot.org/c#exit</a></li>
