@@ -13,8 +13,12 @@ languages: [go, javascript, julia, nim, php, python]
 
 {{< r "fmt.go" >}}
 
-- <https://golang.org/pkg/fmt#Fprintln>
+- <https://golang.org/pkg/fmt#Print>
 - <https://golang.org/pkg/fmt#Println>
+
+{{< r "io.go" >}}
+
+<https://golang.org/pkg/io#Copy>
 
 {{< r "os.go" >}}
 

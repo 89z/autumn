@@ -3,23 +3,17 @@ title: Declarations
 ---
 
 ~~~
-  1 f1 :=
-  1 f1 =
-  1 i1 =
-  1 l1 =
-  1 q1 =
-  1 u1 :=
-  1 x1 =
-  2 d1 =
-  2 t1 :=
-  3 c1 :=
-  3 t1 =
-  6 r1 :=
- 10 o1 :=
- 12 e1 :=
- 15 c1 =
- 30 o1 =
- 37 r1 =
+c1 15
+d1 2
+e1 12
+f1 1
+i1 1
+l1 1
+o1 30
+q1 1
+t1 3
+u1 1
+x1 1
 ~~~
 
 ## Array
@@ -34,6 +28,14 @@ title: Declarations
 
 <https://php.net/language.types.boolean>
 
+## Byte
+
+{{< r "byte.go" >}}
+
+Maybe use `c` for character, or `r` for rune.
+
+<https://golang.org/ref/spec#String_concatenation>
+
 ## Map
 
 {{< r "map.go" >}}
@@ -45,6 +47,8 @@ title: Declarations
 {{< r "num.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number>
+
+## Object
 
 ## Resource
 
@@ -61,7 +65,3 @@ Resource is something that is used by PHP. Other languages use Objects.
 {{< r "str.php" >}}
 
 <https://php.net/language.types.string>
-
-## References
-
-<https://golang.org/ref/spec#String_concatenation>

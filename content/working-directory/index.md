@@ -18,7 +18,11 @@ languages: [go, php, python]
 
 ## Python
 
-{{< r "a.py" >}}
+{{< r "os.py" >}}
+
+<https://docs.python.org/library/os.html>
+
+{{< r "os-path.py" >}}
 
 <https://docs.python.org/library/os.path.html#os.path.abspath>
 

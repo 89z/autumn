@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Write to console</h1>
-<time>Sun Apr 19 16:51:56 2020</time>
+<time>Sun Apr 19 17:58:28 2020</time>
 <a href="/autumn/topics/input-output">input-output</a>
    <h2 id="go">Go</h2>
 
@@ -52,9 +52,22 @@
 }
 </code></pre></div>
 <ul>
-<li><a href="https://golang.org/pkg/fmt#Fprintln">https://golang.org/pkg/fmt#Fprintln</a></li>
+<li><a href="https://golang.org/pkg/fmt#Print">https://golang.org/pkg/fmt#Print</a></li>
 <li><a href="https://golang.org/pkg/fmt#Println">https://golang.org/pkg/fmt#Println</a></li>
 </ul>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;io&#34;</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os&#34;</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#e6db74">&#34;Sunday\n&#34;</span>)
+   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>, <span style="color:#a6e22e">o1</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/io#Copy">https://golang.org/pkg/io#Copy</a></p>
 
 
 

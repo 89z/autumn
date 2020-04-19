@@ -6,20 +6,20 @@ languages: [go, javascript, julia, nim, php, python]
 
 ## Go
 
-{{< r "a.go" >}}
+{{< r "fprint.go" >}}
 
 <https://golang.org/pkg/fmt#Fprint>
 
-{{< r "b.go" >}}
+{{< r "sprint.go" >}}
 
 - <https://golang.org/pkg/fmt#Sprint>
 - <https://golang.org/pkg/fmt#Sprintf>
 
-{{< r "c.go" >}}
+{{< r "writestr.go" >}}
 
 <https://golang.org/pkg/strings#Builder.WriteString>
 
-{{< r "d.go" >}}
+{{< r "concat.go" >}}
 
 <https://golang.org/ref/spec#String_concatenation>
 
