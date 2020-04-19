@@ -8,7 +8,6 @@ languages: [go, php, python]
 
 {{< r "a.go" >}}
 
-- <https://golang.org/pkg/os#FileMode.IsRegular>
 - <https://golang.org/pkg/os#IsNotExist>
 - <https://golang.org/pkg/os#Stat>
 
@@ -16,18 +15,19 @@ languages: [go, php, python]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.filetype>
+- <https://php.net/function.file-exists>
 - <https://php.net/function.is-file>
 
 ## Python
 
-{{< r "a.py" >}}
+{{< r "os.py" >}}
 
-- <https://docs.python.org/library/os.html#os.access>
-- <https://docs.python.org/library/os.html#os.stat>
+<https://docs.python.org/library/os.html#os.access>
+
+{{< r "os-path.py" >}}
+
+- <https://docs.python.org/library/os.path.html#os.path.exists>
 - <https://docs.python.org/library/os.path.html#os.path.isfile>
-- <https://docs.python.org/library/stat.html#stat.S_IFREG>
-- <https://docs.python.org/library/stat.html#stat.S_ISREG>
 
 ## References
 
