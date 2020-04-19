@@ -1,14 +1,9 @@
 package main
 import (
-   "io"
-   "os"
-   "strings"
+   "fmt"
+   "io/ioutil"
 )
 func main() {
-   var o1, _ = os.Open("a.txt")
-   var o2 strings.Builder
-   io.Copy(&o2, o1)
-   // print
-   var s1 = o2.String()
-   print(s1)
+   a1, _ := ioutil.ReadFile("a.txt")
+   fmt.Printf("%s", a1)
 }

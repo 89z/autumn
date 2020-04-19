@@ -1,9 +1,17 @@
 package main
-import (
-   "fmt"
-   "io/ioutil"
-)
+import "bufio"
+import "fmt"
+import "os"
 func main() {
-   a1, _ := ioutil.ReadFile("a.txt")
-   fmt.Printf("%s", a1)
+   // head
+   o1, _ := os.Open("a.txt")
+   o2 := bufio.NewScanner(o1)
+   a1 := []string{}
+   // body
+   for o2.Scan() {
+      s1 := o2.Text()
+      a1 = append(a1, s1)
+   }
+   // foot
+   fmt.Println(a1)
 }

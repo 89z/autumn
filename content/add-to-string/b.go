@@ -1,11 +1,12 @@
 package main
-import (
-   "fmt"
-   "strings"
-)
+import "fmt"
 func main() {
-   var o1 strings.Builder
-   fmt.Fprint(&o1, "Sunday")
-   var s1 = o1.String()
-   println(s1)
+   // example 1
+   s1 := "Sun"
+   s1 = fmt.Sprint(s1, "Mon")
+   // example 2
+   s2 := "Sun"
+   s2 = fmt.Sprintf("%sMon", s2)
+   // print
+   println(s1, s2)
 }

@@ -1,26 +1,22 @@
 ---
 title: Read entire file
 topics: [input-output]
-languages: [d, go, julia, nim, php, python]
+languages: [go, julia, nim, php, python]
 ---
-
-## D
-
-<https://dlang.org/phobos/std_file.html#.readText>
 
 ## Go
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/io/ioutil>
+<https://golang.org/pkg/bufio>
 
-{{< r "c.go" >}}
+{{< r "b.go" >}}
 
 <https://golang.org/pkg/io>
 
-{{< r "d.go" >}}
+{{< r "c.go" >}}
 
-<https://golang.org/pkg/bufio>
+<https://golang.org/pkg/io/ioutil>
 
 ## Julia
 

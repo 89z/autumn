@@ -1,6 +1,8 @@
 package main
+import "strings"
 func main() {
-   s1 := "Sun"
-   s1 += "day"
+   var o1 strings.Builder
+   o1.WriteString("Sunday")
+   var s1 = o1.String()
    println(s1)
 }

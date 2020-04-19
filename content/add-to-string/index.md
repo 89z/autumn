@@ -8,13 +8,16 @@ languages: [go, javascript, julia, nim, php, python]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/strings>
+<https://golang.org/pkg/fmt#Fprint>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/fmt>
+<https://golang.org/pkg/fmt#Sprint>
 
 {{< r "c.go" >}}
+
+<https://golang.org/pkg/strings#Builder.WriteString>
+
 {{< r "d.go" >}}
 
 <https://golang.org/ref/spec#String_concatenation>
