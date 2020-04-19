@@ -1,10 +1,9 @@
 <?php
-$s1 = 'python3-3.6.8-1.tar.xz';
 # example 1
-$s2 = shell_exec('xzdec ' . $s1);
-file_put_contents('a.tar', $s2);
+$s1 = shell_exec('xzdec a.tar.xz');
+file_put_contents('a.tar', $s1);
 # example 2
-$s3 = shell_exec('xz -c -d ' . $s1);
-file_put_contents('b.tar', $s3);
+$s2 = shell_exec('xz -c -d a.tar.xz');
+file_put_contents('b.tar', $s2);
 # example 3
-system('xz -d -k ' . $s1);
+system('xz -d -k a.tar.xz');

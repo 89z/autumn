@@ -10,13 +10,10 @@ languages: [go, php, python]
 
 ## PHP
 
-Not supported natively:
+{{< r "a.php" >}}
 
-<https://php.net/refs.compression>
-
-and the only project is defunct:
-
-<https://github.com/payden/php-xz>
+- <https://php.net/function.shell-exec>
+- <https://php.net/function.system>
 
 ## Python
 
@@ -25,5 +22,5 @@ and the only project is defunct:
 
 ## Reference
 
-- <http://cygwin.mirror.constant.com/x86_64/release/run>
-- <https://ctan.org/tex-archive/systems/win32/w32tex>
+- {{< a `http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-go-1.14.2-1-any.pkg.tar.xz` >}}
+- {{< a `https://en.wikipedia.org/wiki/XZ` >}}

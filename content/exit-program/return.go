@@ -1,5 +1,6 @@
 package main
 func main() {
-   return
    println("Sunday")
+   return
+   println("Monday")
 }

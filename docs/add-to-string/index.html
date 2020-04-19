@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Add to string</h1>
-<time>Sat Apr 18 23:52:11 2020</time>
+<time>Sun Apr 19 13:32:31 2020</time>
 <a href="/autumn/topics/string">string</a>
    <h2 id="go">Go</h2>
 
@@ -44,17 +44,19 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Sun&#34;</span>
-   <span style="color:#a6e22e">s1</span> = <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprint</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#e6db74">&#34;Mon&#34;</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprint</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#e6db74">&#34;Monday&#34;</span>)
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Sun&#34;</span>
-   <span style="color:#a6e22e">s2</span> = <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%sMon&#34;</span>, <span style="color:#a6e22e">s2</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%sMonday&#34;</span>, <span style="color:#a6e22e">s1</span>)
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>)
+</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">s3</span>)
 }
 </code></pre></div>
-<p><a href="https://golang.org/pkg/fmt#Sprint">https://golang.org/pkg/fmt#Sprint</a></p>
+<ul>
+<li><a href="https://golang.org/pkg/fmt#Sprint">https://golang.org/pkg/fmt#Sprint</a></li>
+<li><a href="https://golang.org/pkg/fmt#Sprintf">https://golang.org/pkg/fmt#Sprintf</a></li>
+</ul>
 
 
 
@@ -73,8 +75,8 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Sun&#34;</span>
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;day&#34;</span>
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;Monday&#34;</span>
    println(<span style="color:#a6e22e">s1</span>)
 }
 </code></pre></div>

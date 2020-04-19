@@ -6,11 +6,13 @@ languages: [go, julia, php, python]
 
 ## Go
 
-{{< r "a.go" >}}
-{{< r "b.go" >}}
+{{< r "exit.go" >}}
 
-- <https://golang.org/pkg/os#Exit>
-- <https://golang.org/ref/spec#Return_statements>
+<https://golang.org/pkg/os#Exit>
+
+{{< r "return.go" >}}
+
+<https://golang.org/ref/spec#Return_statements>
 
 ## Julia
 

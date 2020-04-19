@@ -12,7 +12,8 @@ languages: [go, javascript, julia, nim, php, python]
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/fmt#Sprint>
+- <https://golang.org/pkg/fmt#Sprint>
+- <https://golang.org/pkg/fmt#Sprintf>
 
 {{< r "c.go" >}}
 
