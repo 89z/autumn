@@ -8,15 +8,15 @@ languages: [go, julia, nim, php, python]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/bufio>
+<https://golang.org/pkg/bufio#Scanner.Scan>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/io>
+<https://golang.org/pkg/io#Copy>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/io/ioutil>
+<https://golang.org/pkg/io/ioutil#ReadFile>
 
 ## Julia
 
