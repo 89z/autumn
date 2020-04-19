@@ -21,22 +21,9 @@
       </nav>
    </header>
 <h1>Write to file</h1>
-<time>Sat Apr 18 23:52:11 2020</time>
+<time>Sun Apr 19 09:28:43 2020</time>
 <a href="/autumn/topics/input-output">input-output</a>
-   <h2 id="d">D</h2>
-<p><a href="https://dlang.org/phobos/std_file#write">https://dlang.org/phobos/std_file#write</a></p>
-<h2 id="go">Go</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os&#34;</span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
-   <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#e6db74">&#34;Sunday\n&#34;</span>)
-}
-</code></pre></div>
-<p><a href="https://golang.org/pkg/os#File.WriteString">https://golang.org/pkg/os#File.WriteString</a></p>
+   <h2 id="go">Go</h2>
 
 
 
@@ -53,6 +40,31 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;io&#34;</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os&#34;</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#e6db74">&#34;Sunday\n&#34;</span>)
+   <span style="color:#a6e22e">o2</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
+   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#a6e22e">o2</span>, <span style="color:#a6e22e">o1</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/io#Copy">https://golang.org/pkg/io#Copy</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
+   <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#e6db74">&#34;Sunday\n&#34;</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/os#File.WriteString">https://golang.org/pkg/os#File.WriteString</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os&#34;</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
@@ -61,7 +73,7 @@
    <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">WriteTo</span>(<span style="color:#a6e22e">o2</span>)
 }
 </code></pre></div>
-<p><a href="https://golang.org/pkg/bytes#Buffer.WriteTo">https://golang.org/pkg/bytes#Buffer.WriteTo</a></p>
+<p><a href="https://golang.org/pkg/strings#Reader.WriteTo">https://golang.org/pkg/strings#Reader.WriteTo</a></p>
 <h2 id="julia">Julia</h2>
 
 

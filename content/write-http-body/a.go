@@ -1,14 +1,12 @@
 package main
 import (
-   "fmt"
-   "io/ioutil"
+   "io"
    "net/http"
+   "os"
 )
 func main() {
-   // read
    s1 := "http://speedtest.lax.hivelocity.net"
    o1, _ := http.Get(s1)
-   a1, _ := ioutil.ReadAll(o1.Body)
-   // write
-   fmt.Printf("%s", a1)
+   o2, _ := os.Create("a.html")
+   io.Copy(o2, o1.Body)
 }

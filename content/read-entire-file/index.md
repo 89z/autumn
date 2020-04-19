@@ -6,15 +6,19 @@ languages: [go, julia, nim, php, python]
 
 ## Go
 
-{{< r "a.go" >}}
+{{< r "scan.go" >}}
 
 <https://golang.org/pkg/bufio#Scanner.Scan>
 
-{{< r "b.go" >}}
+{{< r "copy.go" >}}
 
 <https://golang.org/pkg/io#Copy>
 
-{{< r "c.go" >}}
+{{< r "readall.go" >}}
+
+<https://golang.org/pkg/io/ioutil#ReadAll>
+
+{{< r "readfile.go" >}}
 
 <https://golang.org/pkg/io/ioutil#ReadFile>
 

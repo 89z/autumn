@@ -1,26 +1,26 @@
 ---
 title: Write to file
 topics: [input-output]
-languages: [d, go, julia, nim, php, python]
+languages: [go, julia, nim, php, python]
 ---
-
-## D
-
-<https://dlang.org/phobos/std_file#write>
 
 ## Go
 
-{{< r "a.go" >}}
-
-<https://golang.org/pkg/os#File.WriteString>
-
-{{< r "b.go" >}}
+{{< r "fprintln.go" >}}
 
 <https://golang.org/pkg/fmt#Fprintln>
 
-{{< r "c.go" >}}
+{{< r "copy.go" >}}
 
-<https://golang.org/pkg/bytes#Buffer.WriteTo>
+<https://golang.org/pkg/io#Copy>
+
+{{< r "writestring.go" >}}
+
+<https://golang.org/pkg/os#File.WriteString>
+
+{{< r "writeto.go" >}}
+
+<https://golang.org/pkg/strings#Reader.WriteTo>
 
 ## Julia
 

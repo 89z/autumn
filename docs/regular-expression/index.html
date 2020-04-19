@@ -35,14 +35,14 @@
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;2020-03-29&#34;</span>)
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">r1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;-..&#34;</span>)
-   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r1</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#a6e22e">s1</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;-..&#34;</span>)
+   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#a6e22e">s1</span>)
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">r2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;-..&#34;</span>)
-   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r2</span>.<span style="color:#a6e22e">FindAll</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;-..&#34;</span>)
+   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">FindAll</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
    <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">r3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;-(..)-(..)&#34;</span>)
-   <span style="color:#a6e22e">a2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r3</span>.<span style="color:#a6e22e">FindSubmatch</span>(<span style="color:#a6e22e">s1</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;-(..)-(..)&#34;</span>)
+   <span style="color:#a6e22e">a2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o3</span>.<span style="color:#a6e22e">FindSubmatch</span>(<span style="color:#a6e22e">s1</span>)
    <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s\n&#34;</span>, []<span style="color:#66d9ef">interface</span>{}{<span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">a1</span>, <span style="color:#a6e22e">a2</span>})
 }
