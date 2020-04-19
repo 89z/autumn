@@ -8,5 +8,8 @@ $b2 = pathinfo($s1, PATHINFO_BASENAME) == 'monday.tar.xz';
 $b3 = pathinfo($s1, PATHINFO_FILENAME) == 'monday.tar';
 # example 4
 $b4 = pathinfo($s1, PATHINFO_EXTENSION) == 'xz';
+# example 5
+$m1 = pathinfo($s1);
+$b5 = $m1['extension'] == 'xz';
 # print
-var_dump($b1, $b2, $b3, $b4);
+var_dump($b1, $b2, $b3, $b4, $b5);

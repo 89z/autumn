@@ -86,8 +86,11 @@ $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/sunda
 </span><span style="color:#75715e"></span>$b3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s1, <span style="color:#a6e22e">PATHINFO_FILENAME</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;monday.tar&#39;</span>;
 <span style="color:#75715e"># example 4
 </span><span style="color:#75715e"></span>$b4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s1, <span style="color:#a6e22e">PATHINFO_EXTENSION</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;xz&#39;</span>;
+<span style="color:#75715e"># example 5
+</span><span style="color:#75715e"></span>$m1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s1);
+$b5 <span style="color:#f92672">=</span> $m1[<span style="color:#e6db74">&#39;extension&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;xz&#39;</span>;
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($b1, $b2, $b3, $b4);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($b1, $b2, $b3, $b4, $b5);
 </code></pre></div>
 <ul>
 <li><a href="https://php.net/function.basename">https://php.net/function.basename</a></li>

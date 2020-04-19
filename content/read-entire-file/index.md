@@ -11,13 +11,22 @@ languages: [d, go, julia, nim, php, python]
 ## Go
 
 {{< r "a.go" >}}
-{{< r "b.go" >}}
+
+<https://golang.org/pkg/io/ioutil>
+
+1,173,504 bytes:
+
 {{< r "c.go" >}}
+
+1,179,648 bytes:
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/io>
+
 {{< r "d.go" >}}
 
-- <https://golang.org/pkg/bufio>
-- <https://golang.org/pkg/io>
-- <https://golang.org/pkg/io/ioutil>
+<https://golang.org/pkg/bufio>
 
 ## Julia
 

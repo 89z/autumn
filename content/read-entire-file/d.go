@@ -1,12 +1,15 @@
 package main
 import (
-   "bytes"
-   "io"
+   "bufio"
+   "fmt"
    "os"
 )
 func main() {
-   var r1, _ = os.Open("a.txt")
-   var r2 bytes.Buffer
-   io.Copy(&r2, r1)
-   print(r2.String())
+   r1, _ := os.Open("a.txt")
+   r2 := bufio.NewScanner(r1)
+   var a1 []string
+   for r2.Scan() {
+      a1 = append(a1, r2.Text())
+   }
+   fmt.Printf("%q\n", a1)
 }

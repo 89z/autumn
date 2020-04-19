@@ -5,8 +5,11 @@ import (
    "strings"
 )
 func main() {
-   var r1, _ = os.Open("a.txt")
-   var s1 strings.Builder
-   io.Copy(&s1, r1)
-   print(s1.String())
+   // read
+   var o1, _ = os.Open("a.txt")
+   var o2 strings.Builder
+   io.Copy(&o2, o1)
+   // write
+   var s1 = o2.String()
+   print(s1)
 }

@@ -1,9 +1,15 @@
 package main
 import (
-   "fmt"
-   "io/ioutil"
+   "bytes"
+   "io"
+   "os"
 )
 func main() {
-   a1, _ := ioutil.ReadFile("a.txt")
-   fmt.Printf("%s", a1)
+   // read
+   var o1, _ = os.Open("a.txt")
+   var o2 bytes.Buffer
+   io.Copy(&o2, o1)
+   // write
+   var s1 = o2.String()
+   print(s1)
 }

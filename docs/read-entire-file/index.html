@@ -21,12 +21,67 @@
       </nav>
    </header>
 <h1>Read entire file</h1>
-<time>Wed Mar 25 10:17:37 2020</time>
+<time>Sat Apr 18 20:27:46 2020</time>
 <a href="/autumn/topics/input-output">input-output</a>
    <h2 id="d">D</h2>
 <p><a href="https://dlang.org/phobos/std_file.html#.readText">https://dlang.org/phobos/std_file.html#.readText</a></p>
 <h2 id="go">Go</h2>
-<p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">a1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadFile</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s&#34;</span>, <span style="color:#a6e22e">a1</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/io/ioutil">https://golang.org/pkg/io/ioutil</a></p>
+<p>1,173,504 bytes:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;io&#34;</span>
+   <span style="color:#e6db74">&#34;os&#34;</span>
+   <span style="color:#e6db74">&#34;strings&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#75715e">// read
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o2</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>
+   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">o2</span>, <span style="color:#a6e22e">o1</span>)
+   <span style="color:#75715e">// write
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s1</span> = <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">String</span>()
+   print(<span style="color:#a6e22e">s1</span>)
+}
+</code></pre></div>
+<p>1,179,648 bytes:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;bytes&#34;</span>
+   <span style="color:#e6db74">&#34;io&#34;</span>
+   <span style="color:#e6db74">&#34;os&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#75715e">// read
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o2</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>
+   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">o2</span>, <span style="color:#a6e22e">o1</span>)
+   <span style="color:#75715e">// write
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s1</span> = <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">String</span>()
+   print(<span style="color:#a6e22e">s1</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/io">https://golang.org/pkg/io</a></p>
+
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
@@ -45,56 +100,7 @@
    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, <span style="color:#a6e22e">a1</span>)
 }
 </code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
-   <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
-)
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadFile</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s&#34;</span>, <span style="color:#a6e22e">a1</span>)
-}
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;io&#34;</span>
-   <span style="color:#e6db74">&#34;os&#34;</span>
-   <span style="color:#e6db74">&#34;strings&#34;</span>
-)
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">r1</span>, <span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s1</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>
-   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">r1</span>)
-   print(<span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">String</span>())
-}
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;bytes&#34;</span>
-   <span style="color:#e6db74">&#34;io&#34;</span>
-   <span style="color:#e6db74">&#34;os&#34;</span>
-)
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">r1</span>, <span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">r2</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>
-   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">r2</span>, <span style="color:#a6e22e">r1</span>)
-   print(<span style="color:#a6e22e">r2</span>.<span style="color:#a6e22e">String</span>())
-}
-</code></pre></div></p>
-<ul>
-<li><a href="https://golang.org/pkg/bufio">https://golang.org/pkg/bufio</a></li>
-<li><a href="https://golang.org/pkg/io">https://golang.org/pkg/io</a></li>
-<li><a href="https://golang.org/pkg/io/ioutil">https://golang.org/pkg/io/ioutil</a></li>
-</ul>
+<p><a href="https://golang.org/pkg/bufio">https://golang.org/pkg/bufio</a></p>
 <h2 id="julia">Julia</h2>
 
 
