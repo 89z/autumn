@@ -2,36 +2,15 @@
 title: Go bytes.Buffer
 ---
 
-## Go
-
-Its important to note that a byte slice is *an array*, not a string:
-
-> A slice is a descriptor for a contiguous segment of an underlying **array**
-> and provides access to a numbered sequence of elements from that **array**.
-
-<https://golang.org/ref/spec#Slice_types>
-
-When using Byte Slices, they shall be declared with `a1` or similar
-identifiers, not `s1` or similar.
-
 What is difference between `bytes.Buffer` and `strings.Builder`?
 
-## Python
+~~~
+String_Builder/1Write_NoGrow-4    20000000  60.4 ns/op   48 B/op  1 allocs/op
+String_Builder/3Write_NoGrow-4    10000000   230 ns/op  336 B/op  3 allocs/op
+String_Builder/3Write_Grow-4      20000000   102 ns/op  112 B/op  1 allocs/op
+String_ByteBuffer/1Write_NoGrow-4 10000000   125 ns/op  160 B/op  2 allocs/op
+String_ByteBuffer/3Write_NoGrow-4  5000000   339 ns/op  400 B/op  3 allocs/op
+String_ByteBuffer/3Write_Grow-4    5000000   316 ns/op  336 B/op  3 allocs/op
+~~~
 
-Python has 2 builtin libraries for HTTP:
-
-- <https://docs.python.org/library/http.client.html>
-- <https://docs.python.org/library/urllib.request.html>
-
-However both libraries return byte arrays. Running a process has a similar
-problem, but with a process, you can open in text mode. None of the HTTP
-methods have a text option:
-
-- {{< a `https://docs.python.org/library/http.client.html#
-   http.client.HTTPConnection.getresponse` >}}
-- {{< a `https://docs.python.org/library/http.client.html#
-   http.client.HTTPConnection.request` >}}
-- {{< a `https://docs.python.org/library/http.client.html#
-   http.client.HTTPConnection` >}}
-- {{< a `https://docs.python.org/library/urllib.request.html#
-   urllib.request.urlopen` >}}
+<https://go-review.googlesource.com/c/go/+/96980>

@@ -1,14 +1,8 @@
 ---
 title: Add to string
 topics: [string]
-languages: [d, go, javascript, julia, nim, php, python]
+languages: [go, javascript, julia, nim, php, python]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/spec/arrays.html#strings>
 
 ## Go
 
@@ -23,13 +17,14 @@ languages: [d, go, javascript, julia, nim, php, python]
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Template_literals>
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Operators/Arithmetic_Operators` >}}
 - {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
    Global_Objects/String/concat` >}}
 - {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
    Global_Objects/String/replace` >}}
+- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
+   Operators/Arithmetic_Operators` >}}
+- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
+   Template_literals` >}}
 
 ## Julia
 

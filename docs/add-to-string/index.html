@@ -21,43 +21,26 @@
       </nav>
    </header>
 <h1>Add to string</h1>
-<time>Sat Apr 18 21:49:02 2020</time>
+<time>Sat Apr 18 22:58:32 2020</time>
 <a href="/autumn/topics/string">string</a>
-   <h2 id="d">D</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sun&#34;</span><span style="color:#f92672">;</span>
-   s1 <span style="color:#f92672">=</span> s1 <span style="color:#f92672">~</span> <span style="color:#e6db74">&#34;day&#34;</span><span style="color:#f92672">;</span>
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sun&#34;</span><span style="color:#f92672">;</span>
-   s2 <span style="color:#f92672">~=</span> <span style="color:#e6db74">&#34;day&#34;</span><span style="color:#f92672">;</span>
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   <span style="color:#f92672">[</span>s1<span style="color:#f92672">,</span> s2<span style="color:#f92672">].</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
-<p><a href="https://dlang.org/spec/arrays.html#strings">https://dlang.org/spec/arrays.html#strings</a></p>
-<h2 id="go">Go</h2>
+   <h2 id="go">Go</h2>
 <p>
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;bytes&#34;</span>
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+)
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o1</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s1</span> = <span style="color:#e6db74">&#34;Sun&#34;</span>
-   <span style="color:#a6e22e">s1</span> = <span style="color:#a6e22e">s1</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;day&#34;</span>
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#e6db74">&#34;Sun&#34;</span>)
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s2</span> = <span style="color:#e6db74">&#34;Sun&#34;</span>
-   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;day&#34;</span>
-   <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s3</span> = <span style="color:#e6db74">&#34;Sun&#34;</span>
-   <span style="color:#a6e22e">s3</span> = <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%s Mon&#34;</span>, <span style="color:#a6e22e">s3</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fprint</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">o1</span>, <span style="color:#e6db74">&#34;day&#34;</span>)
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, []<span style="color:#66d9ef">string</span>{<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">s3</span>})
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s1</span> = <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">String</span>()
+   println(<span style="color:#a6e22e">s1</span>)
 }
 </code></pre></div>
 
@@ -83,19 +66,19 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;bytes&#34;</span>
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
-)
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o1</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#e6db74">&#34;Sun&#34;</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Sun&#34;</span>
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;Mon&#34;</span>
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fprint</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">o1</span>, <span style="color:#e6db74">&#34;day&#34;</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Sun&#34;</span>
+   <span style="color:#a6e22e">s2</span> = <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprint</span>(<span style="color:#a6e22e">s2</span>, <span style="color:#e6db74">&#34;Mon&#34;</span>)
+   <span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Sun&#34;</span>
+   <span style="color:#a6e22e">s3</span> = <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%sMon&#34;</span>, <span style="color:#a6e22e">s3</span>)
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s1</span> = <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">String</span>()
-   println(<span style="color:#a6e22e">s1</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, []<span style="color:#66d9ef">string</span>{<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">s3</span>})
 }
 </code></pre></div></p>
 <ul>
@@ -122,12 +105,13 @@
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>([<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">s3</span>, <span style="color:#a6e22e">s4</span>]);
 </code></pre></div>
 <ul>
-<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Template_literals">https://developer.mozilla.org/Web/JavaScript/Reference/Template_literals</a></li>
-<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators">https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators</a>
-</li>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/concat">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/concat</a>
 </li>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/replace">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/replace</a>
+</li>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators">https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators</a>
+</li>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Template_literals">https://developer.mozilla.org/Web/JavaScript/Reference/Template_literals</a>
 </li>
 </ul>
 <h2 id="julia">Julia</h2>

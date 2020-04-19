@@ -1,15 +1,15 @@
 package main
-import (
-   "bytes"
-   "fmt"
-)
+import "fmt"
 func main() {
-   var o1 bytes.Buffer
    // example 1
-   o1.WriteString("Sun")
+   s1 := "Sun"
+   s1 += "Mon"
    // example 2
-   fmt.Fprint(&o1, "day")
+   s2 := "Sun"
+   s2 = fmt.Sprint(s2, "Mon")
+   // example 3
+   s3 := "Sun"
+   s3 = fmt.Sprintf("%sMon", s3)
    // print
-   var s1 = o1.String()
-   println(s1)
+   fmt.Printf("%q\n", []string{s1, s2, s3})
 }
