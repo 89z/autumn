@@ -4,8 +4,10 @@ import (
    "os"
 )
 func main() {
-   var f_in bytes.Buffer
-   f_in.WriteString("Sunday\n")
-   var f_out, _ = os.Create("a.txt")
-   f_in.WriteTo(f_out)
+   // in
+   var o1 bytes.Buffer
+   o1.WriteString("Sunday\n")
+   // out
+   var o2, _ = os.Create("a.txt")
+   o1.WriteTo(o2)
 }

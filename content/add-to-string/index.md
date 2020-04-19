@@ -13,6 +13,8 @@ languages: [d, go, javascript, julia, nim, php, python]
 ## Go
 
 {{< r "a.go" >}}
+{{< r "b.go" >}}
+{{< r "c.go" >}}
 
 - <https://golang.org/ref/spec#String_concatenation>
 - <https://golang.org/pkg/strings>

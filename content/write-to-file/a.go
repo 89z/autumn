@@ -1,6 +1,6 @@
 package main
 import "os"
 func main() {
-   f1, _ := os.Create("day.txt")
-   f1.WriteString("Sunday\n")
+   o1, _ := os.Create("a.txt")
+   o1.WriteString("Sunday\n")
 }

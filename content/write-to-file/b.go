@@ -4,5 +4,6 @@ import (
    "os"
 )
 func main() {
-   fmt.Fprintln(os.Stderr, "Sunday")
+   o1, _ := os.Create("a.txt")
+   fmt.Fprintln(o1, "Sunday")
 }
