@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Go bytes.Buffer</h1>
-<time>Sat Apr 18 21:49:02 2020</time>
+<time>Sat Apr 18 22:07:27 2020</time>
    <h2 id="go">Go</h2>
 <p>Its important to note that a byte slice is <em>an array</em>, not a string:</p>
 <blockquote>
@@ -30,26 +30,7 @@ and provides access to a numbered sequence of elements from that <strong>array</
 </blockquote>
 <p><a href="https://golang.org/ref/spec#Slice_types">https://golang.org/ref/spec#Slice_types</a></p>
 <p>When using Byte Slices, they shall be declared with <code>a1</code> or similar
-identifiers, not <code>s1</code> or similar. When printing Byte Slices, we could use one
-of these:</p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;bytes&#34;</span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">byte</span>{<span style="color:#e6db74">&#39;S&#39;</span>, <span style="color:#e6db74">&#39;u&#39;</span>, <span style="color:#e6db74">&#39;n&#39;</span>}
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">NewBuffer</span>(<span style="color:#a6e22e">a1</span>).<span style="color:#a6e22e">String</span>()
-   println(<span style="color:#a6e22e">s1</span>)
-}
-</code></pre></div>
-<p>but we are adding an extra line just so that we can use a function that is not
-guaranteed to exist:</p>
-<blockquote>
-<p>Println is useful for bootstrapping and debugging; it is not guaranteed to
-stay in the language.</p>
-</blockquote>
-<p><a href="https://golang.org/pkg/builtin#println">https://golang.org/pkg/builtin#println</a></p>
+identifiers, not <code>s1</code> or similar.</p>
 <p>What is difference between <code>bytes.Buffer</code> and <code>strings.Builder</code>?</p>
 <h2 id="python">Python</h2>
 <p>Python has 2 builtin libraries for HTTP:</p>
@@ -57,22 +38,9 @@ stay in the language.</p>
 <li><a href="https://docs.python.org/library/http.client.html">https://docs.python.org/library/http.client.html</a></li>
 <li><a href="https://docs.python.org/library/urllib.request.html">https://docs.python.org/library/urllib.request.html</a></li>
 </ul>
-<p>However both libraries return byte arrays:</p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> http.client <span style="color:#f92672">as</span> o1
-<span style="color:#f92672">import</span> urllib.parse <span style="color:#f92672">as</span> o2
-s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>
-o3 <span style="color:#f92672">=</span> o2<span style="color:#f92672">.</span>urlparse(s1)
-o4 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>HTTPConnection(o3<span style="color:#f92672">.</span>hostname)
-o4<span style="color:#f92672">.</span>request(<span style="color:#e6db74">&#39;GET&#39;</span>, o3<span style="color:#f92672">.</span>path)
-o5 <span style="color:#f92672">=</span> o4<span style="color:#f92672">.</span>getresponse()
-a1 <span style="color:#f92672">=</span> o5<span style="color:#f92672">.</span>read()
-<span style="color:#66d9ef">print</span>(a1)
-</code></pre></div>
-<p>Running a process has a similar problem, but with a process, you can open in
-text mode. None of the HTTP methods have a text option:</p>
+<p>However both libraries return byte arrays. Running a process has a similar
+problem, but with a process, you can open in text mode. None of the HTTP
+methods have a text option:</p>
 <ul>
 <li><a href="https://docs.python.org/library/http.client.html#http.client.HTTPConnection.getresponse">https://docs.python.org/library/http.client.html#http.client.HTTPConnection.getresponse</a>
 </li>
@@ -83,37 +51,6 @@ text mode. None of the HTTP methods have a text option:</p>
 <li><a href="https://docs.python.org/library/urllib.request.html#urllib.request.urlopen">https://docs.python.org/library/urllib.request.html#urllib.request.urlopen</a>
 </li>
 </ul>
-<p>Workarounds:</p>
-<p>
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> request
-s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>
-o1 <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>urlopen(s1)
-a1 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>read()
-<span style="color:#f92672">from</span> sys <span style="color:#f92672">import</span> stdout
-stdout<span style="color:#f92672">.</span>buffer<span style="color:#f92672">.</span>write(a1)
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> request
-s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>
-o1 <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>urlopen(s1)
-a1 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>read()
-<span style="color:#f92672">import</span> os<span style="color:#f92672">,</span> sys
-os<span style="color:#f92672">.</span>write(sys<span style="color:#f92672">.</span>stdout<span style="color:#f92672">.</span>fileno(), a1)
-</code></pre></div></p>
-<p>Here are some topics:</p>
-<ul>
-<li>byte types</li>
-<li>bytes to console</li>
-<li>string to console</li>
-<li>string types</li>
-</ul>
-<p>before we go down this road again, we need to confront the fact that some
-languages have no bytes type, namely PHP. So as long as that is the case, any
-byte topics need to live in Rubber Duck Debug.</p>
 
 
 </body>
