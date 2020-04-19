@@ -15,17 +15,11 @@ title: Declarations
   3 c1 :=
   3 t1 =
   6 r1 :=
-  9 m1 :=
  10 o1 :=
  12 e1 :=
  15 c1 =
- 20 n1 :=
  30 o1 =
  37 r1 =
- 40 m1 =
- 49 s1 :=
-117 n1 =
-197 s1 =
 ~~~
 
 ## Array
@@ -39,6 +33,24 @@ title: Declarations
 {{< r "bool.php" >}}
 
 <https://php.net/language.types.boolean>
+
+## Map
+
+{{< r "map.go" >}}
+
+<https://golang.org/ref/spec#Map_types>
+
+## Number
+
+{{< r "num.js" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number>
+
+## Resource
+
+Resource is something that is used by PHP. Other languages use Objects.
+
+{{< r "curl.php" >}}
 
 ## Set
 

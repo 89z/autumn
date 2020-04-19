@@ -6,13 +6,19 @@ languages: [go, javascript, julia, nim, php, python]
 
 ## Go
 
-{{< r "a.go" >}}
+{{< r "builtin.go" >}}
 
 - <https://golang.org/pkg/builtin#print>
 - <https://golang.org/pkg/builtin#println>
+
+{{< r "fmt.go" >}}
+
 - <https://golang.org/pkg/fmt#Fprintln>
 - <https://golang.org/pkg/fmt#Println>
-- <https://golang.org/pkg/os#File.WriteString>
+
+{{< r "os.go" >}}
+
+<https://golang.org/pkg/os#File.WriteString>
 
 ## JavaScript
 
