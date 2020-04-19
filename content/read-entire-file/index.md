@@ -14,13 +14,7 @@ languages: [d, go, julia, nim, php, python]
 
 <https://golang.org/pkg/io/ioutil>
 
-1,173,504 bytes:
-
 {{< r "c.go" >}}
-
-1,179,648 bytes:
-
-{{< r "b.go" >}}
 
 <https://golang.org/pkg/io>
 

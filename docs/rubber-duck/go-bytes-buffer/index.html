@@ -21,14 +21,17 @@
       </nav>
    </header>
 <h1>Go bytes.Buffer</h1>
-<time>Sat Apr 18 22:58:32 2020</time>
+<time>Sat Apr 18 23:15:42 2020</time>
    <p>What is difference between <code>bytes.Buffer</code> and <code>strings.Builder</code>?</p>
+<h2 id="test-1">Test 1</h2>
 <pre><code>String_Builder/1Write_NoGrow-4    20000000  60.4 ns/op   48 B/op  1 allocs/op
-String_Builder/3Write_NoGrow-4    10000000   230 ns/op  336 B/op  3 allocs/op
-String_Builder/3Write_Grow-4      20000000   102 ns/op  112 B/op  1 allocs/op
 String_ByteBuffer/1Write_NoGrow-4 10000000   125 ns/op  160 B/op  2 allocs/op
-String_ByteBuffer/3Write_NoGrow-4  5000000   339 ns/op  400 B/op  3 allocs/op
+</code></pre><h2 id="test-2">Test 2</h2>
+<pre><code>String_Builder/3Write_Grow-4      20000000   102 ns/op  112 B/op  1 allocs/op
 String_ByteBuffer/3Write_Grow-4    5000000   316 ns/op  336 B/op  3 allocs/op
+</code></pre><h2 id="test-3">Test 3</h2>
+<pre><code>String_Builder/3Write_NoGrow-4    10000000   230 ns/op  336 B/op  3 allocs/op
+String_ByteBuffer/3Write_NoGrow-4  5000000   339 ns/op  400 B/op  3 allocs/op
 </code></pre><p><a href="https://go-review.googlesource.com/c/go/+/96980">https://go-review.googlesource.com/c/go/+/96980</a></p>
 
 

@@ -12,7 +12,6 @@ languages: [d, go, julia, nim, php, python]
 
 {{< r "a.go" >}}
 {{< r "b.go" >}}
-{{< r "c.go" >}}
 {{< r "d.go" >}}
 
 - <https://golang.org/pkg/bytes#Buffer.WriteTo>

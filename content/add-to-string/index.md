@@ -7,11 +7,17 @@ languages: [go, javascript, julia, nim, php, python]
 ## Go
 
 {{< r "a.go" >}}
-{{< r "b.go" >}}
-{{< r "c.go" >}}
 
-- <https://golang.org/ref/spec#String_concatenation>
-- <https://golang.org/pkg/strings>
+<https://golang.org/pkg/strings>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/fmt>
+
+{{< r "c.go" >}}
+{{< r "d.go" >}}
+
+<https://golang.org/ref/spec#String_concatenation>
 
 ## JavaScript
 
