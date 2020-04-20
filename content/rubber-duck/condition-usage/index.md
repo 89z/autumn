@@ -83,11 +83,7 @@ Further, some languages like Go only accept boolean values:
 ## Constants
 
 It should be noted that certain languages like Go do not support conditional
-constants:
-
-{{< r "const.go" >}}
-
-These fail with JavaScript:
+constants. These fail with JavaScript:
 
 {{< r "const.js" >}}
 {{< r "const_2.js" >}}

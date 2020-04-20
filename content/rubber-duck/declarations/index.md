@@ -2,16 +2,18 @@
 title: Declarations
 ---
 
-~~~
-c1 15
-d1 2
-f1 1
-i1 1
-l1 1
-q1 1
-u1 1
-x1 1
-~~~
+Letter | Type
+-------|-----
+`a`    | Array
+`b`    | Boolean
+`e`    | Error
+`m`    | Map
+`n`    | Number
+`o`    | Object
+`r`    | Resource
+`s`    | String
+`t`    | Set (`t` in `set`, also `t` in `true`)
+`y`    | Byte (`y` in `byte`)
 
 ## Array
 
@@ -29,9 +31,8 @@ x1 1
 
 {{< r "byte.go" >}}
 
-Maybe use `c` for character, or `r` for rune.
-
-<https://golang.org/ref/spec#String_concatenation>
+- <https://golang.org/ref/spec#Numeric_types>
+- <https://golang.org/ref/spec#String_concatenation>
 
 ## Error
 
