@@ -1,5 +1,5 @@
 <?php
-$s1 = '2020-03-29';
+$s1 = '2019-12-31';
 # example 1
 $n1 = preg_match('/\d/', $s1);
 # example 2

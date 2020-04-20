@@ -8,14 +8,26 @@ languages: [go, javascript, julia, php, python]
 
 {{< r "a.go" >}}
 
-- <https://golang.org/pkg/regexp#Regexp.Find>
-- <https://golang.org/pkg/regexp#Regexp.FindAll>
-- <https://golang.org/pkg/regexp#Regexp.FindSubmatch>
+- <https://golang.org/pkg/regexp#Regexp.FindAllString>
+- <https://golang.org/pkg/regexp#Regexp.FindString>
+- <https://golang.org/pkg/regexp#Regexp.FindStringSubmatch>
+- <https://golang.org/pkg/regexp#Regexp.MatchString>
 
 ## JavaScript
 
-{{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/
-RegExp/exec` >}}
+{{< r "reg.js" >}}
+
+- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
+   Global_Objects/RegExp/exec` >}}
+- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
+   Global_Objects/RegExp/test` >}}
+
+{{< r "str.js" >}}
+
+- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
+   Global_Objects/String/match` >}}
+- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
+   Global_Objects/String/search` >}}
 
 ## Julia
 
@@ -34,9 +46,14 @@ RegExp/exec` >}}
 
 ## Python
 
+{{< r "a.py" >}}
+
 <https://docs.python.org/library/re.html>
 
 ## References
 
+- <https://hyperpolyglot.org/c#regex-test>
 - <https://hyperpolyglot.org/numerical-analysis#regex-match>
 - <https://hyperpolyglot.org/scripting#regex-test>
+- <https://rosettacode.org/wiki/Regular_expressions>
+- <https://www.programming-idioms.org/idiom/83>
