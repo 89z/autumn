@@ -30,10 +30,17 @@ Letter | Type
 
 ## Byte
 
-{{< r "byte.go" >}}
+If we use `a1` for Byte Arrays, it will be confusing when used next to
+traditional arrays:
 
-- <https://golang.org/ref/spec#Numeric_types>
-- <https://golang.org/ref/spec#String_concatenation>
+{{< r "byte-arr.go" >}}
+
+If we use `s1` for Byte Array, it will be confusing when used next to
+traditions strings:
+
+{{< r "byte-str.go" >}}
+
+<https://golang.org/ref/spec#Numeric_types>
 
 ## Error
 

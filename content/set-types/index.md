@@ -25,7 +25,9 @@ languages: [go, javascript, julia, nim, php, python]
 
 ## Nim
 
-<https://nim-lang.github.io/Nim/manual#types-set-type>
+{{< r "a.nim" >}}
+
+<https://nim-lang.github.io/Nim/sets.html>
 
 ## PHP
 

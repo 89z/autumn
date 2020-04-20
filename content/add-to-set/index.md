@@ -26,7 +26,7 @@ languages: [go, javascript, julia, nim, php, python]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.github.io/Nim/system#incl,set[T],T>
+<https://nim-lang.github.io/Nim/sets.html>
 
 ## PHP
 

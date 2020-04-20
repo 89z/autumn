@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Add to set</h1>
-<time>Wed Mar 4 18:45:59 2020</time>
+<time>Mon Apr 20 08:44:04 2020</time>
 <a href="/autumn/topics/set">set</a>
    <h2 id="go">Go</h2>
 
@@ -30,9 +30,9 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">c1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">bool</span>{<span style="color:#e6db74">&#34;Sun&#34;</span>: <span style="color:#66d9ef">true</span>}
-   <span style="color:#a6e22e">c1</span>[<span style="color:#e6db74">&#34;Mon&#34;</span>] = <span style="color:#66d9ef">true</span>
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">c1</span>)
+   <span style="color:#a6e22e">t1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">bool</span>{}
+   <span style="color:#a6e22e">t1</span>[<span style="color:#e6db74">&#34;Sunday&#34;</span>] = <span style="color:#66d9ef">true</span>
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">t1</span>)
 }
 </code></pre></div>
 <p><a href="https://golang.org/ref/spec#Assignments">https://golang.org/ref/spec#Assignments</a></p>
@@ -54,20 +54,22 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jl" data-lang="jl">c1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">Set</span>([<span style="color:#e6db74">&#34;Sun&#34;</span>])
-push!(c1, <span style="color:#e6db74">&#34;Mon&#34;</span>)
-println(c1)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jl" data-lang="jl">a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Sunday&#34;</span>]
+t1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">Set</span>(a1)
+push!(t1, <span style="color:#e6db74">&#34;Monday&#34;</span>)
+println(t1)
 </code></pre></div>
 <p><a href="https://docs.julialang.org/en/v1/base/collections#Base.push!">https://docs.julialang.org/en/v1/base/collections#Base.push!</a></p>
 <h2 id="nim">Nim</h2>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">var</span> c1 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;Sun&#34;</span>}
-c1.incl(<span style="color:#e6db74">&#34;Mon&#34;</span>)
-echo c1
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> sets
+<span style="color:#66d9ef">var</span> t1 <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;Sunday&#34;</span><span style="color:#f92672">]</span>.toHashSet
+t1.incl(<span style="color:#e6db74">&#34;Monday&#34;</span>)
+echo t1
 </code></pre></div>
-<p><a href="https://nim-lang.github.io/Nim/system#incl,set%5BT%5D,T">https://nim-lang.github.io/Nim/system#incl,set[T],T</a></p>
+<p><a href="https://nim-lang.github.io/Nim/sets.html">https://nim-lang.github.io/Nim/sets.html</a></p>
 <h2 id="php">PHP</h2>
 
 

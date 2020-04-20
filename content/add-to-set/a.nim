@@ -1,3 +1,4 @@
-var c1 = {"Sun"}
-c1.incl("Mon")
-echo c1
+import sets
+var t1 = ["Sunday"].toHashSet
+t1.incl("Monday")
+echo t1
