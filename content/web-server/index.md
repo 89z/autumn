@@ -7,6 +7,7 @@ languages: [go, php, python]
 ## Go
 
 {{< r "a.go" >}}
+{{< r "b.go" >}}
 
 - <https://golang.org/pkg/net/http#Dir>
 - <https://golang.org/pkg/net/http#FileServer>

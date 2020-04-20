@@ -5,9 +5,9 @@ import (
 )
 func main() {
    // example 1
-   t1 := time.Now()
+   o1 := time.Now()
+   fmt.Println(t1)
    // example 2
-   t2 := time.Unix(86400, 0)
-   // print
-   fmt.Print(t1, "\n", t2, "\n")
+   o2 := time.Unix(86400, 0)
+   fmt.Println(o2)
 }

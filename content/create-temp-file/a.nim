@@ -1,3 +1,3 @@
 import posix_utils
-var t1 = mkstemp("prefix")
-echo t1
+var (s1, o1) = "prefix".mkstemp
+stdout.write s1, o1.repr

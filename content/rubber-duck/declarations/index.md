@@ -5,13 +5,10 @@ title: Declarations
 ~~~
 c1 15
 d1 2
-e1 12
 f1 1
 i1 1
 l1 1
-o1 30
 q1 1
-t1 3
 u1 1
 x1 1
 ~~~
@@ -36,6 +33,12 @@ Maybe use `c` for character, or `r` for rune.
 
 <https://golang.org/ref/spec#String_concatenation>
 
+## Error
+
+{{< r "err.go" >}}
+
+<https://golang.org/ref/spec#Errors>
+
 ## Map
 
 {{< r "map.go" >}}
@@ -49,6 +52,10 @@ Maybe use `c` for character, or `r` for rune.
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number>
 
 ## Object
+
+{{< r "obj.py" >}}
+
+<https://docs.python.org/library/urllib.parse.html#urlparse-result-object>
 
 ## Resource
 
