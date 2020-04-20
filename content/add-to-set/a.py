@@ -1,3 +1,3 @@
-c1 = {'Sun'}
-c1.add('Mon')
-print(c1)
+t1 = {'Sun'}
+t1.add('Mon')
+print(t1)

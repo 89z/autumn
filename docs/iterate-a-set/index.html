@@ -29,18 +29,19 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">c1</span> <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Sun&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">&#39;Mon&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>};
-<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">c1</span>) {
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a1</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span>, <span style="color:#e6db74">&#39;Mon&#39;</span>];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">t1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Set</span>(<span style="color:#a6e22e">a1</span>);
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">t1</span>) {
    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>);
 }
 <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">c2</span> <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Sun&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">&#39;Mon&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>};
-<span style="color:#a6e22e">c2</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">s1</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>));
-<span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">c3</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Set</span>([<span style="color:#e6db74">&#39;Sun&#39;</span>, <span style="color:#e6db74">&#39;Mon&#39;</span>]);
-<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">c3</span>) {
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">t2</span> <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Sun&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">&#39;Mon&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>};
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">t2</span>) {
    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>);
 }
+<span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">t3</span> <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Sun&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">&#39;Mon&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>};
+<span style="color:#a6e22e">t2</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">s1</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>));
 </code></pre></div>
 <ul>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for...in">https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for...in</a></li>
@@ -53,8 +54,9 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$c1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">&#39;Mon&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>];
-<span style="color:#66d9ef">foreach</span> (<span style="color:#a6e22e">array_keys</span>($c1) <span style="color:#66d9ef">as</span> $s1) {
+$t1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">&#39;Mon&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>];
+$a1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_keys</span>($t1);
+<span style="color:#66d9ef">foreach</span> ($a1 <span style="color:#66d9ef">as</span> $s1) {
    <span style="color:#a6e22e">var_dump</span>($s1);
 }
 </code></pre></div>

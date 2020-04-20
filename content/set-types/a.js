@@ -1,6 +1,7 @@
 // example 1
-let c1 = new Set(['Sun', 'Mon']);
+let a1 = ['Sun', 'Mon'];
+let t1 = new Set(a1);
 // example 2
-let c2 = {Sun: true, Mon: true};
+let t2 = {Sun: true, Mon: true};
 // print
-console.log(s1, s2);
+console.log(t1, t2);

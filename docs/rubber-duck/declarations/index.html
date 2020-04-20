@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Declarations</h1>
-<time>Sun Apr 19 22:33:34 2020</time>
+<time>Sun Apr 19 23:17:56 2020</time>
    <table>
 <thead>
 <tr>
@@ -41,6 +41,10 @@
 <tr>
 <td><code>e</code></td>
 <td>Error</td>
+</tr>
+<tr>
+<td><code>f</code></td>
+<td>Function</td>
 </tr>
 <tr>
 <td><code>m</code></td>
@@ -124,6 +128,20 @@ $a1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span
 }
 </code></pre></div>
 <p><a href="https://golang.org/ref/spec#Errors">https://golang.org/ref/spec#Errors</a></p>
+<h2 id="function">Function</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">f1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">n1</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span>
+   }
+   <span style="color:#a6e22e">n2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">f1</span>(<span style="color:#ae81ff">20</span>)
+   println(<span style="color:#a6e22e">n2</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/ref/spec#Function_types">https://golang.org/ref/spec#Function_types</a></p>
 <h2 id="map">Map</h2>
 
 
@@ -164,7 +182,15 @@ s2 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>ge
 $r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>();
 <span style="color:#a6e22e">var_dump</span>($r1);
 </code></pre></div>
+<p><a href="https://php.net/function.curl-init">https://php.net/function.curl-init</a></p>
 <h2 id="set">Set</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span>, <span style="color:#e6db74">&#39;Mon&#39;</span>]
+t1 <span style="color:#f92672">=</span> set(a1)
+<span style="color:#66d9ef">print</span>(t1)
+</code></pre></div>
 <p><a href="https://docs.python.org/library/stdtypes.html#set">https://docs.python.org/library/stdtypes.html#set</a></p>
 <h2 id="string">String</h2>
 

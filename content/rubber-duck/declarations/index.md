@@ -3,10 +3,11 @@ title: Declarations
 ---
 
 Letter | Type
--------|-----
+-------|------
 `a`    | Array
 `b`    | Boolean
 `e`    | Error
+`f`    | Function
 `m`    | Map
 `n`    | Number
 `o`    | Object
@@ -40,6 +41,12 @@ Letter | Type
 
 <https://golang.org/ref/spec#Errors>
 
+## Function
+
+{{< r "func.go" >}}
+
+<https://golang.org/ref/spec#Function_types>
+
 ## Map
 
 {{< r "map.go" >}}
@@ -64,7 +71,11 @@ Resource is something that is used by PHP. Other languages use Objects.
 
 {{< r "curl.php" >}}
 
+<https://php.net/function.curl-init>
+
 ## Set
+
+{{< r "set.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#set>
 

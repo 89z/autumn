@@ -1,4 +1,3 @@
 <?php
-$c1 = ['Sun' => true];
-$c1['Mon'] = true;
-print_r($c1);
+$t1['Sun'] = true;
+var_dump($t1);
