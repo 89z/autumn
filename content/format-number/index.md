@@ -24,9 +24,13 @@ Number/toLocaleString` >}}
 
 ## Nim
 
-{{< r "a.nim" >}}
+{{< r "format.nim" >}}
 
 <https://nim-lang.github.io/Nim/strformat#fmt.m,string>
+
+{{< r "fmt.nim" >}}
+
+<https://github.com/kaushalmodi/strfmt>
 
 ## PHP
 
@@ -45,8 +49,7 @@ Number/toLocaleString` >}}
 
 ## References
 
+- <https://codegolf.stackexchange.com/questions/4499/-/4527>
 - <https://hyperpolyglot.org/numerical-analysis#sprintf>
-- <https://www.programming-idioms.org/idiom/173/format-number-group>
-- <https://www.programming-idioms.org/idiom/65/format-decimal-number>
 - <https://rosettacode.org/wiki/Commatizing_numbers>
-- <https://rosettacode.org/wiki/Formatted_numeric_output>
+- <https://www.programming-idioms.org/idiom/173/format-number-group>
