@@ -16,6 +16,7 @@ languages: [go, php, python]
 {{< r "a.php" >}}
 
 - <https://php.net/function.file-exists>
+- <https://php.net/function.is-dir>
 - <https://php.net/function.is-file>
 
 ## Python
@@ -27,6 +28,7 @@ languages: [go, php, python]
 {{< r "os-path.py" >}}
 
 - <https://docs.python.org/library/os.path.html#os.path.exists>
+- <https://docs.python.org/library/os.path.html#os.path.isdir>
 - <https://docs.python.org/library/os.path.html#os.path.isfile>
 
 ## References

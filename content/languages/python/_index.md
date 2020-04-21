@@ -3,25 +3,21 @@ title: Python
 stars: 77460
 ---
 
-The Cygwin version is garbage:
+Cygwin version is a fucking joke:
 
-<https://sourceware.org/pipermail/cygwin/2020-March/244118.html>
+<https://sourceware.org/pipermail/cygwin/2020-April/244552.html>
 
-Here is another option:
+Native version:
 
 <https://python.org/downloads/windows>
 
-With the Zip File, `pip` is missing. Here is fix:
+The installer must be used instead of the zip file:
 
-~~~
-curl -O https://bootstrap.pypa.io/get-pip.py
-python get-pip.py
-~~~
+> Using pip to manage dependencies as for a regular Python installation is not
+> supported with this distribution, though with some care it may be possible to
+> include and use pip for automatic updates.
 
-<https://packaging.python.org/tutorials/installing-packages>
-
-After that `python/Scripts` will need to be added to the `PATH`. Alternatively,
-we could just use the installer, but `PATH` would still need to be modified.
+<https://docs.python.org/using/windows.html#the-embeddable-package>
 
 ## Docs
 

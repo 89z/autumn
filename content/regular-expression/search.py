@@ -7,9 +7,7 @@ b1 = o1 != None
 o2 = re.search('-..', s1)
 s2 = o2.group()
 # example 3
-a1 = re.findall('-..', s1)
-# example 4
 o3 = re.search('-(..)-(..)', s1)
-a2 = o3.groups()
+a1 = o3.groups()
 # print
-print(b1, s2, a1, a2)
+print(b1, s2, a1)

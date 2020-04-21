@@ -33,6 +33,9 @@ languages: [go, julia, php, python]
 
 {{< r "a.py" >}}
 
+- <https://docs.python.org/library/os.path.html#os.path.basename>
+- <https://docs.python.org/library/os.path.html#os.path.splitext>
+
 ## References
 
 - <https://hyperpolyglot.org/c#dirname-basename>

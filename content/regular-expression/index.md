@@ -42,13 +42,16 @@ languages: [go, javascript, julia, php, python]
 
 - <https://php.net/function.preg-match-all>
 - <https://php.net/function.preg-match>
-- <https://php.net/regexp.reference.escape>
 
 ## Python
 
-{{< r "a.py" >}}
+{{< r "findall.py" >}}
 
-<https://docs.python.org/library/re.html>
+<https://docs.python.org/library/re.html#re.findall>
+
+{{< r "search.py" >}}
+
+<https://docs.python.org/library/re.html#re.search>
 
 ## References
 
