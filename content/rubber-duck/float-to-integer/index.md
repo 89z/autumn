@@ -24,7 +24,7 @@ but with other languages like Go it can be a problem:
 
 workaround:
 
-{{< r "a.go" >}}
+{{< r "b.go" >}}
 
 however this is a misrepresentation of the problem. A closer example would be:
 

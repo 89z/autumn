@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Float to integer</h1>
-<time>Sun Apr 12 12:24:20 2020</time>
+<time>Wed Apr 22 06:32:57 2020</time>
    <p>These functions:</p>
 
 
@@ -77,9 +77,9 @@ $s1 <span style="color:#f92672">=</span> $a1[$n1];
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;math&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;Sun&#34;</span>, <span style="color:#e6db74">&#34;Mon&#34;</span>, <span style="color:#e6db74">&#34;Tue&#34;</span>}
-   <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">math</span>.<span style="color:#a6e22e">Round</span>(<span style="color:#ae81ff">1.9</span>)
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a1</span>[<span style="color:#a6e22e">n1</span>] <span style="color:#75715e">// non-integer slice index n1
-</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s1</span>)
+   <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> int(<span style="color:#a6e22e">math</span>.<span style="color:#a6e22e">Round</span>(<span style="color:#ae81ff">1.9</span>))
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a1</span>[<span style="color:#a6e22e">n1</span>]
+   println(<span style="color:#a6e22e">s1</span>)
 }
 </code></pre></div>
 <p>however this is a misrepresentation of the problem. A closer example would be:</p>
