@@ -1,4 +1,4 @@
 import strutils
-var r1 = "a.txt".open
-var s1 = r1.readLine
+var o1 = "a.txt".open
+var s1 = o1.readLine
 echo s1

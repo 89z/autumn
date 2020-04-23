@@ -1,3 +1,3 @@
-r1 = open("a.txt")
-s1 = readline(r1)
+o1 = open("a.txt")
+s1 = readline(o1)
 show(s1)

@@ -5,15 +5,14 @@ import (
 )
 func main() {
    // example 1
-   r1, _ := os.Open("a.txt")
-   r2 := bufio.NewScanner(r1)
-   r2.Scan()
-   s1 := r2.Text()
-   // example 2
-   r3, _ := os.Open("a.txt")
-   r4 := bufio.NewReader(r3)
-   s2, _ := r4.ReadString('\n')
-   // print
+   o1, _ := os.Open("a.txt")
+   o2 := bufio.NewScanner(o1)
+   o2.Scan()
+   s1 := o2.Text()
    print(s1, "\n")
+   // example 2
+   o3, _ := os.Open("a.txt")
+   o4 := bufio.NewReader(o3)
+   s2, _ := o4.ReadString('\n')
    print(s2)
 }

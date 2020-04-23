@@ -4,12 +4,12 @@ import (
    "os/exec"
 )
 func main() {
-   r1 := exec.Command("ag", "-V")
-   r2, _ := r1.StdoutPipe()
-   r1.Start()
-   r3 := bufio.NewScanner(r2)
-   for r3.Scan() {
-      s1 := r3.Text()
+   o1 := exec.Command("ag", "-V")
+   o2, _ := o1.StdoutPipe()
+   o1.Start()
+   o3 := bufio.NewScanner(o2)
+   for o3.Scan() {
+      s1 := o3.Text()
       println(s1)
    }
 }

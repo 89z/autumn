@@ -1,5 +1,5 @@
-r1 = open('day.txt', 'w')
+o1 = open('day.txt', 'w')
 # example 1
-r1.write('Sunday\n')
+o1.write('Sunday\n')
 # example 2
-print('Sunday', file=r1)
+print('Sunday', file=o1)

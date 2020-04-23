@@ -1,2 +1,2 @@
-r1 = open("a.txt", "w")
-println(r1, "Sunday")
+o1 = open("a.txt", "w")
+println(o1, "Sunday")

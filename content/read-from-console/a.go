@@ -4,8 +4,8 @@ import (
    "os"
 )
 func main() {
-   r1 := bufio.NewScanner(os.Stdin)
-   r1.Scan()
-   s1 := r1.Text()
+   o1 := bufio.NewScanner(os.Stdin)
+   o1.Scan()
+   s1 := o1.Text()
    println(s1)
 }

@@ -1,3 +1,3 @@
 let s1 = "Sunday\n"
-let r1 = open("day.txt", fmWrite)
-r1.write(s1)
+let o1 = open("a.txt", fmWrite)
+o1.write(s1)

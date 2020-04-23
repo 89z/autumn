@@ -3,10 +3,6 @@ title: Lua
 stars: 23535
 ---
 
-## Examples
-
-{{< r "a.lua" >}}
-
 ## Issues
 
 Better binary support for Windows

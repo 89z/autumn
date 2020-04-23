@@ -20,16 +20,7 @@
          <a href="https://github.com/muv1/autumn">Repo</a>
       </nav>
    </header>
-<h1>Lua</h1><h2 id="examples">Examples</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua">r1 <span style="color:#f92672">=</span> require(<span style="color:#e6db74">&#39;curl&#39;</span>)
-s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net/100mb.file&#39;</span>
-r2 <span style="color:#f92672">=</span> io.open(<span style="color:#e6db74">&#39;100mb.file&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>)
-r1.easy{noprogress <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>, url <span style="color:#f92672">=</span> s1, writefunction <span style="color:#f92672">=</span> r2}:perform()
-</code></pre></div>
-<h2 id="issues">Issues</h2>
+<h1>Lua</h1><h2 id="issues">Issues</h2>
 <p>Better binary support for Windows</p>
 <p><a href="https://github.com/luarocks/luarocks/issues/788">https://github.com/luarocks/luarocks/issues/788</a></p>
 <h2 id="setup">Setup</h2>
