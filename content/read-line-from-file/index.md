@@ -12,8 +12,7 @@ languages: [d, go, julia, nim, php, python]
 
 {{< r "a.go" >}}
 
-- <https://golang.org/pkg/bufio#Reader.ReadString>
-- <https://golang.org/pkg/bufio#Scanner.Scan>
+<https://golang.org/pkg/bufio#Scanner.Scan>
 
 ## Julia
 
