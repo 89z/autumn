@@ -6,9 +6,13 @@ languages: [go, julia, nim, php, python]
 
 ## Go
 
-{{< r "a.go" >}}
+{{< r "fmt.go" >}}
+{{< r "io.go" >}}
+{{< r "strings.go" >}}
 
-<https://golang.org/pkg/os/exec#Cmd.Output>
+- <https://golang.org/pkg/io>
+- <https://golang.org/pkg/os/exec>
+- <https://golang.org/pkg/strings>
 
 ## Julia
 

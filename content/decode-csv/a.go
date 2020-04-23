@@ -4,11 +4,11 @@ import (
    "os"
 )
 func main() {
-   r1, _ := os.Open("a.csv")
-   r2 := csv.NewReader(r1)
+   o1, _ := os.Open("a.csv")
+   o2 := csv.NewReader(o1)
    m1 := map[string]int{}
    for {
-      a1, e1 := r2.Read()
+      a1, e1 := o2.Read()
       if e1 != nil {
          break
       }
@@ -18,6 +18,7 @@ func main() {
          }
          continue
       }
-      println(a1[m1["city"]])
+      s1 := a1[m1["city"]]
+      println(s1)
    }
 }

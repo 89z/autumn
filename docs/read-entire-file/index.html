@@ -74,8 +74,8 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
-   <span style="color:#a6e22e">a1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#a6e22e">o1</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s&#34;</span>, <span style="color:#a6e22e">a1</span>)
+   <span style="color:#a6e22e">y1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#a6e22e">o1</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s&#34;</span>, <span style="color:#a6e22e">y1</span>)
 }
 </code></pre></div>
 <p><a href="https://golang.org/pkg/io/ioutil#ReadAll">https://golang.org/pkg/io/ioutil#ReadAll</a></p>
@@ -86,8 +86,8 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadFile</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s&#34;</span>, <span style="color:#a6e22e">a1</span>)
+   <span style="color:#a6e22e">y1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadFile</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s&#34;</span>, <span style="color:#a6e22e">y1</span>)
 }
 </code></pre></div>
 <p><a href="https://golang.org/pkg/io/ioutil#ReadFile">https://golang.org/pkg/io/ioutil#ReadFile</a></p>

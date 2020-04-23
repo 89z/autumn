@@ -8,7 +8,8 @@ languages: [go, julia, nim, php, python]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/os/exec#Cmd.Run>
+- <https://golang.org/pkg/os/exec#Cmd.Run>
+- <https://golang.org/pkg/os/exec#Cmd.Start>
 
 ## Julia
 

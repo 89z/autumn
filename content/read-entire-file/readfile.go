@@ -2,6 +2,6 @@ package main
 import "fmt"
 import "io/ioutil"
 func main() {
-   a1, _ := ioutil.ReadFile("a.txt")
-   fmt.Printf("%s", a1)
+   y1, _ := ioutil.ReadFile("a.txt")
+   fmt.Printf("%s", y1)
 }

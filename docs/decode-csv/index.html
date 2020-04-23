@@ -40,11 +40,11 @@ nice,france
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">r1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.csv&#34;</span>)
-   <span style="color:#a6e22e">r2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">csv</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">r1</span>)
+   <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.csv&#34;</span>)
+   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">csv</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">o1</span>)
    <span style="color:#a6e22e">m1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{}
    <span style="color:#66d9ef">for</span> {
-      <span style="color:#a6e22e">a1</span>, <span style="color:#a6e22e">e1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r2</span>.<span style="color:#a6e22e">Read</span>()
+      <span style="color:#a6e22e">a1</span>, <span style="color:#a6e22e">e1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Read</span>()
       <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e1</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
          <span style="color:#66d9ef">break</span>
       }
@@ -54,7 +54,8 @@ nice,france
          }
          <span style="color:#66d9ef">continue</span>
       }
-      println(<span style="color:#a6e22e">a1</span>[<span style="color:#a6e22e">m1</span>[<span style="color:#e6db74">&#34;city&#34;</span>]])
+      <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a1</span>[<span style="color:#a6e22e">m1</span>[<span style="color:#e6db74">&#34;city&#34;</span>]]
+      println(<span style="color:#a6e22e">s1</span>)
    }
 }
 </code></pre></div>
@@ -104,10 +105,11 @@ $a_head <span style="color:#f92672">=</span> [];
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> csv
-r1 <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;a.csv&#39;</span>)
-r2 <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>DictReader(r1)
-<span style="color:#66d9ef">for</span> m1 <span style="color:#f92672">in</span> r2:
-   <span style="color:#66d9ef">print</span>(m1[<span style="color:#e6db74">&#39;city&#39;</span>])
+o1 <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;a.csv&#39;</span>)
+o2 <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>DictReader(o1)
+<span style="color:#66d9ef">for</span> m1 <span style="color:#f92672">in</span> o2:
+   s1 <span style="color:#f92672">=</span> m1[<span style="color:#e6db74">&#39;city&#39;</span>]
+   <span style="color:#66d9ef">print</span>(s1)
 </code></pre></div>
 <p><a href="https://docs.python.org/library/csv.html">https://docs.python.org/library/csv.html</a></p>
 <h2 id="references">References</h2>
