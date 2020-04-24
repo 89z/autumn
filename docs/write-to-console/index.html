@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Write to console</h1>
-<time>Sun Apr 19 17:58:28 2020</time>
+<time>Fri Apr 24 15:05:35 2020</time>
 <a href="/autumn/topics/input-output">input-output</a>
    <h2 id="go">Go</h2>
 
@@ -78,6 +78,17 @@
 }
 </code></pre></div>
 <p><a href="https://golang.org/pkg/os#File.WriteString">https://golang.org/pkg/os#File.WriteString</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os&#34;</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#e6db74">&#34;Sunday\n&#34;</span>)
+   <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">WriteTo</span>(<span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>)
+}
+</code></pre></div>
 <h2 id="javascript">JavaScript</h2>
 
 

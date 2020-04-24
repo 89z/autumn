@@ -1,13 +1,11 @@
 package main
 func main() {
-   var n1 = 0
-   var s1 string
+   n1 := 0
    if n1 > 0 {
-      s1 = "positive"
+      println("positive")
    } else if n1 < 0 {
-      s1 = "negative"
+      println("negative")
    } else {
-      s1 = "zero"
+      println("zero")
    }
-   println(s1)
 }

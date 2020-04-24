@@ -8,7 +8,8 @@ languages: [go, php, python]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/bufio>
+- <https://golang.org/pkg/bufio#Scanner.Scan>
+- <https://golang.org/pkg/os/exec#Command>
 
 ## PHP
 

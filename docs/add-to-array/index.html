@@ -31,10 +31,10 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a1</span> = []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;Sun&#34;</span>}
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;Sun&#34;</span>}
    <span style="color:#a6e22e">a1</span> = append(<span style="color:#a6e22e">a1</span>, <span style="color:#e6db74">&#34;Mon&#34;</span>)
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a2</span> = []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;Sun&#34;</span>}
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">a2</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;Sun&#34;</span>}
    <span style="color:#a6e22e">a2</span> = append(<span style="color:#a6e22e">a2</span>, []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;Mon&#34;</span>}<span style="color:#f92672">...</span>)
    <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a1</span>, <span style="color:#a6e22e">a2</span>)

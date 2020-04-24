@@ -24,6 +24,8 @@ languages: [go, javascript, julia, nim, php, python]
 
 <https://golang.org/pkg/os#File.WriteString>
 
+{{< r "strings.go" >}}
+
 ## JavaScript
 
 {{< r "a.js" >}}
