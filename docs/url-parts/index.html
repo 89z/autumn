@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>URL parts</h1>
-<time>Sat Apr 11 23:03:58 2020</time>
+<time>Fri Apr 24 18:06:42 2020</time>
 <a href="/autumn/topics/string">string</a>
    <h2 id="go">Go</h2>
 
@@ -55,24 +55,35 @@
 </code></pre></div>
 <p><a href="https://developer.mozilla.org/Web/API/URL/URL">https://developer.mozilla.org/Web/API/URL/URL</a></p>
 <h2 id="php">PHP</h2>
-
+<p>
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://example.com/sun?mon=10&#39;</span>;
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$m1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s1);
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s1, <span style="color:#a6e22e">PHP_URL_HOST</span>);
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s1, <span style="color:#a6e22e">PHP_URL_PATH</span>);
+</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s1, <span style="color:#a6e22e">PHP_URL_PATH</span>);
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s1, <span style="color:#a6e22e">PHP_URL_QUERY</span>);
-<span style="color:#75715e"># example 4
-</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s1)[<span style="color:#e6db74">&#39;path&#39;</span>];
-<span style="color:#75715e"># example 5
-</span><span style="color:#75715e"></span>$s5 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s1)[<span style="color:#e6db74">&#39;query&#39;</span>];
+</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s1, <span style="color:#a6e22e">PHP_URL_QUERY</span>);
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($m1, $s2, $s3, $s4, $s5);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2, $s3, $s4);
 </code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://example.com/sun?mon=10&#39;</span>;
+$m1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s1);
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> $m1[<span style="color:#e6db74">&#39;host&#39;</span>];
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> $m1[<span style="color:#e6db74">&#39;path&#39;</span>];
+<span style="color:#75715e"># example 3
+</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> $m1[<span style="color:#e6db74">&#39;query&#39;</span>];
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2, $s3, $s4);
+</code></pre></div></p>
 <p><a href="https://php.net/function.parse-url">https://php.net/function.parse-url</a></p>
 <h2 id="python">Python</h2>
 

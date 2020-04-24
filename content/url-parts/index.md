@@ -19,6 +19,7 @@ languages: [go, javascript, php, python]
 ## PHP
 
 {{< r "a.php" >}}
+{{< r "b.php" >}}
 
 <https://php.net/function.parse-url>
 
