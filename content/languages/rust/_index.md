@@ -3,6 +3,15 @@ title: Rust
 stars: 43062
 ---
 
+## Algebraic data type
+
+- <https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html>
+- <https://doc.rust-lang.org/std/keyword.enum.html>
+- <https://en.wikipedia.org/wiki/Tagged_union>
+- <https://stackoverflow.com/questions/40776020>
+
+## Map
+
 Rust does not have Map literals:
 
 <https://github.com/rust-lang/rfcs/issues/542>
@@ -30,10 +39,6 @@ Instead requiring something like this:
 {{< r "c.rs" >}}
 
 <https://github.com/rust-lang/rfcs/issues/2875>
-
-## HTTP
-
-<https://github.com/sbstp/attohttpc>
 
 ## Setup
 
