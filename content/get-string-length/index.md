@@ -35,7 +35,8 @@ languages: [go, javascript, php, python]
 
 {{< r "strlen.php" >}}
 
-<https://php.net/function.strlen>
+- <https://php.net/function.strlen>
+- <https://php.net/function.utf8-decode>
 
 ## Python
 

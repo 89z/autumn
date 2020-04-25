@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Web server</h1>
-<time>Sat Apr 25 14:23:14 2020</time>
+<time>Sat Apr 25 15:37:54 2020</time>
 <a href="/autumn/topics/network">network</a>
    <h2 id="go">Go</h2>
 
@@ -56,32 +56,8 @@
 </code></pre></div>
 <p><a href="https://golang.org/pkg/net/http#StripPrefix">https://golang.org/pkg/net/http#StripPrefix</a></p>
 <h2 id="php">PHP</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">php -S localhost:10
-</code></pre></div>
-<p><a href="https://php.net/commandline.webserver#example-414">https://php.net/commandline.webserver#example-414</a></p>
-<p>
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;!^/prefix/!&#39;</span>;
-$s2 <span style="color:#f92672">=</span> $_SERVER[<span style="color:#e6db74">&#39;REQUEST_URI&#39;</span>];
-$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>($s1, $s2);
-<span style="color:#66d9ef">if</span> ($n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
-   $s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_replace</span>($s1, <span style="color:#e6db74">&#39;/&#39;</span>, $s2);
-   <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;Location: &#39;</span> <span style="color:#f92672">.</span> $s3);
-} <span style="color:#66d9ef">else</span> {
-   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
-}
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">php -S localhost:10 a.php
-</code></pre></div></p>
-<p><a href="https://php.net/commandline.webserver#example-416">https://php.net/commandline.webserver#example-416</a></p>
+<pre><code>php -S localhost:10
+</code></pre><p><a href="https://php.net/commandline.webserver#example-414">https://php.net/commandline.webserver#example-414</a></p>
 <h2 id="python">Python</h2>
 <pre><code>python3 -m http.server --bind localhost 10
 </code></pre><p><a href="https://docs.python.org/library/http.server.html">https://docs.python.org/library/http.server.html</a></p>

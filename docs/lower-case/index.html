@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Lower case</h1>
-<time>Wed Mar 25 10:17:37 2020</time>
+<time>Sat Apr 25 15:37:54 2020</time>
 <a href="/autumn/topics/string">string</a>
    <h2 id="go">Go</h2>
 
@@ -79,20 +79,26 @@ println(s2)
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;SUNDAY&#39;</span>;
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtolower</span>($s1);
-<span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">mb_strtolower</span>($s1);
-<span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">mb_convert_case</span>($s1, <span style="color:#a6e22e">MB_CASE_LOWER</span>);
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2, $s3, $s4);
+$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtolower</span>($s1);
+<span style="color:#a6e22e">var_dump</span>($s2);
 </code></pre></div>
-<p>Some examples require <code>php-mbstring</code>.</p>
+<p><a href="https://php.net/function.strtolower">https://php.net/function.strtolower</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;mbstring&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;php-mbstring&#39;</span>);
+$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;SUNDAY&#39;</span>;
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">mb_strtolower</span>($s1);
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">mb_convert_case</span>($s1, <span style="color:#a6e22e">MB_CASE_LOWER</span>);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2, $s3);
+</code></pre></div>
 <ul>
 <li><a href="https://php.net/function.mb-convert-case">https://php.net/function.mb-convert-case</a></li>
 <li><a href="https://php.net/function.mb-strtolower">https://php.net/function.mb-strtolower</a></li>
-<li><a href="https://php.net/function.strtolower">https://php.net/function.strtolower</a></li>
 </ul>
 <h2 id="python">Python</h2>
 

@@ -30,13 +30,14 @@ String/toLowerCase` >}}
 
 ## PHP
 
-{{< r "a.php" >}}
+{{< r "std.php" >}}
 
-Some examples require `php-mbstring`.
+<https://php.net/function.strtolower>
+
+{{< r "mb.php" >}}
 
 - <https://php.net/function.mb-convert-case>
 - <https://php.net/function.mb-strtolower>
-- <https://php.net/function.strtolower>
 
 ## Python
 

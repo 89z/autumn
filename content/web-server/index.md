@@ -6,24 +6,21 @@ languages: [go, php, python]
 
 ## Go
 
-{{< r "a.go" >}}
+{{< r "serve.go" >}}
 
 <https://golang.org/pkg/net/http#ListenAndServe>
 
-{{< r "b.go" >}}
+{{< r "strip.go" >}}
 
 <https://golang.org/pkg/net/http#StripPrefix>
 
 ## PHP
 
-{{< r "php.sh" >}}
+~~~
+php -S localhost:10
+~~~
 
 <https://php.net/commandline.webserver#example-414>
-
-{{< r "a.php" >}}
-{{< r "php2.sh" >}}
-
-<https://php.net/commandline.webserver#example-416>
 
 ## Python
 
