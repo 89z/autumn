@@ -21,22 +21,22 @@ languages: [go, javascript, php, python]
 
 ## PHP
 
-{{< r "grapheme.php" >}}
+{{< r "core.php" >}}
 
-<https://php.net/function.grapheme-strlen>
+- <https://php.net/function.strlen>
+- <https://php.net/function.utf8-decode>
 
 {{< r "iconv.php" >}}
 
 <https://php.net/function.iconv-strlen>
 
-{{< r "mb.php" >}}
+{{< r "intl.php" >}}
+
+<https://php.net/function.grapheme-strlen>
+
+{{< r "mbstring.php" >}}
 
 <https://php.net/function.mb-strlen>
-
-{{< r "strlen.php" >}}
-
-- <https://php.net/function.strlen>
-- <https://php.net/function.utf8-decode>
 
 ## Python
 

@@ -1,5 +1,5 @@
 <?php
-function_exists('curl_init') or die('php-curl');
+extension_loaded('curl') or die('php-curl');
 $s1 = 'http://speedtest.lax.hivelocity.net';
 # example 1
 $r1 = curl_init($s1);

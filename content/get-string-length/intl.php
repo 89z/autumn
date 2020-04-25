@@ -1,4 +1,4 @@
 <?php
-function_exists('grapheme_strlen') or die('php-intl');
+extension_loaded('intl') or die('php-intl');
 $n1 = grapheme_strlen('♠');
 var_dump($n1 == 1);

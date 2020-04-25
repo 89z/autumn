@@ -19,14 +19,14 @@ languages: [go, javascript, php, python]
 
 ## PHP
 
-{{< r "get.php" >}}
-
-- <https://php.net/function.file-get-contents>
-- <https://php.net/function.stream-get-contents>
-
 {{< r "curl.php" >}}
 
 <https://php.net/function.curl-init>
+
+{{< r "std.php" >}}
+
+- <https://php.net/function.file-get-contents>
+- <https://php.net/function.stream-get-contents>
 
 ## Python
 

@@ -22,6 +22,18 @@ php -S localhost:10
 
 <https://php.net/commandline.webserver#example-414>
 
+{{< r "route.php" >}}
+
+~~~
+php -S localhost:10 route.php
+~~~
+
+<https://php.net/commandline.webserver#example-416>
+
+{{< r "serve.php" >}}
+
+<https://php.net/function.socket-create>
+
 ## Python
 
 ~~~
