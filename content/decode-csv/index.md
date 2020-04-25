@@ -10,15 +10,17 @@ languages: [go, javascript, php, python]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/encoding/csv#Reader.Read>
+<https://golang.org/pkg/encoding/csv>
 
 ## PHP
 
-{{< r "a.php" >}}
+{{< r "f.php" >}}
 
-- <https://php.net/function.array-combine>
-- <https://php.net/function.array-flip>
-- <https://php.net/function.fgetcsv>
+<https://php.net/function.fgetcsv>
+
+{{< r "str.php" >}}
+
+<https://php.net/function.str-getcsv>
 
 ## Python
 

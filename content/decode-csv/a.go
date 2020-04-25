@@ -4,21 +4,17 @@ import (
    "os"
 )
 func main() {
-   o1, _ := os.Open("a.csv")
-   o2 := csv.NewReader(o1)
-   m1 := map[string]int{}
-   for {
-      a1, e1 := o2.Read()
-      if e1 != nil {
-         break
-      }
-      if len(m1) == 0 {
-         for n1, s1 := range a1 {
-            m1[s1] = n1
-         }
-         continue
-      }
-      s1 := a1[m1["city"]]
-      println(s1)
+   o_open, _ := os.Open("a.csv")
+   o_table := csv.NewReader(o_open)
+   a_head, _ := o_table.Read()
+   m_head := map[string]int{}
+   for n_ind, s_col := range a_head {
+      m_head[s_col] = n_ind
+   }
+   a_body, _ := o_table.ReadAll()
+   for _, a_row := range a_body {
+      n_city := m_head["city"]
+      s_city := a_row[n_city]
+      println(s_city)
    }
 }
