@@ -3,7 +3,7 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Length of string &middot; Autumn</title>
+<title>Get string length &middot; Autumn</title>
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/autumn.css">
 </head>
@@ -20,8 +20,8 @@
          <a href="https://github.com/muv1/autumn">Repo</a>
       </nav>
    </header>
-<h1>Length of string</h1>
-<time>Wed Mar 4 18:45:59 2020</time>
+<h1>Get string length</h1>
+<time>Sat Apr 25 14:23:14 2020</time>
 <a href="/autumn/topics/string">string</a>
    <h2 id="go">Go</h2>
 
@@ -67,25 +67,37 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;♠&#39;</span>;
-<span style="color:#75715e"># bytes
-</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strlen</span>($s1);
-<span style="color:#75715e"># characters
-</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">mb_strlen</span>($s1);
-<span style="color:#75715e"># characters
-</span><span style="color:#75715e"></span>$n3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">iconv_strlen</span>($s1);
-<span style="color:#75715e"># characters
-</span><span style="color:#75715e"></span>$n4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">grapheme_strlen</span>($s1);
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1, $n2, $n3, $n4);
+<span style="color:#a6e22e">function_exists</span>(<span style="color:#e6db74">&#39;grapheme_strlen&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;php-intl&#39;</span>);
+$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">grapheme_strlen</span>(<span style="color:#e6db74">&#39;♠&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>);
 </code></pre></div>
-<p>Some examples require <code>php-iconv</code>, <code>php-intl</code> or <code>php-mbstring</code>.</p>
-<ul>
-<li><a href="https://php.net/function.grapheme-strlen">https://php.net/function.grapheme-strlen</a></li>
-<li><a href="https://php.net/function.iconv-strlen">https://php.net/function.iconv-strlen</a></li>
-<li><a href="https://php.net/function.mb-strlen">https://php.net/function.mb-strlen</a></li>
-<li><a href="https://php.net/function.strlen">https://php.net/function.strlen</a></li>
-</ul>
+<p><a href="https://php.net/function.grapheme-strlen">https://php.net/function.grapheme-strlen</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">function_exists</span>(<span style="color:#e6db74">&#39;iconv_strlen&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;php-iconv&#39;</span>);
+$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">iconv_strlen</span>(<span style="color:#e6db74">&#39;♠&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>);
+</code></pre></div>
+<p><a href="https://php.net/function.iconv-strlen">https://php.net/function.iconv-strlen</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">function_exists</span>(<span style="color:#e6db74">&#39;mb_strlen&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;php-mbstring&#39;</span>);
+$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">mb_strlen</span>(<span style="color:#e6db74">&#39;♠&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>);
+</code></pre></div>
+<p><a href="https://php.net/function.mb-strlen">https://php.net/function.mb-strlen</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strlen</span>(<span style="color:#e6db74">&#39;♠&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>);
+</code></pre></div>
+<p><a href="https://php.net/function.strlen">https://php.net/function.strlen</a></p>
 <h2 id="python">Python</h2>
 
 

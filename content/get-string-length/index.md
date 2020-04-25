@@ -1,5 +1,5 @@
 ---
-title: Length of string
+title: Get string length
 topics: [string]
 languages: [go, javascript, php, python]
 ---
@@ -21,14 +21,21 @@ languages: [go, javascript, php, python]
 
 ## PHP
 
-{{< r "a.php" >}}
+{{< r "grapheme.php" >}}
 
-Some examples require `php-iconv`, `php-intl` or `php-mbstring`.
+<https://php.net/function.grapheme-strlen>
 
-- <https://php.net/function.grapheme-strlen>
-- <https://php.net/function.iconv-strlen>
-- <https://php.net/function.mb-strlen>
-- <https://php.net/function.strlen>
+{{< r "iconv.php" >}}
+
+<https://php.net/function.iconv-strlen>
+
+{{< r "mb.php" >}}
+
+<https://php.net/function.mb-strlen>
+
+{{< r "strlen.php" >}}
+
+<https://php.net/function.strlen>
 
 ## Python
 

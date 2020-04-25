@@ -7,19 +7,23 @@ languages: [go, php, python]
 ## Go
 
 {{< r "a.go" >}}
+
+<https://golang.org/pkg/net/http#ListenAndServe>
+
 {{< r "b.go" >}}
 
-- <https://golang.org/pkg/net/http#Dir>
-- <https://golang.org/pkg/net/http#FileServer>
-- <https://golang.org/pkg/net/http#ListenAndServe>
+<https://golang.org/pkg/net/http#StripPrefix>
 
 ## PHP
 
-~~~
-php -S localhost:10
-~~~
+{{< r "php.sh" >}}
 
-<https://php.net/features.commandline.webserver>
+<https://php.net/commandline.webserver#example-414>
+
+{{< r "a.php" >}}
+{{< r "php2.sh" >}}
+
+<https://php.net/commandline.webserver#example-416>
 
 ## Python
 

@@ -21,39 +21,67 @@
       </nav>
    </header>
 <h1>Web server</h1>
-<time>Sun Apr 19 19:37:02 2020</time>
+<time>Sat Apr 25 14:23:14 2020</time>
 <a href="/autumn/topics/network">network</a>
    <h2 id="go">Go</h2>
-<p>
+
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;net/http&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;:10&#34;</span>
    <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#e6db74">&#34;.&#34;</span>)
    <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">FileServer</span>(<span style="color:#a6e22e">o1</span>)
-   <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ListenAndServe</span>(<span style="color:#e6db74">&#34;:10&#34;</span>, <span style="color:#a6e22e">o2</span>)
+   println(<span style="color:#e6db74">&#34;localhost&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s1</span>)
+   <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ListenAndServe</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">o2</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/net/http#ListenAndServe">https://golang.org/pkg/net/http#ListenAndServe</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;net/http&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;:10&#34;</span>
+   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;/prefix/&#34;</span>
+   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#e6db74">&#34;.&#34;</span>)
+   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">FileServer</span>(<span style="color:#a6e22e">o1</span>)
+   <span style="color:#a6e22e">o3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StripPrefix</span>(<span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">o2</span>)
+   <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Handle</span>(<span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">o3</span>)
+   println(<span style="color:#e6db74">&#34;localhost&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s2</span>)
+   <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ListenAndServe</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#66d9ef">nil</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/net/http#StripPrefix">https://golang.org/pkg/net/http#StripPrefix</a></p>
+<h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">php -S localhost:10
+</code></pre></div>
+<p><a href="https://php.net/commandline.webserver#example-414">https://php.net/commandline.webserver#example-414</a></p>
+<p>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;!^/prefix/!&#39;</span>;
+$s2 <span style="color:#f92672">=</span> $_SERVER[<span style="color:#e6db74">&#39;REQUEST_URI&#39;</span>];
+$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>($s1, $s2);
+<span style="color:#66d9ef">if</span> ($n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
+   $s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_replace</span>($s1, <span style="color:#e6db74">&#39;/&#39;</span>, $s2);
+   <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;Location: &#39;</span> <span style="color:#f92672">.</span> $s3);
+} <span style="color:#66d9ef">else</span> {
+   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
 }
 </code></pre></div>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;net/http&#34;</span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#e6db74">&#34;&#34;</span>)
-   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">FileServer</span>(<span style="color:#a6e22e">o1</span>)
-   <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ListenAndServe</span>(<span style="color:#e6db74">&#34;:10&#34;</span>, <span style="color:#a6e22e">o2</span>)
-}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">php -S localhost:10 a.php
 </code></pre></div></p>
-<ul>
-<li><a href="https://golang.org/pkg/net/http#Dir">https://golang.org/pkg/net/http#Dir</a></li>
-<li><a href="https://golang.org/pkg/net/http#FileServer">https://golang.org/pkg/net/http#FileServer</a></li>
-<li><a href="https://golang.org/pkg/net/http#ListenAndServe">https://golang.org/pkg/net/http#ListenAndServe</a></li>
-</ul>
-<h2 id="php">PHP</h2>
-<pre><code>php -S localhost:10
-</code></pre><p><a href="https://php.net/features.commandline.webserver">https://php.net/features.commandline.webserver</a></p>
+<p><a href="https://php.net/commandline.webserver#example-416">https://php.net/commandline.webserver#example-416</a></p>
 <h2 id="python">Python</h2>
 <pre><code>python3 -m http.server --bind localhost 10
 </code></pre><p><a href="https://docs.python.org/library/http.server.html">https://docs.python.org/library/http.server.html</a></p>
