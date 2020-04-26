@@ -1,37 +1,33 @@
-html,
-body {
-   margin: 0;
-   padding: 0;
+@media (max-width: 38em) {
+   html {
+      font-size: 16px;
+   }
 }
-
-html {
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-   font-size: 16px;
-   line-height: 1.5;
-}
-
 @media (min-width: 38em) {
    html {
       font-size: 20px;
    }
 }
-
+html {
+   font-family: Arial, sans-serif;
+   line-height: 1.5;
+}
+html,
+body {
+   margin: 0;
+   padding: 0;
+}
+/*****************************************************************************/
 body {
    color: #515151;
 }
-
-/* No `:visited` state is required by default (browsers will use `a`) */
 a {
    color: #268bd2;
    text-decoration: none;
 }
-
-/* `:focus` is linked to `:hover` for basic accessibility */
-a:hover,
-a:focus {
+a:hover {
    text-decoration: underline;
 }
-
 h1, h2, h3, h4, h5, h6 {
    color: #313131;
    font-weight: bold;
@@ -39,45 +35,34 @@ h1, h2, h3, h4, h5, h6 {
    text-rendering: optimizeLegibility;
    margin: 0;
 }
-
 header h1 {
    font-size: 2.6rem;
 }
-
 h3 {
    margin-top: 1.5rem;
    font-size: 1.25rem;
 }
-
 h4, h5, h6 {
    margin-top: 1rem;
    font-size: 1rem;
 }
-
-/* Body text */
 p {
    margin-top: 0;
    margin-bottom: 1rem;
 }
-
 strong {
    color: #303030;
 }
-
 ul, ol, dl {
    margin-top: 0;
    margin-bottom: 1rem;
 }
-
 dt {
    font-weight: bold;
 }
-
 dd {
    margin-bottom: .5rem;
 }
-
-/* Misc */
 hr {
    position: relative;
    margin: 1.5rem 0;
@@ -87,7 +72,7 @@ hr {
 }
 code,
 pre {
-   font-family: Menlo, Monaco, "Courier New", monospace;
+   font-family: "Courier New", monospace;
 }
 code {
    padding: .25em .5rem;
@@ -107,7 +92,8 @@ pre {
    white-space: pre-wrap;
    word-break: break-all;
    word-wrap: break-word;
-   background-color: #f9f9f9;
+   background-color: #272822;
+   color: #f8f8f2;
 }
 pre code {
    padding: 0;
@@ -115,53 +101,51 @@ pre code {
    color: inherit;
    background-color: transparent;
 }
-
 .highlight {
    margin-bottom: 1rem;
    border-radius: 4px;
 }
-
 .highlight pre {
    margin-bottom: 0;
 }
-
-blockquote {
-   padding: .5rem 1rem;
-   margin: .8rem 0;
-   color: #7a7a7a;
-   border-left: .25rem solid #e5e5e5;
+@media (max-width: 30em) {
+   blockquote {
+      padding-left: 1rem;
+      padding-right: 1rem;
+   }
 }
-
+@media (min-width: 30em) {
+   blockquote {
+      padding-left: 1.25rem;
+      padding-right: 5rem;
+   }
+}
+blockquote {
+   border-left: .25rem solid #e5e5e5;
+   color: #7a7a7a;
+   margin: .8rem 0;
+   padding-bottom: .5rem;
+   padding-top: .5rem;
+}
 blockquote p:last-child {
    margin-bottom: 0;
 }
-
-@media (min-width: 30em) {
-   blockquote {
-      padding-right: 5rem;
-      padding-left: 1.25rem;
-   }
-}
-
 img {
    display: block;
    margin: 0 0 1rem;
    border-radius: 5px;
    max-width: 100%;
 }
-
 table {
    border: 1px solid #e5e5e5;
    border-collapse: collapse;
    margin-bottom: 1rem;
 }
-
 td,
 th {
   padding: .25rem .5rem;
   border: 1px solid #e5e5e5;
 }
-
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;

@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Talk:Web Server</h1>
-<time>Sun Apr 26 08:12:31 2020</time>
+<time>Sun Apr 26 10:10:23 2020</time>
    <p>If you have a repository like this:</p>
 <pre><code>css/
 fonts/
@@ -63,6 +63,43 @@ Go can do this pretty easily:</p>
    <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ListenAndServe</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#66d9ef">nil</span>)
 }
 </code></pre></div>
+<p>but with PHP, you need to use a route script:</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;!^/prefix/!&#39;</span>;
+$s2 <span style="color:#f92672">=</span> $_SERVER[<span style="color:#e6db74">&#39;REQUEST_URI&#39;</span>];
+$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>($s1, $s2);
+<span style="color:#66d9ef">if</span> ($n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
+   $s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_replace</span>($s1, <span style="color:#e6db74">&#39;/&#39;</span>, $s2);
+   <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;Location: &#39;</span> <span style="color:#f92672">.</span> $s3);
+} <span style="color:#66d9ef">else</span> {
+   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+}
+</code></pre></div>
+<pre><code>php -S localhost:10 route.php
+</code></pre><p>The issue is, that likely the route script will be tucked away somewhere, and
+not in the current directory. If that is the case, you get this:</p>
+<pre><code>[Sun Apr 26 09:57:29 2020] PHP Fatal error:  Unknown: Failed opening required
+'route.php' (include_path='.:/usr/share/pear:/usr/share/php/php') in Unknown on
+line 0
+</code></pre><p>Since I am only using the route with one repository, I could just put it in the
+local directory. Or I could put it in <code>/usr/share/php/php</code>. However I would
+rather just call something like <code>serve.php</code> instead of
+<code>php -S localhost:10 route.php</code>. Alternatively I could pull the command from
+the shell history with <code>Ctrl + R</code>, but I still feel the best option is calling
+a single script. In order to do that, we could need something like this:</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#39;php -S localhost:10 route.php&#39;</span>);
+</code></pre></div>
+<p>I dislike the idea of calling PHP from PHP. So another option would be to
+reimplement the PHP server, in PHP.</p>
 
 
 </body>
