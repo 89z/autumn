@@ -1,5 +1,5 @@
 ---
-title: Float to integer
+title: 'Talk:Convert to integer'
 ---
 
 These functions:

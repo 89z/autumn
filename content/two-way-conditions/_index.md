@@ -1,14 +1,8 @@
 ---
 title: Two-way conditions
 topics: [condition]
-languages: [d, go, javascript, julia, nim, php, python]
+languages: [go, javascript, julia, nim, php, python]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/spec/statement#if-statement>
 
 ## Go
 
@@ -21,9 +15,10 @@ languages: [d, go, javascript, julia, nim, php, python]
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/if...else>
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Operators/
-   Logical_Operators` >}}
+- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
+   Operators/Logical_Operators` >}}
+- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
+   Statements/if...else` >}}
 
 ## Julia
 

@@ -1,3 +1,0 @@
----
-title: Rubber duck debug
----
