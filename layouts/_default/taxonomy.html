@@ -1,13 +1,16 @@
-{{ define "main" -}}
+{{ define "main" }}
 <h1>{{ .Title }}</h1>
-<dl>
-   {{- range .Pages }}
-   <dt>
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-   </dt>
-   <dd>
-      <time>{{ .Lastmod.Format "Mon Jan 2 15:04:05 2006" }}</time>
-   </dd>
-   {{- end }}
-</dl>
-{{ end -}}
+<table>
+   {{ range .Pages }}
+   <tr>
+      <td>
+         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </td>
+      <td>
+         <time>{{ .Lastmod.Format "Mon Jan 2 15:04:05 2006" }}</time>
+      </td>
+   </tr>
+   {{ end }}
+</table>
+   {{ .Content }}
+{{ end }}

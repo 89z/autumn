@@ -1,5 +1,5 @@
 ---
-title: Declarations
+title: Type
 ---
 
 Letter | Type

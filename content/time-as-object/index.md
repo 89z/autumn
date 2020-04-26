@@ -1,6 +1,6 @@
 ---
 title: Time as an object
-topics: [time, type]
+topics: [time]
 langs: [d, go, javascript, php, python]
 ---
 

@@ -2,7 +2,7 @@
 <main>
    <article>
    {{- range (.Paginate .Pages.ByLastmod.Reverse 24).Pages }}
-      <section>
+      <section class="index">
          <h2>
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
          </h2>

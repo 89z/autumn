@@ -1,10 +1,10 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
-<ul>
+<article>
    {{ range .Data.Terms }}
-   <li>
+   <section class="terms">
       <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}
-   </li>
+   </section>
    {{ end }}
-</ul>
+</article>
 {{ end }}

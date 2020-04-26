@@ -183,11 +183,6 @@ header {
 main {
    padding: .5rem;
 }
-section {
-   flex-basis: 400px;
-   padding: 1rem;
-   margin: .5rem;
-}
 header, footer {
    text-align: center;
 }
@@ -213,12 +208,6 @@ header, footer {
 .theme-base-08 main nav a {
    background-color: #ac414233;
 }
-.theme-base-08 section {
-   border-color: #ac4142;
-   border-radius: 10px;
-   border-style: solid;
-   border-width: thick;
-}
 .theme-base-08 .pagination a {
    background: #ac414233;
    color: #ac4142;
@@ -226,4 +215,21 @@ header, footer {
 .theme-base-08 .pagination .active a {
    background: #ac4142;
    color: white;
+}
+.theme-base-08 section {
+   border-color: #ac4142;
+}
+/*****************************************************************************/
+section {
+   border-radius: 10px;
+   border-style: solid;
+   margin: .5rem;
+   padding: 1rem;
+}
+section.index {
+   border-width: thick;
+   flex-basis: 400px;
+}
+section.terms {
+   flex-basis: 200px;
 }

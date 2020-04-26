@@ -1,6 +1,6 @@
 ---
 title: Null value
-topics: [type]
+topics: [reference]
 langs: [go, javascript, php, python]
 ---
 
