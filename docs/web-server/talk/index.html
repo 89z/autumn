@@ -21,7 +21,7 @@
       </nav>
    </header>
 <h1>Talk:Web Server</h1>
-<time>Sun Apr 26 10:10:23 2020</time>
+<time>Sun Apr 26 14:15:11 2020</time>
    <p>If you have a repository like this:</p>
 <pre><code>css/
 fonts/
@@ -99,7 +99,28 @@ a single script. In order to do that, we could need something like this:</p>
 <span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#39;php -S localhost:10 route.php&#39;</span>);
 </code></pre></div>
 <p>I dislike the idea of calling PHP from PHP. So another option would be to
-reimplement the PHP server, in PHP.</p>
+reimplement the PHP server, in PHP:</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$s_sock <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;localhost:10&#39;</span>;
+$s_msg <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;&lt;</span><span style="color:#e6db74">eof</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">HTTP/1.1 200 OK
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Sunday
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">eof</span>;
+$r_ser <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_socket_server</span>(<span style="color:#e6db74">&#39;tcp://&#39;</span> <span style="color:#f92672">.</span> $s_sock);
+<span style="color:#66d9ef">echo</span> $s_sock, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+   $r_acc <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_socket_accept</span>($r_ser);
+   <span style="color:#a6e22e">fwrite</span>($r_acc, $s_msg);
+   <span style="color:#a6e22e">stream_socket_shutdown</span>($r_acc, <span style="color:#a6e22e">STREAM_SHUT_WR</span>);
+}
+</code></pre></div>
+<p>This example only responds with <code>Sunday</code> regardless of the request. A full
+solution would need to read the request, and redirect if need be.</p>
 
 
 </body>

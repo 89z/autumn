@@ -1,7 +1,7 @@
 ---
 title: Import package
 topics: [reference]
-languages: [d, go, julia, nim, python]
+langs: [d, go, julia, nim, python]
 ---
 
 ## D

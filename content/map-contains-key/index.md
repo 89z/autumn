@@ -1,7 +1,7 @@
 ---
 title: Map contains key
 topics: [map]
-languages: [go, javascript, php, python]
+langs: [go, javascript, php, python]
 ---
 
 ## Go

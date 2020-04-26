@@ -1,7 +1,7 @@
 ---
 title: Directives
 topics: [reference]
-languages: [go, javascript, php, python]
+langs: [go, javascript, php, python]
 ---
 
 ## Go

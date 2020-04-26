@@ -16,6 +16,6 @@ params:
 publishDir: docs
 pygmentsCodefences: true
 taxonomies:
-   language: languages
+   lang: langs
    topic: topics
 title: Autumn

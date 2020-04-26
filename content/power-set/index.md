@@ -1,7 +1,7 @@
 ---
 title: Power set
 topics: [set]
-languages: [php, python]
+langs: [php, python]
 ---
 
 ## PHP

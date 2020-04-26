@@ -1,7 +1,7 @@
 ---
 title: Convert to string
 topics: [string]
-languages: [go, javascript, julia, php, python]
+langs: [go, javascript, julia, php, python]
 ---
 
 ## Go

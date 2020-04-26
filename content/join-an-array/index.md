@@ -1,7 +1,7 @@
 ---
 title: Join an array
 topics: [array, string]
-languages: [d, go, javascript, julia, nim, php, python]
+langs: [d, go, javascript, julia, nim, php, python]
 ---
 
 ## D

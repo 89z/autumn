@@ -1,7 +1,7 @@
 ---
 title: Iterate a process
 topics: [iterate, input-output]
-languages: [go, php, python]
+langs: [go, php, python]
 ---
 
 ## Go

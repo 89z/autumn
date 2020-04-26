@@ -1,7 +1,7 @@
 ---
 title: Iterate an array
 topics: [iterate, array]
-languages: [go, javascript, julia, nim, php, python]
+langs: [go, javascript, julia, nim, php, python]
 ---
 
 ## Go

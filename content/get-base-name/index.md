@@ -1,7 +1,7 @@
 ---
 title: Get base name
 topics: [string]
-languages: [go, julia, php, python]
+langs: [go, julia, php, python]
 ---
 
 ## Go

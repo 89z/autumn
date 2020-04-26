@@ -1,7 +1,7 @@
 ---
 title: Set contains value
 topics: [set]
-languages: [go, javascript, php, python]
+langs: [go, javascript, php, python]
 ---
 
 ## Go

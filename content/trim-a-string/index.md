@@ -1,7 +1,7 @@
 ---
 title: Trim a string
 topics: [string]
-languages: [d, go, javascript, nim, php, python]
+langs: [d, go, javascript, nim, php, python]
 ---
 
 ## D

@@ -1,7 +1,7 @@
 ---
 title: Decode XZ
 topics: [file-format]
-languages: [go, php, python]
+langs: [go, php, python]
 ---
 
 ## Go

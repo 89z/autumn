@@ -76,4 +76,9 @@ a single script. In order to do that, we could need something like this:
 {{< r "a.php" >}}
 
 I dislike the idea of calling PHP from PHP. So another option would be to
-reimplement the PHP server, in PHP.
+reimplement the PHP server, in PHP:
+
+{{< r "../serve.php" >}}
+
+This example only responds with `Sunday` regardless of the request. A full
+solution would need to read the request, and redirect if need be.

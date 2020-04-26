@@ -1,7 +1,7 @@
 ---
 title: Start process
 topics: [system]
-languages: [go, julia, nim, php, python]
+langs: [go, julia, nim, php, python]
 ---
 
 ## Go

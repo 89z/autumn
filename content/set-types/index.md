@@ -1,7 +1,7 @@
 ---
 title: Set types
 topics: [set, type]
-languages: [go, javascript, julia, nim, php, python]
+langs: [go, javascript, julia, nim, php, python]
 ---
 
 ## Go

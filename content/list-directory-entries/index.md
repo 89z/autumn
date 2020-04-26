@@ -1,7 +1,7 @@
 ---
 title: List directory entries
 topics: [system]
-languages: [d, go, julia, nim, php, python]
+langs: [d, go, julia, nim, php, python]
 ---
 
 ## D

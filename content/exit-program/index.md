@@ -1,7 +1,7 @@
 ---
 title: Exit program
 topics: [system]
-languages: [go, julia, php, python]
+langs: [go, julia, php, python]
 ---
 
 ## Go

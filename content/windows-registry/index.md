@@ -1,7 +1,7 @@
 ---
 title: Windows registry
 topics: [system]
-languages: [d, go, python]
+langs: [d, go, python]
 ---
 
 ## D

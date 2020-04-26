@@ -1,7 +1,7 @@
 ---
 title: Query string
 topics: [string]
-languages: [go, javascript, php, python]
+langs: [go, javascript, php, python]
 ---
 
 ## Go

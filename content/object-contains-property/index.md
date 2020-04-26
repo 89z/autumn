@@ -1,7 +1,7 @@
 ---
 title: Object contains property
 topics: [object]
-languages: [javascript, php]
+langs: [javascript, php]
 ---
 
 ## JavaScript

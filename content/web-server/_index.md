@@ -1,7 +1,7 @@
 ---
 title: Web server
 topics: [network]
-languages: [go, php, python]
+langs: [go, php, python]
 ---
 
 ## Go
@@ -30,7 +30,7 @@ php -S localhost:10 route.php
 
 <https://php.net/commandline.webserver#example-416>
 
-{{< r "stream.php" >}}
+{{< r "serve.php" >}}
 
 <https://php.net/function.stream-socket-server>
 

@@ -1,7 +1,7 @@
 ---
 title: Iterate a map
 topics: [iterate, map]
-languages: [go, javascript, php, python]
+langs: [go, javascript, php, python]
 ---
 
 ## Go

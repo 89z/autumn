@@ -1,7 +1,7 @@
 ---
 title: Length of array
 topics: [array]
-languages: [d, go, javascript, julia, nim, php, python]
+langs: [d, go, javascript, julia, nim, php, python]
 ---
 
 ## D

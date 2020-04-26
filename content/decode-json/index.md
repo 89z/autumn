@@ -1,7 +1,7 @@
 ---
 title: Decode JSON
 topics: [file-format]
-languages: [d, go, javascript, julia, nim, php, python]
+langs: [d, go, javascript, julia, nim, php, python]
 ---
 
 {{< r "a.json" >}}

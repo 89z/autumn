@@ -1,7 +1,7 @@
 ---
 title: Iterate a set
 topics: [iterate, set]
-languages: [javascript, php]
+langs: [javascript, php]
 ---
 
 ## JavaScript

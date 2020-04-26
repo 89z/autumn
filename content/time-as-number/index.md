@@ -1,7 +1,7 @@
 ---
 title: Time as a number
 topics: [time, number]
-languages: [go, javascript, php, python]
+langs: [go, javascript, php, python]
 ---
 
 ## Go

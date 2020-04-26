@@ -1,7 +1,7 @@
 ---
 title: Declare
 topics: [reference]
-languages: [d, go, javascript, julia, nim]
+langs: [d, go, javascript, julia, nim]
 ---
 
 ## D

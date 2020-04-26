@@ -1,7 +1,7 @@
 ---
 title: Iterate a file
 topics: [iterate, input-output]
-languages: [d, php, python]
+langs: [d, php, python]
 ---
 
 ## D

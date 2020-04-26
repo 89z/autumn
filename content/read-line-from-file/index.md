@@ -1,7 +1,7 @@
 ---
 title: Read line from file
 topics: [input-output]
-languages: [d, go, julia, nim, php, python]
+langs: [d, go, julia, nim, php, python]
 ---
 
 ## D

@@ -1,7 +1,7 @@
 ---
 title: String contains value
 topics: [string]
-languages: [go, javascript, julia, nim, php, python]
+langs: [go, javascript, julia, nim, php, python]
 ---
 
 ## Go

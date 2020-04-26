@@ -1,7 +1,7 @@
 ---
 title: Working directory
 topics: [system]
-languages: [go, php, python]
+langs: [go, php, python]
 ---
 
 ## Go

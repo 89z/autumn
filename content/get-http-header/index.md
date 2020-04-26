@@ -1,7 +1,7 @@
 ---
 title: Get HTTP header
 topics: [network]
-languages: [go, php, python]
+langs: [go, php, python]
 ---
 
 ## Go

@@ -1,7 +1,7 @@
 ---
 title: Logical operators
 topics: [condition]
-languages: [go, javascript, php, python]
+langs: [go, javascript, php, python]
 ---
 
 ## Go

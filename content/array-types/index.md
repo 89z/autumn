@@ -1,7 +1,7 @@
 ---
 title: Array types
 topics: [array, type]
-languages: [go, javascript, julia, nim, php, python]
+langs: [go, javascript, julia, nim, php, python]
 ---
 
 ## Go

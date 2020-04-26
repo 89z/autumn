@@ -1,7 +1,7 @@
 ---
 title: Null value
 topics: [type]
-languages: [go, javascript, php, python]
+langs: [go, javascript, php, python]
 ---
 
 ## Go

@@ -1,7 +1,7 @@
 ---
 title: Read line from process
 topics: [input-output]
-languages: [go, php, python]
+langs: [go, php, python]
 ---
 
 ## Go

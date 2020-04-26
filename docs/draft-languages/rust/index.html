@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rust &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talk">Talk</a>
+         <a href="https://github.com/muv1/autumn">Repo</a>
+      </nav>
+   </header>
+
+<h1>Rust</h1>
+<time>Sun Apr 26 14:15:11 2020</time>
+   
+   
+   <h2 id="algebraic-data-type">Algebraic data type</h2>
+<ul>
+<li><a href="https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html">https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html</a></li>
+<li><a href="https://doc.rust-lang.org/std/keyword.enum.html">https://doc.rust-lang.org/std/keyword.enum.html</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tagged_union">https://en.wikipedia.org/wiki/Tagged_union</a></li>
+<li><a href="https://stackoverflow.com/questions/40776020">https://stackoverflow.com/questions/40776020</a></li>
+</ul>
+<h2 id="map">Map</h2>
+<p>Rust does not have Map literals:</p>
+<p><a href="https://github.com/rust-lang/rfcs/issues/542">https://github.com/rust-lang/rfcs/issues/542</a></p>
+<p>but it does have <code>struct</code>:</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#75715e">#[derive(Debug)]</span>
+   <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Pref</span> {
+      k: String,
+      n: <span style="color:#66d9ef">u8</span>,
+   }
+   <span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> Pref { k: <span style="color:#e6db74">&#34;Sun&#34;</span>.to_string(), n: <span style="color:#ae81ff">10</span> };
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o1);
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/book/ch05-02-example-structs.html">https://doc.rust-lang.org/book/ch05-02-example-structs.html</a></p>
+<p>and <code>match</code>:</p>
+<p><a href="https://doc.rust-lang.org/book/match.html">https://doc.rust-lang.org/book/match.html</a></p>
+<p>Go <code>struct</code> allows missing fields:</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Pref</span> <span style="color:#66d9ef">struct</span> {
+      <span style="color:#a6e22e">k</span> <span style="color:#66d9ef">string</span>
+      <span style="color:#a6e22e">n</span> <span style="color:#66d9ef">int</span>
+      <span style="color:#a6e22e">b</span> <span style="color:#66d9ef">bool</span>
+   }
+   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pref</span> { <span style="color:#a6e22e">k</span>: <span style="color:#e6db74">&#34;Sun&#34;</span>, <span style="color:#a6e22e">n</span>: <span style="color:#ae81ff">10</span> }
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%+v\n&#34;</span>, <span style="color:#a6e22e">o1</span>)
+}
+</code></pre></div>
+<p>However Rust does not:</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#75715e">#[derive(Debug)]</span>
+   <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Pref</span> {
+      k: String,
+      n: <span style="color:#66d9ef">u8</span>,
+      b: <span style="color:#66d9ef">bool</span>
+   }
+   <span style="color:#75715e">// error[E0063]: missing field `b` in initializer of `main::Pref`
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> Pref { k: <span style="color:#e6db74">&#34;Sun&#34;</span>.to_string(), n: <span style="color:#ae81ff">10</span> };
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o1);
+}
+</code></pre></div>
+<p>Instead requiring something like this:</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#75715e">#[derive(Debug, Default)]</span>
+   <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Pref</span> {
+      k: String,
+      n: <span style="color:#66d9ef">u8</span>,
+      b: <span style="color:#66d9ef">bool</span>
+   }
+   <span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> Pref { k: <span style="color:#e6db74">&#34;Sun&#34;</span>.to_string(), n: <span style="color:#ae81ff">10</span>, ..Default::default() };
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o1);
+}
+</code></pre></div>
+<p><a href="https://github.com/rust-lang/rfcs/issues/2875">https://github.com/rust-lang/rfcs/issues/2875</a></p>
+<h2 id="setup">Setup</h2>
+<p><a href="https://forge.rust-lang.org/infra/other-installation-methods">https://forge.rust-lang.org/infra/other-installation-methods</a></p>
+<h2 id="stars">Stars</h2>
+<p><a href="https://github.com/rust-lang/rust">https://github.com/rust-lang/rust</a></p>
+
+
+</body>
+</html>

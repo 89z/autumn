@@ -1,7 +1,7 @@
 ---
 title: Decode Gzip
 topics: [file-format]
-languages: [go, php]
+langs: [go, php]
 ---
 
 ## Go

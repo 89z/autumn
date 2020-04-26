@@ -1,7 +1,7 @@
 ---
 title: Two-way conditions
 topics: [condition]
-languages: [go, javascript, julia, nim, php, python]
+langs: [go, javascript, julia, nim, php, python]
 ---
 
 ## Go

@@ -1,7 +1,7 @@
 ---
 title: Get map value
 topics: [map]
-languages: [go, javascript, julia, nim, php, python]
+langs: [go, javascript, julia, nim, php, python]
 ---
 
 ## Go

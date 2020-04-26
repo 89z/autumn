@@ -1,7 +1,7 @@
 ---
 title: Invoke a file
 topics: [reference]
-languages: [d, go, julia, nim, php, python]
+langs: [d, go, julia, nim, php, python]
 ---
 
 ## D

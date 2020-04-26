@@ -1,7 +1,7 @@
 ---
 title: Convert to float
 topics: [number]
-languages: [go, javascript, php, python]
+langs: [go, javascript, php, python]
 ---
 
 ## Go

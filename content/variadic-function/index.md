@@ -1,7 +1,7 @@
 ---
 title: Variadic function
 topics: [function]
-languages: [go, javascript, php, python]
+langs: [go, javascript, php, python]
 ---
 
 ## Go
