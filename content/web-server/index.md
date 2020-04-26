@@ -30,9 +30,9 @@ php -S localhost:10 route.php
 
 <https://php.net/commandline.webserver#example-416>
 
-{{< r "serve.php" >}}
+{{< r "stream.php" >}}
 
-<https://php.net/function.socket-create>
+<https://php.net/function.stream-socket-server>
 
 ## Python
 

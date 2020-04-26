@@ -1,5 +1,7 @@
 ---
 title: Power set
+topics: [set]
+languages: [php, python]
 ---
 
 ## PHP
