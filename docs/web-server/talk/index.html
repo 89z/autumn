@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talk:Web Server &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/topics">Topics</a>
+         <a href="/autumn/languages">Languages</a>
+         <a href="/autumn/talk">Talk</a>
+         <a href="https://github.com/muv1/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>Talk:Web Server</h1>
+<time>Sun Apr 26 08:12:31 2020</time>
+   <p>If you have a repository like this:</p>
+<pre><code>css/
+fonts/
+image/
+js/
+index.html
+</code></pre><p>You can just run a normal server and be done with it:</p>
+<pre><code>php -S localhost:10
+</code></pre><p>However in some cases, you will want to move the site into a subfolder:</p>
+<pre><code>docs/css/
+docs/fonts/
+docs/image/
+docs/js/
+docs/index.html
+license.txt
+readme.md
+</code></pre><p>This allows you to separate website files, from other files. Then you can choose
+<strong>master branch /docs folder</strong> with GitHub. The issue is, that the publish site
+will have files like this:</p>
+<pre><code>/umber/js/umber.js
+</code></pre><p>but locally, that file will be:</p>
+<pre><code>/js/umber.js
+</code></pre><p>So the server needs to strip the prefix, in order for the request to succeed.
+Go can do this pretty easily:</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;net/http&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;:10&#34;</span>
+   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;/prefix/&#34;</span>
+   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#e6db74">&#34;.&#34;</span>)
+   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">FileServer</span>(<span style="color:#a6e22e">o1</span>)
+   <span style="color:#a6e22e">o3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StripPrefix</span>(<span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">o2</span>)
+   <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Handle</span>(<span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">o3</span>)
+   println(<span style="color:#e6db74">&#34;localhost&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s2</span>)
+   <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ListenAndServe</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#66d9ef">nil</span>)
+}
+</code></pre></div>
+
+
+</body>
+</html>

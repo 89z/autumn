@@ -27,44 +27,43 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
 $n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 <span style="color:#75715e"># boolean
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> ($n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) { <span style="color:#75715e"># false
-</span><span style="color:#75715e"></span>   $n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> ($n1 <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) { <span style="color:#75715e"># false
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;negative</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 } <span style="color:#66d9ef">else</span> {
-   $n2 <span style="color:#f92672">=</span> $n1;
+   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;positive</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 }
 <span style="color:#75715e"># number
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> ($n1) { <span style="color:#75715e"># true
-</span><span style="color:#75715e"></span>   $n3 <span style="color:#f92672">=</span> $n1;
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;nonzero</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 } <span style="color:#66d9ef">else</span> {
-   $n3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;zero</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 }
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n2, $n3); <span style="color:#75715e"># 10 10
-</span></code></pre></div>
+</code></pre></div>
 <p>Go accepts booleans with conditions:</p>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n1</span> = <span style="color:#ae81ff">10</span>
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n2</span> <span style="color:#66d9ef">int</span>
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> { <span style="color:#75715e">// false
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">n2</span> = <span style="color:#ae81ff">20</span>
+   <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">n1</span> &lt; <span style="color:#ae81ff">0</span> { <span style="color:#75715e">// false
+</span><span style="color:#75715e"></span>      println(<span style="color:#e6db74">&#34;negative&#34;</span>)
    } <span style="color:#66d9ef">else</span> {
-      <span style="color:#a6e22e">n2</span> = <span style="color:#a6e22e">n1</span>
+      println(<span style="color:#e6db74">&#34;positive&#34;</span>)
    }
-   println(<span style="color:#a6e22e">n2</span>) <span style="color:#75715e">// 10
-</span><span style="color:#75715e"></span>}
+}
 </code></pre></div>
 <p>but not other types:</p>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n1</span> = <span style="color:#ae81ff">10</span>
    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n2</span> <span style="color:#66d9ef">int</span>
@@ -83,10 +82,11 @@ expected.</p>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
 $n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-$n1 <span style="color:#f92672">=</span> $n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">?</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">:</span> $n1;
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">$n2\n</span><span style="color:#e6db74">&#34;</span>; <span style="color:#75715e"># 10
+$n2 <span style="color:#f92672">=</span> $n1 <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">?</span> $n1 <span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span>;
+<span style="color:#66d9ef">echo</span> $n1, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>; <span style="color:#75715e"># 10
 </span></code></pre></div>
 <p><a href="https://php.net/operators.comparison#language.operators.comparison.ternary">https://php.net/operators.comparison#language.operators.comparison.ternary</a></p>
 <p>Go does not offer this:</p>
@@ -102,15 +102,17 @@ boolean. For example with Python:</p>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
-n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span> <span style="color:#66d9ef">if</span> n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> n1
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py">n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+n2 <span style="color:#f92672">=</span> n1 <span style="color:#66d9ef">if</span> n1 <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">20</span>
 <span style="color:#66d9ef">print</span>(n2) <span style="color:#75715e"># 10</span>
 </code></pre></div>
 <p>or JavaScript:</p>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span>;
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n2</span>); <span style="color:#75715e">// 10
 </span></code></pre></div>
@@ -120,7 +122,8 @@ be a boolean. For example with JavaScript:</p>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> <span style="color:#ae81ff">20</span>;
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n2</span>); <span style="color:#75715e">// true
 </span></code></pre></div>
@@ -128,7 +131,8 @@ be a boolean. For example with JavaScript:</p>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
 $n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 $n2 <span style="color:#f92672">=</span> $n1 <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">?:</span> <span style="color:#ae81ff">20</span>;
 <span style="color:#a6e22e">var_export</span>($n2); <span style="color:#75715e"># true
@@ -138,7 +142,8 @@ languages like PHP coerce the result to boolean:</p>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
 $n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 $n2 <span style="color:#f92672">=</span> $n1 <span style="color:#f92672">||</span> <span style="color:#ae81ff">20</span>;
 <span style="color:#a6e22e">var_export</span>($n2); <span style="color:#75715e"># true
@@ -147,7 +152,8 @@ $n2 <span style="color:#f92672">=</span> $n1 <span style="color:#f92672">||</spa
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
 $b1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
 $b2 <span style="color:#f92672">=</span> $b1 <span style="color:#f92672">??</span> <span style="color:#66d9ef">true</span>;
 <span style="color:#a6e22e">var_export</span>($b2); <span style="color:#75715e"># false
@@ -160,7 +166,8 @@ would be to use boolean type with all arguments. For example with JavaScript:</p
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n2</span>;
 <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">n1</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">40</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span>) { <span style="color:#75715e">// true
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">n2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n1</span>;
@@ -173,7 +180,8 @@ would be to use boolean type with all arguments. For example with JavaScript:</p
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">10</span>
    <span style="color:#a6e22e">n2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">||</span> <span style="color:#ae81ff">20</span> <span style="color:#75715e">// (operator || not defined on int)
@@ -187,7 +195,8 @@ constants. These fail with JavaScript:</p>
 <p>
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">true</span>) {
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">true</span>) {
    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 }
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span>); <span style="color:#75715e">// ReferenceError: n1 is not defined
@@ -195,7 +204,8 @@ constants. These fail with JavaScript:</p>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">switch</span> (<span style="color:#66d9ef">true</span>) {
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">switch</span> (<span style="color:#66d9ef">true</span>) {
 <span style="color:#66d9ef">case</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">:</span>
    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 }
@@ -205,7 +215,8 @@ constants. These fail with JavaScript:</p>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> {<span style="color:#66d9ef">true</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>}.<span style="color:#66d9ef">true</span>;
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> {<span style="color:#66d9ef">true</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>}.<span style="color:#66d9ef">true</span>;
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span>);
 </code></pre></div>
 

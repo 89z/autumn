@@ -27,7 +27,8 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;unicode/utf8&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;♠&#34;</span>
@@ -47,7 +48,8 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;♠&#39;</span>;
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;♠&#39;</span>;
 <span style="color:#75715e">// bytes
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">TextEncoder</span>().<span style="color:#a6e22e">encode</span>(<span style="color:#a6e22e">s1</span>).<span style="color:#a6e22e">length</span>;
 <span style="color:#75715e">// characters
@@ -66,7 +68,8 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
 $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;♠&#39;</span>;
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strlen</span>($s1);
@@ -83,7 +86,8 @@ $n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strlen</spa
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
 <span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;iconv&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;php-iconv&#39;</span>);
 $n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">iconv_strlen</span>(<span style="color:#e6db74">&#39;♠&#39;</span>);
 <span style="color:#a6e22e">var_dump</span>($n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>);
@@ -92,7 +96,8 @@ $n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">iconv_strle
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
 <span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;intl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;php-intl&#39;</span>);
 $n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">grapheme_strlen</span>(<span style="color:#e6db74">&#39;♠&#39;</span>);
 <span style="color:#a6e22e">var_dump</span>($n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>);
@@ -101,7 +106,8 @@ $n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">grapheme_st
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
 <span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;mbstring&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;php-mbstring&#39;</span>);
 $n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">mb_strlen</span>(<span style="color:#e6db74">&#39;♠&#39;</span>);
 <span style="color:#a6e22e">var_dump</span>($n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>);
@@ -111,7 +117,8 @@ $n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">mb_strlen</
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;♠&#39;</span>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py">s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;♠&#39;</span>
 <span style="color:#75715e"># characters</span>
 n1 <span style="color:#f92672">=</span> len(s1)
 <span style="color:#75715e"># bytes</span>

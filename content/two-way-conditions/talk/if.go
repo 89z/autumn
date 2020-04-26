@@ -1,11 +1,9 @@
 package main
 func main() {
-   var n1 = 10
-   var n2 int
-   if n1 == 0 { // false
-      n2 = 20
+   n1 := 10
+   if n1 < 0 { // false
+      println("negative")
    } else {
-      n2 = n1
+      println("positive")
    }
-   println(n2) // 10
 }
