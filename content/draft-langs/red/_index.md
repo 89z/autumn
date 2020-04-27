@@ -1,6 +1,5 @@
 ---
 title: Red
-stars: 4046
 ---
 
 Shared is slow on first compile, but then fast:
@@ -35,7 +34,3 @@ $ red-13feb20-d513c8f9 -r a.red
 ~~~
 
 <https://github.com/red/red/issues/3412>
-
-## Stars
-
-<https://github.com/red/red>

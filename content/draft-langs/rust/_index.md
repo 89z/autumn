@@ -1,6 +1,5 @@
 ---
 title: Rust
-stars: 43062
 ---
 
 ## Algebraic data type
@@ -43,7 +42,3 @@ Instead requiring something like this:
 ## Setup
 
 <https://forge.rust-lang.org/infra/other-installation-methods>
-
-## Stars
-
-<https://github.com/rust-lang/rust>

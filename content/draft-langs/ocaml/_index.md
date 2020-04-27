@@ -1,6 +1,5 @@
 ---
 title: OCaml
-stars: 20068
 ---
 
 ## Issues
@@ -13,7 +12,3 @@ Windows Console Unicode Support
 
 - <https://github.com/fdopen/opam-repository-mingw/issues/67>
 - <http://xahlee.info/ocaml/ocaml_basics>
-
-## Stars
-
-<https://github.com/facebook/flow>

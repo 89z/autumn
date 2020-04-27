@@ -1,6 +1,5 @@
 ---
 title: Reason
-stars: 6361
 ---
 
 Looking here:
@@ -20,7 +19,3 @@ Ocaml. I look here:
 but everything seems to be about JavaScript.
 
 <https://github.com/facebook/reason>
-
-## Stars
-
-<https://github.com/revery-ui/revery>

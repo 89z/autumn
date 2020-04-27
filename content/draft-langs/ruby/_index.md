@@ -1,6 +1,5 @@
 ---
 title: Ruby
-stars: 44204
 ---
 
 ## Issues
@@ -43,7 +42,3 @@ Append to array 6:
 
 {{< a `https://ruby-doc.org/core/doc/syntax/assignment_rdoc.html#
 label-Implicit+Array+Assignment` >}}
-
-## Stars
-
-<https://github.com/rails/rails>

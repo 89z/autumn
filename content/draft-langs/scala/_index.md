@@ -1,6 +1,5 @@
 ---
 title: Scala
-stars: 23668
 ---
 
 ## Issues
@@ -12,7 +11,3 @@ Windows support
 ## Setup
 
 <https://scala-lang.org/download#download-binaries>
-
-## Stars
-
-<https://github.com/apache/spark>

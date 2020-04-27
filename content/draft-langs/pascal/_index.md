@@ -1,6 +1,5 @@
 ---
 title: Pascal
-stars: 5772
 ---
 
 ## Free Pascal
@@ -49,7 +48,3 @@ units\i386-win32\fcl-web\fphttpclient.rsj
 
 - <https://freepascal.org/docs-html/current/user/usersu7.html>
 - <https://wiki.lazarus.freepascal.org/Unit_not_found_-_How_to_find_units>
-
-## Stars
-
-<https://github.com/stascorp/rdpwrap>

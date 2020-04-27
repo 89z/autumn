@@ -1,6 +1,5 @@
 ---
 title: Perl
-stars: 12217
 ---
 
 ## Issues
@@ -12,7 +11,3 @@ No boolean type
 ## Setup
 
 <http://strawberryperl.com>
-
-## Stars
-
-<https://github.com/so-fancy/diff-so-fancy>
