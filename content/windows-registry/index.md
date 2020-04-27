@@ -1,7 +1,7 @@
 ---
 title: Windows registry
-topics: [system]
-langs: [d, go, python]
+categories: [system]
+tags: [d, go, python]
 ---
 
 ## D

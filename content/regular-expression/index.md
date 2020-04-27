@@ -1,7 +1,7 @@
 ---
 title: Regular expression
-topics: [string]
-langs: [go, javascript, julia, php, python]
+categories: [string]
+tags: [go, javascript, julia, php, python]
 ---
 
 ## Go

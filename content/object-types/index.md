@@ -1,7 +1,7 @@
 ---
 title: Object types
-topics: [object, type]
-langs: [go, javascript, php, python]
+categories: [object, type]
+tags: [go, javascript, php, python]
 ---
 
 ## Go

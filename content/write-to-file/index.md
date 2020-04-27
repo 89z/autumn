@@ -1,7 +1,7 @@
 ---
 title: Write to file
-topics: [input-output]
-langs: [go, julia, nim, php, python]
+categories: [input-output]
+tags: [go, julia, nim, php, python]
 ---
 
 ## Go

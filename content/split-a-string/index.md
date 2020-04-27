@@ -1,7 +1,7 @@
 ---
 title: Split a string
-topics: [array, string]
-langs: [go, javascript, julia, nim, php, python]
+categories: [array, string]
+tags: [go, javascript, julia, nim, php, python]
 ---
 
 ## Go

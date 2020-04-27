@@ -1,7 +1,7 @@
 ---
 title: Write to console
-topics: [input-output]
-langs: [go, javascript, julia, nim, php, python]
+categories: [input-output]
+tags: [go, javascript, julia, nim, php, python]
 ---
 
 ## Go

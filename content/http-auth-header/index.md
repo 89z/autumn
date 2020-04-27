@@ -1,7 +1,7 @@
 ---
 title: HTTP authorization header
-topics: [network]
-langs: [go, php]
+categories: [network]
+tags: [go, php]
 ---
 
 ## Go

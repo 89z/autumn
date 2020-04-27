@@ -1,7 +1,7 @@
 ---
 title: Add to set
-topics: [set]
-langs: [go, javascript, julia, nim, php, python]
+categories: [set]
+tags: [go, javascript, julia, nim, php, python]
 ---
 
 ## Go

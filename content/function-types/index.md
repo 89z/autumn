@@ -1,7 +1,7 @@
 ---
 title: Function types
-topics: [function, type]
-langs: [d, go, javascript, julia, nim, php, python]
+categories: [function, type]
+tags: [d, go, javascript, julia, nim, php, python]
 ---
 
 ## D

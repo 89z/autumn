@@ -1,7 +1,7 @@
 ---
 title: Round a number
-topics: [number]
-langs: [go, javascript, php, python]
+categories: [number]
+tags: [go, javascript, php, python]
 ---
 
 ## Go

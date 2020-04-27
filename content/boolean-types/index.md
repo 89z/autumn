@@ -1,7 +1,7 @@
 ---
 title: Boolean types
-topics: [type]
-langs: [d, go, javascript, julia, php, python]
+categories: [type]
+tags: [d, go, javascript, julia, php, python]
 ---
 
 ## D

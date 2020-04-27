@@ -1,7 +1,7 @@
 ---
 title: Add to string
-topics: [string]
-langs: [go, javascript, julia, nim, php, python]
+categories: [string]
+tags: [go, javascript, julia, nim, php, python]
 ---
 
 ## Go

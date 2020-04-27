@@ -1,7 +1,7 @@
 ---
 title: Read HTTP body
-topics: [network]
-langs: [go, javascript, php, python]
+categories: [network]
+tags: [go, javascript, php, python]
 ---
 
 ## Go

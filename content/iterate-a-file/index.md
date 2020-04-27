@@ -1,7 +1,7 @@
 ---
 title: Iterate a file
-topics: [iterate, input-output]
-langs: [d, php, python]
+categories: [iterate, input-output]
+tags: [d, php, python]
 ---
 
 ## D

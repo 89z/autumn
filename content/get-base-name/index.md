@@ -1,7 +1,7 @@
 ---
 title: Get base name
-topics: [string]
-langs: [go, julia, php, python]
+categories: [string]
+tags: [go, julia, php, python]
 ---
 
 ## Go
