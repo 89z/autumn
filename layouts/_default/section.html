@@ -4,10 +4,12 @@
    {{ range .Params.topics }}
 <a href="/autumn/topics/{{ . }}">{{ . }}</a>
    {{ end }}
+<ul>
    {{ range .Pages }}
-<p>
-   <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-</p>
+   <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+   </li>
    {{ end }}
+</ul>
    {{ .Content }}
 {{ end }}

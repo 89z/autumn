@@ -1,6 +1,5 @@
 ---
 title: Haskell
-stars: 16796
 ---
 
 ## Issues
@@ -12,7 +11,3 @@ Haskell platform size
 ## Setup
 
 <https://haskell.org/platform>
-
-## Stars
-
-<https://github.com/jgm/pandoc>

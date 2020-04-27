@@ -1,6 +1,5 @@
 ---
 title: Dart
-stars: 80588
 ---
 
 Dart can print a string:
@@ -25,7 +24,3 @@ print(s1) # 'Sunday'
 
 - <https://api.dartlang.org>
 - <https://dart.dev/tools/sdk/archive>
-
-## Stars
-
-<https://github.com/flutter/flutter>

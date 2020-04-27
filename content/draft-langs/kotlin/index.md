@@ -1,6 +1,5 @@
 ---
 title: Kotlin
-stars: 35066
 ---
 
 ## Choice of C compiler
@@ -34,7 +33,3 @@ is currently available to do that.
 - <https://github.com/JetBrains/kotlin-native>
 - <https://github.com/JetBrains/kotlin/releases/latest>
 - <https://jdk.java.net>
-
-## Stars
-
-<https://github.com/android/architecture-samples>

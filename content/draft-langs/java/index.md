@@ -1,6 +1,5 @@
 ---
 title: Java
-stars: 53461
 ---
 
 ## Boilerplate
@@ -106,7 +105,3 @@ I think people should be able to choose what compiler they use.
 ## Setup
 
 <https://jdk.java.net>
-
-## Stars
-
-<https://github.com/iluwatar/java-design-patterns>

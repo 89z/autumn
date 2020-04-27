@@ -1,6 +1,5 @@
 ---
 title: Elixir
-stars: 16558
 ---
 
 ## Download
@@ -29,7 +28,3 @@ hello.erl: Warning: this system is not configured for native-code compilation.
 
 - <https://elixir-lang.org/install#installing-erlang>
 - <https://erlang-solutions.com/resources/download.html>
-
-## Stars
-
-<https://github.com/elixir-lang/elixir>

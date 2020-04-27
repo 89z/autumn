@@ -1,6 +1,5 @@
 ---
 title: C++
-stars: 134910
 ---
 
 Regarding booleans, it is not ideal that numbers are printed by default:
@@ -32,7 +31,3 @@ clang++ -s -static -std=c++17 a.cpp
 Cygwin Mingw compiler fails with Unicode under "cmd.exe":
 
 <https://sourceware.org/pipermail/cygwin/2020-March/243989.html>
-
-## Stars
-
-<https://github.com/tensorflow/tensorflow>

@@ -1,6 +1,5 @@
 ---
 title: C#
-stars: 43133
 ---
 
 ## DotNet
@@ -21,7 +20,3 @@ Could not load file or assembly
 
 - <https://github.com/dotnet/roslyn/issues/42330>
 - <https://nuget.org/packages/Microsoft.Net.Compilers>
-
-## Stars
-
-<https://github.com/shadowsocks/shadowsocks-windows>
