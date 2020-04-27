@@ -1,6 +1,5 @@
 ---
 title: Standard ML
-stars: 16722
 ---
 
 ## CakeML
@@ -61,7 +60,3 @@ A Windows version is not available.
 ## Introduction
 
 <https://cs.lmu.edu/~ray/notes/introml>
-
-## Stars
-
-<https://github.com/komeiji-satori/Dress>

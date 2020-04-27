@@ -1,6 +1,5 @@
 ---
 title: PHP
-stars: 55336
 ---
 
 ## Reference
@@ -17,7 +16,3 @@ Also Native version has new features.
 
 - <https://stitcher.io/blog/short-closures-in-php>
 - <https://windows.php.net/download>
-
-## Stars
-
-<https://github.com/laravel/laravel>

@@ -1,6 +1,5 @@
 ---
 title: Scheme
-stars: 5186
 ---
 
 <https://ecraven.github.io/r7rs-benchmarks>

@@ -1,6 +1,5 @@
 ---
 title: Python
-stars: 77460
 ---
 
 Cygwin version is a fucking joke:
@@ -24,7 +23,3 @@ The installer must be used instead of the zip file:
 Always include the `.html`:
 
 <https://docs.python.org/library/email.compat32-message.html>
-
-## Stars
-
-<https://github.com/donnemartin/system-design-primer>

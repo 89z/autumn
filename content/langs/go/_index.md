@@ -1,6 +1,5 @@
 ---
 title: Go
-stars: 66118
 ---
 
 ## Downloads
@@ -16,7 +15,3 @@ go env GOPATH
 ~~~
 
 <https://github.com/golang/go/wiki/SettingGOPATH>
-
-## Stars
-
-<https://github.com/golang/go>

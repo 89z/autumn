@@ -1,6 +1,5 @@
 ---
 title: V
-stars: 15910
 ---
 
 ## field designator 'tm_gmtoff' does not refer to any field
@@ -53,7 +52,3 @@ PATH=llvm-mingw/bin v_windows/v
 ~~~
 
 <https://github.com/vlang/v/issues/3052>
-
-## Stars
-
-<https://github.com/vlang/v>

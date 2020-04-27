@@ -1,6 +1,5 @@
 ---
 title: Nim
-stars: 8038
 ---
 
 ## Setup
@@ -21,7 +20,3 @@ task run, "run":
 
 - <https://nim-lang.github.io/Nim/nims.html>
 - <https://nim-lang.org/docs/nimscript.html#nimcacheDir>
-
-## Stars
-
-<https://github.com/nim-lang/Nim>

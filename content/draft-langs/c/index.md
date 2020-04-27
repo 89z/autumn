@@ -1,6 +1,5 @@
 ---
 title: C
-stars: 80840
 ---
 
 ## C
@@ -10,7 +9,3 @@ stars: 80840
 ## Objective-C
 
 <https://stackoverflow.com/questions/6358349/how-to-print-boolean-flag>
-
-## Stars
-
-<https://github.com/torvalds/linux>

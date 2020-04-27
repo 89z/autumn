@@ -1,6 +1,5 @@
 ---
 title: Julia
-stars: 23867
 ---
 
 ## Documentation
@@ -11,7 +10,3 @@ stars: 23867
 
 - <https://github.com/JuliaLang/julia/issues/34047>
 - <https://julialang.org/downloads/nightlies>
-
-## Stars
-
-<https://github.com/JuliaLang/julia>
