@@ -4,9 +4,9 @@ disableKinds:
 - sitemap
 enableGitInfo: true
 ignoreFiles:
-- \.[^m]
-- \.m[^d]
-- \.md.
+- /content/.*\.[^m]
+- /content/.*\.m[^d]
+- /content/.*\.md.
 markup:
    goldmark:
       extensions:

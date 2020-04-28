@@ -1,46 +1,81 @@
 # Tags
 
 ~~~
-/autumn/tags/c/index.md
-/autumn/tags/go/index.md
-/autumn/tags/index.md
+content/tags/c/index.md
+content/tags/c/talk/index.md
+content/tags/go/index.md
+content/tags/go/talk/index.md
+content/tags/index.md
+content/tags/talk/index.md
 ~~~
 
-The Go page would need to list Go articles, but also information about Go. I
-would rather have one listing page, and one information page. But how to split?
-Like this:
+C is a draft language, so it will not have a listing of articles:
 
 ~~~
-/autumn/tags/go/index.md
-/autumn/tags/go/talk/index.md
+content/tags/c/index.md
+content/tags/go/index.md
+content/tags/go/talk/index.md
+content/tags/index.md
+content/tags/talk/index.md
 ~~~
 
-Now add the rest:
+Need to split:
 
 ~~~
-/autumn/tags/c/index.md
-/autumn/tags/c/talk/index.md
-/autumn/tags/go/index.md
-/autumn/tags/go/talk/index.md
-/autumn/tags/index.md
+content/tags/index.md
+content/tags/go/index.md
 ~~~
 
-The Tags page would need a list of languages, but also information about
-languages. I would rather have one listing page, and one information page. But
-how to split? Like this:
-
 ~~~
-/autumn/tags/index.md
-/autumn/tags/talk/index.md
+content/tags/c/index.md
+content/tags/go/talk/index.md
+content/tags/talk/index.md
 ~~~
 
-Now add the rest:
+Need to rename the second group:
 
 ~~~
-/autumn/tags/c/index.md
-/autumn/tags/c/talk/index.md
-/autumn/tags/go/index.md
-/autumn/tags/go/talk/index.md
-/autumn/tags/index.md
-/autumn/tags/talk/index.md
+content/tags/index.md
+content/tags/go/index.md
 ~~~
+
+~~~
+content/languages/index.md
+content/languages/go/index.md
+content/languages/c/index.md
+~~~
+
+We dont have files for the first group, those are automatically generated.
+However we will have 2 sets of links:
+
+~~~
+/autumn/tags
+/autumn/tags/go
+~~~
+
+~~~
+/autumn/languages
+/autumn/languages/go
+/autumn/languages/c
+~~~
+
+I dont like having two links for Go, or do I? The alternative is having Go links
+and Talk together, and that is worse. The last issue is, we need to be able to
+easily find all these. These are good, can just put links in the site header:
+
+~~~
+/autumn/tags
+/autumn/tags/go
+~~~
+
+but what about these?
+
+~~~
+/autumn/languages
+/autumn/languages/go
+/autumn/languages/c
+~~~
+
+## References
+
+<https://en.wikipedia.org/wiki/Sara_Del_Valle>
