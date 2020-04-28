@@ -1,0 +1,38 @@
+<autumn>
+   <categories>
+      <condition>
+         <block-first-loops/>
+         <two-way-conditions page="talk"/>
+      </condition>
+      <input-output page="talk">
+         <iterate-a-file/>
+         <iterate-a-process/>
+      </input-output>
+      <language page="talk">
+         <c/>
+         <go/>
+      </language>
+      <network>
+         <get-http-header/>
+         <web-server page="talk"/>
+      </network>
+      <number>
+         <convert-to-float/>
+         <convert-to-integer page="talk"/>
+      </number>
+      <type page="talk">
+         <array-types/>
+         <boolean-types/>
+      </type>
+   </categories>
+   <tags>
+      <go>
+         <add-to-array/>
+         <add-to-map/>`
+      </go>
+      <php>
+         <add-to-array/>
+         <add-to-map/>`
+      </php>
+   </tags>
+</autumn>
