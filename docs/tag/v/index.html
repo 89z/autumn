@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/categories">Categories</a>
+         <a href="/autumn/tags">Tags</a>
+         <a href="https://github.com/muv1/autumn">Repo</a>
+      </nav>
+   </header>
+<h1>V</h1>
+<time>Mon Apr 27 22:30:28 2020</time>
+   <h2 id="field-designator-tm_gmtoff-does-not-refer-to-any-field">field designator &lsquo;tm_gmtoff&rsquo; does not refer to any field</h2>
+<p>Trying to build my own version creates this error:</p>
+<pre><code>$ TMPDIR=tmp PATH=../llvm-mingw/bin:$PATH make
+cd tmp/vc &amp;&amp; git clean -xf &amp;&amp; git pull --quiet
+cd /var/tmp/tcc &amp;&amp; git clean -xf &amp;&amp; git pull --quiet
+cc  -std=gnu11 -w -o v tmp/vc/v.c  -lm
+tmp/vc/v.c:9234:38: error: field designator 'tm_gmtoff' does not refer to any
+      field in type 'struct tm'
+                                    .tm_gmtoff = 0};
+                                     ^
+</code></pre><h2 id="compiler-emits-no-warnings-or-errors">Compiler emits no warnings or errors</h2>
+<p>If I have a file like this, everything is fine:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-v" data-lang="v">fn main() {
+   mut m2 <span style="color:#f92672">:=</span> {&#39;Sun&#39;<span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>, &#39;Mon&#39;<span style="color:#f92672">:</span> <span style="color:#ae81ff">11</span>}
+   m2[&#39;Tue&#39;] <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>
+   println(<span style="color:#e6db74">&#34;Sunday&#34;</span>)
+}
+</code></pre></div><p>If I remove <code>mut</code>, it will cause a problem:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-v" data-lang="v">fn main() {
+   m2 <span style="color:#f92672">:=</span> {&#39;Sun&#39;<span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>, &#39;Mon&#39;<span style="color:#f92672">:</span> <span style="color:#ae81ff">11</span>}
+   m2[&#39;Tue&#39;] <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>
+   println(<span style="color:#e6db74">&#34;Sunday&#34;</span>)
+}
+</code></pre></div><p>but instead of printing a warning or error, the compiler just exits. Does V
+have a way to emit messages when a problem happens?
+Workaround is Self-compiled binary.</p>
+<h2 id="program-generated-after-compiling-on-windows-display-nothing">Program generated after compiling on Windows display nothing</h2>
+<p>Workaround:</p>
+<pre><code>PATH=llvm-mingw/bin v_windows/v
+</code></pre><p><a href="https://github.com/vlang/v/issues/3052">https://github.com/vlang/v/issues/3052</a></p>
+
+
+</body>
+</html>

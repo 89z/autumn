@@ -1,3 +1,6 @@
+.column {
+   column-count: 2;
+}
 @media (max-width: 38em) {
    html {
       font-size: 16px;
@@ -17,7 +20,6 @@ body {
    margin: 0;
    padding: 0;
 }
-/*****************************************************************************/
 body {
    color: #515151;
 }
@@ -53,15 +55,9 @@ p {
 strong {
    color: #303030;
 }
-ul, ol, dl {
-   margin-top: 0;
+ul, ol {
    margin-bottom: 1rem;
-}
-dt {
-   font-weight: bold;
-}
-dd {
-   margin-bottom: .5rem;
+   margin-top: 0;
 }
 hr {
    position: relative;

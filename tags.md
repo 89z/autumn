@@ -45,37 +45,21 @@ content/languages/go/index.md
 content/languages/c/index.md
 ~~~
 
-We dont have files for the first group, those are automatically generated.
-However we will have 2 sets of links:
+Also what about this:
 
 ~~~
-/autumn/tags
-/autumn/tags/go
+content/categories/input-output/index.md
 ~~~
 
-~~~
-/autumn/languages
-/autumn/languages/go
-/autumn/languages/c
-~~~
+Heres an idea:
 
-I dont like having two links for Go, or do I? The alternative is having Go links
-and Talk together, and that is worse. The last issue is, we need to be able to
-easily find all these. These are good, can just put links in the site header:
-
-~~~
-/autumn/tags
-/autumn/tags/go
-~~~
-
-but what about these?
-
-~~~
-/autumn/languages
-/autumn/languages/go
-/autumn/languages/c
-~~~
-
-## References
-
-<https://en.wikipedia.org/wiki/Sara_Del_Valle>
+What              | Link
+------------------|---------------
+List of languages | `/autumn/tags`
+List of Go pages  | `/autumn/tags/go`
+List of topics    | `/autumn/categories`
+List of IO pages  | `/autumn/categories/input-output`
+New language talk | `/autumn/tag`
+Go language talk  | `/autumn/tag/go`
+New topic talk    | `/autumn/category`
+IO topic talk     | `/autumn/cateogry/input-output`
