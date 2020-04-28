@@ -1,5 +1,5 @@
 ---
-title: Input output
+title: content/categories/input-output/talk
 ---
 
 - from resource handle, return string contents
