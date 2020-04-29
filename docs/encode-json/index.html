@@ -21,7 +21,7 @@
    </header>
 
 <h1>Encode JSON</h1>
-<time>Mon Apr 27 18:46:46 2020</time>
+<time>Wed Apr 29 12:16:58 2020</time>
 <a href="/autumn/categories/file-format">file-format</a>
    <h2 id="go">Go</h2>
 <p><a href="https://golang.org/pkg/encoding/json">https://golang.org/pkg/encoding/json</a></p>
@@ -38,6 +38,7 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;json&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;php-json&#39;</span>);
 $m1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;Mon&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">11</span>];
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">json_encode</span>($m1);
@@ -48,7 +49,6 @@ $m1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#
 <span style="color:#75715e"># print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1, $s2, $s3);
 </code></pre></div>
-<p>Requires <code>php-json</code> package.</p>
 <p><a href="https://php.net/function.json-encode">https://php.net/function.json-encode</a></p>
 <h2 id="python">Python</h2>
 <p><a href="https://docs.python.org/library/json.html">https://docs.python.org/library/json.html</a></p>

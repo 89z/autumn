@@ -29,50 +29,51 @@ content/web-server/talk/index.md
 
 ## Input output
 
-Keep the Talk page separate from the page of links. One of these:
+Normally we would put this here:
 
 ~~~
 content/categories/input-output/talk.md
-content/categories/input-output/talk/index.md
 ~~~
 
-With a category page, the filesystem is ignored, and only pages with that
-category are recognized. So all we need to do, is add that category to our Talk
-page. We could then put the file itself anywhere we want, but I still like the
-current location.
+However Hugo has a strange bug, where if you put too many files in a taxonomy
+folder, it converts to Kind section. This kills the normal use of that location,
+which is for links to pages with that taxonomy. So we much put talk pages
+somewhere else. It doesnt really matter where, so I chose this:
+
+~~~
+content/category/input-output/talk.md
+~~~
+
+Make sure to add front matter to the talk page:
+
+~~~
+title: 'Talk:Input output'
+categories: [input-output]
+~~~
 
 ## Type
 
-One of these:
-
 ~~~
-content/categories/type/talk.md
-content/categories/type/talk/index.md
-~~~
-
-## Languages
-
-One of these:
-
-~~~
-content/tags/talk.md
-content/tags/talk/index.md
-~~~
-
-## C
-
-One of these:
-
-~~~
-content/tags/c/talk.md
-content/tags/c/talk/index.md
+content/category/type/talk.md
 ~~~
 
 ## Go
 
-One of these:
+~~~
+content/tag/go/talk.md
+~~~
+
+## C
 
 ~~~
-content/tags/go/talk.md
-content/tags/go/talk/index.md
+content/tag/c/talk.md
+~~~
+
+## Languages
+
+Languages is not a tag, so it will not appear on any tag page. But it is a
+section, so it should appear in the page listing.
+
+~~~
+content/tag/talk.md
 ~~~

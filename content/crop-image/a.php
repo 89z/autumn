@@ -1,7 +1,8 @@
 <?php
+extension_loaded('gd') or die('php-gd');
 # files
-$s1 = 'p80eaiz8t0n41.jpg';
-$s2 = 'out.jpg';
+$s1 = 'a.jpg';
+$s2 = 'b.jpg';
 # rectangle
 $m1 = ['x' => 0, 'y' => 0, 'width' => 800, 'height' => 800];
 # images

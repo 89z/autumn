@@ -12,8 +12,6 @@ tags: [go, php]
 
 {{< r "a.php" >}}
 
-Some examples require `php-curl` package.
-
 <https://php.net/function.curl-setopt>
 
 ## References

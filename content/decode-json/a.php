@@ -1,4 +1,5 @@
 <?php
+extension_loaded('json') or die('php-json');
 $s1 = file_get_contents('a.json');
 # example 1
 $o1 = json_decode($s1);

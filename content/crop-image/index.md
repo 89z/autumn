@@ -16,7 +16,7 @@ tags: [go, php]
 
 {{< r "a.php" >}}
 
-Warning, this requires `php-gd` package, which pulls in 23 other packages.
+Warning, `php-gd` pulls in 23 other packages.
 
 <https://php.net/function.imagecrop>
 

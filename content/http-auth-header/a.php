@@ -1,4 +1,5 @@
 <?php
+extension_loaded('curl') or die('php-curl');
 $s1 = 'https://api.github.com/rate_limit';
 # example 1
 $s2 = getenv('USER');

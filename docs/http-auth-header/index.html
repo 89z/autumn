@@ -21,7 +21,7 @@
    </header>
 
 <h1>HTTP authorization header</h1>
-<time>Mon Apr 27 18:46:46 2020</time>
+<time>Wed Apr 29 12:16:58 2020</time>
 <a href="/autumn/categories/network">network</a>
    <h2 id="go">Go</h2>
 <p><a href="https://golang.org/pkg/net/http#Request.SetBasicAuth">https://golang.org/pkg/net/http#Request.SetBasicAuth</a></p>
@@ -31,6 +31,7 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;curl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;php-curl&#39;</span>);
 $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://api.github.com/rate_limit&#39;</span>;
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</span>(<span style="color:#e6db74">&#39;USER&#39;</span>);
@@ -45,7 +46,6 @@ $r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</
 <span style="color:#a6e22e">curl_setopt</span>($r2, <span style="color:#a6e22e">CURLOPT_NETRC</span>, <span style="color:#66d9ef">true</span>);
 <span style="color:#a6e22e">curl_exec</span>($r2);
 </code></pre></div>
-<p>Some examples require <code>php-curl</code> package.</p>
 <p><a href="https://php.net/function.curl-setopt">https://php.net/function.curl-setopt</a></p>
 <h2 id="references">References</h2>
 <ul>

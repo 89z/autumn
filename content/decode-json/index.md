@@ -36,8 +36,6 @@ JSON/parse` >}}
 
 {{< r "a.php" >}}
 
-Requires `php-json` package.
-
 <https://php.net/function.json-decode>
 
 ## Python

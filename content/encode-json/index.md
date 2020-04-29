@@ -25,8 +25,6 @@ JSON` >}}
 
 {{< r "a.php" >}}
 
-Requires `php-json` package.
-
 <https://php.net/function.json-encode>
 
 ## Python
