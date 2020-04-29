@@ -1,5 +1,6 @@
 ---
-title: Type
+title: 'Talk:Type'
+categories: [type]
 ---
 
 Letter | Type

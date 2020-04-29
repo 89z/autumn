@@ -24,7 +24,9 @@
       </nav>
    </header>
 {{ if ne (getenv "DEBUG") "" }}
+   {{ . }}
    {{ .Kind }}
+   {{ .Pages }}
 {{ end }}
 {{ block "main" . }}{{ end }}
 </body>
