@@ -3,15 +3,11 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{{ if .IsHome -}}
-   <title>Autumn</title>
-{{- else -}}
-   <title>{{ .Title }} &middot; Autumn</title>
-{{- end }}
+<title>Scala &middot; Autumn</title>
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/autumn.css">
 </head>
-<body class="{{ .Site.Params.themeColor }}">
+<body class="theme-base-08">
    <header>
       <h1>
          <a href="/autumn">Autumn</a>
@@ -23,12 +19,15 @@
          <a href="https://github.com/muv1/autumn">Repo</a>
       </nav>
    </header>
-{{ if ne (getenv "DEBUG") "" }}
-   {{ . }}
-   {{ .Kind }}
-   {{ .Pages }}
-   {{ .Type }}
-{{ end }}
-{{ block "main" . }}{{ end }}
+
+<h1>Scala</h1>
+<time>Wed Apr 29 06:26:29 2020</time>
+   <h2 id="issues">Issues</h2>
+<p>Windows support</p>
+<p><a href="https://github.com/scala-native/scala-native/issues/113">https://github.com/scala-native/scala-native/issues/113</a></p>
+<h2 id="setup">Setup</h2>
+<p><a href="https://scala-lang.org/download#download-binaries">https://scala-lang.org/download#download-binaries</a></p>
+
+
 </body>
 </html>

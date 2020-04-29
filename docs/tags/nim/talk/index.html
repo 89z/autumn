@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nim &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/categories">Categories</a>
+         <a href="/autumn/tags">Tags</a>
+         <a href="https://github.com/muv1/autumn">Repo</a>
+      </nav>
+   </header>
+
+<h1>Nim</h1>
+<time>Wed Apr 29 06:26:29 2020</time>
+   <h2 id="setup">Setup</h2>
+<ul>
+<li><a href="https://github.com/mstorsjo/llvm-mingw">https://github.com/mstorsjo/llvm-mingw</a></li>
+<li><a href="https://nim-lang.org/install_windows.html">https://nim-lang.org/install_windows.html</a></li>
+</ul>
+<h2 id="run">Run</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#75715e"># %APPDATA%\nim\config.nims</span>
+<span style="color:#f92672">import</span> os
+task run, <span style="color:#e6db74">&#34;run&#34;</span>:
+   setCommand(<span style="color:#e6db74">&#34;compile&#34;</span>)
+   switch(<span style="color:#e6db74">&#34;run&#34;</span>)
+   switch(<span style="color:#e6db74">&#34;outdir&#34;</span>, getTempDir())
+</code></pre></div><ul>
+<li><a href="https://nim-lang.github.io/Nim/nims.html">https://nim-lang.github.io/Nim/nims.html</a></li>
+<li><a href="https://nim-lang.org/docs/nimscript.html#nimcacheDir">https://nim-lang.org/docs/nimscript.html#nimcacheDir</a></li>
+</ul>
+
+
+</body>
+</html>

@@ -3,15 +3,11 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{{ if .IsHome -}}
-   <title>Autumn</title>
-{{- else -}}
-   <title>{{ .Title }} &middot; Autumn</title>
-{{- end }}
+<title>Swift &middot; Autumn</title>
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/autumn.css">
 </head>
-<body class="{{ .Site.Params.themeColor }}">
+<body class="theme-base-08">
    <header>
       <h1>
          <a href="/autumn">Autumn</a>
@@ -23,12 +19,16 @@
          <a href="https://github.com/muv1/autumn">Repo</a>
       </nav>
    </header>
-{{ if ne (getenv "DEBUG") "" }}
-   {{ . }}
-   {{ .Kind }}
-   {{ .Pages }}
-   {{ .Type }}
-{{ end }}
-{{ block "main" . }}{{ end }}
+
+<h1>Swift</h1>
+<time>Wed Apr 29 06:26:29 2020</time>
+   <h2 id="issues">Issues</h2>
+<p>Windows builds are broken</p>
+<ul>
+<li><a href="https://github.com/compnerd/swift-win32/issues/12">https://github.com/compnerd/swift-win32/issues/12</a></li>
+<li><a href="https://google.com/search?tbs=qdr:m&amp;q=swift+windows">https://google.com/search?tbs=qdr:m&amp;q=swift+windows</a></li>
+</ul>
+
+
 </body>
 </html>

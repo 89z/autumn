@@ -3,15 +3,11 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{{ if .IsHome -}}
-   <title>Autumn</title>
-{{- else -}}
-   <title>{{ .Title }} &middot; Autumn</title>
-{{- end }}
+<title>Go &middot; Autumn</title>
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/autumn.css">
 </head>
-<body class="{{ .Site.Params.themeColor }}">
+<body class="theme-base-08">
    <header>
       <h1>
          <a href="/autumn">Autumn</a>
@@ -23,12 +19,19 @@
          <a href="https://github.com/muv1/autumn">Repo</a>
       </nav>
    </header>
-{{ if ne (getenv "DEBUG") "" }}
-   {{ . }}
-   {{ .Kind }}
-   {{ .Pages }}
-   {{ .Type }}
-{{ end }}
-{{ block "main" . }}{{ end }}
+
+<h1>Go</h1>
+<time>Wed Apr 29 06:26:29 2020</time>
+   <h2 id="downloads">Downloads</h2>
+<ul>
+<li><a href="https://github.com/tinygo-org/tinygo">https://github.com/tinygo-org/tinygo</a></li>
+<li><a href="https://golang.org/dl">https://golang.org/dl</a></li>
+</ul>
+<h2 id="gopath">GOPATH</h2>
+<pre><code>go env -w GOPATH=C:/Path/go
+go env GOPATH
+</code></pre><p><a href="https://github.com/golang/go/wiki/SettingGOPATH">https://github.com/golang/go/wiki/SettingGOPATH</a></p>
+
+
 </body>
 </html>

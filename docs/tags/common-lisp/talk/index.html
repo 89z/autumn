@@ -3,15 +3,11 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{{ if .IsHome -}}
-   <title>Autumn</title>
-{{- else -}}
-   <title>{{ .Title }} &middot; Autumn</title>
-{{- end }}
+<title>Common Lisp &middot; Autumn</title>
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/autumn.css">
 </head>
-<body class="{{ .Site.Params.themeColor }}">
+<body class="theme-base-08">
    <header>
       <h1>
          <a href="/autumn">Autumn</a>
@@ -23,12 +19,15 @@
          <a href="https://github.com/muv1/autumn">Repo</a>
       </nav>
    </header>
-{{ if ne (getenv "DEBUG") "" }}
-   {{ . }}
-   {{ .Kind }}
-   {{ .Pages }}
-   {{ .Type }}
-{{ end }}
-{{ block "main" . }}{{ end }}
+
+<h1>Common Lisp</h1>
+<time>Wed Apr 29 06:26:29 2020</time>
+   <ul>
+<li><a href="https://ccl.clozure.com/download.html">https://ccl.clozure.com/download.html</a></li>
+<li><a href="https://github.com/portacle/portacle">https://github.com/portacle/portacle</a></li>
+<li><a href="https://sourceforge.net/projects/sbcl">https://sourceforge.net/projects/sbcl</a></li>
+</ul>
+
+
 </body>
 </html>

@@ -50,13 +50,13 @@ content/categories/type/talk.md
 content/categories/type/talk/index.md
 ~~~
 
-## Go
+## Languages
 
 One of these:
 
 ~~~
-content/tags/go/talk.md
-content/tags/go/talk/index.md
+content/tags/talk.md
+content/tags/talk/index.md
 ~~~
 
 ## C
@@ -68,4 +68,11 @@ content/tags/c/talk.md
 content/tags/c/talk/index.md
 ~~~
 
-## Languages
+## Go
+
+One of these:
+
+~~~
+content/tags/go/talk.md
+content/tags/go/talk/index.md
+~~~
