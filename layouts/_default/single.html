@@ -1,8 +1,8 @@
 {{ define "main" -}}
 <h1>{{ .Title }}</h1>
 <time>{{ .Lastmod.Format "Mon Jan 2 15:04:05 2006" }}</time>
-   {{- range .Params.categories }}
-<a href="/autumn/categories/{{ . }}">{{ . }}</a>
-   {{- end }}
+   {{ range (.GetTerms "categories") }}
+<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+   {{ end }}
    {{ .Content }}
 {{ end }}

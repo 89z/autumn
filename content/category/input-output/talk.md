@@ -1,6 +1,5 @@
 ---
 title: 'Talk:Input output'
-categories: [input-output]
 ---
 
 - from resource handle, return string contents
