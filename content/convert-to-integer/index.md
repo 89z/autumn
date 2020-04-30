@@ -22,11 +22,14 @@ tags: [go, javascript, php, python]
 
 ## PHP
 
-{{< r "a.php" >}}
+{{< r "num.php" >}}
 
 - <https://php.net/function.intval>
-- <https://php.net/language.operators.arithmetic>
 - <https://php.net/language.types.type-juggling>
+
+{{< r "str.php" >}}
+
+<https://php.net/language.operators.arithmetic>
 
 ## Python
 

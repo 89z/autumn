@@ -1,6 +1,7 @@
 package main
 import "time"
 func main() {
-   n1 := time.Now().Unix()
+   o1 := time.Now()
+   n1 := o1.Unix()
    println(n1)
 }
