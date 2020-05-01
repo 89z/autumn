@@ -13,8 +13,6 @@ tags: [go, javascript, php, python]
 {{< r "a.js" >}}
 
 - {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/Math/round` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
    Operators/Arithmetic_Operators#Division` >}}
 - {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
    Operators/Arithmetic_Operators#Remainder` >}}
@@ -24,15 +22,13 @@ tags: [go, javascript, php, python]
 {{< r "a.php" >}}
 
 - <https://php.net/function.intdiv>
-- <https://php.net/function.round>
 - <https://php.net/operators.arithmetic>
 
 ## Python
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/library/functions.html#round>
-- <https://docs.python.org/reference/expressions.html#binary>
+<https://docs.python.org/reference/expressions.html#binary>
 
 ## References
 

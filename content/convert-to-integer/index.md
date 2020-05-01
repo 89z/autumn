@@ -22,7 +22,10 @@ tags: [go, javascript, php, python]
 
 {{< r "num.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Math/floor>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Math/ceil>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Math/floor>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Math/round>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Math/trunc>
 
 {{< r "str.js" >}}
 

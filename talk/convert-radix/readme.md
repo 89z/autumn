@@ -12,3 +12,5 @@ _
 ~~~
 
 which is 65 characters. Omit the `.` and that is 64.
+
+<https://codegolf.stackexchange.com/questions/536>
