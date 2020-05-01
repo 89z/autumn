@@ -6,19 +6,30 @@ tags: [go, javascript, php, python]
 
 ## Go
 
-{{< r "a.go" >}}
+{{< r "fmt.go" >}}
 
-- <https://golang.org/pkg/fmt#Sscan>
-- <https://golang.org/pkg/strconv#ParseInt>
-- <https://golang.org/ref/spec#Conversions>
+<https://golang.org/pkg/fmt#Sscan>
+
+{{< r "strconv.go" >}}
+
+<https://golang.org/pkg/strconv#ParseInt>
+
+{{< r "spec.go" >}}
+
+<https://golang.org/ref/spec#Conversions>
 
 ## JavaScript
 
-{{< r "a.js" >}}
+{{< r "num.js" >}}
 
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/parseInt` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators` >}}
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Math/floor>
+
+{{< r "str.js" >}}
+
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/parseInt>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/parseInt>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators>
 
 ## PHP
 
