@@ -3,7 +3,7 @@ function f1(ni, nr) {
    let s2 = '';
    while (ni > 0) {
       s2 = s1[ni % nr] + s2;
-      ni = Math.floor(ni / nr);
+      ni = Math.trunc(ni / nr);
    }
    return s2;
 }

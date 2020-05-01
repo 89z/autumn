@@ -6,10 +6,13 @@ tags: [go, javascript, php, python]
 
 ## Go
 
-{{< r "a.go" >}}
+{{< r "len.go" >}}
 
-- <https://golang.org/pkg/unicode/utf8#RuneCountInString>
-- <https://golang.org/ref/spec#Length_and_capacity>
+<https://golang.org/ref/spec#Length_and_capacity>
+
+{{< r "uni.go" >}}
+
+<https://golang.org/pkg/unicode/utf8#RuneCountInString>
 
 ## JavaScript
 

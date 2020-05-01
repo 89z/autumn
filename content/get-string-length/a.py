@@ -1,8 +1,8 @@
 s1 = '♠'
-# characters
+# example 1
 n1 = len(s1)
-# bytes
-a1 = s1.encode()
-n2 = len(a1)
-# test
-print(n1, n2)
+# example 2
+y1 = s1.encode()
+n2 = len(y1)
+# print
+print(n1 == 1, n2 == 3)

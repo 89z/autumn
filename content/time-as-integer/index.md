@@ -1,5 +1,5 @@
 ---
-title: Time as a number
+title: Time as an integer
 categories: [time, number]
 tags: [go, javascript, php, python]
 ---
@@ -12,9 +12,14 @@ tags: [go, javascript, php, python]
 
 ## JavaScript
 
-{{< r "a.js" >}}
+{{< r "now.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/now>
+
+{{< r "date.js" >}}
+
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/getTime>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/valueof>
 
 ## PHP
 
