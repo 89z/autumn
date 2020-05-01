@@ -9,3 +9,8 @@ while ($n1 < 20) {
    var_dump($n1);
    $n1++;
 }
+# example 3
+$a1 = range(10, 19);
+foreach ($a1 as $n1) {
+   var_dump($n1);
+}

@@ -23,10 +23,14 @@ tags: [go, javascript, php, python]
 
 ## PHP
 
-{{< r "a.php" >}}
+{{< r "std.php" >}}
 
 - <https://php.net/function.substr>
 - <https://php.net/language.types.string>
+
+{{< r "mb.php" >}}
+
+<https://php.net/function.mb-substr>
 
 ## Python
 

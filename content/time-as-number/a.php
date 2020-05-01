@@ -1,7 +1,8 @@
 <?php
-# 1588286107
+# example 1
 $n1 = time();
-# 1588286107.8381
+# example 2
 $n2 = microtime(true);
+$n3 = (int)($n1);
 # print
-var_dump($n1, $n2, $n3);
+var_dump($n1, $n3);

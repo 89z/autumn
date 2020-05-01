@@ -23,6 +23,7 @@ tags: [go, javascript, php, python]
 
 - <https://php.net/control-structures.for>
 - <https://php.net/control-structures.while>
+- <https://php.net/function.range>
 
 ## Python
 
