@@ -12,10 +12,14 @@ tags: [go, javascript, julia, nim, php, python]
 
 ## JavaScript
 
-{{< r "a.js" >}}
+{{< r "bracket.js" >}}
+{{< r "dot.js" >}}
 
-{{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Operators/
-Property_Accessors` >}}
+<https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Property_Accessors>
+
+{{< r "map.js" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Map/set>
 
 ## Julia
 

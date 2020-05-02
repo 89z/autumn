@@ -21,9 +21,9 @@
    </header>
 
 <h1>Condition-first loops</h1>
-<time>Thu Apr 30 19:19:49 2020</time>
+<time>Fri May 1 21:06:20 2020</time>
    
-<a href="/autumn/categories/condition/">condition</a>
+<a href="/autumn/categories/none/">none</a>
    
    <h2 id="go">Go</h2>
 
@@ -86,6 +86,15 @@
 <span style="color:#66d9ef">foreach</span> ($a1 <span style="color:#66d9ef">as</span> $n1) {
    <span style="color:#a6e22e">var_dump</span>($n1);
 }
+<span style="color:#75715e"># example 4
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f1</span>($n1) {
+   <span style="color:#66d9ef">if</span> ($n1 <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">19</span>) {
+      <span style="color:#66d9ef">return</span>;
+   }
+   <span style="color:#a6e22e">var_dump</span>($n1);
+   <span style="color:#a6e22e">f1</span>($n1 <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+}
+<span style="color:#a6e22e">f1</span>(<span style="color:#ae81ff">10</span>);
 </code></pre></div>
 <ul>
 <li><a href="https://php.net/control-structures.for">https://php.net/control-structures.for</a></li>
@@ -97,10 +106,18 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py">n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#75715e"># example 1</span>
+n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
 <span style="color:#66d9ef">while</span> n1 <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span>:
    <span style="color:#66d9ef">print</span>(n1)
    n1 <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+<span style="color:#75715e"># example 2</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f1</span>(n1):
+   <span style="color:#66d9ef">if</span> n1 <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">19</span>:
+      <span style="color:#66d9ef">return</span>
+   <span style="color:#66d9ef">print</span>(n1)
+   f1(n1 <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+f1(<span style="color:#ae81ff">10</span>)
 </code></pre></div>
 <p>Exclude <code>range</code> as it is ambiguous.</p>
 <p><a href="https://docs.python.org/reference/compound_stmts.html#while">https://docs.python.org/reference/compound_stmts.html#while</a></p>

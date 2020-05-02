@@ -1,6 +1,6 @@
 ---
 title: Block-first loops
-categories: [condition]
+categories: [none]
 tags: [go, javascript, php, python]
 ---
 

@@ -23,3 +23,12 @@ for (;;) {
    }
    $n3++;
 }
+# example 4
+function f1($n1) {
+   var_dump($n1);
+   if ($n1 >= 19) {
+      return;
+   }
+   f1($n1 + 1);
+}
+f1(10);

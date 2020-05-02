@@ -1,6 +1,6 @@
 ---
 title: Decode XZ
-categories: [file-format]
+categories: [none]
 tags: [go, php, python]
 ---
 

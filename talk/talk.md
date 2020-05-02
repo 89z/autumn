@@ -18,18 +18,6 @@ content/categories/type/talk.md
 content/tags/go/talk.md
 ~~~
 
-## C
-
-~~~
-content/tags/c/talk.md
-~~~
-
-## Languages
-
-~~~
-content/tags/talk.md
-~~~
-
 ## Web server
 
 ~~~
@@ -46,4 +34,16 @@ content/convert-to-integer/talk.md
 
 ~~~
 content/two-way-conditions/talk.md
+~~~
+
+## C
+
+~~~
+content/tags/c/talk.md
+~~~
+
+## Languages
+
+~~~
+content/tags/talk.md
 ~~~

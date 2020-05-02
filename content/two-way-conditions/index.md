@@ -1,6 +1,6 @@
 ---
 title: Two-way conditions
-categories: [condition]
+categories: [none]
 tags: [go, javascript, julia, nim, php, python]
 ---
 

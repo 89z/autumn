@@ -29,6 +29,8 @@ tags: [go, javascript, julia, nim, php, python]
 
 {{< r "a.nim" >}}
 
+<https://nim-lang.github.io/Nim/system.html#add,seq[T],T>
+
 ## PHP
 
 {{< r "a.php" >}}

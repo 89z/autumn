@@ -1,3 +1,3 @@
-var a1 = @["Sun", "Mon"]
-a1.add("Tue")
+var a1 = @["Sun"]
+a1.add("Mon")
 echo a1

@@ -1,6 +1,6 @@
 ---
 title: Logical operators
-categories: [condition]
+categories: [none]
 tags: [go, javascript, php, python]
 ---
 
