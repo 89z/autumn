@@ -1,6 +1,6 @@
 ---
 title: Set types
-categories: [set, type]
+categories: [set]
 tags: [go, javascript, julia, nim, php, python]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Decode CSV
-categories: [none]
+categories: [file-format]
 tags: [go, javascript, php, python]
 ---
 

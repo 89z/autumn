@@ -1,6 +1,6 @@
 ---
 title: String types
-categories: [string, type]
+categories: [string]
 tags: [d, go, javascript, julia, nim, php, python]
 ---
 

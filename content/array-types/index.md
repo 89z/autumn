@@ -1,6 +1,6 @@
 ---
 title: Array types
-categories: [array, type]
+categories: [array]
 tags: [go, javascript, julia, nim, php, python]
 ---
 

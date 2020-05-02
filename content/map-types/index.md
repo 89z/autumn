@@ -1,6 +1,6 @@
 ---
 title: Map types
-categories: [map, type]
+categories: [map]
 tags: [go, javascript, julia, nim, php, python]
 ---
 

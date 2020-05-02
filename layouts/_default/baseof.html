@@ -24,10 +24,18 @@
       </nav>
    </header>
 {{ if ne (getenv "DEBUG") "" }}
-   {{ . }}
-   {{ .Kind }}
-   {{ .Pages }}
-   {{ .Type }}
+<dl>
+   <dt>.</dt>
+   <dd>{{ . }}</dd>
+   <dt>.Kind</dt>
+   <dd>{{ .Kind }}</dd>
+   <dt>.GetPage</dt>
+   <dd>{{ .GetPage "talk" }}</dd>
+   <dt>.Pages</dt>
+{{ range .Pages }}
+   <dd>{{ . }}</dd>
+{{ end }}
+</dl>
 {{ end }}
 {{ block "main" . }}{{ end }}
 </body>

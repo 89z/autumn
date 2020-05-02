@@ -1,5 +1,5 @@
 ---
-title: Declare
+title: Declare value
 categories: [reference]
 tags: [d, go, javascript, julia, nim]
 ---

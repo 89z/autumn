@@ -4,6 +4,9 @@
    {{ range (.GetTerms "categories") }}
 <a href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
+   {{ with (.GetPage "talk") }}
+<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+   {{ end }}
 <ul>
    {{ range .Pages }}
    <li>

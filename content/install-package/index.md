@@ -1,6 +1,6 @@
 ---
 title: Install package
-categories: [reference]
+categories: [command]
 tags: [go, julia, nim, php, python]
 ---
 
@@ -19,13 +19,6 @@ tags: [go, julia, nim, php, python]
 {{< r "nim.sh" >}}
 
 <https://github.com/nim-lang/nimble>
-
-## Python
-
-{{< r "python.sh" >}}
-
-- <https://docs.python.org/library/ensurepip.html>
-- <https://pip.pypa.io/en/stable/reference/pip>
 
 ## References
 

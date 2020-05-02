@@ -1,6 +1,6 @@
 ---
 title: Invoke a file
-categories: [reference]
+categories: [command]
 tags: [d, go, julia, nim, php, python]
 ---
 

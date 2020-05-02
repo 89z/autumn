@@ -1,6 +1,6 @@
 ---
 title: Encode JSON
-categories: [none]
+categories: [file-format]
 tags: [go, javascript, julia, nim, php, python]
 ---
 

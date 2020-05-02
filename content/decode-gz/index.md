@@ -1,6 +1,6 @@
 ---
 title: Decode Gzip
-categories: [none]
+categories: [file-format]
 tags: [go, php]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Object types
-categories: [object, type]
+categories: [object]
 tags: [go, javascript, php, python]
 ---
 

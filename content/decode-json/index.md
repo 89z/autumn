@@ -1,6 +1,6 @@
 ---
 title: Decode JSON
-categories: [none]
+categories: [file-format]
 tags: [d, go, javascript, julia, nim, php, python]
 ---
 

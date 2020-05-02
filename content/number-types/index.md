@@ -1,6 +1,6 @@
 ---
 title: Number types
-categories: [number, type]
+categories: [number]
 tags: [d, go, javascript, julia, nim, php, python]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Function types
-categories: [function, type]
+categories: [function]
 tags: [d, go, javascript, julia, nim, php, python]
 ---
 

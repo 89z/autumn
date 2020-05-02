@@ -1,6 +1,6 @@
 ---
 title: Boolean types
-categories: [type]
+categories: [reference]
 tags: [d, go, javascript, julia, php, python]
 ---
 
