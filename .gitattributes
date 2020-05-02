@@ -2,4 +2,4 @@
 *.html linguist-vendored
 *.js linguist-vendored
 *.sh linguist-vendored
-talk/**/* linguist-vendored
+draft-langs/**/* linguist-vendored
