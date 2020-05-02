@@ -1,7 +1,7 @@
 ---
 title: Map an array
-categories: [array]
-tags: [go, javascript, php, python]
+topics: [array]
+langs: [go, javascript, php, python]
 ---
 
 ## Go

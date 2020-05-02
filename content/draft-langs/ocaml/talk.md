@@ -1,5 +1,5 @@
 ---
-title: OCaml
+title: 'Talk:OCaml'
 ---
 
 ## Issues

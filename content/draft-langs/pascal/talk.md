@@ -1,5 +1,5 @@
 ---
-title: Pascal
+title: 'Talk:Pascal'
 ---
 
 ## Free Pascal

@@ -1,7 +1,7 @@
 ---
 title: Logical operators
-categories: [reference]
-tags: [go, javascript, php, python]
+topics: [reference]
+langs: [go, javascript, php, python]
 ---
 
 ## Go

@@ -1,7 +1,7 @@
 ---
 title: Add to array
-categories: [array]
-tags: [go, javascript, julia, nim, php, python]
+topics: [array]
+langs: [go, javascript, julia, nim, php, python]
 ---
 
 ## Go

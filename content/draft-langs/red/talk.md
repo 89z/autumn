@@ -1,5 +1,5 @@
 ---
-title: Red
+title: 'Talk:Red'
 ---
 
 Shared is slow on first compile, but then fast:

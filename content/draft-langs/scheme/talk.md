@@ -1,5 +1,5 @@
 ---
-title: Scheme
+title: 'Talk:Scheme'
 ---
 
 <https://ecraven.github.io/r7rs-benchmarks>

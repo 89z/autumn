@@ -1,7 +1,7 @@
 ---
 title: Convert to integer
-categories: [number]
-tags: [go, javascript, php, python]
+topics: [number]
+langs: [go, javascript, php, python]
 ---
 
 ## Go

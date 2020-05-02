@@ -1,5 +1,5 @@
 ---
-title: Lua
+title: 'Talk:Lua'
 ---
 
 ## Issues

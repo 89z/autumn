@@ -1,5 +1,5 @@
 ---
-title: C++
+title: 'Talk:C++'
 ---
 
 Regarding booleans, it is not ideal that numbers are printed by default:

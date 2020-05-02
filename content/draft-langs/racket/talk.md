@@ -1,7 +1,5 @@
 ---
-title: Racket
+title: 'Talk:Racket'
 ---
-
-## Setup
 
 <https://download.racket-lang.org/releases>

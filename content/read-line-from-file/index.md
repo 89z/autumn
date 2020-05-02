@@ -1,7 +1,7 @@
 ---
 title: Read line from file
-categories: [input-output]
-tags: [d, go, julia, nim, php, python]
+topics: [input-output]
+langs: [d, go, julia, nim, php, python]
 ---
 
 ## D

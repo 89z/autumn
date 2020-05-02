@@ -1,7 +1,7 @@
 ---
 title: Divide a number
-categories: [number]
-tags: [go, javascript, php, python]
+topics: [number]
+langs: [go, javascript, php, python]
 ---
 
 ## Go

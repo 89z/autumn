@@ -1,6 +1,5 @@
 ---
 title: 'Talk:C'
-tags: [c]
 ---
 
 ## C

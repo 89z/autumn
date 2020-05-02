@@ -1,7 +1,7 @@
 ---
 title: HTTP request timeout
-categories: [network]
-tags: [php, python]
+topics: [network]
+langs: [php, python]
 ---
 
 ## PHP

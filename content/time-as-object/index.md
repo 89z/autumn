@@ -1,7 +1,7 @@
 ---
 title: Time as an object
-categories: [time]
-tags: [d, go, javascript, php, python]
+topics: [time]
+langs: [d, go, javascript, php, python]
 ---
 
 ## D

@@ -1,7 +1,7 @@
 ---
 title: Time as an integer
-categories: [time, number]
-tags: [go, javascript, php, python]
+topics: [time, number]
+langs: [go, javascript, php, python]
 ---
 
 ## Go

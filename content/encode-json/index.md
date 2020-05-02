@@ -1,7 +1,7 @@
 ---
 title: Encode JSON
-categories: [file-format]
-tags: [go, javascript, julia, nim, php, python]
+topics: [file-format]
+langs: [go, javascript, julia, nim, php, python]
 ---
 
 ## Go

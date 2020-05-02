@@ -1,7 +1,7 @@
 ---
 title: Slice an array
-categories: [array]
-tags: [d, go, javascript, julia, nim, php, python]
+topics: [array]
+langs: [d, go, javascript, julia, nim, php, python]
 ---
 
 ## D

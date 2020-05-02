@@ -1,5 +1,5 @@
 ---
-title: Scala
+title: 'Talk:Scala'
 ---
 
 ## Issues

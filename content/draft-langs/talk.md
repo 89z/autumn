@@ -1,5 +1,7 @@
 ---
-title: 'Talk:Tags'
+title: 'Talk:Draft languages'
+_build:
+   list: never
 ---
 
 We can use this page to just compile problems with other languages. Avoid

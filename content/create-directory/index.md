@@ -1,7 +1,7 @@
 ---
 title: Create directory
-categories: [system]
-tags: [go, julia, nim, php, python]
+topics: [system]
+langs: [go, julia, nim, php, python]
 ---
 
 ## Go

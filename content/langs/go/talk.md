@@ -1,6 +1,6 @@
 ---
 title: 'Talk:Go'
-tags: [go]
+langs: [go]
 ---
 
 ## Downloads

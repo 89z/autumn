@@ -1,7 +1,7 @@
 ---
 title: Import package
-categories: [reference]
-tags: [d, go, julia, nim, python]
+topics: [reference]
+langs: [d, go, julia, nim, python]
 ---
 
 ## D

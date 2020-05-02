@@ -1,7 +1,7 @@
 ---
 title: Read entire process
-categories: [input-output]
-tags: [go, julia, nim, php, python]
+topics: [input-output]
+langs: [go, julia, nim, php, python]
 ---
 
 ## Go

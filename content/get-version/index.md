@@ -1,7 +1,7 @@
 ---
 title: Get version
-categories: [system]
-tags: [d, go, julia, nim, php, python]
+topics: [system]
+langs: [d, go, julia, nim, php, python]
 ---
 
 ## D

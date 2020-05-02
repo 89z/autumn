@@ -1,7 +1,7 @@
 ---
 title: String types
-categories: [string]
-tags: [d, go, javascript, julia, nim, php, python]
+topics: [string]
+langs: [d, go, javascript, julia, nim, php, python]
 ---
 
 ## D

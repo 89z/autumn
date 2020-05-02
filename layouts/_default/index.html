@@ -8,8 +8,8 @@
          </h2>
          <time>{{ .Lastmod.Format "Mon Jan 2 15:04:05 2006" }}</time>
          <nav>
-      {{ range .Params.categories }}
-            <a href="/autumn/categories/{{ . }}">{{ . }}</a>
+      {{ range (.GetTerms "topics") }}
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}
          </nav>
       </section>

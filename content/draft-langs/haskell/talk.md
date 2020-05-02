@@ -1,5 +1,5 @@
 ---
-title: Haskell
+title: 'Talk:Haskell'
 ---
 
 ## Issues

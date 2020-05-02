@@ -1,7 +1,7 @@
 ---
 title: Map types
-categories: [map]
-tags: [go, javascript, julia, nim, php, python]
+topics: [map]
+langs: [go, javascript, julia, nim, php, python]
 ---
 
 ## Go

@@ -1,7 +1,7 @@
 ---
 title: Install package
-categories: [command]
-tags: [go, julia, nim, php, python]
+topics: [command]
+langs: [go, julia, nim, php, python]
 ---
 
 ## Go

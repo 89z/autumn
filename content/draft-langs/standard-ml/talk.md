@@ -1,5 +1,5 @@
 ---
-title: Standard ML
+title: 'Talk:Standard ML'
 ---
 
 ## CakeML

@@ -1,7 +1,7 @@
 ---
 title: Directory contains entry
-categories: [system]
-tags: [go, php, python]
+topics: [system]
+langs: [go, php, python]
 ---
 
 ## Go

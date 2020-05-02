@@ -1,5 +1,5 @@
 ---
-title: Rust
+title: 'Talk:Rust'
 ---
 
 ## Algebraic data type

@@ -1,5 +1,5 @@
 ---
-title: Ruby
+title: 'Talk:Ruby'
 ---
 
 ## Issues

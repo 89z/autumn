@@ -14,5 +14,7 @@ markup:
 params:
    themeColor: theme-base-08
 publishDir: docs
-pygmentsCodefences: true
+taxonomies:
+   topic: topics
+   lang: langs
 title: Autumn

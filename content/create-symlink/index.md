@@ -1,7 +1,7 @@
 ---
 title: Create symlink
-categories: [system]
-tags: [go, julia, php, python]
+topics: [system]
+langs: [go, julia, php, python]
 ---
 
 ## Go

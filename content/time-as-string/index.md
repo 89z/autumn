@@ -1,7 +1,7 @@
 ---
 title: Time as a string
-categories: [time]
-tags: [go, javascript, php, python]
+topics: [time]
+langs: [go, javascript, php, python]
 ---
 
 ## Go

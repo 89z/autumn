@@ -1,5 +1,5 @@
 ---
-title: Zig
+title: 'Talk:Zig'
 ---
 
 ## HTTP client

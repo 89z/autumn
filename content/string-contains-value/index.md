@@ -1,7 +1,7 @@
 ---
 title: String contains value
-categories: [string]
-tags: [go, javascript, julia, nim, php, python]
+topics: [string]
+langs: [go, javascript, julia, nim, php, python]
 ---
 
 ## Go

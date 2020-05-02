@@ -1,22 +1,15 @@
 ---
-title: Dart
+title: 'Talk:Dart'
 ---
 
 Dart can print a string:
 
-~~~dart
-main() {
-   print('Sunday'); // Sunday
-}
-~~~
+{{< r "a.dart" >}}
 
 but it seems to have no way to print a string representation. Other languages
 can do this, like Python:
 
-~~~py
-s1 = repr('Sunday')
-print(s1) # 'Sunday'
-~~~
+{{< r "a.py" >}}
 
 <https://github.com/dart-lang/sdk>
 

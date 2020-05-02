@@ -1,7 +1,7 @@
 ---
 title: Declare value
-categories: [reference]
-tags: [d, go, javascript, julia, nim]
+topics: [reference]
+langs: [d, go, javascript, julia, nim]
 ---
 
 ## D

@@ -1,8 +1,6 @@
 ---
-title: Swift
+title: 'Talk:Swift'
 ---
-
-## Issues
 
 Windows builds are broken
 

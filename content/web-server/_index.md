@@ -1,7 +1,7 @@
 ---
 title: Web server
-categories: [network]
-tags: [go, php, python]
+topics: [network]
+langs: [go, php, python]
 ---
 
 ## Go

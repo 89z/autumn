@@ -1,5 +1,5 @@
 ---
-title: Pony
+title: 'Talk:Pony'
 ---
 
 Support GCC on windows

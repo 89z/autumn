@@ -1,5 +1,5 @@
 ---
-title: Clojure
+title: 'Talk:Clojure'
 ---
 
 Install Java first.

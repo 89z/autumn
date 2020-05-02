@@ -1,5 +1,5 @@
 ---
-title: Perl
+title: 'Talk:Perl'
 ---
 
 ## Issues

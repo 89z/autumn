@@ -1,7 +1,7 @@
 ---
 title: Get directory name
-categories: [string]
-tags: [go, julia, php, python]
+topics: [string]
+langs: [go, julia, php, python]
 ---
 
 ## Go

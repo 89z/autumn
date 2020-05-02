@@ -1,5 +1,5 @@
 ---
-title: Vala
+title: 'Talk:Vala'
 ---
 
 MSYS2 version is available, native Windows version missing:

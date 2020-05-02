@@ -1,5 +1,5 @@
 ---
-title: Crystal
+title: 'Talk:Crystal'
 ---
 
 ## Issues
