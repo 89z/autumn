@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tag talk:D &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/categories">Categories</a>
+         <a href="/autumn/tags">Tags</a>
+         <a href="https://github.com/muv1/autumn">Repo</a>
+      </nav>
+   </header>
+
+<h1>Tag talk:D</h1>
+<time>Sat May 2 20:05:34 2020</time>
+   
+   
+   <h2 id="build-tools-for-visual-studio">Build Tools for Visual Studio</h2>
+<p>First go here:</p>
+<p><a href="https://visualstudio.microsoft.com/downloads">https://visualstudio.microsoft.com/downloads</a></p>
+<p>Click <strong>Tools for Visual Studio</strong>. Then under <strong>Build Tools for Visual Studio</strong>,
+click <strong>Download</strong>. Then run the following command. Prefer Command Prompt over
+other shells as this will take a while. Warning, this takes about 45 minutes,
+and size is around 22.1 GB:</p>
+<pre><code>vs_BuildTools --lang en-us --layout out
+</code></pre><p>Extract:</p>
+<pre><code>lessmsi x netfx_NETCoreUWP.msi
+</code></pre><p>First find the files:</p>
+<pre><code>fd msi -t f
+</code></pre><p>Need to specify files, as some directories are named MSI as well:</p>
+<pre><code>Microsoft.VisualC.140.EspC.Msi,version=14.0.24245
+</code></pre><h2 id="issues">Issues</h2>
+<p>MinGW:</p>
+<p><a href="https://github.com/ldc-developers/ldc/issues/3385">https://github.com/ldc-developers/ldc/issues/3385</a></p>
+<p>Small build tools:</p>
+<p><a href="https://github.com/microsoft/msbuild/issues/5197">https://github.com/microsoft/msbuild/issues/5197</a></p>
+<h2 id="setup">Setup</h2>
+<p><a href="https://dlang.org/download.html">https://dlang.org/download.html</a></p>
+
+
+</body>
+</html>

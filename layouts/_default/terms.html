@@ -6,9 +6,7 @@
 <table>
    {{ range .Data.Terms }}
    <tr>
-      <td>
-         <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
-      </td>
+      <td><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></td>
       <td>{{ .Count }}</td>
    </tr>
    {{ end }}

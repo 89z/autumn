@@ -1,5 +1,5 @@
 ---
-title: 'Talk:Input output'
+title: 'Category talk:Input output'
 ---
 
 - from resource handle, return string contents

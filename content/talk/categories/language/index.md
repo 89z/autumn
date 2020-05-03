@@ -1,5 +1,5 @@
 ---
-title: 'Talk:Language'
+title: 'Category talk:Language'
 ---
 
 We can use this page to just compile problems with other languages. Avoid

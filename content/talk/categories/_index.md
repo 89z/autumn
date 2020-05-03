@@ -1,5 +1,5 @@
 ---
-title: 'Talk:Categories'
+title: 'Category talk'
 ---
 
 Letter | Type
