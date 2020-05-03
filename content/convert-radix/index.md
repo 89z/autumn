@@ -8,8 +8,6 @@ tags: [javascript, php, python]
 
 {{< r "a.js" >}}
 
-<https://github.com/extemporalgenome/radix64>
-
 ## PHP
 
 {{< r "a.php" >}}
@@ -22,5 +20,4 @@ tags: [javascript, php, python]
 
 ## References
 
-- <https://codegolf.stackexchange.com/questions/536>
-- <https://tools.ietf.org/html/rfc4648#section-5>
+<https://tools.ietf.org/html/rfc4648#section-5>

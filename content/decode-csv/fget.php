@@ -7,5 +7,6 @@ while (true) {
       break;
    }
    $m_row = array_combine($a_head, $a_row);
-   echo $m_row['city'], "\n";
+   $s_city = $m_row['city'];
+   var_dump($s_city);
 }

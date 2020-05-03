@@ -75,7 +75,8 @@ $a_head <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgetcsv
       <span style="color:#66d9ef">break</span>;
    }
    $m_row <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_combine</span>($a_head, $a_row);
-   <span style="color:#66d9ef">echo</span> $m_row[<span style="color:#e6db74">&#39;city&#39;</span>], <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+   $s_city <span style="color:#f92672">=</span> $m_row[<span style="color:#e6db74">&#39;city&#39;</span>];
+   <span style="color:#a6e22e">var_dump</span>($s_city);
 }
 </code></pre></div>
 <p><a href="https://php.net/function.fgetcsv">https://php.net/function.fgetcsv</a></p>
@@ -114,12 +115,9 @@ o_db <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;
 o_db <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;a.csv&#39;</span>)
 o_tab <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>reader(o_db)
 a_head <span style="color:#f92672">=</span> next(o_tab)
-m_head <span style="color:#f92672">=</span> {}
-<span style="color:#66d9ef">for</span> n_ind, s_col <span style="color:#f92672">in</span> enumerate(a_head):
-   m_head[s_col] <span style="color:#f92672">=</span> n_ind
 <span style="color:#66d9ef">for</span> a_row <span style="color:#f92672">in</span> o_tab:
-   n_city <span style="color:#f92672">=</span> m_head[<span style="color:#e6db74">&#39;city&#39;</span>]
-   s_city <span style="color:#f92672">=</span> a_row[n_city]
+   m_row <span style="color:#f92672">=</span> dict(zip(a_head, a_row))
+   s_city <span style="color:#f92672">=</span> m_row[<span style="color:#e6db74">&#39;city&#39;</span>]
    <span style="color:#66d9ef">print</span>(s_city)
 </code></pre></div></p>
 <p><a href="https://docs.python.org/library/csv.html">https://docs.python.org/library/csv.html</a></p>
