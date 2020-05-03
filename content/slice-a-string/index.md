@@ -14,19 +14,19 @@ tags: [go, javascript, php, python]
 
 {{< r "a.js" >}}
 
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/
-   String/charAt` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/
-   String/slice` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/
-   String/substring` >}}
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/charAt>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/slice>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/substring>
 
 ## PHP
 
-{{< r "std.php" >}}
+{{< r "index.php" >}}
 
-- <https://php.net/function.substr>
-- <https://php.net/language.types.string>
+<https://php.net/types.string#example-54>
+
+{{< r "substr.php" >}}
+
+<https://php.net/function.substr>
 
 {{< r "mb.php" >}}
 
