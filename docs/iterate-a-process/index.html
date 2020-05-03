@@ -39,17 +39,17 @@
    <span style="color:#e6db74">&#34;os/exec&#34;</span>
 )
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#75715e">// head
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;ag&#34;</span>, <span style="color:#e6db74">&#34;-V&#34;</span>)
+   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;ag&#34;</span>, <span style="color:#e6db74">&#34;-V&#34;</span>)
    <span style="color:#a6e22e">o2</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">StdoutPipe</span>()
    <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Start</span>()
-   <span style="color:#75715e">// body
+   <span style="color:#75715e">// begin
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">o2</span>)
    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">o3</span>.<span style="color:#a6e22e">Scan</span>() {
       <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o3</span>.<span style="color:#a6e22e">Text</span>()
       println(<span style="color:#a6e22e">s1</span>)
    }
-}
+   <span style="color:#75715e">// end
+</span><span style="color:#75715e"></span>}
 </code></pre></div>
 <ul>
 <li><a href="https://golang.org/pkg/bufio#Scanner.Scan">https://golang.org/pkg/bufio#Scanner.Scan</a></li>

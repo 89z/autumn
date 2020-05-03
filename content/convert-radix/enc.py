@@ -1,5 +1,5 @@
 import string
-# head
+# begin
 def r64_encode(n_div):
    s_safe = string.printable[:62] + '-_'
    s_out = ''
@@ -7,6 +7,6 @@ def r64_encode(n_div):
       s_out += s_safe[n_div & 63]
       n_div >>= 6
    return s_out
-# body
+# end
 s1 = r64_encode(1234567890)
 print(s1 == 'ibwB91')

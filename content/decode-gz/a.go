@@ -5,10 +5,9 @@ import (
    "os"
 )
 func main() {
-   // head
    o1, _ := os.Open("a.tar.gz")
    o2, _ := gzip.NewReader(o1)
    o3, _ := os.Create("a.tar")
-   // body
+   // begin
    io.Copy(o3, o2)
 }

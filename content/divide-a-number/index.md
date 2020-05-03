@@ -28,7 +28,8 @@ tags: [go, javascript, php, python]
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/reference/expressions.html#binary>
+- <https://docs.python.org/library/functions.html#divmod>
+- <https://docs.python.org/reference/expressions.html#binary>
 
 ## References
 

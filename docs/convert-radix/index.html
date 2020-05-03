@@ -36,7 +36,7 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#75715e"># head
+<span style="color:#75715e"># begin
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">r64_encode</span>($n_in) {
    $s_safe <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_&#39;</span>;
    $s_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
@@ -46,9 +46,9 @@
    }
    <span style="color:#66d9ef">return</span> $s_out;
 }
-<span style="color:#75715e"># body
+<span style="color:#75715e"># end
 </span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">r64_encode</span>(<span style="color:#ae81ff">1234567890</span>);
-<span style="color:#a6e22e">var_dump</span>($s1);
+<span style="color:#a6e22e">var_dump</span>($s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ibwB91&#39;</span>);
 </code></pre></div>
 <h2 id="python">Python</h2>
 
@@ -56,7 +56,7 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">import</span> string
-<span style="color:#75715e"># head</span>
+<span style="color:#75715e"># begin</span>
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">r64_encode</span>(n_div):
    s_safe <span style="color:#f92672">=</span> string<span style="color:#f92672">.</span>printable[:<span style="color:#ae81ff">62</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;-_&#39;</span>
    s_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
@@ -64,7 +64,7 @@
       s_out <span style="color:#f92672">+=</span> s_safe[n_div <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">63</span>]
       n_div <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#ae81ff">6</span>
    <span style="color:#66d9ef">return</span> s_out
-<span style="color:#75715e"># body</span>
+<span style="color:#75715e"># end</span>
 s1 <span style="color:#f92672">=</span> r64_encode(<span style="color:#ae81ff">1234567890</span>)
 <span style="color:#66d9ef">print</span>(s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ibwB91&#39;</span>)
 </code></pre></div>

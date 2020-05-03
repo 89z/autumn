@@ -1,5 +1,5 @@
 <?php
-# head
+# begin
 function r64_encode($n_in) {
    $a_safe = array_merge(
       range(0, 9),
@@ -14,6 +14,6 @@ function r64_encode($n_in) {
    }
    return $s_out;
 }
-# body
+# end
 $s1 = r64_encode(1234567890);
 var_dump($s1);

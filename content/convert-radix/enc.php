@@ -1,5 +1,5 @@
 <?php
-# head
+# begin
 function r64_encode($n_in) {
    $s_safe = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_';
    $s_out = '';
@@ -9,6 +9,6 @@ function r64_encode($n_in) {
    }
    return $s_out;
 }
-# body
+# end
 $s1 = r64_encode(1234567890);
-var_dump($s1);
+var_dump($s1 == 'ibwB91');
