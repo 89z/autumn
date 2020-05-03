@@ -14,17 +14,18 @@ tags: [go, javascript, php, python]
 
 ## PHP
 
-{{< r "f.php" >}}
+{{< r "fget.php" >}}
 
 <https://php.net/function.fgetcsv>
 
-{{< r "str.php" >}}
+{{< r "str_get.php" >}}
 
 <https://php.net/function.str-getcsv>
 
 ## Python
 
 {{< r "a.py" >}}
+{{< r "b.py" >}}
 
 <https://docs.python.org/library/csv.html>
 

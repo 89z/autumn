@@ -1,6 +1,4 @@
 import csv
-o1 = open('a.csv')
-o2 = csv.DictReader(o1)
-for m1 in o2:
-   s1 = m1['city']
-   print(s1)
+o_db = open('a.csv')
+for m_row in csv.DictReader(o_db):
+   print(m_row)
