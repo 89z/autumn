@@ -1,7 +1,7 @@
 ---
 title: Object contains property
-topics: [object]
-langs: [javascript, php]
+categories: [object]
+tags: [javascript, php]
 ---
 
 ## JavaScript

@@ -1,7 +1,7 @@
 ---
 title: Start process
-topics: [system]
-langs: [go, julia, nim, php, python]
+categories: [system]
+tags: [go, julia, nim, php, python]
 ---
 
 ## Go

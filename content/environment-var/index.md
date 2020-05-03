@@ -1,7 +1,7 @@
 ---
 title: Environment variables
-topics: [system]
-langs: [d, go, julia, nim, php, python]
+categories: [system]
+tags: [d, go, julia, nim, php, python]
 ---
 
 ## D

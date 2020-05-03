@@ -1,7 +1,7 @@
 ---
 title: Slice a string
-topics: [string]
-langs: [go, javascript, php, python]
+categories: [string]
+tags: [go, javascript, php, python]
 ---
 
 ## Go

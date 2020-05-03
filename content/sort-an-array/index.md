@@ -1,7 +1,7 @@
 ---
 title: Sort an array
-topics: [array]
-langs: [go, javascript, php, python]
+categories: [array]
+tags: [go, javascript, php, python]
 ---
 
 ## Go

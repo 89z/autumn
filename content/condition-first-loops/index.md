@@ -1,7 +1,7 @@
 ---
 title: Condition-first loops
-topics: [reference]
-langs: [go, javascript, php, python]
+categories: [reference]
+tags: [go, javascript, php, python]
 ---
 
 ## Go

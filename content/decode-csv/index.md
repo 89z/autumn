@@ -1,7 +1,7 @@
 ---
 title: Decode CSV
-topics: [file-format]
-langs: [go, javascript, php, python]
+categories: [file-format]
+tags: [go, javascript, php, python]
 ---
 
 {{< r "a.csv" >}}

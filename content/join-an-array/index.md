@@ -1,7 +1,7 @@
 ---
 title: Join an array
-topics: [array, string]
-langs: [d, go, javascript, julia, nim, php, python]
+categories: [array, string]
+tags: [d, go, javascript, julia, nim, php, python]
 ---
 
 ## D

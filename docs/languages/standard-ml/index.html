@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Standard ML language &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/categories">Categories</a>
+         <a href="/autumn/tags">Tags</a>
+         <a href="https://github.com/muv1/autumn">Repo</a>
+      </nav>
+   </header>
+
+<h1>Standard ML language</h1>
+<time>Sat May 2 19:33:52 2020</time>
+   
+<a href="/autumn/categories/language/">language</a>
+   
+   
+   <h2 id="cakeml">CakeML</h2>
+<p>If I compile like this:</p>
+<pre><code>$ make CC=x86_64-w64-mingw32-gcc
+x86_64-w64-mingw32-gcc    -c -o cake.o cake.S
+x86_64-w64-mingw32-gcc    -c -o basis_ffi.o basis_ffi.c
+x86_64-w64-mingw32-gcc  cake.o basis_ffi.o   -o cake.exe
+</code></pre><p>I get this result in a Cygwin console:</p>
+<pre><code>$ ./cake
+sh: ./cake: cannot execute binary file: Exec format error
+</code></pre><p>and this result in a Windows console:</p>
+<pre><code>cake.exe is not a valid Win32 application.
+Access is denied.
+</code></pre><p><a href="https://github.com/CakeML/cakeml">https://github.com/CakeML/cakeml</a></p>
+<h2 id="mlton">MLton</h2>
+<p>The project has no recent release.</p>
+<p><a href="https://github.com/MLton/mlton">https://github.com/MLton/mlton</a></p>
+<h2 id="polyml">Poly/ML</h2>
+<p>This page says I can use <code>polyc</code> to build stand-alone application:</p>
+<p><a href="https://polyml.org/FAQ#standalone">https://polyml.org/FAQ#standalone</a></p>
+<p>but this release does not have that file:</p>
+<p><a href="https://github.com/polyml/polyml/releases/download/v5.8/PolyML5.8-64bit.msi">https://github.com/polyml/polyml/releases/download/v5.8/PolyML5.8-64bit.msi</a></p>
+<h2 id="moscow-ml">Moscow ML</h2>
+<p>The project has no recent release.</p>
+<p><a href="https://github.com/kfl/mosml">https://github.com/kfl/mosml</a></p>
+<h2 id="mlkit">MLKit</h2>
+<p>A Windows version is not available.</p>
+<p><a href="https://github.com/melsman/mlkit">https://github.com/melsman/mlkit</a></p>
+<h2 id="introduction">Introduction</h2>
+<p><a href="https://cs.lmu.edu/~ray/notes/introml">https://cs.lmu.edu/~ray/notes/introml</a></p>
+
+
+</body>
+</html>

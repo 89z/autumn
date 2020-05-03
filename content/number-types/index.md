@@ -1,7 +1,7 @@
 ---
 title: Number types
-topics: [number]
-langs: [d, go, javascript, julia, nim, php, python]
+categories: [number]
+tags: [d, go, javascript, julia, nim, php, python]
 ---
 
 ## D

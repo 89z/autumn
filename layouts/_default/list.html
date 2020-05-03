@@ -1,0 +1,18 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+   {{ with (.GetPage (path.Join "talk" .Path)) }}
+<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+   {{ end }}
+<table>
+   {{ range .Pages }}
+   <tr>
+      <td>
+         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </td>
+      <td>
+         <time>{{ .Lastmod.Format "Mon Jan 2 15:04:05 2006" }}</time>
+      </td>
+   </tr>
+   {{ end }}
+</table>
+{{ end }}

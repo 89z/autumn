@@ -1,7 +1,7 @@
 ---
 title: HTTP HEAD request
-topics: [network]
-langs: [go, php, python]
+categories: [network]
+tags: [go, php, python]
 ---
 
 ## Go

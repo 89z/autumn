@@ -1,7 +1,7 @@
 ---
 title: Length of array
-topics: [array]
-langs: [d, go, javascript, julia, nim, php, python]
+categories: [array]
+tags: [d, go, javascript, julia, nim, php, python]
 ---
 
 ## D

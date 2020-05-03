@@ -14,7 +14,4 @@ markup:
 params:
    themeColor: theme-base-08
 publishDir: docs
-taxonomies:
-   topic: topics
-   lang: langs
 title: Autumn

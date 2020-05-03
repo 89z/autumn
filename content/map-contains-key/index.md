@@ -1,7 +1,7 @@
 ---
 title: Map contains key
-topics: [map]
-langs: [go, javascript, php, python]
+categories: [map]
+tags: [go, javascript, php, python]
 ---
 
 ## Go

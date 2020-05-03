@@ -1,7 +1,7 @@
 ---
 title: Comments
-topics: [reference]
-langs: [go, javascript, julia, nim, php, python]
+categories: [reference]
+tags: [go, javascript, julia, nim, php, python]
 ---
 
 ## Go

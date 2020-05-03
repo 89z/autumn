@@ -1,7 +1,7 @@
 ---
 title: Format number
-topics: [number]
-langs: [go, javascript, julia, nim, php, python]
+categories: [number]
+tags: [go, javascript, julia, nim, php, python]
 ---
 
 ## Go
