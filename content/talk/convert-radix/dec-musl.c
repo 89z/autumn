@@ -6,7 +6,7 @@ int r64_decode(char *s_in) {
    "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_";
    int n_out = 0;
    int n_sh = 0;
-   while (*s_in) {
+   while (*s_in != 0) {
       char *s_out = strchr(s_safe, *s_in);
       n_out |= (s_out - s_safe) << n_sh;
       s_in += 1;

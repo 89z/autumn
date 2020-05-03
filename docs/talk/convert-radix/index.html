@@ -61,7 +61,7 @@
    <span style="color:#e6db74">&#34;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_&#34;</span>;
    <span style="color:#66d9ef">int</span> n_out <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
    <span style="color:#66d9ef">int</span> n_sh <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-   <span style="color:#66d9ef">while</span> (<span style="color:#f92672">*</span>s_in) {
+   <span style="color:#66d9ef">while</span> (<span style="color:#f92672">*</span>s_in <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>) {
       <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>s_out <span style="color:#f92672">=</span> strchr(s_safe, <span style="color:#f92672">*</span>s_in);
       n_out <span style="color:#f92672">|=</span> (s_out <span style="color:#f92672">-</span> s_safe) <span style="color:#f92672">&lt;&lt;</span> n_sh;
       s_in <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;

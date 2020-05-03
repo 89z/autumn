@@ -1,7 +1,7 @@
 ---
 title: Import package
 categories: [reference]
-tags: [d, go, julia, nim, python]
+tags: [d, go, julia, nim, php, python]
 ---
 
 ## D
@@ -25,6 +25,10 @@ tags: [d, go, julia, nim, python]
 {{< r "a.nim" >}}
 
 <https://nim-lang.github.io/Nim/manual#modules-import-statement>
+
+## PHP
+
+<https://php.net/function.extension-loaded>
 
 ## Python
 

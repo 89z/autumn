@@ -6,7 +6,8 @@ tags: [go, javascript, php, python]
 
 ## Go
 
-{{< r "a.go" >}}
+{{< r "str.go" >}}
+{{< r "rune.go" >}}
 
 <https://golang.org/ref/spec#Slice_expressions>
 
@@ -14,8 +15,11 @@ tags: [go, javascript, php, python]
 
 {{< r "a.js" >}}
 
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/slice>
+
+{{< r "b.js" >}}
+
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/charAt>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/slice>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/substring>
 
 ## PHP
@@ -40,6 +44,7 @@ tags: [go, javascript, php, python]
 
 ## References
 
+- <https://hyperpolyglot.org/c#extract-substr>
 - <https://hyperpolyglot.org/scripting#extract-substr>
 - <https://www.programming-idioms.org/idiom/38/extract-a-substring>
 - <https://www.programming-idioms.org/idiom/46/extract-beginning>
