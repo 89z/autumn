@@ -1,6 +1,6 @@
 <?php
 # head
-function radix64($n_in) {
+function r64_encode($n_in) {
    $s_safe = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_';
    $s_out = '';
    while ($n_in > 0) {
@@ -10,5 +10,5 @@ function radix64($n_in) {
    return $s_out;
 }
 # body
-$s1 = radix64(1588337932);
+$s1 = r64_encode(1234567890);
 var_dump($s1);

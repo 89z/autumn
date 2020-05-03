@@ -1,6 +1,6 @@
 #include <stdio.h>
 // head
-char *radix64(int n1) {
+char *r64_encode(int n1) {
    char *s_safe = "0123456789abcdefghijklmnopqrstuvwxyz"
    "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
    static char s1[7];
@@ -14,6 +14,6 @@ char *radix64(int n1) {
 }
 // body
 int main() {
-   char *s1 = radix64(1588337932);
+   char *s1 = r64_encode(1234567890);
    puts(s1);
 }

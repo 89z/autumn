@@ -3,3 +3,4 @@
 *.js linguist-vendored
 *.sh linguist-vendored
 content/draft-lang/**/* linguist-vendored
+content/talk/**/* linguist-vendored

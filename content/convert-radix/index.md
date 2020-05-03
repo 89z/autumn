@@ -1,24 +1,24 @@
 ---
 title: Convert radix
 categories: [number]
-tags: [php, python]
+tags: [javascript, php, python]
 ---
+
+## JavaScript
+
+<https://github.com/extemporalgenome/radix64>
 
 ## PHP
 
-{{< r "a.php" >}}
-{{< r "b.php" >}}
+{{< r "enc.php" >}}
 
 ## Python
 
-{{< r "div.py" >}}
-
-<https://docs.python.org/library/functions.html#divmod>
-
-{{< r "bit.py" >}}
+{{< r "enc.py" >}}
 
 <https://docs.python.org/reference/expressions.html#shifting-operations>
 
 ## References
 
-<https://codegolf.stackexchange.com/questions/536>
+- <https://codegolf.stackexchange.com/questions/536>
+- <https://tools.ietf.org/html/rfc4648#section-5>

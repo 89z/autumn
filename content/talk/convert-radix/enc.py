@@ -1,6 +1,6 @@
 import string
 # head
-def radix64(n_div):
+def r64_encode(n_div):
    s_safe = string.digits + string.ascii_letters + '-_'
    s_out = ''
    while n_div > 0:
@@ -8,5 +8,5 @@ def radix64(n_div):
       s_out += s_safe[n_mod]
    return s_out
 # body
-s1 = radix64(1588337932)
+s1 = r64_encode(1234567890)
 print(s1)
