@@ -10,6 +10,7 @@ tags: [javascript, php, python]
 
 ## PHP
 
+{{< r "dec.php" >}}
 {{< r "enc.php" >}}
 
 ## Python

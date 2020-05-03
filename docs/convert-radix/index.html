@@ -21,7 +21,7 @@
    </header>
 
 <h1>Convert radix</h1>
-<time>Sat May 2 22:41:47 2020</time>
+<time>Sun May 3 13:17:06 2020</time>
    
 <a href="/autumn/categories/number/">number</a>
    
@@ -31,6 +31,25 @@
    <h2 id="javascript">JavaScript</h2>
 <p><a href="https://github.com/extemporalgenome/radix64">https://github.com/extemporalgenome/radix64</a></p>
 <h2 id="php">PHP</h2>
+<p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e"># begin
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">r64_decode</span>($s_in) {
+   $s_safe <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_&#39;</span>;
+   $n_out <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+   <span style="color:#66d9ef">for</span> ($n_sh <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, $n_in <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $n_sh <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">36</span>; $n_sh <span style="color:#f92672">+=</span> <span style="color:#ae81ff">6</span>, $n_in <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>) {
+      $s_chr <span style="color:#f92672">=</span> $s_in[$n_in];
+      $n_out <span style="color:#f92672">|=</span> <span style="color:#a6e22e">strpos</span>($s_safe, $s_chr) <span style="color:#f92672">&lt;&lt;</span> $n_sh;
+   }
+   <span style="color:#66d9ef">return</span> $n_out;
+}
+<span style="color:#75715e"># end
+</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">r64_decode</span>(<span style="color:#e6db74">&#39;ibwB91&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($n1);
+</code></pre></div>
 
 
 
@@ -49,7 +68,7 @@
 <span style="color:#75715e"># end
 </span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">r64_encode</span>(<span style="color:#ae81ff">1234567890</span>);
 <span style="color:#a6e22e">var_dump</span>($s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ibwB91&#39;</span>);
-</code></pre></div>
+</code></pre></div></p>
 <h2 id="python">Python</h2>
 
 

@@ -24,17 +24,18 @@ tags: [go, javascript, php, python]
 
 ## PHP
 
-{{< r "index.php" >}}
+{{< r "a.php" >}}
 
-<https://php.net/types.string#example-54>
+- <https://php.net/function.substr>
+- <https://php.net/types.string#example-54>
 
-{{< r "substr.php" >}}
-
-<https://php.net/function.substr>
-
-{{< r "mb.php" >}}
+{{< r "b.php" >}}
 
 <https://php.net/function.mb-substr>
+
+{{< r "c.php" >}}
+
+<https://php.net/function.strstr>
 
 ## Python
 
