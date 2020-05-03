@@ -6,16 +6,17 @@ tags: [javascript, php, python]
 
 ## JavaScript
 
+{{< r "a.js" >}}
+
 <https://github.com/extemporalgenome/radix64>
 
 ## PHP
 
-{{< r "dec.php" >}}
-{{< r "enc.php" >}}
+{{< r "a.php" >}}
 
 ## Python
 
-{{< r "enc.py" >}}
+{{< r "a.py" >}}
 
 <https://docs.python.org/reference/expressions.html#shifting-operations>
 

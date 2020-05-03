@@ -29,9 +29,8 @@ tags: [go, javascript, php, python]
 
 {{< r "a.py" >}}
 
-Exclude `range` as it is ambiguous.
-
-<https://docs.python.org/reference/compound_stmts.html#while>
+- <https://docs.python.org/library/functions.html#func-range>
+- <https://docs.python.org/reference/compound_stmts.html#while>
 
 ## References
 
