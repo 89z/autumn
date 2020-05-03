@@ -1,26 +1,13 @@
 ---
 title: Convert radix
 categories: [number]
-tags: [javascript, python]
+tags: [php, python]
 ---
 
-## C
+## PHP
 
-{{< r "glibc.c" >}}
-
-<https://github.com/lattera/glibc/blob/master/stdlib/l64a.c>
-
-{{< r "musl.c" >}}
-
-<https://github.com/bminor/musl/blob/master/src/misc/a64l.c>
-
-{{< r "newlib.c" >}}
-
-<https://github.com/mirror/newlib-cygwin/blob/master/newlib/libc/stdlib/l64a.c>
-
-## JavaScript
-
-{{< r "a.js" >}}
+{{< r "a.php" >}}
+{{< r "b.php" >}}
 
 ## Python
 

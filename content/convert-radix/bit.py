@@ -8,5 +8,5 @@ def radix64(n_div):
       n_div >>= 6
    return s_out
 # body
-s1 = radi64(1588337932)
+s1 = radix64(1588337932)
 print(s1)

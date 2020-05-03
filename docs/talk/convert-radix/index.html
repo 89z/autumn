@@ -21,7 +21,7 @@
    </header>
 
 <h1>Talk:Convert radix</h1>
-<time>Sat May 2 19:33:52 2020</time>
+<time>Sat May 2 21:28:16 2020</time>
    
    
    <p>If you percent encode everything from U+0021 to U+007E, then you have:</p>
@@ -32,6 +32,85 @@ A-Z
 .
 _
 </code></pre><p>which is 65 characters. Omit the <code>.</code> and that is 64.</p>
+<h2 id="c">C</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.c" data-lang=".c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">// head
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">radix64</span>(<span style="color:#66d9ef">int</span> n1) {
+   <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>s_safe <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0123456789abcdefghijklmnopqrstuvwxyz&#34;</span>
+   <span style="color:#e6db74">&#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;</span>;
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">char</span> s1[<span style="color:#ae81ff">7</span>];
+   <span style="color:#66d9ef">int</span> n2;
+   <span style="color:#66d9ef">for</span> (n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; n1 <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>; n2<span style="color:#f92672">++</span>) {
+      s1[n2] <span style="color:#f92672">=</span> s_safe[n1 <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">63</span>];
+      n1 <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#ae81ff">6</span>;
+   }
+   s1[n2] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+   <span style="color:#66d9ef">return</span> s1;
+}
+<span style="color:#75715e">// body
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>s1 <span style="color:#f92672">=</span> radix64(<span style="color:#ae81ff">1588337932</span>);
+   puts(s1);
+}
+</code></pre></div>
+<p><a href="https://github.com/lattera/glibc/blob/master/stdlib/l64a.c">https://github.com/lattera/glibc/blob/master/stdlib/l64a.c</a></p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.c" data-lang=".c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">// head
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">radix64</span>(<span style="color:#66d9ef">int</span> n1) {
+   <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>s_safe <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0123456789abcdefghijklmnopqrstuvwxyz&#34;</span>
+   <span style="color:#e6db74">&#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;</span>;
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">char</span> s1[<span style="color:#ae81ff">7</span>];
+   <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>s2 <span style="color:#f92672">=</span> s1;
+   <span style="color:#66d9ef">while</span> (n1 <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+      <span style="color:#f92672">*</span>s2<span style="color:#f92672">++</span> <span style="color:#f92672">=</span> s_safe[n1 <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">63</span>];
+      n1 <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#ae81ff">6</span>;
+   }
+   <span style="color:#f92672">*</span>s2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+   <span style="color:#66d9ef">return</span> s1;
+}
+<span style="color:#75715e">// body
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>s1 <span style="color:#f92672">=</span> radix64(<span style="color:#ae81ff">1588337932</span>);
+   puts(s1);
+}
+</code></pre></div>
+<p><a href="https://github.com/bminor/musl/blob/master/src/misc/a64l.c">https://github.com/bminor/musl/blob/master/src/misc/a64l.c</a></p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.c" data-lang=".c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">// head
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">radix64</span>(<span style="color:#66d9ef">long</span> n1) {
+   <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>s_safe <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0123456789abcdefghijklmnopqrstuvwxyz&#34;</span>
+   <span style="color:#e6db74">&#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#34;</span>;
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">char</span> s1[<span style="color:#ae81ff">7</span>];
+   <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>s2 <span style="color:#f92672">=</span> s1;
+   <span style="color:#66d9ef">int</span> n2;
+   <span style="color:#66d9ef">for</span> (n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; n2 <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">6</span>; n2<span style="color:#f92672">++</span>) {
+      <span style="color:#66d9ef">if</span> (n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+         <span style="color:#f92672">*</span>s2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+      }
+      <span style="color:#f92672">*</span>s2<span style="color:#f92672">++</span> <span style="color:#f92672">=</span> s_safe[n1 <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">63</span>];
+      n1 <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#ae81ff">6</span>;
+   }
+   <span style="color:#66d9ef">return</span> s1;
+}
+<span style="color:#75715e">// body
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>s1 <span style="color:#f92672">=</span> radix64(<span style="color:#ae81ff">1588337932</span>);
+   puts(s1);
+}
+</code></pre></div>
+<p><a href="https://github.com/mirror/newlib-cygwin/blob/master/newlib/libc/stdlib/l64a.c">https://github.com/mirror/newlib-cygwin/blob/master/newlib/libc/stdlib/l64a.c</a></p>
 
 
 </body>

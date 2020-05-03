@@ -22,20 +22,218 @@
 
 
 <h1>Category talk</h1>
-   
+<time>Sat May 2 20:05:34 2020</time>
 <table>
-   
-   <tr>
-      <td><a href="/autumn/talk/categories/input-output/">Category talk:Input output</a></td>
-      <td><time>Sat May 2 20:05:34 2020</time></td>
-   </tr>
-   
-   <tr>
-      <td><a href="/autumn/talk/categories/language/">Category talk:Language</a></td>
-      <td><time>Sat May 2 20:05:34 2020</time></td>
-   </tr>
-   
+<thead>
+<tr>
+<th>Letter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>a</code></td>
+<td>Array</td>
+</tr>
+<tr>
+<td><code>b</code></td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td><code>e</code></td>
+<td>Error</td>
+</tr>
+<tr>
+<td><code>f</code></td>
+<td>Function</td>
+</tr>
+<tr>
+<td><code>m</code></td>
+<td>Map</td>
+</tr>
+<tr>
+<td><code>n</code></td>
+<td>Number</td>
+</tr>
+<tr>
+<td><code>o</code></td>
+<td>Object</td>
+</tr>
+<tr>
+<td><code>r</code></td>
+<td>Resource</td>
+</tr>
+<tr>
+<td><code>s</code></td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>t</code></td>
+<td>Set (<code>t</code> in <code>set</code>, also <code>t</code> in <code>true</code>)</td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Byte (<code>y</code> in <code>byte</code>)</td>
+</tr>
+</tbody>
 </table>
+<h2 id="array">Array</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$a1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(<span style="color:#e6db74">&#39;Sun&#39;</span>, <span style="color:#e6db74">&#39;Mon&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($a1);
+</code></pre></div>
+<p><a href="https://php.net/language.types.array">https://php.net/language.types.array</a></p>
+<h2 id="boolean">Boolean</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$b1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+<span style="color:#75715e"># exmaple 2
+</span><span style="color:#75715e"></span>$b2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($b1, $b2);
+</code></pre></div>
+<p><a href="https://php.net/language.types.boolean">https://php.net/language.types.boolean</a></p>
+<h2 id="byte">Byte</h2>
+<p>If we use <code>a1</code> for Byte Arrays, it will be confusing when used next to
+traditional arrays:</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;Sun&#34;</span>, <span style="color:#e6db74">&#34;Mon&#34;</span>}
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a1</span>)
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">a2</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">byte</span>{<span style="color:#e6db74">&#39;S&#39;</span>, <span style="color:#e6db74">&#39;u&#39;</span>, <span style="color:#e6db74">&#39;n&#39;</span>}
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s\n&#34;</span>, <span style="color:#a6e22e">a2</span>)
+}
+</code></pre></div>
+<p>If we use <code>s1</code> for Byte Array, it will be confusing when used next to
+traditions strings:</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>
+   println(<span style="color:#a6e22e">s1</span>)
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">byte</span>{<span style="color:#e6db74">&#39;S&#39;</span>, <span style="color:#e6db74">&#39;u&#39;</span>, <span style="color:#e6db74">&#39;n&#39;</span>}
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s\n&#34;</span>, <span style="color:#a6e22e">s2</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/ref/spec#Numeric_types">https://golang.org/ref/spec#Numeric_types</a></p>
+<h2 id="error">Error</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;strconv&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">e1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">Atoi</span>(<span style="color:#e6db74">&#34;10&#34;</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">e1</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/ref/spec#Errors">https://golang.org/ref/spec#Errors</a></p>
+<h2 id="function">Function</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">f1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">n1</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span>
+   }
+   <span style="color:#a6e22e">n2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">f1</span>(<span style="color:#ae81ff">20</span>)
+   println(<span style="color:#a6e22e">n2</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/ref/spec#Function_types">https://golang.org/ref/spec#Function_types</a></p>
+<h2 id="map">Map</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">m1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{<span style="color:#e6db74">&#34;Sun&#34;</span>: <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;Mon&#34;</span>: <span style="color:#ae81ff">11</span>}
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m1</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/ref/spec#Map_types">https://golang.org/ref/spec#Map_types</a></p>
+<h2 id="number">Number</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span>);
+</code></pre></div>
+<p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number</a></p>
+<h2 id="object">Object</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> parse
+s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>
+o1 <span style="color:#f92672">=</span> parse<span style="color:#f92672">.</span>urlparse(s1)
+s2 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>geturl()
+<span style="color:#66d9ef">print</span>(s2)
+</code></pre></div>
+<p><a href="https://docs.python.org/library/urllib.parse.html#urlparse-result-object">https://docs.python.org/library/urllib.parse.html#urlparse-result-object</a></p>
+<h2 id="resource">Resource</h2>
+<p>Resource is something that is used by PHP. Other languages use Objects.</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>();
+<span style="color:#a6e22e">var_dump</span>($r1);
+</code></pre></div>
+<p><a href="https://php.net/function.curl-init">https://php.net/function.curl-init</a></p>
+<h2 id="set">Set</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py">a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span>, <span style="color:#e6db74">&#39;Mon&#39;</span>]
+t1 <span style="color:#f92672">=</span> set(a1)
+<span style="color:#66d9ef">print</span>(t1)
+</code></pre></div>
+<p><a href="https://docs.python.org/library/stdtypes.html#set">https://docs.python.org/library/stdtypes.html#set</a></p>
+<h2 id="string">String</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sunday&#39;</span>;
+<span style="color:#a6e22e">var_dump</span>($s1);
+</code></pre></div>
+<p><a href="https://php.net/language.types.string">https://php.net/language.types.string</a></p>
+
 
 </body>
 </html>

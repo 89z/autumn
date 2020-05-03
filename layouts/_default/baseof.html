@@ -29,10 +29,8 @@
    <dd>{{ . }}</dd>
    <dt>.Kind</dt>
    <dd>{{ .Kind }}</dd>
-   <dt>.Pages</dt>
-{{ range .Pages }}
-   <dd>{{ . }}</dd>
-{{ end }}
+   <dt>.GetPage</dt>
+   <dd>{{ .GetPage (path.Join "talk" .Path) }}</dd>
 </dl>
 {{ end }}
 {{ block "main" . }}{{ end }}
