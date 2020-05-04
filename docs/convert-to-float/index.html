@@ -21,7 +21,7 @@
    </header>
 
 <h1>Convert to float</h1>
-<time>Sun May 3 21:06:49 2020</time>
+<time>Sun May 3 21:38:19 2020</time>
    
 <a href="/autumn/categories/number/">number</a>
    
@@ -30,17 +30,93 @@
 <p><a href="https://golang.org/pkg/fmt#Sscan">https://golang.org/pkg/fmt#Sscan</a>
 <a href="https://golang.org/ref/spec#Conversions">https://golang.org/ref/spec#Conversions</a></p>
 <h2 id="javascript">JavaScript</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1.9&#39;</span>;
+<span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> Number(<span style="color:#a6e22e">s1</span>);
+<span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n2</span> <span style="color:#f92672">=</span> Number.parseFloat(<span style="color:#a6e22e">s1</span>);
+<span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n3</span> <span style="color:#f92672">=</span> parseFloat(<span style="color:#a6e22e">s1</span>);
+<span style="color:#75715e">// example 4
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n4</span> <span style="color:#f92672">=</span> <span style="color:#f92672">+</span>(<span style="color:#a6e22e">s1</span>);
+<span style="color:#75715e">// print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>, <span style="color:#a6e22e">n3</span>, <span style="color:#a6e22e">n4</span>);
+</code></pre></div>
 <ul>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/parseFloat">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/parseFloat</a></li>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number</a></li>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/parseFloat">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/parseFloat</a></li>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators">https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators</a></li>
 </ul>
 <h2 id="php">PHP</h2>
+<p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1.9&#39;</span>;
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#f92672">+</span>($s1);
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> (<span style="color:#a6e22e">float</span>)($s1);
+<span style="color:#75715e"># example 3
+</span><span style="color:#75715e"></span>$n3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">floatval</span>($s1);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1, $n2, $n3);
+</code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> (<span style="color:#a6e22e">float</span>)($n1);
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span>$n3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">floatval</span>($n1);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n2, $n3);
+</code></pre></div></p>
 <ul>
+<li><a href="https://php.net/function.floatval">https://php.net/function.floatval</a></li>
 <li><a href="https://php.net/language.operators.arithmetic">https://php.net/language.operators.arithmetic</a></li>
 <li><a href="https://php.net/language.types.type-juggling">https://php.net/language.types.type-juggling</a></li>
 </ul>
+<h2 id="python">Python</h2>
+<p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py">s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;1.9&#39;</span>
+<span style="color:#75715e"># example 1</span>
+n1 <span style="color:#f92672">=</span> float(s1)
+<span style="color:#75715e"># example 2</span>
+<span style="color:#f92672">import</span> locale
+n2 <span style="color:#f92672">=</span> locale<span style="color:#f92672">.</span>atof(s1)
+<span style="color:#75715e"># print</span>
+<span style="color:#66d9ef">print</span>(n1, n2)
+</code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py">n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+n2 <span style="color:#f92672">=</span> float(n1)
+<span style="color:#66d9ef">print</span>(n2)
+</code></pre></div></p>
+<ul>
+<li><a href="https://docs.python.org/library/functions.html#float">https://docs.python.org/library/functions.html#float</a></li>
+<li><a href="https://docs.python.org/library/locale.html#locale.atof">https://docs.python.org/library/locale.html#locale.atof</a></li>
+</ul>
 <h2 id="references">References</h2>
-<p><a href="https://hyperpolyglot.org/c#str-to-num">https://hyperpolyglot.org/c#str-to-num</a></p>
+<ul>
+<li><a href="https://hyperpolyglot.org/c#str-to-num">https://hyperpolyglot.org/c#str-to-num</a></li>
+<li><a href="https://www.programming-idioms.org/idiom/146">https://www.programming-idioms.org/idiom/146</a></li>
+</ul>
 
 
 </body>
