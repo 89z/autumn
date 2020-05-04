@@ -21,10 +21,11 @@
    </header>
 
 <h1>Talk:Convert to integer</h1>
-<time>Sat May 2 19:33:52 2020</time>
+<time>Sun May 3 21:06:49 2020</time>
    
    
-   <p>These functions:</p>
+   <h2 id="float">Float</h2>
+<p>These functions:</p>
 
 
 
@@ -127,6 +128,26 @@ than truncation. A closer example would be:</p>
 </span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">s3</span>)
 }
 </code></pre></div>
+<h2 id="string">String</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Ops/sec</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Number('10')</code></td>
+<td>68,962,875</td>
+</tr>
+<tr>
+<td><code>+('10')</code></td>
+<td>36,446,186</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://jsperf.com/number-vs-parseint-vs-plus">https://jsperf.com/number-vs-parseint-vs-plus</a></p>
 
 
 </body>

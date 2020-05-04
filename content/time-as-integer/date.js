@@ -5,5 +5,7 @@ let n2 = Math.trunc(n1 / 1000);
 // example 2
 let n3 = o1.valueOf();
 let n4 = Math.trunc(n3 / 1000);
+// example 3
+let n5 = Math.trunc(o1 / 1000);
 // print
-console.log(n2, n4);
+console.log(n2, n4, n5);
