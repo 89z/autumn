@@ -1,5 +1,5 @@
 ---
-title: 'Category talk'
+title: 'Talk:Declare value'
 ---
 
 Letter | Type

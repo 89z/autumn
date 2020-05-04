@@ -1,14 +1,8 @@
 ---
 title: Environment variables
 categories: [system]
-tags: [d, go, julia, nim, php, python]
+tags: [go, julia, nim, php, python]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/phobos/std_process.html#.environment.get>
 
 ## Go
 

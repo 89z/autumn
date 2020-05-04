@@ -1,14 +1,8 @@
 ---
 title: Boolean types
 categories: [reference]
-tags: [d, go, javascript, julia, php, python]
+tags: [go, javascript, julia, php, python]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/spec/type.html#bool>
 
 ## Go
 

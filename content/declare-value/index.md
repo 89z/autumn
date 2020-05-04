@@ -1,12 +1,8 @@
 ---
 title: Declare value
 categories: [reference]
-tags: [d, go, javascript, julia, nim]
+tags: [go, javascript, julia, nim]
 ---
-
-## D
-
-{{< r "a.d" >}}
 
 ## Go
 

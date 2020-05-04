@@ -1,14 +1,8 @@
 ---
 title: Join an array
 categories: [array, string]
-tags: [d, go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/phobos/std_array.html#.join>
 
 ## Go
 
