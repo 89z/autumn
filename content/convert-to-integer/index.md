@@ -8,7 +8,9 @@ tags: [go, javascript, php, python]
 
 {{< r "fmt.go" >}}
 
-<https://golang.org/pkg/fmt#Sscan>
+- <https://golang.org/pkg/fmt#Sscan>
+- <https://golang.org/pkg/fmt#Sscanf>
+- <https://golang.org/pkg/fmt#Sscanln>
 
 {{< r "strconv.go" >}}
 

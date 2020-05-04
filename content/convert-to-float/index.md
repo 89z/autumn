@@ -6,8 +6,13 @@ tags: [go, javascript, php, python]
 
 ## Go
 
-<https://golang.org/pkg/fmt#Sscan>
-<https://golang.org/ref/spec#Conversions>
+{{< r "fmt.go" >}}
+{{< r "spec.go" >}}
+{{< r "strconv.go" >}}
+
+- <https://golang.org/pkg/fmt#Sscan>
+- <https://golang.org/pkg/strconv#ParseFloat>
+- <https://golang.org/ref/spec#Conversions>
 
 ## JavaScript
 

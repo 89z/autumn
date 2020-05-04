@@ -8,7 +8,8 @@ tags: [go, julia, nim, php, python]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/os#pkg-variables>
+- <https://golang.org/pkg/fmt#Scan>
+- <https://golang.org/pkg/os#pkg-variables>
 
 ## Julia
 

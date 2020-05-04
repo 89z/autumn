@@ -16,12 +16,9 @@ tags: [go, javascript, julia, nim, php, python]
 
 {{< r "a.js" >}}
 
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/String/endsWith` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/String/includes` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/String/startsWith` >}}
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/endsWith>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/includes>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/startsWith>
 
 ## Julia
 
@@ -40,6 +37,7 @@ tags: [go, javascript, julia, nim, php, python]
 ## PHP
 
 {{< r "a.php" >}}
+{{< r "b.php" >}}
 
 <https://php.net/function.strpos>
 
