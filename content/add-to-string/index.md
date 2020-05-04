@@ -27,14 +27,9 @@ tags: [go, javascript, julia, nim, php, python]
 
 {{< r "a.js" >}}
 
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/String/concat` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/String/replace` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Operators/Arithmetic_Operators` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Template_literals` >}}
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/concat>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Template_literals>
 
 ## Julia
 
