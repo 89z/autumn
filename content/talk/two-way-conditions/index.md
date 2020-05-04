@@ -79,15 +79,3 @@ Further, some languages like Go only accept boolean values:
 {{< r "binary.go" >}}
 
 <https://golang.org/ref/spec#Logical_operators>
-
-## Constants
-
-It should be noted that certain languages like Go do not support conditional
-constants. These fail with JavaScript:
-
-{{< r "const.js" >}}
-{{< r "const_2.js" >}}
-
-this works:
-
-{{< r "const_3.js" >}}

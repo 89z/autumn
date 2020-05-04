@@ -22,7 +22,7 @@
 
 
 <h1>Category talk</h1>
-<time>Sat May 2 20:05:34 2020</time>
+<time>Mon May 4 08:41:39 2020</time>
 <table>
 <thead>
 <tr>
@@ -77,30 +77,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="array">Array</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$a1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(<span style="color:#e6db74">&#39;Sun&#39;</span>, <span style="color:#e6db74">&#39;Mon&#39;</span>);
-<span style="color:#a6e22e">var_dump</span>($a1);
-</code></pre></div>
-<p><a href="https://php.net/language.types.array">https://php.net/language.types.array</a></p>
-<h2 id="boolean">Boolean</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$b1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-<span style="color:#75715e"># exmaple 2
-</span><span style="color:#75715e"></span>$b2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($b1, $b2);
-</code></pre></div>
-<p><a href="https://php.net/language.types.boolean">https://php.net/language.types.boolean</a></p>
 <h2 id="byte">Byte</h2>
 <p>If we use <code>a1</code> for Byte Arrays, it will be confusing when used next to
 traditional arrays:</p>
@@ -153,43 +129,6 @@ traditions strings:</p>
 }
 </code></pre></div>
 <p><a href="https://golang.org/ref/spec#Errors">https://golang.org/ref/spec#Errors</a></p>
-<h2 id="function">Function</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">f1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">n1</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> {
-      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span>
-   }
-   <span style="color:#a6e22e">n2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">f1</span>(<span style="color:#ae81ff">20</span>)
-   println(<span style="color:#a6e22e">n2</span>)
-}
-</code></pre></div>
-<p><a href="https://golang.org/ref/spec#Function_types">https://golang.org/ref/spec#Function_types</a></p>
-<h2 id="map">Map</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">m1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{<span style="color:#e6db74">&#34;Sun&#34;</span>: <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;Mon&#34;</span>: <span style="color:#ae81ff">11</span>}
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m1</span>)
-}
-</code></pre></div>
-<p><a href="https://golang.org/ref/spec#Map_types">https://golang.org/ref/spec#Map_types</a></p>
-<h2 id="number">Number</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span>);
-</code></pre></div>
-<p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number</a></p>
 <h2 id="object">Object</h2>
 
 
@@ -213,26 +152,6 @@ $r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</
 <span style="color:#a6e22e">var_dump</span>($r1);
 </code></pre></div>
 <p><a href="https://php.net/function.curl-init">https://php.net/function.curl-init</a></p>
-<h2 id="set">Set</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py">a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span>, <span style="color:#e6db74">&#39;Mon&#39;</span>]
-t1 <span style="color:#f92672">=</span> set(a1)
-<span style="color:#66d9ef">print</span>(t1)
-</code></pre></div>
-<p><a href="https://docs.python.org/library/stdtypes.html#set">https://docs.python.org/library/stdtypes.html#set</a></p>
-<h2 id="string">String</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sunday&#39;</span>;
-<span style="color:#a6e22e">var_dump</span>($s1);
-</code></pre></div>
-<p><a href="https://php.net/language.types.string">https://php.net/language.types.string</a></p>
 
 
 </body>

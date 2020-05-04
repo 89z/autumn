@@ -21,7 +21,7 @@
    </header>
 
 <h1>Talk:Two-way conditions</h1>
-<time>Sat May 2 19:33:52 2020</time>
+<time>Mon May 4 08:41:39 2020</time>
    
    
    <h2 id="if-statements">If statements</h2>
@@ -191,36 +191,6 @@ would be to use boolean type with all arguments. For example with JavaScript:</p
 }
 </code></pre></div>
 <p><a href="https://golang.org/ref/spec#Logical_operators">https://golang.org/ref/spec#Logical_operators</a></p>
-<h2 id="constants">Constants</h2>
-<p>It should be noted that certain languages like Go do not support conditional
-constants. These fail with JavaScript:</p>
-<p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">true</span>) {
-   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-}
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span>); <span style="color:#75715e">// ReferenceError: n1 is not defined
-</span></code></pre></div>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">switch</span> (<span style="color:#66d9ef">true</span>) {
-<span style="color:#66d9ef">case</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">:</span>
-   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-}
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span>); <span style="color:#75715e">// ReferenceError: n1 is not defined
-</span></code></pre></div></p>
-<p>this works:</p>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> {<span style="color:#66d9ef">true</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>}.<span style="color:#66d9ef">true</span>;
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span>);
-</code></pre></div>
 
 
 </body>
