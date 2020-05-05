@@ -1,5 +1,5 @@
 ---
-title: Slice a string
+title: Slice string from end
 categories: [string]
 tags: [go, javascript, php, python]
 ---
@@ -14,7 +14,6 @@ tags: [go, javascript, php, python]
 ## JavaScript
 
 {{< r "a.js" >}}
-{{< r "b.js" >}}
 
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/charAt>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/slice>
