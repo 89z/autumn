@@ -2,14 +2,25 @@
 title: 'Talk:Slice a string'
 ---
 
-We want to return a single character, as Go can have unexpected results:
+We want to return a begin character, as syntax can be different:
 
-{{< r "a.go" >}}
+{{< r "beg.go" >}}
 
-We also want to return a middle character, as Go can have unexpected results:
+We want to return a middle character, as Go can have unexpected results:
 
-{{< r "b.go" >}}
+{{< r "mid.go" >}}
 
-JavaScript:
+We also want to return an end character, as Go can have unexpected results:
 
-{{ r "a.js" }}
+{{< r "end.go" >}}
+
+We also want to return a single character, as Go can have unexpected results:
+
+{{< r "one.go" >}}
+
+We also want to return multiple characters, as JavaScript can have unexpected
+results:
+
+{{< r "two.js" >}}
+
+Result:

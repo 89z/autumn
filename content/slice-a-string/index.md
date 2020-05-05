@@ -8,8 +8,6 @@ tags: [go, javascript, php, python]
 
 {{< r "a.go" >}}
 {{< r "b.go" >}}
-{{< r "c.go" >}}
-{{< r "d.go" >}}
 
 <https://golang.org/ref/spec#Slice_expressions>
 

@@ -7,7 +7,7 @@
    {{ range .Pages }}
    <tr>
       <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
-      <td><time>{{ .Lastmod.Format "Mon Jan 2 15:04:05 2006" }}</time></td>
+      <td><time>{{ .Lastmod.Format "Mon Jan 2 2006" }}</time></td>
    </tr>
    {{ end }}
 </table>

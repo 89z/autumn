@@ -1,6 +1,8 @@
 package main
 func main() {
-   s1 := "Sunday"
-   s2 := s1[1:2]
-   println(s2)
+   s_in := "♠♣♥♦"
+   a_dec := []rune(s_in)
+   a_tran := a_dec[:2]
+   s_enc := string(a_tran)
+   println(s_enc)
 }
