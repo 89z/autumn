@@ -6,16 +6,16 @@ tags: [go, javascript, php, python]
 
 ## Go
 
-{{< r "str.go" >}}
-{{< r "rune.go" >}}
+{{< r "a.go" >}}
+{{< r "b.go" >}}
+{{< r "c.go" >}}
+{{< r "d.go" >}}
 
 <https://golang.org/ref/spec#Slice_expressions>
 
 ## JavaScript
 
 {{< r "a.js" >}}
-{{< r "b.js" >}}
-{{< r "c.js" >}}
 
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/charAt>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/slice>

@@ -3,7 +3,7 @@ $s1 = 'Sunday';
 # example 1
 $s2 = $s1[0];
 # example 2
-$s3 = substr($s1, 0, 3);
+$s3 = substr($s1, 0, 1);
 # example 3
 $s4 = substr($s1, 3);
 # example 4
