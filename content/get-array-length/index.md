@@ -1,13 +1,8 @@
 ---
-title: Length of array
+title: Get array length
 categories: [array]
-tags: [d, go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python]
 ---
-
-## D
-
-- <https://dlang.org/phobos/std_container_array.html#.Array.length>
-- <https://dlang.org/phobos/std_range_primitives.html#.walkLength>
 
 ## Go
 
@@ -19,8 +14,7 @@ tags: [d, go, javascript, julia, nim, php, python]
 
 {{< r "a.js" >}}
 
-{{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/
-Array/length` >}}
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/length>
 
 ## Julia
 

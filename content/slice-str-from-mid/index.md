@@ -26,7 +26,7 @@ tags: [go, javascript, php, python]
 
 - <https://php.net/function.mb-substr>
 - <https://php.net/function.substr>
-- <https://php.net/types.string#example-54>
+- <https://php.net/types.string>
 
 ## Python
 
@@ -39,6 +39,4 @@ tags: [go, javascript, php, python]
 - <https://hyperpolyglot.org/c#extract-substr>
 - <https://hyperpolyglot.org/scripting#extract-substr>
 - <https://www.programming-idioms.org/idiom/38/extract-a-substring>
-- <https://www.programming-idioms.org/idiom/46/extract-beginning>
-- <https://www.programming-idioms.org/idiom/47/extract-string-suffix>
 - <https://rosettacode.org/wiki/Substring>
