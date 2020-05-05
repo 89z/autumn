@@ -40,5 +40,4 @@ tags: [go, javascript, php, python]
 - <https://hyperpolyglot.org/scripting#extract-substr>
 - <https://www.programming-idioms.org/idiom/38/extract-a-substring>
 - <https://www.programming-idioms.org/idiom/46/extract-beginning>
-- <https://www.programming-idioms.org/idiom/47/extract-string-suffix>
 - <https://rosettacode.org/wiki/Substring>
