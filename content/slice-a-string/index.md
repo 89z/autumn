@@ -14,6 +14,7 @@ tags: [go, javascript, php, python]
 ## JavaScript
 
 {{< r "a.js" >}}
+{{< r "b.js" >}}
 
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/charAt>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/slice>
