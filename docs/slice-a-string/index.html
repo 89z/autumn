@@ -21,7 +21,7 @@
    </header>
 
 <h1>Slice a string</h1>
-<time>Mon May 4 2020</time>
+<time>Tue May 5 2020</time>
    
 <a href="/autumn/categories/string/">string</a>
    
@@ -37,15 +37,13 @@
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s1</span>[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">2</span>]
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s1</span>[:<span style="color:#ae81ff">1</span>]
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s1</span>[:<span style="color:#ae81ff">2</span>]
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s1</span>[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">3</span>]
    <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s4</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s1</span>[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">2</span>]
-   <span style="color:#75715e">// example 4
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s5</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s1</span>[len(<span style="color:#a6e22e">s1</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>:]
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s4</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s1</span>[len(<span style="color:#a6e22e">s1</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>:]
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Su&#34;</span>, <span style="color:#a6e22e">s3</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Su&#34;</span>, <span style="color:#a6e22e">s4</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;u&#34;</span>, <span style="color:#a6e22e">s5</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;y&#34;</span>)
+</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;S&#34;</span>, <span style="color:#a6e22e">s3</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;un&#34;</span>, <span style="color:#a6e22e">s4</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;y&#34;</span>)
 }
 </code></pre></div>
 
@@ -56,9 +54,9 @@
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">s_in</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;♠♣♥♦&#34;</span>
    <span style="color:#a6e22e">a_dec</span> <span style="color:#f92672">:=</span> []rune(<span style="color:#a6e22e">s_in</span>)
-   <span style="color:#a6e22e">a_tran</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a_dec</span>[:<span style="color:#ae81ff">2</span>]
+   <span style="color:#a6e22e">a_tran</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a_dec</span>[:<span style="color:#ae81ff">1</span>]
    <span style="color:#a6e22e">s_enc</span> <span style="color:#f92672">:=</span> string(<span style="color:#a6e22e">a_tran</span>)
-   println(<span style="color:#a6e22e">s_enc</span>)
+   println(<span style="color:#a6e22e">s_enc</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;♠&#34;</span>)
 }
 </code></pre></div></p>
 <p><a href="https://golang.org/ref/spec#Slice_expressions">https://golang.org/ref/spec#Slice_expressions</a></p>
@@ -67,11 +65,25 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">substring</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s4</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">charAt</span>(<span style="color:#ae81ff">0</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s5</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">charAt</span>();
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s6</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>[<span style="color:#ae81ff">0</span>];
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sunday&#39;</span>;
+<span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>);
+<span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">substring</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>);
+<span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s4</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">charAt</span>(<span style="color:#ae81ff">0</span>);
+<span style="color:#75715e">// example 4
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s5</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">charAt</span>();
+<span style="color:#75715e">// example 5
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s6</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>[<span style="color:#ae81ff">0</span>];
+<span style="color:#75715e">// example 6
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s7</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>);
+<span style="color:#75715e">// example 7
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s8</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">substring</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>);
+<span style="color:#75715e">// example 8
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s9</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+<span style="color:#75715e">// print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">s3</span>, <span style="color:#a6e22e">s4</span>, <span style="color:#a6e22e">s5</span>, <span style="color:#a6e22e">s6</span>, <span style="color:#a6e22e">s7</span>, <span style="color:#a6e22e">s8</span>, <span style="color:#a6e22e">s9</span>);
 </code></pre></div>
 <ul>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/charAt">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/charAt</a></li>
@@ -79,7 +91,7 @@
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/substring">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/substring</a></li>
 </ul>
 <h2 id="php">PHP</h2>
-
+<p>
 
 
 
@@ -98,10 +110,6 @@ $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sunday
 <span style="color:#75715e"># print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;S&#39;</span>, $s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Sun&#39;</span>, $s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;day&#39;</span>, $s5 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;day&#39;</span>, $s6 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;y&#39;</span>);
 </code></pre></div>
-<ul>
-<li><a href="https://php.net/function.substr">https://php.net/function.substr</a></li>
-<li><a href="https://php.net/types.string#example-54">https://php.net/types.string#example-54</a></li>
-</ul>
 
 
 
@@ -117,22 +125,12 @@ $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;♠♣
 </span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">mb_substr</span>($s1, <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>);
 <span style="color:#75715e"># print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;♠♣&#39;</span>, $s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;♥♦&#39;</span>, $s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;♥♦&#39;</span>);
-</code></pre></div>
-<p><a href="https://php.net/function.mb-substr">https://php.net/function.mb-substr</a></p>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sunday&#39;</span>;
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strstr</span>($s1, <span style="color:#e6db74">&#39;d&#39;</span>, <span style="color:#66d9ef">true</span>);
-<span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strstr</span>($s1, <span style="color:#e6db74">&#39;d&#39;</span>);
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Sun&#39;</span>, $s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;day&#39;</span>);
-</code></pre></div>
-<p><a href="https://php.net/function.strstr">https://php.net/function.strstr</a></p>
+</code></pre></div></p>
+<ul>
+<li><a href="https://php.net/function.mb-substr">https://php.net/function.mb-substr</a></li>
+<li><a href="https://php.net/function.substr">https://php.net/function.substr</a></li>
+<li><a href="https://php.net/types.string#example-54">https://php.net/types.string#example-54</a></li>
+</ul>
 <h2 id="python">Python</h2>
 
 

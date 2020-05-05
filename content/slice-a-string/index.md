@@ -22,17 +22,11 @@ tags: [go, javascript, php, python]
 ## PHP
 
 {{< r "a.php" >}}
-
-- <https://php.net/function.substr>
-- <https://php.net/types.string#example-54>
-
 {{< r "b.php" >}}
 
-<https://php.net/function.mb-substr>
-
-{{< r "c.php" >}}
-
-<https://php.net/function.strstr>
+- <https://php.net/function.mb-substr>
+- <https://php.net/function.substr>
+- <https://php.net/types.string#example-54>
 
 ## Python
 

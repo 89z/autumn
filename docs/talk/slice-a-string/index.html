@@ -21,10 +21,10 @@
    </header>
 
 <h1>Talk:Slice a string</h1>
-<time>Mon May 4 2020</time>
+<time>Tue May 5 2020</time>
    
    
-   <p>We want to return a begin character, as syntax can be different:</p>
+   <p>We want to return begin character(s), as syntax can be different:</p>
 
 
 
@@ -36,7 +36,7 @@
    println(<span style="color:#a6e22e">s2</span>)
 }
 </code></pre></div>
-<p>We want to return a middle character, as Go can have unexpected results:</p>
+<p>We want to return middle character(s), as Go can have unexpected results:</p>
 
 
 
@@ -49,7 +49,7 @@
    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, <span style="color:#a6e22e">s2</span>) <span style="color:#75715e">// &#34;&#34;
 </span><span style="color:#75715e"></span>}
 </code></pre></div>
-<p>We also want to return an end character, as Go can have unexpected results:</p>
+<p>We also want to return end character(s), as Go can have unexpected results:</p>
 
 
 
@@ -82,6 +82,15 @@ results:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sunday&#39;</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>[<span style="color:#f92672">:</span><span style="color:#ae81ff">2</span>]; <span style="color:#75715e">// SyntaxError: Unexpected token &#39;:&#39;
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s2</span>);
+</code></pre></div>
+<p>Make the begin a single character:</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sunday&#39;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">charAt</span>();
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s2</span>);
 </code></pre></div>
 <p>Result:</p>
 
