@@ -9,6 +9,7 @@ tags: [go, javascript, julia, nim, php, python]
 {{< r "a.go" >}}
 {{< r "b.go" >}}
 
+- <https://golang.org/pkg/regexp#Regexp.MatchString>
 - <https://golang.org/pkg/strings#Contains>
 - <https://golang.org/pkg/strings#HasPrefix>
 - <https://golang.org/pkg/strings#HasSuffix>
@@ -17,6 +18,7 @@ tags: [go, javascript, julia, nim, php, python]
 
 {{< r "a.js" >}}
 
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/RegExp/test>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/endsWith>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/includes>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/startsWith>
@@ -39,12 +41,15 @@ tags: [go, javascript, julia, nim, php, python]
 
 {{< r "a.php" >}}
 
-<https://php.net/function.strpos>
+- <https://php.net/function.preg-match>
+- <https://php.net/function.strpos>
 
 ## Python
 
 {{< r "a.py" >}}
+{{< r "b.py" >}}
 
+- <https://docs.python.org/library/re.html#re.search>
 - <https://docs.python.org/library/stdtypes.html#str.endswith>
 - <https://docs.python.org/library/stdtypes.html#str.startswith>
 - <https://docs.python.org/reference/expressions.html#in>

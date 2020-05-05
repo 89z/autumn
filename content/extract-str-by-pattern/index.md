@@ -1,5 +1,5 @@
 ---
-title: Regular expression
+title: Extract string by pattern
 categories: [string]
 tags: [go, javascript, julia, php, python]
 ---
@@ -17,17 +17,13 @@ tags: [go, javascript, julia, php, python]
 
 {{< r "reg.js" >}}
 
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/RegExp/exec` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/RegExp/test` >}}
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/RegExp/exec>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/RegExp/test>
 
 {{< r "str.js" >}}
 
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/String/match` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/String/search` >}}
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/match>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/search>
 
 ## Julia
 
@@ -46,12 +42,10 @@ tags: [go, javascript, julia, php, python]
 ## Python
 
 {{< r "findall.py" >}}
-
-<https://docs.python.org/library/re.html#re.findall>
-
 {{< r "search.py" >}}
 
-<https://docs.python.org/library/re.html#re.search>
+- <https://docs.python.org/library/re.html#re.findall>
+- <https://docs.python.org/library/re.html#re.search>
 
 ## References
 
