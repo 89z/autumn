@@ -1,9 +1,9 @@
-s2 = s1[0]
-s2 = s1[:1]
-s3 = s1[:3]
-s4 = s1[0]
-s4 = s1[3:]
-s5 = s1[-1]
-s5 = s1[1:3]
-s6 = s1[-1:]
-s7 = s1[-1]
+s1 = 'Sunday'
+# example 1
+s2 = s1[-1:]
+# example 2
+s3 = s1[-1]
+# example 3
+s4 = s1[-2:]
+# print
+print(s2 == 'y', s3 == 'y', s4 == 'ay')

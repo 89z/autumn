@@ -7,6 +7,7 @@ tags: [go, javascript, julia, nim, php, python]
 ## Go
 
 {{< r "a.go" >}}
+{{< r "b.go" >}}
 
 - <https://golang.org/pkg/strings#Contains>
 - <https://golang.org/pkg/strings#HasPrefix>
@@ -37,7 +38,6 @@ tags: [go, javascript, julia, nim, php, python]
 ## PHP
 
 {{< r "a.php" >}}
-{{< r "b.php" >}}
 
 <https://php.net/function.strpos>
 

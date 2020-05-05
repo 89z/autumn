@@ -15,9 +15,7 @@ tags: [go, javascript, php, python]
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/charAt>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/slice>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/substring>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/slice>
 
 ## PHP
 
@@ -39,6 +37,5 @@ tags: [go, javascript, php, python]
 - <https://hyperpolyglot.org/c#extract-substr>
 - <https://hyperpolyglot.org/scripting#extract-substr>
 - <https://www.programming-idioms.org/idiom/38/extract-a-substring>
-- <https://www.programming-idioms.org/idiom/46/extract-beginning>
 - <https://www.programming-idioms.org/idiom/47/extract-string-suffix>
 - <https://rosettacode.org/wiki/Substring>
