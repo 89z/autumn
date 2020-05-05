@@ -21,7 +21,7 @@
    </header>
 
 <h1>Talk:Convert radix</h1>
-<time>Sat May 2 23:45:55 2020</time>
+<time>Mon May 4 21:45:20 2020</time>
    
    
    <h2 id="c">C</h2>
@@ -181,7 +181,7 @@
 <span style="color:#a6e22e">var_dump</span>($s1);
 </code></pre></div>
 <h2 id="python">Python</h2>
-
+<p>
 
 
 
@@ -198,6 +198,34 @@
 s1 <span style="color:#f92672">=</span> r64_encode(<span style="color:#ae81ff">1234567890</span>)
 <span style="color:#66d9ef">print</span>(s1)
 </code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py">s_enc <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_&#39;</span>
+s_dec <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;_~~!&#34;#$%&amp;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">()*~~~~~~~EFGHIJKLMNOPQRSTUVWXYZ[\]^~~~~`~+,-./0123456789:;&lt;=&gt;?@ABCD&#39;</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">r64_encode</span>(n_in):
+   s_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+   <span style="color:#66d9ef">while</span> n_in <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+      s_out <span style="color:#f92672">=</span> s_enc[n_in <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">63</span>] <span style="color:#f92672">+</span> s_out
+      n_in <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#ae81ff">6</span>
+   <span style="color:#66d9ef">return</span> s_out
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">r64_decode</span>(s_in):
+   n_out <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+   <span style="color:#66d9ef">for</span> s_chr <span style="color:#f92672">in</span> s_in:
+      n_ord <span style="color:#f92672">=</span> ord(s_chr) <span style="color:#f92672">-</span> <span style="color:#ae81ff">45</span>
+      s_out <span style="color:#f92672">=</span> s_dec[n_ord]
+      n_out <span style="color:#f92672">=</span> n_out <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">6</span> <span style="color:#f92672">|</span> ord(s_out) <span style="color:#f92672">-</span> <span style="color:#ae81ff">33</span>
+   <span style="color:#66d9ef">return</span> n_out
+
+<span style="color:#f92672">import</span> time
+n1 <span style="color:#f92672">=</span> int(time<span style="color:#f92672">.</span>time())
+s1 <span style="color:#f92672">=</span> r64_encode(n1)
+n2 <span style="color:#f92672">=</span> r64_decode(s1)
+<span style="color:#66d9ef">print</span>(n1, s1, n2 <span style="color:#f92672">==</span> n1)
+</code></pre></div></p>
 
 
 </body>

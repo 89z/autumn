@@ -14,12 +14,11 @@ tags: [go, javascript, php, python]
 ## JavaScript
 
 {{< r "a.js" >}}
-
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/slice>
-
 {{< r "b.js" >}}
+{{< r "c.js" >}}
 
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/charAt>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/slice>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/substring>
 
 ## PHP

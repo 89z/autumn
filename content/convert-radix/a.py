@@ -3,20 +3,15 @@ s_dig = string.printable[:62] + '-_'
 # example 1
 def r64_encode(n_in):
    s_out = ''
-   n_sh = n_in
-   while n_sh > 0:
-      n_key = n_sh & 63
-      s_out = s_dig[n_key] + s_out
-      n_sh >>= 6
+   while n_in > 0:
+      s_out = s_dig[n_in & 63] + s_out
+      n_in >>= 6
    return s_out
 # example 2
 def r64_decode(s_in):
    n_out = 0
-   n_key = -1
-   for n_sh in range(0, 36, 6):
-      s_val = s_in[n_key]
-      n_out |= s_dig.find(s_val) << n_sh
-      n_key -= 1
+   for s_chr in s_in:
+      n_out = n_out << 6 | s_dig.find(s_chr)
    return n_out
 # print
 import time

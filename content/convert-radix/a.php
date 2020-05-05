@@ -4,9 +4,9 @@ $s_dig = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_';
 function r64_encode($n_in) {
    global $s_dig;
    $s_out = '';
-   for ($n_sh = $n_in; $n_sh > 0; $n_sh >>= 6) {
-      $n_key = $n_sh & 63;
-      $s_out = $s_dig[$n_key] . $s_out;
+   while ($n_in > 0) {
+      $s_out = $s_dig[$n_in & 63] . $s_out;
+      $n_in >>= 6;
    }
    return $s_out;
 }
@@ -14,9 +14,11 @@ function r64_encode($n_in) {
 function r64_decode($s_in) {
    global $s_dig;
    $n_out = 0;
-   for ($n_sh = 0, $n_key = -1; $n_sh < 36; $n_sh += 6, $n_key -= 1) {
-      $s_val = $s_in[$n_key];
-      $n_out |= strpos($s_dig, $s_val) << $n_sh;
+   $n_len = strlen($s_in);
+   while ($n_len > 0) {
+      $s_chr = $s_in[-$n_len];
+      $n_out = $n_out << 6 | strpos($s_dig, $s_chr);
+      $n_len--;
    }
    return $n_out;
 }

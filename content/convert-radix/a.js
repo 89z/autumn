@@ -2,20 +2,17 @@ let s_dig = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_';
 // example 1
 function r64_encode(n_in) {
    let s_out = '';
-   for (let n_sh = n_in; n_sh > 0; n_sh >>= 6) {
-      let n_key = n_sh & 63;
-      s_out = s_dig[n_key] + s_out;
+   while (n_in > 0) {
+      s_out = s_dig[n_in & 63] + s_out;
+      n_in >>= 6;
    }
    return s_out;
 }
 // example 2
 function r64_decode(s_in) {
    let n_out = 0;
-   let n_key = s_in.length - 1;
-   for (let n_sh = 0; n_sh < 36; n_sh += 6) {
-      let s_val = s_in[n_key];
-      n_out |= s_dig.indexOf(s_val) << n_sh;
-      n_key -= 1
+   for (s_chr of s_in) {
+      n_out = n_out << 6 | s_dig.indexOf(s_chr);
    }
    return n_out;
 }

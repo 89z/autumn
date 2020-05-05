@@ -24,4 +24,5 @@ title: 'Talk:Convert radix'
 
 ## Python
 
-{{< r "enc.py" >}}
+{{< r "divmod.py" >}}
+{{< r "ord.py" >}}
