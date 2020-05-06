@@ -1,8 +1,13 @@
 ---
 title: Convert radix
 categories: [number]
-tags: [javascript, php, python]
+tags: [go, javascript, php, python]
 ---
+
+## Go
+
+{{< r "a.go" >}}
+{{< r "b.go" >}}
 
 ## JavaScript
 

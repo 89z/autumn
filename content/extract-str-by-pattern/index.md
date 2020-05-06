@@ -11,16 +11,12 @@ tags: [go, javascript, julia, php, python]
 - <https://golang.org/pkg/regexp#Regexp.FindAllString>
 - <https://golang.org/pkg/regexp#Regexp.FindString>
 - <https://golang.org/pkg/regexp#Regexp.FindStringSubmatch>
-- <https://golang.org/pkg/regexp#Regexp.MatchString>
 
 ## JavaScript
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/RegExp/exec>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/RegExp/test>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/match>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/search>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/match>
 
 ## Julia
 
@@ -45,8 +41,6 @@ tags: [go, javascript, julia, php, python]
 
 ## References
 
-- <https://hyperpolyglot.org/c#regex-test>
-- <https://hyperpolyglot.org/numerical-analysis#regex-match>
-- <https://hyperpolyglot.org/scripting#regex-test>
+- <https://hyperpolyglot.org/scripting#group-capture>
 - <https://rosettacode.org/wiki/Regular_expressions>
 - <https://www.programming-idioms.org/idiom/83>
