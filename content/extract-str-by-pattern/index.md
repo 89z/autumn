@@ -15,13 +15,10 @@ tags: [go, javascript, julia, php, python]
 
 ## JavaScript
 
-{{< r "reg.js" >}}
+{{< r "a.js" >}}
 
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/RegExp/exec>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/RegExp/test>
-
-{{< r "str.js" >}}
-
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/match>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/search>
 
@@ -41,8 +38,7 @@ tags: [go, javascript, julia, php, python]
 
 ## Python
 
-{{< r "findall.py" >}}
-{{< r "search.py" >}}
+{{< r "a.py" >}}
 
 - <https://docs.python.org/library/re.html#re.findall>
 - <https://docs.python.org/library/re.html#re.search>
