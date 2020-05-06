@@ -10,7 +10,8 @@ func r64_encode(n_in int64) string {
 }
 // example 2
 func r64_decode(s_in string) int64 {
-   o_big, _ := big.NewInt(0).SetString(s_in, 62)
+   var o_big big.Int
+   o_big.SetString(s_in, 62)
    return o_big.Int64()
 }
 // print

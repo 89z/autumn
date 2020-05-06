@@ -7,6 +7,7 @@ tags: [go, javascript, php, python]
 ## Go
 
 {{< r "a.go" >}}
+{{< r "b.go" >}}
 
 - <https://golang.org/pkg/time#ANSIC>
 - <https://golang.org/pkg/time#Time.Format>
@@ -16,14 +17,9 @@ tags: [go, javascript, php, python]
 
 {{< r "a.js" >}}
 
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/Date/toDateString` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/Date/toISOString` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/Date/toLocaleString` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/Date/toString` >}}
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toDateString>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toISOString>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString>
 
 ## PHP
 
