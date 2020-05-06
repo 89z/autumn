@@ -27,24 +27,6 @@
    
    
    <h2 id="go">Go</h2>
-<p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">b1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">HasPrefix</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#e6db74">&#34;Su&#34;</span>)
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">b2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Contains</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#e6db74">&#34;un&#34;</span>)
-   <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">b3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">HasSuffix</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#e6db74">&#34;ay&#34;</span>)
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">b1</span>, <span style="color:#a6e22e">b2</span>, <span style="color:#a6e22e">b3</span>)
-}
-</code></pre></div>
 
 
 
@@ -62,33 +44,16 @@
    <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">b1</span>, <span style="color:#a6e22e">b2</span>, <span style="color:#a6e22e">b3</span>)
 }
-</code></pre></div></p>
-<ul>
-<li><a href="https://golang.org/pkg/regexp#Regexp.MatchString">https://golang.org/pkg/regexp#Regexp.MatchString</a></li>
-<li><a href="https://golang.org/pkg/strings#Contains">https://golang.org/pkg/strings#Contains</a></li>
-<li><a href="https://golang.org/pkg/strings#HasPrefix">https://golang.org/pkg/strings#HasPrefix</a></li>
-<li><a href="https://golang.org/pkg/strings#HasSuffix">https://golang.org/pkg/strings#HasSuffix</a></li>
-</ul>
+</code></pre></div>
+<p><a href="https://golang.org/pkg/regexp#Regexp.MatchString">https://golang.org/pkg/regexp#Regexp.MatchString</a></p>
 <h2 id="javascript">JavaScript</h2>
 
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sunday&#39;</span>;
-<span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">&#39;Su&#39;</span>);
-<span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/^Su/</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">s1</span>);
-<span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#e6db74">&#39;un&#39;</span>);
-<span style="color:#75715e">// example 4
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b4</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/un./</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">s1</span>);
-<span style="color:#75715e">// example 5
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b5</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">endsWith</span>(<span style="color:#e6db74">&#39;ay&#39;</span>);
-<span style="color:#75715e">// example 6
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b6</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/ay$/</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">s1</span>);
-<span style="color:#75715e">// print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">b1</span>, <span style="color:#a6e22e">b2</span>, <span style="color:#a6e22e">b3</span>, <span style="color:#a6e22e">b4</span>, <span style="color:#a6e22e">b5</span>, <span style="color:#a6e22e">b6</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/^Su/</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">s1</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b4</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/un./</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">s1</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b6</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/ay$/</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">s1</span>);
 </code></pre></div>
 <ul>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/RegExp/test">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/RegExp/test</a></li>
@@ -101,19 +66,12 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.jl" data-lang=".jl">s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>
-<span style="color:#75715e"># example 1</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.jl" data-lang=".jl"><span style="color:#75715e"># example 1</span>
 o1 <span style="color:#f92672">=</span> match(<span style="color:#e6db74">r&#34;^Su&#34;</span>, s1)
 println(o1 <span style="color:#f92672">!=</span> nothing)
-<span style="color:#75715e"># example 2</span>
-b1 <span style="color:#f92672">=</span> occursin(<span style="color:#e6db74">&#34;un&#34;</span>, s1)
-println(b1)
 <span style="color:#75715e"># example 3</span>
 o2 <span style="color:#f92672">=</span> match(<span style="color:#e6db74">r&#34;un.&#34;</span>, s1)
 println(o2 <span style="color:#f92672">!=</span> nothing)
-<span style="color:#75715e"># example 4</span>
-b2 <span style="color:#f92672">=</span> endswith(<span style="color:#e6db74">&#34;ay&#34;</span>, s1)
-println(b1)
 <span style="color:#75715e"># example 5</span>
 o3 <span style="color:#f92672">=</span> match(<span style="color:#e6db74">r&#34;ay$&#34;</span>, s1)
 println(o3 <span style="color:#f92672">!=</span> nothing)
@@ -121,24 +79,6 @@ println(o3 <span style="color:#f92672">!=</span> nothing)
 <ul>
 <li><a href="https://docs.julialang.org/en/v1/base/strings#Base.endswith">https://docs.julialang.org/en/v1/base/strings#Base.endswith</a></li>
 <li><a href="https://docs.julialang.org/en/v1/base/strings#Base.occursin">https://docs.julialang.org/en/v1/base/strings#Base.occursin</a></li>
-</ul>
-<h2 id="nim">Nim</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.nim" data-lang=".nim"><span style="color:#f92672">import</span> strutils
-<span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>
-<span style="color:#75715e"># example 1</span>
-<span style="color:#66d9ef">let</span> b1 <span style="color:#f92672">=</span> s1.contains(<span style="color:#e6db74">&#34;un&#34;</span>)
-echo b1
-<span style="color:#75715e"># example 2</span>
-<span style="color:#66d9ef">let</span> b2 <span style="color:#f92672">=</span> s1.endsWith(<span style="color:#e6db74">&#34;ay&#34;</span>)
-echo b2
-</code></pre></div>
-<ul>
-<li><a href="https://nim-lang.github.io/Nim/strutils#contains,string,string">https://nim-lang.github.io/Nim/strutils#contains,string,string</a></li>
-<li><a href="https://nim-lang.github.io/Nim/strutils#endsWith,string,string">https://nim-lang.github.io/Nim/strutils#endsWith,string,string</a></li>
 </ul>
 <h2 id="php">PHP</h2>
 

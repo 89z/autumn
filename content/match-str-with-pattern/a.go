@@ -1,13 +1,13 @@
 package main
-import "strings"
+import "regexp"
 func main() {
    s1 := "Sunday"
    // example 1
-   b1 := strings.HasPrefix(s1, "Su")
+   b1 := regexp.MustCompile("^Su").MatchString(s1)
    // example 2
-   b2 := strings.Contains(s1, "un")
+   b2 := regexp.MustCompile("un.").MatchString(s1)
    // example 3
-   b3 := strings.HasSuffix(s1, "ay")
+   b3 := regexp.MustCompile("ay$").MatchString(s1)
    // print
    println(b1, b2, b3)
 }

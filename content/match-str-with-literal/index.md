@@ -16,7 +16,6 @@ tags: [go, javascript, julia, nim, php, python]
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/RegExp/test>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/endsWith>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/includes>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/startsWith>
@@ -39,7 +38,8 @@ tags: [go, javascript, julia, nim, php, python]
 
 {{< r "a.php" >}}
 
-<https://php.net/function.strpos>
+- <https://php.net/function.stripos>
+- <https://php.net/function.strpos>
 
 ## Python
 

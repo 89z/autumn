@@ -1,18 +1,14 @@
 ---
 title: Match string with pattern
 categories: [string]
-tags: [go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, php, python]
 ---
 
 ## Go
 
 {{< r "a.go" >}}
-{{< r "b.go" >}}
 
-- <https://golang.org/pkg/regexp#Regexp.MatchString>
-- <https://golang.org/pkg/strings#Contains>
-- <https://golang.org/pkg/strings#HasPrefix>
-- <https://golang.org/pkg/strings#HasSuffix>
+<https://golang.org/pkg/regexp#Regexp.MatchString>
 
 ## JavaScript
 
@@ -29,13 +25,6 @@ tags: [go, javascript, julia, nim, php, python]
 
 - <https://docs.julialang.org/en/v1/base/strings#Base.endswith>
 - <https://docs.julialang.org/en/v1/base/strings#Base.occursin>
-
-## Nim
-
-{{< r "a.nim" >}}
-
-- <https://nim-lang.github.io/Nim/strutils#contains,string,string>
-- <https://nim-lang.github.io/Nim/strutils#endsWith,string,string>
 
 ## PHP
 
