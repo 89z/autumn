@@ -58,6 +58,6 @@ tags: [go, javascript, julia, nim, php, python]
 
 - <https://hyperpolyglot.org/scripting#prefix-suffix-test>
 - <https://rosettacode.org/wiki/String_matching>
-- <https://www.programming-idioms.org/idiom/39/str-contains>
+- <https://www.programming-idioms.org/idiom/39/check-string-contains>
 - <https://www.programming-idioms.org/idiom/96/check-string-prefix>
 - <https://www.programming-idioms.org/idiom/97/check-string-suffix>

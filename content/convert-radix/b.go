@@ -8,8 +8,8 @@ var s_dig = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_"
 func r64_encode(n_in int) string {
    var s_out string
    for n_in > 0 {
-      s_new := s_dig[n_in & 63]
-      s_out = string(s_new) + s_out
+      n_key := n_in & 63
+      s_out = s_dig[n_key:n_key + 1] + s_out
       n_in >>= 6
    }
    return s_out

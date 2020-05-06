@@ -8,8 +8,10 @@ tags: [go, javascript, php, python]
 
 {{< r "a.go" >}}
 {{< r "b.go" >}}
+{{< r "c.go" >}}
 
-<https://golang.org/ref/spec#Slice_expressions>
+- <https://golang.org/pkg/unicode/utf8#DecodeLastRuneInString>
+- <https://golang.org/ref/spec#Slice_expressions>
 
 ## JavaScript
 

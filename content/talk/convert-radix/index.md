@@ -26,3 +26,7 @@ title: 'Talk:Convert radix'
 
 {{< r "divmod.py" >}}
 {{< r "ord.py" >}}
+
+## References
+
+<https://tools.ietf.org/html/rfc4648#section-5>

@@ -54,8 +54,23 @@
    <span style="color:#a6e22e">s_enc</span> <span style="color:#f92672">:=</span> string(<span style="color:#a6e22e">a_tran</span>)
    println(<span style="color:#a6e22e">s_enc</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;♦&#34;</span>)
 }
+</code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;unicode/utf8&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s_in</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;♠♣♥♦&#34;</span>
+   <span style="color:#a6e22e">a_tran</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">utf8</span>.<span style="color:#a6e22e">DecodeLastRuneInString</span>(<span style="color:#a6e22e">s_in</span>)
+   println(string(<span style="color:#a6e22e">a_tran</span>))
+}
 </code></pre></div></p>
-<p><a href="https://golang.org/ref/spec#Slice_expressions">https://golang.org/ref/spec#Slice_expressions</a></p>
+<ul>
+<li><a href="https://golang.org/pkg/unicode/utf8#DecodeLastRuneInString">https://golang.org/pkg/unicode/utf8#DecodeLastRuneInString</a></li>
+<li><a href="https://golang.org/ref/spec#Slice_expressions">https://golang.org/ref/spec#Slice_expressions</a></li>
+</ul>
 <h2 id="javascript">JavaScript</h2>
 
 
