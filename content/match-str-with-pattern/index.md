@@ -1,5 +1,5 @@
 ---
-title: String contains value
+title: Match string with pattern
 categories: [string]
 tags: [go, javascript, julia, nim, php, python]
 ---
