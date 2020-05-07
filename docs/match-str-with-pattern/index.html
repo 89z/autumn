@@ -21,7 +21,7 @@
    </header>
 
 <h1>Match string with pattern</h1>
-<time>Wed May 6 2020</time>
+<time>Thu May 7 2020</time>
    
 <a href="/autumn/categories/string/">string</a>
    
@@ -41,25 +41,38 @@
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">b2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;un.&#34;</span>).<span style="color:#a6e22e">MatchString</span>(<span style="color:#a6e22e">s1</span>)
    <span style="color:#75715e">// example 3
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">b3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;ay$&#34;</span>).<span style="color:#a6e22e">MatchString</span>(<span style="color:#a6e22e">s1</span>)
+   <span style="color:#75715e">// example 4
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">b4</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;(?i)su&#34;</span>).<span style="color:#a6e22e">MatchString</span>(<span style="color:#a6e22e">s1</span>)
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">b1</span>, <span style="color:#a6e22e">b2</span>, <span style="color:#a6e22e">b3</span>)
+</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">b1</span>, <span style="color:#a6e22e">b2</span>, <span style="color:#a6e22e">b3</span>, <span style="color:#a6e22e">b4</span>)
 }
 </code></pre></div>
-<p><a href="https://golang.org/pkg/regexp#Regexp.MatchString">https://golang.org/pkg/regexp#Regexp.MatchString</a></p>
+<ul>
+<li><a href="https://github.com/google/re2/wiki/Syntax">https://github.com/google/re2/wiki/Syntax</a></li>
+<li><a href="https://golang.org/pkg/regexp#Regexp.MatchString">https://golang.org/pkg/regexp#Regexp.MatchString</a></li>
+</ul>
 <h2 id="javascript">JavaScript</h2>
 
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/^Su/</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">s1</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b4</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/un./</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">s1</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b6</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/ay$/</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">s1</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sunday&#39;</span>;
+<span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/^Su/</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">s1</span>);
+<span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/un./</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">s1</span>);
+<span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b3</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/ay$/</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">s1</span>);
+<span style="color:#75715e">// example 4
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b4</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/su/i</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">s1</span>);
+<span style="color:#75715e">// example 5
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b5</span> <span style="color:#f92672">=</span> RegExp(<span style="color:#e6db74">/su/</span>, <span style="color:#e6db74">&#39;i&#39;</span>).<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">s1</span>);
+<span style="color:#75715e">// print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">b1</span>, <span style="color:#a6e22e">b2</span>, <span style="color:#a6e22e">b3</span>, <span style="color:#a6e22e">b4</span>, <span style="color:#a6e22e">b5</span>);
 </code></pre></div>
 <ul>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/RegExp/test">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/RegExp/test</a></li>
-<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/endsWith">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/endsWith</a></li>
-<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/includes">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/includes</a></li>
-<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/startsWith">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/startsWith</a></li>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/RegExp">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/RegExp</a></li>
 </ul>
 <h2 id="julia">Julia</h2>
 
@@ -76,10 +89,6 @@ println(o2 <span style="color:#f92672">!=</span> nothing)
 o3 <span style="color:#f92672">=</span> match(<span style="color:#e6db74">r&#34;ay$&#34;</span>, s1)
 println(o3 <span style="color:#f92672">!=</span> nothing)
 </code></pre></div>
-<ul>
-<li><a href="https://docs.julialang.org/en/v1/base/strings#Base.endswith">https://docs.julialang.org/en/v1/base/strings#Base.endswith</a></li>
-<li><a href="https://docs.julialang.org/en/v1/base/strings#Base.occursin">https://docs.julialang.org/en/v1/base/strings#Base.occursin</a></li>
-</ul>
 <h2 id="php">PHP</h2>
 
 
@@ -89,39 +98,22 @@ println(o3 <span style="color:#f92672">!=</span> nothing)
 $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sunday&#39;</span>;
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/^Su/&#39;</span>, $s1);
-<span style="color:#a6e22e">var_dump</span>($n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>);
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strpos</span>($s1, <span style="color:#e6db74">&#39;Su&#39;</span>);
-<span style="color:#a6e22e">var_dump</span>($n2 <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>);
+</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/un./&#39;</span>, $s1);
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$n3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/un./&#39;</span>, $s1);
-<span style="color:#a6e22e">var_dump</span>($n3 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>);
+</span><span style="color:#75715e"></span>$n3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/ay$/&#39;</span>, $s1);
 <span style="color:#75715e"># example 4
-</span><span style="color:#75715e"></span>$n4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strpos</span>($s1, <span style="color:#e6db74">&#39;un&#39;</span>);
-<span style="color:#a6e22e">var_dump</span>($n4 <span style="color:#f92672">!==</span> <span style="color:#66d9ef">false</span>);
+</span><span style="color:#75715e"></span>$n4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/su/i&#39;</span>, $s1);
 <span style="color:#75715e"># example 5
-</span><span style="color:#75715e"></span>$n5 <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/ay$/&#39;</span>, $s1);
-<span style="color:#a6e22e">var_dump</span>($n5 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>);
+</span><span style="color:#75715e"></span>$n5 <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/(?i)su/&#39;</span>, $s1);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>, $n2 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>, $n3 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>, $n4 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>, $n5 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>);
 </code></pre></div>
 <ul>
 <li><a href="https://php.net/function.preg-match">https://php.net/function.preg-match</a></li>
-<li><a href="https://php.net/function.strpos">https://php.net/function.strpos</a></li>
+<li><a href="https://php.net/regexp.reference.internal-options">https://php.net/regexp.reference.internal-options</a></li>
 </ul>
 <h2 id="python">Python</h2>
-<p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py">s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sunday&#39;</span>
-<span style="color:#75715e"># example 1</span>
-b1 <span style="color:#f92672">=</span> s1<span style="color:#f92672">.</span>startswith(<span style="color:#e6db74">&#39;Su&#39;</span>)
-<span style="color:#75715e"># example 2</span>
-b2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;un&#39;</span> <span style="color:#f92672">in</span> s1
-<span style="color:#75715e"># example 3</span>
-b3 <span style="color:#f92672">=</span> s1<span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;ay&#39;</span>)
-<span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(b1, b2, b3)
-</code></pre></div>
 
 
 
@@ -130,25 +122,26 @@ b3 <span style="color:#f92672">=</span> s1<span style="color:#f92672">.</span>en
 s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sunday&#39;</span>
 <span style="color:#75715e"># example 1</span>
 o1 <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;^Su&#39;</span>, s1)
-<span style="color:#66d9ef">print</span>(o1 <span style="color:#f92672">!=</span> None)
 <span style="color:#75715e"># example 2</span>
 o2 <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;un.&#39;</span>, s1)
-<span style="color:#66d9ef">print</span>(o2 <span style="color:#f92672">!=</span> None)
 <span style="color:#75715e"># example 3</span>
 o3 <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;ay$&#39;</span>, s1)
-<span style="color:#66d9ef">print</span>(o2 <span style="color:#f92672">!=</span> None)
-</code></pre></div></p>
+<span style="color:#75715e"># example 4</span>
+o4 <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;su&#39;</span>, s1, re<span style="color:#f92672">.</span>I)
+<span style="color:#75715e"># example 5</span>
+o5 <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;(?i)su&#39;</span>, s1)
+<span style="color:#75715e"># print</span>
+<span style="color:#66d9ef">print</span>(o1 <span style="color:#f92672">!=</span> None, o2 <span style="color:#f92672">!=</span> None, o3 <span style="color:#f92672">!=</span> None, o4 <span style="color:#f92672">!=</span> None, o5 <span style="color:#f92672">!=</span> None)
+</code></pre></div>
 <ul>
+<li><a href="https://docs.python.org/library/re.html#re.I">https://docs.python.org/library/re.html#re.I</a></li>
 <li><a href="https://docs.python.org/library/re.html#re.search">https://docs.python.org/library/re.html#re.search</a></li>
-<li><a href="https://docs.python.org/library/stdtypes.html#str.endswith">https://docs.python.org/library/stdtypes.html#str.endswith</a></li>
-<li><a href="https://docs.python.org/library/stdtypes.html#str.startswith">https://docs.python.org/library/stdtypes.html#str.startswith</a></li>
-<li><a href="https://docs.python.org/reference/expressions.html#in">https://docs.python.org/reference/expressions.html#in</a></li>
 </ul>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://hyperpolyglot.org/scripting#prefix-suffix-test">https://hyperpolyglot.org/scripting#prefix-suffix-test</a></li>
+<li><a href="https://hyperpolyglot.org/c#case-insensitive-regex">https://hyperpolyglot.org/c#case-insensitive-regex</a></li>
+<li><a href="https://hyperpolyglot.org/scripting#case-insensitive-regex">https://hyperpolyglot.org/scripting#case-insensitive-regex</a></li>
 <li><a href="https://rosettacode.org/wiki/String_matching">https://rosettacode.org/wiki/String_matching</a></li>
-<li><a href="https://www.programming-idioms.org/idiom/39/check-string-contains">https://www.programming-idioms.org/idiom/39/check-string-contains</a></li>
 <li><a href="https://www.programming-idioms.org/idiom/96/check-string-prefix">https://www.programming-idioms.org/idiom/96/check-string-prefix</a></li>
 <li><a href="https://www.programming-idioms.org/idiom/97/check-string-suffix">https://www.programming-idioms.org/idiom/97/check-string-suffix</a></li>
 </ul>

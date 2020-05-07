@@ -79,15 +79,14 @@ $m1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#
    <span style="color:#a6e22e">var_dump</span>($n1);
 }
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">end</span>($m1);
-<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
-   $s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">key</span>($m1);
-   <span style="color:#66d9ef">if</span> ($s1 <span style="color:#f92672">===</span> <span style="color:#66d9ef">null</span>) {
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+   $n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">current</span>($m1);
+   <span style="color:#66d9ef">if</span> ($n1 <span style="color:#f92672">===</span> <span style="color:#66d9ef">false</span>) {
       <span style="color:#66d9ef">break</span>;
    }
-   $n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">current</span>($m1);
+   $s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">key</span>($m1);
    <span style="color:#a6e22e">var_dump</span>($s1, $n1);
-   <span style="color:#a6e22e">prev</span>($m1);
+   <span style="color:#a6e22e">next</span>($m1);
 }
 </code></pre></div>
 <ul>

@@ -5,13 +5,12 @@ foreach ($m1 as $n1) {
    var_dump($n1);
 }
 # example 2
-end($m1);
 while (true) {
-   $s1 = key($m1);
-   if ($s1 === null) {
+   $n1 = current($m1);
+   if ($n1 === false) {
       break;
    }
-   $n1 = current($m1);
+   $s1 = key($m1);
    var_dump($s1, $n1);
-   prev($m1);
+   next($m1);
 }

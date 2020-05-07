@@ -11,7 +11,7 @@ function r64_encode(n_in) {
 // example 2
 function r64_decode(s_in) {
    let n_out = 0;
-   for (s_chr of s_in) {
+   for (let s_chr of s_in) {
       n_out = n_out << 6 | s_dig.indexOf(s_chr);
    }
    return n_out;
