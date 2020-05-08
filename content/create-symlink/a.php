@@ -1,7 +1,5 @@
 <?php
-# example 1
-$s1 = getcwd();
-symlink($s1 . DIRECTORY_SEPARATOR . 'index.md', 'a.md');
-# example 2
-$s2 = realpath('index.md');
-symlink($s2, 'b.md');
+$s1 = realpath('index.md');
+$s2 = getenv('HOMDRIVE');
+chdir($s2);
+symlink($s1, 'a.md');

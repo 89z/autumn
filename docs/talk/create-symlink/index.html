@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talk:Create symlink &middot; Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/categories">Categories</a>
+         <a href="/autumn/tags">Tags</a>
+         <a href="https://github.com/muv1/autumn">Repo</a>
+      </nav>
+   </header>
+
+<h1>Talk:Create symlink</h1>
+<time>Fri May 8 2020</time>
+   
+   
+   <p>This is valid code:</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
+$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</span>(<span style="color:#e6db74">&#39;HOMEDRIVE&#39;</span>);
+<span style="color:#a6e22e">symlink</span>($s1, $s2 <span style="color:#f92672">.</span> <span style="color:#a6e22e">DIRECTORY_SEPARATOR</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;a.md&#39;</span>);
+</code></pre></div>
+<p>but it can produce this error in some cases:</p>
+<pre><code>PHP Warning:  symlink(): No such file or directory
+</code></pre><p>It will happen if you provide a Windows path to Cygwin PHP. Same with these:</p>
+<p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
+<span style="color:#a6e22e">symlink</span>($s1, <span style="color:#e6db74">&#39;C:/index.md&#39;</span>);
+</code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
+<span style="color:#a6e22e">symlink</span>($s1, <span style="color:#e6db74">&#39;C:\index.md&#39;</span>);
+</code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
+<span style="color:#a6e22e">symlink</span>($s1, <span style="color:#e6db74">&#39;C:\\index.md&#39;</span>);
+</code></pre></div></p>
+<p>Workaround is use Cygwin path:</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
+<span style="color:#a6e22e">symlink</span>($s1, <span style="color:#e6db74">&#39;/cygdrive/c/index.md&#39;</span>);
+</code></pre></div>
+
+
+</body>
+</html>

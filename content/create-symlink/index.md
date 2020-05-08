@@ -8,7 +8,7 @@ tags: [go, julia, php, python]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/os>
+<https://golang.org/pkg/os#Symlink>
 
 ## Julia
 
