@@ -1,7 +1,4 @@
 <?php
-# example 1
-$s1 = dirname('Sunday/Monday');
-# example 2
-$s2 = dirname('Sunday\Monday');
-# print
-var_dump($s1, $s2);
+$s1 = realpath('index.md');
+$s2 = getenv('HOMEDRIVE');
+symlink($s1, $s2 . DIRECTORY_SEPARATOR . 'a.md');
