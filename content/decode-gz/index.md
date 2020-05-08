@@ -14,7 +14,8 @@ tags: [go, php]
 
 {{< r "a.php" >}}
 
-<https://php.net/function.gzdecode>
+- <https://php.net/function.gzdecode>
+- <https://php.net/stream.examples#example-5010>
 
 ## References
 

@@ -2,18 +2,18 @@
 title: 'Category talk:Input output'
 ---
 
-- from resource handle, return string contents
-- from resource handle, return string name
-- from resource handle, write to resource handle
-- from resource handle, write to string name
-- from string contents, write to resource handle
-- from string contents, write to string name
-- from string name, return resource handle
-- from string name, return string contents
+## Copy
 
-## References
-
-- <https://php.net/function.file-get-contents>
-- <https://php.net/function.fwrite>
+- <https://php.net/function.copy>
 - <https://php.net/function.stream-copy-to-stream>
-- <https://php.net/stream.examples#example-5006>
+
+## Read
+
+- <https://php.net/function.fgets>
+- <https://php.net/function.file-get-contents>
+- <https://php.net/function.stream-get-contents>
+
+## Write
+
+- <https://php.net/function.file-put-contents>
+- <https://php.net/function.fwrite>
