@@ -78,29 +78,39 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f_join</span>(<span style="color:#f92672">...</span>$a_elem) {
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">implode</span>(<span style="color:#a6e22e">DIRECTORY_SEPARATOR</span>, $a_elem);
+}
 $s_pub <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</span>(<span style="color:#e6db74">&#39;PUBLIC&#39;</span>);
-$s_sep <span style="color:#f92672">=</span> <span style="color:#a6e22e">DIRECTORY_SEPARATOR</span>;
 <span style="color:#75715e"># round 1
 </span><span style="color:#75715e"></span>$s_old <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>(<span style="color:#e6db74">&#39;abs.php&#39;</span>);
-<span style="color:#a6e22e">symlink</span>($s_old, $s_pub <span style="color:#f92672">.</span> $s_sep <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;Music&#39;</span> <span style="color:#f92672">.</span> $s_sep <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;abs.php&#39;</span>);
+$s_new <span style="color:#f92672">=</span> <span style="color:#a6e22e">f_join</span>($s_pub, <span style="color:#e6db74">&#39;Music&#39;</span>, <span style="color:#e6db74">&#39;abs.php&#39;</span>);
+<span style="color:#a6e22e">symlink</span>($s_old, $s_new);
 <span style="color:#75715e"># round 2
 </span><span style="color:#75715e"></span>$s_old <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>(<span style="color:#e6db74">&#39;chdir.php&#39;</span>);
-<span style="color:#a6e22e">symlink</span>($s_old, $s_pub <span style="color:#f92672">.</span> $s_sep <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;Videos&#39;</span> <span style="color:#f92672">.</span> $s_sep <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;chdir.php&#39;</span>);
+$s_new <span style="color:#f92672">=</span> <span style="color:#a6e22e">f_join</span>($s_pub, <span style="color:#e6db74">&#39;Videos&#39;</span>, <span style="color:#e6db74">&#39;chdir.php&#39;</span>);
+<span style="color:#a6e22e">symlink</span>($s_old, $s_new);
 </code></pre></div>
 
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f_join</span>(<span style="color:#f92672">...</span>$a_elem) {
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">implode</span>(<span style="color:#a6e22e">DIRECTORY_SEPARATOR</span>, $a_elem);
+}
 $s_wd <span style="color:#f92672">=</span> <span style="color:#a6e22e">getcwd</span>();
 $s_pub <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</span>(<span style="color:#e6db74">&#39;PUBLIC&#39;</span>);
-$s_sep <span style="color:#f92672">=</span> <span style="color:#a6e22e">DIRECTORY_SEPARATOR</span>;
 <span style="color:#75715e"># round 1
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">chdir</span>($s_pub <span style="color:#f92672">.</span> $s_sep <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;Music&#39;</span>);
-<span style="color:#a6e22e">symlink</span>($s_wd <span style="color:#f92672">.</span> $s_sep <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;abs.php&#39;</span>, <span style="color:#e6db74">&#39;abs.php&#39;</span>);
+</span><span style="color:#75715e"></span>$s_old <span style="color:#f92672">=</span> <span style="color:#a6e22e">f_join</span>($s_wd, <span style="color:#e6db74">&#39;abs.php&#39;</span>);
+$s_new <span style="color:#f92672">=</span> <span style="color:#a6e22e">f_join</span>($s_pub, <span style="color:#e6db74">&#39;Music&#39;</span>);
+<span style="color:#a6e22e">chdir</span>($s_new);
+<span style="color:#a6e22e">symlink</span>($s_old, <span style="color:#e6db74">&#39;abs.php&#39;</span>);
 <span style="color:#75715e"># round 2
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">chdir</span>($s_pub <span style="color:#f92672">.</span> $s_sep <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;Videos&#39;</span>);
-<span style="color:#a6e22e">symlink</span>($s_wd <span style="color:#f92672">.</span> $s_sep <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;chdir.php&#39;</span>, <span style="color:#e6db74">&#39;chdir.php&#39;</span>);
+</span><span style="color:#75715e"></span>$s_old <span style="color:#f92672">=</span> <span style="color:#a6e22e">f_join</span>($s_wd, <span style="color:#e6db74">&#39;chdir.php&#39;</span>);
+$s_new <span style="color:#f92672">=</span> <span style="color:#a6e22e">f_join</span>($s_pub, <span style="color:#e6db74">&#39;Videos&#39;</span>);
+<span style="color:#a6e22e">chdir</span>($s_new);
+<span style="color:#a6e22e">symlink</span>($s_old, <span style="color:#e6db74">&#39;chdir.php&#39;</span>);
 </code></pre></div></p>
 <p><a href="https://php.net/function.symlink">https://php.net/function.symlink</a></p>
 <h2 id="python">Python</h2>

@@ -2,36 +2,22 @@
 title: 'Tag talk:PHP'
 ---
 
-## Cygwin
-
-This is valid code:
-
 {{< r "a.php" >}}
 
-but it can produce this error in some cases:
-
-~~~
-PHP Warning:  symlink(): No such file or directory
-~~~
-
-It will happen if you provide a Windows path to Cygwin PHP. Same with these:
+<https://php.net/function.chdir>
 
 {{< r "b.php" >}}
+
+<https://php.net/function.realpath>
+
 {{< r "c.php" >}}
+
+<https://php.net/function.dir>
+
 {{< r "d.php" >}}
 
-Workaround is use Cygwin path:
+<https://php.net/function.dirname>
 
 {{< r "e.php" >}}
 
-## Native
-
-Native PHP works best with Windows 10, because of ANSI escape codes.
-
-New features:
-
-<https://stitcher.io/blog/short-closures-in-php>
-
-Download:
-
-<https://windows.php.net/download>
+<https://php.net/function.stat>

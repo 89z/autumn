@@ -1,3 +1,4 @@
 <?php
-$s1 = realpath('index.md');
-symlink($s1, '/cygdrive/c/index.md');
+$s1 = getenv('PUBLIC');
+$a1 = stat($s1);
+var_dump($a1); # array(26)

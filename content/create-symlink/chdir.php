@@ -1,10 +1,16 @@
 <?php
+function f_join(...$a_elem) {
+   return implode(DIRECTORY_SEPARATOR, $a_elem);
+}
 $s_wd = getcwd();
 $s_pub = getenv('PUBLIC');
-$s_sep = DIRECTORY_SEPARATOR;
 # round 1
-chdir($s_pub . $s_sep . 'Music');
-symlink($s_wd . $s_sep . 'abs.php', 'abs.php');
+$s_old = f_join($s_wd, 'abs.php');
+$s_new = f_join($s_pub, 'Music');
+chdir($s_new);
+symlink($s_old, 'abs.php');
 # round 2
-chdir($s_pub . $s_sep . 'Videos');
-symlink($s_wd . $s_sep . 'chdir.php', 'chdir.php');
+$s_old = f_join($s_wd, 'chdir.php');
+$s_new = f_join($s_pub, 'Videos');
+chdir($s_new);
+symlink($s_old, 'chdir.php');

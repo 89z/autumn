@@ -21,62 +21,61 @@
    </header>
 
 <h1>Tag talk:PHP</h1>
-<time>Fri May 8 2020</time>
+<time>Sat May 9 2020</time>
    
    
-   <h2 id="cygwin">Cygwin</h2>
-<p>This is valid code:</p>
+   
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</span>(<span style="color:#e6db74">&#39;PUBLIC&#39;</span>);
+$b1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">chdir</span>($s1);
+$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getcwd</span>();
+<span style="color:#a6e22e">var_dump</span>($s2); <span style="color:#75715e"># &#34;/cygdrive/c/Users/Public&#34;
+</span></code></pre></div>
+<p><a href="https://php.net/function.chdir">https://php.net/function.chdir</a></p>
 
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
-$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</span>(<span style="color:#e6db74">&#39;HOMEDRIVE&#39;</span>);
-<span style="color:#a6e22e">symlink</span>($s1, $s2 <span style="color:#f92672">.</span> <span style="color:#a6e22e">DIRECTORY_SEPARATOR</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;a.md&#39;</span>);
-</code></pre></div>
-<p>but it can produce this error in some cases:</p>
-<pre><code>PHP Warning:  symlink(): No such file or directory
-</code></pre><p>It will happen if you provide a Windows path to Cygwin PHP. Same with these:</p>
-<p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
-<span style="color:#a6e22e">symlink</span>($s1, <span style="color:#e6db74">&#39;C:/index.md&#39;</span>);
-</code></pre></div>
+$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</span>(<span style="color:#e6db74">&#39;PUBLIC&#39;</span>);
+$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>($s1);
+<span style="color:#a6e22e">var_dump</span>($s2); <span style="color:#75715e"># bool(false)
+</span></code></pre></div>
+<p><a href="https://php.net/function.realpath">https://php.net/function.realpath</a></p>
 
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
-<span style="color:#a6e22e">symlink</span>($s1, <span style="color:#e6db74">&#39;C:\index.md&#39;</span>);
-</code></pre></div>
+$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</span>(<span style="color:#e6db74">&#39;PUBLIC&#39;</span>);
+$o1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">dir</span>($s1);
+$s2 <span style="color:#f92672">=</span> $o1<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">path</span>;
+<span style="color:#a6e22e">var_dump</span>($s2); <span style="color:#75715e"># &#34;C:\Users\Public&#34;
+</span></code></pre></div>
+<p><a href="https://php.net/function.dir">https://php.net/function.dir</a></p>
 
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
-<span style="color:#a6e22e">symlink</span>($s1, <span style="color:#e6db74">&#39;C:\\index.md&#39;</span>);
-</code></pre></div></p>
-<p>Workaround is use Cygwin path:</p>
+$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</span>(<span style="color:#e6db74">&#39;PUBLIC&#39;</span>);
+$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">dirname</span>($s1);
+<span style="color:#a6e22e">var_dump</span>($s2); <span style="color:#75715e"># &#34;.&#34;
+</span></code></pre></div>
+<p><a href="https://php.net/function.dirname">https://php.net/function.dirname</a></p>
 
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
-<span style="color:#a6e22e">symlink</span>($s1, <span style="color:#e6db74">&#39;/cygdrive/c/index.md&#39;</span>);
-</code></pre></div>
-<h2 id="native">Native</h2>
-<p>Native PHP works best with Windows 10, because of ANSI escape codes.</p>
-<p>New features:</p>
-<p><a href="https://stitcher.io/blog/short-closures-in-php">https://stitcher.io/blog/short-closures-in-php</a></p>
-<p>Download:</p>
-<p><a href="https://windows.php.net/download">https://windows.php.net/download</a></p>
+$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</span>(<span style="color:#e6db74">&#39;PUBLIC&#39;</span>);
+$a1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stat</span>($s1);
+<span style="color:#a6e22e">var_dump</span>($a1); <span style="color:#75715e"># array(26)
+</span></code></pre></div>
+<p><a href="https://php.net/function.stat">https://php.net/function.stat</a></p>
 
 
 </body>
