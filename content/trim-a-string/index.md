@@ -1,21 +1,15 @@
 ---
 title: Trim a string
 categories: [string]
-tags: [d, go, javascript, nim, php, python]
+tags: [go, javascript, nim, php, python]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-- <https://dlang.org/phobos/std_string#.chomp>
-- <https://dlang.org/phobos/std_string#.strip>
 
 ## Go
 
 {{< r "a.go" >}}
 
 - <https://golang.org/pkg/strings#Trim>
+- <https://golang.org/pkg/strings#TrimLeft>
 - <https://golang.org/pkg/strings#TrimRight>
 - <https://golang.org/pkg/strings#TrimSpace>
 
@@ -23,10 +17,8 @@ tags: [d, go, javascript, nim, php, python]
 
 {{< r "a.js" >}}
 
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/
-   String/trim` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/
-   String/trimEnd` >}}
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/trim>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/trimEnd>
 
 ## Nim
 
@@ -39,6 +31,7 @@ tags: [d, go, javascript, nim, php, python]
 
 {{< r "a.php" >}}
 
+- <https://php.net/function.chop>
 - <https://php.net/function.ltrim>
 - <https://php.net/function.rtrim>
 - <https://php.net/function.trim>

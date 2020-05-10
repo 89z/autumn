@@ -1,8 +1,9 @@
 import strutils
-var s1 = " Sun Mon "
 # example 1
+var s1 = " ab "
 var s2 = s1.strip
 # example 2
-s1.stripLineEnd
+var s3 = "ab\n"
+s3.stripLineEnd
 # print
-echo [s1, s2]
+echo s2 == "ab", s3 == "ab"

@@ -12,15 +12,15 @@ tags: [go, javascript, php, python]
 
 {{< r "a.js" >}}
 
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Operators/Arithmetic_Operators#Division` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Operators/Arithmetic_Operators#Remainder` >}}
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder>
 
 ## PHP
 
 {{< r "a.php" >}}
+{{< r "b.php" >}}
 
+- <https://php.net/function.gmp-div-qr>
 - <https://php.net/function.intdiv>
 - <https://php.net/operators.arithmetic>
 

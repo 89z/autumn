@@ -21,59 +21,35 @@
    </header>
 
 <h1>Trim a string</h1>
-<time>Sat May 2 2020</time>
+<time>Sat May 9 2020</time>
    
 <a href="/autumn/categories/string/">string</a>
    
    
-   <h2 id="d">D</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.d" data-lang=".d"><span style="color:#f92672">import</span> std.string<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34; Sun Mon &#34;</span><span style="color:#f92672">;</span>
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> s1<span style="color:#f92672">.</span><span style="color:#a6e22e">stripLeft</span><span style="color:#f92672">;</span>
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s3 <span style="color:#f92672">=</span> s1<span style="color:#f92672">.</span><span style="color:#a6e22e">stripRight</span><span style="color:#f92672">;</span>
-   <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s4 <span style="color:#f92672">=</span> s1<span style="color:#f92672">.</span><span style="color:#a6e22e">strip</span><span style="color:#f92672">;</span>
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   <span style="color:#f92672">[</span>s2<span style="color:#f92672">,</span> s3<span style="color:#f92672">,</span> s4<span style="color:#f92672">].</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
-<ul>
-<li><a href="https://dlang.org/phobos/std_string#.chomp">https://dlang.org/phobos/std_string#.chomp</a></li>
-<li><a href="https://dlang.org/phobos/std_string#.strip">https://dlang.org/phobos/std_string#.strip</a></li>
-</ul>
-<h2 id="go">Go</h2>
+   <h2 id="go">Go</h2>
 
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
-   <span style="color:#e6db74">&#34;strings&#34;</span>
-)
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34; Sun Mon &#34;</span>
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34; ab &#34;</span>
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">TrimLeft</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Trim</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#e6db74">&#34; &#34;</span>)
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">TrimRight</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">TrimLeft</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#e6db74">&#34; &#34;</span>)
    <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s4</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Trim</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s4</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">TrimRight</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#e6db74">&#34; &#34;</span>)
    <span style="color:#75715e">// example 4
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s5</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">TrimSpace</span>(<span style="color:#a6e22e">s1</span>)
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, []<span style="color:#66d9ef">string</span>{<span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">s3</span>, <span style="color:#a6e22e">s4</span>, <span style="color:#a6e22e">s5</span>})
+</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;ab&#34;</span>, <span style="color:#a6e22e">s3</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;ab &#34;</span>, <span style="color:#a6e22e">s4</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34; ab&#34;</span>, <span style="color:#a6e22e">s5</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;ab&#34;</span>)
 }
 </code></pre></div>
 <ul>
 <li><a href="https://golang.org/pkg/strings#Trim">https://golang.org/pkg/strings#Trim</a></li>
+<li><a href="https://golang.org/pkg/strings#TrimLeft">https://golang.org/pkg/strings#TrimLeft</a></li>
 <li><a href="https://golang.org/pkg/strings#TrimRight">https://golang.org/pkg/strings#TrimRight</a></li>
 <li><a href="https://golang.org/pkg/strings#TrimSpace">https://golang.org/pkg/strings#TrimSpace</a></li>
 </ul>
@@ -82,21 +58,19 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39; Sun Mon &#39;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39; ab &#39;</span>;
 <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">trimStart</span>();
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">trim</span>();
 <span style="color:#75715e">// example 2
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">trimEnd</span>();
 <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s4</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">trim</span>();
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s4</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">trimStart</span>();
 <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>([<span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">s3</span>, <span style="color:#a6e22e">s4</span>]);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ab&#39;</span>, <span style="color:#a6e22e">s3</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39; ab&#39;</span>, <span style="color:#a6e22e">s4</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ab &#39;</span>);
 </code></pre></div>
 <ul>
-<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/trim">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/trim</a>
-</li>
-<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/trimEnd">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/trimEnd</a>
-</li>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/trim">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/trim</a></li>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/trimEnd">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/trimEnd</a></li>
 </ul>
 <h2 id="nim">Nim</h2>
 
@@ -104,13 +78,14 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.nim" data-lang=".nim"><span style="color:#f92672">import</span> strutils
-<span style="color:#66d9ef">var</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34; Sun Mon &#34;</span>
 <span style="color:#75715e"># example 1</span>
+<span style="color:#66d9ef">var</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34; ab &#34;</span>
 <span style="color:#66d9ef">var</span> s2 <span style="color:#f92672">=</span> s1.strip
 <span style="color:#75715e"># example 2</span>
-s1.stripLineEnd
+<span style="color:#66d9ef">var</span> s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ab</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
+s3.stripLineEnd
 <span style="color:#75715e"># print</span>
-echo <span style="color:#f92672">[</span>s1, s2<span style="color:#f92672">]</span>
+echo s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;ab&#34;</span>, s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;ab&#34;</span>
 </code></pre></div>
 <ul>
 <li><a href="https://nim-lang.github.io/Nim/strutils#strip,string,set%5Bchar%5D">https://nim-lang.github.io/Nim/strutils#strip,string,set[char]</a></li>
@@ -122,17 +97,20 @@ echo <span style="color:#f92672">[</span>s1, s2<span style="color:#f92672">]</sp
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39; Sun Mon &#39;</span>;
+$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39; ab &#39;</span>;
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">ltrim</span>($s1);
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">chop</span>($s1);
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">rtrim</span>($s1);
+</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">ltrim</span>($s1);
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">trim</span>($s1);
+</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">rtrim</span>($s1);
+<span style="color:#75715e"># example 4
+</span><span style="color:#75715e"></span>$s5 <span style="color:#f92672">=</span> <span style="color:#a6e22e">trim</span>($s1);
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2, $s3, $s4);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39; ab&#39;</span>, $s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ab &#39;</span>, $s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39; ab&#39;</span>, $s5 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ab&#39;</span>);
 </code></pre></div>
 <ul>
+<li><a href="https://php.net/function.chop">https://php.net/function.chop</a></li>
 <li><a href="https://php.net/function.ltrim">https://php.net/function.ltrim</a></li>
 <li><a href="https://php.net/function.rtrim">https://php.net/function.rtrim</a></li>
 <li><a href="https://php.net/function.trim">https://php.net/function.trim</a></li>

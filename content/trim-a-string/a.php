@@ -1,10 +1,12 @@
 <?php
-$s1 = ' Sun Mon ';
+$s1 = ' ab ';
 # example 1
-$s2 = ltrim($s1);
+$s2 = chop($s1);
 # example 2
-$s3 = rtrim($s1);
+$s3 = ltrim($s1);
 # example 3
-$s4 = trim($s1);
+$s4 = rtrim($s1);
+# example 4
+$s5 = trim($s1);
 # print
-var_dump($s2, $s3, $s4);
+var_dump($s2 == ' ab', $s3 == 'ab ', $s4 == ' ab', $s5 == 'ab');
