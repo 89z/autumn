@@ -3,10 +3,9 @@ import "path"
 func main() {
    s1 := "/sunday/monday.tar.xz"
    // example 1
-   b1 := path.Dir(s1) == "/sunday"
+   s2 := path.Dir(s1)
    // example 2
-   s2, _ := path.Split(s1)
-   b2 := s2 == "/sunday/"
+   s3, _ := path.Split(s1)
    // print
-   println(b1, b2)
+   println(s2 == "/sunday", s3 == "/sunday/")
 }

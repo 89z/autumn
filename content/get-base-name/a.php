@@ -1,15 +1,18 @@
 <?php
 $s1 = '/sunday/monday.tar.xz';
 # example 1
-$b1 = basename($s1) == 'monday.tar.xz';
+$s2 = basename($s1);
+var_dump($s2 == 'monday.tar.xz');
 # example 2
-$b2 = pathinfo($s1, PATHINFO_BASENAME) == 'monday.tar.xz';
+$s2 = pathinfo($s1, PATHINFO_BASENAME);
+var_dump($s2 == 'monday.tar.xz');
 # example 3
-$b3 = pathinfo($s1, PATHINFO_FILENAME) == 'monday.tar';
+$s2 = pathinfo($s1, PATHINFO_FILENAME);
+var_dump($s2 == 'monday.tar');
 # example 4
-$b4 = pathinfo($s1, PATHINFO_EXTENSION) == 'xz';
+$s2 = pathinfo($s1, PATHINFO_EXTENSION);
+var_dump($s2 == 'xz');
 # example 5
 $m1 = pathinfo($s1);
-$b5 = $m1['extension'] == 'xz';
-# print
-var_dump($b1, $b2, $b3, $b4, $b5);
+$s2 = $m1['extension'];
+var_dump($s2 == 'xz');

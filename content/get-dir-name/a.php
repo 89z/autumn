@@ -1,8 +1,8 @@
 <?php
 $s1 = '/sunday/monday.tar.xz';
 # example 1
-$b1 = dirname($s1) == '/sunday';
+$s2 = dirname($s1);
 # example 2
-$b2 = pathinfo($s1, PATHINFO_DIRNAME) == '/sunday';
+$s3 = pathinfo($s1, PATHINFO_DIRNAME);
 # print
-var_dump($b1, $b2);
+var_dump($s2 == '/sunday', $s3 == '/sunday');
