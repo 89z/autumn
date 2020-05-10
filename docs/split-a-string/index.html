@@ -105,7 +105,7 @@ echo a1
 <li><a href="https://nim-lang.github.io/Nim/strutils#splitLines,string">https://nim-lang.github.io/Nim/strutils#splitLines,string</a></li>
 </ul>
 <h2 id="php">PHP</h2>
-
+<p>
 
 
 
@@ -114,7 +114,23 @@ $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sunday
 $a1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">explode</span>(<span style="color:#e6db74">&#39; &#39;</span>, $s1);
 <span style="color:#a6e22e">var_dump</span>($a1);
 </code></pre></div>
-<p><a href="https://php.net/function.explode">https://php.net/function.explode</a></p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;10,11&#39;</span>;
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$a1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">sscanf</span>($s1, <span style="color:#e6db74">&#39;%d,%d&#39;</span>);
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">sscanf</span>($s1, <span style="color:#e6db74">&#39;%d,%d&#39;</span>, $n1, $n2);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($a1, $n1, $n2);
+</code></pre></div></p>
+<ul>
+<li><a href="https://php.net/function.explode">https://php.net/function.explode</a></li>
+<li><a href="https://php.net/function.sscanf">https://php.net/function.sscanf</a></li>
+</ul>
 <h2 id="python">Python</h2>
 <p>
 

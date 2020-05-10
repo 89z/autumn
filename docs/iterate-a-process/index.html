@@ -21,7 +21,7 @@
    </header>
 
 <h1>Iterate a process</h1>
-<time>Sat May 2 2020</time>
+<time>Sun May 10 2020</time>
    
 <a href="/autumn/categories/input-output/">input-output</a>
    
@@ -36,25 +36,42 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;bufio&#34;</span>
+   <span style="color:#e6db74">&#34;bytes&#34;</span>
    <span style="color:#e6db74">&#34;os/exec&#34;</span>
 )
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;ag&#34;</span>, <span style="color:#e6db74">&#34;-V&#34;</span>)
-   <span style="color:#a6e22e">o2</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">StdoutPipe</span>()
-   <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Start</span>()
-   <span style="color:#75715e">// begin
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">o2</span>)
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">o3</span>.<span style="color:#a6e22e">Scan</span>() {
-      <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o3</span>.<span style="color:#a6e22e">Text</span>()
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {   
+   <span style="color:#a6e22e">y1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;ag&#34;</span>, <span style="color:#e6db74">&#34;-V&#34;</span>).<span style="color:#a6e22e">Output</span>()
+   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">y1</span>)
+   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">o1</span>)
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Scan</span>() {
+      <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Text</span>()
       println(<span style="color:#a6e22e">s1</span>)
    }
-   <span style="color:#75715e">// end
-</span><span style="color:#75715e"></span>}
+}
 </code></pre></div>
-<ul>
-<li><a href="https://golang.org/pkg/bufio#Scanner.Scan">https://golang.org/pkg/bufio#Scanner.Scan</a></li>
-<li><a href="https://golang.org/pkg/os/exec#Command">https://golang.org/pkg/os/exec#Command</a></li>
-</ul>
+<p><a href="https://golang.org/pkg/bufio#NewScanner">https://golang.org/pkg/bufio#NewScanner</a></p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;bytes&#34;</span>
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;os/exec&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">f1</span>(<span style="color:#a6e22e">r1</span> <span style="color:#66d9ef">rune</span>) <span style="color:#66d9ef">bool</span> {
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">r1</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;\n&#39;</span>
+}
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {   
+   <span style="color:#a6e22e">y1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;ag&#34;</span>, <span style="color:#e6db74">&#34;-V&#34;</span>).<span style="color:#a6e22e">Output</span>()
+   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">FieldsFunc</span>(<span style="color:#a6e22e">y1</span>, <span style="color:#a6e22e">f1</span>)
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">a1</span> {
+      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s\n&#34;</span>, <span style="color:#a6e22e">s1</span>)
+   }
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/bytes#FieldsFunc">https://golang.org/pkg/bytes#FieldsFunc</a></p>
 <h2 id="php">PHP</h2>
 
 

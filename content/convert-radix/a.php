@@ -1,5 +1,5 @@
 <?php
-$s_dig = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_';
+$s_dig = '-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz';
 # example 1
 function r64_encode($n_in) {
    global $s_dig;

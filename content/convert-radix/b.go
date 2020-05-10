@@ -3,7 +3,7 @@ import (
    "strings"
    "time"
 )
-var s_dig = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_"
+var s_dig = "-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz"
 // example 1
 func r64_encode(n_in int) string {
    var s_out string

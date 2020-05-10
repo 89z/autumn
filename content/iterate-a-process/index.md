@@ -6,10 +6,13 @@ tags: [go, php, python]
 
 ## Go
 
-{{< r "a.go" >}}
+{{< r "scan.go" >}}
 
-- <https://golang.org/pkg/bufio#Scanner.Scan>
-- <https://golang.org/pkg/os/exec#Command>
+<https://golang.org/pkg/bufio#NewScanner>
+
+{{< r "range.go" >}}
+
+<https://golang.org/pkg/bytes#FieldsFunc>
 
 ## PHP
 

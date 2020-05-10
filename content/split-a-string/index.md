@@ -33,8 +33,10 @@ tags: [go, javascript, julia, nim, php, python]
 ## PHP
 
 {{< r "a.php" >}}
+{{< r "b.php" >}}
 
-<https://php.net/function.explode>
+- <https://php.net/function.explode>
+- <https://php.net/function.sscanf>
 
 ## Python
 

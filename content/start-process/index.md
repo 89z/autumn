@@ -21,15 +21,16 @@ tags: [go, julia, nim, php, python]
 
 {{< r "a.nim" >}}
 
-- {{< a `https://nim-lang.github.io/Nim/osproc#execCmd,string` >}}
-- {{< a `https://nim-lang.github.io/Nim/osproc#startProcess,string,string,
-   openArray[string],StringTableRef,set[ProcessOption]` >}}
+- <https://nim-lang.github.io/Nim/osproc#execCmd,string>
+- <https://nim-lang.github.io/Nim/osproc#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]>
 
 ## PHP
 
 {{< r "a.php" >}}
 
-<https://php.net/function.system>
+- <https://php.net/function.escapeshellarg>
+- <https://php.net/function.proc-open>
+- <https://php.net/function.system>
 
 ## Python
 
