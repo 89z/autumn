@@ -19,6 +19,7 @@ tags: [go, javascript, nim, php, python]
 
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/trim>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/trimEnd>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/trimStart>
 
 ## Nim
 

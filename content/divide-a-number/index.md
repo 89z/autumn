@@ -7,6 +7,9 @@ tags: [go, javascript, php, python]
 ## Go
 
 {{< r "a.go" >}}
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/math#Mod>
 
 ## JavaScript
 

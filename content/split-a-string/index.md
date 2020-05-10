@@ -16,8 +16,7 @@ tags: [go, javascript, julia, nim, php, python]
 
 {{< r "a.js" >}}
 
-{{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/
-String/split` >}}
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/split>
 
 ## Julia
 
@@ -26,6 +25,7 @@ String/split` >}}
 ## Nim
 
 {{< r "a.nim" >}}
+{{< r "b.nim" >}}
 
 - <https://nim-lang.github.io/Nim/strutils#split,string,string,int>
 - <https://nim-lang.github.io/Nim/strutils#splitLines,string>
@@ -39,6 +39,7 @@ String/split` >}}
 ## Python
 
 {{< r "a.py" >}}
+{{< r "b.py" >}}
 
 - <https://docs.python.org/library/stdtypes.html#str.split>
 - <https://docs.python.org/library/stdtypes.html#str.splitlines>
