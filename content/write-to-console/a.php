@@ -1,6 +1,8 @@
 <?php
-$s1 = 'Sunday';
+$s1 = "Sunday\n";
 # example 1
-echo $s1, "\n";
+echo $s1;
 # example 2
-print $s1 . "\n";
+print $s1;
+# example 3
+fwrite(STDOUT, $s1);

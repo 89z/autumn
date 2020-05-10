@@ -169,8 +169,7 @@ $n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">r64_decode<
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">import</span> string
-s_dig <span style="color:#f92672">=</span> string<span style="color:#f92672">.</span>printable[:<span style="color:#ae81ff">62</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;-_&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py">s_dig <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz&#39;</span>
 <span style="color:#75715e"># example 1</span>
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">r64_encode</span>(n_in):
    s_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>

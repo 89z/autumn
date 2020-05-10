@@ -7,6 +7,7 @@ tags: [go, julia, nim, php, python]
 ## Go
 
 {{< r "a.go" >}}
+{{< r "b.go" >}}
 
 - <https://golang.org/pkg/os/exec#Cmd.Run>
 - <https://golang.org/pkg/os/exec#Cmd.Start>
@@ -20,6 +21,8 @@ tags: [go, julia, nim, php, python]
 ## Nim
 
 {{< r "a.nim" >}}
+{{< r "b.nim" >}}
+{{< r "c.nim" >}}
 
 - <https://nim-lang.github.io/Nim/osproc#execCmd,string>
 - <https://nim-lang.github.io/Nim/osproc#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]>
@@ -27,6 +30,8 @@ tags: [go, julia, nim, php, python]
 ## PHP
 
 {{< r "a.php" >}}
+{{< r "b.php" >}}
+{{< r "c.php" >}}
 
 - <https://php.net/function.escapeshellarg>
 - <https://php.net/function.proc-open>
@@ -44,6 +49,6 @@ tags: [go, julia, nim, php, python]
 
 ## References
 
+- <https://hyperpolyglot.org/scripting2#external-cmd>
 - <https://www.programming-idioms.org/idiom/111/launch-other-program>
-- <https://www.programming-idioms.org/idiom/164/open-url-in-browser>
 - <https://rosettacode.org/wiki/Execute_a_system_command>

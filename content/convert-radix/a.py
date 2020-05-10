@@ -1,5 +1,4 @@
-import string
-s_dig = string.printable[:62] + '-_'
+s_dig = '-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz'
 # example 1
 def r64_encode(n_in):
    s_out = ''

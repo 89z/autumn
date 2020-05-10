@@ -7,24 +7,14 @@ tags: [go, javascript, julia, nim, php, python]
 ## Go
 
 {{< r "builtin.go" >}}
+{{< r "fmt.go" >}}
+{{< r "strings.go" >}}
 
 - <https://golang.org/pkg/builtin#print>
 - <https://golang.org/pkg/builtin#println>
-
-{{< r "fmt.go" >}}
-
 - <https://golang.org/pkg/fmt#Print>
 - <https://golang.org/pkg/fmt#Println>
-
-{{< r "io.go" >}}
-
-<https://golang.org/pkg/io#Copy>
-
-{{< r "os.go" >}}
-
-<https://golang.org/pkg/os#File.WriteString>
-
-{{< r "strings.go" >}}
+- <https://golang.org/pkg/strings#Reader.WriteTo>
 
 ## JavaScript
 
@@ -43,6 +33,10 @@ tags: [go, javascript, julia, nim, php, python]
 ## PHP
 
 {{< r "a.php" >}}
+
+- <https://php.net/function.echo>
+- <https://php.net/function.fwrite>
+- <https://php.net/function.print>
 
 ## Python
 

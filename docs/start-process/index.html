@@ -27,6 +27,21 @@
    
    
    <h2 id="go">Go</h2>
+<p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;os&#34;</span>
+   <span style="color:#e6db74">&#34;os/exec&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;less&#34;</span>, <span style="color:#e6db74">&#34;-V&#34;</span>)
+   <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Stdout</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>
+   <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Run</span>()
+}
+</code></pre></div>
 
 
 
@@ -37,16 +52,12 @@
    <span style="color:#e6db74">&#34;os/exec&#34;</span>
 )
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;ag&#34;</span>)
-   <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Stdout</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>
-   <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Run</span>()
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;ag&#34;</span>, <span style="color:#e6db74">&#34;-V&#34;</span>)
+   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;less&#34;</span>, <span style="color:#e6db74">&#34;index.md&#34;</span>)
+   <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Stdin</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdin</span>
    <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Stdout</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>
-   <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Run</span>()
+   <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Start</span>()
 }
-</code></pre></div>
+</code></pre></div></p>
 <ul>
 <li><a href="https://golang.org/pkg/os/exec#Cmd.Run">https://golang.org/pkg/os/exec#Cmd.Run</a></li>
 <li><a href="https://golang.org/pkg/os/exec#Cmd.Start">https://golang.org/pkg/os/exec#Cmd.Start</a></li>
@@ -64,39 +75,60 @@ run(<span style="color:#e6db74">`</span><span style="color:#e6db74">$a1</span><s
 </code></pre></div>
 <p><a href="https://docs.julialang.org/en/v1/manual/running-external-programs">https://docs.julialang.org/en/v1/manual/running-external-programs</a></p>
 <h2 id="nim">Nim</h2>
+<p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.nim" data-lang=".nim"><span style="color:#f92672">import</span> osproc
+<span style="color:#66d9ef">discard</span> execCmd(<span style="color:#e6db74">&#34;less -V&#34;</span>)
+</code></pre></div>
 
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.nim" data-lang=".nim"><span style="color:#f92672">import</span> osproc
-<span style="color:#75715e"># example 1</span>
-<span style="color:#66d9ef">discard</span> execCmd(<span style="color:#e6db74">&#34;ag -V&#34;</span>)
-<span style="color:#75715e"># example 2</span>
-<span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> startProcess(<span style="color:#e6db74">&#34;ag&#34;</span>, args<span style="color:#f92672">=[</span><span style="color:#e6db74">&#34;-V&#34;</span><span style="color:#f92672">]</span>, options<span style="color:#f92672">=</span>{poParentStreams})
+<span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> startProcess(<span style="color:#e6db74">&#34;less&#34;</span>, args<span style="color:#f92672">=[</span><span style="color:#e6db74">&#34;-V&#34;</span><span style="color:#f92672">]</span>, options<span style="color:#f92672">=</span>{poParentStreams})
 <span style="color:#66d9ef">discard</span> o1.waitForExit
 </code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.nim" data-lang=".nim"><span style="color:#f92672">import</span> osproc
+<span style="color:#66d9ef">discard</span> startProcess(<span style="color:#e6db74">&#34;less&#34;</span>, args<span style="color:#f92672">=[</span><span style="color:#e6db74">&#34;index.md&#34;</span><span style="color:#f92672">]</span>, options<span style="color:#f92672">=</span>{poParentStreams})
+</code></pre></div></p>
 <ul>
 <li><a href="https://nim-lang.github.io/Nim/osproc#execCmd,string">https://nim-lang.github.io/Nim/osproc#execCmd,string</a></li>
 <li><a href="https://nim-lang.github.io/Nim/osproc#startProcess,string,string,openArray%5Bstring%5D,StringTableRef,set%5BProcessOption%5D">https://nim-lang.github.io/Nim/osproc#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]</a></li>
 </ul>
 <h2 id="php">PHP</h2>
+<p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#39;less -V&#39;</span>);
+</code></pre></div>
 
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#39;ag -V&#39;</span>);
-<span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;ag&#39;</span>, <span style="color:#e6db74">&#39;-V&#39;</span>];
+$a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;less&#39;</span>, <span style="color:#e6db74">&#39;-V&#39;</span>];
 $a2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_map</span>(<span style="color:#e6db74">&#39;escapeshellarg&#39;</span>, $a1);
 $s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">implode</span>(<span style="color:#e6db74">&#39; &#39;</span>, $a2);
 <span style="color:#a6e22e">system</span>($s1);
-<span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$a1 <span style="color:#f92672">=</span> [];
-$a2 <span style="color:#f92672">=</span> [];
-<span style="color:#a6e22e">proc_open</span>(<span style="color:#e6db74">&#39;sleep 10&#39;</span>, $a1, $a2);
 </code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$a1 <span style="color:#f92672">=</span> [];
+$a2 <span style="color:#f92672">=</span> [];
+$r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">proc_open</span>(<span style="color:#e6db74">&#39;less index.md&#39;</span>, $a1, $a2);
+<span style="color:#a6e22e">proc_close</span>($r1);
+</code></pre></div></p>
 <ul>
 <li><a href="https://php.net/function.escapeshellarg">https://php.net/function.escapeshellarg</a></li>
 <li><a href="https://php.net/function.proc-open">https://php.net/function.proc-open</a></li>
@@ -131,8 +163,8 @@ os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#39;ag
 </ul>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://hyperpolyglot.org/scripting2#external-cmd">https://hyperpolyglot.org/scripting2#external-cmd</a></li>
 <li><a href="https://www.programming-idioms.org/idiom/111/launch-other-program">https://www.programming-idioms.org/idiom/111/launch-other-program</a></li>
-<li><a href="https://www.programming-idioms.org/idiom/164/open-url-in-browser">https://www.programming-idioms.org/idiom/164/open-url-in-browser</a></li>
 <li><a href="https://rosettacode.org/wiki/Execute_a_system_command">https://rosettacode.org/wiki/Execute_a_system_command</a></li>
 </ul>
 
