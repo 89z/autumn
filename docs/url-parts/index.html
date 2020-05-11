@@ -21,12 +21,31 @@
    </header>
 
 <h1>URL parts</h1>
-<time>Sat May 2 2020</time>
+<time>Sun May 10 2020</time>
    
 <a href="/autumn/categories/string/">string</a>
    
    
    <h2 id="go">Go</h2>
+<p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;net/url&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;https://example.com/one?two=even&#34;</span>
+   <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">s1</span>)
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Host</span>
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Path</span>
+   <span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s4</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">RawQuery</span>
+   <span style="color:#75715e">// print
+</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;example.com&#34;</span>, <span style="color:#a6e22e">s3</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;/one&#34;</span>, <span style="color:#a6e22e">s4</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;two=even&#34;</span>)
+}
+</code></pre></div>
 
 
 
@@ -38,10 +57,11 @@
 )
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;https://example.com/one?two=even&#34;</span>
-   <span style="color:#a6e22e">m1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">s1</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%#v\n&#34;</span>, <span style="color:#a6e22e">m1</span>)
+   <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">s1</span>)
+   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Query</span>()
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">o2</span>)
 }
-</code></pre></div>
+</code></pre></div></p>
 <p><a href="https://golang.org/pkg/net/url#Parse">https://golang.org/pkg/net/url#Parse</a></p>
 <h2 id="javascript">JavaScript</h2>
 
