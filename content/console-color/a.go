@@ -1,9 +1,11 @@
 package main
 import "github.com/daviddengcn/go-colortext"
 func main() {
-   b_bold := true
+   b_bold := false
    ct.Foreground(ct.Red, b_bold)
-   println("Sunday")
+   print("Sunday")
+   ct.Foreground(ct.Green, b_bold)
+   print("Monday")
    ct.ResetColor()
-   println("Sunday")
+   println("Tuesday")
 }

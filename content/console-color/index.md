@@ -7,8 +7,10 @@ tags: [go, php]
 ## Go
 
 {{< r "a.go" >}}
+{{< r "b.go" >}}
 
-<https://pkg.go.dev/github.com/daviddengcn/go-colortext>
+- <https://pkg.go.dev/github.com/daviddengcn/go-colortext>
+- <https://pkg.go.dev/github.com/mattn/go-colorable>
 
 ## PHP
 
