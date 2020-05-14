@@ -21,61 +21,17 @@
    </header>
 
 <h1>Tag talk:PHP</h1>
-<time>Sat May 9 2020</time>
+<time>Thu May 14 2020</time>
    
    
-   
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</span>(<span style="color:#e6db74">&#39;PUBLIC&#39;</span>);
-$b1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">chdir</span>($s1);
-$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getcwd</span>();
-<span style="color:#a6e22e">var_dump</span>($s2); <span style="color:#75715e"># &#34;/cygdrive/c/Users/Public&#34;
-</span></code></pre></div>
-<p><a href="https://php.net/function.chdir">https://php.net/function.chdir</a></p>
+   <p><code>php.ini</code>:</p>
 
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</span>(<span style="color:#e6db74">&#39;PUBLIC&#39;</span>);
-$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>($s1);
-<span style="color:#a6e22e">var_dump</span>($s2); <span style="color:#75715e"># bool(false)
-</span></code></pre></div>
-<p><a href="https://php.net/function.realpath">https://php.net/function.realpath</a></p>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</span>(<span style="color:#e6db74">&#39;PUBLIC&#39;</span>);
-$o1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">dir</span>($s1);
-$s2 <span style="color:#f92672">=</span> $o1<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">path</span>;
-<span style="color:#a6e22e">var_dump</span>($s2); <span style="color:#75715e"># &#34;C:\Users\Public&#34;
-</span></code></pre></div>
-<p><a href="https://php.net/function.dir">https://php.net/function.dir</a></p>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</span>(<span style="color:#e6db74">&#39;PUBLIC&#39;</span>);
-$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">dirname</span>($s1);
-<span style="color:#a6e22e">var_dump</span>($s2); <span style="color:#75715e"># &#34;.&#34;
-</span></code></pre></div>
-<p><a href="https://php.net/function.dirname">https://php.net/function.dirname</a></p>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</span>(<span style="color:#e6db74">&#39;PUBLIC&#39;</span>);
-$a1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stat</span>($s1);
-<span style="color:#a6e22e">var_dump</span>($a1); <span style="color:#75715e"># array(26)
-</span></code></pre></div>
-<p><a href="https://php.net/function.stat">https://php.net/function.stat</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.ini" data-lang=".ini"><span style="color:#a6e22e">extension</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">curl</span>
+<span style="color:#a6e22e">curl.cainfo</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">C:\msys64\usr\ssl\cert.pem</span>
+</code></pre></div>
 
 
 </body>

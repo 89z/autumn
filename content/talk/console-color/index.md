@@ -2,6 +2,10 @@
 title: 'Talk:Console color'
 ---
 
+~~~
+SetConsoleTextAttribute
+~~~
+
 Accept ANSI escape codes:
 
 <https://github.com/daviddengcn/go-colortext/issues/17>
