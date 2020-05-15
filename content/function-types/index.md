@@ -1,7 +1,7 @@
 ---
 title: Function types
 categories: [function]
-tags: [go, javascript, julia, nim, php, python]
+tags: [go, javascript, nim, php, python]
 ---
 
 ## Go
@@ -18,10 +18,6 @@ tags: [go, javascript, julia, nim, php, python]
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/function>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/function>
 
-## Julia
-
-{{< r "a.jl" >}}
-
 ## Nim
 
 {{< r "a.nim" >}}
@@ -32,8 +28,8 @@ tags: [go, javascript, julia, nim, php, python]
 
 {{< r "a.php" >}}
 
-- <https://php.net/closure.fromcallable>
 - <https://php.net/functions.anonymous>
+- <https://php.net/functions.arrow>
 - <https://php.net/functions.user-defined>
 
 ## Python

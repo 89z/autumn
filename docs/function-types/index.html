@@ -32,19 +32,19 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">f1</span>(<span style="color:#a6e22e">n1</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> {
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span>
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">f1</span>(<span style="color:#a6e22e">s1</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">int</span> {
+   <span style="color:#66d9ef">return</span> len(<span style="color:#a6e22e">s1</span>)
 }
 <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">f2</span> = <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">n1</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> {
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span>
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">f2</span> = <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">s1</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">int</span> {
+   <span style="color:#66d9ef">return</span> len(<span style="color:#a6e22e">s1</span>)
 }
 <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%T\n&#34;</span>, <span style="color:#a6e22e">f1</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%T\n&#34;</span>, <span style="color:#a6e22e">f2</span>)
+   <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">f1</span>(<span style="color:#e6db74">&#34;Sunday&#34;</span>)
+   <span style="color:#a6e22e">n2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">f2</span>(<span style="color:#e6db74">&#34;Sunday&#34;</span>)
+   println(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>)
 }
 </code></pre></div>
 <p><a href="https://golang.org/ref/spec#Function_types">https://golang.org/ref/spec#Function_types</a></p>
@@ -54,34 +54,26 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f1</span>(<span style="color:#a6e22e">n1</span>) {
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f1</span>(<span style="color:#a6e22e">s1</span>) {
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">length</span>;
 }
 <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">f2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">n1</span>) {
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">f2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">s1</span>) {
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">length</span>;
 };
 <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">f3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n1</span> =&gt; <span style="color:#a6e22e">n1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">f3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span> =&gt; <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">length</span>;
 <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">f1</span>, <span style="color:#a6e22e">f2</span>, <span style="color:#a6e22e">f3</span>);
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">f1</span>(<span style="color:#e6db74">&#39;Sunday&#39;</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">f2</span>(<span style="color:#e6db74">&#39;Sunday&#39;</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">f3</span>(<span style="color:#e6db74">&#39;Sunday&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>, <span style="color:#a6e22e">n3</span>);
 </code></pre></div>
 <ul>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Functions/Arrow_functions">https://developer.mozilla.org/Web/JavaScript/Reference/Functions/Arrow_functions</a></li>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Operators/function">https://developer.mozilla.org/Web/JavaScript/Reference/Operators/function</a></li>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Statements/function">https://developer.mozilla.org/Web/JavaScript/Reference/Statements/function</a></li>
 </ul>
-<h2 id="julia">Julia</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.jl" data-lang=".jl"><span style="color:#66d9ef">function</span> f1(n1)
-   n1 <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span>
-<span style="color:#66d9ef">end</span>
-n2 <span style="color:#f92672">=</span> f1(<span style="color:#ae81ff">20</span>)
-println(n2)
-</code></pre></div>
 <h2 id="nim">Nim</h2>
 
 
@@ -100,23 +92,23 @@ echo f1(<span style="color:#ae81ff">20</span>)
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f1</span>($s1) {
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">intval</span>($s1);
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">strlen</span>($s1);
 }
-$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">f1</span>(<span style="color:#e6db74">&#39;10&#39;</span>);
+$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">f1</span>(<span style="color:#e6db74">&#39;Sunday&#39;</span>);
 <span style="color:#75715e"># example 2
 </span><span style="color:#75715e"></span>$f2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> ($s1) {
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">intval</span>($s1);
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">strlen</span>($s1);
 };
-$n2 <span style="color:#f92672">=</span> $f2(<span style="color:#e6db74">&#39;10&#39;</span>);
+$n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">f1</span>(<span style="color:#e6db74">&#39;Sunday&#39;</span>);
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$f3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span>($s1) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">intval</span>($s1);
-$n3 <span style="color:#f92672">=</span> $f3(<span style="color:#e6db74">&#39;10&#39;</span>);
+</span><span style="color:#75715e"></span>$f3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span>($s1) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">strlen</span>($s1);
+$n3 <span style="color:#f92672">=</span> $f3(<span style="color:#e6db74">&#39;Sunday&#39;</span>);
 <span style="color:#75715e"># print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1, $n2, $n3);
 </code></pre></div>
 <ul>
-<li><a href="https://php.net/closure.fromcallable">https://php.net/closure.fromcallable</a></li>
 <li><a href="https://php.net/functions.anonymous">https://php.net/functions.anonymous</a></li>
+<li><a href="https://php.net/functions.arrow">https://php.net/functions.arrow</a></li>
 <li><a href="https://php.net/functions.user-defined">https://php.net/functions.user-defined</a></li>
 </ul>
 <h2 id="python">Python</h2>

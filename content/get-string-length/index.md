@@ -1,7 +1,7 @@
 ---
 title: Get string length
 categories: [string]
-tags: [go, javascript, php, python]
+tags: [go, javascript, nim, php, python]
 ---
 
 ## Go
@@ -19,27 +19,26 @@ tags: [go, javascript, php, python]
 {{< r "a.js" >}}
 
 - <https://developer.mozilla.org/Web/API/TextEncoder/encode>
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/String/length` >}}
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/length>
+
+## Nim
+
+{{< r "a.nim" >}}
+{{< r "b.nim" >}}
+
+<https://nim-lang.github.io/Nim/unicode>
 
 ## PHP
 
-{{< r "core.php" >}}
-
-- <https://php.net/function.strlen>
-- <https://php.net/function.utf8-decode>
-
-{{< r "iconv.php" >}}
-
-<https://php.net/function.iconv-strlen>
-
+{{< r "str.php" >}}
+{{< r "mb.php" >}}
 {{< r "intl.php" >}}
 
-<https://php.net/function.grapheme-strlen>
-
-{{< r "mbstring.php" >}}
-
-<https://php.net/function.mb-strlen>
+- <https://php.net/function.grapheme-strlen>
+- <https://php.net/function.iconv-strlen>
+- <https://php.net/function.mb-strlen>
+- <https://php.net/function.strlen>
+- <https://php.net/function.utf8-decode>
 
 ## Python
 
@@ -50,5 +49,6 @@ tags: [go, javascript, php, python]
 
 ## References
 
+- <https://hyperpolyglot.org/scripting#str-len>
 - <https://rosettacode.org/wiki/String_length>
 - <https://www.programming-idioms.org/idiom/169/string-length>

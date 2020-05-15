@@ -1,15 +1,15 @@
 package main
-import "fmt"
 // example 1
-func f1(n1 int) int {
-   return n1 + 10
+func f1(s1 string) int {
+   return len(s1)
 }
 // example 2
-var f2 = func(n1 int) int {
-   return n1 + 10
+var f2 = func(s1 string) int {
+   return len(s1)
 }
 // print
 func main() {
-   fmt.Printf("%T\n", f1)
-   fmt.Printf("%T\n", f2)
+   n1 := f1("Sunday")
+   n2 := f2("Sunday")
+   println(n1, n2)
 }
