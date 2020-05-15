@@ -2,31 +2,17 @@
 title: 'Talk:Console color'
 ---
 
-## labstack/gommon
-
-deps: 9
-
-<https://github.com/labstack/gommon>
-
 ## multiverse-os/color
+
+{{< r "multiverse-os-color.go" >}}
 
 deps: 15
 
 <https://github.com/multiverse-os/color>
 
-## daviddengcn/go-colortext
-
-deps: 27
-
-<https://github.com/daviddengcn/go-colortext>
-
-## mattn/go-colorable
-
-deps: 34
-
-<https://github.com/mattn/go-colorable>
-
 ## Mivinci/color
+
+{{< r "mivinci-color.go" >}}
 
 deps: 35
 
@@ -73,6 +59,29 @@ deps: 42
 deps: 48
 
 <https://github.com/muesli/termenv>
+
+## mattn/go-colorable
+
+~~~
+fmt.Fprint(stdOut, "\x1B[3GMove to 3rd Column\n")
+~~~
+
+<https://github.com/mattn/go-colorable>
+
+## daviddengcn/go-colortext
+
+~~~go
+ct.Foreground(Green, false)
+fmt.Println("Green text starts here...")
+~~~
+
+<https://github.com/daviddengcn/go-colortext>
+
+## labstack/gommon
+
+No color with Windows
+
+<https://github.com/labstack/gommon/tree/master/color>
 
 ## mitchellh/colorstring
 

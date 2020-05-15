@@ -24,19 +24,42 @@
 <time>Fri May 15 2020</time>
    
    
-   <h2 id="labstackgommon">labstack/gommon</h2>
-<p>deps: 9</p>
-<p><a href="https://github.com/labstack/gommon">https://github.com/labstack/gommon</a></p>
-<h2 id="multiverse-oscolor">multiverse-os/color</h2>
+   <h2 id="multiverse-oscolor">multiverse-os/color</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;github.com/multiverse-os/color&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">Green</span>(<span style="color:#a6e22e">s1</span>)
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">Red</span>(<span style="color:#a6e22e">s1</span>)
+   <span style="color:#75715e">// print
+</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">s3</span>, <span style="color:#a6e22e">s1</span>)
+}
+</code></pre></div>
 <p>deps: 15</p>
 <p><a href="https://github.com/multiverse-os/color">https://github.com/multiverse-os/color</a></p>
-<h2 id="daviddengcngo-colortext">daviddengcn/go-colortext</h2>
-<p>deps: 27</p>
-<p><a href="https://github.com/daviddengcn/go-colortext">https://github.com/daviddengcn/go-colortext</a></p>
-<h2 id="mattngo-colorable">mattn/go-colorable</h2>
-<p>deps: 34</p>
-<p><a href="https://github.com/mattn/go-colorable">https://github.com/mattn/go-colorable</a></p>
 <h2 id="mivincicolor">Mivinci/color</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;github.com/mivinci/color&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">Green</span>(<span style="color:#a6e22e">s1</span>)
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">Red</span>(<span style="color:#a6e22e">s1</span>)
+   <span style="color:#75715e">// print
+</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">s3</span>, <span style="color:#a6e22e">s1</span>)
+}
+</code></pre></div>
 <p>deps: 35</p>
 <p><a href="https://github.com/Mivinci/color">https://github.com/Mivinci/color</a></p>
 <h2 id="morikuniaec">morikuni/aec</h2>
@@ -60,6 +83,16 @@
 <h2 id="mueslitermenv">muesli/termenv</h2>
 <p>deps: 48</p>
 <p><a href="https://github.com/muesli/termenv">https://github.com/muesli/termenv</a></p>
+<h2 id="mattngo-colorable">mattn/go-colorable</h2>
+<pre><code>fmt.Fprint(stdOut, &quot;\x1B[3GMove to 3rd Column\n&quot;)
+</code></pre><p><a href="https://github.com/mattn/go-colorable">https://github.com/mattn/go-colorable</a></p>
+<h2 id="daviddengcngo-colortext">daviddengcn/go-colortext</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">ct</span>.<span style="color:#a6e22e">Foreground</span>(<span style="color:#a6e22e">Green</span>, <span style="color:#66d9ef">false</span>)
+<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Green text starts here...&#34;</span>)
+</code></pre></div><p><a href="https://github.com/daviddengcn/go-colortext">https://github.com/daviddengcn/go-colortext</a></p>
+<h2 id="labstackgommon">labstack/gommon</h2>
+<p>No color with Windows</p>
+<p><a href="https://github.com/labstack/gommon/tree/master/color">https://github.com/labstack/gommon/tree/master/color</a></p>
 <h2 id="mitchellhcolorstring">mitchellh/colorstring</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">colorstring</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;[blue]Hello [red]World!&#34;</span>)
 </code></pre></div><p><a href="https://github.com/mitchellh/colorstring">https://github.com/mitchellh/colorstring</a></p>

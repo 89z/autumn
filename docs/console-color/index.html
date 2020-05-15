@@ -28,62 +28,7 @@
    
 <a href="/autumn/talk/console-color/">Talk:Console color</a>
    
-   <h2 id="go">Go</h2>
-<p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
-   <span style="color:#e6db74">&#34;github.com/morikuni/aec&#34;</span>
-)
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">aec</span>.<span style="color:#a6e22e">GreenF</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">s1</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">aec</span>.<span style="color:#a6e22e">RedF</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">s1</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">aec</span>.<span style="color:#a6e22e">Reset</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">s1</span>)
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">aec</span>.<span style="color:#a6e22e">GreenF</span>.<span style="color:#a6e22e">Apply</span>(<span style="color:#a6e22e">s1</span>)
-   <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">aec</span>.<span style="color:#a6e22e">RedF</span>.<span style="color:#a6e22e">Apply</span>(<span style="color:#a6e22e">s1</span>)
-   <span style="color:#a6e22e">s4</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">aec</span>.<span style="color:#a6e22e">Reset</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s1</span>
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s3</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s4</span>)
-}
-</code></pre></div>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
-   <span style="color:#e6db74">&#34;github.com/wzshiming/ctc&#34;</span>
-)
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">ctc</span>.<span style="color:#a6e22e">ForegroundGreen</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">s1</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">ctc</span>.<span style="color:#a6e22e">ForegroundRed</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">s1</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">ctc</span>.<span style="color:#a6e22e">Reset</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">s1</span>)
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ctc</span>.<span style="color:#a6e22e">ForegroundGreen</span>.<span style="color:#a6e22e">String</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">s1</span>
-   <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ctc</span>.<span style="color:#a6e22e">ForegroundRed</span>.<span style="color:#a6e22e">String</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">s1</span>
-   <span style="color:#a6e22e">s4</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ctc</span>.<span style="color:#a6e22e">Reset</span>.<span style="color:#a6e22e">String</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">s1</span>
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s3</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s4</span>)
-}
-</code></pre></div></p>
-<ul>
-<li><a href="https://github.com/morikuni/aec">https://github.com/morikuni/aec</a></li>
-<li><a href="https://github.com/wzshiming/ctc">https://github.com/wzshiming/ctc</a></li>
-</ul>
-<h2 id="php">PHP</h2>
+   <h2 id="php">PHP</h2>
 
 
 
