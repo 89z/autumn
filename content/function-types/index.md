@@ -1,12 +1,8 @@
 ---
 title: Function types
 categories: [function]
-tags: [d, go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python]
 ---
-
-## D
-
-<https://dlang.org/spec/function.html>
 
 ## Go
 
@@ -18,10 +14,9 @@ tags: [d, go, javascript, julia, nim, php, python]
 
 {{< r "a.js" >}}
 
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Functions/Arrow_functions>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/function>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/function>
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Functions/
-   Arrow_functions` >}}
 
 ## Julia
 

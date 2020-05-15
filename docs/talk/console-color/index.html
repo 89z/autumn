@@ -24,13 +24,45 @@
 <time>Thu May 14 2020</time>
    
    
-   <pre><code>SetConsoleTextAttribute
-</code></pre><p>Accept ANSI escape codes:</p>
-<p><a href="https://github.com/daviddengcn/go-colortext/issues/17">https://github.com/daviddengcn/go-colortext/issues/17</a></p>
-<p>Color constants:</p>
-<p><a href="https://github.com/mattn/go-colorable/issues/52">https://github.com/mattn/go-colorable/issues/52</a></p>
-<p>No color on Windows:</p>
-<p><a href="https://github.com/TwinProduction/go-color/issues/2">https://github.com/TwinProduction/go-color/issues/2</a></p>
+   <p>Cygwin PHP is bad:</p>
+<p><a href="https://sourceware.org/pipermail/cygwin/2020-May/244793.html">https://sourceware.org/pipermail/cygwin/2020-May/244793.html</a></p>
+<p>so I am now using native PHP. Since PHP cannot do <code>SetConsoleTextAttribute</code>,
+that means I need to use Mintty short term, and Windows 10 long term.</p>
+<p>Since I am now using Mintty, I no longer have to worry about
+<code>SetConsoleTextAttribute</code>, as Mintty will just accept ANSI escape codes. So I
+can be more relaxed about what package I choose.</p>
+<p><a href="https://github.com/mintty/mintty/issues/994">https://github.com/mintty/mintty/issues/994</a></p>
+<h2 id="aec">aec</h2>
+<p>2 imports</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;github.com/morikuni/aec&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">aec</span>.<span style="color:#a6e22e">GreenF</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#e6db74">&#34;Sun&#34;</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">aec</span>.<span style="color:#a6e22e">RedF</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#e6db74">&#34;Mon&#34;</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">aec</span>.<span style="color:#a6e22e">Reset</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Tue&#34;</span>)
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s_in</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">aec</span>.<span style="color:#a6e22e">GreenF</span>.<span style="color:#a6e22e">Apply</span>(<span style="color:#e6db74">&#34;Sun&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">aec</span>.<span style="color:#a6e22e">RedF</span>.<span style="color:#a6e22e">Apply</span>(<span style="color:#e6db74">&#34;Mon&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">aec</span>.<span style="color:#a6e22e">Reset</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;Tue&#34;</span>
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">s_in</span>)
+}
+</code></pre></div>
+<p><a href="https://pkg.go.dev/github.com/morikuni/aec">https://pkg.go.dev/github.com/morikuni/aec</a></p>
+<h2 id="colorstring">colorstring</h2>
+<p>5 imports</p>
+<p><a href="https://pkg.go.dev/github.com/mitchellh/colorstring">https://pkg.go.dev/github.com/mitchellh/colorstring</a></p>
+<h2 id="line">line</h2>
+<p>6 imports</p>
+<p><a href="https://pkg.go.dev/github.com/dollarshaveclub/line">https://pkg.go.dev/github.com/dollarshaveclub/line</a></p>
 
 
 </body>
