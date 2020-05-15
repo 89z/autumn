@@ -13,6 +13,8 @@ func main() {
    fmt.Print(aec.Reset)
    fmt.Println(s1)
    // example 2
-   s_in := aec.GreenF.Apply(s1) + aec.RedF.Apply(s1) + aec.Reset + s1
-   fmt.Println(s_in)
+   s2 := aec.GreenF.Apply(s1)
+   s3 := aec.RedF.Apply(s1)
+   s4 := aec.Reset + s1
+   fmt.Println(s2 + s3 + s4)
 }

@@ -6,11 +6,11 @@ tags: [go, php]
 
 ## Go
 
-{{< r "a.go" >}}
-{{< r "b.go" >}}
+{{< r "aec.go" >}}
+{{< r "ctc.go" >}}
 
-- <https://pkg.go.dev/github.com/daviddengcn/go-colortext>
-- <https://pkg.go.dev/github.com/mattn/go-colorable>
+- <https://github.com/morikuni/aec>
+- <https://github.com/wzshiming/ctc>
 
 ## PHP
 

@@ -2,63 +2,49 @@
 title: 'Talk:Console color'
 ---
 
-## wzshiming/ctc
+## dollarshaveclub/line
 
-{{< r "ctc.go" >}}
+Color constants
 
-2020
-
-<https://github.com/wzshiming/ctc>
-
-## openset/color
-
-2020
-
-<https://github.com/openset/color>
-
-## mitchellh/colorstring
-
-2019
-
-<https://github.com/mitchellh/colorstring>
-
-## multiverse-os/ansi
-
-2019
-
-<https://github.com/multiverse-os/ansi>
-
-## multiverse-os/color
-
-2019
-
-<https://github.com/multiverse-os/color>
-
-## r-novel/go-color
-
-2019
-
-<https://github.com/r-novel/go-color>
+<https://github.com/dollarshaveclub/line/issues/12>
 
 ## TwinProduction/go-color
 
-2019
+No color on Windows 7
 
-<https://github.com/TwinProduction/go-color>
+<https://github.com/TwinProduction/go-color/issues/2>
 
-## morikuni/aec
+## r-novel/go-color
 
-{{< r "aec.go" >}}
+Color constants
 
-2017
+<https://github.com/r-novel/go-color/issues/8>
 
-<https://github.com/morikuni/aec>
+## multiverse-os/color
 
-## dollarshaveclub/line
+Color constants
 
-2017
+<https://github.com/multiverse-os/color>
 
-<https://github.com/dollarshaveclub/line>
+## multiverse-os/ansi
+
+Color constants
+
+<https://github.com/multiverse-os/ansi/issues/2>
+
+## mitchellh/colorstring
+
+~~~go
+colorstring.Println("[blue]Hello [red]World!")
+~~~
+
+<https://github.com/mitchellh/colorstring>
+
+## openset/color
+
+Color constants
+
+<https://github.com/openset/color/issues/1>
 
 ## daviddengcn/go-colortext
 
