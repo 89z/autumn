@@ -1,14 +1,17 @@
 <?php
+$s_green = "\e[32m";
 $s_red = "\e[31m";
-$s_gre = "\e[32m";
 $s_end = "\e[m";
+$s1 = 'Sunday';
 # example 1
+echo $s_green;
+echo $s1;
 echo $s_red;
-echo 'Sunday';
-echo $s_gre;
-echo 'Monday';
+echo $s1;
 echo $s_end;
-echo "Tuesday\n";
+echo $s1, "\n";
 # example 2
-$s_in = $s_red . 'Sunday' . $s_gre . 'Monday' . $s_end . 'Tuesday';
-echo $s_in, "\n";
+$s2 = $s_green . $s1;
+$s3 = $s_red . $s1;
+$s4 = $s_end . $s1;
+echo $s2, $s3, $s4, "\n";
