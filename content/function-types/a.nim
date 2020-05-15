@@ -1,3 +1,3 @@
-proc f1(n1: int): int =
-   return n1 + 10
-echo f1(20)
+proc f1(s1: string): int =
+   return s1.len
+echo f1("Sunday")

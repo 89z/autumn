@@ -1,11 +1,8 @@
 <?php
-$a1 = [16, 25];
+$a1 = ['Sun', 'Mon'];
 # example 1
-$a2 = array_map('sqrt', $a1);
+$a2 = array_map('strlen', $a1);
 # example 2
-$a3 = array_map(function ($n1) {
-   return sqrt($n1);
-}, $a1);
+$a3 = array_map(fn($s1) => strlen($s1), $a1);
 # print
-print_r($a2);
-print_r($a3);
+var_dump($a2, $a3);

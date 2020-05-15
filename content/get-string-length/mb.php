@@ -1,4 +1,5 @@
 <?php
 extension_loaded('mbstring') or die('extension=mbstring');
-$n1 = mb_strlen('♠');
+$s1 = '♠';
+$n1 = mb_strlen($s1);
 var_dump($n1);
