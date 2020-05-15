@@ -22,7 +22,3 @@ The workaround is to split on double quotes, then join again with double quotes.
 Interestingly, interleaving quotes do not need to be escaped:
 
 <https://stackoverflow.com/questions/7760545>
-
-Implementation:
-
-{{< r "d.php" >}}

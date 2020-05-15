@@ -4,14 +4,15 @@ import (
    "github.com/morikuni/aec"
 )
 func main() {
+   s1 := "Sunday"
    // example 1
    fmt.Print(aec.GreenF)
-   fmt.Print("Sun")
+   fmt.Print(s1)
    fmt.Print(aec.RedF)
-   fmt.Print("Mon")
+   fmt.Print(s1)
    fmt.Print(aec.Reset)
-   fmt.Println("Tue")
+   fmt.Println(s1)
    // example 2
-   s_in := aec.GreenF.Apply("Sun") + aec.RedF.Apply("Mon") + aec.Reset + "Tue"
+   s_in := aec.GreenF.Apply(s1) + aec.RedF.Apply(s1) + aec.Reset + s1
    fmt.Println(s_in)
 }

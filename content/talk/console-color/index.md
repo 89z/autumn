@@ -2,35 +2,64 @@
 title: 'Talk:Console color'
 ---
 
-Cygwin PHP is bad:
+## daviddengcn/go-colortext
 
-<https://sourceware.org/pipermail/cygwin/2020-May/244793.html>
+Accept ANSI escape codes
 
-so I am now using native PHP. Since PHP cannot do `SetConsoleTextAttribute`,
-that means I need to use Mintty short term, and Windows 10 long term.
+<https://github.com/daviddengcn/go-colortext/issues/17>
 
-Since I am now using Mintty, I no longer have to worry about
-`SetConsoleTextAttribute`, as Mintty will just accept ANSI escape codes. So I
-can be more relaxed about what package I choose.
+## dollarshaveclub/line
 
-<https://github.com/mintty/mintty/issues/994>
+<https://github.com/dollarshaveclub/line>
 
-## aec
+## mitchellh/colorstring
 
-2 imports
+<https://github.com/mitchellh/colorstring>
+
+## Mivinci/color
+
+Color constants
+
+<https://github.com/Mivinci/color/issues/1>
+
+## morikuni/aec
 
 {{< r "aec.go" >}}
 
 <https://pkg.go.dev/github.com/morikuni/aec>
 
-## colorstring
+## muesli/termenv
 
-5 imports
+Add constants for ANSI colors
 
-<https://pkg.go.dev/github.com/mitchellh/colorstring>
+<https://github.com/muesli/termenv/issues/1>
 
-## line
+## multiverse-os/ansi
 
-6 imports
+<https://github.com/multiverse-os/ansi>
 
-<https://pkg.go.dev/github.com/dollarshaveclub/line>
+## multiverse-os/color
+
+<https://github.com/multiverse-os/color>
+
+## openset/color
+
+<https://github.com/openset/color>
+
+## r-novel/go-color
+
+<https://github.com/r-novel/go-color>
+
+## tnclong/berry
+
+Windows build broken
+
+<https://github.com/tnclong/berry/issues/1>
+
+## TwinProduction/go-color
+
+<https://github.com/TwinProduction/go-color>
+
+## wzshiming/ctc
+
+<https://github.com/wzshiming/ctc>

@@ -31,17 +31,8 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sh" data-lang=".sh"><span style="color:#75715e"># example 1</span>
-go get -v github.com/user/module
-<span style="color:#75715e"># example 2</span>
-go get github.com/user/module/package
-<span style="color:#75715e"># example 3</span>
-go get github.com/user/module/...
-<span style="color:#75715e"># example 4</span>
-go mod init sunday
-go get github.com/user/module
-<span style="color:#75715e"># example 5</span>
-go mod init sunday
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sh" data-lang=".sh">go mod init sunday
+go list -deps
 go build
 </code></pre></div>
 <p><a href="https://golang.org/cmd/go">https://golang.org/cmd/go</a></p>

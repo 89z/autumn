@@ -31,11 +31,8 @@ tags: [go, julia, nim, php, python]
 
 {{< r "a.php" >}}
 {{< r "b.php" >}}
-{{< r "c.php" >}}
 
-- <https://php.net/function.escapeshellarg>
-- <https://php.net/function.proc-open>
-- <https://php.net/function.system>
+<https://php.net/function.system>
 
 ## Python
 

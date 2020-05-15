@@ -53,25 +53,12 @@ $s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">escapeshell
 $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://example.com/sun&#34;mon&#39;</span>;
 $s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">escapeshellcmd</span>($s1);
 <span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#39;firefox &#39;</span> <span style="color:#f92672">.</span> $s2);
-
 </code></pre></div>
 <p>The quote is stripped and you get here:</p>
 <p><a href="https://example.com/sunmon">https://example.com/sunmon</a></p>
 <p>The workaround is to split on double quotes, then join again with double quotes.
 Interestingly, interleaving quotes do not need to be escaped:</p>
 <p><a href="https://stackoverflow.com/questions/7760545">https://stackoverflow.com/questions/7760545</a></p>
-<p>Implementation:</p>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f_escape_sh</span>($s_all) {
-   $a_enc <span style="color:#f92672">=</span> <span style="color:#a6e22e">explode</span>(<span style="color:#e6db74">&#39;&#34;&#39;</span>, $s_all);
-   $a_tran <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_map</span>(<span style="color:#a6e22e">fn</span>($s_one) <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;&#34;&#39;</span> <span style="color:#f92672">.</span> $s_one <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&#34;&#39;</span>, $a_enc);
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">implode</span>(<span style="color:#e6db74">&#39;&#34;&#39;</span>, $a_tran);
-}
-</code></pre></div>
 
 
 </body>
