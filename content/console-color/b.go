@@ -1,5 +1,5 @@
 package main
-import "github.com/mivinci/color"
+import "github.com/mivinci/color" // 35 deps
 func main() {
    s1 := "Sunday"
    // example 1

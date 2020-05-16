@@ -1,8 +1,16 @@
 ---
 title: Console color
 categories: [input-output]
-tags: [php]
+tags: [go, php]
 ---
+
+## Go
+
+{{< r "a.go" >}}
+{{< r "b.go" >}}
+
+- <https://github.com/Mivinci/color>
+- <https://github.com/multiverse-os/color>
 
 ## PHP
 

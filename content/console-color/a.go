@@ -1,5 +1,5 @@
 package main
-import "github.com/multiverse-os/color"
+import "github.com/multiverse-os/color" // 15 deps
 func main() {
    s1 := "Sunday"
    // example 1

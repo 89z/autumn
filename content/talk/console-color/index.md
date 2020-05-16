@@ -2,22 +2,6 @@
 title: 'Talk:Console color'
 ---
 
-## multiverse-os/color
-
-{{< r "multiverse-os-color.go" >}}
-
-deps: 15
-
-<https://github.com/multiverse-os/color>
-
-## Mivinci/color
-
-{{< r "mivinci-color.go" >}}
-
-deps: 35
-
-<https://github.com/Mivinci/color>
-
 ## morikuni/aec
 
 deps: 36
