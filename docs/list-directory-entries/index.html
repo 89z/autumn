@@ -21,25 +21,13 @@
    </header>
 
 <h1>List directory entries</h1>
-<time>Sat May 2 2020</time>
+<time>Tue May 19 2020</time>
    
 <a href="/autumn/categories/system/">system</a>
    
    
-   <h2 id="d">D</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.d" data-lang=".d"><span style="color:#f92672">import</span> std.file<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> a1 <span style="color:#f92672">=</span> dirEntries<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">,</span> SpanMode<span style="color:#f92672">.</span><span style="color:#a6e22e">shallow</span><span style="color:#f92672">);</span>
-   a1<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
-<p><a href="https://dlang.org/phobos/std_file.html#.dirEntries">https://dlang.org/phobos/std_file.html#.dirEntries</a></p>
-<h2 id="go">Go</h2>
-
+   <h2 id="go">Go</h2>
+<p>
 
 
 
@@ -53,7 +41,6 @@
    }
 }
 </code></pre></div>
-<p><a href="https://golang.org/pkg/io/ioutil#ReadDir">https://golang.org/pkg/io/ioutil#ReadDir</a></p>
 
 
 
@@ -69,7 +56,6 @@
    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a1</span>)
 }
 </code></pre></div>
-<p><a href="https://golang.org/pkg/os#File.Readdirnames">https://golang.org/pkg/os#File.Readdirnames</a></p>
 
 
 
@@ -83,8 +69,12 @@
    <span style="color:#a6e22e">a1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Glob</span>(<span style="color:#e6db74">&#34;*&#34;</span>)
    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a1</span>)
 }
-</code></pre></div>
-<p><a href="https://golang.org/pkg/path/filepath#Glob">https://golang.org/pkg/path/filepath#Glob</a></p>
+</code></pre></div></p>
+<ul>
+<li><a href="https://golang.org/pkg/io/ioutil#ReadDir">https://golang.org/pkg/io/ioutil#ReadDir</a></li>
+<li><a href="https://golang.org/pkg/os#File.Readdirnames">https://golang.org/pkg/os#File.Readdirnames</a></li>
+<li><a href="https://golang.org/pkg/path/filepath#Glob">https://golang.org/pkg/path/filepath#Glob</a></li>
+</ul>
 <h2 id="julia">Julia</h2>
 
 
@@ -146,6 +136,22 @@ a1 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>li
 <span style="color:#66d9ef">print</span>(a1)
 </code></pre></div>
 <p><a href="https://docs.python.org/library/os.html#os.listdir">https://docs.python.org/library/os.html#os.listdir</a></p>
+<h2 id="rust">Rust</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::fs;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">match</span> fs::read_dir(<span style="color:#e6db74">&#34;.&#34;</span>) {
+      Err(e1) <span style="color:#f92672">=&gt;</span> println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Err {:?}&#34;</span>, e1),
+      Ok(o1) <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">for</span> o2 <span style="color:#66d9ef">in</span> o1 {
+         println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o2);
+      }
+   }
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/fs/fn.read_dir.html">https://doc.rust-lang.org/std/fs/fn.read_dir.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#dir-iterate">https://hyperpolyglot.org/scripting2#dir-iterate</a></li>

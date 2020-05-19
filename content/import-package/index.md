@@ -1,14 +1,8 @@
 ---
 title: Import package
 categories: [reference]
-tags: [d, go, julia, nim, php, python]
+tags: [go, julia, nim, php, python, rust]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/spec/module.html#import-declaration>
 
 ## Go
 
@@ -36,6 +30,10 @@ tags: [d, go, julia, nim, php, python]
 {{< r "b.py" >}}
 
 <https://docs.python.org/reference/simple_stmts.html#import>
+
+## Rust
+
+{{< r "a.rs" >}}
 
 ## References
 

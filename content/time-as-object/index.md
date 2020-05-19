@@ -1,15 +1,8 @@
 ---
 title: Time as an object
 categories: [time]
-tags: [d, go, javascript, php, python]
+tags: [go, javascript, php, python, rust]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-- <https://dlang.org/phobos/core_time.html>
-- <https://dlang.org/phobos/std_datetime.html>
 
 ## Go
 
@@ -35,11 +28,11 @@ tags: [d, go, javascript, php, python]
 
 {{< r "a.py" >}}
 
-{{< a `https://docs.python.org/library/datetime.html#
-datetime.datetime.utcfromtimestamp` >}}
+<https://docs.python.org/library/datetime.html#datetime.datetime.utcfromtimestamp>
 
 ## References
 
 - <https://hyperpolyglot.org/c#unix-epoch-to-broken-down-datetime>
 - <https://hyperpolyglot.org/scripting#unix-epoch-to-broken-down-datetime>
+- <https://rosettacode.org/wiki/Date_manipulation>
 - <https://www.programming-idioms.org/idiom/98/epoch-seconds-to-date-object>

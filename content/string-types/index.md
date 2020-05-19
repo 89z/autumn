@@ -1,16 +1,8 @@
 ---
 title: String types
 categories: [string]
-tags: [d, go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python, rust]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-- <https://dlang.org/phobos/std_stdio#.writeln>
-- <https://dlang.org/spec/lex#double_quoted_strings>
-- <https://dlang.org/spec/lex#wysiwyg>
 
 ## Go
 
@@ -50,6 +42,10 @@ tags: [d, go, javascript, julia, nim, php, python]
 
 - <https://docs.python.org/library/io.html#io.StringIO>
 - <https://docs.python.org/reference/lexical_analysis.html#strings>
+
+## Rust
+
+{{< r "a.rs" >}}
 
 ## References
 

@@ -1,12 +1,8 @@
 ---
 title: Windows registry
 categories: [system]
-tags: [d, go, python]
+tags: [go]
 ---
-
-## D
-
-<https://dlang.org/phobos/std_windows_registry.html>
 
 ## Go
 

@@ -1,14 +1,8 @@
 ---
 title: Slice an array
 categories: [array]
-tags: [d, go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python, rust]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/spec/expression.html#SliceExpression>
 
 ## Go
 
@@ -20,10 +14,8 @@ tags: [d, go, javascript, julia, nim, php, python]
 
 {{< r "a.js" >}}
 
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/
-   Array/slice` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/
-   Array#Accessing_array_elements` >}}
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array#Accessing_array_elements>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/slice>
 
 ## Julia
 
@@ -50,6 +42,10 @@ tags: [d, go, javascript, julia, nim, php, python]
 
 - <https://docs.python.org/library/functions.html#slice>
 - <https://docs.python.org/library/stdtypes.html#mutable-sequence-types>
+
+## Rust
+
+{{< r "a.rs" >}}
 
 ## References
 

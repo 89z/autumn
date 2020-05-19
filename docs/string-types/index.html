@@ -21,33 +21,12 @@
    </header>
 
 <h1>String types</h1>
-<time>Sat May 2 2020</time>
+<time>Tue May 19 2020</time>
    
 <a href="/autumn/categories/string/">string</a>
    
    
-   <h2 id="d">D</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.d" data-lang=".d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sunday&#34;</span><span style="color:#f92672">;</span>
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">`Sunday
-</span><span style="color:#e6db74">Monday`</span><span style="color:#f92672">;</span>
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   <span style="color:#f92672">[</span>s1<span style="color:#f92672">,</span> s2<span style="color:#f92672">].</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
-<ul>
-<li><a href="https://dlang.org/phobos/std_stdio#.writeln">https://dlang.org/phobos/std_stdio#.writeln</a></li>
-<li><a href="https://dlang.org/spec/lex#double_quoted_strings">https://dlang.org/spec/lex#double_quoted_strings</a></li>
-<li><a href="https://dlang.org/spec/lex#wysiwyg">https://dlang.org/spec/lex#wysiwyg</a></li>
-</ul>
-<h2 id="go">Go</h2>
+   <h2 id="go">Go</h2>
 
 
 
@@ -162,6 +141,16 @@ s5 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>ge
 <li><a href="https://docs.python.org/library/io.html#io.StringIO">https://docs.python.org/library/io.html#io.StringIO</a></li>
 <li><a href="https://docs.python.org/reference/lexical_analysis.html#strings">https://docs.python.org/reference/lexical_analysis.html#strings</a></li>
 </ul>
+<h2 id="rust">Rust</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>;
+   dbg<span style="color:#f92672">!</span>(s1);
+}
+</code></pre></div>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://www.programming-idioms.org/idiom/48/multi-line-string">https://www.programming-idioms.org/idiom/48/multi-line-string</a></li>

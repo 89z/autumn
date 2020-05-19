@@ -1,28 +1,18 @@
 ---
 title: List directory entries
 categories: [system]
-tags: [d, go, julia, nim, php, python]
+tags: [go, julia, nim, php, python]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/phobos/std_file.html#.dirEntries>
 
 ## Go
 
 {{< r "a.go" >}}
-
-<https://golang.org/pkg/io/ioutil#ReadDir>
-
 {{< r "b.go" >}}
-
-<https://golang.org/pkg/os#File.Readdirnames>
-
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/path/filepath#Glob>
+- <https://golang.org/pkg/io/ioutil#ReadDir>
+- <https://golang.org/pkg/os#File.Readdirnames>
+- <https://golang.org/pkg/path/filepath#Glob>
 
 ## Julia
 
@@ -47,6 +37,12 @@ tags: [d, go, julia, nim, php, python]
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/os.html#os.listdir>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/fs/fn.read_dir.html>
 
 ## References
 
