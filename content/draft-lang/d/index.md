@@ -1,5 +1,6 @@
 ---
-title: 'Tag talk:D'
+title: D language
+categories: [draft-lang]
 ---
 
 ## Issues

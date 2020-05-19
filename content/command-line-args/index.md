@@ -1,14 +1,8 @@
 ---
 title: Command line arguments
 categories: [system]
-tags: [d, go, julia, nim, php, python]
+tags: [go, julia, nim, php, python, rust]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/phobos/core_runtime.html#.Runtime.args>
 
 ## Go
 
@@ -36,6 +30,12 @@ tags: [d, go, julia, nim, php, python]
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/sys.html#sys.argv>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/env/struct.Args.html>
 
 ## References
 

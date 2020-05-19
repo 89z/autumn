@@ -1,6 +1,5 @@
 ---
 title: Rust language
-categories: [draft-lang]
 ---
 
 ## Setup
