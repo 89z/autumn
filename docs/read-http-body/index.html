@@ -21,7 +21,7 @@
    </header>
 
 <h1>Read HTTP body</h1>
-<time>Sat May 2 2020</time>
+<time>Tue May 19 2020</time>
    
 <a href="/autumn/categories/network/">network</a>
    
@@ -133,11 +133,29 @@ a1 <span style="color:#f92672">=</span> o3<span style="color:#f92672">.</span>re
 stdout<span style="color:#f92672">.</span>buffer<span style="color:#f92672">.</span>write(a1)
 </code></pre></div></p>
 <ul>
-<li><a href="https://docs.python.org/library/http.client.html#http.client.HTTPConnection.getresponse">https://docs.python.org/library/http.client.html#http.client.HTTPConnection.getresponse</a>
-</li>
-<li><a href="https://docs.python.org/library/urllib.request.html#urllib.request.urlopen">https://docs.python.org/library/urllib.request.html#urllib.request.urlopen</a>
-</li>
+<li><a href="https://docs.python.org/library/http.client.html#http.client.HTTPConnection.getresponse">https://docs.python.org/library/http.client.html#http.client.HTTPConnection.getresponse</a></li>
+<li><a href="https://docs.python.org/library/urllib.request.html#urllib.request.urlopen">https://docs.python.org/library/urllib.request.html#urllib.request.urlopen</a></li>
 </ul>
+<h2 id="rust">Rust</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> curl::easy::Easy;
+<span style="color:#66d9ef">use</span> std::io::{stdout, Write};
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>;
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> easy <span style="color:#f92672">=</span> Easy::new();
+   easy.url(s1).unwrap();
+   easy.write_function(<span style="color:#f92672">|</span>data<span style="color:#f92672">|</span> {
+      stdout().write_all(data).unwrap();
+      Ok(data.len())
+   }).unwrap();
+   easy.perform().unwrap();
+}
+</code></pre></div>
+<p>19 deps</p>
+<p><a href="https://github.com/alexcrichton/curl-rust">https://github.com/alexcrichton/curl-rust</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#http-get">https://hyperpolyglot.org/c#http-get</a></li>

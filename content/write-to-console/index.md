@@ -1,7 +1,7 @@
 ---
 title: Write to console
 categories: [input-output]
-tags: [go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python, rust]
 ---
 
 ## Go
@@ -44,6 +44,10 @@ tags: [go, javascript, julia, nim, php, python]
 
 - <https://docs.python.org/library/functions.html#print>
 - <https://docs.python.org/library/io.html#io.TextIOBase.write>
+
+## Rust
+
+{{< r "a.rs" >}}
 
 ## References
 

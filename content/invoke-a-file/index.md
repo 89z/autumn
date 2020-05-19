@@ -1,15 +1,8 @@
 ---
 title: Invoke a file
 categories: [command]
-tags: [d, go, julia, nim, php, python]
+tags: [go, julia, nim, php, python, rust]
 ---
-
-## D
-
-{{< r "d.sh" >}}
-
-- <https://dlang.org/dmd.html>
-- <https://dub.pm/commandline>
 
 ## Go
 
@@ -43,6 +36,10 @@ tags: [d, go, julia, nim, php, python]
 {{< r "python.sh" >}}
 
 <https://docs.python.org/using/cmdline.html>
+
+## Rust
+
+{{< r "rust.sh" >}}
 
 ## References
 

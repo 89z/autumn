@@ -1,7 +1,7 @@
 ---
 title: Boolean types
 categories: [reference]
-tags: [go, javascript, julia, php, python]
+tags: [go, javascript, julia, php, python, rust]
 ---
 
 ## Go
@@ -32,6 +32,10 @@ tags: [go, javascript, julia, php, python]
 
 - <https://docs.python.org/library/constants.html#False>
 - <https://docs.python.org/library/constants.html#True>
+
+## Rust
+
+{{< r "a.rs" >}}
 
 ## References
 

@@ -1,14 +1,8 @@
 ---
 title: Number types
 categories: [number]
-tags: [d, go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python, rust]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/spec/type.html#basic-data-types>
 
 ## Go
 
@@ -20,10 +14,8 @@ tags: [d, go, javascript, julia, nim, php, python]
 
 {{< r "a.js" >}}
 
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Guide/
-   Numbers_and_dates#Decimal_numbers` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Lexical_grammar#Numeric_separators` >}}
+- <https://developer.mozilla.org/Web/JavaScript/Guide/Numbers_and_dates#Decimal_numbers>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators>
 
 ## Julia
 
@@ -46,6 +38,10 @@ tags: [d, go, javascript, julia, nim, php, python]
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#typesnumeric>
+
+## Rust
+
+{{< r "a.rs" >}}
 
 ## References
 

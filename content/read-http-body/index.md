@@ -1,7 +1,7 @@
 ---
 title: Read HTTP body
 categories: [network]
-tags: [go, javascript, php, python]
+tags: [go, javascript, php, python, rust]
 ---
 
 ## Go
@@ -33,10 +33,16 @@ tags: [go, javascript, php, python]
 {{< r "a.py" >}}
 {{< r "b.py" >}}
 
-- {{< a `https://docs.python.org/library/http.client.html#
-   http.client.HTTPConnection.getresponse` >}}
-- {{< a `https://docs.python.org/library/urllib.request.html#
-   urllib.request.urlopen` >}}
+- <https://docs.python.org/library/http.client.html#http.client.HTTPConnection.getresponse>
+- <https://docs.python.org/library/urllib.request.html#urllib.request.urlopen>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+19 deps
+
+<https://github.com/alexcrichton/curl-rust>
 
 ## References
 
