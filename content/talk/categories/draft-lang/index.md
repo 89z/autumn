@@ -34,6 +34,7 @@ have 5 or less ways to perform a task. These currently fail that test:
 - PHP
 - Python
 - Racket
+- Rust
 - Scheme
 
 ## HTTP client
@@ -51,13 +52,6 @@ test:
 
 - Javascript
 - Reason
-
-## Map literals
-
-This should be part of the language, not a package. These currently fail that
-test:
-
-Rust
 
 ## Strings
 

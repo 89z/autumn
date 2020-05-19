@@ -1,5 +1,5 @@
 ---
-title: Rust language
+title: 'Tag talk:Rust'
 ---
 
 ## Setup
