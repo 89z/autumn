@@ -8,10 +8,11 @@ the Languages folder.
 
 ## Booleans
 
-Language should be able to print Booleans and Numbers differently. These
-currently fail that test:
+Default boolean printing should be `true` or `false`, not numbers or anything
+else. These currently fail that test:
 
 - C
+- C++
 - Perl
 
 ## Code bloat
@@ -24,7 +25,6 @@ have 5 or less ways to perform a task. These currently fail that test:
 
 ## Good
 
-- C++
 - Clojure
 - Common-lisp
 - F#

@@ -3,9 +3,20 @@ title: C# language
 categories: [draft-lang]
 ---
 
-## DotNet
+## .NET Core
 
-<https://docs.microsoft.com/dotnet/api?view=netframework-4.8>
+Runtime is 52 MB.
+
+<https://dotnet.microsoft.com/download>
+
+## .NET Framework
+
+~~~
+csc a.cs
+~~~
+
+- <https://dotnet.microsoft.com/download>
+- <https://github.com/microsoft/dotnet/issues/1083>
 
 ## Mono
 
@@ -13,7 +24,10 @@ categories: [draft-lang]
 mcs.bat a.cs
 ~~~
 
-<https://mono-project.com/download>
+Could not load type System.Numerics.Vector from assembly mscorlib
+
+- <https://github.com/mono/mono/issues/19808>
+- <https://mono-project.com/download>
 
 ## Roslyn
 
