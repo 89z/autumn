@@ -1,5 +1,4 @@
 <?php
-extension_loaded('zlib') or die('php-zlib');
 # example 1
 $s1 = file_get_contents('a.tar.gz');
 $s2 = gzdecode($s1);

@@ -1,5 +1,4 @@
 <?php
-extension_loaded('json') or die('php-json');
 $m1 = ['Sun' => 10, 'Mon' => 11];
 # example 1
 $s1 = json_encode($m1);

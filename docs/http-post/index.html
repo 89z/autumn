@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTTP POST / Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/categories">Categories</a>
+         <a href="/autumn/tags">Tags</a>
+         <a href="https://github.com/muv1/autumn">Repo</a>
+      </nav>
+   </header>
+
+<h1>HTTP POST</h1>
+<time>Tue May 19 2020</time>
+   
+<a href="/autumn/categories/network/">network</a>
+   
+   
+   <h2 id="php">PHP</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;curl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;curl&#39;</span>);
+<span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;openssl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;openssl&#39;</span>);
+$m1[<span style="color:#e6db74">&#39;reqtype&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;fileupload&#39;</span>;
+$m1[<span style="color:#e6db74">&#39;fileToUpload&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">CURLFile</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
+$r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>(<span style="color:#e6db74">&#39;https://catbox.moe/user/api.php&#39;</span>);
+<span style="color:#a6e22e">curl_setopt</span>($r1, <span style="color:#a6e22e">CURLOPT_HTTP_VERSION</span>, <span style="color:#a6e22e">CURL_HTTP_VERSION_1_1</span>);
+<span style="color:#a6e22e">curl_setopt</span>($r1, <span style="color:#a6e22e">CURLOPT_POST</span>, <span style="color:#66d9ef">true</span>);
+<span style="color:#a6e22e">curl_setopt</span>($r1, <span style="color:#a6e22e">CURLOPT_POSTFIELDS</span>, $m1);
+<span style="color:#a6e22e">curl_setopt</span>($r1, <span style="color:#a6e22e">CURLOPT_VERBOSE</span>, <span style="color:#66d9ef">true</span>);
+<span style="color:#a6e22e">curl_exec</span>($r1);
+</code></pre></div>
+
+
+</body>
+</html>

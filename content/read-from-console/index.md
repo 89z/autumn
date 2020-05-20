@@ -27,7 +27,8 @@ tags: [go, julia, nim, php, python]
 
 {{< r "a.php" >}}
 
-<https://php.net/features.commandline.io-streams>
+- <https://php.net/features.commandline.io-streams>
+- <https://php.net/function.fscanf>
 
 ## Python
 

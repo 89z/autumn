@@ -1,12 +1,8 @@
 ---
 title: Iterate a file
 categories: [iterate, input-output]
-tags: [d, php, python]
+tags: [php, python, rust]
 ---
-
-## D
-
-<https://dlang.org/phobos/std_stdio#.lines>
 
 ## PHP
 
@@ -22,6 +18,10 @@ cannot use it until we are certain that we have a string.
 {{< r "a.py" >}}
 
 <https://docs.python.org/reference/compound_stmts.html#for>
+
+## Rust
+
+{{< r "a.rs" >}}
 
 ## References
 

@@ -46,6 +46,6 @@ traditions strings:
 
 Resource is something that is used by PHP. Other languages use Objects.
 
-{{< r "curl.php" >}}
+{{< r "fopen.php" >}}
 
-<https://php.net/function.curl-init>
+<https://php.net/function.fopen>

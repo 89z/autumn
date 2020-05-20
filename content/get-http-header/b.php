@@ -1,4 +1,5 @@
 <?php
+extension_loaded('curl') or die('curl');
 $s1 = 'http://speedtest.lax.hivelocity.net/100mb.file';
 # example 1
 $r1 = curl_init($s1);

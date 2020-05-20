@@ -1,5 +1,5 @@
 <?php
-extension_loaded('gd') or die('php-gd');
+extension_loaded('gd') or die('gd');
 # files
 $s1 = 'a.jpg';
 $s2 = 'b.jpg';
