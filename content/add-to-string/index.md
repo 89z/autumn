@@ -1,27 +1,21 @@
 ---
 title: Add to string
 categories: [string]
-tags: [go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python, rust]
 ---
 
 ## Go
 
+{{< r "concat.go" >}}
 {{< r "fprint.go" >}}
-
-<https://golang.org/pkg/fmt#Fprint>
-
 {{< r "sprint.go" >}}
+{{< r "writestr.go" >}}
 
 - <https://golang.org/pkg/fmt#Sprint>
 - <https://golang.org/pkg/fmt#Sprintf>
-
-{{< r "writestr.go" >}}
-
-<https://golang.org/pkg/strings#Builder.WriteString>
-
-{{< r "concat.go" >}}
-
-<https://golang.org/ref/spec#String_concatenation>
+- <https://golang.org/pkg/fmt#Fprint>
+- <https://golang.org/pkg/strings#Builder.WriteString>
+- <https://golang.org/ref/spec#String_concatenation>
 
 ## JavaScript
 
@@ -55,10 +49,13 @@ tags: [go, javascript, julia, nim, php, python]
 - <https://docs.python.org/reference/expressions.html#binary>
 - <https://docs.python.org/reference/lexical_analysis.html#f-strings>
 
+## Rust
+
+{{< r "a.rs" >}}
+
 ## References
 
 - <https://hyperpolyglot.org/numerical-analysis#str-concat>
-- <https://hyperpolyglot.org/scripting#var-interpolation>
+- <https://hyperpolyglot.org/rust#str-concat>
 - <https://rosettacode.org/wiki/String_append>
 - <https://rosettacode.org/wiki/String_concatenation>
-- <https://rosettacode.org/wiki/String_interpolation_(included)>

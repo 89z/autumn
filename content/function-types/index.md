@@ -1,7 +1,7 @@
 ---
 title: Function types
 categories: [function]
-tags: [go, javascript, nim, php, python]
+tags: [go, javascript, nim, php, python, rust]
 ---
 
 ## Go
@@ -39,8 +39,13 @@ tags: [go, javascript, nim, php, python]
 - <https://docs.python.org/reference/compound_stmts.html#function-definitions>
 - <https://docs.python.org/reference/expressions.html#lambda>
 
+## Rust
+
+{{< r "a.rs" >}}
+
 ## References
 
+- <https://hyperpolyglot.org/rust#def-func>
 - <https://hyperpolyglot.org/scripting#def-func>
 - <https://www.programming-idioms.org/idiom/4/create-a-function>
 - <https://rosettacode.org/wiki/Function_definition>

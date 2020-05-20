@@ -1,7 +1,7 @@
 ---
 title: Create directory
 categories: [system]
-tags: [go, julia, nim, php, python]
+tags: [go, julia, nim, php, python, rust]
 ---
 
 ## Go
@@ -34,6 +34,12 @@ tags: [go, julia, nim, php, python]
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/os.html#os.makedirs>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/nightly/std/fs/fn.create_dir.html>
 
 ## References
 

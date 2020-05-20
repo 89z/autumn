@@ -1,7 +1,7 @@
 ---
 title: Format number
 categories: [number]
-tags: [go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python, rust]
 ---
 
 ## Go
@@ -15,8 +15,7 @@ tags: [go, javascript, julia, nim, php, python]
 
 {{< r "a.js" >}}
 
-{{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/
-Number/toLocaleString` >}}
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString>
 
 ## Julia
 
@@ -47,9 +46,12 @@ Number/toLocaleString` >}}
 - <https://docs.python.org/library/locale.html#locale.setlocale>
 - <https://docs.python.org/library/stdtypes.html#str.format>
 
+## Rust
+
+<https://github.com/saghm/rust-separator>
+
 ## References
 
-- <https://codegolf.stackexchange.com/questions/4499/-/4527>
 - <https://hyperpolyglot.org/numerical-analysis#sprintf>
 - <https://rosettacode.org/wiki/Commatizing_numbers>
 - <https://www.programming-idioms.org/idiom/173/format-number-group>

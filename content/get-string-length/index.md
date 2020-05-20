@@ -1,7 +1,7 @@
 ---
 title: Get string length
 categories: [string]
-tags: [go, javascript, nim, php, python]
+tags: [go, javascript, nim, php, python, rust]
 ---
 
 ## Go
@@ -46,6 +46,12 @@ tags: [go, javascript, nim, php, python]
 
 - <https://docs.python.org/library/functions.html#len>
 - <https://docs.python.org/library/stdtypes.html#str.encode>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/str/struct.Chars.html>
 
 ## References
 
