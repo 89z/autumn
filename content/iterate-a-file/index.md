@@ -23,6 +23,8 @@ cannot use it until we are certain that we have a string.
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/std/io/trait.BufRead.html#method.lines>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting2#iterate-by-line>

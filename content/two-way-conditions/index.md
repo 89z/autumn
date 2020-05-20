@@ -1,7 +1,7 @@
 ---
 title: Two-way conditions
 categories: [reference]
-tags: [go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python, rust]
 ---
 
 ## Go
@@ -15,10 +15,8 @@ tags: [go, javascript, julia, nim, php, python]
 
 {{< r "a.js" >}}
 
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Operators/Logical_Operators` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Statements/if...else` >}}
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Logical_Operators>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/if...else>
 
 ## Julia
 
@@ -44,11 +42,16 @@ tags: [go, javascript, julia, nim, php, python]
 - <https://docs.python.org/reference/compound_stmts.html#if>
 - <https://docs.python.org/reference/expressions.html#if-expr>
 
+## Rust
+
+{{< r "a.rs" >}}
+
 ## References
 
 - <https://hyperpolyglot.org/c#if>
 - <https://hyperpolyglot.org/numerical-analysis#if>
+- <https://hyperpolyglot.org/rust#if>
 - <https://hyperpolyglot.org/scripting#if>
-- <https://www.programming-idioms.org/idiom/131/successive-condition>
 - <https://rosettacode.org/wiki/Conditional_structures>
 - <https://rosettacode.org/wiki/Short-circuit_evaluation>
+- <https://www.programming-idioms.org/idiom/131/successive-condition>

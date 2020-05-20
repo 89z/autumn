@@ -1,7 +1,7 @@
 ---
 title: Declare value
 categories: [reference]
-tags: [go, javascript, julia, nim, php]
+tags: [go, javascript, julia, nim, php, rust]
 ---
 
 ## Go
@@ -33,6 +33,10 @@ tags: [go, javascript, julia, nim, php]
 {{< r "a.php" >}}
 
 <https://php.net/language.constants.syntax>
+
+## Rust
+
+{{< r "a.rs" >}}
 
 ## References
 

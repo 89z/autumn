@@ -1,7 +1,7 @@
 ---
 title: Comments
 categories: [reference]
-tags: [go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python, rust]
 ---
 
 ## Go
@@ -39,6 +39,10 @@ tags: [go, javascript, julia, nim, php, python]
 
 - <https://docs.python.org/reference/lexical_analysis.html#comments>
 - <https://docs.python.org/reference/lexical_analysis.html#strings>
+
+## Rust
+
+{{< r "a.rs" >}}
 
 ## References
 

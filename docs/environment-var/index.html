@@ -21,7 +21,7 @@
    </header>
 
 <h1>Environment variables</h1>
-<time>Mon May 4 2020</time>
+<time>Tue May 19 2020</time>
    
 <a href="/autumn/categories/system/">system</a>
    
@@ -87,6 +87,19 @@ s2 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>ge
 <li><a href="https://docs.python.org/library/os.html#os.environ">https://docs.python.org/library/os.html#os.environ</a></li>
 <li><a href="https://docs.python.org/library/os.html#os.getenv">https://docs.python.org/library/os.html#os.getenv</a></li>
 </ul>
+<h2 id="rust">Rust</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::env;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">match</span> env::var(<span style="color:#e6db74">&#34;BROWSER&#34;</span>) {
+      Err(e) <span style="color:#f92672">=&gt;</span> println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e),
+      Ok(s1) <span style="color:#f92672">=&gt;</span> println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s1)
+   }
+}
+</code></pre></div>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/numerical-analysis#env-var">https://hyperpolyglot.org/numerical-analysis#env-var</a></li>

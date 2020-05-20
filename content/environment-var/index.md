@@ -1,7 +1,7 @@
 ---
 title: Environment variables
 categories: [system]
-tags: [go, julia, nim, php, python]
+tags: [go, julia, nim, php, python, rust]
 ---
 
 ## Go
@@ -33,6 +33,10 @@ tags: [go, julia, nim, php, python]
 
 - <https://docs.python.org/library/os.html#os.environ>
 - <https://docs.python.org/library/os.html#os.getenv>
+
+## Rust
+
+{{< r "a.rs" >}}
 
 ## References
 
