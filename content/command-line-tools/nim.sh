@@ -1,0 +1,10 @@
+# example 1
+nim compile a.nim
+# example 2
+nim c a.nim
+# example 3
+nimble install monday
+# example 4
+nimble install https://github.com/sunday/monday
+# example 5
+nimble install https://github.com/sunday/monday@#head

@@ -3,7 +3,7 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Invoke a file / Autumn</title>
+<title>Command line tools / Autumn</title>
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/autumn.css">
 </head>
@@ -20,10 +20,10 @@
       </nav>
    </header>
 
-<h1>Invoke a file</h1>
-<time>Tue May 19 2020</time>
+<h1>Command line tools</h1>
+<time>Wed May 20 2020</time>
    
-<a href="/autumn/categories/command/">command</a>
+<a href="/autumn/categories/reference/">reference</a>
    
    
    <h2 id="go">Go</h2>
@@ -32,14 +32,17 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sh" data-lang=".sh"><span style="color:#75715e"># example 1</span>
-go build prog.go
-<span style="color:#75715e"># example 2</span>
-go build -ldflags -s prog.go
-<span style="color:#75715e"># example 3</span>
-go mod init prog
 go build
-<span style="color:#75715e"># example 4</span>
-go run app.go
+<span style="color:#75715e"># example 2</span>
+go build a.go
+<span style="color:#75715e"># example 3</span>
+go build -ldflags -s
+<span style="color:#75715e"># exmaple 4</span>
+go run a.go
+<span style="color:#75715e"># example 5</span>
+go mod init sunday
+<span style="color:#75715e"># example 6</span>
+go list -deps
 </code></pre></div>
 <ul>
 <li><a href="https://golang.org/cmd/go#hdr-Compile_and_run_Go_program">https://golang.org/cmd/go#hdr-Compile_and_run_Go_program</a></li>
@@ -59,28 +62,21 @@ go run app.go
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sh" data-lang=".sh"><span style="color:#75715e"># example 1</span>
-nim compile prog.nim
+nim compile a.nim
 <span style="color:#75715e"># example 2</span>
-nim c prog.nim
+nim c a.nim
+<span style="color:#75715e"># example 3</span>
+nimble install monday
+<span style="color:#75715e"># example 4</span>
+nimble install https://github.com/sunday/monday
+<span style="color:#75715e"># example 5</span>
+nimble install https://github.com/sunday/monday@#head
 </code></pre></div>
-<p><a href="https://nim-lang.github.io/Nim/nimc#compiler-usage-command-line-switches">https://nim-lang.github.io/Nim/nimc#compiler-usage-command-line-switches</a></p>
+<ul>
+<li><a href="https://github.com/nim-lang/nimble">https://github.com/nim-lang/nimble</a></li>
+<li><a href="https://nim-lang.github.io/Nim/nimc#compiler-usage-command-line-switches">https://nim-lang.github.io/Nim/nimc#compiler-usage-command-line-switches</a></li>
+</ul>
 <h2 id="php">PHP</h2>
-<p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Sunday</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-<span style="color:#75715e">?&gt;</span>
-</code></pre></div>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php">#!/usr/bin/php
-<span style="color:#75715e">&lt;?php</span>
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Sunday</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-</code></pre></div>
 
 
 
@@ -89,7 +85,7 @@ nim c prog.nim
 php -f app.php
 <span style="color:#75715e"># example 2</span>
 php app.php
-</code></pre></div></p>
+</code></pre></div>
 <ul>
 <li><a href="https://php.net/features.commandline.usage">https://php.net/features.commandline.usage</a></li>
 <li><a href="https://php.net/language.basic-syntax.phptags">https://php.net/language.basic-syntax.phptags</a></li>
@@ -111,6 +107,8 @@ php app.php
 </code></pre></div>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://hyperpolyglot.org/c#hello-world">https://hyperpolyglot.org/c#hello-world</a></li>
+<li><a href="https://hyperpolyglot.org/rust#compiler">https://hyperpolyglot.org/rust#compiler</a></li>
 <li><a href="https://hyperpolyglot.org/scripting#interpreter">https://hyperpolyglot.org/scripting#interpreter</a></li>
 <li><a href="https://rosettacode.org/wiki/Hello_world/Newbie">https://rosettacode.org/wiki/Hello_world/Newbie</a></li>
 </ul>

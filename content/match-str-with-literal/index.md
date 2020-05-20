@@ -1,7 +1,7 @@
 ---
 title: Match string with literal
 categories: [string]
-tags: [go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python, rust]
 ---
 
 ## Go
@@ -48,6 +48,12 @@ tags: [go, javascript, julia, nim, php, python]
 - <https://docs.python.org/library/stdtypes.html#str.endswith>
 - <https://docs.python.org/library/stdtypes.html#str.startswith>
 - <https://docs.python.org/reference/expressions.html#in>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/string/struct.String.html#method.starts_with>
 
 ## References
 

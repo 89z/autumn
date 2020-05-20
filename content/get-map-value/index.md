@@ -40,6 +40,12 @@ Property_Accessors` >}}
 - <https://docs.python.org/library/stdtypes.html#dict>
 - <https://docs.python.org/library/stdtypes.html#dict.get>
 
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/collections/struct.HashMap.html>
+
 ## References
 
 - <https://hyperpolyglot.org/c#dict-lookup>

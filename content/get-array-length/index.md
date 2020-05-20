@@ -1,7 +1,7 @@
 ---
 title: Get array length
 categories: [array]
-tags: [go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python, rust]
 ---
 
 ## Go
@@ -38,6 +38,10 @@ tags: [go, javascript, julia, nim, php, python]
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/functions.html#len>
+
+## Rust
+
+{{< r "a.rs" >}}
 
 ## References
 

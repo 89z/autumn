@@ -48,9 +48,13 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.jl" data-lang=".jl"><span style="color:#66d9ef">using</span> Base64
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.jl" data-lang=".jl"><span style="color:#75715e"># example 1</span>
+<span style="color:#66d9ef">using</span> Base64
 s1 <span style="color:#f92672">=</span> base64encode(<span style="color:#e6db74">&#34;Sunday&#34;</span>)
 println(s1)
+<span style="color:#75715e"># example 2</span>
+<span style="color:#66d9ef">using</span> Pkg
+Pkg<span style="color:#f92672">.</span>add(<span style="color:#e6db74">&#34;HTTP&#34;</span>)
 </code></pre></div>
 <h2 id="nim">Nim</h2>
 

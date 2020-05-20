@@ -47,6 +47,8 @@ tags: [go, javascript, julia, nim, php, python, rust]
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/std/collections/struct.HashMap.html>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting#dict-update>
