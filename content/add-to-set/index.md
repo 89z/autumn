@@ -1,7 +1,7 @@
 ---
 title: Add to set
 categories: [set]
-tags: [go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python, rust]
 ---
 
 ## Go
@@ -39,6 +39,12 @@ tags: [go, javascript, julia, nim, php, python]
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#set>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/collections/struct.HashSet.html>
 
 ## References
 
