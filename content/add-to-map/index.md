@@ -1,7 +1,7 @@
 ---
 title: Add to map
 categories: [map]
-tags: [go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python, rust]
 ---
 
 ## Go
@@ -14,12 +14,10 @@ tags: [go, javascript, julia, nim, php, python]
 
 {{< r "bracket.js" >}}
 {{< r "dot.js" >}}
-
-<https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Property_Accessors>
-
 {{< r "map.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Map/set>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Map/set>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Property_Accessors>
 
 ## Julia
 
@@ -44,6 +42,10 @@ tags: [go, javascript, julia, nim, php, python]
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#dict>
+
+## Rust
+
+{{< r "a.rs" >}}
 
 ## References
 

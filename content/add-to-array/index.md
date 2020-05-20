@@ -1,7 +1,7 @@
 ---
 title: Add to array
 categories: [array]
-tags: [go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python, rust]
 ---
 
 ## Go
@@ -14,12 +14,9 @@ tags: [go, javascript, julia, nim, php, python]
 
 {{< r "a.js" >}}
 
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Operators/Spread_syntax` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/Array/concat` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/Array/push` >}}
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/concat>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/push>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Spread_syntax>
 
 ## Julia
 
@@ -45,8 +42,13 @@ tags: [go, javascript, julia, nim, php, python]
 
 <https://docs.python.org/library/stdtypes.html#typesseq-mutable>
 
+## Rust
+
+{{< r "a.rs" >}}
+
 ## References
 
+- <https://hyperpolyglot.org/rust#array-back>
 - <https://www.programming-idioms.org/idiom/166/concatenate-two-lists>
 - <https://www.programming-idioms.org/idiom/171/add-an-element-at-end>
 - <https://rosettacode.org/wiki/Array_concatenation>

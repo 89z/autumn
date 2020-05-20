@@ -1,14 +1,10 @@
 ---
 title: Decode JSON
 categories: [file-format]
-tags: [d, go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python, rust]
 ---
 
 {{< r "a.json" >}}
-
-## D
-
-<https://dlang.org/phobos/std_json.html>
 
 ## Go
 
@@ -21,8 +17,7 @@ tags: [d, go, javascript, julia, nim, php, python]
 
 {{< r "a.js" >}}
 
-{{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/
-JSON/parse` >}}
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/JSON/parse>
 
 ## Julia
 
@@ -44,6 +39,10 @@ JSON/parse` >}}
 
 - <https://docs.python.org/library/json.html#json.load>
 - <https://docs.python.org/library/json.html#json.loads>
+
+## Rust
+
+<https://github.com/serde-rs/json>
 
 ## References
 

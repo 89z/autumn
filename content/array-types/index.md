@@ -1,7 +1,7 @@
 ---
 title: Array types
 categories: [array]
-tags: [go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python, rust]
 ---
 
 ## Go
@@ -41,8 +41,13 @@ tags: [go, javascript, julia, nim, php, python]
 
 <https://docs.python.org/library/stdtypes.html#list>
 
+## Rust
+
+{{< r "a.rs" >}}
+
 ## References
 
+- <https://hyperpolyglot.org/rust#declare-array>
 - <https://hyperpolyglot.org/scripting#arrays>
 - <https://www.programming-idioms.org/idiom/134/create-a-new-list>
 - <https://rosettacode.org/wiki/Arrays>
