@@ -1,7 +1,7 @@
 ---
 title: Join an array
 categories: [array, string]
-tags: [go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python, rust]
 ---
 
 ## Go
@@ -14,8 +14,7 @@ tags: [go, javascript, julia, nim, php, python]
 
 {{< r "a.js" >}}
 
-{{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/
-Array/join` >}}
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/join>
 
 ## Julia
 
@@ -39,6 +38,10 @@ Array/join` >}}
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#str.join>
+
+## Rust
+
+{{< r "a.rs" >}}
 
 ## References
 

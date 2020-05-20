@@ -1,7 +1,7 @@
 ---
 title: Iterate an array
 categories: [iterate, array]
-tags: [go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python, rust]
 ---
 
 ## Go
@@ -14,11 +14,10 @@ tags: [go, javascript, julia, nim, php, python]
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/forEach>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for...in>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for...of>
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/Array/forEach` >}}
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for>
 
 ## Julia
 
@@ -46,9 +45,14 @@ tags: [go, javascript, julia, nim, php, python]
 - <https://docs.python.org/library/functions.html#enumerate>
 - <https://docs.python.org/reference/compound_stmts.html#for>
 
+## Rust
+
+{{< r "a.rs" >}}
+
 ## References
 
 - <https://hyperpolyglot.org/numerical-analysis#array-iteration>
+- <https://hyperpolyglot.org/rust#iterate-over-array>
 - <https://www.programming-idioms.org/idiom/6/iterate-over-list-val>
 - <https://www.programming-idioms.org/idiom/7/iterate-over-list-indexes-val>
 - <https://rosettacode.org/wiki/Loop_Structures>

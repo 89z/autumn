@@ -1,7 +1,7 @@
 ---
 title: Read from console
 categories: [input-output]
-tags: [go, julia, nim, php, python]
+tags: [go, julia, nim, php, python, rust]
 ---
 
 ## Go
@@ -37,6 +37,12 @@ tags: [go, julia, nim, php, python]
 - <https://docs.python.org/library/sys.html#sys.stderr>
 - <https://docs.python.org/library/sys.html#sys.stdin>
 - <https://docs.python.org/library/sys.html#sys.stdout>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/io/struct.Stdin.html#method.read_line>
 
 ## References
 

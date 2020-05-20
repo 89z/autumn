@@ -48,7 +48,8 @@ tags: [go, javascript, julia, nim, php, python, rust]
 
 ## Rust
 
-<https://github.com/saghm/rust-separator>
+- <https://github.com/bcmyers/num-format>
+- <https://github.com/saghm/rust-separator>
 
 ## References
 

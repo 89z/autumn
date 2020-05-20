@@ -1,7 +1,7 @@
 ---
 title: List directory entries
 categories: [system]
-tags: [go, julia, nim, php, python]
+tags: [go, julia, nim, php, python, rust]
 ---
 
 ## Go

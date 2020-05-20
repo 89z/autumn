@@ -21,7 +21,7 @@
    </header>
 
 <h1>Split a string</h1>
-<time>Sun May 10 2020</time>
+<time>Wed May 20 2020</time>
    
 <a href="/autumn/categories/array/">array</a>
    
@@ -157,6 +157,19 @@ a1 <span style="color:#f92672">=</span> s1<span style="color:#f92672">.</span>sp
 <li><a href="https://docs.python.org/library/stdtypes.html#str.split">https://docs.python.org/library/stdtypes.html#str.split</a></li>
 <li><a href="https://docs.python.org/library/stdtypes.html#str.splitlines">https://docs.python.org/library/stdtypes.html#str.splitlines</a></li>
 </ul>
+<h2 id="rust">Rust</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sunday Monday&#34;</span>;
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> a1 <span style="color:#f92672">=</span> s1.split_whitespace();
+   <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> a1.nth(<span style="color:#ae81ff">1</span>);
+   dbg<span style="color:#f92672">!</span>(s2);
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/primitive.str.html#method.split_whitespace">https://doc.rust-lang.org/std/primitive.str.html#method.split_whitespace</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#split">https://hyperpolyglot.org/c#split</a></li>

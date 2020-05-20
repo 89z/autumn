@@ -1,7 +1,7 @@
 ---
 title: Split a string
 categories: [array, string]
-tags: [go, javascript, julia, nim, php, python]
+tags: [go, javascript, julia, nim, php, python, rust]
 ---
 
 ## Go
@@ -45,6 +45,12 @@ tags: [go, javascript, julia, nim, php, python]
 
 - <https://docs.python.org/library/stdtypes.html#str.split>
 - <https://docs.python.org/library/stdtypes.html#str.splitlines>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/primitive.str.html#method.split_whitespace>
 
 ## References
 
