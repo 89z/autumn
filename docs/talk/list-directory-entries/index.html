@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talk:List directory entries / Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/categories">Categories</a>
+         <a href="/autumn/tags">Tags</a>
+         <a href="https://github.com/muv1/autumn">Repo</a>
+      </nav>
+   </header>
+
+<h1>Talk:List directory entries</h1>
+<time>Thu May 21 2020</time>
+   
+   
+   <p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s1);
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> String::from(<span style="color:#e6db74">&#34;Sunday&#34;</span>);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s2);
+}
+</code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::ffi::OsStr;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> OsStr::new(<span style="color:#e6db74">&#34;Sunday&#34;</span>);
+   <span style="color:#75715e">// std::ffi::OsStr doesn&#39;t implement std::fmt::Display
+</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s1);
+}
+</code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::ffi::OsString;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> OsString::from(<span style="color:#e6db74">&#34;Sunday&#34;</span>);
+   <span style="color:#75715e">// std::ffi::OsString doesn&#39;t implement std::fmt::Display
+</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s1);
+}
+</code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::fs;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">match</span> fs::read_dir(<span style="color:#e6db74">&#34;.&#34;</span>) {
+      Err(e) <span style="color:#f92672">=&gt;</span> println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e),
+      Ok(readdir) <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">for</span> r_dirent <span style="color:#66d9ef">in</span> readdir {
+         <span style="color:#66d9ef">match</span> r_dirent {
+            Err(e) <span style="color:#f92672">=&gt;</span> println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e),
+            <span style="color:#75715e">// std::fs::DirEntry doesn&#39;t implement std::fmt::Display
+</span><span style="color:#75715e"></span>            Ok(dirent) <span style="color:#f92672">=&gt;</span> println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, dirent)
+         }
+      }
+   }
+}
+</code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::fs;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">match</span> fs::read_dir(<span style="color:#e6db74">&#34;.&#34;</span>) {
+      Err(e) <span style="color:#f92672">=&gt;</span> println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e),
+      Ok(readdir) <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">for</span> r_dirent <span style="color:#66d9ef">in</span> readdir {
+         <span style="color:#66d9ef">match</span> r_dirent {
+            Err(e) <span style="color:#f92672">=&gt;</span> println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e),
+            Ok(dirent) <span style="color:#f92672">=&gt;</span> {
+               <span style="color:#66d9ef">let</span> name <span style="color:#f92672">=</span> dirent.file_name();
+               <span style="color:#75715e">// std::ffi::OsString` doesn&#39;t implement `std::fmt::Display
+</span><span style="color:#75715e"></span>               println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, name);
+            }
+         }
+      }
+   }
+}
+</code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::fs;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">match</span> fs::read_dir(<span style="color:#e6db74">&#34;.&#34;</span>) {
+      Err(e) <span style="color:#f92672">=&gt;</span> println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e),
+      Ok(readdir) <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">for</span> r_dirent <span style="color:#66d9ef">in</span> readdir {
+         <span style="color:#66d9ef">match</span> r_dirent {
+            Err(e) <span style="color:#f92672">=&gt;</span> println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e),
+            Ok(dirent) <span style="color:#f92672">=&gt;</span> {
+               <span style="color:#66d9ef">let</span> pathbuf <span style="color:#f92672">=</span> dirent.path();
+               <span style="color:#75715e">// std::path::PathBuf doesn&#39;t implement std::fmt::Display
+</span><span style="color:#75715e"></span>               println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, pathbuf);
+            }
+         }
+      }
+   }
+}
+</code></pre></div></p>
+
+
+</body>
+</html>
