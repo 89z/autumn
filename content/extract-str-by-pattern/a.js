@@ -1,9 +1,17 @@
-let s1 = 'package';
+let a1, s2, s1 = 'Wednesday';
 // example 1
-let a1 = s1.match(/p./);
+a1 = s1.match(/e./);
+s2 = JSON.stringify(a1);
+console.log(s2 == '["ed"]');
 // example 2
-let a2 = s1.match(/a./g);
+a1 = s1.match(/e./g);
+console.log(a1 == ['ed', 'es']);
 // example 3
-let a3 = s1.match(/p(..)/);
-// print
-console.log(a1, a2, a3);
+o1 = s1.matchAll(/e./g);
+console.log(a1 == [['ed'], ['es']]);
+// example 4
+o1 = s1.match(/e(..)/);
+console.log(a1 == ['edn', 'dn']);
+// example 5
+o1 = s1.matchAll(/e(..)/g);
+console.log(a1 == [['edn', 'dn'], ['esd', 'sd']]);

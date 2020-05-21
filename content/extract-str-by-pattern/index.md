@@ -9,6 +9,7 @@ tags: [go, javascript, julia, php, python, rust]
 {{< r "a.go" >}}
 
 - <https://golang.org/pkg/regexp#Regexp.FindAllString>
+- <https://golang.org/pkg/regexp#Regexp.FindAllStringSubmatch>
 - <https://golang.org/pkg/regexp#Regexp.FindString>
 - <https://golang.org/pkg/regexp#Regexp.FindStringSubmatch>
 

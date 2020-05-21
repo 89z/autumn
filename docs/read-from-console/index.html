@@ -107,12 +107,13 @@ sys<span style="color:#f92672">.</span>stdin
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::io;
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::error::Error;
+<span style="color:#66d9ef">use</span> std::io;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> s1 <span style="color:#f92672">=</span> String::new();
-   <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> Ok(n1) <span style="color:#f92672">=</span> io::stdin().read_line(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> s1) {
-      dbg<span style="color:#f92672">!</span>(n1, s1);
-   }
+   io::stdin().read_line(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> s1)<span style="color:#f92672">?</span>;
+   dbg<span style="color:#f92672">!</span>(s1);
+   Ok(())
 }
 </code></pre></div>
 <p><a href="https://doc.rust-lang.org/std/io/struct.Stdin.html#method.read_line">https://doc.rust-lang.org/std/io/struct.Stdin.html#method.read_line</a></p>

@@ -6,12 +6,15 @@ tags: [go, javascript, julia, nim, php, python]
 
 ## Go
 
+{{< r "a.go" >}}
+
 <https://golang.org/pkg/encoding/json>
 
 ## JavaScript
 
-{{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/
-JSON` >}}
+{{< r "a.js" >}}
+
+<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify>
 
 ## Julia
 
@@ -33,6 +36,7 @@ JSON` >}}
 
 ## References
 
+- <https://hyperpolyglot.org/c#generate-json-note>
 - <https://hyperpolyglot.org/scripting2#generate-json>
 - <https://rosettacode.org/wiki/JSON>
 - <https://www.programming-idioms.org/idiom/92>

@@ -35,6 +35,8 @@ tags: [go, julia, nim, php, python, rust]
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/reference/items/use-declarations.html>
+
 ## References
 
 - <https://hyperpolyglot.org/c#alias-namespace>

@@ -1,7 +1,8 @@
+use std::error::Error;
 use std::io;
-fn main() {
+fn main() -> Result<(), Box<dyn Error>> {
    let mut s1 = String::new();
-   if let Ok(n1) = io::stdin().read_line(&mut s1) {
-      dbg!(n1, s1);
-   }
+   io::stdin().read_line(&mut s1)?;
+   dbg!(s1);
+   Ok(())
 }
