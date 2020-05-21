@@ -1,13 +1,15 @@
 package main
-import "io"
-import "os"
-import "strings"
+import (
+   "io"
+   "os"
+   "strings"
+)
 func main() {
-   var o1, _ = os.Open("a.txt")
-   var o2 strings.Builder
-   // begin
-   io.Copy(&o2, o1)
-   // end
-   var s1 = o2.String()
-   print(s1)
+   var o1, e1 = os.Open("a.txt")
+   if e1 == nil {
+      var o2 strings.Builder
+      io.Copy(&o2, o1)
+      var s1 = o2.String()
+      print(s1)
+   }
 }

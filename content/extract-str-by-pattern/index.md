@@ -1,7 +1,7 @@
 ---
 title: Extract string by pattern
 categories: [string]
-tags: [go, javascript, julia, php, python]
+tags: [go, javascript, julia, php, python, rust]
 ---
 
 ## Go
@@ -38,6 +38,12 @@ tags: [go, javascript, julia, php, python]
 
 - <https://docs.python.org/library/re.html#re.findall>
 - <https://docs.python.org/library/re.html#re.search>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://github.com/rust-lang/regex>
 
 ## References
 

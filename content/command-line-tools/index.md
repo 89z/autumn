@@ -40,6 +40,8 @@ tags: [go, julia, nim, php, python, rust]
 
 {{< r "rust.sh" >}}
 
+<https://doc.rust-lang.org/cargo/getting-started/first-steps.html>
+
 ## References
 
 - <https://hyperpolyglot.org/c#hello-world>

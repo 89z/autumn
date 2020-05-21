@@ -6,7 +6,12 @@ title: 'Tag talk:Julia'
 
 <https://docs.julialang.org>
 
-## Install
+## Issues
 
-- <https://github.com/JuliaLang/julia/issues/34047>
-- <https://julialang.org/downloads/nightlies>
+Further startup time improvements
+
+<https://github.com/JuliaLang/julia/issues/17285>
+
+## Setup
+
+<https://julialang.org/downloads>
