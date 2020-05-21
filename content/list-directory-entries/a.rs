@@ -1,10 +1,9 @@
-use std::fs;
-fn main() {
-   if let Ok(mut o1) = fs::read_dir(".") {
-      while let Some(o2) = o1.next() {
-         if let Ok(o3) = o2 {
-            println!("{:?}", o3);
-         }
-      }
+use std::{fs, io};
+fn main() -> io::Result<()> {
+   for o1 in fs::read_dir(".")? {
+      let o2 = o1?.path();
+      let s1 = o2.display();
+      println!("{}", s1);
    }
+   Ok(())
 }

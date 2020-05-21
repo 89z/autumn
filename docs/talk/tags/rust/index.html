@@ -21,15 +21,43 @@
    </header>
 
 <h1>Tag talk:Rust</h1>
-<time>Tue May 19 2020</time>
+<time>Thu May 21 2020</time>
    
    
-   <h2 id="setup">Setup</h2>
-<p><a href="https://forge.rust-lang.org/infra/other-installation-methods">https://forge.rust-lang.org/infra/other-installation-methods</a></p>
+   <h2 id="errors">Errors</h2>
+<p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::{env, process};
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> env::var(<span style="color:#e6db74">&#34;BROWSER&#34;</span>) {
+      Err(b) <span style="color:#f92672">=&gt;</span> {
+         dbg<span style="color:#f92672">!</span>(b);
+         process::exit(<span style="color:#ae81ff">1</span>);
+      }
+      Ok(c) <span style="color:#f92672">=&gt;</span> c
+   };
+   dbg<span style="color:#f92672">!</span>(a);
+}
+</code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::{env, error};
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn error::Error<span style="color:#f92672">&gt;&gt;</span> {
+   <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> env::var(<span style="color:#e6db74">&#34;SUNDAY&#34;</span>)<span style="color:#f92672">?</span>;
+   dbg<span style="color:#f92672">!</span>(a);
+   Ok(())
+}
+</code></pre></div></p>
 <h2 id="http">HTTP</h2>
 <p><strong>hyper</strong></p>
 <p>50 deps</p>
 <p><a href="https://github.com/hyperium/hyper">https://github.com/hyperium/hyper</a></p>
+<h2 id="setup">Setup</h2>
+<p><a href="https://forge.rust-lang.org/infra/other-installation-methods">https://forge.rust-lang.org/infra/other-installation-methods</a></p>
 
 
 </body>

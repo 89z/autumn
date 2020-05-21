@@ -2,9 +2,10 @@
 title: 'Tag talk:Rust'
 ---
 
-## Setup
+## Errors
 
-<https://forge.rust-lang.org/infra/other-installation-methods>
+{{< r "a.rs" >}}
+{{< r "b.rs" >}}
 
 ## HTTP
 
@@ -13,3 +14,7 @@ title: 'Tag talk:Rust'
 50 deps
 
 <https://github.com/hyperium/hyper>
+
+## Setup
+
+<https://forge.rust-lang.org/infra/other-installation-methods>

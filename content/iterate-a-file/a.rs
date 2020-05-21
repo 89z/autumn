@@ -1,13 +1,11 @@
+use std::error::Error;
 use std::fs::File;
-use std::io::{BufRead,BufReader};
-fn main() {
-   match File::open("a.txt") {
-      Err(e) => println!("{}", e),
-      Ok(o1) => for o2 in BufReader::new(o1).lines() {
-         match o2 {
-            Err(e) => println!("{}", e),
-            Ok(s1) => println!("{}", s1)
-         }
-      }
+use std::io::{BufRead, BufReader};
+fn main() -> Result<(), Box<dyn Error>> {
+   let o1 = File::open("a.txt")?;
+   for o2 in BufReader::new(o1).lines() {
+      let s1 = o2?;
+      dbg!(s1);
    }
+   Ok(())
 }
