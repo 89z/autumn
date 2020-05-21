@@ -1,7 +1,7 @@
 ---
 title: Trim a string
 categories: [string]
-tags: [go, javascript, nim, php, python]
+tags: [go, javascript, nim, php, python, rust]
 ---
 
 ## Go
@@ -43,8 +43,15 @@ tags: [go, javascript, nim, php, python]
 
 <https://docs.python.org/library/stdtypes.html#str.strip>
 
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/primitive.str.html#method.trim_end>
+
 ## References
 
+- <https://hyperpolyglot.org/scripting#trim>
 - <https://www.programming-idioms.org/idiom/150/remove-trailing-slash>
 - <https://www.programming-idioms.org/idiom/168/trim-suffix>
 - <https://rosettacode.org/wiki/Strip_whitespace_from_a_string/Top_and_tail>

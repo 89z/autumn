@@ -1,5 +1,5 @@
 ---
-title: Read entire process
+title: Read from process
 categories: [input-output]
 tags: [go, julia, nim, php, python]
 ---

@@ -21,7 +21,7 @@
    </header>
 
 <h1>Iterate a process</h1>
-<time>Sun May 10 2020</time>
+<time>Wed May 20 2020</time>
    
 <a href="/autumn/categories/input-output/">input-output</a>
    
@@ -29,28 +29,7 @@
    
    
    <h2 id="go">Go</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;bufio&#34;</span>
-   <span style="color:#e6db74">&#34;bytes&#34;</span>
-   <span style="color:#e6db74">&#34;os/exec&#34;</span>
-)
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {   
-   <span style="color:#a6e22e">y1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;ag&#34;</span>, <span style="color:#e6db74">&#34;-V&#34;</span>).<span style="color:#a6e22e">Output</span>()
-   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">y1</span>)
-   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">o1</span>)
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Scan</span>() {
-      <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Text</span>()
-      println(<span style="color:#a6e22e">s1</span>)
-   }
-}
-</code></pre></div>
-<p><a href="https://golang.org/pkg/bufio#NewScanner">https://golang.org/pkg/bufio#NewScanner</a></p>
-
+<p>
 
 
 
@@ -71,7 +50,30 @@
    }
 }
 </code></pre></div>
-<p><a href="https://golang.org/pkg/bytes#FieldsFunc">https://golang.org/pkg/bytes#FieldsFunc</a></p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;bufio&#34;</span>
+   <span style="color:#e6db74">&#34;bytes&#34;</span>
+   <span style="color:#e6db74">&#34;os/exec&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {   
+   <span style="color:#a6e22e">y1</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;ag&#34;</span>, <span style="color:#e6db74">&#34;-V&#34;</span>).<span style="color:#a6e22e">Output</span>()
+   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">y1</span>)
+   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">o1</span>)
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Scan</span>() {
+      <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Text</span>()
+      println(<span style="color:#a6e22e">s1</span>)
+   }
+}
+</code></pre></div></p>
+<ul>
+<li><a href="https://golang.org/pkg/bufio#NewScanner">https://golang.org/pkg/bufio#NewScanner</a></li>
+<li><a href="https://golang.org/pkg/bytes#FieldsFunc">https://golang.org/pkg/bytes#FieldsFunc</a></li>
+</ul>
 <h2 id="php">PHP</h2>
 
 
@@ -112,6 +114,11 @@ o1 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.<
 <ul>
 <li><a href="https://docs.python.org/library/subprocess.html#subprocess.check_output">https://docs.python.org/library/subprocess.html#subprocess.check_output</a></li>
 <li><a href="https://docs.python.org/library/subprocess.html#subprocess.Popen">https://docs.python.org/library/subprocess.html#subprocess.Popen</a></li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/scripting2#cmd-subst">https://hyperpolyglot.org/scripting2#cmd-subst</a></li>
+<li><a href="https://rosettacode.org/wiki/Get_system_command_output">https://rosettacode.org/wiki/Get_system_command_output</a></li>
 </ul>
 
 

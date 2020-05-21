@@ -1,6 +1,6 @@
 ---
 title: Function types
-categories: [function]
+categories: [reference]
 tags: [go, javascript, nim, php, python, rust]
 ---
 

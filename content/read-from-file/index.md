@@ -1,26 +1,20 @@
 ---
-title: Read entire file
+title: Read from file
 categories: [input-output]
-tags: [go, julia, nim, php, python]
+tags: [go, julia, nim, php, python, rust]
 ---
 
 ## Go
 
+{{< r "copy.go" >}}
+{{< r "readall.go" >}}
+{{< r "readfile.go" >}}
 {{< r "scan.go" >}}
 
-<https://golang.org/pkg/bufio#Scanner.Scan>
-
-{{< r "copy.go" >}}
-
-<https://golang.org/pkg/io#Copy>
-
-{{< r "readall.go" >}}
-
-<https://golang.org/pkg/io/ioutil#ReadAll>
-
-{{< r "readfile.go" >}}
-
-<https://golang.org/pkg/io/ioutil#ReadFile>
+- <https://golang.org/pkg/bufio#Scanner.Scan>
+- <https://golang.org/pkg/io#Copy>
+- <https://golang.org/pkg/io/ioutil#ReadAll>
+- <https://golang.org/pkg/io/ioutil#ReadFile>
 
 ## Julia
 
@@ -47,6 +41,12 @@ tags: [go, julia, nim, php, python]
 
 - <https://docs.python.org/library/io.html#io.BufferedIOBase.read>
 - <https://docs.python.org/library/io.html#io.IOBase.readlines>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/fs/fn.read_to_string.html>
 
 ## References
 

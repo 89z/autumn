@@ -21,7 +21,7 @@
    </header>
 
 <h1>Trim a string</h1>
-<time>Sun May 10 2020</time>
+<time>Wed May 20 2020</time>
    
 <a href="/autumn/categories/string/">string</a>
    
@@ -126,8 +126,21 @@ s2 <span style="color:#f92672">=</span> s1<span style="color:#f92672">.</span>st
 <span style="color:#66d9ef">print</span>(s2)
 </code></pre></div>
 <p><a href="https://docs.python.org/library/stdtypes.html#str.strip">https://docs.python.org/library/stdtypes.html#str.strip</a></p>
+<h2 id="rust">Rust</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34; ab &#34;</span>;
+   <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> s1.trim_end();
+   dbg<span style="color:#f92672">!</span>(s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34; ab&#34;</span>);
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/primitive.str.html#method.trim_end">https://doc.rust-lang.org/std/primitive.str.html#method.trim_end</a></p>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://hyperpolyglot.org/scripting#trim">https://hyperpolyglot.org/scripting#trim</a></li>
 <li><a href="https://www.programming-idioms.org/idiom/150/remove-trailing-slash">https://www.programming-idioms.org/idiom/150/remove-trailing-slash</a></li>
 <li><a href="https://www.programming-idioms.org/idiom/168/trim-suffix">https://www.programming-idioms.org/idiom/168/trim-suffix</a></li>
 <li><a href="https://rosettacode.org/wiki/Strip_whitespace_from_a_string/Top_and_tail">https://rosettacode.org/wiki/Strip_whitespace_from_a_string/Top_and_tail</a></li>
