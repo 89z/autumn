@@ -1,6 +1,17 @@
-use std::ffi::OsStr;
+use std::fs;
 fn main() {
-   let s1 = OsStr::new("Sunday");
-   // std::ffi::OsStr doesn't implement std::fmt::Display
-   println!("{}", s1);
+   match fs::read_dir(".") {
+      Err(e) => println!("{}", e),
+      Ok(readdir) => for r_dirent in readdir {
+         match r_dirent {
+            Err(e) => println!("{}", e),
+            Ok(dirent) => {
+               match dirent.path().to_str() {
+                  None => println!("to_str"),
+                  Some(s1) => println!("{}", s1)
+               }
+            }
+         }
+      }
+   }
 }

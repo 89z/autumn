@@ -1,8 +1,9 @@
-fn main() {
-   // example 1
-   let s1 = "Sunday";
-   println!("{}", s1);
-   // example 2
-   let s2 = String::from("Sunday");
-   println!("{}", s2);
+use std::{fs, io};
+fn main() -> io::Result<()> {
+   for o1 in fs::read_dir(".")? {
+      let o2 = o1?.path();
+      let s1 = o2.display();
+      println!("{}", s1);
+   }
+   Ok(())
 }
