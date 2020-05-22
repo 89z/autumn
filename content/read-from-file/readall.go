@@ -1,9 +1,17 @@
 package main
-import "fmt"
-import "io/ioutil"
-import "os"
+import (
+   "io/ioutil"
+   "log"
+   "os"
+)
 func main() {
-   o1, _ := os.Open("a.txt")
-   y1, _ := ioutil.ReadAll(o1)
-   fmt.Printf("%s", y1)
+   o, e := os.Open("a.txt")
+   if e != nil {
+      log.Fatal(e)
+   }
+   y, e := ioutil.ReadAll(o)
+   if e != nil {
+      log.Fatal(e)
+   }
+   log.Printf("%s", y)
 }

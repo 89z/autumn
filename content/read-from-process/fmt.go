@@ -1,8 +1,14 @@
 package main
-import "fmt"
-import "os/exec"
+import (
+   "fmt"
+   "log"
+   "os/exec"
+)
 func main() {
-   o1 := exec.Command("ag")
-   y1, _ := o1.Output()
-   fmt.Printf("%s", y1)
+   o := exec.Command("ag", "-V")
+   y, e := o.Output()
+   if e != nil {
+      log.Fatal(e)
+   }
+   fmt.Printf("%s", y)
 }

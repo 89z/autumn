@@ -1,9 +1,13 @@
 package main
 import (
    "fmt"
+   "log"
    "path/filepath"
 )
 func main() {
-   a1, _ := filepath.Glob("*")
-   fmt.Println(a1)
+   a, e := filepath.Glob("*")
+   if e != nil {
+      log.Fatal(e)
+   }
+   fmt.Println(a)
 }

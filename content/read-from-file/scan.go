@@ -1,16 +1,19 @@
 package main
-import "bufio"
-import "fmt"
-import "os"
+import (
+   "bufio"
+   "log"
+   "os"
+)
 func main() {
-   o1, _ := os.Open("a.txt")
+   o1, e1 := os.Open("a.txt")
+   if e1 != nil {
+      log.Fatal(e1)
+   }
    o2 := bufio.NewScanner(o1)
    a1 := []string{}
-   // begin
    for o2.Scan() {
       s1 := o2.Text()
       a1 = append(a1, s1)
    }
-   // end
-   fmt.Println(a1)
+   log.Print(a1)
 }
