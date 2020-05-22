@@ -6,8 +6,7 @@ tags: [go, julia, php, python]
 
 ## Go
 
-{{< r "abs.go" >}}
-{{< r "chdir.go" >}}
+{{< r "a.go" >}}
 
 <https://golang.org/pkg/os#Symlink>
 

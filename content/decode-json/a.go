@@ -1,17 +1,20 @@
 package main
 import (
    "encoding/json"
-   "fmt"
    "io/ioutil"
+   "log"
 )
 func main() {
-   a1, _ := ioutil.ReadFile("a.json")
+   a, e := ioutil.ReadFile("a.json")
+   if e != nil {
+      log.Fatal(e)
+   }
    // example 1
-   var m1 map[string]int
-   json.Unmarshal(a1, &m1)
-   fmt.Println(m1)
+   var m map[string]int
+   json.Unmarshal(a, &m)
+   log.Print(m)
    // example 2
-   var o1 struct{Sunday, Monday int}
-   json.Unmarshal(a1, &o1)
-   fmt.Printf("%+v\n", o1)
+   var o struct{Sunday, Monday int}
+   json.Unmarshal(a, &o)
+   log.Printf("%+v", o)
 }
