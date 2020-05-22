@@ -5,7 +5,7 @@ import (
 )
 func main() {
    o, e := os.Stat("index.md")
-   if e != nil {
+   if os.IsNotExist(e) {
       log.Fatal(e)
    }
    log.Print(o)

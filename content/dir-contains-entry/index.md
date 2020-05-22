@@ -7,6 +7,7 @@ tags: [go, php, python]
 ## Go
 
 {{< r "a.go" >}}
+{{< r "b.go" >}}
 
 - <https://golang.org/pkg/os#IsNotExist>
 - <https://golang.org/pkg/os#Stat>

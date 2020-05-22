@@ -7,9 +7,9 @@ import (
 func main() {
    // example 1
    s1 := "one=odd&two=even"
-   m1, e1 := url.ParseQuery(s1)
-   if e1 != nil {
-      log.Fatal(e1)
+   m1, e := url.ParseQuery(s1)
+   if e != nil {
+      log.Fatal(e)
    }
    // example 2
    m2 := url.Values{

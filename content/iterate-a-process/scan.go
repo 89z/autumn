@@ -6,9 +6,9 @@ import (
    "os/exec"
 )
 func main() {
-   y1, e1 := exec.Command("ag", "-V").Output()
-   if e1 != nil {
-      log.Fatal(e1)
+   y1, e := exec.Command("ag", "-V").Output()
+   if e != nil {
+      log.Fatal(e)
    }
    o1 := bytes.NewReader(y1)
    o2 := bufio.NewScanner(o1)
