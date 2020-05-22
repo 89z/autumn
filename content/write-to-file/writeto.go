@@ -6,9 +6,9 @@ import (
 )
 func main() {
    o1 := strings.NewReader("Sunday\n")
-   o2, e1 := os.Create("a.txt")
-   if e1 != nil {
-      log.Fatal(e1)
+   o2, e := os.Create("a.txt")
+   if e != nil {
+      log.Fatal(e)
    }
    o1.WriteTo(o2)
 }

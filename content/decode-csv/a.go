@@ -1,20 +1,28 @@
 package main
 import (
    "encoding/csv"
+   "log"
    "os"
 )
 func main() {
-   o_db, _ := os.Open("a.csv")
-   o_tab := csv.NewReader(o_db)
-   a_head, _ := o_tab.Read()
-   m_head := map[string]int{}
-   for n_ind, s_col := range a_head {
-      m_head[s_col] = n_ind
+   o_db, e := os.Open("a.csv")
+   if e != nil {
+      log.Fatal(e)
    }
-   a_body, _ := o_tab.ReadAll()
-   for _, a_row := range a_body {
-      n_city := m_head["city"]
-      s_city := a_row[n_city]
-      println(s_city)
+   o_tab := csv.NewReader(o_db)
+   a_head, e := o_tab.Read()
+   if e != nil {
+      log.Fatal(e)
+   }
+   m_row := map[string]string{}
+   for {
+      a_row, e := o_tab.Read()
+      if e != nil {
+         break
+      }
+      for n_row, s_row := range a_head {
+         m_row[s_row] = a_row[n_row]
+      }
+      log.Print(m_row)
    }
 }

@@ -34,17 +34,19 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;io&#34;</span>
+   <span style="color:#e6db74">&#34;log&#34;</span>
    <span style="color:#e6db74">&#34;os&#34;</span>
    <span style="color:#e6db74">&#34;strings&#34;</span>
 )
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">e1</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e1</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o2</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>
-      <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">o2</span>, <span style="color:#a6e22e">o1</span>)
-      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s1</span> = <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">String</span>()
-      print(<span style="color:#a6e22e">s1</span>)
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">e</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o2</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>
+   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">o2</span>, <span style="color:#a6e22e">o1</span>)
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s1</span> = <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">String</span>()
+   print(<span style="color:#a6e22e">s1</span>)
 }
 </code></pre></div>
 
@@ -97,9 +99,9 @@
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">e1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e1</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e1</span>)
+   <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
    <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">o1</span>)
    <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{}

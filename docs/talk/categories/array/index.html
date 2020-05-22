@@ -46,15 +46,17 @@
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;bytes&#34;</span>
    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
+   <span style="color:#e6db74">&#34;log&#34;</span>
 )
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>}
-   <span style="color:#a6e22e">y1</span>, <span style="color:#a6e22e">e1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">a1</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e1</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">y2</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;[10,11]&#34;</span>)
-      <span style="color:#a6e22e">b1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Equal</span>(<span style="color:#a6e22e">y1</span>, <span style="color:#a6e22e">y2</span>)
-      println(<span style="color:#a6e22e">b1</span>)
+   <span style="color:#a6e22e">y1</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">a1</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
+   <span style="color:#a6e22e">y2</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;[10,11]&#34;</span>)
+   <span style="color:#a6e22e">b1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Equal</span>(<span style="color:#a6e22e">y1</span>, <span style="color:#a6e22e">y2</span>)
+   println(<span style="color:#a6e22e">b1</span>)
 }
 </code></pre></div></p>
 <p><a href="https://golang.org/pkg/reflect#DeepEqual">https://golang.org/pkg/reflect#DeepEqual</a></p>

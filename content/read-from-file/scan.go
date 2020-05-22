@@ -5,9 +5,9 @@ import (
    "os"
 )
 func main() {
-   o1, e1 := os.Open("a.txt")
-   if e1 != nil {
-      log.Fatal(e1)
+   o1, e := os.Open("a.txt")
+   if e != nil {
+      log.Fatal(e)
    }
    o2 := bufio.NewScanner(o1)
    a1 := []string{}
