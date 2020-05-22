@@ -1,7 +1,13 @@
 package main
-import "strconv"
+import (
+   "log"
+   "strconv"
+)
 func main() {
-   s1 := "1.9"
-   n1, _ := strconv.ParseFloat(s1, 64)
-   println(n1)
+   s := "1.9"
+   n, e := strconv.ParseFloat(s, 64)
+   if e != nil {
+      log.Fatal(e)
+   }
+   println(n)
 }
