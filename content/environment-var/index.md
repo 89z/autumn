@@ -8,7 +8,8 @@ tags: [go, julia, nim, php, python, rust]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/os#Getenv>
+- <https://golang.org/pkg/os#Getenv>
+- <https://golang.org/pkg/os#LookupEnv>
 
 ## Julia
 

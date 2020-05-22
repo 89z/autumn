@@ -1,8 +1,12 @@
 ---
 title: Iterate a file
 categories: [iterate, input-output]
-tags: [php, python, rust]
+tags: [go, php, python, rust]
 ---
+
+## Go
+
+{{< r "a.go" >}}
 
 ## PHP
 

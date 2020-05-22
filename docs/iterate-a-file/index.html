@@ -21,14 +21,37 @@
    </header>
 
 <h1>Iterate a file</h1>
-<time>Tue May 19 2020</time>
+<time>Thu May 21 2020</time>
    
 <a href="/autumn/categories/input-output/">input-output</a>
    
 <a href="/autumn/categories/iterate/">iterate</a>
    
    
-   <h2 id="php">PHP</h2>
+   <h2 id="go">Go</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;bufio&#34;</span>
+   <span style="color:#e6db74">&#34;log&#34;</span>
+   <span style="color:#e6db74">&#34;os&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() <span style="color:#66d9ef">bool</span> {
+   <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">e1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e1</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e1</span>)
+   }
+   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">o1</span>)
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Scan</span>() {
+      <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Text</span>()
+      println(<span style="color:#a6e22e">s1</span>)
+   }
+}
+</code></pre></div>
+<h2 id="php">PHP</h2>
 
 
 

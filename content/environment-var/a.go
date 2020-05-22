@@ -1,6 +1,10 @@
 package main
 import "os"
 func main() {
-   s1 := os.Getenv("HOME")
-   println(s1)
+   // example 1
+   s1 := os.Getenv("BROWSER")
+   // example 2
+   s2, b1 := os.LookupEnv("BROWSER")
+   // print
+   println(s1, s2, b1)
 }

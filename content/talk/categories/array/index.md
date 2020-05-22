@@ -5,6 +5,7 @@ title: 'Category talk:array'
 ## Go
 
 {{< r "a.go" >}}
+{{< r "b.go" >}}
 
 <https://golang.org/pkg/reflect#DeepEqual>
 
