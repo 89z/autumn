@@ -42,7 +42,7 @@ tags: [go, javascript, julia, php, python, rust]
 
 ## Rust
 
-{{< r "main.rs" >}}
+{{< r "rs/src/main.rs" >}}
 
 <https://github.com/rust-lang/regex>
 

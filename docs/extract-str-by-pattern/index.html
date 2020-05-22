@@ -21,10 +21,12 @@
    </header>
 
 <h1>Extract string by pattern</h1>
-<time>Thu May 21 2020</time>
+<time>Fri May 22 2020</time>
    
 <a href="/autumn/categories/string/">string</a>
    
+   
+<a href="/autumn/talk/extract-str-by-pattern/">Talk:Extract string by pattern</a>
    
    <h2 id="go">Go</h2>
 
@@ -110,15 +112,17 @@ println(a1)
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;package&#39;</span>;
+$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Wednesday&#39;</span>;
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/p./&#39;</span>, $s1, $a1);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/e./&#39;</span>, $s1, $a1);
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">preg_match_all</span>(<span style="color:#e6db74">&#39;/a./&#39;</span>, $s1, $a2);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">preg_match_all</span>(<span style="color:#e6db74">&#39;/e./&#39;</span>, $s1, $a2);
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/p(..)/&#39;</span>, $s1, $a3);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/e(..)/&#39;</span>, $s1, $a3);
+<span style="color:#75715e"># example 4
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">preg_match_all</span>(<span style="color:#e6db74">&#39;/e(..)/&#39;</span>, $s1, $a4);
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($a1, $a2, $a3);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($a1, $a2, $a3, $a4);
 </code></pre></div>
 <ul>
 <li><a href="https://php.net/function.preg-match-all">https://php.net/function.preg-match-all</a></li>
@@ -130,15 +134,15 @@ $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;packag
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">import</span> re
-s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;package&#39;</span>
+s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Wednesday&#39;</span>
 <span style="color:#75715e"># example 1</span>
-s2 <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;p.&#39;</span>, s1)<span style="color:#f92672">.</span>group()
+s2 <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;e.&#39;</span>, s1)<span style="color:#f92672">.</span>group()
 <span style="color:#75715e"># example 2</span>
-a1 <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">&#39;a.&#39;</span>, s1)
+a1 <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">&#39;e.&#39;</span>, s1)
 <span style="color:#75715e"># example 3</span>
-a2 <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;p(..)&#39;</span>, s1)<span style="color:#f92672">.</span>groups()
+a2 <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;e(..)&#39;</span>, s1)<span style="color:#f92672">.</span>groups()
 <span style="color:#75715e"># example 4</span>
-a3 <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">&#39;p(..)&#39;</span>, s1)
+a3 <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">&#39;e(..)&#39;</span>, s1)
 <span style="color:#75715e"># print</span>
 <span style="color:#66d9ef">print</span>(s2, a1, a2, a3)
 </code></pre></div>
@@ -155,8 +159,16 @@ a3 <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>fi
 <span style="color:#66d9ef">use</span> std::error::Error;
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
    <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wednesday&#34;</span>;
-   <span style="color:#66d9ef">for</span> a1 <span style="color:#66d9ef">in</span> Regex::new(<span style="color:#e6db74">r&#34;e(..)&#34;</span>)<span style="color:#f92672">?</span>.captures_iter(s1) {
-      dbg<span style="color:#f92672">!</span>(a1);
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">for</span> o1 <span style="color:#66d9ef">in</span> Regex::new(<span style="color:#e6db74">r&#34;e.&#34;</span>)<span style="color:#f92672">?</span>.find_iter(s1) {
+      <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> o1.as_str();
+      dbg<span style="color:#f92672">!</span>(s2);
+   }
+   <span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span>   <span style="color:#75715e">// example 4
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">for</span> o1 <span style="color:#66d9ef">in</span> Regex::new(<span style="color:#e6db74">r&#34;e(..)&#34;</span>)<span style="color:#f92672">?</span>.captures_iter(s1) {
+      dbg<span style="color:#f92672">!</span>(o1);
    }
    Ok(())
 }

@@ -1,3 +1,4 @@
 *.exe
+Cargo.toml
 desktop.ini
 go.sum
