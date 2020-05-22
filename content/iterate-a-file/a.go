@@ -4,7 +4,7 @@ import (
    "log"
    "os"
 )
-func main() bool {
+func main() {
    o1, e1 := os.Open("a.txt")
    if e1 != nil {
       log.Fatal(e1)

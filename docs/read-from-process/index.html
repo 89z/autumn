@@ -21,7 +21,7 @@
    </header>
 
 <h1>Read from process</h1>
-<time>Wed May 20 2020</time>
+<time>Thu May 21 2020</time>
    
 <a href="/autumn/categories/input-output/">input-output</a>
    
@@ -45,24 +45,6 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;io&#34;</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os/exec&#34;</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o1</span> = <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;ag&#34;</span>, <span style="color:#e6db74">&#34;-V&#34;</span>)
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o2</span>, <span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">StdoutPipe</span>()
-   <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Start</span>()
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o3</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>
-   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">o3</span>, <span style="color:#a6e22e">o2</span>)
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s1</span> = <span style="color:#a6e22e">o3</span>.<span style="color:#a6e22e">String</span>()
-   print(<span style="color:#a6e22e">s1</span>)
-}
-</code></pre></div>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os/exec&#34;</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
@@ -75,7 +57,6 @@
 }
 </code></pre></div></p>
 <ul>
-<li><a href="https://golang.org/pkg/io">https://golang.org/pkg/io</a></li>
 <li><a href="https://golang.org/pkg/os/exec">https://golang.org/pkg/os/exec</a></li>
 <li><a href="https://golang.org/pkg/strings">https://golang.org/pkg/strings</a></li>
 </ul>
