@@ -1,6 +1,12 @@
 package main
-import "os"
+import (
+   "log"
+   "os"
+)
 func main() {
-   o1, _ := os.Create("a.txt")
-   o1.WriteString("Sunday\n")
+   o, e := os.Create("a.txt")
+   if e != nil {
+      log.Fatal(e)
+   }
+   o.WriteString("Sunday\n")
 }

@@ -1,6 +1,12 @@
 package main
-import "os"
+import (
+   "log"
+   "os"
+)
 func main() {
-   s1, _ := os.Getwd()
-   println(s1)
+   s, e := os.Getwd()
+   if e != nil {
+      log.Fatal(e)
+   }
+   println(s)
 }

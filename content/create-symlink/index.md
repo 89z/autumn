@@ -17,8 +17,7 @@ tags: [go, julia, php, python]
 
 ## PHP
 
-{{< r "abs.php" >}}
-{{< r "chdir.php" >}}
+{{< r "a.php" >}}
 
 <https://php.net/function.symlink>
 

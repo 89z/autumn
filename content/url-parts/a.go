@@ -1,8 +1,14 @@
 package main
-import "net/url"
+import (
+   "log"
+   "net/url"
+)
 func main() {
    s1 := "https://example.com/one?two=even"
-   o1, _ := url.Parse(s1)
+   o1, e1 := url.Parse(s1)
+   if e1 != nil {
+      log.Fatal(e1)
+   }
    // example 1
    s2 := o1.Host
    // example 2
