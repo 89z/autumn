@@ -2,15 +2,19 @@ package main
 import (
    "bytes"
    "fmt"
+   "log"
    "os/exec"
 )
-func f1(r1 rune) bool {
-   return r1 == '\n'
+func f(r rune) bool {
+   return r == '\n'
 }
-func main() {   
-   y1, _ := exec.Command("ag", "-V").Output()
-   a1 := bytes.FieldsFunc(y1, f1)
-   for _, s1 := range a1 {
-      fmt.Printf("%s\n", s1)
+func main() {
+   y, e := exec.Command("ag", "-V").Output()
+   if e != nil {
+      log.Fatal(e)
+   }
+   a := bytes.FieldsFunc(y, f)
+   for n, y := range a {
+      fmt.Printf("%v %s\n", n, y)
    }
 }

@@ -1,9 +1,15 @@
 package main
-import "io/ioutil"
+import (
+   "io/ioutil"
+   "log"
+)
 func main() {
-   a1, _ := ioutil.ReadDir(".")
-   for _, o1 := range a1 {
-      s1 := o1.Name()
-      println(s1)
+   a, e := ioutil.ReadDir(".")
+   if e != nil {
+      log.Fatal(e)
+   }
+   for n, o := range a {
+      s := o.Name()
+      println(n, s)
    }
 }
