@@ -103,7 +103,7 @@ s2 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>ge
 <span style="color:#66d9ef">use</span> std::error::Error;
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
    <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> env::var(<span style="color:#e6db74">&#34;BROWSER&#34;</span>)<span style="color:#f92672">?</span>;
-   dbg<span style="color:#f92672">!</span>(s1);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s1);
    Ok(())
 }
 </code></pre></div>

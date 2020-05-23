@@ -164,9 +164,8 @@ a1 <span style="color:#f92672">=</span> s1<span style="color:#f92672">.</span>sp
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sunday Monday&#34;</span>;
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> o1 <span style="color:#f92672">=</span> s1.split_whitespace();
-   <span style="color:#66d9ef">let</span> o2 <span style="color:#f92672">=</span> o1.nth(<span style="color:#ae81ff">1</span>);
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o2);
+   <span style="color:#66d9ef">let</span> a1: Vec<span style="color:#f92672">&lt;&amp;</span><span style="color:#66d9ef">str</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> s1.split_whitespace().collect();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, a1);
 }
 </code></pre></div>
 <p><a href="https://doc.rust-lang.org/std/primitive.str.html#method.split_whitespace">https://doc.rust-lang.org/std/primitive.str.html#method.split_whitespace</a></p>

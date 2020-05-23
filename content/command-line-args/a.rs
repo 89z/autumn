@@ -1,6 +1,5 @@
 use std::env;
 fn main() {
-   let mut o1 = env::args();
-   let o2 = o1.nth(1);
-   println!("{:?}", o2);
+   let a1: Vec<String> = env::args().collect();
+   println!("{:?}", a1);
 }
