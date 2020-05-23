@@ -48,18 +48,27 @@
 <li><a href="https://blog.golang.org/error-handling-and-go">https://blog.golang.org/error-handling-and-go</a></li>
 <li><a href="https://golang.org/pkg/log#Fatal">https://golang.org/pkg/log#Fatal</a></li>
 </ul>
-<h2 id="javascript">JavaScript</h2>
-<p><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error">https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error</a></p>
 <h2 id="rust">Rust</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::env;
+<span style="color:#66d9ef">use</span> std::error::Error;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
+   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> env::var(<span style="color:#e6db74">&#34;BROWSER&#34;</span>)<span style="color:#f92672">?</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s1);
+   Ok(())
+}
+</code></pre></div>
 <ul>
 <li><a href="https://doc.rust-lang.org/book/ch09-00-error-handling.html">https://doc.rust-lang.org/book/ch09-00-error-handling.html</a></li>
 <li><a href="https://doc.rust-lang.org/std/macro.panic.html">https://doc.rust-lang.org/std/macro.panic.html</a></li>
 <li><a href="https://doc.rust-lang.org/std/option/enum.Option.html">https://doc.rust-lang.org/std/option/enum.Option.html</a></li>
 <li><a href="https://doc.rust-lang.org/std/process/fn.exit.html">https://doc.rust-lang.org/std/process/fn.exit.html</a></li>
 <li><a href="https://doc.rust-lang.org/std/result/enum.Result.html">https://doc.rust-lang.org/std/result/enum.Result.html</a></li>
+<li><a href="https://learning-rust.github.io/docs/e4.unwrap_and_expect.html">https://learning-rust.github.io/docs/e4.unwrap_and_expect.html</a></li>
 </ul>
-<h2 id="references">References</h2>
-<p><a href="https://en.wikipedia.org/wiki/Exception_handling">https://en.wikipedia.org/wiki/Exception_handling</a></p>
 
 
 </body>

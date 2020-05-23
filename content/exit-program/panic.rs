@@ -1,4 +1,4 @@
 fn main() {
    panic!("Sunday");
-   dbg!("Monday");
+   println!("Monday");
 }
