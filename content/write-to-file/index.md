@@ -1,7 +1,7 @@
 ---
 title: Write to file
 categories: [input-output]
-tags: [go, julia, nim, php, python]
+tags: [go, julia, nim, php, python, rust]
 ---
 
 ## Go
@@ -40,6 +40,14 @@ tags: [go, julia, nim, php, python]
 
 - <https://docs.python.org/library/functions.html#print>
 - <https://docs.python.org/library/io.html#io.TextIOBase.write>
+
+## Rust
+
+{{< r "a.rs" >}}
+{{< r "b.rs" >}}
+
+- <https://doc.rust-lang.org/std/fs/fn.write.html>
+- <https://doc.rust-lang.org/std/io/trait.Write.html#tymethod.write>
 
 ## References
 

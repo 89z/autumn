@@ -161,6 +161,39 @@ o1<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;Sun
 <li><a href="https://docs.python.org/library/functions.html#print">https://docs.python.org/library/functions.html#print</a></li>
 <li><a href="https://docs.python.org/library/io.html#io.TextIOBase.write">https://docs.python.org/library/io.html#io.TextIOBase.write</a></li>
 </ul>
+<h2 id="rust">Rust</h2>
+<p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::error::Error;
+<span style="color:#66d9ef">use</span> std::fs;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
+   fs::write(<span style="color:#e6db74">&#34;a.txt&#34;</span>, <span style="color:#e6db74">&#34;Sunday\n&#34;</span>)<span style="color:#f92672">?</span>;
+   Ok(())
+}
+</code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::error::Error;
+<span style="color:#66d9ef">use</span> std::fs::File;
+<span style="color:#66d9ef">use</span> std::io::Write;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> o1 <span style="color:#f92672">=</span> File::create(<span style="color:#e6db74">&#34;a.txt&#34;</span>)<span style="color:#f92672">?</span>;
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   o1.write(<span style="color:#e6db74">b&#34;Sunday</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">?</span>;
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   write<span style="color:#f92672">!</span>(o1, <span style="color:#e6db74">&#34;Sunday\n&#34;</span>)<span style="color:#f92672">?</span>;
+   <span style="color:#75715e">// return
+</span><span style="color:#75715e"></span>   Ok(())
+}
+</code></pre></div></p>
+<ul>
+<li><a href="https://doc.rust-lang.org/std/fs/fn.write.html">https://doc.rust-lang.org/std/fs/fn.write.html</a></li>
+<li><a href="https://doc.rust-lang.org/std/io/trait.Write.html#tymethod.write">https://doc.rust-lang.org/std/io/trait.Write.html#tymethod.write</a></li>
+</ul>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/numerical-analysis#write-str">https://hyperpolyglot.org/numerical-analysis#write-str</a></li>
