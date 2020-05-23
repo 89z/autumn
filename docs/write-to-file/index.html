@@ -21,32 +21,13 @@
    </header>
 
 <h1>Write to file</h1>
-<time>Sat May 2 2020</time>
+<time>Fri May 22 2020</time>
    
 <a href="/autumn/categories/input-output/">input-output</a>
    
    
    <h2 id="go">Go</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
-   <span style="color:#e6db74">&#34;log&#34;</span>
-   <span style="color:#e6db74">&#34;os&#34;</span>
-)
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
-   }
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fprintln</span>(<span style="color:#a6e22e">o</span>, <span style="color:#e6db74">&#34;Sunday&#34;</span>)
-}
-</code></pre></div>
-<p><a href="https://golang.org/pkg/fmt#Fprintln">https://golang.org/pkg/fmt#Fprintln</a></p>
-
+<p>
 
 
 
@@ -66,7 +47,24 @@
    <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#a6e22e">o2</span>, <span style="color:#a6e22e">o1</span>)
 }
 </code></pre></div>
-<p><a href="https://golang.org/pkg/io#Copy">https://golang.org/pkg/io#Copy</a></p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;log&#34;</span>
+   <span style="color:#e6db74">&#34;os&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fprintln</span>(<span style="color:#a6e22e">o</span>, <span style="color:#e6db74">&#34;Sunday&#34;</span>)
+}
+</code></pre></div>
 
 
 
@@ -84,7 +82,6 @@
    <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#e6db74">&#34;Sunday\n&#34;</span>)
 }
 </code></pre></div>
-<p><a href="https://golang.org/pkg/os#File.WriteString">https://golang.org/pkg/os#File.WriteString</a></p>
 
 
 
@@ -103,8 +100,13 @@
    }
    <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">WriteTo</span>(<span style="color:#a6e22e">o2</span>)
 }
-</code></pre></div>
-<p><a href="https://golang.org/pkg/strings#Reader.WriteTo">https://golang.org/pkg/strings#Reader.WriteTo</a></p>
+</code></pre></div></p>
+<ul>
+<li><a href="https://golang.org/pkg/fmt#Fprintln">https://golang.org/pkg/fmt#Fprintln</a></li>
+<li><a href="https://golang.org/pkg/io#Copy">https://golang.org/pkg/io#Copy</a></li>
+<li><a href="https://golang.org/pkg/os#File.WriteString">https://golang.org/pkg/os#File.WriteString</a></li>
+<li><a href="https://golang.org/pkg/strings#Reader.WriteTo">https://golang.org/pkg/strings#Reader.WriteTo</a></li>
+</ul>
 <h2 id="julia">Julia</h2>
 
 

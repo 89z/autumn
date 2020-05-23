@@ -1,5 +1,5 @@
 ---
-title: Read HTTP body
+title: HTTP GET
 categories: [network]
 tags: [go, javascript, php, python, rust]
 ---
@@ -38,7 +38,7 @@ tags: [go, javascript, php, python, rust]
 
 ## Rust
 
-{{< r "a.rs" >}}
+{{< r "rs/src/main.rs" >}}
 
 19 deps
 

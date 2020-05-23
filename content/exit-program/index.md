@@ -1,22 +1,20 @@
 ---
 title: Exit program
 categories: [system]
-tags: [go, julia, php, python]
+tags: [go, julia, php, python, rust]
 ---
 
 ## Go
 
-{{< r "log.go" >}}
-
-<https://golang.org/pkg/log#Fatal>
-
 {{< r "exit.go" >}}
-
-<https://golang.org/pkg/os#Exit>
-
+{{< r "log.go" >}}
+{{< r "panic.go" >}}
 {{< r "return.go" >}}
 
-<https://golang.org/ref/spec#Return_statements>
+- <https://golang.org/pkg/builtin#panic>
+- <https://golang.org/pkg/log#Fatal>
+- <https://golang.org/pkg/os#Exit>
+- <https://golang.org/ref/spec#Return_statements>
 
 ## Julia
 
@@ -24,24 +22,28 @@ tags: [go, julia, php, python]
 
 ## PHP
 
+{{< r "die.php" >}}
 {{< r "exit.php" >}}
 
-<https://php.net/function.exit>
-
-{{< r "die.php" >}}
-
-<https://php.net/function.die>
+- <https://php.net/function.die>
+- <https://php.net/function.exit>
 
 ## Python
 
+{{< r "abort.py" >}}
 {{< r "exit-num.py" >}}
 {{< r "exit-str.py" >}}
 
-<https://docs.python.org/library/sys.html#sys.exit>
+- <https://docs.python.org/library/os.html#os.abort>
+- <https://docs.python.org/library/sys.html#sys.exit>
 
-{{< r "abort.py" >}}
+## Rust
 
-<https://docs.python.org/library/os.html#os.abort>
+{{< r "exit.rs" >}}
+{{< r "panic.rs" >}}
+
+- <https://doc.rust-lang.org/std/macro.panic.html>
+- <https://doc.rust-lang.org/std/process/fn.exit.html>
 
 ## References
 

@@ -6,21 +6,15 @@ tags: [go, julia, nim, php, python]
 
 ## Go
 
-{{< r "fprintln.go" >}}
-
-<https://golang.org/pkg/fmt#Fprintln>
-
 {{< r "copy.go" >}}
-
-<https://golang.org/pkg/io#Copy>
-
+{{< r "fprintln.go" >}}
 {{< r "writestring.go" >}}
-
-<https://golang.org/pkg/os#File.WriteString>
-
 {{< r "writeto.go" >}}
 
-<https://golang.org/pkg/strings#Reader.WriteTo>
+- <https://golang.org/pkg/fmt#Fprintln>
+- <https://golang.org/pkg/io#Copy>
+- <https://golang.org/pkg/os#File.WriteString>
+- <https://golang.org/pkg/strings#Reader.WriteTo>
 
 ## Julia
 

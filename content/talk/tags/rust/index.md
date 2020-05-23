@@ -2,18 +2,13 @@
 title: 'Tag talk:Rust'
 ---
 
-## Errors
+- Option
+- Result
 
 {{< r "a.rs" >}}
 {{< r "b.rs" >}}
 
-## HTTP
-
-**hyper**
-
-50 deps
-
-<https://github.com/hyperium/hyper>
+<https://learning-rust.github.io/docs/e4.unwrap_and_expect.html>
 
 ## Setup
 

@@ -1,5 +1,5 @@
 ---
-title: HTTP authorization header
+title: HTTP authorization
 categories: [network]
 tags: [go, php]
 ---

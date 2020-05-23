@@ -1,4 +1,6 @@
 *.exe
+Cargo.lock
 Cargo.toml
 desktop.ini
 go.sum
+target
