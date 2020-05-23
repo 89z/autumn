@@ -1,6 +1,6 @@
 use std::process;
 fn main() {
-   dbg!("Sunday");
+   println!("Sunday");
    process::exit(1);
-   dbg!("Monday");
+   println!("Monday");
 }

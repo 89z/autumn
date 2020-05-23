@@ -21,7 +21,7 @@
    </header>
 
 <h1>Time as an integer</h1>
-<time>Sat May 2 2020</time>
+<time>Sat May 23 2020</time>
    
 <a href="/autumn/categories/number/">number</a>
    
@@ -81,14 +81,17 @@
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">time</span>();
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
-$n3 <span style="color:#f92672">=</span> (<span style="color:#a6e22e">int</span>)($n1);
+</span><span style="color:#75715e"></span>$o1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_create</span>(<span style="color:#e6db74">&#39;2020-05-23&#39;</span>);
+$n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_timestamp_get</span>($o1);
+<span style="color:#75715e"># example 3
+</span><span style="color:#75715e"></span>$n3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtotime</span>(<span style="color:#e6db74">&#39;2020-05-23&#39;</span>);
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1, $n3);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1, $n2, $n3);
 </code></pre></div>
 <ul>
+<li><a href="https://php.net/function.date-timestamp-get">https://php.net/function.date-timestamp-get</a></li>
+<li><a href="https://php.net/function.strtotime">https://php.net/function.strtotime</a></li>
 <li><a href="https://php.net/function.time">https://php.net/function.time</a></li>
-<li><a href="https://php.net/function.microtime">https://php.net/function.microtime</a></li>
 </ul>
 <h2 id="python">Python</h2>
 

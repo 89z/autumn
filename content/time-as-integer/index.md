@@ -25,8 +25,9 @@ tags: [go, javascript, php, python]
 
 {{< r "a.php" >}}
 
+- <https://php.net/function.date-timestamp-get>
+- <https://php.net/function.strtotime>
 - <https://php.net/function.time>
-- <https://php.net/function.microtime>
 
 ## Python
 

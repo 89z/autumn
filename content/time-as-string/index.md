@@ -24,11 +24,9 @@ tags: [go, javascript, php, python]
 ## PHP
 
 {{< r "a.php" >}}
+{{< r "b.php" >}}
 
 - <https://php.net/function.date>
-- <https://php.net/function.date-format>
-- <https://php.net/function.gmdate>
-- <https://php.net/function.gmstrftime>
 - <https://php.net/function.strftime>
 
 ## Python

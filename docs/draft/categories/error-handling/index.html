@@ -49,18 +49,57 @@
 <li><a href="https://golang.org/pkg/log#Fatal">https://golang.org/pkg/log#Fatal</a></li>
 </ul>
 <h2 id="rust">Rust</h2>
-
+<p>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::env;
 <span style="color:#66d9ef">use</span> std::error::Error;
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
-   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> env::var(<span style="color:#e6db74">&#34;BROWSER&#34;</span>)<span style="color:#f92672">?</span>;
+   <span style="color:#75715e">// test 1
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> env::var(<span style="color:#e6db74">&#34;APPDATA&#34;</span>)<span style="color:#f92672">?</span>;
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s1);
+   <span style="color:#75715e">// test 2
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> env::var(<span style="color:#e6db74">&#34;DATAAPP&#34;</span>)<span style="color:#f92672">?</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s2);
+   <span style="color:#75715e">// test 3
+</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Sunday&#34;</span>);
    Ok(())
 }
 </code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::error::Error;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
+   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sunday Monday&#34;</span>;
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> a1 <span style="color:#f92672">=</span> s1.split_whitespace();
+   <span style="color:#75715e">// std::error::Error is not implemented for std::option::NoneError
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> a1.nth(<span style="color:#ae81ff">1</span>)<span style="color:#f92672">?</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s2);
+   Ok(())
+}
+</code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::error::Error;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
+   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sunday Monday&#34;</span>;
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> a1 <span style="color:#f92672">=</span> s1.split_whitespace();
+   <span style="color:#75715e">// test 1
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> a1.nth(<span style="color:#ae81ff">1</span>).ok_or(<span style="color:#e6db74">&#34;None&#34;</span>)<span style="color:#f92672">?</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s2);
+   <span style="color:#75715e">// test 2
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s3 <span style="color:#f92672">=</span> a1.nth(<span style="color:#ae81ff">2</span>).ok_or(<span style="color:#e6db74">&#34;None&#34;</span>)<span style="color:#f92672">?</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s3);
+   <span style="color:#75715e">// test 3
+</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Sunday&#34;</span>);
+   Ok(())
+}
+</code></pre></div></p>
 <ul>
 <li><a href="https://doc.rust-lang.org/book/ch09-00-error-handling.html">https://doc.rust-lang.org/book/ch09-00-error-handling.html</a></li>
 <li><a href="https://doc.rust-lang.org/std/macro.panic.html">https://doc.rust-lang.org/std/macro.panic.html</a></li>
@@ -69,6 +108,8 @@
 <li><a href="https://doc.rust-lang.org/std/result/enum.Result.html">https://doc.rust-lang.org/std/result/enum.Result.html</a></li>
 <li><a href="https://learning-rust.github.io/docs/e4.unwrap_and_expect.html">https://learning-rust.github.io/docs/e4.unwrap_and_expect.html</a></li>
 </ul>
+<h2 id="references">References</h2>
+<p><a href="https://en.wikipedia.org/wiki/Dispose_pattern#Early_exit">https://en.wikipedia.org/wiki/Dispose_pattern#Early_exit</a></p>
 
 
 </body>
