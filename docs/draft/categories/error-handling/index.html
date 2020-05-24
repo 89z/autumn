@@ -21,7 +21,7 @@
    </header>
 
 <h1>Error handling</h1>
-<time>Sat May 23 2020</time>
+<time>Sun May 24 2020</time>
    
 <a href="/autumn/categories/draft/">draft</a>
    
@@ -66,19 +66,6 @@ $m <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sunday
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::collections::HashMap;
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> m <span style="color:#f92672">=</span> HashMap::new();
-   m.insert(<span style="color:#e6db74">&#34;Sunday&#34;</span>, <span style="color:#ae81ff">10</span>);
-   <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> Some(n) <span style="color:#f92672">=</span> m.get(<span style="color:#e6db74">&#34;Sunday&#34;</span>) {
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
-   }
-}
-</code></pre></div>
-
-
-
-
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> regex::Regex;
 <span style="color:#66d9ef">use</span> std::error::Error;
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
@@ -108,22 +95,26 @@ $m <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sunday
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::collections::HashMap;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> regex::Regex;
 <span style="color:#66d9ef">use</span> std::error::Error;
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> m <span style="color:#f92672">=</span> HashMap::new();
-   m.insert(<span style="color:#e6db74">&#34;Sunday&#34;</span>, <span style="color:#ae81ff">10</span>);
-   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> m.get(<span style="color:#e6db74">&#34;Sunday&#34;</span>).ok_or(<span style="color:#e6db74">&#34;None&#34;</span>)<span style="color:#f92672">?</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
+   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wednesday&#34;</span>;
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> s2;
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> s3;
+   <span style="color:#75715e">// test 1
+</span><span style="color:#75715e"></span>   s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;e.&#34;</span>;
+   s3 <span style="color:#f92672">=</span> Regex::new(s2)<span style="color:#f92672">?</span>.find(s1).ok_or(s2)<span style="color:#f92672">?</span>.as_str();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s3);
+   <span style="color:#75715e">// test 2
+</span><span style="color:#75715e"></span>   s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;f.&#34;</span>;
+   s3 <span style="color:#f92672">=</span> Regex::new(s2)<span style="color:#f92672">?</span>.find(s1).ok_or(s2)<span style="color:#f92672">?</span>.as_str();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s3);
+   <span style="color:#75715e">// test 3
+</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Ok&#34;</span>);
    Ok(())
 }
 </code></pre></div></p>
-<ul>
-<li><a href="https://doc.rust-lang.org/book/ch09-00-error-handling.html">https://doc.rust-lang.org/book/ch09-00-error-handling.html</a></li>
-<li><a href="https://doc.rust-lang.org/stable/rust-by-example/error/result/early_returns.html">https://doc.rust-lang.org/stable/rust-by-example/error/result/early_returns.html</a></li>
-</ul>
-<h2 id="references">References</h2>
-<p><a href="https://en.wikipedia.org/wiki/Dispose_pattern#Early_exit">https://en.wikipedia.org/wiki/Dispose_pattern#Early_exit</a></p>
+<p><a href="https://doc.rust-lang.org/stable/rust-by-example/error/result/early_returns.html">https://doc.rust-lang.org/stable/rust-by-example/error/result/early_returns.html</a></p>
 
 
 </body>

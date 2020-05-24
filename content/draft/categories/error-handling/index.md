@@ -16,13 +16,7 @@ categories: [draft]
 
 ## Rust
 
-{{< r "if-let.rs" >}}
 {{< r "let-match.rs" >}}
 {{< r "ok-or.rs" >}}
 
-- <https://doc.rust-lang.org/book/ch09-00-error-handling.html>
-- <https://doc.rust-lang.org/stable/rust-by-example/error/result/early_returns.html>
-
-## References
-
-<https://en.wikipedia.org/wiki/Dispose_pattern#Early_exit>
+<https://doc.rust-lang.org/stable/rust-by-example/error/result/early_returns.html>
