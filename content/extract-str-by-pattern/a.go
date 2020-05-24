@@ -5,14 +5,11 @@ import (
 )
 func main() {
    s1 := "Wednesday"
+   s2 := "e."
    // example 1
-   s2 := regexp.MustCompile("e.").FindString(s1)
+   s3 := regexp.MustCompile(s2).FindString(s1)
    // example 2
-   a1 := regexp.MustCompile("e.").FindAllString(s1, -1)
-   // example 3
-   a2 := regexp.MustCompile("e(..)").FindStringSubmatch(s1)
-   // example 4
-   a3 := regexp.MustCompile("e(..)").FindAllStringSubmatch(s1, -1)
+   a1 := regexp.MustCompile(s2).FindAllString(s1, -1)
    // print
-   fmt.Println(s2, a1, a2, a3)
+   fmt.Println(s3, a1)
 }

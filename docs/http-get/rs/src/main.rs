@@ -1,12 +1,12 @@
-use curl::easy::Easy;
+use curl::easy::{Easy, WriteError};
+use std::error::Error;
 use std::io::{stdout, Write};
-fn main() {
-   let s1 = "http://speedtest.lax.hivelocity.net";
-   let mut easy = Easy::new();
-   easy.url(s1).unwrap();
-   easy.write_function(|data| {
-      stdout().write_all(data).unwrap();
-      Ok(data.len())
-   }).unwrap();
-   easy.perform().unwrap();
+fn main() -> Result<(), Box<dyn Error>> {
+   let mut o = Easy::new();
+   o.url("http://speedtest.lax.hivelocity.net")?;
+   o.write_function(|y|
+      stdout().write(y).or(Err(WriteError::Pause))
+   )?;
+   o.perform()?;
+   Ok(())
 }

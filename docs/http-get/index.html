@@ -149,17 +149,17 @@ stdout<span style="color:#f92672">.</span>buffer<span style="color:#f92672">.</s
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> curl::easy::Easy;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> curl::easy::{Easy, WriteError};
+<span style="color:#66d9ef">use</span> std::error::Error;
 <span style="color:#66d9ef">use</span> std::io::{stdout, Write};
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>;
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> easy <span style="color:#f92672">=</span> Easy::new();
-   easy.url(s1).unwrap();
-   easy.write_function(<span style="color:#f92672">|</span>data<span style="color:#f92672">|</span> {
-      stdout().write_all(data).unwrap();
-      Ok(data.len())
-   }).unwrap();
-   easy.perform().unwrap();
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> o <span style="color:#f92672">=</span> Easy::new();
+   o.url(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>)<span style="color:#f92672">?</span>;
+   o.write_function(<span style="color:#f92672">|</span>y<span style="color:#f92672">|</span>
+      stdout().write(y).or(Err(WriteError::Pause))
+   )<span style="color:#f92672">?</span>;
+   o.perform()<span style="color:#f92672">?</span>;
+   Ok(())
 }
 </code></pre></div>
 <p>19 deps</p>

@@ -7,6 +7,7 @@ tags: [go, javascript, julia, php, python, rust]
 ## Go
 
 {{< r "a.go" >}}
+{{< r "b.go" >}}
 
 - <https://golang.org/pkg/regexp#Regexp.FindAllString>
 - <https://golang.org/pkg/regexp#Regexp.FindAllStringSubmatch>
@@ -36,6 +37,7 @@ tags: [go, javascript, julia, php, python, rust]
 ## Python
 
 {{< r "a.py" >}}
+{{< r "b.py" >}}
 
 - <https://docs.python.org/library/re.html#re.findall>
 - <https://docs.python.org/library/re.html#re.search>

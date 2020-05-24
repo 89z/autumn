@@ -16,7 +16,8 @@ categories: [draft]
 
 ## Rust
 
-{{< r "let-match.rs" >}}
+{{< r "or.rs" >}}
 {{< r "ok-or.rs" >}}
 
-<https://doc.rust-lang.org/stable/rust-by-example/error/result/early_returns.html>
+- <https://doc.rust-lang.org/std/option/enum.Option.html#method.ok_or>
+- <https://doc.rust-lang.org/std/result/enum.Result.html#method.or>
