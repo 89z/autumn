@@ -1,13 +1,24 @@
-use std::collections::HashMap;
-fn main() {
-   let mut m1 = HashMap::new();
-   m1.insert("Sunday", 10);
-   let n1 = match m1.get("Sunday") {
-      None => {
-         println!("None");
-         return;
-      },
-      Some(n) => n
+use regex::Regex;
+use std::error::Error;
+fn main() -> Result<(), Box<dyn Error>> {
+   let s1 = "Wednesday";
+   let mut s2;
+   let mut s3;
+   // test 1
+   s2 = "e.";
+   s3 = match Regex::new(s2)?.find(s1) {
+      Some(o) => o.as_str(),
+      None => return Err(Box::from(s2))
    };
-   println!("{}", n1);
+   println!("{}", s3);
+   // test 2
+   s2 = "f.";
+   s3 = match Regex::new(s2)?.find(s1) {
+      Some(o) => o.as_str(),
+      None => return Err(Box::from(s2))
+   };
+   println!("{}", s3);
+   // test 3
+   println!("Ok");
+   Ok(())
 }

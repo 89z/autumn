@@ -90,7 +90,7 @@ cannot use it until we are certain that we have a string.</p>
    <span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> File::open(<span style="color:#e6db74">&#34;a.txt&#34;</span>)<span style="color:#f92672">?</span>;
    <span style="color:#66d9ef">for</span> o2 <span style="color:#66d9ef">in</span> BufReader::new(o1).lines() {
       <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> o2<span style="color:#f92672">?</span>;
-      dbg<span style="color:#f92672">!</span>(s1);
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s1);
    }
    Ok(())
 }

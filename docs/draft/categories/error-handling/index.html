@@ -66,39 +66,6 @@ $m <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sunday
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::env;
-<span style="color:#66d9ef">use</span> std::error::Error;
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
-   <span style="color:#75715e">// test 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> env::var(<span style="color:#e6db74">&#34;APPDATA&#34;</span>)<span style="color:#f92672">?</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s1);
-   <span style="color:#75715e">// test 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> env::var(<span style="color:#e6db74">&#34;DATAAPP&#34;</span>)<span style="color:#f92672">?</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s2);
-   <span style="color:#75715e">// test 3
-</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Sunday&#34;</span>);
-   Ok(())
-}
-</code></pre></div>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::collections::HashMap;
-<span style="color:#66d9ef">use</span> std::error::Error;
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> m <span style="color:#f92672">=</span> HashMap::new();
-   m.insert(<span style="color:#e6db74">&#34;Sunday&#34;</span>, <span style="color:#ae81ff">10</span>);
-   <span style="color:#75715e">// std::error::Error is not implemented for std::option::NoneError
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> m.get(<span style="color:#e6db74">&#34;Sunday&#34;</span>)<span style="color:#f92672">?</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
-   Ok(())
-}
-</code></pre></div>
-
-
-
-
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::collections::HashMap;
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> m <span style="color:#f92672">=</span> HashMap::new();
@@ -112,13 +79,28 @@ $m <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sunday
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::collections::HashMap;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> regex::Regex;
 <span style="color:#66d9ef">use</span> std::error::Error;
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> m <span style="color:#f92672">=</span> HashMap::new();
-   m.insert(<span style="color:#e6db74">&#34;Sunday&#34;</span>, <span style="color:#ae81ff">10</span>);
-   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> m.get(<span style="color:#e6db74">&#34;Sunday&#34;</span>).ok_or(<span style="color:#e6db74">&#34;None&#34;</span>)<span style="color:#f92672">?</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
+   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wednesday&#34;</span>;
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> s2;
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> s3;
+   <span style="color:#75715e">// test 1
+</span><span style="color:#75715e"></span>   s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;e.&#34;</span>;
+   s3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> Regex::new(s2)<span style="color:#f92672">?</span>.find(s1) {
+      Some(o) <span style="color:#f92672">=&gt;</span> o.as_str(),
+      None <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">return</span> Err(Box::from(s2))
+   };
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s3);
+   <span style="color:#75715e">// test 2
+</span><span style="color:#75715e"></span>   s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;f.&#34;</span>;
+   s3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> Regex::new(s2)<span style="color:#f92672">?</span>.find(s1) {
+      Some(o) <span style="color:#f92672">=&gt;</span> o.as_str(),
+      None <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">return</span> Err(Box::from(s2))
+   };
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s3);
+   <span style="color:#75715e">// test 3
+</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Ok&#34;</span>);
    Ok(())
 }
 </code></pre></div>
@@ -127,55 +109,12 @@ $m <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sunday
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::collections::HashMap;
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+<span style="color:#66d9ef">use</span> std::error::Error;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> m <span style="color:#f92672">=</span> HashMap::new();
    m.insert(<span style="color:#e6db74">&#34;Sunday&#34;</span>, <span style="color:#ae81ff">10</span>);
-   <span style="color:#66d9ef">match</span> m.get(<span style="color:#e6db74">&#34;Sunday&#34;</span>) {
-      None <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">return</span>,
-      Some(n) <span style="color:#f92672">=&gt;</span> println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n)
-   }
-}
-</code></pre></div>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::collections::HashMap;
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> m1 <span style="color:#f92672">=</span> HashMap::new();
-   m1.insert(<span style="color:#e6db74">&#34;Sunday&#34;</span>, <span style="color:#ae81ff">10</span>);
-   <span style="color:#66d9ef">let</span> n1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> m1.get(<span style="color:#e6db74">&#34;Sunday&#34;</span>) {
-      None <span style="color:#f92672">=&gt;</span> {
-         println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;None&#34;</span>);
-         <span style="color:#66d9ef">return</span>;
-      },
-      Some(n) <span style="color:#f92672">=&gt;</span> n
-   };
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n1);
-}
-</code></pre></div>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::collections::HashMap;
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), ()<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> m1 <span style="color:#f92672">=</span> HashMap::new();
-   m1.insert(<span style="color:#e6db74">&#34;Sunday&#34;</span>, <span style="color:#ae81ff">10</span>);
-   <span style="color:#75715e">// test 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> n1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> m1.get(<span style="color:#e6db74">&#34;Sunday&#34;</span>) {
-      None <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">return</span> Err(()),
-      Some(n) <span style="color:#f92672">=&gt;</span> n
-   };
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n1);
-   <span style="color:#75715e">// test 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> n2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> m1.get(<span style="color:#e6db74">&#34;Monday&#34;</span>) {
-      None <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">return</span> Err(()),
-      Some(n) <span style="color:#f92672">=&gt;</span> n
-   };
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n2);
-   <span style="color:#75715e">// test 3
-</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Ok&#34;</span>);
+   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> m.get(<span style="color:#e6db74">&#34;Sunday&#34;</span>).ok_or(<span style="color:#e6db74">&#34;None&#34;</span>)<span style="color:#f92672">?</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
    Ok(())
 }
 </code></pre></div></p>

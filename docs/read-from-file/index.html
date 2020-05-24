@@ -196,7 +196,7 @@ s2 <span style="color:#f92672">=</span> o2<span style="color:#f92672">.</span>re
 <span style="color:#66d9ef">use</span> std::fs;
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
    <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> fs::read_to_string(<span style="color:#e6db74">&#34;a.txt&#34;</span>)<span style="color:#f92672">?</span>;
-   dbg<span style="color:#f92672">!</span>(s1);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s1);
    Ok(())
 }
 </code></pre></div>
