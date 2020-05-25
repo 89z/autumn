@@ -1,11 +1,17 @@
 <?php
-$s1 = 'Sunday';
+$s = 'Sunday';
 # example 1
-$n1 = strpos($s1, 'Su');
-var_dump($n1 === 0);
+$n = strpos($s, 'Su');
+var_dump($n === 0);
 # example 2
-$n2 = strpos($s1, 'un');
-var_dump($n2 !== false);
+$n = strpos($s, 'un');
+var_dump($n !== false);
 # example 3
-$n3 = stripos($s1, 'su');
-var_dump($n3 === 0);
+$n = stripos($s, 'su');
+var_dump($n === 0);
+# example 4
+$s2 = $s[0];
+var_dump($s2 == 'S');
+# example 5
+$s2 = $s[-1];
+var_dump($s2 == 'y');

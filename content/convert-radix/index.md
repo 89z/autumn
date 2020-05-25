@@ -4,16 +4,17 @@ categories: [number]
 tags: [go, javascript, php, python]
 ---
 
+Some faster bitwise operations could be used, but these functions allow to
+easily change the radix.
+
 ## Go
 
 {{< r "a.go" >}}
+{{< r "b.go" >}}
 
 - <https://golang.org/pkg/math/big#Int.SetString>
 - <https://golang.org/pkg/math/big#Int.Text>
-
-{{< r "b.go" >}}
-
-<https://golang.org/pkg/strings#IndexRune>
+- <https://golang.org/pkg/strings#IndexRune>
 
 ## JavaScript
 

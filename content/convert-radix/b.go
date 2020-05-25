@@ -6,19 +6,20 @@ import (
 var s_dig = "-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz"
 // example 1
 func r64_encode(n_in int) string {
-   var s_out string
+   s_out := ""
    for n_in > 0 {
-      n_key := n_in & 63
+      n_key := n_in % 64
       s_out = s_dig[n_key:n_key + 1] + s_out
-      n_in >>= 6
+      n_in /= 64
    }
    return s_out
 }
 // example 1
 func r64_decode(s_in string) int {
-   var n_out int
-   for _, s_chr := range s_in {
-      n_out = n_out << 6 | strings.IndexRune(s_dig, s_chr)
+   n_out := 0
+   for n_key := range s_in {
+      s_chr := s_in[n_key:n_key + 1]
+      n_out = n_out * 64 + strings.Index(s_dig, s_chr)
    }
    return n_out
 }

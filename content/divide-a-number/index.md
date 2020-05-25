@@ -9,7 +9,8 @@ tags: [go, javascript, php, python]
 {{< r "a.go" >}}
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/math#Mod>
+- <https://golang.org/pkg/math#Mod>
+- <https://golang.org/pkg/math#Remainder>
 
 ## JavaScript
 

@@ -3,8 +3,8 @@ let s_dig = '-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz';
 function r64_encode(n_in) {
    let s_out = '';
    while (n_in > 0) {
-      s_out = s_dig[n_in & 63] + s_out;
-      n_in >>= 6;
+      s_out = s_dig[n_in % 64] + s_out;
+      n_in = Math.trunc(n_in / 64);
    }
    return s_out;
 }
@@ -12,7 +12,7 @@ function r64_encode(n_in) {
 function r64_decode(s_in) {
    let n_out = 0;
    for (let s_chr of s_in) {
-      n_out = n_out << 6 | s_dig.indexOf(s_chr);
+      n_out = n_out * 64 + s_dig.indexOf(s_chr);
    }
    return n_out;
 }

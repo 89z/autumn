@@ -16,4 +16,5 @@ tags: [php, python]
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/http.cookiejar.html>
+- <https://developer.mozilla.org/Web/HTTP/Headers/Accept-Encoding>
+- <https://docs.python.org/library/http.cookiejar.html>

@@ -9,7 +9,8 @@ tags: [go, javascript, php, python]
 {{< r "a.go" >}}
 {{< r "b.go" >}}
 
-<https://golang.org/ref/spec#Slice_expressions>
+- <https://golang.org/ref/spec#Slice_expressions>
+- <https://golang.org/pkg/strings#Split>
 
 ## JavaScript
 
