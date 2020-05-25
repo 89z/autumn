@@ -5,7 +5,7 @@ tags: [go, javascript, php, python]
 ---
 
 Some faster bitwise operations could be used, but these functions allow to
-easily change the radix.
+easily change the radix. These also account for numeric zero input.
 
 ## Go
 

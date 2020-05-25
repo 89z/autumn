@@ -6,10 +6,11 @@ tags: [go, julia, nim, php, python, rust]
 
 ## Go
 
-{{< r "a.go" >}}
+{{< r "bufio.go" >}}
+{{< r "fmt.go" >}}
 
+- <https://golang.org/pkg/bufio#Scanner.Scan>
 - <https://golang.org/pkg/fmt#Scan>
-- <https://golang.org/pkg/os#pkg-variables>
 
 ## Julia
 

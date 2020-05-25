@@ -2,10 +2,10 @@ let s_dig = '-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz';
 // example 1
 function r64_encode(n_in) {
    let s_out = '';
-   while (n_in > 0) {
+   do {
       s_out = s_dig[n_in % 64] + s_out;
       n_in = Math.trunc(n_in / 64);
-   }
+   } while (n_in > 0);
    return s_out;
 }
 // example 2

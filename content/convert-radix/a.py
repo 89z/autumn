@@ -2,9 +2,11 @@ s_dig = '-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz'
 # example 1
 def r64_encode(n_in):
    s_out = ''
-   while n_in > 0:
+   while True:
       s_out = s_dig[n_in % 64] + s_out
       n_in //= 64
+      if n_in == 0:
+         break
    return s_out
 # example 2
 def r64_decode(s_in):

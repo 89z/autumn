@@ -4,10 +4,10 @@ $s_dig = '-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz';
 function r64_encode($n_in) {
    global $s_dig;
    $s_out = '';
-   while ($n_in > 0) {
+   do {
       $s_out = $s_dig[$n_in % 64] . $s_out;
       $n_in = intdiv($n_in, 64);
-   }
+   } while ($n_in > 0);
    return $s_out;
 }
 # example 2
