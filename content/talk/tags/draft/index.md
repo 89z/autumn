@@ -1,5 +1,5 @@
 ---
-title: 'Category talk:Draft languages'
+title: 'Tag talk:Draft'
 ---
 
 We can use this page to just compile problems with other languages. Avoid

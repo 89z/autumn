@@ -1,8 +1,12 @@
 ---
 title: String types
 categories: [string]
-tags: [go, javascript, julia, nim, php, python, rust]
+tags: [dart, go, javascript, julia, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 

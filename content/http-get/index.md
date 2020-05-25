@@ -1,8 +1,12 @@
 ---
 title: HTTP GET
 categories: [network]
-tags: [go, javascript, php, python, rust]
+tags: [dart, go, javascript, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 

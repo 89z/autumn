@@ -1,8 +1,12 @@
 ---
 title: Boolean types
 categories: [reference]
-tags: [go, javascript, julia, php, python, rust]
+tags: [dart, go, javascript, julia, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 

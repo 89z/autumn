@@ -1,8 +1,12 @@
 ---
 title: Array types
 categories: [array]
-tags: [go, javascript, julia, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -15,12 +19,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array>
-
-## Julia
-
-{{< r "a.jl" >}}
-
-<https://docs.julialang.org/en/v1/base/arrays>
 
 ## Nim
 
@@ -49,5 +47,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 
 - <https://hyperpolyglot.org/rust#declare-array>
 - <https://hyperpolyglot.org/scripting#arrays>
-- <https://www.programming-idioms.org/idiom/134/create-a-new-list>
+- <https://hyperpolyglot.org/web#array-literal>
 - <https://rosettacode.org/wiki/Arrays>
+- <https://www.programming-idioms.org/idiom/134/create-a-new-list>
