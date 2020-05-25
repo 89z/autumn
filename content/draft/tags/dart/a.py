@@ -1,2 +1,3 @@
-s1 = repr('Sunday')
-print(s1) # 'Sunday'
+s = repr('Sunday')
+# 'Sunday'
+print(s)

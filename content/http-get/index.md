@@ -31,10 +31,8 @@ tags: [go, javascript, php, python, rust]
 ## Python
 
 {{< r "a.py" >}}
-{{< r "b.py" >}}
 
-- <https://docs.python.org/library/http.client.html#http.client.HTTPConnection.getresponse>
-- <https://docs.python.org/library/urllib.request.html#urllib.request.urlopen>
+<https://docs.python.org/library/urllib.request.html#urllib.request.urlopen>
 
 ## Rust
 

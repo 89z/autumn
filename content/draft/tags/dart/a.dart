@@ -1,3 +1,5 @@
 main() {
-   print('Sunday'); // Sunday
+   var s = 'Sunday';
+   // true
+   print(s == 'Sunday');
 }

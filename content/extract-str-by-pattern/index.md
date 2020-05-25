@@ -23,6 +23,7 @@ tags: [go, javascript, julia, php, python, rust]
 ## Julia
 
 {{< r "a.jl" >}}
+{{< r "b.jl" >}}
 
 - <https://docs.julialang.org/en/v1/base/strings#Base.eachmatch>
 - <https://docs.julialang.org/en/v1/base/strings#Base.match>

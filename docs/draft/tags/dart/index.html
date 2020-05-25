@@ -21,33 +21,35 @@
    </header>
 
 <h1>Dart language</h1>
-<time>Sat May 23 2020</time>
+<time>Sun May 24 2020</time>
    
    
-   <p>Dart can print a string:</p>
+   <p>Other languages like Python can print a string representation:</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py">s <span style="color:#f92672">=</span> repr(<span style="color:#e6db74">&#39;Sunday&#39;</span>)
+<span style="color:#75715e"># &#39;Sunday&#39;</span>
+<span style="color:#66d9ef">print</span>(s)
+</code></pre></div>
+<p>Dart cannot do this, but you can use boolean as workaround:</p>
 
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart">main() {
-   print(<span style="color:#e6db74">&#39;Sunday&#39;</span>); <span style="color:#75715e">// Sunday
-</span><span style="color:#75715e"></span>}
+   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sunday&#39;</span>;
+   <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>   print(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Sunday&#39;</span>);
+}
 </code></pre></div>
-<p>but it seems to have no way to print a string representation. Other languages
-can do this, like Python:</p>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py">s1 <span style="color:#f92672">=</span> repr(<span style="color:#e6db74">&#39;Sunday&#39;</span>)
-<span style="color:#66d9ef">print</span>(s1) <span style="color:#75715e"># &#39;Sunday&#39;</span>
-</code></pre></div>
+<p><strong>Download</strong>:</p>
+<p><a href="https://dart.dev/tools/sdk/archive">https://dart.dev/tools/sdk/archive</a></p>
+<p><strong>Docs</strong>:</p>
+<p><a href="https://api.dartlang.org">https://api.dartlang.org</a></p>
+<p><strong>Code</strong>:</p>
 <p><a href="https://github.com/dart-lang/sdk">https://github.com/dart-lang/sdk</a></p>
-<h2 id="setup">Setup</h2>
-<ul>
-<li><a href="https://api.dartlang.org">https://api.dartlang.org</a></li>
-<li><a href="https://dart.dev/tools/sdk/archive">https://dart.dev/tools/sdk/archive</a></li>
-</ul>
 
 
 </body>

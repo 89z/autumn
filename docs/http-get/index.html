@@ -21,7 +21,7 @@
    </header>
 
 <h1>HTTP GET</h1>
-<time>Fri May 22 2020</time>
+<time>Sun May 24 2020</time>
    
 <a href="/autumn/categories/network/">network</a>
    
@@ -114,36 +114,18 @@ $s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_
 <li><a href="https://php.net/function.stream-get-contents">https://php.net/function.stream-get-contents</a></li>
 </ul>
 <h2 id="python">Python</h2>
-<p>
+
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> request
-s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>
-o1 <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>urlopen(s1)
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>
+o <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>urlopen(s)
 <span style="color:#f92672">from</span> sys <span style="color:#f92672">import</span> stdout
-a1 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>read()
-stdout<span style="color:#f92672">.</span>buffer<span style="color:#f92672">.</span>write(a1)
+y <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>read()
+stdout<span style="color:#f92672">.</span>buffer<span style="color:#f92672">.</span>write(y)
 </code></pre></div>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> parse
-s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>
-o1 <span style="color:#f92672">=</span> parse<span style="color:#f92672">.</span>urlparse(s1)
-<span style="color:#f92672">from</span> http <span style="color:#f92672">import</span> client
-o2 <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>HTTPConnection(o1<span style="color:#f92672">.</span>hostname)
-o2<span style="color:#f92672">.</span>request(<span style="color:#e6db74">&#39;GET&#39;</span>, o1<span style="color:#f92672">.</span>path)
-o3 <span style="color:#f92672">=</span> o2<span style="color:#f92672">.</span>getresponse()
-<span style="color:#f92672">from</span> sys <span style="color:#f92672">import</span> stdout
-a1 <span style="color:#f92672">=</span> o3<span style="color:#f92672">.</span>read()
-stdout<span style="color:#f92672">.</span>buffer<span style="color:#f92672">.</span>write(a1)
-</code></pre></div></p>
-<ul>
-<li><a href="https://docs.python.org/library/http.client.html#http.client.HTTPConnection.getresponse">https://docs.python.org/library/http.client.html#http.client.HTTPConnection.getresponse</a></li>
-<li><a href="https://docs.python.org/library/urllib.request.html#urllib.request.urlopen">https://docs.python.org/library/urllib.request.html#urllib.request.urlopen</a></li>
-</ul>
+<p><a href="https://docs.python.org/library/urllib.request.html#urllib.request.urlopen">https://docs.python.org/library/urllib.request.html#urllib.request.urlopen</a></p>
 <h2 id="rust">Rust</h2>
 
 
