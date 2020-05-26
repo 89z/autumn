@@ -1,8 +1,12 @@
 ---
 title: Slice an array
 categories: [array]
-tags: [go, javascript, julia, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -16,10 +20,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array#Accessing_array_elements>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/slice>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 
@@ -50,7 +50,7 @@ tags: [go, javascript, julia, nim, php, python, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#resizable-array-lookup>
-- <https://hyperpolyglot.org/numerical-analysis#array-lookup>
 - <https://hyperpolyglot.org/scripting#array-lookup>
+- <https://hyperpolyglot.org/web#array-lookup>
 - <https://www.programming-idioms.org/idiom/165/last-element>
 - <https://rosettacode.org/wiki/Arrays>

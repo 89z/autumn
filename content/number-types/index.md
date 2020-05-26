@@ -1,8 +1,12 @@
 ---
 title: Number types
 categories: [number]
-tags: [go, javascript, julia, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -16,10 +20,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 
 - <https://developer.mozilla.org/Web/JavaScript/Guide/Numbers_and_dates#Decimal_numbers>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 
@@ -45,4 +45,5 @@ tags: [go, javascript, julia, nim, php, python, rust]
 
 ## References
 
-<https://hyperpolyglot.org/c#int-type>
+- <https://hyperpolyglot.org/c#int-type>
+- <https://hyperpolyglot.org/web#int-type>
