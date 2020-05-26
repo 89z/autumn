@@ -21,12 +21,25 @@
    </header>
 
 <h1>Format number</h1>
-<time>Wed May 20 2020</time>
+<time>Tue May 26 2020</time>
    
 <a href="/autumn/categories/number/">number</a>
    
    
-   <h2 id="go">Go</h2>
+   <h2 id="dart">Dart</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:intl/intl.dart&#39;</span>;
+main() {
+   <span style="color:#66d9ef">var</span> o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> NumberFormat(<span style="color:#e6db74">&#39;,###&#39;</span>);
+   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> o.format(<span style="color:#ae81ff">1000</span>);
+   print(s);
+}
+</code></pre></div>
+<p><a href="https://pub.dev/documentation/intl">https://pub.dev/documentation/intl</a></p>
+<h2 id="go">Go</h2>
 
 
 
@@ -64,16 +77,6 @@
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>);
 </code></pre></div>
 <p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString</a></p>
-<h2 id="julia">Julia</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.jl" data-lang=".jl"><span style="color:#66d9ef">using</span> Printf
-n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>
-s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">@sprintf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">%5d</span><span style="color:#e6db74">&#34;</span>, n1)
-show(s1)
-</code></pre></div>
 <h2 id="nim">Nim</h2>
 
 
@@ -145,7 +148,6 @@ s3 <span style="color:#f92672">=</span> format(n1, <span style="color:#e6db74">&
 </ul>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://hyperpolyglot.org/numerical-analysis#sprintf">https://hyperpolyglot.org/numerical-analysis#sprintf</a></li>
 <li><a href="https://rosettacode.org/wiki/Commatizing_numbers">https://rosettacode.org/wiki/Commatizing_numbers</a></li>
 <li><a href="https://www.programming-idioms.org/idiom/173/format-number-group">https://www.programming-idioms.org/idiom/173/format-number-group</a></li>
 </ul>

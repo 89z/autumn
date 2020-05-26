@@ -1,8 +1,14 @@
 ---
 title: Format number
 categories: [number]
-tags: [go, javascript, julia, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "dart/a.dart" >}}
+
+<https://pub.dev/documentation/intl>
 
 ## Go
 
@@ -16,10 +22,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 
@@ -53,6 +55,5 @@ tags: [go, javascript, julia, nim, php, python, rust]
 
 ## References
 
-- <https://hyperpolyglot.org/numerical-analysis#sprintf>
 - <https://rosettacode.org/wiki/Commatizing_numbers>
 - <https://www.programming-idioms.org/idiom/173/format-number-group>

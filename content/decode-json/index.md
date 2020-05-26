@@ -1,10 +1,12 @@
 ---
 title: Decode JSON
 categories: [file-format]
-tags: [go, javascript, julia, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
 
-{{< r "a.json" >}}
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -18,10 +20,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/JSON/parse>
-
-## Julia
-
-<https://github.com/JuliaIO/JSON.jl>
 
 ## Nim
 

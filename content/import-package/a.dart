@@ -1,5 +1,5 @@
-import 'dart:io' show Platform;
+import 'dart:io';
 main() {
-   Map<String, String> envVars = Platform.environment;
-   print(envVars['BROWSER']);
+   var s = Platform.environment['BROWSER'];
+   print(s);
 }

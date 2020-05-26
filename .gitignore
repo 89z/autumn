@@ -1,6 +1,9 @@
 *.exe
+.dart_tool
+.packages
 Cargo.lock
 Cargo.toml
 desktop.ini
 go.sum
+pubspec.lock
 target

@@ -1,10 +1,8 @@
 <?php
-$s1 = file_get_contents('a.json');
+$s = '{"Sunday": 10}';
 # example 1
-$o1 = json_decode($s1);
-$n1 = $o1->Sunday;
+$o = json_decode($s);
 # example 2
-$m1 = json_decode($s1, true);
-$n2 = $m1['Sunday'];
+$m = json_decode($s, true);
 # print
-var_dump($n1, $n2);
+var_dump($o, $m);

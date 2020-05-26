@@ -1,3 +1,3 @@
-let s1 = '{"Sunday": 10, "Monday": 11}';
-let m1 = JSON.parse(s1);
-console.log(m1);
+let s = '{"Sunday": 10}';
+let m = JSON.parse(s);
+console.log(m);
