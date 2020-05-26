@@ -1,8 +1,12 @@
 ---
 title: Get map value
 categories: [map]
-tags: [go, javascript, julia, nim, php, python]
+tags: [dart, go, javascript, nim, php, python]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -14,14 +18,7 @@ tags: [go, javascript, julia, nim, php, python]
 
 {{< r "a.js" >}}
 
-{{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Operators/
-Property_Accessors` >}}
-
-## Julia
-
-{{< r "a.jl" >}}
-
-<https://docs.julialang.org/en/v1/base/collections#Base.get>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Property_Accessors>
 
 ## Nim
 
@@ -50,4 +47,5 @@ Property_Accessors` >}}
 
 - <https://hyperpolyglot.org/c#dict-lookup>
 - <https://hyperpolyglot.org/scripting#dict-lookup>
+- <https://hyperpolyglot.org/web#dict-lookup>
 - <https://rosettacode.org/wiki/Collections>

@@ -1,8 +1,12 @@
 ---
 title: Split a string
 categories: [array, string]
-tags: [go, javascript, julia, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -17,10 +21,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/split>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 
@@ -55,7 +55,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#split>
-- <https://hyperpolyglot.org/numerical-analysis#split>
 - <https://hyperpolyglot.org/scripting#split>
 - <https://www.programming-idioms.org/idiom/49/split-string>
 - <https://rosettacode.org/wiki/Tokenize_a_string>

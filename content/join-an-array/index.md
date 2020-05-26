@@ -1,8 +1,12 @@
 ---
 title: Join an array
 categories: [array, string]
-tags: [go, javascript, julia, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -15,10 +19,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/join>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 
@@ -45,7 +45,7 @@ tags: [go, javascript, julia, nim, php, python, rust]
 
 ## References
 
-- <https://hyperpolyglot.org/numerical-analysis#join>
 - <https://hyperpolyglot.org/scripting#str-join>
+- <https://hyperpolyglot.org/web#str-join>
 - <https://www.programming-idioms.org/idiom/53/join-a-list>
 - <https://rosettacode.org/wiki/Arrays>

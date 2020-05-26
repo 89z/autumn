@@ -1,8 +1,12 @@
 ---
 title: Iterate an array
 categories: [iterate, array]
-tags: [go, javascript, julia, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -18,10 +22,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for...in>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for...of>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 
@@ -51,8 +51,8 @@ tags: [go, javascript, julia, nim, php, python, rust]
 
 ## References
 
-- <https://hyperpolyglot.org/numerical-analysis#array-iteration>
 - <https://hyperpolyglot.org/rust#iterate-over-array>
+- <https://hyperpolyglot.org/web#iterate-over-array>
 - <https://www.programming-idioms.org/idiom/6/iterate-over-list-val>
 - <https://www.programming-idioms.org/idiom/7/iterate-over-list-indexes-val>
 - <https://rosettacode.org/wiki/Loop_Structures>

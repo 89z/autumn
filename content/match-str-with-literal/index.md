@@ -1,8 +1,12 @@
 ---
 title: Match string with literal
 categories: [string]
-tags: [go, javascript, julia, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -19,13 +23,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/endsWith>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/includes>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/startsWith>
-
-## Julia
-
-{{< r "a.jl" >}}
-
-- <https://docs.julialang.org/en/v1/base/strings#Base.endswith>
-- <https://docs.julialang.org/en/v1/base/strings#Base.occursin>
 
 ## Nim
 
@@ -58,6 +55,7 @@ tags: [go, javascript, julia, nim, php, python, rust]
 ## References
 
 - <https://hyperpolyglot.org/scripting#prefix-suffix-test>
+- <https://hyperpolyglot.org/web#prefix-suffix-test>
 - <https://rosettacode.org/wiki/String_matching>
 - <https://www.programming-idioms.org/idiom/39/check-string-contains>
 - <https://www.programming-idioms.org/idiom/96/check-string-prefix>

@@ -21,14 +21,29 @@
    </header>
 
 <h1>Join an array</h1>
-<time>Wed May 20 2020</time>
+<time>Mon May 25 2020</time>
    
 <a href="/autumn/categories/array/">array</a>
    
 <a href="/autumn/categories/string/">string</a>
    
    
-   <h2 id="go">Go</h2>
+   <h2 id="dart">Dart</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart">main() {
+   <span style="color:#66d9ef">var</span> s, a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span>, <span style="color:#e6db74">&#39;Mon&#39;</span>];
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   s <span style="color:#f92672">=</span> a.join(<span style="color:#e6db74">&#39;,&#39;</span>);
+   print(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Sun,Mon&#39;</span>);
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   s <span style="color:#f92672">=</span> a.join();
+   print(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;SunMon&#39;</span>);
+}
+</code></pre></div>
+<h2 id="go">Go</h2>
 
 
 
@@ -56,19 +71,6 @@
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>);
 </code></pre></div>
 <p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/join">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/join</a></p>
-<h2 id="julia">Julia</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.jl" data-lang=".jl">a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Sun&#34;</span>, <span style="color:#e6db74">&#34;Mon&#34;</span>]
-<span style="color:#75715e"># example 1</span>
-s1 <span style="color:#f92672">=</span> join(a1, <span style="color:#e6db74">&#34;,&#34;</span>)
-<span style="color:#75715e"># example 2</span>
-s2 <span style="color:#f92672">=</span> join(a1)
-<span style="color:#75715e"># print</span>
-println([s1, s2])
-</code></pre></div>
 <h2 id="nim">Nim</h2>
 
 
@@ -130,8 +132,8 @@ s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;,&#39;<
 </code></pre></div>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://hyperpolyglot.org/numerical-analysis#join">https://hyperpolyglot.org/numerical-analysis#join</a></li>
 <li><a href="https://hyperpolyglot.org/scripting#str-join">https://hyperpolyglot.org/scripting#str-join</a></li>
+<li><a href="https://hyperpolyglot.org/web#str-join">https://hyperpolyglot.org/web#str-join</a></li>
 <li><a href="https://www.programming-idioms.org/idiom/53/join-a-list">https://www.programming-idioms.org/idiom/53/join-a-list</a></li>
 <li><a href="https://rosettacode.org/wiki/Arrays">https://rosettacode.org/wiki/Arrays</a></li>
 </ul>
