@@ -29,7 +29,6 @@ have 5 or less ways to perform a task. These currently fail that test:
 - Common-lisp
 - F#
 - Go
-- Julia
 - Nim
 - PHP
 - Python
@@ -52,6 +51,12 @@ test:
 
 - Javascript
 - Reason
+
+## Speed
+
+Language should not be dirt slow. These currently fail that test:
+
+Julia
 
 ## Strings
 

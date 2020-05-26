@@ -1,7 +1,7 @@
 ---
 title: String types
 categories: [string]
-tags: [dart, go, javascript, julia, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
 
 ## Dart
@@ -20,10 +20,6 @@ tags: [dart, go, javascript, julia, nim, php, python, rust]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Template_literals>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 

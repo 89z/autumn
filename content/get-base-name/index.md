@@ -1,26 +1,20 @@
 ---
 title: Get base name
 categories: [string]
-tags: [go, julia, php, python]
+tags: [go, php, python]
 ---
 
 ## Go
 
 {{< r "a.go" >}}
+{{< r "b.go" >}}
 
 - <https://golang.org/pkg/path#Base>
 - <https://golang.org/pkg/path#Ext>
 - <https://golang.org/pkg/path#Split>
-
-{{< r "b.go" >}}
-
 - <https://golang.org/pkg/path/filepath#Base>
 - <https://golang.org/pkg/path/filepath#Ext>
 - <https://golang.org/pkg/path/filepath#Split>
-
-## Julia
-
-<https://docs.julialang.org/en/v1/base/file#Base.Filesystem.dirname>
 
 ## PHP
 

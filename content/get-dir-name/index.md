@@ -1,24 +1,18 @@
 ---
 title: Get directory name
 categories: [string]
-tags: [go, julia, php, python]
+tags: [go, php, python]
 ---
 
 ## Go
 
 {{< r "a.go" >}}
+{{< r "b.go" >}}
 
 - <https://golang.org/pkg/path#Dir>
 - <https://golang.org/pkg/path#Split>
-
-{{< r "b.go" >}}
-
 - <https://golang.org/pkg/path/filepath#Dir>
 - <https://golang.org/pkg/path/filepath#Split>
-
-## Julia
-
-<https://docs.julialang.org/en/v1/base/file#Base.Filesystem.dirname>
 
 ## PHP
 

@@ -1,7 +1,7 @@
 ---
 title: Match string with pattern
 categories: [string]
-tags: [go, javascript, julia, php, python]
+tags: [go, javascript, php, python]
 ---
 
 ## Go
@@ -17,10 +17,6 @@ tags: [go, javascript, julia, php, python]
 
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/RegExp/test>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/RegExp>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## PHP
 

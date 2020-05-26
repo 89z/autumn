@@ -1,7 +1,7 @@
 ---
 title: Extract string by pattern
 categories: [string]
-tags: [go, javascript, julia, php, python, rust]
+tags: [go, javascript, php, python, rust]
 ---
 
 ## Go
@@ -19,14 +19,6 @@ tags: [go, javascript, julia, php, python, rust]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/match>
-
-## Julia
-
-{{< r "a.jl" >}}
-{{< r "b.jl" >}}
-
-- <https://docs.julialang.org/en/v1/base/strings#Base.eachmatch>
-- <https://docs.julialang.org/en/v1/base/strings#Base.match>
 
 ## PHP
 

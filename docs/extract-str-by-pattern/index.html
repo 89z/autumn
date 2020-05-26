@@ -21,12 +21,10 @@
    </header>
 
 <h1>Extract string by pattern</h1>
-<time>Sun May 24 2020</time>
+<time>Tue May 26 2020</time>
    
 <a href="/autumn/categories/string/">string</a>
    
-   
-<a href="/autumn/talk/extract-str-by-pattern/">Talk:Extract string by pattern</a>
    
    <h2 id="go">Go</h2>
 <p>
@@ -100,41 +98,6 @@
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a1</span>);
 </code></pre></div>
 <p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/match">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/match</a></p>
-<h2 id="julia">Julia</h2>
-<p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.jl" data-lang=".jl">s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wednesday&#34;</span>
-s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#34;e.&#34;</span>
-<span style="color:#75715e"># example 1</span>
-o1 <span style="color:#f92672">=</span> match(s2, s1)
-s3 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>match
-println(s3)
-<span style="color:#75715e"># example 2</span>
-o2 <span style="color:#f92672">=</span> eachmatch(s2, s1)
-a1 <span style="color:#f92672">=</span> collect(o2)
-println(a1)
-</code></pre></div>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.jl" data-lang=".jl">s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wednesday&#34;</span>
-s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#34;e(..)&#34;</span>
-<span style="color:#75715e"># match captures</span>
-o <span style="color:#f92672">=</span> match(s2, s1)
-a <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>captures
-println(a)
-<span style="color:#75715e"># eachmatch collect</span>
-o <span style="color:#f92672">=</span> eachmatch(s2, s1)
-a <span style="color:#f92672">=</span> collect(o)
-println(a)
-</code></pre></div></p>
-<ul>
-<li><a href="https://docs.julialang.org/en/v1/base/strings#Base.eachmatch">https://docs.julialang.org/en/v1/base/strings#Base.eachmatch</a></li>
-<li><a href="https://docs.julialang.org/en/v1/base/strings#Base.match">https://docs.julialang.org/en/v1/base/strings#Base.match</a></li>
-</ul>
 <h2 id="php">PHP</h2>
 
 
