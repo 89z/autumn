@@ -1,8 +1,12 @@
 ---
 title: Create directory
 categories: [system]
-tags: [go, julia, nim, php, python, rust]
+tags: [dart, go, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -11,17 +15,12 @@ tags: [go, julia, nim, php, python, rust]
 - <https://golang.org/pkg/os#Mkdir>
 - <https://golang.org/pkg/os#MkdirAll>
 
-## Julia
-
-{{< r "a.jl" >}}
-
-<https://docs.julialang.org/en/v1/base/file#Base.Filesystem.mkpath>
-
 ## Nim
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.github.io/Nim/os#createDir,string>
+- <https://nim-lang.github.io/Nim/os#createDir,string>
+- <https://nim-lang.github.io/Nim/os#existsOrCreateDir,string>
 
 ## PHP
 

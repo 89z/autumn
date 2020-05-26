@@ -1,5 +1,6 @@
 use std::env;
 fn main() {
-   let a1: Vec<String> = env::args().collect();
-   println!("{:?}", a1);
+   let a: Vec<String> = env::args().collect();
+   let s = &a[1];
+   println!("{}", s == "Sunday");
 }

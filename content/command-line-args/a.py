@@ -1,3 +1,3 @@
 import sys
-a1 = sys.argv
-print(a1)
+s = sys.argv[1]
+print(s == 'Sunday')

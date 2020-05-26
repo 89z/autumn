@@ -1,8 +1,12 @@
 ---
 title: Declare value
 categories: [reference]
-tags: [go, javascript, julia, nim, php, rust]
+tags: [dart, go, javascript, nim, php, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -20,10 +24,6 @@ tags: [go, javascript, julia, nim, php, rust]
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/let>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/var>
 
-## Julia
-
-{{< r "a.jl" >}}
-
 ## Nim
 
 {{< r "a.nim" >}}
@@ -40,4 +40,5 @@ tags: [go, javascript, julia, nim, php, rust]
 
 ## References
 
-<https://hyperpolyglot.org/scripting#const>
+- <https://hyperpolyglot.org/scripting#const>
+- <https://hyperpolyglot.org/web#local-var>

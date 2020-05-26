@@ -1,8 +1,12 @@
 ---
 title: Command line tools
 categories: [reference]
-tags: [go, julia, nim, php, python, rust]
+tags: [dart, go, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "dart.sh" >}}
 
 ## Go
 
@@ -11,10 +15,6 @@ tags: [go, julia, nim, php, python, rust]
 - <https://golang.org/cmd/go#hdr-Compile_and_run_Go_program>
 - <https://golang.org/cmd/go#hdr-Compile_packages_and_dependencies>
 - <https://golang.org/cmd/go#hdr-Module_maintenance>
-
-## Julia
-
-{{< r "julia.sh" >}}
 
 ## Nim
 
@@ -46,5 +46,6 @@ tags: [go, julia, nim, php, python, rust]
 
 - <https://hyperpolyglot.org/c#hello-world>
 - <https://hyperpolyglot.org/rust#compiler>
+- <https://hyperpolyglot.org/web#hello-world>
 - <https://hyperpolyglot.org/scripting#interpreter>
 - <https://rosettacode.org/wiki/Hello_world/Newbie>

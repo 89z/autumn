@@ -1,4 +1,6 @@
+package main
 import "os"
-if len(os.Args) > 1 {
-  fmt.Printf("first arg: %\n", os.Args[1])
+func main() {
+   s := os.Args[1]
+   println(s == "Sunday")
 }

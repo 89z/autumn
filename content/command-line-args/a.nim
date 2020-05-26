@@ -1,3 +1,4 @@
 import os
-let programName = getAppFilename()
-let arguments = commandLineParams()
+var a = commandLineParams()
+var s = a[0]
+echo s == "Sunday"
