@@ -1,8 +1,12 @@
 ---
 title: Add to array
 categories: [array]
-tags: [go, javascript, julia, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -17,10 +21,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/concat>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/push>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Spread_syntax>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 
@@ -49,6 +49,7 @@ tags: [go, javascript, julia, nim, php, python, rust]
 ## References
 
 - <https://hyperpolyglot.org/rust#array-back>
+- <https://hyperpolyglot.org/web#array-back>
 - <https://www.programming-idioms.org/idiom/166/concatenate-two-lists>
 - <https://www.programming-idioms.org/idiom/171/add-an-element-at-end>
 - <https://rosettacode.org/wiki/Array_concatenation>

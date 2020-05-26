@@ -1,8 +1,12 @@
 ---
 title: Add to string
 categories: [string]
-tags: [go, javascript, julia, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -24,10 +28,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/concat>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Template_literals>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 
@@ -55,7 +55,7 @@ tags: [go, javascript, julia, nim, php, python, rust]
 
 ## References
 
-- <https://hyperpolyglot.org/numerical-analysis#str-concat>
 - <https://hyperpolyglot.org/rust#str-concat>
+- <https://hyperpolyglot.org/web#str-concat>
 - <https://rosettacode.org/wiki/String_append>
 - <https://rosettacode.org/wiki/String_concatenation>

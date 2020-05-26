@@ -1,7 +1,7 @@
 ---
 title: Command line arguments
 categories: [system]
-tags: [go, julia, nim, php, python, rust]
+tags: [go, nim, php, python, rust]
 ---
 
 ## Go
@@ -9,10 +9,6 @@ tags: [go, julia, nim, php, python, rust]
 {{< r "a.go" >}}
 
 <https://golang.org/pkg/os#pkg-variables>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 
@@ -39,7 +35,6 @@ tags: [go, julia, nim, php, python, rust]
 
 ## References
 
-- <https://hyperpolyglot.org/numerical-analysis#cmd-line-arg>
 - <https://hyperpolyglot.org/scripting2#cmd-line-arg>
 - <https://www.programming-idioms.org/idiom/60/read-command-line-arg>
 - <https://rosettacode.org/wiki/Command-line_arguments>

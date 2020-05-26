@@ -1,8 +1,12 @@
 ---
 title: Comments
 categories: [reference]
-tags: [go, javascript, julia, nim, php, python, rust]
+tags: [go, javascript, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -15,10 +19,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Lexical_grammar>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 
@@ -46,6 +46,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 
 ## References
 
-- <https://hyperpolyglot.org/numerical-analysis#eol-comment>
 - <https://hyperpolyglot.org/scripting#eol-comment>
+- <https://hyperpolyglot.org/web#eol-comment>
 - <https://rosettacode.org/wiki/Comments>

@@ -1,8 +1,14 @@
 ---
 title: Add to set
 categories: [set]
-tags: [go, javascript, julia, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-core/Set/add.html>
 
 ## Go
 
@@ -15,12 +21,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Set/add>
-
-## Julia
-
-{{< r "a.jl" >}}
-
-<https://docs.julialang.org/en/v1/base/collections#Base.push!>
 
 ## Nim
 

@@ -1,8 +1,12 @@
 ---
 title: Add to map
 categories: [map]
-tags: [go, javascript, julia, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -18,12 +22,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Map/set>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Property_Accessors>
-
-## Julia
-
-{{< r "a.jl" >}}
-
-<https://docs.julialang.org/en/v1/base/collections#Base.setindex!>
 
 ## Nim
 
@@ -52,5 +50,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 ## References
 
 - <https://hyperpolyglot.org/scripting#dict-update>
+- <https://hyperpolyglot.org/web#dict-update>
 - <https://www.programming-idioms.org/idiom/172/insert-entry-in-map>
 - <https://rosettacode.org/wiki/Associative_array/Creation>
