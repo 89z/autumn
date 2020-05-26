@@ -1,8 +1,12 @@
 ---
 title: Two-way conditions
 categories: [reference]
-tags: [go, javascript, julia, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -17,10 +21,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Logical_Operators>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/if...else>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 
@@ -49,9 +49,8 @@ tags: [go, javascript, julia, nim, php, python, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#if>
-- <https://hyperpolyglot.org/numerical-analysis#if>
 - <https://hyperpolyglot.org/rust#if>
 - <https://hyperpolyglot.org/scripting#if>
+- <https://hyperpolyglot.org/web#if-note>
 - <https://rosettacode.org/wiki/Conditional_structures>
-- <https://rosettacode.org/wiki/Short-circuit_evaluation>
 - <https://www.programming-idioms.org/idiom/131/successive-condition>
