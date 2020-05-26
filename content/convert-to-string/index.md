@@ -1,7 +1,7 @@
 ---
 title: Convert to string
 categories: [string]
-tags: [go, javascript, julia, php, python]
+tags: [go, javascript, php, python]
 ---
 
 ## Go
@@ -15,10 +15,6 @@ tags: [go, javascript, julia, php, python]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## PHP
 
@@ -36,5 +32,4 @@ tags: [go, javascript, julia, php, python]
 
 ## References
 
-- <https://hyperpolyglot.org/numerical-analysis#sprintf>
-- <https://hyperpolyglot.org/scripting#format-str>
+<https://hyperpolyglot.org/scripting#format-str>

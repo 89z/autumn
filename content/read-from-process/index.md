@@ -1,8 +1,14 @@
 ---
 title: Read from process
 categories: [input-output]
-tags: [go, julia, nim, php, python]
+tags: [go, nim, php, python]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-io/Process-class.html>
 
 ## Go
 
@@ -11,12 +17,6 @@ tags: [go, julia, nim, php, python]
 
 - <https://golang.org/pkg/os/exec>
 - <https://golang.org/pkg/strings>
-
-## Julia
-
-{{< r "a.jl" >}}
-
-<https://docs.julialang.org/en/v1/manual/running-external-programs>
 
 ## Nim
 
@@ -44,4 +44,5 @@ tags: [go, julia, nim, php, python]
 ## References
 
 - <https://hyperpolyglot.org/scripting2#cmd-subst>
+- <https://hyperpolyglot.org/web#external-cmd>
 - <https://rosettacode.org/wiki/Get_system_command_output>

@@ -1,8 +1,14 @@
 ---
 title: Start process
 categories: [system]
-tags: [go, julia, nim, php, python]
+tags: [dart, go, nim, php, python]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-io/Process/runSync.html>
 
 ## Go
 
@@ -11,12 +17,6 @@ tags: [go, julia, nim, php, python]
 
 - <https://golang.org/pkg/os/exec#Cmd.Run>
 - <https://golang.org/pkg/os/exec#Cmd.Start>
-
-## Julia
-
-{{< r "a.jl" >}}
-
-<https://docs.julialang.org/en/v1/manual/running-external-programs>
 
 ## Nim
 

@@ -1,5 +1,6 @@
 ---
-title: 'Tag talk:Julia'
+title: Julia language
+tags: [draft]
 ---
 
 ## Documentation

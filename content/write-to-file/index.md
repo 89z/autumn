@@ -1,8 +1,14 @@
 ---
 title: Write to file
 categories: [input-output]
-tags: [go, julia, nim, php, python, rust]
+tags: [dart, go, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-io/File-class.html>
 
 ## Go
 
@@ -15,10 +21,6 @@ tags: [go, julia, nim, php, python, rust]
 - <https://golang.org/pkg/io#Copy>
 - <https://golang.org/pkg/os#File.WriteString>
 - <https://golang.org/pkg/strings#Reader.WriteTo>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 
@@ -51,6 +53,5 @@ tags: [go, julia, nim, php, python, rust]
 
 ## References
 
-- <https://hyperpolyglot.org/numerical-analysis#write-str>
 - <https://rosettacode.org/wiki/Write_entire_file>
 - <https://rosettacode.org/wiki/Create_a_file>

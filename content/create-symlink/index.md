@@ -1,7 +1,7 @@
 ---
 title: Create symlink
 categories: [system]
-tags: [go, julia, php, python]
+tags: [go, php, python]
 ---
 
 ## Go
@@ -9,10 +9,6 @@ tags: [go, julia, php, python]
 {{< r "a.go" >}}
 
 <https://golang.org/pkg/os#Symlink>
-
-## Julia
-
-<https://docs.julialang.org/en/v1/base/file#Base.Filesystem.symlink>
 
 ## PHP
 

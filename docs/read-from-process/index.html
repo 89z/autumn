@@ -21,12 +21,25 @@
    </header>
 
 <h1>Read from process</h1>
-<time>Thu May 21 2020</time>
+<time>Tue May 26 2020</time>
    
 <a href="/autumn/categories/input-output/">input-output</a>
    
    
-   <h2 id="go">Go</h2>
+   <h2 id="dart">Dart</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
+main() {
+   Process.run(<span style="color:#e6db74">&#39;less&#39;</span>, [<span style="color:#e6db74">&#39;-V&#39;</span>]).then((ProcessResult results) {
+      stdout.write(results.stdout);
+   });
+}
+</code></pre></div>
+<p><a href="https://api.dart.dev/dart-io/Process-class.html">https://api.dart.dev/dart-io/Process-class.html</a></p>
+<h2 id="go">Go</h2>
 <p>
 
 
@@ -66,15 +79,6 @@
 <li><a href="https://golang.org/pkg/os/exec">https://golang.org/pkg/os/exec</a></li>
 <li><a href="https://golang.org/pkg/strings">https://golang.org/pkg/strings</a></li>
 </ul>
-<h2 id="julia">Julia</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.jl" data-lang=".jl">s1 <span style="color:#f92672">=</span> read(<span style="color:#e6db74">`cal`</span>, String)
-print(s1)
-</code></pre></div>
-<p><a href="https://docs.julialang.org/en/v1/manual/running-external-programs">https://docs.julialang.org/en/v1/manual/running-external-programs</a></p>
 <h2 id="nim">Nim</h2>
 
 
@@ -138,6 +142,7 @@ s3 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.<
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#cmd-subst">https://hyperpolyglot.org/scripting2#cmd-subst</a></li>
+<li><a href="https://hyperpolyglot.org/web#external-cmd">https://hyperpolyglot.org/web#external-cmd</a></li>
 <li><a href="https://rosettacode.org/wiki/Get_system_command_output">https://rosettacode.org/wiki/Get_system_command_output</a></li>
 </ul>
 

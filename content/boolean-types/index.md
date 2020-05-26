@@ -1,7 +1,7 @@
 ---
 title: Boolean types
 categories: [reference]
-tags: [dart, go, javascript, julia, php, python, rust]
+tags: [dart, go, javascript, php, python, rust]
 ---
 
 ## Dart
@@ -19,10 +19,6 @@ tags: [dart, go, javascript, julia, php, python, rust]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Boolean>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## PHP
 
@@ -43,6 +39,5 @@ tags: [dart, go, javascript, julia, php, python, rust]
 
 ## References
 
-- <https://hyperpolyglot.org/numerical-analysis#true-false>
 - <https://hyperpolyglot.org/scripting#true-false>
 - <https://rosettacode.org/wiki/Boolean_values>

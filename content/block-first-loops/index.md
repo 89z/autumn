@@ -1,8 +1,12 @@
 ---
 title: Block-first loops
 categories: [reference]
-tags: [go, javascript, php, python]
+tags: [dart, go, javascript, php, python]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -37,5 +41,6 @@ Exclude `range` as it is ambiguous.
 ## References
 
 - <https://hyperpolyglot.org/scripting#while>
+- <https://hyperpolyglot.org/web#infinite-loop>
 - <https://www.programming-idioms.org/idiom/78/do-while-loop>
 - <https://rosettacode.org/wiki/Loops/Do-while>
