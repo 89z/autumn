@@ -1,6 +1,11 @@
-// example 1
-for (var i in [1, 2, 3]) {
-  print(i);
+main() {
+   var a = ['Sunday', 'Monday'];
+   // example 1
+   for (var s in a) {
+      print(s);
+   }
+   // example 2
+   a.forEach((s) => print(s));
+   // example 3
+   a.forEach(print);
 }
-// example 2
-[1, 2, 3].forEach((i) => print(i));

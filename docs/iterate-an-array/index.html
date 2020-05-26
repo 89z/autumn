@@ -33,12 +33,17 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart"><span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> i <span style="color:#66d9ef">in</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]) {
-  print(i);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart">main() {
+   <span style="color:#66d9ef">var</span> a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sunday&#39;</span>, <span style="color:#e6db74">&#39;Monday&#39;</span>];
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> s <span style="color:#66d9ef">in</span> a) {
+      print(s);
+   }
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   a.forEach((s) <span style="color:#f92672">=&gt;</span> print(s));
+   <span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span>   a.forEach(print);
 }
-<span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>].forEach((i) <span style="color:#f92672">=&gt;</span> print(i));
 </code></pre></div>
 <h2 id="go">Go</h2>
 
