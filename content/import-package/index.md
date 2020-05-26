@@ -1,18 +1,18 @@
 ---
 title: Import package
 categories: [reference]
-tags: [go, julia, nim, php, python, rust]
+tags: [dart, go, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
 {{< r "a.go" >}}
 
 <https://golang.org/ref/spec#Import_declarations>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 

@@ -1,8 +1,12 @@
 ---
 title: Get array length
 categories: [array]
-tags: [go, javascript, julia, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -15,10 +19,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/length>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 
@@ -46,7 +46,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#array-size>
-- <https://hyperpolyglot.org/numerical-analysis#array-size>
 - <https://hyperpolyglot.org/scripting#array-size>
 - <https://www.programming-idioms.org/idiom/117/get-list-size>
 - <https://rosettacode.org/wiki/Array_length>

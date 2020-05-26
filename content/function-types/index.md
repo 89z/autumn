@@ -1,8 +1,12 @@
 ---
 title: Function types
 categories: [reference]
-tags: [go, javascript, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -47,5 +51,6 @@ tags: [go, javascript, nim, php, python, rust]
 
 - <https://hyperpolyglot.org/rust#def-func>
 - <https://hyperpolyglot.org/scripting#def-func>
+- <https://hyperpolyglot.org/web#def-func>
 - <https://www.programming-idioms.org/idiom/4/create-a-function>
 - <https://rosettacode.org/wiki/Function_definition>

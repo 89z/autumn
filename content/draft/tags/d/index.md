@@ -21,11 +21,6 @@ module is in file which cannot be read:
 
 <https://github.com/adamdruppe/arsd/issues/194>
 
-Segmentation fault with HTTP client:
-
-- <https://github.com/huntlabs/hunt-framework/issues/146>
-- <https://github.com/huntlabs/hunt-http/issues/15>
-
 Static LibCurl:
 
 <https://github.com/ldc-developers/ldc/issues/3376>
@@ -33,6 +28,10 @@ Static LibCurl:
 Static linking:
 
 <https://github.com/vibe-d/vibe.d/issues/2282>
+
+Unresolvable dependencies to package hunt
+
+<https://github.com/huntlabs/hunt-http/issues/16>
 
 ## Setup
 

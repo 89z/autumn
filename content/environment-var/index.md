@@ -1,8 +1,14 @@
 ---
 title: Environment variables
 categories: [system]
-tags: [go, julia, nim, php, python, rust]
+tags: [dart, go, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-io/Platform-class.html>
 
 ## Go
 
@@ -10,10 +16,6 @@ tags: [go, julia, nim, php, python, rust]
 
 - <https://golang.org/pkg/os#Getenv>
 - <https://golang.org/pkg/os#LookupEnv>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 
@@ -41,7 +43,6 @@ tags: [go, julia, nim, php, python, rust]
 
 ## References
 
-- <https://hyperpolyglot.org/numerical-analysis#env-var>
 - <https://hyperpolyglot.org/scripting2#env-var>
 - <https://www.programming-idioms.org/idiom/205/get-an-environment-variable>
 - <https://rosettacode.org/wiki/Environment_variables>

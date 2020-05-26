@@ -1,18 +1,20 @@
 ---
 title: Get string length
 categories: [string]
-tags: [go, javascript, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
 {{< r "len.go" >}}
-
-<https://golang.org/ref/spec#Length_and_capacity>
-
 {{< r "uni.go" >}}
 
-<https://golang.org/pkg/unicode/utf8#RuneCountInString>
+- <https://golang.org/pkg/unicode/utf8#RuneCountInString>
+- <https://golang.org/ref/spec#Length_and_capacity>
 
 ## JavaScript
 
@@ -56,5 +58,6 @@ tags: [go, javascript, nim, php, python, rust]
 ## References
 
 - <https://hyperpolyglot.org/scripting#str-len>
+- <https://hyperpolyglot.org/web#str-len>
 - <https://rosettacode.org/wiki/String_length>
 - <https://www.programming-idioms.org/idiom/169/string-length>
