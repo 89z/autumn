@@ -1,8 +1,14 @@
 ---
 title: Encode JSON
 categories: [file-format]
-tags: [go, javascript, julia, nim, php, python]
+tags: [dart, go, javascript, nim, php, python]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-convert/dart-convert-library.html>
 
 ## Go
 
@@ -15,10 +21,6 @@ tags: [go, javascript, julia, nim, php, python]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify>
-
-## Julia
-
-<https://github.com/JuliaIO/JSON.jl>
 
 ## Nim
 

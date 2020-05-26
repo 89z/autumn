@@ -1,8 +1,14 @@
 ---
 title: Read from file
 categories: [input-output]
-tags: [go, julia, nim, php, python, rust]
+tags: [dart, go, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-io/File/readAsStringSync.html>
 
 ## Go
 
@@ -15,10 +21,6 @@ tags: [go, julia, nim, php, python, rust]
 - <https://golang.org/pkg/io#Copy>
 - <https://golang.org/pkg/io/ioutil#ReadAll>
 - <https://golang.org/pkg/io/ioutil#ReadFile>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 
@@ -52,5 +54,6 @@ tags: [go, julia, nim, php, python, rust]
 
 - <https://hyperpolyglot.org/c#read-file-str>
 - <https://hyperpolyglot.org/scripting2#read-file-str>
+- <https://hyperpolyglot.org/web#read-file-str>
 - <https://www.programming-idioms.org/idiom/58/extract-file-content>
 - <https://rosettacode.org/wiki/Read_entire_file>

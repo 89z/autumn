@@ -21,12 +21,25 @@
    </header>
 
 <h1>Read from file</h1>
-<time>Wed May 20 2020</time>
+<time>Tue May 26 2020</time>
    
 <a href="/autumn/categories/input-output/">input-output</a>
    
    
-   <h2 id="go">Go</h2>
+   <h2 id="dart">Dart</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
+main() {
+   <span style="color:#66d9ef">var</span> o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File(<span style="color:#e6db74">&#39;a.txt&#39;</span>);
+   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> o.readAsStringSync();
+   print(s);
+}
+</code></pre></div>
+<p><a href="https://api.dart.dev/dart-io/File/readAsStringSync.html">https://api.dart.dev/dart-io/File/readAsStringSync.html</a></p>
+<h2 id="go">Go</h2>
 <p>
 
 
@@ -118,15 +131,6 @@
 <li><a href="https://golang.org/pkg/io/ioutil#ReadAll">https://golang.org/pkg/io/ioutil#ReadAll</a></li>
 <li><a href="https://golang.org/pkg/io/ioutil#ReadFile">https://golang.org/pkg/io/ioutil#ReadFile</a></li>
 </ul>
-<h2 id="julia">Julia</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.jl" data-lang=".jl">o1 <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
-s1 <span style="color:#f92672">=</span> readline(o1)
-show(s1)
-</code></pre></div>
 <h2 id="nim">Nim</h2>
 
 
@@ -205,6 +209,7 @@ s2 <span style="color:#f92672">=</span> o2<span style="color:#f92672">.</span>re
 <ul>
 <li><a href="https://hyperpolyglot.org/c#read-file-str">https://hyperpolyglot.org/c#read-file-str</a></li>
 <li><a href="https://hyperpolyglot.org/scripting2#read-file-str">https://hyperpolyglot.org/scripting2#read-file-str</a></li>
+<li><a href="https://hyperpolyglot.org/web#read-file-str">https://hyperpolyglot.org/web#read-file-str</a></li>
 <li><a href="https://www.programming-idioms.org/idiom/58/extract-file-content">https://www.programming-idioms.org/idiom/58/extract-file-content</a></li>
 <li><a href="https://rosettacode.org/wiki/Read_entire_file">https://rosettacode.org/wiki/Read_entire_file</a></li>
 </ul>

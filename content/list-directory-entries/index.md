@@ -1,8 +1,14 @@
 ---
 title: List directory entries
 categories: [system]
-tags: [go, julia, nim, php, python, rust]
+tags: [dart, go, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-io/Directory-class.html>
 
 ## Go
 
@@ -13,10 +19,6 @@ tags: [go, julia, nim, php, python, rust]
 - <https://golang.org/pkg/io/ioutil#ReadDir>
 - <https://golang.org/pkg/os#File.Readdirnames>
 - <https://golang.org/pkg/path/filepath#Glob>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 

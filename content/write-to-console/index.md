@@ -1,8 +1,12 @@
 ---
 title: Write to console
 categories: [input-output]
-tags: [go, javascript, julia, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -21,10 +25,6 @@ tags: [go, javascript, julia, nim, php, python, rust]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/API/Console/log>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 

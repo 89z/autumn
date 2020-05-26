@@ -1,8 +1,12 @@
 ---
 title: Read from console
 categories: [input-output]
-tags: [go, julia, nim, php, python, rust]
+tags: [dart, go, nim, php, python, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -11,10 +15,6 @@ tags: [go, julia, nim, php, python, rust]
 
 - <https://golang.org/pkg/bufio#Scanner.Scan>
 - <https://golang.org/pkg/fmt#Scan>
-
-## Julia
-
-{{< r "a.jl" >}}
 
 ## Nim
 
@@ -48,4 +48,4 @@ tags: [go, julia, nim, php, python, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#std-file-handles>
-- <https://hyperpolyglot.org/numerical-analysis#read-line-stdin>
+- <https://rosettacode.org/wiki/User_input/Text>
