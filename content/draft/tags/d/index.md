@@ -13,6 +13,10 @@ How to use https:
 
 <https://github.com/Kripth/lighttp/issues/2>
 
+HTTPS failure
+
+<https://github.com/huntlabs/hunt-http/issues/18>
+
 lacks some features, such as the HTTP client implementation:
 
 <https://github.com/vibe-d/vibe-http#experimental-status>
@@ -28,10 +32,6 @@ Static LibCurl:
 Static linking:
 
 <https://github.com/vibe-d/vibe.d/issues/2282>
-
-Unresolvable dependencies to package hunt
-
-<https://github.com/huntlabs/hunt-http/issues/16>
 
 ## Setup
 

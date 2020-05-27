@@ -21,14 +21,44 @@
    </header>
 
 <h1>Common Lisp language</h1>
-<time>Sat May 23 2020</time>
+<time>Wed May 27 2020</time>
    
    
-   <ul>
-<li><a href="https://ccl.clozure.com/download.html">https://ccl.clozure.com/download.html</a></li>
-<li><a href="https://github.com/portacle/portacle">https://github.com/portacle/portacle</a></li>
-<li><a href="https://sourceforge.net/projects/sbcl">https://sourceforge.net/projects/sbcl</a></li>
+   <h2 id="examples">Examples</h2>
+<p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.lisp" data-lang=".lisp">(<span style="color:#a6e22e">format</span> <span style="color:#66d9ef">t</span> <span style="color:#e6db74">&#34;~D&#34;</span> <span style="color:#66d9ef">t</span>)
+(quit)
+</code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.lisp" data-lang=".lisp">(<span style="color:#a6e22e">format</span> <span style="color:#66d9ef">t</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>)
+(quit)
+</code></pre></div></p>
+<h2 id="http">HTTP</h2>
+<p>Install quicklisp:</p>
+<pre><code>wx86cl -l quicklisp.lisp
+(quicklisp-quickstart:install)
+</code></pre><p><a href="https://www.quicklisp.org">https://www.quicklisp.org</a></p>
+<p>Then dexador:</p>
+<pre><code>(ql:quickload &quot;dexador&quot;)
+</code></pre><ul>
+<li><a href="https://github.com/edicl/drakma">https://github.com/edicl/drakma</a></li>
+<li><a href="https://github.com/fukamachi/dexador">https://github.com/fukamachi/dexador</a></li>
+<li><a href="https://github.com/roswell/roswell">https://github.com/roswell/roswell</a></li>
+<li><a href="https://lispcookbook.github.io/cl-cookbook/web-scraping">https://lispcookbook.github.io/cl-cookbook/web-scraping</a></li>
 </ul>
+<h2 id="distros">Distros</h2>
+<p><strong>Clozure</strong>:</p>
+<p><a href="https://github.com/Clozure/ccl">https://github.com/Clozure/ccl</a></p>
+<p><strong>Portacle</strong>:</p>
+<p><a href="https://github.com/portacle/portacle">https://github.com/portacle/portacle</a></p>
+<p><strong>Steel Bank</strong>:</p>
+<p><a href="https://sourceforge.net/projects/sbcl">https://sourceforge.net/projects/sbcl</a></p>
 
 
 </body>
