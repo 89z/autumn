@@ -21,7 +21,7 @@
    </header>
 
 <h1>HTTP GET</h1>
-<time>Mon May 25 2020</time>
+<time>Wed May 27 2020</time>
    
 <a href="/autumn/categories/network/">network</a>
    
@@ -140,6 +140,18 @@ y <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>read
 stdout<span style="color:#f92672">.</span>buffer<span style="color:#f92672">.</span>write(y)
 </code></pre></div>
 <p><a href="https://docs.python.org/library/urllib.request.html#urllib.request.urlopen">https://docs.python.org/library/urllib.request.html#urllib.request.urlopen</a></p>
+<h2 id="racket">Racket</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rkt" data-lang=".rkt"><span style="color:#f92672">#lang </span>racket
+(<span style="color:#66d9ef">require</span> net/url)
+(copy-port
+   (get-pure-port (string-&gt;url <span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>))
+   (current-output-port)
+)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
 <h2 id="rust">Rust</h2>
 
 

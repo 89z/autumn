@@ -1,7 +1,7 @@
 ---
 title: Array types
 categories: [array]
-tags: [dart, go, javascript, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -39,12 +39,17 @@ tags: [dart, go, javascript, nim, php, python, rust]
 
 <https://docs.python.org/library/stdtypes.html#list>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
 ## Rust
 
 {{< r "a.rs" >}}
 
 ## References
 
+- <https://hyperpolyglot.org/lisp#lists>
 - <https://hyperpolyglot.org/rust#declare-array>
 - <https://hyperpolyglot.org/scripting#arrays>
 - <https://hyperpolyglot.org/web#array-literal>

@@ -1,7 +1,7 @@
 ---
 title: Write to console
 categories: [input-output]
-tags: [dart, go, javascript, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -45,12 +45,19 @@ tags: [dart, go, javascript, nim, php, python, rust]
 - <https://docs.python.org/library/functions.html#print>
 - <https://docs.python.org/library/io.html#io.TextIOBase.write>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/Writing.html>
+
 ## Rust
 
 {{< r "a.rs" >}}
 
 ## References
 
+- <https://hyperpolyglot.org/lisp#format-stdout>
 - <https://hyperpolyglot.org/scripting2#write-stdout>
 - <https://www.programming-idioms.org/idiom/1>
 - <https://rosettacode.org/wiki/Hello_world/Newline_omission>

@@ -1,7 +1,7 @@
 ---
 title: Command line tools
 categories: [reference]
-tags: [dart, go, nim, php, python, rust]
+tags: [dart, go, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -36,6 +36,10 @@ tags: [dart, go, nim, php, python, rust]
 
 <https://docs.python.org/using/cmdline.html>
 
+## Racket
+
+{{< r "racket.sh" >}}
+
 ## Rust
 
 {{< r "rust.sh" >}}
@@ -45,6 +49,7 @@ tags: [dart, go, nim, php, python, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#hello-world>
+- <https://hyperpolyglot.org/lisp#interpreter>
 - <https://hyperpolyglot.org/rust#compiler>
 - <https://hyperpolyglot.org/web#hello-world>
 - <https://hyperpolyglot.org/scripting#interpreter>

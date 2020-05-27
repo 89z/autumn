@@ -1,7 +1,7 @@
 ---
 title: HTTP GET
 categories: [network]
-tags: [dart, go, javascript, php, python, rust]
+tags: [dart, go, javascript, php, python, racket, rust]
 ---
 
 ## Dart
@@ -37,6 +37,10 @@ tags: [dart, go, javascript, php, python, rust]
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/urllib.request.html#urllib.request.urlopen>
+
+## Racket
+
+{{< r "a.rkt" >}}
 
 ## Rust
 

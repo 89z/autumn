@@ -1,7 +1,7 @@
 ---
 title: Boolean types
 categories: [reference]
-tags: [dart, go, javascript, php, python, rust]
+tags: [dart, go, javascript, php, python, racket, rust]
 ---
 
 ## Dart
@@ -33,11 +33,18 @@ tags: [dart, go, javascript, php, python, rust]
 - <https://docs.python.org/library/constants.html#False>
 - <https://docs.python.org/library/constants.html#True>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/booleans.html>
+
 ## Rust
 
 {{< r "a.rs" >}}
 
 ## References
 
+- <https://hyperpolyglot.org/lisp#true-false>
 - <https://hyperpolyglot.org/scripting#true-false>
 - <https://rosettacode.org/wiki/Boolean_values>

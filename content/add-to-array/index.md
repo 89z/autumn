@@ -1,7 +1,7 @@
 ---
 title: Add to array
 categories: [array]
-tags: [dart, go, javascript, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -42,12 +42,17 @@ tags: [dart, go, javascript, nim, php, python, rust]
 
 <https://docs.python.org/library/stdtypes.html#typesseq-mutable>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
 ## Rust
 
 {{< r "a.rs" >}}
 
 ## References
 
+- <https://hyperpolyglot.org/lisp#lists>
 - <https://hyperpolyglot.org/rust#array-back>
 - <https://hyperpolyglot.org/web#array-back>
 - <https://www.programming-idioms.org/idiom/166/concatenate-two-lists>
