@@ -24,7 +24,14 @@
 <time>Wed May 27 2020</time>
    
    
-   <h2 id="examples">Examples</h2>
+   <h2 id="distros">Distros</h2>
+<p><strong>Clozure</strong>:</p>
+<p><a href="https://github.com/Clozure/ccl">https://github.com/Clozure/ccl</a></p>
+<p><strong>Portacle</strong>:</p>
+<p><a href="https://github.com/portacle/portacle">https://github.com/portacle/portacle</a></p>
+<p><strong>Steel Bank</strong>:</p>
+<p><a href="https://sourceforge.net/projects/sbcl">https://sourceforge.net/projects/sbcl</a></p>
+<h2 id="examples">Examples</h2>
 <p>
 
 
@@ -40,25 +47,16 @@
 (quit)
 </code></pre></div></p>
 <h2 id="http">HTTP</h2>
-<p>Install quicklisp:</p>
+<pre><code>(ql:quickload &quot;dexador&quot;)
+</code></pre><p><a href="https://github.com/fukamachi/dexador">https://github.com/fukamachi/dexador</a></p>
+<h2 id="issues">Issues</h2>
+<p>QuickList init speed</p>
+<p><a href="https://github.com/quicklisp/quicklisp-client/issues/197">https://github.com/quicklisp/quicklisp-client/issues/197</a></p>
+<h2 id="setup">Setup</h2>
 <pre><code>wx86cl -l quicklisp.lisp
 (quicklisp-quickstart:install)
+(ql:add-to-init-file)
 </code></pre><p><a href="https://www.quicklisp.org">https://www.quicklisp.org</a></p>
-<p>Then dexador:</p>
-<pre><code>(ql:quickload &quot;dexador&quot;)
-</code></pre><ul>
-<li><a href="https://github.com/edicl/drakma">https://github.com/edicl/drakma</a></li>
-<li><a href="https://github.com/fukamachi/dexador">https://github.com/fukamachi/dexador</a></li>
-<li><a href="https://github.com/roswell/roswell">https://github.com/roswell/roswell</a></li>
-<li><a href="https://lispcookbook.github.io/cl-cookbook/web-scraping">https://lispcookbook.github.io/cl-cookbook/web-scraping</a></li>
-</ul>
-<h2 id="distros">Distros</h2>
-<p><strong>Clozure</strong>:</p>
-<p><a href="https://github.com/Clozure/ccl">https://github.com/Clozure/ccl</a></p>
-<p><strong>Portacle</strong>:</p>
-<p><a href="https://github.com/portacle/portacle">https://github.com/portacle/portacle</a></p>
-<p><strong>Steel Bank</strong>:</p>
-<p><a href="https://sourceforge.net/projects/sbcl">https://sourceforge.net/projects/sbcl</a></p>
 
 
 </body>
