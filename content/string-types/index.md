@@ -1,7 +1,7 @@
 ---
 title: String types
 categories: [string]
-tags: [dart, go, javascript, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -43,12 +43,17 @@ tags: [dart, go, javascript, nim, php, python, rust]
 - <https://docs.python.org/library/io.html#io.StringIO>
 - <https://docs.python.org/reference/lexical_analysis.html#strings>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
 ## Rust
 
 {{< r "a.rs" >}}
 
 ## References
 
+- <https://hyperpolyglot.org/lisp#str-literal>
 - <https://www.programming-idioms.org/idiom/48/multi-line-string>
 - <https://rosettacode.org/wiki/Here_document>
 - <https://rosettacode.org/wiki/Literals/String>

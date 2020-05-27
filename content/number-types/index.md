@@ -1,7 +1,7 @@
 ---
 title: Number types
 categories: [number]
-tags: [dart, go, javascript, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -38,6 +38,10 @@ tags: [dart, go, javascript, nim, php, python, rust]
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#typesnumeric>
+
+## Racket
+
+{{< r "a.rkt" >}}
 
 ## Rust
 

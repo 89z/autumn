@@ -1,7 +1,7 @@
 ---
 title: Add to map
 categories: [map]
-tags: [dart, go, javascript, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -41,6 +41,10 @@ tags: [dart, go, javascript, nim, php, python, rust]
 
 <https://docs.python.org/library/stdtypes.html#dict>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
 ## Rust
 
 {{< r "a.rs" >}}
@@ -49,6 +53,7 @@ tags: [dart, go, javascript, nim, php, python, rust]
 
 ## References
 
+- <https://hyperpolyglot.org/lisp#dict-update>
 - <https://hyperpolyglot.org/scripting#dict-update>
 - <https://hyperpolyglot.org/web#dict-update>
 - <https://www.programming-idioms.org/idiom/172/insert-entry-in-map>

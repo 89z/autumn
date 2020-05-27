@@ -21,7 +21,7 @@
    </header>
 
 <h1>Import package</h1>
-<time>Tue May 26 2020</time>
+<time>Wed May 27 2020</time>
    
 <a href="/autumn/categories/reference/">reference</a>
    
@@ -90,6 +90,18 @@ main() {
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">import</span> sys<span style="color:#f92672">,</span> os
 </code></pre></div></p>
 <p><a href="https://docs.python.org/reference/simple_stmts.html#import">https://docs.python.org/reference/simple_stmts.html#import</a></p>
+<h2 id="racket">Racket</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rkt" data-lang=".rkt"><span style="color:#f92672">#lang </span>racket
+(<span style="color:#66d9ef">require</span> net/url)
+(copy-port
+   (get-pure-port (string-&gt;url <span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>))
+   (current-output-port)
+)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
 <h2 id="rust">Rust</h2>
 
 
@@ -110,6 +122,7 @@ main() {
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#alias-namespace">https://hyperpolyglot.org/c#alias-namespace</a></li>
+<li><a href="https://hyperpolyglot.org/lisp#libraries-namespaces">https://hyperpolyglot.org/lisp#libraries-namespaces</a></li>
 <li><a href="https://hyperpolyglot.org/scripting2#load-lib">https://hyperpolyglot.org/scripting2#load-lib</a></li>
 <li><a href="https://rosettacode.org/wiki/Include_a_file">https://rosettacode.org/wiki/Include_a_file</a></li>
 </ul>

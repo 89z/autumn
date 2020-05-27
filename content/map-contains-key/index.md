@@ -14,11 +14,9 @@ tags: [go, javascript, php, python]
 
 {{< r "a.js" >}}
 
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Reflect/has>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/in>
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/Object/hasOwnProperty` >}}
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/Reflect/has` >}}
 
 ## PHP
 
