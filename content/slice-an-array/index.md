@@ -1,7 +1,7 @@
 ---
 title: Slice an array
 categories: [array]
-tags: [dart, go, javascript, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -43,6 +43,10 @@ tags: [dart, go, javascript, nim, php, python, rust]
 - <https://docs.python.org/library/functions.html#slice>
 - <https://docs.python.org/library/stdtypes.html#mutable-sequence-types>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
 ## Rust
 
 {{< r "a.rs" >}}
@@ -50,6 +54,7 @@ tags: [dart, go, javascript, nim, php, python, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#resizable-array-lookup>
+- <https://hyperpolyglot.org/lisp#lists>
 - <https://hyperpolyglot.org/scripting#array-lookup>
 - <https://hyperpolyglot.org/web#array-lookup>
 - <https://www.programming-idioms.org/idiom/165/last-element>

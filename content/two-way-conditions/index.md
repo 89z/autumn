@@ -1,7 +1,7 @@
 ---
 title: Two-way conditions
 categories: [reference]
-tags: [dart, go, javascript, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -42,6 +42,12 @@ tags: [dart, go, javascript, nim, php, python, rust]
 - <https://docs.python.org/reference/compound_stmts.html#if>
 - <https://docs.python.org/reference/expressions.html#if-expr>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/if.html>
+
 ## Rust
 
 {{< r "a.rs" >}}
@@ -49,6 +55,7 @@ tags: [dart, go, javascript, nim, php, python, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#if>
+- <https://hyperpolyglot.org/lisp#execution-control>
 - <https://hyperpolyglot.org/rust#if>
 - <https://hyperpolyglot.org/scripting#if>
 - <https://hyperpolyglot.org/web#if-note>

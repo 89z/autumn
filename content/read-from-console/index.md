@@ -1,7 +1,7 @@
 ---
 title: Read from console
 categories: [input-output]
-tags: [dart, go, nim, php, python, rust]
+tags: [dart, go, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -39,6 +39,10 @@ tags: [dart, go, nim, php, python, rust]
 - <https://docs.python.org/library/sys.html#sys.stdin>
 - <https://docs.python.org/library/sys.html#sys.stdout>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
 ## Rust
 
 {{< r "a.rs" >}}
@@ -48,4 +52,5 @@ tags: [dart, go, nim, php, python, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#std-file-handles>
+- <https://hyperpolyglot.org/lisp#read-stdin>
 - <https://rosettacode.org/wiki/User_input/Text>

@@ -35,7 +35,8 @@ tags: [go, php, python, racket, rust]
 
 ## Racket
 
-{{< r "a.rkt" >}}
+{{< r "error.rkt" >}}
+{{< r "exit.rkt" >}}
 
 ## Rust
 

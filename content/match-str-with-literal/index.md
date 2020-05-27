@@ -1,7 +1,7 @@
 ---
 title: Match string with literal
 categories: [string]
-tags: [dart, go, javascript, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -45,6 +45,12 @@ tags: [dart, go, javascript, nim, php, python, rust]
 - <https://docs.python.org/library/stdtypes.html#str.endswith>
 - <https://docs.python.org/library/stdtypes.html#str.startswith>
 - <https://docs.python.org/reference/expressions.html#in>
+
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/strings.html>
 
 ## Rust
 
