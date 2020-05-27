@@ -1,7 +1,7 @@
 ---
 title: Join an array
 categories: [array, string]
-tags: [dart, go, javascript, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -39,12 +39,17 @@ tags: [dart, go, javascript, nim, php, python, rust]
 
 <https://docs.python.org/library/stdtypes.html#str.join>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
 ## Rust
 
 {{< r "a.rs" >}}
 
 ## References
 
+- <https://hyperpolyglot.org/lisp#str-join>
 - <https://hyperpolyglot.org/scripting#str-join>
 - <https://hyperpolyglot.org/web#str-join>
 - <https://www.programming-idioms.org/idiom/53/join-a-list>

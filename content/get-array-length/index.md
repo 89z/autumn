@@ -1,7 +1,7 @@
 ---
 title: Get array length
 categories: [array]
-tags: [dart, go, javascript, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -39,6 +39,10 @@ tags: [dart, go, javascript, nim, php, python, rust]
 
 <https://docs.python.org/library/functions.html#len>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
 ## Rust
 
 {{< r "a.rs" >}}
@@ -46,6 +50,7 @@ tags: [dart, go, javascript, nim, php, python, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#array-size>
+- <https://hyperpolyglot.org/lisp#lists>
 - <https://hyperpolyglot.org/scripting#array-size>
 - <https://www.programming-idioms.org/idiom/117/get-list-size>
 - <https://rosettacode.org/wiki/Array_length>

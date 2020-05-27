@@ -1,6 +1,8 @@
 #lang racket
-(define s "Sunday")
-(define a
-   (string->list s)
-)
-(println a)
+(define s "Sunday Monday")
+; example 1
+(string-split s " ")
+; example 2
+(string-split s)
+; example 3
+(string->list s)

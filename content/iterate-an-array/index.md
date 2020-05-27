@@ -1,7 +1,7 @@
 ---
 title: Iterate an array
 categories: [iterate, array]
-tags: [dart, go, javascript, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -45,12 +45,17 @@ tags: [dart, go, javascript, nim, php, python, rust]
 - <https://docs.python.org/library/functions.html#enumerate>
 - <https://docs.python.org/reference/compound_stmts.html#for>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
 ## Rust
 
 {{< r "a.rs" >}}
 
 ## References
 
+- <https://hyperpolyglot.org/lisp#lists>
 - <https://hyperpolyglot.org/rust#iterate-over-array>
 - <https://hyperpolyglot.org/web#iterate-over-array>
 - <https://www.programming-idioms.org/idiom/6/iterate-over-list-val>
