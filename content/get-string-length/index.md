@@ -1,7 +1,7 @@
 ---
 title: Get string length
 categories: [string]
-tags: [dart, go, javascript, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -49,6 +49,12 @@ tags: [dart, go, javascript, nim, php, python, rust]
 - <https://docs.python.org/library/functions.html#len>
 - <https://docs.python.org/library/stdtypes.html#str.encode>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/strings.html>
+
 ## Rust
 
 {{< r "a.rs" >}}
@@ -57,6 +63,7 @@ tags: [dart, go, javascript, nim, php, python, rust]
 
 ## References
 
+- <https://hyperpolyglot.org/lisp#str-len>
 - <https://hyperpolyglot.org/scripting#str-len>
 - <https://hyperpolyglot.org/web#str-len>
 - <https://rosettacode.org/wiki/String_length>

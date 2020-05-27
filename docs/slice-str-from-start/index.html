@@ -21,7 +21,7 @@
    </header>
 
 <h1>Slice string from start</h1>
-<time>Thu May 21 2020</time>
+<time>Wed May 27 2020</time>
    
 <a href="/autumn/categories/string/">string</a>
    
@@ -144,9 +144,25 @@ s6 <span style="color:#f92672">=</span> s1[:<span style="color:#ae81ff">2</span>
 <span style="color:#66d9ef">print</span>(s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;S&#39;</span>, s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;S&#39;</span>, s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;S&#39;</span>, s5 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Su&#39;</span>, s6 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Su&#39;</span>)
 </code></pre></div>
 <p><a href="https://docs.python.org/reference/expressions.html#slicings">https://docs.python.org/reference/expressions.html#slicings</a></p>
+<h2 id="racket">Racket</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rkt" data-lang=".rkt"><span style="color:#f92672">#lang </span>racket
+(<span style="color:#66d9ef">define</span> s <span style="color:#e6db74">&#34;Sunday&#34;</span>)
+(<span style="color:#66d9ef">define</span> s1
+   (substring s <span style="color:#ae81ff">1</span>)
+)
+(println
+   (string=? s1 <span style="color:#e6db74">&#34;unday&#34;</span>)
+)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
+<p><a href="https://docs.racket-lang.org/reference/strings.html">https://docs.racket-lang.org/reference/strings.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#extract-substr">https://hyperpolyglot.org/c#extract-substr</a></li>
+<li><a href="https://hyperpolyglot.org/lisp#extract-substr">https://hyperpolyglot.org/lisp#extract-substr</a></li>
 <li><a href="https://hyperpolyglot.org/scripting#extract-substr">https://hyperpolyglot.org/scripting#extract-substr</a></li>
 <li><a href="https://www.programming-idioms.org/idiom/38/extract-a-substring">https://www.programming-idioms.org/idiom/38/extract-a-substring</a></li>
 <li><a href="https://www.programming-idioms.org/idiom/46/extract-beginning">https://www.programming-idioms.org/idiom/46/extract-beginning</a></li>

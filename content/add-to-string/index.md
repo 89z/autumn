@@ -53,6 +53,8 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rkt" >}}
 
+<https://docs.racket-lang.org/reference/strings.html>
+
 ## Rust
 
 {{< r "a.rs" >}}

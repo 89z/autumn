@@ -1,7 +1,7 @@
 ---
 title: Command line arguments
 categories: [system]
-tags: [dart, go, nim, php, python, rust]
+tags: [dart, go, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -31,6 +31,12 @@ tags: [dart, go, nim, php, python, rust]
 
 <https://docs.python.org/library/sys.html#sys.argv>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/runtime.html>
+
 ## Rust
 
 {{< r "a.rs" >}}
@@ -39,6 +45,7 @@ tags: [dart, go, nim, php, python, rust]
 
 ## References
 
+- <https://hyperpolyglot.org/lisp#cmd-line-arg>
 - <https://hyperpolyglot.org/scripting2#cmd-line-arg>
 - <https://www.programming-idioms.org/idiom/60/read-command-line-arg>
 - <https://rosettacode.org/wiki/Command-line_arguments>

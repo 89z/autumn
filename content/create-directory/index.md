@@ -1,7 +1,7 @@
 ---
 title: Create directory
 categories: [system]
-tags: [dart, go, nim, php, python, rust]
+tags: [dart, go, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -34,6 +34,10 @@ tags: [dart, go, nim, php, python, rust]
 
 <https://docs.python.org/library/os.html#os.makedirs>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
 ## Rust
 
 {{< r "a.rs" >}}
@@ -43,6 +47,7 @@ tags: [dart, go, nim, php, python, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#mkdir>
+- <https://hyperpolyglot.org/lisp#mkdir>
 - <https://hyperpolyglot.org/scripting2#mkdir>
 - <https://www.programming-idioms.org/idiom/211/create-folder>
 - <https://rosettacode.org/wiki/Make_directory_path>
