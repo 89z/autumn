@@ -41,5 +41,4 @@ Append to array 6:
 
 {{< r "f.rb" >}}
 
-{{< a `https://ruby-doc.org/core/doc/syntax/assignment_rdoc.html#
-label-Implicit+Array+Assignment` >}}
+<https://ruby-doc.org/core/doc/syntax/assignment_rdoc.html#label-Implicit+Array+Assignment>

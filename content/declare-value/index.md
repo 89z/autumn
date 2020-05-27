@@ -1,7 +1,7 @@
 ---
 title: Declare value
 categories: [reference]
-tags: [dart, go, javascript, nim, php, rust]
+tags: [dart, go, javascript, nim, php, racket, rust]
 ---
 
 ## Dart
@@ -34,11 +34,16 @@ tags: [dart, go, javascript, nim, php, rust]
 
 <https://php.net/language.constants.syntax>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
 ## Rust
 
 {{< r "a.rs" >}}
 
 ## References
 
+- <https://hyperpolyglot.org/lisp#local-var>
 - <https://hyperpolyglot.org/scripting#const>
 - <https://hyperpolyglot.org/web#local-var>

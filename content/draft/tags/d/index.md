@@ -3,7 +3,16 @@ title: D language
 tags: [draft]
 ---
 
-## HTTP
+## LDC HTTP
+
+So this is technically fixed:
+
+<https://github.com/ldc-developers/mingw-w64-libs/releases>
+
+but we cant assume they are going to keep LibCurl up to date. They are hosting
+LibCurl 7.69.1 (Mar 2020). We should check again next year to see what happens.
+
+## Other HTTP
 
 can't complete call to TLS_method:
 
@@ -24,10 +33,6 @@ lacks some features, such as the HTTP client implementation:
 module is in file which cannot be read:
 
 <https://github.com/adamdruppe/arsd/issues/194>
-
-Static LibCurl:
-
-<https://github.com/ldc-developers/ldc/issues/3376>
 
 Static linking:
 

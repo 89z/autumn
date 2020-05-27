@@ -8,10 +8,9 @@ tags: [javascript, php]
 
 {{< r "a.js" >}}
 
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Set/forEach>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for...in>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for...of>
-- {{< a `https://developer.mozilla.org/Web/JavaScript/Reference/
-   Global_Objects/Set/forEach` >}}
 
 ## PHP
 

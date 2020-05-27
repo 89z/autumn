@@ -1,7 +1,7 @@
 ---
 title: Add to string
 categories: [string]
-tags: [dart, go, javascript, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -49,12 +49,17 @@ tags: [dart, go, javascript, nim, php, python, rust]
 - <https://docs.python.org/reference/expressions.html#binary>
 - <https://docs.python.org/reference/lexical_analysis.html#f-strings>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
 ## Rust
 
 {{< r "a.rs" >}}
 
 ## References
 
+- <https://hyperpolyglot.org/lisp#str-concat>
 - <https://hyperpolyglot.org/rust#str-concat>
 - <https://hyperpolyglot.org/web#str-concat>
 - <https://rosettacode.org/wiki/String_append>

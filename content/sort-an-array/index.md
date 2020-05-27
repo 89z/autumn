@@ -14,8 +14,7 @@ tags: [go, javascript, php, python]
 
 {{< r "a.js" >}}
 
-{{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/
-Array/sort` >}}
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/sort>
 
 ## PHP
 

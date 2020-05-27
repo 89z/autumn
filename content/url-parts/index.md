@@ -28,10 +28,8 @@ tags: [go, javascript, php, python]
 
 {{< r "a.py" >}}
 
-- {{< a `https://docs.python.org/library/urllib.parse.html#
-   urllib.parse.urllib.parse.SplitResult.geturl` >}}
-- {{< a `https://docs.python.org/library/urllib.parse.html#
-   urllib.parse.urlparse` >}}
+- <https://docs.python.org/library/urllib.parse.html#urllib.parse.urllib.parse.SplitResult.geturl>
+- <https://docs.python.org/library/urllib.parse.html#urllib.parse.urlparse>
 
 ## References
 

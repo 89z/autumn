@@ -1,7 +1,7 @@
 ---
 title: Comments
 categories: [reference]
-tags: [go, javascript, nim, php, python, rust]
+tags: [go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -40,12 +40,17 @@ tags: [go, javascript, nim, php, python, rust]
 - <https://docs.python.org/reference/lexical_analysis.html#comments>
 - <https://docs.python.org/reference/lexical_analysis.html#strings>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
 ## Rust
 
 {{< r "a.rs" >}}
 
 ## References
 
+- <https://hyperpolyglot.org/lisp#eol-comment>
 - <https://hyperpolyglot.org/scripting#eol-comment>
 - <https://hyperpolyglot.org/web#eol-comment>
 - <https://rosettacode.org/wiki/Comments>

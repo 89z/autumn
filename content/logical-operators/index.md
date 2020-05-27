@@ -14,8 +14,7 @@ tags: [go, javascript, php, python]
 
 {{< r "a.js" >}}
 
-{{< a `https://developer.mozilla.org/Web/JavaScript/Reference/Operators/
-Logical_Operators` >}}
+<https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Logical_Operators>
 
 ## PHP
 
