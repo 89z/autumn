@@ -27,6 +27,7 @@ have 5 or less ways to perform a task. These currently fail that test:
 
 - Clojure
 - Common-lisp
+- Dart
 - F#
 - Go
 - Nim
@@ -57,13 +58,6 @@ test:
 Language should not be dirt slow. These currently fail that test:
 
 Julia
-
-## Strings
-
-Language should be able to print a string representation, JSON is not
-acceptable. These currently fail that test:
-
-Dart
 
 ## Windows
 

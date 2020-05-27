@@ -3,19 +3,10 @@ title: Scheme language
 tags: [draft]
 ---
 
-<https://ecraven.github.io/r7rs-benchmarks>
+**HTTP requests**:
 
-## Chez Scheme
+<https://github.com/cisco/ChezScheme/issues/515>
 
-<https://github.com/cisco/ChezScheme>
+**default type-database 'types.db' not found**:
 
-## Chicken Scheme
-
-- <https://call-cc.org>
-- <https://pkg.musl.cc/chicken-5.0.0>
-
-## Gerbil Scheme
-
-Address space needed error when building on MSYS2
-
-<https://github.com/vyzo/gerbil/issues/279>
+<https://bitbucket.org/roti/chicken-installer/issues/4>

@@ -5,30 +5,9 @@ tags: [draft]
 
 ## CakeML
 
-If I compile like this:
+Windows
 
-~~~
-$ make CC=x86_64-w64-mingw32-gcc
-x86_64-w64-mingw32-gcc    -c -o cake.o cake.S
-x86_64-w64-mingw32-gcc    -c -o basis_ffi.o basis_ffi.c
-x86_64-w64-mingw32-gcc  cake.o basis_ffi.o   -o cake.exe
-~~~
-
-I get this result in a Cygwin console:
-
-~~~
-$ ./cake
-sh: ./cake: cannot execute binary file: Exec format error
-~~~
-
-and this result in a Windows console:
-
-~~~
-cake.exe is not a valid Win32 application.
-Access is denied.
-~~~
-
-<https://github.com/CakeML/cakeml>
+<https://github.com/CakeML/cakeml/issues/739>
 
 ## MLton
 

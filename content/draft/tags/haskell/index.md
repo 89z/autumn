@@ -11,4 +11,4 @@ Haskell platform size
 
 ## Setup
 
-<https://haskell.org/platform>
+<https://haskell.org/platform/prior.html>

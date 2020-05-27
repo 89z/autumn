@@ -3,16 +3,9 @@ title: Elixir language
 tags: [draft]
 ---
 
-## Download
+## Download speed
 
-If I try to download a file, the average speed is 421k:
-
-~~~
-$ curl -O erlang.org/download/otp_win64_22.2.exe
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
- 28 90.4M   28 25.7M    0     0   421k      0  0:03:39  0:01:02  0:02:37  433k
-~~~
+<https://github.com/erlang/eep/issues/12>
 
 ## Native
 

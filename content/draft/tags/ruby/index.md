@@ -5,7 +5,7 @@ tags: [draft]
 
 ## Issues
 
-<https://en.wikipedia.org/wiki/There languages_more_than_one_way_to_do_it>
+<https://en.wikipedia.org/wiki/There's_more_than_one_way_to_do_it>
 
 Append to array 1:
 
