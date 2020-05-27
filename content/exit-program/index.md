@@ -1,7 +1,7 @@
 ---
 title: Exit program
 categories: [system]
-tags: [go, php, python, rust]
+tags: [go, php, python, racket, rust]
 ---
 
 ## Go
@@ -32,6 +32,10 @@ tags: [go, php, python, rust]
 
 - <https://docs.python.org/library/os.html#os.abort>
 - <https://docs.python.org/library/sys.html#sys.exit>
+
+## Racket
+
+{{< r "a.rkt" >}}
 
 ## Rust
 

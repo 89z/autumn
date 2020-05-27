@@ -1,7 +1,7 @@
 ---
 title: Environment variables
 categories: [system]
-tags: [dart, go, nim, php, python, rust]
+tags: [dart, go, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -37,12 +37,17 @@ tags: [dart, go, nim, php, python, rust]
 - <https://docs.python.org/library/os.html#os.environ>
 - <https://docs.python.org/library/os.html#os.getenv>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
 ## Rust
 
 {{< r "a.rs" >}}
 
 ## References
 
+- <https://hyperpolyglot.org/lisp#env-var>
 - <https://hyperpolyglot.org/scripting2#env-var>
 - <https://www.programming-idioms.org/idiom/205/get-an-environment-variable>
 - <https://rosettacode.org/wiki/Environment_variables>

@@ -47,6 +47,8 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rkt" >}}
 
+<https://beautifulracket.com/explainer/stringlike-types.html>
+
 ## Rust
 
 {{< r "a.rs" >}}

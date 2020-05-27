@@ -1,7 +1,7 @@
 ---
 title: Decode JSON
 categories: [file-format]
-tags: [dart, go, javascript, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -39,6 +39,12 @@ tags: [dart, go, javascript, nim, php, python, rust]
 
 - <https://docs.python.org/library/json.html#json.load>
 - <https://docs.python.org/library/json.html#json.loads>
+
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/json>
 
 ## Rust
 

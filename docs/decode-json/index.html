@@ -21,7 +21,7 @@
    </header>
 
 <h1>Decode JSON</h1>
-<time>Tue May 26 2020</time>
+<time>Wed May 27 2020</time>
    
 <a href="/autumn/categories/file-format/">file-format</a>
    
@@ -111,6 +111,20 @@ m2 <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>
 <li><a href="https://docs.python.org/library/json.html#json.load">https://docs.python.org/library/json.html#json.load</a></li>
 <li><a href="https://docs.python.org/library/json.html#json.loads">https://docs.python.org/library/json.html#json.loads</a></li>
 </ul>
+<h2 id="racket">Racket</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rkt" data-lang=".rkt"><span style="color:#f92672">#lang </span>racket
+(<span style="color:#66d9ef">require</span> json)
+(<span style="color:#66d9ef">define</span> s <span style="color:#e6db74">#&lt;&lt;eof
+</span><span style="color:#e6db74">{&#34;Sunday&#34;: 10}
+</span><span style="color:#e6db74">eof</span>
+)
+(string-&gt;jsexpr s)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
+<p><a href="https://docs.racket-lang.org/json">https://docs.racket-lang.org/json</a></p>
 <h2 id="rust">Rust</h2>
 <p><a href="https://github.com/serde-rs/json">https://github.com/serde-rs/json</a></p>
 <h2 id="references">References</h2>
