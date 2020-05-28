@@ -9,6 +9,8 @@ tags: [dart, go, nim, php, python, racket, rust]
 {{< r "a.dart" >}}
 {{< r "dart/a.dart" >}}
 
+<https://dart.dev/guides/language/language-tour#using-libraries>
+
 ## Go
 
 {{< r "a.go" >}}

@@ -1,12 +1,14 @@
 ---
 title: Comments
 categories: [reference]
-tags: [go, javascript, nim, php, python, racket, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
 
 {{< r "a.dart" >}}
+
+<https://dart.dev/guides/language/language-tour#comments>
 
 ## Go
 

@@ -8,6 +8,8 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.dart" >}}
 
+<https://api.dart.dev/dart-core/Iterable/join.html>
+
 ## Go
 
 {{< r "a.go" >}}

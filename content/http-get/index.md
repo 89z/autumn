@@ -8,6 +8,8 @@ tags: [dart, go, javascript, php, python, racket, rust]
 
 {{< r "a.dart" >}}
 
+<https://api.dart.dev/dart-io/HttpClient-class.html>
+
 ## Go
 
 {{< r "a.go" >}}

@@ -8,6 +8,8 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.dart" >}}
 
+<https://api.dart.dev/stable/String/operator_plus.html>
+
 ## Go
 
 {{< r "concat.go" >}}

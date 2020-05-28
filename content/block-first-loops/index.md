@@ -8,6 +8,8 @@ tags: [dart, go, javascript, nim, php, python]
 
 {{< r "a.dart" >}}
 
+<https://dart.dev/guides/language/language-tour#while-and-do-while>
+
 ## Go
 
 {{< r "a.go" >}}
