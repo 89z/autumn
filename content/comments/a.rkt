@@ -1,4 +1,4 @@
-#lang racket
+#lang racket/base
 ; example 1
 (displayln "Sunday")
 #|

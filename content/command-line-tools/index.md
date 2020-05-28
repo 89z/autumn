@@ -40,6 +40,7 @@ tags: [dart, go, nim, php, python, racket, rust]
 
 {{< r "racket.sh" >}}
 
+- <https://docs.racket-lang.org/guide/exe.html>
 - <https://docs.racket-lang.org/guide/intro.html>
 - <https://docs.racket-lang.org/guide/racket.html>
 

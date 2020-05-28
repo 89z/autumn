@@ -1,7 +1,7 @@
 ---
 title: Condition-first loops
 categories: [reference]
-tags: [go, javascript, php, python]
+tags: [go, javascript, php, python, racket]
 ---
 
 ## Go
@@ -31,6 +31,12 @@ tags: [go, javascript, php, python]
 
 - <https://docs.python.org/library/functions.html#func-range>
 - <https://docs.python.org/reference/compound_stmts.html#while>
+
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/guide/for.html>
 
 ## References
 

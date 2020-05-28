@@ -1,8 +1,6 @@
-#lang racket
+#lang racket/base
 (define m
-   (make-hash
-      '(("Sunday" . 10))
-   )
+   (make-hash)
 )
-(hash-set! m "Monday" 11)
+(hash-set! m "Sunday" 10)
 (println m)

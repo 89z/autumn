@@ -1,4 +1,4 @@
-#lang racket
+#lang racket/base
 (define (f s)
    (string-length s)
 )

@@ -1,4 +1,4 @@
-#lang racket
+#lang racket ; system
 (define f
    (lambda () (system "ag -V"))
 )

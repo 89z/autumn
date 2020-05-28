@@ -156,10 +156,13 @@ a1 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>li
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rkt" data-lang=".rkt"><span style="color:#f92672">#lang </span>racket
-(<span style="color:#66d9ef">for</span> ([path (directory-list <span style="color:#e6db74">&#34;.&#34;</span>)])
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rkt" data-lang=".rkt"><span style="color:#f92672">#lang </span>racket/base
+(<span style="color:#66d9ef">define</span> o1
+   (directory-list <span style="color:#e6db74">&#34;.&#34;</span>)
+)
+(<span style="color:#66d9ef">for</span> ([o2 o1])
    (println
-      (path-&gt;string path)
+      (path-&gt;string o2)
    )
 )<span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div>

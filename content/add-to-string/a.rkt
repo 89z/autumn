@@ -1,5 +1,3 @@
-#lang racket
-(define s1 "Sunday")
-(println
-   (string-append s1 "Monday")
-)
+#lang racket/base
+(define s "Sunday")
+(string-append s "Monday")

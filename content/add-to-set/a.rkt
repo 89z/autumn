@@ -1,7 +1,5 @@
-#lang racket
+#lang racket ; set
 (define t
    (set 10)
 )
-(println
-   (set-add t 11)
-)
+(set-add t 11)

@@ -21,7 +21,7 @@
    </header>
 
 <h1>Condition-first loops</h1>
-<time>Sun May 3 2020</time>
+<time>Thu May 28 2020</time>
    
 <a href="/autumn/categories/reference/">reference</a>
    
@@ -127,6 +127,20 @@ f1(<span style="color:#ae81ff">10</span>)
 <li><a href="https://docs.python.org/library/functions.html#func-range">https://docs.python.org/library/functions.html#func-range</a></li>
 <li><a href="https://docs.python.org/reference/compound_stmts.html#while">https://docs.python.org/reference/compound_stmts.html#while</a></li>
 </ul>
+<h2 id="racket">Racket</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rkt" data-lang=".rkt"><span style="color:#f92672">#lang </span>racket/base
+(<span style="color:#66d9ef">define</span> o
+   (in-range <span style="color:#ae81ff">10</span> <span style="color:#ae81ff">20</span>)
+)
+(<span style="color:#66d9ef">for</span> ([s o])
+   (println s)
+)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
+<p><a href="https://docs.racket-lang.org/guide/for.html">https://docs.racket-lang.org/guide/for.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting#execution-control">https://hyperpolyglot.org/scripting#execution-control</a></li>

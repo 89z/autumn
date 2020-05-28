@@ -1,4 +1,4 @@
-#lang racket
+#lang racket/base
 ; example 1
 (define n1 10)
 (println n1)

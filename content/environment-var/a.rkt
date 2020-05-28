@@ -1,5 +1,5 @@
-#lang racket
+#lang racket/base
 (define s
    (getenv "BROWSER")
 )
-(displayln s)
+(println s)
