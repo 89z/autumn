@@ -23,10 +23,10 @@ Comparison of programming languages
 38 rust tasks
 38 racket tasks
 37 nim tasks
-35 dart tasks
+36 dart tasks
+29 dart links
 23 rust links
 21 racket links
-10 dart links
 ~~~
 
 ## Author

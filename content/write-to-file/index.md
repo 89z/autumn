@@ -47,6 +47,8 @@ tags: [dart, go, nim, php, python, racket, rust]
 
 {{< r "a.rkt" >}}
 
+<https://docs.racket-lang.org/reference/Byte_and_String_Output.html#(def._((quote._~23~25kernel)._write-string))>
+
 ## Rust
 
 {{< r "a.rs" >}}

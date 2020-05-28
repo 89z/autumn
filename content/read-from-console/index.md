@@ -43,6 +43,8 @@ tags: [dart, go, nim, php, python, racket, rust]
 
 {{< r "a.rkt" >}}
 
+<https://docs.racket-lang.org/reference/Byte_and_String_Input.html?#(def._((quote._~23~25kernel)._read-line))>
+
 ## Rust
 
 {{< r "a.rs" >}}

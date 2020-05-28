@@ -48,6 +48,8 @@ tags: [dart, go, nim, php, python, racket, rust]
 
 {{< r "a.rkt" >}}
 
+<https://docs.racket-lang.org/reference/Filesystem.html#(def._((lib._racket/file..rkt)._file-~3estring))>
+
 ## Rust
 
 {{< r "a.rs" >}}
