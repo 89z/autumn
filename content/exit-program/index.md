@@ -1,7 +1,7 @@
 ---
 title: Exit program
 categories: [system]
-tags: [go, php, python, racket, rust]
+tags: [go, nim, php, python, racket, rust]
 ---
 
 ## Go
@@ -15,6 +15,10 @@ tags: [go, php, python, racket, rust]
 - <https://golang.org/pkg/log#Fatal>
 - <https://golang.org/pkg/os#Exit>
 - <https://golang.org/ref/spec#Return_statements>
+
+## Nim
+
+{{< r "a.nim" >}}
 
 ## PHP
 

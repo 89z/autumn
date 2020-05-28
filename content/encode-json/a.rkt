@@ -1,4 +1,4 @@
-#lang racket
+#lang racket/base
 (require json)
 (define m
    #hash((Sunday . 10))

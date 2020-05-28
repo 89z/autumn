@@ -1,7 +1,7 @@
 ---
 title: Boolean types
 categories: [reference]
-tags: [dart, go, javascript, php, python, racket, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -19,6 +19,10 @@ tags: [dart, go, javascript, php, python, racket, rust]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Boolean>
+
+## Nim
+
+{{< r "a.nim" >}}
 
 ## PHP
 

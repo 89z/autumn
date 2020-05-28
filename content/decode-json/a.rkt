@@ -1,4 +1,4 @@
-#lang racket
+#lang racket/base
 (require json)
 (define s #<<eof
 {"Sunday": 10}

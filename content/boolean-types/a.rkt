@@ -1,7 +1,9 @@
 #lang racket/base
 ; example 1
-(define b1 #true)
-(println b1)
+(println #true)
 ; example 2
-(define b2 #false)
-(println b2)
+(println #t)
+; example 3
+(println #false)
+; example 4
+(println #f)

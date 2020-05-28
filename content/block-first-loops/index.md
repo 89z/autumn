@@ -1,7 +1,7 @@
 ---
 title: Block-first loops
 categories: [reference]
-tags: [dart, go, javascript, php, python]
+tags: [dart, go, javascript, nim, php, python]
 ---
 
 ## Dart
@@ -22,6 +22,10 @@ tags: [dart, go, javascript, php, python]
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/while>
 
+## Nim
+
+{{< r "a.nim" >}}
+
 ## PHP
 
 {{< r "a.php" >}}
@@ -33,8 +37,6 @@ tags: [dart, go, javascript, php, python]
 ## Python
 
 {{< r "a.py" >}}
-
-Exclude `range` as it is ambiguous.
 
 <https://docs.python.org/reference/compound_stmts.html#while>
 
