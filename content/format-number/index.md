@@ -50,8 +50,7 @@ tags: [dart, go, javascript, nim, php, python, rust]
 
 ## Rust
 
-- <https://github.com/bcmyers/num-format>
-- <https://github.com/saghm/rust-separator>
+<https://docs.rs/num-format>
 
 ## References
 

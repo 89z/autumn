@@ -1,7 +1,7 @@
 ---
 title: Time as an object
 categories: [time]
-tags: [go, javascript, php, python, rust]
+tags: [go, javascript, php, python]
 ---
 
 ## Go

@@ -42,6 +42,8 @@ tags: [go, nim, php, python, racket, rust]
 {{< r "error.rkt" >}}
 {{< r "exit.rkt" >}}
 
+<https://docs.racket-lang.org/reference/Exiting.html#(def._((quote._~23~25kernel)._exit))>
+
 ## Rust
 
 {{< r "exit.rs" >}}

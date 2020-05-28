@@ -46,9 +46,13 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rkt" >}}
 
+<https://docs.racket-lang.org/reference/reader.html#(part._parse-comment)>
+
 ## Rust
 
 {{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/reference/comments.html>
 
 ## References
 

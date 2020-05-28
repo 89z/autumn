@@ -47,6 +47,8 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/std/index.html#primitives>
+
 ## References
 
 - <https://hyperpolyglot.org/c#int-type>

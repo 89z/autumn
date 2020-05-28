@@ -53,6 +53,8 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/std/keyword.fn.html>
+
 ## References
 
 - <https://hyperpolyglot.org/lisp#functions>

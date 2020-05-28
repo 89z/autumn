@@ -53,6 +53,8 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/std/vec/index.html>
+
 ## References
 
 - <https://hyperpolyglot.org/c#resizable-array-lookup>

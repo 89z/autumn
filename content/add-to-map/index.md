@@ -47,6 +47,8 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rkt" >}}
 
+<https://docs.racket-lang.org/reference/hashtables.html#(def._((quote._~23~25kernel)._hash-set!))>
+
 ## Rust
 
 {{< r "a.rs" >}}

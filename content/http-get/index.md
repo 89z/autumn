@@ -44,13 +44,13 @@ tags: [dart, go, javascript, php, python, racket, rust]
 
 {{< r "a.rkt" >}}
 
+<https://docs.racket-lang.org/net/url.html>
+
 ## Rust
 
 {{< r "rs/src/main.rs" >}}
 
-19 deps
-
-<https://github.com/alexcrichton/curl-rust>
+<https://docs.rs/curl>
 
 ## References
 

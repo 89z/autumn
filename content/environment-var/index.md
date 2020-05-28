@@ -41,9 +41,13 @@ tags: [dart, go, nim, php, python, racket, rust]
 
 {{< r "a.rkt" >}}
 
+<https://docs.racket-lang.org/reference/envvars.html#(def._((lib._racket/private/misc..rkt)._getenv))>
+
 ## Rust
 
 {{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/env/fn.var.html>
 
 ## References
 

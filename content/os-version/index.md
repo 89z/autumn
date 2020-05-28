@@ -19,3 +19,5 @@ tags: [go, php, rust]
 ## Rust
 
 {{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/reference/items/external-blocks.html#the-link-attribute>

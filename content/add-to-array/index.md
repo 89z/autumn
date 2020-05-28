@@ -54,6 +54,8 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/std/vec/struct.Vec.html#method.push>
+
 ## References
 
 - <https://hyperpolyglot.org/lisp#lists>

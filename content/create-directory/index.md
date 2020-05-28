@@ -40,6 +40,8 @@ tags: [dart, go, nim, php, python, racket, rust]
 
 {{< r "a.rkt" >}}
 
+<https://docs.racket-lang.org/reference/Filesystem.html#(def._((quote._~23~25kernel)._make-directory))>
+
 ## Rust
 
 {{< r "a.rs" >}}

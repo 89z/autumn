@@ -48,7 +48,7 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 ## Rust
 
-<https://github.com/serde-rs/json>
+<https://docs.rs/serde_json>
 
 ## References
 

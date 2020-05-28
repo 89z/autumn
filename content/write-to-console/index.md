@@ -55,6 +55,9 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rs" >}}
 
+- <https://doc.rust-lang.org/std/macro.dbg.html>
+- <https://doc.rust-lang.org/std/macro.println.html>
+
 ## References
 
 - <https://hyperpolyglot.org/lisp#format-stdout>

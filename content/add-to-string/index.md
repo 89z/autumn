@@ -61,6 +61,8 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/std/string/struct.String.html#method.add_assign>
+
 ## References
 
 - <https://hyperpolyglot.org/lisp#str-concat>

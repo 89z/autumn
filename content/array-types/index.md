@@ -49,6 +49,8 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/std/macro.vec.html>
+
 ## References
 
 - <https://hyperpolyglot.org/lisp#lists>

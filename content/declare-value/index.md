@@ -40,9 +40,13 @@ tags: [dart, go, javascript, nim, php, racket, rust]
 
 {{< r "a.rkt" >}}
 
+<https://docs.racket-lang.org/reference/define.html>
+
 ## Rust
 
 {{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/keyword.let.html>
 
 ## References
 

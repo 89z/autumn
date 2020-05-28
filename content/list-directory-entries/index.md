@@ -44,6 +44,8 @@ tags: [dart, go, nim, php, python, racket, rust]
 
 {{< r "a.rkt" >}}
 
+<https://docs.racket-lang.org/reference/Filesystem.html#(def._((lib._racket/private/base..rkt)._directory-list))>
+
 ## Rust
 
 {{< r "a.rs" >}}

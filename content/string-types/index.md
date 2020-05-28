@@ -54,6 +54,9 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rs" >}}
 
+- <https://doc.rust-lang.org/std/primitive.str.html>
+- <https://doc.rust-lang.org/std/string/struct.String.html#method.from>
+
 ## References
 
 - <https://hyperpolyglot.org/lisp#str-literal>

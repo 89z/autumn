@@ -49,6 +49,8 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/std/primitive.slice.html#method.join>
+
 ## References
 
 - <https://hyperpolyglot.org/lisp#str-join>
