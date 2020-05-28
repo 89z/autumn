@@ -21,7 +21,7 @@
    </header>
 
 <h1>Start process</h1>
-<time>Tue May 26 2020</time>
+<time>Wed May 27 2020</time>
    
 <a href="/autumn/categories/system/">system</a>
    
@@ -155,8 +155,21 @@ os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#39;ag
 <li><a href="https://docs.python.org/library/subprocess.html#subprocess.check_call">https://docs.python.org/library/subprocess.html#subprocess.check_call</a></li>
 <li><a href="https://docs.python.org/library/subprocess.html#subprocess.run">https://docs.python.org/library/subprocess.html#subprocess.run</a></li>
 </ul>
+<h2 id="racket">Racket</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rkt" data-lang=".rkt"><span style="color:#f92672">#lang </span>racket <span style="color:#75715e">; system</span>
+<span style="color:#75715e">; example 1</span>
+(system <span style="color:#e6db74">&#34;ag -V&#34;</span>)
+<span style="color:#75715e">; example 2</span>
+(system* <span style="color:#e6db74">&#34;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">path</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">ag.exe&#34;</span> <span style="color:#e6db74">&#34;-V&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
+<p><a href="https://docs.racket-lang.org/reference/subprocess.html">https://docs.racket-lang.org/reference/subprocess.html</a></p>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://hyperpolyglot.org/lisp#external-cmd">https://hyperpolyglot.org/lisp#external-cmd</a></li>
 <li><a href="https://hyperpolyglot.org/scripting2#external-cmd">https://hyperpolyglot.org/scripting2#external-cmd</a></li>
 <li><a href="https://www.programming-idioms.org/idiom/111/launch-other-program">https://www.programming-idioms.org/idiom/111/launch-other-program</a></li>
 <li><a href="https://rosettacode.org/wiki/Execute_a_system_command">https://rosettacode.org/wiki/Execute_a_system_command</a></li>

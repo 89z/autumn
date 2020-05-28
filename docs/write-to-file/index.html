@@ -21,7 +21,7 @@
    </header>
 
 <h1>Write to file</h1>
-<time>Tue May 26 2020</time>
+<time>Wed May 27 2020</time>
    
 <a href="/autumn/categories/input-output/">input-output</a>
    
@@ -165,6 +165,17 @@ o1<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;Sun
 <li><a href="https://docs.python.org/library/functions.html#print">https://docs.python.org/library/functions.html#print</a></li>
 <li><a href="https://docs.python.org/library/io.html#io.TextIOBase.write">https://docs.python.org/library/io.html#io.TextIOBase.write</a></li>
 </ul>
+<h2 id="racket">Racket</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rkt" data-lang=".rkt"><span style="color:#f92672">#lang </span>racket/base
+(<span style="color:#66d9ef">define</span> o
+   (open-output-file <span style="color:#e6db74">&#34;a.txt&#34;</span>)
+)
+(write-string <span style="color:#e6db74">&#34;Sunday</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span> o)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
 <h2 id="rust">Rust</h2>
 <p>
 
@@ -200,6 +211,7 @@ o1<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;Sun
 </ul>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://hyperpolyglot.org/lisp#write-str">https://hyperpolyglot.org/lisp#write-str</a></li>
 <li><a href="https://rosettacode.org/wiki/Write_entire_file">https://rosettacode.org/wiki/Write_entire_file</a></li>
 <li><a href="https://rosettacode.org/wiki/Create_a_file">https://rosettacode.org/wiki/Create_a_file</a></li>
 </ul>

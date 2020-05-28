@@ -1,7 +1,7 @@
 ---
 title: Start process
 categories: [system]
-tags: [dart, go, nim, php, python]
+tags: [dart, go, nim, php, python, racket]
 ---
 
 ## Dart
@@ -44,8 +44,15 @@ tags: [dart, go, nim, php, python]
 - <https://docs.python.org/library/subprocess.html#subprocess.check_call>
 - <https://docs.python.org/library/subprocess.html#subprocess.run>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/subprocess.html>
+
 ## References
 
+- <https://hyperpolyglot.org/lisp#external-cmd>
 - <https://hyperpolyglot.org/scripting2#external-cmd>
 - <https://www.programming-idioms.org/idiom/111/launch-other-program>
 - <https://rosettacode.org/wiki/Execute_a_system_command>

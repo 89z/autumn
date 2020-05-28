@@ -1,4 +1,4 @@
-#lang racket
+#lang racket/base
 (define s "Sunday")
 (define s1
    (substring s 1)

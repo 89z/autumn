@@ -1,4 +1,4 @@
-#lang racket
+#lang racket ; string-split
 (define s "Sunday Monday")
 ; example 1
 (string-split s " ")
