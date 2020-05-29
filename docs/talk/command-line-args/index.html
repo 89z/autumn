@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talk:Command line arguments / Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/autumn.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/categories">Categories</a>
+         <a href="/autumn/tags">Tags</a>
+         <a href="https://github.com/nu8/autumn">Repo</a>
+      </nav>
+   </header>
+
+<h1>Talk:Command line arguments</h1>
+<time>Fri May 29 2020</time>
+   
+   
+   <pre><code>&quot;a &quot;&quot;b&quot;&quot; c&quot;
+</code></pre><h2 id="dart">Dart</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart">main(a) {
+   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> a[<span style="color:#ae81ff">0</span>];
+   print(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;a &#34;b&#39;</span>);
+}
+</code></pre></div>
+<h2 id="go">Go</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Args</span>[<span style="color:#ae81ff">1</span>]
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">`a &#34;b`</span>)
+}
+</code></pre></div>
+<p><a href="https://github.com/golang/go/blob/8f4151ea/src/os/exec_windows.go#L161">https://github.com/golang/go/blob/8f4151ea/src/os/exec_windows.go#L161</a></p>
+<h2 id="php">PHP</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$s <span style="color:#f92672">=</span> $argv[<span style="color:#ae81ff">1</span>];
+<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;a &#34;b&#39;</span>);
+</code></pre></div>
+<h2 id="python">Python</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">import</span> sys
+s <span style="color:#f92672">=</span> sys<span style="color:#f92672">.</span>argv[<span style="color:#ae81ff">1</span>]
+<span style="color:#66d9ef">print</span>(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;a &#34;b&#34; c&#39;</span>)
+</code></pre></div>
+<h2 id="rust">Rust</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::env;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> a: Vec<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> env::args().collect();
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>a[<span style="color:#ae81ff">1</span>];
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s <span style="color:#f92672">==</span> <span style="color:#e6db74">r#&#34;a &#34;b&#34;#</span>);
+}
+</code></pre></div>
+<h2 id="references">References</h2>
+<p><a href="http://daviddeley.com/autohotkey/parameters/parameters.htm#WINCRULES">http://daviddeley.com/autohotkey/parameters/parameters.htm#WINCRULES</a></p>
+
+
+</body>
+</html>

@@ -60,6 +60,7 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 ## References
 
 - <https://hyperpolyglot.org/lisp#str-literal>
+- <https://hyperpolyglot.org/rust#str-literal>
 - <https://www.programming-idioms.org/idiom/48/multi-line-string>
 - <https://rosettacode.org/wiki/Here_document>
 - <https://rosettacode.org/wiki/Literals/String>
