@@ -24,7 +24,79 @@
 <time>Fri May 29 2020</time>
    
    
-   <pre><code>&quot;a &quot;&quot;b&quot;&quot; c&quot;
+   <p>It seems that <code>CommandLineToArgvW</code> parses differently than <code>argv</code> itself. Take
+this program:</p>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;windows.h&gt;
+int main(int argc, char* argv[]) {
+   char *s1;
+   for (int n1 = 0; n1 &lt; argc; n1++) {
+      s1 = argv[n1];
+      printf(&quot;%d %s\n&quot;, n1, s1);
+   }
+   int n2;
+   LPWSTR s2;
+   LPWSTR *a1 = CommandLineToArgvW(GetCommandLineW(), &amp;n2);
+   for (int n1 = 0; n1 &lt; n2; n1++) {
+      s2 = a1[n1];
+      printf(&quot;%d %ws\n&quot;, n1, s2);
+   }
+}
+</code></pre><p>If you compile with <code>cc a.c -lmsvcr100</code>, you get this:</p>
+<pre><code>C:&gt; c-test.exe &quot;a &quot;&quot;b&quot;&quot; c&quot;
+0 c-test.exe
+1 a &quot;b&quot; c
+0 c-test.exe
+1 a &quot;b
+2 c
+</code></pre><p>I did a little searching, and I found this:</p>
+<p><a href="https://devblogs.microsoft.com/oldnewthing/20100917-00?p=12833">https://devblogs.microsoft.com/oldnewthing/20100917-00?p=12833</a></p>
+<p>and I noticed, he never uses Quote Quote, but Backslash Quote. So I thought to
+retry my example:</p>
+<pre><code>C:&gt; c-test.exe &quot;a \&quot;b\&quot; c&quot;
+0 c-test.exe
+1 a &quot;b&quot; c
+0 c-test.exe
+1 a &quot;b&quot; c
+</code></pre><p>The other characters I had trouble with are <code>&amp;</code>, <code>&lt;</code>, <code>&gt;</code>, <code>^</code> and <code>|</code>.
+Sometimes you can just quote them:</p>
+<pre><code>C:\&gt; c-test.exe &quot;a &amp; b &lt; c &gt; d ^ e | f&quot;
+0 c-test.exe
+1 a &amp; b &lt; c &gt; d ^ e | f
+0 c-test.exe
+1 a &amp; b &lt; c &gt; d ^ e | f
+</code></pre><p>but then other times, you have to Quote and Escape them:</p>
+<pre><code>C:\&gt; c-test.exe &quot;a \&quot; b ^&amp; c ^&lt; d ^&gt; e ^^ f ^| g&quot;
+0 c-test.exe
+1 a &quot; b &amp; c &lt; d &gt; e ^ f | g
+0 c-test.exe
+1 a &quot; b &amp; c &lt; d &gt; e ^ f | g
+</code></pre><p>After some different trials, it seems the best option in my opinion is this.
+Never quote <code>&quot;</code>, but always escape with <code>\^</code>. Then just quote everything else:</p>
+<p><a href="http://daviddeley.com/autohotkey/parameters/parameters.htm#WINCMDRULES">http://daviddeley.com/autohotkey/parameters/parameters.htm#WINCMDRULES</a></p>
+<p>Example:</p>
+<pre><code>C:\&gt; c-test.exe &quot;a &quot;\^&quot;&quot; b &amp; c &lt; d &gt; e ^ f | g&quot;
+0 c-test.exe
+1 a &quot; b &amp; c &lt; d &gt; e ^ f | g
+0 c-test.exe
+1 a &quot; b &amp; c &lt; d &gt; e ^ f | g
+</code></pre><p>Finally, I wanted to test all the other characters to see if any other problems.
+Result are as expected:</p>
+<pre><code>C:\&gt; c-test.exe &quot; !&quot;\^&quot;&quot;#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~&quot;
+0 c-test.exe
+1  !&quot;#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~
+0 c-test.exe
+1  !&quot;#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~
+</code></pre><p>Finally, I was curious what would happen if I applied all this to the original
+examples:</p>
+<pre><code>C:\&gt; python-2.6.2.amd64\python.exe a.py &quot;a &quot;\^&quot;b\^&quot;&quot; c&quot;
+a &quot;b&quot; c
+
+C:\&gt; python-2.5.4.amd64\python.exe a.py &quot;a &quot;\^&quot;b\^&quot;&quot; c&quot;
+a &quot;b&quot; c
+</code></pre><p>and Go:</p>
+<pre><code>C:\&gt; go-test.exe &quot;a &quot;\^&quot;b\^&quot;&quot; c&quot;
+a &quot;b&quot; c
 </code></pre><h2 id="dart">Dart</h2>
 
 
