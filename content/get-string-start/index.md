@@ -1,5 +1,5 @@
 ---
-title: Slice string from start
+title: Get string start
 categories: [string]
 tags: [go, javascript, php, python, racket]
 ---
