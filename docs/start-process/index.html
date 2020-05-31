@@ -117,10 +117,13 @@ $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;less -
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f_escape_sh</span>($s_all) {
-   $a_enc <span style="color:#f92672">=</span> <span style="color:#a6e22e">explode</span>(<span style="color:#e6db74">&#39;&#34;&#39;</span>, $s_all);
-   $a_map <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_map</span>(<span style="color:#a6e22e">fn</span>($s_one) <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;&#34;&#39;</span> <span style="color:#f92672">.</span> $s_one <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&#34;&#39;</span>, $a_enc);
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">implode</span>(<span style="color:#e6db74">&#39;&#34;&#39;</span>, $a_map);
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f_escape_sh</span>($s_in) {
+   <span style="color:#75715e"># split on double quotes
+</span><span style="color:#75715e"></span>   $a_in <span style="color:#f92672">=</span> <span style="color:#a6e22e">explode</span>(<span style="color:#e6db74">&#39;&#34;&#39;</span>, $s_in);
+   <span style="color:#75715e"># quote parts
+</span><span style="color:#75715e"></span>   $a_out <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_map</span>(<span style="color:#a6e22e">fn</span>($s_out) <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;&#34;&#39;</span> <span style="color:#f92672">.</span> $s_out <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&#34;&#39;</span>, $a_in);
+   <span style="color:#75715e"># join parts
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">implode</span>(<span style="color:#e6db74">&#39;\^&#34;&#39;</span>, $a_out);
 }
 $a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;less&#39;</span>, <span style="color:#e6db74">&#39;-V&#39;</span>];
 $a2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_map</span>(<span style="color:#e6db74">&#39;f_escape_sh&#39;</span>, $a1);

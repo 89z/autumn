@@ -105,24 +105,30 @@ a "b" c
 
 {{< r "a.dart" >}}
 
+<https://github.com/dart-lang/sdk/issues/42124>
+
 ## Go
 
 {{< r "a.go" >}}
 
-<https://github.com/golang/go/blob/8f4151ea/src/os/exec_windows.go#L161>
+<https://github.com/golang/go/issues/39311>
 
-## PHP
+## Nim
 
-{{< r "a.php" >}}
+{{< r "a.nim" >}}
 
-## Python
+## Racket
 
-{{< r "a.py" >}}
+{{< r "a.rkt" >}}
+
+<https://github.com/racket/racket/issues/3227>
 
 ## Rust
 
 {{< r "a.rs" >}}
 
+<https://github.com/rust-lang/rust/issues/44650>
+
 ## References
 
-<http://daviddeley.com/autohotkey/parameters/parameters.htm#WINCRULES>
+<https://github.com/microsoft/Windows-driver-samples/issues/509>

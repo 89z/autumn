@@ -137,6 +137,7 @@ a &quot;b&quot; c
    print(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;a &#34;b&#39;</span>);
 }
 </code></pre></div>
+<p><a href="https://github.com/dart-lang/sdk/issues/42124">https://github.com/dart-lang/sdk/issues/42124</a></p>
 <h2 id="go">Go</h2>
 
 
@@ -149,25 +150,32 @@ a &quot;b&quot; c
    println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">`a &#34;b`</span>)
 }
 </code></pre></div>
-<p><a href="https://github.com/golang/go/blob/8f4151ea/src/os/exec_windows.go#L161">https://github.com/golang/go/blob/8f4151ea/src/os/exec_windows.go#L161</a></p>
-<h2 id="php">PHP</h2>
+<p><a href="https://github.com/golang/go/issues/39311">https://github.com/golang/go/issues/39311</a></p>
+<h2 id="nim">Nim</h2>
 
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$s <span style="color:#f92672">=</span> $argv[<span style="color:#ae81ff">1</span>];
-<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;a &#34;b&#39;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.nim" data-lang=".nim"><span style="color:#f92672">import</span> os
+<span style="color:#66d9ef">var</span> a <span style="color:#f92672">=</span> commandLineParams()
+<span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> a<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span>
+echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;&#34;a &#34;b&#34; c&#34;&#34;&#34;</span>
 </code></pre></div>
-<h2 id="python">Python</h2>
+<h2 id="racket">Racket</h2>
 
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">import</span> sys
-s <span style="color:#f92672">=</span> sys<span style="color:#f92672">.</span>argv[<span style="color:#ae81ff">1</span>]
-<span style="color:#66d9ef">print</span>(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;a &#34;b&#34; c&#39;</span>)
-</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rkt" data-lang=".rkt"><span style="color:#f92672">#lang </span>racket <span style="color:#75715e">; vector-ref</span>
+(<span style="color:#66d9ef">define</span> a
+   (current-command-line-arguments)
+)
+(<span style="color:#66d9ef">define</span> s
+   (vector-ref a <span style="color:#ae81ff">0</span>)
+)
+(string=? s <span style="color:#e6db74">&#34;a b c&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
+<p><a href="https://github.com/racket/racket/issues/3227">https://github.com/racket/racket/issues/3227</a></p>
 <h2 id="rust">Rust</h2>
 
 
@@ -180,8 +188,9 @@ s <span style="color:#f92672">=</span> sys<span style="color:#f92672">.</span>ar
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s <span style="color:#f92672">==</span> <span style="color:#e6db74">r#&#34;a &#34;b&#34;#</span>);
 }
 </code></pre></div>
+<p><a href="https://github.com/rust-lang/rust/issues/44650">https://github.com/rust-lang/rust/issues/44650</a></p>
 <h2 id="references">References</h2>
-<p><a href="http://daviddeley.com/autohotkey/parameters/parameters.htm#WINCRULES">http://daviddeley.com/autohotkey/parameters/parameters.htm#WINCRULES</a></p>
+<p><a href="https://github.com/microsoft/Windows-driver-samples/issues/509">https://github.com/microsoft/Windows-driver-samples/issues/509</a></p>
 
 
 </body>
