@@ -1,8 +1,20 @@
 ---
 title: Sleep
 categories: [system]
-tags: [php, rust]
+tags: [dart, nim, php, racket, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-io/sleep.html>
+
+## Nim
+
+{{< r "a.nim" >}}
+
+<https://nim-lang.github.io/Nim/os#sleep,int>
 
 ## PHP
 
@@ -11,6 +23,12 @@ tags: [php, rust]
 
 - <https://php.net/function.time-sleep-until>
 - <https://php.net/function.usleep>
+
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/threads.html#(def._((quote._~23~25kernel)._sleep))>
 
 ## Rust
 

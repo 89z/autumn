@@ -1,8 +1,14 @@
 ---
 title: Condition-first loops
 categories: [reference]
-tags: [go, javascript, nim, php, python, racket]
+tags: [dart, go, javascript, nim, php, python, racket]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://dart.dev/guides/language/language-tour#while-and-do-while>
 
 ## Go
 
@@ -45,6 +51,7 @@ tags: [go, javascript, nim, php, python, racket]
 ## References
 
 - <https://hyperpolyglot.org/scripting#execution-control>
+- <https://hyperpolyglot.org/web#while>
 - <https://www.programming-idioms.org/idiom/2/print-hello-10-times>
 - <https://rosettacode.org/wiki/Loops/For>
 - <https://rosettacode.org/wiki/Loops/While>

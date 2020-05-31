@@ -1,7 +1,7 @@
 ---
 title: Working directory
 categories: [system]
-tags: [dart, go, php, python, racket]
+tags: [dart, go, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -22,6 +22,12 @@ tags: [dart, go, php, python, racket]
 
 <https://php.net/function.getcwd>
 
+## Nim
+
+{{< r "a.nim" >}}
+
+<https://nim-lang.github.io/Nim/os#getCurrentDir>
+
 ## Python
 
 {{< r "os-path.py" >}}
@@ -35,6 +41,12 @@ tags: [dart, go, php, python, racket]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/Filesystem.html#(def._((quote._~23~25kernel)._current-directory))>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/env/fn.current_dir.html>
 
 ## References
 
