@@ -8,6 +8,8 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.dart" >}}
 
+<https://dart.dev/guides/language/language-tour#strings>
+
 ## Go
 
 {{< r "a.go" >}}

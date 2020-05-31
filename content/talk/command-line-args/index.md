@@ -99,35 +99,6 @@ a "b" c
 ~~~
 
 {{< r "main.c" >}}
-{{< r "wmain.c" >}}
-
-## Dart
-
-{{< r "a.dart" >}}
-
-<https://github.com/dart-lang/sdk/issues/42124>
-
-## Go
-
-{{< r "a.go" >}}
-
-<https://github.com/golang/go/issues/39311>
-
-## Nim
-
-{{< r "a.nim" >}}
-
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://github.com/racket/racket/issues/3227>
-
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://github.com/rust-lang/rust/issues/44650>
 
 ## References
 

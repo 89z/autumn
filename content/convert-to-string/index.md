@@ -1,8 +1,12 @@
 ---
 title: Convert to string
 categories: [string]
-tags: [go, javascript, php, python]
+tags: [dart, go, javascript, php, python]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -32,4 +36,5 @@ tags: [go, javascript, php, python]
 
 ## References
 
-<https://hyperpolyglot.org/scripting#format-str>
+- <https://hyperpolyglot.org/scripting#format-str>
+- <https://hyperpolyglot.org/web#num-to-str>

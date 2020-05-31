@@ -21,7 +21,7 @@
    </header>
 
 <h1>List directory entries</h1>
-<time>Thu May 28 2020</time>
+<time>Sat May 30 2020</time>
    
 <a href="/autumn/categories/system/">system</a>
    
@@ -115,7 +115,7 @@ main() {
 </code></pre></div>
 <p><a href="https://nim-lang.github.io/Nim/os#walkFiles.i,string">https://nim-lang.github.io/Nim/os#walkFiles.i,string</a></p>
 <h2 id="php">PHP</h2>
-
+<p>
 
 
 
@@ -136,6 +136,17 @@ main() {
 </span><span style="color:#75715e"></span>$a2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">glob</span>(<span style="color:#e6db74">&#39;a.*&#39;</span>);
 <span style="color:#a6e22e">print_r</span>($a2);
 </code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$o_dir <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveDirectoryIterator</span>(<span style="color:#e6db74">&#39;.&#39;</span>);
+$o_iter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveIteratorIterator</span>($o_dir);
+<span style="color:#66d9ef">foreach</span> ($o_iter <span style="color:#66d9ef">as</span> $o_path) {
+   <span style="color:#66d9ef">echo</span> $o_path<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getPathname</span>(), <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+}
+</code></pre></div></p>
 <ul>
 <li><a href="https://php.net/function.glob">https://php.net/function.glob</a></li>
 <li><a href="https://php.net/function.opendir">https://php.net/function.opendir</a></li>

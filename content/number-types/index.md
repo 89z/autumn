@@ -8,6 +8,8 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.dart" >}}
 
+<https://dart.dev/guides/language/language-tour#numbers>
+
 ## Go
 
 {{< r "a.go" >}}
@@ -42,6 +44,8 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 ## Racket
 
 {{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/numbers.html>
 
 ## Rust
 

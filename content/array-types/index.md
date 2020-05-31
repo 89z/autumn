@@ -45,6 +45,8 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rkt" >}}
 
+<https://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._list))>
+
 ## Rust
 
 {{< r "a.rs" >}}

@@ -8,6 +8,8 @@ tags: [dart, go, nim, php, python, racket, rust]
 
 {{< r "a.dart" >}}
 
+<https://api.dart.dev/dart-io/Stdin/readLineSync.html>
+
 ## Go
 
 {{< r "bufio.go" >}}
