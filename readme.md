@@ -13,7 +13,7 @@ Comparison of programming languages
 ~~~
 168 php links
 148 go links
-124 go examples
+123 go examples
 120 python links
 106 php examples
 106 javascript links
@@ -24,9 +24,9 @@ Comparison of programming languages
 41 nim examples
 41 dart links
 41 dart examples
+40 rust examples
 40 racket links
 40 racket examples
-39 rust examples
 ~~~
 
 ## Author
