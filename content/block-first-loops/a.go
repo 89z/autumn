@@ -1,21 +1,22 @@
 package main
 func main() {
+   var n int
    // example 1
-   n1 := 10
+   n = 10
    for true {
-      println(n1)
-      if n1 == 19 {
+      println(n)
+      if n == 19 {
          break
       }
-      n1++
+      n++
    }
    // example 2
-   n2 := 10
+   n = 10
    for {
-      println(n2)
-      if n2 == 19 {
+      println(n)
+      if n == 19 {
          break
       }
-      n2++
+      n++
    }
 }

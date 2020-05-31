@@ -1,7 +1,7 @@
 ---
 title: Block-first loops
 categories: [reference]
-tags: [dart, go, javascript, nim, php, python, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -41,6 +41,12 @@ tags: [dart, go, javascript, nim, php, python, rust]
 {{< r "a.py" >}}
 
 <https://docs.python.org/reference/compound_stmts.html#while>
+
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/when_unless.html#(form._((lib._racket/private/letstx-scheme..rkt)._when))>
 
 ## Rust
 

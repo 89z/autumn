@@ -1,14 +1,13 @@
 # example 1
-n1 = 10
+n = 10
 while True:
-   print(n1)
-   if n1 == 19:
+   print(n)
+   if n == 19:
       break
-   n1 += 1
+   n += 1
 # example 2
-def f1(n1):
-   print(n1)
-   if n1 >= 19:
-      return
-   f1(n1 + 1)
-f1(10)
+def f(n):
+   print(n)
+   if n < 19:
+      f(n + 1)
+f(10)
