@@ -36,8 +36,6 @@ tags: [go, javascript, php, python, racket]
 
 ## Racket
 
-{{< r "a.rkt" >}}
-
 <https://docs.racket-lang.org/reference/strings.html>
 
 ## References

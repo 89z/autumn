@@ -1,10 +1,10 @@
 <?php
-$s1 = 'Sunday';
+$s = 'Sunday';
 # example 1
-$s2 = substr($s1, 1, 1);
+$s1 = $s[1];
 # example 2
-$s3 = $s1[1];
+$s2 = substr($s, 1, 1);
 # example 3
-$s4 = substr($s1, 1);
+$s3 = substr($s, 1, 2);
 # print
-var_dump($s2 == 'u', $s3 == 'u', $s4 == 'unday');
+var_dump($s1 == 'u', $s2 == 'u', $s3 == 'un');

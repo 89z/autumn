@@ -21,7 +21,7 @@
    </header>
 
 <h1>Block-first loops</h1>
-<time>Thu May 28 2020</time>
+<time>Sat May 30 2020</time>
    
 <a href="/autumn/categories/reference/">reference</a>
    
@@ -181,8 +181,25 @@ n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
 f1(<span style="color:#ae81ff">10</span>)
 </code></pre></div>
 <p><a href="https://docs.python.org/reference/compound_stmts.html#while">https://docs.python.org/reference/compound_stmts.html#while</a></p>
+<h2 id="rust">Rust</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+   <span style="color:#66d9ef">loop</span> {
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
+      <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">19</span> {
+         <span style="color:#66d9ef">break</span>;
+      }
+      n <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
+   }
+}
+</code></pre></div>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://hyperpolyglot.org/rust#infinite-loop">https://hyperpolyglot.org/rust#infinite-loop</a></li>
 <li><a href="https://hyperpolyglot.org/scripting#while">https://hyperpolyglot.org/scripting#while</a></li>
 <li><a href="https://hyperpolyglot.org/web#infinite-loop">https://hyperpolyglot.org/web#infinite-loop</a></li>
 <li><a href="https://www.programming-idioms.org/idiom/78/do-while-loop">https://www.programming-idioms.org/idiom/78/do-while-loop</a></li>

@@ -1,9 +1,9 @@
-s1 = 'Sunday'
+s = 'Sunday'
 # example 1
-s2 = s1[-1:]
+s1 = s[1:]
 # example 2
-s3 = s1[-1]
+s2 = s[-2:]
 # example 3
-s4 = s1[-2:]
+s3 = s[-1]
 # print
-print(s2 == 'y', s3 == 'y', s4 == 'ay')
+print(s1 == 'unday', s2 == 'ay', s3 == 'y')

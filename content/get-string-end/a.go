@@ -1,10 +1,12 @@
 package main
 func main() {
-   s1 := "Sunday"
+   s := "Sunday"
    // example 1
-   s2 := s1[len(s1) - 1:]
+   s1 := s[1:2]
    // example 2
-   s3 := s1[len(s1) - 2:]
+   s2 := s[1:]
+   // example 3
+   s3 := s[len(s) - 1:]
    // print
-   println(s2 == "y", s3 == "ay")
+   println(s1 == "u", s2 == "unday", s3 == "y")
 }

@@ -1,7 +1,8 @@
 package main
+import "strings"
 func main() {
-   a := []rune("♠♣♥♦")
-   a2 := a[1:2]
-   s2 := string(a2)
+   s := "♠♣♥♦"
+   a := strings.Split(s, "")
+   s2 := a[1]
    println(s2 == "♣")
 }

@@ -1,10 +1,12 @@
 package main
 func main() {
-   s := "Sunday"
    // example 1
-   s1 := s[1:2]
+   s1 := "Sunday"
+   s2 := s1[1:2]
    // example 2
-   s2 := s[1:]
+   a1 := []rune("♠♣♥♦")
+   a2 := a1[1:2]
+   s3 := string(a2)
    // print
-   println(s1 == "u", s2 == "unday")
+   println(s2 == "u", s3 == "♣")
 }

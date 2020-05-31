@@ -1,7 +1,7 @@
 ---
 title: Block-first loops
 categories: [reference]
-tags: [dart, go, javascript, nim, php, python]
+tags: [dart, go, javascript, nim, php, python, rust]
 ---
 
 ## Dart
@@ -42,8 +42,13 @@ tags: [dart, go, javascript, nim, php, python]
 
 <https://docs.python.org/reference/compound_stmts.html#while>
 
+## Rust
+
+{{< r "a.rs" >}}
+
 ## References
 
+- <https://hyperpolyglot.org/rust#infinite-loop>
 - <https://hyperpolyglot.org/scripting#while>
 - <https://hyperpolyglot.org/web#infinite-loop>
 - <https://www.programming-idioms.org/idiom/78/do-while-loop>

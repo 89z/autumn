@@ -1,7 +1,9 @@
-let s1 = 'Sunday';
+let s = 'Sunday';
 // example 1
-let s2 = s1.slice(-1);
+let s1 = s.slice(1);
 // example 2
-let s3 = s1.slice(-2);
+let s2 = s.substring(1);
+// example 3
+let s3 = s.slice(-1);
 // print
-console.log(s2 == 'y', s3 == 'ay');
+console.log(s1 == 'unday', s2 == 'unday', s3 == 'y');

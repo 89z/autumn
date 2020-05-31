@@ -1,13 +1,7 @@
-s1 = 'Sunday'
+s = 'Sunday'
 # example 1
-s2 = s1[0:1]
+s1 = s[0]
 # example 2
-s3 = s1[:1]
-# example 3
-s4 = s1[0]
-# example 4
-s5 = s1[0:2]
-# example 5
-s6 = s1[:2]
+s2 = s[:2]
 # print
-print(s2 == 'S', s3 == 'S', s4 == 'S', s5 == 'Su', s6 == 'Su')
+print(s1 == 'S', s2 == 'Su')

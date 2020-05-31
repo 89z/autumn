@@ -1,7 +1,7 @@
 ---
 title: Get string end
 categories: [string]
-tags: [go, javascript, php, python]
+tags: [go, javascript, php, python, racket]
 ---
 
 ## Go
@@ -31,6 +31,10 @@ tags: [go, javascript, php, python]
 {{< r "a.py" >}}
 
 <https://docs.python.org/reference/expressions.html#slicings>
+
+## Racket
+
+{{< r "a.rkt" >}}
 
 ## References
 
