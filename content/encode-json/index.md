@@ -40,6 +40,8 @@ tags: [dart, go, javascript, nim, php, python, racket]
 
 {{< r "a.rkt" >}}
 
+<https://docs.racket-lang.org/json>
+
 ## References
 
 - <https://hyperpolyglot.org/c#generate-json-note>

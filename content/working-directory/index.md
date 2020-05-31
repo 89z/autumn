@@ -1,8 +1,14 @@
 ---
 title: Working directory
 categories: [system]
-tags: [go, php, python]
+tags: [dart, go, php, python, racket]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-io/Directory/current.html>
 
 ## Go
 
@@ -18,13 +24,17 @@ tags: [go, php, python]
 
 ## Python
 
+{{< r "os-path.py" >}}
 {{< r "os.py" >}}
 
-<https://docs.python.org/library/os.html>
+- <https://docs.python.org/library/os.html>
+- <https://docs.python.org/library/os.path.html#os.path.abspath>
 
-{{< r "os-path.py" >}}
+## Racket
 
-<https://docs.python.org/library/os.path.html#os.path.abspath>
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/Filesystem.html#(def._((quote._~23~25kernel)._current-directory))>
 
 ## References
 

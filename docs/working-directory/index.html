@@ -21,12 +21,24 @@
    </header>
 
 <h1>Working directory</h1>
-<time>Sat May 2 2020</time>
+<time>Sat May 30 2020</time>
    
 <a href="/autumn/categories/system/">system</a>
    
    
-   <h2 id="go">Go</h2>
+   <h2 id="dart">Dart</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
+main() {
+   <span style="color:#66d9ef">var</span> o <span style="color:#f92672">=</span> Directory.current;
+   print(o);
+}
+</code></pre></div>
+<p><a href="https://api.dart.dev/dart-io/Directory/current.html">https://api.dart.dev/dart-io/Directory/current.html</a></p>
+<h2 id="go">Go</h2>
 
 
 
@@ -60,16 +72,7 @@
 </code></pre></div>
 <p><a href="https://php.net/function.getcwd">https://php.net/function.getcwd</a></p>
 <h2 id="python">Python</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">import</span> os
-s1 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>getcwd()
-<span style="color:#66d9ef">print</span>(s1)
-</code></pre></div>
-<p><a href="https://docs.python.org/library/os.html">https://docs.python.org/library/os.html</a></p>
-
+<p>
 
 
 
@@ -77,7 +80,27 @@ s1 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>ge
 s1 <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>abspath(<span style="color:#e6db74">&#39;.&#39;</span>)
 <span style="color:#66d9ef">print</span>(s1)
 </code></pre></div>
-<p><a href="https://docs.python.org/library/os.path.html#os.path.abspath">https://docs.python.org/library/os.path.html#os.path.abspath</a></p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">import</span> os
+s1 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>getcwd()
+<span style="color:#66d9ef">print</span>(s1)
+</code></pre></div></p>
+<ul>
+<li><a href="https://docs.python.org/library/os.html">https://docs.python.org/library/os.html</a></li>
+<li><a href="https://docs.python.org/library/os.path.html#os.path.abspath">https://docs.python.org/library/os.path.html#os.path.abspath</a></li>
+</ul>
+<h2 id="racket">Racket</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rkt" data-lang=".rkt"><span style="color:#f92672">#lang </span>racket
+(current-directory)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
+<p><a href="https://docs.racket-lang.org/reference/Filesystem.html#(def._((quote._~23~25kernel)._current-directory))">https://docs.racket-lang.org/reference/Filesystem.html#(def._((quote._~23~25kernel)._current-directory))</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#working-dir">https://hyperpolyglot.org/c#working-dir</a></li>

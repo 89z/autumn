@@ -1,7 +1,7 @@
 ---
 title: Condition-first loops
 categories: [reference]
-tags: [go, javascript, php, python, racket]
+tags: [go, javascript, nim, php, python, racket]
 ---
 
 ## Go
@@ -16,6 +16,10 @@ tags: [go, javascript, php, python, racket]
 
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/while>
+
+## Nim
+
+{{< r "a.nim" >}}
 
 ## PHP
 
