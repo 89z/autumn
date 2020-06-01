@@ -46,7 +46,7 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rkt" >}}
 
-<https://docs.racket-lang.org/reference/when_unless.html#(form._((lib._racket/private/letstx-scheme..rkt)._when))>
+<https://docs.racket-lang.org/reference/when_unless.html>
 
 ## Rust
 

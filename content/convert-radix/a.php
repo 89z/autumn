@@ -14,11 +14,9 @@ function r64_encode($n_in) {
 function r64_decode($s_in) {
    global $s_dig;
    $n_out = 0;
-   $n_len = strlen($s_in);
-   while ($n_len > 0) {
-      $s_chr = $s_in[-$n_len];
+   $a_in = str_split($s_in);
+   foreach ($a_in as $s_chr) {
       $n_out = $n_out * 64 + strpos($s_dig, $s_chr);
-      $n_len--;
    }
    return $n_out;
 }

@@ -1,6 +1,12 @@
 #lang racket/base
-(define a1 '(10 11))
-(define a2
-   (append a1 '(12 13))
+(define a '(11 12))
+; example 1
+(define a1
+   (append a '(13 14))
 )
-(writeln a2)
+(println a1)
+; exapmle 2
+(define a2
+   (cons 10 a)
+)
+(println a2)
