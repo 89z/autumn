@@ -21,12 +21,29 @@
    </header>
 
 <h1>Encode PDF</h1>
-<time>Sun May 17 2020</time>
+<time>Tue Jun 2 2020</time>
    
 <a href="/autumn/categories/file-format/">file-format</a>
    
    
    <h2 id="php">PHP</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">require</span> <span style="color:#e6db74">&#39;dompdf/autoload.inc.php&#39;</span>;
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Dompdf\Dompdf</span>;
+<span style="color:#75715e"># read
+</span><span style="color:#75715e"></span>$dompdf <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Dompdf</span>();
+$dompdf<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getOptions</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setIsFontSubsettingEnabled</span>(<span style="color:#66d9ef">true</span>);
+$s_in <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>(<span style="color:#e6db74">&#39;index.html&#39;</span>);
+$dompdf<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">loadHtml</span>($s_in);
+<span style="color:#75715e"># write
+</span><span style="color:#75715e"></span>$dompdf<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">render</span>();
+$s_out <span style="color:#f92672">=</span> $dompdf<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">output</span>();
+<span style="color:#a6e22e">file_put_contents</span>(<span style="color:#e6db74">&#39;index.pdf&#39;</span>, $s_out);
+</code></pre></div>
 <ul>
 <li><a href="https://github.com/dompdf/dompdf">https://github.com/dompdf/dompdf</a></li>
 <li><a href="https://github.com/mpdf/mpdf">https://github.com/mpdf/mpdf</a></li>

@@ -6,6 +6,8 @@ tags: [php, python]
 
 ## PHP
 
+{{< r "a.php" >}}
+
 - <https://github.com/dompdf/dompdf>
 - <https://github.com/mpdf/mpdf>
 - <https://github.com/spipu/html2pdf>
