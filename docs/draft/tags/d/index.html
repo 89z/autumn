@@ -24,41 +24,7 @@
 <time>Sun Jun 7 2020</time>
    
    
-   <p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.d" data-lang=".d"><span style="color:#f92672">import</span> etc.c.curl<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">string</span><span style="color:#f92672">;</span>
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span><span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">auto</span> r <span style="color:#f92672">=</span> curl_easy_init<span style="color:#f92672">();</span>
-   curl_easy_setopt<span style="color:#f92672">(</span>r<span style="color:#f92672">,</span> CurlOption<span style="color:#f92672">.</span><span style="color:#a6e22e">url</span><span style="color:#f92672">,</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">toStringz</span><span style="color:#f92672">);</span>
-   curl_easy_perform<span style="color:#f92672">(</span>r<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.ps1" data-lang=".ps1">git clone --depth 1 git<span style="color:#960050;background-color:#1e0010">:</span>//github.com/curl/curl
-Set-Location curl/lib
-mingw32-make `
-<span style="color:#f92672">-f</span> Makefile.m32 `
--j 5 `
-CFG=-winssl `
-CURL_CFLAG_EXTRAS=-fno-addrsig
-Copy-Item libcurl.a ..\..\curl.lib
-</code></pre></div>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.ps1" data-lang=".ps1">ldc2 https.d `
-crypt32.lib `
-curl.lib `
-wldap32.lib
-</code></pre></div></p>
-<p><strong>module is in file which cannot be read</strong></p>
+   <p><strong>module is in file which cannot be read</strong></p>
 <p><a href="https://github.com/adamdruppe/arsd/issues/194">https://github.com/adamdruppe/arsd/issues/194</a></p>
 <p>** https client**</p>
 <p><a href="https://github.com/huntlabs/hunt-http/issues/19">https://github.com/huntlabs/hunt-http/issues/19</a></p>

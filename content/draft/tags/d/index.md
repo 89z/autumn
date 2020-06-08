@@ -3,10 +3,6 @@ title: D language
 tags: [draft]
 ---
 
-{{< r "https.d" >}}
-{{< r "curl.ps1" >}}
-{{< r "ldc2.ps1" >}}
-
 **module is in file which cannot be read**
 
 <https://github.com/adamdruppe/arsd/issues/194>

@@ -48,6 +48,8 @@ tags: [dart, go, nim, php, python, racket, rust]
 
 {{< r "rust.sh" >}}
 
+`edition` allows to omit `extern crate`.
+
 <https://doc.rust-lang.org/cargo/getting-started/first-steps.html>
 
 ## References
