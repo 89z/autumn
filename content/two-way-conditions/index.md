@@ -1,8 +1,12 @@
 ---
 title: Two-way conditions
 categories: [reference]
-tags: [dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
 
 ## Dart
 
@@ -63,5 +67,5 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 - <https://hyperpolyglot.org/rust#if>
 - <https://hyperpolyglot.org/scripting#if>
 - <https://hyperpolyglot.org/web#if-note>
+- <https://programming-idioms.org/idiom/131>
 - <https://rosettacode.org/wiki/Conditional_structures>
-- <https://www.programming-idioms.org/idiom/131/successive-condition>
