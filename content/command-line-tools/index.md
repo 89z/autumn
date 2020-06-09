@@ -1,8 +1,12 @@
 ---
 title: Command line tools
 categories: [reference]
-tags: [dart, go, nim, php, python, racket, rust]
+tags: [d, dart, go, nim, php, python, racket, rust]
 ---
+
+## D
+
+{{< r "d.sh" >}}
 
 ## Dart
 

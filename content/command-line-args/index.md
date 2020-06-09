@@ -1,8 +1,12 @@
 ---
 title: Command line arguments
 categories: [system]
-tags: [dart, go, nim, php, python, racket, rust]
+tags: [d, dart, go, nim, php, python, racket, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
 
 ## Dart
 

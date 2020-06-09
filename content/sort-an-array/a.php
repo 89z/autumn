@@ -4,8 +4,11 @@ $a = ['99', '100'];
 sort($a);
 print_r($a);
 # example 2
-rsort($a);
+sort($a, SORT_NATURAL);
 print_r($a);
 # example 3
+rsort($a);
+print_r($a);
+# example 4
 rsort($a, SORT_NATURAL);
 print_r($a);

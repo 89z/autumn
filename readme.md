@@ -27,7 +27,7 @@ Comparison of programming languages
 38 racket links
 37 nim examples
 34 nim links
-6 d examples
+11 d examples
 2 d links
 ~~~
 
