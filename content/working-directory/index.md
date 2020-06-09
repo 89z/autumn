@@ -1,8 +1,14 @@
 ---
 title: Working directory
 categories: [system]
-tags: [dart, go, nim, php, python, racket, rust]
+tags: [d, dart, go, nim, php, python, racket, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/path/absolute_path.html>
 
 ## Dart
 
@@ -52,4 +58,4 @@ tags: [dart, go, nim, php, python, racket, rust]
 
 - <https://hyperpolyglot.org/c#working-dir>
 - <https://hyperpolyglot.org/scripting2#working-dir>
-- <https://www.programming-idioms.org/idiom/106/get-program-working-directory>
+- <https://programming-idioms.org/idiom/106>

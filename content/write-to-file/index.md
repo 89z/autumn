@@ -1,8 +1,14 @@
 ---
 title: Write to file
 categories: [input-output]
-tags: [dart, go, nim, php, python, racket, rust]
+tags: [d, dart, go, nim, php, python, racket, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/stdio/file.writeln.html>
 
 ## Dart
 

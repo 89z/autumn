@@ -8,6 +8,8 @@ tags: [d, go, php, python, rust]
 
 {{< r "a.d" >}}
 
+<https://dlang.org/library/std/stdio/file.by_line.html>
+
 ## Go
 
 {{< r "a.go" >}}

@@ -8,6 +8,8 @@ tags: [d, dart, nim, php, racket, rust]
 
 {{< r "a.d" >}}
 
+<https://dlang.org/library/core/thread/osthread/thread.sleep.html>
+
 ## Dart
 
 {{< r "a.dart" >}}

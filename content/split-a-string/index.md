@@ -8,6 +8,8 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.d" >}}
 
+<https://dlang.org/library/std/array/split.html>
+
 ## Dart
 
 {{< r "a.dart" >}}
