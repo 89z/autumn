@@ -1,8 +1,15 @@
 ---
 title: Add to set
 categories: [set]
-tags: [dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
+{{< r "b.d" >}}
+
+<https://dlang.org/library/std/container/rbtree.html>
 
 ## Dart
 

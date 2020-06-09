@@ -1,8 +1,14 @@
 ---
 title: HTTP GET
 categories: [network]
-tags: [dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/net/curl/get.html>
 
 ## Dart
 

@@ -21,7 +21,7 @@
    </header>
 
 <h1>Sort an array</h1>
-<time>Wed May 27 2020</time>
+<time>Tue Jun 9 2020</time>
    
 <a href="/autumn/categories/array/">array</a>
    
@@ -66,26 +66,20 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;99&#39;</span>, <span style="color:#e6db74">&#39;100&#39;</span>];
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span>, <span style="color:#e6db74">&#39;Mon&#39;</span>];
-<span style="color:#a6e22e">sort</span>($a1);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">sort</span>($a);
+<span style="color:#a6e22e">print_r</span>($a);
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$a2 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Mon&#39;</span>, <span style="color:#e6db74">&#39;Tue&#39;</span>];
-<span style="color:#a6e22e">rsort</span>($a2);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">rsort</span>($a);
+<span style="color:#a6e22e">print_r</span>($a);
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$a3 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Monday&#39;</span>, <span style="color:#e6db74">&#39;Tue&#39;</span>];
-<span style="color:#a6e22e">array_multisort</span>(<span style="color:#a6e22e">array_map</span>(<span style="color:#e6db74">&#39;strlen&#39;</span>, $a3), $a3);
-<span style="color:#75715e"># example 4
-</span><span style="color:#75715e"></span>$a4 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Monday&#39;</span>, <span style="color:#e6db74">&#39;Tue&#39;</span>];
-<span style="color:#a6e22e">usort</span>($a4, <span style="color:#a6e22e">fn</span>($s1, $s2) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">strlen</span>($s1) <span style="color:#f92672">-</span> <span style="color:#a6e22e">strlen</span>($s2));
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($a1, $a2, $a3, $a4);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">rsort</span>($a, <span style="color:#a6e22e">SORT_NATURAL</span>);
+<span style="color:#a6e22e">print_r</span>($a);
 </code></pre></div>
 <ul>
-<li><a href="https://php.net/function.array-multisort">https://php.net/function.array-multisort</a></li>
 <li><a href="https://php.net/function.rsort">https://php.net/function.rsort</a></li>
 <li><a href="https://php.net/function.sort">https://php.net/function.sort</a></li>
-<li><a href="https://php.net/function.usort">https://php.net/function.usort</a></li>
 </ul>
 <h2 id="python">Python</h2>
 

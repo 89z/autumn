@@ -20,10 +20,8 @@ tags: [go, javascript, php, python]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.array-multisort>
 - <https://php.net/function.rsort>
 - <https://php.net/function.sort>
-- <https://php.net/function.usort>
 
 ## Python
 

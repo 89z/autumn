@@ -1,8 +1,12 @@
 ---
 title: Array types
 categories: [array]
-tags: [dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
 
 ## Dart
 
