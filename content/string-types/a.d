@@ -1,5 +1,11 @@
 import std.stdio;
 void main() {
-   auto s = "Sunday";
-   s.writeln;
+   // example 1
+   auto s1 = "Sunday
+Monday";
+   // example 2
+   auto s2 = `Sunday
+Monday`;
+   // print
+   [s1, s2].writeln;
 }

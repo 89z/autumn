@@ -1,8 +1,12 @@
 ---
 title: Extract string by pattern
 categories: [string]
-tags: [go, javascript, php, python, rust]
+tags: [d, go, javascript, php, python, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
 
 ## Go
 
@@ -45,5 +49,5 @@ tags: [go, javascript, php, python, rust]
 ## References
 
 - <https://hyperpolyglot.org/scripting#group-capture>
+- <https://programming-idioms.org/idiom/83>
 - <https://rosettacode.org/wiki/Regular_expressions>
-- <https://www.programming-idioms.org/idiom/83>

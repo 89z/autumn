@@ -1,8 +1,12 @@
 ---
 title: Join an array
 categories: [array, string]
-tags: [dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
 
 ## Dart
 
@@ -56,5 +60,5 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 - <https://hyperpolyglot.org/lisp#str-join>
 - <https://hyperpolyglot.org/scripting#str-join>
 - <https://hyperpolyglot.org/web#str-join>
-- <https://www.programming-idioms.org/idiom/53/join-a-list>
+- <https://programming-idioms.org/idiom/53>
 - <https://rosettacode.org/wiki/Arrays>

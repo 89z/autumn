@@ -1,8 +1,14 @@
 ---
 title: Decode JSON
 categories: [file-format]
-tags: [dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/json.html>
 
 ## Dart
 
@@ -53,5 +59,5 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 ## References
 
 - <https://hyperpolyglot.org/scripting2#parse-json>
-- <https://www.programming-idioms.org/idiom/91/load-json-file-into-struct>
+- <https://programming-idioms.org/idiom/91>
 - <https://rosettacode.org/wiki/JSON>

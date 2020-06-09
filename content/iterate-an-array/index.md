@@ -1,8 +1,12 @@
 ---
 title: Iterate an array
 categories: [iterate, array]
-tags: [dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
 
 ## Dart
 
@@ -62,7 +66,7 @@ tags: [dart, go, javascript, nim, php, python, racket, rust]
 - <https://hyperpolyglot.org/lisp#lists>
 - <https://hyperpolyglot.org/rust#iterate-over-array>
 - <https://hyperpolyglot.org/web#iterate-over-array>
-- <https://www.programming-idioms.org/idiom/6/iterate-over-list-val>
-- <https://www.programming-idioms.org/idiom/7/iterate-over-list-indexes-val>
+- <https://programming-idioms.org/idiom/6/iterate-over-list-val>
+- <https://programming-idioms.org/idiom/7/iterate-over-list-indexes-val>
 - <https://rosettacode.org/wiki/Loop_Structures>
 - <https://rosettacode.org/wiki/Loops/Foreach>
