@@ -21,12 +21,24 @@
    </header>
 
 <h1>Environment variables</h1>
-<time>Thu May 28 2020</time>
+<time>Tue Jun 9 2020</time>
    
 <a href="/autumn/categories/system/">system</a>
    
    
-   <h2 id="dart">Dart</h2>
+   <h2 id="d">D</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.d" data-lang=".d"><span style="color:#f92672">import</span> std.process<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> environment<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;BROWSER&#34;</span><span style="color:#f92672">);</span>
+   s<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+<p><a href="https://dlang.org/library/std/process/environment.get.html">https://dlang.org/library/std/process/environment.get.html</a></p>
+<h2 id="dart">Dart</h2>
 
 
 
@@ -128,7 +140,7 @@ s2 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>ge
 <ul>
 <li><a href="https://hyperpolyglot.org/lisp#env-var">https://hyperpolyglot.org/lisp#env-var</a></li>
 <li><a href="https://hyperpolyglot.org/scripting2#env-var">https://hyperpolyglot.org/scripting2#env-var</a></li>
-<li><a href="https://www.programming-idioms.org/idiom/205/get-an-environment-variable">https://www.programming-idioms.org/idiom/205/get-an-environment-variable</a></li>
+<li><a href="https://www.programming-idioms.org/idiom/205">https://www.programming-idioms.org/idiom/205</a></li>
 <li><a href="https://rosettacode.org/wiki/Environment_variables">https://rosettacode.org/wiki/Environment_variables</a></li>
 </ul>
 

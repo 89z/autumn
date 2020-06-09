@@ -1,8 +1,14 @@
 ---
 title: Create directory
 categories: [system]
-tags: [dart, go, nim, php, python, racket, rust]
+tags: [d, dart, go, nim, php, python, racket, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/file/mkdir.html>
 
 ## Dart
 

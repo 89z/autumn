@@ -21,12 +21,25 @@
    </header>
 
 <h1>Format number</h1>
-<time>Thu May 28 2020</time>
+<time>Tue Jun 9 2020</time>
    
 <a href="/autumn/categories/number/">number</a>
    
    
-   <h2 id="dart">Dart</h2>
+   <h2 id="d">D</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.d" data-lang=".d"><span style="color:#f92672">import</span> std.format<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> format<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;%,d&#34;</span><span style="color:#f92672">,</span> n<span style="color:#f92672">);</span>
+   writeln<span style="color:#f92672">(</span>s<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+<p><a href="https://dlang.org/library/std/format.html">https://dlang.org/library/std/format.html</a></p>
+<h2 id="dart">Dart</h2>
 
 
 
@@ -145,8 +158,8 @@ s3 <span style="color:#f92672">=</span> format(n1, <span style="color:#e6db74">&
 <p><a href="https://docs.rs/num-format">https://docs.rs/num-format</a></p>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://programming-idioms.org/idiom/173">https://programming-idioms.org/idiom/173</a></li>
 <li><a href="https://rosettacode.org/wiki/Commatizing_numbers">https://rosettacode.org/wiki/Commatizing_numbers</a></li>
-<li><a href="https://www.programming-idioms.org/idiom/173/format-number-group">https://www.programming-idioms.org/idiom/173/format-number-group</a></li>
 </ul>
 
 

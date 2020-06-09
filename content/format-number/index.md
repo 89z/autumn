@@ -1,8 +1,14 @@
 ---
 title: Format number
 categories: [number]
-tags: [dart, go, javascript, nim, php, python, rust]
+tags: [d, dart, go, javascript, nim, php, python, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/format.html>
 
 ## Dart
 
@@ -54,5 +60,5 @@ tags: [dart, go, javascript, nim, php, python, rust]
 
 ## References
 
+- <https://programming-idioms.org/idiom/173>
 - <https://rosettacode.org/wiki/Commatizing_numbers>
-- <https://www.programming-idioms.org/idiom/173/format-number-group>

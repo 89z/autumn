@@ -1,8 +1,12 @@
 ---
 title: Declare value
 categories: [reference]
-tags: [dart, go, javascript, nim, php, racket, rust]
+tags: [d, dart, go, javascript, nim, php, racket, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
 
 ## Dart
 

@@ -1,4 +1,5 @@
 *.exe
+*.obj
 .dart_tool
 .packages
 Cargo.lock

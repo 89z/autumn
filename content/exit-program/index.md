@@ -1,17 +1,19 @@
 ---
 title: Exit program
 categories: [system]
-tags: [go, nim, php, python, racket, rust]
+tags: [d, go, nim, php, python, racket, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
 
 ## Go
 
 {{< r "exit.go" >}}
 {{< r "log.go" >}}
-{{< r "panic.go" >}}
 {{< r "return.go" >}}
 
-- <https://golang.org/pkg/builtin#panic>
 - <https://golang.org/pkg/log#Fatal>
 - <https://golang.org/pkg/os#Exit>
 - <https://golang.org/ref/spec#Return_statements>
@@ -47,14 +49,12 @@ tags: [go, nim, php, python, racket, rust]
 ## Rust
 
 {{< r "exit.rs" >}}
-{{< r "panic.rs" >}}
 
-- <https://doc.rust-lang.org/std/macro.panic.html>
-- <https://doc.rust-lang.org/std/process/fn.exit.html>
+<https://doc.rust-lang.org/std/process/fn.exit.html>
 
 ## References
 
 - <https://hyperpolyglot.org/c#exit>
 - <https://hyperpolyglot.org/scripting2#exit>
+- <https://programming-idioms.org/idiom/87>
 - <https://rosettacode.org/wiki/Program_termination>
-- <https://www.programming-idioms.org/idiom/87/stop-program>
