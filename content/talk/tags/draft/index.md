@@ -27,6 +27,7 @@ have 5 or less ways to perform a task. These currently fail that test:
 
 - Clojure
 - Common-lisp
+- D
 - Dart
 - F#
 - Go
@@ -42,8 +43,7 @@ have 5 or less ways to perform a task. These currently fail that test:
 Language should have built in HTTP client, or at least an up to date package
 without major bugs. These currently fail that test:
 
-- D
-- Zig
+Zig
 
 ## JavaScript
 

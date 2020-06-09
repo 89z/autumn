@@ -1,7 +1,7 @@
 ---
 title: HTTP GET
 categories: [network]
-tags: [dart, go, javascript, php, python, racket, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## Dart
@@ -23,14 +23,18 @@ tags: [dart, go, javascript, php, python, racket, rust]
 - <https://developer.mozilla.org/Web/API/WindowOrWorkerGlobalScope/fetch>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/await>
 
+## Nim
+
+{{< r "a.nim" >}}
+
 ## PHP
 
-{{< r "curl.php" >}}
+{{< r "a.php" >}}
+{{< r "b.php" >}}
+{{< r "c.php" >}}
 
-<https://php.net/function.curl-init>
-
-{{< r "std.php" >}}
-
+- <https://php.net/function.copy>
+- <https://php.net/function.curl-init>
 - <https://php.net/function.file-get-contents>
 - <https://php.net/function.stream-get-contents>
 

@@ -33,8 +33,10 @@
 <pre><code class="language-.nims" data-lang=".nims">import os
 task r, &#34;compile to temp&#34;:
    setCommand(&#34;compile&#34;)
-   switch(&#34;run&#34;)
+   switch(&#34;gcc.exe&#34;, &#34;C:/llvm-mingw/bin/gcc.exe&#34;)
+   switch(&#34;gcc.linkerexe&#34;, &#34;C:/llvm-mingw/bin/gcc.exe&#34;)
    switch(&#34;outdir&#34;, getTempDir())
+   switch(&#34;run&#34;)
 </code></pre>
 <ul>
 <li><a href="https://nim-lang.github.io/Nim/nims.html">https://nim-lang.github.io/Nim/nims.html</a></li>
