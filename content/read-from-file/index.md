@@ -1,8 +1,12 @@
 ---
 title: Read from file
 categories: [input-output]
-tags: [dart, go, nim, php, python, racket, rust]
+tags: [d, dart, go, nim, php, python, racket, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
 
 ## Dart
 
@@ -62,5 +66,5 @@ tags: [dart, go, nim, php, python, racket, rust]
 - <https://hyperpolyglot.org/lisp#read-file-str>
 - <https://hyperpolyglot.org/scripting2#read-file-str>
 - <https://hyperpolyglot.org/web#read-file-str>
-- <https://www.programming-idioms.org/idiom/58/extract-file-content>
+- <https://programming-idioms.org/idiom/58>
 - <https://rosettacode.org/wiki/Read_entire_file>

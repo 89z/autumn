@@ -1,8 +1,12 @@
 ---
 title: Sleep
 categories: [system]
-tags: [dart, nim, php, racket, rust]
+tags: [d, dart, nim, php, racket, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
 
 ## Dart
 
@@ -39,4 +43,4 @@ tags: [dart, nim, php, racket, rust]
 ## References
 
 - <https://hyperpolyglot.org/scripting#sleep>
-- <https://www.programming-idioms.org/idiom/45>
+- <https://programming-idioms.org/idiom/45>

@@ -1,8 +1,14 @@
 ---
 title: List directory entries
 categories: [system]
-tags: [dart, go, nim, php, python, racket, rust]
+tags: [d, dart, go, nim, php, python, racket, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/file/dir_entries.html>
 
 ## Dart
 
@@ -57,6 +63,6 @@ tags: [dart, go, nim, php, python, racket, rust]
 
 - <https://hyperpolyglot.org/lisp#iterate-dir>
 - <https://hyperpolyglot.org/scripting2#dir-iterate>
-- <https://www.programming-idioms.org/idiom/180/list-files-in-directory>
+- <https://programming-idioms.org/idiom/180>
 - <https://rosettacode.org/wiki/Unix/ls>
 - <https://rosettacode.org/wiki/Walk_a_directory/Non-recursively>

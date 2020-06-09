@@ -1,8 +1,12 @@
 ---
 title: Write to console
 categories: [input-output]
-tags: [dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
+
+## D
+
+{{< r "a.d" >}}
 
 ## Dart
 
