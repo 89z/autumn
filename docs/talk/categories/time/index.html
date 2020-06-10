@@ -24,33 +24,72 @@
 <time>Wed Jun 10 2020</time>
    
    
-   <p>current date string:</p>
-<pre><code>cove/git-train/git-board.php
-43:$s_curr = strftime('%F');
-</code></pre><p>current date number:</p>
-<pre><code>cove/youtube-insert/youtube-insert.php
-78:$n_id_1 = time();
-</code></pre><p>date string to object:</p>
-<pre><code>cove/youtube-playlist/youtube-playlist.php
-43:   $o_then = date_create($s_then);
-</code></pre><ul>
-<li><a href="https://docs.python.org/library/time.html#time.strptime">https://docs.python.org/library/time.html#time.strptime</a></li>
-<li><a href="https://docs.python.org/library/datetime.html#datetime.datetime.strptime">https://docs.python.org/library/datetime.html#datetime.datetime.strptime</a></li>
-</ul>
-<p>date difference:</p>
-<pre><code>cove/youtube-playlist/youtube-playlist.php
-44:   $o_diff = date_diff($o_now, $o_then);
-</code></pre><p>number to date string:</p>
-<pre><code>umber/docs/js/date.js
-14:   const o = new Date(n_id * 1000);
-15:   const s_day = o.toLocaleString(0, {weekday: 'short'});
-</code></pre><p>not needed:</p>
+   <p>Some languages like Go cannot convert directly from number to date string:</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;time&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n</span> <span style="color:#66d9ef">int64</span> = <span style="color:#ae81ff">365</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o</span> = <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Unix</span>(<span style="color:#a6e22e">n</span>, <span style="color:#ae81ff">0</span>)
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> = <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">String</span>()
+   println(<span style="color:#a6e22e">s</span>)
+}
+</code></pre></div>
+<p>Same with JavaScript:</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">365</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">o</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#a6e22e">n</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">toString</span>();
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span>);
+</code></pre></div>
+<p>PHP can:</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">365</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">strftime</span>(<span style="color:#e6db74">&#39;%F&#39;</span>, $n);
+<span style="color:#a6e22e">var_dump</span>($s);
+</code></pre></div>
+<p>and PHP can also convert from object:</p>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">365</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>;
+$o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
+$o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setTimestamp</span>($n);
+$s <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#39;Y-m-d&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($s);
+</code></pre></div>
+<p>we could approach like this:</p>
 <ul>
-<li>current date object</li>
-<li>date object to number</li>
-<li>date object to string</li>
-<li>date string to number</li>
-<li>number to date object</li>
+<li>get date number</li>
+<li>get date object</li>
+<li>get date string</li>
+</ul>
+<p>but those pages could be too large, as could be multiple input and output
+options. Better would be this:</p>
+<ul>
+<li>number to object</li>
+<li>number to string</li>
+<li>object to number</li>
+<li>object to string</li>
+<li>string to number</li>
+<li>string to object</li>
+</ul>
+<p>So in this case, we can split like this:</p>
+<ul>
+<li>number to string</li>
+<li>number to object</li>
 </ul>
 
 

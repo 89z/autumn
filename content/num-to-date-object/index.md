@@ -1,5 +1,5 @@
 ---
-title: Number to date string
+title: Number to date object
 categories: [time]
 tags: [go, javascript, php, python]
 ---

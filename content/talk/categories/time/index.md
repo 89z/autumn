@@ -2,49 +2,39 @@
 title: 'Category talk:Time'
 ---
 
-current date string:
+Some languages like Go cannot convert directly from number to date string:
 
-~~~
-cove/git-train/git-board.php
-43:$s_curr = strftime('%F');
-~~~
+{{< r "a.go" >}}
 
-current date number:
+Same with JavaScript:
 
-~~~
-cove/youtube-insert/youtube-insert.php
-78:$n_id_1 = time();
-~~~
+{{< r "a.js" >}}
 
-date string to object:
+PHP can:
 
-~~~
-cove/youtube-playlist/youtube-playlist.php
-43:   $o_then = date_create($s_then);
-~~~
+{{< r "a.php" >}}
 
-- <https://docs.python.org/library/time.html#time.strptime>
-- <https://docs.python.org/library/datetime.html#datetime.datetime.strptime>
+and PHP can also convert from object:
 
-date difference:
+{{< r "b.php" >}}
 
-~~~
-cove/youtube-playlist/youtube-playlist.php
-44:   $o_diff = date_diff($o_now, $o_then);
-~~~
+we could approach like this:
 
-number to date string:
+- get date number
+- get date object
+- get date string
 
-~~~
-umber/docs/js/date.js
-14:   const o = new Date(n_id * 1000);
-15:   const s_day = o.toLocaleString(0, {weekday: 'short'});
-~~~
+but those pages could be too large, as could be multiple input and output
+options. Better would be this:
 
-not needed:
+- number to object
+- number to string
+- object to number
+- object to string
+- string to number
+- string to object
 
-- current date object
-- date object to number
-- date object to string
-- date string to number
-- number to date object
+So in this case, we can split like this:
+
+- number to string
+- number to object
