@@ -24,21 +24,33 @@
 <time>Wed Jun 10 2020</time>
    
    
-   <h2 id="to-do">To do</h2>
+   <p>current date string:</p>
+<pre><code>cove/git-train/git-board.php
+43:$s_curr = strftime('%F');
+</code></pre><p>current date number:</p>
+<pre><code>cove/youtube-insert/youtube-insert.php
+78:$n_id_1 = time();
+</code></pre><p>date string to object:</p>
+<pre><code>cove/youtube-playlist/youtube-playlist.php
+43:   $o_then = date_create($s_then);
+</code></pre><ul>
+<li><a href="https://docs.python.org/library/time.html#time.strptime">https://docs.python.org/library/time.html#time.strptime</a></li>
+<li><a href="https://docs.python.org/library/datetime.html#datetime.datetime.strptime">https://docs.python.org/library/datetime.html#datetime.datetime.strptime</a></li>
+</ul>
+<p>date difference:</p>
+<pre><code>cove/youtube-playlist/youtube-playlist.php
+44:   $o_diff = date_diff($o_now, $o_then);
+</code></pre><p>number to date string:</p>
+<pre><code>umber/docs/js/date.js
+14:   const o = new Date(n_id * 1000);
+15:   const s_day = o.toLocaleString(0, {weekday: 'short'});
+</code></pre><p>not needed:</p>
 <ul>
 <li>current date object</li>
 <li>date object to number</li>
 <li>date object to string</li>
 <li>date string to number</li>
 <li>number to date object</li>
-</ul>
-<h2 id="done">Done</h2>
-<ul>
-<li>current date number</li>
-<li>current date string</li>
-<li>date difference</li>
-<li>date string to object</li>
-<li>number to date string</li>
 </ul>
 
 
