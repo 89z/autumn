@@ -1,6 +1,5 @@
 <?php
-$o1 = date_create('2019-12-31');
-$o2 = date_create();
-$o3 = date_diff($o2, $o1);
-$n1 = $o3->days;
-var_dump($n1);
+$n1 = strtotime('2020-06-10');
+$n2 = time();
+$n3 = $n2 - $n1;
+var_dump($n3);

@@ -5,11 +5,12 @@ import (
    "time"
 )
 func main() {
-   o1, e := time.Parse(time.RFC3339, "2019-12-31T00:00:00Z")
+   o1, e := time.Parse(time.RFC3339[:10], "2019-12-31")
    if e != nil {
       log.Fatal(e)
    }
    o2 := time.Now()
    o3 := o2.Sub(o1)
-   fmt.Println(o3)
+   n := o3.Seconds()
+   fmt.Println(n)
 }
