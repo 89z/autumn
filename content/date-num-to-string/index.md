@@ -1,6 +1,6 @@
 ---
-title: Number to date string
-categories: [time]
+title: Date number to string
+categories: [date]
 tags: [go, javascript, php, python]
 ---
 

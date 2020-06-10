@@ -1,6 +1,6 @@
 ---
-title: Number to date object
-categories: [time]
+title: Date number to object
+categories: [date]
 tags: [d, go, javascript, php, python]
 ---
 

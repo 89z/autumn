@@ -1,6 +1,6 @@
 ---
 title: Current date string
-categories: [time]
+categories: [date]
 tags: [go, javascript, php, python]
 ---
 

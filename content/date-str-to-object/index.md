@@ -1,6 +1,6 @@
 ---
 title: Date string to object
-categories: [time]
+categories: [date]
 tags: [go, javascript, php, python]
 ---
 

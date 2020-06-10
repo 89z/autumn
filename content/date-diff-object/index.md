@@ -1,6 +1,6 @@
 ---
-title: Date difference
-categories: [time]
+title: Date difference object
+categories: [date]
 tags: [go, javascript, php, python]
 ---
 

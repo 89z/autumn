@@ -1,5 +1,5 @@
 ---
-title: Date string to number
+title: Date difference number
 categories: [date]
 tags: [go, javascript, php, python]
 ---
@@ -8,7 +8,7 @@ tags: [go, javascript, php, python]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/time#Time.Unix>
+<https://golang.org/pkg/time>
 
 ## JavaScript
 
@@ -20,14 +20,15 @@ tags: [go, javascript, php, python]
 
 {{< r "a.php" >}}
 
-<https://php.net/function.strtotime>
+<https://php.net/function.date-diff>
 
 ## Python
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/datetime.html#datetime.datetime.timestamp>
+<https://docs.python.org/library/datetime.html>
 
 ## References
 
-<https://hyperpolyglot.org/scripting#broken-down-datetime-to-unix-epoch>
+- <https://hyperpolyglot.org/c#date-subtraction>
+- <https://hyperpolyglot.org/scripting#datetime-subtraction>
