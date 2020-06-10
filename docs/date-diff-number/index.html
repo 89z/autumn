@@ -43,12 +43,11 @@
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
    <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Now</span>()
-   <span style="color:#a6e22e">o3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Sub</span>(<span style="color:#a6e22e">o1</span>)
-   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o3</span>.<span style="color:#a6e22e">Seconds</span>()
+   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Sub</span>(<span style="color:#a6e22e">o1</span>).<span style="color:#a6e22e">Seconds</span>()
    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">n</span>)
 }
 </code></pre></div>
-<p><a href="https://golang.org/pkg/time">https://golang.org/pkg/time</a></p>
+<p><a href="https://golang.org/pkg/time#Duration.Seconds">https://golang.org/pkg/time#Duration.Seconds</a></p>
 <h2 id="javascript">JavaScript</h2>
 
 
@@ -59,7 +58,7 @@
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">o2</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">o1</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">1000</span>;
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n</span>);
 </code></pre></div>
-<p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/getTime">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/getTime</a></p>
+<p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date</a></p>
 <h2 id="php">PHP</h2>
 
 
@@ -71,7 +70,7 @@ $n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">time</span>
 $n3 <span style="color:#f92672">=</span> $n2 <span style="color:#f92672">-</span> $n1;
 <span style="color:#a6e22e">var_dump</span>($n3);
 </code></pre></div>
-<p><a href="https://php.net/function.date-diff">https://php.net/function.date-diff</a></p>
+<p><a href="https://php.net/function.strtotime">https://php.net/function.strtotime</a></p>
 <h2 id="python">Python</h2>
 
 
@@ -80,11 +79,10 @@ $n3 <span style="color:#f92672">=</span> $n2 <span style="color:#f92672">-</span
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
 o1 <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>strptime(<span style="color:#e6db74">&#39;2019-12-31&#39;</span>, <span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>)
 o2 <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now()
-o3 <span style="color:#f92672">=</span> o2 <span style="color:#f92672">-</span> o1
-n <span style="color:#f92672">=</span> o3<span style="color:#f92672">.</span>total_seconds()
+n <span style="color:#f92672">=</span> (o2 <span style="color:#f92672">-</span> o1)<span style="color:#f92672">.</span>total_seconds()
 <span style="color:#66d9ef">print</span>(n)
 </code></pre></div>
-<p><a href="https://docs.python.org/library/datetime.html">https://docs.python.org/library/datetime.html</a></p>
+<p><a href="https://docs.python.org/library/datetime.html#datetime.timedelta.total_seconds">https://docs.python.org/library/datetime.html#datetime.timedelta.total_seconds</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#date-subtraction">https://hyperpolyglot.org/c#date-subtraction</a></li>

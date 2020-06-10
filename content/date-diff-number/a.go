@@ -10,7 +10,6 @@ func main() {
       log.Fatal(e)
    }
    o2 := time.Now()
-   o3 := o2.Sub(o1)
-   n := o3.Seconds()
+   n := o2.Sub(o1).Seconds()
    fmt.Println(n)
 }
