@@ -1,14 +1,8 @@
 ---
 title: Current date string
 categories: [time]
-tags: [d, go, javascript, php, python]
+tags: [go, javascript, php, python]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/library/std/datetime/date/date.to_iso_string.html>
 
 ## Go
 
