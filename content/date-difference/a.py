@@ -1,5 +1,5 @@
-from datetime import date
-o1 = date(2019, 12, 31)
-o2 = date.today()
+from datetime import datetime
+o1 = datetime.strptime('2019-12-31', '%Y-%m-%d')
+o2 = datetime.now()
 o3 = o2 - o1
 print(o3)

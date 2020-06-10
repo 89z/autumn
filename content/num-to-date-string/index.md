@@ -1,5 +1,5 @@
 ---
-title: Timestamp to date string
+title: Number to date string
 categories: [time]
 tags: [javascript]
 ---

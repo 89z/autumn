@@ -1,5 +1,5 @@
 ---
-title: Current timestamp
+title: Current date number
 categories: [time]
 tags: [go, javascript, php, python]
 ---

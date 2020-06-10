@@ -18,7 +18,7 @@ Comparison of programming languages
 70 python links
 69 python examples
 54 javascript links
-53 javascript examples
+54 javascript examples
 41 dart links
 40 racket examples
 40 dart examples
@@ -27,8 +27,8 @@ Comparison of programming languages
 38 racket links
 38 nim links
 38 nim examples
-38 d links
-38 d examples
+37 d links
+37 d examples
 ~~~
 
 ## Author
