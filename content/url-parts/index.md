@@ -1,7 +1,7 @@
 ---
 title: URL parts
-categories: [string]
-tags: [go, javascript, php, python]
+categories: [network]
+tags: [go, javascript, nim, php, python]
 ---
 
 ## Go
@@ -16,6 +16,10 @@ tags: [go, javascript, php, python]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/API/URL/URL>
+
+## Nim
+
+{{< r "a.nim" >}}
 
 ## PHP
 

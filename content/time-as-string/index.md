@@ -1,8 +1,14 @@
 ---
 title: Time as a string
 categories: [time]
-tags: [go, javascript, php, python]
+tags: [d, go, javascript, php, python]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/datetime/date/date.to_iso_string.html>
 
 ## Go
 
@@ -43,6 +49,6 @@ tags: [go, javascript, php, python]
 
 - <https://hyperpolyglot.org/c#fmt-datetime>
 - <https://hyperpolyglot.org/scripting#fmt-datetime>
-- <https://www.programming-idioms.org/idiom/99/format-date>
+- <https://programming-idioms.org/idiom/99>
 - <https://rosettacode.org/wiki/Date_format>
 - <https://rosettacode.org/wiki/Show_the_epoch>

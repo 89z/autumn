@@ -8,6 +8,8 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 
 {{< r "a.d" >}}
 
+<https://dlang.org/spec/function.html#main>
+
 ## Dart
 
 {{< r "a.dart" >}}

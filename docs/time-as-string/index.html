@@ -21,12 +21,25 @@
    </header>
 
 <h1>Time as a string</h1>
-<time>Sat May 23 2020</time>
+<time>Tue Jun 9 2020</time>
    
 <a href="/autumn/categories/time/">time</a>
    
    
-   <h2 id="go">Go</h2>
+   <h2 id="d">D</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.d" data-lang=".d"><span style="color:#f92672">import</span> std.datetime<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> Date<span style="color:#f92672">(</span><span style="color:#ae81ff">2019</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">12</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">31</span><span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> toISOString<span style="color:#f92672">(</span>o<span style="color:#f92672">);</span>
+   writeln<span style="color:#f92672">(</span>s<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+<p><a href="https://dlang.org/library/std/datetime/date/date.to_iso_string.html">https://dlang.org/library/std/datetime/date/date.to_iso_string.html</a></p>
+<h2 id="go">Go</h2>
 <p>
 
 
@@ -151,7 +164,7 @@ t<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%
 <ul>
 <li><a href="https://hyperpolyglot.org/c#fmt-datetime">https://hyperpolyglot.org/c#fmt-datetime</a></li>
 <li><a href="https://hyperpolyglot.org/scripting#fmt-datetime">https://hyperpolyglot.org/scripting#fmt-datetime</a></li>
-<li><a href="https://www.programming-idioms.org/idiom/99/format-date">https://www.programming-idioms.org/idiom/99/format-date</a></li>
+<li><a href="https://programming-idioms.org/idiom/99">https://programming-idioms.org/idiom/99</a></li>
 <li><a href="https://rosettacode.org/wiki/Date_format">https://rosettacode.org/wiki/Date_format</a></li>
 <li><a href="https://rosettacode.org/wiki/Show_the_epoch">https://rosettacode.org/wiki/Show_the_epoch</a></li>
 </ul>

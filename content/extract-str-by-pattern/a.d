@@ -1,4 +1,4 @@
-import std.algorithm, std.regex, std.stdio;
+import  std.regex, std.stdio;
 void main() {
    auto s1 = "Wednesday";
    auto s2 = "e.";

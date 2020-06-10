@@ -8,6 +8,8 @@ tags: [d, go, javascript, php, python, rust]
 
 {{< r "a.d" >}}
 
+<https://dlang.org/library/std/regex/match_all.html>
+
 ## Go
 
 {{< r "a.go" >}}

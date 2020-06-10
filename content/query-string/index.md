@@ -1,6 +1,6 @@
 ---
 title: Query string
-categories: [string]
+categories: [network]
 tags: [go, javascript, php, python]
 ---
 

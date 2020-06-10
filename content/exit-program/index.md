@@ -8,6 +8,8 @@ tags: [d, go, nim, php, python, racket, rust]
 
 {{< r "a.d" >}}
 
+<https://dlang.org/spec/statement.html#return-statement>
+
 ## Go
 
 {{< r "exit.go" >}}
@@ -21,6 +23,8 @@ tags: [d, go, nim, php, python, racket, rust]
 ## Nim
 
 {{< r "a.nim" >}}
+
+<https://nim-lang.github.io/Nim/system.html#quit,int>
 
 ## PHP
 

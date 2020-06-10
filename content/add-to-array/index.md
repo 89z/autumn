@@ -8,6 +8,8 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.d" >}}
 
+<https://dlang.org/spec/arrays.html#array-concatenation>
+
 ## Dart
 
 {{< r "a.dart" >}}
