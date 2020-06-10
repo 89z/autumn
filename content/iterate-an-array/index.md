@@ -35,7 +35,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.github.io/Nim/iterators#items.i,seq[T][T]>
+<https://nim-lang.org/docs/iterators#items.i,seq[T][T]>
 
 ## PHP
 

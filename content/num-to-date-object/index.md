@@ -1,8 +1,14 @@
 ---
 title: Number to date object
 categories: [time]
-tags: [go, javascript, php, python]
+tags: [d, go, javascript, php, python]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/datetime/systime/sys_time.from_unix_time.html>
 
 ## Go
 

@@ -35,7 +35,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.github.io/Nim/tables#[]=,Table[A,B],A,B>
+<https://nim-lang.org/docs/tables#[]=,Table[A,B],A,B>
 
 ## PHP
 

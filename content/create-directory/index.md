@@ -27,8 +27,8 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-- <https://nim-lang.github.io/Nim/os#createDir,string>
-- <https://nim-lang.github.io/Nim/os#existsOrCreateDir,string>
+- <https://nim-lang.org/docs/os#createDir,string>
+- <https://nim-lang.org/docs/os#existsOrCreateDir,string>
 
 ## PHP
 

@@ -34,7 +34,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.github.io/Nim/manual#procedures>
+<https://nim-lang.org/docs/manual#procedures>
 
 ## PHP
 

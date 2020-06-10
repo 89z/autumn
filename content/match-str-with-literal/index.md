@@ -36,8 +36,8 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-- <https://nim-lang.github.io/Nim/strutils#contains,string,string>
-- <https://nim-lang.github.io/Nim/strutils#endsWith,string,string>
+- <https://nim-lang.org/docs/strutils#contains,string,string>
+- <https://nim-lang.org/docs/strutils#endsWith,string,string>
 
 ## PHP
 

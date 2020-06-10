@@ -32,7 +32,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.github.io/Nim/strutils#join,openArray[string],string>
+<https://nim-lang.org/docs/strutils#join,openArray[string],string>
 
 ## PHP
 

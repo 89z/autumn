@@ -41,7 +41,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.github.io/Nim/manual#types-string-type>
+<https://nim-lang.org/docs/manual#types-string-type>
 
 ## PHP
 

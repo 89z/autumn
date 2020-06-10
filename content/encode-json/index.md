@@ -24,7 +24,7 @@ tags: [dart, go, javascript, nim, php, python, racket]
 
 ## Nim
 
-<https://nim-lang.github.io/Nim/json>
+<https://nim-lang.org/docs/json>
 
 ## PHP
 

@@ -25,7 +25,7 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 {{< r "nim.sh" >}}
 
 - <https://github.com/nim-lang/nimble>
-- <https://nim-lang.github.io/Nim/nimc#compiler-usage-command-line-switches>
+- <https://nim-lang.org/docs/nimc#compiler-usage-command-line-switches>
 
 ## PHP
 

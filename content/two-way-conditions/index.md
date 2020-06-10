@@ -34,7 +34,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.github.io/Nim/manual#statements-and-expressions-if-statement>
+<https://nim-lang.org/docs/manual#statements-and-expressions-if-statement>
 
 ## PHP
 

@@ -32,7 +32,7 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.github.io/Nim/io#write,File,string>
+<https://nim-lang.org/docs/io#write,File,string>
 
 ## PHP
 

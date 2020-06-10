@@ -8,7 +8,7 @@ title: 'Tag talk:Nim'
 
 {{< r "config.nims" >}}
 
-- <https://nim-lang.github.io/Nim/nims.html>
+- <https://nim-lang.org/docs/nims.html>
 - <https://nim-lang.org/docs/nimscript.html#nimcacheDir>
 
 ## Setup

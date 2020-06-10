@@ -1,7 +1,7 @@
 ---
 title: Set contains value
 categories: [set]
-tags: [go, javascript, php, python]
+tags: [go, javascript, nim, php, python]
 ---
 
 ## Go
@@ -15,6 +15,10 @@ tags: [go, javascript, php, python]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Set/has>
+
+## Nim
+
+<https://nim-lang.org/docs/sets.html>
 
 ## PHP
 

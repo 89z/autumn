@@ -33,7 +33,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.github.io/Nim/manual#types-preminusdefined-integer-types>
+<https://nim-lang.org/docs/manual#types-preminusdefined-integer-types>
 
 ## PHP
 

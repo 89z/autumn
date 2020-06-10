@@ -27,7 +27,7 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.github.io/Nim/manual#modules-import-statement>
+<https://nim-lang.org/docs/manual#modules-import-statement>
 
 ## PHP
 

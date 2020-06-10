@@ -33,7 +33,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.github.io/Nim/httpclient>
+<https://nim-lang.org/docs/httpclient>
 
 ## PHP
 

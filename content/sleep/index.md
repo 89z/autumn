@@ -20,7 +20,7 @@ tags: [d, dart, nim, php, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.github.io/Nim/os#sleep,int>
+<https://nim-lang.org/docs/os#sleep,int>
 
 ## PHP
 

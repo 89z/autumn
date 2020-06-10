@@ -26,7 +26,7 @@ tags: [d, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.github.io/Nim/algorithm#sort,openArray[T]>
+<https://nim-lang.org/docs/algorithm#sort,openArray[T]>
 
 ## PHP
 

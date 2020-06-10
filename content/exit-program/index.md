@@ -24,7 +24,7 @@ tags: [d, go, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.github.io/Nim/system.html#quit,int>
+<https://nim-lang.org/docs/system.html#quit,int>
 
 ## PHP
 

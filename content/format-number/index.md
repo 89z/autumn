@@ -33,7 +33,7 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 
 {{< r "format.nim" >}}
 
-<https://nim-lang.github.io/Nim/strformat#fmt.m,string>
+<https://nim-lang.org/docs/strformat#fmt.m,string>
 
 {{< r "fmt.nim" >}}
 

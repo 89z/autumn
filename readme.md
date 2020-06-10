@@ -21,14 +21,14 @@ Comparison of programming languages
 57 javascript examples
 41 racket examples
 41 dart links
+40 nim links
+40 d links
+40 d examples
 40 dart examples
 39 rust links
 39 rust examples
 39 racket links
-39 nim links
 39 nim examples
-39 d links
-39 d examples
 ~~~
 
 ## Author

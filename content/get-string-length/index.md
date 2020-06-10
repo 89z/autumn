@@ -36,7 +36,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 {{< r "a.nim" >}}
 {{< r "b.nim" >}}
 
-<https://nim-lang.github.io/Nim/unicode>
+<https://nim-lang.org/docs/unicode>
 
 ## PHP
 
