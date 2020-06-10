@@ -1,3 +1,8 @@
-var t int64 = 1421929926
-var ns int64 = 0
-dt := time.Unix(t, ns)
+package main
+import "time"
+func main() {
+   var n int64 = 365 * 24 * 60 * 60
+   var o = time.Unix(n, 0)
+   var s = o.String()
+   println(s)
+}

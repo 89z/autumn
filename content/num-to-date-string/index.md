@@ -8,7 +8,7 @@ tags: [go, javascript, php, python]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/time#Unix>
+<https://golang.org/pkg/time#Time.String>
 
 ## JavaScript
 
@@ -26,16 +26,11 @@ tags: [go, javascript, php, python]
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/library/datetime.html#datetime.date.fromtimestamp>
 - <https://docs.python.org/library/datetime.html#datetime.date.isoformat>
 - <https://docs.python.org/library/datetime.html#datetime.date.strftime>
-- <https://docs.python.org/library/datetime.html#datetime.datetime.fromtimestamp>
-- <https://docs.python.org/library/datetime.html#datetime.datetime.isoformat>
-- <https://docs.python.org/library/datetime.html#datetime.datetime.strftime>
 
 ## References
 
-- <https://hyperpolyglot.org/c#unix-epoch-to-broken-down-datetime>
 - <https://hyperpolyglot.org/scripting#fmt-datetime>
 - <https://programming-idioms.org/idiom/99>
 - <https://rosettacode.org/wiki/Date_format>

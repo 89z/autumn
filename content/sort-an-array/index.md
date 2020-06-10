@@ -1,8 +1,14 @@
 ---
 title: Sort an array
 categories: [array]
-tags: [go, javascript, php, python]
+tags: [d, go, javascript, php, python]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/algorithm/sorting.html>
 
 ## Go
 
@@ -32,5 +38,5 @@ tags: [go, javascript, php, python]
 ## References
 
 - <https://hyperpolyglot.org/c#sort-resizable-array>
-- <https://www.programming-idioms.org/idiom/100/sort-by-comparator>
+- <https://programming-idioms.org/idiom/100>
 - <https://rosettacode.org/wiki/Sort_using_a_custom_comparator>

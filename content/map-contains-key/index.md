@@ -1,8 +1,14 @@
 ---
 title: Map contains key
 categories: [map]
-tags: [go, javascript, php, python]
+tags: [d, go, javascript, php, python]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/spec/hash-map.html#testing_membership>
 
 ## Go
 
@@ -34,5 +40,5 @@ tags: [go, javascript, php, python]
 
 - <https://hyperpolyglot.org/c#dict-is-key-present>
 - <https://hyperpolyglot.org/scripting#dict-key-check>
-- <https://www.programming-idioms.org/idiom/51/check-if-map-contains-key>
+- <https://programming-idioms.org/idiom/51>
 - <https://rosettacode.org/wiki/Associative_array/Creation>
