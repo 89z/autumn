@@ -1,9 +1,5 @@
 from datetime import date
-n = 365 * 24 * 60 * 60
+n = 366 * 24 * 60 * 60
 o = date.fromtimestamp(n)
-# example 1
-s1 = o.isoformat()
-# example 2
-s2 = o.strftime('%F')
-# print
-print(s1, s2)
+s = o.strftime('%a %b %#d %Y')
+print(s == 'Fri Jan 1 1971')

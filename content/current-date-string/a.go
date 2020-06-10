@@ -7,9 +7,6 @@ func main() {
    s = o.String()
    println(s)
    // example 2
-   s = o.Format(time.ANSIC)
-   println(s)
-   // example 3
-   s = o.Format("Mon Jan 2 15:04:05 2006")
+   s = o.Format(time.RFC3339)
    println(s)
 }

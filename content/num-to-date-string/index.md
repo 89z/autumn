@@ -8,7 +8,7 @@ tags: [go, javascript, php, python]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/time#Time.String>
+<https://golang.org/pkg/time#Time.Format>
 
 ## JavaScript
 
@@ -26,8 +26,7 @@ tags: [go, javascript, php, python]
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/library/datetime.html#datetime.date.isoformat>
-- <https://docs.python.org/library/datetime.html#datetime.date.strftime>
+<https://docs.python.org/library/datetime.html#datetime.date.strftime>
 
 ## References
 

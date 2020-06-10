@@ -9,18 +9,15 @@ tags: [go, javascript, php, python]
 {{< r "a.go" >}}
 {{< r "b.go" >}}
 
-- <https://golang.org/pkg/time#ANSIC>
 - <https://golang.org/pkg/time#Time.Format>
 - <https://golang.org/pkg/time#Time.MarshalText>
+- <https://golang.org/pkg/time#Time.String>
 
 ## JavaScript
 
 {{< r "a.js" >}}
-{{< r "b.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toDateString>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toISOString>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toISOString>
 
 ## PHP
 
@@ -31,14 +28,10 @@ tags: [go, javascript, php, python]
 
 ## Python
 
-{{< r "date.py" >}}
-{{< r "time.py" >}}
-{{< r "email.py" >}}
+{{< r "a.py" >}}
 
 - <https://docs.python.org/library/datetime.html#datetime.date.isoformat>
 - <https://docs.python.org/library/datetime.html#datetime.date.strftime>
-- <https://docs.python.org/library/email.utils.html#email.utils.formatdate>
-- <https://docs.python.org/library/time.html#time.asctime>
 
 ## References
 

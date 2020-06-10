@@ -1,7 +1,3 @@
-let s, o = new Date;
-// example 1
-s = o.toISOString();
-console.log(s);
-// example 2
-s = o.toDateString();
+let o = new Date;
+let s = o.toISOString();
 console.log(s);
