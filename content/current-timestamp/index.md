@@ -12,13 +12,11 @@ tags: [go, javascript, php, python]
 
 ## JavaScript
 
+{{< r "date.js" >}}
 {{< r "now.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/now>
-
-{{< r "date.js" >}}
-
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/getTime>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/now>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/valueof>
 
 ## PHP
@@ -40,5 +38,4 @@ tags: [go, javascript, php, python]
 
 - <https://hyperpolyglot.org/c#current-unix-epoch>
 - <https://hyperpolyglot.org/scripting#current-unix-epoch>
-- <https://hyperpolyglot.org/scripting#microseconds>
 - <https://rosettacode.org/wiki/System_time>

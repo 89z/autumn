@@ -46,4 +46,3 @@ tags: [go, javascript, php, python]
 - <https://hyperpolyglot.org/scripting#fmt-datetime>
 - <https://programming-idioms.org/idiom/99>
 - <https://rosettacode.org/wiki/Date_format>
-- <https://rosettacode.org/wiki/Show_the_epoch>
