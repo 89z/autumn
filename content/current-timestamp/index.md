@@ -1,6 +1,6 @@
 ---
-title: Date as an integer
-categories: [date, number]
+title: Current timestamp
+categories: [time]
 tags: [go, javascript, php, python]
 ---
 

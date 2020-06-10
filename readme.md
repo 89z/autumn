@@ -25,10 +25,10 @@ Comparison of programming languages
 38 rust links
 38 rust examples
 38 racket links
+38 nim links
 38 nim examples
 38 d links
 38 d examples
-37 nim links
 ~~~
 
 ## Author

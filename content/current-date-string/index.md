@@ -1,6 +1,6 @@
 ---
-title: Date as a string
-categories: [date]
+title: Current date string
+categories: [time]
 tags: [d, go, javascript, php, python]
 ---
 
@@ -31,7 +31,6 @@ tags: [d, go, javascript, php, python]
 ## PHP
 
 {{< r "a.php" >}}
-{{< r "b.php" >}}
 
 - <https://php.net/function.date>
 - <https://php.net/function.strftime>
