@@ -1,6 +1,6 @@
 ---
-title: Time as a string
-categories: [time]
+title: Date as a string
+categories: [date]
 tags: [d, go, javascript, php, python]
 ---
 
@@ -22,6 +22,7 @@ tags: [d, go, javascript, php, python]
 ## JavaScript
 
 {{< r "a.js" >}}
+{{< r "b.js" >}}
 
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toDateString>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toISOString>
@@ -37,11 +38,12 @@ tags: [d, go, javascript, php, python]
 
 ## Python
 
-{{< r "a.py" >}}
+{{< r "date.py" >}}
+{{< r "time.py" >}}
+{{< r "email.py" >}}
 
 - <https://docs.python.org/library/datetime.html#datetime.date.isoformat>
 - <https://docs.python.org/library/datetime.html#datetime.date.strftime>
-- <https://docs.python.org/library/datetime.html#datetime.datetime.isoformat>
 - <https://docs.python.org/library/email.utils.html#email.utils.formatdate>
 - <https://docs.python.org/library/time.html#time.asctime>
 

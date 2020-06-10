@@ -1,6 +1,6 @@
 ---
-title: Time as an integer
-categories: [time, number]
+title: Date as an integer
+categories: [date, number]
 tags: [go, javascript, php, python]
 ---
 

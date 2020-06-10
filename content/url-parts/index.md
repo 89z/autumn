@@ -21,6 +21,8 @@ tags: [go, javascript, nim, php, python]
 
 {{< r "a.nim" >}}
 
+<https://nim-lang.github.io/Nim/uri>
+
 ## PHP
 
 {{< r "a.php" >}}

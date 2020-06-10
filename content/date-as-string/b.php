@@ -1,9 +1,9 @@
 <?php
 date_default_timezone_set('America/Chicago');
-$n1 = strtotime('2019-12-31');
+$n = strtotime('2019-12-31');
 # example 1
-$s1 = date('Y-m-d', $n1);
+$s1 = date('Y-m-d', $n);
 # example 2
-$s2 = strftime('%F', $n1);
+$s2 = strftime('%F', $n);
 # print
 var_dump($s1, $s2);
