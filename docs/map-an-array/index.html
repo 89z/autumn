@@ -106,11 +106,23 @@ a3 <span style="color:#f92672">=</span> list(map(math<span style="color:#f92672"
 <li><a href="https://docs.python.org/library/functions.html#map">https://docs.python.org/library/functions.html#map</a></li>
 <li><a href="https://docs.python.org/reference/expressions.html#comprehensions">https://docs.python.org/reference/expressions.html#comprehensions</a></li>
 </ul>
+<h2 id="rust">Rust</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> a1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>];
+   <span style="color:#66d9ef">let</span> a2: Vec<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> a1.iter().map(<span style="color:#f92672">|</span>n<span style="color:#f92672">|</span> n <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>).collect();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, a2);
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html#method.map">https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html#method.map</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting#map">https://hyperpolyglot.org/scripting#map</a></li>
 <li><a href="https://hyperpolyglot.org/web#map">https://hyperpolyglot.org/web#map</a></li>
-<li><a href="https://programming-idioms.org/idiom/161/multiply-all-elements">https://programming-idioms.org/idiom/161/multiply-all-elements</a></li>
+<li><a href="https://programming-idioms.org/idiom/161">https://programming-idioms.org/idiom/161</a></li>
 <li><a href="https://rosettacode.org/wiki/Apply_a_callback_to_an_array">https://rosettacode.org/wiki/Apply_a_callback_to_an_array</a></li>
 </ul>
 

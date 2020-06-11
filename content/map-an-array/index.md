@@ -1,7 +1,7 @@
 ---
 title: Map an array
 categories: [array]
-tags: [dart, go, javascript, php, python]
+tags: [dart, go, javascript, php, python, rust]
 ---
 
 ## Dart
@@ -36,9 +36,15 @@ tags: [dart, go, javascript, php, python]
 - <https://docs.python.org/library/functions.html#map>
 - <https://docs.python.org/reference/expressions.html#comprehensions>
 
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html#method.map>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting#map>
 - <https://hyperpolyglot.org/web#map>
-- <https://programming-idioms.org/idiom/161/multiply-all-elements>
+- <https://programming-idioms.org/idiom/161>
 - <https://rosettacode.org/wiki/Apply_a_callback_to_an_array>

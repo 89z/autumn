@@ -1,12 +1,16 @@
 ---
 title: String index
 categories: [string]
-tags: [d, go, javascript, php, python, rust]
+tags: [d, dart, go, javascript, php, python, rust]
 ---
 
 ## D
 
 {{< r "a.d" >}}
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -36,4 +40,5 @@ tags: [d, go, javascript, php, python, rust]
 
 - <https://hyperpolyglot.org/c#index-substr>
 - <https://hyperpolyglot.org/scripting#index-substr>
+- <https://hyperpolyglot.org/web#index-substr>
 - <https://programming-idioms.org/idiom/62>

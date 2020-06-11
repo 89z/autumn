@@ -1,7 +1,7 @@
 ---
 title: Directives
 categories: [reference]
-tags: [go, javascript, php, python]
+tags: [go, javascript, php, python, racket]
 ---
 
 ## Go
@@ -27,6 +27,12 @@ Declaration must be the very first statement in the script.
 ## Python
 
 <https://docs.python.org/library/__future__.html>
+
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference>
 
 ## References
 

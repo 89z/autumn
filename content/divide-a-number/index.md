@@ -1,7 +1,7 @@
 ---
 title: Divide a number
 categories: [number]
-tags: [d, go, javascript, php, python]
+tags: [d, go, javascript, nim, php, python]
 ---
 
 ## D
@@ -22,6 +22,12 @@ tags: [d, go, javascript, php, python]
 
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder>
+
+## Nim
+
+{{< r "a.nim" >}}
+
+<https://nim-lang.org/docs/system.html#/,int,int>
 
 ## PHP
 

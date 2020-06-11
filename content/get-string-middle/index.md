@@ -1,8 +1,12 @@
 ---
 title: Get string middle
 categories: [string]
-tags: [go, javascript, nim, php, python]
+tags: [d, go, javascript, nim, php, python]
 ---
+
+## D
+
+<https://dlang.org/spec/arrays.html#slicing>
 
 ## Go
 

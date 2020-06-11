@@ -32,7 +32,9 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 
 ## Nim
 
-<https://nim-lang.org/docs/tables.html>
+{{< r "a.nim" >}}
+
+<https://nim-lang.org/docs/tables.html#hasKey,Table[A,B],A>
 
 ## PHP
 

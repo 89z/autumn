@@ -48,7 +48,9 @@ tags: [d, go, javascript, nim, php, python, racket]
 
 ## Racket
 
-<https://docs.racket-lang.org/reference/strings.html>
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/strings.html#(def._((quote._~23~25kernel)._substring))>
 
 ## References
 

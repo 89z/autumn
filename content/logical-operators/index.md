@@ -50,6 +50,8 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rkt" >}}
 
+<https://docs.racket-lang.org/reference/booleans.html#(def._((quote._~23~25kernel)._not))>
+
 ## Rust
 
 {{< r "a.rs" >}}
