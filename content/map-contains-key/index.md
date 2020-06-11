@@ -1,7 +1,7 @@
 ---
 title: Map contains key
 categories: [map]
-tags: [d, go, javascript, php, python]
+tags: [d, go, javascript, php, python, rust]
 ---
 
 ## D
@@ -35,6 +35,12 @@ tags: [d, go, javascript, php, python]
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#dict>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/collections/struct.HashMap.html>
 
 ## References
 

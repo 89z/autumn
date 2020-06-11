@@ -1,7 +1,7 @@
 ---
 title: Set contains value
 categories: [set]
-tags: [go, javascript, nim, php, python]
+tags: [go, javascript, nim, php, python, racket]
 ---
 
 ## Go
@@ -33,3 +33,9 @@ Trying to access missing value is an error.
 ## Python
 
 <https://docs.python.org/library/stdtypes.html#set>
+
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/sets.html#(def._((lib._racket/set..rkt)._set-member~3f))>

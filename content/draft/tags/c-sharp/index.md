@@ -32,7 +32,7 @@ csc a.cs
 
 Visual C# Command Line Compiler has stopped working
 
-<https://github.com/dotnet/runtime/issues/36723>
+<https://github.com/dotnet/roslyn/issues/44397>
 
 ## Roslyn
 

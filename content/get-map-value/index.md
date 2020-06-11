@@ -24,6 +24,8 @@ tags: [dart, go, javascript, nim, php, python, racket]
 
 ## Nim
 
+{{< r "a.nim" >}}
+
 <https://nim-lang.org/docs/tables#[],Table[A,B],A>
 
 ## PHP

@@ -1,8 +1,14 @@
 ---
 title: Get string start
 categories: [string]
-tags: [go, javascript, php, python, racket]
+tags: [d, go, javascript, php, python, racket]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/spec/arrays.html#slicing>
 
 ## Go
 
