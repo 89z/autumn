@@ -1,10 +1,9 @@
 <?php
-$n1 = 10;
-# not
-$b1 = !($n1 > 20);
-# or
-$b2 = $n1 > 30 || $n1 < 20;
-# and
-$b3 = $n1 > 0 && $n1 < 40;
+# example 1
+$b1 = ! false;
+# example 2
+$b2 = false || true;
+# example 3
+$b3 = true && true;
 # print
 var_dump($b1, $b2, $b3);

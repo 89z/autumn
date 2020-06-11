@@ -1,9 +1,8 @@
-let n1 = 10;
-// not
-let b1 = !(n1 > 20);
-// or
-let b2 = n1 > 30 || n1 < 20;
-// and
-let b3 = n1 > 0 && n1 < 40;
+// example 1
+let b1 = ! false;
+// example 2
+let b2 = false || true;
+// example 3
+let b3 = true && true;
 // print
 console.log(b1, b2, b3);

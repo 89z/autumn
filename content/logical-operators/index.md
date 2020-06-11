@@ -1,8 +1,14 @@
 ---
 title: Logical operators
 categories: [reference]
-tags: [go, javascript, php, python]
+tags: [d, go, javascript, nim, php, python]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/spec/expression#AndAndExpression>
 
 ## Go
 
@@ -15,6 +21,10 @@ tags: [go, javascript, php, python]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Logical_Operators>
+
+## Nim
+
+{{< r "a.nim" >}}
 
 ## PHP
 
