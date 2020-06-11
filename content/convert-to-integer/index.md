@@ -39,13 +39,11 @@ tags: [go, javascript, php, python]
 ## PHP
 
 {{< r "num.php" >}}
-
-- <https://php.net/function.intval>
-- <https://php.net/language.types.type-juggling>
-
 {{< r "str.php" >}}
 
-<https://php.net/language.operators.arithmetic>
+- <https://php.net/function.intval>
+- <https://php.net/language.operators.arithmetic>
+- <https://php.net/language.types.type-juggling>
 
 ## Python
 

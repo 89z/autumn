@@ -8,6 +8,8 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 
 {{< r "d.sh" >}}
 
+<https://wiki.dlang.org/Using_LDC>
+
 ## Dart
 
 {{< r "dart.sh" >}}

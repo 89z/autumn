@@ -20,15 +20,8 @@ with PHP this is fine:
 
 {{< r "b.php" >}}
 
-but with other languages like Go it can be a problem:
-
-{{< r "a.go" >}}
-
-workaround:
-
-{{< r "b.go" >}}
-
-however this is a misrepresentation of the problem. A closer example would be:
+but with other languages like Go it can be a problem. however this is a
+misrepresentation of the problem. A closer example would be:
 
 {{< r "c.go" >}}
 

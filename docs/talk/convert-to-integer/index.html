@@ -21,7 +21,7 @@
    </header>
 
 <h1>Talk:Convert to integer</h1>
-<time>Sun May 3 2020</time>
+<time>Thu Jun 11 2020</time>
    
    
    <h2 id="float">Float</h2>
@@ -61,35 +61,8 @@ $n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">round</span
 $s1 <span style="color:#f92672">=</span> $a1[$n1];
 <span style="color:#a6e22e">var_dump</span>($s1);
 </code></pre></div>
-<p>but with other languages like Go it can be a problem:</p>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;math&#34;</span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;Sun&#34;</span>, <span style="color:#e6db74">&#34;Mon&#34;</span>, <span style="color:#e6db74">&#34;Tue&#34;</span>}
-   <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">math</span>.<span style="color:#a6e22e">Round</span>(<span style="color:#ae81ff">1.9</span>)
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a1</span>[<span style="color:#a6e22e">n1</span>] <span style="color:#75715e">// non-integer slice index n1
-</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s1</span>)
-}
-</code></pre></div>
-<p>workaround:</p>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;math&#34;</span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;Sun&#34;</span>, <span style="color:#e6db74">&#34;Mon&#34;</span>, <span style="color:#e6db74">&#34;Tue&#34;</span>}
-   <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> int(<span style="color:#a6e22e">math</span>.<span style="color:#a6e22e">Round</span>(<span style="color:#ae81ff">1.9</span>))
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a1</span>[<span style="color:#a6e22e">n1</span>]
-   println(<span style="color:#a6e22e">s1</span>)
-}
-</code></pre></div>
-<p>however this is a misrepresentation of the problem. A closer example would be:</p>
+<p>but with other languages like Go it can be a problem. however this is a
+misrepresentation of the problem. A closer example would be:</p>
 
 
 
