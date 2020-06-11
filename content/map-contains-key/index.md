@@ -1,7 +1,7 @@
 ---
 title: Map contains key
 categories: [map]
-tags: [d, dart, go, javascript, php, python, rust]
+tags: [d, dart, go, javascript, nim, php, python, rust]
 ---
 
 ## D
@@ -29,6 +29,10 @@ tags: [d, dart, go, javascript, php, python, rust]
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Reflect/has>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/in>
+
+## Nim
+
+<https://nim-lang.org/docs/tables.html>
 
 ## PHP
 

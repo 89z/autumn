@@ -32,8 +32,8 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-- <https://nim-lang.org/docs/io#readAll,File>
-- <https://nim-lang.org/docs/io#readFile,string>
+- <https://nim-lang.org/docs/io.html#readAll,File>
+- <https://nim-lang.org/docs/io.html#readFile,string>
 
 ## PHP
 

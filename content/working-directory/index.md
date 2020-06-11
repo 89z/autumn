@@ -32,7 +32,7 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/os#getCurrentDir>
+<https://nim-lang.org/docs/os.html#getCurrentDir>
 
 ## Python
 

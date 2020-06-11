@@ -1,8 +1,12 @@
 ---
 title: Convert to string
 categories: [string]
-tags: [dart, go, javascript, php, python]
+tags: [d, dart, go, javascript, php, python]
 ---
+
+## D
+
+<https://dlang.org/library/std/format.html>
 
 ## Dart
 

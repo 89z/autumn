@@ -32,7 +32,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/algorithm#sort,openArray[T]>
+<https://nim-lang.org/docs/algorithm.html#sort,openArray[T]>
 
 ## PHP
 

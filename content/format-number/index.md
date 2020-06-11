@@ -35,7 +35,7 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 {{< r "format.nim" >}}
 
 - <https://github.com/kaushalmodi/strfmt>
-- <https://nim-lang.org/docs/strformat#fmt.m,string>
+- <https://nim-lang.org/docs/strformat.html#fmt.m,string>
 
 ## PHP
 

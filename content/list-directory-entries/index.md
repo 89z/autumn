@@ -30,7 +30,7 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/os#walkFiles.i,string>
+<https://nim-lang.org/docs/os.html#walkFiles.i,string>
 
 ## PHP
 

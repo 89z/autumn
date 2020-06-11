@@ -1,7 +1,7 @@
 ---
 title: Logical operators
 categories: [reference]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## D
@@ -50,10 +50,15 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 
 {{< r "a.rkt" >}}
 
+## Rust
+
+{{< r "a.rs" >}}
+
 ## References
 
 - <https://hyperpolyglot.org/c#logical-op>
 - <https://hyperpolyglot.org/lisp#logical-op>
+- <https://hyperpolyglot.org/rust#logical-op>
 - <https://hyperpolyglot.org/scripting#logical-op>
 - <https://hyperpolyglot.org/web#logical-op>
 - <https://rosettacode.org/wiki/Logical_operations>

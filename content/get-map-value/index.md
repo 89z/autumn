@@ -32,7 +32,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/tables#[],Table[A,B],A>
+<https://nim-lang.org/docs/tables.html#[],Table[A,B],A>
 
 ## PHP
 

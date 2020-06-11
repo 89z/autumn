@@ -1,8 +1,14 @@
 ---
 title: Map an array
 categories: [array]
-tags: [go, javascript, php, python]
+tags: [dart, go, javascript, php, python]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-core/Iterable/map.html>
 
 ## Go
 
@@ -33,5 +39,6 @@ tags: [go, javascript, php, python]
 ## References
 
 - <https://hyperpolyglot.org/scripting#map>
-- <https://www.programming-idioms.org/idiom/161/multiply-all-elements>
+- <https://hyperpolyglot.org/web#map>
+- <https://programming-idioms.org/idiom/161/multiply-all-elements>
 - <https://rosettacode.org/wiki/Apply_a_callback_to_an_array>

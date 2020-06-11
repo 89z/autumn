@@ -28,9 +28,9 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-- <https://nim-lang.org/docs/io#stderr>
-- <https://nim-lang.org/docs/io#stdin>
-- <https://nim-lang.org/docs/io#stdout>
+- <https://nim-lang.org/docs/io.html#stderr>
+- <https://nim-lang.org/docs/io.html#stdin>
+- <https://nim-lang.org/docs/io.html#stdout>
 
 ## PHP
 

@@ -33,7 +33,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/tut1#advanced-types-slices>
+<https://nim-lang.org/docs/tut1.html#advanced-types-slices>
 
 ## PHP
 

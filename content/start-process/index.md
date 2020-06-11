@@ -24,8 +24,8 @@ tags: [dart, go, nim, php, python, racket]
 {{< r "b.nim" >}}
 {{< r "c.nim" >}}
 
-- <https://nim-lang.org/docs/osproc#execCmd,string>
-- <https://nim-lang.org/docs/osproc#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]>
+- <https://nim-lang.org/docs/osproc.html#execCmd,string>
+- <https://nim-lang.org/docs/osproc.html#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]>
 
 ## PHP
 

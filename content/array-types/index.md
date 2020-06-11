@@ -32,7 +32,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/manual#types-array-and-sequence-types>
+<https://nim-lang.org/docs/manual.html#types-array-and-sequence-types>
 
 ## PHP
 

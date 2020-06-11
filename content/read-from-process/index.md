@@ -22,7 +22,7 @@ tags: [go, nim, php, python, racket]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/osproc#execCmdEx,string,set[ProcessOption]>
+<https://nim-lang.org/docs/osproc.html#execCmdEx,string,set[ProcessOption]>
 
 ## PHP
 

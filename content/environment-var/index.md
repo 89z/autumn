@@ -27,7 +27,7 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/os#getEnv,string,string>
+<https://nim-lang.org/docs/os.html#getEnv,string,string>
 
 ## PHP
 

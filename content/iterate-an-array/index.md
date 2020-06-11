@@ -35,7 +35,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/iterators#items.i,seq[T][T]>
+<https://nim-lang.org/docs/iterators.html#items.i,seq[T][T]>
 
 ## PHP
 
@@ -56,6 +56,8 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ## Racket
 
 {{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/for.html#(form._((lib._racket/private/base..rkt)._for))>
 
 ## Rust
 
