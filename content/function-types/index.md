@@ -55,6 +55,8 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rkt" >}}
 
+<https://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))>
+
 ## Rust
 
 {{< r "a.rs" >}}

@@ -1,8 +1,14 @@
 ---
 title: Get map value
 categories: [map]
-tags: [dart, go, javascript, nim, php, python, racket]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/spec/hash-map.html>
 
 ## Dart
 

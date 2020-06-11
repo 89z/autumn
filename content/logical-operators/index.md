@@ -1,7 +1,7 @@
 ---
 title: Logical operators
 categories: [reference]
-tags: [d, go, javascript, nim, php, python]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -9,6 +9,12 @@ tags: [d, go, javascript, nim, php, python]
 {{< r "a.d" >}}
 
 <https://dlang.org/spec/expression#AndAndExpression>
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://dart.dev/guides/language/language-tour#operators>
 
 ## Go
 
@@ -40,8 +46,14 @@ tags: [d, go, javascript, nim, php, python]
 
 <https://docs.python.org/reference/expressions.html#boolean-operations>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
 ## References
 
 - <https://hyperpolyglot.org/c#logical-op>
+- <https://hyperpolyglot.org/lisp#logical-op>
 - <https://hyperpolyglot.org/scripting#logical-op>
+- <https://hyperpolyglot.org/web#logical-op>
 - <https://rosettacode.org/wiki/Logical_operations>

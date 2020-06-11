@@ -1,8 +1,12 @@
 ---
 title: Divide a number
 categories: [number]
-tags: [go, javascript, php, python]
+tags: [d, go, javascript, php, python]
 ---
+
+## D
+
+{{< r "a.d" >}}
 
 ## Go
 

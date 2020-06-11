@@ -1,7 +1,7 @@
 ---
 title: Get string middle
 categories: [string]
-tags: [go, javascript, php, python]
+tags: [go, javascript, nim, php, python]
 ---
 
 ## Go
@@ -19,6 +19,10 @@ tags: [go, javascript, php, python]
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/charAt>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/slice>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/substring>
+
+## Nim
+
+<https://nim-lang.org/docs/system.html#[],string,HSlice[T,U]>
 
 ## PHP
 
