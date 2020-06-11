@@ -12,6 +12,8 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 
 {{< r "dart.sh" >}}
 
+<https://dart.dev/tools/dart-vm>
+
 ## Go
 
 {{< r "go.sh" >}}

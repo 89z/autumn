@@ -1,8 +1,14 @@
 ---
 title: Set contains value
 categories: [set]
-tags: [go, javascript, nim, php, python, racket, rust]
+tags: [dart, go, javascript, nim, php, python, racket, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-core/Set/contains.html>
 
 ## Go
 
