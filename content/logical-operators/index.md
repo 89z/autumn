@@ -26,6 +26,8 @@ tags: [d, go, javascript, nim, php, python]
 
 {{< r "a.nim" >}}
 
+<https://nim-lang.org/docs/system.html#and,bool,bool>
+
 ## PHP
 
 {{< r "a.php" >}}

@@ -12,7 +12,7 @@ Comparison of programming languages
 
 ~~~
 514 examples
-508 links
+509 links
 
 87 php examples
 85 php links
@@ -27,11 +27,11 @@ Comparison of programming languages
 43 d examples
 43 dart links
 42 racket examples
+42 nim links
 42 d links
 42 dart examples
 41 rust examples
 41 racket links
-41 nim links
 ~~~
 
 ## Author
