@@ -34,7 +34,7 @@ tags: [go, javascript, php, python, rust]
 
 {{< r "a.rs" >}}
 
-<https://github.com/rust-lang/rfcs/issues/2875>
+<https://doc.rust-lang.org/std/keyword.struct.html>
 
 ## References
 

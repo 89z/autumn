@@ -46,7 +46,7 @@ tags: [d, go, javascript, php, python, rust]
 {{< r "rs1/src/main.rs" >}}
 {{< r "rs2/src/main.rs" >}}
 
-<https://github.com/rust-lang/regex>
+<https://docs.rs/regex>
 
 ## References
 

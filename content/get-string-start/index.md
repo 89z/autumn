@@ -1,7 +1,7 @@
 ---
 title: Get string start
 categories: [string]
-tags: [d, go, javascript, php, python, racket]
+tags: [d, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -24,6 +24,12 @@ tags: [d, go, javascript, php, python, racket]
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/charAt>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/slice>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/substring>
+
+## Nim
+
+{{< r "a.nim" >}}
+
+<https://nim-lang.org/docs/system.html#[],string,HSlice[T,U]>
 
 ## PHP
 
@@ -49,6 +55,6 @@ tags: [d, go, javascript, php, python, racket]
 - <https://hyperpolyglot.org/c#extract-substr>
 - <https://hyperpolyglot.org/lisp#extract-substr>
 - <https://hyperpolyglot.org/scripting#extract-substr>
-- <https://www.programming-idioms.org/idiom/38/extract-a-substring>
-- <https://www.programming-idioms.org/idiom/46/extract-beginning>
+- <https://programming-idioms.org/idiom/38/extract-a-substring>
+- <https://programming-idioms.org/idiom/46/extract-beginning>
 - <https://rosettacode.org/wiki/Substring>

@@ -31,13 +31,11 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 
 ## Nim
 
+{{< r "fmt.nim" >}}
 {{< r "format.nim" >}}
 
-<https://nim-lang.org/docs/strformat#fmt.m,string>
-
-{{< r "fmt.nim" >}}
-
-<https://github.com/kaushalmodi/strfmt>
+- <https://github.com/kaushalmodi/strfmt>
+- <https://nim-lang.org/docs/strformat#fmt.m,string>
 
 ## PHP
 

@@ -51,6 +51,8 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rkt" >}}
 
+<https://docs.racket-lang.org/reference/strings.html#(def._((lib._racket/string..rkt)._string-join))>
+
 ## Rust
 
 {{< r "a.rs" >}}
