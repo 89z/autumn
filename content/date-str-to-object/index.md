@@ -24,8 +24,12 @@ tags: [go, javascript, php, python]
 
 ## Python
 
-{{< r "a.py" >}}
+{{< r "date.py" >}}
+{{< r "datetime.py" >}}
+{{< r "time.py" >}}
 
+- <https://docs.python.org/library/datetime.html#datetime.date.fromisoformat>
+- <https://docs.python.org/library/datetime.html#datetime.datetime.fromisoformat>
 - <https://docs.python.org/library/datetime.html#datetime.datetime.strptime>
 - <https://docs.python.org/library/time.html#time.strptime>
 

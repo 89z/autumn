@@ -18,7 +18,9 @@ tags: [go, javascript, nim, php, python]
 
 ## Nim
 
-<https://nim-lang.org/docs/sets.html>
+{{< r "a.nim" >}}
+
+<https://nim-lang.org/docs/sets.html#contains,HashSet[A],A>
 
 ## PHP
 

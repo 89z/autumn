@@ -72,20 +72,38 @@ $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2019-12
 </code></pre></div>
 <p><a href="https://php.net/function.date-create">https://php.net/function.date-create</a></p>
 <h2 id="python">Python</h2>
+<p>
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#75715e"># example 1</span>
-<span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
-o1 <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>strptime(<span style="color:#e6db74">&#39;2019-12-31&#39;</span>, <span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>)
-<span style="color:#75715e"># example 2</span>
-<span style="color:#f92672">import</span> time
-o2 <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>strptime(<span style="color:#e6db74">&#39;2019-12-31&#39;</span>, <span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>)
-<span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(o1, o2, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> date
+o <span style="color:#f92672">=</span> date<span style="color:#f92672">.</span>fromisoformat(<span style="color:#e6db74">&#39;2019-12-31&#39;</span>)
+<span style="color:#66d9ef">print</span>(o)
 </code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2019-12-31&#39;</span>
+<span style="color:#75715e"># example 1</span>
+o1 <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>strptime(s, <span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>)
+<span style="color:#75715e"># example 2</span>
+o2 <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>fromisoformat(s)
+<span style="color:#75715e"># print</span>
+<span style="color:#66d9ef">print</span>(o1, o2)
+</code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">import</span> time
+o <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>strptime(<span style="color:#e6db74">&#39;2019-12-31&#39;</span>, <span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>)
+<span style="color:#66d9ef">print</span>(o)
+</code></pre></div></p>
 <ul>
+<li><a href="https://docs.python.org/library/datetime.html#datetime.date.fromisoformat">https://docs.python.org/library/datetime.html#datetime.date.fromisoformat</a></li>
+<li><a href="https://docs.python.org/library/datetime.html#datetime.datetime.fromisoformat">https://docs.python.org/library/datetime.html#datetime.datetime.fromisoformat</a></li>
 <li><a href="https://docs.python.org/library/datetime.html#datetime.datetime.strptime">https://docs.python.org/library/datetime.html#datetime.datetime.strptime</a></li>
 <li><a href="https://docs.python.org/library/time.html#time.strptime">https://docs.python.org/library/time.html#time.strptime</a></li>
 </ul>

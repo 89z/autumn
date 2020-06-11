@@ -11,24 +11,24 @@ Comparison of programming languages
 ## Progress
 
 ~~~
-87 php examples
-84 php links
-81 go examples
-78 go links
-73 python links
-72 python examples
-57 javascript links
-57 javascript examples
+88 php examples
+86 php links
+82 go examples
+80 go links
+75 python links
+74 python examples
+59 javascript links
+58 javascript examples
 41 racket examples
 41 dart links
 40 nim links
+40 nim examples
 40 d links
 40 d examples
 40 dart examples
 39 rust links
 39 rust examples
 39 racket links
-39 nim examples
 ~~~
 
 ## Author

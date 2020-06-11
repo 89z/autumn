@@ -8,25 +8,25 @@ tags: [go, javascript, php, python]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/time>
+<https://golang.org/pkg/time#Time.Sub>
 
 ## JavaScript
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/getTime>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds>
 
 ## PHP
 
 {{< r "a.php" >}}
 
-<https://php.net/function.date-diff>
+<https://php.net/function.date-interval-format>
 
 ## Python
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/datetime.html>
+<https://docs.python.org/library/datetime.html#datetime.datetime.fromisoformat>
 
 ## References
 
