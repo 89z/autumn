@@ -25,6 +25,8 @@ tags: [d, go, javascript, nim, php, python, racket, rust]
 
 ## Nim
 
+{{< r "a.nim" >}}
+
 <https://nim-lang.org/docs/system.html#[],string,HSlice[T,U]>
 
 ## PHP

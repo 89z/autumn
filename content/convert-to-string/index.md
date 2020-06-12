@@ -58,6 +58,8 @@ tags: [d, dart, go, javascript, php, python, racket]
 
 ## Racket
 
+{{< r "a.rkt" >}}
+
 <https://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._number-~3estring))>
 
 ## Rust

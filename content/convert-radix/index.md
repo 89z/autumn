@@ -13,6 +13,12 @@ easily change the radix. These also account for numeric zero input.
 
 <https://dlang.org/library/std/conv.html>
 
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-core/int/toRadixString.html>
+
 ## Go
 
 {{< r "a.go" >}}
@@ -43,4 +49,6 @@ easily change the radix. These also account for numeric zero input.
 ## References
 
 - <https://hyperpolyglot.org/scripting#radix>
+- <https://programming-idioms.org/idiom/142>
 - <https://rosettacode.org/wiki/Non-decimal_radices/Convert>
+- <https://rosettacode.org/wiki/Non-decimal_radices/Output>
