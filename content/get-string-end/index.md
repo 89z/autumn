@@ -1,7 +1,7 @@
 ---
 title: Get string end
 categories: [string]
-tags: [d, go, javascript, php, python, racket, rust]
+tags: [d, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## D
@@ -22,6 +22,10 @@ tags: [d, go, javascript, php, python, racket, rust]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/slice>
+
+## Nim
+
+<https://nim-lang.org/docs/system.html#[],string,HSlice[T,U]>
 
 ## PHP
 

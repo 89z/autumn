@@ -1,11 +1,17 @@
 ---
 title: Convert radix
 categories: [number]
-tags: [go, javascript, php, python]
+tags: [d, go, javascript, php, python]
 ---
 
 Some faster bitwise operations could be used, but these functions allow to
 easily change the radix. These also account for numeric zero input.
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/conv.html>
 
 ## Go
 

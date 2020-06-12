@@ -1,7 +1,7 @@
 ---
 title: Convert to float
 categories: [number]
-tags: [d, go, javascript, nim, php, python, rust]
+tags: [d, dart, go, javascript, nim, php, python, rust]
 ---
 
 ## D
@@ -9,6 +9,12 @@ tags: [d, go, javascript, nim, php, python, rust]
 {{< r "a.d" >}}
 
 <https://dlang.org/library/std/conv.html>
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-core/num/parse.html>
 
 ## Go
 
@@ -54,6 +60,8 @@ tags: [d, go, javascript, nim, php, python, rust]
 
 ## Racket
 
+{{< r "a.rkt" >}}
+
 <https://docs.racket-lang.org/reference/generic-numbers.html>
 
 ## Rust
@@ -64,4 +72,5 @@ tags: [d, go, javascript, nim, php, python, rust]
 
 - <https://hyperpolyglot.org/c#str-to-num>
 - <https://hyperpolyglot.org/rust#str-to-num>
+- <https://hyperpolyglot.org/web#str-to-num>
 - <https://programming-idioms.org/idiom/146>

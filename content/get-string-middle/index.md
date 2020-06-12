@@ -59,6 +59,8 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 ## Rust
 
+{{< r "a.rs" >}}
+
 <https://doc.rust-lang.org/std/primitive.str.html#method.get>
 
 ## References

@@ -1,7 +1,7 @@
 ---
 title: Convert to string
 categories: [string]
-tags: [d, dart, go, javascript, php, python]
+tags: [d, dart, go, javascript, php, python, racket]
 ---
 
 ## D
@@ -56,12 +56,17 @@ tags: [d, dart, go, javascript, php, python]
 - <https://docs.python.org/library/locale.html#locale.setlocale>
 - <https://docs.python.org/library/stdtypes.html#str.format>
 
+## Racket
+
+<https://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._number-~3estring))>
+
 ## Rust
 
 <https://docs.rs/num-format>
 
 ## References
 
+- <https://hyperpolyglot.org/lisp#num-to-str>
 - <https://hyperpolyglot.org/scripting#format-str>
 - <https://hyperpolyglot.org/web#num-to-str>
 - <https://programming-idioms.org/idiom/173>
