@@ -1,7 +1,7 @@
 ---
 title: Divide a number
 categories: [number]
-tags: [d, go, javascript, nim, php, python]
+tags: [d, go, javascript, nim, php, python, rust]
 ---
 
 ## D
@@ -44,6 +44,12 @@ tags: [d, go, javascript, nim, php, python]
 
 - <https://docs.python.org/library/functions.html#divmod>
 - <https://docs.python.org/reference/expressions.html#binary>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/ops/trait.Div.html>
 
 ## References
 

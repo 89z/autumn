@@ -32,6 +32,8 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.nim" >}}
 
+<https://nim-lang.org/docs/manual.html#types-boolean-type>
+
 ## PHP
 
 {{< r "a.php" >}}
