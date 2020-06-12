@@ -1,12 +1,18 @@
 ---
 title: Get string middle
 categories: [string]
-tags: [d, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## D
 
+{{< r "a.d" >}}
+
 <https://dlang.org/spec/arrays.html#slicing>
+
+## Dart
+
+<https://api.dart.dev/dart-core/String/substring.html>
 
 ## Go
 
@@ -25,6 +31,8 @@ tags: [d, go, javascript, nim, php, python, racket, rust]
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/substring>
 
 ## Nim
+
+{{< r "a.nim" >}}
 
 <https://nim-lang.org/docs/system.html#[],string,HSlice[T,U]>
 
@@ -58,5 +66,6 @@ tags: [d, go, javascript, nim, php, python, racket, rust]
 - <https://hyperpolyglot.org/c#extract-substr>
 - <https://hyperpolyglot.org/lisp#extract-substr>
 - <https://hyperpolyglot.org/scripting#extract-substr>
+- <https://hyperpolyglot.org/web#extract-substr>
 - <https://programming-idioms.org/idiom/38>
 - <https://rosettacode.org/wiki/Substring>

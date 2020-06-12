@@ -8,6 +8,8 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 
 {{< r "a.d" >}}
 
+<https://dlang.org/library/std/algorithm/searching/count_until.html>
+
 ## Dart
 
 {{< r "a.dart" >}}

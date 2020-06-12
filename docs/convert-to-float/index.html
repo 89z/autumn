@@ -21,7 +21,7 @@
    </header>
 
 <h1>Convert to float</h1>
-<time>Thu Jun 11 2020</time>
+<time>Fri Jun 12 2020</time>
    
 <a href="/autumn/categories/number/">number</a>
    
@@ -189,9 +189,23 @@ n2 <span style="color:#f92672">=</span> float(n1)
 </ul>
 <h2 id="racket">Racket</h2>
 <p><a href="https://docs.racket-lang.org/reference/generic-numbers.html">https://docs.racket-lang.org/reference/generic-numbers.html</a></p>
+<h2 id="rust">Rust</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::error::Error;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1.9&#34;</span>;
+   <span style="color:#66d9ef">let</span> n: <span style="color:#66d9ef">f32</span> <span style="color:#f92672">=</span> s.parse()<span style="color:#f92672">?</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1.9</span>);
+   Ok(())
+}
+</code></pre></div>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#str-to-num">https://hyperpolyglot.org/c#str-to-num</a></li>
+<li><a href="https://hyperpolyglot.org/rust#str-to-num">https://hyperpolyglot.org/rust#str-to-num</a></li>
 <li><a href="https://programming-idioms.org/idiom/146">https://programming-idioms.org/idiom/146</a></li>
 </ul>
 

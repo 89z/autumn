@@ -1,12 +1,14 @@
 ---
 title: Is directory or file
 categories: [system]
-tags: [d, dart, go, php, python, racket]
+tags: [d, dart, go, nim, php, python, racket]
 ---
 
 ## D
 
-<https://dlang.org/library/std/file.html>
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/file/exists.html>
 
 ## Dart
 
@@ -21,6 +23,10 @@ tags: [d, dart, go, php, python, racket]
 
 - <https://golang.org/pkg/os#IsNotExist>
 - <https://golang.org/pkg/os#Stat>
+
+## Nim
+
+{{< r "a.nim" >}}
 
 ## PHP
 
