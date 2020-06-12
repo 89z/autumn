@@ -8,9 +8,13 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.d" >}}
 
+<https://dlang.org/spec/expression.html#mul_expressions>
+
 ## Dart
 
 {{< r "a.dart" >}}
+
+<https://dart.dev/guides/language/language-tour#operators>
 
 ## Go
 

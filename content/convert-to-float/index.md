@@ -1,7 +1,7 @@
 ---
 title: Convert to float
 categories: [number]
-tags: [d, go, javascript, php, python]
+tags: [d, go, javascript, nim, php, python]
 ---
 
 ## D
@@ -29,6 +29,12 @@ tags: [d, go, javascript, php, python]
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/parseFloat>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators>
 
+## Nim
+
+{{< r "a.nim" >}}
+
+<https://nim-lang.org/docs/strutils.html#parseFloat,string>
+
 ## PHP
 
 {{< r "str.php" >}}
@@ -46,7 +52,11 @@ tags: [d, go, javascript, php, python]
 - <https://docs.python.org/library/functions.html#float>
 - <https://docs.python.org/library/locale.html#locale.atof>
 
+## Racket
+
+<https://docs.racket-lang.org/reference/generic-numbers.html>
+
 ## References
 
 - <https://hyperpolyglot.org/c#str-to-num>
-- <https://www.programming-idioms.org/idiom/146>
+- <https://programming-idioms.org/idiom/146>

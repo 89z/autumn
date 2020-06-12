@@ -49,6 +49,7 @@ tags: [d, dart, go, javascript, php, python]
 ## Python
 
 {{< r "a.py" >}}
+{{< r "b.py" >}}
 
 - <https://docs.python.org/library/functions.html#format>
 - <https://docs.python.org/library/functions.html#func-str>
