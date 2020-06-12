@@ -1,8 +1,14 @@
 ---
 title: Convert to float
 categories: [number]
-tags: [go, javascript, php, python]
+tags: [d, go, javascript, php, python]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/conv.html>
 
 ## Go
 

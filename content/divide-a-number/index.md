@@ -1,12 +1,16 @@
 ---
 title: Divide a number
 categories: [number]
-tags: [d, go, javascript, nim, php, python, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## D
 
 {{< r "a.d" >}}
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -45,6 +49,12 @@ tags: [d, go, javascript, nim, php, python, rust]
 - <https://docs.python.org/library/functions.html#divmod>
 - <https://docs.python.org/reference/expressions.html#binary>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._quotient))>
+
 ## Rust
 
 {{< r "a.rs" >}}
@@ -53,5 +63,7 @@ tags: [d, go, javascript, nim, php, python, rust]
 
 ## References
 
+- <https://hyperpolyglot.org/lisp#arith-op>
 - <https://hyperpolyglot.org/scripting#arith-op>
+- <https://hyperpolyglot.org/web#arith-op>
 - <https://rosettacode.org/wiki/Arithmetic/Integer>

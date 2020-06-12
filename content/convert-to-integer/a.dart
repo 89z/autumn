@@ -1,5 +1,9 @@
 main() {
    var s = "10";
-   var n = int.parse(s);
-   print(n);
+   // example 1
+   var n1 = int.parse(s);
+   // example 2
+   var n2 = num.parse(s);
+   // print
+   print([n1, n2]);
 }

@@ -14,6 +14,8 @@ tags: [d, dart, go, javascript, php, python, racket]
 
 {{< r "a.dart" >}}
 
+<https://api.dart.dev/dart-core/num/parse.html>
+
 ## Go
 
 {{< r "fmt.go" >}}
@@ -36,6 +38,12 @@ tags: [d, dart, go, javascript, php, python, racket]
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/parseInt>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators>
+
+## Nim
+
+{{< r "a.nim" >}}
+
+<https://nim-lang.org/docs/strutils.html#parseInt,string>
 
 ## PHP
 
@@ -65,5 +73,4 @@ tags: [d, dart, go, javascript, php, python, racket]
 - <https://hyperpolyglot.org/c#str-to-num>
 - <https://hyperpolyglot.org/lisp#str-to-num>
 - <https://hyperpolyglot.org/web#str-to-num>
-- <https://programming-idioms.org/idiom/22/convert-string-to-int>
-- <https://rosettacode.org/wiki/Real_constants_and_functions>
+- <https://programming-idioms.org/idiom/22>
