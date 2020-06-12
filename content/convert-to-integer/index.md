@@ -1,8 +1,14 @@
 ---
 title: Convert to integer
 categories: [number]
-tags: [dart, go, javascript, php, python, racket]
+tags: [d, dart, go, javascript, php, python, racket]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/conv.html>
 
 ## Dart
 

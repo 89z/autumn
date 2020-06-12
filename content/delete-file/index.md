@@ -1,8 +1,14 @@
 ---
 title: Delete file
 categories: [system]
-tags: [php, racket]
+tags: [dart, php, racket]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-io/FileSystemEntity/deleteSync.html>
 
 ## PHP
 
@@ -20,3 +26,4 @@ tags: [php, racket]
 
 - <https://hyperpolyglot.org/lisp#cp-rm-mv>
 - <https://hyperpolyglot.org/scripting2#file-cp-rm-mv>
+- <https://hyperpolyglot.org/web#file-cp-rm-mv>

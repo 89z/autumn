@@ -6,6 +6,8 @@ tags: [d, dart, go, javascript, php, python]
 
 ## D
 
+{{< r "a.d" >}}
+
 <https://dlang.org/library/std/format.html>
 
 ## Dart
@@ -16,20 +18,30 @@ tags: [d, dart, go, javascript, php, python]
 
 ## Go
 
-{{< r "a.go" >}}
+{{< r "fmt.go" >}}
+{{< r "x.go" >}}
 
-<https://golang.org/pkg/fmt>
+- <https://golang.org/pkg/fmt#Printf>
+- <https://pkg.go.dev/golang.org/x/text/message#NewPrinter>
 
 ## JavaScript
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String>
+
+## Nim
+
+{{< r "a.nim" >}}
+
+<https://nim-lang.org/docs/strformat.html#fmt.m,string>
 
 ## PHP
 
 {{< r "a.php" >}}
 
+- <https://php.net/function.number-format>
 - <https://php.net/function.sprintf>
 - <https://php.net/function.strval>
 - <https://php.net/language.types.type-juggling>
@@ -38,9 +50,18 @@ tags: [d, dart, go, javascript, php, python]
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/functions.html#func-str>
+- <https://docs.python.org/library/functions.html#format>
+- <https://docs.python.org/library/functions.html#func-str>
+- <https://docs.python.org/library/locale.html#locale.setlocale>
+- <https://docs.python.org/library/stdtypes.html#str.format>
+
+## Rust
+
+<https://docs.rs/num-format>
 
 ## References
 
 - <https://hyperpolyglot.org/scripting#format-str>
 - <https://hyperpolyglot.org/web#num-to-str>
+- <https://programming-idioms.org/idiom/173>
+- <https://rosettacode.org/wiki/Commatizing_numbers>
