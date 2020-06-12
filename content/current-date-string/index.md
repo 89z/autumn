@@ -1,7 +1,7 @@
 ---
 title: Current date string
 categories: [date]
-tags: [d, go, javascript, php, python]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -9,6 +9,12 @@ tags: [d, go, javascript, php, python]
 {{< r "a.d" >}}
 
 <https://dlang.org/library/std/datetime/systime/sys_time.to_iso_ext_string.html>
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-core/DateTime/toString.html>
 
 ## Go
 
@@ -25,6 +31,12 @@ tags: [d, go, javascript, php, python]
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toISOString>
 
+## Nim
+
+{{< r "a.nim" >}}
+
+<https://nim-lang.org/docs/times.html>
+
 ## PHP
 
 {{< r "a.php" >}}
@@ -39,9 +51,14 @@ tags: [d, go, javascript, php, python]
 - <https://docs.python.org/library/datetime.html#datetime.date.isoformat>
 - <https://docs.python.org/library/datetime.html#datetime.date.strftime>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/time.html#(def._((lib._racket/date..rkt)._current-date))>
+
 ## References
 
-- <https://hyperpolyglot.org/c#fmt-datetime>
-- <https://hyperpolyglot.org/scripting#fmt-datetime>
+- <https://hyperpolyglot.org/lisp#current-datetime>
 - <https://programming-idioms.org/idiom/99>
 - <https://rosettacode.org/wiki/Date_format>

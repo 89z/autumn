@@ -21,12 +21,26 @@
    </header>
 
 <h1>Encode JSON</h1>
-<time>Thu Jun 11 2020</time>
+<time>Fri Jun 12 2020</time>
    
 <a href="/autumn/categories/file-format/">file-format</a>
    
    
-   <h2 id="dart">Dart</h2>
+   <h2 id="d">D</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.d" data-lang=".d"><span style="color:#f92672">import</span> std.json<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> m <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;Sunday&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">];</span>
+   <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> m<span style="color:#f92672">.</span><span style="color:#a6e22e">JSONValue</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">toJSON</span><span style="color:#f92672">;</span>
+   s<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+<p><a href="https://dlang.org/library/std/json/to_json.html">https://dlang.org/library/std/json/to_json.html</a></p>
+<h2 id="dart">Dart</h2>
 
 
 
@@ -110,8 +124,8 @@ $a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#
 <ul>
 <li><a href="https://hyperpolyglot.org/c#generate-json-note">https://hyperpolyglot.org/c#generate-json-note</a></li>
 <li><a href="https://hyperpolyglot.org/scripting2#generate-json">https://hyperpolyglot.org/scripting2#generate-json</a></li>
+<li><a href="https://programming-idioms.org/idiom/92">https://programming-idioms.org/idiom/92</a></li>
 <li><a href="https://rosettacode.org/wiki/JSON">https://rosettacode.org/wiki/JSON</a></li>
-<li><a href="https://www.programming-idioms.org/idiom/92">https://www.programming-idioms.org/idiom/92</a></li>
 </ul>
 
 

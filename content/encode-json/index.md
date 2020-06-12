@@ -1,8 +1,14 @@
 ---
 title: Encode JSON
 categories: [file-format]
-tags: [dart, go, javascript, nim, php, python, racket]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/json/to_json.html>
 
 ## Dart
 
@@ -46,5 +52,5 @@ tags: [dart, go, javascript, nim, php, python, racket]
 
 - <https://hyperpolyglot.org/c#generate-json-note>
 - <https://hyperpolyglot.org/scripting2#generate-json>
+- <https://programming-idioms.org/idiom/92>
 - <https://rosettacode.org/wiki/JSON>
-- <https://www.programming-idioms.org/idiom/92>

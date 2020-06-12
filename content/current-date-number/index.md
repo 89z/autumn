@@ -1,7 +1,7 @@
 ---
 title: Current date number
 categories: [date]
-tags: [d, dart, go, javascript, php, python, racket]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -30,6 +30,12 @@ tags: [d, dart, go, javascript, php, python, racket]
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/getTime>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/now>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/valueof>
+
+## Nim
+
+{{< r "a.nim" >}}
+
+<https://nim-lang.org/docs/times.html>
 
 ## PHP
 

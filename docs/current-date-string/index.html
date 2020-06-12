@@ -39,6 +39,18 @@
 <span style="color:#f92672">}</span>
 </code></pre></div>
 <p><a href="https://dlang.org/library/std/datetime/systime/sys_time.to_iso_ext_string.html">https://dlang.org/library/std/datetime/systime/sys_time.to_iso_ext_string.html</a></p>
+<h2 id="dart">Dart</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart">main() {
+   <span style="color:#66d9ef">var</span> o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DateTime.now();
+   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> o.toString();
+   print(s);
+}
+</code></pre></div>
+<p><a href="https://api.dart.dev/dart-core/DateTime/toString.html">https://api.dart.dev/dart-core/DateTime/toString.html</a></p>
 <h2 id="go">Go</h2>
 <p>
 
@@ -91,6 +103,16 @@
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span>);
 </code></pre></div>
 <p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toISOString">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toISOString</a></p>
+<h2 id="nim">Nim</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.nim" data-lang=".nim"><span style="color:#f92672">import</span> times
+<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> getDateStr()
+echo s
+</code></pre></div>
+<p><a href="https://nim-lang.org/docs/times.html">https://nim-lang.org/docs/times.html</a></p>
 <h2 id="php">PHP</h2>
 
 
@@ -127,10 +149,22 @@ s2 <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>str
 <li><a href="https://docs.python.org/library/datetime.html#datetime.date.isoformat">https://docs.python.org/library/datetime.html#datetime.date.isoformat</a></li>
 <li><a href="https://docs.python.org/library/datetime.html#datetime.date.strftime">https://docs.python.org/library/datetime.html#datetime.date.strftime</a></li>
 </ul>
+<h2 id="racket">Racket</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rkt" data-lang=".rkt"><span style="color:#f92672">#lang </span>racket/base
+(<span style="color:#66d9ef">require</span> racket/date)
+(<span style="color:#66d9ef">define</span> o
+   (current-date)
+)
+(date-&gt;string o)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
+<p><a href="https://docs.racket-lang.org/reference/time.html#(def._((lib._racket/date..rkt)._current-date))">https://docs.racket-lang.org/reference/time.html#(def._((lib._racket/date..rkt)._current-date))</a></p>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://hyperpolyglot.org/c#fmt-datetime">https://hyperpolyglot.org/c#fmt-datetime</a></li>
-<li><a href="https://hyperpolyglot.org/scripting#fmt-datetime">https://hyperpolyglot.org/scripting#fmt-datetime</a></li>
+<li><a href="https://hyperpolyglot.org/lisp#current-datetime">https://hyperpolyglot.org/lisp#current-datetime</a></li>
 <li><a href="https://programming-idioms.org/idiom/99">https://programming-idioms.org/idiom/99</a></li>
 <li><a href="https://rosettacode.org/wiki/Date_format">https://rosettacode.org/wiki/Date_format</a></li>
 </ul>
