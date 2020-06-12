@@ -1,8 +1,18 @@
 ---
 title: Is directory or file
 categories: [system]
-tags: [go, php, python]
+tags: [d, dart, go, php, python, racket]
 ---
+
+## D
+
+<https://dlang.org/library/std/file.html>
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-io/FileSystemEntity/existsSync.html>
 
 ## Go
 
@@ -30,9 +40,17 @@ tags: [go, php, python]
 - <https://docs.python.org/library/os.path.html#os.path.isdir>
 - <https://docs.python.org/library/os.path.html#os.path.isfile>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/Filesystem.html#(def._((quote._~23~25kernel)._file-exists~3f))>
+
 ## References
 
 - <https://hyperpolyglot.org/c#file-test>
+- <https://hyperpolyglot.org/lisp#file-test>
 - <https://hyperpolyglot.org/scripting2#file-test>
-- <https://programming-idioms.org/idiom/144/check-if-file-exists>
+- <https://hyperpolyglot.org/web#file-test>
+- <https://programming-idioms.org/idiom/144>
 - <https://rosettacode.org/wiki/Check_that_file_exists>

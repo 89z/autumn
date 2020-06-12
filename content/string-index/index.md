@@ -1,7 +1,7 @@
 ---
 title: String index
 categories: [string]
-tags: [d, dart, go, javascript, php, python, rust]
+tags: [d, dart, go, javascript, nim, php, python, rust]
 ---
 
 ## D
@@ -21,6 +21,12 @@ tags: [d, dart, go, javascript, php, python, rust]
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/indexOf>
+
+## Nim
+
+{{< r "a.nim" >}}
+
+<https://nim-lang.org/docs/strutils.html#find,string,string,Natural,int>
 
 ## PHP
 

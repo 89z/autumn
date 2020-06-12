@@ -1,7 +1,7 @@
 ---
 title: Get string middle
 categories: [string]
-tags: [d, go, javascript, nim, php, python]
+tags: [d, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## D
@@ -43,9 +43,20 @@ tags: [d, go, javascript, nim, php, python]
 
 <https://docs.python.org/reference/expressions.html#slicings>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/strings.html>
+
+## Rust
+
+<https://doc.rust-lang.org/std/primitive.str.html#method.get>
+
 ## References
 
 - <https://hyperpolyglot.org/c#extract-substr>
+- <https://hyperpolyglot.org/lisp#extract-substr>
 - <https://hyperpolyglot.org/scripting#extract-substr>
-- <https://www.programming-idioms.org/idiom/38/extract-a-substring>
+- <https://programming-idioms.org/idiom/38>
 - <https://rosettacode.org/wiki/Substring>
