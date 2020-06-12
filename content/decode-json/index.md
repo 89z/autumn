@@ -31,6 +31,8 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 ## Nim
 
+{{< r "a.nim" >}}
+
 <https://nim-lang.org/docs/json.html>
 
 ## PHP

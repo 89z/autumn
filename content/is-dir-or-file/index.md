@@ -1,5 +1,5 @@
 ---
-title: Directory contains entry
+title: Is directory or file
 categories: [system]
 tags: [go, php, python]
 ---
@@ -22,12 +22,10 @@ tags: [go, php, python]
 
 ## Python
 
+{{< r "os-path.py" >}}
 {{< r "os.py" >}}
 
-<https://docs.python.org/library/os.html#os.access>
-
-{{< r "os-path.py" >}}
-
+- <https://docs.python.org/library/os.html#os.access>
 - <https://docs.python.org/library/os.path.html#os.path.exists>
 - <https://docs.python.org/library/os.path.html#os.path.isdir>
 - <https://docs.python.org/library/os.path.html#os.path.isfile>
@@ -36,5 +34,5 @@ tags: [go, php, python]
 
 - <https://hyperpolyglot.org/c#file-test>
 - <https://hyperpolyglot.org/scripting2#file-test>
-- <https://www.programming-idioms.org/idiom/144/check-if-file-exists>
+- <https://programming-idioms.org/idiom/144/check-if-file-exists>
 - <https://rosettacode.org/wiki/Check_that_file_exists>

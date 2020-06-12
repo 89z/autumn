@@ -36,6 +36,8 @@ tags: [d, dart, go, javascript, nim, php, racket, rust]
 
 {{< r "a.nim" >}}
 
+<https://nim-lang.org/docs/manual.html#statements-and-expressions-var-statement>
+
 ## PHP
 
 {{< r "a.php" >}}
