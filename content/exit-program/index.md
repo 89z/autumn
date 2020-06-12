@@ -1,7 +1,7 @@
 ---
 title: Exit program
 categories: [system]
-tags: [d, go, nim, php, python, racket, rust]
+tags: [d, dart, go, nim, php, python, racket, rust]
 ---
 
 ## D
@@ -9,6 +9,10 @@ tags: [d, go, nim, php, python, racket, rust]
 {{< r "a.d" >}}
 
 <https://dlang.org/spec/statement.html#return-statement>
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
