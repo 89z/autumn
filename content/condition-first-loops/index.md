@@ -1,7 +1,7 @@
 ---
 title: Condition-first loops
 categories: [reference]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## D
@@ -54,10 +54,17 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 
 <https://docs.racket-lang.org/guide/for.html>
 
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/keyword.while.html>
+
 ## References
 
-- <https://hyperpolyglot.org/scripting#execution-control>
+- <https://hyperpolyglot.org/rust#while>
+- <https://hyperpolyglot.org/scripting#while>
 - <https://hyperpolyglot.org/web#while>
-- <https://www.programming-idioms.org/idiom/2/print-hello-10-times>
+- <https://programming-idioms.org/idiom/2>
 - <https://rosettacode.org/wiki/Loops/For>
 - <https://rosettacode.org/wiki/Loops/While>

@@ -1,8 +1,20 @@
 ---
 title: Current date number
 categories: [date]
-tags: [go, javascript, php, python]
+tags: [d, dart, go, javascript, php, python, racket]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/datetime/systime/sys_time.to_unix_time.html>
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-core/DateTime/millisecondsSinceEpoch.html>
 
 ## Go
 
@@ -34,8 +46,15 @@ tags: [go, javascript, php, python]
 - <https://docs.python.org/library/datetime.html#datetime.datetime.timestamp>
 - <https://docs.python.org/library/time.html#time.time>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/reference/time.html#(def._((quote._~23~25kernel)._current-seconds))>
+
 ## References
 
 - <https://hyperpolyglot.org/c#current-unix-epoch>
+- <https://hyperpolyglot.org/lisp#current-unix-epoch>
 - <https://hyperpolyglot.org/scripting#current-unix-epoch>
 - <https://rosettacode.org/wiki/System_time>

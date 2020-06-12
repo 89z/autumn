@@ -21,12 +21,37 @@
    </header>
 
 <h1>Current date number</h1>
-<time>Wed Jun 10 2020</time>
+<time>Fri Jun 12 2020</time>
    
 <a href="/autumn/categories/date/">date</a>
    
    
-   <h2 id="go">Go</h2>
+   <h2 id="d">D</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.d" data-lang=".d"><span style="color:#f92672">import</span> std.datetime<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> Clock<span style="color:#f92672">.</span><span style="color:#a6e22e">currTime</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> n <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">toUnixTime</span><span style="color:#f92672">;</span>
+   n<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+<p><a href="https://dlang.org/library/std/datetime/systime/sys_time.to_unix_time.html">https://dlang.org/library/std/datetime/systime/sys_time.to_unix_time.html</a></p>
+<h2 id="dart">Dart</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart">main() {
+   <span style="color:#66d9ef">var</span> o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DateTime.now();
+   <span style="color:#66d9ef">var</span> n <span style="color:#f92672">=</span> o.millisecondsSinceEpoch <span style="color:#f92672">/</span> <span style="color:#ae81ff">1000</span>;
+   print(n);
+}
+</code></pre></div>
+<p><a href="https://api.dart.dev/dart-core/DateTime/millisecondsSinceEpoch.html">https://api.dart.dev/dart-core/DateTime/millisecondsSinceEpoch.html</a></p>
+<h2 id="go">Go</h2>
 
 
 
@@ -108,9 +133,19 @@ n2 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>ti
 <li><a href="https://docs.python.org/library/datetime.html#datetime.datetime.timestamp">https://docs.python.org/library/datetime.html#datetime.datetime.timestamp</a></li>
 <li><a href="https://docs.python.org/library/time.html#time.time">https://docs.python.org/library/time.html#time.time</a></li>
 </ul>
+<h2 id="racket">Racket</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rkt" data-lang=".rkt"><span style="color:#f92672">#lang </span>racket/base
+(current-seconds)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
+<p><a href="https://docs.racket-lang.org/reference/time.html#(def._((quote._~23~25kernel)._current-seconds))">https://docs.racket-lang.org/reference/time.html#(def._((quote._~23~25kernel)._current-seconds))</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#current-unix-epoch">https://hyperpolyglot.org/c#current-unix-epoch</a></li>
+<li><a href="https://hyperpolyglot.org/lisp#current-unix-epoch">https://hyperpolyglot.org/lisp#current-unix-epoch</a></li>
 <li><a href="https://hyperpolyglot.org/scripting#current-unix-epoch">https://hyperpolyglot.org/scripting#current-unix-epoch</a></li>
 <li><a href="https://rosettacode.org/wiki/System_time">https://rosettacode.org/wiki/System_time</a></li>
 </ul>

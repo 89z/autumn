@@ -1,7 +1,7 @@
 ---
 title: Convert radix
 categories: [number]
-tags: [d, go, javascript, php, python]
+tags: [d, go, javascript, nim, php, python]
 ---
 
 Some faster bitwise operations could be used, but these functions allow to
@@ -33,6 +33,12 @@ easily change the radix. These also account for numeric zero input.
 {{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/indexOf>
+
+## Nim
+
+{{< r "a.nim" >}}
+
+<https://nim-lang.org/docs/strutils.html>
 
 ## PHP
 
