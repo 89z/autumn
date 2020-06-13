@@ -1,7 +1,7 @@
 ---
 title: Date string to object
 categories: [date]
-tags: [d, dart, go, javascript, php, python]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -28,6 +28,12 @@ tags: [d, dart, go, javascript, php, python]
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/Date>
 
+## Nim
+
+{{< r "a.nim" >}}
+
+<https://nim-lang.org/docs/times.html>
+
 ## PHP
 
 {{< r "a.php" >}}
@@ -45,6 +51,13 @@ tags: [d, dart, go, javascript, php, python]
 - <https://docs.python.org/library/datetime.html#datetime.datetime.strptime>
 - <https://docs.python.org/library/time.html#time.strptime>
 
+## Racket
+
+{{< r "a.rkt" >}}
+
+<https://docs.racket-lang.org/srfi/srfi-std/srfi-19.html#string-%3Edate>
+
 ## References
 
-<https://hyperpolyglot.org/scripting#parse-datetime>
+- <https://hyperpolyglot.org/lisp#parse-datetime>
+- <https://hyperpolyglot.org/scripting#parse-datetime>

@@ -1,7 +1,7 @@
 ---
 title: Import package
 categories: [reference]
-tags: [d, dart, go, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## D
@@ -22,6 +22,13 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 {{< r "a.go" >}}
 
 <https://golang.org/ref/spec#Import_declarations>
+
+## JavaScript
+
+{{< r "a.mjs" >}}
+{{< r "b.mjs" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Statements/import>
 
 ## Nim
 

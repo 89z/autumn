@@ -81,6 +81,16 @@
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">o</span>);
 </code></pre></div>
 <p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/Date">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/Date</a></p>
+<h2 id="nim">Nim</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.nim" data-lang=".nim"><span style="color:#f92672">import</span> times
+<span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> parse(<span style="color:#e6db74">&#34;2019-12-31&#34;</span>, <span style="color:#e6db74">&#34;yyyy-M-d&#34;</span>)
+echo o
+</code></pre></div>
+<p><a href="https://nim-lang.org/docs/times.html">https://nim-lang.org/docs/times.html</a></p>
 <h2 id="php">PHP</h2>
 
 
@@ -132,8 +142,22 @@ o <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>s
 <li><a href="https://docs.python.org/library/datetime.html#datetime.datetime.strptime">https://docs.python.org/library/datetime.html#datetime.datetime.strptime</a></li>
 <li><a href="https://docs.python.org/library/time.html#time.strptime">https://docs.python.org/library/time.html#time.strptime</a></li>
 </ul>
+<h2 id="racket">Racket</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rkt" data-lang=".rkt"><span style="color:#f92672">#lang </span>racket/base
+(<span style="color:#66d9ef">define</span> s <span style="color:#e6db74">&#34;2019-12-31&#34;</span>)
+(<span style="color:#66d9ef">require</span> srfi/19)
+(string-&gt;date s <span style="color:#e6db74">&#34;~Y-~m-~d&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
+<p><a href="https://docs.racket-lang.org/srfi/srfi-std/srfi-19.html#string-%3Edate">https://docs.racket-lang.org/srfi/srfi-std/srfi-19.html#string-%3Edate</a></p>
 <h2 id="references">References</h2>
-<p><a href="https://hyperpolyglot.org/scripting#parse-datetime">https://hyperpolyglot.org/scripting#parse-datetime</a></p>
+<ul>
+<li><a href="https://hyperpolyglot.org/lisp#parse-datetime">https://hyperpolyglot.org/lisp#parse-datetime</a></li>
+<li><a href="https://hyperpolyglot.org/scripting#parse-datetime">https://hyperpolyglot.org/scripting#parse-datetime</a></li>
+</ul>
 
 
 </body>

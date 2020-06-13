@@ -40,7 +40,7 @@ tags: [dart, go, javascript, php, python, rust]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html#method.map>
+<https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.map>
 
 ## References
 

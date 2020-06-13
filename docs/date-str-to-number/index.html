@@ -21,12 +21,26 @@
    </header>
 
 <h1>Date string to number</h1>
-<time>Wed Jun 10 2020</time>
+<time>Fri Jun 12 2020</time>
    
 <a href="/autumn/categories/date/">date</a>
    
    
-   <h2 id="go">Go</h2>
+   <h2 id="d">D</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.d" data-lang=".d"><span style="color:#f92672">import</span> std.datetime<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2019-12-31T23:59:59&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> SysTime<span style="color:#f92672">.</span><span style="color:#a6e22e">fromISOExtString</span><span style="color:#f92672">(</span>s<span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> n <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">toUnixTime</span><span style="color:#f92672">;</span>
+   n<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+<p><a href="https://dlang.org/library/std/datetime/systime/sys_time.to_unix_time.html">https://dlang.org/library/std/datetime/systime/sys_time.to_unix_time.html</a></p>
+<h2 id="go">Go</h2>
 
 
 
