@@ -21,31 +21,11 @@
    </header>
 
 <h1>Talk:Two-way conditions</h1>
-<time>Mon May 4 2020</time>
+<time>Sat Jun 13 2020</time>
    
    
    <h2 id="if-statements">If statements</h2>
-<p>PHP accepts any type with conditions:</p>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-<span style="color:#75715e"># boolean
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> ($n1 <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) { <span style="color:#75715e"># false
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;negative</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-} <span style="color:#66d9ef">else</span> {
-   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;positive</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-}
-<span style="color:#75715e"># number
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> ($n1) { <span style="color:#75715e"># true
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;nonzero</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-} <span style="color:#66d9ef">else</span> {
-   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;zero</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-}
-</code></pre></div>
-<p>Go accepts booleans with conditions:</p>
+<p>PHP accepts any type with conditions. Go accepts booleans with conditions:</p>
 
 
 
@@ -81,15 +61,6 @@ $n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 expected.</p>
 <h2 id="ternary-operations">Ternary operations</h2>
 <p>PHP offers this:</p>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-$n2 <span style="color:#f92672">=</span> $n1 <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">?</span> $n1 <span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span>;
-<span style="color:#66d9ef">echo</span> $n1, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>; <span style="color:#75715e"># 10
-</span></code></pre></div>
 <p><a href="https://php.net/operators.comparison#language.operators.comparison.ternary">https://php.net/operators.comparison#language.operators.comparison.ternary</a></p>
 <p>Go does not offer this:</p>
 <blockquote>

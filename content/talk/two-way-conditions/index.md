@@ -4,11 +4,7 @@ title: 'Talk:Two-way conditions'
 
 ## If statements
 
-PHP accepts any type with conditions:
-
-{{< r "if.php" >}}
-
-Go accepts booleans with conditions:
+PHP accepts any type with conditions. Go accepts booleans with conditions:
 
 {{< r "if.go" >}}
 
@@ -22,8 +18,6 @@ expected.
 ## Ternary operations
 
 PHP offers this:
-
-{{< r "ternary.php" >}}
 
 <https://php.net/operators.comparison#language.operators.comparison.ternary>
 

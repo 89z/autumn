@@ -16,7 +16,3 @@ red -r a.red
 ~~~
 
 <https://github.com/red/red/issues/3412>
-
-Syntax Error : Invalid decimal:
-
-<https://github.com/red/red/issues/4470>

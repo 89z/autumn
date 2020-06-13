@@ -17,31 +17,12 @@ tags: [draft]
 
 <https://sourceforge.net/projects/sbcl>
 
-## Examples
-
-{{< r "bool.lisp" >}}
-{{< r "str.lisp" >}}
-
-## HTTP
-
-~~~
-(ql:quickload "dexador")
-~~~
-
-<https://github.com/fukamachi/dexador>
-
 ## Issues
 
 QuickList init speed
 
 <https://github.com/quicklisp/quicklisp-client/issues/197>
 
-## Setup
+Startup speed
 
-~~~
-wx86cl -l quicklisp.lisp
-(quicklisp-quickstart:install)
-(ql:add-to-init-file)
-~~~
-
-<https://www.quicklisp.org>
+<https://github.com/roswell/roswell/issues/433>

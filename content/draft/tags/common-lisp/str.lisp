@@ -1,2 +1,0 @@
-(format t "Sunday")
-(quit)
