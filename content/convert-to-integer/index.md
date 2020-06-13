@@ -72,6 +72,8 @@ tags: [d, dart, go, javascript, php, python, racket, rust]
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/std/primitive.str.html#method.parse>
+
 ## References
 
 - <https://hyperpolyglot.org/c#str-to-num>

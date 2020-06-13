@@ -64,7 +64,9 @@ tags: [d, dart, go, javascript, php, python, racket]
 
 ## Rust
 
-<https://docs.rs/num-format>
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/fmt>
 
 ## References
 

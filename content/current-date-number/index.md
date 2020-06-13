@@ -1,7 +1,7 @@
 ---
 title: Current date number
 categories: [date]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## D
@@ -58,9 +58,16 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 
 <https://docs.racket-lang.org/reference/time.html#(def._((quote._~23~25kernel)._current-seconds))>
 
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/time>
+
 ## References
 
 - <https://hyperpolyglot.org/c#current-unix-epoch>
 - <https://hyperpolyglot.org/lisp#current-unix-epoch>
 - <https://hyperpolyglot.org/scripting#current-unix-epoch>
+- <https://programming-idioms.org/idiom/61>
 - <https://rosettacode.org/wiki/System_time>

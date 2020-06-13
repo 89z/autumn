@@ -14,6 +14,8 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 
 {{< r "a.dart" >}}
 
+<https://dart.dev/guides/language/language-tour#functions>
+
 ## Go
 
 {{< r "exit.go" >}}
