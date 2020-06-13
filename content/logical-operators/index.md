@@ -56,6 +56,8 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/std/primitive.bool.html>
+
 ## References
 
 - <https://hyperpolyglot.org/c#logical-op>
