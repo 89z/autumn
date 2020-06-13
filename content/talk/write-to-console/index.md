@@ -2,9 +2,20 @@
 title: 'Talk:Write to console'
 ---
 
-## D
+## cURL
+
+{{< r "curl.sh" >}}
+
+Works with 7.62 (Oct 2018) and higher. Windows 10 1909 still has 7.55.1.
+
+- <https://github.com/curl/curl/commit/becfe123>
+- <https://github.com/microsoft/terminal/issues/216>
 
 ## Dart
+
+{{< r "a.dart" >}}
+
+good
 
 ## Go
 
@@ -12,25 +23,43 @@ title: 'Talk:Write to console'
 
 1.14.4 bad
 
-## JavaScript
-
-## Nim
-
 ## PHP
 
 {{< r "a.php" >}}
 
-7.4.6 good
+Works with 7.2 (Aug 2017) and higher.
+
+<https://github.com/php/php-src/commit/33301d5b>
 
 ## Python
 
-## Racket
+{{< r "a.py" >}}
+
+3.8.3 bad
 
 ## Rust
 
+{{< r "a.rs" >}}
+
+bad
+
+## JavaScript
+
+{{< r "a.js" >}}
+
+good
+
+## Racket
+
+{{< r "a.rkt" >}}
+
+bad
+
+## D
+
+## Nim
+
 ## References
 
-- <https://en.wikipedia.org/wiki/ANSI_escape_code>
-- <https://github.com/microsoft/terminal/issues/216>
 - <https://github.com/microsoft/terminal/issues/51>
 - <https://superuser.com/questions/413073>
