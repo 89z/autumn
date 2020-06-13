@@ -1,7 +1,7 @@
 ---
 title: Date number to object
 categories: [date]
-tags: [d, go, javascript, nim, php, python, racket]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -9,6 +9,12 @@ tags: [d, go, javascript, nim, php, python, racket]
 {{< r "a.d" >}}
 
 <https://dlang.org/library/std/datetime/systime/sys_time.from_unix_time.html>
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-core/DateTime/DateTime.fromMillisecondsSinceEpoch.html>
 
 ## Go
 
@@ -51,3 +57,4 @@ tags: [d, go, javascript, nim, php, python, racket]
 
 - <https://hyperpolyglot.org/c#unix-epoch-to-broken-down-datetime>
 - <https://hyperpolyglot.org/lisp#unix-epoch-to-broken-down-datetime>
+- <https://hyperpolyglot.org/web#unix-epoch-to-broken-down-datetime>

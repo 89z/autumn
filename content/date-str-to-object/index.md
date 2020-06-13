@@ -1,8 +1,20 @@
 ---
 title: Date string to object
 categories: [date]
-tags: [go, javascript, php, python]
+tags: [d, dart, go, javascript, php, python]
 ---
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/datetime/date/date.from_iso_ext_string.html>
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-core/DateTime/parse.html>
 
 ## Go
 
