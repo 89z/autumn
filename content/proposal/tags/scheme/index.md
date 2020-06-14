@@ -1,6 +1,6 @@
 ---
 title: Scheme
-tags: [draft]
+tags: [reject]
 ---
 
 **HTTP requests**:

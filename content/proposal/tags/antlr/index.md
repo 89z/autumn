@@ -1,8 +1,8 @@
 ---
 title: ANTLR
-tags: [draft]
+tags: [reject]
 ---
 
-ANother Tool for Language Recognition, is a parser generator
+> ANother Tool for Language Recognition, is a parser generator
 
 <https://en.wikipedia.org/wiki/ANTLR>

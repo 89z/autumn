@@ -1,6 +1,8 @@
 ---
 title: Erlang
-tags: [draft]
+tags: [reject]
 ---
 
-<https://en.wikipedia.org/wiki/Erlang_(programming_language)>
+Download speed:
+
+<https://github.com/erlang/eep/issues/12>

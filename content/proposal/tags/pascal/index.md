@@ -1,6 +1,6 @@
 ---
 title: Pascal
-tags: [draft]
+tags: [reject]
 ---
 
 Old

@@ -1,8 +1,9 @@
 ---
 title: Vala
-tags: [draft]
+tags: [reject]
 ---
 
-MSYS2 version is available, native Windows version missing:
+Too many packages
 
-<https://google.com/search?tbs=qdr:y&q=vala+windows>
+- <https://packages.msys2.org/package/mingw-w64-x86_64-graphviz>
+- <https://packages.msys2.org/package/mingw-w64-x86_64-vala>
