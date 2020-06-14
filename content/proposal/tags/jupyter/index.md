@@ -1,6 +1,6 @@
 ---
 title: Jupyter Notebook
-tags: [draft]
+tags: [reject]
 ---
 
 > Project Jupyter's name is a reference to the three core programming languages

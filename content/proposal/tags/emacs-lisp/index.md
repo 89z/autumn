@@ -1,6 +1,6 @@
 ---
 title: Emacs Lisp
-tags: [draft]
+tags: [reject]
 ---
 
 > Emacs Lisp is a dialect of the Lisp programming language used as a scripting

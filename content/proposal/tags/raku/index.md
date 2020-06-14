@@ -1,22 +1,8 @@
 ---
 title: Raku
-tags: [draft]
+tags: [reject]
 ---
 
-**Boolean**:
+zef tar.gz:
 
-{{< r "bool.raku" >}}
-
-**Command line tools**:
-
-{{< r "raku.sh" >}}
-
-**Setup**:
-
-Zip:
-
-<https://rakudo.org/downloads>
-
-MSI:
-
-<https://rakudo.org/star>
+<https://github.com/ugexe/zef/issues/354>

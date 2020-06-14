@@ -1,6 +1,6 @@
 ---
 title: Vue
-tags: [draft]
+tags: [reject]
 ---
 
 > Vue.js is an open-source model–view–viewmodel JavaScript framework for

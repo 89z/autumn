@@ -1,6 +1,6 @@
 ---
 title: Java
-tags: [draft]
+tags: [reject]
 ---
 
 ## Boilerplate

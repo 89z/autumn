@@ -1,6 +1,6 @@
 ---
 title: C++
-tags: [draft]
+tags: [reject]
 ---
 
 **Boolean**:

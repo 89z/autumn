@@ -23,35 +23,12 @@ have 5 or less ways to perform a task. These currently fail that test:
 - Java
 - Ruby
 
-## Good
-
-- Clojure
-- Common-lisp
-- D
-- Dart
-- F#
-- Go
-- Nim
-- PHP
-- Python
-- Racket
-- Rust
-- Scheme
-
 ## HTTP client
 
 Language should have built in HTTP client, or at least an up to date package
 without major bugs. These currently fail that test:
 
 Zig
-
-## JavaScript
-
-Language should not be JavaScript or any variant. These currently fail that
-test:
-
-- Javascript
-- Reason
 
 ## Speed
 

@@ -1,14 +1,8 @@
 ---
 title: Perl
-tags: [draft]
+tags: [reject]
 ---
-
-## Issues
 
 No boolean type
 
-<https://stackoverflow.com/questions/1036347>
-
-## Setup
-
-<http://strawberryperl.com>
+<https://stackoverflow.com/questions/1036347/-/1036353>
