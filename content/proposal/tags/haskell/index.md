@@ -1,14 +1,12 @@
 ---
 title: Haskell
-tags: [draft]
+tags: [reject]
 ---
 
-## Issues
-
-Haskell platform size
+**Haskell platform size**:
 
 <https://github.com/haskell/haskell-platform/issues/326>
 
-## Setup
+**Setup**:
 
 <https://haskell.org/platform/prior.html>

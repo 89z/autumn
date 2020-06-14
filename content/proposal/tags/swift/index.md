@@ -1,6 +1,6 @@
 ---
 title: Swift
-tags: [draft]
+tags: [reject]
 ---
 
 error: `stdint.h` file not found

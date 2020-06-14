@@ -1,6 +1,6 @@
 ---
 title: V
-tags: [draft]
+tags: [reject]
 ---
 
 ## field designator  languagetm_gmtoff' does not refer to any field

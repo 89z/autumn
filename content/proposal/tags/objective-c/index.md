@@ -1,6 +1,8 @@
 ---
 title: Objective-C
-tags: [draft]
+tags: [reject]
 ---
 
-<https://en.wikipedia.org/wiki/Objective-C>
+Cannot print boolean
+
+<https://stackoverflow.com/questions/6358349/-/6358367>

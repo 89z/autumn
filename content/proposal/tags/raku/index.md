@@ -3,4 +3,20 @@ title: Raku
 tags: [draft]
 ---
 
-<https://en.wikipedia.org/wiki/Raku_(programming_language)>
+**Boolean**:
+
+{{< r "bool.raku" >}}
+
+**Command line tools**:
+
+{{< r "raku.sh" >}}
+
+**Setup**:
+
+Zip:
+
+<https://rakudo.org/downloads>
+
+MSI:
+
+<https://rakudo.org/star>

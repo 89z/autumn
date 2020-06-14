@@ -1,6 +1,6 @@
 ---
 title: Crystal
-tags: [draft]
+tags: [reject]
 ---
 
 Coordinate porting to Windows

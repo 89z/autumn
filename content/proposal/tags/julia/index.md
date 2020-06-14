@@ -1,13 +1,7 @@
 ---
 title: Julia
-tags: [draft]
+tags: [reject]
 ---
-
-## Documentation
-
-<https://docs.julialang.org>
-
-## Issues
 
 Further startup time improvements:
 
@@ -16,7 +10,3 @@ Further startup time improvements:
 Speed of ERROR: LoadError
 
 <https://github.com/JuliaLang/julia/issues/36016>
-
-## Setup
-
-<https://julialang.org/downloads>

@@ -1,6 +1,12 @@
 ---
 title: Standard ML
-tags: [draft]
+tags: [reject]
 ---
 
-<https://en.wikipedia.org/wiki/Standard_ML>
+This is a false result:
+
+<https://github.com/komeiji-satori/Dress/search?l=standard-ml>
+
+Real result is here:
+
+<https://github.com/search?q=language:"standard+ml"+stars:%3E1>
