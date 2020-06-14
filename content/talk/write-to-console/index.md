@@ -2,64 +2,21 @@
 title: 'Talk:Write to console'
 ---
 
-## cURL
+Some languages have not set `ENABLE_VIRTUAL_TERMINAL_PROCESSING`:
 
-{{< r "curl.sh" >}}
+<https://bugs.python.org/issue29059>
 
-Works with 7.62 (Oct 2018) and higher. Windows 10 1909 still has 7.55.1.
+which means we would need to set:
 
-- <https://github.com/curl/curl/commit/becfe123>
-- <https://github.com/microsoft/terminal/issues/216>
+~~~
+[HKEY_CURRENT_USER\Console]
+"VirtualTerminalLevel"=dword:00000001
+~~~
 
-## Dart
+but this breaks PowerShell 5.1 when doing `git status`. Instead we can use this:
 
-{{< r "a.dart" >}}
+<https://github.com/microsoft/terminal>
 
-good
+**Reference**:
 
-## Go
-
-{{< r "a.go" >}}
-
-1.14.4 bad
-
-## PHP
-
-{{< r "a.php" >}}
-
-Works with 7.2 (Aug 2017) and higher.
-
-<https://github.com/php/php-src/commit/33301d5b>
-
-## Python
-
-{{< r "a.py" >}}
-
-3.8.3 bad
-
-## Rust
-
-{{< r "a.rs" >}}
-
-bad
-
-## JavaScript
-
-{{< r "a.js" >}}
-
-good
-
-## Racket
-
-{{< r "a.rkt" >}}
-
-bad
-
-## D
-
-## Nim
-
-## References
-
-- <https://github.com/microsoft/terminal/issues/51>
-- <https://superuser.com/questions/413073>
+<https://superuser.com/questions/413073>

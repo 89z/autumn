@@ -24,116 +24,15 @@
 <time>Sat Jun 13 2020</time>
    
    
-   <h2 id="curl">cURL</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sh" data-lang=".sh">curl.exe wttr.in
-</code></pre></div>
-<p>Works with 7.62 (Oct 2018) and higher. Windows 10 1909 still has 7.55.1.</p>
-<ul>
-<li><a href="https://github.com/curl/curl/commit/becfe123">https://github.com/curl/curl/commit/becfe123</a></li>
-<li><a href="https://github.com/microsoft/terminal/issues/216">https://github.com/microsoft/terminal/issues/216</a></li>
-</ul>
-<h2 id="dart">Dart</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart">main() {
-   <span style="color:#66d9ef">var</span> s_f_red <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\x1b</span><span style="color:#e6db74">[31m&#39;</span>;
-   <span style="color:#66d9ef">var</span> s_end <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\x1b</span><span style="color:#e6db74">[m&#39;</span>;
-   print(s_f_red <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;Sunday&#39;</span> <span style="color:#f92672">+</span> s_end);
-}
-</code></pre></div>
-<p>good</p>
-<h2 id="go">Go</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s_f_red</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;\x1b[31m&#34;</span>
-   <span style="color:#a6e22e">s_end</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;\x1b[m&#34;</span>
-   println(<span style="color:#a6e22e">s_f_red</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;Sunday&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s_end</span>)
-}
-</code></pre></div>
-<p>1.14.4 bad</p>
-<h2 id="php">PHP</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$s_f_red <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;\e[31m&#34;</span>;
-$s_end <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;\e[m&#34;</span>;
-<span style="color:#66d9ef">echo</span> $s_f_red, <span style="color:#e6db74">&#39;Sunday&#39;</span>, $s_end, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-</code></pre></div>
-<p>Works with 7.2 (Aug 2017) and higher.</p>
-<p><a href="https://github.com/php/php-src/commit/33301d5b">https://github.com/php/php-src/commit/33301d5b</a></p>
-<h2 id="python">Python</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py">
-
-s_f_red <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\x1b</span><span style="color:#e6db74">[31m&#39;</span>
-s_end <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\x1b</span><span style="color:#e6db74">[m&#39;</span>
-<span style="color:#66d9ef">print</span>(s_f_red <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;Sunday&#39;</span> <span style="color:#f92672">+</span> s_end)
-
-
-bad
-
-
-
-
-</code></pre></div>
-<p>3.8.3 bad</p>
-<h2 id="rust">Rust</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> s_f_red <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;\x1b[31m&#34;</span>;
-   <span style="color:#66d9ef">let</span> s_end <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;\x1b[m&#34;</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}Sunday{}&#34;</span>, s_f_red, s_end);
-}
-</code></pre></div>
-<p>bad</p>
-<h2 id="javascript">JavaScript</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_f_red</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\x1b[31m&#39;</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_end</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\x1b[m&#39;</span>;
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s_f_red</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;Sunday&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s_end</span>);
-</code></pre></div>
-<p>good</p>
-<h2 id="racket">Racket</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rkt" data-lang=".rkt"><span style="color:#f92672">#lang </span>racket/base
-(<span style="color:#66d9ef">define</span> s_f_red <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\e</span><span style="color:#e6db74">[31m&#34;</span>)
-(<span style="color:#66d9ef">define</span> s_end <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\e</span><span style="color:#e6db74">[m&#34;</span>)
-(displayln
-   (string-append s_f_red <span style="color:#e6db74">&#34;Sunday&#34;</span> s_end)
-)<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div>
-<p>bad</p>
-<h2 id="d">D</h2>
-<h2 id="nim">Nim</h2>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://github.com/microsoft/terminal/issues/51">https://github.com/microsoft/terminal/issues/51</a></li>
-<li><a href="https://superuser.com/questions/413073">https://superuser.com/questions/413073</a></li>
-</ul>
+   <p>Some languages have not set <code>ENABLE_VIRTUAL_TERMINAL_PROCESSING</code>:</p>
+<p><a href="https://bugs.python.org/issue29059">https://bugs.python.org/issue29059</a></p>
+<p>which means we would need to set:</p>
+<pre><code>[HKEY_CURRENT_USER\Console]
+&quot;VirtualTerminalLevel&quot;=dword:00000001
+</code></pre><p>but this breaks PowerShell 5.1 when doing <code>git status</code>. Instead we can use this:</p>
+<p><a href="https://github.com/microsoft/terminal">https://github.com/microsoft/terminal</a></p>
+<p><strong>Reference</strong>:</p>
+<p><a href="https://superuser.com/questions/413073">https://superuser.com/questions/413073</a></p>
 
 
 </body>

@@ -1,16 +1,20 @@
 <?php
-$m1 = ['Sun' => 10, 'Mon' => 11];
+$m = ['Sun' => 10, 'Mon' => 11];
 # example 1
-foreach ($m1 as $n1) {
-   var_dump($n1);
-}
-# example 2
 while (true) {
-   $n1 = current($m1);
-   if ($n1 === false) {
+   $n = current($m);
+   if ($n === false) {
       break;
    }
-   $s1 = key($m1);
-   var_dump($s1, $n1);
-   next($m1);
+   $s = key($m);
+   var_dump($s, $n);
+   next($m);
+}
+# example 2
+foreach ($m as $n) {
+   var_dump($n);
+}
+# example 3
+foreach ($m as $s => $n) {
+   var_dump($s, $n);
 }
