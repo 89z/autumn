@@ -1,5 +1,5 @@
 ---
-title: Crystal language
+title: Crystal
 tags: [draft]
 ---
 

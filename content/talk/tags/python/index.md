@@ -1,5 +1,5 @@
 ---
-title: 'Talk talk:Python'
+title: 'Tag talk:Python'
 ---
 
 Cygwin version is a fucking joke:

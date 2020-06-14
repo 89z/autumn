@@ -1,5 +1,5 @@
 ---
-title: Perl language
+title: Perl
 tags: [draft]
 ---
 

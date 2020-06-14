@@ -1,5 +1,5 @@
 ---
-title: Pascal language
+title: Pascal
 tags: [draft]
 ---
 

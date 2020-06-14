@@ -1,5 +1,5 @@
 ---
-title: F# language
+title: F#
 tags: [draft]
 ---
 
