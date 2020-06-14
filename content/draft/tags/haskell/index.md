@@ -1,5 +1,5 @@
 ---
-title: Haskell language
+title: Haskell
 tags: [draft]
 ---
 

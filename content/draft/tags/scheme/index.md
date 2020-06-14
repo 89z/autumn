@@ -1,5 +1,5 @@
 ---
-title: Scheme language
+title: Scheme
 tags: [draft]
 ---
 

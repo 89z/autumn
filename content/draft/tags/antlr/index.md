@@ -1,5 +1,5 @@
 ---
-title: ANTLR language
+title: ANTLR
 tags: [draft]
 ---
 

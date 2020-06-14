@@ -1,5 +1,5 @@
 ---
-title: Java language
+title: Java
 tags: [draft]
 ---
 

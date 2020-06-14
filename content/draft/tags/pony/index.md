@@ -1,5 +1,5 @@
 ---
-title: Pony language
+title: Pony
 tags: [draft]
 ---
 

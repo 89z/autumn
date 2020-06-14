@@ -1,5 +1,5 @@
 ---
-title: Ruby language
+title: Ruby
 tags: [draft]
 ---
 

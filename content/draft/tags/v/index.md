@@ -1,5 +1,5 @@
 ---
-title: V language
+title: V
 tags: [draft]
 ---
 

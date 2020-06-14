@@ -1,5 +1,5 @@
 ---
-title: Red language
+title: Red
 tags: [draft]
 ---
 

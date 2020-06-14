@@ -1,5 +1,5 @@
 ---
-title: Vala language
+title: Vala
 tags: [draft]
 ---
 

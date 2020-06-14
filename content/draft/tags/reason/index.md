@@ -1,5 +1,5 @@
 ---
-title: Reason language
+title: Reason
 tags: [draft]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Swift language
+title: Swift
 tags: [draft]
 ---
 

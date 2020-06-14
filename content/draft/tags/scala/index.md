@@ -1,5 +1,5 @@
 ---
-title: Scala language
+title: Scala
 tags: [draft]
 ---
 

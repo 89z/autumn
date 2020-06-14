@@ -1,2 +1,0 @@
-(display #t)
-(newline)

@@ -1,5 +1,5 @@
 ---
-title: Lua language
+title: Lua
 tags: [draft]
 ---
 

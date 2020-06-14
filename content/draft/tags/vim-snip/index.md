@@ -1,5 +1,5 @@
 ---
-title: Vim snippet
+title: Vim Snippet
 tags: [draft]
 ---
 

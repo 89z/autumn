@@ -1,5 +1,5 @@
 ---
-title: Kotlin language
+title: Kotlin
 tags: [draft]
 ---
 

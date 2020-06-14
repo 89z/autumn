@@ -1,2 +1,0 @@
-(display "Sunday")
-(newline)
