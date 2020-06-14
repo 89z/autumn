@@ -1,9 +1,9 @@
 ---
-title: Zig language
+title: Zig
 tags: [draft]
 ---
 
-## HTTP client
+HTTP client:
 
 ~~~
 $ zig.exe libc
