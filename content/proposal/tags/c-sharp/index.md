@@ -1,35 +1,26 @@
 ---
 title: C#
-tags: [draft]
+tags: [reject]
 ---
 
 ## Mono
 
-~~~
-mcs.bat a.cs
-~~~
-
 Could not load type System.Numerics.Vector from assembly mscorlib
 
-- <https://github.com/mono/mono/issues/19808>
-- <https://mono-project.com/download>
+<https://github.com/mono/mono/issues/19808>
 
 ## Roslyn
 
 Could not load file or assembly
 
-- <https://github.com/dotnet/roslyn/issues/42330>
-- <https://nuget.org/packages/Microsoft.Net.Compilers>
+<https://github.com/dotnet/roslyn/issues/42330>
 
 ## .NET
 
-Users do need to download runtime, else they get:
+Support Single-File Apps
 
-~~~
-The required library hostfxr.dll could not be found.
-~~~
+<https://github.com/dotnet/runtime/issues/36590>
 
-<https://dotnet.microsoft.com/download/dotnet>
+Support Platform-independent single-file app DLLs
 
-However it is pretty small. Zip is 32 MB and Exe is 27 MB. It can be installed
-in less than 1 minute from my testing.
+<https://github.com/dotnet/runtime/issues/13677>

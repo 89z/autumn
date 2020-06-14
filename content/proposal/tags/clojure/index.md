@@ -1,9 +1,9 @@
 ---
 title: Clojure
-tags: [draft]
+tags: [reject]
 ---
 
-Install Java first.
+> Clojure is a modern, dynamic, and functional dialect of the Lisp programming
+> language on the Java platform.
 
-- <https://github.com/borkdude/deps.clj>
-- <https://github.com/clojure/tools.deps.alpha/wiki/clj-on-Windows>
+<https://en.wikipedia.org/wiki/Clojure>

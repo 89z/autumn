@@ -1,6 +1,6 @@
 ---
 title: ASP
-tags: [reject]
+tags: [draft]
 ---
 
 <https://github.com/dotnet/aspnetcore>

@@ -1,6 +1,6 @@
 ---
 title: AutoHotkey
-tags: [reject]
+tags: [draft]
 ---
 
 <https://en.wikipedia.org/wiki/AutoHotkey>

@@ -9,10 +9,6 @@ It is not ideal that numbers are printed by default:
 
 {{< r "b.cpp" >}}
 
-but to be fair, other languages have similar issues. Here is Go:
-
-{{< r "a.go" >}}
-
 **Map**:
 
 {{< r "a.cpp" >}}

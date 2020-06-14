@@ -1,6 +1,6 @@
 ---
 title: AutoIt
-tags: [reject]
+tags: [draft]
 ---
 
 <https://en.wikipedia.org/wiki/AutoIt>

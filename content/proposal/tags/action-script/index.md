@@ -1,6 +1,6 @@
 ---
 title: ActionScript
-tags: [reject]
+tags: [draft]
 ---
 
 <https://en.wikipedia.org/wiki/ActionScript>
