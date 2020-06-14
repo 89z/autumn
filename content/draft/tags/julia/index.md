@@ -1,5 +1,5 @@
 ---
-title: Julia language
+title: Julia
 tags: [draft]
 ---
 

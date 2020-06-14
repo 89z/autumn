@@ -1,5 +1,5 @@
 ---
-title: OCaml language
+title: OCaml
 tags: [draft]
 ---
 
