@@ -1,5 +1,5 @@
 ---
-title: Clojure language
+title: Clojure
 tags: [draft]
 ---
 

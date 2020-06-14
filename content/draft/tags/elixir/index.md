@@ -1,5 +1,5 @@
 ---
-title: Elixir language
+title: Elixir
 tags: [draft]
 ---
 

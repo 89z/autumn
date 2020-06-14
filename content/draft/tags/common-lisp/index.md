@@ -1,5 +1,5 @@
 ---
-title: Common Lisp language
+title: Common Lisp
 tags: [draft]
 ---
 

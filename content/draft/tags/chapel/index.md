@@ -1,5 +1,5 @@
 ---
-title: Chapel language
+title: Chapel
 tags: [draft]
 ---
 

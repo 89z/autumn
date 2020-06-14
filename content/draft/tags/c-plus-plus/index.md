@@ -1,5 +1,5 @@
 ---
-title: C++ language
+title: C++
 tags: [draft]
 ---
 

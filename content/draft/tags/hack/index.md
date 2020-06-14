@@ -1,5 +1,5 @@
 ---
-title: Hack language
+title: Hack
 tags: [draft]
 ---
 
