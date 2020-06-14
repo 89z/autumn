@@ -1,6 +1,8 @@
 ---
 title: Dhall
-tags: [draft]
+tags: [reject]
 ---
+
+> Maintainable configuration files
 
 <https://github.com/dhall-lang/dhall-lang>

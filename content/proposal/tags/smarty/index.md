@@ -1,6 +1,8 @@
 ---
 title: Smarty
-tags: [draft]
+tags: [reject]
 ---
+
+PHP Template Engine
 
 <https://www.smarty.net>

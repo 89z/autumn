@@ -1,28 +1,12 @@
 ---
 title: Common Lisp
-tags: [draft]
+tags: [reject]
 ---
 
-## Distros
-
-**Clozure**:
-
-<https://github.com/Clozure/ccl>
-
-**Portacle**:
-
-<https://github.com/portacle/portacle>
-
-**Steel Bank**:
-
-<https://sourceforge.net/projects/sbcl>
-
-## Issues
-
-QuickList init speed
+QuickList init speed:
 
 <https://github.com/quicklisp/quicklisp-client/issues/197>
 
-Startup speed
+Startup speed:
 
 <https://github.com/roswell/roswell/issues/433>

@@ -27,7 +27,18 @@
    <p>Shared is slow on first compile, but then fast:</p>
 <pre><code>red -c a.red
 </code></pre><p>Static is always slow:</p>
-<pre><code>red -r a.red
+<pre><code>PS C:\red&gt; .\red-14jun20-a34a784f8.exe -r a.red
+
+-=== Red Compiler 0.6.4 ===-
+
+Compiling C:\red\a.red ...
+Compiling compression library...
+...compilation time : 735 ms
+
+Target: MSDOS
+
+Compiling to native code...
+...compilation time : 27665 ms
 </code></pre><p><a href="https://github.com/red/red/issues/3412">https://github.com/red/red/issues/3412</a></p>
 
 

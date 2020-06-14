@@ -1,6 +1,8 @@
 ---
 title: Vim Snippet
-tags: [draft]
+tags: [reject]
 ---
 
-<https://github.com/SirVer/ultisnips>
+> Vim is a clone, with additions, of Bill Joy's vi text editor program for Unix.
+
+<https://en.wikipedia.org/wiki/Vim_(text_editor)>
