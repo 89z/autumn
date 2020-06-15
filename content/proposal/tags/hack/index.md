@@ -1,6 +1,6 @@
 ---
 title: Hack
-tags: [draft]
+tags: [reject]
 ---
 
 HHVM Installation in windows

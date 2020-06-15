@@ -1,6 +1,8 @@
 ---
 title: F*
-tags: [draft]
+tags: [reject]
 ---
 
-<https://fstar-lang.org>
+New release
+
+<https://github.com/FStarLang/kremlin/issues/180>
