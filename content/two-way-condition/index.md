@@ -1,5 +1,5 @@
 ---
-title: Two-way conditions
+title: Two-way condition
 categories: [reference]
 tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
