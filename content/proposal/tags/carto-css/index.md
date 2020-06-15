@@ -1,6 +1,9 @@
 ---
 title: CartoCSS
-tags: [draft]
+tags: [reject]
 ---
 
-<https://carto.com/developers/styling/cartocss>
+> CartoCSS is used in the rendering process of the "Standard" map tiles of
+> OSM.org since August 2013.
+
+<https://wiki.openstreetmap.org/wiki/CartoCSS>

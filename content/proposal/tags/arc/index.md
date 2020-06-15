@@ -1,6 +1,8 @@
 ---
 title: Arc
-tags: [draft]
+tags: [reject]
 ---
 
-<https://en.wikipedia.org/wiki/Arc_(programming_language)>
+> To install, first install git and racket
+
+<https://arclanguage.github.io>

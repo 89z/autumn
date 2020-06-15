@@ -1,6 +1,9 @@
 ---
 title: DM
-tags: [draft]
+tags: [reject]
 ---
 
-<https://github.com/tgstation/tgstation>
+> BYOND (Build Your Own Net Dream) is a free software suite for creating and
+> playing online games.
+
+<https://tig.fandom.com/wiki/BYOND>

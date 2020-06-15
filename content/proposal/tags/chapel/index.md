@@ -1,6 +1,6 @@
 ---
 title: Chapel
-tags: [draft]
+tags: [reject]
 ---
 
 Support Windows OS

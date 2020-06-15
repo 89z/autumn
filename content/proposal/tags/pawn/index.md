@@ -1,6 +1,8 @@
 ---
 title: Pawn
-tags: [draft]
+tags: [reject]
 ---
 
-<https://github.com/compuphase/pawn>
+New release
+
+<https://github.com/compuphase/pawn/issues/49>
