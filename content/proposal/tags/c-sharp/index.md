@@ -13,7 +13,8 @@ Could not load type System.Numerics.Vector from assembly mscorlib
 
 Could not load file or assembly
 
-<https://github.com/dotnet/roslyn/issues/42330>
+- <https://github.com/dotnet/roslyn/issues/42330>
+- <https://nuget.org/packages/Microsoft.Net.Compilers>
 
 ## .NET
 
