@@ -1,7 +1,7 @@
 ---
 title: Multi-way condition
 categories: [reference]
-tags: [go, javascript, rust]
+tags: [go, javascript, php, rust]
 ---
 
 ## Go
@@ -14,9 +14,19 @@ tags: [go, javascript, rust]
 
 {{< r "a.js" >}}
 
+<https://developer.mozilla.org/Web/JavaScript/Reference/Statements/switch>
+
+## PHP
+
+{{< r "a.php" >}}
+
+<https://php.net/control-structures.switch>
+
 ## Rust
 
 {{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/keyword.match.html>
 
 ## Reference
 

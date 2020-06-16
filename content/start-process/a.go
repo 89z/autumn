@@ -4,7 +4,7 @@ import (
    "os/exec"
 )
 func main() {
-   o1 := exec.Command("less", "-V")
-   o1.Stdout = os.Stdout
-   o1.Run()
+   o := exec.Command("less", "-V")
+   o.Stdout = os.Stdout
+   o.Run()
 }

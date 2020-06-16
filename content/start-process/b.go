@@ -4,8 +4,8 @@ import (
    "os/exec"
 )
 func main() {
-   o2 := exec.Command("less", "index.md")
-   o2.Stdin = os.Stdin
-   o2.Stdout = os.Stdout
-   o2.Start()
+   o := exec.Command("less", "index.md")
+   o.Stdin = os.Stdin
+   o.Stdout = os.Stdout
+   o.Start()
 }
