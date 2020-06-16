@@ -118,23 +118,18 @@ $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;less -
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f_escape_sh</span>($s_in) {
-   $s_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
-   $a_in <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_split</span>($s_in);
-   <span style="color:#66d9ef">foreach</span> ($a_in <span style="color:#66d9ef">as</span> $s_chr) {
-      <span style="color:#66d9ef">if</span> ($s_chr <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39; &#39;</span>) {
-         $s_out <span style="color:#f92672">.=</span> <span style="color:#e6db74">&#39;&#34; &#34;&#39;</span>;
-      } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> ($s_chr <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;&#34;&#39;</span>) {
-         $s_out <span style="color:#f92672">.=</span> <span style="color:#e6db74">&#39;\^&#34;&#39;</span>;
-      } <span style="color:#66d9ef">else</span> {
-         $s_out <span style="color:#f92672">.=</span> <span style="color:#e6db74">&#39;^&#39;</span> <span style="color:#f92672">.</span> $s_chr;
-      }
+   $s_out <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_replace</span>(<span style="color:#e6db74">&#39;/&#34;/&#39;</span>, <span style="color:#e6db74">&#39;&#34;&#34;&#39;</span>, $s_in);
+   <span style="color:#66d9ef">if</span> ($s_out <span style="color:#f92672">!=</span> $s_in) {
+      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#34;&#39;</span> <span style="color:#f92672">.</span> $s_out <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&#34;&#39;</span>;
+   }
+   $n_mat <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/[ &amp;&gt;^-]/&#39;</span>, $s_in);
+   <span style="color:#66d9ef">if</span> ($n_mat <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
+      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#34;&#39;</span> <span style="color:#f92672">.</span> $s_out <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&#34;&#39;</span>;
    }
    <span style="color:#66d9ef">return</span> $s_out;
 }
-$a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;less&#39;</span>, <span style="color:#e6db74">&#39;-V&#39;</span>];
-$a2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_map</span>(<span style="color:#e6db74">&#39;f_escape_sh&#39;</span>, $a1);
-$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">implode</span>(<span style="color:#e6db74">&#39; &#39;</span>, $a2);
-<span style="color:#a6e22e">system</span>($s1);
+$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">f_escape_sh</span>(<span style="color:#e6db74">&#39;a b.txt&#39;</span>);
+<span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#39;less &#39;</span> <span style="color:#f92672">.</span> $s);
 </code></pre></div></p>
 <p><a href="https://php.net/function.system">https://php.net/function.system</a></p>
 <h2 id="python">Python</h2>

@@ -1,9 +1,9 @@
 from os import path
-s1 = '/sunday/monday.tar.xz'
+s = '/a/b.tar.xz'
 # example 1
-s2 = path.basename(s1)
+s1 = path.basename(s)
 # example 2
-a1 = path.splitext(s1)
-s3 = a1[1]
+a = path.splitext(s)
+s2 = a[1]
 # print
-print(s2 == 'monday.tar.xz', s3 == '.xz')
+print(s1 == 'b.tar.xz', s2 == '.xz')

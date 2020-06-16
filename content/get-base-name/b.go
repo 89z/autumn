@@ -1,13 +1,13 @@
 package main
 import "path/filepath"
 func main() {
-   s1 := `C:\sunday\monday.tar.xz`
+   s := `C:\a\b.tar.xz`
    // example 1
-   s2 := filepath.Base(s1)
+   s1, s2 := filepath.Split(s)
    // example 2
-   _, s3 := filepath.Split(s1)
+   s3 := filepath.Base(s)
    // example 3
-   s4 := filepath.Ext(s1)
+   s4 := filepath.Ext(s)
    // print
-   println(s2 == "monday.tar.xz", s3 == "monday.tar.xz", s4 == ".xz")
+   println(s1 == `C:\a\`, s2 == "b.tar.xz", s3 == "b.tar.xz", s4 == ".xz")
 }
