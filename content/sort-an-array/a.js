@@ -1,3 +1,3 @@
-let a1 = ['Sun', 'Mon'];
-a1.sort();
-console.log(a1);
+let a = ['BBBB', 'AA', 'CCC'];
+a.sort();
+console.log(a);

@@ -1,5 +1,5 @@
 #lang racket/base
 (define a
-   (list "99" "100")
+   (list "BBBB" "AA" "CCC")
 )
 (sort a string<?)

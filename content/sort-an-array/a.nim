@@ -1,4 +1,4 @@
 import algorithm
-var a = ["99", "100"]
+var a = ["BBBB", "AA", "CCC"]
 a.sort
 echo a

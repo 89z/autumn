@@ -40,6 +40,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 - <https://php.net/function.rsort>
 - <https://php.net/function.sort>
+- <https://php.net/function.usort>
 
 ## Python
 

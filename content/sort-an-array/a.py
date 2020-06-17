@@ -1,14 +1,13 @@
+a1 = ['BBBB', 'AA', 'CCC']
 # example 1
-a1 = ['Sun', 'Mon']
 a1.sort()
+print(a1)
 # example 2
-a2 = ['Mon', 'Tue']
-a2.sort(reverse = True)
+a1.sort(reverse = True)
+print(a1)
 # example 3
-a3 = ['Monday', 'Tue']
-a3.sort(key = len)
+a1.sort(key = len)
+print(a1)
 # example 4
-a4 = ['Sun', 'Mon']
-a5 = sorted(a4)
-# print
-print(a1, a2, a3, a5)
+a2 = sorted(a1)
+print(a2)

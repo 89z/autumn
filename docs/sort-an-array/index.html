@@ -21,7 +21,7 @@
    </header>
 
 <h1>Sort an array</h1>
-<time>Thu Jun 11 2020</time>
+<time>Wed Jun 17 2020</time>
    
 <a href="/autumn/categories/array/">array</a>
    
@@ -33,7 +33,7 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.d" data-lang=".d"><span style="color:#f92672">import</span> std.algorithm<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;99&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;100&#34;</span><span style="color:#f92672">];</span>
+   <span style="color:#66d9ef">auto</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;BBBB&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;AA&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;CCC&#34;</span><span style="color:#f92672">];</span>
    a<span style="color:#f92672">.</span><span style="color:#a6e22e">sort</span><span style="color:#f92672">;</span>
    a<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
@@ -45,7 +45,7 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart">main() {
-   <span style="color:#66d9ef">var</span> a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;99&#34;</span>, <span style="color:#e6db74">&#34;100&#34;</span>];
+   <span style="color:#66d9ef">var</span> a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;BBBB&#34;</span>, <span style="color:#e6db74">&#34;AA&#34;</span>, <span style="color:#e6db74">&#34;CCC&#34;</span>];
    a.sort();
    print(a);
 }
@@ -62,16 +62,12 @@
    <span style="color:#e6db74">&#34;sort&#34;</span>
 )
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">10</span>}
-   <span style="color:#a6e22e">a2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">sort</span>.<span style="color:#a6e22e">IntSlice</span>(<span style="color:#a6e22e">a1</span>)
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">a3</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;Monday&#34;</span>, <span style="color:#e6db74">&#34;Tue&#34;</span>}
-   <span style="color:#a6e22e">sort</span>.<span style="color:#a6e22e">Slice</span>(<span style="color:#a6e22e">a3</span>, <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">bool</span> {
-      <span style="color:#66d9ef">return</span> len(<span style="color:#a6e22e">a3</span>[<span style="color:#a6e22e">n1</span>]) &lt; len(<span style="color:#a6e22e">a3</span>[<span style="color:#a6e22e">n2</span>])
-   })
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a2</span>, <span style="color:#a6e22e">a3</span>)
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;BBBB&#34;</span>, <span style="color:#e6db74">&#34;AA&#34;</span>, <span style="color:#e6db74">&#34;CCC&#34;</span>}
+   <span style="color:#a6e22e">f</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">bool</span> {
+      <span style="color:#66d9ef">return</span> len(<span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">n1</span>]) &lt; len(<span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">n2</span>])
+   }
+   <span style="color:#a6e22e">sort</span>.<span style="color:#a6e22e">Slice</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">f</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span>)
 }
 </code></pre></div>
 <p><a href="https://golang.org/pkg/sort">https://golang.org/pkg/sort</a></p>
@@ -80,9 +76,9 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a1</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span>, <span style="color:#e6db74">&#39;Mon&#39;</span>];
-<span style="color:#a6e22e">a1</span>.<span style="color:#a6e22e">sort</span>();
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a1</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;BBBB&#39;</span>, <span style="color:#e6db74">&#39;AA&#39;</span>, <span style="color:#e6db74">&#39;CCC&#39;</span>];
+<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">sort</span>();
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span>);
 </code></pre></div>
 <p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/sort">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/sort</a></p>
 <h2 id="nim">Nim</h2>
@@ -91,7 +87,7 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.nim" data-lang=".nim"><span style="color:#f92672">import</span> algorithm
-<span style="color:#66d9ef">var</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;99&#34;</span>, <span style="color:#e6db74">&#34;100&#34;</span><span style="color:#f92672">]</span>
+<span style="color:#66d9ef">var</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;BBBB&#34;</span>, <span style="color:#e6db74">&#34;AA&#34;</span>, <span style="color:#e6db74">&#34;CCC&#34;</span><span style="color:#f92672">]</span>
 a.sort
 echo a
 </code></pre></div>
@@ -102,43 +98,41 @@ echo a
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;99&#39;</span>, <span style="color:#e6db74">&#39;100&#39;</span>];
+$a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;BBBB&#39;</span>, <span style="color:#e6db74">&#39;AA&#39;</span>, <span style="color:#e6db74">&#39;CCC&#39;</span>];
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">sort</span>($a);
 <span style="color:#a6e22e">print_r</span>($a);
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">sort</span>($a, <span style="color:#a6e22e">SORT_NATURAL</span>);
-<span style="color:#a6e22e">print_r</span>($a);
-<span style="color:#75715e"># example 3
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">rsort</span>($a);
 <span style="color:#a6e22e">print_r</span>($a);
-<span style="color:#75715e"># example 4
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">rsort</span>($a, <span style="color:#a6e22e">SORT_NATURAL</span>);
+<span style="color:#75715e"># example 3
+</span><span style="color:#75715e"></span>$f <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span>($s1, $s2) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">strlen</span>($s1) <span style="color:#f92672">&lt;=&gt;</span> <span style="color:#a6e22e">strlen</span>($s2);
+<span style="color:#a6e22e">usort</span>($a, $f);
 <span style="color:#a6e22e">print_r</span>($a);
 </code></pre></div>
 <ul>
 <li><a href="https://php.net/function.rsort">https://php.net/function.rsort</a></li>
 <li><a href="https://php.net/function.sort">https://php.net/function.sort</a></li>
+<li><a href="https://php.net/function.usort">https://php.net/function.usort</a></li>
 </ul>
 <h2 id="python">Python</h2>
 
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#75715e"># example 1</span>
-a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span>, <span style="color:#e6db74">&#39;Mon&#39;</span>]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py">a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;BBBB&#39;</span>, <span style="color:#e6db74">&#39;AA&#39;</span>, <span style="color:#e6db74">&#39;CCC&#39;</span>]
+<span style="color:#75715e"># example 1</span>
 a1<span style="color:#f92672">.</span>sort()
+<span style="color:#66d9ef">print</span>(a1)
 <span style="color:#75715e"># example 2</span>
-a2 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Mon&#39;</span>, <span style="color:#e6db74">&#39;Tue&#39;</span>]
-a2<span style="color:#f92672">.</span>sort(reverse <span style="color:#f92672">=</span> True)
+a1<span style="color:#f92672">.</span>sort(reverse <span style="color:#f92672">=</span> True)
+<span style="color:#66d9ef">print</span>(a1)
 <span style="color:#75715e"># example 3</span>
-a3 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Monday&#39;</span>, <span style="color:#e6db74">&#39;Tue&#39;</span>]
-a3<span style="color:#f92672">.</span>sort(key <span style="color:#f92672">=</span> len)
+a1<span style="color:#f92672">.</span>sort(key <span style="color:#f92672">=</span> len)
+<span style="color:#66d9ef">print</span>(a1)
 <span style="color:#75715e"># example 4</span>
-a4 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span>, <span style="color:#e6db74">&#39;Mon&#39;</span>]
-a5 <span style="color:#f92672">=</span> sorted(a4)
-<span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(a1, a2, a3, a5)
+a2 <span style="color:#f92672">=</span> sorted(a1)
+<span style="color:#66d9ef">print</span>(a2)
 </code></pre></div>
 <p><a href="https://docs.python.org/library/stdtypes.html#list.sort">https://docs.python.org/library/stdtypes.html#list.sort</a></p>
 <h2 id="racket">Racket</h2>
@@ -148,7 +142,7 @@ a5 <span style="color:#f92672">=</span> sorted(a4)
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rkt" data-lang=".rkt"><span style="color:#f92672">#lang </span>racket/base
 (<span style="color:#66d9ef">define</span> a
-   (list <span style="color:#e6db74">&#34;99&#34;</span> <span style="color:#e6db74">&#34;100&#34;</span>)
+   (list <span style="color:#e6db74">&#34;BBBB&#34;</span> <span style="color:#e6db74">&#34;AA&#34;</span> <span style="color:#e6db74">&#34;CCC&#34;</span>)
 )
 (sort a string&lt;?)<span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div>
@@ -159,7 +153,7 @@ a5 <span style="color:#f92672">=</span> sorted(a4)
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;99&#34;</span>, <span style="color:#e6db74">&#34;100&#34;</span>];
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;BBBB&#34;</span>, <span style="color:#e6db74">&#34;AA&#34;</span>, <span style="color:#e6db74">&#34;CCC&#34;</span>];
    a.sort();
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, a);
 }
