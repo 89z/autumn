@@ -92,18 +92,19 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Jan</span> {
-   <span style="color:#66d9ef">public</span> $Sun <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#66d9ef">public</span> $Mon <span style="color:#f92672">=</span> <span style="color:#ae81ff">11</span>;
-}
-$o1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Jan</span>;
+</span><span style="color:#75715e"></span>$o1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">stdClass</span>;
+$o1<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">Sunday</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$o2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">class</span>{
-   <span style="color:#66d9ef">public</span> $Sun <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#66d9ef">public</span> $Son <span style="color:#f92672">=</span> <span style="color:#ae81ff">11</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Day</span> {
+   <span style="color:#66d9ef">public</span> $Sunday <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+}
+$o2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Day</span>;
+<span style="color:#75715e"># example 3
+</span><span style="color:#75715e"></span>$o3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">{</span>
+   public $Sunday = 10;
 };
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($o1, $o2);
+# print
+var_dump($o1, $o2, $o3);
 </code></pre></div>
 <p><a href="https://php.net/types.object#language.types.object.init">https://php.net/types.object#language.types.object.init</a></p>
 <h2 id="python">Python</h2>

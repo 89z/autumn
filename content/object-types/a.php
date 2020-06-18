@@ -1,14 +1,15 @@
 <?php
 # example 1
-class Jan {
-   public $Sun = 10;
-   public $Mon = 11;
-}
-$o1 = new Jan;
+$o1 = new stdClass;
+$o1->Sunday = 10;
 # example 2
-$o2 = new class{
-   public $Sun = 10;
-   public $Son = 11;
+class Day {
+   public $Sunday = 10;
+}
+$o2 = new Day;
+# example 3
+$o3 = new class {
+   public $Sunday = 10;
 };
 # print
-var_dump($o1, $o2);
+var_dump($o1, $o2, $o3);
