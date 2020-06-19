@@ -15,4 +15,8 @@ tags: [javascript, php]
 
 {{< r "a.php" >}}
 
-<https://php.net/function.property-exists>
+> For backward compatibility reasons, `array_key_exists` will also return `TRUE`
+> if key is a property defined within an object given as array.
+
+- <https://php.net/function.array-key-exists>
+- <https://php.net/function.property-exists>

@@ -21,7 +21,7 @@
    </header>
 
 <h1>Object contains property</h1>
-<time>Wed May 27 2020</time>
+<time>Fri Jun 19 2020</time>
    
 <a href="/autumn/categories/object/">object</a>
    
@@ -53,17 +53,24 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$o1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">class</span>{
-   <span style="color:#66d9ef">public</span> $Sun <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+$o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">{</span>
+   public $Sunday = 10;
 };
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$b1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">property_exists</span>($o1, <span style="color:#e6db74">&#39;Sun&#39;</span>);
-<span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$b2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_key_exists</span>(<span style="color:#e6db74">&#39;Sun&#39;</span>, $o1);
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($b1, $b2);
+# example 1
+$b1 = property_exists($o, &#39;Sunday&#39;);
+# example 2
+$b2 = array_key_exists(&#39;Sunday&#39;, $o);
+# print
+var_dump($b1, $b2);
 </code></pre></div>
-<p><a href="https://php.net/function.property-exists">https://php.net/function.property-exists</a></p>
+<blockquote>
+<p>For backward compatibility reasons, <code>array_key_exists</code> will also return <code>TRUE</code>
+if key is a property defined within an object given as array.</p>
+</blockquote>
+<ul>
+<li><a href="https://php.net/function.array-key-exists">https://php.net/function.array-key-exists</a></li>
+<li><a href="https://php.net/function.property-exists">https://php.net/function.property-exists</a></li>
+</ul>
 
 
 </body>
