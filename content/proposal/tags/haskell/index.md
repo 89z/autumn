@@ -9,4 +9,4 @@ tags: [reject]
 
 **Setup**:
 
-<https://haskell.org/platform/prior.html>
+<https://downloads.haskell.org/~ghc>
