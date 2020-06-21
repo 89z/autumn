@@ -1,13 +1,9 @@
-let s1 = 'Sunday';
+let s = 'Wednesday';
 // example 1
-let b1 = /^Su/.test(s1);
+let b1 = /^W/.test(s);
 // example 2
-let b2 = /un./.test(s1);
+let b2 = /we/i.test(s);
 // example 3
-let b3 = /ay$/.test(s1);
-// example 4
-let b4 = /su/i.test(s1);
-// example 5
-let b5 = RegExp(/su/, 'i').test(s1);
+let b3 = RegExp(/we/, 'i').test(s);
 // print
-console.log(b1, b2, b3, b4, b5);
+console.log(b1, b2, b3);

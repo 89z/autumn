@@ -5,7 +5,7 @@ function f_escape_sh($s_in) {
       return '"' . $s_out . '"';
    }
    $n_mat = preg_match('/[ &>^-]/', $s_in);
-   if ($n_mat == 1) {
+   if ($n_mat !== 0) {
       return '"' . $s_out . '"';
    }
    return $s_out;

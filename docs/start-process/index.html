@@ -123,7 +123,7 @@ $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;less -
       <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#34;&#39;</span> <span style="color:#f92672">.</span> $s_out <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&#34;&#39;</span>;
    }
    $n_mat <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/[ &amp;&gt;^-]/&#39;</span>, $s_in);
-   <span style="color:#66d9ef">if</span> ($n_mat <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
+   <span style="color:#66d9ef">if</span> ($n_mat <span style="color:#f92672">!==</span> <span style="color:#ae81ff">0</span>) {
       <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#34;&#39;</span> <span style="color:#f92672">.</span> $s_out <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&#34;&#39;</span>;
    }
    <span style="color:#66d9ef">return</span> $s_out;
