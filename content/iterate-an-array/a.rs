@@ -1,11 +1,11 @@
 fn main() {
-   let a1 = ["Sun", "Mon"];
+   let a = ["Sunday", "Monday"];
    // example 1
-   for s1 in &a1 {
-      println!("{}", s1);
+   for s in &a {
+      println!("{}", s);
    }
    // example 2
-   for s1 in a1.iter() {
-      println!("{}", s1);
+   for s in a.iter() {
+      println!("{}", s);
    }
 }

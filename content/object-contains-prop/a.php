@@ -1,5 +1,5 @@
 <?php
-$o = new class {
+$o = new class{
    public $Sunday = 10;
 };
 # example 1

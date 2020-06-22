@@ -1,15 +1,15 @@
-let a1 = ['Sun', 'Mon'];
+let a = ['Sunday', 'Monday'];
 // example 1
-for (let n1 = 0; n1 < a1.length; n1++) {
-   console.log(a1[n1]);
+for (let n = 0; n < a.length; n++) {
+   console.log(a[n]);
 }
 // example 2
-for (let n1 in a1) {
-   console.log(a1[n1]);
+for (let n in a) {
+   console.log(a[n]);
 }
 // example 3
-for (let s1 of a1) {
-   console.log(s1);
+for (let s of a) {
+   console.log(s);
 }
 // example 4
-a1.forEach(s1 => console.log(s1));
+a.forEach(s => console.log(s));

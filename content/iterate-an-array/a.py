@@ -1,7 +1,7 @@
-a1 = ['Sun', 'Mon']
+a = ['Sunday', 'Monday']
 # example 1
-for s1 in a1:
-   print(s1)
+for s in a:
+   print(s)
 # example 2
-for n1, s1 in enumerate(a1):
-   print(n1, s1)
+for n, s in enumerate(a):
+   print(n, s)

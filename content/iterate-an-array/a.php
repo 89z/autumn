@@ -1,18 +1,18 @@
 <?php
-$a1 = ['Sun', 'Mon'];
+$a = ['Sunday', 'Monday'];
 # example 1
-foreach ($a1 as $s1) {
-   var_dump($s1);
+foreach ($a as $s) {
+   var_dump($s);
 }
 # example 2
-for ($n1 = 0; $n1 < count($a1); $n1++) {
-   $s1 = $a1[$n1];
-   var_dump($s1);
+for ($n = 0; $n < count($a); $n++) {
+   $s = $a[$n];
+   var_dump($s);
 }
 # example 3
-for (reset($a1); key($a1) !== null; next($a1)) {
-   $s1 = current($a1);
-   var_dump($s1);
+for (reset($a); key($a) !== null; next($a)) {
+   $s = current($a);
+   var_dump($s);
 }
 # example 4
-array_walk($a1, fn($s1) => var_dump($s1));
+array_walk($a, fn($s) => var_dump($s));
