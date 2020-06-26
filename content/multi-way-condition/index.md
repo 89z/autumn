@@ -1,8 +1,12 @@
 ---
 title: Multi-way condition
 categories: [reference]
-tags: [go, javascript, php, rust]
+tags: [dart, go, javascript, php, rust]
 ---
+
+## Dart
+
+{{< r "a.dart" >}}
 
 ## Go
 
@@ -33,3 +37,4 @@ tags: [go, javascript, php, rust]
 - <https://hyperpolyglot.org/c#switch>
 - <https://hyperpolyglot.org/rust#user-defined-types>
 - <https://hyperpolyglot.org/scripting#switch>
+- <https://hyperpolyglot.org/web#switch>
