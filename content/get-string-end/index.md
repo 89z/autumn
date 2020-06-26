@@ -1,7 +1,7 @@
 ---
 title: Get string end
 categories: [string]
-tags: [d, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## D
@@ -9,6 +9,10 @@ tags: [d, go, javascript, nim, php, python, racket, rust]
 {{< r "a.d" >}}
 
 <https://dlang.org/spec/arrays.html#slicing>
+
+## Dart
+
+<https://api.dart.dev/dart-core/String/substring.html>
 
 ## Go
 
