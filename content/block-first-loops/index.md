@@ -1,7 +1,7 @@
 ---
 title: Block-first loops
 categories: [reference]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -54,16 +54,9 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 <https://docs.racket-lang.org/reference/when_unless.html>
 
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/keyword.loop.html>
-
 ## References
 
-- <https://hyperpolyglot.org/rust#infinite-loop>
 - <https://hyperpolyglot.org/scripting#while>
 - <https://hyperpolyglot.org/web#infinite-loop>
-- <https://www.programming-idioms.org/idiom/78/do-while-loop>
+- <https://programming-idioms.org/idiom/78/do-while-loop>
 - <https://rosettacode.org/wiki/Loops/Do-while>

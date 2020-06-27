@@ -1,7 +1,7 @@
 ---
 title: Boolean types
 categories: [reference]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -52,12 +52,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/booleans.html>
-
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/primitive.bool.html>
 
 ## References
 
