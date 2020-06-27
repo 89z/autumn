@@ -1,7 +1,7 @@
 ---
 title: Multi-way condition
 categories: [reference]
-tags: [dart, go, javascript, php, rust]
+tags: [dart, go, javascript, php]
 ---
 
 ## Dart
@@ -26,15 +26,8 @@ tags: [dart, go, javascript, php, rust]
 
 <https://php.net/control-structures.switch>
 
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/keyword.match.html>
-
 ## Reference
 
 - <https://hyperpolyglot.org/c#switch>
-- <https://hyperpolyglot.org/rust#user-defined-types>
 - <https://hyperpolyglot.org/scripting#switch>
 - <https://hyperpolyglot.org/web#switch>
