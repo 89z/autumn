@@ -1,10 +1,12 @@
 fn main() {
-   let n1 = 0;
-   if n1 > 0 {
-      dbg!("positive");
-   } else if n1 < 0 {
-      dbg!("negative");
+   let n = 10;
+   let s: &str;
+   if n > 12 {
+      s = "Tue";
+   } else if n > 11 {
+      s = "Mon";
    } else {
-      dbg!("zero");
+      s = "Sun";
    }
+   println!("{}", s);
 }

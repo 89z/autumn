@@ -1,9 +1,9 @@
 #lang racket/base
-(define n 0)
-(if (positive? n)
-   "positive"
-   (if (negative? n)
-      "negative"
-      "zero"
+(define n 10)
+(if (> n 12)
+   "Tue"
+   (if (> n 11)
+      "Mon"
+      "Sun"
    )
 )
