@@ -1,7 +1,7 @@
 ---
 title: Two-way condition
 categories: [reference]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -56,17 +56,10 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 <https://docs.racket-lang.org/reference/if.html>
 
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/keyword.else.html>
-
 ## References
 
 - <https://hyperpolyglot.org/c#if>
 - <https://hyperpolyglot.org/lisp#execution-control>
-- <https://hyperpolyglot.org/rust#if>
 - <https://hyperpolyglot.org/scripting#if>
 - <https://hyperpolyglot.org/web#if-note>
 - <https://programming-idioms.org/idiom/131>

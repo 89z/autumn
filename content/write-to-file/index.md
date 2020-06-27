@@ -1,7 +1,7 @@
 ---
 title: Write to file
 categories: [input-output]
-tags: [d, dart, go, nim, php, python, racket, rust]
+tags: [d, dart, go, nim, php, python, racket]
 ---
 
 ## D
@@ -54,14 +54,6 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/Byte_and_String_Output.html#(def._((quote._~23~25kernel)._write-string))>
-
-## Rust
-
-{{< r "a.rs" >}}
-{{< r "b.rs" >}}
-
-- <https://doc.rust-lang.org/std/fs/fn.write.html>
-- <https://doc.rust-lang.org/std/io/trait.Write.html#tymethod.write>
 
 ## References
 

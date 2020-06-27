@@ -1,7 +1,7 @@
 ---
 title: Working directory
 categories: [system]
-tags: [d, dart, go, nim, php, python, racket, rust]
+tags: [d, dart, go, nim, php, python, racket]
 ---
 
 ## D
@@ -47,12 +47,6 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/Filesystem.html#(def._((quote._~23~25kernel)._current-directory))>
-
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/env/fn.current_dir.html>
 
 ## References
 
