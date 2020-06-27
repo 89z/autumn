@@ -1,7 +1,7 @@
 ---
 title: Add to map
 categories: [map]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -55,16 +55,10 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 <https://docs.racket-lang.org/reference/hashtables.html#(def._((quote._~23~25kernel)._hash-set!))>
 
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/collections/struct.HashMap.html>
-
 ## References
 
 - <https://hyperpolyglot.org/lisp#dict-update>
 - <https://hyperpolyglot.org/scripting#dict-update>
 - <https://hyperpolyglot.org/web#dict-update>
-- <https://www.programming-idioms.org/idiom/172/insert-entry-in-map>
+- <https://programming-idioms.org/idiom/172/insert-entry-in-map>
 - <https://rosettacode.org/wiki/Associative_array/Creation>

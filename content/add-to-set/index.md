@@ -1,7 +1,7 @@
 ---
 title: Add to set
 categories: [set]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -52,12 +52,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/sets.html>
-
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/collections/struct.HashSet.html>
 
 ## References
 

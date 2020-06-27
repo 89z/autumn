@@ -1,7 +1,7 @@
 ---
 title: Array types
 categories: [array]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -53,17 +53,10 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 <https://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._list))>
 
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/macro.vec.html>
-
 ## References
 
 - <https://hyperpolyglot.org/lisp#lists>
-- <https://hyperpolyglot.org/rust#declare-array>
 - <https://hyperpolyglot.org/scripting#arrays>
 - <https://hyperpolyglot.org/web#array-literal>
+- <https://programming-idioms.org/idiom/134>
 - <https://rosettacode.org/wiki/Arrays>
-- <https://www.programming-idioms.org/idiom/134/create-a-new-list>
