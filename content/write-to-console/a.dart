@@ -1,6 +1,6 @@
 import 'dart:io';
 main() {
-   var s = 'Sunday';
+   var s = '𐐀';
    // example 1
    print(s);
    // example 2

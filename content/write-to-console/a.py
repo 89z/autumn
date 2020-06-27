@@ -1,8 +1,8 @@
-s1 = 'Sunday'
+s = '𐐀'
 # example 1
-print(s1)
+print(s)
 # exmaple 2
-print(s1, end='')
+print(s, end='')
 # example 3
 import sys
-sys.stdout.write(s1)
+sys.stdout.write(s)

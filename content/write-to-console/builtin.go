@@ -1,7 +1,8 @@
 package main
 func main() {
+   s := "𐐀"
    // example 1
-   println("Sunday")
+   println(s)
    // example 2
-   print("Sunday\n")
+   print(s, "\n")
 }

@@ -1,8 +1,8 @@
 <?php
-$s1 = "Sunday\n";
+$s = "𐐀\n";
 # example 1
-echo $s1;
+echo $s;
 # example 2
-print $s1;
+print $s;
 # example 3
-fwrite(STDOUT, $s1);
+fwrite(STDOUT, $s);

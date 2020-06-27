@@ -1,7 +1,8 @@
 #lang racket/base
+(define s "𐐀")
 ; example 1
-(displayln "Sunday")
+(displayln s)
 ; example 2
-(println "Sunday")
+(println s)
 ; example 3
-(writeln "Sunday")
+(writeln s)

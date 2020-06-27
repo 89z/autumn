@@ -1,2 +1,2 @@
-let s1 = 'Sunday';
-console.log(s1);
+let s = '♠';
+console.log(s);
