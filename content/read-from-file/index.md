@@ -1,7 +1,7 @@
 ---
 title: Read from file
 categories: [input-output]
-tags: [d, dart, go, nim, php, python, racket, rust]
+tags: [d, dart, go, nim, php, python, racket]
 ---
 
 ## D
@@ -55,12 +55,6 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/Filesystem.html#(def._((lib._racket/file..rkt)._file-~3estring))>
-
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/fs/fn.read_to_string.html>
 
 ## References
 

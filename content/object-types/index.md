@@ -1,7 +1,7 @@
 ---
 title: Object types
 categories: [object]
-tags: [go, javascript, php, python, rust]
+tags: [go, javascript, php, python]
 ---
 
 ## Go
@@ -29,12 +29,6 @@ tags: [go, javascript, php, python, rust]
 
 - <https://docs.python.org/library/types.html>
 - <https://docs.python.org/tutorial/classes.html>
-
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/keyword.struct.html>
 
 ## References
 
