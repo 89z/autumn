@@ -2,12 +2,22 @@
 title: 'Tag talk:Rust'
 ---
 
-**Option to Result**:
+Allow missing fields in structs:
 
-{{< r "a.rs" >}}
+<https://github.com/rust-lang/rfcs/issues/2875>
 
-<https://doc.rust-lang.org/std/option/enum.Option.html#method.ok_or>
+compatibility with toolchains providing LLVM:
 
-**Setup**:
+<https://github.com/rust-lang/rust/issues/72241>
+
+config file for rustc:
+
+<https://github.com/rust-lang/rfcs/issues/2950>
+
+`rustc --run` option:
+
+<https://github.com/rust-lang/rust/issues/72406>
+
+Setup:
 
 <https://forge.rust-lang.org/infra/other-installation-methods>

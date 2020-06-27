@@ -1,19 +1,10 @@
 ---
-title: 'Tag talk:Draft'
+title: 'Talk:Tags'
 ---
 
 We can use this page to just compile problems with other languages. Avoid
 putting any links here, as we can keep sources and detailed information under
 the Languages folder.
-
-## Booleans
-
-Default boolean printing should be `true` or `false`, not numbers or anything
-else. These currently fail that test:
-
-- C
-- C++
-- Perl
 
 ## Code bloat
 

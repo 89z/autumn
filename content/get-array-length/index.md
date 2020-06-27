@@ -1,7 +1,7 @@
 ---
 title: Get array length
 categories: [array]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -53,16 +53,10 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 <https://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._length))>
 
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/primitive.slice.html#method.len>
-
 ## References
 
 - <https://hyperpolyglot.org/c#array-size>
 - <https://hyperpolyglot.org/lisp#lists>
 - <https://hyperpolyglot.org/scripting#array-size>
-- <https://www.programming-idioms.org/idiom/117/get-list-size>
+- <https://programming-idioms.org/idiom/117>
 - <https://rosettacode.org/wiki/Array_length>

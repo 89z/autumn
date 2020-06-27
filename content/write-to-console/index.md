@@ -1,8 +1,12 @@
 ---
 title: Write to console
 categories: [input-output]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [c, d, dart, go, javascript, nim, php, python, racket]
 ---
+
+## C
+
+{{< r "a.c" >}}
 
 ## D
 
@@ -61,17 +65,11 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 <https://docs.racket-lang.org/reference/Writing.html>
 
-## Rust
-
-{{< r "a.rs" >}}
-
-- <https://doc.rust-lang.org/std/macro.dbg.html>
-- <https://doc.rust-lang.org/std/macro.println.html>
-
 ## References
 
+- <https://hyperpolyglot.org/c#write-line-stdout>
 - <https://hyperpolyglot.org/lisp#format-stdout>
 - <https://hyperpolyglot.org/scripting2#write-stdout>
-- <https://www.programming-idioms.org/idiom/1>
+- <https://programming-idioms.org/idiom/1>
 - <https://rosettacode.org/wiki/Hello_world/Newline_omission>
 - <https://rosettacode.org/wiki/Hello_world/Text>

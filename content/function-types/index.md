@@ -1,7 +1,7 @@
 ---
 title: Function types
 categories: [reference]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -57,16 +57,9 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 <https://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))>
 
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/keyword.fn.html>
-
 ## References
 
 - <https://hyperpolyglot.org/lisp#functions>
-- <https://hyperpolyglot.org/rust#def-func>
 - <https://hyperpolyglot.org/scripting#def-func>
 - <https://hyperpolyglot.org/web#def-func>
 - <https://www.programming-idioms.org/idiom/4/create-a-function>

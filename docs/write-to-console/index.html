@@ -21,14 +21,24 @@
    </header>
 
 <h1>Write to console</h1>
-<time>Thu Jun 11 2020</time>
+<time>Sat Jun 27 2020</time>
    
 <a href="/autumn/categories/input-output/">input-output</a>
    
    
 <a href="/autumn/talk/write-to-console/">Talk:Write to console</a>
    
-   <h2 id="d">D</h2>
+   <h2 id="c">C</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.c" data-lang=".c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   puts(<span style="color:#e6db74">&#34;𐐀&#34;</span>);
+}
+</code></pre></div>
+<h2 id="d">D</h2>
 
 
 
@@ -176,28 +186,12 @@ sys<span style="color:#f92672">.</span>stdout<span style="color:#f92672">.</span
 (writeln s)<span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div>
 <p><a href="https://docs.racket-lang.org/reference/Writing.html">https://docs.racket-lang.org/reference/Writing.html</a></p>
-<h2 id="rust">Rust</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;𐐀&#34;</span>;
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   dbg<span style="color:#f92672">!</span>(s);
-}
-</code></pre></div>
-<ul>
-<li><a href="https://doc.rust-lang.org/std/macro.dbg.html">https://doc.rust-lang.org/std/macro.dbg.html</a></li>
-<li><a href="https://doc.rust-lang.org/std/macro.println.html">https://doc.rust-lang.org/std/macro.println.html</a></li>
-</ul>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://hyperpolyglot.org/c#write-line-stdout">https://hyperpolyglot.org/c#write-line-stdout</a></li>
 <li><a href="https://hyperpolyglot.org/lisp#format-stdout">https://hyperpolyglot.org/lisp#format-stdout</a></li>
 <li><a href="https://hyperpolyglot.org/scripting2#write-stdout">https://hyperpolyglot.org/scripting2#write-stdout</a></li>
-<li><a href="https://www.programming-idioms.org/idiom/1">https://www.programming-idioms.org/idiom/1</a></li>
+<li><a href="https://programming-idioms.org/idiom/1">https://programming-idioms.org/idiom/1</a></li>
 <li><a href="https://rosettacode.org/wiki/Hello_world/Newline_omission">https://rosettacode.org/wiki/Hello_world/Newline_omission</a></li>
 <li><a href="https://rosettacode.org/wiki/Hello_world/Text">https://rosettacode.org/wiki/Hello_world/Text</a></li>
 </ul>
