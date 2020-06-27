@@ -1,7 +1,7 @@
 ---
 title: String types
 categories: [string]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -58,17 +58,9 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 - <https://beautifulracket.com/explainer/stringlike-types.html>
 - <https://docs.racket-lang.org/reference/strings.html>
 
-## Rust
-
-{{< r "a.rs" >}}
-
-- <https://doc.rust-lang.org/std/primitive.str.html>
-- <https://doc.rust-lang.org/std/string/struct.String.html#method.from>
-
 ## References
 
 - <https://hyperpolyglot.org/lisp#str-literal>
-- <https://hyperpolyglot.org/rust#str-literal>
 - <https://programming-idioms.org/idiom/48>
 - <https://rosettacode.org/wiki/Here_document>
 - <https://rosettacode.org/wiki/Literals/String>

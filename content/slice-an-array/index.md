@@ -1,7 +1,7 @@
 ---
 title: Slice an array
 categories: [array]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -57,17 +57,11 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 <https://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._list-ref))>
 
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/vec/index.html>
-
 ## References
 
 - <https://hyperpolyglot.org/c#resizable-array-lookup>
 - <https://hyperpolyglot.org/lisp#lists>
 - <https://hyperpolyglot.org/scripting#array-lookup>
 - <https://hyperpolyglot.org/web#array-lookup>
-- <https://www.programming-idioms.org/idiom/165/last-element>
+- <https://programming-idioms.org/idiom/165/last-element>
 - <https://rosettacode.org/wiki/Arrays>
