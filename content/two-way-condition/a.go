@@ -1,11 +1,13 @@
 package main
 func main() {
-   n1 := 0
-   if n1 > 0 {
-      println("positive")
-   } else if n1 < 0 {
-      println("negative")
+   var n = 10
+   var s string
+   if n > 12 {
+      s = "Tue"
+   } else if n > 11 {
+      s = "Mon"
    } else {
-      println("zero")
+      s = "Sun"
    }
+   println(s)
 }

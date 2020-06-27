@@ -1,12 +1,12 @@
-n1 = 0
+n = 10
 # example 1
-if n1 > 0:
-   s1 = 'positive'
-elif n1 < 0:
-   s1 = 'negative'
+if n > 12:
+   s1 = 'Tue'
+elif n > 11:
+   s1 = 'Mon'
 else:
-   s1 = 'zero'
+   s1 = 'Sun'
 # example 2
-s2 = 'negative' if n1 < 0 else 'positive'
+s2 = 'Mon' if n > 11 else 'Sun'
 # print
 print(s1, s2)

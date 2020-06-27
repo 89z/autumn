@@ -1,10 +1,11 @@
 main() {
-   var n = 0;
-   if (n > 0) {
-      print('positive');
-   } else if (n < 0) {
-      print('negative');
+   var s, n = 10;
+   if (n > 12) {
+      s = 'Tue';
+   } else if (n > 11) {
+      s = 'Mon';
    } else {
-      print('zero');
+      s = 'Sun';
    }
+   print(s);
 }

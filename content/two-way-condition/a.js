@@ -1,14 +1,14 @@
-let n1 = 0;
+let n = 10;
 // example 1
 let s1;
-if (n1 > 0) {
-   s1 = 'positive';
-} else if (n1 < 0) {
-   s1 = 'negative';
+if (n > 12) {
+   s1 = 'Tue';
+} else if (n > 11) {
+   s1 = 'Mon';
 } else {
-   s1 = 'zero';
+   s1 = 'Sun';
 }
 // example 2
-let s2 = n1 < 0 ? 'negative' : 'positive';
+let s2 = n > 11 ? 'Mon' : 'Sun';
 // print
 console.log(s1, s2);

@@ -1,22 +1,22 @@
 <?php
-$n1 = 0;
+$n = 10;
 # example 1
-if ($n1 > 0) {
-   $s1 = 'positive';
-} else if ($n1 < 0) {
-   $s1 = 'negative';
+if ($n > 12) {
+   $s1 = 'Tue';
+} else if ($n > 11) {
+   $s1 = 'Mon';
 } else {
-   $s1 = 'zero';
+   $s1 = 'Sun';
 }
 # example 2
-if ($n1 > 0) {
-   $s2 = 'positive';
-} elseif ($n1 < 0) {
-   $s2 = 'negative';
+if ($n > 12) {
+   $s2 = 'Tue';
+} elseif ($n > 11) {
+   $s2 = 'Mon';
 } else {
-   $s2 = 'zero';
+   $s2 = 'Sun';
 }
 # example 3
-$s3 = $n1 < 0 ? 'negative' : 'positive';
+$s3 = $n > 11 ? 'Mon' : 'Sun';
 # print
 var_dump($s1, $s2, $s3);

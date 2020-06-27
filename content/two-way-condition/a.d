@@ -1,11 +1,13 @@
 import std.stdio;
 void main() {
-   auto n = 0;
-   if (n > 0) {
-      "positive".writeln;
-   } else if (n < 0) {
-      "negative".writeln;
+   int n = 10;
+   string s;
+   if (n > 12) {
+      s = "Tue";
+   } else if (n > 11) {
+      s = "Mon";
    } else {
-      "zero".writeln;
+      s = "Sun";
    }
+   s.writeln;
 }
