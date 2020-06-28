@@ -53,12 +53,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 
 <https://docs.racket-lang.org/reference/hashtables.html>
 
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/collections/struct.HashMap.html>
-
 ## References
 
 - <https://hyperpolyglot.org/c#dict-lookup>

@@ -1,7 +1,7 @@
 ---
 title: Get string start
 categories: [string]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -57,12 +57,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/strings.html#(def._((quote._~23~25kernel)._substring))>
-
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/primitive.str.html#method.get>
 
 ## References
 
