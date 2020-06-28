@@ -1,8 +1,14 @@
 ---
 title: Boolean types
 categories: [reference]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [c, d, dart, go, javascript, nim, php, python, racket]
 ---
+
+## C
+
+{{< r "a.c" >}}
+
+<https://en.cppreference.com/w/c/types/boolean>
 
 ## D
 
@@ -55,6 +61,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 
 ## References
 
+- <https://hyperpolyglot.org/c#true-false>
 - <https://hyperpolyglot.org/lisp#true-false>
 - <https://hyperpolyglot.org/scripting#true-false>
 - <https://rosettacode.org/wiki/Boolean_values>

@@ -1,8 +1,14 @@
 ---
 title: Get base name
 categories: [string]
-tags: [go, php, python]
+tags: [c, go, php, python]
 ---
+
+## C
+
+{{< r "a.c" >}}
+
+<https://pubs.opengroup.org/onlinepubs/9699919799/functions/basename.html>
 
 ## Go
 
