@@ -1,8 +1,12 @@
 ---
 title: Is a terminal
 categories: [system]
-tags: [php]
+tags: [c, php]
 ---
+
+## C
+
+{{< r "a.c" >}}
 
 ## PHP
 
