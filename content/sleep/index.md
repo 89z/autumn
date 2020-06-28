@@ -1,14 +1,8 @@
 ---
 title: Sleep
 categories: [system]
-tags: [c, d, dart, nim, php, racket]
+tags: [d, dart, nim, php, racket]
 ---
-
-## C
-
-{{< r "a.c" >}}
-
-<https://pubs.opengroup.org/onlinepubs/9699919799/functions/sleep.html>
 
 ## D
 
