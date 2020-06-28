@@ -1,7 +1,7 @@
 ---
 title: Divide a number
 categories: [number]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -58,12 +58,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._quotient))>
-
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/ops/trait.Div.html>
 
 ## References
 
