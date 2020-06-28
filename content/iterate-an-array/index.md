@@ -1,8 +1,14 @@
 ---
 title: Iterate an array
 categories: [iterate, array]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [c, d, dart, go, javascript, nim, php, python, racket]
 ---
+
+## C
+
+{{< r "a.c" >}}
+
+<https://en.cppreference.com/w/c/language/for>
 
 ## D
 
@@ -61,6 +67,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 
 ## References
 
+- <https://hyperpolyglot.org/c#iterate-over-array>
 - <https://hyperpolyglot.org/lisp#lists>
 - <https://hyperpolyglot.org/web#iterate-over-array>
 - <https://programming-idioms.org/idiom/6/iterate-over-list-val>

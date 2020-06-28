@@ -1,8 +1,14 @@
 ---
 title: Import package
 categories: [reference]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [c, d, dart, go, javascript, nim, php, python, racket]
 ---
+
+## C
+
+{{< r "a.c" >}}
+
+<https://en.cppreference.com/w/c/preprocessor/include>
 
 ## D
 
@@ -53,7 +59,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 
 ## References
 
-- <https://hyperpolyglot.org/c#alias-namespace>
+- <https://hyperpolyglot.org/c#load-lib>
 - <https://hyperpolyglot.org/lisp#libraries-namespaces>
 - <https://hyperpolyglot.org/scripting2#load-lib>
 - <https://rosettacode.org/wiki/Include_a_file>

@@ -1,8 +1,14 @@
 ---
 title: Match string with literal
 categories: [string]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [c, d, dart, go, javascript, nim, php, python, racket]
 ---
+
+## C
+
+{{< r "a.c" >}}
+
+<https://en.cppreference.com/w/c/string/byte/strstr>
 
 ## D
 

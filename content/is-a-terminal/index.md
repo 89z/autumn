@@ -8,6 +8,8 @@ tags: [c, php]
 
 {{< r "a.c" >}}
 
+<https://pubs.opengroup.org/onlinepubs/9699919799/functions/isatty.html>
+
 ## PHP
 
 {{< r "a.php" >}}

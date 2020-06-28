@@ -21,12 +21,26 @@
    </header>
 
 <h1>Match string with literal</h1>
-<time>Sat Jun 27 2020</time>
+<time>Sun Jun 28 2020</time>
    
 <a href="/autumn/categories/string/">string</a>
    
    
-   <h2 id="d">D</h2>
+   <h2 id="c">C</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.c" data-lang=".c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>;
+   <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>s2 <span style="color:#f92672">=</span> strstr(s1, <span style="color:#e6db74">&#34;un&#34;</span>);
+   printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, s2 <span style="color:#f92672">!=</span> NULL);
+}
+</code></pre></div>
+<p><a href="https://en.cppreference.com/w/c/string/byte/strstr">https://en.cppreference.com/w/c/string/byte/strstr</a></p>
+<h2 id="d">D</h2>
 
 
 
