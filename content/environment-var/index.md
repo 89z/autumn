@@ -1,7 +1,7 @@
 ---
 title: Environment variables
 categories: [system]
-tags: [d, dart, go, nim, php, python, racket, rust]
+tags: [d, dart, go, nim, php, python, racket]
 ---
 
 ## D
@@ -49,15 +49,9 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 
 <https://docs.racket-lang.org/reference/envvars.html#(def._((lib._racket/private/misc..rkt)._getenv))>
 
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/env/fn.var.html>
-
 ## References
 
 - <https://hyperpolyglot.org/lisp#env-var>
 - <https://hyperpolyglot.org/scripting2#env-var>
-- <https://www.programming-idioms.org/idiom/205>
+- <https://programming-idioms.org/idiom/205>
 - <https://rosettacode.org/wiki/Environment_variables>

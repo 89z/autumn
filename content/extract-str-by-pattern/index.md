@@ -1,7 +1,7 @@
 ---
 title: Extract string by pattern
 categories: [string]
-tags: [d, go, javascript, php, python, rust]
+tags: [d, go, javascript, php, python]
 ---
 
 ## D
@@ -40,13 +40,6 @@ tags: [d, go, javascript, php, python, rust]
 
 - <https://docs.python.org/library/re.html#re.findall>
 - <https://docs.python.org/library/re.html#re.search>
-
-## Rust
-
-{{< r "rs1/src/main.rs" >}}
-{{< r "rs2/src/main.rs" >}}
-
-<https://docs.rs/regex>
 
 ## References
 

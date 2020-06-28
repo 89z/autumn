@@ -21,7 +21,7 @@
    </header>
 
 <h1>Extract string by pattern</h1>
-<time>Wed Jun 10 2020</time>
+<time>Sat Jun 27 2020</time>
    
 <a href="/autumn/categories/string/">string</a>
    
@@ -169,47 +169,6 @@ a2 <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>fi
 <li><a href="https://docs.python.org/library/re.html#re.findall">https://docs.python.org/library/re.html#re.findall</a></li>
 <li><a href="https://docs.python.org/library/re.html#re.search">https://docs.python.org/library/re.html#re.search</a></li>
 </ul>
-<h2 id="rust">Rust</h2>
-<p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> regex::Regex;
-<span style="color:#66d9ef">use</span> std::error::Error;
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
-   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wednesday&#34;</span>;
-   <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;e.&#34;</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;example 1&#34;</span>);
-   <span style="color:#66d9ef">let</span> s3 <span style="color:#f92672">=</span> Regex::new(s2)<span style="color:#f92672">?</span>.find(s1).ok_or(s2)<span style="color:#f92672">?</span>.as_str();
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s3);
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;example 2&#34;</span>);
-   <span style="color:#66d9ef">for</span> o1 <span style="color:#66d9ef">in</span> Regex::new(s2)<span style="color:#f92672">?</span>.find_iter(s1) {
-      <span style="color:#66d9ef">let</span> s3 <span style="color:#f92672">=</span> o1.as_str();
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s3);
-   }
-   Ok(())
-}
-</code></pre></div>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> regex::Regex;
-<span style="color:#66d9ef">use</span> std::error::Error;
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
-   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wednesday&#34;</span>;
-   <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;e(..)&#34;</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;example 1&#34;</span>);
-   <span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> Regex::new(s2)<span style="color:#f92672">?</span>.captures(s1).ok_or(s2)<span style="color:#f92672">?</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o1);
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;example 2&#34;</span>);
-   <span style="color:#66d9ef">for</span> o1 <span style="color:#66d9ef">in</span> Regex::new(s2)<span style="color:#f92672">?</span>.captures_iter(s1) {
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o1);
-   }
-   Ok(())
-}
-</code></pre></div></p>
-<p><a href="https://docs.rs/regex">https://docs.rs/regex</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting#group-capture">https://hyperpolyglot.org/scripting#group-capture</a></li>
