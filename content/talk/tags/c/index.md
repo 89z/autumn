@@ -2,9 +2,9 @@
 title: 'Tag talk:C'
 ---
 
-Docs:
+No hashtables in the C standard library:
 
-<https://en.cppreference.com/w/c>
+<https://stackoverflow.com/questions/6118539>
 
 Setup:
 
