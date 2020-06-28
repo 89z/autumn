@@ -8,6 +8,8 @@ tags: [c, d, dart, go, javascript, nim, php, python, racket]
 
 {{< r "a.c" >}}
 
+<https://en.cppreference.com/w/c/io/puts>
+
 ## D
 
 {{< r "a.d" >}}

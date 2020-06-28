@@ -1,8 +1,14 @@
 ---
 title: Sleep
 categories: [system]
-tags: [d, dart, nim, php, racket]
+tags: [c, d, dart, nim, php, racket]
 ---
+
+## C
+
+{{< r "a.c" >}}
+
+<https://pubs.opengroup.org/onlinepubs/9699919799/functions/sleep.html>
 
 ## D
 
@@ -38,5 +44,6 @@ tags: [d, dart, nim, php, racket]
 
 ## References
 
+- <https://hyperpolyglot.org/c#sleep>
 - <https://hyperpolyglot.org/scripting#sleep>
 - <https://programming-idioms.org/idiom/45>

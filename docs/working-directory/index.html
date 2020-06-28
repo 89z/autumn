@@ -26,7 +26,22 @@
 <a href="/autumn/categories/system/">system</a>
    
    
-   <h2 id="d">D</h2>
+   <h2 id="c">C</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.c" data-lang=".c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt; // puts</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt; // PATH_MAX</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;unistd.h&gt; // getcwd</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">char</span> s[PATH_MAX];
+   getcwd(s, PATH_MAX);
+   puts(s);
+}
+</code></pre></div>
+<p><a href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/getcwd.html">https://pubs.opengroup.org/onlinepubs/9699919799/functions/getcwd.html</a></p>
+<h2 id="d">D</h2>
 
 
 

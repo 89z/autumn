@@ -1,8 +1,14 @@
 ---
 title: Write to file
 categories: [input-output]
-tags: [d, dart, go, nim, php, python, racket]
+tags: [c, d, dart, go, nim, php, python, racket]
 ---
+
+## C
+
+{{< r "a.c" >}}
+
+<https://en.cppreference.com/w/c/io/fputs>
 
 ## D
 
@@ -57,6 +63,7 @@ tags: [d, dart, go, nim, php, python, racket]
 
 ## References
 
+- <https://hyperpolyglot.org/c#write-str>
 - <https://hyperpolyglot.org/lisp#write-str>
 - <https://rosettacode.org/wiki/Write_entire_file>
 - <https://rosettacode.org/wiki/Create_a_file>

@@ -1,7 +1,7 @@
 ---
 title: Decode JSON
 categories: [file-format]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -53,10 +53,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/json>
-
-## Rust
-
-<https://docs.rs/serde_json>
 
 ## References
 
