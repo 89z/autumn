@@ -1,12 +1,8 @@
 ---
 title: Get string length
 categories: [string]
-tags: [c, d, dart, go, javascript, nim, php, python, racket]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
-
-## C
-
-{{< r "a.c" >}}
 
 ## D
 
