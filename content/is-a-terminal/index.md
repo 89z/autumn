@@ -1,14 +1,8 @@
 ---
 title: Is a terminal
 categories: [system]
-tags: [c, php]
+tags: [php]
 ---
-
-## C
-
-{{< r "a.c" >}}
-
-<https://pubs.opengroup.org/onlinepubs/9699919799/functions/isatty.html>
 
 ## PHP
 

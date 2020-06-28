@@ -1,14 +1,8 @@
 ---
 title: Iterate an array
 categories: [iterate, array]
-tags: [c, d, dart, go, javascript, nim, php, python, racket]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
-
-## C
-
-{{< r "a.c" >}}
-
-<https://en.cppreference.com/w/c/language/for>
 
 ## D
 
