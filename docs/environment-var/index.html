@@ -21,12 +21,25 @@
    </header>
 
 <h1>Environment variables</h1>
-<time>Sat Jun 27 2020</time>
+<time>Sun Jun 28 2020</time>
    
 <a href="/autumn/categories/system/">system</a>
    
    
-   <h2 id="d">D</h2>
+   <h2 id="c">C</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.c" data-lang=".c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>s <span style="color:#f92672">=</span> getenv(<span style="color:#e6db74">&#34;BROWSER&#34;</span>);
+   puts(s);
+}
+</code></pre></div>
+<p><a href="https://en.cppreference.com/w/c/program/getenv">https://en.cppreference.com/w/c/program/getenv</a></p>
+<h2 id="d">D</h2>
 
 
 
@@ -124,6 +137,7 @@ s2 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>ge
 <p><a href="https://docs.racket-lang.org/reference/envvars.html#(def._((lib._racket/private/misc..rkt)._getenv))">https://docs.racket-lang.org/reference/envvars.html#(def._((lib._racket/private/misc..rkt)._getenv))</a></p>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://hyperpolyglot.org/c#env-var">https://hyperpolyglot.org/c#env-var</a></li>
 <li><a href="https://hyperpolyglot.org/lisp#env-var">https://hyperpolyglot.org/lisp#env-var</a></li>
 <li><a href="https://hyperpolyglot.org/scripting2#env-var">https://hyperpolyglot.org/scripting2#env-var</a></li>
 <li><a href="https://programming-idioms.org/idiom/205">https://programming-idioms.org/idiom/205</a></li>

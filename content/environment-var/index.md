@@ -1,8 +1,14 @@
 ---
 title: Environment variables
 categories: [system]
-tags: [d, dart, go, nim, php, python, racket]
+tags: [c, d, dart, go, nim, php, python, racket]
 ---
+
+## C
+
+{{< r "a.c" >}}
+
+<https://en.cppreference.com/w/c/program/getenv>
 
 ## D
 
@@ -51,6 +57,7 @@ tags: [d, dart, go, nim, php, python, racket]
 
 ## References
 
+- <https://hyperpolyglot.org/c#env-var>
 - <https://hyperpolyglot.org/lisp#env-var>
 - <https://hyperpolyglot.org/scripting2#env-var>
 - <https://programming-idioms.org/idiom/205>
