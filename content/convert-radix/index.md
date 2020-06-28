@@ -1,7 +1,7 @@
 ---
 title: Convert radix
 categories: [number]
-tags: [d, go, javascript, nim, php, python, rust]
+tags: [d, go, javascript, nim, php, python]
 ---
 
 Some faster bitwise operations could be used, but these functions allow to
@@ -51,12 +51,6 @@ easily change the radix. These also account for numeric zero input.
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#str.find>
-
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/nightly/std/fmt/index.html>
 
 ## References
 

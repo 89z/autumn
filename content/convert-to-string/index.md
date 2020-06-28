@@ -62,12 +62,6 @@ tags: [d, dart, go, javascript, php, python, racket]
 
 <https://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._number-~3estring))>
 
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/fmt>
-
 ## References
 
 - <https://hyperpolyglot.org/lisp#num-to-str>
