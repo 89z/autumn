@@ -1,7 +1,7 @@
 ---
 title: Iterate an array
 categories: [iterate, array]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -59,16 +59,9 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 <https://docs.racket-lang.org/reference/for.html#(form._((lib._racket/private/base..rkt)._for))>
 
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/keyword.for.html>
-
 ## References
 
 - <https://hyperpolyglot.org/lisp#lists>
-- <https://hyperpolyglot.org/rust#iterate-over-array>
 - <https://hyperpolyglot.org/web#iterate-over-array>
 - <https://programming-idioms.org/idiom/6/iterate-over-list-val>
 - <https://programming-idioms.org/idiom/7/iterate-over-list-indexes-val>

@@ -1,7 +1,7 @@
 ---
 title: Join an array
 categories: [array, string]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -52,12 +52,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/strings.html#(def._((lib._racket/string..rkt)._string-join))>
-
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/primitive.slice.html#method.join>
 
 ## References
 

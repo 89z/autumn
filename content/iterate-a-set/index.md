@@ -1,7 +1,7 @@
 ---
 title: Iterate a set
 categories: [iterate, set]
-tags: [javascript, php, rust]
+tags: [javascript, php]
 ---
 
 ## JavaScript
@@ -15,9 +15,3 @@ tags: [javascript, php, rust]
 ## PHP
 
 {{< r "a.php" >}}
-
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/collections/struct.HashSet.html>
