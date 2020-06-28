@@ -1,8 +1,14 @@
 ---
 title: Divide a number
 categories: [number]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [c, d, dart, go, javascript, nim, php, python, racket]
 ---
+
+## C
+
+{{< r "a.c" >}}
+
+<https://en.cppreference.com/w/c/language/operator_arithmetic>
 
 ## D
 
@@ -61,6 +67,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 
 ## References
 
+- <https://hyperpolyglot.org/c#arith-op>
 - <https://hyperpolyglot.org/lisp#arith-op>
 - <https://hyperpolyglot.org/scripting#arith-op>
 - <https://hyperpolyglot.org/web#arith-op>
