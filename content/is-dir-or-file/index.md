@@ -1,7 +1,7 @@
 ---
 title: Is directory or file
 categories: [system]
-tags: [d, dart, go, nim, php, python, racket, rust]
+tags: [d, dart, go, nim, php, python, racket]
 ---
 
 ## D
@@ -53,12 +53,6 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/Filesystem.html#(def._((quote._~23~25kernel)._file-exists~3f))>
-
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/path/struct.Path.html#method.exists>
 
 ## References
 

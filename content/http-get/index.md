@@ -1,7 +1,7 @@
 ---
 title: HTTP GET
 categories: [network]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
 
 ## D
@@ -58,15 +58,9 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 <https://docs.racket-lang.org/net/url.html>
 
-## Rust
-
-{{< r "rs/src/main.rs" >}}
-
-<https://docs.rs/curl>
-
 ## References
 
 - <https://hyperpolyglot.org/c#http-get>
 - <https://hyperpolyglot.org/scripting2#http-get>
-- <https://www.programming-idioms.org/idiom/101/load-from-http-get>
+- <https://programming-idioms.org/idiom/101/load-from-http-get>
 - <https://rosettacode.org/wiki/HTTP>
