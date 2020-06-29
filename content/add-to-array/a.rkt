@@ -5,7 +5,7 @@
    (append a '(13 14))
 )
 (println a1)
-; exapmle 2
+; example 2
 (define a2
    (cons 10 a)
 )
