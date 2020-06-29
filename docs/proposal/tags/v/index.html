@@ -21,20 +21,10 @@
    </header>
 
 <h1>V</h1>
-<time>Sun Jun 14 2020</time>
+<time>Sun Jun 28 2020</time>
    
    
-   <h2 id="field-designator--languagetm_gmtoff-does-not-refer-to-any-field">field designator  languagetm_gmtoff&rsquo; does not refer to any field</h2>
-<p>Trying to build my own version creates this error:</p>
-<pre><code>$ TMPDIR=tmp PATH=../llvm-mingw/bin:$PATH make
-cd tmp/vc &amp;&amp; git clean -xf &amp;&amp; git pull --quiet
-cd /var/tmp/tcc &amp;&amp; git clean -xf &amp;&amp; git pull --quiet
-cc  -std=gnu11 -w -o v tmp/vc/v.c  -lm
-tmp/vc/v.c:9234:38: error: field designator  languagetm_gmtoff' does not refer to any
-      field in type  languagestruct tm'
-                                    .tm_gmtoff = 0};
-                                     ^
-</code></pre><h2 id="compiler-emits-no-warnings-or-errors">Compiler emits no warnings or errors</h2>
+   <h2 id="compiler-emits-no-warnings-or-errors">Compiler emits no warnings or errors</h2>
 <p>If I have a file like this, everything is fine:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-v" data-lang="v">fn main() {
    mut m2 <span style="color:#f92672">:=</span> { languageSun&#39;<span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>, &#39;Mon&#39;<span style="color:#f92672">:</span> <span style="color:#ae81ff">11</span>}

@@ -30,8 +30,6 @@ Comparison of programming languages
 59 dart examples
 59 d links
 59 d examples
-24 c examples
-23 c links
 
 59 goal 7/10
 ~~~

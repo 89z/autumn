@@ -1,14 +1,8 @@
 ---
 title: Write to console
 categories: [input-output]
-tags: [c, d, dart, go, javascript, nim, php, python, racket]
+tags: [d, dart, go, javascript, nim, php, python, racket]
 ---
-
-## C
-
-{{< r "a.c" >}}
-
-<https://en.cppreference.com/w/c/io/puts>
 
 ## D
 

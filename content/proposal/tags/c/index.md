@@ -1,5 +1,6 @@
 ---
-title: 'Tag talk:C'
+title: C
+tags: [reject]
 ---
 
 No hashtables in the C standard library:

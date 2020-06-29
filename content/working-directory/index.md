@@ -1,14 +1,8 @@
 ---
 title: Working directory
 categories: [system]
-tags: [c, d, dart, go, nim, php, python, racket]
+tags: [d, dart, go, nim, php, python, racket]
 ---
-
-## C
-
-{{< r "a.c" >}}
-
-<https://pubs.opengroup.org/onlinepubs/9699919799/functions/getcwd.html>
 
 ## D
 
