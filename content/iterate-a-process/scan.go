@@ -6,14 +6,14 @@ import (
    "os/exec"
 )
 func main() {
-   y1, e := exec.Command("ag", "-V").Output()
+   y, e := exec.Command("ag", "-V").Output()
    if e != nil {
       log.Fatal(e)
    }
-   o1 := bytes.NewReader(y1)
+   o1 := bytes.NewReader(y)
    o2 := bufio.NewScanner(o1)
    for o2.Scan() {
-      s1 := o2.Text()
-      println(s1)
+      s := o2.Text()
+      println(s)
    }
 }
