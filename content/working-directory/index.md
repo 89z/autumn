@@ -8,7 +8,7 @@ tags: [d, dart, go, nim, php, python, racket]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/library/std/path/absolute_path.html>
+<https://dlang.org/library/std/file/getcwd.html>
 
 ## Dart
 

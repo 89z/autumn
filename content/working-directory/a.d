@@ -1,5 +1,5 @@
-import std.path, std.stdio;
+import std.file, std.stdio;
 void main() {
-   auto s = absolutePath(".");
+   auto s = getcwd();
    s.writeln;
 }
