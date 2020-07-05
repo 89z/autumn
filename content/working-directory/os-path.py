@@ -1,3 +1,3 @@
 from os import path
-s = path.abspath('.')
-print(s)
+s1 = path.abspath('.')
+print(s1)

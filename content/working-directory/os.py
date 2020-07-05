@@ -1,3 +1,3 @@
 import os
-s = os.getcwd()
-print(s)
+s1 = os.getcwd()
+print(s1)
