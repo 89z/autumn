@@ -22,17 +22,17 @@ tags: [d, dart, go, nim, php, python, racket]
 
 <https://golang.org/pkg/os#Getwd>
 
-## PHP
-
-{{< r "a.php" >}}
-
-<https://php.net/function.getcwd>
-
 ## Nim
 
 {{< r "a.nim" >}}
 
 <https://nim-lang.org/docs/os.html#getCurrentDir>
+
+## PHP
+
+{{< r "a.php" >}}
+
+<https://php.net/function.getcwd>
 
 ## Python
 

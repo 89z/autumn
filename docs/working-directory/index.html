@@ -69,6 +69,16 @@ main() {
 }
 </code></pre></div>
 <p><a href="https://golang.org/pkg/os#Getwd">https://golang.org/pkg/os#Getwd</a></p>
+<h2 id="nim">Nim</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.nim" data-lang=".nim"><span style="color:#f92672">import</span> os
+<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> getCurrentDir()
+echo s
+</code></pre></div>
+<p><a href="https://nim-lang.org/docs/os.html#getCurrentDir">https://nim-lang.org/docs/os.html#getCurrentDir</a></p>
 <h2 id="php">PHP</h2>
 
 
@@ -83,32 +93,22 @@ main() {
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1, $s2);
 </code></pre></div>
 <p><a href="https://php.net/function.getcwd">https://php.net/function.getcwd</a></p>
-<h2 id="nim">Nim</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.nim" data-lang=".nim"><span style="color:#f92672">import</span> os
-<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> getCurrentDir()
-echo s
-</code></pre></div>
-<p><a href="https://nim-lang.org/docs/os.html#getCurrentDir">https://nim-lang.org/docs/os.html#getCurrentDir</a></p>
 <h2 id="python">Python</h2>
 <p>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">from</span> os <span style="color:#f92672">import</span> path
-s1 <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>abspath(<span style="color:#e6db74">&#39;.&#39;</span>)
-<span style="color:#66d9ef">print</span>(s1)
+s <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>abspath(<span style="color:#e6db74">&#39;.&#39;</span>)
+<span style="color:#66d9ef">print</span>(s)
 </code></pre></div>
 
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">import</span> os
-s1 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>getcwd()
-<span style="color:#66d9ef">print</span>(s1)
+s <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>getcwd()
+<span style="color:#66d9ef">print</span>(s)
 </code></pre></div></p>
 <ul>
 <li><a href="https://docs.python.org/library/os.html">https://docs.python.org/library/os.html</a></li>
