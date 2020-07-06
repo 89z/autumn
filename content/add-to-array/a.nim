@@ -1,3 +1,3 @@
-var a1 = @["Sun"]
-a1.add("Mon")
-echo a1
+var a = @[10, 11]
+a.add(12)
+echo a
