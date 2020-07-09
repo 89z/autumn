@@ -1,8 +1,12 @@
 ---
 title: Exit program
 categories: [system]
-tags: [d, dart, go, nim, php, python, racket]
+tags: [c++ d, dart, go, nim, php, python, racket]
 ---
+
+## C++
+
+<https://en.cppreference.com/w/cpp/utility/program/exit>
 
 ## D
 
