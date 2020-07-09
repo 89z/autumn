@@ -1,7 +1,7 @@
 ---
 title: String index
 categories: [string]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## D
@@ -43,6 +43,12 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/srfi/srfi-std/srfi-13.html#string-contains>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/string/struct.String.html#method.find>
 
 ## References
 

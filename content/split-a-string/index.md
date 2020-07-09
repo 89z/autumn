@@ -1,7 +1,7 @@
 ---
 title: Split a string
 categories: [array, string]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## D
@@ -59,6 +59,12 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/strings.html>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/primitive.str.html#method.split_whitespace>
 
 ## References
 
