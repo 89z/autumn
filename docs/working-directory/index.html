@@ -21,7 +21,7 @@
    </header>
 
 <h1>Working directory</h1>
-<time>Sun Jul 5 2020</time>
+<time>Thu Jul 9 2020</time>
    
 <a href="/autumn/categories/system/">system</a>
    
@@ -123,6 +123,21 @@ s1 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>ge
 (current-directory)<span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div>
 <p><a href="https://docs.racket-lang.org/reference/Filesystem.html#(def._((quote._~23~25kernel)._current-directory))">https://docs.racket-lang.org/reference/Filesystem.html#(def._((quote._~23~25kernel)._current-directory))</a></p>
+<h2 id="rust">Rust</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::env;
+<span style="color:#66d9ef">use</span> std::error::Error;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
+   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> env::current_dir()<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> o.display();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
+   Ok(())
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/env/fn.current_dir.html">https://doc.rust-lang.org/std/env/fn.current_dir.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#working-dir">https://hyperpolyglot.org/c#working-dir</a></li>

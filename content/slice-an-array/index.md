@@ -1,7 +1,7 @@
 ---
 title: Slice an array
 categories: [array]
-tags: [c++, d, dart, go, javascript, nim, php, python, racket]
+tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## C++
@@ -62,6 +62,12 @@ tags: [c++, d, dart, go, javascript, nim, php, python, racket]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._list-ref))>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/vec/index.html>
 
 ## References
 
