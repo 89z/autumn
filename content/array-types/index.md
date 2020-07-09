@@ -1,7 +1,7 @@
 ---
 title: Array types
 categories: [array]
-tags: [c++, d, dart, go, javascript, nim, php, python, racket]
+tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## C++
@@ -59,10 +59,17 @@ tags: [c++, d, dart, go, javascript, nim, php, python, racket]
 
 <https://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._list))>
 
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/macro.vec.html>
+
 ## References
 
 - <https://hyperpolyglot.org/cpp#resizable-array-init-list>
 - <https://hyperpolyglot.org/lisp#lists>
+- <https://hyperpolyglot.org/rust#declare-array>
 - <https://hyperpolyglot.org/scripting#arrays>
 - <https://hyperpolyglot.org/web#array-literal>
 - <https://programming-idioms.org/idiom/134>

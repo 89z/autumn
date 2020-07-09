@@ -21,7 +21,7 @@
    </header>
 
 <h1>Add to map</h1>
-<time>Sun Jun 28 2020</time>
+<time>Thu Jul 9 2020</time>
    
 <a href="/autumn/categories/map/">map</a>
    
@@ -139,6 +139,19 @@ m1[<span style="color:#e6db74">&#39;Mon&#39;</span>] <span style="color:#f92672"
 (println m)<span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div>
 <p><a href="https://docs.racket-lang.org/reference/hashtables.html#(def._((quote._~23~25kernel)._hash-set!))">https://docs.racket-lang.org/reference/hashtables.html#(def._((quote._~23~25kernel)._hash-set!))</a></p>
+<h2 id="rust">Rust</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::collections::HashMap;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> m1 <span style="color:#f92672">=</span> HashMap::new();
+   m1.insert(<span style="color:#e6db74">&#34;Sun&#34;</span>, <span style="color:#ae81ff">10</span>);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, m1);
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/collections/struct.HashMap.html">https://doc.rust-lang.org/std/collections/struct.HashMap.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/lisp#dict-update">https://hyperpolyglot.org/lisp#dict-update</a></li>
