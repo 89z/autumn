@@ -1,8 +1,12 @@
 ---
 title: Comments
 categories: [reference]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [c++, d, dart, go, javascript, nim, php, python, racket]
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
 
 ## D
 
@@ -56,6 +60,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 
 ## References
 
+- <https://hyperpolyglot.org/cpp#eol-comment>
 - <https://hyperpolyglot.org/lisp#eol-comment>
 - <https://hyperpolyglot.org/scripting#eol-comment>
 - <https://hyperpolyglot.org/web#eol-comment>

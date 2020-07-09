@@ -1,8 +1,14 @@
 ---
 title: Array types
 categories: [array]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [c++, d, dart, go, javascript, nim, php, python, racket]
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
+
+<https://en.cppreference.com/w/cpp/container/vector>
 
 ## D
 
@@ -55,6 +61,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 
 ## References
 
+- <https://hyperpolyglot.org/cpp#resizable-array-init-list>
 - <https://hyperpolyglot.org/lisp#lists>
 - <https://hyperpolyglot.org/scripting#arrays>
 - <https://hyperpolyglot.org/web#array-literal>

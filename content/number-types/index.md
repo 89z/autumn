@@ -1,8 +1,12 @@
 ---
 title: Number types
 categories: [number]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [c++, d, dart, go, javascript, nim, php, python, racket]
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
 
 ## D
 
@@ -56,4 +60,5 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 ## References
 
 - <https://hyperpolyglot.org/c#int-type>
+- <https://hyperpolyglot.org/cpp#int-type>
 - <https://hyperpolyglot.org/web#int-type>

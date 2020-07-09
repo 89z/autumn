@@ -1,8 +1,12 @@
 ---
 title: Command line tools
 categories: [reference]
-tags: [d, dart, go, nim, php, python, racket]
+tags: [c++, d, dart, go, nim, php, python, racket]
 ---
+
+## C++
+
+{{< r "cpp.sh" >}}
 
 ## D
 
@@ -55,7 +59,8 @@ tags: [d, dart, go, nim, php, python, racket]
 ## References
 
 - <https://hyperpolyglot.org/c#hello-world>
+- <https://hyperpolyglot.org/cpp#hello-world>
 - <https://hyperpolyglot.org/lisp#interpreter>
-- <https://hyperpolyglot.org/web#hello-world>
 - <https://hyperpolyglot.org/scripting#interpreter>
+- <https://hyperpolyglot.org/web#hello-world>
 - <https://rosettacode.org/wiki/Hello_world/Newbie>

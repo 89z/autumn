@@ -1,8 +1,12 @@
 ---
 title: Declare value
 categories: [reference]
-tags: [d, dart, go, javascript, nim, php, racket]
+tags: [c++, d, dart, go, javascript, nim, php, racket]
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
 
 ## D
 
@@ -52,6 +56,7 @@ tags: [d, dart, go, javascript, nim, php, racket]
 
 ## References
 
+- <https://hyperpolyglot.org/cpp#local-var>
 - <https://hyperpolyglot.org/lisp#local-var>
 - <https://hyperpolyglot.org/scripting#const>
 - <https://hyperpolyglot.org/web#local-var>
