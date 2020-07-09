@@ -21,7 +21,7 @@
    </header>
 
 <h1>Function types</h1>
-<time>Wed Jul 8 2020</time>
+<time>Thu Jul 9 2020</time>
    
 <a href="/autumn/categories/reference/">reference</a>
    
@@ -179,11 +179,32 @@ n2 <span style="color:#f92672">=</span> f2(<span style="color:#e6db74">&#39;Sund
 (f <span style="color:#e6db74">&#34;Sunday&#34;</span>)<span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div>
 <p><a href="https://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))">https://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))</a></p>
+<h2 id="rust">Rust</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">f1</span>(s1: <span style="color:#66d9ef">&amp;</span><span style="color:#66d9ef">str</span>) -&gt; <span style="color:#66d9ef">usize</span> {
+   <span style="color:#66d9ef">return</span> s1.len();
+}
+<span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">f2</span>(s1: <span style="color:#66d9ef">&amp;</span><span style="color:#66d9ef">str</span>) -&gt; <span style="color:#66d9ef">usize</span> {
+   s1.len()
+}
+<span style="color:#75715e">// print
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> n1 <span style="color:#f92672">=</span> f1(<span style="color:#e6db74">&#34;Sunday&#34;</span>);
+   <span style="color:#66d9ef">let</span> n2 <span style="color:#f92672">=</span> f2(<span style="color:#e6db74">&#34;Sunday&#34;</span>);
+   dbg<span style="color:#f92672">!</span>(n1, n2);
+}
+</code></pre></div>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#def-func">https://hyperpolyglot.org/c#def-func</a></li>
 <li><a href="https://hyperpolyglot.org/cpp#def-func">https://hyperpolyglot.org/cpp#def-func</a></li>
 <li><a href="https://hyperpolyglot.org/lisp#functions">https://hyperpolyglot.org/lisp#functions</a></li>
+<li><a href="https://hyperpolyglot.org/rust#def-func">https://hyperpolyglot.org/rust#def-func</a></li>
 <li><a href="https://hyperpolyglot.org/scripting#def-func">https://hyperpolyglot.org/scripting#def-func</a></li>
 <li><a href="https://hyperpolyglot.org/web#def-func">https://hyperpolyglot.org/web#def-func</a></li>
 <li><a href="https://programming-idioms.org/idiom/4">https://programming-idioms.org/idiom/4</a></li>

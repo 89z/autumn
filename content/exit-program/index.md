@@ -1,7 +1,7 @@
 ---
 title: Exit program
 categories: [system]
-tags: [c++ d, dart, go, nim, php, python, racket]
+tags: [c++, d, dart, go, nim, php, python, racket]
 ---
 
 ## C++

@@ -1,7 +1,7 @@
 ---
 title: Write to console
 categories: [input-output]
-tags: [c++, d, dart, go, javascript, nim, php, python, racket]
+tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## C++
@@ -66,6 +66,13 @@ tags: [c++, d, dart, go, javascript, nim, php, python, racket]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/Writing.html>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+- <https://doc.rust-lang.org/std/macro.dbg.html>
+- <https://doc.rust-lang.org/std/macro.println.html>
 
 ## References
 

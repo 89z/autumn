@@ -1,7 +1,7 @@
 ---
 title: Get array length
 categories: [array]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## D
@@ -52,6 +52,12 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._length))>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/primitive.slice.html#method.len>
 
 ## References
 
