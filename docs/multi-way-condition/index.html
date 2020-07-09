@@ -21,7 +21,7 @@
    </header>
 
 <h1>Multi-way condition</h1>
-<time>Sat Jun 27 2020</time>
+<time>Thu Jul 9 2020</time>
    
 <a href="/autumn/categories/reference/">reference</a>
    
@@ -108,6 +108,22 @@ $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sun&#39
 <span style="color:#a6e22e">var_dump</span>($n);
 </code></pre></div>
 <p><a href="https://php.net/control-structures.switch">https://php.net/control-structures.switch</a></p>
+<h2 id="rust">Rust</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sun&#34;</span>;
+   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> s {
+      <span style="color:#e6db74">&#34;Fri&#34;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">1</span>,
+      <span style="color:#e6db74">&#34;Sat&#34;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#34;Sun&#34;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">2</span>,
+      _ <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">0</span>
+   };
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/keyword.match.html">https://doc.rust-lang.org/std/keyword.match.html</a></p>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#switch">https://hyperpolyglot.org/c#switch</a></li>

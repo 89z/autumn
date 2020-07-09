@@ -1,7 +1,7 @@
 ---
 title: Add to array
 categories: [array]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## D
@@ -56,9 +56,16 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 
 <https://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._append))>
 
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/vec/struct.Vec.html#method.push>
+
 ## References
 
 - <https://hyperpolyglot.org/lisp#lists>
+- <https://hyperpolyglot.org/rust#array-back>
 - <https://hyperpolyglot.org/web#array-back>
 - <https://www.programming-idioms.org/idiom/166/concatenate-two-lists>
 - <https://www.programming-idioms.org/idiom/171/add-an-element-at-end>

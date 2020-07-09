@@ -21,7 +21,7 @@
    </header>
 
 <h1>Map contains key</h1>
-<time>Sat Jun 27 2020</time>
+<time>Thu Jul 9 2020</time>
    
 <a href="/autumn/categories/map/">map</a>
    
@@ -116,6 +116,20 @@ b1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Mon&#39
 <span style="color:#66d9ef">print</span>(b1)
 </code></pre></div>
 <p><a href="https://docs.python.org/library/stdtypes.html#dict">https://docs.python.org/library/stdtypes.html#dict</a></p>
+<h2 id="rust">Rust</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::collections::HashMap;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> m <span style="color:#f92672">=</span> HashMap::new();
+   m.insert(<span style="color:#e6db74">&#34;Sunday&#34;</span>, <span style="color:#ae81ff">10</span>);
+   <span style="color:#66d9ef">let</span> b <span style="color:#f92672">=</span> m.contains_key(<span style="color:#e6db74">&#34;Sunday&#34;</span>);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, b);
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/collections/struct.HashMap.html">https://doc.rust-lang.org/std/collections/struct.HashMap.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#dict-is-key-present">https://hyperpolyglot.org/c#dict-is-key-present</a></li>
