@@ -82,12 +82,8 @@ error=2, The system cannot find the file specified
    startCommand(CCompilerInvoker.java:158)
 ~~~
 
-Its true, I dont have `CL.exe` on my system, but I do have Clang and GCC:
-
-- <https://github.com/mstorsjo/llvm-mingw>
-- <https://musl.cc>
-
-It seems currently, with Windows only the MSVC compiler is allowed:
+Its true, I dont have `CL.exe` on my system, but I do have GCC. It seems
+currently, with Windows only the MSVC compiler is allowed:
 
 - <https://docs.microsoft.com/cpp/build/reference/compiling-a-c-cpp-program>
 - <https://github.com/oracle/graal/blob/fb9b1d3b/substratevm/src/com.oracle.svm.hosted/src/com/oracle/svm/hosted/c/codegen/CCompilerInvoker.java#L106-L108>

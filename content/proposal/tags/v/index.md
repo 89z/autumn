@@ -31,10 +31,4 @@ Workaround is Self-compiled binary.
 
 ## Program generated after compiling on Windows display nothing
 
-Workaround:
-
-~~~
-PATH=llvm-mingw/bin v_windows/v
-~~~
-
 <https://github.com/vlang/v/issues/3052>

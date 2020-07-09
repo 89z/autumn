@@ -7,10 +7,6 @@ Allow missing fields in structs:
 
 <https://github.com/rust-lang/rfcs/issues/2875>
 
-compatibility with toolchains providing LLVM:
-
-<https://github.com/rust-lang/rust/issues/72241>
-
 config file for rustc:
 
 <https://github.com/rust-lang/rfcs/issues/2950>
