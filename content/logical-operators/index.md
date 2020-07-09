@@ -1,8 +1,12 @@
 ---
 title: Logical operators
 categories: [reference]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [c++, d, dart, go, javascript, nim, php, python, racket]
 ---
+
+## C++
+
+<https://en.cppreference.com/w/cpp/language/expressions>
 
 ## D
 
@@ -55,6 +59,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 ## References
 
 - <https://hyperpolyglot.org/c#logical-op>
+- <https://hyperpolyglot.org/cpp#logical-op>
 - <https://hyperpolyglot.org/lisp#logical-op>
 - <https://hyperpolyglot.org/scripting#logical-op>
 - <https://hyperpolyglot.org/web#logical-op>

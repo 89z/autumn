@@ -1,8 +1,14 @@
 ---
 title: String types
 categories: [string]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [c++, d, dart, go, javascript, nim, php, python, racket]
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
+
+<https://en.cppreference.com/w/cpp/string/basic_string>
 
 ## D
 
@@ -61,6 +67,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 ## References
 
 - <https://hyperpolyglot.org/c#str-literal>
+- <https://hyperpolyglot.org/cpp#str-type>
 - <https://hyperpolyglot.org/lisp#str-literal>
 - <https://programming-idioms.org/idiom/48>
 - <https://rosettacode.org/wiki/Here_document>

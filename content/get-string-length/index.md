@@ -1,8 +1,14 @@
 ---
 title: Get string length
 categories: [string]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [c++, d, dart, go, javascript, nim, php, python, racket]
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
+
+<https://en.cppreference.com/w/cpp/string/basic_string/size>
 
 ## D
 
@@ -66,6 +72,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 ## References
 
 - <https://hyperpolyglot.org/c#str-len>
+- <https://hyperpolyglot.org/cpp#str-length>
 - <https://hyperpolyglot.org/lisp#str-len>
 - <https://hyperpolyglot.org/scripting#str-len>
 - <https://hyperpolyglot.org/web#str-len>

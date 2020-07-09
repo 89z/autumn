@@ -1,8 +1,12 @@
 ---
 title: Function types
 categories: [reference]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [c++, d, dart, go, javascript, nim, php, python, racket]
 ---
+
+## C++
+
+<https://en.cppreference.com/w/cpp/language/functions>
 
 ## D
 
@@ -60,6 +64,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 ## References
 
 - <https://hyperpolyglot.org/c#def-func>
+- <https://hyperpolyglot.org/cpp#def-func>
 - <https://hyperpolyglot.org/lisp#functions>
 - <https://hyperpolyglot.org/scripting#def-func>
 - <https://hyperpolyglot.org/web#def-func>

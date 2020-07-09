@@ -8,6 +8,8 @@ tags: [c++, d, dart, go, javascript, nim, php, python, racket]
 
 {{< r "a.cpp" >}}
 
+<https://en.cppreference.com/w/cpp/language/types>
+
 ## D
 
 {{< r "a.d" >}}
