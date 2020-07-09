@@ -1,7 +1,7 @@
 ---
 title: Sleep
 categories: [system]
-tags: [c++, d, dart, nim, php, racket]
+tags: [c++, d, dart, nim, php, racket, rust]
 ---
 
 ## C++
@@ -41,6 +41,12 @@ tags: [c++, d, dart, nim, php, racket]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/threads.html#(def._((quote._~23~25kernel)._sleep))>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/thread/fn.sleep.html>
 
 ## References
 

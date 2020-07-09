@@ -1,7 +1,7 @@
 ---
 title: Logical operators
 categories: [reference]
-tags: [c++, d, dart, go, javascript, nim, php, python, racket]
+tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## C++
@@ -56,11 +56,18 @@ tags: [c++, d, dart, go, javascript, nim, php, python, racket]
 
 <https://docs.racket-lang.org/reference/booleans.html#(def._((quote._~23~25kernel)._not))>
 
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/primitive.bool.html>
+
 ## References
 
 - <https://hyperpolyglot.org/c#logical-op>
 - <https://hyperpolyglot.org/cpp#logical-op>
 - <https://hyperpolyglot.org/lisp#logical-op>
+- <https://hyperpolyglot.org/rust#logical-op>
 - <https://hyperpolyglot.org/scripting#logical-op>
 - <https://hyperpolyglot.org/web#logical-op>
 - <https://rosettacode.org/wiki/Logical_operations>

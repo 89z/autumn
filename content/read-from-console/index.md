@@ -1,7 +1,7 @@
 ---
 title: Read from console
 categories: [input-output]
-tags: [d, dart, go, nim, php, python, racket]
+tags: [d, dart, go, nim, php, python, racket, rust]
 ---
 
 ## D
@@ -52,6 +52,12 @@ tags: [d, dart, go, nim, php, python, racket]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/Byte_and_String_Input.html?#(def._((quote._~23~25kernel)._read-line))>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/io/struct.Stdin.html#method.read_line>
 
 ## References
 
