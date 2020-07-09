@@ -21,12 +21,28 @@
    </header>
 
 <h1>Sort an array</h1>
-<time>Sat Jun 27 2020</time>
+<time>Wed Jul 8 2020</time>
    
 <a href="/autumn/categories/array/">array</a>
    
    
-   <h2 id="d">D</h2>
+   <h2 id="c">C++</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.cpp" data-lang=".cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>string<span style="color:#f92672">&gt;</span> a <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;BBBB&#34;</span>, <span style="color:#e6db74">&#34;AA&#34;</span>, <span style="color:#e6db74">&#34;CCC&#34;</span>};
+   std<span style="color:#f92672">::</span>sort(a.begin(), a.end());
+   <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> s: a) {
+      std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> s <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+   }
+}
+</code></pre></div>
+<p><a href="https://en.cppreference.com/w/cpp/algorithm/sort">https://en.cppreference.com/w/cpp/algorithm/sort</a></p>
+<h2 id="d">D</h2>
 
 
 
@@ -150,6 +166,7 @@ a2 <span style="color:#f92672">=</span> sorted(a1)
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#sort-resizable-array">https://hyperpolyglot.org/c#sort-resizable-array</a></li>
+<li><a href="https://hyperpolyglot.org/cpp#sort-array">https://hyperpolyglot.org/cpp#sort-array</a></li>
 <li><a href="https://hyperpolyglot.org/lisp#lists">https://hyperpolyglot.org/lisp#lists</a></li>
 <li><a href="https://hyperpolyglot.org/web#array-sort">https://hyperpolyglot.org/web#array-sort</a></li>
 <li><a href="https://programming-idioms.org/idiom/100">https://programming-idioms.org/idiom/100</a></li>

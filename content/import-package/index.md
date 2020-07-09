@@ -1,8 +1,14 @@
 ---
 title: Import package
 categories: [reference]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [c++, d, dart, go, javascript, nim, php, python, racket]
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
+
+<https://en.cppreference.com/w/cpp/preprocessor/include>
 
 ## D
 
@@ -13,7 +19,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 ## Dart
 
 {{< r "a.dart" >}}
-{{< r "dart/a.dart" >}}
 
 <https://dart.dev/guides/language/language-tour#using-libraries>
 

@@ -1,8 +1,12 @@
 ---
 title: Slice an array
 categories: [array]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [c++, d, dart, go, javascript, nim, php, python, racket]
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
 
 ## D
 
@@ -60,6 +64,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 ## References
 
 - <https://hyperpolyglot.org/c#resizable-array-lookup>
+- <https://hyperpolyglot.org/cpp#resizable-array-lookup>
 - <https://hyperpolyglot.org/lisp#lists>
 - <https://hyperpolyglot.org/scripting#array-lookup>
 - <https://hyperpolyglot.org/web#array-lookup>

@@ -21,12 +21,25 @@
    </header>
 
 <h1>Is directory or file</h1>
-<time>Sun Jun 28 2020</time>
+<time>Wed Jul 8 2020</time>
    
 <a href="/autumn/categories/system/">system</a>
    
    
-   <h2 id="d">D</h2>
+   <h2 id="c">C++</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.cpp" data-lang=".cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;unistd.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> access(<span style="color:#e6db74">&#34;index.md&#34;</span>, F_OK);
+   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> (n <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+}
+</code></pre></div>
+<p><a href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/access.html">https://pubs.opengroup.org/onlinepubs/9699919799/functions/access.html</a></p>
+<h2 id="d">D</h2>
 
 
 

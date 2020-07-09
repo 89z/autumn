@@ -1,8 +1,14 @@
 ---
 title: Sleep
 categories: [system]
-tags: [d, dart, nim, php, racket]
+tags: [c++, d, dart, nim, php, racket]
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
+
+<https://en.cppreference.com/w/cpp/thread/sleep_for>
 
 ## D
 
