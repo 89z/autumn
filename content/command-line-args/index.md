@@ -1,7 +1,7 @@
 ---
 title: Command line arguments
 categories: [system]
-tags: [d, dart, go, nim, php, python, racket]
+tags: [d, dart, go, nim, php, python, racket, rust]
 ---
 
 ## D
@@ -46,6 +46,12 @@ tags: [d, dart, go, nim, php, python, racket]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/runtime.html>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/env/struct.Args.html>
 
 ## References
 

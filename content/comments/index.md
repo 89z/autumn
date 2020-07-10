@@ -1,7 +1,7 @@
 ---
 title: Comments
 categories: [reference]
-tags: [c++, d, dart, go, javascript, nim, php, python, racket]
+tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## C++
@@ -57,6 +57,12 @@ tags: [c++, d, dart, go, javascript, nim, php, python, racket]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/reader.html#(part._parse-comment)>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/reference/comments.html>
 
 ## References
 
