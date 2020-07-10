@@ -1,7 +1,7 @@
 ---
 title: Create directory
 categories: [system]
-tags: [d, dart, go, nim, php, python, racket]
+tags: [d, dart, go, nim, php, python, racket, rust]
 ---
 
 ## D
@@ -47,6 +47,12 @@ tags: [d, dart, go, nim, php, python, racket]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/Filesystem.html#(def._((quote._~23~25kernel)._make-directory))>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/nightly/std/fs/fn.create_dir.html>
 
 ## References
 

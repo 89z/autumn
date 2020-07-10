@@ -1,7 +1,7 @@
 ---
 title: Convert to string
 categories: [string]
-tags: [d, dart, go, javascript, php, python, racket]
+tags: [d, dart, go, javascript, php, python, racket, rust]
 ---
 
 ## D
@@ -61,6 +61,12 @@ tags: [d, dart, go, javascript, php, python, racket]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._number-~3estring))>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/fmt>
 
 ## References
 
