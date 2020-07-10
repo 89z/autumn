@@ -1,7 +1,7 @@
 ---
 title: Add to map
 categories: [map]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket, ruby, rust]
 ---
 
 ## D
@@ -49,11 +49,9 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 <https://docs.python.org/library/stdtypes.html#dict>
 
-## Racket
+## Ruby
 
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/hashtables.html#(def._((quote._~23~25kernel)._hash-set!))>
+{{< r "a.rb" >}}
 
 ## Rust
 

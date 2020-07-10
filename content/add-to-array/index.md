@@ -1,7 +1,7 @@
 ---
 title: Add to array
 categories: [array]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, racket, ruby, rust]
 ---
 
 ## D
@@ -50,11 +50,9 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 <https://docs.python.org/library/stdtypes.html#typesseq-mutable>
 
-## Racket
+## Ruby
 
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._append))>
+{{< r "a.rb" >}}
 
 ## Rust
 
