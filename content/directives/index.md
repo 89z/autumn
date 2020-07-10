@@ -1,7 +1,7 @@
 ---
 title: Directives
 categories: [reference]
-tags: [go, javascript, php, python, racket]
+tags: [go, javascript, php, python, racket, rust]
 ---
 
 ## Go
@@ -33,6 +33,12 @@ Declaration must be the very first statement in the script.
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/fmt/trait.Debug.html>
 
 ## References
 

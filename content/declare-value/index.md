@@ -1,7 +1,7 @@
 ---
 title: Declare value
 categories: [reference]
-tags: [c++, d, dart, go, javascript, nim, php, racket]
+tags: [c++, d, dart, go, javascript, nim, php, racket, rust]
 ---
 
 ## C++
@@ -55,6 +55,12 @@ tags: [c++, d, dart, go, javascript, nim, php, racket]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/define.html>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/keyword.let.html>
 
 ## References
 

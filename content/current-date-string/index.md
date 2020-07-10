@@ -1,7 +1,7 @@
 ---
 title: Current date string
 categories: [date]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## D
@@ -56,6 +56,10 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/time.html#(def._((lib._racket/date..rkt)._current-date))>
+
+## Rust
+
+<https://docs.rs/date_time>
 
 ## References
 
