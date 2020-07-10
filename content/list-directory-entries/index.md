@@ -1,7 +1,7 @@
 ---
 title: List directory entries
 categories: [system]
-tags: [d, dart, go, nim, php, python, racket]
+tags: [d, dart, go, nim, php, python, racket, rust]
 ---
 
 ## D
@@ -52,6 +52,12 @@ tags: [d, dart, go, nim, php, python, racket]
 {{< r "a.rkt" >}}
 
 <https://docs.racket-lang.org/reference/Filesystem.html#(def._((lib._racket/private/base..rkt)._directory-list))>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/fs/fn.read_dir.html>
 
 ## References
 
