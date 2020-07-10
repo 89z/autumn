@@ -1,7 +1,7 @@
 ---
 title: Import package
 categories: [reference]
-tags: [c++, d, dart, go, javascript, nim, php, python, racket]
+tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
 ---
 
 ## C++
@@ -55,6 +55,12 @@ tags: [c++, d, dart, go, javascript, nim, php, python, racket]
 ## Racket
 
 {{< r "a.rkt" >}}
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/reference/items/use-declarations.html>
 
 ## References
 

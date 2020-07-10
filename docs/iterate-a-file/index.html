@@ -21,7 +21,7 @@
    </header>
 
 <h1>Iterate a file</h1>
-<time>Sat Jun 27 2020</time>
+<time>Fri Jul 10 2020</time>
    
 <a href="/autumn/categories/input-output/">input-output</a>
    
@@ -92,6 +92,24 @@ cannot use it until we are certain that we have a string.</p>
    <span style="color:#66d9ef">print</span>(s1, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
 </code></pre></div>
 <p><a href="https://docs.python.org/reference/compound_stmts.html#for">https://docs.python.org/reference/compound_stmts.html#for</a></p>
+<h2 id="rust">Rust</h2>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::error::Error;
+<span style="color:#66d9ef">use</span> std::fs::File;
+<span style="color:#66d9ef">use</span> std::io::{BufRead, BufReader};
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
+   <span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> File::open(<span style="color:#e6db74">&#34;a.txt&#34;</span>)<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">for</span> o2 <span style="color:#66d9ef">in</span> BufReader::new(o1).lines() {
+      <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> o2<span style="color:#f92672">?</span>;
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s1);
+   }
+   Ok(())
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/io/trait.BufRead.html#method.lines">https://doc.rust-lang.org/std/io/trait.BufRead.html#method.lines</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#iterate-by-line">https://hyperpolyglot.org/scripting2#iterate-by-line</a></li>

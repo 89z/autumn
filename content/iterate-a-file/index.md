@@ -1,7 +1,7 @@
 ---
 title: Iterate a file
 categories: [iterate, input-output]
-tags: [d, go, php, python]
+tags: [d, go, php, python, rust]
 ---
 
 ## D
@@ -28,6 +28,12 @@ cannot use it until we are certain that we have a string.
 {{< r "a.py" >}}
 
 <https://docs.python.org/reference/compound_stmts.html#for>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/io/trait.BufRead.html#method.lines>
 
 ## References
 
