@@ -1,7 +1,7 @@
 ---
 title: Write to console
 categories: [input-output]
-tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [c++, d, dart, go, javascript, nim, perl, php, python, racket, rust]
 ---
 
 ## C++
@@ -46,6 +46,10 @@ tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
 
 <https://nim-lang.org/docs/system.html#echo,varargs[typed,]>
 
+## Perl
+
+{{< r "a.pl" >}}
+
 ## PHP
 
 {{< r "a.php" >}}
@@ -79,6 +83,7 @@ tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
 - <https://hyperpolyglot.org/c#write-line-stdout>
 - <https://hyperpolyglot.org/cpp#printf>
 - <https://hyperpolyglot.org/lisp#format-stdout>
+- <https://hyperpolyglot.org/more#print-to-stdout>
 - <https://hyperpolyglot.org/scripting2#write-stdout>
 - <https://programming-idioms.org/idiom/1>
 - <https://rosettacode.org/wiki/Hello_world/Newline_omission>

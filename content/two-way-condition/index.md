@@ -1,7 +1,7 @@
 ---
 title: Two-way condition
 categories: [reference]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, perl, php, python, racket, rust]
 ---
 
 ## D
@@ -36,6 +36,10 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 <https://nim-lang.org/docs/manual.html#statements-and-expressions-if-statement>
 
+## Perl
+
+{{< r "a.pl" >}}
+
 ## PHP
 
 {{< r "a.php" >}}
@@ -66,6 +70,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 - <https://hyperpolyglot.org/c#if>
 - <https://hyperpolyglot.org/lisp#execution-control>
+- <https://hyperpolyglot.org/more#conditional-expr>
 - <https://hyperpolyglot.org/rust#if>
 - <https://hyperpolyglot.org/scripting#if>
 - <https://hyperpolyglot.org/web#if-note>

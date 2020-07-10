@@ -1,7 +1,7 @@
 ---
 title: Comments
 categories: [reference]
-tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [c++, d, dart, go, javascript, nim, perl, php, python, racket, rust]
 ---
 
 ## C++
@@ -38,6 +38,10 @@ tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
 
 - <https://nim-lang.org/docs/manual.html#lexical-analysis-comments>
 - <https://nim-lang.org/docs/manual.html#lexical-analysis-multiline-comments>
+
+## Perl
+
+{{< r "a.pl" >}}
 
 ## PHP
 

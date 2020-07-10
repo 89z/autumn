@@ -1,7 +1,7 @@
 ---
 title: Command line tools
 categories: [reference]
-tags: [c++, d, dart, go, nim, php, python, racket, rust]
+tags: [c++, d, dart, go, nim, perl, php, python, racket, rust]
 ---
 
 ## C++
@@ -34,6 +34,10 @@ tags: [c++, d, dart, go, nim, php, python, racket, rust]
 
 - <https://github.com/nim-lang/nimble>
 - <https://nim-lang.org/docs/nimc.html#compiler-usage-command-line-switches>
+
+## Perl
+
+{{< r "perl.sh" >}}
 
 ## PHP
 
@@ -69,6 +73,7 @@ tags: [c++, d, dart, go, nim, php, python, racket, rust]
 - <https://hyperpolyglot.org/c#hello-world>
 - <https://hyperpolyglot.org/cpp#hello-world>
 - <https://hyperpolyglot.org/lisp#interpreter>
+- <https://hyperpolyglot.org/more#interpreter>
 - <https://hyperpolyglot.org/rust#compiler>
 - <https://hyperpolyglot.org/scripting#interpreter>
 - <https://hyperpolyglot.org/web#hello-world>
