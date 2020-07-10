@@ -1,7 +1,7 @@
 ---
 title: Comments
 categories: [reference]
-tags: [c++, d, dart, go, javascript, nim, perl, php, python, racket, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 ---
 
 ## C++
@@ -39,10 +39,6 @@ tags: [c++, d, dart, go, javascript, nim, perl, php, python, racket, rust]
 - <https://nim-lang.org/docs/manual.html#lexical-analysis-comments>
 - <https://nim-lang.org/docs/manual.html#lexical-analysis-multiline-comments>
 
-## Perl
-
-{{< r "a.pl" >}}
-
 ## PHP
 
 {{< r "a.php" >}}
@@ -56,11 +52,9 @@ tags: [c++, d, dart, go, javascript, nim, perl, php, python, racket, rust]
 - <https://docs.python.org/reference/lexical_analysis.html#comments>
 - <https://docs.python.org/reference/lexical_analysis.html#strings>
 
-## Racket
+## Ruby
 
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/reader.html#(part._parse-comment)>
+{{< r "a.rb" >}}
 
 ## Rust
 
@@ -71,7 +65,6 @@ tags: [c++, d, dart, go, javascript, nim, perl, php, python, racket, rust]
 ## References
 
 - <https://hyperpolyglot.org/cpp#eol-comment>
-- <https://hyperpolyglot.org/lisp#eol-comment>
 - <https://hyperpolyglot.org/scripting#eol-comment>
 - <https://hyperpolyglot.org/web#eol-comment>
 - <https://rosettacode.org/wiki/Comments>

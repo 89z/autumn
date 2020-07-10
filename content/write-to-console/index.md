@@ -1,7 +1,7 @@
 ---
 title: Write to console
 categories: [input-output]
-tags: [c++, d, dart, go, javascript, nim, perl, php, python, racket, rust]
+tags: [c++, d, dart, go, javascript, nim, perl, php, python, ruby, rust]
 ---
 
 ## C++
@@ -65,11 +65,9 @@ tags: [c++, d, dart, go, javascript, nim, perl, php, python, racket, rust]
 - <https://docs.python.org/library/functions.html#print>
 - <https://docs.python.org/library/io.html#io.TextIOBase.write>
 
-## Racket
+## Ruby
 
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/Writing.html>
+{{< r "a.rb" >}}
 
 ## Rust
 
@@ -82,7 +80,6 @@ tags: [c++, d, dart, go, javascript, nim, perl, php, python, racket, rust]
 
 - <https://hyperpolyglot.org/c#write-line-stdout>
 - <https://hyperpolyglot.org/cpp#printf>
-- <https://hyperpolyglot.org/lisp#format-stdout>
 - <https://hyperpolyglot.org/more#print-to-stdout>
 - <https://hyperpolyglot.org/scripting2#write-stdout>
 - <https://programming-idioms.org/idiom/1>
