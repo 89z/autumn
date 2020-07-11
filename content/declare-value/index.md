@@ -1,7 +1,7 @@
 ---
 title: Declare value
 categories: [reference]
-tags: [c++, d, dart, go, javascript, nim, perl, php, racket, rust]
+tags: [c++, d, dart, go, javascript, nim, php, ruby, rust]
 ---
 
 ## C++
@@ -44,21 +44,15 @@ tags: [c++, d, dart, go, javascript, nim, perl, php, racket, rust]
 
 <https://nim-lang.org/docs/manual.html#statements-and-expressions-var-statement>
 
-## Perl
-
-{{< r "a.pl" >}}
-
 ## PHP
 
 {{< r "a.php" >}}
 
 <https://php.net/language.constants.syntax>
 
-## Racket
+## Ruby
 
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/define.html>
+{{< r "a.rb" >}}
 
 ## Rust
 
@@ -69,7 +63,5 @@ tags: [c++, d, dart, go, javascript, nim, perl, php, racket, rust]
 ## References
 
 - <https://hyperpolyglot.org/cpp#local-var>
-- <https://hyperpolyglot.org/lisp#local-var>
-- <https://hyperpolyglot.org/more#local-var>
 - <https://hyperpolyglot.org/scripting#const>
 - <https://hyperpolyglot.org/web#local-var>
