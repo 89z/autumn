@@ -1,7 +1,7 @@
 ---
 title: Write to file
 categories: [input-output]
-tags: [d, dart, go, nim, php, python, racket, rust]
+tags: [d, dart, go, nim, php, python, rust]
 ---
 
 ## D
@@ -49,12 +49,6 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 - <https://docs.python.org/library/functions.html#print>
 - <https://docs.python.org/library/io.html#io.TextIOBase.write>
 
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/Byte_and_String_Output.html#(def._((quote._~23~25kernel)._write-string))>
-
 ## Rust
 
 {{< r "a.rs" >}}
@@ -66,6 +60,5 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#write-str>
-- <https://hyperpolyglot.org/lisp#write-str>
 - <https://rosettacode.org/wiki/Write_entire_file>
 - <https://rosettacode.org/wiki/Create_a_file>
