@@ -1,7 +1,7 @@
 ---
 title: Add to array
 categories: [array]
-tags: [d, dart, go, javascript, nim, php, python, racket, ruby, rust]
+tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 ---
 
 ## D
@@ -62,7 +62,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket, ruby, rust]
 
 ## References
 
-- <https://hyperpolyglot.org/lisp#lists>
 - <https://hyperpolyglot.org/rust#array-back>
 - <https://hyperpolyglot.org/web#array-back>
 - <https://www.programming-idioms.org/idiom/166/concatenate-two-lists>
