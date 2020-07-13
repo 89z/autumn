@@ -1,7 +1,7 @@
 ---
 title: Sleep
 categories: [system]
-tags: [c++, d, dart, nim, php, racket, rust]
+tags: [c++, d, dart, nim, php, rust]
 ---
 
 ## C++
@@ -35,12 +35,6 @@ tags: [c++, d, dart, nim, php, racket, rust]
 
 - <https://php.net/function.time-sleep-until>
 - <https://php.net/function.usleep>
-
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/threads.html#(def._((quote._~23~25kernel)._sleep))>
 
 ## Rust
 

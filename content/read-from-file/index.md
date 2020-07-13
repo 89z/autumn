@@ -1,7 +1,7 @@
 ---
 title: Read from file
 categories: [input-output]
-tags: [d, dart, go, nim, php, python, racket, rust]
+tags: [d, dart, go, nim, php, python, rust]
 ---
 
 ## D
@@ -50,12 +50,6 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 - <https://docs.python.org/library/io.html#io.BufferedIOBase.read>
 - <https://docs.python.org/library/io.html#io.IOBase.readlines>
 
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/Filesystem.html#(def._((lib._racket/file..rkt)._file-~3estring))>
-
 ## Rust
 
 {{< r "a.rs" >}}
@@ -65,7 +59,6 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#read-file-str>
-- <https://hyperpolyglot.org/lisp#read-file-str>
 - <https://hyperpolyglot.org/scripting2#read-file-str>
 - <https://hyperpolyglot.org/web#read-file-str>
 - <https://programming-idioms.org/idiom/58>

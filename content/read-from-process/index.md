@@ -1,7 +1,7 @@
 ---
 title: Read from process
 categories: [input-output]
-tags: [go, nim, php, python, racket]
+tags: [go, nim, php, python]
 ---
 
 ## Dart
@@ -40,12 +40,6 @@ tags: [go, nim, php, python, racket]
 - <https://docs.python.org/library/subprocess.html#subprocess.Popen>
 - <https://docs.python.org/library/subprocess.html#subprocess.check_output>
 - <https://docs.python.org/library/subprocess.html#subprocess.run>
-
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/port-lib.html>
 
 ## References
 

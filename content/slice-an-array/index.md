@@ -1,7 +1,7 @@
 ---
 title: Slice an array
 categories: [array]
-tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, rust]
 ---
 
 ## C++
@@ -57,12 +57,6 @@ tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
 - <https://docs.python.org/library/functions.html#slice>
 - <https://docs.python.org/library/stdtypes.html#mutable-sequence-types>
 
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._list-ref))>
-
 ## Rust
 
 {{< r "a.rs" >}}
@@ -73,7 +67,6 @@ tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
 
 - <https://hyperpolyglot.org/c#resizable-array-lookup>
 - <https://hyperpolyglot.org/cpp#resizable-array-lookup>
-- <https://hyperpolyglot.org/lisp#lists>
 - <https://hyperpolyglot.org/scripting#array-lookup>
 - <https://hyperpolyglot.org/web#array-lookup>
 - <https://programming-idioms.org/idiom/165/last-element>
