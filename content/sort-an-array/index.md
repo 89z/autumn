@@ -1,7 +1,7 @@
 ---
 title: Sort an array
 categories: [array]
-tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, rust]
 ---
 
 ## C++
@@ -54,12 +54,6 @@ tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
 
 <https://docs.python.org/library/stdtypes.html#list.sort>
 
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/private/list..rkt)._sort))>
-
 ## Rust
 
 {{< r "a.rs" >}}
@@ -70,7 +64,6 @@ tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
 
 - <https://hyperpolyglot.org/c#sort-resizable-array>
 - <https://hyperpolyglot.org/cpp#sort-array>
-- <https://hyperpolyglot.org/lisp#lists>
 - <https://hyperpolyglot.org/rust#sort-array>
 - <https://hyperpolyglot.org/web#array-sort>
 - <https://programming-idioms.org/idiom/100>

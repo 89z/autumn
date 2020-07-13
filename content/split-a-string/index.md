@@ -1,7 +1,7 @@
 ---
 title: Split a string
 categories: [array, string]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, rust]
 ---
 
 ## D
@@ -54,12 +54,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 - <https://docs.python.org/library/stdtypes.html#str.split>
 - <https://docs.python.org/library/stdtypes.html#str.splitlines>
 
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/strings.html>
-
 ## Rust
 
 {{< r "a.rs" >}}
@@ -69,7 +63,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#split>
-- <https://hyperpolyglot.org/lisp#str-to-char-array>
 - <https://hyperpolyglot.org/scripting#split>
 - <https://programming-idioms.org/idiom/49>
 - <https://rosettacode.org/wiki/Tokenize_a_string>
