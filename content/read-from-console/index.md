@@ -1,7 +1,7 @@
 ---
 title: Read from console
 categories: [input-output]
-tags: [d, dart, go, nim, php, python, racket, rust]
+tags: [d, dart, go, nim, php, python, rust]
 ---
 
 ## D
@@ -47,12 +47,6 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 - <https://docs.python.org/library/sys.html#sys.stdin>
 - <https://docs.python.org/library/sys.html#sys.stdout>
 
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/Byte_and_String_Input.html?#(def._((quote._~23~25kernel)._read-line))>
-
 ## Rust
 
 {{< r "a.rs" >}}
@@ -62,5 +56,4 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#std-file-handles>
-- <https://hyperpolyglot.org/lisp#read-stdin>
 - <https://rosettacode.org/wiki/User_input/Text>
