@@ -1,7 +1,7 @@
 ---
 title: Add to set
 categories: [set]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, rust]
 ---
 
 ## D
@@ -46,12 +46,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#set>
-
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/sets.html>
 
 ## Rust
 

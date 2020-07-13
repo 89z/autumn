@@ -58,12 +58,6 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 - <https://docs.python.org/library/functions.html#float>
 - <https://docs.python.org/library/locale.html#locale.atof>
 
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/generic-numbers.html>
-
 ## Rust
 
 {{< r "a.rs" >}}
