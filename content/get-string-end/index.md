@@ -1,7 +1,7 @@
 ---
 title: Get string end
 categories: [string]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, rust]
 ---
 
 ## D
@@ -47,12 +47,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 {{< r "a.py" >}}
 
 <https://docs.python.org/reference/expressions.html#slicings>
-
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/strings.html#(def._((quote._~23~25kernel)._substring))>
 
 ## Rust
 

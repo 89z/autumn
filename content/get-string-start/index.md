@@ -1,7 +1,7 @@
 ---
 title: Get string start
 categories: [string]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, rust]
 ---
 
 ## D
@@ -52,12 +52,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 
 <https://docs.python.org/reference/expressions.html#slicings>
 
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/strings.html#(def._((quote._~23~25kernel)._substring))>
-
 ## Rust
 
 {{< r "a.rs" >}}
@@ -67,7 +61,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#extract-substr>
-- <https://hyperpolyglot.org/lisp#extract-substr>
 - <https://hyperpolyglot.org/scripting#extract-substr>
 - <https://hyperpolyglot.org/web#extract-substr>
 - <https://programming-idioms.org/idiom/38/extract-a-substring>
