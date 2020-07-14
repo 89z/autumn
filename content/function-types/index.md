@@ -1,7 +1,7 @@
 ---
 title: Function types
 categories: [reference]
-tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, rust]
 ---
 
 ## C++
@@ -55,12 +55,6 @@ tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
 - <https://docs.python.org/reference/compound_stmts.html#function-definitions>
 - <https://docs.python.org/reference/expressions.html#lambda>
 
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))>
-
 ## Rust
 
 {{< r "a.rs" >}}
@@ -69,7 +63,6 @@ tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
 
 - <https://hyperpolyglot.org/c#def-func>
 - <https://hyperpolyglot.org/cpp#def-func>
-- <https://hyperpolyglot.org/lisp#functions>
 - <https://hyperpolyglot.org/rust#def-func>
 - <https://hyperpolyglot.org/scripting#def-func>
 - <https://hyperpolyglot.org/web#def-func>

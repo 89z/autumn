@@ -1,7 +1,7 @@
 ---
 title: Get map value
 categories: [map]
-tags: [d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [d, dart, go, javascript, nim, php, python, rust]
 ---
 
 ## D
@@ -47,12 +47,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 - <https://docs.python.org/library/stdtypes.html#dict>
 - <https://docs.python.org/library/stdtypes.html#dict.get>
 
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/hashtables.html>
-
 ## Rust
 
 {{< r "a.rs" >}}
@@ -62,7 +56,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#dict-lookup>
-- <https://hyperpolyglot.org/lisp#dict-lookup>
 - <https://hyperpolyglot.org/scripting#dict-lookup>
 - <https://hyperpolyglot.org/web#dict-lookup>
 - <https://rosettacode.org/wiki/Collections>

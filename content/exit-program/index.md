@@ -1,7 +1,7 @@
 ---
 title: Exit program
 categories: [system]
-tags: [c++, d, dart, go, nim, php, python, racket, rust]
+tags: [c++, d, dart, go, nim, php, python, rust]
 ---
 
 ## C++
@@ -52,13 +52,6 @@ tags: [c++, d, dart, go, nim, php, python, racket, rust]
 
 - <https://docs.python.org/library/os.html#os.abort>
 - <https://docs.python.org/library/sys.html#sys.exit>
-
-## Racket
-
-{{< r "error.rkt" >}}
-{{< r "exit.rkt" >}}
-
-<https://docs.racket-lang.org/reference/Exiting.html#(def._((quote._~23~25kernel)._exit))>
 
 ## Rust
 
