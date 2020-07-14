@@ -1,7 +1,7 @@
 ---
 title: Date number to object
 categories: [date]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [d, dart, go, javascript, nim, php, python]
 ---
 
 ## D
@@ -47,14 +47,7 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 - <https://docs.python.org/library/datetime.html#datetime.date.fromtimestamp>
 - <https://docs.python.org/library/datetime.html#datetime.datetime.fromtimestamp>
 
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/time.html#(def._((quote._~23~25kernel)._seconds-~3edate))>
-
 ## References
 
 - <https://hyperpolyglot.org/c#unix-epoch-to-broken-down-datetime>
-- <https://hyperpolyglot.org/lisp#unix-epoch-to-broken-down-datetime>
 - <https://hyperpolyglot.org/web#unix-epoch-to-broken-down-datetime>

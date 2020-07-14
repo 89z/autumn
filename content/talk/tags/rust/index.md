@@ -1,6 +1,5 @@
 ---
-title: Rust
-tags: [reject]
+title: 'Tag talk:Rust'
 ---
 
 Allow missing fields in structs:

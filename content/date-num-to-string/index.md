@@ -1,7 +1,7 @@
 ---
 title: Date number to string
 categories: [date]
-tags: [d, go, javascript, nim, php, python, racket]
+tags: [d, go, javascript, nim, php, python]
 ---
 
 ## D
@@ -40,14 +40,7 @@ tags: [d, go, javascript, nim, php, python, racket]
 
 <https://docs.python.org/library/datetime.html#datetime.date.strftime>
 
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/time.html#(def._((lib._racket/date..rkt)._date-~3estring))>
-
 ## References
 
-- <https://hyperpolyglot.org/lisp#unix-epoch-to-broken-down-datetime>
 - <https://programming-idioms.org/idiom/99>
 - <https://rosettacode.org/wiki/Date_format>

@@ -21,7 +21,7 @@
    </header>
 
 <h1>Date number to string</h1>
-<time>Fri Jun 12 2020</time>
+<time>Tue Jul 14 2020</time>
    
 <a href="/autumn/categories/date/">date</a>
    
@@ -108,25 +108,8 @@ s <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>strf
 <span style="color:#66d9ef">print</span>(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Fri Jan 1 1971&#39;</span>)
 </code></pre></div>
 <p><a href="https://docs.python.org/library/datetime.html#datetime.date.strftime">https://docs.python.org/library/datetime.html#datetime.date.strftime</a></p>
-<h2 id="racket">Racket</h2>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rkt" data-lang=".rkt"><span style="color:#f92672">#lang </span>racket/base
-(<span style="color:#66d9ef">require</span> racket/date)
-(<span style="color:#66d9ef">define</span> n
-   (* <span style="color:#ae81ff">366</span> <span style="color:#ae81ff">24</span> <span style="color:#ae81ff">60</span> <span style="color:#ae81ff">60</span>)
-)
-(<span style="color:#66d9ef">define</span> o
-   (seconds-&gt;date n)
-)
-(date-&gt;string o)<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div>
-<p><a href="https://docs.racket-lang.org/reference/time.html#(def._((lib._racket/date..rkt)._date-~3estring))">https://docs.racket-lang.org/reference/time.html#(def._((lib._racket/date..rkt)._date-~3estring))</a></p>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://hyperpolyglot.org/lisp#unix-epoch-to-broken-down-datetime">https://hyperpolyglot.org/lisp#unix-epoch-to-broken-down-datetime</a></li>
 <li><a href="https://programming-idioms.org/idiom/99">https://programming-idioms.org/idiom/99</a></li>
 <li><a href="https://rosettacode.org/wiki/Date_format">https://rosettacode.org/wiki/Date_format</a></li>
 </ul>
