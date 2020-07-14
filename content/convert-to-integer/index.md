@@ -1,7 +1,7 @@
 ---
 title: Convert to integer
 categories: [number]
-tags: [d, dart, go, javascript, php, python, racket, rust]
+tags: [d, dart, go, javascript, php, python, rust]
 ---
 
 ## D
@@ -62,12 +62,6 @@ tags: [d, dart, go, javascript, php, python, racket, rust]
 - <https://docs.python.org/library/functions.html#int>
 - <https://docs.python.org/library/locale.html#locale.atoi>
 
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._string-~3enumber))>
-
 ## Rust
 
 {{< r "a.rs" >}}
@@ -77,7 +71,6 @@ tags: [d, dart, go, javascript, php, python, racket, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#str-to-num>
-- <https://hyperpolyglot.org/lisp#str-to-num>
 - <https://hyperpolyglot.org/rust#str-to-num>
 - <https://hyperpolyglot.org/web#str-to-num>
 - <https://programming-idioms.org/idiom/22>
