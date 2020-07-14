@@ -1,7 +1,7 @@
 ---
 title: Divide a number
 categories: [number]
-tags: [c++, d, dart, go, javascript, nim, perl, php, python, racket, rust]
+tags: [c++, d, dart, go, javascript, nim, perl, php, python, rust]
 ---
 
 ## C++
@@ -63,12 +63,6 @@ tags: [c++, d, dart, go, javascript, nim, perl, php, python, racket, rust]
 - <https://docs.python.org/library/functions.html#divmod>
 - <https://docs.python.org/reference/expressions.html#binary>
 
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._quotient))>
-
 ## Rust
 
 {{< r "a.rs" >}}
@@ -79,7 +73,6 @@ tags: [c++, d, dart, go, javascript, nim, perl, php, python, racket, rust]
 
 - <https://hyperpolyglot.org/c#arith-op>
 - <https://hyperpolyglot.org/cpp#arithmetic-op>
-- <https://hyperpolyglot.org/lisp#arith-op>
 - <https://hyperpolyglot.org/more#arith-expr>
 - <https://hyperpolyglot.org/scripting#arith-op>
 - <https://hyperpolyglot.org/web#arith-op>

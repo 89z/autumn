@@ -1,7 +1,7 @@
 ---
 title: Encode JSON
 categories: [file-format]
-tags: [d, dart, go, javascript, nim, php, python, racket]
+tags: [d, dart, go, javascript, nim, php, python]
 ---
 
 ## D
@@ -41,12 +41,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket]
 ## Python
 
 <https://docs.python.org/library/json.html>
-
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/json>
 
 ## References
 
