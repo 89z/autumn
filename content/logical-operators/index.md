@@ -1,7 +1,7 @@
 ---
 title: Logical operators
 categories: [reference]
-tags: [c++, d, dart, go, javascript, nim, perl, php, python, racket, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, rust]
 ---
 
 ## C++
@@ -38,10 +38,6 @@ tags: [c++, d, dart, go, javascript, nim, perl, php, python, racket, rust]
 
 <https://nim-lang.org/docs/system.html#and,bool,bool>
 
-## Perl
-
-{{< r "a.pl" >}}
-
 ## PHP
 
 {{< r "a.php" >}}
@@ -54,12 +50,6 @@ tags: [c++, d, dart, go, javascript, nim, perl, php, python, racket, rust]
 
 <https://docs.python.org/reference/expressions.html#boolean-operations>
 
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/booleans.html#(def._((quote._~23~25kernel)._not))>
-
 ## Rust
 
 {{< r "a.rs" >}}
@@ -70,8 +60,6 @@ tags: [c++, d, dart, go, javascript, nim, perl, php, python, racket, rust]
 
 - <https://hyperpolyglot.org/c#logical-op>
 - <https://hyperpolyglot.org/cpp#logical-op>
-- <https://hyperpolyglot.org/lisp#logical-op>
-- <https://hyperpolyglot.org/more#logical-op>
 - <https://hyperpolyglot.org/rust#logical-op>
 - <https://hyperpolyglot.org/scripting#logical-op>
 - <https://hyperpolyglot.org/web#logical-op>

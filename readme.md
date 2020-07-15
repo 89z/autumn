@@ -20,8 +20,6 @@ Comparison of programming languages
 77 go examples
 73 python links
 70 python examples
-59 racket links
-59 racket examples
 59 nim links
 59 nim examples
 59 javascript links

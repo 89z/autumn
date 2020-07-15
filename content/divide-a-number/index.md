@@ -1,7 +1,7 @@
 ---
 title: Divide a number
 categories: [number]
-tags: [c++, d, dart, go, javascript, nim, perl, php, python, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, rust]
 ---
 
 ## C++
@@ -43,10 +43,6 @@ tags: [c++, d, dart, go, javascript, nim, perl, php, python, rust]
 
 <https://nim-lang.org/docs/system.html#/,int,int>
 
-## Perl
-
-{{< r "a.pl" >}}
-
 ## PHP
 
 {{< r "a.php" >}}
@@ -73,7 +69,6 @@ tags: [c++, d, dart, go, javascript, nim, perl, php, python, rust]
 
 - <https://hyperpolyglot.org/c#arith-op>
 - <https://hyperpolyglot.org/cpp#arithmetic-op>
-- <https://hyperpolyglot.org/more#arith-expr>
 - <https://hyperpolyglot.org/scripting#arith-op>
 - <https://hyperpolyglot.org/web#arith-op>
 - <https://rosettacode.org/wiki/Arithmetic/Integer>

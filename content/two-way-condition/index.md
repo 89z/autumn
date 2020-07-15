@@ -59,8 +59,6 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#if>
-- <https://hyperpolyglot.org/lisp#execution-control>
-- <https://hyperpolyglot.org/more#conditional-expr>
 - <https://hyperpolyglot.org/rust#if>
 - <https://hyperpolyglot.org/scripting#if>
 - <https://hyperpolyglot.org/web#if-note>

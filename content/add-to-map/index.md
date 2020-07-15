@@ -1,7 +1,7 @@
 ---
 title: Add to map
 categories: [map]
-tags: [d, dart, go, javascript, nim, php, python, racket, ruby, rust]
+tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 ---
 
 ## D
@@ -61,7 +61,6 @@ tags: [d, dart, go, javascript, nim, php, python, racket, ruby, rust]
 
 ## References
 
-- <https://hyperpolyglot.org/lisp#dict-update>
 - <https://hyperpolyglot.org/scripting#dict-update>
 - <https://hyperpolyglot.org/web#dict-update>
 - <https://programming-idioms.org/idiom/172>
