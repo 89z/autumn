@@ -1,7 +1,7 @@
 ---
 title: Sleep
 categories: [system]
-tags: [c++, d, dart, nim, php, rust]
+tags: [c++, d, dart, nim, php, ruby, rust]
 ---
 
 ## C++
@@ -35,6 +35,12 @@ tags: [c++, d, dart, nim, php, rust]
 
 - <https://php.net/function.time-sleep-until>
 - <https://php.net/function.usleep>
+
+## Ruby
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/Kernel.html#method-i-sleep>
 
 ## Rust
 

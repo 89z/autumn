@@ -1,7 +1,7 @@
 ---
 title: Join an array
 categories: [array, string]
-tags: [d, dart, go, javascript, nim, php, python, rust]
+tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 ---
 
 ## D
@@ -46,6 +46,10 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#str.join>
+
+## Ruby
+
+<https://ruby-doc.org/core/Array.html#method-i-join>
 
 ## Rust
 

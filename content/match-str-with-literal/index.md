@@ -1,7 +1,7 @@
 ---
 title: Match string with literal
 categories: [string]
-tags: [d, dart, go, javascript, nim, php, python, rust]
+tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 ---
 
 ## D
@@ -53,6 +53,10 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 - <https://docs.python.org/library/stdtypes.html#str.endswith>
 - <https://docs.python.org/library/stdtypes.html#str.startswith>
 - <https://docs.python.org/reference/expressions.html#in>
+
+## Ruby
+
+<https://ruby-doc.org/core/String.html#method-i-start_with-3F>
 
 ## Rust
 

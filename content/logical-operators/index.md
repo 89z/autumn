@@ -1,7 +1,7 @@
 ---
 title: Logical operators
 categories: [reference]
-tags: [c++, d, dart, go, javascript, nim, php, python, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 ---
 
 ## C++
@@ -49,6 +49,10 @@ tags: [c++, d, dart, go, javascript, nim, php, python, rust]
 {{< r "a.py" >}}
 
 <https://docs.python.org/reference/expressions.html#boolean-operations>
+
+## Ruby
+
+{{< r "a.rb" >}}
 
 ## Rust
 

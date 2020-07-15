@@ -1,7 +1,7 @@
 ---
 title: String index
 categories: [string]
-tags: [d, dart, go, javascript, nim, php, python, rust]
+tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 ---
 
 ## D
@@ -37,6 +37,10 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 ## Python
 
 {{< r "a.py" >}}
+
+## Ruby
+
+<https://ruby-doc.org/core/String.html#method-i-index>
 
 ## Rust
 

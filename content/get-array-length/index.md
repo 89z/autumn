@@ -1,7 +1,7 @@
 ---
 title: Get array length
 categories: [array]
-tags: [d, dart, go, javascript, nim, php, python, rust]
+tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 ---
 
 ## D
@@ -46,6 +46,10 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/functions.html#len>
+
+## Ruby
+
+<https://ruby-doc.org/core/Array.html#method-i-length>
 
 ## Rust
 

@@ -1,7 +1,7 @@
 ---
 title: Slice an array
 categories: [array]
-tags: [c++, d, dart, go, javascript, nim, php, python, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 ---
 
 ## C++
@@ -56,6 +56,10 @@ tags: [c++, d, dart, go, javascript, nim, php, python, rust]
 
 - <https://docs.python.org/library/functions.html#slice>
 - <https://docs.python.org/library/stdtypes.html#mutable-sequence-types>
+
+## Ruby
+
+<https://ruby-doc.org/core/Array.html#method-i-slice>
 
 ## Rust
 

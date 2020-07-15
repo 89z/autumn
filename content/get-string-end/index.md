@@ -1,7 +1,7 @@
 ---
 title: Get string end
 categories: [string]
-tags: [d, dart, go, javascript, nim, php, python, rust]
+tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 ---
 
 ## D
@@ -47,6 +47,10 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 {{< r "a.py" >}}
 
 <https://docs.python.org/reference/expressions.html#slicings>
+
+## Ruby
+
+<https://ruby-doc.org/core/String.html#method-i-slice>
 
 ## Rust
 

@@ -1,7 +1,7 @@
 ---
 title: Is a terminal
 categories: [system]
-tags: [php]
+tags: [php, ruby]
 ---
 
 ## PHP
@@ -9,6 +9,10 @@ tags: [php]
 {{< r "a.php" >}}
 
 <https://php.net/function.stream-isatty>
+
+## Ruby
+
+<https://ruby-doc.org/core/IO.html#method-i-isatty>
 
 ## Reference
 
