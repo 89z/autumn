@@ -1,7 +1,7 @@
 ---
 title: Import package
 categories: [reference]
-tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, rust]
 ---
 
 ## C++
@@ -52,10 +52,6 @@ tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
 
 <https://docs.python.org/reference/simple_stmts.html#import>
 
-## Racket
-
-{{< r "a.rkt" >}}
-
 ## Rust
 
 {{< r "a.rs" >}}
@@ -65,6 +61,5 @@ tags: [c++, d, dart, go, javascript, nim, php, python, racket, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#load-lib>
-- <https://hyperpolyglot.org/lisp#libraries-namespaces>
 - <https://hyperpolyglot.org/scripting2#load-lib>
 - <https://rosettacode.org/wiki/Include_a_file>
