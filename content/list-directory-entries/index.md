@@ -1,7 +1,7 @@
 ---
 title: List directory entries
 categories: [system]
-tags: [d, dart, go, nim, php, python, racket, rust]
+tags: [d, dart, go, nim, php, python, rust]
 ---
 
 ## D
@@ -47,12 +47,6 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 
 <https://docs.python.org/library/os.html#os.listdir>
 
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/Filesystem.html#(def._((lib._racket/private/base..rkt)._directory-list))>
-
 ## Rust
 
 {{< r "a.rs" >}}
@@ -61,7 +55,6 @@ tags: [d, dart, go, nim, php, python, racket, rust]
 
 ## References
 
-- <https://hyperpolyglot.org/lisp#iterate-dir>
 - <https://hyperpolyglot.org/scripting2#dir-iterate>
 - <https://programming-idioms.org/idiom/180>
 - <https://rosettacode.org/wiki/Unix/ls>

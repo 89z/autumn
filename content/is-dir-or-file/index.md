@@ -1,7 +1,7 @@
 ---
 title: Is directory or file
 categories: [system]
-tags: [c++, d, dart, go, nim, php, python, racket, rust]
+tags: [c++, d, dart, go, nim, php, python, rust]
 ---
 
 ## C++
@@ -54,12 +54,6 @@ tags: [c++, d, dart, go, nim, php, python, racket, rust]
 - <https://docs.python.org/library/os.path.html#os.path.isdir>
 - <https://docs.python.org/library/os.path.html#os.path.isfile>
 
-## Racket
-
-{{< r "a.rkt" >}}
-
-<https://docs.racket-lang.org/reference/Filesystem.html#(def._((quote._~23~25kernel)._file-exists~3f))>
-
 ## Rust
 
 {{< r "a.rs" >}}
@@ -69,7 +63,6 @@ tags: [c++, d, dart, go, nim, php, python, racket, rust]
 ## References
 
 - <https://hyperpolyglot.org/c#file-test>
-- <https://hyperpolyglot.org/lisp#file-test>
 - <https://hyperpolyglot.org/scripting2#file-test>
 - <https://hyperpolyglot.org/web#file-test>
 - <https://programming-idioms.org/idiom/144>
