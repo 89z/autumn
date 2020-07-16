@@ -1,7 +1,7 @@
 ---
 title: Sort an array
 categories: [array]
-tags: [c++, d, dart, go, javascript, nim, php, python, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 ---
 
 ## C++
@@ -53,6 +53,10 @@ tags: [c++, d, dart, go, javascript, nim, php, python, rust]
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#list.sort>
+
+## Ruby
+
+<https://ruby-doc.org/core/Array.html#method-i-sort>
 
 ## Rust
 

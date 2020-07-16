@@ -12,7 +12,7 @@ Comparison of programming languages
 
 ~~~
 548 examples
-551 links
+552 links
 
 82 php links
 82 php examples
@@ -32,8 +32,8 @@ Comparison of programming languages
 57 rust examples
 15 c++ links
 15 c++ examples
+11 ruby links
 11 ruby examples
-10 ruby links
 
 58 goal 7/10
 ~~~
