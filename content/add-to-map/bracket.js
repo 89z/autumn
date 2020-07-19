@@ -1,3 +1,3 @@
-let m1 = {'Sun': 10};
-m1['Mon'] = 11;
-console.log(m1);
+let m = {'Sunday': 10};
+m['Monday'] = 11;
+console.log(m);
