@@ -21,7 +21,7 @@
    </header>
 
 <h1>Decode JSON</h1>
-<time>Tue Jul 14 2020</time>
+<time>Wed Jul 22 2020</time>
    
 <a href="/autumn/categories/file-format/">file-format</a>
    
@@ -53,7 +53,7 @@ main() {
 </code></pre></div>
 <p><a href="https://api.dart.dev/dart-convert/dart-convert-library.html">https://api.dart.dev/dart-convert/dart-convert-library.html</a></p>
 <h2 id="go">Go</h2>
-
+<p>
 
 
 
@@ -74,6 +74,27 @@ main() {
    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%+v\n&#34;</span>, <span style="color:#a6e22e">o</span>)
 }
 </code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;encoding/json&#34;</span>
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;log&#34;</span>
+   <span style="color:#e6db74">&#34;os&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.json&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">m</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>
+   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">o</span>).<span style="color:#a6e22e">Decode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m</span>)
+}
+</code></pre></div></p>
 <ul>
 <li><a href="https://golang.org/pkg/encoding/json#Unmarshal">https://golang.org/pkg/encoding/json#Unmarshal</a></li>
 <li><a href="https://golang.org/ref/spec#Exported_identifiers">https://golang.org/ref/spec#Exported_identifiers</a></li>

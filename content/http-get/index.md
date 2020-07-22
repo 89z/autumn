@@ -19,6 +19,7 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 ## Go
 
 {{< r "a.go" >}}
+{{< r "b.go" >}}
 
 <https://golang.org/pkg/net/http#Get>
 
