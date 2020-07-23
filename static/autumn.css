@@ -1,6 +1,9 @@
 .column {
    column-count: 2;
 }
+html {
+   font-family: Arial, sans-serif;
+}
 @media (max-width: 38em) {
    html {
       font-size: 16px;
@@ -12,7 +15,6 @@
    }
 }
 html {
-   font-family: Arial, sans-serif;
    line-height: 1.5;
 }
 html,
