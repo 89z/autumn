@@ -1,11 +1,27 @@
+:root {
+   --light-red: #ac414233;
+   --red: #ac4142;
+}
 pre {
-   background-color: #272822;
+   background: #272822;
 }
-code {
-   background-color: #f9f9f9;
+code,
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+   background: #f9f9f9;
 }
-table {
-   border: 1px solid #e5e5e5;
+.theme-base-08 .pagination .active a,
+.theme-base-08 header {
+   background: var(--red);
+}
+.theme-base-08 .pagination a,
+.theme-base-08 main nav a {
+   background: var(--light-red);
+}
+table,
+td,
+th {
+  border: 1px solid #e5e5e5;
 }
 hr {
    border-bottom: 1px solid #fff;
@@ -13,12 +29,17 @@ hr {
 table {
    border-collapse: collapse;
 }
+.theme-base-08 section {
+   border-color: var(--red);
+}
 blockquote {
    border-left: .25rem solid #e5e5e5;
 }
 .highlight,
+.pagination li a,
 code,
-img {
+img,
+main nav a {
    border-radius: 5px;
 }
 section {
@@ -63,8 +84,18 @@ header a {
 header p {
    color: rgba(255, 255, 255, .5);
 }
+.theme-base-08 .pagination a,
+.theme-base-08 main a {
+   color: var(--red);
+}
+.theme-base-08 .pagination .active a {
+   color: white;
+}
 .column {
    column-count: 2;
+}
+article, header nav {
+   display: flex;
 }
 .pagination .disabled {
    display: none;
@@ -75,6 +106,9 @@ section.terms {
 }
 section.index {
    flex-basis: 400px;
+}
+article, header nav {
+   flex-wrap: wrap;
 }
 html {
    font-family: Arial, sans-serif;
@@ -104,6 +138,9 @@ header h1 {
 }
 h1, h2 {
    font-weight: bold;
+}
+article, header nav {
+   justify-content: center;
 }
 body,
 h1,
@@ -149,14 +186,22 @@ pre,
 section {
    padding: 1rem;
 }
-code {
-   padding-bottom: .25em;
+code,
+td,
+th {
+   padding-bottom: .25rem;
 }
+.pagination li a,
 blockquote {
    padding-bottom: .5rem;
 }
-code {
+code,
+td,
+th {
    padding-left: .5rem;
+}
+.pagination li a {
+   padding-left: .625rem;
 }
 @media (max-width: 30em) {
    blockquote {
@@ -168,7 +213,9 @@ code {
       padding-left: 1.25rem;
    }
 }
-code {
+code,
+td,
+th {
    padding-right: .5rem;
 }
 @media (max-width: 30em) {
@@ -181,9 +228,15 @@ code {
       padding-right: 5rem;
    }
 }
-code {
+.pagination li a {
+   padding-right: .625rem;
+}
+code,
+td,
+th {
    padding-top: .25em;
 }
+.pagination li a,
 blockquote {
    padding-top: .5rem;
 }
@@ -203,51 +256,11 @@ pre {
    word-wrap: break-word;
 }
 /*****************************************************************************/
-td,
-th {
-  padding: .25rem .5rem;
-  border: 1px solid #e5e5e5;
-}
-tbody tr:nth-child(odd) td,
-tbody tr:nth-child(odd) th {
-  background-color: #f9f9f9;
-}
-article, header nav {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-}
 main nav a {
-   border-radius: 4px;
    padding: 8px 16px;
 }
 .pagination li {
    display: inline-block;
    font-size: .875rem;
    margin: .5rem;
-}
-.pagination li a {
-   border-radius: 3px;
-   padding: .5rem .625rem;
-}
-/* red */
-.theme-base-08 header {
-   background: #ac4142;
-}
-.theme-base-08 main a {
-   color: #ac4142;
-}
-.theme-base-08 main nav a {
-   background-color: #ac414233;
-}
-.theme-base-08 .pagination a {
-   background: #ac414233;
-   color: #ac4142;
-}
-.theme-base-08 .pagination .active a {
-   background: #ac4142;
-   color: white;
-}
-.theme-base-08 section {
-   border-color: #ac4142;
 }
