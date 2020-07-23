@@ -1,7 +1,17 @@
+pre {
+   background-color: #272822;
+}
+code {
+   background-color: #f9f9f9;
+}
 hr {
    border-bottom: 1px solid #fff;
 }
-.highlight {
+blockquote {
+   border-left: .25rem solid #e5e5e5;
+}
+.highlight,
+code {
    border-radius: 4px;
 }
 hr {
@@ -13,11 +23,20 @@ a {
 strong {
    color: #303030;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
    color: #313131;
 }
 body {
    color: #515151;
+}
+blockquote {
+   color: #7a7a7a;
+}
+code {
+   color: #bf616a;
+}
+pre {
+   color: #f8f8f2;
 }
 .column {
    column-count: 2;
@@ -39,56 +58,80 @@ pre {
       font-size: 20px;
    }
 }
-h4, h5, h6 {
-   font-size: 1rem;
-}
-h3 {
-   font-size: 1.25rem;
+pre {
+   font-size: .8rem;
 }
 header h1 {
    font-size: 2.6rem;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
    font-weight: bold;
-}
-h1, h2, h3, h4, h5, h6 {
-   line-height: 1.25;
 }
 body,
 h1,
 h2,
-h3,
-h4,
-h5,
-h6,
 html {
    margin: 0;
 }
-hr {
-   margin: 1.5rem 0;
-}
-.highlight pre,
-blockquote p:last-child {
-   margin-bottom: 0;
-}
 .highlight,
+blockquote,
 ol,
 p,
+pre,
 ul {
    margin-bottom: 1rem;
 }
-p, ol, ul {
-   margin-top: 0;
+hr {
+   margin-bottom: 1.5rem;
 }
-h4, h5, h6 {
-   margin-top: 1rem;
+blockquote {
+   margin-top: .8rem;
 }
-h3 {
+hr {
    margin-top: 1.5rem;
 }
+pre {
+   overflow: auto;
+}
+body,
 html,
-body {
+pre code {
    padding: 0;
+}
+pre {
+   padding: 1rem;
+}
+code {
+   padding-bottom: .25em;
+}
+code {
+   padding-left: .5rem;
+}
+@media (max-width: 30em) {
+   blockquote {
+      padding-left: 1rem;
+   }
+}
+@media (min-width: 30em) {
+   blockquote {
+      padding-left: 1.25rem;
+   }
+}
+code {
+   padding-right: .5rem;
+}
+@media (max-width: 30em) {
+   blockquote {
+      padding-right: 1rem;
+   }
+}
+@media (min-width: 30em) {
+   blockquote {
+      padding-right: 5rem;
+   }
+}
+code {
+   padding-top: .25em;
 }
 a {
    text-decoration: none;
@@ -96,50 +139,17 @@ a {
 a:hover {
    text-decoration: underline;
 }
-/*****************************************************************************/
-code {
-   padding: .25em .5rem;
-   font-size: 85%;
-   color: #bf616a;
-   background-color: #f9f9f9;
-   border-radius: 3px;
+pre {
+   word-break: break-all;
 }
 pre {
-   overflow: auto;
-   background-color: #272822;
-   color: #f8f8f2;
-   display: block;
-   font-size: .8rem;
-   line-height: 1.4;
-   margin-bottom: 1rem;
-   margin-top: 0;
-   padding: 1rem;
-   word-break: break-all;
    word-wrap: break-word;
 }
-pre code {
-   padding: 0;
-   font-size: 100%;
-   color: inherit;
-   background-color: transparent;
-}
-@media (max-width: 30em) {
-   blockquote {
-      padding-left: 1rem;
-      padding-right: 1rem;
-   }
-}
-@media (min-width: 30em) {
-   blockquote {
-      padding-left: 1.25rem;
-      padding-right: 5rem;
-   }
+/*****************************************************************************/
+blockquote {
+   padding-bottom: .5rem;
 }
 blockquote {
-   border-left: .25rem solid #e5e5e5;
-   color: #7a7a7a;
-   margin: .8rem 0;
-   padding-bottom: .5rem;
    padding-top: .5rem;
 }
 img {
