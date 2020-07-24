@@ -6,8 +6,7 @@ pre {
    background: #272822;
 }
 code,
-tbody tr:nth-child(odd) td,
-tbody tr:nth-child(odd) th {
+tbody tr:nth-child(odd) td {
    background: #f9f9f9;
 }
 .theme-base-08 .pagination .active a,
@@ -18,22 +17,17 @@ tbody tr:nth-child(odd) th {
 .theme-base-08 main nav a {
    background: var(--light-red);
 }
-table,
-td,
-th {
-  border: 1px solid #e5e5e5;
-}
-hr {
-   border-bottom: 1px solid #fff;
-}
 table {
    border-collapse: collapse;
 }
+blockquote,
+table,
+td,
+th {
+   border-color: #e5e5e5;
+}
 .theme-base-08 section {
    border-color: var(--red);
-}
-blockquote {
-   border-left: .25rem solid #e5e5e5;
 }
 .highlight,
 .pagination li a,
@@ -45,11 +39,18 @@ main nav a {
 section {
    border-radius: 10px;
 }
-section {
+blockquote,
+hr,
+section,
+table,
+td,
+th {
    border-style: solid;
 }
-hr {
-   border-top: 1px solid #eee;
+table,
+td,
+th {
+   border-width: 1px;
 }
 section.index {
    border-width: thick;
@@ -75,11 +76,9 @@ time {
 code {
    color: #bf616a;
 }
+header a,
 pre {
    color: #f8f8f2;
-}
-header a {
-   color: #fff;
 }
 header p {
    color: rgba(255, 255, 255, .5);
@@ -90,9 +89,6 @@ header p {
 }
 .theme-base-08 .pagination .active a {
    color: white;
-}
-.column {
-   column-count: 2;
 }
 article, header nav {
    display: flex;
@@ -117,16 +113,7 @@ code,
 pre {
    font-family: "Courier New", monospace;
 }
-@media (max-width: 38em) {
-   html {
-      font-size: 16px;
-   }
-}
-@media (min-width: 38em) {
-   html {
-      font-size: 20px;
-   }
-}
+.pagination li,
 pre {
    font-size: .8rem;
 }
@@ -136,7 +123,8 @@ header p, header nav {
 header h1 {
    font-size: 2.6rem;
 }
-h1, h2 {
+h1,
+h2 {
    font-weight: bold;
 }
 article, header nav {
@@ -146,10 +134,11 @@ body,
 h1,
 h2,
 html {
-   margin: 0;
+   margin-bottom: 0;
 }
+.pagination li,
 section {
-   margin: .5rem;
+   margin-bottom: .5rem;
 }
 .highlight,
 blockquote,
@@ -163,6 +152,36 @@ ul {
 hr {
    margin-bottom: 1.5rem;
 }
+body,
+h1,
+h2,
+html {
+   margin-left: 0;
+}
+.pagination li,
+section {
+   margin-left: .5rem;
+}
+body,
+h1,
+h2,
+html {
+   margin-right: 0;
+}
+.pagination li,
+section {
+   margin-right: .5rem;
+}
+body,
+h1,
+h2,
+html {
+   margin-top: 0;
+}
+.pagination li,
+section {
+   margin-top: .5rem;
+}
 blockquote,
 main nav {
    margin-top: 1rem;
@@ -170,6 +189,7 @@ main nav {
 hr {
    margin-top: 1.5rem;
 }
+/*****************************************************************************/
 pre {
    overflow: auto;
 }
@@ -186,6 +206,9 @@ pre,
 section {
    padding: 1rem;
 }
+main nav a {
+   padding-bottom: 8px;
+}
 code,
 td,
 th {
@@ -195,6 +218,9 @@ th {
 blockquote {
    padding-bottom: .5rem;
 }
+main nav a {
+   padding-left: 16px;
+}
 code,
 td,
 th {
@@ -203,33 +229,23 @@ th {
 .pagination li a {
    padding-left: .625rem;
 }
-@media (max-width: 30em) {
-   blockquote {
-      padding-left: 1rem;
-   }
-}
-@media (min-width: 30em) {
-   blockquote {
-      padding-left: 1.25rem;
-   }
+blockquote {
+   padding-left: 1rem;
 }
 code,
 td,
 th {
    padding-right: .5rem;
 }
-@media (max-width: 30em) {
-   blockquote {
-      padding-right: 1rem;
-   }
-}
-@media (min-width: 30em) {
-   blockquote {
-      padding-right: 5rem;
-   }
-}
 .pagination li a {
    padding-right: .625rem;
+}
+blockquote,
+main nav a {
+   padding-right: 1rem;
+}
+main nav a {
+   padding-top: 8px;
 }
 code,
 td,
@@ -254,13 +270,4 @@ pre {
 }
 pre {
    word-wrap: break-word;
-}
-/*****************************************************************************/
-main nav a {
-   padding: 8px 16px;
-}
-.pagination li {
-   display: inline-block;
-   font-size: .875rem;
-   margin: .5rem;
 }
