@@ -4,12 +4,12 @@
    {{- range (.Paginate .Pages.ByLastmod.Reverse 24).Pages }}
       <section class="index">
          <h2>
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
          </h2>
          <time>{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
          <nav>
       {{ range (.GetTerms "categories") }}
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <a class="category" href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}
          </nav>
       </section>
