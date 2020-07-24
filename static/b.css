@@ -1,0 +1,19 @@
+:root {
+   --light-red: #ac414233;
+   --red: #ac4142;
+}
+.theme-base-08 .pagination a,
+.theme-base-08 main nav a {
+   background: var(--light-red);
+}
+.theme-base-08 .pagination .active a,
+.theme-base-08 header {
+   background: var(--red);
+}
+.theme-base-08 section {
+   border-color: var(--red);
+}
+.theme-base-08 .pagination a,
+.theme-base-08 main a {
+   color: var(--red);
+}

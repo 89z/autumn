@@ -1,21 +1,9 @@
-:root {
-   --light-red: #ac414233;
-   --red: #ac4142;
-}
 pre {
    background: #272822;
 }
 code,
 tbody tr:nth-child(odd) td {
    background: #f9f9f9;
-}
-.theme-base-08 .pagination .active a,
-.theme-base-08 header {
-   background: var(--red);
-}
-.theme-base-08 .pagination a,
-.theme-base-08 main nav a {
-   background: var(--light-red);
 }
 table {
    border-collapse: collapse;
@@ -25,9 +13,6 @@ table,
 td,
 th {
    border-color: #e5e5e5;
-}
-.theme-base-08 section {
-   border-color: var(--red);
 }
 .highlight,
 .pagination li a,
@@ -61,7 +46,8 @@ a {
 strong {
    color: #303030;
 }
-h1, h2, h3, h4 {
+h1,
+h2 {
    color: #313131;
 }
 body {
@@ -82,10 +68,6 @@ pre {
 }
 header p {
    color: rgba(255, 255, 255, .5);
-}
-.theme-base-08 .pagination a,
-.theme-base-08 main a {
-   color: var(--red);
 }
 .theme-base-08 .pagination .active a {
    color: white;
@@ -189,22 +171,13 @@ main nav {
 hr {
    margin-top: 1.5rem;
 }
-/*****************************************************************************/
 pre {
    overflow: auto;
 }
 body,
 html,
 pre code {
-   padding: 0;
-}
-main {
-   padding: .5rem;
-}
-header,
-pre,
-section {
-   padding: 1rem;
+   padding-bottom: 0;
 }
 main nav a {
    padding-bottom: 8px;
@@ -215,37 +188,57 @@ th {
    padding-bottom: .25rem;
 }
 .pagination li a,
-blockquote {
+blockquote,
+main {
    padding-bottom: .5rem;
 }
-main nav a {
-   padding-left: 16px;
+header,
+pre,
+section {
+   padding-bottom: 1rem;
 }
+body,
+html,
+pre code {
+   padding-left: 0;
+}
+.pagination li a,
 code,
+main,
 td,
 th {
    padding-left: .5rem;
 }
-.pagination li a {
-   padding-left: .625rem;
-}
-blockquote {
+blockquote,
+header,
+main nav a,
+pre,
+section {
    padding-left: 1rem;
 }
+body,
+html,
+pre code {
+   padding-right: 0;
+}
+.pagination li a,
 code,
+main,
 td,
 th {
    padding-right: .5rem;
 }
-.pagination li a {
-   padding-right: .625rem;
-}
 blockquote,
-main nav a {
+header,
+main nav a,
+pre,
+section {
    padding-right: 1rem;
 }
-main nav a {
-   padding-top: 8px;
+body,
+html,
+pre code {
+   padding-top: 0;
 }
 code,
 td,
@@ -253,8 +246,15 @@ th {
    padding-top: .25em;
 }
 .pagination li a,
-blockquote {
+blockquote,
+main nav a,
+main {
    padding-top: .5rem;
+}
+header,
+pre,
+section {
+   padding-top: 1rem;
 }
 header, footer {
    text-align: center;
