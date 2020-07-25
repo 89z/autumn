@@ -1,15 +1,15 @@
 package main
 import "fmt"
 func main() {
-   a1 := []string{"Sun", "Mon", "Tue"}
+   a := []string{"Sun", "Mon", "Tue"}
    // string from front
-   s1 := a1[0]
+   s1 := a[0]
    // string from back
-   s2 := a1[len(a1) - 1]
+   s2 := a[len(a) - 1]
    // array from front
-   a2 := a1[:2]
+   a1 := a[:2]
    // array from back
-   a3 := a1[len(a1) - 2:]
+   a2 := a[len(a) - 2:]
    // print
-   fmt.Println(s1, s2, a2, a3)
+   fmt.Println(s1, s2, a1, a2)
 }
