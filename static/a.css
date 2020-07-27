@@ -1,4 +1,31 @@
+code,
+td,
+th {
+   padding-top: .25em;
+}
+.category,
+.page-link,
+blockquote,
+main {
+   padding-top: .5rem;
+}
+header,
+pre,
+section {
+   padding-top: 1rem;
+}
+footer,
+header {
+   text-align: center;
+}
+a {
+   text-decoration: none;
+}
+a:hover {
+   text-decoration: underline;
+}
 pre {
+   /* non highlight */
    background: #272822;
 }
 tr:nth-child(odd) td {
@@ -16,8 +43,7 @@ th {
 .category,
 .highlight,
 .page-link,
-code,
-img {
+code {
    border-radius: 5px;
 }
 section {
@@ -29,11 +55,6 @@ table,
 td,
 th {
    border-style: solid;
-}
-table,
-td,
-th {
-   border-width: 1px;
 }
 section.index {
    border-width: thick;
@@ -51,14 +72,53 @@ h2 {
 body {
    color: #515151;
 }
-blockquote {
-   color: #7a7a7a;
-}
 time {
    color: #9a9a9a;
 }
-code {
-   color: #bf616a;
+.pagination .disabled {
+   display: none;
+}
+article,
+header nav {
+   flex-wrap: wrap;
+}
+body {
+   font-family: Arial;
+}
+section.index {
+   flex-basis: 400px;
+}
+header nav a,
+section.terms {
+   flex-basis: 200px;
+}
+.pagination,
+article,
+header nav {
+   display: flex;
+}
+code,
+pre {
+   font-family: "Courier New";
+}
+h2 {
+   font-size: 1.6rem;
+}
+header h1 {
+   font-size: 2.6rem;
+}
+p,
+table,
+ul {
+   font-size: 1.2rem;
+}
+h1,
+h2 {
+   margin-bottom: 0;
+}
+/*****************************************************************************/
+blockquote {
+   color: #7a7a7a;
 }
 header a,
 pre code,
@@ -71,58 +131,18 @@ header p {
 .active .page-link {
    color: white;
 }
-.pagination,
-article,
-header nav {
-   display: flex;
-}
-.pagination .disabled {
-   display: none;
-}
-header nav a,
-section.terms {
-   flex-basis: 200px;
-}
-section.index {
-   flex-basis: 400px;
-}
-article,
-header nav {
-   flex-wrap: wrap;
-}
-body {
-   font-family: Arial;
-}
-code,
-pre {
-   font-family: "Courier New";
-}
 .pagination li,
 pre {
    font-size: 1rem;
-}
-p,
-ul {
-   font-size: 1.2rem;
 }
 header nav,
 header p {
    font-size: 1.4rem;
 }
-h2 {
-   font-size: 1.6rem;
-}
-header h1 {
-   font-size: 2.6rem;
-}
 .pagination,
 article,
 header nav {
    justify-content: center;
-}
-h1,
-h2 {
-   margin-bottom: 0;
 }
 .pagination li,
 nav,
@@ -173,15 +193,14 @@ pre {
 pre code {
    padding-bottom: 0;
 }
-code,
-td,
-th {
+code {
    padding-bottom: .25rem;
 }
 .category,
 .page-link,
 blockquote,
-main {
+main,
+td {
    padding-bottom: .5rem;
 }
 header,
@@ -193,9 +212,7 @@ pre code {
    padding-left: 0;
 }
 code,
-main,
-td,
-th {
+main {
    padding-left: .5rem;
 }
 .category,
@@ -203,16 +220,15 @@ th {
 blockquote,
 header,
 pre,
-section {
+section,
+td {
    padding-left: 1rem;
 }
 pre code {
    padding-right: 0;
 }
 code,
-main,
-td,
-th {
+main {
    padding-right: .5rem;
 }
 .category,
@@ -220,35 +236,10 @@ th {
 blockquote,
 header,
 pre,
-section {
+section,
+td {
    padding-right: 1rem;
 }
 pre code {
    padding-top: 0;
-}
-code,
-td,
-th {
-   padding-top: .25em;
-}
-.category,
-.page-link,
-blockquote,
-main {
-   padding-top: .5rem;
-}
-header,
-pre,
-section {
-   padding-top: 1rem;
-}
-footer,
-header {
-   text-align: center;
-}
-a {
-   text-decoration: none;
-}
-a:hover {
-   text-decoration: underline;
 }

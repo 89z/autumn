@@ -15,6 +15,7 @@
 }
 .theme-base-08 .category,
 .theme-base-08 .title,
-.theme-base-08 :not(.active) > .page-link {
+.theme-base-08 :not(.active) > .page-link,
+.theme-base-08 p code {
    color: var(--red);
 }
