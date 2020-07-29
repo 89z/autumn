@@ -1,11 +1,13 @@
-{{ define "main" -}}
-<h1>{{ .Title }}</h1>
-<time>{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
+{{ define "main" }}
+<main>
+   <h1>{{ .Title }}</h1>
+   <time>{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
    {{ range (.GetTerms "categories") }}
-<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+   <a href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
    {{ with (.GetPage (path.Join "talk" .Path)) }}
-<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+   <a href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
    {{ .Content }}
+</main>
 {{ end }}
