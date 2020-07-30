@@ -131,10 +131,6 @@ header p {
 .active .page-link {
    color: white;
 }
-.pagination li,
-pre {
-   font-size: 1rem;
-}
 header nav,
 header p {
    font-size: 1.4rem;
