@@ -141,7 +141,7 @@ header nav {
    justify-content: center;
 }
 .pagination li,
-nav,
+main nav,
 section {
    margin-bottom: .5rem;
 }
