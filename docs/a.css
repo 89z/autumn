@@ -2,13 +2,18 @@ pre {
    /* non highlight */
    background: #272822;
 }
+blockquote {
+   background: #ddd;
+}
+p code {
+   background: #eee;
+}
 tr:nth-child(odd) td {
    background: #f9f9f9;
 }
 table {
    border-collapse: collapse;
 }
-blockquote,
 table,
 td,
 th {
@@ -23,7 +28,6 @@ code {
 section {
    border-radius: 10px;
 }
-blockquote,
 section,
 table,
 td,
@@ -36,11 +40,9 @@ section.index {
 a {
    color: #268bd2;
 }
-strong {
-   color: #303030;
-}
 h1,
-h2 {
+h2,
+strong {
    color: #313131;
 }
 body {
@@ -49,28 +51,61 @@ body {
 time {
    color: #9a9a9a;
 }
-blockquote {
-   color: #7a7a7a;
-}
 header a,
 pre code,
 pre {
    color: #f8f8f2;
 }
+.active .page-link,
 header p {
-   color: rgba(255, 255, 255, .5);
-}
-.active .page-link {
    color: white;
+}
+.pagination,
+article,
+header nav {
+   display: flex;
+}
+.pagination .disabled {
+   display: none;
+}
+header nav a,
+section.terms {
+   flex-basis: 200px;
+}
+section.index {
+   flex-basis: 400px;
+}
+article,
+header nav {
+   flex-wrap: wrap;
+}
+body {
+   font-family: Arial;
+}
+code,
+pre {
+   font-family: "Courier New";
+}
+p,
+table,
+ul {
+   font-size: 1.2rem;
 }
 header nav,
 header p {
    font-size: 1.4rem;
 }
+h2 {
+   font-size: 1.6rem;
+}
 .pagination,
 article,
 header nav {
    justify-content: center;
+}
+h1,
+h2 {
+   margin-bottom: 0;
 }
 .pagination li,
 main nav,
@@ -78,7 +113,6 @@ section {
    margin-bottom: .5rem;
 }
 .highlight,
-blockquote,
 ol,
 p,
 pre,
@@ -111,15 +145,14 @@ section h2 {
 section {
    margin-top: .5rem;
 }
-blockquote,
 main nav {
    margin-top: 1rem;
 }
+header p {
+   opacity: .5;
+}
 pre {
    overflow: auto;
-}
-pre code {
-   padding-bottom: 0;
 }
 code {
    padding-bottom: .25rem;
@@ -152,9 +185,6 @@ section,
 td {
    padding-left: 1rem;
 }
-pre code {
-   padding-right: 0;
-}
 code,
 main {
    padding-right: .5rem;
@@ -168,50 +198,6 @@ section,
 td {
    padding-right: 1rem;
 }
-pre code {
-   padding-top: 0;
-}
-.pagination .disabled {
-   display: none;
-}
-article,
-header nav {
-   flex-wrap: wrap;
-}
-body {
-   font-family: Arial;
-}
-section.index {
-   flex-basis: 400px;
-}
-header nav a,
-section.terms {
-   flex-basis: 200px;
-}
-.pagination,
-article,
-header nav {
-   display: flex;
-}
-code,
-pre {
-   font-family: "Courier New";
-}
-h2 {
-   font-size: 1.6rem;
-}
-header h1 {
-   font-size: 2.6rem;
-}
-p,
-table,
-ul {
-   font-size: 1.2rem;
-}
-h1,
-h2 {
-   margin-bottom: 0;
-}
 code,
 td,
 th {
@@ -220,10 +206,10 @@ th {
 .category,
 .page-link,
 blockquote,
+header,
 main {
    padding-top: .5rem;
 }
-header,
 pre,
 section {
    padding-top: 1rem;
