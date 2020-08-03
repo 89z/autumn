@@ -135,19 +135,19 @@ echo s1, s2, a2, a3
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span>, <span style="color:#e6db74">&#39;Mon&#39;</span>, <span style="color:#e6db74">&#39;Tue&#39;</span>];
+$a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Sun&#39;</span>, <span style="color:#e6db74">&#39;Mon&#39;</span>, <span style="color:#e6db74">&#39;Tue&#39;</span>];
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> $a1[<span style="color:#ae81ff">0</span>];
+</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> $a[<span style="color:#ae81ff">0</span>];
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">reset</span>($a1);
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">reset</span>($a);
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">end</span>($a1);
+</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">end</span>($a);
 <span style="color:#75715e"># example 4
-</span><span style="color:#75715e"></span>$a2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_slice</span>($a1, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>);
+</span><span style="color:#75715e"></span>$a1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_slice</span>($a, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>);
 <span style="color:#75715e"># example 5
-</span><span style="color:#75715e"></span>$a3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_slice</span>($a1, <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>);
+</span><span style="color:#75715e"></span>$a2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_slice</span>($a, <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>);
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1, $s2, $s3, $a2, $a3);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1, $s2, $s3, $a1, $a2);
 </code></pre></div>
 <ul>
 <li><a href="https://php.net/function.array-slice">https://php.net/function.array-slice</a></li>

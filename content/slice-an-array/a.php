@@ -1,14 +1,14 @@
 <?php
-$a1 = ['Sun', 'Mon', 'Tue'];
+$a = ['Sun', 'Mon', 'Tue'];
 # example 1
-$s1 = $a1[0];
+$s1 = $a[0];
 # example 2
-$s2 = reset($a1);
+$s2 = reset($a);
 # example 3
-$s3 = end($a1);
+$s3 = end($a);
 # example 4
-$a2 = array_slice($a1, 0, 2);
+$a1 = array_slice($a, 0, 2);
 # example 5
-$a3 = array_slice($a1, -2);
+$a2 = array_slice($a, -2);
 # print
-var_dump($s1, $s2, $s3, $a2, $a3);
+var_dump($s1, $s2, $s3, $a1, $a2);
