@@ -1,7 +1,4 @@
 <?php
-# example 1
-$a1 = scandir('.');
-print_r($a1);
 # example 2
 $r1 = opendir('.');
 while (true) {

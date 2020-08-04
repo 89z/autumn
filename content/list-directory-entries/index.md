@@ -39,7 +39,6 @@ tags: [d, dart, go, nim, php, python, rust]
 
 - <https://php.net/function.glob>
 - <https://php.net/function.opendir>
-- <https://php.net/function.scandir>
 
 ## Python
 
