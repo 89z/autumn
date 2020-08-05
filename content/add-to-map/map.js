@@ -1,3 +1,3 @@
-let m1 = new Map;
-m1.set('Sun', 10);
-console.log(m1);
+let m = new Map;
+m.set('Sunday', 10);
+console.log(m);
