@@ -35,7 +35,6 @@ tags: [d, dart, go, nim, php, python, rust]
 ## PHP
 
 {{< r "a.php" >}}
-{{< r "b.php" >}}
 
 - <https://php.net/function.glob>
 - <https://php.net/function.opendir>
