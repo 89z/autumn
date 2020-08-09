@@ -1,5 +1,4 @@
 <?php
-declare(strict_types = 1);
 # example 1
 $a1 = glob('a.*');
 # example 2
