@@ -1,3 +1,3 @@
 import os
-a1 = os.listdir('.')
-print(a1)
+a = os.listdir('.')
+print(a)

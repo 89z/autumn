@@ -118,7 +118,7 @@ $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;less -
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f_escape_sh</span>($s_in) {
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f_escape_sh</span>(<span style="color:#a6e22e">string</span> $s_in)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
    $s_out <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_replace</span>(<span style="color:#e6db74">&#39;/&#34;/&#39;</span>, <span style="color:#e6db74">&#39;&#34;&#34;&#39;</span>, $s_in);
    <span style="color:#66d9ef">if</span> ($s_out <span style="color:#f92672">!=</span> $s_in) {
       <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#34;&#39;</span> <span style="color:#f92672">.</span> $s_out <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&#34;&#39;</span>;

@@ -114,7 +114,6 @@ section {
 }
 .highlight,
 ol,
-p,
 pre,
 table,
 ul {
@@ -142,6 +141,7 @@ section h2 {
    margin-top: 0;
 }
 .pagination li,
+header p,
 section {
    margin-top: .5rem;
 }

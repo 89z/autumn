@@ -1,5 +1,5 @@
 <?php
-function f_escape_sh($s_in) {
+function f_escape_sh(string $s_in): string {
    $s_out = preg_replace('/"/', '""', $s_in);
    if ($s_out != $s_in) {
       return '"' . $s_out . '"';

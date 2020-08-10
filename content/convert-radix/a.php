@@ -1,7 +1,7 @@
 <?php
 $s_dig = '-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz';
 # example 1
-function r64_encode($n_in) {
+function r64_encode(int $n_in): string {
    global $s_dig;
    $s_out = '';
    do {
@@ -11,7 +11,7 @@ function r64_encode($n_in) {
    return $s_out;
 }
 # example 2
-function r64_decode($s_in) {
+function r64_decode(string $s_in): int {
    global $s_dig;
    $n_out = 0;
    $a_in = str_split($s_in);

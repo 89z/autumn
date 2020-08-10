@@ -14,12 +14,3 @@ $a1 = range(10, 19);
 foreach ($a1 as $n1) {
    var_dump($n1);
 }
-# example 4
-function f1($n1) {
-   if ($n1 > 19) {
-      return;
-   }
-   var_dump($n1);
-   f1($n1 + 1);
-}
-f1(10);

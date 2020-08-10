@@ -23,11 +23,3 @@ for (;;) {
    }
    $n++;
 }
-# example 4
-function f($n) {
-   var_dump($n);
-   if ($n < 19) {
-      f($n + 1);
-   }
-}
-f(10);

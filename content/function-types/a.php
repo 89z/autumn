@@ -1,14 +1,14 @@
 <?php
 # example 1
-function f1($s1) {
-   return strlen($s1);
+function f1(string $s): int {
+   return strlen($s);
 }
 # example 2
-$f2 = function ($s1) {
-   return strlen($s1);
+$f2 = function (string $s): int {
+   return strlen($s);
 };
 # example 3
-$f3 = fn($s1) => strlen($s1);
+$f3 = fn(string $s): int => strlen($s);
 # print
 $n1 = f1('Sunday');
 $n2 = $f2('Sunday');
