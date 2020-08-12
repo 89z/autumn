@@ -8,8 +8,8 @@ tags: [go, javascript, php, python]
 
 {{< r "a.go" >}}
 
-- <https://github.com/google/re2/wiki/Syntax>
 - <https://golang.org/pkg/regexp#Regexp.MatchString>
+- <https://golang.org/pkg/regexp/syntax>
 
 ## JavaScript
 
