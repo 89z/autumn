@@ -24,7 +24,7 @@
 
 <main>
    <h1>List directory entries</h1>
-   <time>Sun Aug 9 2020</time>
+   <time>Fri Aug 14 2020</time>
    
    <a href="/autumn/categories/system/">system</a>
    
@@ -113,6 +113,26 @@ main() {
    }
    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span>)
 }
+</code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;os&#34;</span>
+   <span style="color:#e6db74">&#34;path/filepath&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">f</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">o</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">FileInfo</span>, <span style="color:#a6e22e">e</span> <span style="color:#66d9ef">error</span>) <span style="color:#66d9ef">error</span> {
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">IsDir</span>() {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span>
+   }
+   println(<span style="color:#a6e22e">s</span>)
+   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+}
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Walk</span>(<span style="color:#e6db74">&#34;.&#34;</span>, <span style="color:#a6e22e">f</span>)
+}
 </code></pre></div></p>
 <ul>
 <li><a href="https://golang.org/pkg/io/ioutil#ReadDir">https://golang.org/pkg/io/ioutil#ReadDir</a></li>
@@ -181,10 +201,12 @@ a <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>lis
 <p><a href="https://doc.rust-lang.org/std/fs/fn.read_dir.html">https://doc.rust-lang.org/std/fs/fn.read_dir.html</a></p>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://hyperpolyglot.org/c#dir-iterate">https://hyperpolyglot.org/c#dir-iterate</a></li>
 <li><a href="https://hyperpolyglot.org/scripting2#dir-iterate">https://hyperpolyglot.org/scripting2#dir-iterate</a></li>
 <li><a href="https://programming-idioms.org/idiom/180">https://programming-idioms.org/idiom/180</a></li>
 <li><a href="https://rosettacode.org/wiki/Unix/ls">https://rosettacode.org/wiki/Unix/ls</a></li>
 <li><a href="https://rosettacode.org/wiki/Walk_a_directory/Non-recursively">https://rosettacode.org/wiki/Walk_a_directory/Non-recursively</a></li>
+<li><a href="https://rosettacode.org/wiki/Walk_a_directory/Recursively">https://rosettacode.org/wiki/Walk_a_directory/Recursively</a></li>
 </ul>
 
 </main>
