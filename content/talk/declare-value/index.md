@@ -18,7 +18,7 @@ Letter | Type
 
 ## Byte
 
-If we use `a1` for Byte Arrays, it will be confusing when used next to
+If we use `a` for Byte Arrays, it will be confusing when used next to
 traditional arrays:
 
 {{< r "byte-arr.go" >}}
