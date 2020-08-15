@@ -38,9 +38,10 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 
 ## PHP
 
-{{< r "a.php" >}}
-{{< r "b.php" >}}
-{{< r "c.php" >}}
+{{< r "file-1.php" >}}
+{{< r "file-2.php" >}}
+{{< r "stdout-1.php" >}}
+{{< r "stdout-2.php" >}}
 
 - <https://php.net/function.copy>
 - <https://php.net/function.curl-init>
@@ -55,7 +56,7 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 
 ## Rust
 
-{{< r "a.rs" >}}
+{{< r "rust/src/main.rs" >}}
 
 <https://docs.rs/curl>
 

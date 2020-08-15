@@ -24,7 +24,7 @@
 
 <main>
    <h1>HTTP GET</h1>
-   <time>Wed Jul 22 2020</time>
+   <time>Sat Aug 15 2020</time>
    
    <a href="/autumn/categories/network/">network</a>
    
@@ -146,7 +146,7 @@ stdout.write s2
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>;
 <span style="color:#a6e22e">copy</span>($s, <span style="color:#e6db74">&#39;index.html&#39;</span>);
 </code></pre></div>
 
@@ -154,7 +154,28 @@ $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>;
+<span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;curl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;curl&#39;</span>);
+<span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;openssl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;openssl&#39;</span>);
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$r_c <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>(<span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>);
+$r_f <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;index.html&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>);
+<span style="color:#a6e22e">curl_setopt</span>($r_c, <span style="color:#a6e22e">CURLOPT_FILE</span>, $r_f);
+<span style="color:#a6e22e">curl_exec</span>($r_c);
+<span style="color:#a6e22e">fclose</span>($r_f);
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span>$r_c <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>(<span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net/10Mio.dat&#39;</span>);
+$r_f <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;10Mio.dat&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>);
+<span style="color:#a6e22e">curl_setopt</span>($r_c, <span style="color:#a6e22e">CURLOPT_FILE</span>, $r_f);
+<span style="color:#a6e22e">curl_setopt</span>($r_c, <span style="color:#a6e22e">CURLOPT_NOPROGRESS</span>, <span style="color:#66d9ef">false</span>);
+<span style="color:#a6e22e">curl_exec</span>($r_c);
+<span style="color:#a6e22e">fclose</span>($r_f);
+</code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>;
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>($s);
 <span style="color:#75715e"># example 2
@@ -169,18 +190,10 @@ $s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
 <span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;curl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;curl&#39;</span>);
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>;
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$r <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>($s);
+<span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;openssl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;openssl&#39;</span>);
+$r <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>(<span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>);
 <span style="color:#a6e22e">curl_setopt</span>($r, <span style="color:#a6e22e">CURLOPT_RETURNTRANSFER</span>, <span style="color:#66d9ef">true</span>);
 <span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">curl_exec</span>($r);
-<span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$r_f <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;index.html&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>);
-$r_c <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>($s);
-<span style="color:#a6e22e">curl_setopt</span>($r_c, <span style="color:#a6e22e">CURLOPT_FILE</span>, $r_f);
-<span style="color:#a6e22e">curl_setopt</span>($r_c, <span style="color:#a6e22e">CURLOPT_NOPROGRESS</span>, <span style="color:#66d9ef">false</span>);
-<span style="color:#a6e22e">curl_exec</span>($r_c);
-<span style="color:#a6e22e">fclose</span>($r_f);
 </code></pre></div></p>
 <ul>
 <li><a href="https://php.net/function.copy">https://php.net/function.copy</a></li>
@@ -194,7 +207,7 @@ $r_c <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init<
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> request
-s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>
 o <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>urlopen(s)
 <span style="color:#f92672">from</span> sys <span style="color:#f92672">import</span> stdout
 y <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>read()
@@ -211,7 +224,7 @@ stdout<span style="color:#f92672">.</span>buffer<span style="color:#f92672">.</s
 <span style="color:#66d9ef">use</span> std::io::{stdout, Write};
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> o <span style="color:#f92672">=</span> Easy::new();
-   o.url(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>)<span style="color:#f92672">?</span>;
+   o.url(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>)<span style="color:#f92672">?</span>;
    o.write_function(<span style="color:#f92672">|</span>y<span style="color:#f92672">|</span>
       stdout().write(y).or(Err(WriteError::Pause))
    )<span style="color:#f92672">?</span>;

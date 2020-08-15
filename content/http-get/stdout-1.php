@@ -1,5 +1,5 @@
 <?php
-$s = 'http://speedtest.lax.hivelocity.net';
+$s = 'https://speedtest.lax.hivelocity.net';
 # example 1
 $s1 = file_get_contents($s);
 # example 2

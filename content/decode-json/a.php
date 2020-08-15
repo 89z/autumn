@@ -1,5 +1,7 @@
 <?php
-$s = '{"Sunday": 10}';
+$s = <<<eof
+{"Sunday": 10}
+eof;
 # example 1
 $o = json_decode($s);
 # example 2

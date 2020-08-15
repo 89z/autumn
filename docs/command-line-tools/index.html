@@ -24,7 +24,7 @@
 
 <main>
    <h1>Command line tools</h1>
-   <time>Fri Jul 10 2020</time>
+   <time>Sat Aug 15 2020</time>
    
    <a href="/autumn/categories/reference/">reference</a>
    
@@ -34,17 +34,17 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sh" data-lang=".sh"><span style="color:#75715e"># example 1</span>
-g++.exe a.cpp
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.ps1" data-lang=".ps1"><span style="color:#75715e"># example 1</span>
+g++ a.cpp
 <span style="color:#75715e"># example 2</span>
-g++.exe -s -static -std<span style="color:#f92672">=</span>c++17 a.cpp
+g++ -s -static -std=c++17 a.cpp
 </code></pre></div>
 <h2 id="d">D</h2>
 
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sh" data-lang=".sh"><span style="color:#75715e"># example 1</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.ps1" data-lang=".ps1"><span style="color:#75715e"># example 1</span>
 ldc2 a.d
 <span style="color:#75715e"># example 2</span>
 ldc2 -run a.d
@@ -55,16 +55,10 @@ ldc2 -run a.d
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sh" data-lang=".sh"><span style="color:#75715e"># example 1</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.ps1" data-lang=".ps1"><span style="color:#75715e"># example 1</span>
 dart a.dart
 <span style="color:#75715e"># example 2</span>
 dart2native.bat a.dart
-<span style="color:#75715e"># example 3</span>
-cat &gt; pubspec.yaml <span style="color:#e6db74">&lt;&lt;eof
-</span><span style="color:#e6db74">dependencies:
-</span><span style="color:#e6db74">   intl:
-</span><span style="color:#e6db74">eof</span>
-pub.bat get
 </code></pre></div>
 <p><a href="https://dart.dev/tools/dart-vm">https://dart.dev/tools/dart-vm</a></p>
 <h2 id="go">Go</h2>
@@ -72,7 +66,7 @@ pub.bat get
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sh" data-lang=".sh"><span style="color:#75715e"># example 1</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.ps1" data-lang=".ps1"><span style="color:#75715e"># example 1</span>
 go build
 <span style="color:#75715e"># example 2</span>
 go build a.go
@@ -95,16 +89,16 @@ go list -deps
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sh" data-lang=".sh"><span style="color:#75715e"># example 1</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.ps1" data-lang=".ps1"><span style="color:#75715e"># example 1</span>
 nim compile a.nim
 <span style="color:#75715e"># example 2</span>
 nim c a.nim
 <span style="color:#75715e"># example 3</span>
 nimble install monday
 <span style="color:#75715e"># example 4</span>
-nimble install https://github.com/sunday/monday
+nimble install https<span style="color:#960050;background-color:#1e0010">:</span>//github.com/sunday/monday
 <span style="color:#75715e"># example 5</span>
-nimble install https://github.com/sunday/monday@#head
+nimble install https<span style="color:#960050;background-color:#1e0010">:</span>//github.com/sunday/monday@<span style="color:#75715e">#head</span>
 </code></pre></div>
 <ul>
 <li><a href="https://github.com/nim-lang/nimble">https://github.com/nim-lang/nimble</a></li>
@@ -115,10 +109,10 @@ nimble install https://github.com/sunday/monday@#head
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sh" data-lang=".sh"><span style="color:#75715e"># example 1</span>
-php -f app.php
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.ps1" data-lang=".ps1"><span style="color:#75715e"># example 1</span>
+php <span style="color:#f92672">-f</span> a.php
 <span style="color:#75715e"># example 2</span>
-php app.php
+php a.php
 </code></pre></div>
 <ul>
 <li><a href="https://php.net/features.commandline.usage">https://php.net/features.commandline.usage</a></li>
@@ -129,7 +123,7 @@ php app.php
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sh" data-lang=".sh">python3 app.py
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.ps1" data-lang=".ps1">python a.py
 </code></pre></div>
 <p><a href="https://docs.python.org/using/cmdline.html">https://docs.python.org/using/cmdline.html</a></p>
 <h2 id="ruby">Ruby</h2>
@@ -137,26 +131,26 @@ php app.php
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sh" data-lang=".sh">ruby a.rb
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.ps1" data-lang=".ps1">ruby a.rb
 </code></pre></div>
 <h2 id="rust">Rust</h2>
 
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.sh" data-lang=".sh"><span style="color:#75715e"># example 1</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.ps1" data-lang=".ps1"><span style="color:#75715e"># example 1</span>
 rustc a.rs
 <span style="color:#75715e"># example 2</span>
 cargo new sunday
-cd sunday
-cat &gt; Cargo.toml <span style="color:#e6db74">&lt;&lt;eof
+Set-Location sunday
+<span style="color:#e6db74">&#39;
 </span><span style="color:#e6db74">[package]
 </span><span style="color:#e6db74">name = &#34;sunday&#34;
 </span><span style="color:#e6db74">version = &#34;1.0.0&#34;
 </span><span style="color:#e6db74">edition = &#34;2018&#34;
 </span><span style="color:#e6db74">[dependencies]
-</span><span style="color:#e6db74">regex-automata = &#34;&#34;
-</span><span style="color:#e6db74">eof</span>
+</span><span style="color:#e6db74">curl = &#34;&#34;
+</span><span style="color:#e6db74">&#39;</span> &gt; Cargo.toml
 cargo build
 </code></pre></div>
 <p><code>edition</code> allows to omit <code>extern crate</code>.</p>

@@ -2,9 +2,9 @@
 title: 'Tag talk:Rust'
 ---
 
-Allow missing fields in structs:
+Add cargo-add (from cargo-edit) to cargo proper:
 
-<https://github.com/rust-lang/rfcs/issues/2875>
+<https://github.com/rust-lang/cargo/issues/5586>
 
 config file for rustc:
 

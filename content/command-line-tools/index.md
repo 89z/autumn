@@ -6,23 +6,23 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 
 ## C++
 
-{{< r "cpp.sh" >}}
+{{< r "cpp.ps1" >}}
 
 ## D
 
-{{< r "d.sh" >}}
+{{< r "d.ps1" >}}
 
 <https://wiki.dlang.org/Using_LDC>
 
 ## Dart
 
-{{< r "dart.sh" >}}
+{{< r "dart.ps1" >}}
 
 <https://dart.dev/tools/dart-vm>
 
 ## Go
 
-{{< r "go.sh" >}}
+{{< r "go.ps1" >}}
 
 - <https://golang.org/cmd/go#hdr-Compile_and_run_Go_program>
 - <https://golang.org/cmd/go#hdr-Compile_packages_and_dependencies>
@@ -30,31 +30,31 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 
 ## Nim
 
-{{< r "nim.sh" >}}
+{{< r "nim.ps1" >}}
 
 - <https://github.com/nim-lang/nimble>
 - <https://nim-lang.org/docs/nimc.html#compiler-usage-command-line-switches>
 
 ## PHP
 
-{{< r "php.sh" >}}
+{{< r "php.ps1" >}}
 
 - <https://php.net/features.commandline.usage>
 - <https://php.net/language.basic-syntax.phptags>
 
 ## Python
 
-{{< r "python.sh" >}}
+{{< r "python.ps1" >}}
 
 <https://docs.python.org/using/cmdline.html>
 
 ## Ruby
 
-{{< r "ruby.sh" >}}
+{{< r "ruby.ps1" >}}
 
 ## Rust
 
-{{< r "rust.sh" >}}
+{{< r "rust.ps1" >}}
 
 `edition` allows to omit `extern crate`.
 
