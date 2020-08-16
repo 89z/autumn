@@ -5,7 +5,7 @@ import (
    "net/http"
 )
 func main() {
-   s := "http://speedtest.lax.hivelocity.net"
+   s := "https://speedtest.lax.hivelocity.net"
    o, e := http.Get(s)
    if e != nil {
       log.Fatal(e)

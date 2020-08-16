@@ -4,10 +4,12 @@ f1(s) {
 }
 // example 2
 f2(s) => s.length;
+// example 3
+var f3 = (s) => s.length;
 // print
 main() {
-   var n1 = f1('Sunday');
-   print(n1);
-   var n2 = f2('Sunday');
-   print(n2);
+   var s = 'Sunday';
+   print(f1(s));
+   print(f2(s));
+   print(f3(s));
 }

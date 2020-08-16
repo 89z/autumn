@@ -1,5 +1,6 @@
 import httpclient
-let s1 = "http://speedtest.lax.hivelocity.net"
-let o1 = newHttpClient()
-let s2 = o1.getContent(s1)
-stdout.write s2
+# -d:ssl
+let s_in = "https://speedtest.lax.hivelocity.net"
+let o = newHttpClient()
+let s_out = o.getContent(s_in)
+stdout.write s_out

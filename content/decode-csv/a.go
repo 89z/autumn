@@ -1,6 +1,7 @@
 package main
 import (
    "encoding/csv"
+   "fmt"
    "log"
    "os"
 )
@@ -23,6 +24,6 @@ func main() {
       for n_row, s_row := range a_head {
          m_row[s_row] = a_row[n_row]
       }
-      log.Print(m_row)
+      fmt.Println(m_row)
    }
 }

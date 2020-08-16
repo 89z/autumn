@@ -6,13 +6,14 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 
 ## D
 
-{{< r "a.d" >}}
+{{< r "d/https.d" >}}
 
 <https://dlang.org/library/std/net/curl/get.html>
 
 ## Dart
 
 {{< r "a.dart" >}}
+{{< r "b.dart" >}}
 
 <https://api.dart.dev/dart-io/HttpClient-class.html>
 
@@ -26,6 +27,7 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 ## JavaScript
 
 {{< r "a.js" >}}
+{{< r "b.js" >}}
 
 - <https://developer.mozilla.org/Web/API/WindowOrWorkerGlobalScope/fetch>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/await>

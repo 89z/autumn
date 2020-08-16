@@ -38,26 +38,43 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.d" data-lang=".d"><span style="color:#f92672">import</span> std.net.curl<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span><span style="color:#f92672">;</span>
    <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> s1<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">;</span>
    s2<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 <p><a href="https://dlang.org/library/std/net/curl/get.html">https://dlang.org/library/std/net/curl/get.html</a></p>
 <h2 id="dart">Dart</h2>
+<p>
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart">main() <span style="color:#66d9ef">async</span> {
-   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>;
-   <span style="color:#66d9ef">var</span> client <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HttpClient();
-   <span style="color:#66d9ef">var</span> request <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> client.getUrl(Uri.parse(s));
-   <span style="color:#66d9ef">var</span> response <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> request.close();
-   response.pipe(stdout);
-   client.close();
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
+main() {
+   <span style="color:#66d9ef">var</span> o_uri <span style="color:#f92672">=</span> Uri.parse(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>);
+   <span style="color:#66d9ef">var</span> o_http <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HttpClient();
+   o_http.getUrl(o_uri).then(
+      (o_req) <span style="color:#f92672">=&gt;</span> o_req.close()
+   ).then(
+      (o_resp) <span style="color:#f92672">=&gt;</span> o_resp.pipe(stdout)
+   );
+   o_http.close();
 }
 </code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
+main() <span style="color:#66d9ef">async</span> {
+   <span style="color:#66d9ef">var</span> o_uri <span style="color:#f92672">=</span> Uri.parse(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>);
+   <span style="color:#66d9ef">var</span> o_http <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HttpClient();
+   <span style="color:#66d9ef">var</span> o_req <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> o_http.getUrl(o_uri);
+   <span style="color:#66d9ef">var</span> o_resp <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> o_req.close();
+   o_resp.pipe(stdout);
+   o_http.close();
+}
+</code></pre></div></p>
 <p><a href="https://api.dart.dev/dart-io/HttpClient-class.html">https://api.dart.dev/dart-io/HttpClient-class.html</a></p>
 <h2 id="go">Go</h2>
 <p>
@@ -71,7 +88,7 @@
    <span style="color:#e6db74">&#34;net/http&#34;</span>
 )
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>
    <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">s</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
@@ -95,35 +112,42 @@
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>)
+   <span style="color:#a6e22e">o_in</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">o2</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#e6db74">&#34;index.html&#34;</span>)
+   <span style="color:#a6e22e">o_out</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#e6db74">&#34;index.html&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#a6e22e">o2</span>, <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Body</span>)
+   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#a6e22e">o_out</span>, <span style="color:#a6e22e">o_in</span>.<span style="color:#a6e22e">Body</span>)
 }
 </code></pre></div></p>
 <p><a href="https://golang.org/pkg/net/http#Get">https://golang.org/pkg/net/http#Get</a></p>
 <h2 id="javascript">JavaScript</h2>
+<p>
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>;
-<span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">s1</span>).
-<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">o1</span> =&gt; <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">text</span>()).
-<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">s2</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s2</span>));
-<span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>(<span style="color:#a6e22e">async</span> () =&gt; {
-   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">o1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">s1</span>);
-   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">text</span>();
-   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s2</span>);
-})();
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_uri</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>;
+<span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">s_uri</span>).<span style="color:#a6e22e">then</span>(
+   <span style="color:#a6e22e">o_req</span> =&gt; <span style="color:#a6e22e">o_req</span>.<span style="color:#a6e22e">text</span>()
+).<span style="color:#a6e22e">then</span>(
+   <span style="color:#a6e22e">s_resp</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s_resp</span>)
+);
 </code></pre></div>
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#a6e22e">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_uri</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>;
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">o_req</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">s_uri</span>);
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_resp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">o_req</span>.<span style="color:#a6e22e">text</span>();
+   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s_resp</span>);
+}
+<span style="color:#a6e22e">main</span>();
+</code></pre></div></p>
 <ul>
 <li><a href="https://developer.mozilla.org/Web/API/WindowOrWorkerGlobalScope/fetch">https://developer.mozilla.org/Web/API/WindowOrWorkerGlobalScope/fetch</a></li>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Operators/await">https://developer.mozilla.org/Web/JavaScript/Reference/Operators/await</a></li>
@@ -134,10 +158,11 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.nim" data-lang=".nim"><span style="color:#f92672">import</span> httpclient
-<span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>
-<span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> newHttpClient()
-<span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> o1.getContent(s1)
-stdout.write s2
+<span style="color:#75715e"># -d:ssl</span>
+<span style="color:#66d9ef">let</span> s_in <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>
+<span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> newHttpClient()
+<span style="color:#66d9ef">let</span> s_out <span style="color:#f92672">=</span> o.getContent(s_in)
+stdout.write s_out
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/httpclient.html">https://nim-lang.org/docs/httpclient.html</a></p>
 <h2 id="php">PHP</h2>

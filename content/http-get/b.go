@@ -6,13 +6,13 @@ import (
    "os"
 )
 func main() {
-   o1, e := http.Get("http://speedtest.lax.hivelocity.net")
+   o_in, e := http.Get("https://speedtest.lax.hivelocity.net")
    if e != nil {
       log.Fatal(e)
    }
-   o2, e := os.Create("index.html")
+   o_out, e := os.Create("index.html")
    if e != nil {
       log.Fatal(e)
    }
-   io.Copy(o2, o1.Body)
+   io.Copy(o_out, o_in.Body)
 }
