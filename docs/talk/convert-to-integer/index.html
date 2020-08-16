@@ -24,38 +24,14 @@
 
 <main>
    <h1>Talk:Convert to integer</h1>
-   <time>Sat Aug 15 2020</time>
+   <time>Sun Aug 16 2020</time>
    
    
    <h2 id="float">Float</h2>
 <p>Some functions return floats rather than integers. With PHP this is fine, but
 with other languages like Go it can be a problem. However this is a
 misrepresentation of the problem. Even this is a misrepresentation, as we want
-rounding rather than truncation. A closer example would be:</p>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;math&#34;</span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;Sun&#34;</span>, <span style="color:#e6db74">&#34;Mon&#34;</span>, <span style="color:#e6db74">&#34;Tue&#34;</span>}
-   <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">19</span>
-   <span style="color:#a6e22e">n2</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">10</span>
-   <span style="color:#a6e22e">n3</span> <span style="color:#f92672">:=</span> float64(<span style="color:#a6e22e">n1</span>) <span style="color:#f92672">/</span> float64(<span style="color:#a6e22e">n2</span>)
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">n4</span> <span style="color:#f92672">:=</span> int(<span style="color:#a6e22e">math</span>.<span style="color:#a6e22e">Round</span>(<span style="color:#a6e22e">n3</span>))
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a1</span>[<span style="color:#a6e22e">n4</span>]
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">n5</span> <span style="color:#f92672">:=</span> int(<span style="color:#a6e22e">n3</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">.5</span>)
-   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a1</span>[<span style="color:#a6e22e">n5</span>]
-   <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">n6</span> <span style="color:#f92672">:=</span> int(<span style="color:#a6e22e">n3</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">math</span>.<span style="color:#a6e22e">Copysign</span>(<span style="color:#ae81ff">.5</span>, <span style="color:#a6e22e">n3</span>))
-   <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a1</span>[<span style="color:#a6e22e">n6</span>]
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">s3</span>)
-}
-</code></pre></div>
+rounding rather than truncation.</p>
 <h2 id="string">String</h2>
 <table>
 <thead>
