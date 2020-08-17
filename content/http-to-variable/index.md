@@ -1,12 +1,12 @@
 ---
-title: HTTP GET
-categories: [network]
+title: HTTP to variable
+categories: [input-output, network]
 tags: [d, dart, go, javascript, nim, php, python, rust]
 ---
 
 ## D
 
-{{< r "d/https.d" >}}
+{{< r "a.d" >}}
 
 <https://dlang.org/library/std/net/curl/get.html>
 
@@ -20,7 +20,6 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 ## Go
 
 {{< r "a.go" >}}
-{{< r "b.go" >}}
 
 <https://golang.org/pkg/net/http#Get>
 
@@ -40,12 +39,9 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 
 ## PHP
 
-{{< r "file-1.php" >}}
-{{< r "file-2.php" >}}
-{{< r "stdout-1.php" >}}
-{{< r "stdout-2.php" >}}
+{{< r "a.php" >}}
+{{< r "b.php" >}}
 
-- <https://php.net/function.copy>
 - <https://php.net/function.curl-init>
 - <https://php.net/function.file-get-contents>
 - <https://php.net/function.stream-get-contents>
@@ -58,7 +54,7 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 
 ## Rust
 
-{{< r "rust/src/main.rs" >}}
+{{< r "a.rs" >}}
 
 <https://docs.rs/curl>
 
@@ -66,5 +62,5 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 
 - <https://hyperpolyglot.org/c#http-get>
 - <https://hyperpolyglot.org/scripting2#http-get>
-- <https://programming-idioms.org/idiom/101/load-from-http-get>
+- <https://programming-idioms.org/idiom/101>
 - <https://rosettacode.org/wiki/HTTP>

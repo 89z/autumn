@@ -1,5 +1,5 @@
 ---
-title: Read from file
+title: File to variable
 categories: [input-output]
 tags: [d, dart, go, nim, php, python, rust]
 ---

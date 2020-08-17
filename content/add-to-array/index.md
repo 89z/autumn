@@ -64,6 +64,6 @@ tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 
 - <https://hyperpolyglot.org/rust#array-back>
 - <https://hyperpolyglot.org/web#array-back>
-- <https://www.programming-idioms.org/idiom/166/concatenate-two-lists>
-- <https://www.programming-idioms.org/idiom/171/add-an-element-at-end>
+- <https://programming-idioms.org/idiom/166/concatenate-two-lists>
+- <https://programming-idioms.org/idiom/171/add-an-element-at-end>
 - <https://rosettacode.org/wiki/Array_concatenation>

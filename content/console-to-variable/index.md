@@ -1,5 +1,5 @@
 ---
-title: Read from console
+title: Console to variable
 categories: [input-output]
 tags: [d, dart, go, nim, php, python, rust]
 ---
