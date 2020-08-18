@@ -1,5 +1,5 @@
 ---
-title: Read from process
+title: Process to variable
 categories: [input-output]
 tags: [go, nim, php, python]
 ---
