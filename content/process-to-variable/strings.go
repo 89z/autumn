@@ -1,6 +1,8 @@
 package main
-import "os/exec"
-import "strings"
+import (
+   "os/exec"
+   "strings"
+)
 func main() {
    var o1 = exec.Command("ag")
    var o2 strings.Builder

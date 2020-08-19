@@ -33,8 +33,7 @@
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.d" data-lang=".d"><span style="color:#f92672">import</span> std.process<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.process<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> environment<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;BROWSER&#34;</span><span style="color:#f92672">);</span>
    s<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
@@ -45,8 +44,7 @@
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
 main() {
    <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> Platform.environment[<span style="color:#e6db74">&#39;BROWSER&#39;</span>];
    print(s);
@@ -57,8 +55,7 @@ main() {
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#75715e">// example 1
@@ -77,8 +74,7 @@ main() {
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.nim" data-lang=".nim"><span style="color:#f92672">import</span> os
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> os
 echo getEnv(<span style="color:#e6db74">&#34;BROWSER&#34;</span>)
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/os.html#getEnv,string,string">https://nim-lang.org/docs/os.html#getEnv,string,string</a></p>
@@ -86,8 +82,7 @@ echo getEnv(<span style="color:#e6db74">&#34;BROWSER&#34;</span>)
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $s1 <span style="color:#f92672">=</span> $_SERVER[<span style="color:#e6db74">&#39;BROWSER&#39;</span>];
 $s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</span>()[<span style="color:#e6db74">&#39;BROWSER&#39;</span>];
 $s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</span>(<span style="color:#e6db74">&#39;BROWSER&#39;</span>);
@@ -102,8 +97,7 @@ $s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</spa
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">import</span> os
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> os
 s1 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#39;BROWSER&#39;</span>]
 s2 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>getenv(<span style="color:#e6db74">&#39;BROWSER&#39;</span>)
 <span style="color:#75715e"># test</span>
@@ -117,8 +111,7 @@ s2 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>ge
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::env;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::env;
 <span style="color:#66d9ef">use</span> std::error::Error;
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
    <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> env::var(<span style="color:#e6db74">&#34;BROWSER&#34;</span>)<span style="color:#f92672">?</span>;

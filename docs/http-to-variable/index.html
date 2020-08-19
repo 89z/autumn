@@ -35,8 +35,7 @@
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.d" data-lang=".d"><span style="color:#f92672">import</span> std.net.curl<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.net.curl<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span><span style="color:#f92672">;</span>
    <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> s1<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">;</span>
@@ -48,8 +47,7 @@
 <p>
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
 main() {
    <span style="color:#66d9ef">var</span> o_uri <span style="color:#f92672">=</span> Uri.parse(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>);
    <span style="color:#66d9ef">var</span> o_http <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HttpClient();
@@ -64,8 +62,7 @@ main() {
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
 main() <span style="color:#66d9ef">async</span> {
    <span style="color:#66d9ef">var</span> o_uri <span style="color:#f92672">=</span> Uri.parse(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>);
    <span style="color:#66d9ef">var</span> o_http <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HttpClient();
@@ -80,8 +77,7 @@ main() <span style="color:#66d9ef">async</span> {
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
    <span style="color:#e6db74">&#34;log&#34;</span>
@@ -105,8 +101,7 @@ main() <span style="color:#66d9ef">async</span> {
 <p>
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_uri</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_uri</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>;
 <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">s_uri</span>).<span style="color:#a6e22e">then</span>(
    <span style="color:#a6e22e">o_req</span> =&gt; <span style="color:#a6e22e">o_req</span>.<span style="color:#a6e22e">text</span>()
 ).<span style="color:#a6e22e">then</span>(
@@ -116,8 +111,7 @@ main() <span style="color:#66d9ef">async</span> {
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#a6e22e">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">main</span>() {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_uri</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>;
    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">o_req</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">s_uri</span>);
    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_resp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">o_req</span>.<span style="color:#a6e22e">text</span>();
@@ -133,8 +127,7 @@ main() <span style="color:#66d9ef">async</span> {
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.nim" data-lang=".nim"><span style="color:#f92672">import</span> httpclient
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> httpclient
 <span style="color:#75715e"># -d:ssl</span>
 <span style="color:#66d9ef">let</span> s_in <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>
 <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> newHttpClient()
@@ -146,8 +139,7 @@ stdout.write s_out
 <p>
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>;
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>($s);
@@ -160,8 +152,7 @@ $s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 <span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;curl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;curl&#39;</span>);
 <span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;openssl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;openssl&#39;</span>);
 $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>(<span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>);
@@ -177,8 +168,7 @@ $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</s
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> request
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> request
 s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>
 o <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>urlopen(s)
 <span style="color:#f92672">from</span> sys <span style="color:#f92672">import</span> stdout
@@ -190,8 +180,7 @@ stdout<span style="color:#f92672">.</span>buffer<span style="color:#f92672">.</s
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> curl::easy::{Easy, WriteError};
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> curl::easy::{Easy, WriteError};
 <span style="color:#66d9ef">use</span> std::error::Error;
 <span style="color:#66d9ef">use</span> std::io::{stdout, Write};
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {

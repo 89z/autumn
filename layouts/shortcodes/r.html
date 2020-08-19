@@ -3,6 +3,7 @@
 {{ $s_path := path.Join .Page.File.Dir $s_file -}}
 {{ $s_code := readFile $s_path -}}
 <!--get language-->
-{{ $s_lang := path.Ext $s_file }}
+{{ $a_file := split $s_file "." -}}
+{{ $s_lang := index $a_file 1 -}}
 <!--highlight-->
 {{ highlight $s_code $s_lang "" -}}

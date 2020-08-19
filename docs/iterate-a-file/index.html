@@ -35,8 +35,7 @@
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.d" data-lang=".d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;a.txt&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">File</span><span style="color:#f92672">;</span>
    <span style="color:#66d9ef">foreach</span> <span style="color:#f92672">(</span>s<span style="color:#f92672">;</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">byLine</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
@@ -49,8 +48,7 @@
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;bufio&#34;</span>
    <span style="color:#e6db74">&#34;log&#34;</span>
@@ -72,8 +70,7 @@
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
 <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
    $s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgets</span>($r1);
@@ -90,8 +87,7 @@ cannot use it until we are certain that we have a string.</p>
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#66d9ef">for</span> s1 <span style="color:#f92672">in</span> open(<span style="color:#e6db74">&#39;a.txt&#39;</span>):
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">for</span> s1 <span style="color:#f92672">in</span> open(<span style="color:#e6db74">&#39;a.txt&#39;</span>):
    <span style="color:#66d9ef">print</span>(s1, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
 </code></pre></div>
 <p><a href="https://docs.python.org/reference/compound_stmts.html#for">https://docs.python.org/reference/compound_stmts.html#for</a></p>
@@ -99,8 +95,7 @@ cannot use it until we are certain that we have a string.</p>
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">use</span> std::error::Error;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::error::Error;
 <span style="color:#66d9ef">use</span> std::fs::File;
 <span style="color:#66d9ef">use</span> std::io::{BufRead, BufReader};
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {

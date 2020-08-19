@@ -35,8 +35,7 @@ easily change the radix. These also account for numeric zero input.</p>
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.d" data-lang=".d"><span style="color:#f92672">import</span> std.conv<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.conv<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">;</span>
    <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> n<span style="color:#f92672">.</span><span style="color:#a6e22e">to</span><span style="color:#f92672">!</span><span style="color:#66d9ef">string</span><span style="color:#f92672">(</span><span style="color:#ae81ff">16</span><span style="color:#f92672">);</span>
@@ -48,8 +47,7 @@ easily change the radix. These also account for numeric zero input.</p>
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.dart" data-lang=".dart">main() {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart">main() {
    <span style="color:#66d9ef">var</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
    <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> n.toRadixString(<span style="color:#ae81ff">16</span>);
    print(s);
@@ -60,8 +58,7 @@ easily change the radix. These also account for numeric zero input.</p>
 <p>
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;math/big&#34;</span>
    <span style="color:#e6db74">&#34;time&#34;</span>
@@ -88,8 +85,7 @@ easily change the radix. These also account for numeric zero input.</p>
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;strings&#34;</span>
    <span style="color:#e6db74">&#34;time&#34;</span>
@@ -134,8 +130,7 @@ easily change the radix. These also account for numeric zero input.</p>
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_dig</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz&#39;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_dig</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz&#39;</span>;
 <span style="color:#75715e">// example 1
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">r64_encode</span>(<span style="color:#a6e22e">n_in</span>) {
    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_out</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
@@ -164,8 +159,7 @@ easily change the radix. These also account for numeric zero input.</p>
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.nim" data-lang=".nim"><span style="color:#f92672">import</span> strutils
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> strutils
 <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
 <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> n.toHex
 echo s
@@ -175,8 +169,7 @@ echo s
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $s_dig <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz&#39;</span>;
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">r64_encode</span>(<span style="color:#a6e22e">int</span> $n_in)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
@@ -209,8 +202,7 @@ $n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">r64_decode<
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py">s_dig <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">s_dig <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz&#39;</span>
 <span style="color:#75715e"># example 1</span>
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">r64_encode</span>(n_in):
    s_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
@@ -238,8 +230,7 @@ n2 <span style="color:#f92672">=</span> r64_decode(s1)
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.rs" data-lang=".rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
    <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> format<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:x}&#34;</span>, n);
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);

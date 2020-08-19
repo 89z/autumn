@@ -32,8 +32,7 @@
    
 
 
-
-<pre><code class="language-.csv" data-lang=".csv">city,country
+<pre><code class="language-csv" data-lang="csv">city,country
 london,england
 nice,france
 </code></pre>
@@ -41,8 +40,7 @@ nice,france
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;encoding/csv&#34;</span>
    <span style="color:#e6db74">&#34;fmt&#34;</span>
@@ -77,8 +75,7 @@ nice,france
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $r_tab <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.csv&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
 $a_head <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgetcsv</span>($r_tab);
 <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
@@ -95,8 +92,7 @@ $a_head <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgetcsv
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $a_tab <span style="color:#f92672">=</span> <span style="color:#a6e22e">file</span>(<span style="color:#e6db74">&#39;a.csv&#39;</span>);
 $s_head <span style="color:#f92672">=</span> $a_tab[<span style="color:#ae81ff">0</span>];
 $a_head <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_getcsv</span>($s_head);
@@ -113,8 +109,7 @@ $a_body <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_s
 <p>
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">import</span> csv
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> csv
 o_db <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;a.csv&#39;</span>)
 <span style="color:#66d9ef">for</span> m_row <span style="color:#f92672">in</span> csv<span style="color:#f92672">.</span>DictReader(o_db):
    <span style="color:#66d9ef">print</span>(m_row)
@@ -122,8 +117,7 @@ o_db <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">import</span> csv
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> csv
 o_db <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;a.csv&#39;</span>)
 o_tab <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>reader(o_db)
 a_head <span style="color:#f92672">=</span> next(o_tab)

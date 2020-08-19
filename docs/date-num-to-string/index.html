@@ -33,8 +33,7 @@
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.d" data-lang=".d"><span style="color:#f92672">import</span> std.datetime<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.datetime<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">366</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span><span style="color:#f92672">;</span>
    <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> SysTime<span style="color:#f92672">.</span><span style="color:#a6e22e">fromUnixTime</span><span style="color:#f92672">(</span>n<span style="color:#f92672">);</span>
@@ -47,8 +46,7 @@
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.go" data-lang=".go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;time&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n</span> <span style="color:#66d9ef">int64</span> = <span style="color:#ae81ff">366</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>
@@ -62,8 +60,7 @@
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.js" data-lang=".js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">366</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">366</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">o</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#a6e22e">n</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>);
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_d</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">toLocaleString</span>(<span style="color:#ae81ff">0</span>, {<span style="color:#a6e22e">weekday</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;short&#39;</span>});
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_m</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">toLocaleString</span>(<span style="color:#ae81ff">0</span>, {<span style="color:#a6e22e">month</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;short&#39;</span>, <span style="color:#a6e22e">day</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;numeric&#39;</span>});
@@ -76,8 +73,7 @@
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.nim" data-lang=".nim"><span style="color:#f92672">import</span> times
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> times
 <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">366</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>
 <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> n.fromUnix
 <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#f92672">$</span>o
@@ -88,8 +84,7 @@ echo s
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.php" data-lang=".php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $n <span style="color:#f92672">=</span> <span style="color:#ae81ff">365</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>;
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strftime</span>(<span style="color:#e6db74">&#39;%a %b %#d %Y&#39;</span>, $n);
@@ -103,8 +98,7 @@ $n <span style="color:#f92672">=</span> <span style="color:#ae81ff">365</span> <
 
 
 
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.py" data-lang=".py"><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> date
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> date
 n <span style="color:#f92672">=</span> <span style="color:#ae81ff">366</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>
 o <span style="color:#f92672">=</span> date<span style="color:#f92672">.</span>fromtimestamp(n)
 s <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%a %b </span><span style="color:#e6db74">%#d</span><span style="color:#e6db74"> %Y&#39;</span>)
