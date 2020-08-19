@@ -1,5 +1,5 @@
 ---
-title: Write to file
+title: Variable to file
 categories: [input-output]
 tags: [d, dart, go, nim, php, python, rust]
 ---

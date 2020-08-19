@@ -1,5 +1,5 @@
 ---
-title: Get base name
+title: Path parts
 categories: [string]
 tags: [go, php, python]
 ---

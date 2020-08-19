@@ -1,5 +1,5 @@
 ---
-title: Write to console
+title: Variable to console
 categories: [input-output]
 tags: [c++, d, dart, go, javascript, nim, perl, php, python, ruby, rust]
 ---
