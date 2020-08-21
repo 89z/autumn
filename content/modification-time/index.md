@@ -1,8 +1,12 @@
 ---
 title: Modification time
 categories: [system]
-tags: [php]
+tags: [go, php]
 ---
+
+## Go
+
+<https://golang.org/pkg/os#Chtimes>
 
 ## PHP
 
