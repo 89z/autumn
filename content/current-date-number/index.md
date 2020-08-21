@@ -1,7 +1,7 @@
 ---
 title: Current date number
 categories: [date]
-tags: [d, dart, go, javascript, nim, php, python, rust]
+tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 ---
 
 ## D
@@ -51,6 +51,10 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 
 - <https://docs.python.org/library/datetime.html#datetime.datetime.timestamp>
 - <https://docs.python.org/library/time.html#time.time>
+
+## Ruby
+
+{{< r "a.rb" >}}
 
 ## Rust
 

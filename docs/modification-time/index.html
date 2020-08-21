@@ -30,6 +30,24 @@
    
    
    <h2 id="c">C++</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;chrono&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;filesystem&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;fstream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iomanip&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">namespace</span> fs <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>filesystem;
+<span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std<span style="color:#f92672">::</span>chrono_literals;
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   fs<span style="color:#f92672">::</span>path p <span style="color:#f92672">=</span> fs<span style="color:#f92672">::</span>current_path() <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;example.bin&#34;</span>;
+   std<span style="color:#f92672">::</span>ofstream(p.c_str()).put(<span style="color:#e6db74">&#39;a&#39;</span>); <span style="color:#75715e">// create file
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> ftime <span style="color:#f92672">=</span> fs<span style="color:#f92672">::</span>last_write_time(p);
+   std<span style="color:#f92672">::</span>time_t cftime <span style="color:#f92672">=</span> <span style="color:#66d9ef">decltype</span>(ftime)<span style="color:#f92672">::</span>clock<span style="color:#f92672">::</span>to_time_t(ftime);
+   fs<span style="color:#f92672">::</span>last_write_time(p, ftime <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>h); <span style="color:#75715e">// move file write time 1 hour to the future
+</span><span style="color:#75715e"></span>}
+</code></pre></div>
 <p><a href="https://en.cppreference.com/w/cpp/filesystem/last_write_time">https://en.cppreference.com/w/cpp/filesystem/last_write_time</a></p>
 <h2 id="d">D</h2>
 
@@ -44,6 +62,7 @@
    setTimes<span style="color:#f92672">(</span>fname<span style="color:#f92672">,</span> fileAccessTime<span style="color:#f92672">,</span> fileModificationTime<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
+<p><a href="https://dlang.org/library/std/file/set_times.html">https://dlang.org/library/std/file/set_times.html</a></p>
 <h2 id="dart">Dart</h2>
 <p><a href="https://api.dart.dev/dart-io/File/setLastModified.html">https://api.dart.dev/dart-io/File/setLastModified.html</a></p>
 <h2 id="go">Go</h2>
@@ -69,7 +88,17 @@ unixModTime.tv_sec <span style="color:#f92672">=</span> <span style="color:#ae81
 <span style="color:#75715e"># Set the access and modification times to the current time</span>
 <span style="color:#66d9ef">discard</span> utimes(<span style="color:#e6db74">&#34;filename&#34;</span>, <span style="color:#66d9ef">nil</span>)
 </code></pre></div>
+<p><a href="https://nim-lang.org/docs/os.html#setLastModificationTime,string,">https://nim-lang.org/docs/os.html#setLastModificationTime,string,</a></p>
 <h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">time</span>();
+<span style="color:#a6e22e">touch</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>, $n1);
+$n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">filemtime</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($n1, $n2 <span style="color:#f92672">==</span> $n1);
+</code></pre></div>
 <p><a href="https://php.net/function.touch">https://php.net/function.touch</a></p>
 <h2 id="python">Python</h2>
 
@@ -89,6 +118,7 @@ os<span style="color:#f92672">.</span>utime(<span style="color:#e6db74">&#39;pat
 <span style="color:#75715e">#Set the access and modification times to the current time:</span>
 os<span style="color:#f92672">.</span>utime(<span style="color:#e6db74">&#39;path&#39;</span>, None)
 </code></pre></div>
+<p><a href="https://docs.python.org/library/os.html">https://docs.python.org/library/os.html</a></p>
 <h2 id="ruby">Ruby</h2>
 
 
@@ -105,6 +135,29 @@ modtime <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</s
 <span style="color:#75715e">#Set the access and modification times to the current time:</span>
 <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>utime(<span style="color:#66d9ef">nil</span>, <span style="color:#66d9ef">nil</span>, <span style="color:#e6db74">&#39;path&#39;</span>)
 </code></pre></div>
+<ul>
+<li><a href="https://ruby-doc.org/core/File.html#method-c-mtime">https://ruby-doc.org/core/File.html#method-c-mtime</a></li>
+<li><a href="https://ruby-doc.org/core/File.html#method-i-mtime">https://ruby-doc.org/core/File.html#method-i-mtime</a></li>
+<li><a href="https://ruby-doc.org/core/File/Stat.html#method-i-mtime">https://ruby-doc.org/core/File/Stat.html#method-i-mtime</a></li>
+</ul>
+<h2 id="rust">Rust</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::fs;
+ 
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">std</span>::io::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
+    <span style="color:#66d9ef">let</span> metadata <span style="color:#f92672">=</span> fs::metadata(<span style="color:#e6db74">&#34;foo.txt&#34;</span>)<span style="color:#f92672">?</span>;
+ 
+    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> Ok(time) <span style="color:#f92672">=</span> metadata.accessed() {
+        println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, time);
+    } <span style="color:#66d9ef">else</span> {
+        println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Not supported on this platform&#34;</span>);
+    }
+    Ok(())
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/fs">https://doc.rust-lang.org/std/fs</a></p>
 <h2 id="references">References</h2>
 <p><a href="https://rosettacode.org/wiki/File_modification_time">https://rosettacode.org/wiki/File_modification_time</a></p>
 

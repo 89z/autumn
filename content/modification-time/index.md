@@ -1,16 +1,20 @@
 ---
 title: Modification time
 categories: [system]
-tags: [c++, d, dart, go, nim, php, python, ruby]
+tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 ---
 
 ## C++
+
+{{< r "a.cpp" >}}
 
 <https://en.cppreference.com/w/cpp/filesystem/last_write_time>
 
 ## D
 
 {{< r "a.d" >}}
+
+<https://dlang.org/library/std/file/set_times.html>
 
 ## Dart
 
@@ -24,7 +28,11 @@ tags: [c++, d, dart, go, nim, php, python, ruby]
 
 {{< r "a.nim" >}}
 
+<https://nim-lang.org/docs/os.html#setLastModificationTime,string,>
+
 ## PHP
+
+{{< r "a.php" >}}
 
 <https://php.net/function.touch>
 
@@ -32,9 +40,21 @@ tags: [c++, d, dart, go, nim, php, python, ruby]
 
 {{< r "a.py" >}}
 
+<https://docs.python.org/library/os.html>
+
 ## Ruby
 
 {{< r "a.rb" >}}
+
+- <https://ruby-doc.org/core/File.html#method-c-mtime>
+- <https://ruby-doc.org/core/File.html#method-i-mtime>
+- <https://ruby-doc.org/core/File/Stat.html#method-i-mtime>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/fs>
 
 ## References
 
