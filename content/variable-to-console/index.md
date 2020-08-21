@@ -1,7 +1,7 @@
 ---
 title: Variable to console
 categories: [input-output]
-tags: [c++, d, dart, go, javascript, nim, perl, php, python, ruby, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 ---
 
 ## C++
@@ -46,10 +46,6 @@ tags: [c++, d, dart, go, javascript, nim, perl, php, python, ruby, rust]
 
 <https://nim-lang.org/docs/system.html#echo,varargs[typed,]>
 
-## Perl
-
-{{< r "a.pl" >}}
-
 ## PHP
 
 {{< r "a.php" >}}
@@ -80,7 +76,6 @@ tags: [c++, d, dart, go, javascript, nim, perl, php, python, ruby, rust]
 
 - <https://hyperpolyglot.org/c#write-line-stdout>
 - <https://hyperpolyglot.org/cpp#printf>
-- <https://hyperpolyglot.org/more#print-to-stdout>
 - <https://hyperpolyglot.org/scripting2#write-stdout>
 - <https://programming-idioms.org/idiom/1>
 - <https://rosettacode.org/wiki/Hello_world/Newline_omission>

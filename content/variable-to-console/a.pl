@@ -1,1 +1,0 @@
-print "Sunday\n";

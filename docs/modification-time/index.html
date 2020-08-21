@@ -29,10 +29,82 @@
    <a href="/autumn/categories/system/">system</a>
    
    
-   <h2 id="go">Go</h2>
+   <h2 id="c">C++</h2>
+<p><a href="https://en.cppreference.com/w/cpp/filesystem/last_write_time">https://en.cppreference.com/w/cpp/filesystem/last_write_time</a></p>
+<h2 id="d">D</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.file<span style="color:#f92672">:</span> getTimes<span style="color:#f92672">,</span> setTimes<span style="color:#f92672">,</span> SysTime<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> fname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;unixdict.txt&#34;</span><span style="color:#f92672">;</span>
+   SysTime fileAccessTime<span style="color:#f92672">,</span> fileModificationTime<span style="color:#f92672">;</span>
+   getTimes<span style="color:#f92672">(</span>fname<span style="color:#f92672">,</span> fileAccessTime<span style="color:#f92672">,</span> fileModificationTime<span style="color:#f92672">);</span>
+   setTimes<span style="color:#f92672">(</span>fname<span style="color:#f92672">,</span> fileAccessTime<span style="color:#f92672">,</span> fileModificationTime<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+<h2 id="dart">Dart</h2>
+<p><a href="https://api.dart.dev/dart-io/File/setLastModified.html">https://api.dart.dev/dart-io/File/setLastModified.html</a></p>
+<h2 id="go">Go</h2>
 <p><a href="https://golang.org/pkg/os#Chtimes">https://golang.org/pkg/os#Chtimes</a></p>
+<h2 id="nim">Nim</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> os, times
+<span style="color:#66d9ef">let</span> accTime <span style="color:#f92672">=</span> getLastAccessTime(<span style="color:#e6db74">&#34;filename&#34;</span>)
+<span style="color:#66d9ef">let</span> modTime <span style="color:#f92672">=</span> getLastModificationTime(<span style="color:#e6db74">&#34;filename&#34;</span>)
+ 
+<span style="color:#f92672">import</span> posix
+<span style="color:#66d9ef">var</span> unixAccTime <span style="color:#f92672">=</span> Timeval(tv_sec: <span style="color:#66d9ef">int</span>(accTime))
+<span style="color:#66d9ef">var</span> unixModTime <span style="color:#f92672">=</span> Timeval(tv_sec: <span style="color:#66d9ef">int</span>(modTime))
+ 
+<span style="color:#75715e"># Set the modification time</span>
+unixModTime.tv_sec <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+ 
+<span style="color:#66d9ef">var</span> times <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>unixAccTime, unixModTime<span style="color:#f92672">]</span>
+<span style="color:#66d9ef">discard</span> utimes(<span style="color:#e6db74">&#34;filename&#34;</span>, <span style="color:#66d9ef">addr</span>(times))
+ 
+<span style="color:#75715e"># Set the access and modification times to the current time</span>
+<span style="color:#66d9ef">discard</span> utimes(<span style="color:#e6db74">&#34;filename&#34;</span>, <span style="color:#66d9ef">nil</span>)
+</code></pre></div>
 <h2 id="php">PHP</h2>
 <p><a href="https://php.net/function.touch">https://php.net/function.touch</a></p>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> os
+ 
+<span style="color:#75715e">#Get modification time:</span>
+modtime <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>getmtime(<span style="color:#e6db74">&#39;filename&#39;</span>)
+ 
+<span style="color:#75715e">#Set the access and modification times:</span>
+os<span style="color:#f92672">.</span>utime(<span style="color:#e6db74">&#39;path&#39;</span>, (actime, mtime))
+ 
+<span style="color:#75715e">#Set just the modification time:</span>
+os<span style="color:#f92672">.</span>utime(<span style="color:#e6db74">&#39;path&#39;</span>, (os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>getatime(<span style="color:#e6db74">&#39;path&#39;</span>), mtime))
+ 
+<span style="color:#75715e">#Set the access and modification times to the current time:</span>
+os<span style="color:#f92672">.</span>utime(<span style="color:#e6db74">&#39;path&#39;</span>, None)
+</code></pre></div>
+<h2 id="ruby">Ruby</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#75715e">#Get modification time:</span>
+modtime <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>mtime(<span style="color:#e6db74">&#39;filename&#39;</span>)
+ 
+<span style="color:#75715e">#Set the access and modification times:</span>
+<span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>utime(actime, mtime, <span style="color:#e6db74">&#39;path&#39;</span>)
+ 
+<span style="color:#75715e">#Set just the modification time:</span>
+<span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>utime(<span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>atime(<span style="color:#e6db74">&#39;path&#39;</span>), mtime, <span style="color:#e6db74">&#39;path&#39;</span>)
+ 
+<span style="color:#75715e">#Set the access and modification times to the current time:</span>
+<span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>utime(<span style="color:#66d9ef">nil</span>, <span style="color:#66d9ef">nil</span>, <span style="color:#e6db74">&#39;path&#39;</span>)
+</code></pre></div>
 <h2 id="references">References</h2>
 <p><a href="https://rosettacode.org/wiki/File_modification_time">https://rosettacode.org/wiki/File_modification_time</a></p>
 
