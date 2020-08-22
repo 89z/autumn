@@ -68,12 +68,12 @@ main() {
    <span style="color:#e6db74">&#34;strings&#34;</span>
 )
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o1</span> = <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;ag&#34;</span>)
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o2</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>
+   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;go&#34;</span>, <span style="color:#e6db74">&#34;version&#34;</span>)
+   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>{}
    <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Stdout</span> = <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">o2</span>
    <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Run</span>()
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s1</span> = <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">String</span>()
-   print(<span style="color:#a6e22e">s1</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">String</span>()
+   print(<span style="color:#a6e22e">s</span>)
 }
 </code></pre></div></p>
 <ul>

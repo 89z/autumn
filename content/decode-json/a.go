@@ -4,13 +4,15 @@ import (
    "fmt"
 )
 func main() {
-   var y = []byte(`{"Sunday": 10}`)
+   y := []byte(`
+{"Sunday": 10}
+`)
    // example 1
-   var m map[string]int
+   m := map[string]int{}
    json.Unmarshal(y, &m)
-   fmt.Println(m)
    // example 2
-   var o struct {Sunday int}
+   o := struct{Sunday int}{}
    json.Unmarshal(y, &o)
-   fmt.Printf("%+v\n", o)
+   // print
+   fmt.Printf("%v %+v\n", m, o)
 }

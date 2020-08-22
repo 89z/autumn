@@ -3,10 +3,12 @@ import (
    "strings"
    "time"
 )
-var s_dig = "-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz"
+const (
+   s_dig = "-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz"
+)
 // example 1
 func r64_encode(n_in int) string {
-   var s_out string
+   s_out := ""
    for {
       n_key := n_in % 64
       s_out = s_dig[n_key:n_key + 1] + s_out
@@ -19,7 +21,7 @@ func r64_encode(n_in int) string {
 }
 // example 1
 func r64_decode(s_in string) int {
-   var n_out int
+   n_out := 0
    for n_key := range s_in {
       s_chr := s_in[n_key:n_key + 1]
       n_out = n_out * 64 + strings.Index(s_dig, s_chr)

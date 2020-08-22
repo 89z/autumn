@@ -1,2 +1,2 @@
-let s = '♠';
+let s = 'Sunday';
 console.log(s);

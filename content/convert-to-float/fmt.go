@@ -1,7 +1,8 @@
 package main
 import "fmt"
 func main() {
-   var n1, n2 float64
+   n1 := float64(0)
+   n2 := float64(0)
    // example 1
    fmt.Sscanln("1.8 1.9", &n1, &n2)
    println(n1, n2)

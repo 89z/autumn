@@ -1,14 +1,14 @@
 package main
 func main() {
-   var s = "Sun"
-   var n int
+   n := 0
+   s := "Sunday"
    switch s {
-   case "Fri":
-      n = 1
-   case "Sat", "Sun":
+   case "Friday":
       n = 2
+   case "Saturday", "Sunday":
+      n = 3
    default:
-      n = 0
+      n = 1
    }
    println(n)
 }

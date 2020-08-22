@@ -1,8 +1,8 @@
-s1 = '♠'
+s = '😀'
 # example 1
-n1 = len(s1)
+n1 = len(s)
 # example 2
-y1 = s1.encode()
-n2 = len(y1)
+y = s.encode()
+n2 = len(y)
 # print
-print(n1 == 1, n2 == 3)
+print(n1 == 1, n2 == 4)

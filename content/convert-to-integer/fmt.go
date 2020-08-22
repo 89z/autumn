@@ -1,7 +1,8 @@
 package main
 import "fmt"
 func main() {
-   var n1, n2 int
+   n1 := 0
+   n2 := 0
    // example 1
    fmt.Sscanln("10 11", &n1, &n2)
    println(n1, n2)

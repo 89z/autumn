@@ -1,12 +1,11 @@
 package main
 import "time"
 func main() {
-   var o = time.Now()
-   var s string
+   o := time.Now()
    // example 1
-   s = o.String()
-   println(s)
+   s1 := o.String()
    // example 2
-   s = o.Format(time.RFC3339)
-   println(s)
+   s2 := o.Format(time.RFC3339)
+   // print
+   println(s1, s2)
 }
