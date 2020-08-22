@@ -1,4 +1,4 @@
-let s1 = '𐐀';
+let s1 = '📕';
 // example 1
 let a1 = Array.from(s1);
 let n1 = a1.length;

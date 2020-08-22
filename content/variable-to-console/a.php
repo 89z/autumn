@@ -1,5 +1,5 @@
 <?php
-$s = "𐐀\n";
+$s = "Sunday\n";
 # example 1
 echo $s;
 # example 2

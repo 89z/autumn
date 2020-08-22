@@ -1,6 +1,6 @@
 package main
 func main() {
-   s := "𐐀"
+   s := "Sunday"
    // example 1
    println(s)
    // example 2

@@ -1,5 +1,5 @@
 fn main() {
-   let s = "𐐀";
+   let s = "Sunday";
    // example 1
    println!("{}", s);
    // example 2

@@ -19,6 +19,7 @@ tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 ## Dart
 
 {{< r "a.dart" >}}
+{{< r "b.dart" >}}
 
 <https://api.dart.dev/dart-core/print.html>
 

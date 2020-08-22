@@ -1,11 +1,10 @@
 package main
 func main() {
-   s1 := "♠"
    // example 1
-   n1 := len(s1)
+   n1 := len("📕")
    // example 2
-   a1 := []rune(s1)
+   a1 := []rune("📕")
    n2 := len(a1)
    // print
-   println(n1 == 3, n2 == 1)
+   println(n1 == 4, n2 == 1)
 }
