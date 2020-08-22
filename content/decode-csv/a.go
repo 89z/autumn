@@ -2,18 +2,17 @@ package main
 import (
    "encoding/csv"
    "fmt"
-   "log"
    "os"
 )
 func main() {
    o_db, e := os.Open("a.csv")
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
    o_tab := csv.NewReader(o_db)
    a_head, e := o_tab.Read()
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
    m_row := map[string]string{}
    for {

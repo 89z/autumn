@@ -1,13 +1,13 @@
 package main
 import (
-   "log"
+   "os"
    "time"
 )
 func main() {
-   s := "2019-12-31"
-   o, e := time.Parse(time.RFC3339[:10], s)
+   s_layout := time.RFC3339[:10]
+   o, e := time.Parse(s_layout, "2019-12-31")
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
    n := o.Unix()
    println(n)

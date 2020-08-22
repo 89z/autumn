@@ -24,7 +24,7 @@
 
 <main>
    <h1>Talk:Two-way conditions</h1>
-   <time>Sat Aug 1 2020</time>
+   <time>Fri Aug 21 2020</time>
    
    
    <h2 id="if-statements">If statements</h2>
@@ -42,24 +42,8 @@
    }
 }
 </code></pre></div>
-<p>but not other types:</p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n1</span> = <span style="color:#ae81ff">10</span>
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n2</span> <span style="color:#66d9ef">int</span>
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">n1</span> { <span style="color:#75715e">// non-bool n1 (type int) used as if condition
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">n2</span> = <span style="color:#a6e22e">n1</span>
-   } <span style="color:#66d9ef">else</span> {
-      <span style="color:#a6e22e">n2</span> = <span style="color:#ae81ff">20</span>
-   }
-   println(<span style="color:#a6e22e">n2</span>)
-}
-</code></pre></div>
-<p>To deal with this, we should simply only use booleans when a condition is
-expected.</p>
+<p>but not other types. To deal with this, we should simply only use booleans when
+a condition is expected.</p>
 <h2 id="ternary-operations">Ternary operations</h2>
 <p>PHP offers this:</p>
 <p><a href="https://php.net/operators.comparison#language.operators.comparison.ternary">https://php.net/operators.comparison#language.operators.comparison.ternary</a></p>

@@ -1,13 +1,13 @@
 package main
 import (
-   "log"
+   "os"
    "strconv"
 )
 func main() {
    s := "1.9"
    n, e := strconv.ParseFloat(s, 64)
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
    println(n)
 }

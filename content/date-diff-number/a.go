@@ -1,15 +1,14 @@
 package main
 import (
-   "fmt"
-   "log"
+   "os"
    "time"
 )
 func main() {
    o1, e := time.Parse(time.RFC3339[:10], "2019-12-31")
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
    o2 := time.Now()
    n := o2.Sub(o1).Seconds()
-   fmt.Println(n)
+   println(n)
 }

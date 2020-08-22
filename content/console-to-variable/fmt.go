@@ -1,13 +1,13 @@
 package main
 import (
    "fmt"
-   "log"
+   "os"
 )
 func main() {
-   var s string
+   s := ""
    n, e := fmt.Scanln(&s)
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
    println(n, s)
 }

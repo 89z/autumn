@@ -2,15 +2,14 @@ package main
 import (
    "encoding/json"
    "fmt"
-   "log"
    "os"
 )
 func main() {
-   var o, e = os.Open("a.json")
+   o, e := os.Open("a.json")
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
-   var m map[string]int
+   m := map[string]int{}
    json.NewDecoder(o).Decode(&m)
    fmt.Println(m)
 }

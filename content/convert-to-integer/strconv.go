@@ -1,19 +1,19 @@
 package main
 import (
-   "log"
+   "os"
    "strconv"
 )
 func main() {
-   s1 := "10"
+   s := "10"
    // example 1
-   n1, e := strconv.ParseInt(s1, 10, 0)
+   n1, e := strconv.ParseInt(s, 10, 0)
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
    // example 2
-   n2, e := strconv.Atoi(s1)
+   n2, e := strconv.Atoi(s)
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
    // print
    println(n1, n2)

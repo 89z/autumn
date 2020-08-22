@@ -8,12 +8,8 @@ PHP accepts any type with conditions. Go accepts booleans with conditions:
 
 {{< r "if.go" >}}
 
-but not other types:
-
-{{< r "if_2.go" >}}
-
-To deal with this, we should simply only use booleans when a condition is
-expected.
+but not other types. To deal with this, we should simply only use booleans when
+a condition is expected.
 
 ## Ternary operations
 
