@@ -1,12 +1,13 @@
 package main
 import (
+   "fmt"
    "io/ioutil"
-   "log"
+   "os"
 )
 func main() {
    y, e := ioutil.ReadFile("a.txt")
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
-   log.Printf("%s", y)
+   fmt.Printf("%s", y)
 }

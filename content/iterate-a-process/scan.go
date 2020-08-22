@@ -2,13 +2,13 @@ package main
 import (
    "bufio"
    "bytes"
-   "log"
+   "os"
    "os/exec"
 )
 func main() {
-   y, e := exec.Command("ag", "-V").Output()
+   y, e := exec.Command("go", "env").Output()
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
    o1 := bytes.NewReader(y)
    o2 := bufio.NewScanner(o1)

@@ -1,14 +1,13 @@
 package main
 import (
    "fmt"
-   "log"
+   "os"
    "os/exec"
 )
 func main() {
-   o := exec.Command("ag", "-V")
-   y, e := o.Output()
+   y, e := exec.Command("go", "version").Output()
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
    fmt.Printf("%s", y)
 }

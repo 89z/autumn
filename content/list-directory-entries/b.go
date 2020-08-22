@@ -1,16 +1,16 @@
 package main
 import (
-   "log"
+   "fmt"
    "os"
 )
 func main() {
-   f, e := os.Open(".")
+   o, e := os.Open(".")
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
-   a, e := f.Readdirnames(0)
+   a, e := o.Readdirnames(0)
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
-   log.Println(a)
+   fmt.Println(a)
 }

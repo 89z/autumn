@@ -1,12 +1,12 @@
 package main
 import (
    "io/ioutil"
-   "log"
+   "os"
 )
 func main() {
    a, e := ioutil.ReadDir(".")
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
    for n, o := range a {
       s := o.Name()

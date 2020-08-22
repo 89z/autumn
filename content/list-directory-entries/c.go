@@ -1,13 +1,13 @@
 package main
 import (
    "fmt"
-   "log"
+   "os"
    "path/filepath"
 )
 func main() {
    a, e := filepath.Glob("*")
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
    fmt.Println(a)
 }
