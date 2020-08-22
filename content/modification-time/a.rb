@@ -1,11 +1,4 @@
-#Get modification time:
-modtime = File.mtime('filename')
- 
-#Set the access and modification times:
-File.utime(actime, mtime, 'path')
- 
-#Set just the modification time:
-File.utime(File.atime('path'), mtime, 'path')
- 
-#Set the access and modification times to the current time:
-File.utime(nil, nil, 'path')
+o1 = Time.now
+File.utime(o1, o1, 'index.md')
+o2 = File.mtime('index.md')
+puts o1, o2 == o1

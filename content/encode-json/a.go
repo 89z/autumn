@@ -2,11 +2,13 @@ package main
 import (
    "encoding/json"
    "fmt"
+   "os"
 )
 func main() {
-   a := []string{"Sun", "Mon"}
-   y, e := json.Marshal(a)
-   if e == nil {
-      fmt.Printf("%s\n", y)
+   m := map[string]int{"α/β": 10}
+   y, e := json.Marshal(m)
+   if e != nil {
+      os.Exit(1)
    }
+   fmt.Printf("%s\n", y)
 }

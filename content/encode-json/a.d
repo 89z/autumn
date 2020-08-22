@@ -1,7 +1,13 @@
 import std.json, std.stdio;
 void main() {
-   auto m = ["Sunday": 10];
+   auto m = ["α/β": 10];
    auto o = m.JSONValue;
-   auto s = o.toJSON;
-   s.writeln;
+   // example 1
+   auto s1 = o.toJSON;
+   // example 2
+   auto s2 = o.toJSON(true);
+   // example 3
+   auto s3 = o.toJSON(true, JSONOptions.doNotEscapeSlashes);
+   // print
+   writeln(s1, s2, s3);
 }

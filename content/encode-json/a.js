@@ -1,7 +1,7 @@
-let s1, a1 = ['Sun', 'Mon'];
+let m = {'α/β': 10};
 // example 1
-s1 = JSON.stringify(a1);
-console.log(s1);
+s1 = JSON.stringify(m);
 // example 2
-s1 = JSON.stringify(a1, null, 3);
-console.log(s1);
+s2 = JSON.stringify(m, null, 3);
+// print
+console.log(s1, s2);

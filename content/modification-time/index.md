@@ -22,6 +22,8 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 
 ## Go
 
+{{< r "a.go" >}}
+
 <https://golang.org/pkg/os#Chtimes>
 
 ## Nim

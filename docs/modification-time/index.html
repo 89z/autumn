@@ -66,6 +66,27 @@
 <h2 id="dart">Dart</h2>
 <p><a href="https://api.dart.dev/dart-io/File/setLastModified.html">https://api.dart.dev/dart-io/File/setLastModified.html</a></p>
 <h2 id="go">Go</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;os&#34;</span>
+   <span style="color:#e6db74">&#34;time&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Now</span>()
+   <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Chtimes</span>(<span style="color:#e6db74">&#34;index.md&#34;</span>, <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">o1</span>)
+   <span style="color:#a6e22e">o2</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stat</span>(<span style="color:#e6db74">&#34;index.md&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
+   }
+   <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Unix</span>()
+   <span style="color:#a6e22e">n2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">ModTime</span>().<span style="color:#a6e22e">Unix</span>()
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">n1</span>)
+}
+</code></pre></div>
 <p><a href="https://golang.org/pkg/os#Chtimes">https://golang.org/pkg/os#Chtimes</a></p>
 <h2 id="nim">Nim</h2>
 
@@ -104,36 +125,21 @@ $n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">filemtime</
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> os
- 
-<span style="color:#75715e">#Get modification time:</span>
-modtime <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>getmtime(<span style="color:#e6db74">&#39;filename&#39;</span>)
- 
-<span style="color:#75715e">#Set the access and modification times:</span>
-os<span style="color:#f92672">.</span>utime(<span style="color:#e6db74">&#39;path&#39;</span>, (actime, mtime))
- 
-<span style="color:#75715e">#Set just the modification time:</span>
-os<span style="color:#f92672">.</span>utime(<span style="color:#e6db74">&#39;path&#39;</span>, (os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>getatime(<span style="color:#e6db74">&#39;path&#39;</span>), mtime))
- 
-<span style="color:#75715e">#Set the access and modification times to the current time:</span>
-os<span style="color:#f92672">.</span>utime(<span style="color:#e6db74">&#39;path&#39;</span>, None)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> os<span style="color:#f92672">,</span> time
+n1 <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+os<span style="color:#f92672">.</span>utime(<span style="color:#e6db74">&#39;index.md&#39;</span>, (n1, n1))
+n2 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>getmtime(<span style="color:#e6db74">&#39;index.md&#39;</span>)
+<span style="color:#66d9ef">print</span>(n1, n2 <span style="color:#f92672">==</span> n1)
 </code></pre></div>
 <p><a href="https://docs.python.org/library/os.html">https://docs.python.org/library/os.html</a></p>
 <h2 id="ruby">Ruby</h2>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#75715e">#Get modification time:</span>
-modtime <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>mtime(<span style="color:#e6db74">&#39;filename&#39;</span>)
- 
-<span style="color:#75715e">#Set the access and modification times:</span>
-<span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>utime(actime, mtime, <span style="color:#e6db74">&#39;path&#39;</span>)
- 
-<span style="color:#75715e">#Set just the modification time:</span>
-<span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>utime(<span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>atime(<span style="color:#e6db74">&#39;path&#39;</span>), mtime, <span style="color:#e6db74">&#39;path&#39;</span>)
- 
-<span style="color:#75715e">#Set the access and modification times to the current time:</span>
-<span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>utime(<span style="color:#66d9ef">nil</span>, <span style="color:#66d9ef">nil</span>, <span style="color:#e6db74">&#39;path&#39;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">o1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>now
+<span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>utime(o1, o1, <span style="color:#e6db74">&#39;index.md&#39;</span>)
+o2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>mtime(<span style="color:#e6db74">&#39;index.md&#39;</span>)
+puts o1, o2 <span style="color:#f92672">==</span> o1
 </code></pre></div>
 <ul>
 <li><a href="https://ruby-doc.org/core/File.html#method-c-mtime">https://ruby-doc.org/core/File.html#method-c-mtime</a></li>
