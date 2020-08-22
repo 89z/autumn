@@ -16,9 +16,11 @@ tags: [c++, d, dart, go, nim, php, python, rust]
 
 ## Dart
 
-{{< r "a.dart" >}}
+{{< r "exit.dart" >}}
+{{< r "return.dart" >}}
 
-<https://dart.dev/guides/language/language-tour#functions>
+- <https://api.dart.dev/dart-io/exit.html>
+- <https://dart.dev/guides/language/language-tour#functions>
 
 ## Go
 
@@ -55,7 +57,7 @@ tags: [c++, d, dart, go, nim, php, python, rust]
 
 ## Rust
 
-{{< r "exit.rs" >}}
+{{< r "a.rs" >}}
 
 <https://doc.rust-lang.org/std/process/fn.exit.html>
 

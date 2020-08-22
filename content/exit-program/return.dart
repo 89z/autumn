@@ -1,0 +1,4 @@
+main() {
+   return;
+   print('Sunday');
+}

@@ -1,13 +1,16 @@
 ---
-title: 'Category talk:Time'
+title: 'Category talk:date'
 ---
 
 - current date number
-- current date object
 - current date string
-- date diff number
-- date diff object
-- date diff string
+- current date object
+- date addition number
+- date addition object
+- date addition string
+- date difference number
+- date difference object
+- date difference string
 - date number to object
 - date number to string
 - date object to number

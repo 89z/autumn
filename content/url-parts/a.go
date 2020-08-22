@@ -1,20 +1,19 @@
 package main
 import (
-   "log"
    "net/url"
+   "os"
 )
 func main() {
-   s1 := "https://example.com/one?two=even"
-   o1, e := url.Parse(s1)
+   o, e := url.Parse("https://example.com/one?two=even")
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
    // example 1
-   s2 := o1.Host
+   s1 := o.Host
    // example 2
-   s3 := o1.Path
+   s2 := o.Path
    // example 3
-   s4 := o1.RawQuery
+   s3 := o.RawQuery
    // print
-   println(s2 == "example.com", s3 == "/one", s4 == "two=even")
+   println(s1 == "example.com", s2 == "/one", s3 == "two=even")
 }

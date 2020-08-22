@@ -1,14 +1,14 @@
 package main
 import (
-   "log"
+   "fmt"
    "net/url"
+   "os"
 )
 func main() {
-   s1 := "https://example.com/one?two=even"
-   o1, e := url.Parse(s1)
+   o1, e := url.Parse("https://example.com/one?two=even")
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
    o2 := o1.Query()
-   log.Print(o2)
+   fmt.Println(o2)
 }

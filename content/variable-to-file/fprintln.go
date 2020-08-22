@@ -1,13 +1,12 @@
 package main
 import (
    "fmt"
-   "log"
    "os"
 )
 func main() {
    o, e := os.Create("a.txt")
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
    fmt.Fprintln(o, "Sunday")
 }

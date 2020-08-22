@@ -1,22 +1,21 @@
 package main
 import (
    "fmt"
-   "log"
    "net/url"
+   "os"
 )
 func main() {
    // example 1
-   s1 := "one=odd&two=even"
-   m1, e := url.ParseQuery(s1)
+   m1, e := url.ParseQuery("one=odd&two=even")
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
    // example 2
    m2 := url.Values{
       "one": []string{"odd"},
       "two": []string{"even"},
    }
-   s2 := m2.Encode()
+   s1 := m2.Encode()
    // print
-   fmt.Println(m1, s2)
+   fmt.Println(m1, s1)
 }
