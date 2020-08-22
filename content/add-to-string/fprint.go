@@ -4,8 +4,8 @@ import (
    "strings"
 )
 func main() {
-   var o strings.Builder
+   o := strings.Builder{}
    fmt.Fprint(&o, "Sunday")
-   var s = o.String()
+   s := o.String()
    println(s)
 }
