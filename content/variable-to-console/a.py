@@ -1,4 +1,4 @@
-s = '𐐀'
+s = 'Sunday'
 # example 1
 print(s)
 # exmaple 2

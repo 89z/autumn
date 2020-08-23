@@ -1,6 +1,6 @@
 import std.json, std.stdio;
 void main() {
-   auto m = ["α/β": 10];
+   auto m = ["📕/📙": 10];
    auto o = m.JSONValue;
    // example 1
    auto s1 = o.toJSON;

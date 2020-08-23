@@ -1,3 +1,4 @@
 import unicode
-let n = "📕".runeLen
+let s = "📕"
+let n = s.runeLen
 echo n == 1

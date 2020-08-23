@@ -1,6 +1,7 @@
 package main
 import "unicode/utf8"
 func main() {
-   n := utf8.RuneCountInString("📕")
+   s := "📕"
+   n := utf8.RuneCountInString(s)
    println(n == 1)
 }

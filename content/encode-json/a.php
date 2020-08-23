@@ -1,5 +1,5 @@
 <?php
-$m['α/β'] = 10;
+$m['📕/📙'] = 10;
 # example 1
 $s1 = json_encode($m);
 # example 2

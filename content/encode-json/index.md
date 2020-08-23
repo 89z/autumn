@@ -30,6 +30,8 @@ tags: [d, dart, go, javascript, nim, php, python]
 
 ## Nim
 
+{{< r "a.nim" >}}
+
 <https://nim-lang.org/docs/json.html>
 
 ## PHP
@@ -40,7 +42,9 @@ tags: [d, dart, go, javascript, nim, php, python]
 
 ## Python
 
-<https://docs.python.org/library/json.html>
+{{< r "a.py" >}}
+
+<https://docs.python.org/library/json.html#json.dumps>
 
 ## References
 

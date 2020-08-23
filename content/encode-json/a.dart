@@ -1,6 +1,6 @@
 import 'dart:convert';
 main() {
-   var m = {'α/β': 10};
+   var m = {'📕/📙': 10};
    // example 1
    var s1 = jsonEncode(m);
    print(s1);
