@@ -21,8 +21,8 @@ easily change the radix. These also account for numeric zero input.
 
 ## Go
 
-{{< r "a.go" >}}
-{{< r "b.go" >}}
+{{< r "big.go" >}}
+{{< r "str.go" >}}
 
 - <https://golang.org/pkg/math/big#Int.SetString>
 - <https://golang.org/pkg/math/big#Int.Text>

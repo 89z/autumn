@@ -1,4 +1,4 @@
-let m = {'📕/📙': 10};
+let m = {'➕/➖': 10};
 // example 1
 let s1 = JSON.stringify(m);
 // example 2
