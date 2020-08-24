@@ -13,9 +13,7 @@ tags: [go, javascript, php, python, rust]
 
 ## JavaScript
 
-{{< r "a.js" >}}
-
-<https://developer.mozilla.org/Web/JavaScript/Reference/Classes>
+<https://developer.mozilla.org/Web/JavaScript/Inheritance_and_the_prototype_chain#With_a_constructor>
 
 ## PHP
 

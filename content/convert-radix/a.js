@@ -1,23 +1,34 @@
-let s_dig = '-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz';
-// example 1
-function r64_encode(n_in) {
+'use strict';
+
+let Radix = function(s_dig) {
+   this.Digits = s_dig;
+   this.Size = s_dig.length;
+};
+
+let Radix64 = function() {
+   let s = '-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz';
+   return new Radix(s);
+};
+
+Radix.prototype.Encode = function(n_in) {
    let s_out = '';
    do {
-      s_out = s_dig[n_in % 64] + s_out;
-      n_in = Math.trunc(n_in / 64);
+      s_out = this.Digits[n_in % this.Size] + s_out;
+      n_in = Math.trunc(n_in / this.Size);
    } while (n_in > 0);
    return s_out;
-}
-// example 2
-function r64_decode(s_in) {
+};
+
+Radix.prototype.Decode = function(s_in) {
    let n_out = 0;
    for (let s_chr of s_in) {
-      n_out = n_out * 64 + s_dig.indexOf(s_chr);
+      n_out = n_out * this.Size + this.Digits.indexOf(s_chr);
    }
    return n_out;
-}
-// print
-let n1 = Math.trunc(new Date / 1000);
-let s1 = r64_encode(n1);
-let n2 = r64_decode(s1);
-console.log(n1, s1, n2 == n1);
+};
+
+let n = Math.trunc(new Date / 1000);
+let o = new Radix64;
+let s = o.Encode(n);
+let n2 = o.Decode(s);
+console.log(n, s, n2 == n);
