@@ -1,22 +1,25 @@
-s_dig = '-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz'
-# example 1
-def r64_encode(n_in):
-   s_out = ''
-   while True:
-      s_out = s_dig[n_in % 64] + s_out
-      n_in //= 64
-      if n_in == 0:
-         break
-   return s_out
-# example 2
-def r64_decode(s_in):
-   n_out = 0
-   for s_chr in s_in:
-      n_out = n_out * 64 + s_dig.find(s_chr)
-   return n_out
-# print
+class Radix64:
+   def __init__(self):
+      self.s_dig = '-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz'
+
+   def Encode(self, n_in):
+      s_out = ''
+      while True:
+         s_out = self.s_dig[n_in % 64] + s_out
+         n_in //= 64
+         if n_in == 0:
+            break
+      return s_out
+
+   def Decode(self, s_in):
+      n_out = 0
+      for s_chr in s_in:
+         n_out = n_out * 64 + self.s_dig.find(s_chr)
+      return n_out
+
 import time
-n1 = int(time.time())
-s1 = r64_encode(n1)
-n2 = r64_decode(s1)
-print(n1, s1, n2 == n1)
+n = int(time.time())
+o = Radix64()
+s = o.Encode(n)
+n2 = o.Decode(s)
+print(n, s, n2 == n)

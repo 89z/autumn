@@ -1,28 +1,20 @@
-'use strict';
-
-let Radix = function(s_dig) {
-   this.Digits = s_dig;
-   this.Size = s_dig.length;
-};
-
 let Radix64 = function() {
-   let s = '-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz';
-   return new Radix(s);
+   this.s_dig = '-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz';
 };
 
-Radix.prototype.Encode = function(n_in) {
+Radix64.prototype.Encode = function(n_in) {
    let s_out = '';
    do {
-      s_out = this.Digits[n_in % this.Size] + s_out;
-      n_in = Math.trunc(n_in / this.Size);
+      s_out = this.s_dig[n_in % 64] + s_out;
+      n_in = Math.trunc(n_in / 64);
    } while (n_in > 0);
    return s_out;
 };
 
-Radix.prototype.Decode = function(s_in) {
+Radix64.prototype.Decode = function(s_in) {
    let n_out = 0;
    for (let s_chr of s_in) {
-      n_out = n_out * this.Size + this.Digits.indexOf(s_chr);
+      n_out = n_out * 64 + this.s_dig.indexOf(s_chr);
    }
    return n_out;
 };
