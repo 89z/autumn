@@ -146,11 +146,12 @@ easily change the radix. These also account for numeric zero input.</p>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">Radix64</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
-   <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">s_dig</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz&#39;</span>;
-};
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Radix64</span>() {
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz&#39;</span>;
+   <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">s_dig</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s</span>;
+}
 
-<span style="color:#a6e22e">Radix64</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">Encode</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">n_in</span>) {
+<span style="color:#a6e22e">Radix64</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">encode</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">n_in</span>) {
    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_out</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
    <span style="color:#66d9ef">do</span> {
       <span style="color:#a6e22e">s_out</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">s_dig</span>[<span style="color:#a6e22e">n_in</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">64</span>] <span style="color:#f92672">+</span> <span style="color:#a6e22e">s_out</span>;
@@ -159,7 +160,7 @@ easily change the radix. These also account for numeric zero input.</p>
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s_out</span>;
 };
 
-<span style="color:#a6e22e">Radix64</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">Decode</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">s_in</span>) {
+<span style="color:#a6e22e">Radix64</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">decode</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">s_in</span>) {
    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n_out</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_chr</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">s_in</span>) {
       <span style="color:#a6e22e">n_out</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n_out</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">64</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">s_dig</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#a6e22e">s_chr</span>);
@@ -169,8 +170,8 @@ easily change the radix. These also account for numeric zero input.</p>
 
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">trunc</span>(<span style="color:#66d9ef">new</span> Date <span style="color:#f92672">/</span> <span style="color:#ae81ff">1000</span>);
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">o</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Radix64</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Encode</span>(<span style="color:#a6e22e">n</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Decode</span>(<span style="color:#a6e22e">s</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">encode</span>(<span style="color:#a6e22e">n</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">decode</span>(<span style="color:#a6e22e">s</span>);
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">n</span>);
 </code></pre></div>
 <p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/indexOf">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/indexOf</a></p>
@@ -191,9 +192,12 @@ echo s
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Radix64</span> {
-   <span style="color:#66d9ef">private</span> $s_dig <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz&#39;</span>;
+   <span style="color:#66d9ef">function</span> __construct() {
+      $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz&#39;</span>;
+      $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">s_dig</span> <span style="color:#f92672">=</span> $s;
+   }
 
-   <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Encode</span>(<span style="color:#a6e22e">int</span> $n_in)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
+   <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">encode</span>(<span style="color:#a6e22e">int</span> $n_in)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
       $s_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
       <span style="color:#66d9ef">do</span> {
          $s_out <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">s_dig</span>[$n_in <span style="color:#f92672">%</span> <span style="color:#ae81ff">64</span>] <span style="color:#f92672">.</span> $s_out;
@@ -202,7 +206,7 @@ echo s
       <span style="color:#66d9ef">return</span> $s_out;
    }
 
-   <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Decode</span>(<span style="color:#a6e22e">string</span> $s_in)<span style="color:#f92672">:</span> <span style="color:#a6e22e">int</span> {
+   <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decode</span>(<span style="color:#a6e22e">string</span> $s_in)<span style="color:#f92672">:</span> <span style="color:#a6e22e">int</span> {
       $n_out <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
       $a_in <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_split</span>($s_in);
       <span style="color:#66d9ef">foreach</span> ($a_in <span style="color:#66d9ef">as</span> $s_chr) {
@@ -214,8 +218,8 @@ echo s
 
 $n <span style="color:#f92672">=</span> <span style="color:#a6e22e">time</span>();
 $o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Radix64</span>;
-$s <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">Encode</span>($n);
-$n2 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">Decode</span>($s);
+$s <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">encode</span>($n);
+$n2 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">decode</span>($s);
 <span style="color:#a6e22e">var_dump</span>($n, $s, $n2 <span style="color:#f92672">==</span> $n);
 </code></pre></div>
 <p><a href="https://php.net/function.strpos">https://php.net/function.strpos</a></p>
@@ -225,9 +229,10 @@ $n2 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</sp
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Radix64</span>:
    <span style="color:#66d9ef">def</span> __init__(self):
-      self<span style="color:#f92672">.</span>s_dig <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz&#39;</span>
+      s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz&#39;</span>
+      self<span style="color:#f92672">.</span>s_dig <span style="color:#f92672">=</span> s
 
-   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">Encode</span>(self, n_in):
+   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">encode</span>(self, n_in):
       s_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
       <span style="color:#66d9ef">while</span> True:
          s_out <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>s_dig[n_in <span style="color:#f92672">%</span> <span style="color:#ae81ff">64</span>] <span style="color:#f92672">+</span> s_out
@@ -236,7 +241,7 @@ $n2 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</sp
             <span style="color:#66d9ef">break</span>
       <span style="color:#66d9ef">return</span> s_out
 
-   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">Decode</span>(self, s_in):
+   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">decode</span>(self, s_in):
       n_out <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
       <span style="color:#66d9ef">for</span> s_chr <span style="color:#f92672">in</span> s_in:
          n_out <span style="color:#f92672">=</span> n_out <span style="color:#f92672">*</span> <span style="color:#ae81ff">64</span> <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>s_dig<span style="color:#f92672">.</span>find(s_chr)
@@ -245,8 +250,8 @@ $n2 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</sp
 <span style="color:#f92672">import</span> time
 n <span style="color:#f92672">=</span> int(time<span style="color:#f92672">.</span>time())
 o <span style="color:#f92672">=</span> Radix64()
-s <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>Encode(n)
-n2 <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>Decode(s)
+s <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>encode(n)
+n2 <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>decode(s)
 <span style="color:#66d9ef">print</span>(n, s, n2 <span style="color:#f92672">==</span> n)
 </code></pre></div>
 <p><a href="https://docs.python.org/library/stdtypes.html#str.find">https://docs.python.org/library/stdtypes.html#str.find</a></p>

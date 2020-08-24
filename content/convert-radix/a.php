@@ -1,9 +1,12 @@
 <?php
 
 class Radix64 {
-   private $s_dig = '-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz';
+   function __construct() {
+      $s = '-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz';
+      $this->s_dig = $s;
+   }
 
-   function Encode(int $n_in): string {
+   function encode(int $n_in): string {
       $s_out = '';
       do {
          $s_out = $this->s_dig[$n_in % 64] . $s_out;
@@ -12,7 +15,7 @@ class Radix64 {
       return $s_out;
    }
 
-   function Decode(string $s_in): int {
+   function decode(string $s_in): int {
       $n_out = 0;
       $a_in = str_split($s_in);
       foreach ($a_in as $s_chr) {
@@ -24,6 +27,6 @@ class Radix64 {
 
 $n = time();
 $o = new Radix64;
-$s = $o->Encode($n);
-$n2 = $o->Decode($s);
+$s = $o->encode($n);
+$n2 = $o->decode($s);
 var_dump($n, $s, $n2 == $n);
