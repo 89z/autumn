@@ -192,10 +192,7 @@ echo s
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Radix64</span> {
-   <span style="color:#66d9ef">function</span> __construct() {
-      $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz&#39;</span>;
-      $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">s_dig</span> <span style="color:#f92672">=</span> $s;
-   }
+   <span style="color:#66d9ef">public</span> $s_dig <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz&#39;</span>;
 
    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">encode</span>(<span style="color:#a6e22e">int</span> $n_in)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
       $s_out <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
