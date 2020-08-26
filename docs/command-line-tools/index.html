@@ -133,7 +133,7 @@ php a.php
 rustc a.rs
 <span style="color:#75715e"># example 2</span>
 cargo new sunday
-Set-Location sunday
+<span style="color:#75715e"># example 3</span>
 <span style="color:#e6db74">&#39;
 </span><span style="color:#e6db74">[package]
 </span><span style="color:#e6db74">name = &#34;sunday&#34;
@@ -142,7 +142,11 @@ Set-Location sunday
 </span><span style="color:#e6db74">[dependencies]
 </span><span style="color:#e6db74">curl = &#34;&#34;
 </span><span style="color:#e6db74">&#39;</span> &gt; Cargo.toml
-cargo build
+<span style="color:#75715e"># example 4</span>
+cargo run
+<span style="color:#75715e"># example 5</span>
+$env:RUSTFLAGS = <span style="color:#e6db74">&#39;-C link-arg=-s&#39;</span>
+cargo build --release
 </code></pre></div>
 <p><code>edition</code> allows to omit <code>extern crate</code>.</p>
 <p><a href="https://doc.rust-lang.org/cargo/getting-started/first-steps.html">https://doc.rust-lang.org/cargo/getting-started/first-steps.html</a></p>

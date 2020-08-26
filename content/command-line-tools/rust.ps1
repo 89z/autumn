@@ -2,7 +2,7 @@
 rustc a.rs
 # example 2
 cargo new sunday
-Set-Location sunday
+# example 3
 '
 [package]
 name = "sunday"
@@ -11,4 +11,8 @@ edition = "2018"
 [dependencies]
 curl = ""
 ' > Cargo.toml
-cargo build
+# example 4
+cargo run
+# example 5
+$env:RUSTFLAGS = '-C link-arg=-s'
+cargo build --release
