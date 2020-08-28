@@ -38,6 +38,7 @@ tags: [c++, d, dart, go, nim, php, python, rust]
 ## PHP
 
 {{< r "a.php" >}}
+{{< r "b.php" >}}
 
 - <https://php.net/function.file-exists>
 - <https://php.net/function.is-dir>

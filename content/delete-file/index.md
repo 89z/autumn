@@ -1,7 +1,7 @@
 ---
 title: Delete file
 categories: [system]
-tags: [dart, php]
+tags: [dart, php, py]
 ---
 
 ## Dart
@@ -15,6 +15,10 @@ tags: [dart, php]
 {{< r "a.php" >}}
 
 <https://php.net/function.unlink>
+
+## Python
+
+{{< r "a.py" >}}
 
 ## References
 
