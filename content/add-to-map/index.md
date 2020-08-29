@@ -40,7 +40,8 @@ tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 
 {{< r "a.php" >}}
 
-<https://php.net/language.types.array>
+- <https://php.net/function.array-merge>
+- <https://php.net/language.types.array>
 
 ## Python
 

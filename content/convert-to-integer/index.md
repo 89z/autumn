@@ -18,9 +18,10 @@ tags: [d, dart, go, javascript, php, python, rust]
 
 ## Go
 
+{{< r "atoi.go" >}}
 {{< r "fmt.go" >}}
+{{< r "parseint.go" >}}
 {{< r "spec.go" >}}
-{{< r "strconv.go" >}}
 
 - <https://golang.org/pkg/fmt#Sscan>
 - <https://golang.org/pkg/fmt#Sscanf>
