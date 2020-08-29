@@ -41,6 +41,7 @@ tags: [c++, d, dart, go, nim, php, python, rust]
 ## PHP
 
 {{< r "die.php" >}}
+{{< r "error.php" >}}
 {{< r "exit.php" >}}
 
 - <https://php.net/function.die>
