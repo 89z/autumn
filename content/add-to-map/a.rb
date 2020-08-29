@@ -1,3 +1,3 @@
-m = {'Sunday' => 10}
-m['Monday'] = 11
+m = {}
+m['Sunday'] = 10
 puts m

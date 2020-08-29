@@ -24,7 +24,7 @@
 
 <main>
    <h1>Path parts</h1>
-   <time>Fri Aug 28 2020</time>
+   <time>Sat Aug 29 2020</time>
    
    <a href="/autumn/categories/string/">string</a>
    
@@ -77,37 +77,13 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/aa/bb.cc.dd&#39;</span>;
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">basename</span>($s);
-<span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s, <span style="color:#a6e22e">PATHINFO_BASENAME</span>);
-<span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">basename</span>($s, <span style="color:#e6db74">&#39;.dd&#39;</span>);
-<span style="color:#75715e"># example 4
-</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s, <span style="color:#a6e22e">PATHINFO_FILENAME</span>);
-<span style="color:#75715e"># example 5
-</span><span style="color:#75715e"></span>$s5 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s, <span style="color:#a6e22e">PATHINFO_EXTENSION</span>);
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>(
-   $s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;bb.cc.dd&#39;</span>,
-   $s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;bb.cc.dd&#39;</span>,
-   $s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;bb.cc&#39;</span>,
-   $s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;bb.cc&#39;</span>,
-   $s5 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;dd&#39;</span>
-);
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SplFileInfo</span>(<span style="color:#e6db74">&#39;C:\\php\\.\\license.txt&#39;</span>);
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getRealPath</span>();
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getFilename</span>();
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getBasename</span>();
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getBasename</span>();
+</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getFilename</span>();
 <span style="color:#75715e"># example 4
 </span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getBasename</span>(<span style="color:#e6db74">&#39;.txt&#39;</span>);
 <span style="color:#75715e"># example 5
@@ -125,9 +101,28 @@ $o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SplFileInfo</span>(<span style="color:#e6db74">&#39;C:\\php\\&#39;</span>);
-$s <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getPathname</span>();
-<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;C:\\php&#39;</span>);
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:\\php\\.\\license.txt&#39;</span>;
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>($s);
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">basename</span>($s);
+<span style="color:#75715e"># example 3
+</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s, <span style="color:#a6e22e">PATHINFO_BASENAME</span>);
+<span style="color:#75715e"># example 4
+</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">basename</span>($s, <span style="color:#e6db74">&#39;.txt&#39;</span>);
+<span style="color:#75715e"># example 5
+</span><span style="color:#75715e"></span>$s5 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s, <span style="color:#a6e22e">PATHINFO_FILENAME</span>);
+<span style="color:#75715e"># example 6
+</span><span style="color:#75715e"></span>$s6 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s, <span style="color:#a6e22e">PATHINFO_EXTENSION</span>);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>(
+   $s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;C:\\php\\license.txt&#39;</span>,
+   $s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license.txt&#39;</span>,
+   $s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license.txt&#39;</span>,
+   $s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license&#39;</span>,
+   $s5 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license&#39;</span>,
+   $s6 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;txt&#39;</span>
+);
 </code></pre></div></p>
 <ul>
 <li><a href="https://php.net/function.basename">https://php.net/function.basename</a></li>

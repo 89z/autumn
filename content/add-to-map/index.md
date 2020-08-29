@@ -24,9 +24,8 @@ tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 
 ## JavaScript
 
-{{< r "bracket.js" >}}
-{{< r "dot.js" >}}
-{{< r "map.js" >}}
+{{< r "m.js" >}}
+{{< r "o.js" >}}
 
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Map/set>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Property_Accessors>

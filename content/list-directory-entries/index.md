@@ -34,6 +34,8 @@ tags: [d, dart, go, nim, php, python, rust]
 ## PHP
 
 {{< r "a.php" >}}
+{{< r "b.php" >}}
+{{< r "c.php" >}}
 
 <https://php.net/class.filesystemiterator>
 

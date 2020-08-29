@@ -3,9 +3,9 @@ $o = new SplFileInfo('C:\\php\\.\\license.txt');
 # example 1
 $s1 = $o->getRealPath();
 # example 2
-$s2 = $o->getFilename();
+$s2 = $o->getBasename();
 # example 3
-$s3 = $o->getBasename();
+$s3 = $o->getFilename();
 # example 4
 $s4 = $o->getBasename('.txt');
 # example 5

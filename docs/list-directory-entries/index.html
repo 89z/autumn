@@ -125,23 +125,30 @@ main() {
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/os.html#walkFiles.i,string">https://nim-lang.org/docs/os.html#walkFiles.i,string</a></p>
 <h2 id="php">PHP</h2>
-
+<p>
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;example 1</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 $o_iter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FilesystemIterator</span>(<span style="color:#e6db74">&#39;.&#39;</span>);
 <span style="color:#66d9ef">foreach</span> ($o_iter <span style="color:#66d9ef">as</span> $o_info) {
    <span style="color:#66d9ef">echo</span> $o_info<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getPathname</span>(), <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 }
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">example 2</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $o_dir <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveDirectoryIterator</span>(<span style="color:#e6db74">&#39;.&#39;</span>);
 $o_dir<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setFlags</span>(<span style="color:#a6e22e">RecursiveDirectoryIterator</span><span style="color:#f92672">::</span><span style="color:#a6e22e">SKIP_DOTS</span>);
 $o_iter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveIteratorIterator</span>($o_dir);
 <span style="color:#66d9ef">foreach</span> ($o_iter <span style="color:#66d9ef">as</span> $o_info) {
    <span style="color:#66d9ef">echo</span> $o_info<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getPathname</span>(), <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 }
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">example 3</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $o_dir <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveDirectoryIterator</span>(<span style="color:#e6db74">&#39;.&#39;</span>);
 $o_dir<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setFlags</span>(<span style="color:#a6e22e">RecursiveDirectoryIterator</span><span style="color:#f92672">::</span><span style="color:#a6e22e">SKIP_DOTS</span>);
 $f_filter <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span> ($o_info) <span style="color:#f92672">=&gt;</span> $o_info<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getFilename</span>() <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;.git&#39;</span> <span style="color:#f92672">?</span> <span style="color:#66d9ef">false</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>;
@@ -150,7 +157,7 @@ $o_iter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</sp
 <span style="color:#66d9ef">foreach</span> ($o_iter <span style="color:#66d9ef">as</span> $o_info) {
    <span style="color:#66d9ef">echo</span> $o_info<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getPathname</span>(), <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 }
-</code></pre></div>
+</code></pre></div></p>
 <p><a href="https://php.net/class.filesystemiterator">https://php.net/class.filesystemiterator</a></p>
 <h2 id="python">Python</h2>
 

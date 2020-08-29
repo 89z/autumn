@@ -18,9 +18,8 @@ tags: [go, php, python]
 
 ## PHP
 
-{{< r "fs.php" >}}
-{{< r "fo.php" >}}
-{{< r "do.php" >}}
+{{< r "o.php" >}}
+{{< r "s.php" >}}
 
 - <https://php.net/function.basename>
 - <https://php.net/function.pathinfo>
