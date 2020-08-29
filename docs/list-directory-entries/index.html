@@ -24,7 +24,7 @@
 
 <main>
    <h1>List directory entries</h1>
-   <time>Fri Aug 14 2020</time>
+   <time>Sat Aug 29 2020</time>
    
    <a href="/autumn/categories/system/">system</a>
    
@@ -97,23 +97,6 @@ main() {
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
-   <span style="color:#e6db74">&#34;os&#34;</span>
-   <span style="color:#e6db74">&#34;path/filepath&#34;</span>
-)
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Glob</span>(<span style="color:#e6db74">&#34;*&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
-   }
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span>)
-}
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;os&#34;</span>
    <span style="color:#e6db74">&#34;path/filepath&#34;</span>
 )
@@ -131,7 +114,6 @@ main() {
 <ul>
 <li><a href="https://golang.org/pkg/io/ioutil#ReadDir">https://golang.org/pkg/io/ioutil#ReadDir</a></li>
 <li><a href="https://golang.org/pkg/os#File.Readdirnames">https://golang.org/pkg/os#File.Readdirnames</a></li>
-<li><a href="https://golang.org/pkg/path/filepath#Glob">https://golang.org/pkg/path/filepath#Glob</a></li>
 </ul>
 <h2 id="nim">Nim</h2>
 
@@ -147,31 +129,29 @@ main() {
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$a1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">glob</span>(<span style="color:#e6db74">&#39;*&#39;</span>);
-<span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$o_file <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FilesystemIterator</span>(<span style="color:#e6db74">&#39;.&#39;</span>);
-<span style="color:#66d9ef">foreach</span> ($o_file <span style="color:#66d9ef">as</span> $o_name) {
-   $a2[] <span style="color:#f92672">=</span> $o_name<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getFilename</span>();
+<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;example 1</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+$o_iter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FilesystemIterator</span>(<span style="color:#e6db74">&#39;.&#39;</span>);
+<span style="color:#66d9ef">foreach</span> ($o_iter <span style="color:#66d9ef">as</span> $o_info) {
+   <span style="color:#66d9ef">echo</span> $o_info<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getPathname</span>(), <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 }
-<span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$o_dir <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveDirectoryIterator</span>(<span style="color:#e6db74">&#39;.&#39;</span>, <span style="color:#a6e22e">FilesystemIterator</span><span style="color:#f92672">::</span><span style="color:#a6e22e">SKIP_DOTS</span>);
-$o_iter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveIteratorIterator</span>($o_dir);
-<span style="color:#66d9ef">foreach</span> ($o_iter <span style="color:#66d9ef">as</span> $o_name) {
-   $a3[] <span style="color:#f92672">=</span> $o_name<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getFilename</span>();
-}
-<span style="color:#75715e"># example 4
-</span><span style="color:#75715e"></span>$f_filter <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span> ($o_file) <span style="color:#f92672">=&gt;</span> $o_file<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getFilename</span>() <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;.git&#39;</span> <span style="color:#f92672">?</span> <span style="color:#66d9ef">false</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>;
+<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">example 2</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 $o_dir <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveDirectoryIterator</span>(<span style="color:#e6db74">&#39;.&#39;</span>);
+$o_dir<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setFlags</span>(<span style="color:#a6e22e">RecursiveDirectoryIterator</span><span style="color:#f92672">::</span><span style="color:#a6e22e">SKIP_DOTS</span>);
+$o_iter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveIteratorIterator</span>($o_dir);
+<span style="color:#66d9ef">foreach</span> ($o_iter <span style="color:#66d9ef">as</span> $o_info) {
+   <span style="color:#66d9ef">echo</span> $o_info<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getPathname</span>(), <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+}
+<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">example 3</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+$o_dir <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveDirectoryIterator</span>(<span style="color:#e6db74">&#39;.&#39;</span>);
+$o_dir<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setFlags</span>(<span style="color:#a6e22e">RecursiveDirectoryIterator</span><span style="color:#f92672">::</span><span style="color:#a6e22e">SKIP_DOTS</span>);
+$f_filter <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span> ($o_info) <span style="color:#f92672">=&gt;</span> $o_info<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getFilename</span>() <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;.git&#39;</span> <span style="color:#f92672">?</span> <span style="color:#66d9ef">false</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>;
 $o_filter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveCallbackFilterIterator</span>($o_dir, $f_filter);
 $o_iter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveIteratorIterator</span>($o_filter);
-<span style="color:#66d9ef">foreach</span> ($o_iter <span style="color:#66d9ef">as</span> $o_name) {
-   $a4[] <span style="color:#f92672">=</span> $o_name<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getFilename</span>();
+<span style="color:#66d9ef">foreach</span> ($o_iter <span style="color:#66d9ef">as</span> $o_info) {
+   <span style="color:#66d9ef">echo</span> $o_info<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getPathname</span>(), <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 }
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($a1, $a2, $a3, $a4);
 </code></pre></div>
-<p><a href="https://php.net/function.glob">https://php.net/function.glob</a></p>
+<p><a href="https://php.net/class.filesystemiterator">https://php.net/class.filesystemiterator</a></p>
 <h2 id="python">Python</h2>
 
 

@@ -1,24 +1,22 @@
 <?php
-# example 1
-$a1 = glob('*');
-# example 2
-$o_file = new FilesystemIterator('.');
-foreach ($o_file as $o_name) {
-   $a2[] = $o_name->getFilename();
+echo "example 1\n";
+$o_iter = new FilesystemIterator('.');
+foreach ($o_iter as $o_info) {
+   echo $o_info->getPathname(), "\n";
 }
-# example 3
-$o_dir = new RecursiveDirectoryIterator('.', FilesystemIterator::SKIP_DOTS);
-$o_iter = new RecursiveIteratorIterator($o_dir);
-foreach ($o_iter as $o_name) {
-   $a3[] = $o_name->getFilename();
-}
-# example 4
-$f_filter = fn ($o_file) => $o_file->getFilename() == '.git' ? false : true;
+echo "\nexample 2\n";
 $o_dir = new RecursiveDirectoryIterator('.');
+$o_dir->setFlags(RecursiveDirectoryIterator::SKIP_DOTS);
+$o_iter = new RecursiveIteratorIterator($o_dir);
+foreach ($o_iter as $o_info) {
+   echo $o_info->getPathname(), "\n";
+}
+echo "\nexample 3\n";
+$o_dir = new RecursiveDirectoryIterator('.');
+$o_dir->setFlags(RecursiveDirectoryIterator::SKIP_DOTS);
+$f_filter = fn ($o_info) => $o_info->getFilename() == '.git' ? false : true;
 $o_filter = new RecursiveCallbackFilterIterator($o_dir, $f_filter);
 $o_iter = new RecursiveIteratorIterator($o_filter);
-foreach ($o_iter as $o_name) {
-   $a4[] = $o_name->getFilename();
+foreach ($o_iter as $o_info) {
+   echo $o_info->getPathname(), "\n";
 }
-# print
-var_dump($a1, $a2, $a3, $a4);

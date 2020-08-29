@@ -21,11 +21,9 @@ tags: [d, dart, go, nim, php, python, rust]
 {{< r "a.go" >}}
 {{< r "b.go" >}}
 {{< r "c.go" >}}
-{{< r "d.go" >}}
 
 - <https://golang.org/pkg/io/ioutil#ReadDir>
 - <https://golang.org/pkg/os#File.Readdirnames>
-- <https://golang.org/pkg/path/filepath#Glob>
 
 ## Nim
 
@@ -37,7 +35,7 @@ tags: [d, dart, go, nim, php, python, rust]
 
 {{< r "a.php" >}}
 
-<https://php.net/function.glob>
+<https://php.net/class.filesystemiterator>
 
 ## Python
 

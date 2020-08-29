@@ -1,13 +1,15 @@
 package main
 import (
-   "fmt"
    "os"
    "path/filepath"
 )
-func main() {
-   a, e := filepath.Glob("*")
-   if e != nil {
-      os.Exit(1)
+func f(s string, o os.FileInfo, e error) error {
+   if o.IsDir() {
+      return e
    }
-   fmt.Println(a)
+   println(s)
+   return nil
+}
+func main() {
+   filepath.Walk(".", f)
 }
