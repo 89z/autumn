@@ -1,7 +1,12 @@
 package main
+import "path/filepath"
 func main() {
-   a1 := []rune("📕📙📒📗")
-   a2 := a1[len(a1) - 2:]
-   s1 := string(a2)
-   println(s1 == "📒📗")
+   s := `C:\a\b.tar.xz`
+   // example 1
+   // example 2
+   s3 := filepath.Base(s)
+   // example 3
+   s4 := filepath.Ext(s)
+   // print
+   println(s1 == `C:\a\`, s2 == "b.tar.xz", s3 == "b.tar.xz", s4 == ".xz")
 }

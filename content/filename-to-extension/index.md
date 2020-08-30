@@ -1,67 +1,38 @@
 ---
 title: Filename to extension
 categories: [string]
-tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [go, php, python]
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/spec/arrays.html#slicing>
-
-## Dart
-
-<https://api.dart.dev/dart-core/String/substring.html>
 
 ## Go
 
 {{< r "a.go" >}}
 {{< r "b.go" >}}
 
-<https://golang.org/ref/spec#Slice_expressions>
-
-## JavaScript
-
-{{< r "a.js" >}}
-
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/slice>
-
-## Nim
-
-{{< r "a.nim" >}}
-
-<https://nim-lang.org/docs/system.html#[],string,HSlice[T,U]>
+- <https://golang.org/pkg/path#Base>
+- <https://golang.org/pkg/path#Dir>
+- <https://golang.org/pkg/path#Ext>
+- <https://golang.org/pkg/path/filepath#Base>
+- <https://golang.org/pkg/path/filepath#Dir>
+- <https://golang.org/pkg/path/filepath#Ext>
 
 ## PHP
 
-{{< r "a.php" >}}
-{{< r "b.php" >}}
+{{< r "o.php" >}}
+{{< r "s.php" >}}
 
-- <https://php.net/function.mb-substr>
-- <https://php.net/function.substr>
-- <https://php.net/types.string#example-54>
+- <https://php.net/function.basename>
+- <https://php.net/function.pathinfo>
 
 ## Python
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/reference/expressions.html#slicings>
-
-## Ruby
-
-<https://ruby-doc.org/core/String.html#method-i-slice>
-
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/primitive.str.html#method.get>
+- <https://docs.python.org/library/os.path.html#os.path.basename>
+- <https://docs.python.org/library/pathlib.html#pathlib.PurePath.stem>
+- <https://docs.python.org/library/pathlib.html#pathlib.PurePath.suffix>
 
 ## References
 
-- <https://hyperpolyglot.org/c#extract-substr>
-- <https://hyperpolyglot.org/scripting#extract-substr>
-- <https://programming-idioms.org/idiom/38/extract-a-substring>
-- <https://programming-idioms.org/idiom/47/extract-string-suffix>
-- <https://rosettacode.org/wiki/Substring>
+- <https://hyperpolyglot.org/c#dirname-basename>
+- <https://hyperpolyglot.org/scripting2#dirname-basename>
