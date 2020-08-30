@@ -1,5 +1,5 @@
 ---
-title: Get path middle
+title: Filename to filepath
 categories: [string]
 tags: [go, php, python]
 ---

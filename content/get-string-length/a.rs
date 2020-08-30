@@ -1,5 +1,5 @@
 fn main() {
-   let s1 = "📕";
+   let s1 = "📗";
    // example 1
    let n1 = s1.len();
    // example 2

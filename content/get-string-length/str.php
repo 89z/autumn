@@ -1,5 +1,5 @@
 <?php
-$s1 = '📕';
+$s1 = '📗';
 # example 1
 $n1 = strlen($s1);
 # example 2

@@ -1,5 +1,5 @@
 import json
-m = {'📕/📙': 10}
+m = {'📗/📕': 10}
 # example 1
 s1 = json.dumps(m)
 # example 2

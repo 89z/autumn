@@ -35,7 +35,7 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-   std<span style="color:#f92672">::</span>string s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;📕&#34;</span>;
+   std<span style="color:#f92672">::</span>string s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;📗&#34;</span>;
    size_t n <span style="color:#f92672">=</span> s.length();
    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> (n <span style="color:#f92672">==</span> <span style="color:#ae81ff">4</span>) <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
 }
@@ -47,7 +47,7 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;📕&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;📗&#34;</span><span style="color:#f92672">;</span>
    <span style="color:#66d9ef">auto</span> n <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
    writeln<span style="color:#f92672">(</span>n <span style="color:#f92672">==</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
@@ -70,7 +70,7 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;📕&#34;</span>
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;📗&#34;</span>
    <span style="color:#75715e">// example 1
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> len(<span style="color:#a6e22e">s1</span>)
    <span style="color:#75715e">// example 2
@@ -86,7 +86,7 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;unicode/utf8&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;📕&#34;</span>
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;📗&#34;</span>
    <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">utf8</span>.<span style="color:#a6e22e">RuneCountInString</span>(<span style="color:#a6e22e">s</span>)
    println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>)
 }
@@ -99,7 +99,7 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;📕&#39;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;📗&#39;</span>;
 <span style="color:#75715e">// example 1
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a1</span> <span style="color:#f92672">=</span> Array.<span style="color:#a6e22e">from</span>(<span style="color:#a6e22e">s1</span>);
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a1</span>.<span style="color:#a6e22e">length</span>;
@@ -120,7 +120,7 @@
 <p>
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;📕&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;📗&#34;</span>
 <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> s.len
 echo n <span style="color:#f92672">==</span> <span style="color:#ae81ff">4</span>
 </code></pre></div>
@@ -128,7 +128,7 @@ echo n <span style="color:#f92672">==</span> <span style="color:#ae81ff">4</span
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> unicode
-<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;📕&#34;</span>
+<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;📗&#34;</span>
 <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> s.runeLen
 echo n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>
 </code></pre></div></p>
@@ -138,7 +138,7 @@ echo n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;📕&#39;</span>;
+$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;📗&#39;</span>;
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strlen</span>($s1);
 <span style="color:#75715e"># example 2
@@ -154,7 +154,7 @@ $n3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strlen</spa
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 <span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;mbstring&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;mbstring&#39;</span>);
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;📕&#39;</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;📗&#39;</span>;
 $n <span style="color:#f92672">=</span> <span style="color:#a6e22e">mb_strlen</span>($s);
 <span style="color:#a6e22e">var_dump</span>($n);
 </code></pre></div>
@@ -163,7 +163,7 @@ $n <span style="color:#f92672">=</span> <span style="color:#a6e22e">mb_strlen</s
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 <span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;intl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;intl&#39;</span>);
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;📕&#39;</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;📗&#39;</span>;
 $n <span style="color:#f92672">=</span> <span style="color:#a6e22e">grapheme_strlen</span>($s);
 <span style="color:#a6e22e">var_dump</span>($n);
 </code></pre></div></p>
@@ -178,7 +178,7 @@ $n <span style="color:#f92672">=</span> <span style="color:#a6e22e">grapheme_str
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;📕&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;📗&#39;</span>
 <span style="color:#75715e"># example 1</span>
 n1 <span style="color:#f92672">=</span> len(s1)
 <span style="color:#75715e"># example 2</span>
@@ -196,7 +196,7 @@ n2 <span style="color:#f92672">=</span> len(y1)
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;📕&#34;</span>;
+   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;📗&#34;</span>;
    <span style="color:#75715e">// example 1
 </span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> n1 <span style="color:#f92672">=</span> s1.len();
    <span style="color:#75715e">// example 2

@@ -1,5 +1,5 @@
 <?php
 extension_loaded('mbstring') or die('mbstring');
-$s = '📕';
+$s = '📗';
 $n = mb_strlen($s);
 var_dump($n);

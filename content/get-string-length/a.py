@@ -1,4 +1,4 @@
-s1 = '📕'
+s1 = '📗'
 # example 1
 n1 = len(s1)
 # example 2

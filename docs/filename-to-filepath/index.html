@@ -3,7 +3,7 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Get path middle / Autumn</title>
+<title>Filename to filepath / Autumn</title>
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/a.css">
    <link rel="stylesheet" href="/autumn/b.css">
@@ -23,8 +23,8 @@
 
 
 <main>
-   <h1>Get path middle</h1>
-   <time>Sat Aug 29 2020</time>
+   <h1>Filename to filepath</h1>
+   <time>Sun Aug 30 2020</time>
    
    <a href="/autumn/categories/string/">string</a>
    
@@ -36,9 +36,9 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Base</span>(<span style="color:#a6e22e">s</span>)
-   <span style="color:#a6e22e">s4</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Ext</span>(<span style="color:#a6e22e">s</span>)
-   <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#a6e22e">s</span>)
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;C:/go/bin/go.exe&#34;</span>
+   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#a6e22e">s1</span>)
+   println(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;C:/go/bin&#34;</span>)
 }
 </code></pre></div>
 
@@ -47,14 +47,9 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path/filepath&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`C:\a\b.tar.xz`</span>
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Base</span>(<span style="color:#a6e22e">s</span>)
-   <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s4</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Ext</span>(<span style="color:#a6e22e">s</span>)
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s1</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">`C:\a\`</span>, <span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;b.tar.xz&#34;</span>, <span style="color:#a6e22e">s3</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;b.tar.xz&#34;</span>, <span style="color:#a6e22e">s4</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;.xz&#34;</span>)
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`C:\go\bin\go.exe`</span>
+   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#a6e22e">s1</span>)
+   println(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">`C:\go\bin`</span>)
 }
 </code></pre></div></p>
 <ul>
@@ -71,24 +66,11 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SplFileInfo</span>(<span style="color:#e6db74">&#39;C:\\php\\.\\license.txt&#39;</span>);
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getRealPath</span>();
-<span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getBasename</span>();
-<span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getFilename</span>();
-<span style="color:#75715e"># example 4
-</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getBasename</span>(<span style="color:#e6db74">&#39;.txt&#39;</span>);
-<span style="color:#75715e"># example 5
-</span><span style="color:#75715e"></span>$s5 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getExtension</span>();
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>(
-   $s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;C:\\php\\license.txt&#39;</span>,
-   $s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license.txt&#39;</span>,
-   $s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license.txt&#39;</span>,
-   $s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license&#39;</span>,
-   $s5 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;txt&#39;</span>
-);
+$s1 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getRealPath</span>();
+$s2 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getBasename</span>();
+$s3 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getFilename</span>();
+$s4 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getBasename</span>(<span style="color:#e6db74">&#39;.txt&#39;</span>);
+$s5 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getExtension</span>();
 </code></pre></div>
 
 

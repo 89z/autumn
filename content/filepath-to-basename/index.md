@@ -1,5 +1,5 @@
 ---
-title: Get path start
+title: Filepath to basename
 categories: [string]
 tags: [go, php, python]
 ---

@@ -1,6 +1,6 @@
 import std.stdio;
 void main() {
-   auto s = "📕";
+   auto s = "📗";
    auto n = s.length;
    writeln(n == 4);
 }

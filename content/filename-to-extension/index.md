@@ -1,5 +1,5 @@
 ---
-title: Get string end
+title: Filename to extension
 categories: [string]
 tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 ---
