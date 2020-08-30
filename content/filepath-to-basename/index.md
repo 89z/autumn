@@ -10,11 +10,7 @@ tags: [go, php, python]
 {{< r "b.go" >}}
 
 - <https://golang.org/pkg/path#Base>
-- <https://golang.org/pkg/path#Dir>
-- <https://golang.org/pkg/path#Ext>
 - <https://golang.org/pkg/path/filepath#Base>
-- <https://golang.org/pkg/path/filepath#Dir>
-- <https://golang.org/pkg/path/filepath#Ext>
 
 ## PHP
 
@@ -30,7 +26,6 @@ tags: [go, php, python]
 
 - <https://docs.python.org/library/os.path.html#os.path.basename>
 - <https://docs.python.org/library/pathlib.html#pathlib.PurePath.stem>
-- <https://docs.python.org/library/pathlib.html#pathlib.PurePath.suffix>
 
 ## References
 

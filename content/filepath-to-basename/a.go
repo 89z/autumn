@@ -1,7 +1,7 @@
 package main
 import "path"
 func main() {
-   s3 := path.Base(s)
-   s4 := path.Ext(s)
-   path.Dir(s)
+   s1 := "C:/go/bin/go.exe"
+   s2 := path.Base(s1)
+   println(s2 == "go.exe")
 }

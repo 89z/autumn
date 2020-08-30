@@ -36,9 +36,9 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Base</span>(<span style="color:#a6e22e">s</span>)
-   <span style="color:#a6e22e">s4</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Ext</span>(<span style="color:#a6e22e">s</span>)
-   <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#a6e22e">s</span>)
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;C:/go/bin/go.exe&#34;</span>
+   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Base</span>(<span style="color:#a6e22e">s1</span>)
+   println(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;go.exe&#34;</span>)
 }
 </code></pre></div>
 
@@ -47,74 +47,49 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path/filepath&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`C:\a\b.tar.xz`</span>
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Base</span>(<span style="color:#a6e22e">s</span>)
-   <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s4</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Ext</span>(<span style="color:#a6e22e">s</span>)
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s1</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">`C:\a\`</span>, <span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;b.tar.xz&#34;</span>, <span style="color:#a6e22e">s3</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;b.tar.xz&#34;</span>, <span style="color:#a6e22e">s4</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;.xz&#34;</span>)
+   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`C:\go\bin\go.exe`</span>
+   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Base</span>(<span style="color:#a6e22e">s1</span>)
+   println(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;go.exe&#34;</span>)
 }
 </code></pre></div></p>
 <ul>
 <li><a href="https://golang.org/pkg/path#Base">https://golang.org/pkg/path#Base</a></li>
-<li><a href="https://golang.org/pkg/path#Dir">https://golang.org/pkg/path#Dir</a></li>
-<li><a href="https://golang.org/pkg/path#Ext">https://golang.org/pkg/path#Ext</a></li>
 <li><a href="https://golang.org/pkg/path/filepath#Base">https://golang.org/pkg/path/filepath#Base</a></li>
-<li><a href="https://golang.org/pkg/path/filepath#Dir">https://golang.org/pkg/path/filepath#Dir</a></li>
-<li><a href="https://golang.org/pkg/path/filepath#Ext">https://golang.org/pkg/path/filepath#Ext</a></li>
 </ul>
 <h2 id="php">PHP</h2>
 <p>
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SplFileInfo</span>(<span style="color:#e6db74">&#39;C:\\php\\.\\license.txt&#39;</span>);
+$o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SplFileInfo</span>(<span style="color:#e6db74">&#39;C:\\php\\license.txt&#39;</span>);
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getRealPath</span>();
+</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getBasename</span>();
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getBasename</span>();
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getFilename</span>();
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getFilename</span>();
-<span style="color:#75715e"># example 4
-</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getBasename</span>(<span style="color:#e6db74">&#39;.txt&#39;</span>);
-<span style="color:#75715e"># example 5
-</span><span style="color:#75715e"></span>$s5 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getExtension</span>();
+</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getBasename</span>(<span style="color:#e6db74">&#39;.txt&#39;</span>);
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>(
-   $s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;C:\\php\\license.txt&#39;</span>,
-   $s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license.txt&#39;</span>,
-   $s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license.txt&#39;</span>,
-   $s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license&#39;</span>,
-   $s5 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;txt&#39;</span>
-);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license.txt&#39;</span>, $s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license.txt&#39;</span>, $s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license&#39;</span>);
 </code></pre></div>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:\\php\\.\\license.txt&#39;</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:\\php\\license.txt&#39;</span>;
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>($s);
+</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">basename</span>($s);
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">basename</span>($s);
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s, <span style="color:#a6e22e">PATHINFO_BASENAME</span>);
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s, <span style="color:#a6e22e">PATHINFO_BASENAME</span>);
+</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">basename</span>($s, <span style="color:#e6db74">&#39;.txt&#39;</span>);
 <span style="color:#75715e"># example 4
-</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">basename</span>($s, <span style="color:#e6db74">&#39;.txt&#39;</span>);
-<span style="color:#75715e"># example 5
-</span><span style="color:#75715e"></span>$s5 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s, <span style="color:#a6e22e">PATHINFO_FILENAME</span>);
-<span style="color:#75715e"># example 6
-</span><span style="color:#75715e"></span>$s6 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s, <span style="color:#a6e22e">PATHINFO_EXTENSION</span>);
+</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s, <span style="color:#a6e22e">PATHINFO_FILENAME</span>);
 <span style="color:#75715e"># print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>(
-   $s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;C:\\php\\license.txt&#39;</span>,
+   $s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license.txt&#39;</span>,
    $s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license.txt&#39;</span>,
-   $s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license.txt&#39;</span>,
-   $s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license&#39;</span>,
-   $s5 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license&#39;</span>,
-   $s6 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;txt&#39;</span>
+   $s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license&#39;</span>,
+   $s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license&#39;</span>
 );
 </code></pre></div></p>
 <ul>
@@ -126,18 +101,13 @@ $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:\\php
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> os <span style="color:#f92672">import</span> path
-s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/a/b.tar.xz&#39;</span>
-<span style="color:#75715e"># example 1</span>
-s1 <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>basename(s)
-<span style="color:#75715e"># example 2</span>
-s2 <span style="color:#f92672">=</span> a[<span style="color:#ae81ff">1</span>]
-<span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;b.tar.xz&#39;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;.xz&#39;</span>)
+s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">python</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">python.exe&#39;</span>
+s2 <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>basename(s1)
+<span style="color:#66d9ef">print</span>(s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;python.exe&#39;</span>)
 </code></pre></div>
 <ul>
 <li><a href="https://docs.python.org/library/os.path.html#os.path.basename">https://docs.python.org/library/os.path.html#os.path.basename</a></li>
 <li><a href="https://docs.python.org/library/pathlib.html#pathlib.PurePath.stem">https://docs.python.org/library/pathlib.html#pathlib.PurePath.stem</a></li>
-<li><a href="https://docs.python.org/library/pathlib.html#pathlib.PurePath.suffix">https://docs.python.org/library/pathlib.html#pathlib.PurePath.suffix</a></li>
 </ul>
 <h2 id="references">References</h2>
 <ul>
