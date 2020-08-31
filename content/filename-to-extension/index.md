@@ -57,7 +57,7 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/path/index.html>
+<https://doc.rust-lang.org/std/path/struct.Path.html#method.extension>
 
 ## References
 

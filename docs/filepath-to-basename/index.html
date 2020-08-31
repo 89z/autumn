@@ -24,7 +24,7 @@
 
 <main>
    <h1>Filepath to basename</h1>
-   <time>Sun Aug 30 2020</time>
+   <time>Mon Aug 31 2020</time>
    
    <a href="/autumn/categories/string/">string</a>
    
@@ -44,7 +44,17 @@
 </code></pre></div>
 <p><a href="https://en.cppreference.com/w/cpp/filesystem/path/filename">https://en.cppreference.com/w/cpp/filesystem/path/filename</a></p>
 <h2 id="d">D</h2>
-<p><a href="https://dlang.org/library/std/path.html">https://dlang.org/library/std/path.html</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.path<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:\\Windows\\write.exe&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> s1<span style="color:#f92672">.</span><span style="color:#a6e22e">baseName</span><span style="color:#f92672">;</span>
+   writeln<span style="color:#f92672">(</span>s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;write.exe&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+<p><a href="https://dlang.org/library/std/path/base_name.html">https://dlang.org/library/std/path/base_name.html</a></p>
 <h2 id="dart">Dart</h2>
 <p><a href="https://github.com/dart-lang/path">https://github.com/dart-lang/path</a></p>
 <h2 id="go">Go</h2>
@@ -75,6 +85,14 @@
 <li><a href="https://golang.org/pkg/path/filepath#Base">https://golang.org/pkg/path/filepath#Base</a></li>
 </ul>
 <h2 id="nim">Nim</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> os
+<span style="color:#66d9ef">var</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Windows</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">write.exe&#34;</span>
+<span style="color:#66d9ef">let</span> (s2, s3, s4) <span style="color:#f92672">=</span> splitFile(s1)
+echo <span style="color:#f92672">[</span>s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Windows&#34;</span>, s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;write&#34;</span>, s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;.exe&#34;</span><span style="color:#f92672">]</span>
+</code></pre></div>
 <p><a href="https://nim-lang.org/docs/os.html#splitFile,string">https://nim-lang.org/docs/os.html#splitFile,string</a></p>
 <h2 id="php">PHP</h2>
 <p>
@@ -130,9 +148,29 @@ s2 <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>
 <li><a href="https://docs.python.org/library/pathlib.html#pathlib.PurePath.stem">https://docs.python.org/library/pathlib.html#pathlib.PurePath.stem</a></li>
 </ul>
 <h2 id="ruby">Ruby</h2>
-<p><a href="https://ruby-doc.org/core/File.html">https://ruby-doc.org/core/File.html</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:\\Windows\\write.exe&#39;</span>
+s2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>basename(s1)
+puts s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;write.exe&#39;</span>
+</code></pre></div>
+<p><a href="https://ruby-doc.org/core/File.html#method-c-basename">https://ruby-doc.org/core/File.html#method-c-basename</a></p>
 <h2 id="rust">Rust</h2>
-<p><a href="https://doc.rust-lang.org/std/path/index.html">https://doc.rust-lang.org/std/path/index.html</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::error::Error;
+<span style="color:#66d9ef">use</span> std::path::Path;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
+   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:\\Windows\\write.exe&#34;</span>;
+   <span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> Path::new(s1);
+   <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> o1.file_stem().ok_or(<span style="color:#e6db74">&#34;file_stem&#34;</span>)<span style="color:#f92672">?</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;write&#34;</span>);
+   Ok(())
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/path/struct.Path.html#method.file_stem">https://doc.rust-lang.org/std/path/struct.Path.html#method.file_stem</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#dirname-basename">https://hyperpolyglot.org/c#dirname-basename</a></li>

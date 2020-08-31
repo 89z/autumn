@@ -12,7 +12,9 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 
 ## D
 
-<https://dlang.org/library/std/path.html>
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/path/base_name.html>
 
 ## Dart
 
@@ -27,6 +29,8 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 - <https://golang.org/pkg/path/filepath#Base>
 
 ## Nim
+
+{{< r "a.nim" >}}
 
 <https://nim-lang.org/docs/os.html#splitFile,string>
 
@@ -47,11 +51,15 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 
 ## Ruby
 
-<https://ruby-doc.org/core/File.html>
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/File.html#method-c-basename>
 
 ## Rust
 
-<https://doc.rust-lang.org/std/path/index.html>
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/path/struct.Path.html#method.file_stem>
 
 ## References
 
