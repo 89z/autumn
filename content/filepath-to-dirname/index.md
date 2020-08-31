@@ -1,8 +1,20 @@
 ---
 title: Filepath to dirname
 categories: [string]
-tags: [go, php]
+tags: [c++, d, dart, go, nim, php]
 ---
+
+## C++
+
+<https://en.cppreference.com/w/cpp/filesystem/path>
+
+## D
+
+<https://dlang.org/library/std/path.html>
+
+## Dart
+
+<https://github.com/dart-lang/path>
 
 ## Go
 
@@ -11,6 +23,10 @@ tags: [go, php]
 
 - <https://golang.org/pkg/path#Dir>
 - <https://golang.org/pkg/path/filepath#Dir>
+
+## Nim
+
+<https://nim-lang.org/docs/os.html#splitFile,string>
 
 ## PHP
 

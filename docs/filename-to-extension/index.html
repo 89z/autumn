@@ -54,6 +54,7 @@
    writeln<span style="color:#f92672">(</span>s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;.md&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
+<p><a href="https://dlang.org/library/std/path.html">https://dlang.org/library/std/path.html</a></p>
 <h2 id="dart">Dart</h2>
 <p><a href="https://github.com/dart-lang/path">https://github.com/dart-lang/path</a></p>
 <h2 id="go">Go</h2>
@@ -110,37 +111,14 @@ $s2 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</sp
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::path::Path;
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-    <span style="color:#66d9ef">let</span> filenames <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>[
-        <span style="color:#e6db74">&#34;http://example.com/download.tar.gz&#34;</span>,
-        <span style="color:#e6db74">&#34;CharacterModel.3DS&#34;</span>,
-        <span style="color:#e6db74">&#34;.desktop&#34;</span>,
-        <span style="color:#e6db74">&#34;document&#34;</span>,
-        <span style="color:#e6db74">&#34;document.txt_backup&#34;</span>,
-        <span style="color:#e6db74">&#34;/etc/pam.d/login&#34;</span>,
-    ];
-    <span style="color:#66d9ef">for</span> filename <span style="color:#66d9ef">in</span> filenames {
-        println<span style="color:#f92672">!</span>(
-            <span style="color:#e6db74">&#34;{:34} | {:8} | {:?}&#34;</span>,
-            filename,
-            extension(filename),
-            Path::new(filename).extension()
-        );
-    }
-}
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">extension</span>(filename: <span style="color:#66d9ef">&amp;</span><span style="color:#66d9ef">str</span>) -&gt; <span style="color:#66d9ef">&amp;</span><span style="color:#66d9ef">str</span> {
-    filename
-        .rfind(<span style="color:#e6db74">&#39;.&#39;</span>)
-        .map(<span style="color:#f92672">|</span>idx<span style="color:#f92672">|</span> <span style="color:#f92672">&amp;</span>filename[idx..])
-        .filter(<span style="color:#f92672">|</span>ext<span style="color:#f92672">|</span> ext.chars().skip(<span style="color:#ae81ff">1</span>).all(<span style="color:#f92672">|</span>c<span style="color:#f92672">|</span> c.is_ascii_alphanumeric()))
-        .unwrap_or(<span style="color:#e6db74">&#34;&#34;</span>)
+   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;index.md&#34;</span>;
+   <span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> Path::new(s1);
+   <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> o1.extension();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, s2);
 }
 </code></pre></div>
 <h2 id="references">References</h2>
-<ul>
-<li><a href="https://hyperpolyglot.org/c#dirname-basename">https://hyperpolyglot.org/c#dirname-basename</a></li>
-<li><a href="https://hyperpolyglot.org/scripting2#dirname-basename">https://hyperpolyglot.org/scripting2#dirname-basename</a></li>
-<li><a href="https://rosettacode.org/wiki/Extract_file_extension">https://rosettacode.org/wiki/Extract_file_extension</a></li>
-</ul>
+<p><a href="https://rosettacode.org/wiki/Extract_file_extension">https://rosettacode.org/wiki/Extract_file_extension</a></p>
 
 </main>
 

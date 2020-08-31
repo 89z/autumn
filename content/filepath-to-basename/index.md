@@ -1,8 +1,22 @@
 ---
 title: Filepath to basename
 categories: [string]
-tags: [go, php, python]
+tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
+
+<https://en.cppreference.com/w/cpp/filesystem/path/filename>
+
+## D
+
+<https://dlang.org/library/std/path.html>
+
+## Dart
+
+<https://github.com/dart-lang/path>
 
 ## Go
 
@@ -11,6 +25,10 @@ tags: [go, php, python]
 
 - <https://golang.org/pkg/path#Base>
 - <https://golang.org/pkg/path/filepath#Base>
+
+## Nim
+
+<https://nim-lang.org/docs/os.html#splitFile,string>
 
 ## PHP
 
@@ -26,6 +44,14 @@ tags: [go, php, python]
 
 - <https://docs.python.org/library/os.path.html#os.path.basename>
 - <https://docs.python.org/library/pathlib.html#pathlib.PurePath.stem>
+
+## Ruby
+
+<https://ruby-doc.org/core/File.html>
+
+## Rust
+
+<https://doc.rust-lang.org/std/path/index.html>
 
 ## References
 

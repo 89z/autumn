@@ -1,12 +1,18 @@
 ---
-title: Filename to filepath
+title: Relative to absolute path
 categories: [string]
-tags: [php, python]
+tags: [c++, php, python]
 ---
+
+## C++
+
+<https://en.cppreference.com/w/cpp/filesystem/absolute>
 
 ## PHP
 
 {{< r "a.php" >}}
+
+<https://php.net/function.realpath>
 
 ## References
 

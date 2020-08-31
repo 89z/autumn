@@ -14,6 +14,8 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 
 {{< r "a.d" >}}
 
+<https://dlang.org/library/std/path.html>
+
 ## Dart
 
 <https://github.com/dart-lang/path>
@@ -50,6 +52,4 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 
 ## References
 
-- <https://hyperpolyglot.org/c#dirname-basename>
-- <https://hyperpolyglot.org/scripting2#dirname-basename>
-- <https://rosettacode.org/wiki/Extract_file_extension>
+<https://rosettacode.org/wiki/Extract_file_extension>
