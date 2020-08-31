@@ -1,7 +1,7 @@
 ---
 title: Filepath to dirname
 categories: [string]
-tags: [c++, d, dart, go, nim, php]
+tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 ---
 
 ## C++
@@ -31,6 +31,18 @@ tags: [c++, d, dart, go, nim, php]
 ## PHP
 
 <https://php.net/function.pathinfo>
+
+## Python
+
+<https://docs.python.org/library/pathlib.html>
+
+## Ruby
+
+<https://ruby-doc.org/core/File.html>
+
+## Rust
+
+<https://doc.rust-lang.org/std/path/index.html>
 
 ## References
 

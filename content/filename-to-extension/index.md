@@ -14,7 +14,7 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/library/std/path.html>
+<https://dlang.org/library/std/path/extension.html>
 
 ## Dart
 
@@ -30,25 +30,34 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 
 ## Nim
 
+{{< r "a.nim" >}}
+
 <https://nim-lang.org/docs/os.html#splitFile,string>
 
 ## PHP
 
 {{< r "a.php" >}}
 
-<https://php.net/function.pathinfo>
+- <https://php.net/function.pathinfo>
+- <https://php.net/splfileinfo.getextension>
 
 ## Python
+
+{{< r "a.py" >}}
 
 <https://docs.python.org/library/pathlib.html#pathlib.PurePath.suffix>
 
 ## Ruby
+
+{{< r "a.rb" >}}
 
 <https://ruby-doc.org/core/File.html#method-c-extname>
 
 ## Rust
 
 {{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/path/index.html>
 
 ## References
 
