@@ -1,7 +1,7 @@
 ---
 title: Delete file
 categories: [system]
-tags: [dart, php, py]
+tags: [dart, php, python]
 ---
 
 ## Dart
