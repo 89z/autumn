@@ -18,7 +18,7 @@ tags: [c++, d, dart, go, php, python, ruby, rust]
 
 ## Go
 
-<https://golang.org/pkg/path>
+<https://golang.org/pkg/path/filepath>
 
 ## Nim
 
