@@ -59,7 +59,8 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/path/struct.Path.html#method.file_stem>
+- <https://doc.rust-lang.org/std/path/struct.Path.html#method.file_name>
+- <https://doc.rust-lang.org/std/path/struct.Path.html#method.file_stem>
 
 ## References
 

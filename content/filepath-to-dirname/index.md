@@ -30,7 +30,8 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 
 ## PHP
 
-<https://php.net/function.pathinfo>
+- <https://php.net/function.pathinfo>
+- <https://php.net/splfileinfo.getpath>
 
 ## Python
 

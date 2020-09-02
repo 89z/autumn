@@ -24,7 +24,7 @@
 
 <main>
    <h1>Filepath to basename</h1>
-   <time>Mon Aug 31 2020</time>
+   <time>Wed Sep 2 2020</time>
    
    <a href="/autumn/categories/string/">string</a>
    
@@ -163,14 +163,20 @@ puts s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;w
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::error::Error;
 <span style="color:#66d9ef">use</span> std::path::Path;
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
-   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:\\Windows\\write.exe&#34;</span>;
-   <span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> Path::new(s1);
-   <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> o1.file_stem().ok_or(<span style="color:#e6db74">&#34;file_stem&#34;</span>)<span style="color:#f92672">?</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;write&#34;</span>);
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:\\Windows\\write.exe&#34;</span>;
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> Path::new(s).file_name().ok_or(<span style="color:#e6db74">&#34;file_name&#34;</span>)<span style="color:#f92672">?</span>;
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> Path::new(s).file_stem().ok_or(<span style="color:#e6db74">&#34;file_stem&#34;</span>)<span style="color:#f92672">?</span>;
+   <span style="color:#75715e">// print
+</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{} {}&#34;</span>, s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;write.exe&#34;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;write&#34;</span>);
    Ok(())
 }
 </code></pre></div>
-<p><a href="https://doc.rust-lang.org/std/path/struct.Path.html#method.file_stem">https://doc.rust-lang.org/std/path/struct.Path.html#method.file_stem</a></p>
+<ul>
+<li><a href="https://doc.rust-lang.org/std/path/struct.Path.html#method.file_name">https://doc.rust-lang.org/std/path/struct.Path.html#method.file_name</a></li>
+<li><a href="https://doc.rust-lang.org/std/path/struct.Path.html#method.file_stem">https://doc.rust-lang.org/std/path/struct.Path.html#method.file_stem</a></li>
+</ul>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#dirname-basename">https://hyperpolyglot.org/c#dirname-basename</a></li>
