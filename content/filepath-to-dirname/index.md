@@ -30,6 +30,8 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 
 ## PHP
 
+{{< r "a.php" >}}
+
 - <https://php.net/function.pathinfo>
 - <https://php.net/splfileinfo.getpath>
 
