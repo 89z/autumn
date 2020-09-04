@@ -26,6 +26,8 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 
 ## Nim
 
+{{< r "a.nim" >}}
+
 <https://nim-lang.org/docs/os.html#splitFile,string>
 
 ## PHP
