@@ -30,11 +30,63 @@
    
    
    <h2 id="c">C++</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdlib&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;fstream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;filesystem&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">namespace</span> fs <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>filesystem;
+ 
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    fs<span style="color:#f92672">::</span>create_directories(<span style="color:#e6db74">&#34;sandbox/dir/subdir&#34;</span>);
+    std<span style="color:#f92672">::</span>ofstream(<span style="color:#e6db74">&#34;sandbox/file1.txt&#34;</span>).put(<span style="color:#e6db74">&#39;a&#39;</span>);
+    fs<span style="color:#f92672">::</span>copy(<span style="color:#e6db74">&#34;sandbox/file1.txt&#34;</span>, <span style="color:#e6db74">&#34;sandbox/file2.txt&#34;</span>); <span style="color:#75715e">// copy file
+</span><span style="color:#75715e"></span>    fs<span style="color:#f92672">::</span>copy(<span style="color:#e6db74">&#34;sandbox/dir&#34;</span>, <span style="color:#e6db74">&#34;sandbox/dir2&#34;</span>); <span style="color:#75715e">// copy directory (non-recursive)
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span> copyOptions <span style="color:#f92672">=</span> fs<span style="color:#f92672">::</span>copy_options<span style="color:#f92672">::</span>update_existing
+                           <span style="color:#f92672">|</span> fs<span style="color:#f92672">::</span>copy_options<span style="color:#f92672">::</span>recursive
+                           <span style="color:#f92672">|</span> fs<span style="color:#f92672">::</span>copy_options<span style="color:#f92672">::</span>directories_only
+                           ;
+    fs<span style="color:#f92672">::</span>copy(<span style="color:#e6db74">&#34;sandbox&#34;</span>, <span style="color:#e6db74">&#34;sandbox_copy&#34;</span>, copyOptions); 
+    <span style="color:#66d9ef">static_cast</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">void</span><span style="color:#f92672">&gt;</span>(std<span style="color:#f92672">::</span>system(<span style="color:#e6db74">&#34;tree&#34;</span>));
+    fs<span style="color:#f92672">::</span>remove_all(<span style="color:#e6db74">&#34;sandbox&#34;</span>);
+    fs<span style="color:#f92672">::</span>remove_all(<span style="color:#e6db74">&#34;sandbox_copy&#34;</span>);
+}
+</code></pre></div>
 <ul>
 <li><a href="https://en.cppreference.com/w/cpp/filesystem/copy">https://en.cppreference.com/w/cpp/filesystem/copy</a></li>
 <li><a href="https://en.cppreference.com/w/cpp/filesystem/copy_file">https://en.cppreference.com/w/cpp/filesystem/copy_file</a></li>
 </ul>
 <h2 id="d">D</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span>
+<span style="color:#f92672">{</span>
+    <span style="color:#f92672">import</span> std.file<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">:</span> writeln<span style="color:#f92672">,</span> writef<span style="color:#f92672">,</span> writefln<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">auto</span> source <span style="color:#f92672">=</span> deleteme <span style="color:#f92672">~</span> <span style="color:#e6db74">&#34;source&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">auto</span> target <span style="color:#f92672">=</span> deleteme <span style="color:#f92672">~</span> <span style="color:#e6db74">&#34;target&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">auto</span> targetNonExistent <span style="color:#f92672">=</span> deleteme <span style="color:#f92672">~</span> <span style="color:#e6db74">&#34;target2&#34;</span><span style="color:#f92672">;</span>
+    
+    scope<span style="color:#f92672">(</span>exit<span style="color:#f92672">)</span> source<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">,</span> target<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">,</span> targetNonExistent<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">;</span>
+    
+    source<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;source&#34;</span><span style="color:#f92672">);</span>
+    target<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;target&#34;</span><span style="color:#f92672">);</span>
+    
+    writeln<span style="color:#f92672">(</span>target<span style="color:#f92672">.</span><span style="color:#a6e22e">readText</span><span style="color:#f92672">);</span> <span style="color:#75715e">// &#34;target&#34;
+</span><span style="color:#75715e"></span>    
+    source<span style="color:#f92672">.</span><span style="color:#a6e22e">copy</span><span style="color:#f92672">(</span>target<span style="color:#f92672">);</span>
+    writeln<span style="color:#f92672">(</span>target<span style="color:#f92672">.</span><span style="color:#a6e22e">readText</span><span style="color:#f92672">);</span> <span style="color:#75715e">// &#34;source&#34;
+</span><span style="color:#75715e"></span>    
+    source<span style="color:#f92672">.</span><span style="color:#a6e22e">copy</span><span style="color:#f92672">(</span>targetNonExistent<span style="color:#f92672">);</span>
+    writeln<span style="color:#f92672">(</span>targetNonExistent<span style="color:#f92672">.</span><span style="color:#a6e22e">readText</span><span style="color:#f92672">);</span> <span style="color:#75715e">// &#34;source&#34;
+</span><span style="color:#75715e"></span>    
+    
+<span style="color:#f92672">}</span>
+</code></pre></div>
 <p><a href="https://dlang.org/library/std/file/copy.html">https://dlang.org/library/std/file/copy.html</a></p>
 <h2 id="dart">Dart</h2>
 
@@ -112,8 +164,33 @@ f2.renameSync(<span style="color:#e6db74">&#34;/tmp/foo&#34;</span>);
 }
 </code></pre></div>
 <p><a href="https://golang.org/pkg/io#Copy">https://golang.org/pkg/io#Copy</a></p>
+<h2 id="nim">Nim</h2>
+<p><a href="https://nim-lang.org/docs/os.html#copyFile,string,string">https://nim-lang.org/docs/os.html#copyFile,string,string</a></p>
 <h2 id="php">PHP</h2>
 <p><a href="https://php.net/function.copy">https://php.net/function.copy</a></p>
+<h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> shutil
+
+shutil<span style="color:#f92672">.</span>copy(<span style="color:#e6db74">&#39;/tmp/foo&#39;</span>, <span style="color:#e6db74">&#39;/tmp/bar&#39;</span>)
+os<span style="color:#f92672">.</span>remove(<span style="color:#e6db74">&#39;/tmp/foo&#39;</span>)
+shutil<span style="color:#f92672">.</span>move(<span style="color:#e6db74">&#39;/tmp/bar&#39;</span>, <span style="color:#e6db74">&#39;/tmp/foo&#39;</span>)
+</code></pre></div>
+<h2 id="ruby">Ruby</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;fileutils&#39;</span>
+
+<span style="color:#66d9ef">FileUtils</span><span style="color:#f92672">.</span>cp(<span style="color:#e6db74">&#34;/tmp/foo&#34;</span>, <span style="color:#e6db74">&#34;/tmp/bar&#34;</span>)
+<span style="color:#66d9ef">FileUtils</span><span style="color:#f92672">.</span>rm(<span style="color:#e6db74">&#34;/tmp/foo&#34;</span>)
+<span style="color:#66d9ef">FileUtils</span><span style="color:#f92672">.</span>mv(<span style="color:#e6db74">&#34;/tmp/bar&#34;</span>, <span style="color:#e6db74">&#34;/tmp/foo&#34;</span>)
+</code></pre></div>
+<p><a href="https://ruby-doc.org/stdlib/libdoc/fileutils/rdoc/FileUtils.html#method-c-copy">https://ruby-doc.org/stdlib/libdoc/fileutils/rdoc/FileUtils.html#method-c-copy</a></p>
+<h2 id="rust">Rust</h2>
+<p><a href="https://doc.rust-lang.org/std/fs/fn.copy.html">https://doc.rust-lang.org/std/fs/fn.copy.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#file-cp-rm-mv">https://hyperpolyglot.org/scripting2#file-cp-rm-mv</a></li>
