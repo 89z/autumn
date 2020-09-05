@@ -1,4 +1,4 @@
 <?php
 $s = 'Sunday';
 $n = strpos($s, 'day');
-var_dump($n);
+var_dump($n == 3);

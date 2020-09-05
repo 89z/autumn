@@ -43,7 +43,7 @@ tags: [d, go, javascript, php, python, rust]
 
 ## Rust
 
-{{< r "a.rs" >}}
+{{< r "main.rs" >}}
 
 <https://docs.rs/regex>
 

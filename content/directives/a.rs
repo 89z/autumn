@@ -5,7 +5,7 @@ fn main() {
       n: Option<u8>
    }
    let o = Day {
-      s: Some(String::from("Sunday")),
+      s: Some("Sunday".into()),
       n: None
    };
    println!("{:?}", o);

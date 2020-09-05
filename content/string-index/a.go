@@ -3,5 +3,5 @@ import "strings"
 func main() {
    s := "Sunday"
    n := strings.Index(s, "day")
-   println(n)
+   println(n == 3)
 }

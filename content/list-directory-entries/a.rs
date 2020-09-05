@@ -1,10 +1,8 @@
-use std::error::Error;
-use std::fs;
-fn main() -> Result<(), Box<dyn Error>> {
-   for o_read in fs::read_dir(".")? {
-      let o_path = o_read?.path();
-      let s = o_path.display();
-      println!("{}", s);
+use std::{fs, io};
+fn main() -> io::Result<()> {
+   for r_ent in fs::read_dir(".")? {
+      let s_ent = r_ent?.path();
+      println!("{:?}", s_ent);
    }
    Ok(())
 }

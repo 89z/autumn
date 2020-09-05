@@ -120,7 +120,7 @@ o2 <span style="color:#f92672">=</span> types<span style="color:#f92672">.</span
       n: Option<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span>
    }
    <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> Day {
-      s: Some(String::from(<span style="color:#e6db74">&#34;Sunday&#34;</span>)),
+      s: Some(<span style="color:#e6db74">&#34;Sunday&#34;</span>.into()),
       n: None
    };
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o);
