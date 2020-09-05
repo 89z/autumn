@@ -1,9 +1,9 @@
-let m1 = {'Sun': 10, 'Mon': 11};
+let m = {'Sunday': 10};
 // example 1
-let b1 = 'Mon' in m1;
+let b1 = 'Sunday' in m;
 // example 2
-let b2 = m1.hasOwnProperty('Mon');
+let b2 = m.hasOwnProperty('Sunday');
 // example 3
-let b3 = Reflect.has(m1, 'Mon');
+let b3 = Reflect.has(m, 'Sunday');
 // print
 console.log(b1, b2, b3);

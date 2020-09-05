@@ -150,17 +150,12 @@ puts o1, o2 <span style="color:#f92672">==</span> o1
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::fs;
- 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">std</span>::io::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
-    <span style="color:#66d9ef">let</span> metadata <span style="color:#f92672">=</span> fs::metadata(<span style="color:#e6db74">&#34;foo.txt&#34;</span>)<span style="color:#f92672">?</span>;
- 
-    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> Ok(time) <span style="color:#f92672">=</span> metadata.accessed() {
-        println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, time);
-    } <span style="color:#66d9ef">else</span> {
-        println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Not supported on this platform&#34;</span>);
-    }
-    Ok(())
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{fs, io};
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> o_meta <span style="color:#f92672">=</span> fs::metadata(<span style="color:#e6db74">&#34;index.md&#34;</span>)<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> o_mod <span style="color:#f92672">=</span> o_meta.modified()<span style="color:#f92672">?</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o_mod);
+   Ok(())
 }
 </code></pre></div>
 <p><a href="https://doc.rust-lang.org/std/fs">https://doc.rust-lang.org/std/fs</a></p>

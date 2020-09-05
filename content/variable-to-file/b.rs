@@ -1,12 +1,11 @@
-use std::error::Error;
 use std::fs::File;
-use std::io::Write;
-fn main() -> Result<(), Box<dyn Error>> {
-   let mut o1 = File::create("a.txt")?;
+use std::io::{Error, Write};
+fn main() -> Result<(), Error> {
+   let mut o = File::create("a.txt")?;
    // example 1
-   o1.write(b"Sunday\n")?;
+   o.write(b"Sunday\n")?;
    // example 2
-   write!(o1, "Sunday\n")?;
+   write!(o, "Sunday\n")?;
    // return
    Ok(())
 }

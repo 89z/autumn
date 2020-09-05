@@ -1,12 +1,7 @@
-use std::fs;
- 
-fn main() -> std::io::Result<()> {
-    let metadata = fs::metadata("foo.txt")?;
- 
-    if let Ok(time) = metadata.accessed() {
-        println!("{:?}", time);
-    } else {
-        println!("Not supported on this platform");
-    }
-    Ok(())
+use std::{fs, io};
+fn main() -> io::Result<()> {
+   let o_meta = fs::metadata("index.md")?;
+   let o_mod = o_meta.modified()?;
+   println!("{:?}", o_mod);
+   Ok(())
 }

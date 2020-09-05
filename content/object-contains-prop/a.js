@@ -1,11 +1,10 @@
-class Day {
-   Sun = 10;
-   Mon = 11;
+function Day() {
+   this.Sunday = 10;
 }
-let o1 = new Day;
+let o = new Day;
 // example 1
-let b1 = 'Sun' in o1;
+let b1 = 'Sunday' in o;
 // example 2
-let b2 = o1.hasOwnProperty('Sun');
+let b2 = o.hasOwnProperty('Sunday');
 // print
 console.log(b1, b2);

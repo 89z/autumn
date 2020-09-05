@@ -18,9 +18,8 @@ tags: [go, javascript, php, python, rust]
 
 ## PHP
 
-{{< r "a.php" >}}
-
-Declaration must be the very first statement in the script.
+{{< r "dec.php" >}}
+{{< r "err.php" >}}
 
 <https://php.net/control-structures.declare>
 

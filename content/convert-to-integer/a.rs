@@ -1,5 +1,5 @@
-use std::error::Error;
-fn main() -> Result<(), Box<dyn Error>> {
+use std::num;
+fn main() -> Result<(), num::ParseIntError> {
    let s = "10";
    let n: u8 = s.parse()?;
    println!("{}", n == 10);

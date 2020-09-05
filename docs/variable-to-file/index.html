@@ -169,9 +169,8 @@ o1<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;Sun
 <p>
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::error::Error;
-<span style="color:#66d9ef">use</span> std::fs;
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{io, fs};
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
    fs::write(<span style="color:#e6db74">&#34;a.txt&#34;</span>, <span style="color:#e6db74">&#34;Sunday\n&#34;</span>)<span style="color:#f92672">?</span>;
    Ok(())
 }
@@ -179,15 +178,14 @@ o1<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;Sun
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::error::Error;
-<span style="color:#66d9ef">use</span> std::fs::File;
-<span style="color:#66d9ef">use</span> std::io::Write;
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> o1 <span style="color:#f92672">=</span> File::create(<span style="color:#e6db74">&#34;a.txt&#34;</span>)<span style="color:#f92672">?</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::fs::File;
+<span style="color:#66d9ef">use</span> std::io::{Error, Write};
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Error<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> o <span style="color:#f92672">=</span> File::create(<span style="color:#e6db74">&#34;a.txt&#34;</span>)<span style="color:#f92672">?</span>;
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   o1.write(<span style="color:#e6db74">b&#34;Sunday</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">?</span>;
+</span><span style="color:#75715e"></span>   o.write(<span style="color:#e6db74">b&#34;Sunday</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">?</span>;
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   write<span style="color:#f92672">!</span>(o1, <span style="color:#e6db74">&#34;Sunday\n&#34;</span>)<span style="color:#f92672">?</span>;
+</span><span style="color:#75715e"></span>   write<span style="color:#f92672">!</span>(o, <span style="color:#e6db74">&#34;Sunday\n&#34;</span>)<span style="color:#f92672">?</span>;
    <span style="color:#75715e">// return
 </span><span style="color:#75715e"></span>   Ok(())
 }
