@@ -1,10 +1,10 @@
 package main
 func main() {
-   t1 := map[string]bool{"Sun": true, "Mon": true}
+   t := map[string]bool{"Sunday": true}
    // example 1
-   _, b1 := t1["Mon"]
+   b1, b2 := t["Sunday"]
    // example 2
-   b2 := t1["Mon"]
+   b3 := t["Sunday"]
    // print
-   println(b1, b2)
+   println(b1, b2, b3)
 }

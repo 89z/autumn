@@ -1,9 +1,8 @@
 // example 1
-let a1 = ['Sun', 'Mon'];
-let t1 = new Set(a1);
-let b1 = t1.has('Mon');
+let t1 = {Sunday: true, Monday: true};
+let b1 = 'Sunday' in t1;
 // example 2
-let t2 = {Sun: true, Mon: true};
-let b2 = 'Mon' in t2;
+let t2 = new Set(['Sunday', 'Monday']);
+let b2 = t2.has('Sunday');
 // print
 console.log(b1, b2);
