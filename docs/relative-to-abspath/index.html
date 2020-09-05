@@ -24,7 +24,7 @@
 
 <main>
    <h1>Relative to absolute path</h1>
-   <time>Tue Sep 1 2020</time>
+   <time>Sat Sep 5 2020</time>
    
    <a href="/autumn/categories/string/">string</a>
    
@@ -55,11 +55,40 @@ $s2 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</sp
 </code></pre></div>
 <p><a href="https://php.net/function.realpath">https://php.net/function.realpath</a></p>
 <h2 id="python">Python</h2>
-<p><a href="https://docs.python.org/library/pathlib.html">https://docs.python.org/library/pathlib.html</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> os <span style="color:#f92672">import</span> path
+s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;index.md&#39;</span>
+s2 <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>abspath(s1)
+<span style="color:#66d9ef">print</span>(s2)
+</code></pre></div>
+<ul>
+<li><a href="https://docs.python.org/library/os.path.html#os.path.abspath">https://docs.python.org/library/os.path.html#os.path.abspath</a></li>
+<li><a href="https://docs.python.org/library/pathlib.html">https://docs.python.org/library/pathlib.html</a></li>
+</ul>
 <h2 id="ruby">Ruby</h2>
-<p><a href="https://ruby-doc.org/core/File.html">https://ruby-doc.org/core/File.html</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;index.md&#39;</span>
+s2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>absolute_path(s1)
+puts s2
+</code></pre></div>
+<p><a href="https://ruby-doc.org/core/File.html#method-c-absolute_path">https://ruby-doc.org/core/File.html#method-c-absolute_path</a></p>
 <h2 id="rust">Rust</h2>
-<p><a href="https://doc.rust-lang.org/std/path/index.html">https://doc.rust-lang.org/std/path/index.html</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{fs, io};
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;index.md&#34;</span>;
+   <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> fs::canonicalize(s1)<span style="color:#f92672">?</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, s2);
+   Ok(())
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/fs/fn.canonicalize.html">https://doc.rust-lang.org/std/fs/fn.canonicalize.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#dirname-basename">https://hyperpolyglot.org/c#dirname-basename</a></li>

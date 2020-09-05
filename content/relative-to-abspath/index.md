@@ -32,15 +32,22 @@ tags: [c++, d, dart, go, php, python, ruby, rust]
 
 ## Python
 
-<https://docs.python.org/library/pathlib.html>
+{{< r "a.py" >}}
+
+- <https://docs.python.org/library/os.path.html#os.path.abspath>
+- <https://docs.python.org/library/pathlib.html>
 
 ## Ruby
 
-<https://ruby-doc.org/core/File.html>
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/File.html#method-c-absolute_path>
 
 ## Rust
 
-<https://doc.rust-lang.org/std/path/index.html>
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/fs/fn.canonicalize.html>
 
 ## References
 

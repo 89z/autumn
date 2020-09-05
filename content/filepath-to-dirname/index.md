@@ -6,9 +6,13 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 
 ## C++
 
-<https://en.cppreference.com/w/cpp/filesystem/path>
+{{< r "a.cpp" >}}
+
+<https://en.cppreference.com/w/cpp/filesystem/path/parent_path>
 
 ## D
+
+{{< r "a.d" >}}
 
 <https://dlang.org/library/std/path.html>
 
@@ -39,15 +43,22 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 
 ## Python
 
-<https://docs.python.org/library/pathlib.html>
+{{< r "a.py" >}}
+
+- <https://docs.python.org/library/os.path.html#os.path.dirname>
+- <https://docs.python.org/library/pathlib.html>
 
 ## Ruby
 
-<https://ruby-doc.org/core/File.html>
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/File.html#method-c-dirname>
 
 ## Rust
 
-<https://doc.rust-lang.org/std/path/index.html>
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/path/struct.Path.html#method.parent>
 
 ## References
 

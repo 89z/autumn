@@ -24,14 +24,36 @@
 
 <main>
    <h1>Filepath to dirname</h1>
-   <time>Fri Sep 4 2020</time>
+   <time>Sat Sep 5 2020</time>
    
    <a href="/autumn/categories/string/">string</a>
    
    
    <h2 id="c">C++</h2>
-<p><a href="https://en.cppreference.com/w/cpp/filesystem/path">https://en.cppreference.com/w/cpp/filesystem/path</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;filesystem&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">namespace</span> fs <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>filesystem;
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   fs<span style="color:#f92672">::</span>path o <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Windows</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">write.exe&#34;</span>;
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> o.parent_path();
+   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> s <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+}
+</code></pre></div>
+<p><a href="https://en.cppreference.com/w/cpp/filesystem/path/parent_path">https://en.cppreference.com/w/cpp/filesystem/path/parent_path</a></p>
 <h2 id="d">D</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.path<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">`C:\Windows\write.exe`</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> s1<span style="color:#f92672">.</span><span style="color:#a6e22e">dirName</span><span style="color:#f92672">;</span>
+   writeln<span style="color:#f92672">(</span>s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">`C:\Windows`</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
 <p><a href="https://dlang.org/library/std/path.html">https://dlang.org/library/std/path.html</a></p>
 <h2 id="dart">Dart</h2>
 <p><a href="https://github.com/dart-lang/path">https://github.com/dart-lang/path</a></p>
@@ -86,11 +108,39 @@ $s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</s
 <li><a href="https://php.net/splfileinfo.getpath">https://php.net/splfileinfo.getpath</a></li>
 </ul>
 <h2 id="python">Python</h2>
-<p><a href="https://docs.python.org/library/pathlib.html">https://docs.python.org/library/pathlib.html</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> os <span style="color:#f92672">import</span> path
+s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Windows</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">write.exe&#39;</span>
+s2 <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>dirname(s1)
+<span style="color:#66d9ef">print</span>(s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Windows&#39;</span>)
+</code></pre></div>
+<ul>
+<li><a href="https://docs.python.org/library/os.path.html#os.path.dirname">https://docs.python.org/library/os.path.html#os.path.dirname</a></li>
+<li><a href="https://docs.python.org/library/pathlib.html">https://docs.python.org/library/pathlib.html</a></li>
+</ul>
 <h2 id="ruby">Ruby</h2>
-<p><a href="https://ruby-doc.org/core/File.html">https://ruby-doc.org/core/File.html</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:\\Windows\\write.exe&#39;</span>
+s2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>dirname(s1)
+puts s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;C:\\Windows&#39;</span>
+</code></pre></div>
+<p><a href="https://ruby-doc.org/core/File.html#method-c-dirname">https://ruby-doc.org/core/File.html#method-c-dirname</a></p>
 <h2 id="rust">Rust</h2>
-<p><a href="https://doc.rust-lang.org/std/path/index.html">https://doc.rust-lang.org/std/path/index.html</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::path::Path;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> Path::new(<span style="color:#e6db74">&#34;C:\\Windows\\write.exe&#34;</span>);
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> o.parent();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, s);
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/path/struct.Path.html#method.parent">https://doc.rust-lang.org/std/path/struct.Path.html#method.parent</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#dirname-basename">https://hyperpolyglot.org/c#dirname-basename</a></li>
