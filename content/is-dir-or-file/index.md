@@ -1,7 +1,7 @@
 ---
 title: Is directory or file
 categories: [system]
-tags: [c++, d, dart, go, nim, php, python, rust]
+tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 ---
 
 ## C++
@@ -55,11 +55,17 @@ tags: [c++, d, dart, go, nim, php, python, rust]
 - <https://docs.python.org/library/os.path.html#os.path.isdir>
 - <https://docs.python.org/library/os.path.html#os.path.isfile>
 
+## Ruby
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/File.html#method-c-directory-3F>
+
 ## Rust
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/path/struct.Path.html#method.exists>
+<https://doc.rust-lang.org/std/path/struct.Path.html#method.is_file>
 
 ## References
 

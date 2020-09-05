@@ -3,6 +3,6 @@ title: Zig
 tags: [reject]
 ---
 
-http client in the standard library
+Zig emits `NUL` file when compiling on Windows
 
-<https://github.com/ziglang/zig/issues/2007>
+<https://github.com/ziglang/zig/issues/5989>

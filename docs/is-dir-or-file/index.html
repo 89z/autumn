@@ -24,7 +24,7 @@
 
 <main>
    <h1>Is directory or file</h1>
-   <time>Sat Aug 29 2020</time>
+   <time>Sat Sep 5 2020</time>
    
    <a href="/autumn/categories/system/">system</a>
    
@@ -175,17 +175,26 @@ b1 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>ac
 <li><a href="https://docs.python.org/library/os.path.html#os.path.isdir">https://docs.python.org/library/os.path.html#os.path.isdir</a></li>
 <li><a href="https://docs.python.org/library/os.path.html#os.path.isfile">https://docs.python.org/library/os.path.html#os.path.isfile</a></li>
 </ul>
+<h2 id="ruby">Ruby</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:\\Windows&#39;</span>
+b <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>directory?(s)
+puts b
+</code></pre></div>
+<p><a href="https://ruby-doc.org/core/File.html#method-c-directory-3F">https://ruby-doc.org/core/File.html#method-c-directory-3F</a></p>
 <h2 id="rust">Rust</h2>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::path::Path;
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> b <span style="color:#f92672">=</span> Path::new(<span style="color:#e6db74">&#34;index.md&#34;</span>).exists();
+   <span style="color:#66d9ef">let</span> b <span style="color:#f92672">=</span> Path::new(<span style="color:#e6db74">&#34;index.md&#34;</span>).is_file();
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, b);
 }
 </code></pre></div>
-<p><a href="https://doc.rust-lang.org/std/path/struct.Path.html#method.exists">https://doc.rust-lang.org/std/path/struct.Path.html#method.exists</a></p>
+<p><a href="https://doc.rust-lang.org/std/path/struct.Path.html#method.is_file">https://doc.rust-lang.org/std/path/struct.Path.html#method.is_file</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#file-test">https://hyperpolyglot.org/c#file-test</a></li>

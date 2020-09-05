@@ -6,11 +6,15 @@ tags: [c++, d, dart, go, php, python, ruby, rust]
 
 ## C++
 
+{{< r "a.cpp" >}}
+
 <https://en.cppreference.com/w/cpp/filesystem/absolute>
 
 ## D
 
-<https://dlang.org/library/std/path.html>
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/path/absolute_path.html>
 
 ## Dart
 
@@ -18,11 +22,15 @@ tags: [c++, d, dart, go, php, python, ruby, rust]
 
 ## Go
 
-<https://golang.org/pkg/path/filepath>
+{{< r "a.go" >}}
+
+<https://golang.org/pkg/path/filepath#Abs>
 
 ## Nim
 
-<https://nim-lang.org/docs/os.html>
+{{< r "a.nim" >}}
+
+<https://nim-lang.org/docs/os.html#absolutePath,string>
 
 ## PHP
 

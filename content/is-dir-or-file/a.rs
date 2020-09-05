@@ -1,5 +1,5 @@
 use std::path::Path;
 fn main() {
-   let b = Path::new("index.md").exists();
+   let b = Path::new("index.md").is_file();
    println!("{}", b);
 }
