@@ -1,7 +1,7 @@
 ---
 title: Delete file
 categories: [system]
-tags: [c++, d, dart, php, python]
+tags: [c++, d, go, dart, php, python]
 ---
 
 ## C++
@@ -18,6 +18,10 @@ tags: [c++, d, dart, php, python]
 
 <https://api.dart.dev/dart-io/FileSystemEntity/deleteSync.html>
 
+## Go
+
+{{< r "a.go" >}}
+
 ## PHP
 
 {{< r "a.php" >}}
@@ -30,6 +34,7 @@ tags: [c++, d, dart, php, python]
 
 ## References
 
+- <https://hyperpolyglot.org/c#file-cp-rm-mv>
 - <https://hyperpolyglot.org/scripting2#file-cp-rm-mv>
 - <https://hyperpolyglot.org/web#file-cp-rm-mv>
 - <https://programming-idioms.org/idiom/155>
