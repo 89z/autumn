@@ -161,22 +161,14 @@ puts s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;w
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::path::Path;
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), String<span style="color:#f92672">&gt;</span> {
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> Path::new(<span style="color:#e6db74">&#34;C:\\Windows\\write.exe&#34;</span>);
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> Some(s) <span style="color:#f92672">=</span> o.file_name() {
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, s)
-   } <span style="color:#66d9ef">else</span> {
-      <span style="color:#66d9ef">return</span> Err(<span style="color:#e6db74">&#34;file_name&#34;</span>.into())
-   }
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> o.file_name();
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> Some(s) <span style="color:#f92672">=</span> o.file_stem() {
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, s)
-   } <span style="color:#66d9ef">else</span> {
-      <span style="color:#66d9ef">return</span> Err(<span style="color:#e6db74">&#34;file_stem&#34;</span>.into())
-   }
-   <span style="color:#75715e">// return
-</span><span style="color:#75715e"></span>   Ok(())
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> o2 <span style="color:#f92672">=</span> o.file_stem();
+   <span style="color:#75715e">// print
+</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?} {:?}&#34;</span>, o1, o2);
 }
 </code></pre></div>
 <ul>
