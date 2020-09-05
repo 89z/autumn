@@ -21,6 +21,8 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 
 {{< r "a.dart" >}}
 
+<https://api.dart.dev/dart-io/File/copySync.html>
+
 ## Go
 
 {{< r "a.go" >}}
@@ -29,15 +31,21 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 
 ## Nim
 
+{{< r "a.nim" >}}
+
 <https://nim-lang.org/docs/os.html#copyFile,string,string>
 
 ## PHP
+
+{{< r "a.php" >}}
 
 <https://php.net/function.copy>
 
 ## Python
 
 {{< r "a.py" >}}
+
+<https://docs.python.org/library/shutil#shutil.copy>
 
 ## Ruby
 
@@ -46,6 +54,8 @@ tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 <https://ruby-doc.org/stdlib/libdoc/fileutils/rdoc/FileUtils.html#method-c-copy>
 
 ## Rust
+
+{{< r "a.rs" >}}
 
 <https://doc.rust-lang.org/std/fs/fn.copy.html>
 
