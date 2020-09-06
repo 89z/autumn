@@ -1,7 +1,7 @@
 ---
 title: Divide a number
 categories: [number]
-tags: [c++, d, dart, go, javascript, nim, php, python, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 ---
 
 ## C++
@@ -58,6 +58,12 @@ tags: [c++, d, dart, go, javascript, nim, php, python, rust]
 
 - <https://docs.python.org/library/functions.html#divmod>
 - <https://docs.python.org/reference/expressions.html#binary>
+
+## Ruby
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/Integer.html#method-i-2F>
 
 ## Rust
 

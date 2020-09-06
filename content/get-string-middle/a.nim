@@ -1,3 +1,7 @@
-let s1 = "Sunday"
-let s2 = s1[1..3]
-echo s2 == "und"
+let s = "Sunday"
+# example 1
+let s1 = s[1..2]
+# example 2
+let s2 = s[1..<3]
+# print
+echo [s1 == "un", s2 == "un"]

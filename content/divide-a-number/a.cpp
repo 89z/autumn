@@ -1,5 +1,5 @@
 #include <iostream>
 int main() {
-   int n = 19 / 10;
-   std::cout << n << std::endl;
+   auto n = 29 / 10;
+   std::cout << (n == 2) << std::endl;
 }

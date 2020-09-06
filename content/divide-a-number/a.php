@@ -1,9 +1,9 @@
 <?php
-# float
-$n1 = 19 / 10;
-# remainder
-$n2 = 19 % 10;
-# truncate
-$n3 = intdiv(19, 10);
+# example 1
+$n1 = 29 / 10;
+# example 2
+$n2 = 29 % 10;
+# example 3
+$n3 = intdiv(29, 10);
 # print
-var_dump($n1, $n2, $n3);
+var_dump($n1 == 2.9, $n2 == 9, $n3 == 2);

@@ -1,13 +1,11 @@
-let s2, s = 'Sunday';
+let s = 'Sunday';
 // example 1
-s2 = s.slice(1, 2);
-console.log(s2 == 'u');
+let s1 = s.charAt(1);
 // example 2
-s2 = s.substring(1, 2);
-console.log(s2 == 'u');
+let s2 = s.slice(1, 2);
 // example 3
-s2 = s.charAt(1);
-console.log(s2 == 'u');
+let s3 = s.substring(1, 2);
 // example 4
-s2 = s[1];
-console.log(s2 == 'u');
+let s4 = s[1];
+// print
+console.log(s1 == 'u', s2 == 'u', s3 == 'u', s4 == 'u');

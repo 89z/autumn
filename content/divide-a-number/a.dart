@@ -1,4 +1,4 @@
 main() {
-   var n = 19 / 10;
-   print(n == 1.9);
+   var n = 29 / 10;
+   print(n == 2.9);
 }

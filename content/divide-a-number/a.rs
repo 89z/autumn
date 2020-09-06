@@ -1,4 +1,4 @@
 fn main() {
-   let n = 19 / 10;
-   println!("{}", n == 1);
+   let n = 29 / 10;
+   println!("{}", n == 2);
 }
