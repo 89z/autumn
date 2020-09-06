@@ -1,7 +1,5 @@
-#![allow(unused)]
-use std::fs;
-
-fn main() -> std::io::Result<()> {
-    fs::copy("foo.txt", "bar.txt")?;  // Copy foo.txt to bar.txt
-    Ok(())
+use std::{fs, io};
+fn main() -> io::Result<()> {
+   fs::copy("a.txt", "b.txt")?;
+   Ok(())
 }

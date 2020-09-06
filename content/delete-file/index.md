@@ -1,14 +1,18 @@
 ---
 title: Delete file
 categories: [system]
-tags: [c++, d, go, dart, php, python]
+tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 ---
 
 ## C++
 
+{{< r "a.cpp" >}}
+
 <https://en.cppreference.com/w/cpp/filesystem/remove>
 
 ## D
+
+{{< r "a.d" >}}
 
 <https://dlang.org/library/std/file/remove.html>
 
@@ -22,6 +26,14 @@ tags: [c++, d, go, dart, php, python]
 
 {{< r "a.go" >}}
 
+<https://golang.org/pkg/os>
+
+## Nim
+
+{{< r "a.nim" >}}
+
+<https://nim-lang.org/docs/os.html#removeFile,string>
+
 ## PHP
 
 {{< r "a.php" >}}
@@ -31,6 +43,20 @@ tags: [c++, d, go, dart, php, python]
 ## Python
 
 {{< r "a.py" >}}
+
+<https://docs.python.org/library/os.html>
+
+## Ruby
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/stdlib/libdoc/fileutils/rdoc/FileUtils.html#method-c-rm>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/fs/fn.remove_file.html>
 
 ## References
 

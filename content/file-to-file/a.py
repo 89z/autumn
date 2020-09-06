@@ -1,2 +1,2 @@
 import shutil
-shutil.copy('/tmp/foo', '/tmp/bar')
+shutil.copy('a.txt', 'b.txt')
