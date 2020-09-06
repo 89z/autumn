@@ -1,6 +1,6 @@
 ---
-title: Object types
-categories: [object]
+title: Define class property
+categories: [class]
 tags: [go, javascript, php, python, rust]
 ---
 
