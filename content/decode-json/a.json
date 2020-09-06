@@ -1,1 +1,4 @@
-{"Sunday": 10}
+[
+   {"city": "Dresden", "country": "Germany"},
+   {"city": "Ostrava", "country": "Czech Republic"}
+]

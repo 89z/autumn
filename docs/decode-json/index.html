@@ -24,7 +24,7 @@
 
 <main>
    <h1>Decode JSON</h1>
-   <time>Wed Jul 22 2020</time>
+   <time>Sun Sep 6 2020</time>
    
    <a href="/autumn/categories/file-format/">file-format</a>
    
@@ -58,41 +58,69 @@ main() {
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
    <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;log&#34;</span>
+   <span style="color:#e6db74">&#34;os&#34;</span>
 )
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">`
-</span><span style="color:#e6db74">{&#34;Sunday&#34;: 10}
-</span><span style="color:#e6db74">`</span>)
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{}
-   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">y</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m</span>)
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">struct</span>{<span style="color:#a6e22e">Sunday</span> <span style="color:#66d9ef">int</span>}{}
-   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">y</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">o</span>)
+   <span style="color:#75715e">// file to map
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.json&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{}
+   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">o</span>).<span style="color:#a6e22e">Decode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">a</span>)
+   <span style="color:#75715e">// string to map
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`[
+</span><span style="color:#e6db74">      {&#34;city&#34;:&#34;Dresden&#34;,&#34;country&#34;:&#34;Germany&#34;},
+</span><span style="color:#e6db74">      {&#34;city&#34;:&#34;Ostrava&#34;,&#34;country&#34;:&#34;Czech Republic&#34;}
+</span><span style="color:#e6db74">   ]`</span>
+   <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#a6e22e">s</span>)
+   <span style="color:#a6e22e">a2</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{}
+   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">y</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">a2</span>)
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%v %+v\n&#34;</span>, <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">o</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">a</span>, <span style="color:#e6db74">&#34;\n&#34;</span>, <span style="color:#a6e22e">a2</span>, <span style="color:#e6db74">&#34;\n&#34;</span>)
 }
 </code></pre></div>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
    <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;log&#34;</span>
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Place</span> <span style="color:#66d9ef">struct</span> {
+   <span style="color:#a6e22e">City</span> <span style="color:#66d9ef">string</span>
+   <span style="color:#a6e22e">Country</span> <span style="color:#66d9ef">string</span>
+}
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.json&#34;</span>)
+   <span style="color:#75715e">// file to object
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.json&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{}
-   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">o</span>).<span style="color:#a6e22e">Decode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m</span>)
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []<span style="color:#a6e22e">Place</span>{}
+   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">o</span>).<span style="color:#a6e22e">Decode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">a</span>)
+   <span style="color:#75715e">// string to object
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`[
+</span><span style="color:#e6db74">      {&#34;city&#34;:&#34;Dresden&#34;,&#34;country&#34;:&#34;Germany&#34;},
+</span><span style="color:#e6db74">      {&#34;city&#34;:&#34;Ostrava&#34;,&#34;country&#34;:&#34;Czech Republic&#34;}
+</span><span style="color:#e6db74">   ]`</span>
+   <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#a6e22e">s</span>)
+   <span style="color:#a6e22e">a2</span> <span style="color:#f92672">:=</span> []<span style="color:#a6e22e">Place</span>{}
+   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">y</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">a2</span>)
+   <span style="color:#75715e">// print
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%+v\n%+v\n&#34;</span>, <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">a2</span>)
 }
 </code></pre></div></p>
 <ul>
