@@ -24,7 +24,7 @@
 
 <main>
    <h1>Start process</h1>
-   <time>Mon Aug 17 2020</time>
+   <time>Sun Sep 6 2020</time>
    
    <a href="/autumn/categories/system/">system</a>
    
@@ -69,8 +69,27 @@ main() {
    <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Stdout</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>
    <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Start</span>()
 }
+</code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;log&#34;</span>
+   <span style="color:#e6db74">&#34;os&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`C:\go\bin\go.exe`</span>
+   <span style="color:#a6e22e">oa</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">ProcAttr</span>{<span style="color:#a6e22e">Files</span>: []<span style="color:#f92672">*</span><span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">File</span>{<span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>, <span style="color:#66d9ef">nil</span>}}
+   <span style="color:#a6e22e">op</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">StartProcess</span>(<span style="color:#a6e22e">s</span>, []<span style="color:#66d9ef">string</span>{<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;version&#34;</span>}, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">oa</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+   <span style="color:#a6e22e">op</span>.<span style="color:#a6e22e">Wait</span>()
+}
 </code></pre></div></p>
 <ul>
+<li><a href="https://golang.org/pkg/os#StartProcess">https://golang.org/pkg/os#StartProcess</a></li>
 <li><a href="https://golang.org/pkg/os/exec#Cmd.Run">https://golang.org/pkg/os/exec#Cmd.Run</a></li>
 <li><a href="https://golang.org/pkg/os/exec#Cmd.Start">https://golang.org/pkg/os/exec#Cmd.Start</a></li>
 </ul>

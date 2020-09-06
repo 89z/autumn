@@ -33,16 +33,10 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdint&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;filesystem&gt;</span><span style="color:#75715e">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;filesystem&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">namespace</span> fs <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>filesystem;
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
-{
-    fs<span style="color:#f92672">::</span>path dir <span style="color:#f92672">=</span> fs<span style="color:#f92672">::</span>temp_directory_path();
-    fs<span style="color:#f92672">::</span>create_directories(dir <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;abcdef/example&#34;</span>);
-    std<span style="color:#f92672">::</span>uintmax_t n <span style="color:#f92672">=</span> fs<span style="color:#f92672">::</span>remove_all(dir <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;abcdef&#34;</span>);
-    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Deleted &#34;</span> <span style="color:#f92672">&lt;&lt;</span> n <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; files or directories</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   fs<span style="color:#f92672">::</span>remove(<span style="color:#e6db74">&#34;a.txt&#34;</span>);
 }
 </code></pre></div>
 <p><a href="https://en.cppreference.com/w/cpp/filesystem/remove">https://en.cppreference.com/w/cpp/filesystem/remove</a></p>
@@ -50,19 +44,9 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span>
-<span style="color:#f92672">{</span>
-    <span style="color:#f92672">import</span> std.file<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">:</span> writeln<span style="color:#f92672">,</span> writef<span style="color:#f92672">,</span> writefln<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> std.exception <span style="color:#f92672">:</span> assertThrown<span style="color:#f92672">;</span>
-    
-    deleteme<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello&#34;</span><span style="color:#f92672">);</span>
-    writeln<span style="color:#f92672">(</span>deleteme<span style="color:#f92672">.</span><span style="color:#a6e22e">readText</span><span style="color:#f92672">);</span> <span style="color:#75715e">// &#34;Hello&#34;
-</span><span style="color:#75715e"></span>    
-    deleteme<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">;</span>
-    assertThrown<span style="color:#f92672">!</span>FileException<span style="color:#f92672">(</span>deleteme<span style="color:#f92672">.</span><span style="color:#a6e22e">readText</span><span style="color:#f92672">);</span>
-    
-    
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.file<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   remove<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a.txt&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 <p><a href="https://dlang.org/library/std/file/remove.html">https://dlang.org/library/std/file/remove.html</a></p>
@@ -81,18 +65,10 @@ main() {
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os&#34;</span>
-
-<span style="color:#75715e">// no copy function in standard library
-</span><span style="color:#75715e"></span>
-<span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Remove</span>(<span style="color:#e6db74">&#34;/tmp/foo&#34;</span>)
-<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Remove failed: %s\n&#34;</span>, <span style="color:#a6e22e">err</span>)
-}
-
-<span style="color:#a6e22e">err2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Rename</span>(<span style="color:#e6db74">&#34;/tmp/bar&#34;</span>, <span style="color:#e6db74">&#34;/tmp/foo&#34;</span>)
-<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err2</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Rename failed: %s\n&#34;</span>, <span style="color:#a6e22e">err2</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Remove</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
 }
 </code></pre></div>
 <p><a href="https://golang.org/pkg/os">https://golang.org/pkg/os</a></p>
@@ -132,12 +108,10 @@ os<span style="color:#f92672">.</span>remove(<span style="color:#e6db74">&#39;a.
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#75715e">#![allow(unused)]</span>
-<span style="color:#66d9ef">use</span> std::fs;
-
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">std</span>::io::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
-    fs::remove_file(<span style="color:#e6db74">&#34;a.txt&#34;</span>)<span style="color:#f92672">?</span>;
-    Ok(())
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{fs, io};
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
+   fs::remove_file(<span style="color:#e6db74">&#34;a.txt&#34;</span>)<span style="color:#f92672">?</span>;
+   Ok(())
 }
 </code></pre></div>
 <p><a href="https://doc.rust-lang.org/std/fs/fn.remove_file.html">https://doc.rust-lang.org/std/fs/fn.remove_file.html</a></p>

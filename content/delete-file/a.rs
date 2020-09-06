@@ -1,7 +1,5 @@
-#![allow(unused)]
-use std::fs;
-
-fn main() -> std::io::Result<()> {
-    fs::remove_file("a.txt")?;
-    Ok(())
+use std::{fs, io};
+fn main() -> io::Result<()> {
+   fs::remove_file("a.txt")?;
+   Ok(())
 }

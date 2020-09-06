@@ -14,7 +14,9 @@ tags: [dart, go, nim, php, python]
 
 {{< r "a.go" >}}
 {{< r "b.go" >}}
+{{< r "c.go" >}}
 
+- <https://golang.org/pkg/os#StartProcess>
 - <https://golang.org/pkg/os/exec#Cmd.Run>
 - <https://golang.org/pkg/os/exec#Cmd.Start>
 
