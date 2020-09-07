@@ -36,13 +36,13 @@ error: invalid method declaration; return type required
 5. `main` is required
 
 ~~~
-error: can languaget find main(String[]) method in class: a1
+error: cant find main(String[]) method in class
 ~~~
 
 6. `String[]` is required
 
 ~~~
-error: can languaget find main(String[]) method in class: app
+error: cant find main(String[]) method in class
 ~~~
 
 <https://google.com/search?tbs=qdr:m&q=java+hello+world>

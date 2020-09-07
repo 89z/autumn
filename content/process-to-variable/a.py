@@ -1,13 +1,12 @@
 import subprocess
-a1 = ['ag', '-V']
+a = ['python', '-V']
 # example 1
-o1 = subprocess.Popen(a1, stdout=subprocess.PIPE, text=True)
-o2 = o1.stdout
-s1 = o2.read()
+o = subprocess.Popen(a, stdout=subprocess.PIPE, text=True)
+s = o.stdout.read()
 # example 2
-o3 = subprocess.run(a1, stdout=subprocess.PIPE, text=True)
-s2 = o3.stdout
+o = subprocess.run(a, stdout=subprocess.PIPE, text=True)
+s2 = o.stdout
 # example 3
-s3 = subprocess.check_output(a1, text=True)
+s3 = subprocess.check_output(a, text=True)
 # print
-print(s1, s2, s3, end='', sep='')
+print(s, s2, s3, end='', sep='')

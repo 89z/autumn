@@ -1,8 +1,8 @@
 import strutils
-let a1 = ["Sun", "Mon"]
+let a = ["Sunday", "Monday"]
 # example 1
-let s1 = a1.join("")
+let s = a.join(",")
 # example 2
-let s2 = a1.join
+let s2 = a.join
 # print
-echo [s1, s2]
+echo [s == "Sunday,Monday", s2 == "SundayMonday"]

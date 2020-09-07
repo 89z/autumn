@@ -76,10 +76,10 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> []rune(<span style="color:#e6db74">&#34;📕📙📒📗&#34;</span>)
-   <span style="color:#a6e22e">a2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a1</span>[:<span style="color:#ae81ff">2</span>]
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> string(<span style="color:#a6e22e">a2</span>)
-   println(<span style="color:#a6e22e">s1</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;📕📙&#34;</span>)
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []rune(<span style="color:#e6db74">&#34;📗📒📕&#34;</span>)
+   <span style="color:#a6e22e">a2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a</span>[:<span style="color:#ae81ff">2</span>]
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> string(<span style="color:#a6e22e">a2</span>)
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;📗📒&#34;</span>)
 }
 </code></pre></div></p>
 <p><a href="https://golang.org/ref/spec#Slice_expressions">https://golang.org/ref/spec#Slice_expressions</a></p>

@@ -1,8 +1,8 @@
 # example 1
-a1 = ['Sun', 'Mon']
-s1 = ','.join(a1)
+a = ['Sunday', 'Monday']
+s = ','.join(a)
 # example 2
-a2 = [10, 11]
-s2 = ','.join(map(str, a2))
+a = [10, 11]
+s2 = ','.join(map(str, a))
 # print
-print(s1, s2)
+print(s, s2)

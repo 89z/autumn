@@ -1,7 +1,7 @@
-let a1 = ['Sun', 'Mon'];
+let a = ['Sun', 'Mon'];
 // example 1
-let s1 = a1.join(',');
+let s = a.join(',');
 // example 2
-let s2 = a1.join();
+let s2 = a.join();
 // print
-console.log(s1, s2);
+console.log(s == 'Sun,Mon', s2 == 'Sun,Mon');

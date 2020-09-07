@@ -95,18 +95,18 @@ stdout.write s1
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ag -V&#39;</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;php -v&#39;</span>;
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">`$s1`</span>;
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">`$s`</span>;
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">shell_exec</span>($s1);
+</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">shell_exec</span>($s);
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">popen</span>($s1, <span style="color:#e6db74">&#39;r&#39;</span>);
-$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_contents</span>($r1);
+</span><span style="color:#75715e"></span>$r <span style="color:#f92672">=</span> <span style="color:#a6e22e">popen</span>($s, <span style="color:#e6db74">&#39;r&#39;</span>);
+$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_contents</span>($r);
 <span style="color:#75715e"># example 4
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">exec</span>($s1, $a1);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">exec</span>($s, $a);
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2, $s3, $s4, $a1);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2, $s3, $s4, $a);
 </code></pre></div>
 <ul>
 <li><a href="https://php.net/function.exec">https://php.net/function.exec</a></li>
@@ -119,18 +119,17 @@ $s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> subprocess
-a1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;ag&#39;</span>, <span style="color:#e6db74">&#39;-V&#39;</span>]
+a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;python&#39;</span>, <span style="color:#e6db74">&#39;-V&#39;</span>]
 <span style="color:#75715e"># example 1</span>
-o1 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>Popen(a1, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE, text<span style="color:#f92672">=</span>True)
-o2 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>stdout
-s1 <span style="color:#f92672">=</span> o2<span style="color:#f92672">.</span>read()
+o <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>Popen(a, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE, text<span style="color:#f92672">=</span>True)
+s <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>stdout<span style="color:#f92672">.</span>read()
 <span style="color:#75715e"># example 2</span>
-o3 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>run(a1, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE, text<span style="color:#f92672">=</span>True)
-s2 <span style="color:#f92672">=</span> o3<span style="color:#f92672">.</span>stdout
+o <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>run(a, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE, text<span style="color:#f92672">=</span>True)
+s2 <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>stdout
 <span style="color:#75715e"># example 3</span>
-s3 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>check_output(a1, text<span style="color:#f92672">=</span>True)
+s3 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>check_output(a, text<span style="color:#f92672">=</span>True)
 <span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(s1, s2, s3, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+<span style="color:#66d9ef">print</span>(s, s2, s3, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
 </code></pre></div>
 <ul>
 <li><a href="https://docs.python.org/library/subprocess.html#subprocess.Popen">https://docs.python.org/library/subprocess.html#subprocess.Popen</a></li>

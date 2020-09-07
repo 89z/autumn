@@ -1,16 +1,16 @@
 <?php
-$s1 = 'ag -V';
+$s = 'php -v';
 # example 1
-$r1 = popen($s1, 'r');
+$r = popen($s, 'r');
 while (true) {
-   $s2 = fgets($r1);
-   if (feof($r1)) {
+   $s2 = fgets($r);
+   if (feof($r)) {
       break;
    }
    var_dump($s2);
 }
 # example 2
-exec($s1, $a1);
-foreach ($a1 as $s2) {
+exec($s, $a);
+foreach ($a as $s2) {
    var_dump($s2);
 }

@@ -1,10 +1,10 @@
 // example 1
 use std::env;
 // example 2
-use std::env as o1;
+use std::env as o;
 // end
 fn main() {
-   let a1 = env::args();
-   let a2 = o1::args();
-   dbg!(a1, a2);
+   let a = env::args();
+   let a2 = o::args();
+   println!("{:?} {:?}", a, a2);
 }
