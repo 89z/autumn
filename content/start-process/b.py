@@ -1,2 +1,2 @@
 import os
-os.system('ag -V')
+os.system('python -V')

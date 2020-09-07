@@ -2,6 +2,6 @@ package main
 import "fmt"
 func main() {
    m := map[string]int{}
-   m["Sunday"] = 10
+   m["year"] = 2020
    fmt.Println(m)
 }

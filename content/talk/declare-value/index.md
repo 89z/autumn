@@ -19,12 +19,8 @@ Letter | Type
 ## Byte
 
 If we use `a` for Byte Arrays, it will be confusing when used next to
-traditional arrays:
-
-{{< r "byte-arr.go" >}}
-
-If we use `s1` for Byte Array, it will be confusing when used next to
-traditions strings:
+traditional arrays. If we use `s1` for Byte Array, it will be confusing when
+used next to traditions strings:
 
 {{< r "byte-str.go" >}}
 

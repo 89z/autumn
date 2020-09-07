@@ -1,3 +1,3 @@
 let m = new Map;
-m.set('Sunday', 10);
+m.set('year', 2020);
 console.log(m);
