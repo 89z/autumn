@@ -35,7 +35,7 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.json<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">`{&#34;Sunday&#34;: 10}`</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">`{&#34;year&#34;: 2019, &#34;month&#34;: 12, &#34;day&#34;: 31}`</span><span style="color:#f92672">;</span>
    <span style="color:#66d9ef">auto</span> m <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">parseJSON</span><span style="color:#f92672">;</span>
    m<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
@@ -47,7 +47,7 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:convert&#39;</span>;
 main() {
-   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{&#34;Sunday&#34;: 10}&#39;</span>;
+   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{&#34;year&#34;: 2019, &#34;month&#34;: 12, &#34;day&#34;: 31}&#39;</span>;
    <span style="color:#66d9ef">var</span> m <span style="color:#f92672">=</span> jsonDecode(s);
    print(m);
 }
@@ -67,21 +67,18 @@ main() {
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#75715e">// string to map
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`{&#34;year&#34;: 2019, &#34;month&#34;: 12, &#34;day&#34;: 31}`</span>
+   <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#a6e22e">s</span>)
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{}
+   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">y</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">a</span>)
    <span style="color:#75715e">// file to map
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.json&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{}
-   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">o</span>).<span style="color:#a6e22e">Decode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">a</span>)
-   <span style="color:#75715e">// string to map
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`[
-</span><span style="color:#e6db74">      {&#34;city&#34;:&#34;Dresden&#34;,&#34;country&#34;:&#34;Germany&#34;},
-</span><span style="color:#e6db74">      {&#34;city&#34;:&#34;Ostrava&#34;,&#34;country&#34;:&#34;Czech Republic&#34;}
-</span><span style="color:#e6db74">   ]`</span>
-   <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#a6e22e">s</span>)
-   <span style="color:#a6e22e">a2</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{}
-   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">y</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">a2</span>)
+   <span style="color:#a6e22e">a2</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{}
+   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">o</span>).<span style="color:#a6e22e">Decode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">a2</span>)
    <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">a</span>, <span style="color:#e6db74">&#34;\n&#34;</span>, <span style="color:#a6e22e">a2</span>, <span style="color:#e6db74">&#34;\n&#34;</span>)
 }
@@ -98,27 +95,23 @@ main() {
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
 
-<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Place</span> <span style="color:#66d9ef">struct</span> {
-   <span style="color:#a6e22e">City</span> <span style="color:#66d9ef">string</span>
-   <span style="color:#a6e22e">Country</span> <span style="color:#66d9ef">string</span>
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Date</span> <span style="color:#66d9ef">struct</span> {
+   <span style="color:#a6e22e">Year</span>, <span style="color:#a6e22e">Month</span>, <span style="color:#a6e22e">Day</span> <span style="color:#66d9ef">int</span>
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#75715e">// string to object
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`{&#34;year&#34;: 2019, &#34;month&#34;: 12, &#34;day&#34;: 31}`</span>
+   <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#a6e22e">s</span>)
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Date</span>{}
+   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">y</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">a</span>)
    <span style="color:#75715e">// file to object
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.json&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []<span style="color:#a6e22e">Place</span>{}
-   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">o</span>).<span style="color:#a6e22e">Decode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">a</span>)
-   <span style="color:#75715e">// string to object
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`[
-</span><span style="color:#e6db74">      {&#34;city&#34;:&#34;Dresden&#34;,&#34;country&#34;:&#34;Germany&#34;},
-</span><span style="color:#e6db74">      {&#34;city&#34;:&#34;Ostrava&#34;,&#34;country&#34;:&#34;Czech Republic&#34;}
-</span><span style="color:#e6db74">   ]`</span>
-   <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#a6e22e">s</span>)
-   <span style="color:#a6e22e">a2</span> <span style="color:#f92672">:=</span> []<span style="color:#a6e22e">Place</span>{}
-   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">y</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">a2</span>)
+   <span style="color:#a6e22e">a2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Date</span>{}
+   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">o</span>).<span style="color:#a6e22e">Decode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">a2</span>)
    <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%+v\n%+v\n&#34;</span>, <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">a2</span>)
 }
@@ -131,7 +124,7 @@ main() {
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{&#34;Sunday&#34;: 10}&#39;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{&#34;year&#34;: 2019, &#34;month&#34;: 12, &#34;day&#34;: 31}&#39;</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">s</span>);
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">m</span>);
 </code></pre></div>
@@ -142,7 +135,7 @@ main() {
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> json
 <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;
-</span><span style="color:#e6db74">{&#34;Sunday&#34;: 10}
+</span><span style="color:#e6db74">{&#34;year&#34;: 2019, &#34;month&#34;: 12, &#34;day&#34;: 31}
 </span><span style="color:#e6db74">&#34;&#34;&#34;</span>
 <span style="color:#66d9ef">let</span> m <span style="color:#f92672">=</span> s.parseJson
 echo m
@@ -154,7 +147,7 @@ echo m
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;&lt;</span><span style="color:#e6db74">eof</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">{&#34;Sunday&#34;: 10}
+</span><span style="color:#e6db74">{&#34;year&#34;: 2019, &#34;month&#34;: 12, &#34;day&#34;: 31}
 </span><span style="color:#e6db74"></span><span style="color:#e6db74">eof</span>;
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span>$o <span style="color:#f92672">=</span> <span style="color:#a6e22e">json_decode</span>($s);
@@ -170,13 +163,13 @@ $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;&lt;
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> json
 <span style="color:#75715e"># example 1</span>
-o <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;a.json&#39;</span>)
-m1 <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>load(o)
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{&#34;year&#34;: 2019, &#34;month&#34;: 12, &#34;day&#34;: 31}&#39;</span>
+m <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(s)
 <span style="color:#75715e"># example 2</span>
-s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{&#34;Sunday&#34;: 10}&#39;</span>
-m2 <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(s)
+o <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;a.json&#39;</span>)
+m2 <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>load(o)
 <span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(m1, m2)
+<span style="color:#66d9ef">print</span>(m, m2, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
 </code></pre></div>
 <ul>
 <li><a href="https://docs.python.org/library/json.html#json.load">https://docs.python.org/library/json.html#json.load</a></li>

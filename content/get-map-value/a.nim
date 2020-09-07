@@ -1,4 +1,4 @@
 import tables
-let m = {"Sunday": 10}.toTable
-let n = m["Sunday"]
+let m = {"year": 2020}.toTable
+let n = m["year"]
 echo n

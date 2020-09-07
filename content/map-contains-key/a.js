@@ -1,9 +1,9 @@
-let m = {'Sunday': 10};
+let m = {'year': 2020};
 // example 1
-let b1 = 'Sunday' in m;
+let b = 'year' in m;
 // example 2
-let b2 = m.hasOwnProperty('Sunday');
+let b2 = m.hasOwnProperty('year');
 // example 3
-let b3 = Reflect.has(m, 'Sunday');
+let b3 = Reflect.has(m, 'year');
 // print
-console.log(b1, b2, b3);
+console.log(b, b2, b3);

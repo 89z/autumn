@@ -1,9 +1,9 @@
 import json
 # example 1
-o = open('a.json')
-m1 = json.load(o)
+s = '{"year": 2019, "month": 12, "day": 31}'
+m = json.loads(s)
 # example 2
-s = '{"Sunday": 10}'
-m2 = json.loads(s)
+o = open('a.json')
+m2 = json.load(o)
 # print
-print(m1, m2)
+print(m, m2, sep='\n')

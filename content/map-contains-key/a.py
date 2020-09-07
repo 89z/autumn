@@ -1,3 +1,3 @@
-m = {'Sunday': 10}
-b = 'Sunday' in m
+m = {'year': 2020}
+b = 'year' in m
 print(b)

@@ -1,6 +1,6 @@
 package main
 func main() {
-   m := map[string]int{"Sunday": 10}
-   n, b := m["Sunday"]
+   m := map[string]int{"year": 2020}
+   n, b := m["year"]
    println(n, b)
 }

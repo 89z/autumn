@@ -1,5 +1,5 @@
 main() {
-   var m = {'Sunday': 10};
-   var n = m['Sunday'];
+   var m = {'year': 2020};
+   var n = m['year'];
    print(n);
 }

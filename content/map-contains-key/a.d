@@ -1,6 +1,6 @@
 import std.stdio;
 void main() {
-   auto m = ["Sunday": 10];
-   auto o = "Sunday" in m;
+   auto m = ["year": 2020];
+   auto o = "year" in m;
    writeln(o != null);
 }

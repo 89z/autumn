@@ -1,5 +1,5 @@
 main() {
-   var m = {'Sunday': 10};
-   var b = m.containsKey('Sunday');
+   var m = {'year': 2020};
+   var b = m.containsKey('year');
    print(b);
 }

@@ -1,10 +1,10 @@
 package main
 func main() {
-   m := map[string]int{"Sunday": 10}
+   m := map[string]int{"year": 2020}
    // example 1
-   n1, b := m["Sunday"]
+   n, b := m["year"]
    // example 2
-   n2 := m["Sunday"]
+   n2 := m["year"]
    // print
-   println(n1, b, n2)
+   println(n, b, n2)
 }

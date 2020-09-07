@@ -1,4 +1,4 @@
 <?php
-$m = ['Sunday' => 10];
-$b = array_key_exists('Sunday', $m);
+$m = ['year' => 2020];
+$b = array_key_exists('year', $m);
 var_dump($b);

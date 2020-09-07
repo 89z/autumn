@@ -1,7 +1,7 @@
-let m1 = {Sun: 10, Mon: 11};
+let m = {year: 2020};
 // example 1
-let n1 = m1['Mon'];
+let n = m['year'];
 // example 2
-let n2 = m1.Mon;
+let n2 = m.year;
 // print
-console.log(n1, n2);
+console.log(n, n2);

@@ -1,6 +1,6 @@
 <?php
 $s = <<<eof
-{"Sunday": 10}
+{"year": 2019, "month": 12, "day": 31}
 eof;
 # example 1
 $o = json_decode($s);
