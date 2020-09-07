@@ -1,2 +1,2 @@
-let a1 = ["Sun", "Mon"]
-echo a1
+let a = ["Sunday", "Monday"]
+echo a

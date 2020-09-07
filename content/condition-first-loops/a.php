@@ -1,16 +1,19 @@
 <?php
-# example 1
-for ($n1 = 10; $n1 < 20; $n1++) {
-   var_dump($n1);
+
+echo "example 1\n";
+for ($n = 10; $n < 20; $n++) {
+   var_dump($n);
 }
-# example 2
-$n1 = 10;
-while ($n1 < 20) {
-   var_dump($n1);
-   $n1++;
+
+echo "example 2\n";
+$n = 10;
+while ($n < 20) {
+   var_dump($n);
+   $n++;
 }
-# example 3
-$a1 = range(10, 19);
-foreach ($a1 as $n1) {
-   var_dump($n1);
+
+echo "example 3\n";
+$a = range(10, 19);
+foreach ($a as $n) {
+   var_dump($n);
 }

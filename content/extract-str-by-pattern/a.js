@@ -1,18 +1,15 @@
-let a1, o1, s1 = 'Wednesday';
+let s = 'Wednesday';
 // example 1
-a1 = s1.match(/e./);
-console.log(a1);
+let a = s.match(/e./);
 // example 2
-a1 = s1.match(/e./g);
-console.log(a1);
+let a2 = s.match(/e./g);
 // example 3
-o1 = s1.matchAll(/e./g);
-a1 = Array.from(o1);
-console.log(a1);
+let o = s.matchAll(/e./g);
+let a3 = Array.from(o);
 // example 4
-a1 = s1.match(/e(..)/);
-console.log(a1);
+let a4 = s.match(/e(..)/);
 // example 5
-o1 = s1.matchAll(/e(..)/g);
-a1 = Array.from(o1);
-console.log(a1);
+let o2 = s.matchAll(/e(..)/g);
+let a5 = Array.from(o2);
+// print
+console.log(a, a2, a3, a4, a5);

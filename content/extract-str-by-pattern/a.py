@@ -1,10 +1,9 @@
 import re
-s_in = 'Wednesday'
-s_re = 'e.'
+s = 'Wednesday'
 # example 1
-o = re.search(s_re, s_in)
+o = re.search('e.', s)
 s = o.group()
 # example 2
-a = re.findall(s_re, s_in)
+a = re.findall('e.', s)
 # print
 print(s, a)
