@@ -39,8 +39,10 @@ tags: [d, dart, go, javascript, nim, php, python, rust]
 ## PHP
 
 {{< r "a.php" >}}
+{{< r "b.php" >}}
 
-<https://php.net/function.json-decode>
+- <https://php.net/function.json-decode>
+- <https://php.net/function.json-last-error>
 
 ## Python
 

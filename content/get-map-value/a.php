@@ -1,4 +1,4 @@
 <?php
-$m = ['Sunday' => 10];
-$n = $m['Sunday'];
-var_dump($n);
+$m = ['year' => 2020];
+$n = $m['year'];
+var_dump($n == 2020);

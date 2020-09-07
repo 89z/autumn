@@ -24,24 +24,11 @@
 
 <main>
    <h1>Tag talk:Nim</h1>
-   <time>Wed Jun 10 2020</time>
+   <time>Mon Sep 7 2020</time>
    
    
-   <h2 id="run">Run</h2>
-<p><code>%APPDATA%\nim\config.nims</code>:</p>
-
-
-
-<pre><code class="language-nims" data-lang="nims">import os
-task r, &#34;compile to temp&#34;:
-   setCommand(&#34;compile&#34;)
-   switch(&#34;run&#34;)
-   switch(&#34;outdir&#34;, getTempDir())
-</code></pre>
-<ul>
-<li><a href="https://nim-lang.org/docs/nims.html">https://nim-lang.org/docs/nims.html</a></li>
-<li><a href="https://nim-lang.org/docs/nimscript.html#nimcacheDir">https://nim-lang.org/docs/nimscript.html#nimcacheDir</a></li>
-</ul>
+   <h2 id="cache-issue-with-gettempdir">Cache issue with getTempDir</h2>
+<p><a href="https://github.com/nim-lang/Nim/issues/15279">https://github.com/nim-lang/Nim/issues/15279</a></p>
 <h2 id="setup">Setup</h2>
 <p><a href="https://nim-lang.org/install_windows.html">https://nim-lang.org/install_windows.html</a></p>
 

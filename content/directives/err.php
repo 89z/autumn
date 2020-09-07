@@ -1,7 +1,9 @@
 <?php
 error_reporting(E_ALL);
+
 class Day {
-   public $Sunday = 10;
+   public $year = 2020;
 }
+
 $o = new Day;
-array_key_exists('Sunday', $o);
+array_key_exists('year', $o);

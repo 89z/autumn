@@ -6,5 +6,5 @@ func main() {
    // example 2
    n2 := m["year"]
    // print
-   println(n, b, n2)
+   println(b, n == 2020, n2 == 2020)
 }

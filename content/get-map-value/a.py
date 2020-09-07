@@ -1,7 +1,7 @@
-m1 = {'Sun': 10, 'Mon': 11}
+m = {'year': 2020}
 # example 1
-n1 = m1['Mon']
+n = m['year']
 # example 2
-n2 = m1.get('Mon')
+n2 = m.get('year')
 # print
-print(n1, n2)
+print(n == 2020, n2 == 2020)

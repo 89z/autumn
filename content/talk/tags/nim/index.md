@@ -2,14 +2,9 @@
 title: 'Tag talk:Nim'
 ---
 
-## Run
+## Cache issue with getTempDir
 
-`%APPDATA%\nim\config.nims`:
-
-{{< r "config.nims" >}}
-
-- <https://nim-lang.org/docs/nims.html>
-- <https://nim-lang.org/docs/nimscript.html#nimcacheDir>
+<https://github.com/nim-lang/Nim/issues/15279>
 
 ## Setup
 

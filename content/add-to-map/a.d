@@ -1,6 +1,6 @@
 import std.stdio;
 void main() {
-   auto m = ["Sunday": 10];
-   m["Monday"] = 11;
+   auto m = ["year": 2020];
+   m["month"] = 9;
    m.writeln;
 }
