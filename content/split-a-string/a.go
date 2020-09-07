@@ -1,14 +1,16 @@
 package main
+
 import (
    "fmt"
    "strings"
 )
+
 func main() {
-   s1 := "Sunday Monday"
+   s := "Sunday Monday"
    // example 1
-   a1 := strings.Split(s1, " ")
+   a := strings.Split(s, " ")
    // example 2
-   a2 := strings.Fields(s1)
+   a2 := strings.Fields(s)
    // print
-   fmt.Println(a1, a2)
+   fmt.Println(a, a2)
 }

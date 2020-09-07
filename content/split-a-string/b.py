@@ -1,4 +1,4 @@
-s1 = '''Sunday
+s = '''Sunday
 Monday'''
-a1 = s1.splitlines()
-print(a1)
+a = s.splitlines()
+print(a)

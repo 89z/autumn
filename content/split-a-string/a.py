@@ -1,7 +1,7 @@
-s1 = 'Sunday Monday'
+s = 'Sunday Monday'
 # example 1
-a1 = s1.split(' ')
+a = s.split(' ')
 # example 2
-a2 = s1.split()
+a2 = s.split()
 # print
-print(a1, a2)
+print(a, a2)

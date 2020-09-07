@@ -1,4 +1,4 @@
 <?php
-$s1 = 'Sunday Monday';
-$a1 = explode(' ', $s1);
-var_dump($a1);
+$s = 'Sunday Monday';
+$a = explode(' ', $s);
+var_dump($a);

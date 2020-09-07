@@ -1,13 +1,13 @@
-a1 = ['BBBB', 'AA', 'CCC']
+a = ['BBBB', 'AA', 'CCC']
 # example 1
-a1.sort()
-print(a1)
+a.sort()
+print(a)
 # example 2
-a1.sort(reverse = True)
-print(a1)
+a.sort(reverse = True)
+print(a)
 # example 3
-a1.sort(key = len)
-print(a1)
+a.sort(key = len)
+print(a)
 # example 4
-a2 = sorted(a1)
+a2 = sorted(a)
 print(a2)

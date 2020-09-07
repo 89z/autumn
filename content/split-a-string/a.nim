@@ -1,8 +1,8 @@
 import strutils
-let s1 = "Sunday Monday"
+let s = "Sunday Monday"
 # example 1
-let a1 = s1.split(" ")
+let a = s.split(" ")
 # example 2
-let a2 = s1.split
+let a2 = s.split
 # print
-echo a1, a2
+echo a, a2

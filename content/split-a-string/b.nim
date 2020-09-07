@@ -1,5 +1,5 @@
 import strutils
-let s1 = """Sunday
+let s = """Sunday
 Monday"""
-let a1 = s1.splitLines
-echo a1
+let a = s.splitLines
+echo a

@@ -1,6 +1,11 @@
-a1[:2]
-a1[-2:]
-a1[slice(2)]
-a1[slice(-2, None)]
-s1 = a1[0]
-s2 = a1[-1]
+a = ['Sun', 'Mon', 'Tue']
+# example 1
+s = a[0]
+# example 2
+s2 = a[-1]
+# example 3
+a2 = a[:2]
+# example 4
+a3 = a[-2:]
+# print
+print(s, s2, a2, a3)
