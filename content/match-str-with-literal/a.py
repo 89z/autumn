@@ -1,9 +1,9 @@
-s1 = 'Sunday'
+s = 'June'
 # example 1
-b1 = s1.startswith('Su')
+b = s.startswith('Ju')
 # example 2
-b2 = 'un' in s1
+b2 = 'un' in s
 # example 3
-b3 = s1.endswith('ay')
+b3 = s.endswith('ne')
 # print
-print(b1, b2, b3)
+print(b, b2, b3)

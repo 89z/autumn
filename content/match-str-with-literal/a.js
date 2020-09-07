@@ -1,9 +1,9 @@
-let s1 = 'Sunday';
+let s = 'June';
 // example 1
-let b1 = s1.startsWith('Su');
+let b = s.startsWith('Ju');
 // example 2
-let b2 = s1.includes('un');
+let b2 = s.includes('un');
 // example 3
-let b3 = s1.endsWith('ay');
+let b3 = s.endsWith('ne');
 // print
-console.log(b1, b2, b3);
+console.log(b, b2, b3);
