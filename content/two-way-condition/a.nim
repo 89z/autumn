@@ -1,9 +1,7 @@
-var n = 10
-var s: string
-if n > 12:
-   s = "Tue"
-elif n > 11:
-   s = "Mon"
+var n = 1
+if n == 3:
+   echo "three"
+elif n == 2:
+   echo "two"
 else:
-   s = "Sun"
-echo s
+   echo "else"

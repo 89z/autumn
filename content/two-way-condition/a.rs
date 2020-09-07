@@ -1,12 +1,10 @@
 fn main() {
-   let n = 10;
-   let s: &str;
-   if n > 12 {
-      s = "Tue";
-   } else if n > 11 {
-      s = "Mon";
+   let n = 1;
+   if n == 3 {
+      println!("three");
+   } else if n == 2 {
+      println!("two");
    } else {
-      s = "Sun";
+      println!("else");
    }
-   println!("{}", s);
 }

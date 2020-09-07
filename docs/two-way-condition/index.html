@@ -120,15 +120,13 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">var</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
-<span style="color:#66d9ef">var</span> s: <span style="color:#66d9ef">string</span>
-<span style="color:#66d9ef">if</span> n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">12</span>:
-   s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Tue&#34;</span>
-<span style="color:#66d9ef">elif</span> n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">11</span>:
-   s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Mon&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">var</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+<span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>:
+   echo <span style="color:#e6db74">&#34;three&#34;</span>
+<span style="color:#66d9ef">elif</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>:
+   echo <span style="color:#e6db74">&#34;two&#34;</span>
 <span style="color:#66d9ef">else</span>:
-   s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sun&#34;</span>
-echo s
+   echo <span style="color:#e6db74">&#34;else&#34;</span>
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/manual.html#statements-and-expressions-if-statement">https://nim-lang.org/docs/manual.html#statements-and-expressions-if-statement</a></p>
 <h2 id="php">PHP</h2>
@@ -136,27 +134,28 @@ echo s
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> ($n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">12</span>) {
-   $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Tue&#39;</span>;
-} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> ($n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">11</span>) {
-   $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Mon&#39;</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> ($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>) {
+   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;three</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> ($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>) {
+   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;two</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 } <span style="color:#66d9ef">else</span> {
-   $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sun&#39;</span>;
+   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;else</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 }
+
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> ($n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">12</span>) {
-   $s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Tue&#39;</span>;
-} <span style="color:#66d9ef">elseif</span> ($n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">11</span>) {
-   $s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Mon&#39;</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> ($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>) {
+   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;three</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+} <span style="color:#66d9ef">elseif</span> ($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>) {
+   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;two</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 } <span style="color:#66d9ef">else</span> {
-   $s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sun&#39;</span>;
+   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;else</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 }
+
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> $n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">11</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;Mon&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Sun&#39;</span>;
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1, $s2, $s3);
+</span><span style="color:#75715e"></span>$n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">?</span> <span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;two</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;else</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 </code></pre></div>
 <ul>
 <li><a href="https://php.net/control-structures.elseif">https://php.net/control-structures.elseif</a></li>
@@ -166,18 +165,16 @@ $n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
 <span style="color:#75715e"># example 1</span>
-<span style="color:#66d9ef">if</span> n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">12</span>:
-   s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Tue&#39;</span>
-<span style="color:#66d9ef">elif</span> n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">11</span>:
-   s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Mon&#39;</span>
+<span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>:
+   <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;three&#39;</span>)
+<span style="color:#66d9ef">elif</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>:
+   <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;two&#39;</span>)
 <span style="color:#66d9ef">else</span>:
-   s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sun&#39;</span>
+   <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;else&#39;</span>)
 <span style="color:#75715e"># example 2</span>
-s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Mon&#39;</span> <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">11</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;Sun&#39;</span>
-<span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(s1, s2)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;two&#39;</span>) <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;else&#39;</span>)
 </code></pre></div>
 <ul>
 <li><a href="https://docs.python.org/reference/compound_stmts.html#if">https://docs.python.org/reference/compound_stmts.html#if</a></li>
@@ -188,16 +185,14 @@ s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Mon&#39
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#66d9ef">let</span> s: <span style="color:#66d9ef">&amp;</span><span style="color:#66d9ef">str</span>;
-   <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">12</span> {
-      s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Tue&#34;</span>;
-   } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">11</span> {
-      s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Mon&#34;</span>;
+   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+   <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span> {
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;three&#34;</span>);
+   } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span> {
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;two&#34;</span>);
    } <span style="color:#66d9ef">else</span> {
-      s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sun&#34;</span>;
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;else&#34;</span>);
    }
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
 }
 </code></pre></div>
 <p><a href="https://doc.rust-lang.org/std/keyword.else.html">https://doc.rust-lang.org/std/keyword.else.html</a></p>

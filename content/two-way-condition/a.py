@@ -1,12 +1,10 @@
-n = 10
+n = 1
 # example 1
-if n > 12:
-   s1 = 'Tue'
-elif n > 11:
-   s1 = 'Mon'
+if n == 3:
+   print('three')
+elif n == 2:
+   print('two')
 else:
-   s1 = 'Sun'
+   print('else')
 # example 2
-s2 = 'Mon' if n > 11 else 'Sun'
-# print
-print(s1, s2)
+print('two') if n == 2 else print('else')

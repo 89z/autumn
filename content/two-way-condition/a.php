@@ -1,22 +1,23 @@
 <?php
-$n = 10;
+$n = 1;
+
 # example 1
-if ($n > 12) {
-   $s1 = 'Tue';
-} else if ($n > 11) {
-   $s1 = 'Mon';
+if ($n == 3) {
+   echo "three\n";
+} else if ($n == 2) {
+   echo "two\n";
 } else {
-   $s1 = 'Sun';
+   echo "else\n";
 }
+
 # example 2
-if ($n > 12) {
-   $s2 = 'Tue';
-} elseif ($n > 11) {
-   $s2 = 'Mon';
+if ($n == 3) {
+   echo "three\n";
+} elseif ($n == 2) {
+   echo "two\n";
 } else {
-   $s2 = 'Sun';
+   echo "else\n";
 }
+
 # example 3
-$s3 = $n > 11 ? 'Mon' : 'Sun';
-# print
-var_dump($s1, $s2, $s3);
+$n == 2 ? print "two\n" : print "else\n";
