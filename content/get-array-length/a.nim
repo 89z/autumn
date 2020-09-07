@@ -1,3 +1,3 @@
-let a1 = ["Sun", "Mon"]
-let n1 = a1.len
-echo n1
+let a = ["Sunday", "Monday"]
+let n = a.len
+echo n == 2

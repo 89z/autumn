@@ -59,14 +59,14 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>
-   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s1</span>[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">3</span>]
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>
+   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s</span>[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">3</span>]
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> []rune(<span style="color:#e6db74">&#34;📕📙📒📗&#34;</span>)
-   <span style="color:#a6e22e">a2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a1</span>[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">3</span>]
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []rune(<span style="color:#e6db74">&#34;📗📒📙📕&#34;</span>)
+   <span style="color:#a6e22e">a2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a</span>[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">3</span>]
    <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> string(<span style="color:#a6e22e">a2</span>)
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;un&#34;</span>, <span style="color:#a6e22e">s3</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;📙📒&#34;</span>)
+</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;un&#34;</span>, <span style="color:#a6e22e">s3</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;📒📙&#34;</span>)
 }
 </code></pre></div>
 
@@ -75,10 +75,10 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;📕📙📒📗&#34;</span>
-   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#e6db74">&#34;&#34;</span>)
-   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a1</span>[<span style="color:#ae81ff">1</span>]
-   println(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;📙&#34;</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;📗📒📕&#34;</span>
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a</span>[<span style="color:#ae81ff">1</span>]
+   println(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;📒&#34;</span>)
 }
 </code></pre></div></p>
 <ul>

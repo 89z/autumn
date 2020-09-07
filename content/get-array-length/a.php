@@ -1,8 +1,8 @@
 <?php
-$a1 = ['Sun', 'Mon'];
+$a = ['Sunday', 'Monday'];
 # example 1
-$n1 = count($a1);
+$n = count($a);
 # example 2
-$n2 = sizeof($a1);
+$n2 = sizeof($a);
 # print
-var_dump($n1, $n2);
+var_dump($n == 2, $n2 == 2);

@@ -1,3 +1,3 @@
-let a1 = ['Sun', 'Mon'];
-let n1 = a1.length;
-console.log(n1);
+let a = ['Sunday', 'Monday'];
+let n = a.length;
+console.log(n == 2);
