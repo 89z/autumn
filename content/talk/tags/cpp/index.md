@@ -6,4 +6,4 @@ title: 'Tag talk:C++'
 
 {{< r "a.cpp" >}}
 
-<https://stackoverflow.com/questions/14070940/-/55278718>
+<https://stackoverflow.com/questions/14070940#55278718>

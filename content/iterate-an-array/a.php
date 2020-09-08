@@ -1,18 +1,26 @@
 <?php
-$a = ['Sunday', 'Monday'];
-# example 1
+$a = ['May', 'June'];
+
+echo "example 1\n";
 foreach ($a as $s) {
-   var_dump($s);
+   echo $s, "\n";
 }
-# example 2
+
+echo "example 2\n";
+foreach ($a as $n => $s) {
+   echo $n, "\t", $s, "\n";
+}
+
+echo "example 3\n";
 for ($n = 0; $n < count($a); $n++) {
-   $s = $a[$n];
-   var_dump($s);
+   echo $n, "\t", $a[$n], "\n";
 }
-# example 3
+
+echo "example 4\n";
 for (reset($a); key($a) !== null; next($a)) {
-   $s = current($a);
-   var_dump($s);
+   echo current($a), "\n";
 }
-# example 4
-array_walk($a, fn($s) => var_dump($s));
+
+echo "example 5\n";
+$f = fn ($s) => var_dump($s);
+array_walk($a, $f);

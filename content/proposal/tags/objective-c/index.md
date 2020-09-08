@@ -5,4 +5,4 @@ tags: [reject]
 
 Cannot print boolean
 
-<https://stackoverflow.com/questions/6358349/-/6358367>
+<https://stackoverflow.com/questions/6358349#6358367>
