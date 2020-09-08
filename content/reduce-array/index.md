@@ -1,12 +1,26 @@
 ---
 title: Reduce array
 categories: [array]
-tags: [dart, go, javascript, php, python, ruby]
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
+
+<https://en.cppreference.com/w/cpp/algorithm/accumulate>
+
+## D
+
+{{< r "a.d" >}}
+
+<https://dlang.org/library/std/algorithm/iteration/reduce.html>
 
 ## Dart
 
 {{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-core/Iterable/reduce.html>
 
 ## Go
 
@@ -15,6 +29,12 @@ tags: [dart, go, javascript, php, python, ruby]
 ## JavaScript
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/Reduce>
+
+## Nim
+
+{{< r "a.nim" >}}
+
+<https://nim-lang.org/docs/sequtils.html#foldl.t,untyped,untyped>
 
 ## PHP
 
@@ -27,15 +47,24 @@ tags: [dart, go, javascript, php, python, ruby]
 
 {{< r "a.py" >}}
 
+<https://docs.python.org/library/functools.html>
+
 ## Ruby
 
 {{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/Enumerable.html#method-i-inject>
+
+## Rust
+
+{{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.fold>
 
 ## References
 
 - <https://hyperpolyglot.org/scripting#reduce>
 - <https://hyperpolyglot.org/web#reduce-note>
-- <https://programming-idioms.org/idiom/161/multiply-all-the-elements>
 - <https://programming-idioms.org/idiom/202/sum-of-squares>
 - <https://programming-idioms.org/idiom/54/compute-sum-of-integers>
 - <https://rosettacode.org/wiki/Greatest_element_of_a_list>
