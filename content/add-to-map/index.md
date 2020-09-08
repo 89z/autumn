@@ -28,7 +28,9 @@ tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 {{< r "o.js" >}}
 
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Map/set>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Object/assign>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Property_Accessors>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals>
 
 ## Nim
 

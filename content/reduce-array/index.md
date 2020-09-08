@@ -26,7 +26,11 @@ tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 
 {{< r "a.go" >}}
 
+<https://golang.org/ref/spec#For_range>
+
 ## JavaScript
+
+{{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/Reduce>
 

@@ -1,2 +1,5 @@
-var a = [1, 2, 3];
-var sum = a.reduce((v, e) => v + e);
+main() {
+   var a = ['May', 'June'];
+   var s = a.reduce((s_acc, s_cur) => s_acc + s_cur);
+   print(s);
+}
