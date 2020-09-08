@@ -34,28 +34,17 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;numeric&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;functional&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
-{
-    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> v{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>};
-    <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>accumulate(v.begin(), v.end(), <span style="color:#ae81ff">0</span>);
-    <span style="color:#66d9ef">int</span> product <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>accumulate(v.begin(), v.end(), <span style="color:#ae81ff">1</span>, std<span style="color:#f92672">::</span>multiplies<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>());
-    <span style="color:#66d9ef">auto</span> dash_fold <span style="color:#f92672">=</span> [](std<span style="color:#f92672">::</span>string a, <span style="color:#66d9ef">int</span> b) {
-                         <span style="color:#66d9ef">return</span> std<span style="color:#f92672">::</span>move(a) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;-&#39;</span> <span style="color:#f92672">+</span> std<span style="color:#f92672">::</span>to_string(b);
-                     };
-    std<span style="color:#f92672">::</span>string s <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>accumulate(std<span style="color:#f92672">::</span>next(v.begin()), v.end(),
-                                    std<span style="color:#f92672">::</span>to_string(v[<span style="color:#ae81ff">0</span>]), <span style="color:#75715e">// start with first element
-</span><span style="color:#75715e"></span>                                    dash_fold);
-    std<span style="color:#f92672">::</span>string rs <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>accumulate(std<span style="color:#f92672">::</span>next(v.rbegin()), v.rend(),
-                                     std<span style="color:#f92672">::</span>to_string(v.back()), <span style="color:#75715e">// start with last element
-</span><span style="color:#75715e"></span>                                     dash_fold);
-    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;sum: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> sum <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;\n&#39;</span>
-              <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;product: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> product <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;\n&#39;</span>
-              <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;dash-separated string: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> s <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;\n&#39;</span>
-              <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;dash-separated string (right-folded): &#34;</span> <span style="color:#f92672">&lt;&lt;</span> rs <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;\n&#39;</span>;
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+std<span style="color:#f92672">::</span>string f(std<span style="color:#f92672">::</span>string s_acc, std<span style="color:#f92672">::</span>string s_cur) {
+   <span style="color:#66d9ef">return</span> s_acc <span style="color:#f92672">+</span> s_cur;
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>string<span style="color:#f92672">&gt;</span> a <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span>};
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>accumulate(a.begin(), a.end(), std<span style="color:#f92672">::</span>string(), f);
+   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> s <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
 }
 </code></pre></div>
 <p><a href="https://en.cppreference.com/w/cpp/algorithm/accumulate">https://en.cppreference.com/w/cpp/algorithm/accumulate</a></p>
@@ -63,12 +52,53 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">algorithm</span><span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">typecons</span><span style="color:#f92672">;</span>
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    immutable array <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">5</span><span style="color:#f92672">];</span>
-    immutable r <span style="color:#f92672">=</span> reduce<span style="color:#f92672">!(q{</span>a <span style="color:#f92672">+</span> b<span style="color:#f92672">},</span> <span style="color:#f92672">q{</span>a <span style="color:#f92672">*</span> b<span style="color:#f92672">})(</span>tuple<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">),</span> array<span style="color:#f92672">);</span>
-    writeln<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Sum: &#34;</span><span style="color:#f92672">,</span> r<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]);</span>
-    writeln<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Product: &#34;</span><span style="color:#f92672">,</span> r<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]);</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span>
+<span style="color:#f92672">{</span>
+    <span style="color:#f92672">import</span> std.algorithm.iteration<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">:</span> write<span style="color:#f92672">,</span> writeln<span style="color:#f92672">,</span> writef<span style="color:#f92672">,</span> writefln<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> std.algorithm.comparison <span style="color:#f92672">:</span> max<span style="color:#f92672">,</span> min<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> std.math <span style="color:#f92672">:</span> approxEqual<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> std.range<span style="color:#f92672">;</span>
+    
+    <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr <span style="color:#f92672">=</span> <span style="color:#f92672">[</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">];</span>
+    <span style="color:#75715e">// Sum all elements
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">auto</span> sum <span style="color:#f92672">=</span> reduce<span style="color:#f92672">!((</span>a<span style="color:#f92672">,</span>b<span style="color:#f92672">)</span> <span style="color:#f92672">=&gt;</span> a <span style="color:#f92672">+</span> b<span style="color:#f92672">)(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">,</span> arr<span style="color:#f92672">);</span>
+    writeln<span style="color:#f92672">(</span>sum<span style="color:#f92672">);</span> <span style="color:#75715e">// 15
+</span><span style="color:#75715e"></span>    
+    <span style="color:#75715e">// Sum again, using a string predicate with &#34;a&#34; and &#34;b&#34;
+</span><span style="color:#75715e"></span>    sum <span style="color:#f92672">=</span> reduce<span style="color:#f92672">!</span><span style="color:#e6db74">&#34;a + b&#34;</span><span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">,</span> arr<span style="color:#f92672">);</span>
+    writeln<span style="color:#f92672">(</span>sum<span style="color:#f92672">);</span> <span style="color:#75715e">// 15
+</span><span style="color:#75715e"></span>    
+    <span style="color:#75715e">// Compute the maximum of all elements
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">auto</span> largest <span style="color:#f92672">=</span> reduce<span style="color:#f92672">!(</span>max<span style="color:#f92672">)(</span>arr<span style="color:#f92672">);</span>
+    writeln<span style="color:#f92672">(</span>largest<span style="color:#f92672">);</span> <span style="color:#75715e">// 5
+</span><span style="color:#75715e"></span>    
+    <span style="color:#75715e">// Max again, but with Uniform Function Call Syntax (UFCS)
+</span><span style="color:#75715e"></span>    largest <span style="color:#f92672">=</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">reduce</span><span style="color:#f92672">!(</span>max<span style="color:#f92672">);</span>
+    writeln<span style="color:#f92672">(</span>largest<span style="color:#f92672">);</span> <span style="color:#75715e">// 5
+</span><span style="color:#75715e"></span>    
+    <span style="color:#75715e">// Compute the number of odd elements
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">auto</span> odds <span style="color:#f92672">=</span> reduce<span style="color:#f92672">!((</span>a<span style="color:#f92672">,</span>b<span style="color:#f92672">)</span> <span style="color:#f92672">=&gt;</span> a <span style="color:#f92672">+</span> <span style="color:#f92672">(</span>b <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">))(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">,</span> arr<span style="color:#f92672">);</span>
+    writeln<span style="color:#f92672">(</span>odds<span style="color:#f92672">);</span> <span style="color:#75715e">// 3
+</span><span style="color:#75715e"></span>    
+    <span style="color:#75715e">// Compute the sum of squares
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">auto</span> ssquares <span style="color:#f92672">=</span> reduce<span style="color:#f92672">!((</span>a<span style="color:#f92672">,</span>b<span style="color:#f92672">)</span> <span style="color:#f92672">=&gt;</span> a <span style="color:#f92672">+</span> b <span style="color:#f92672">*</span> b<span style="color:#f92672">)(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">,</span> arr<span style="color:#f92672">);</span>
+    writeln<span style="color:#f92672">(</span>ssquares<span style="color:#f92672">);</span> <span style="color:#75715e">// 55
+</span><span style="color:#75715e"></span>    
+    <span style="color:#75715e">// Chain multiple ranges into seed
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">];</span>
+    <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> b <span style="color:#f92672">=</span> <span style="color:#f92672">[</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">];</span>
+    <span style="color:#66d9ef">auto</span> r <span style="color:#f92672">=</span> reduce<span style="color:#f92672">!(</span><span style="color:#e6db74">&#34;a + b&#34;</span><span style="color:#f92672">)(</span>chain<span style="color:#f92672">(</span>a<span style="color:#f92672">,</span> b<span style="color:#f92672">));</span>
+    writeln<span style="color:#f92672">(</span>r<span style="color:#f92672">);</span> <span style="color:#75715e">// 107
+</span><span style="color:#75715e"></span>    
+    <span style="color:#75715e">// Mixing convertible types is fair game, too
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">double</span><span style="color:#f92672">[]</span> c <span style="color:#f92672">=</span> <span style="color:#f92672">[</span> <span style="color:#ae81ff">2.5</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">3.0</span> <span style="color:#f92672">];</span>
+    <span style="color:#66d9ef">auto</span> r1 <span style="color:#f92672">=</span> reduce<span style="color:#f92672">!(</span><span style="color:#e6db74">&#34;a + b&#34;</span><span style="color:#f92672">)(</span>chain<span style="color:#f92672">(</span>a<span style="color:#f92672">,</span> b<span style="color:#f92672">,</span> c<span style="color:#f92672">));</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>approxEqual<span style="color:#f92672">(</span>r1<span style="color:#f92672">,</span> <span style="color:#ae81ff">112.5</span><span style="color:#f92672">));</span>
+    
+    <span style="color:#75715e">// To minimize nesting of parentheses, Uniform Function Call Syntax can be used
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">auto</span> r2 <span style="color:#f92672">=</span> chain<span style="color:#f92672">(</span>a<span style="color:#f92672">,</span> b<span style="color:#f92672">,</span> c<span style="color:#f92672">).</span><span style="color:#a6e22e">reduce</span><span style="color:#f92672">!(</span><span style="color:#e6db74">&#34;a + b&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>approxEqual<span style="color:#f92672">(</span>r2<span style="color:#f92672">,</span> <span style="color:#ae81ff">112.5</span><span style="color:#f92672">));</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 <p><a href="https://dlang.org/library/std/algorithm/iteration/reduce.html">https://dlang.org/library/std/algorithm/iteration/reduce.html</a></p>

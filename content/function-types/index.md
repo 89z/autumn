@@ -6,6 +6,8 @@ tags: [c++, d, dart, go, javascript, nim, php, python, rust]
 
 ## C++
 
+{{< r "a.cpp" >}}
+
 <https://en.cppreference.com/w/cpp/language/functions>
 
 ## D
