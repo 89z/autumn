@@ -1,14 +1,14 @@
-let n = 10;
+let n = 1;
 // example 1
-let s1;
-if (n > 12) {
-   s1 = 'Tue';
-} else if (n > 11) {
-   s1 = 'Mon';
+let s;
+if (n > 0) {
+   s = '+';
+} else if (n < 0) {
+   s = '-';
 } else {
-   s1 = 'Sun';
+   s = 'zero';
 }
 // example 2
-let s2 = n > 11 ? 'Mon' : 'Sun';
+let s2 = n > 0 ? '+' : '-';
 // print
-console.log(s1, s2);
+console.log(s == '+', s2 == '+');

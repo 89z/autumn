@@ -1,10 +1,12 @@
 n = 1
 # example 1
-if n == 3:
-   print('three')
-elif n == 2:
-   print('two')
+if n > 0:
+   s = '+'
+elif n < 0:
+   s = '-'
 else:
-   print('else')
+   s = 'zero'
 # example 2
-print('two') if n == 2 else print('else')
+s2 = '+' if n > 0 else '-'
+# print
+print(s == '+', s2 == '+')

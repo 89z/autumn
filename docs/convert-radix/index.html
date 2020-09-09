@@ -151,7 +151,7 @@ easily change the radix. These also account for numeric zero input.</p>
    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">s_dig</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s</span>;
 }
 
-<span style="color:#a6e22e">Radix64</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">encode</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">n_in</span>) {
+<span style="color:#a6e22e">Radix64</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">encode</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">n_in</span>) {
    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_out</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
    <span style="color:#66d9ef">do</span> {
       <span style="color:#a6e22e">s_out</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">s_dig</span>[<span style="color:#a6e22e">n_in</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">64</span>] <span style="color:#f92672">+</span> <span style="color:#a6e22e">s_out</span>;
@@ -160,7 +160,7 @@ easily change the radix. These also account for numeric zero input.</p>
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s_out</span>;
 };
 
-<span style="color:#a6e22e">Radix64</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">decode</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">s_in</span>) {
+<span style="color:#a6e22e">Radix64</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">decode</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">s_in</span>) {
    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n_out</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_chr</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">s_in</span>) {
       <span style="color:#a6e22e">n_out</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n_out</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">64</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">s_dig</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#a6e22e">s_chr</span>);

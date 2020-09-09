@@ -8,7 +8,7 @@ $f2 = function (string $s): int {
    return strlen($s);
 };
 # example 3
-$f3 = fn(string $s): int => strlen($s);
+$f3 = fn (string $s): int => strlen($s);
 # print
 $n1 = f1('Sunday');
 $n2 = $f2('Sunday');

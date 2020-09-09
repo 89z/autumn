@@ -1,10 +1,12 @@
 fn main() {
    let n = 1;
-   if n == 3 {
-      println!("three");
-   } else if n == 2 {
-      println!("two");
+   let s;
+   if n > 0 {
+      s = "+";
+   } else if n < 0 {
+      s = "-";
    } else {
-      println!("else");
+      s = "zero";
    }
+   println!("{}", s == "+");
 }

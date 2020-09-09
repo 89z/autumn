@@ -1,23 +1,22 @@
 <?php
 $n = 1;
-
 # example 1
-if ($n == 3) {
-   echo "three\n";
-} else if ($n == 2) {
-   echo "two\n";
+if ($n > 0) {
+   $s = '+';
+} else if ($n < 0) {
+   $s = '-';
 } else {
-   echo "else\n";
+   $s = 'zero';
 }
-
 # example 2
-if ($n == 3) {
-   echo "three\n";
-} elseif ($n == 2) {
-   echo "two\n";
+if ($n > 0) {
+   $s2 = '+';
+} elseif ($n < 0) {
+   $s2 = '-';
 } else {
-   echo "else\n";
+   $s2 = 'zero';
 }
-
 # example 3
-$n == 2 ? print "two\n" : print "else\n";
+$s3 = $n < 0 ? '-' : '+';
+# print
+var_dump($s == '+', $s2 == '+', $s3 == '+');

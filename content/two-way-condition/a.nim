@@ -1,7 +1,10 @@
-var n = 1
-if n == 3:
-   echo "three"
-elif n == 2:
-   echo "two"
+var
+   n = 1
+   s = ""
+if n > 0:
+   s = "+"
+elif n < 0:
+   s = "-"
 else:
-   echo "else"
+   s = "zero"
+echo s == "+"
