@@ -1,4 +1,4 @@
-let a = ["Sun", "Mon", "Tue"]
+let a = ["May", "June", "July"]
 # example 1
 let s = a[0]
 # example 2

@@ -1,9 +1,9 @@
 fn main() {
-   let s = "Sun";
-   let n = match s {
-      "Fri" => 1,
-      "Sat" | "Sun" => 2,
-      _ => 0
+   let n = 1;
+   let s = match n {
+      3 => "all",
+      2 | 1 => "some",
+      _ => "none"
    };
-   println!("{}", n);
+   println!("{}", s == "some");
 }

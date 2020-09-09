@@ -1,8 +1,12 @@
 ---
 title: Add to map
 categories: [map]
-tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
 
 ## D
 

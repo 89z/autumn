@@ -1,14 +1,13 @@
 package main
 func main() {
-   n := 0
-   s := "Sunday"
-   switch s {
-   case "Friday":
-      n = 2
-   case "Saturday", "Sunday":
-      n = 3
+   n, s := 1, ""
+   switch n {
+   case 3:
+      s = "all"
+   case 2, 1:
+      s = "some"
    default:
-      n = 1
+      s = "none"
    }
-   println(n)
+   println(s == "some")
 }

@@ -1,4 +1,4 @@
-a = ['Sun', 'Mon', 'Tue']
+a = ['May', 'June', 'July']
 # example 1
 s = a[0]
 # example 2

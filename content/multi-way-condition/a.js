@@ -1,13 +1,13 @@
-let n, s = 'Sun';
-switch (s) {
-case 'Fri':
-   n = 1;
+let s, n = 1;
+switch (n) {
+case 3:
+   s = 'all';
    break;
-case 'Sat':
-case 'Sun':
-   n = 2;
+case 2:
+case 1:
+   s = 'some';
    break;
 default:
-   n = 0;
+   s = 'none';
 }
-console.log(n);
+console.log(s == 'some');
