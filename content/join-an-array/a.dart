@@ -1,9 +1,9 @@
 main() {
-   var s, a = ['Sun', 'Mon'];
+   var a = ['May', 'June'];
    // example 1
-   s = a.join(',');
-   print(s == 'Sun,Mon');
+   var s = a.join(',');
    // example 2
-   s = a.join();
-   print(s == 'SunMon');
+   var s2 = a.join();
+   // print
+   print([s == 'May,June', s2 == 'MayJune']);
 }

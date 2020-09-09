@@ -1,3 +1,3 @@
-m1 = {'Sun': 10, 'Mon': 11}
-for s1, n1 in m1.items():
-   print(s1, n1)
+m = {'year': 2020, 'month': 9}
+for s, n in m.items():
+   print(s, n)

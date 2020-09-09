@@ -1,7 +1,8 @@
 package main
 import "strings"
+
 func main() {
-   a := []string{"Sun", "Mon"}
+   a := []string{"May", "June"}
    s := strings.Join(a, ",")
-   println(s == "Sun,Mon")
+   println(s == "May,June")
 }

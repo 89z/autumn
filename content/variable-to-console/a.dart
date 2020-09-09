@@ -1,3 +1,3 @@
 main() {
-   print('Sunday');
+   print('May');
 }

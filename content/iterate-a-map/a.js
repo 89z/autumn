@@ -1,9 +1,11 @@
-let m1 = {Sun: 10, Mon: 11};
-// example 1
-for (let s1 in m1) {
-   console.log(s1);
+let m = {year: 2020, month: 9};
+
+console.log('example 1');
+for (let s in m) {
+   console.log(s);
 }
-// example 2
-for (let [s1, n1] of Object.entries(m1)) {
-   console.log(s1, n1);
+
+console.log('example 2');
+for (let [s, n] of Object.entries(m)) {
+   console.log(s, n);
 }

@@ -1,20 +1,23 @@
 <?php
-$m = ['Sun' => 10, 'Mon' => 11];
-# example 1
+$m = ['year' => 2020, 'month' => 9];
+
+echo "example 1\n";
 while (true) {
    $n = current($m);
    if ($n === false) {
       break;
    }
    $s = key($m);
-   var_dump($s, $n);
+   echo $s, ':', $n, "\n";
    next($m);
 }
-# example 2
+
+echo "example 2\n";
 foreach ($m as $n) {
-   var_dump($n);
+   echo $n, "\n";
 }
-# example 3
+
+echo "example 3\n";
 foreach ($m as $s => $n) {
-   var_dump($s, $n);
+   echo $s, ':', $n, "\n";
 }
