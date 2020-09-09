@@ -1,1 +1,2 @@
-puts 'Sunday'
+s = 'May'
+puts s

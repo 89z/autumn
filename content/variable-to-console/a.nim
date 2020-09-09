@@ -1,5 +1,5 @@
-var s = "Sunday"
+var s = "May"
 # example 1
 echo s
 # example 2
-stdout.write s
+stdout.write s, "\n"

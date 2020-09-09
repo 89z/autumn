@@ -1,6 +1,6 @@
 package main
 func main() {
-   s := "Sunday"
+   s := "May"
    // example 1
    println(s)
    // example 2

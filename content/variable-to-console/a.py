@@ -1,4 +1,4 @@
-s = 'Sunday'
+s = 'May'
 # example 1
 print(s)
 # exmaple 2

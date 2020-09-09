@@ -1,5 +1,7 @@
 use std::{io, fs};
+
 fn main() -> io::Result<()> {
-   fs::write("a.txt", "Sunday\n")?;
+   let s = "May\n";
+   fs::write("a.txt", s)?;
    Ok(())
 }

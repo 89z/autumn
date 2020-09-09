@@ -1,10 +1,10 @@
 <?php
-$s1 = "Sunday\n";
+$s = "May\n";
 # example 1
-file_put_contents('a.txt', $s1);
+file_put_contents('a.txt', $s);
 # example 2
-$r1 = fopen('b.txt', 'w');
-fwrite($r1, $s1);
+$r = fopen('b.txt', 'w');
+fwrite($r, $s);
 # example 3
-$r2 = fopen('c.txt', 'w');
-fputs($r2, $s1);
+$r = fopen('c.txt', 'w');
+fputs($r, $s);

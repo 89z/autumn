@@ -1,5 +1,6 @@
 import 'dart:io';
 
 main() {
-   stdout.writeln('May');
+   var s = 'May';
+   stdout.writeln(s);
 }

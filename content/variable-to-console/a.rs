@@ -1,7 +1,4 @@
 fn main() {
-   let s = "Sunday";
-   // example 1
+   let s = "May";
    println!("{}", s);
-   // example 2
-   dbg!(s);
 }

@@ -1,5 +1,6 @@
 import std.stdio;
+
 void main() {
-   auto s = "Sunday";
+   auto s = "May";
    s.writeln;
 }

@@ -1,3 +1,4 @@
 main() {
-   print('May');
+   var s = 'May';
+   print(s);
 }

@@ -1,8 +1,10 @@
 package main
 import "fmt"
+
 func main() {
+   s := "May"
    // example 1
-   fmt.Println("Sunday")
+   fmt.Println(s)
    // example 2
-   fmt.Print("Sunday\n")
+   fmt.Print(s, "\n")
 }

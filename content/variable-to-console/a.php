@@ -1,5 +1,5 @@
 <?php
-$s = "Sunday\n";
+$s = "May\n";
 # example 1
 echo $s;
 # example 2

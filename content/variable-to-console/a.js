@@ -1,2 +1,2 @@
-let s = 'Sunday';
+let s = 'May';
 console.log(s);

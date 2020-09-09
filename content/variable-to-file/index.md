@@ -45,6 +45,7 @@ tags: [d, dart, go, nim, php, python, rust]
 ## Python
 
 {{< r "a.py" >}}
+{{< r "b.py" >}}
 
 - <https://docs.python.org/library/functions.html#print>
 - <https://docs.python.org/library/io.html#io.TextIOBase.write>
