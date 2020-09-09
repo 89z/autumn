@@ -1,5 +1,5 @@
 fn main() {
-   let s = "Sunday Monday";
+   let s = "May June";
    let a: Vec<&str> = s.split_whitespace().collect();
    println!("{:?}", a);
 }

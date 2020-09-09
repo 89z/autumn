@@ -36,6 +36,7 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;chrono&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;thread&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std<span style="color:#f92672">::</span>chrono_literals;
+
 <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
    std<span style="color:#f92672">::</span>this_thread<span style="color:#f92672">::</span>sleep_for(<span style="color:#ae81ff">5</span>s);
 }
@@ -45,11 +46,10 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> core.thread<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> core.thread<span style="color:#f92672">;</span>
+
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#e6db74">&#34;Sunday&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
-   Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">sleep</span><span style="color:#f92672">(</span><span style="color:#ae81ff">2.</span>seconds<span style="color:#f92672">);</span>
-   <span style="color:#e6db74">&#34;Monday&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+   Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">sleep</span><span style="color:#f92672">(</span><span style="color:#ae81ff">5.</span>seconds<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 <p><a href="https://dlang.org/library/core/thread/osthread/thread.sleep.html">https://dlang.org/library/core/thread/osthread/thread.sleep.html</a></p>
@@ -58,10 +58,10 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
+
 main() {
-   print(<span style="color:#e6db74">&#39;Sunday&#39;</span>);
-   sleep(<span style="color:#66d9ef">const</span> Duration(seconds: <span style="color:#ae81ff">2</span>));
-   print(<span style="color:#e6db74">&#39;Monday&#39;</span>);
+   <span style="color:#66d9ef">var</span> o <span style="color:#f92672">=</span> Duration(seconds: <span style="color:#ae81ff">5</span>);
+   sleep(o);
 }
 </code></pre></div>
 <p><a href="https://api.dart.dev/dart-io/sleep.html">https://api.dart.dev/dart-io/sleep.html</a></p>
@@ -70,9 +70,7 @@ main() {
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> os
-echo <span style="color:#e6db74">&#34;Sunday&#34;</span>
-sleep(<span style="color:#ae81ff">2000</span>)
-echo <span style="color:#e6db74">&#34;Monday&#34;</span>
+sleep(<span style="color:#ae81ff">5000</span>)
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/os.html#sleep,int">https://nim-lang.org/docs/os.html#sleep,int</a></p>
 <h2 id="php">PHP</h2>
@@ -81,17 +79,18 @@ echo <span style="color:#e6db74">&#34;Monday&#34;</span>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $n <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Sunday</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-<span style="color:#a6e22e">time_sleep_until</span>($n <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>);
+<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;May</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+<span style="color:#a6e22e">time_sleep_until</span>($n <span style="color:#f92672">+</span> <span style="color:#ae81ff">5</span>);
 </code></pre></div>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Sunday</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+$n <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
+<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;May</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 $n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
-<span style="color:#a6e22e">usleep</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">-</span> $n2 <span style="color:#f92672">-</span> $n1);
+$n3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">3e6</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1e6</span> <span style="color:#f92672">*</span> ($n2 <span style="color:#f92672">-</span> $n);
+<span style="color:#a6e22e">usleep</span>($n3);
 </code></pre></div></p>
 <ul>
 <li><a href="https://php.net/function.time-sleep-until">https://php.net/function.time-sleep-until</a></li>
@@ -101,19 +100,19 @@ $n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">puts <span style="color:#e6db74">&#39;Sunday&#39;</span>
-sleep(<span style="color:#ae81ff">2</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">sleep(<span style="color:#ae81ff">5</span>)
 </code></pre></div>
 <p><a href="https://ruby-doc.org/core/Kernel.html#method-i-sleep">https://ruby-doc.org/core/Kernel.html#method-i-sleep</a></p>
 <h2 id="rust">Rust</h2>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{thread, time};
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::thread::sleep;
+<span style="color:#66d9ef">use</span> std::time::Duration;
+
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Sunday&#34;</span>);
-   thread::sleep(time::Duration::from_secs(<span style="color:#ae81ff">5</span>));
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Monday&#34;</span>);
+   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> Duration::from_secs(<span style="color:#ae81ff">5</span>);
+   sleep(o);
 }
 </code></pre></div>
 <p><a href="https://doc.rust-lang.org/std/thread/fn.sleep.html">https://doc.rust-lang.org/std/thread/fn.sleep.html</a></p>

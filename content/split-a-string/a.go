@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-   s := "Sunday Monday"
+   s := "May June"
    // example 1
    a := strings.Split(s, " ")
    // example 2

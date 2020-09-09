@@ -7,43 +7,20 @@ tags: [reject]
 
 Here is a minimal program:
 
-{{< r "a.java" >}}
+~~~
+class May {
+   public static void main(String[] June) {
+      System.out.println("July");
+   }
+}
+~~~
 
 1. `class` is required:
-
-~~~
-error: class, interface, or enum expected
-~~~
-
 2. `public` is required:
-
-~~~
-error:  languagemain' method is not declared 'public static'
-~~~
-
 3. `static` is required:
-
-~~~
-error:  languagemain' method is not declared 'public static'
-~~~
-
 4. `void` is required:
-
-~~~
-error: invalid method declaration; return type required
-~~~
-
 5. `main` is required
-
-~~~
-error: cant find main(String[]) method in class
-~~~
-
 6. `String[]` is required
-
-~~~
-error: cant find main(String[]) method in class
-~~~
 
 <https://google.com/search?tbs=qdr:m&q=java+hello+world>
 

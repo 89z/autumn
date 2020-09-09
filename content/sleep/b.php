@@ -1,5 +1,6 @@
 <?php
-$n1 = microtime(true);
-echo "Sunday\n";
+$n = microtime(true);
+echo "May\n";
 $n2 = microtime(true);
-usleep(3 - $n2 - $n1);
+$n3 = 3e6 - 1e6 * ($n2 - $n);
+usleep($n3);

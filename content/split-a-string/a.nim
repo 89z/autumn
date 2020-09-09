@@ -1,5 +1,5 @@
 import strutils
-let s = "Sunday Monday"
+let s = "May June"
 # example 1
 let a = s.split(" ")
 # example 2

@@ -1,4 +1,4 @@
 <?php
-$t = ['Sunday' => true];
-$b = array_key_exists('Sunday', $t);
+$t = ['May' => true];
+$b = array_key_exists('May', $t);
 var_dump($b);

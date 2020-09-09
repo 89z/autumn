@@ -1,2 +1,1 @@
-puts 'Sunday'
-sleep(2)
+sleep(5)

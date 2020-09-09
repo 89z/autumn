@@ -1,6 +1,5 @@
-import core.thread, std.stdio;
+import core.thread;
+
 void main() {
-   "Sunday".writeln;
-   Thread.sleep(2.seconds);
-   "Monday".writeln;
+   Thread.sleep(5.seconds);
 }

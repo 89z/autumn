@@ -1,4 +1,4 @@
-s = 'Sunday Monday'
+s = 'May June'
 # example 1
 a = s.split(' ')
 # example 2

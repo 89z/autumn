@@ -1,4 +1,4 @@
-s = '''Sunday
-Monday'''
+s = '''May
+June'''
 a = s.splitlines()
 print(a)

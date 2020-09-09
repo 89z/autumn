@@ -1,4 +1,4 @@
 <?php
 $n = microtime(true);
-echo "Sunday\n";
-time_sleep_until($n + 3);
+echo "May\n";
+time_sleep_until($n + 5);

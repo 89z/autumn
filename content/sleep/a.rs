@@ -1,6 +1,7 @@
-use std::{thread, time};
+use std::thread::sleep;
+use std::time::Duration;
+
 fn main() {
-   println!("Sunday");
-   thread::sleep(time::Duration::from_secs(5));
-   println!("Monday");
+   let o = Duration::from_secs(5);
+   sleep(o);
 }

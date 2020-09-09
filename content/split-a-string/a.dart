@@ -1,5 +1,5 @@
 main() {
-   var s = 'Sunday Monday';
+   var s = 'May June';
    var a = s.split(' ');
    print(a);
 }
