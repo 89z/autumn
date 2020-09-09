@@ -1,6 +1,7 @@
 import std.algorithm.searching, std.stdio;
+
 void main() {
-   auto s = "Sunday";
-   auto b = endsWith(s, "ay");
+   auto s = "June";
+   auto b = endsWith(s, "ne");
    b.writeln;
 }

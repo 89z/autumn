@@ -1,4 +1,4 @@
-a = ['Sunday', 'Monday']
+a = ['May', 'June']
 # example 1
 for s in a:
    print(s)

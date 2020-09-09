@@ -1,4 +1,5 @@
 import std.stdio;
+
 void main() {
-   "Sunday".writeln;
+   "May".writeln;
 }

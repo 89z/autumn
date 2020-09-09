@@ -1,5 +1,5 @@
 fn main() {
-   let a = ["Sunday", "Monday"];
+   let a = ["May", "June"];
    // example 1
    for s in &a {
       println!("{}", s);

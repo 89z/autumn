@@ -1,6 +1,7 @@
 import std.stdio;
+
 void main() {
-   auto a = ["Sunday", "Monday"];
+   auto a = ["May", "June"];
    foreach (s; a) {
       s.writeln;
    }

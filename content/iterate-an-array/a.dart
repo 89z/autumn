@@ -1,11 +1,12 @@
 main() {
-   var a = ['Sunday', 'Monday'];
+   var a = ['May', 'June'];
    // example 1
    for (var s in a) {
       print(s);
    }
    // example 2
-   a.forEach((s) => print(s));
+   var f = (s) => print(s);
+   a.forEach(f);
    // example 3
    a.forEach(print);
 }

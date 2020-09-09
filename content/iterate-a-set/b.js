@@ -1,4 +1,4 @@
-let t = {'Sunday': true, 'Monday': true};
+let t = {'May': true, 'June': true};
 for (let s in t) {
    console.log(s);
 }

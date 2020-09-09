@@ -1,7 +1,8 @@
-let t = new Set(['Sunday', 'Monday']);
+let t = new Set(['May', 'June']);
 // example 1
 for (let s of t) {
    console.log(s);
 }
 // example 2
-t.forEach(s => console.log(s));
+let f = s => console.log(s);
+t.forEach(f);
