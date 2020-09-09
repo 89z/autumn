@@ -20,9 +20,7 @@ Letter | Type
 
 If we use `a` for Byte Arrays, it will be confusing when used next to
 traditional arrays. If we use `s1` for Byte Array, it will be confusing when
-used next to traditions strings:
-
-{{< r "byte-str.go" >}}
+used next to traditions strings.
 
 <https://golang.org/ref/spec#Numeric_types>
 

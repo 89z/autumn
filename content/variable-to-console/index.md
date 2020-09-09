@@ -70,8 +70,7 @@ tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 
 {{< r "a.rs" >}}
 
-- <https://doc.rust-lang.org/std/macro.dbg.html>
-- <https://doc.rust-lang.org/std/macro.println.html>
+<https://doc.rust-lang.org/std/macro.println.html>
 
 ## References
 

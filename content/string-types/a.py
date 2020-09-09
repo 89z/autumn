@@ -1,16 +1,16 @@
 # example 1
-s1 = 'Sunday'
+s = 'May'
 # example 2
-s2 = "Sunday"
+s2 = "May"
 # example 3
-s3 = '''Sunday
-Monday'''
+s3 = '''May
+June'''
 # example 4
-s4 = """Sunday
-Monday"""
+s4 = """May
+June"""
 # example 5
 import io
-o1 = io.StringIO('Sunday')
-s5 = o1.getvalue()
+o = io.StringIO('May')
+s5 = o.getvalue()
 # print
-print([s1, s2, s3, s4, s5])
+print([s, s2, s3, s4, s5])

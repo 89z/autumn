@@ -1,8 +1,8 @@
 fn main() {
    // example 1
-   let b1 = true;
+   let b = true;
    // example 2
    let b2 = false;
    // print
-   dbg!(b1, b2);
+   println!("{} {}", b, b2);
 }

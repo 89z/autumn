@@ -1,6 +1,6 @@
 fn main() {
    // example 1
-   let b1 = ! false;
+   let b = ! false;
    // example 2
    let b2 = false || true;
    // example 3
@@ -10,5 +10,5 @@ fn main() {
    // example 5
    let b5 = true & true;
    // print
-   dbg!(b1, b2, b3, b4, b5);
+   println!("{} {} {} {} {}", b, b2, b3, b4, b5);
 }

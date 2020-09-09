@@ -1,10 +1,10 @@
 fn main() {
    // example 1
-   let mut s1 = "Sunday".to_string();
-   s1 += "Monday";
+   let mut s = "May".to_string();
+   s += "June";
    // example 2
-   let mut s2 = "Sunday".to_owned();
-   s2 += "Monday";
+   let mut s2 = "May".to_owned();
+   s2 += "June";
    // print
-   dbg!(s1, s2);
+   println!("{} {}", s == "MayJune", s2 == "MayJune");
 }
