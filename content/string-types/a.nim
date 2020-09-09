@@ -1,7 +1,7 @@
 # example 1
-let s1 = "Sunday"
+let s = "May"
 # example 2
-let s2 = """Sunday
-Monday"""
+let s2 = """May
+June"""
 # print
-echo [s1, s2]
+echo [s, s2]
