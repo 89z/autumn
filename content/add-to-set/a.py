@@ -1,3 +1,3 @@
-t1 = {'Sun'}
-t1.add('Mon')
-print(t1)
+t = {'May', 'June'}
+t.add('July')
+print(t)

@@ -1,4 +1,4 @@
 fn main() {
-   let a = vec!["Sun", "Mon"];
+   let a = vec!["May", "June"];
    println!("{:?}", a);
 }

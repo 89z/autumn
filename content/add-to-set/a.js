@@ -1,8 +1,8 @@
 // example 1
-let t1 = new Set;
-t1.add('Sun');
+let t = new Set;
+t.add('May');
 // example 2
 let t2 = {};
-t2.Sun = true;
+t2.May = true;
 // print
-console.log(t1, t2);
+console.log(t, t2);

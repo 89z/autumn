@@ -1,3 +1,3 @@
 <?php
-$t1['Sun'] = true;
-var_dump($t1);
+$t['May'] = true;
+var_dump($t);

@@ -1,8 +1,7 @@
+var s = "May"
 # example 1
-var s1 = "Sun"
-s1 = s1 & "day"
+s = s & "June"
 # example 2
-var s2 = "Sun"
-s2 &= "day"
+s &= "July"
 # print
-echo [s1, s2]
+echo s == "MayJuneJuly"

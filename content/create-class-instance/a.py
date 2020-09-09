@@ -1,10 +1,11 @@
 # example 1
-class Jan:
-   Sun = 10
-   Mon = 11
-o1 = Jan()
+class Date:
+   year = 2020
+o = Date()
+
 # example 2
 import types
-o2 = types.SimpleNamespace(Sun = 10, Mon = 11)
+o2 = types.SimpleNamespace(year = 2020)
+
 # print
-print(o1, o2)
+print(o.year == 2020, o2.year == 2020)

@@ -1,9 +1,8 @@
 <?php
+$s = 'May';
 # example 1
-$s1 = 'Sun';
-$s1 = $s1 . 'day';
+$s = $s . 'June';
 # example 2
-$s2 = 'Sun';
-$s2 .= 'day';
+$s .= 'July';
 # print
-var_dump($s1, $s2);
+var_dump($s == 'MayJuneJuly');
