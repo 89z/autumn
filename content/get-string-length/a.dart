@@ -1,5 +1,5 @@
 main() {
-   var s = 'Sunday';
+   var s = 'May';
    var n = s.length;
-   print(n);
+   print(n == 3);
 }

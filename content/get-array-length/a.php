@@ -1,5 +1,5 @@
 <?php
-$a = ['Sunday', 'Monday'];
+$a = ['May', 'June'];
 # example 1
 $n = count($a);
 # example 2

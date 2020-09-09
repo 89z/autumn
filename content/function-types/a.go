@@ -1,15 +1,15 @@
 package main
 // example 1
-func f1(s1 string) int {
-   return len(s1)
+func f(s string) int {
+   return len(s)
 }
 // example 2
-var f2 = func(s1 string) int {
-   return len(s1)
+var f2 = func(s string) int {
+   return len(s)
 }
 // print
 func main() {
-   n1 := f1("Sunday")
-   n2 := f2("Sunday")
-   println(n1, n2)
+   n := f("May")
+   n2 := f2("May")
+   println(n == 3, n2 == 3)
 }

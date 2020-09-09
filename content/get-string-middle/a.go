@@ -1,7 +1,8 @@
 package main
+
 func main() {
    // example 1
-   s := "Sunday"
+   s := "June"
    s2 := s[1:3]
    // example 2
    a := []rune("📗📒📙📕")

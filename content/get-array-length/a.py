@@ -1,3 +1,3 @@
-a = ['Sunday', 'Monday']
+a = ['May', 'June']
 n = len(a)
 print(n == 2)

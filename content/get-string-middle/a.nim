@@ -1,7 +1,7 @@
-let s = "Sunday"
+let s = "June"
 # example 1
-let s1 = s[1..2]
+let s2 = s[1 .. 2]
 # example 2
-let s2 = s[1..<3]
+let s3 = s[1 ..< 3]
 # print
-echo [s1 == "un", s2 == "un"]
+echo [s2 == "un", s3 == "un"]

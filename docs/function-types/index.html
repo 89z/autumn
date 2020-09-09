@@ -86,18 +86,18 @@ size_t <span style="color:#a6e22e">f</span>(std<span style="color:#f92672">::</s
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">f1</span>(<span style="color:#a6e22e">s1</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">int</span> {
-   <span style="color:#66d9ef">return</span> len(<span style="color:#a6e22e">s1</span>)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">f</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">int</span> {
+   <span style="color:#66d9ef">return</span> len(<span style="color:#a6e22e">s</span>)
 }
 <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">f2</span> = <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">s1</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">int</span> {
-   <span style="color:#66d9ef">return</span> len(<span style="color:#a6e22e">s1</span>)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">f2</span> = <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">int</span> {
+   <span style="color:#66d9ef">return</span> len(<span style="color:#a6e22e">s</span>)
 }
 <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">f1</span>(<span style="color:#e6db74">&#34;Sunday&#34;</span>)
-   <span style="color:#a6e22e">n2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">f2</span>(<span style="color:#e6db74">&#34;Sunday&#34;</span>)
-   println(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>)
+   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">f</span>(<span style="color:#e6db74">&#34;May&#34;</span>)
+   <span style="color:#a6e22e">n2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">f2</span>(<span style="color:#e6db74">&#34;May&#34;</span>)
+   println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>)
 }
 </code></pre></div>
 <p><a href="https://golang.org/ref/spec#Function_types">https://golang.org/ref/spec#Function_types</a></p>
@@ -106,20 +106,20 @@ size_t <span style="color:#a6e22e">f</span>(std<span style="color:#f92672">::</s
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f1</span>(<span style="color:#a6e22e">s1</span>) {
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">length</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f</span>(<span style="color:#a6e22e">s</span>) {
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">length</span>;
 }
 <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">f2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">s1</span>) {
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">length</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">f2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">s</span>) {
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">length</span>;
 };
 <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">f3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s1</span> =&gt; <span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">length</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">f3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s</span> =&gt; <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">length</span>;
 <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">f1</span>(<span style="color:#e6db74">&#39;Sunday&#39;</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">f2</span>(<span style="color:#e6db74">&#39;Sunday&#39;</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">f3</span>(<span style="color:#e6db74">&#39;Sunday&#39;</span>);
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>, <span style="color:#a6e22e">n3</span>);
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">f</span>(<span style="color:#e6db74">&#39;May&#39;</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">f2</span>(<span style="color:#e6db74">&#39;May&#39;</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">f3</span>(<span style="color:#e6db74">&#39;May&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>, <span style="color:#a6e22e">n3</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>);
 </code></pre></div>
 <ul>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Functions/Arrow_functions">https://developer.mozilla.org/Web/JavaScript/Reference/Functions/Arrow_functions</a></li>
@@ -130,9 +130,11 @@ size_t <span style="color:#a6e22e">f</span>(std<span style="color:#f92672">::</s
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">proc </span><span style="color:#a6e22e">f1</span>(s1: <span style="color:#66d9ef">string</span>): <span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span>
-   <span style="color:#66d9ef">return</span> s1.len
-echo f1(<span style="color:#e6db74">&#34;Sunday&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">proc </span><span style="color:#a6e22e">f</span>(s: <span style="color:#66d9ef">string</span>): <span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span>
+   <span style="color:#66d9ef">return</span> s.len
+
+<span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> f(<span style="color:#e6db74">&#34;May&#34;</span>)
+echo n <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/manual.html#procedures">https://nim-lang.org/docs/manual.html#procedures</a></p>
 <h2 id="php">PHP</h2>
@@ -141,7 +143,7 @@ echo f1(<span style="color:#e6db74">&#34;Sunday&#34;</span>)
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f1</span>(<span style="color:#a6e22e">string</span> $s)<span style="color:#f92672">:</span> <span style="color:#a6e22e">int</span> {
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f</span>(<span style="color:#a6e22e">string</span> $s)<span style="color:#f92672">:</span> <span style="color:#a6e22e">int</span> {
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">strlen</span>($s);
 }
 <span style="color:#75715e"># example 2
@@ -151,10 +153,10 @@ echo f1(<span style="color:#e6db74">&#34;Sunday&#34;</span>)
 <span style="color:#75715e"># example 3
 </span><span style="color:#75715e"></span>$f3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span> (<span style="color:#a6e22e">string</span> $s)<span style="color:#f92672">:</span> <span style="color:#a6e22e">int</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">strlen</span>($s);
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">f1</span>(<span style="color:#e6db74">&#39;Sunday&#39;</span>);
-$n2 <span style="color:#f92672">=</span> $f2(<span style="color:#e6db74">&#39;Sunday&#39;</span>);
-$n3 <span style="color:#f92672">=</span> $f3(<span style="color:#e6db74">&#39;Sunday&#39;</span>);
-<span style="color:#a6e22e">var_dump</span>($n1, $n2, $n3);
+</span><span style="color:#75715e"></span>$n <span style="color:#f92672">=</span> <span style="color:#a6e22e">f</span>(<span style="color:#e6db74">&#39;May&#39;</span>);
+$n2 <span style="color:#f92672">=</span> $f2(<span style="color:#e6db74">&#39;May&#39;</span>);
+$n3 <span style="color:#f92672">=</span> $f3(<span style="color:#e6db74">&#39;May&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>, $n2 <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>, $n3 <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>);
 </code></pre></div>
 <ul>
 <li><a href="https://php.net/functions.anonymous">https://php.net/functions.anonymous</a></li>
@@ -166,14 +168,14 @@ $n3 <span style="color:#f92672">=</span> $f3(<span style="color:#e6db74">&#39;Su
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># example 1</span>
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f1</span>(s1):
-   <span style="color:#66d9ef">return</span> len(s1)
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(s):
+   <span style="color:#66d9ef">return</span> len(s)
 <span style="color:#75715e"># example 2</span>
-f2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> s1: len(s1)
+f2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> s: len(s)
 <span style="color:#75715e"># print</span>
-n1 <span style="color:#f92672">=</span> f1(<span style="color:#e6db74">&#39;Sunday&#39;</span>)
-n2 <span style="color:#f92672">=</span> f2(<span style="color:#e6db74">&#39;Sunday&#39;</span>)
-<span style="color:#66d9ef">print</span>(n1, n2)
+n <span style="color:#f92672">=</span> f(<span style="color:#e6db74">&#39;May&#39;</span>)
+n2 <span style="color:#f92672">=</span> f2(<span style="color:#e6db74">&#39;May&#39;</span>)
+<span style="color:#66d9ef">print</span>(n <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>, n2 <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>)
 </code></pre></div>
 <ul>
 <li><a href="https://docs.python.org/reference/compound_stmts.html#function-definitions">https://docs.python.org/reference/compound_stmts.html#function-definitions</a></li>

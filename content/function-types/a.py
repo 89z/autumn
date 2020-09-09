@@ -1,9 +1,9 @@
 # example 1
-def f1(s1):
-   return len(s1)
+def f(s):
+   return len(s)
 # example 2
-f2 = lambda s1: len(s1)
+f2 = lambda s: len(s)
 # print
-n1 = f1('Sunday')
-n2 = f2('Sunday')
-print(n1, n2)
+n = f('May')
+n2 = f2('May')
+print(n == 3, n2 == 3)

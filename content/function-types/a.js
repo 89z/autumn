@@ -1,15 +1,15 @@
 // example 1
-function f1(s1) {
-   return s1.length;
+function f(s) {
+   return s.length;
 }
 // example 2
-let f2 = function (s1) {
-   return s1.length;
+let f2 = function (s) {
+   return s.length;
 };
 // example 3
-let f3 = s1 => s1.length;
+let f3 = s => s.length;
 // print
-let n1 = f1('Sunday');
-let n2 = f2('Sunday');
-let n3 = f3('Sunday');
-console.log(n1, n2, n3);
+let n = f('May');
+let n2 = f2('May');
+let n3 = f3('May');
+console.log(n == 3, n2 == 3, n3 == 3);

@@ -1,6 +1,7 @@
 package main
+
 func main() {
-   a := []string{"Sunday", "Monday"}
+   a := []string{"May", "June"}
    n := len(a)
    println(n == 2)
 }
