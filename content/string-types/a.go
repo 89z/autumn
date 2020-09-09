@@ -1,10 +1,11 @@
 package main
+
 func main() {
    // example 1
-   s1 := "Sunday"
+   s := "May"
    // example 2
-   s2 := `Sunday
-Monday`
+   s2 := `May
+June`
    // print
-   println(s1, s2)
+   println(s, s2)
 }

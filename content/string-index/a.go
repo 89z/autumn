@@ -1,7 +1,8 @@
 package main
 import "strings"
+
 func main() {
-   s := "Sunday"
-   n := strings.Index(s, "day")
-   println(n == 3)
+   s := "June"
+   n := strings.Index(s, "un")
+   println(n == 1)
 }

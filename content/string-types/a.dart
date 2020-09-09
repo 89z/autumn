@@ -1,5 +1,4 @@
 main() {
-   var s = 'Sunday';
-   // true
-   print(s == 'Sunday');
+   var s = 'May';
+   print(s == 'May');
 }

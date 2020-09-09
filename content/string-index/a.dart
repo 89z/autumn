@@ -1,5 +1,5 @@
 main() {
-   var s = "Sunday";
-   var n = s.indexOf("day");
-   print(n == 3);
+   var s = 'June';
+   var n = s.indexOf('un');
+   print(n == 1);
 }

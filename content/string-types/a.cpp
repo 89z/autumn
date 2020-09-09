@@ -1,5 +1,10 @@
 #include <iostream>
+
 int main() {
-   std::string s = "Sunday";
-   std::cout << s << std::endl;
+   // example 1
+   std::string s = "May";
+   // example 2
+   auto s2 = "May";
+   // print
+   std::cout << s << s2 << std::endl;
 }

@@ -1,3 +1,3 @@
-let s = 'Sunday';
-let n = s.indexOf('day');
-console.log(n == 3);
+let s = 'June';
+let n = s.indexOf('un');
+console.log(n == 1);

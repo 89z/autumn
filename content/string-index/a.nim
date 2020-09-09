@@ -1,4 +1,4 @@
 import strutils
-let s = "Sunday"
-let n = s.find("day")
-echo n == 3
+let s = "June"
+let n = s.find("un")
+echo n == 1

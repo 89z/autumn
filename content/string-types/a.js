@@ -1,9 +1,9 @@
 // example 1
-let s1 = "Sunday";
+let s = 'May';
 // example 2
-let s2 = 'Sunday';
+let s2 = "May";
 // example 3
-let s3 = `Sunday
-Monday`;
+let s3 = `May
+June`;
 // print
-console.log(s1, s2, s3);
+console.log(s, s2, s3);
