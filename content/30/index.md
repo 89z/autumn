@@ -2,6 +2,7 @@
 title: Environment variables
 categories: [system]
 tags: [d, dart, go, nim, php, python, rust]
+date: 2020-07-21
 ---
 
 ## D

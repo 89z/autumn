@@ -2,6 +2,7 @@
 title: Add to set
 categories: [set]
 tags: [d, dart, go, javascript, nim, php, python, rust]
+date: 2020-07-12
 ---
 
 ## D

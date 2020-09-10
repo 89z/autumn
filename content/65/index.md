@@ -2,6 +2,7 @@
 title: Directives
 categories: [reference]
 tags: [go, javascript, php, python, rust]
+date: 2020-08-25
 ---
 
 ## Go

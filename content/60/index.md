@@ -2,6 +2,7 @@
 title: Convert radix
 categories: [number]
 tags: [d, go, javascript, nim, php, python, rust]
+date: 2020-08-20
 ---
 
 Some faster bitwise operations could be used, but these functions allow to

@@ -2,6 +2,7 @@
 title: Command line tools
 categories: [reference]
 tags: [c++, d, dart, go, nim, php, python, ruby, rust]
+date: 2020-08-09
 ---
 
 ## C++

@@ -2,6 +2,7 @@
 title: Get string middle
 categories: [string]
 tags: [d, dart, go, javascript, nim, php, python, rust]
+date: 2020-07-24
 ---
 
 ## D

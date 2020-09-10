@@ -2,6 +2,7 @@
 title: Add to array
 categories: [array]
 tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
+date: 2020-08-10
 ---
 
 ## D

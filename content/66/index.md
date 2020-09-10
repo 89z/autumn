@@ -2,6 +2,7 @@
 title: Extract string by pattern
 categories: [string]
 tags: [d, go, javascript, php, python, rust]
+date: 2020-08-26
 ---
 
 ## D

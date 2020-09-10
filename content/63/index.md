@@ -2,6 +2,7 @@
 title: Exit program
 categories: [system]
 tags: [c++, d, dart, go, nim, php, python, rust]
+date: 2020-08-23
 ---
 
 ## C++

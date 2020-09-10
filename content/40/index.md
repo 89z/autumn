@@ -2,6 +2,7 @@
 title: Is a terminal
 categories: [system]
 tags: [php, ruby]
+date: 2020-07-31
 ---
 
 ## PHP

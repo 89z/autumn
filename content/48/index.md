@@ -2,6 +2,7 @@
 title: Match string with pattern
 categories: [string]
 tags: [go, javascript, php, python]
+date: 2020-08-08
 ---
 
 ## Go

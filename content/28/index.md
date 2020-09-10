@@ -2,6 +2,7 @@
 title: Current date string
 categories: [date]
 tags: [d, dart, go, javascript, nim, php, python, rust]
+date: 2020-07-19
 ---
 
 ## D

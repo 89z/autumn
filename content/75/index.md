@@ -2,6 +2,7 @@
 title: Create class instance
 categories: [class]
 tags: [go, javascript, php, python, rust]
+date: 2020-09-04
 ---
 
 ## Go

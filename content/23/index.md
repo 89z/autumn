@@ -2,6 +2,7 @@
 title: Command line arguments
 categories: [system]
 tags: [d, dart, go, nim, php, python, rust]
+date: 2020-07-14
 ---
 
 ## D

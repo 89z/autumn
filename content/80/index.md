@@ -2,6 +2,7 @@
 title: Variable to file
 categories: [input-output]
 tags: [d, dart, go, nim, php, python, rust]
+date: 2020-09-09
 ---
 
 ## D

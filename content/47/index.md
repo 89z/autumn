@@ -2,6 +2,7 @@
 title: Sort an array
 categories: [array]
 tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+date: 2020-08-07
 ---
 
 ## C++

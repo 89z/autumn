@@ -2,6 +2,7 @@
 title: Date number to string
 categories: [date]
 tags: [d, go, javascript, nim, php, python]
+date: 2020-07-20
 ---
 
 ## D

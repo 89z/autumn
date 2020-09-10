@@ -2,6 +2,7 @@
 title: Encode JSON
 categories: [file-format]
 tags: [d, dart, go, javascript, nim, php, python]
+date: 2020-08-19
 ---
 
 ## D

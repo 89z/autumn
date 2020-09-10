@@ -2,6 +2,7 @@
 title: Convert to integer
 categories: [number]
 tags: [d, dart, go, javascript, php, python, rust]
+date: 2020-08-22
 ---
 
 ## D

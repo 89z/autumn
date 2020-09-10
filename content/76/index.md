@@ -2,6 +2,7 @@
 title: Define class property
 categories: [class]
 tags: [go, javascript, php, python, rust]
+date: 2020-09-05
 ---
 
 ## Go

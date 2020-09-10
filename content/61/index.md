@@ -2,6 +2,7 @@
 title: List directory entries
 categories: [system]
 tags: [d, dart, go, nim, php, python, rust]
+date: 2020-08-21
 ---
 
 ## D

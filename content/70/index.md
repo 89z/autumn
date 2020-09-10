@@ -2,6 +2,7 @@
 title: Relative to absolute path
 categories: [string]
 tags: [c++, d, dart, go, php, python, ruby, rust]
+date: 2020-08-30
 ---
 
 ## C++

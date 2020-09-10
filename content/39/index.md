@@ -2,6 +2,7 @@
 title: Get string start
 categories: [string]
 tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
+date: 2020-07-30
 ---
 
 ## D

@@ -2,6 +2,7 @@
 title: Add to map
 categories: [map]
 tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+date: 2020-09-08
 ---
 
 ## C++

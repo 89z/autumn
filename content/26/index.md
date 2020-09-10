@@ -2,6 +2,7 @@
 title: Convert to string
 categories: [string]
 tags: [d, dart, go, javascript, php, python, rust]
+date: 2020-07-17
 ---
 
 ## D

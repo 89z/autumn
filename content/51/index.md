@@ -2,6 +2,7 @@
 title: Console to variable
 categories: [input-output]
 tags: [d, dart, go, nim, php, python, rust]
+date: 2020-08-11
 ---
 
 ## D

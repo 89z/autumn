@@ -2,6 +2,7 @@
 title: Divide a number
 categories: [number]
 tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+date: 2020-09-03
 ---
 
 ## C++
