@@ -1,17 +1,19 @@
 package main
+
 import (
    "fmt"
    "os"
    "time"
 )
+
 func main() {
-   o1 := time.Now()
-   os.Chtimes("index.md", o1, o1)
+   o := time.Now()
+   os.Chtimes("index.md", o, o)
    o2, e := os.Stat("index.md")
    if e != nil {
       os.Exit(1)
    }
-   n1 := o1.Unix()
+   n := o.Unix()
    n2 := o2.ModTime().Unix()
-   fmt.Println(n1, n2 == n1)
+   fmt.Println(n, n2 == n)
 }
