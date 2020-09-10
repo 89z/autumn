@@ -1,3 +1,3 @@
 <?php
-$s1 = 'less -V';
-system($s1);
+$s = 'less -V';
+system($s);

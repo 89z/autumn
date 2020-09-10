@@ -1,5 +1,5 @@
 <?php
-$s = '10,11';
+$s = '8,9';
 # example 1
 $a = sscanf($s, '%d,%d');
 # example 2

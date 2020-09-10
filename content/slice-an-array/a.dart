@@ -1,5 +1,5 @@
-main() {
-   var a = [10, 11, 12];
-   var n = a[0];
-   print(n);
+void main() {
+   var a = ['May', 'June'];
+   var s = a[0];
+   print(s == 'May');
 }

@@ -19,27 +19,21 @@ Letter | Type
 ## Byte
 
 If we use `a` for Byte Arrays, it will be confusing when used next to
-traditional arrays. If we use `s1` for Byte Array, it will be confusing when
+traditional arrays. If we use `s` for Byte Array, it will be confusing when
 used next to traditions strings.
 
 <https://golang.org/ref/spec#Numeric_types>
 
 ## Error
 
-{{< r "err.go" >}}
-
 <https://golang.org/ref/spec#Errors>
 
 ## Object
-
-{{< r "obj.py" >}}
 
 <https://docs.python.org/library/urllib.parse.html#urlparse-result-object>
 
 ## Resource
 
 Resource is something that is used by PHP. Other languages use Objects.
-
-{{< r "fopen.php" >}}
 
 <https://php.net/function.fopen>

@@ -24,7 +24,7 @@
 
 <main>
    <h1>Talk:Declare value</h1>
-   <time>Tue Sep 8 2020</time>
+   <time>Wed Sep 9 2020</time>
    
    
    <table>
@@ -83,44 +83,15 @@
 </table>
 <h2 id="byte">Byte</h2>
 <p>If we use <code>a</code> for Byte Arrays, it will be confusing when used next to
-traditional arrays. If we use <code>s1</code> for Byte Array, it will be confusing when
+traditional arrays. If we use <code>s</code> for Byte Array, it will be confusing when
 used next to traditions strings.</p>
 <p><a href="https://golang.org/ref/spec#Numeric_types">https://golang.org/ref/spec#Numeric_types</a></p>
 <h2 id="error">Error</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
-   <span style="color:#e6db74">&#34;strconv&#34;</span>
-)
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">Atoi</span>(<span style="color:#e6db74">&#34;10&#34;</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">e</span>)
-}
-</code></pre></div>
 <p><a href="https://golang.org/ref/spec#Errors">https://golang.org/ref/spec#Errors</a></p>
 <h2 id="object">Object</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> parse
-s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>
-o1 <span style="color:#f92672">=</span> parse<span style="color:#f92672">.</span>urlparse(s1)
-s2 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>geturl()
-<span style="color:#66d9ef">print</span>(s2)
-</code></pre></div>
 <p><a href="https://docs.python.org/library/urllib.parse.html#urlparse-result-object">https://docs.python.org/library/urllib.parse.html#urlparse-result-object</a></p>
 <h2 id="resource">Resource</h2>
 <p>Resource is something that is used by PHP. Other languages use Objects.</p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
-<span style="color:#a6e22e">var_dump</span>($r1);
-</code></pre></div>
 <p><a href="https://php.net/function.fopen">https://php.net/function.fopen</a></p>
 
 </main>

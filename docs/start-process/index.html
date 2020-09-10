@@ -104,8 +104,8 @@ main() {
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> osproc
-<span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> startProcess(<span style="color:#e6db74">&#34;less&#34;</span>, args<span style="color:#f92672">=[</span><span style="color:#e6db74">&#34;-V&#34;</span><span style="color:#f92672">]</span>, options<span style="color:#f92672">=</span>{poParentStreams})
-<span style="color:#66d9ef">discard</span> o1.waitForExit
+<span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> startProcess(<span style="color:#e6db74">&#34;less&#34;</span>, args<span style="color:#f92672">=[</span><span style="color:#e6db74">&#34;-V&#34;</span><span style="color:#f92672">]</span>, options<span style="color:#f92672">=</span>{poParentStreams})
+<span style="color:#66d9ef">discard</span> o.waitForExit
 </code></pre></div>
 
 
@@ -122,8 +122,8 @@ main() {
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;less -V&#39;</span>;
-<span style="color:#a6e22e">system</span>($s1);
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;less -V&#39;</span>;
+<span style="color:#a6e22e">system</span>($s);
 </code></pre></div>
 
 
