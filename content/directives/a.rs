@@ -1,12 +1,12 @@
 fn main() {
+
    #[derive(Debug)]
-   struct Day {
-      s: Option<String>,
-      n: Option<u8>
+   struct Date {
+      year: u16,
+      month: Option<u8>,
+      day: Option<u8>
    }
-   let o = Day {
-      s: Some("Sunday".into()),
-      n: None
-   };
+
+   let o = Date {year: 2020, month: None, day: None};
    println!("{:?}", o);
 }

@@ -1,6 +1,7 @@
 package main
 import "log"
+
 func main() {
-   log.Fatal("Sunday")
-   println("Monday")
+   log.Fatal("May")
+   println("June")
 }

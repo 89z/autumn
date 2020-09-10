@@ -1,3 +1,4 @@
 if true:
    quit(QuitFailure)
-echo "Sunday"
+
+echo "May"

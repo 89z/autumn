@@ -1,3 +1,3 @@
 import sys
-sys.exit('Sunday')
-print('Monday')
+sys.exit('May')
+print('June')

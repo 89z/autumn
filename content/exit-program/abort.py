@@ -1,3 +1,3 @@
 import os
 os.abort()
-print('Sunday')
+print('May')

@@ -1,3 +1,3 @@
 <?php
-user_error('Sunday', E_USER_ERROR);
-echo 'Monday';
+user_error('May', E_USER_ERROR);
+echo 'June';

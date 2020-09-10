@@ -1,3 +1,3 @@
 <?php
 exit(1);
-echo 'Sunday';
+echo "May\n";

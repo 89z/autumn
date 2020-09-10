@@ -1,7 +1,7 @@
-use std::process;
-fn main() {
+fn main() -> Result<(), u8> {
    if true {
-      process::exit(1);
+      return Err(1);
    }
-   println!("Sunday");
+   println!("May");
+   Ok(())
 }

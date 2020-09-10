@@ -72,15 +72,15 @@ $o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+
    <span style="color:#75715e">#[derive(Debug)]</span>
-   <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Day</span> {
-      s: Option<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>,
-      n: Option<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span>
+   <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Date</span> {
+      year: <span style="color:#66d9ef">u16</span>,
+      month: Option<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span>,
+      day: Option<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span>
    }
-   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> Day {
-      s: Some(<span style="color:#e6db74">&#34;Sunday&#34;</span>.into()),
-      n: None
-   };
+
+   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> Date {year: <span style="color:#ae81ff">2020</span>, month: None, day: None};
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o);
 }
 </code></pre></div>

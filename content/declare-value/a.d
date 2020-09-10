@@ -1,11 +1,12 @@
 import std.stdio;
+
 void main() {
    // example 1
-   string s = "Sunday";
+   string s = "May";
    // example 2
-   int n1 = 10;
+   int n = 9;
    // example 3
-   auto n2 = 10;
+   auto n2 = 9;
    // print
-   writeln(s, ' ', n1, ' ', n2);
+   writeln(s, ' ', n, ' ', n2);
 }

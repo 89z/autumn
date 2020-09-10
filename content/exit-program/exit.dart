@@ -1,5 +1,6 @@
 import 'dart:io';
-main() {
+
+void main() {
    exit(1);
-   print('Sunday');
+   print('May');
 }
