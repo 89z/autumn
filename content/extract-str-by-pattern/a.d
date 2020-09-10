@@ -1,6 +1,7 @@
 import  std.regex, std.stdio;
+
 void main() {
-   auto s = "Wednesday";
-   auto a = s.matchAll("e.".regex);
+   auto s = "January";
+   auto a = s.matchAll("a.".regex);
    a.writeln;
 }

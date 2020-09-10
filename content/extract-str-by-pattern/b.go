@@ -6,11 +6,11 @@ import (
 )
 
 func main() {
-   o := regexp.MustCompile("e(..)")
+   o := regexp.MustCompile("a(..)")
    // example 1
-   a := o.FindStringSubmatch("Wednesday")
+   a := o.FindStringSubmatch("January")
    // example 2
-   a2 := o.FindAllStringSubmatch("Wednesday", -1)
+   a2 := o.FindAllStringSubmatch("January", -1)
    // print
    fmt.Println(a, a2)
 }

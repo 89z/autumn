@@ -1,9 +1,9 @@
 import re
-s = 'Wednesday'
+s = 'January'
 # example 1
-o = re.search('e(..)', s)
+o = re.search('a(..)', s)
 a = o.groups()
 # example 2
-a2 = re.findall('e(..)', s)
+a2 = re.findall('a(..)', s)
 # print
 print(a, a2)
