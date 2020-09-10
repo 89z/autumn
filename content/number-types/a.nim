@@ -1,6 +1,6 @@
 # example 1
-var n1: int = 10
+var n: int = 9
 # example 2
-var n2 = 10
+var n2 = 9
 # print
-echo [n1, n2]
+echo [n, n2]

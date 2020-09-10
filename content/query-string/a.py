@@ -1,9 +1,9 @@
-import urllib.parse as o1
+from urllib import parse
 # example 1
-s1 = 'one=odd&two=even'
-m1 = o1.parse_qs(s1)
+s = 'one=odd&two=even'
+m = parse.parse_qs(s)
 # example 2
 m2 = {'one': 'odd', 'two': 'even'}
-s2 = o1.urlencode(m2)
+s2 = parse.urlencode(m2)
 # print
-print(m1, s2)
+print(m, s2, sep='\n')

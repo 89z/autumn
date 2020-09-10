@@ -63,15 +63,17 @@ main() {
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;os/exec&#34;</span>
    <span style="color:#e6db74">&#34;strings&#34;</span>
 )
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;go&#34;</span>, <span style="color:#e6db74">&#34;version&#34;</span>)
+   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;go&#34;</span>, <span style="color:#e6db74">&#34;version&#34;</span>)
    <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>{}
-   <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Stdout</span> = <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">o2</span>
-   <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Run</span>()
+   <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Stdout</span> = <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">o2</span>
+   <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Run</span>()
    <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">String</span>()
    print(<span style="color:#a6e22e">s</span>)
 }
@@ -85,9 +87,9 @@ main() {
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> osproc
-<span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ag&#34;</span>.execCmdEx
-<span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> o1.output
-stdout.write s1
+<span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;nim -v&#34;</span>.execCmdEx
+<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> o.output
+stdout.write s
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/osproc.html#execCmdEx,string,set%5BProcessOption%5D">https://nim-lang.org/docs/osproc.html#execCmdEx,string,set[ProcessOption]</a></p>
 <h2 id="php">PHP</h2>

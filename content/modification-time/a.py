@@ -1,5 +1,5 @@
 import os, time
-n1 = time.time()
-os.utime('index.md', (n1, n1))
+n = time.time()
+os.utime('index.md', (n, n))
 n2 = os.path.getmtime('index.md')
-print(n1, n2 == n1)
+print(n, n2 == n)

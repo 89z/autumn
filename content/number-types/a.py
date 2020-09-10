@@ -1,6 +1,6 @@
 # example 1
-n1 = 1000
+n = 1000
 # example 2
 n2 = 1_000
 # print
-print(n1, n2)
+print(n, n2)
