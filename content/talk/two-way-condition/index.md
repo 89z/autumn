@@ -4,12 +4,9 @@ title: 'Talk:Two-way conditions'
 
 ## If statements
 
-PHP accepts any type with conditions. Go accepts booleans with conditions:
-
-{{< r "if.go" >}}
-
-but not other types. To deal with this, we should simply only use booleans when
-a condition is expected.
+PHP accepts any type with conditions. Go accepts booleans with conditions, but
+not other types. To deal with this, we should simply only use booleans when a
+condition is expected.
 
 ## Ternary operations
 
@@ -32,34 +29,16 @@ boolean. For example with Python or JavaScript.
 ## Binary operators
 
 The first argument is a condition. As such, per the previous decision, it must
-be a boolean. For example with JavaScript:
-
-{{< r "binary.js" >}}
-
-or PHP:
-
-{{< r "binary.php" >}}
-
-This isnt really useful if we want to return non boolean values. Further, some
-languages like PHP coerce the result to boolean:
-
-{{< r "binary_2.php" >}}
-
-or worse, only fail on null:
-
-{{< r "binary_3.php" >}}
+be a boolean. For example with JavaScript or PHP. This isnt really useful if we
+want to return non boolean values. Further, some languages like PHP coerce the
+result to boolean. Or worse, only fail on null:
 
 <https://php.net/operators.comparison#language.operators.comparison.coalesce>
 
 In order to have two values that can be returned, we would need to use an if
 statement or similar. However implementing an if statement means that the
 second argument is also a condition, and must be a boolean as well. Better
-would be to use boolean type with all arguments. For example with JavaScript:
-
-{{< r "binary_2.js" >}}
-
+would be to use boolean type with all arguments. For example with JavaScript.
 Further, some languages like Go only accept boolean values:
-
-{{< r "binary.go" >}}
 
 <https://golang.org/ref/spec#Logical_operators>
