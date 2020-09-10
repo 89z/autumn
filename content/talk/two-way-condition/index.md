@@ -27,13 +27,7 @@ Go does not offer this:
 <https://golang.org/doc/faq#Does_Go_have_a_ternary_form>
 
 We can continue to use ternary opeations, as long as the condition is a
-boolean. For example with Python:
-
-{{< r "ternary.py" >}}
-
-or JavaScript:
-
-{{< r "ternary.js" >}}
+boolean. For example with Python or JavaScript.
 
 ## Binary operators
 

@@ -1,6 +1,7 @@
 import std.stdio;
+
 void main() {
-   auto t = ["Sunday": true];
-   t["Monday"] = true;
+   auto t = ["May": true];
+   t["June"] = true;
    t.writeln;
 }

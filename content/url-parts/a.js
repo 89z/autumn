@@ -1,9 +1,6 @@
 // example 1
-let s1 = 'https://example.com/one?two=even';
-let o1 = new URL(s1);
+let o = new URL('https://example.com/one?two=even');
 // example 2
-let s2 = 'https://example.com';
-let s3 = 'one?two=even';
-let o2 = new URL(s3, s2);
+let o2 = new URL('one?two=even', 'https://example.com');
 // print
-console.log(o1, o2);
+console.log(o, o2);

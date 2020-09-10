@@ -34,40 +34,44 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;net/url&#34;</span>
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#e6db74">&#34;https://example.com/one?two=even&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
    }
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Host</span>
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Host</span>
    <span style="color:#75715e">// example 2
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Path</span>
    <span style="color:#75715e">// example 3
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">RawQuery</span>
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s1</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;example.com&#34;</span>, <span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;/one&#34;</span>, <span style="color:#a6e22e">s3</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;two=even&#34;</span>)
+</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;example.com&#34;</span>, <span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;/one&#34;</span>, <span style="color:#a6e22e">s3</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;two=even&#34;</span>)
 }
 </code></pre></div>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;fmt&#34;</span>
    <span style="color:#e6db74">&#34;net/url&#34;</span>
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#e6db74">&#34;https://example.com/one?two=even&#34;</span>)
+   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#e6db74">&#34;https://example.com/one?two=even&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
    }
-   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Query</span>()
+   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Query</span>()
    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">o2</span>)
 }
 </code></pre></div></p>
@@ -77,14 +81,11 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">o1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URL</span>(<span style="color:#a6e22e">s1</span>);
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">o</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URL</span>(<span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>);
 <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://example.com&#39;</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s3</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;one?two=even&#39;</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">o2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URL</span>(<span style="color:#a6e22e">s3</span>, <span style="color:#a6e22e">s2</span>);
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">o2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URL</span>(<span style="color:#e6db74">&#39;one?two=even&#39;</span>, <span style="color:#e6db74">&#39;https://example.com&#39;</span>);
 <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">o2</span>);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">o2</span>);
 </code></pre></div>
 <p><a href="https://developer.mozilla.org/Web/API/URL/URL">https://developer.mozilla.org/Web/API/URL/URL</a></p>
 <h2 id="nim">Nim</h2>
@@ -92,16 +93,15 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> uri
-<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://example.com/one?two=even&#34;</span>
-<span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> s.parseUri
+<span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://example.com/one?two=even&#34;</span>.parseUri
 <span style="color:#75715e"># example 1</span>
-<span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> o.hostname
+<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> o.hostname
 <span style="color:#75715e"># example 2</span>
 <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> o.path
 <span style="color:#75715e"># example 3</span>
 <span style="color:#66d9ef">let</span> s3 <span style="color:#f92672">=</span> o.query
 <span style="color:#75715e"># print</span>
-echo s1, s2, s3
+echo <span style="color:#f92672">[</span>s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;example.com&#34;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;/one&#34;</span>, s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;two=even&#34;</span><span style="color:#f92672">]</span>
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/uri.html">https://nim-lang.org/docs/uri.html</a></p>
 <h2 id="php">PHP</h2>
@@ -109,13 +109,13 @@ echo s1, s2, s3
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>;
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s1, <span style="color:#a6e22e">PHP_URL_HOST</span>);
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s, <span style="color:#a6e22e">PHP_URL_HOST</span>);
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s1, <span style="color:#a6e22e">PHP_URL_PATH</span>);
+</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s, <span style="color:#a6e22e">PHP_URL_PATH</span>);
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s1, <span style="color:#a6e22e">PHP_URL_QUERY</span>);
+</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s, <span style="color:#a6e22e">PHP_URL_QUERY</span>);
 <span style="color:#75715e"># print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;example.com&#39;</span>, $s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;/one&#39;</span>, $s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;two=even&#39;</span>);
 </code></pre></div>
@@ -123,16 +123,15 @@ $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https:
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>;
-$m1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s1);
+$m <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>(<span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>);
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> $m1[<span style="color:#e6db74">&#39;host&#39;</span>];
+</span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> $m[<span style="color:#e6db74">&#39;host&#39;</span>];
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> $m1[<span style="color:#e6db74">&#39;path&#39;</span>];
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> $m[<span style="color:#e6db74">&#39;path&#39;</span>];
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> $m1[<span style="color:#e6db74">&#39;query&#39;</span>];
+</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> $m[<span style="color:#e6db74">&#39;query&#39;</span>];
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;example.com&#39;</span>, $s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;/one&#39;</span>, $s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;two=even&#39;</span>);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;example.com&#39;</span>, $s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;/one&#39;</span>, $s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;two=even&#39;</span>);
 </code></pre></div></p>
 <p><a href="https://php.net/function.parse-url">https://php.net/function.parse-url</a></p>
 <h2 id="python">Python</h2>
@@ -140,9 +139,10 @@ $m1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> parse
+
 <span style="color:#75715e"># example 1</span>
-s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>
-o1 <span style="color:#f92672">=</span> parse<span style="color:#f92672">.</span>urlparse(s1)
+o <span style="color:#f92672">=</span> parse<span style="color:#f92672">.</span>urlparse(<span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>)
+
 <span style="color:#75715e"># example 2</span>
 o2 <span style="color:#f92672">=</span> parse<span style="color:#f92672">.</span>ParseResult(
    fragment <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>,
@@ -152,9 +152,10 @@ o2 <span style="color:#f92672">=</span> parse<span style="color:#f92672">.</span
    query <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;two=even&#39;</span>,
    scheme <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https&#39;</span>
 )
-s2 <span style="color:#f92672">=</span> o1<span style="color:#f92672">.</span>geturl()
+s <span style="color:#f92672">=</span> o2<span style="color:#f92672">.</span>geturl()
+
 <span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(o1, s2)
+<span style="color:#66d9ef">print</span>(o, s, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
 </code></pre></div>
 <ul>
 <li><a href="https://docs.python.org/library/urllib.parse.html#urllib.parse.urllib.parse.SplitResult.geturl">https://docs.python.org/library/urllib.parse.html#urllib.parse.urllib.parse.SplitResult.geturl</a></li>

@@ -1,7 +1,8 @@
 from urllib import parse
+
 # example 1
-s1 = 'https://example.com/one?two=even'
-o1 = parse.urlparse(s1)
+o = parse.urlparse('https://example.com/one?two=even')
+
 # example 2
 o2 = parse.ParseResult(
    fragment = '',
@@ -11,6 +12,7 @@ o2 = parse.ParseResult(
    query = 'two=even',
    scheme = 'https'
 )
-s2 = o1.geturl()
+s = o2.geturl()
+
 # print
-print(o1, s2)
+print(o, s, sep='\n')

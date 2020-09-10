@@ -1,11 +1,10 @@
 <?php
-$s1 = 'https://example.com/one?two=even';
-$m1 = parse_url($s1);
+$m = parse_url('https://example.com/one?two=even');
 # example 1
-$s2 = $m1['host'];
+$s = $m['host'];
 # example 2
-$s3 = $m1['path'];
+$s2 = $m['path'];
 # example 3
-$s4 = $m1['query'];
+$s3 = $m['query'];
 # print
-var_dump($s2 == 'example.com', $s3 == '/one', $s4 == 'two=even');
+var_dump($s == 'example.com', $s2 == '/one', $s3 == 'two=even');
