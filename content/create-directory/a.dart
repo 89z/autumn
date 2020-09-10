@@ -1,9 +1,10 @@
 import 'dart:io';
-main() {
+
+void main() {
    // example 1
-   var o1 = new Directory('Sunday');
-   o1.createSync();
+   var o = new Directory('May');
+   o.createSync();
    // example 2
-   var o2 = new Directory('Monday/Tuesday');
+   var o2 = new Directory('June/July');
    o2.createSync(recursive: true);
 }

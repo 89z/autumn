@@ -1,2 +1,2 @@
 import os
-os.makedirs('Sunday/Monday')
+os.makedirs('May/June')

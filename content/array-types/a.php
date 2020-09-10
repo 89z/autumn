@@ -1,7 +1,7 @@
 <?php
 # example 1
-$a = array('Sunday', 'Monday');
+$a = array('May', 'June');
 # example 2
-$a2 = ['Sunday', 'Monday'];
+$a2 = ['May', 'June'];
 # print
 var_dump($a, $a2);

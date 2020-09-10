@@ -1,2 +1,2 @@
 import os
-"Sunday/Monday".createDir
+"May/June".createDir

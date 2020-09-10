@@ -1,6 +1,7 @@
 package main
 import "os"
+
 func main() {
    s := os.Args[1]
-   println(s == "Sunday")
+   println(s == "May")
 }

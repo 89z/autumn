@@ -1,8 +1,10 @@
 #include <iostream>
+
 int main() {
    // example 1
-   std::cout << "Sunday" << std::endl;
+   std::cout << "May" << std::endl;
    /*
    example 2
    */
+   std::cout << "May" << std::endl;
 }

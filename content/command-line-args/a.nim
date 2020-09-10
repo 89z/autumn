@@ -1,4 +1,4 @@
 import os
 var a = commandLineParams()
 var s = a[0]
-echo s == "Sunday"
+echo s == "May"

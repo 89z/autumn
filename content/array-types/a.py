@@ -1,6 +1,6 @@
 # example 1
-a = ['Sunday', 'Monday']
+a = ['May', 'June']
 # example 2
-a2 = list('Sunday')
+a2 = list('May')
 # print
 print(a, a2)

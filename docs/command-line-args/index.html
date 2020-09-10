@@ -34,9 +34,10 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
+
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span><span style="color:#66d9ef">string</span><span style="color:#f92672">[]</span> a<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> a<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">];</span>
-   writeln<span style="color:#f92672">(</span>s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Sunday&#34;</span><span style="color:#f92672">);</span>
+   writeln<span style="color:#f92672">(</span>s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;May&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 <p><a href="https://dlang.org/spec/function.html#main">https://dlang.org/spec/function.html#main</a></p>
@@ -44,9 +45,9 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart">main(a) {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main(List<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span> a) {
    <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> a[<span style="color:#ae81ff">0</span>];
-   print(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Sunday&#39;</span>);
+   print(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;May&#39;</span>);
 }
 </code></pre></div>
 <p><a href="https://dart.dev/guides/language/language-tour#functions">https://dart.dev/guides/language/language-tour#functions</a></p>
@@ -56,9 +57,10 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os&#34;</span>
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Args</span>[<span style="color:#ae81ff">1</span>]
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>)
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;May&#34;</span>)
 }
 </code></pre></div>
 <p><a href="https://golang.org/pkg/os#pkg-variables">https://golang.org/pkg/os#pkg-variables</a></p>
@@ -69,7 +71,7 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> os
 <span style="color:#66d9ef">var</span> a <span style="color:#f92672">=</span> commandLineParams()
 <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> a<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span>
-echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>
+echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;May&#34;</span>
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/os.html#commandLineParams">https://nim-lang.org/docs/os.html#commandLineParams</a></p>
 <h2 id="php">PHP</h2>
@@ -82,7 +84,7 @@ echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Su
 <span style="color:#75715e"># example 2
 </span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> $argv[<span style="color:#ae81ff">1</span>];
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>, $s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Sunday&#39;</span>);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>, $s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;May&#39;</span>);
 </code></pre></div>
 <ul>
 <li><a href="https://php.net/reserved.variables.argc">https://php.net/reserved.variables.argc</a></li>
@@ -94,18 +96,19 @@ echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Su
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> sys
 s <span style="color:#f92672">=</span> sys<span style="color:#f92672">.</span>argv[<span style="color:#ae81ff">1</span>]
-<span style="color:#66d9ef">print</span>(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Sunday&#39;</span>)
+<span style="color:#66d9ef">print</span>(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;May&#39;</span>)
 </code></pre></div>
 <p><a href="https://docs.python.org/library/sys.html#sys.argv">https://docs.python.org/library/sys.html#sys.argv</a></p>
 <h2 id="rust">Rust</h2>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::env;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::env::args;
+
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> a: Vec<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> env::args().collect();
+   <span style="color:#66d9ef">let</span> a: Vec<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> args().collect();
    <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>a[<span style="color:#ae81ff">1</span>];
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;May&#34;</span>);
 }
 </code></pre></div>
 <p><a href="https://doc.rust-lang.org/std/env/struct.Args.html">https://doc.rust-lang.org/std/env/struct.Args.html</a></p>

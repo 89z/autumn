@@ -2,6 +2,6 @@ package main
 import "fmt"
 
 func main() {
-   a := []string{"Sunday", "Monday"}
+   a := []string{"May", "June"}
    fmt.Println(a)
 }

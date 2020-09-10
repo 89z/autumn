@@ -1,11 +1,13 @@
 package main
+
 import (
    "fmt"
    "strings"
 )
+
 func main() {
    o := strings.Builder{}
-   fmt.Fprint(&o, "Sunday")
+   fmt.Fprint(&o, "May")
    s := o.String()
-   println(s)
+   println(s == "May")
 }

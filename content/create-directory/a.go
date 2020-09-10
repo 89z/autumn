@@ -1,8 +1,9 @@
 package main
 import "os"
+
 func main() {
    // example 1
-   os.Mkdir("Sunday", os.ModeDir)
+   os.Mkdir("May", os.ModeDir)
    // exmaple 2
-   os.MkdirAll("Monday/Tuesday", os.ModeDir)
+   os.MkdirAll("June/July", os.ModeDir)
 }

@@ -1,11 +1,11 @@
 # example 1
 rustc a.rs
 # example 2
-cargo new sunday
+cargo new may
 # example 3
 '
 [package]
-name = "sunday"
+name = "may"
 version = "1.0.0"
 edition = "2018"
 [dependencies]

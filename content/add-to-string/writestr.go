@@ -1,8 +1,9 @@
 package main
 import "strings"
+
 func main() {
    o := strings.Builder{}
-   o.WriteString("Sunday")
+   o.WriteString("May")
    s := o.String()
-   println(s)
+   println(s == "May")
 }

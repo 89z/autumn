@@ -1,11 +1,12 @@
 package main
 import "fmt"
+
 func main() {
-   s1 := "Sunday"
+   s := "May"
    // example 1
-   s2 := fmt.Sprint(s1, "Monday")
+   s = fmt.Sprint(s, ",June")
    // example 2
-   s3 := fmt.Sprintf("%sMonday", s1)
+   s = fmt.Sprintf("%s,July", s)
    // print
-   println(s2, s3)
+   println(s == "May,June,July")
 }
