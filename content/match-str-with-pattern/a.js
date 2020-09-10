@@ -1,9 +1,9 @@
-let s = 'Wednesday';
+let s= 'January';
 // example 1
-let b1 = /^W/.test(s);
+let b = /^J/.test(s);
 // example 2
-let b2 = /we/i.test(s);
+let b2 = /ja/i.test(s);
 // example 3
-let b3 = RegExp(/we/, 'i').test(s);
+let b3 = RegExp(/ja/, 'i').test(s);
 // print
-console.log(b1, b2, b3);
+console.log(b, b2, b3);
