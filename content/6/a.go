@@ -1,12 +1,14 @@
 package main
+
 import (
    "fmt"
    "log"
    "time"
 )
+
 func main() {
    s := time.RFC3339[:19]
-   o1, e := time.Parse(s, "2019-12-31T00:00:00")
+   o, e := time.Parse(s, "2019-12-31T00:00:00")
    if e != nil {
       log.Fatal(e)
    }
@@ -14,6 +16,6 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   o3 := o2.Sub(o1)
+   o3 := o2.Sub(o)
    fmt.Println(o3)
 }

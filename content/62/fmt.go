@@ -1,15 +1,15 @@
 package main
 import "fmt"
+
 func main() {
-   n1 := 0
-   n2 := 0
+   n, n2 := 0, 0
    // example 1
-   fmt.Sscanln("10 11", &n1, &n2)
-   println(n1, n2)
+   fmt.Sscanln("8 9", &n, &n2)
+   println(n == 8, n2 == 9)
    // example 2
-   fmt.Sscan("10\n11", &n1, &n2)
-   println(n1, n2)
+   fmt.Sscan("8\n9", &n, &n2)
+   println(n == 8, n2 == 9)
    // example 3
-   fmt.Sscanf("10 11", "%v %v", &n1, &n2)
-   println(n1, n2)
+   fmt.Sscanf("8 9", "%v %v", &n, &n2)
+   println(n == 8, n2 == 9)
 }

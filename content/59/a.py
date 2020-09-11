@@ -1,8 +1,8 @@
 import json
-m = {'📗/📕': 10}
+m = {'📗/📕': 9}
 # example 1
-s1 = json.dumps(m)
+s = json.dumps(m)
 # example 2
 s2 = json.dumps(m, ensure_ascii=False)
 # print
-print(s1, s2)
+print(s, s2)

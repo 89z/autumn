@@ -2,7 +2,7 @@
 title: Current date number
 categories: [date]
 tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
-date: 2020-08-17
+date: 2020-09-11
 ---
 
 ## D

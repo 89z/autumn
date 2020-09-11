@@ -1,9 +1,9 @@
-main() {
-   var s = "10";
+void main() {
+   var s = "9";
    // example 1
-   var n1 = int.parse(s);
+   var n = int.parse(s);
    // example 2
    var n2 = num.parse(s);
    // print
-   print([n1, n2]);
+   print([n == 9, n2 == 9]);
 }

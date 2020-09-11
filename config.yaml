@@ -2,7 +2,6 @@ baseURL: https://nu8.github.io/autumn
 disableKinds:
 - RSS
 - sitemap
-# enableGitInfo: true
 ignoreFiles:
 - /content/.*\.[^m]
 - /content/.*\.m[^d]
