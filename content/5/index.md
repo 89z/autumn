@@ -2,7 +2,7 @@
 title: Date difference number
 categories: [date]
 tags: [go, javascript, php, python]
-date: 2020-06-26
+date: 2020-09-11
 ---
 
 ## Go

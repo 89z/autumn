@@ -1,9 +1,9 @@
 fn main() {
-   let s1 = "📗";
+   let s = "📗";
    // example 1
-   let n1 = s1.len();
+   let n = s.len();
    // example 2
-   let n2 = s1.chars().count();
+   let n2 = s.chars().count();
    // print
-   println!("{} {}", n1 == 4, n2 == 1);
+   println!("{} {}", n == 4, n2 == 1);
 }

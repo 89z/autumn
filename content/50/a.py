@@ -1,14 +1,12 @@
+a = [10, 11]
 # example 1
-a1 = [10, 11]
-a1.append(12)
+a.append(13)
 # example 2
-a2 = [10, 11]
-a2.extend([12, 13])
+a2 = [14, 15]
+a.extend(a2)
 # example 3
-a3 = [10, 11]
-a3 = [*a3, 12]
+a = [*a, 16]
 # example 4
-a4 = [10, 11]
-a4 += [12, 13]
+a += [17, 18]
 # print
-print(a1, a2, a3, a4)
+print(a)

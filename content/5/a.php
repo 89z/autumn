@@ -1,5 +1,5 @@
 <?php
-$n1 = strtotime('2020-06-10');
+$n = strtotime('2019-12-31');
 $n2 = time();
-$n3 = $n2 - $n1;
+$n3 = $n2 - $n;
 var_dump($n3);

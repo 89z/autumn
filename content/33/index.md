@@ -2,7 +2,7 @@
 title: Get string middle
 categories: [string]
 tags: [d, dart, go, javascript, nim, php, python, rust]
-date: 2020-07-24
+date: 2020-09-11
 ---
 
 ## D
@@ -42,7 +42,6 @@ date: 2020-07-24
 ## PHP
 
 {{< r "a.php" >}}
-{{< r "b.php" >}}
 
 - <https://php.net/function.mb-substr>
 - <https://php.net/function.substr>

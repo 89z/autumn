@@ -1,11 +1,11 @@
 <?php
-$s1 = '📗';
+$s = '📗';
 # example 1
-$n1 = strlen($s1);
+$n = strlen($s);
 # example 2
-$n2 = iconv_strlen($s1);
+$n2 = iconv_strlen($s);
 # example 3
-$s2 = utf8_decode($s1);
+$s2 = utf8_decode($s);
 $n3 = strlen($s2);
 # print
-var_dump($n1 == 4, $n2 == 1, $n3 == 1);
+var_dump($n == 4, $n2 == 1, $n3 == 1);

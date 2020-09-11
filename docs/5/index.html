@@ -24,7 +24,7 @@
 
 <main>
    <h1>Date difference number</h1>
-   <time>Fri Jun 26 2020</time>
+   <time>Fri Sep 11 2020</time>
    
    <a href="/autumn/categories/date/">date</a>
    
@@ -34,17 +34,20 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;os&#34;</span>
    <span style="color:#e6db74">&#34;time&#34;</span>
 )
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">RFC3339</span>[:<span style="color:#ae81ff">10</span>], <span style="color:#e6db74">&#34;2019-12-31&#34;</span>)
+   <span style="color:#a6e22e">s_layout</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">RFC3339</span>[:<span style="color:#ae81ff">10</span>]
+   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">s_layout</span>, <span style="color:#e6db74">&#34;2019-12-31&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
    }
    <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Now</span>()
-   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Sub</span>(<span style="color:#a6e22e">o1</span>).<span style="color:#a6e22e">Seconds</span>()
+   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Sub</span>(<span style="color:#a6e22e">o</span>).<span style="color:#a6e22e">Seconds</span>()
    println(<span style="color:#a6e22e">n</span>)
 }
 </code></pre></div>
@@ -53,9 +56,9 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">o1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#e6db74">&#39;2019-12-31&#39;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">o</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#e6db74">&#39;2019-12-31&#39;</span>);
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">o2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">o2</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">o1</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">1000</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">o2</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">o</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">1000</span>;
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n</span>);
 </code></pre></div>
 <p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date</a></p>
@@ -64,9 +67,9 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtotime</span>(<span style="color:#e6db74">&#39;2020-06-10&#39;</span>);
+$n <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtotime</span>(<span style="color:#e6db74">&#39;2019-12-31&#39;</span>);
 $n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">time</span>();
-$n3 <span style="color:#f92672">=</span> $n2 <span style="color:#f92672">-</span> $n1;
+$n3 <span style="color:#f92672">=</span> $n2 <span style="color:#f92672">-</span> $n;
 <span style="color:#a6e22e">var_dump</span>($n3);
 </code></pre></div>
 <p><a href="https://php.net/function.strtotime">https://php.net/function.strtotime</a></p>
@@ -75,9 +78,9 @@ $n3 <span style="color:#f92672">=</span> $n2 <span style="color:#f92672">-</span
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
-o1 <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>strptime(<span style="color:#e6db74">&#39;2019-12-31&#39;</span>, <span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>)
+o <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>strptime(<span style="color:#e6db74">&#39;2019-12-31&#39;</span>, <span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>)
 o2 <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now()
-n <span style="color:#f92672">=</span> (o2 <span style="color:#f92672">-</span> o1)<span style="color:#f92672">.</span>total_seconds()
+n <span style="color:#f92672">=</span> (o2 <span style="color:#f92672">-</span> o)<span style="color:#f92672">.</span>total_seconds()
 <span style="color:#66d9ef">print</span>(n)
 </code></pre></div>
 <p><a href="https://docs.python.org/library/datetime.html#datetime.timedelta.total_seconds">https://docs.python.org/library/datetime.html#datetime.timedelta.total_seconds</a></p>
