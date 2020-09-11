@@ -1,12 +1,12 @@
 <?php
-$s1 = '10';
+$s = '9';
 # example 1
-$n1 = +($s1);
+$n = +($s);
 # example 2
-$n2 = (int)($s1);
+$n2 = (int)($s);
 # example 3
-$n3 = intval($s1);
+$n3 = intval($s);
 # example 4
-$n4 = intval($s1, 10);
+$n4 = intval($s, 10);
 # print
-var_dump($n1, $n2, $n3, $n4);
+var_dump($n === 9, $n2 === 9, $n3 === 9, $n4 === 9);

@@ -1,3 +1,3 @@
-n1 = 1.9
-n2 = int(n1)
-print(n2)
+n = 1.9
+n2 = int(n)
+print(n2 == 1)

@@ -24,7 +24,7 @@
 
 <main>
    <h1>Filepath to basename</h1>
-   <time>Mon Aug 24 2020</time>
+   <time>Thu Sep 10 2020</time>
    
    <a href="/autumn/categories/string/">string</a>
    
@@ -35,10 +35,11 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;filesystem&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Windows</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">write.exe&#34;</span>;
-   <span style="color:#66d9ef">auto</span> o1 <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>filesystem<span style="color:#f92672">::</span>path(s1);
-   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> o1.filename();
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std<span style="color:#f92672">::</span>filesystem;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Windows</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">write.exe&#34;</span>;
+   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> path(s).filename();
    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> s2 <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
 }
 </code></pre></div>
@@ -48,9 +49,10 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.path<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:\\Windows\\write.exe&#34;</span><span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> s1<span style="color:#f92672">.</span><span style="color:#a6e22e">baseName</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:\\Windows\\write.exe&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">baseName</span><span style="color:#f92672">;</span>
    writeln<span style="color:#f92672">(</span>s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;write.exe&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
@@ -63,9 +65,10 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path&#34;</span>
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;C:/go/bin/go.exe&#34;</span>
-   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Base</span>(<span style="color:#a6e22e">s1</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;C:/go/bin/go.exe&#34;</span>
+   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Base</span>(<span style="color:#a6e22e">s</span>)
    println(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;go.exe&#34;</span>)
 }
 </code></pre></div>
@@ -74,9 +77,10 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path/filepath&#34;</span>
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`C:\go\bin\go.exe`</span>
-   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Base</span>(<span style="color:#a6e22e">s1</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`C:\go\bin\go.exe`</span>
+   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Base</span>(<span style="color:#a6e22e">s</span>)
    println(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;go.exe&#34;</span>)
 }
 </code></pre></div></p>
@@ -89,8 +93,8 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> os
-<span style="color:#66d9ef">var</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Windows</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">write.exe&#34;</span>
-<span style="color:#66d9ef">let</span> (s2, s3, s4) <span style="color:#f92672">=</span> splitFile(s1)
+<span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Windows</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">write.exe&#34;</span>
+<span style="color:#66d9ef">let</span> (s2, s3, s4) <span style="color:#f92672">=</span> splitFile(s)
 echo <span style="color:#f92672">[</span>s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Windows&#34;</span>, s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;write&#34;</span>, s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;.exe&#34;</span><span style="color:#f92672">]</span>
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/os.html#splitFile,string">https://nim-lang.org/docs/os.html#splitFile,string</a></p>
@@ -101,13 +105,13 @@ echo <span style="color:#f92672">[</span>s2 <span style="color:#f92672">==</span
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SplFileInfo</span>(<span style="color:#e6db74">&#39;C:\\php\\license.txt&#39;</span>);
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getBasename</span>();
+</span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getBasename</span>();
 <span style="color:#75715e"># example 2
 </span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getFilename</span>();
 <span style="color:#75715e"># example 3
 </span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getBasename</span>(<span style="color:#e6db74">&#39;.txt&#39;</span>);
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license.txt&#39;</span>, $s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license.txt&#39;</span>, $s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license&#39;</span>);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license.txt&#39;</span>, $s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license.txt&#39;</span>, $s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license&#39;</span>);
 </code></pre></div>
 
 
@@ -115,19 +119,19 @@ $o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:\\php\\license.txt&#39;</span>;
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">basename</span>($s);
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">basename</span>($s);
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s, <span style="color:#a6e22e">PATHINFO_BASENAME</span>);
+</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s, <span style="color:#a6e22e">PATHINFO_BASENAME</span>);
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">basename</span>($s, <span style="color:#e6db74">&#39;.txt&#39;</span>);
+</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">basename</span>($s, <span style="color:#e6db74">&#39;.txt&#39;</span>);
 <span style="color:#75715e"># example 4
-</span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s, <span style="color:#a6e22e">PATHINFO_FILENAME</span>);
+</span><span style="color:#75715e"></span>$s5 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($s, <span style="color:#a6e22e">PATHINFO_FILENAME</span>);
 <span style="color:#75715e"># print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>(
-   $s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license.txt&#39;</span>,
    $s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license.txt&#39;</span>,
-   $s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license&#39;</span>,
-   $s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license&#39;</span>
+   $s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license.txt&#39;</span>,
+   $s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license&#39;</span>,
+   $s5 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;license&#39;</span>
 );
 </code></pre></div></p>
 <ul>
@@ -139,8 +143,8 @@ $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:\\php
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> os <span style="color:#f92672">import</span> path
-s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">python</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">python.exe&#39;</span>
-s2 <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>basename(s1)
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">python</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">python.exe&#39;</span>
+s2 <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>basename(s)
 <span style="color:#66d9ef">print</span>(s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;python.exe&#39;</span>)
 </code></pre></div>
 <ul>
@@ -151,8 +155,8 @@ s2 <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:\\Windows\\write.exe&#39;</span>
-s2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>basename(s1)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:\\Windows\\write.exe&#39;</span>
+s2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>basename(s)
 puts s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;write.exe&#39;</span>
 </code></pre></div>
 <p><a href="https://ruby-doc.org/core/File.html#method-c-basename">https://ruby-doc.org/core/File.html#method-c-basename</a></p>
@@ -161,14 +165,15 @@ puts s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;w
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::path::Path;
+
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> Path::new(<span style="color:#e6db74">&#34;C:\\Windows\\write.exe&#34;</span>);
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> o.file_name();
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> o2 <span style="color:#f92672">=</span> o.file_name();
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> o2 <span style="color:#f92672">=</span> o.file_stem();
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> o3 <span style="color:#f92672">=</span> o.file_stem();
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?} {:?}&#34;</span>, o1, o2);
+</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?} {:?}&#34;</span>, o2, o3);
 }
 </code></pre></div>
 <ul>

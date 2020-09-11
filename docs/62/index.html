@@ -24,7 +24,7 @@
 
 <main>
    <h1>Convert to integer</h1>
-   <time>Sat Aug 22 2020</time>
+   <time>Thu Sep 10 2020</time>
    
    <a href="/autumn/categories/number/">number</a>
    
@@ -114,10 +114,11 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1.9</span>
-   <span style="color:#a6e22e">n2</span> <span style="color:#f92672">:=</span> int(<span style="color:#a6e22e">n1</span>)
-   println(<span style="color:#a6e22e">n2</span>)
+   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1.9</span>
+   <span style="color:#a6e22e">n2</span> <span style="color:#f92672">:=</span> int(<span style="color:#a6e22e">n</span>)
+   println(<span style="color:#a6e22e">n2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>)
 }
 </code></pre></div></p>
 <ul>
@@ -138,17 +139,17 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;10&#39;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;9&#39;</span>;
 <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> Number(<span style="color:#a6e22e">s1</span>);
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> Number(<span style="color:#a6e22e">s</span>);
 <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n2</span> <span style="color:#f92672">=</span> Number.parseInt(<span style="color:#a6e22e">s1</span>);
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n2</span> <span style="color:#f92672">=</span> Number.parseInt(<span style="color:#a6e22e">s</span>);
 <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n3</span> <span style="color:#f92672">=</span> parseInt(<span style="color:#a6e22e">s1</span>);
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n3</span> <span style="color:#f92672">=</span> parseInt(<span style="color:#a6e22e">s</span>);
 <span style="color:#75715e">// example 4
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n4</span> <span style="color:#f92672">=</span> <span style="color:#f92672">+</span>(<span style="color:#a6e22e">s1</span>);
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n4</span> <span style="color:#f92672">=</span> <span style="color:#f92672">+</span>(<span style="color:#a6e22e">s</span>);
 <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>, <span style="color:#a6e22e">n3</span>, <span style="color:#a6e22e">n4</span>);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">9</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">9</span>, <span style="color:#a6e22e">n3</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">9</span>, <span style="color:#a6e22e">n4</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">9</span>);
 </code></pre></div></p>
 <ul>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Math/trunc">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Math/trunc</a></li>
@@ -184,17 +185,17 @@ $n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.9</span>;
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;10&#39;</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;9&#39;</span>;
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#f92672">+</span>($s1);
+</span><span style="color:#75715e"></span>$n <span style="color:#f92672">=</span> <span style="color:#f92672">+</span>($s);
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> (<span style="color:#a6e22e">int</span>)($s1);
+</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> (<span style="color:#a6e22e">int</span>)($s);
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$n3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">intval</span>($s1);
+</span><span style="color:#75715e"></span>$n3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">intval</span>($s);
 <span style="color:#75715e"># example 4
-</span><span style="color:#75715e"></span>$n4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">intval</span>($s1, <span style="color:#ae81ff">10</span>);
+</span><span style="color:#75715e"></span>$n4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">intval</span>($s, <span style="color:#ae81ff">10</span>);
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1, $n2, $n3, $n4);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">===</span> <span style="color:#ae81ff">9</span>, $n2 <span style="color:#f92672">===</span> <span style="color:#ae81ff">9</span>, $n3 <span style="color:#f92672">===</span> <span style="color:#ae81ff">9</span>, $n4 <span style="color:#f92672">===</span> <span style="color:#ae81ff">9</span>);
 </code></pre></div></p>
 <ul>
 <li><a href="https://php.net/function.intval">https://php.net/function.intval</a></li>
@@ -205,21 +206,20 @@ $s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;10&#39
 <p>
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;10&#39;</span>
-<span style="color:#75715e"># example 1</span>
-n1 <span style="color:#f92672">=</span> int(s1)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># example 1</span>
+n <span style="color:#f92672">=</span> int(<span style="color:#e6db74">&#39;9&#39;</span>)
 <span style="color:#75715e"># example 2</span>
 <span style="color:#f92672">import</span> locale
-n2 <span style="color:#f92672">=</span> locale<span style="color:#f92672">.</span>atoi(s1)
+n2 <span style="color:#f92672">=</span> locale<span style="color:#f92672">.</span>atoi(<span style="color:#e6db74">&#39;9&#39;</span>)
 <span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(n1, n2)
+<span style="color:#66d9ef">print</span>(n <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>, n2 <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>)
 </code></pre></div>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.9</span>
-n2 <span style="color:#f92672">=</span> int(n1)
-<span style="color:#66d9ef">print</span>(n2)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.9</span>
+n2 <span style="color:#f92672">=</span> int(n)
+<span style="color:#66d9ef">print</span>(n2 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>)
 </code></pre></div></p>
 <ul>
 <li><a href="https://docs.python.org/library/functions.html#int">https://docs.python.org/library/functions.html#int</a></li>

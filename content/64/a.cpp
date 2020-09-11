@@ -1,8 +1,9 @@
 #include <filesystem>
 #include <iostream>
+using namespace std::filesystem;
+
 int main() {
-   auto s1 = "C:\\Windows\\write.exe";
-   auto o1 = std::filesystem::path(s1);
-   auto s2 = o1.filename();
+   auto s = "C:\\Windows\\write.exe";
+   auto s2 = path(s).filename();
    std::cout << s2 << std::endl;
 }
