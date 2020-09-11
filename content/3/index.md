@@ -2,6 +2,7 @@
 title: HTTP authorization
 categories: [network]
 tags: [go, php]
+date: 2020-06-24
 ---
 
 ## Go

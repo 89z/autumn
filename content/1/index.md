@@ -2,6 +2,7 @@
 title: Decode CSV
 categories: [file-format]
 tags: [go, javascript, php, python]
+date: 2020-06-22
 ---
 
 {{< r "a.csv" >}}

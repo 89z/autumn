@@ -24,7 +24,7 @@
 
 <main>
    <h1>Divide a number</h1>
-   <time>Thu Sep 3 2020</time>
+   <time>Thu Sep 10 2020</time>
    
    <a href="/autumn/categories/number/">number</a>
    
@@ -66,15 +66,15 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">29</span>
-   <span style="color:#a6e22e">n2</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">10</span>
+   <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">10</span>
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">n3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">n2</span>
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">n3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">n2</span>
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">n4</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">%</span> <span style="color:#a6e22e">n2</span>
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">n4</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">%</span> <span style="color:#a6e22e">n2</span>
    <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">n5</span> <span style="color:#f92672">:=</span> float64(<span style="color:#a6e22e">n1</span>) <span style="color:#f92672">/</span> float64(<span style="color:#a6e22e">n2</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">n5</span> <span style="color:#f92672">:=</span> float64(<span style="color:#a6e22e">n</span>) <span style="color:#f92672">/</span> float64(<span style="color:#a6e22e">n2</span>)
    <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">n3</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">n4</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>, <span style="color:#a6e22e">n5</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.9</span>)
 }
@@ -84,13 +84,14 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;math&#34;</span>
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">math</span>.<span style="color:#a6e22e">Mod</span>(<span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">10</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">math</span>.<span style="color:#a6e22e">Mod</span>(<span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">10</span>)
    <span style="color:#75715e">// example 2
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">n2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">math</span>.<span style="color:#a6e22e">Remainder</span>(<span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">10</span>)
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">n1</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
 }
 </code></pre></div></p>
 <ul>
@@ -102,11 +103,11 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">19</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">19</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>;
 <span style="color:#75715e">// example 2
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n2</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">19</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>;
 <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1.9</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1.9</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>);
 </code></pre></div>
 <ul>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division">https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division</a></li>
@@ -126,13 +127,13 @@ echo n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.9</sp
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">29</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>;
+</span><span style="color:#75715e"></span>$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">29</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>;
 <span style="color:#75715e"># example 2
 </span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">29</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>;
 <span style="color:#75715e"># example 3
 </span><span style="color:#75715e"></span>$n3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">intdiv</span>(<span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">10</span>);
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.9</span>, $n2 <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>, $n3 <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.9</span>, $n2 <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>, $n3 <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>);
 </code></pre></div>
 
 
@@ -152,13 +153,13 @@ $a <span style="color:#f92672">=</span> <span style="color:#a6e22e">gmp_div_qr</
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># example 1</span>
-n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">29</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>
+n <span style="color:#f92672">=</span> <span style="color:#ae81ff">29</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>
 <span style="color:#75715e"># example 2</span>
 n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">29</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>
 <span style="color:#75715e"># exmaple 3</span>
 n3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">29</span> <span style="color:#f92672">//</span> <span style="color:#ae81ff">10</span>
 <span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.9</span>, n2 <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>, n3 <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>)
+<span style="color:#66d9ef">print</span>(n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.9</span>, n2 <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>, n3 <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>)
 </code></pre></div>
 <ul>
 <li><a href="https://docs.python.org/library/functions.html#divmod">https://docs.python.org/library/functions.html#divmod</a></li>

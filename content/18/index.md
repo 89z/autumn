@@ -2,6 +2,7 @@
 title: Split a string
 categories: [array, string]
 tags: [d, dart, go, javascript, nim, php, python, rust]
+date: 2020-07-09
 ---
 
 ## D

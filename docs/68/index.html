@@ -24,7 +24,7 @@
 
 <main>
    <h1>Filepath to dirname</h1>
-   <time>Fri Aug 28 2020</time>
+   <time>Thu Sep 10 2020</time>
    
    <a href="/autumn/categories/string/">string</a>
    
@@ -74,9 +74,10 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path/filepath&#34;</span>
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`C:\go\bin\go.exe`</span>
-   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#a6e22e">s1</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`C:\go\bin\go.exe`</span>
+   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#a6e22e">s</span>)
    println(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">`C:\go\bin`</span>)
 }
 </code></pre></div></p>
@@ -124,8 +125,8 @@ s2 <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:\\Windows\\write.exe&#39;</span>
-s2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>dirname(s1)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:\\Windows\\write.exe&#39;</span>
+s2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>dirname(s)
 puts s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;C:\\Windows&#39;</span>
 </code></pre></div>
 <p><a href="https://ruby-doc.org/core/File.html#method-c-dirname">https://ruby-doc.org/core/File.html#method-c-dirname</a></p>

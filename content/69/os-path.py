@@ -1,10 +1,10 @@
 from os import path
-s1 = 'a.txt'
+s = 'index.md'
 # example 1
-b1 = path.isdir(s1)
+b = path.isfile(s)
 # example 2
-b2 = path.exists(s1)
+b2 = path.exists(s)
 # example 3
-b3 = path.isfile(s1)
+b3 = not path.isdir(s)
 # print
-print(b1, b2, b3)
+print(b, b2, b3)

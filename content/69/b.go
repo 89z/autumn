@@ -1,5 +1,6 @@
 package main
 import "os"
+
 func main() {
    o, e := os.Stat("index.md")
    // example 1
@@ -7,9 +8,9 @@ func main() {
       os.Exit(1)
    }
    // example 2
-   b1 := o.Mode().IsDir()
+   b := o.Mode().IsRegular()
    // example 3
-   b2 := o.Mode().IsRegular()
+   b2 := ! o.Mode().IsDir()
    // print
-   println(b1, b2)
+   println(b, b2)
 }

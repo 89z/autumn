@@ -2,6 +2,7 @@
 title: String types
 categories: [string]
 tags: [c++, d, dart, go, javascript, nim, php, python, rust]
+date: 2020-07-10
 ---
 
 ## C++

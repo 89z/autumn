@@ -1,7 +1,8 @@
 import os
+let s = "index.md"
 # example 1
-let b1 = "index.md".existsFile
+let b = s.existsFile
 # example 2
-let b2 = "C:/Users".existsDir
+let b2 = not s.existsDir
 # print
-echo [b1, b2]
+echo [b, b2]
