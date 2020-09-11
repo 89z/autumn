@@ -1,8 +1,8 @@
 from datetime import date
 o = date.today()
 # example 1
-s1 = o.isoformat()
+s = o.isoformat()
 # example 2
 s2 = o.strftime('%Y-%m-%d')
 # print
-print(s1, s2)
+print(s, s2)

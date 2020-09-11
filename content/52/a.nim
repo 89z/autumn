@@ -1,7 +1,7 @@
+var s = "a.txt"
 # example 1
-var s1 = "a.txt".readFile
+var s2 = s.readFile
 # example 2
-var o1 = "a.txt".open
-var s2 = o1.readAll
+var s3 = s.open.readAll
 # print
-echo [s1, s2]
+echo [s2, s3]

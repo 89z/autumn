@@ -24,7 +24,7 @@
 
 <main>
    <h1>Current date number</h1>
-   <time>Mon Aug 17 2020</time>
+   <time>Fri Sep 11 2020</time>
    
    <a href="/autumn/categories/date/">date</a>
    
@@ -107,7 +107,7 @@ echo n
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">time</span>();
+</span><span style="color:#75715e"></span>$n <span style="color:#f92672">=</span> <span style="color:#a6e22e">time</span>();
 <span style="color:#75715e"># example 2
 </span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtotime</span>(<span style="color:#e6db74">&#39;now&#39;</span>);
 <span style="color:#75715e"># example 3
@@ -115,7 +115,9 @@ echo n
 $n3 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getTimestamp</span>();
 <span style="color:#75715e"># example 4
 </span><span style="color:#75715e"></span>$o <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_create</span>(<span style="color:#e6db74">&#39;now&#39;</span>);
-$n3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_timestamp_get</span>($o);
+$n4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_timestamp_get</span>($o);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n, $n2, $n3, $n4);
 </code></pre></div>
 <ul>
 <li><a href="https://php.net/function.date-timestamp-get">https://php.net/function.date-timestamp-get</a></li>
@@ -128,12 +130,12 @@ $n3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_timest
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># example 1</span>
 <span style="color:#f92672">import</span> time
-n1 <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+n <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
 <span style="color:#75715e"># example 2</span>
 <span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
 n2 <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>timestamp()
 <span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(n1, n2)
+<span style="color:#66d9ef">print</span>(n, n2, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
 </code></pre></div>
 <ul>
 <li><a href="https://docs.python.org/library/datetime.html#datetime.datetime.timestamp">https://docs.python.org/library/datetime.html#datetime.datetime.timestamp</a></li>

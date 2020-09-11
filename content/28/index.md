@@ -40,7 +40,8 @@ date: 2020-07-19
 
 ## PHP
 
-{{< r "a.php" >}}
+{{< r "iso.php" >}}
+{{< r "short.php" >}}
 
 - <https://php.net/function.date>
 - <https://php.net/function.strftime>
@@ -53,6 +54,8 @@ date: 2020-07-19
 - <https://docs.python.org/library/datetime.html#datetime.date.strftime>
 
 ## Rust
+
+{{< r "main.rs" >}}
 
 <https://docs.rs/date_time>
 

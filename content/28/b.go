@@ -1,9 +1,11 @@
 package main
+
 import (
    "fmt"
    "os"
    "time"
 )
+
 func main() {
    y, e := time.Now().MarshalText()
    if e != nil {

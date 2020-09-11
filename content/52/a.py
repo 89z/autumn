@@ -1,8 +1,8 @@
 # example 1
-o1 = open('a.txt')
-s1 = o1.read()
+o = open('a.txt')
+s = o.read()
 # example 2
-o2 = open('a.txt')
-s2 = o2.readlines()
+o = open('a.txt')
+s2 = o.readlines()
 # print
-print(s1, s2, sep='')
+print(s, s2, sep='')
