@@ -1,6 +1,10 @@
 package main
+
 func main() {
-   b1 := true
+   // example 1
+   b := true
+   // example 2
    b2 := false
-   println(b1, b2)
+   // print
+   println(b, b2)
 }

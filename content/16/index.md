@@ -2,7 +2,7 @@
 title: Declare value
 categories: [reference]
 tags: [c++, d, dart, go, javascript, nim, php, ruby, rust]
-date: 2020-07-07
+date: 2020-09-11
 ---
 
 ## C++

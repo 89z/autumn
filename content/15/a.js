@@ -1,3 +1,6 @@
-let b1 = true;
+// example 1
+let b = true;
+// example 2
 let b2 = false;
-console.log(b1, b2);
+// print
+console.log(b, b2);

@@ -1,15 +1,16 @@
 package main
+
 func main() {
-   // example 1
-   n1 := 10
+   println("example 1")
+   n := 10
    for true {
-      println(n1)
-      if n1 == 19 {
+      println(n)
+      if n == 19 {
          break
       }
-      n1++
+      n++
    }
-   // example 2
+   println("example 2")
    n2 := 10
    for {
       println(n2)

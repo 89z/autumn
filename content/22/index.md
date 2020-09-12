@@ -2,7 +2,7 @@
 title: Block-first loops
 categories: [reference]
 tags: [d, dart, go, javascript, nim, php, python, rust]
-date: 2020-07-13
+date: 2020-09-11
 ---
 
 ## D

@@ -1,4 +1,4 @@
 fn main() {
-   let n1 = 10;
-   println!("{}", n1);
+   let n = 10;
+   println!("{}", n);
 }

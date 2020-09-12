@@ -1,10 +1,11 @@
-// example 1
-for (let n1 = 10; n1 < 20; n1++) {
-   console.log(n1);
+console.log('example 1');
+for (let n = 10; n < 20; n++) {
+   console.log(n);
 }
-// example 2
-let n2 = 10;
-while (n2 < 20) {
-   console.log(n2);
-   n2++;
+
+console.log('example 2');
+let n = 10;
+while (n < 20) {
+   console.log(n);
+   n++;
 }

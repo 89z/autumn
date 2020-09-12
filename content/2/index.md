@@ -2,7 +2,7 @@
 title: Iterate a process
 categories: [iterate, input-output]
 tags: [go, php, python]
-date: 2020-06-23
+date: 2020-09-11
 ---
 
 ## Go
