@@ -1,5 +1,5 @@
-import std.file: getTimes, setTimes, SysTime;
-import std.stdio;
+import std.file, std.stdio;
+
 void main() {
    auto fname = "unixdict.txt";
    SysTime fileAccessTime, fileModificationTime;

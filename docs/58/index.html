@@ -40,6 +40,7 @@
 </span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">namespace</span> fs <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>filesystem;
 <span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std<span style="color:#f92672">::</span>chrono_literals;
+
 <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
    fs<span style="color:#f92672">::</span>path p <span style="color:#f92672">=</span> fs<span style="color:#f92672">::</span>current_path() <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;example.bin&#34;</span>;
    std<span style="color:#f92672">::</span>ofstream(p.c_str()).put(<span style="color:#e6db74">&#39;a&#39;</span>); <span style="color:#75715e">// create file
@@ -53,8 +54,8 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.file<span style="color:#f92672">:</span> getTimes<span style="color:#f92672">,</span> setTimes<span style="color:#f92672">,</span> SysTime<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.file<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> fname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;unixdict.txt&#34;</span><span style="color:#f92672">;</span>
    SysTime fileAccessTime<span style="color:#f92672">,</span> fileModificationTime<span style="color:#f92672">;</span>
@@ -153,6 +154,7 @@ puts o, o2 <span style="color:#f92672">==</span> o
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{fs, io};
+
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
    <span style="color:#66d9ef">let</span> o_meta <span style="color:#f92672">=</span> fs::metadata(<span style="color:#e6db74">&#34;index.md&#34;</span>)<span style="color:#f92672">?</span>;
    <span style="color:#66d9ef">let</span> o_mod <span style="color:#f92672">=</span> o_meta.modified()<span style="color:#f92672">?</span>;

@@ -73,11 +73,13 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
    <span style="color:#e6db74">&#34;fmt&#34;</span>
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{<span style="color:#e6db74">&#34;📗/📕&#34;</span>: <span style="color:#ae81ff">10</span>}
    <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">m</span>)

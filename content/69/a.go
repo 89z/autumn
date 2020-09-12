@@ -1,5 +1,6 @@
 package main
 import "os"
+
 func main() {
    o, e := os.Stat("index.md")
    // example 1

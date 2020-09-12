@@ -1,9 +1,11 @@
 package main
+
 import (
    "io"
    "log"
    "os"
 )
+
 func main() {
    o_in, e := os.Open("a.txt")
    if e != nil {

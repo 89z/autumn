@@ -1,8 +1,10 @@
 package main
+
 import (
    "io/ioutil"
    "os"
 )
+
 func main() {
    a, e := ioutil.ReadDir(".")
    if e != nil {

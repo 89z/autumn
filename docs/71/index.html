@@ -35,6 +35,7 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;filesystem&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">namespace</span> fs <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>filesystem;
+
 <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
    fs<span style="color:#f92672">::</span>copy(<span style="color:#e6db74">&#34;a.txt&#34;</span>, <span style="color:#e6db74">&#34;b.txt&#34;</span>);
 }
@@ -48,6 +49,7 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.file<span style="color:#f92672">;</span>
+
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    copy<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a.txt&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b.txt&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
@@ -70,11 +72,13 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;io&#34;</span>
    <span style="color:#e6db74">&#34;log&#34;</span>
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">o_in</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {

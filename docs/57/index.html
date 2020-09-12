@@ -34,6 +34,7 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.datetime<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> Clock<span style="color:#f92672">.</span><span style="color:#a6e22e">currTime</span><span style="color:#f92672">;</span>
    <span style="color:#66d9ef">auto</span> n <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">toUnixTime</span><span style="color:#f92672">;</span>
@@ -58,6 +59,7 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;time&#34;</span>
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Now</span>()
    <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Unix</span>()
@@ -154,6 +156,7 @@ puts n
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::time::{SystemTime, UNIX_EPOCH};
+
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> SystemTime::now();
    <span style="color:#66d9ef">let</span> r <span style="color:#f92672">=</span> o.duration_since(UNIX_EPOCH);

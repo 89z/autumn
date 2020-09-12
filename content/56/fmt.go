@@ -1,9 +1,11 @@
 package main
+
 import (
    "fmt"
    "os"
    "os/exec"
 )
+
 func main() {
    y, e := exec.Command("go", "version").Output()
    if e != nil {

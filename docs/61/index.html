@@ -34,6 +34,7 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.file<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> a <span style="color:#f92672">=</span> dirEntries<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">,</span> SpanMode<span style="color:#f92672">.</span><span style="color:#a6e22e">shallow</span><span style="color:#f92672">);</span>
    writeln<span style="color:#f92672">(</span>a<span style="color:#f92672">);</span>
@@ -58,10 +59,12 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadDir</span>(<span style="color:#e6db74">&#34;.&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
@@ -77,11 +80,13 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;fmt&#34;</span>
    <span style="color:#e6db74">&#34;log&#34;</span>
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;.&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
@@ -98,10 +103,12 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;os&#34;</span>
    <span style="color:#e6db74">&#34;path/filepath&#34;</span>
 )
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">f</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">o</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">FileInfo</span>, <span style="color:#a6e22e">e</span> <span style="color:#66d9ef">error</span>) <span style="color:#66d9ef">error</span> {
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">IsDir</span>() {
       <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span>
@@ -109,6 +116,7 @@
    println(<span style="color:#a6e22e">s</span>)
    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
 }
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Walk</span>(<span style="color:#e6db74">&#34;.&#34;</span>, <span style="color:#a6e22e">f</span>)
 }
@@ -175,6 +183,7 @@ a <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>lis
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{fs, io};
+
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
    <span style="color:#66d9ef">for</span> r_ent <span style="color:#66d9ef">in</span> fs::read_dir(<span style="color:#e6db74">&#34;.&#34;</span>)<span style="color:#f92672">?</span> {
       <span style="color:#66d9ef">let</span> s_ent <span style="color:#f92672">=</span> r_ent<span style="color:#f92672">?</span>.path();

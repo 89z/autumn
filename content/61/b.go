@@ -1,9 +1,11 @@
 package main
+
 import (
    "fmt"
    "log"
    "os"
 )
+
 func main() {
    o, e := os.Open(".")
    if e != nil {

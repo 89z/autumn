@@ -5,6 +5,7 @@
 #include <iostream>
 namespace fs = std::filesystem;
 using namespace std::chrono_literals;
+
 int main() {
    fs::path p = fs::current_path() / "example.bin";
    std::ofstream(p.c_str()).put('a'); // create file
