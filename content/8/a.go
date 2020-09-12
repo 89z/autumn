@@ -12,5 +12,5 @@ func main() {
       os.Exit(1)
    }
    n := o.Unix()
-   println(n)
+   println(n == 1577750400)
 }

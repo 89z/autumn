@@ -28,37 +28,19 @@
    
    
    <h2 id="boilerplate">Boilerplate</h2>
-<p>Here is a minimal program:</p>
-<pre><code>class May {
-   public static void main(String[] June) {
-      System.out.println(&quot;July&quot;);
-   }
-}
-</code></pre><ol>
-<li><code>class</code> is required:</li>
-<li><code>public</code> is required:</li>
-<li><code>static</code> is required:</li>
-<li><code>void</code> is required:</li>
-<li><code>main</code> is required</li>
-<li><code>String[]</code> is required</li>
+<p>With a minimal program, these items are required:</p>
+<ol>
+<li><code>class</code></li>
+<li><code>public</code></li>
+<li><code>static</code></li>
+<li><code>void</code></li>
+<li><code>main</code></li>
+<li><code>String[]</code></li>
 </ol>
 <p><a href="https://google.com/search?tbs=qdr:m&amp;q=java+hello+world">https://google.com/search?tbs=qdr:m&amp;q=java+hello+world</a></p>
 <h2 id="graal">Graal</h2>
 <p>If I try to use <code>native-image</code>, I get this:</p>
-<pre><code>&gt; type HelloWorld.java
-public class HelloWorld {
-  public static void main(String[] args) {
-    System.out.println(&quot;Hello, World!&quot;);
-  }
-}
-
-&gt; bin\javac HelloWorld.java
-
-&gt; bin\native-image HelloWorld
-[helloworld:2924]    classlist:     960.11 ms,  1.19 GB
-[helloworld:2924]        (cap):      84.78 ms,  1.19 GB
-[helloworld:2924]        setup:     327.89 ms,  1.19 GB
-Error: Unable to compile C-ABI query code. Make sure native software development
+<pre><code>Error: Unable to compile C-ABI query code. Make sure native software development
 toolchain is installed on your system.
 </code></pre><p>Running again gives this:</p>
 <pre><code>&gt; bin\native-image -H:+ReportExceptionStackTraces HelloWorld

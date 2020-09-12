@@ -5,22 +5,14 @@ tags: [reject]
 
 ## Boilerplate
 
-Here is a minimal program:
+With a minimal program, these items are required:
 
-~~~
-class May {
-   public static void main(String[] June) {
-      System.out.println("July");
-   }
-}
-~~~
-
-1. `class` is required:
-2. `public` is required:
-3. `static` is required:
-4. `void` is required:
-5. `main` is required
-6. `String[]` is required
+1. `class`
+2. `public`
+3. `static`
+4. `void`
+5. `main`
+6. `String[]`
 
 <https://google.com/search?tbs=qdr:m&q=java+hello+world>
 
@@ -29,19 +21,6 @@ class May {
 If I try to use `native-image`, I get this:
 
 ~~~
-> type HelloWorld.java
-public class HelloWorld {
-  public static void main(String[] args) {
-    System.out.println("Hello, World!");
-  }
-}
-
-> bin\javac HelloWorld.java
-
-> bin\native-image HelloWorld
-[helloworld:2924]    classlist:     960.11 ms,  1.19 GB
-[helloworld:2924]        (cap):      84.78 ms,  1.19 GB
-[helloworld:2924]        setup:     327.89 ms,  1.19 GB
 Error: Unable to compile C-ABI query code. Make sure native software development
 toolchain is installed on your system.
 ~~~

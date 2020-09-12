@@ -1,5 +1,6 @@
 package main
 import "strings"
+
 func main() {
    s := "June"
    // example 1

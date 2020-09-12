@@ -1,10 +1,12 @@
 package main
+
 import (
    "fmt"
    "io/ioutil"
    "log"
    "os"
 )
+
 func main() {
    o, e := os.Open("a.txt")
    if e != nil {

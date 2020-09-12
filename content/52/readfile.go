@@ -1,9 +1,11 @@
 package main
+
 import (
    "fmt"
    "io/ioutil"
    "os"
 )
+
 func main() {
    y, e := ioutil.ReadFile("a.txt")
    if e != nil {

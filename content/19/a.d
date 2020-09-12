@@ -1,4 +1,5 @@
 import std.stdio;
+
 void main() {
    // example 1
    auto s = "May

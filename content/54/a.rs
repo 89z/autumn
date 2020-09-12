@@ -1,5 +1,6 @@
 use curl::easy::{Easy, WriteError};
 use std::io::{stdout, Write};
+
 fn main() -> Result<(), curl::Error> {
    let mut o = Easy::new();
    o.url("https://speedtest.lax.hivelocity.net")?;

@@ -1,4 +1,5 @@
 package main
+
 func main() {
    n := 10
    // example 1

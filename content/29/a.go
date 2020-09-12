@@ -1,5 +1,6 @@
 package main
 import "time"
+
 func main() {
    n := int64(366 * 24 * 60 * 60)
    o := time.Unix(n, 0)

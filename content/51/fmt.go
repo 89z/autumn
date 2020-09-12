@@ -1,8 +1,10 @@
 package main
+
 import (
    "fmt"
    "os"
 )
+
 func main() {
    s := ""
    n, e := fmt.Scanln(&s)

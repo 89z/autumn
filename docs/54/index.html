@@ -81,12 +81,14 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;fmt&#34;</span>
    <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
    <span style="color:#e6db74">&#34;log&#34;</span>
    <span style="color:#e6db74">&#34;net/http&#34;</span>
 )
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
@@ -120,6 +122,7 @@
    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_resp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">o_req</span>.<span style="color:#a6e22e">text</span>();
    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s_resp</span>);
 }
+
 <span style="color:#a6e22e">main</span>();
 </code></pre></div></p>
 <ul>
@@ -185,6 +188,7 @@ stdout<span style="color:#f92672">.</span>buffer<span style="color:#f92672">.</s
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> curl::easy::{Easy, WriteError};
 <span style="color:#66d9ef">use</span> std::io::{stdout, Write};
+
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), curl::Error<span style="color:#f92672">&gt;</span> {
    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> o <span style="color:#f92672">=</span> Easy::new();
    o.url(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>)<span style="color:#f92672">?</span>;

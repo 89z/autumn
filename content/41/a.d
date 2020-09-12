@@ -1,4 +1,5 @@
 import std.array, std.stdio;
+
 void main() {
    auto a = ["May", "June"];
    // example 1

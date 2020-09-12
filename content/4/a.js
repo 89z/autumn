@@ -2,8 +2,7 @@ let m = {year: 2019, month: 12};
 
 console.log('example 1');
 for (let s in m) {
-   let n = m[s];
-   console.log(s, n);
+   console.log(s);
 }
 
 console.log('example 2');

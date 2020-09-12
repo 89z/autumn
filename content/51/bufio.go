@@ -1,8 +1,10 @@
 package main
+
 import (
    "bufio"
    "os"
 )
+
 func main() {
    o := bufio.NewScanner(os.Stdin)
    o.Scan()

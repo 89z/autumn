@@ -1,10 +1,12 @@
 package main
+
 import (
    "io"
    "log"
    "net/http"
    "os"
 )
+
 func main() {
    o_in, e := http.Get("https://speedtest.lax.hivelocity.net")
    if e != nil {

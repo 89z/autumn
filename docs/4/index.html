@@ -60,8 +60,7 @@
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;example 1&#39;</span>);
 <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">m</span>) {
-   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">m</span>[<span style="color:#a6e22e">s</span>];
-   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">n</span>);
+   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span>);
 }
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;example 2&#39;</span>);
@@ -110,7 +109,10 @@ $m <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;year&#
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">m <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;year&#39;</span>: <span style="color:#ae81ff">2019</span>, <span style="color:#e6db74">&#39;month&#39;</span>: <span style="color:#ae81ff">12</span>}
-
+<span style="color:#75715e"># example 1</span>
+<span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> m:
+   <span style="color:#66d9ef">print</span>(s)
+<span style="color:#75715e"># example 2</span>
 <span style="color:#66d9ef">for</span> s, n <span style="color:#f92672">in</span> m<span style="color:#f92672">.</span>items():
    <span style="color:#66d9ef">print</span>(s, n)
 </code></pre></div>

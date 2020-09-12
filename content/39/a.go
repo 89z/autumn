@@ -1,4 +1,5 @@
 package main
+
 func main() {
    s := "May"
    // example 1

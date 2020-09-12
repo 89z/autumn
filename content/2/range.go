@@ -1,13 +1,16 @@
 package main
+
 import (
    "bytes"
    "fmt"
    "os"
    "os/exec"
 )
+
 func f(r rune) bool {
    return r == '\n'
 }
+
 func main() {
    y, e := exec.Command("go", "env").Output()
    if e != nil {
