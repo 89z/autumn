@@ -36,9 +36,9 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.conv<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2.9&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;9.9&#34;</span><span style="color:#f92672">;</span>
    <span style="color:#66d9ef">auto</span> n <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">to</span><span style="color:#f92672">!(</span><span style="color:#66d9ef">float</span><span style="color:#f92672">);</span>
-   writeln<span style="color:#f92672">(</span>n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.9f</span><span style="color:#f92672">);</span>
+   writeln<span style="color:#f92672">(</span>n <span style="color:#f92672">==</span> <span style="color:#ae81ff">9.9f</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 <p><a href="https://dlang.org/library/std/conv/to.html">https://dlang.org/library/std/conv/to.html</a></p>
@@ -47,9 +47,9 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2.9&#34;</span>;
+   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;9.9&#34;</span>;
    <span style="color:#66d9ef">var</span> n <span style="color:#f92672">=</span> <span style="color:#66d9ef">num</span>.parse(s);
-   print(n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.9</span>);
+   print(n <span style="color:#f92672">==</span> <span style="color:#ae81ff">9.9</span>);
 }
 </code></pre></div>
 <p><a href="https://api.dart.dev/dart-core/num/parse.html">https://api.dart.dev/dart-core/num/parse.html</a></p>
@@ -63,14 +63,14 @@
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">:=</span> float64(<span style="color:#ae81ff">0</span>), float64(<span style="color:#ae81ff">0</span>)
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sscanln</span>(<span style="color:#e6db74">&#34;2.8 2.9&#34;</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n2</span>)
-   println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.8</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.9</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sscanln</span>(<span style="color:#e6db74">&#34;9.9 9.8&#34;</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n2</span>)
+   println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">9.9</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">9.8</span>)
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sscan</span>(<span style="color:#e6db74">&#34;2.8\n2.9&#34;</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n2</span>)
-   println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.8</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.9</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sscan</span>(<span style="color:#e6db74">&#34;9.9\n9.8&#34;</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n2</span>)
+   println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">9.9</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">9.8</span>)
    <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sscanf</span>(<span style="color:#e6db74">&#34;2.8 2.9&#34;</span>, <span style="color:#e6db74">&#34;%v %v&#34;</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n2</span>)
-   println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.8</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.9</span>)
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sscanf</span>(<span style="color:#e6db74">&#34;9.9 9.8&#34;</span>, <span style="color:#e6db74">&#34;%v %v&#34;</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n2</span>)
+   println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">9.9</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">9.8</span>)
 }
 </code></pre></div>
 
@@ -95,12 +95,12 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;2.9&#34;</span>
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;9.9&#34;</span>
    <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">ParseFloat</span>(<span style="color:#a6e22e">s</span>, <span style="color:#ae81ff">64</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
    }
-   println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.9</span>)
+   println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">9.9</span>)
 }
 </code></pre></div></p>
 <ul>
@@ -112,7 +112,7 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2.9&#39;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;9.9&#39;</span>;
 <span style="color:#75715e">// example 1
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> Number(<span style="color:#a6e22e">s</span>);
 <span style="color:#75715e">// example 2
@@ -122,7 +122,7 @@
 <span style="color:#75715e">// example 4
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n4</span> <span style="color:#f92672">=</span> <span style="color:#f92672">+</span>(<span style="color:#a6e22e">s</span>);
 <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">2.9</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">2.9</span>, <span style="color:#a6e22e">n3</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">2.9</span>, <span style="color:#a6e22e">n4</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">2.9</span>);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">9.9</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">9.9</span>, <span style="color:#a6e22e">n3</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">9.9</span>, <span style="color:#a6e22e">n4</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">9.9</span>);
 </code></pre></div>
 <ul>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/parseFloat">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/parseFloat</a></li>
@@ -135,9 +135,9 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> strutils
-<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2.9&#34;</span>
+<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;9.9&#34;</span>
 <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> s.parseFloat
-echo n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.9</span>
+echo n <span style="color:#f92672">==</span> <span style="color:#ae81ff">9.9</span>
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/strutils.html#parseFloat,string">https://nim-lang.org/docs/strutils.html#parseFloat,string</a></p>
 <h2 id="php">PHP</h2>
@@ -145,7 +145,7 @@ echo n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.9</sp
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2.9&#39;</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;9.9&#39;</span>;
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span>$n <span style="color:#f92672">=</span> <span style="color:#f92672">+</span>($s);
 <span style="color:#75715e"># example 2
@@ -153,7 +153,7 @@ $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2.9&#39
 <span style="color:#75715e"># example 3
 </span><span style="color:#75715e"></span>$n3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">floatval</span>($s);
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">===</span> <span style="color:#ae81ff">2.9</span>, $n2 <span style="color:#f92672">===</span> <span style="color:#ae81ff">2.9</span>, $n3 <span style="color:#f92672">===</span> <span style="color:#ae81ff">2.9</span>);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">===</span> <span style="color:#ae81ff">9.9</span>, $n2 <span style="color:#f92672">===</span> <span style="color:#ae81ff">9.9</span>, $n3 <span style="color:#f92672">===</span> <span style="color:#ae81ff">9.9</span>);
 </code></pre></div>
 
 
@@ -176,14 +176,14 @@ $n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 <p>
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2.9&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;9.9&#39;</span>
 <span style="color:#75715e"># example 1</span>
 n <span style="color:#f92672">=</span> float(s)
 <span style="color:#75715e"># example 2</span>
 <span style="color:#f92672">import</span> locale
 n2 <span style="color:#f92672">=</span> locale<span style="color:#f92672">.</span>atof(s)
 <span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.9</span>, n2 <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.9</span>)
+<span style="color:#66d9ef">print</span>(n <span style="color:#f92672">==</span> <span style="color:#ae81ff">9.9</span>, n2 <span style="color:#f92672">==</span> <span style="color:#ae81ff">9.9</span>)
 </code></pre></div>
 
 
@@ -203,9 +203,9 @@ n2 <span style="color:#f92672">=</span> float(n)
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::num;
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), num::ParseFloatError<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2.9&#34;</span>;
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;9.9&#34;</span>;
    <span style="color:#66d9ef">let</span> n: <span style="color:#66d9ef">f32</span> <span style="color:#f92672">=</span> s.parse()<span style="color:#f92672">?</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2.9</span>);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n <span style="color:#f92672">==</span> <span style="color:#ae81ff">9.9</span>);
    Ok(())
 }
 </code></pre></div>

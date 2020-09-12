@@ -1,11 +1,11 @@
 package main
 func main() {
-   n := 1
+   n := 10
    // example 1
    s := ""
    if n > 0 {
       s = "+"
-   } else if n < 0{
+   } else if n < 0 {
       s = "-"
    } else {
       s = "zero"

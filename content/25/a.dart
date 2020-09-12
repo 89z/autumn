@@ -1,5 +1,5 @@
 void main() {
-   var s = "2.9";
+   var s = "9.9";
    var n = num.parse(s);
-   print(n == 2.9);
+   print(n == 9.9);
 }

@@ -1,9 +1,9 @@
 <?php
 # example 1
-$n = 9;
+$n = 10;
 # example 2
 $n2 = 1_000;
 # example 3
-$n3 = 10.0;
+$n3 = 9.9;
 # print
 var_dump($n, $n2, $n3);

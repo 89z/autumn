@@ -1,7 +1,7 @@
 package main
 
 func main() {
-   n := 1.9
+   n := 9.9
    n2 := int(n)
-   println(n2 == 1)
+   println(n2 == 9)
 }

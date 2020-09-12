@@ -1,4 +1,4 @@
-n = 1
+n = 10
 # example 1
 if n > 0:
    s = '+'

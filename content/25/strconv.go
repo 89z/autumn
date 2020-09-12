@@ -6,10 +6,10 @@ import (
 )
 
 func main() {
-   s := "2.9"
+   s := "9.9"
    n, e := strconv.ParseFloat(s, 64)
    if e != nil {
       os.Exit(1)
    }
-   println(n == 2.9)
+   println(n == 9.9)
 }

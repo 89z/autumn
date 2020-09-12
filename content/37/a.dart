@@ -1,5 +1,5 @@
 void main() {
-   var s, n = 1;
+   var s, n = 10;
    if (n > 0) {
       s = '+';
    } else if (n < 0) {

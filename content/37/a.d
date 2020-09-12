@@ -1,6 +1,6 @@
 import std.stdio;
 void main() {
-   int n = 1;
+   int n = 10;
    string s;
    if (n > 0) {
       s = "+";

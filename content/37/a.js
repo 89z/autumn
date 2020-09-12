@@ -1,4 +1,4 @@
-let n = 1;
+let n = 10;
 // example 1
 let s;
 if (n > 0) {
