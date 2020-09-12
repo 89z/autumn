@@ -2,7 +2,7 @@
 title: Iterate a map
 categories: [iterate, map]
 tags: [go, javascript, php, python]
-date: 2020-06-25
+date: 2020-09-12
 ---
 
 ## Go

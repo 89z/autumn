@@ -1,8 +1,9 @@
-let m = {year: 2020, month: 9};
+let m = {year: 2019, month: 12};
 
 console.log('example 1');
 for (let s in m) {
-   console.log(s);
+   let n = m[s];
+   console.log(s, n);
 }
 
 console.log('example 2');
