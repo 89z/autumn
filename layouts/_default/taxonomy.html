@@ -5,7 +5,7 @@
    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
    <table>
-   {{ range .Pages }}
+   {{ range .Pages.ByTitle }}
       <tr>
          <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
          <td><time>{{ .Lastmod.Format "Mon Jan 2 2006" }}</time></td>

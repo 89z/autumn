@@ -2,14 +2,14 @@
 title: Convert to float
 categories: [number]
 tags: [d, dart, go, javascript, nim, php, python, rust]
-date: 2020-07-16
+date: 2020-09-11
 ---
 
 ## D
 
 {{< r "a.d" >}}
 
-<https://dlang.org/library/std/conv.html>
+<https://dlang.org/library/std/conv/to.html>
 
 ## Dart
 

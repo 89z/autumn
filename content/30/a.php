@@ -1,6 +1,11 @@
 <?php
-$s1 = $_SERVER['BROWSER'];
-$s2 = getenv()['BROWSER'];
-$s3 = getenv('BROWSER');
-# test
-var_dump($s1, $s2, $s3);
+$s = 'USERPROFILE';
+# example 1
+$s2 = getenv($s);
+# example 2
+$m = getenv();
+$s3 = $m[$s];
+# example 3
+$s4 = $_SERVER[$s];
+# print
+var_dump($s2, $s3, $s4);

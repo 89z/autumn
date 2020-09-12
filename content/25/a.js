@@ -1,11 +1,11 @@
-let s1 = '1.9';
+let s = '2.9';
 // example 1
-let n1 = Number(s1);
+let n = Number(s);
 // example 2
-let n2 = Number.parseFloat(s1);
+let n2 = Number.parseFloat(s);
 // example 3
-let n3 = parseFloat(s1);
+let n3 = parseFloat(s);
 // example 4
-let n4 = +(s1);
+let n4 = +(s);
 // print
-console.log(n1, n2, n3, n4);
+console.log(n === 2.9, n2 === 2.9, n3 === 2.9, n4 === 2.9);

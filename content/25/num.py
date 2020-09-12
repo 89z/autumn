@@ -1,3 +1,3 @@
-n1 = 10
-n2 = float(n1)
+n = 10
+n2 = float(n)
 print(n2)

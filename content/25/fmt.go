@@ -1,15 +1,15 @@
 package main
 import "fmt"
+
 func main() {
-   n1 := float64(0)
-   n2 := float64(0)
+   n, n2 := float64(0), float64(0)
    // example 1
-   fmt.Sscanln("1.8 1.9", &n1, &n2)
-   println(n1, n2)
+   fmt.Sscanln("2.8 2.9", &n, &n2)
+   println(n == 2.8, n2 == 2.9)
    // example 2
-   fmt.Sscan("1.8\n1.9", &n1, &n2)
-   println(n1, n2)
+   fmt.Sscan("2.8\n2.9", &n, &n2)
+   println(n == 2.8, n2 == 2.9)
    // example 3
-   fmt.Sscanf("1.8 1.9", "%v %v", &n1, &n2)
-   println(n1, n2)
+   fmt.Sscanf("2.8 2.9", "%v %v", &n, &n2)
+   println(n == 2.8, n2 == 2.9)
 }

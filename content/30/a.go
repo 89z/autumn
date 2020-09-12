@@ -1,10 +1,12 @@
 package main
 import "os"
+
 func main() {
+   s := "USERPROFILE"
    // example 1
-   s1 := os.Getenv("BROWSER")
+   s2 := os.Getenv(s)
    // example 2
-   s2, b1 := os.LookupEnv("BROWSER")
+   s3, b := os.LookupEnv(s)
    // print
-   println(s1, s2, b1)
+   print(s2, "\n", s3, "\n", b, "\n")
 }

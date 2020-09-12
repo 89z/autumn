@@ -1,8 +1,8 @@
-s1 = '1.9'
+s = '2.9'
 # example 1
-n1 = float(s1)
+n = float(s)
 # example 2
 import locale
-n2 = locale.atof(s1)
+n2 = locale.atof(s)
 # print
-print(n1, n2)
+print(n == 2.9, n2 == 2.9)
