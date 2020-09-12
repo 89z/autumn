@@ -2,7 +2,7 @@
 title: Variable to console
 categories: [input-output]
 tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
-date: 2020-09-10
+date: 2020-09-11
 ---
 
 ## C++

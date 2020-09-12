@@ -1,5 +1,6 @@
 import 'dart:io';
-main() {
+
+void main() {
    var o = new File('a.txt');
    o.deleteSync();
 }

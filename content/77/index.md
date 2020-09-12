@@ -2,7 +2,7 @@
 title: Decode JSON
 categories: [file-format]
 tags: [d, dart, go, javascript, nim, php, python, rust]
-date: 2020-09-06
+date: 2020-09-11
 ---
 
 ## D

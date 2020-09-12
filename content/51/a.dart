@@ -1,5 +1,6 @@
 import 'dart:io';
-main() {
+
+void main() {
    var s = stdin.readLineSync();
    print(s);
 }

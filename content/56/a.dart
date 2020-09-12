@@ -1,5 +1,6 @@
 import 'dart:io';
-main() {
+
+void main() {
    Process.run('less', ['-V']).then((ProcessResult results) {
       stdout.write(results.stdout);
    });

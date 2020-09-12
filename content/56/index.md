@@ -2,7 +2,7 @@
 title: Process to variable
 categories: [input-output]
 tags: [go, nim, php, python]
-date: 2020-08-16
+date: 2020-09-11
 ---
 
 ## Dart

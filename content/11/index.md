@@ -2,7 +2,7 @@
 title: Iterate a file
 categories: [iterate, input-output]
 tags: [d, go, php, python, rust]
-date: 2020-07-02
+date: 2020-09-11
 ---
 
 ## D

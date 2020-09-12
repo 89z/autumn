@@ -2,7 +2,7 @@
 title: String index
 categories: [string]
 tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
-date: 2020-08-06
+date: 2020-09-11
 ---
 
 ## D

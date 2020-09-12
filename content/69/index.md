@@ -2,7 +2,7 @@
 title: Is directory or file
 categories: [system]
 tags: [c++, d, dart, go, nim, php, python, ruby, rust]
-date: 2020-09-10
+date: 2020-09-11
 ---
 
 ## C++

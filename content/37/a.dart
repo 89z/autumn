@@ -1,4 +1,4 @@
-main() {
+void main() {
    var s, n = 1;
    if (n > 0) {
       s = '+';

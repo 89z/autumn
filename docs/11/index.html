@@ -24,7 +24,7 @@
 
 <main>
    <h1>Iterate a file</h1>
-   <time>Thu Jul 2 2020</time>
+   <time>Fri Sep 11 2020</time>
    
    <a href="/autumn/categories/iterate/">iterate</a>
    
@@ -49,16 +49,18 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;bufio&#34;</span>
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
+   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
    }
-   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">o1</span>)
+   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">o</span>)
    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Scan</span>() {
       <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Text</span>()
       println(<span style="color:#a6e22e">s</span>)
@@ -70,13 +72,14 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$r1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
+$r <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
+
 <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
-   $s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgets</span>($r1);
-   <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">feof</span>($r1)) {
+   $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgets</span>($r);
+   <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">feof</span>($r)) {
       <span style="color:#66d9ef">break</span>;
    }
-   <span style="color:#a6e22e">var_dump</span>($s1);
+   <span style="color:#a6e22e">var_dump</span>($s);
 }
 </code></pre></div>
 <p><code>feof</code> is triggered after <code>fgets</code>. Further, <code>trim</code> expects a string, so we
@@ -86,8 +89,8 @@ cannot use it until we are certain that we have a string.</p>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">for</span> s1 <span style="color:#f92672">in</span> open(<span style="color:#e6db74">&#39;a.txt&#39;</span>):
-   <span style="color:#66d9ef">print</span>(s1, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> open(<span style="color:#e6db74">&#39;a.txt&#39;</span>):
+   <span style="color:#66d9ef">print</span>(s, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
 </code></pre></div>
 <p><a href="https://docs.python.org/reference/compound_stmts.html#for">https://docs.python.org/reference/compound_stmts.html#for</a></p>
 <h2 id="rust">Rust</h2>

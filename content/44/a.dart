@@ -1,6 +1,6 @@
 import 'dart:io';
 
-main() {
+void main() {
    var o = Duration(seconds: 5);
    sleep(o);
 }

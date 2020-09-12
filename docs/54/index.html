@@ -24,7 +24,7 @@
 
 <main>
    <h1>HTTP to variable</h1>
-   <time>Fri Aug 14 2020</time>
+   <time>Fri Sep 11 2020</time>
    
    <a href="/autumn/categories/input-output/">input-output</a>
    
@@ -49,7 +49,8 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
-main() {
+
+<span style="color:#66d9ef">void</span> main() {
    <span style="color:#66d9ef">var</span> o_uri <span style="color:#f92672">=</span> Uri.parse(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>);
    <span style="color:#66d9ef">var</span> o_http <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HttpClient();
    o_http.getUrl(o_uri).then(
@@ -64,7 +65,8 @@ main() {
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
-main() <span style="color:#66d9ef">async</span> {
+
+<span style="color:#66d9ef">void</span> main() <span style="color:#66d9ef">async</span> {
    <span style="color:#66d9ef">var</span> o_uri <span style="color:#f92672">=</span> Uri.parse(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>);
    <span style="color:#66d9ef">var</span> o_http <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HttpClient();
    <span style="color:#66d9ef">var</span> o_req <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> o_http.getUrl(o_uri);

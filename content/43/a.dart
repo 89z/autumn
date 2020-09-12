@@ -1,4 +1,4 @@
-main() {
+void main() {
    var s = 'June';
    // example 1
    var b = s.startsWith('Ju');

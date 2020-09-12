@@ -1,4 +1,4 @@
-main() {
+void main() {
    var a = ['May', 'June'];
    // example 1
    for (var s in a) {

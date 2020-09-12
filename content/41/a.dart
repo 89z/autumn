@@ -1,4 +1,4 @@
-main() {
+void main() {
    var a = ['May', 'June'];
    // example 1
    var s = a.join(',');

@@ -2,7 +2,7 @@
 title: Get array length
 categories: [array]
 tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
-date: 2020-07-29
+date: 2020-09-11
 ---
 
 ## D
