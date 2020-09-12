@@ -1,8 +1,8 @@
 # example 1
-n = 29 / 10
+n = 46 / 10
 # example 2
-n2 = 29 % 10
+n2 = 46 % 10
 # exmaple 3
-n3 = 29 // 10
+n3 = 46 // 10
 # print
-print(n == 2.9, n2 == 9, n3 == 2)
+print(n == 4.6, n2 == 6, n3 == 4)

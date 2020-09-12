@@ -1,5 +1,6 @@
 #include <iostream>
+
 int main() {
-   auto n = 29 / 10;
-   std::cout << (n == 2) << std::endl;
+   auto n = 46 / 10;
+   std::cout << (n == 4) << std::endl;
 }

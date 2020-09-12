@@ -2,10 +2,11 @@ package main
 import "math"
 
 func main() {
+   n, n2 := float64(46), float64(10)
    // example 1
-   n := math.Mod(29, 10)
+   n3 := math.Mod(n, n2)
    // example 2
-   n2 := math.Remainder(29, 10)
+   n4 := math.Remainder(n, n2)
    // print
-   println(n == 9, n2 == -1)
+   println(n3 == 6, n4 == -4)
 }

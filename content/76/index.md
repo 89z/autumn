@@ -20,7 +20,8 @@ date: 2020-09-05
 
 {{< r "a.php" >}}
 
-<https://php.net/types.object#language.types.object.init>
+- <https://php.net/language.oop5.visibility>
+- <https://php.net/types.object#language.types.object.init>
 
 ## Python
 

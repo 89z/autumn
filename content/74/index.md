@@ -47,9 +47,7 @@ date: 2020-09-11
 ## PHP
 
 {{< r "a.php" >}}
-{{< r "b.php" >}}
 
-- <https://php.net/function.gmp-div-qr>
 - <https://php.net/function.intdiv>
 - <https://php.net/operators.arithmetic>
 

@@ -6,9 +6,9 @@ func main() {
       Year, Month, Day int
    }
    // example 1
-   o := Date{2020, 9, 10}
+   o := Date{2019, 12, 31}
    // example 2
-   o2 := Date{Year: 2020}
+   o2 := Date{Year: 2019}
    // print
    fmt.Println(o, o2)
 }

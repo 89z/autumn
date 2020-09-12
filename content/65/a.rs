@@ -7,6 +7,6 @@ fn main() {
       day: Option<u8>
    }
 
-   let o = Date {year: 2020, month: None, day: None};
+   let o = Date {year: 2019, month: None, day: None};
    println!("{:?}", o);
 }

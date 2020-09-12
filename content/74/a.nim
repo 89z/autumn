@@ -1,2 +1,2 @@
-let n = 29 / 10
-echo n == 2.9
+let n = 46 / 10
+echo n == 4.6

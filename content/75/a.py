@@ -1,11 +1,11 @@
 # example 1
 class Date:
-   year = 2020
+   year = 2019
 o = Date()
 
 # example 2
 import types
-o2 = types.SimpleNamespace(year = 2020)
+o2 = types.SimpleNamespace(year = 2019)
 
 # print
-print(o.year == 2020, o2.year == 2020)
+print(o.year == 2019, o2.year == 2019)
