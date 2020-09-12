@@ -2,7 +2,7 @@
 title: Multi-way condition
 categories: [reference]
 tags: [dart, go, javascript, php, rust]
-date: 2020-07-01
+date: 2020-09-11
 ---
 
 ## Dart

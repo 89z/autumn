@@ -2,7 +2,7 @@
 title: Get map value
 categories: [map]
 tags: [d, dart, go, javascript, nim, php, python, rust]
-date: 2020-07-22
+date: 2020-09-11
 ---
 
 ## D

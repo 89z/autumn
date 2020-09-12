@@ -1,4 +1,4 @@
-main() {
-   var a = [10, 11];
+void main() {
+   var a = ['May', 'June'];
    print(a);
 }

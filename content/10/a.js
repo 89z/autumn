@@ -1,13 +1,15 @@
-let s, n = 1;
+let s, n = 10;
+
 switch (n) {
-case 3:
+case 12:
    s = 'all';
    break;
-case 2:
-case 1:
+case 11:
+case 10:
    s = 'some';
    break;
 default:
    s = 'none';
 }
+
 console.log(s == 'some');

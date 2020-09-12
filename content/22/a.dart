@@ -1,4 +1,4 @@
-main() {
+void main() {
    var n = 10;
    do {
       print(n);

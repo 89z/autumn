@@ -2,7 +2,7 @@
 title: Working directory
 categories: [system]
 tags: [d, dart, go, nim, php, python, rust]
-date: 2020-07-08
+date: 2020-09-11
 ---
 
 ## D

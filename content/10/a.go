@@ -1,10 +1,11 @@
 package main
+
 func main() {
-   n, s := 1, ""
+   n, s := 10, ""
    switch n {
-   case 3:
+   case 12:
       s = "all"
-   case 2, 1:
+   case 11, 10:
       s = "some"
    default:
       s = "none"
