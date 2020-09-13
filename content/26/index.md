@@ -1,9 +1,15 @@
 ---
 title: Convert to string
 categories: [string]
-tags: [d, dart, go, javascript, php, python, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
+
+<https://en.cppreference.com/w/cpp/string/basic_string/to_string>
 
 ## D
 
@@ -16,7 +22,8 @@ date: 2020-09-11
 
 {{< r "a.dart" >}}
 
-<https://api.dart.dev/dart-core/num/toString.html>
+- <https://api.dart.dev/dart-core/num/toString.html>
+- <https://github.com/dart-lang/intl>
 
 ## Go
 
@@ -58,6 +65,10 @@ date: 2020-09-11
 - <https://docs.python.org/library/locale.html#locale.setlocale>
 - <https://docs.python.org/library/stdtypes.html#str.format>
 
+## Ruby
+
+{{< r "a.rb" >}}
+
 ## Rust
 
 {{< r "a.rs" >}}
@@ -66,7 +77,9 @@ date: 2020-09-11
 
 ## References
 
-- <https://hyperpolyglot.org/scripting#format-str>
+- <https://hyperpolyglot.org/cpp#num-to-str>
+- <https://hyperpolyglot.org/scripting#num-to-str>
 - <https://hyperpolyglot.org/web#num-to-str>
-- <https://programming-idioms.org/idiom/173>
+- <https://programming-idioms.org/idiom/173/format-a-number-with-group>
+- <https://programming-idioms.org/idiom/55/convert-integer-to-str>
 - <https://rosettacode.org/wiki/Commatizing_numbers>

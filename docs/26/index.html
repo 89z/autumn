@@ -29,7 +29,21 @@
    <a href="/autumn/categories/string/">string</a>
    
    
-   <h2 id="d">D</h2>
+   <h2 id="c">C++</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">auto</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>to_string(n);
+   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> (s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;9&#34;</span>) <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+}
+</code></pre></div>
+<p><a href="https://en.cppreference.com/w/cpp/string/basic_string/to_string">https://en.cppreference.com/w/cpp/string/basic_string/to_string</a></p>
+<h2 id="d">D</h2>
 <p>
 
 
@@ -64,12 +78,15 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+   <span style="color:#66d9ef">var</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>;
    <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> n.toString();
-   print(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;10&#39;</span>);
+   print(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;1000&#39;</span>);
 }
 </code></pre></div>
-<p><a href="https://api.dart.dev/dart-core/num/toString.html">https://api.dart.dev/dart-core/num/toString.html</a></p>
+<ul>
+<li><a href="https://api.dart.dev/dart-core/num/toString.html">https://api.dart.dev/dart-core/num/toString.html</a></li>
+<li><a href="https://github.com/dart-lang/intl">https://github.com/dart-lang/intl</a></li>
+</ul>
 <h2 id="go">Go</h2>
 <p>
 
@@ -183,6 +200,12 @@ s <span style="color:#f92672">=</span> format(n, <span style="color:#e6db74">&#3
 <li><a href="https://docs.python.org/library/locale.html#locale.setlocale">https://docs.python.org/library/locale.html#locale.setlocale</a></li>
 <li><a href="https://docs.python.org/library/stdtypes.html#str.format">https://docs.python.org/library/stdtypes.html#str.format</a></li>
 </ul>
+<h2 id="ruby">Ruby</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#e6db74">&#34;value: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">8</span><span style="color:#f92672">.</span>to_s
+</code></pre></div>
 <h2 id="rust">Rust</h2>
 
 
@@ -196,9 +219,11 @@ s <span style="color:#f92672">=</span> format(n, <span style="color:#e6db74">&#3
 <p><a href="https://doc.rust-lang.org/std/fmt">https://doc.rust-lang.org/std/fmt</a></p>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://hyperpolyglot.org/scripting#format-str">https://hyperpolyglot.org/scripting#format-str</a></li>
+<li><a href="https://hyperpolyglot.org/cpp#num-to-str">https://hyperpolyglot.org/cpp#num-to-str</a></li>
+<li><a href="https://hyperpolyglot.org/scripting#num-to-str">https://hyperpolyglot.org/scripting#num-to-str</a></li>
 <li><a href="https://hyperpolyglot.org/web#num-to-str">https://hyperpolyglot.org/web#num-to-str</a></li>
-<li><a href="https://programming-idioms.org/idiom/173">https://programming-idioms.org/idiom/173</a></li>
+<li><a href="https://programming-idioms.org/idiom/173/format-a-number-with-group">https://programming-idioms.org/idiom/173/format-a-number-with-group</a></li>
+<li><a href="https://programming-idioms.org/idiom/55/convert-integer-to-str">https://programming-idioms.org/idiom/55/convert-integer-to-str</a></li>
 <li><a href="https://rosettacode.org/wiki/Commatizing_numbers">https://rosettacode.org/wiki/Commatizing_numbers</a></li>
 </ul>
 

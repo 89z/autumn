@@ -1,5 +1,5 @@
 void main() {
-   var n = 10;
+   var n = 1000;
    var s = n.toString();
-   print(s == '10');
+   print(s == '1000');
 }
