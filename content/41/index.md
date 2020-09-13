@@ -7,7 +7,8 @@ date: 2020-09-11
 
 ## D
 
-{{< r "a.d" >}}
+{{< r "n.d" >}}
+{{< r "s.d" >}}
 
 <https://dlang.org/library/std/array/join.html>
 

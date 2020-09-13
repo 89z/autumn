@@ -29,6 +29,8 @@ date: 2020-09-12
 
 {{< r "a.py" >}}
 
+<https://docs.python.org/library/stdtypes#dict.items>
+
 ## References
 
 - <https://hyperpolyglot.org/c#dict-iter>

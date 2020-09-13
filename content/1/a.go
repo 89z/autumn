@@ -1,10 +1,12 @@
 package main
+
 import (
    "encoding/csv"
    "fmt"
    "log"
    "os"
 )
+
 func main() {
    o_csv, e := os.Open("a.csv")
    if e != nil {

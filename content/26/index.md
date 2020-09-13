@@ -7,7 +7,8 @@ date: 2020-09-11
 
 ## D
 
-{{< r "a.d" >}}
+{{< r "conv.d" >}}
+{{< r "fmt.d" >}}
 
 <https://dlang.org/library/std/format.html>
 

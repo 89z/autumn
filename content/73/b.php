@@ -1,14 +1,12 @@
 <?php
+
 function f_escape_sh(string $s_in): string {
-   $s_out = preg_replace('/"/', '""', $s_in);
-   if ($s_out != $s_in) {
-      return '"' . $s_out . '"';
+   $s_brk = strpbrk($s_in, ' "&->^');
+   if ($s_brk === false) {
+      return $s_in;
    }
-   $n_mat = preg_match('/[ &>^-]/', $s_in);
-   if ($n_mat !== 0) {
-      return '"' . $s_out . '"';
-   }
-   return $s_out;
+   return '"' . str_replace('"', '""', $s_in) . '"';
 }
+
 $s = f_escape_sh('a b.txt');
 system('less ' . $s);

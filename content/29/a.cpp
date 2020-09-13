@@ -1,7 +1,7 @@
 #include <ctime>
 #include <iostream>
 #include <locale>
- 
+
 int main() {
     std::time_t t = std::time(nullptr);
     char mbstr[100];

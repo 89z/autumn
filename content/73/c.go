@@ -1,8 +1,10 @@
 package main
+
 import (
    "log"
    "os"
 )
+
 func main() {
    s := `C:\go\bin\go.exe`
    oa := os.ProcAttr{Files: []*os.File{nil, os.Stdout, nil}}

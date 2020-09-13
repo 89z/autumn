@@ -1,9 +1,11 @@
 package main
+
 import (
    "bufio"
    "fmt"
    "os"
 )
+
 func main() {
    o_open, e := os.Open("a.txt")
    if e != nil {

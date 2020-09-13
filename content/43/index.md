@@ -45,6 +45,7 @@ date: 2020-09-11
 {{< r "a.php" >}}
 
 - <https://php.net/function.stripos>
+- <https://php.net/function.strpbrk>
 - <https://php.net/function.strpos>
 
 ## Python
