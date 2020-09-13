@@ -1,7 +1,15 @@
-let n = 366 * 24 * 60 * 60;
-let o = new Date(n * 1000);
-let s_d = o.toLocaleString(0, {weekday: 'short'});
-let s_m = o.toLocaleString(0, {month: 'short', day: 'numeric'});
-let s_y = o.toLocaleString(0, {year: 'numeric'});
-let s = s_d + ' ' + s_m + ' ' + s_y;
-console.log(s == 'Fri Jan 1 1971');
+function f_date(n_date) {
+   const o_date = new Date(n_date * 1000);
+   const o_fmt = new Intl.DateTimeFormat('en', {
+      day: 'numeric', month: 'short', weekday: 'short', year: 'numeric'
+   });
+   const f_parts = (m_acc, m_cur) => {
+      return {...m_acc, [m_cur.type]: m_cur.value};
+   };
+   return o_fmt.formatToParts(o_date).reduce(f_parts, {});
+}
+
+let n = 1577858399;
+let m = f_date(n);
+let s = [m.weekday, m.month, m.day, m.year].join(' ');
+console.log(s == 'Tue Dec 31 2019');

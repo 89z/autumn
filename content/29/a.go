@@ -2,8 +2,15 @@ package main
 import "time"
 
 func main() {
-   n := int64(366 * 24 * 60 * 60)
+   n := int64(1577858399)
    o := time.Unix(n, 0)
-   s := o.Format("Mon Jan 2 2006")
-   println(s == "Fri Jan 1 1971")
+   // example 1
+   s := o.String()
+   // example 2
+   s2 := o.Format(time.RFC3339)
+   // print
+   println(
+      s == "2019-12-31 23:59:59 -0600 CST",
+      s2 == "2019-12-31T23:59:59-06:00",
+   )
 }

@@ -1,5 +1,5 @@
 import times
-let n = 366 * 24 * 60 * 60
-let o = n.fromUnix
-let s = $o
-echo s
+let n = 1577858399
+let o = fromUnix(n)
+let s = $(o)
+echo s == "2019-12-31T23:59:59-06:00"

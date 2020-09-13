@@ -1,8 +1,8 @@
 import std.datetime, std.stdio;
 
 void main() {
-   auto n = 366 * 24 * 60 * 60;
+   auto n = 1577858399;
    auto o = SysTime.fromUnixTime(n);
    auto s = o.toISOExtString;
-   s.writeln;
+   writeln(s == "2019-12-31T23:59:59");
 }

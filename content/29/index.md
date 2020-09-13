@@ -1,15 +1,26 @@
 ---
 title: Date number to string
 categories: [date]
-tags: [d, go, javascript, nim, php, python]
+tags: [c++, d, dart, go, javascript, nim, php, python]
 date: 2020-09-11
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
+
+<https://en.cppreference.com/w/cpp/chrono/c/strftime>
 
 ## D
 
 {{< r "a.d" >}}
 
-<https://dlang.org/library/std/datetime/systime/sys_time.from_unix_time.html>
+- <https://dlang.org/library/std/datetime/systime/sys_time.from_unix_time.html>
+- <https://github.com/dhasenan/datefmt>
+
+## Dart
+
+<https://github.com/dart-lang/intl>
 
 ## Go
 
