@@ -1,7 +1,15 @@
 import std.stdio;
 
 void main() {
-   auto s = "📗";
+   // example 1
+   string s = "📗";
    auto n = s.length;
-   writeln(n == 4);
+   // example 2
+   wstring s2 = "📗";
+   auto n2 = s2.length;
+   // example 3
+   dstring s3 = "📗";
+   auto n3 = s3.length;
+   // print
+   [n == 4, n2 == 2, n3 == 1].writeln;
 }

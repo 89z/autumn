@@ -1,1 +1,3 @@
-"value: " + 8.to_s
+n = 9
+s = n.to_s
+puts s == '9'

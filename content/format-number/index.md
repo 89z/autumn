@@ -27,11 +27,16 @@ date: 2020-09-13
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString>
 
+## Nim
+
+<https://nim-lang.org/docs/strutils.html#insertSep,string,char,int>
+
 ## PHP
 
 {{< r "a.php" >}}
 
-<https://php.net/function.number-format>
+- <https://php.net/function.number-format>
+- <https://stackoverflow.com/questions/63873013>
 
 ## Python
 
@@ -41,6 +46,12 @@ date: 2020-09-13
 - <https://docs.python.org/library/functions.html#format>
 - <https://docs.python.org/library/locale.html#locale.setlocale>
 - <https://docs.python.org/library/stdtypes.html#str.format>
+
+## Ruby
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/String.html#method-i-gsub>
 
 ## References
 

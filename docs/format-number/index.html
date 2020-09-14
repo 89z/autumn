@@ -69,6 +69,8 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>.<span style="color:#a6e22e">toLocaleString</span>();
 </code></pre></div>
 <p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString</a></p>
+<h2 id="nim">Nim</h2>
+<p><a href="https://nim-lang.org/docs/strutils.html#insertSep,string,char,int">https://nim-lang.org/docs/strutils.html#insertSep,string,char,int</a></p>
 <h2 id="php">PHP</h2>
 
 
@@ -76,7 +78,10 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $s4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">number_format</span>($n);
 </code></pre></div>
-<p><a href="https://php.net/function.number-format">https://php.net/function.number-format</a></p>
+<ul>
+<li><a href="https://php.net/function.number-format">https://php.net/function.number-format</a></li>
+<li><a href="https://stackoverflow.com/questions/63873013">https://stackoverflow.com/questions/63873013</a></li>
+</ul>
 <h2 id="python">Python</h2>
 <p>
 
@@ -98,6 +103,15 @@ s <span style="color:#f92672">=</span> format(n, <span style="color:#e6db74">&#3
 <li><a href="https://docs.python.org/library/locale.html#locale.setlocale">https://docs.python.org/library/locale.html#locale.setlocale</a></li>
 <li><a href="https://docs.python.org/library/stdtypes.html#str.format">https://docs.python.org/library/stdtypes.html#str.format</a></li>
 </ul>
+<h2 id="ruby">Ruby</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">n <span style="color:#f92672">=</span> <span style="color:#ae81ff">7654321</span>
+s <span style="color:#f92672">=</span> n<span style="color:#f92672">.</span>to_s<span style="color:#f92672">.</span>gsub(<span style="color:#e6db74">/(?=(...)+$)/</span>, <span style="color:#e6db74">&#39;,&#39;</span>)
+puts s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;7,654,321&#39;</span>
+</code></pre></div>
+<p><a href="https://ruby-doc.org/core/String.html#method-i-gsub">https://ruby-doc.org/core/String.html#method-i-gsub</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting#format-str">https://hyperpolyglot.org/scripting#format-str</a></li>

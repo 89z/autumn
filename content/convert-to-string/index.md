@@ -15,7 +15,8 @@ date: 2020-09-11
 
 {{< r "a.d" >}}
 
-<https://dlang.org/library/std/format.html>
+- <https://dlang.org/library/std/conv/text.html>
+- <https://dlang.org/library/std/conv/to.html>
 
 ## Dart
 
@@ -27,7 +28,8 @@ date: 2020-09-11
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/fmt#Printf>
+- <https://golang.org/pkg/fmt#Sprint>
+- <https://golang.org/pkg/fmt#Sprintf>
 
 ## JavaScript
 
@@ -55,17 +57,20 @@ date: 2020-09-11
 
 - <https://docs.python.org/library/functions.html#format>
 - <https://docs.python.org/library/functions.html#func-str>
+- <https://docs.python.org/library/functions.html#repr>
 - <https://docs.python.org/library/stdtypes.html#str.format>
 
 ## Ruby
 
 {{< r "a.rb" >}}
 
+<https://ruby-doc.org/core/Integer.html#method-i-to_s>
+
 ## Rust
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/fmt>
+<https://doc.rust-lang.org/std/macro.format.html>
 
 ## References
 
