@@ -1,9 +1,7 @@
 let s = 'May';
 // example 1
-s = s + 'June';
+s += 'June';
 // example 2
-s += 'July';
-// example 3
-s = s.concat('August');
+s = s.concat('July');
 // print
-console.log(s == 'MayJuneJulyAugust');
+console.log(s == 'MayJuneJuly');

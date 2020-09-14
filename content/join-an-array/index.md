@@ -2,7 +2,7 @@
 title: Join an array
 categories: [array, string]
 tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
-date: 2020-09-11
+date: 2020-09-14
 ---
 
 ## D

@@ -2,7 +2,7 @@
 title: Iterate an array
 categories: [iterate, array]
 tags: [d, dart, go, javascript, nim, php, python, rust]
-date: 2020-09-11
+date: 2020-09-13
 ---
 
 ## D

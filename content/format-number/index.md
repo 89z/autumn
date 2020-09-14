@@ -35,8 +35,7 @@ date: 2020-09-13
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.number-format>
-- <https://stackoverflow.com/questions/63873013>
+<https://php.net/function.number-format>
 
 ## Python
 

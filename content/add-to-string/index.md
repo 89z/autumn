@@ -2,7 +2,7 @@
 title: Add to string
 categories: [string]
 tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
-date: 2020-07-04
+date: 2020-09-14
 ---
 
 ## D
@@ -36,7 +36,6 @@ date: 2020-07-04
 
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/concat>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Template_literals>
 
 ## Nim
 
@@ -48,15 +47,13 @@ date: 2020-07-04
 
 {{< r "a.php" >}}
 
-- <https://php.net/language.operators.string>
-- <https://php.net/types.string#language.types.string.parsing>
+<https://php.net/language.operators.string>
 
 ## Python
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/reference/expressions.html#binary>
-- <https://docs.python.org/reference/lexical_analysis.html#f-strings>
+<https://docs.python.org/reference/expressions.html#binary>
 
 ## Ruby
 
@@ -64,7 +61,8 @@ date: 2020-07-04
 
 ## Rust
 
-{{< r "a.rs" >}}
+{{< r "from.rs" >}}
+{{< r "new.rs" >}}
 
 <https://doc.rust-lang.org/std/string/struct.String.html#method.add_assign>
 
@@ -73,4 +71,3 @@ date: 2020-07-04
 - <https://hyperpolyglot.org/rust#str-concat>
 - <https://hyperpolyglot.org/web#str-concat>
 - <https://rosettacode.org/wiki/String_append>
-- <https://rosettacode.org/wiki/String_concatenation>
