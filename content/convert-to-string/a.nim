@@ -1,4 +1,3 @@
 import strformat
-let n = 1000
+let n = 9
 var s = "{n}".fmt
-echo s == "1000"

@@ -2,7 +2,7 @@ package main
 import "fmt"
 
 func main() {
-   n := 10
+   n := 9
    s := fmt.Sprintf("%d", n)
-   println(s == "10")
+   println(s == "9")
 }

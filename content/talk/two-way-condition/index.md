@@ -1,5 +1,5 @@
 ---
-title: 'Talk:Two-way conditions'
+title: 'Talk:Two-way condition'
 ---
 
 ## If statements

@@ -1,59 +1,37 @@
 ---
 title: Format number
 categories: [number]
-tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-13
 ---
 
-## C++
-
-{{< r "a.cpp" >}}
-
-<https://en.cppreference.com/w/cpp/string/basic_string/to_string>
-
 ## D
 
-{{< r "conv.d" >}}
-{{< r "fmt.d" >}}
+{{< r "a.d" >}}
 
 <https://dlang.org/library/std/format.html>
 
 ## Dart
 
-{{< r "a.dart" >}}
-
-- <https://api.dart.dev/dart-core/num/toString.html>
-- <https://github.com/dart-lang/intl>
+<https://github.com/dart-lang/intl>
 
 ## Go
 
-{{< r "fmt.go" >}}
-{{< r "x.go" >}}
+{{< r "a.go" >}}
 
-- <https://golang.org/pkg/fmt#Printf>
-- <https://pkg.go.dev/golang.org/x/text/message#NewPrinter>
+<https://pkg.go.dev/golang.org/x/text/message#NewPrinter>
 
 ## JavaScript
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String>
-
-## Nim
-
-{{< r "a.nim" >}}
-
-<https://nim-lang.org/docs/strformat.html#fmt.m,string>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString>
 
 ## PHP
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.number-format>
-- <https://php.net/function.sprintf>
-- <https://php.net/function.strval>
-- <https://php.net/language.types.type-juggling>
+<https://php.net/function.number-format>
 
 ## Python
 
@@ -61,25 +39,11 @@ date: 2020-09-13
 {{< r "b.py" >}}
 
 - <https://docs.python.org/library/functions.html#format>
-- <https://docs.python.org/library/functions.html#func-str>
 - <https://docs.python.org/library/locale.html#locale.setlocale>
 - <https://docs.python.org/library/stdtypes.html#str.format>
 
-## Ruby
-
-{{< r "a.rb" >}}
-
-## Rust
-
-{{< r "a.rs" >}}
-
-<https://doc.rust-lang.org/std/fmt>
-
 ## References
 
-- <https://hyperpolyglot.org/cpp#num-to-str>
-- <https://hyperpolyglot.org/scripting#num-to-str>
-- <https://hyperpolyglot.org/web#num-to-str>
-- <https://programming-idioms.org/idiom/173/format-a-number-with-group>
-- <https://programming-idioms.org/idiom/55/convert-integer-to-str>
+- <https://hyperpolyglot.org/scripting#format-str>
+- <https://programming-idioms.org/idiom/173>
 - <https://rosettacode.org/wiki/Commatizing_numbers>

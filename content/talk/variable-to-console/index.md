@@ -1,5 +1,5 @@
 ---
-title: 'Talk:Write to console'
+title: 'Talk:Variable to console'
 ---
 
 Some languages have not set `ENABLE_VIRTUAL_TERMINAL_PROCESSING`:

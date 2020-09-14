@@ -13,8 +13,7 @@ date: 2020-09-11
 
 ## D
 
-{{< r "conv.d" >}}
-{{< r "fmt.d" >}}
+{{< r "a.d" >}}
 
 <https://dlang.org/library/std/format.html>
 
@@ -22,23 +21,19 @@ date: 2020-09-11
 
 {{< r "a.dart" >}}
 
-- <https://api.dart.dev/dart-core/num/toString.html>
-- <https://github.com/dart-lang/intl>
+<https://api.dart.dev/dart-core/num/toString.html>
 
 ## Go
 
-{{< r "fmt.go" >}}
-{{< r "x.go" >}}
+{{< r "a.go" >}}
 
-- <https://golang.org/pkg/fmt#Printf>
-- <https://pkg.go.dev/golang.org/x/text/message#NewPrinter>
+<https://golang.org/pkg/fmt#Printf>
 
 ## JavaScript
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String>
 
 ## Nim
 
@@ -50,7 +45,6 @@ date: 2020-09-11
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.number-format>
 - <https://php.net/function.sprintf>
 - <https://php.net/function.strval>
 - <https://php.net/language.types.type-juggling>
@@ -58,11 +52,9 @@ date: 2020-09-11
 ## Python
 
 {{< r "a.py" >}}
-{{< r "b.py" >}}
 
 - <https://docs.python.org/library/functions.html#format>
 - <https://docs.python.org/library/functions.html#func-str>
-- <https://docs.python.org/library/locale.html#locale.setlocale>
 - <https://docs.python.org/library/stdtypes.html#str.format>
 
 ## Ruby
@@ -80,6 +72,4 @@ date: 2020-09-11
 - <https://hyperpolyglot.org/cpp#num-to-str>
 - <https://hyperpolyglot.org/scripting#num-to-str>
 - <https://hyperpolyglot.org/web#num-to-str>
-- <https://programming-idioms.org/idiom/173/format-a-number-with-group>
-- <https://programming-idioms.org/idiom/55/convert-integer-to-str>
-- <https://rosettacode.org/wiki/Commatizing_numbers>
+- <https://programming-idioms.org/idiom/55>
