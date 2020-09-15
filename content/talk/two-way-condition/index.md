@@ -1,5 +1,6 @@
 ---
 title: 'Talk:Two-way condition'
+date: 2020-09-14
 ---
 
 ## If statements

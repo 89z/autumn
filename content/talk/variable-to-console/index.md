@@ -1,5 +1,6 @@
 ---
 title: 'Talk:Variable to console'
+date: 2020-09-14
 ---
 
 Some languages have not set `ENABLE_VIRTUAL_TERMINAL_PROCESSING`:

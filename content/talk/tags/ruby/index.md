@@ -1,5 +1,6 @@
 ---
 title: 'Tag talk:Ruby'
+date: 2020-09-14
 ---
 
 <https://en.wikipedia.org/wiki/There's_more_than_one_way_to_do_it>

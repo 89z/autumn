@@ -1,5 +1,6 @@
 ---
 title: 'Talk:Convert to integer'
+date: 2020-09-14
 ---
 
 ## Float

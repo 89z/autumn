@@ -1,5 +1,6 @@
 ---
 title: 'Tag talk:Nim'
+date: 2020-09-14
 ---
 
 ## Cache issue with getTempDir

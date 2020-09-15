@@ -24,40 +24,26 @@
 
 <main>
    <h1>Talk:Reduce array</h1>
-   <time>Mon Jan 1 0001</time>
+   <time>Mon Sep 14 2020</time>
    
    
-   <p>If you have some code like this:</p>
+   <p>We can approach this three ways. Using the reduce function:</p>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>];
-$f <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span> ($s_acc, $s_cur) <span style="color:#f92672">=&gt;</span> $s_acc <span style="color:#f92672">.</span> $s_cur;
-$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_reduce</span>($a, $f);
-<span style="color:#a6e22e">var_dump</span>($s);
-</code></pre></div>
-<p>You can rewrite it like this:</p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>];
-$s_acc <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
-
-<span style="color:#66d9ef">foreach</span> ($a <span style="color:#66d9ef">as</span> $s_cur) {
-   $s_acc <span style="color:#f92672">.=</span> $s_cur;
-}
-
+$a_src <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>];
+$f_red <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span> ($s_acc, $s_cur) <span style="color:#f92672">=&gt;</span> $s_acc <span style="color:#f92672">.</span> $s_cur;
+$s_acc <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_reduce</span>($a_src, $f_red);
 <span style="color:#a6e22e">var_dump</span>($s_acc);
 </code></pre></div>
-<p>Others:</p>
+<p>Functional loop:</p>
 <p>
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">reduce</span>(<span style="color:#a6e22e">s_acc</span>, <span style="color:#a6e22e">s_cur</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">f_red</span>(<span style="color:#a6e22e">s_acc</span>, <span style="color:#a6e22e">s_cur</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s_acc</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s_cur</span>
 }
 
@@ -66,12 +52,27 @@ $s_acc <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#3
    <span style="color:#a6e22e">s_acc</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;&#34;</span>
    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">n_idx</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">a_src</span> {
       <span style="color:#a6e22e">s_cur</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a_src</span>[<span style="color:#a6e22e">n_idx</span>]
-      <span style="color:#a6e22e">s_acc</span> = <span style="color:#a6e22e">reduce</span>(<span style="color:#a6e22e">s_acc</span>, <span style="color:#a6e22e">s_cur</span>)
+      <span style="color:#a6e22e">s_acc</span> = <span style="color:#a6e22e">f_red</span>(<span style="color:#a6e22e">s_acc</span>, <span style="color:#a6e22e">s_cur</span>)
    }
    println(<span style="color:#a6e22e">s_acc</span>)
 }
 </code></pre></div>
 
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$a_src <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>];
+$f_red <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span> ($s_acc, $s_cur) <span style="color:#f92672">=&gt;</span> $s_acc <span style="color:#f92672">.</span> $s_cur;
+$s_acc <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+
+<span style="color:#66d9ef">foreach</span> ($a_src <span style="color:#66d9ef">as</span> $s_cur) {
+   $s_acc <span style="color:#f92672">=</span> $f_red($s_acc, $s_cur);
+}
+
+<span style="color:#a6e22e">var_dump</span>($s_acc);
+</code></pre></div></p>
+<p>Inline loop:</p>
+<p>
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
@@ -84,7 +85,26 @@ $s_acc <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#3
    }
    println(<span style="color:#a6e22e">s_acc</span>)
 }
+</code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$a_src <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>];
+$s_acc <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+
+<span style="color:#66d9ef">foreach</span> ($a_src <span style="color:#66d9ef">as</span> $s_cur) {
+   $s_acc <span style="color:#f92672">.=</span> $s_cur;
+}
+
+<span style="color:#a6e22e">var_dump</span>($s_acc);
 </code></pre></div></p>
+<p>The reduce function can be used in cases where you dont need or dont care about
+the current index, and just want some short code.</p>
+<p>The inline loop can be used in cases where reduce function is not available
+(Go), or in cases wheres reduce callback does not offer current index (PHP).</p>
+<p>The functional loop can be used when you need a loop, but you want to reuse the
+inner code.</p>
 
 </main>
 

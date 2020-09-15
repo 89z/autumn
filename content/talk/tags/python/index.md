@@ -1,5 +1,6 @@
 ---
 title: 'Tag talk:Python'
+date: 2020-09-14
 ---
 
 Cygwin version is a fucking joke:
