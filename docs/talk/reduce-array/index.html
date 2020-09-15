@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talk:Reduce array / Autumn</title>
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/a.css">
+   <link rel="stylesheet" href="/autumn/b.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/categories">Categories</a>
+         <a href="/autumn/tags">Tags</a>
+         <a href="https://github.com/nu8/autumn">Repo</a>
+      </nav>
+   </header>
+
+
+<main>
+   <h1>Talk:Reduce array</h1>
+   <time>Mon Jan 1 0001</time>
+   
+   
+   <p>If you have some code like this:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>];
+$f <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span> ($s_acc, $s_cur) <span style="color:#f92672">=&gt;</span> $s_acc <span style="color:#f92672">.</span> $s_cur;
+$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_reduce</span>($a, $f);
+<span style="color:#a6e22e">var_dump</span>($s);
+</code></pre></div>
+<p>You can rewrite it like this:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>];
+$s_acc <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+
+<span style="color:#66d9ef">foreach</span> ($a <span style="color:#66d9ef">as</span> $s_cur) {
+   $s_acc <span style="color:#f92672">.=</span> $s_cur;
+}
+
+<span style="color:#a6e22e">var_dump</span>($s_acc);
+</code></pre></div>
+<p>Others:</p>
+<p>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">reduce</span>(<span style="color:#a6e22e">s_acc</span>, <span style="color:#a6e22e">s_cur</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s_acc</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s_cur</span>
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">a_src</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span>}
+   <span style="color:#a6e22e">s_acc</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;&#34;</span>
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">n_idx</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">a_src</span> {
+      <span style="color:#a6e22e">s_cur</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a_src</span>[<span style="color:#a6e22e">n_idx</span>]
+      <span style="color:#a6e22e">s_acc</span> = <span style="color:#a6e22e">reduce</span>(<span style="color:#a6e22e">s_acc</span>, <span style="color:#a6e22e">s_cur</span>)
+   }
+   println(<span style="color:#a6e22e">s_acc</span>)
+}
+</code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">a_src</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span>}
+   <span style="color:#a6e22e">s_acc</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;&#34;</span>
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">n_idx</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">a_src</span> {
+      <span style="color:#a6e22e">s_acc</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">a_src</span>[<span style="color:#a6e22e">n_idx</span>]
+   }
+   println(<span style="color:#a6e22e">s_acc</span>)
+}
+</code></pre></div></p>
+
+</main>
+
+</body>
+</html>

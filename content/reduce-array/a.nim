@@ -1,5 +1,4 @@
 import sequtils
-let
-  xs = @[1,2,3,4,5,6]
-  sum = xs.foldl(a + b)
-  product = xs.foldl(a * b)
+let a_mon = ["May", "June"]
+let s_mon = foldl(a_mon, a & b)
+echo s_mon == "MayJune"

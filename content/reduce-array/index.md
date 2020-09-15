@@ -2,7 +2,7 @@
 title: Reduce array
 categories: [array]
 tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
-date: 2020-09-13
+date: 2020-09-14
 ---
 
 ## C++
@@ -52,7 +52,7 @@ date: 2020-09-13
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/functools.html>
+<https://docs.python.org/library/functools.html#functools.reduce>
 
 ## Ruby
 
