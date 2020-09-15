@@ -1,14 +1,19 @@
 ---
 title: Join an array
 categories: [array, string]
-tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-14
 ---
 
+## C++
+
+{{< r "a.cpp" >}}
+
+<https://en.cppreference.com/w/cpp/language/range-for>
+
 ## D
 
-{{< r "n.d" >}}
-{{< r "s.d" >}}
+{{< r "a.d" >}}
 
 <https://dlang.org/library/std/array/join.html>
 
@@ -50,6 +55,8 @@ date: 2020-09-14
 <https://docs.python.org/library/stdtypes.html#str.join>
 
 ## Ruby
+
+{{< r "a.rb" >}}
 
 <https://ruby-doc.org/core/Array.html#method-i-join>
 

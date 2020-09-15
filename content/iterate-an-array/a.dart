@@ -5,8 +5,11 @@ void main() {
       print(s);
    }
    // example 2
-   var f = (s) => print(s);
+   var f = (String s) => print(s);
    a.forEach(f);
    // example 3
-   a.forEach(print);
+   for (var n = 0; n < a.length; n++) {
+      var s = a[n];
+      print([n, s]);
+   }
 }
