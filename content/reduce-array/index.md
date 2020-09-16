@@ -2,7 +2,7 @@
 title: Reduce array
 categories: [array]
 tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
-date: 2020-09-14
+date: 2020-09-16
 ---
 
 ## C++
@@ -38,6 +38,7 @@ date: 2020-09-14
 ## Nim
 
 {{< r "a.nim" >}}
+{{< r "b.nim" >}}
 
 <https://nim-lang.org/docs/sequtils.html#foldl.t,untyped,untyped>
 

@@ -5,5 +5,5 @@ fn main() {
    // example 2
    let n2 = s.chars().count();
    // print
-   println!("{} {}", n == 4, n2 == 1);
+   println!("{}", n == 4 && n2 == 1);
 }

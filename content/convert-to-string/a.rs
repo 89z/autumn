@@ -5,5 +5,5 @@ fn main() {
    // example 2
    let s2 = n.to_string();
    // print
-   println!("{} {}", s == "9", s2 == "9");
+   println!("{}", s == "9" && s2 == "9");
 }

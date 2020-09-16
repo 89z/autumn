@@ -5,5 +5,5 @@ fn main() {
    // example 2
    let s3 = s.get(..2);
    // print
-   println!("{} {}", s2 == "Ma", s3 == Some("Ma"));
+   println!("{}", s2 == "Ma" && s3 == Some("Ma"));
 }

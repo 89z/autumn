@@ -10,5 +10,5 @@ fn main() {
    // example 5
    let b5 = true & true;
    // print
-   println!("{} {} {} {} {}", b, b2, b3, b4, b5);
+   println!("{}", b && b2 && b3 && b4 && b5);
 }

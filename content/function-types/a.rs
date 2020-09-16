@@ -10,5 +10,5 @@ fn f2(n: u8, n2: u8) -> bool {
 fn main() {
    let b = f(9, 8);
    let b2 = f2(9, 8);
-   println!("{} {}", b, b2);
+   println!("{}", b && b2);
 }

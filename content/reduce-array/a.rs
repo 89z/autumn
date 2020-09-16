@@ -1,6 +1,16 @@
+fn f(s_acc: String, s_cur: &&str) -> String {
+   s_acc + s_cur
+}
+
 fn main() {
-   let arr = vec![1, 2, 3, 4, 5, 6, 7, 8, 9];
-   let sum = arr.iter().fold(0i32, |a, &b| a + b);
-   let product = arr.iter().fold(1i32, |a, &b| a * b);
-   println!("the sum is {} and the product is {}", sum, product);
+   let a = vec!["May", "June"];
+   // example 1
+   let s = a.iter().fold(String::new(), f);
+   // example 2
+   let mut s2 = String::new();
+   for s_cur in a.iter() {
+      s2 = f(s2, s_cur);
+   }
+   // print
+   println!("{}", s == "MayJune" && s2 == "MayJune");
 }
