@@ -1,10 +1,10 @@
 package main
 // example 1
-func f(n, n2 int) bool {
+func f(n int, n2 int) bool {
    return n > n2
 }
 // example 2
-var f2 = func (n, n2 int) bool {
+func f2(n, n2 int) bool {
    return n > n2
 }
 // print
