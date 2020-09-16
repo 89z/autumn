@@ -1,10 +1,10 @@
 <?php
 # example 1
-function f($n, $n2) {
+function f(int $n, int $n2): bool {
    return $n > $n2;
 }
 # example 2
-function f2(int $n, int $n2): bool {
+function f2($n, $n2) {
    return $n > $n2;
 }
 # print

@@ -1,27 +1,33 @@
 ---
 title: Anonymous functions
 categories: [function]
-tags: [d, dart, go, javascript, php, python, ruby, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-15
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
+
+<https://en.cppreference.com/w/cpp/language/lambda>
 
 ## D
 
 {{< r "a.d" >}}
 
-<https://dlang.org/spec/function.html>
+<https://dlang.org/spec/expression.html#FunctionLiteral>
 
 ## Dart
 
 {{< r "a.dart" >}}
 
-<https://dart.dev/guides/language/language-tour#functions>
+<https://dart.dev/guides/language/language-tour#functions-as-first-class-objects>
 
 ## Go
 
 {{< r "a.go" >}}
 
-<https://golang.org/ref/spec#Function_types>
+<https://golang.org/ref/spec#Function_literals>
 
 ## JavaScript
 
@@ -30,40 +36,40 @@ date: 2020-09-15
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Functions/Arrow_functions>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/function>
 
+## Nim
+
+{{< r "a.nim" >}}
+
+<https://nim-lang.org/docs/manual.html#procedures-anonymous-procs>
+
 ## PHP
 
 {{< r "a.php" >}}
 
 - <https://php.net/functions.anonymous>
 - <https://php.net/functions.arrow>
-- <https://php.net/functions.user-defined>
 
 ## Python
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/reference/compound_stmts.html#function-definitions>
-- <https://docs.python.org/reference/expressions.html#lambda>
+<https://docs.python.org/reference/expressions.html#lambda>
 
 ## Ruby
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/doc/syntax/methods_rdoc.html>
+<https://ruby-doc.org/core/Proc.html>
 
 ## Rust
 
-{{< r "a.rs" >}}
-
-- <https://doc.rust-lang.org/reference/types/closure.html>
-- <https://doc.rust-lang.org/std/keyword.fn.html>
+<https://doc.rust-lang.org/reference/types/closure.html>
 
 ## References
 
-- <https://hyperpolyglot.org/c#def-func>
-- <https://hyperpolyglot.org/cpp#def-func>
-- <https://hyperpolyglot.org/rust#def-func>
-- <https://hyperpolyglot.org/scripting#def-func>
-- <https://hyperpolyglot.org/web#def-func>
+- <https://hyperpolyglot.org/c#anonymous-func-literal>
+- <https://hyperpolyglot.org/cpp#anon-func-literal>
+- <https://hyperpolyglot.org/scripting#anonymous-func-literal>
+- <https://hyperpolyglot.org/web#anonymous-func-literal>
 - <https://programming-idioms.org/idiom/4>
 - <https://rosettacode.org/wiki/Function_definition>
