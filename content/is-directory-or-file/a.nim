@@ -5,4 +5,4 @@ let b = s.existsFile
 # example 2
 let b2 = not s.existsDir
 # print
-echo [b, b2]
+echo b and b2

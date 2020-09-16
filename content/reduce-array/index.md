@@ -8,12 +8,14 @@ date: 2020-09-16
 ## C++
 
 {{< r "a.cpp" >}}
+{{< r "b.cpp" >}}
 
 <https://en.cppreference.com/w/cpp/algorithm/accumulate>
 
 ## D
 
 {{< r "a.d" >}}
+{{< r "b.d" >}}
 
 <https://dlang.org/library/std/algorithm/iteration/reduce.html>
 
@@ -45,13 +47,13 @@ date: 2020-09-16
 ## PHP
 
 {{< r "a.php" >}}
-{{< r "b.php" >}}
 
 <https://php.net/function.array-reduce>
 
 ## Python
 
 {{< r "a.py" >}}
+{{< r "b.py" >}}
 
 <https://docs.python.org/library/functools.html#functools.reduce>
 

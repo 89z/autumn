@@ -5,4 +5,4 @@ let b = t.contains("May")
 # example 2
 let b2 = "May" in t
 # print
-echo [b, b2]
+echo b and b2

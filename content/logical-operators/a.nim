@@ -5,4 +5,4 @@ let b2 = false or true
 # example 3
 let b3 = true and true
 # print
-echo [b, b2, b3]
+echo b and b2 and b3

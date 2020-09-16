@@ -4,4 +4,4 @@ let s2 = s[1 .. 2]
 # example 2
 let s3 = s[1 ..< 3]
 # print
-echo [s2 == "un", s3 == "un"]
+echo s3 == "un" and s3 == "un"

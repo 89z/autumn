@@ -5,4 +5,4 @@ let s = a.join(",")
 # example 2
 let s2 = a.join
 # print
-echo [s == "May,June", s2 == "MayJune"]
+echo s == "May,June" and s2 == "MayJune"

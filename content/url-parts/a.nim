@@ -7,4 +7,4 @@ let s2 = o.path
 # example 3
 let s3 = o.query
 # print
-echo [s == "example.com", s2 == "/one", s3 == "two=even"]
+echo s == "example.com" and s2 == "/one" and s3 == "two=even"
