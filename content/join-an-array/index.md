@@ -64,7 +64,8 @@ date: 2020-09-14
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/primitive.slice.html#method.join>
+- <https://doc.rust-lang.org/std/primitive.slice.html#method.concat>
+- <https://doc.rust-lang.org/std/primitive.slice.html#method.join>
 
 ## References
 

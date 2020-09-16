@@ -1,6 +1,6 @@
 ---
-title: Function types
-categories: [reference]
+title: Global functions
+categories: [function]
 tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-15
 ---
@@ -68,7 +68,8 @@ date: 2020-09-15
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/keyword.fn.html>
+- <https://doc.rust-lang.org/reference/types/closure.html>
+- <https://doc.rust-lang.org/std/keyword.fn.html>
 
 ## References
 
