@@ -1,16 +1,16 @@
 <?php
 # example 1
-function f(string $s): int {
-   return strlen($s);
+function f(int $n, int $n2): bool {
+   return $n > $n2;
 }
 # example 2
-$f2 = function (string $s): int {
-   return strlen($s);
+$f2 = function (int $n, int $n2): bool {
+   return $n > $n2;
 };
 # example 3
-$f3 = fn (string $s): int => strlen($s);
+$f3 = fn (int $n, int $n2): bool => $n > $n2;
 # print
-$n = f('May');
-$n2 = $f2('May');
-$n3 = $f3('May');
-var_dump($n == 3, $n2 == 3, $n3 == 3);
+$b = f(9, 8);
+$b2 = $f2(9, 8);
+$b3 = $f3(9, 8);
+var_dump($b, $b2, $b3);

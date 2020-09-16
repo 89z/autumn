@@ -13,7 +13,7 @@ int main() {
    // example 2
    std::string s2;
    for (auto s_cur: a) {
-      s2 += s_cur;
+      s2 = f(s2, s_cur);
    }
    // print
    std::cout << (s == "MayJune" && s2 == "MayJune") << std::endl;

@@ -1,7 +1,7 @@
 ---
 title: Function types
 categories: [reference]
-tags: [c++, d, dart, go, javascript, nim, php, python, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-15
 ---
 
@@ -58,9 +58,17 @@ date: 2020-09-15
 - <https://docs.python.org/reference/compound_stmts.html#function-definitions>
 - <https://docs.python.org/reference/expressions.html#lambda>
 
+## Ruby
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/doc/syntax/methods_rdoc.html>
+
 ## Rust
 
 {{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/keyword.fn.html>
 
 ## References
 

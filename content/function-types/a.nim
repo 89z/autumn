@@ -1,5 +1,5 @@
-proc f(s: string): int =
-   return s.len
+proc f(n, n2: int): bool =
+   return n > n2
 
-let n = f("May")
-echo n == 3
+let b = f(9, 8)
+echo b

@@ -50,7 +50,7 @@ std<span style="color:#f92672">::</span>string f(std<span style="color:#f92672">
    <span style="color:#75715e">// example 2
 </span><span style="color:#75715e"></span>   std<span style="color:#f92672">::</span>string s2;
    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> s_cur: a) {
-      s2 <span style="color:#f92672">+=</span> s_cur;
+      s2 <span style="color:#f92672">=</span> f(s2, s_cur);
    }
    <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span>   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> (s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span> <span style="color:#f92672">&amp;&amp;</span> s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>) <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;

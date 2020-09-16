@@ -1,15 +1,15 @@
 // example 1
-function f(s) {
-   return s.length;
+function f(n, n2) {
+   return n > n2;
 }
 // example 2
-let f2 = function (s) {
-   return s.length;
+let f2 = function (n, n2) {
+   return n > n2;
 };
 // example 3
-let f3 = s => s.length;
+let f3 = (n, n2) => n > n2;
 // print
-let n = f('May');
-let n2 = f2('May');
-let n3 = f3('May');
-console.log(n == 3, n2 == 3, n3 == 3);
+let b = f(9, 8);
+let b2 = f2(9, 8);
+let b3 = f3(9, 8);
+console.log(b, b2, b3);
