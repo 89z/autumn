@@ -1,15 +1,9 @@
 ---
 title: Anonymous functions
 categories: [function]
-tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [d, dart, go, javascript, php, python, ruby, rust]
 date: 2020-09-15
 ---
-
-## C++
-
-{{< r "a.cpp" >}}
-
-<https://en.cppreference.com/w/cpp/language/functions>
 
 ## D
 
@@ -35,13 +29,6 @@ date: 2020-09-15
 
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Functions/Arrow_functions>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/function>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/function>
-
-## Nim
-
-{{< r "a.nim" >}}
-
-<https://nim-lang.org/docs/manual.html#procedures>
 
 ## PHP
 

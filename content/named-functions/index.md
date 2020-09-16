@@ -33,9 +33,7 @@ date: 2020-09-15
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Functions/Arrow_functions>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/function>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/function>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Statements/function>
 
 ## Nim
 
@@ -47,16 +45,13 @@ date: 2020-09-15
 
 {{< r "a.php" >}}
 
-- <https://php.net/functions.anonymous>
-- <https://php.net/functions.arrow>
-- <https://php.net/functions.user-defined>
+<https://php.net/functions.user-defined>
 
 ## Python
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/reference/compound_stmts.html#function-definitions>
-- <https://docs.python.org/reference/expressions.html#lambda>
+<https://docs.python.org/reference/compound_stmts.html#function-definitions>
 
 ## Ruby
 
@@ -68,8 +63,7 @@ date: 2020-09-15
 
 {{< r "a.rs" >}}
 
-- <https://doc.rust-lang.org/reference/types/closure.html>
-- <https://doc.rust-lang.org/std/keyword.fn.html>
+<https://doc.rust-lang.org/std/keyword.fn.html>
 
 ## References
 
