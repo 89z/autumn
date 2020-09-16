@@ -1,15 +1,15 @@
 // example 1
-num f(String s) {
-   return s.length;
+bool f(num n, num n2) {
+   return n > n2;
 }
 // example 2
-num f2(String s) => s.length;
+bool f2(num n, num n2) => n > n2;
 // example 3
-var f3 = (String s) => s.length;
+var f3 = (num n, num n2) => n > n2;
 // print
 void main() {
-   var n = f('May');
-   var n2 = f2('May');
-   var n3 = f3('May');
-   print([n == 3, n2 == 3, n3 == 3]);
+   var b = f(9, 8);
+   var b2 = f2(9, 8);
+   var b3 = f3(9, 8);
+   print([b, b2, b3]);
 }

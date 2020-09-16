@@ -2,7 +2,7 @@
 title: Function types
 categories: [reference]
 tags: [c++, d, dart, go, javascript, nim, php, python, rust]
-date: 2020-09-07
+date: 2020-09-15
 ---
 
 ## C++

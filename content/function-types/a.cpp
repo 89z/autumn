@@ -1,10 +1,10 @@
 #include <iostream>
 
-size_t f(std::string s) {
-   return s.length();
+bool f(int n, int n2) {
+   return n > n2;
 }
 
 int main() {
-   auto n = f("📗");
-   std::cout << n << std::endl;
+   auto b = f(9, 8);
+   std::cout << b << std::endl;
 }
