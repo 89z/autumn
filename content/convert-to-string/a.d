@@ -7,5 +7,5 @@ void main() {
    // example 2
    auto s2 = n.to!string;
    // print
-   [s == "9", s2 == "9"].writeln;
+   writeln(s == "9" && s2 == "9");
 }

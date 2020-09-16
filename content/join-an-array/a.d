@@ -7,5 +7,5 @@ void main() {
    // example 2
    auto s2 = a.join;
    // print
-   [s == "May,June", s2 == "MayJune"].writeln;
+   writeln(s == "May,June" && s2 == "MayJune");
 }

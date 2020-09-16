@@ -11,5 +11,5 @@ void main() {
    var b = f(9, 8);
    var b2 = f2(9, 8);
    var b3 = f3(9, 8);
-   print([b, b2, b3]);
+   print(b && b2 && b3);
 }

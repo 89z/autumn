@@ -1,4 +1,4 @@
-import std.algorithm, import std.stdio;
+import std.algorithm, std.stdio;
 
 void main() {
    auto a = ["May", "June"];
@@ -11,5 +11,5 @@ void main() {
       s2 = f(s2, s_cur);
    }
    // print
-   [s == "MayJune", s2 == "MayJune"].writeln;
+   writeln(s == "MayJune" && s2 == "MayJune");
 }

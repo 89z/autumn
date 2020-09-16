@@ -5,5 +5,5 @@ void main() {
    // example 2
    var n2 = num.parse(s);
    // print
-   print([n == 10, n2 == 10]);
+   print(n == 10 && n2 == 10);
 }

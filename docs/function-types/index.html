@@ -78,7 +78,7 @@
    <span style="color:#66d9ef">auto</span> b4 <span style="color:#f92672">=</span> f4<span style="color:#f92672">(</span><span style="color:#ae81ff">9</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">8</span><span style="color:#f92672">);</span>
    <span style="color:#66d9ef">auto</span> b5 <span style="color:#f92672">=</span> f5<span style="color:#f92672">(</span><span style="color:#ae81ff">9</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">8</span><span style="color:#f92672">);</span>
    <span style="color:#66d9ef">auto</span> b6 <span style="color:#f92672">=</span> f6<span style="color:#f92672">(</span><span style="color:#ae81ff">9</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">8</span><span style="color:#f92672">);</span>
-   <span style="color:#f92672">[</span>b<span style="color:#f92672">,</span> b2<span style="color:#f92672">,</span> b3<span style="color:#f92672">,</span> b4<span style="color:#f92672">,</span> b5<span style="color:#f92672">,</span> b6<span style="color:#f92672">].</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+   writeln<span style="color:#f92672">(</span>b <span style="color:#f92672">&amp;&amp;</span> b2 <span style="color:#f92672">&amp;&amp;</span> b3 <span style="color:#f92672">&amp;&amp;</span> b4 <span style="color:#f92672">&amp;&amp;</span> b5 <span style="color:#f92672">&amp;&amp;</span> b6<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 <p><a href="https://dlang.org/spec/function.html">https://dlang.org/spec/function.html</a></p>
@@ -99,7 +99,7 @@
    <span style="color:#66d9ef">var</span> b <span style="color:#f92672">=</span> f(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>);
    <span style="color:#66d9ef">var</span> b2 <span style="color:#f92672">=</span> f2(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>);
    <span style="color:#66d9ef">var</span> b3 <span style="color:#f92672">=</span> f3(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>);
-   print([b, b2, b3]);
+   print(b <span style="color:#f92672">&amp;&amp;</span> b2 <span style="color:#f92672">&amp;&amp;</span> b3);
 }
 </code></pre></div>
 <p><a href="https://dart.dev/guides/language/language-tour#functions">https://dart.dev/guides/language/language-tour#functions</a></p>

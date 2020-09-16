@@ -8,5 +8,5 @@ void main() {
    // example 3
    auto b3 = true && true;
    // print
-   [b, b2, b3].writeln;
+   writeln(b && b2 && b3);
 }

@@ -105,7 +105,53 @@ the current index, and just want some short code.</p>
 (Go), or in cases wheres reduce callback does not offer current index (PHP).</p>
 <p>The functional loop can be used when you need a loop, but you want to reuse the
 inner code.</p>
+<h2 id="nim">Nim</h2>
+<p>You can use <code>foldl</code> like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> sequtils
+<span style="color:#66d9ef">let</span> a_src <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span><span style="color:#f92672">]</span>
+<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> foldl(a_src, a <span style="color:#f92672">&amp;</span> b)
+echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>
+</code></pre></div><p>but it seem you cannot supply an actual function:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> sequtils
+<span style="color:#66d9ef">let</span> a_src <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span><span style="color:#f92672">]</span>
 
+<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">f</span>(s_acc, s_cur: <span style="color:#66d9ef">string</span>): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span>
+   <span style="color:#66d9ef">return</span> s_acc <span style="color:#f92672">&amp;</span> s_cur
+
+<span style="color:#75715e"># Error: type mismatch: got</span>
+<span style="color:#75715e"># &lt;proc (s_acc: string, s_cur: string): string{.noSideEffect, gcsafe, locks: 0.}&gt;</span>
+<span style="color:#75715e"># but expected &#39;string&#39;</span>
+foldl(a_src, f)
+</code></pre></div><p>This is possible with other languages, like C++:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;numeric&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+std<span style="color:#f92672">::</span>string f(std<span style="color:#f92672">::</span>string s_acc, std<span style="color:#f92672">::</span>string s_cur) {
+   <span style="color:#66d9ef">return</span> s_acc <span style="color:#f92672">+</span> s_cur;
+}
+
+<span style="color:#66d9ef">int</span> main() {
+   std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>string<span style="color:#f92672">&gt;</span> a <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span>};
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>accumulate(a.begin(), a.end(), std<span style="color:#f92672">::</span>string(), f);
+   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> (s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>) <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+}
+</code></pre></div><p>D:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.algorithm<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;May&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;June&#34;</span><span style="color:#f92672">];</span>
+   <span style="color:#66d9ef">auto</span> f <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">string</span> s_acc<span style="color:#f92672">,</span> <span style="color:#66d9ef">string</span> s_cur<span style="color:#f92672">)</span> <span style="color:#f92672">=&gt;</span> s_acc <span style="color:#f92672">~</span> s_cur<span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">reduce</span><span style="color:#f92672">!(</span>f<span style="color:#f92672">);</span>
+   writeln<span style="color:#f92672">(</span>s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Python:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> functools
+a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>]
+f <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> s_acc, s_cur: s_acc <span style="color:#f92672">+</span> s_cur
+s <span style="color:#f92672">=</span> functools<span style="color:#f92672">.</span>reduce(f, a)
+<span style="color:#66d9ef">print</span>(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>)
+</code></pre></div>
 </main>
 
 </body>

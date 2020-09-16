@@ -7,5 +7,5 @@ void main() {
    // example 2
    auto s3 = s[0 .. 2];
    // print
-   [s2 == 'J', s3 == "Ju"].writeln;
+   writeln(s2 == 'J' && s3 == "Ju");
 }

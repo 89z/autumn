@@ -27,5 +27,5 @@ void main() {
    auto b4 = f4(9, 8);
    auto b5 = f5(9, 8);
    auto b6 = f6(9, 8);
-   [b, b2, b3, b4, b5, b6].writeln;
+   writeln(b && b2 && b3 && b4 && b5 && b6);
 }

@@ -11,5 +11,5 @@ void main() {
    dstring s3 = "📗";
    auto n3 = s3.length;
    // print
-   [n == 4, n2 == 2, n3 == 1].writeln;
+   writeln(n == 4 && n2 == 2 && n3 == 1);
 }

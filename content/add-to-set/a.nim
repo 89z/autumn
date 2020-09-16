@@ -1,4 +1,4 @@
 import sets
-var t = ["May"].toHashSet
-t.incl("June")
+var t = ["May", "June"].toHashSet
+t.incl("July")
 echo t

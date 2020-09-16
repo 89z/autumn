@@ -6,5 +6,5 @@ void main() {
    // example 3
    var b3 = true && true;
    // print
-   print([b, b2, b3]);
+   print(b && b2 && b3);
 }

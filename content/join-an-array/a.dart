@@ -5,5 +5,5 @@ void main() {
    // example 2
    var s2 = a.join();
    // print
-   print([s == 'May,June', s2 == 'MayJune']);
+   print(s == 'May,June' && s2 == 'MayJune');
 }
