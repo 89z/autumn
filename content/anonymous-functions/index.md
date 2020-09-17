@@ -63,6 +63,8 @@ date: 2020-09-15
 
 ## Rust
 
+{{< r "a.rs" >}}
+
 <https://doc.rust-lang.org/reference/types/closure.html>
 
 ## References

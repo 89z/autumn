@@ -61,11 +61,12 @@ date: 2020-09-16
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Enumerable.html#method-i-inject>
+<https://ruby-doc.org/core/Enumerable.html#method-i-reduce>
 
 ## Rust
 
 {{< r "a.rs" >}}
+{{< r "b.rs" >}}
 
 <https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.fold>
 
