@@ -22,18 +22,21 @@ date: 2020-09-16
 ## Dart
 
 {{< r "a.dart" >}}
+{{< r "b.dart" >}}
 
 <https://api.dart.dev/dart-core/Iterable/reduce.html>
 
 ## Go
 
 {{< r "a.go" >}}
+{{< r "b.go" >}}
 
 <https://golang.org/ref/spec#For_range>
 
 ## JavaScript
 
 {{< r "a.js" >}}
+{{< r "b.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/Reduce>
 

@@ -2,7 +2,11 @@ import std.algorithm, std.stdio;
 
 void main() {
    auto a = ["May", "June"];
-   auto f = (string s_acc, string s_cur) => s_acc ~ s_cur;
-   auto s = a.reduce!(f);
-   writeln(s == "MayJune");
+   // example 1
+   auto s = a.reduce!((sa, sc) => sa ~ sc);
+   // example 2
+   auto f = (string sa, string sc) => sa ~ sc;
+   auto s2 = a.reduce!(f);
+   // print
+   writeln(s == "MayJune" && s2 == "MayJune");
 }
