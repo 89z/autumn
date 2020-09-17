@@ -32,7 +32,7 @@
    <a href="/autumn/talk/reduce-array/">Talk:Reduce array</a>
    
    <h2 id="c">C++</h2>
-<p>
+
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
@@ -52,28 +52,9 @@
 </span><span style="color:#75715e"></span>   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> (s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span> <span style="color:#f92672">&amp;&amp;</span> s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>) <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
 }
 </code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-std<span style="color:#f92672">::</span>string f(std<span style="color:#f92672">::</span>string sa, std<span style="color:#f92672">::</span>string sc) {
-   <span style="color:#66d9ef">return</span> sa <span style="color:#f92672">+</span> sc;
-}
-
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-   std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>string<span style="color:#f92672">&gt;</span> a <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span>};
-   std<span style="color:#f92672">::</span>string s;
-   <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> sc: a) {
-      s <span style="color:#f92672">=</span> f(s, sc);
-   }
-   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> (s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>) <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
-}
-</code></pre></div></p>
 <p><a href="https://en.cppreference.com/w/cpp/algorithm/accumulate">https://en.cppreference.com/w/cpp/algorithm/accumulate</a></p>
 <h2 id="d">D</h2>
-<p>
+
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.algorithm<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
@@ -89,27 +70,9 @@ std<span style="color:#f92672">::</span>string f(std<span style="color:#f92672">
 </span><span style="color:#75715e"></span>   writeln<span style="color:#f92672">(</span>s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span> <span style="color:#f92672">&amp;&amp;</span> s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">string</span> <span style="color:#a6e22e">f</span><span style="color:#f92672">(</span><span style="color:#66d9ef">string</span> sa<span style="color:#f92672">,</span> <span style="color:#66d9ef">string</span> sc<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">return</span> sa <span style="color:#f92672">~</span> sc<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;May&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;June&#34;</span><span style="color:#f92672">];</span>
-   <span style="color:#66d9ef">string</span> s<span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">foreach</span> <span style="color:#f92672">(</span>sc<span style="color:#f92672">;</span> a<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      s <span style="color:#f92672">=</span> f<span style="color:#f92672">(</span>s<span style="color:#f92672">,</span> sc<span style="color:#f92672">);</span>
-   <span style="color:#f92672">}</span>
-   writeln<span style="color:#f92672">(</span>s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span><span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-</code></pre></div></p>
 <p><a href="https://dlang.org/library/std/algorithm/iteration/reduce.html">https://dlang.org/library/std/algorithm/iteration/reduce.html</a></p>
 <h2 id="dart">Dart</h2>
-<p>
+
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
@@ -123,22 +86,6 @@ std<span style="color:#f92672">::</span>string f(std<span style="color:#f92672">
 </span><span style="color:#75715e"></span>   print(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span> <span style="color:#f92672">&amp;&amp;</span> s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>);
 }
 </code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">String</span> f(<span style="color:#66d9ef">String</span> sa, <span style="color:#66d9ef">String</span> sc) {
-   <span style="color:#66d9ef">return</span> sa <span style="color:#f92672">+</span> sc;
-}
-
-<span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>];
-   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
-   <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> sc <span style="color:#66d9ef">in</span> a) {
-      s <span style="color:#f92672">=</span> f(s, sc);
-   }
-   print(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>);
-}
-</code></pre></div></p>
 <p><a href="https://api.dart.dev/dart-core/Iterable/reduce.html">https://api.dart.dev/dart-core/Iterable/reduce.html</a></p>
 <h2 id="go">Go</h2>
 <p>
@@ -205,7 +152,7 @@ echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Ma
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/sequtils.html#foldl.t,untyped,untyped">https://nim-lang.org/docs/sequtils.html#foldl.t,untyped,untyped</a></p>
 <h2 id="php">PHP</h2>
-<p>
+
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
@@ -218,23 +165,6 @@ $s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_reduc
 <span style="color:#75715e"># print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>, $s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>);
 </code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f</span>(<span style="color:#a6e22e">string</span> $sa, <span style="color:#a6e22e">string</span> $sc)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
-   <span style="color:#66d9ef">return</span> $sa <span style="color:#f92672">.</span> $sc;
-}
-
-$a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>];
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
-
-<span style="color:#66d9ef">foreach</span> ($a <span style="color:#66d9ef">as</span> $sc) {
-   $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">f</span>($s, $sc);
-}
-
-<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>);
-</code></pre></div></p>
 <p><a href="https://php.net/function.array-reduce">https://php.net/function.array-reduce</a></p>
 <h2 id="python">Python</h2>
 
@@ -266,7 +196,7 @@ puts s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Ma
 </code></pre></div>
 <p><a href="https://ruby-doc.org/core/Enumerable.html#method-i-reduce">https://ruby-doc.org/core/Enumerable.html#method-i-reduce</a></p>
 <h2 id="rust">Rust</h2>
-<p>
+
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
@@ -280,22 +210,6 @@ puts s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Ma
 </span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span> <span style="color:#f92672">&amp;&amp;</span> s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>);
 }
 </code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">f</span>(sa: String, sc: <span style="color:#66d9ef">&amp;&amp;</span><span style="color:#66d9ef">str</span>) -&gt; String {
-   <span style="color:#66d9ef">return</span> sa <span style="color:#f92672">+</span> sc;
-}
-
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> vec<span style="color:#f92672">!</span>[<span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span>];
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> s <span style="color:#f92672">=</span> String::new();
-   <span style="color:#66d9ef">for</span> sc <span style="color:#66d9ef">in</span> a.iter() {
-      s <span style="color:#f92672">=</span> f(s, sc);
-   }
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>);
-}
-</code></pre></div></p>
 <p><a href="https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.fold">https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.fold</a></p>
 <h2 id="references">References</h2>
 <ul>

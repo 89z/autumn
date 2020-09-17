@@ -8,21 +8,18 @@ date: 2020-09-17
 ## C++
 
 {{< r "a.cpp" >}}
-{{< r "b.cpp" >}}
 
 <https://en.cppreference.com/w/cpp/algorithm/accumulate>
 
 ## D
 
 {{< r "a.d" >}}
-{{< r "b.d" >}}
 
 <https://dlang.org/library/std/algorithm/iteration/reduce.html>
 
 ## Dart
 
 {{< r "a.dart" >}}
-{{< r "b.dart" >}}
 
 <https://api.dart.dev/dart-core/Iterable/reduce.html>
 
@@ -48,7 +45,6 @@ date: 2020-09-17
 ## PHP
 
 {{< r "a.php" >}}
-{{< r "b.php" >}}
 
 <https://php.net/function.array-reduce>
 
@@ -67,7 +63,6 @@ date: 2020-09-17
 ## Rust
 
 {{< r "a.rs" >}}
-{{< r "b.rs" >}}
 
 <https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.fold>
 
