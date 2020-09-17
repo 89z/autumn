@@ -1,5 +1,9 @@
-import functools
+from functools import reduce
 a = ['May', 'June']
-f = lambda s_acc, s_cur: s_acc + s_cur
-s = functools.reduce(f, a)
-print(s == 'MayJune')
+# example 1
+s = reduce(lambda sa, sc: sa + sc, a)
+# example 2
+f = lambda sa, sc: sa + sc
+s2 = reduce(f, a)
+# print
+print(s == 'MayJune', s2 == 'MayJune')

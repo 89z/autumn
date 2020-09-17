@@ -1,12 +1,9 @@
 <?php
 $a = ['May', 'June'];
-$f = fn ($s_acc, $s_cur) => $s_acc . $s_cur;
 # example 1
-$s = array_reduce($a, $f);
+$s = array_reduce($a, fn ($sa, $sc) => $sa . $sc);
 # example 2
-$s2 = '';
-foreach ($a as $s_cur) {
-   $s2 = $f($s2, $s_cur);
-}
+$f = fn ($sa, $sc) => $sa . $sc;
+$s2 = array_reduce($a, $f);
 # print
 var_dump($s == 'MayJune', $s2 == 'MayJune');

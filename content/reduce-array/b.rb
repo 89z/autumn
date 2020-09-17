@@ -1,10 +1,12 @@
-def f(sa, sc):
+def f(sa, sc)
    return sa + sc
+end
 
 a = ['May', 'June']
 s = ''
 
-for sc in a:
+a.each do |sc|
    s = f(s, sc)
+end
 
-print(s == 'MayJune')
+puts s == 'MayJune'

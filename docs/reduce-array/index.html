@@ -210,19 +210,26 @@ std<span style="color:#f92672">::</span>string f(std<span style="color:#f92672">
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> sequtils
-<span style="color:#66d9ef">let</span> a_src <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span><span style="color:#f92672">]</span>
-<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> foldl(a_src, a <span style="color:#f92672">&amp;</span> b)
-echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>
+<span style="color:#66d9ef">let</span> ab <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span><span style="color:#f92672">]</span>
+<span style="color:#75715e"># example 1</span>
+<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> foldl(ab, a <span style="color:#f92672">&amp;</span> b)
+<span style="color:#75715e"># example 2</span>
+<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">f</span>(sa, sc: <span style="color:#66d9ef">string</span>): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> sa <span style="color:#f92672">&amp;</span> sc
+<span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> foldl(ab, f(a, b))
+<span style="color:#75715e"># print</span>
+echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span> <span style="color:#f92672">and</span> s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>
 </code></pre></div>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">var</span> a_src <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span><span style="color:#f92672">]</span>
-<span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">f</span>(s_acc, s_cur: <span style="color:#66d9ef">string</span>): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> s_acc <span style="color:#f92672">&amp;</span> s_cur
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">proc </span><span style="color:#a6e22e">f</span>(sa, sc: <span style="color:#66d9ef">string</span>): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span>
+   <span style="color:#66d9ef">return</span> sa <span style="color:#f92672">&amp;</span> sc
 
-<span style="color:#66d9ef">for</span> s_cur <span style="color:#f92672">in</span> a_src.items:
-   s <span style="color:#f92672">=</span> f(s, s_cur)
+<span style="color:#66d9ef">var</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span><span style="color:#f92672">]</span>
+<span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+
+<span style="color:#66d9ef">for</span> sc <span style="color:#f92672">in</span> a.items:
+   s <span style="color:#f92672">=</span> f(s, sc)
 
 echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>
 </code></pre></div></p>
@@ -233,14 +240,11 @@ echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Ma
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>];
-$f <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span> ($s_acc, $s_cur) <span style="color:#f92672">=&gt;</span> $s_acc <span style="color:#f92672">.</span> $s_cur;
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_reduce</span>($a, $f);
+</span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_reduce</span>($a, <span style="color:#a6e22e">fn</span> ($sa, $sc) <span style="color:#f92672">=&gt;</span> $sa <span style="color:#f92672">.</span> $sc);
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
-<span style="color:#66d9ef">foreach</span> ($a <span style="color:#66d9ef">as</span> $s_cur) {
-   $s2 <span style="color:#f92672">=</span> $f($s2, $s_cur);
-}
+</span><span style="color:#75715e"></span>$f <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span> ($sa, $sc) <span style="color:#f92672">=&gt;</span> $sa <span style="color:#f92672">.</span> $sc;
+$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_reduce</span>($a, $f);
 <span style="color:#75715e"># print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>, $s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>);
 </code></pre></div>
@@ -249,21 +253,27 @@ $f <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span> ($
 <p>
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> functools
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> functools <span style="color:#f92672">import</span> reduce
 a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>]
-f <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> s_acc, s_cur: s_acc <span style="color:#f92672">+</span> s_cur
-s <span style="color:#f92672">=</span> functools<span style="color:#f92672">.</span>reduce(f, a)
-<span style="color:#66d9ef">print</span>(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>)
+<span style="color:#75715e"># example 1</span>
+s <span style="color:#f92672">=</span> reduce(<span style="color:#66d9ef">lambda</span> sa, sc: sa <span style="color:#f92672">+</span> sc, a)
+<span style="color:#75715e"># example 2</span>
+f <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> sa, sc: sa <span style="color:#f92672">+</span> sc
+s2 <span style="color:#f92672">=</span> reduce(f, a)
+<span style="color:#75715e"># print</span>
+<span style="color:#66d9ef">print</span>(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>)
 </code></pre></div>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>]
-f <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> s_acc, s_cur: s_acc <span style="color:#f92672">+</span> s_cur
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(sa, sc):
+   <span style="color:#66d9ef">return</span> sa <span style="color:#f92672">+</span> sc
+
+a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>]
 s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
 
-<span style="color:#66d9ef">for</span> s_cur <span style="color:#f92672">in</span> a:
-   s <span style="color:#f92672">=</span> f(s, s_cur)
+<span style="color:#66d9ef">for</span> sc <span style="color:#f92672">in</span> a:
+   s <span style="color:#f92672">=</span> f(s, sc)
 
 <span style="color:#66d9ef">print</span>(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>)
 </code></pre></div></p>
@@ -273,14 +283,11 @@ s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</s
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span><span style="color:#f92672">]</span>
-f <span style="color:#f92672">=</span> lambda { <span style="color:#f92672">|</span>sa, sc<span style="color:#f92672">|</span> sa <span style="color:#f92672">+</span> sc }
 <span style="color:#75715e"># example 1</span>
-s <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span>reduce(<span style="color:#f92672">&amp;</span>f)
+s <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span>reduce { <span style="color:#f92672">|</span>sa, sc<span style="color:#f92672">|</span> sa <span style="color:#f92672">+</span> sc }
 <span style="color:#75715e"># example 2</span>
-s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
-a<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>sc<span style="color:#f92672">|</span>
-   s2 <span style="color:#f92672">=</span> f<span style="color:#f92672">.</span>call(s2, sc)
-<span style="color:#66d9ef">end</span>
+f <span style="color:#f92672">=</span> lambda { <span style="color:#f92672">|</span>sa, sc<span style="color:#f92672">|</span> sa <span style="color:#f92672">+</span> sc }
+s2 <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span>reduce(<span style="color:#f92672">&amp;</span>f)
 <span style="color:#75715e"># print</span>
 puts s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>
 </code></pre></div>
@@ -291,8 +298,13 @@ puts s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Ma
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> vec<span style="color:#f92672">!</span>[<span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span>];
-   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> a.iter().fold(String::new(), <span style="color:#f92672">|</span>sa, sc<span style="color:#f92672">|</span> sa <span style="color:#f92672">+</span> sc);
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>);
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> a.iter().fold(String::new(), <span style="color:#f92672">|</span>sa, sc<span style="color:#f92672">|</span> sa <span style="color:#f92672">+</span> sc);
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> f <span style="color:#f92672">=</span> <span style="color:#f92672">|</span>sa: String, sc: <span style="color:#66d9ef">&amp;&amp;</span><span style="color:#66d9ef">str</span><span style="color:#f92672">|</span> sa <span style="color:#f92672">+</span> sc;
+   <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> a.iter().fold(String::new(), f);
+   <span style="color:#75715e">// print
+</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span> <span style="color:#f92672">&amp;&amp;</span> s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>);
 }
 </code></pre></div>
 

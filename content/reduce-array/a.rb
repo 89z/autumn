@@ -1,11 +1,8 @@
 a = ['May', 'June']
-f = lambda { |sa, sc| sa + sc }
 # example 1
-s = a.reduce(&f)
+s = a.reduce { |sa, sc| sa + sc }
 # example 2
-s2 = ''
-a.each do |sc|
-   s2 = f.call(s2, sc)
-end
+f = lambda { |sa, sc| sa + sc }
+s2 = a.reduce(&f)
 # print
 puts s == 'MayJune', s2 == 'MayJune'
