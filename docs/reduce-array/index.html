@@ -24,7 +24,7 @@
 
 <main>
    <h1>Reduce array</h1>
-   <time>Wed Sep 16 2020</time>
+   <time>Thu Sep 17 2020</time>
    
    <a href="/autumn/categories/array/">array</a>
    
@@ -235,7 +235,7 @@ echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Ma
 </code></pre></div></p>
 <p><a href="https://nim-lang.org/docs/sequtils.html#foldl.t,untyped,untyped">https://nim-lang.org/docs/sequtils.html#foldl.t,untyped,untyped</a></p>
 <h2 id="php">PHP</h2>
-
+<p>
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
@@ -248,6 +248,23 @@ $s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_reduc
 <span style="color:#75715e"># print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>, $s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>);
 </code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f</span>(<span style="color:#a6e22e">string</span> $sa, <span style="color:#a6e22e">string</span> $sc)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
+   <span style="color:#66d9ef">return</span> $sa <span style="color:#f92672">.</span> $sc;
+}
+
+$a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>];
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+
+<span style="color:#66d9ef">foreach</span> ($a <span style="color:#66d9ef">as</span> $sc) {
+   $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">f</span>($s, $sc);
+}
+
+<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>);
+</code></pre></div></p>
 <p><a href="https://php.net/function.array-reduce">https://php.net/function.array-reduce</a></p>
 <h2 id="python">Python</h2>
 <p>
@@ -279,7 +296,7 @@ s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</s
 </code></pre></div></p>
 <p><a href="https://docs.python.org/library/functools.html#functools.reduce">https://docs.python.org/library/functools.html#functools.reduce</a></p>
 <h2 id="ruby">Ruby</h2>
-
+<p>
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span><span style="color:#f92672">]</span>
@@ -291,6 +308,22 @@ s2 <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span>red
 <span style="color:#75715e"># print</span>
 puts s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>
 </code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(sa, sc)
+   <span style="color:#66d9ef">return</span> sa <span style="color:#f92672">+</span> sc
+<span style="color:#66d9ef">end</span>
+
+a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span><span style="color:#f92672">]</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+
+a<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>sc<span style="color:#f92672">|</span>
+   s <span style="color:#f92672">=</span> f(s, sc)
+<span style="color:#66d9ef">end</span>
+
+puts s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>
+</code></pre></div></p>
 <p><a href="https://ruby-doc.org/core/Enumerable.html#method-i-reduce">https://ruby-doc.org/core/Enumerable.html#method-i-reduce</a></p>
 <h2 id="rust">Rust</h2>
 <p>

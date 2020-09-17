@@ -2,7 +2,7 @@
 title: Reduce array
 categories: [array]
 tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
-date: 2020-09-16
+date: 2020-09-17
 ---
 
 ## C++
@@ -50,6 +50,7 @@ date: 2020-09-16
 ## PHP
 
 {{< r "a.php" >}}
+{{< r "b.php" >}}
 
 <https://php.net/function.array-reduce>
 
@@ -63,6 +64,7 @@ date: 2020-09-16
 ## Ruby
 
 {{< r "a.rb" >}}
+{{< r "b.rb" >}}
 
 <https://ruby-doc.org/core/Enumerable.html#method-i-reduce>
 
