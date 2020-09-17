@@ -1,15 +1,15 @@
 package main
 
-func f_red(s_acc, s_cur string) string {
-   return s_acc + s_cur
+func f(sa, sc string) string {
+   return sa + sc
 }
 
 func main() {
-   a_src := []string{"May", "June"}
-   s_acc := ""
-   for n_idx := range a_src {
-      s_cur := a_src[n_idx]
-      s_acc = f_red(s_acc, s_cur)
+   a := []string{"May", "June"}
+   s := ""
+   for n := range a {
+      sc := a[n]
+      s = f(s, sc)
    }
-   println(s_acc)
+   println(s == "MayJune")
 }

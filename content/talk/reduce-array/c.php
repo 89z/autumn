@@ -1,9 +1,9 @@
 <?php
-$a_src = ['May', 'June'];
-$s_acc = '';
+$a = ['May', 'June'];
+$s = '';
 
-foreach ($a_src as $s_cur) {
-   $s_acc .= $s_cur;
+foreach ($a as $sc) {
+   $s .= $sc;
 }
 
-var_dump($s_acc);
+var_dump($s == 'MayJune');

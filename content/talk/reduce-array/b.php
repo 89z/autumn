@@ -1,10 +1,10 @@
 <?php
-$a_src = ['May', 'June'];
-$f_red = fn ($s_acc, $s_cur) => $s_acc . $s_cur;
-$s_acc = '';
+$a = ['May', 'June'];
+$f = fn ($sa, $sc) => $sa . $sc;
+$s = '';
 
-foreach ($a_src as $s_cur) {
-   $s_acc = $f_red($s_acc, $s_cur);
+foreach ($a as $sc) {
+   $s = $f($s, $sc);
 }
 
-var_dump($s_acc);
+var_dump($s == 'MayJune');

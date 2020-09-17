@@ -36,14 +36,12 @@ date: 2020-09-17
 ## JavaScript
 
 {{< r "a.js" >}}
-{{< r "b.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/Reduce>
 
 ## Nim
 
 {{< r "a.nim" >}}
-{{< r "b.nim" >}}
 
 <https://nim-lang.org/docs/sequtils.html#foldl.t,untyped,untyped>
 
@@ -57,14 +55,12 @@ date: 2020-09-17
 ## Python
 
 {{< r "a.py" >}}
-{{< r "b.py" >}}
 
 <https://docs.python.org/library/functools.html#functools.reduce>
 
 ## Ruby
 
 {{< r "a.rb" >}}
-{{< r "b.rb" >}}
 
 <https://ruby-doc.org/core/Enumerable.html#method-i-reduce>
 

@@ -176,7 +176,7 @@ std<span style="color:#f92672">::</span>string f(std<span style="color:#f92672">
 </code></pre></div></p>
 <p><a href="https://golang.org/ref/spec#For_range">https://golang.org/ref/spec#For_range</a></p>
 <h2 id="javascript">JavaScript</h2>
-<p>
+
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>];
@@ -188,25 +188,9 @@ std<span style="color:#f92672">::</span>string f(std<span style="color:#f92672">
 <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>, <span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>);
 </code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f</span>(<span style="color:#a6e22e">sa</span>, <span style="color:#a6e22e">sc</span>) {
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sa</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sc</span>;
-}
-
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>];
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
-
-<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sc</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">a</span>) {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">f</span>(<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">sc</span>);
-}
-
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>);
-</code></pre></div></p>
 <p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/Reduce">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/Reduce</a></p>
 <h2 id="nim">Nim</h2>
-<p>
+
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> sequtils
@@ -219,20 +203,6 @@ std<span style="color:#f92672">::</span>string f(std<span style="color:#f92672">
 <span style="color:#75715e"># print</span>
 echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span> <span style="color:#f92672">and</span> s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>
 </code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">proc </span><span style="color:#a6e22e">f</span>(sa, sc: <span style="color:#66d9ef">string</span>): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span>
-   <span style="color:#66d9ef">return</span> sa <span style="color:#f92672">&amp;</span> sc
-
-<span style="color:#66d9ef">var</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span><span style="color:#f92672">]</span>
-<span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
-
-<span style="color:#66d9ef">for</span> sc <span style="color:#f92672">in</span> a.items:
-   s <span style="color:#f92672">=</span> f(s, sc)
-
-echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>
-</code></pre></div></p>
 <p><a href="https://nim-lang.org/docs/sequtils.html#foldl.t,untyped,untyped">https://nim-lang.org/docs/sequtils.html#foldl.t,untyped,untyped</a></p>
 <h2 id="php">PHP</h2>
 <p>
@@ -267,7 +237,7 @@ $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</
 </code></pre></div></p>
 <p><a href="https://php.net/function.array-reduce">https://php.net/function.array-reduce</a></p>
 <h2 id="python">Python</h2>
-<p>
+
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> functools <span style="color:#f92672">import</span> reduce
@@ -280,23 +250,9 @@ s2 <span style="color:#f92672">=</span> reduce(f, a)
 <span style="color:#75715e"># print</span>
 <span style="color:#66d9ef">print</span>(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>)
 </code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(sa, sc):
-   <span style="color:#66d9ef">return</span> sa <span style="color:#f92672">+</span> sc
-
-a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>]
-s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
-
-<span style="color:#66d9ef">for</span> sc <span style="color:#f92672">in</span> a:
-   s <span style="color:#f92672">=</span> f(s, sc)
-
-<span style="color:#66d9ef">print</span>(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>)
-</code></pre></div></p>
 <p><a href="https://docs.python.org/library/functools.html#functools.reduce">https://docs.python.org/library/functools.html#functools.reduce</a></p>
 <h2 id="ruby">Ruby</h2>
-<p>
+
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span><span style="color:#f92672">]</span>
@@ -308,22 +264,6 @@ s2 <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span>red
 <span style="color:#75715e"># print</span>
 puts s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>
 </code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(sa, sc)
-   <span style="color:#66d9ef">return</span> sa <span style="color:#f92672">+</span> sc
-<span style="color:#66d9ef">end</span>
-
-a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span><span style="color:#f92672">]</span>
-s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
-
-a<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>sc<span style="color:#f92672">|</span>
-   s <span style="color:#f92672">=</span> f(s, sc)
-<span style="color:#66d9ef">end</span>
-
-puts s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>
-</code></pre></div></p>
 <p><a href="https://ruby-doc.org/core/Enumerable.html#method-i-reduce">https://ruby-doc.org/core/Enumerable.html#method-i-reduce</a></p>
 <h2 id="rust">Rust</h2>
 <p>
