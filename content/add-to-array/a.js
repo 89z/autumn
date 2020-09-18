@@ -6,8 +6,8 @@ a = a.concat(13);
 // example 3
 a = a.concat(14, 15);
 // example 4
-let a2 = [16, 17];
-a = a.concat(a2);
+let a4 = [16, 17];
+a = a.concat(a4);
 // example 5
 a = [...a, 18];
 // print

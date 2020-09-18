@@ -1,9 +1,9 @@
-// example 1
-bool f(num n, num n2) {
+// example A
+bool fA(num n, num n2) {
    return n > n2;
 }
-// example 2
-bool f2(num n, num n2) => n > n2;
+// example B
+bool fB(num n, num n2) => n > n2;
 // print
 void main() {
    var b = f(9, 8);

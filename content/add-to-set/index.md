@@ -10,7 +10,7 @@ date: 2020-09-11
 {{< r "a.d" >}}
 {{< r "b.d" >}}
 
-<https://dlang.org/library/std/container/rbtree.html>
+<https://dlang.org/library/std/container/rbtree/red_black_tree.html>
 
 ## Dart
 

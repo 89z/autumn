@@ -1,15 +1,15 @@
 package main
-// example 1
-func f(n int, n2 int) bool {
-   return n > n2
+// example A
+func fA(nY int, nZ int) bool {
+   return nY > nZ
 }
-// example 2
-func f2(n, n2 int) bool {
-   return n > n2
+// example B
+func fB(nY, nZ int) bool {
+   return nY > nZ
 }
 // print
 func main() {
-   b := f(9, 8)
-   b2 := f2(9, 8)
-   println(b, b2)
+   bA := fA(9, 8)
+   bB := fB(9, 8)
+   println(bA, bB)
 }
