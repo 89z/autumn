@@ -2,17 +2,17 @@ package main
 
 func main() {
    n := 10
-   // example 1
-   s := ""
+   // example A
+   sA := ""
    if n > 0 {
-      s = "+"
+      sA = "+"
    } else if n < 0 {
-      s = "-"
+      sA = "-"
    } else {
-      s = "zero"
+      sA = "zero"
    }
-   // example 2
-   s2 := map[bool]string{true: "+", false: "-"}[n > 0]
+   // example B
+   sB := map[bool]string{true: "+", false: "-"}[n > 0]
    // print
-   println(s == "+", s2 == "+")
+   println(sA == "+", sB == "+")
 }

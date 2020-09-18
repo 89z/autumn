@@ -160,22 +160,22 @@ echo <span style="color:#f92672">[</span>s, s2, s3<span style="color:#f92672">]<
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># example 1</span>
-s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;May&#39;</span>
-<span style="color:#75715e"># example 2</span>
-s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May&#34;</span>
-<span style="color:#75715e"># example 3</span>
-s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;&#39;May
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># example A</span>
+sA <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;May&#39;</span>
+<span style="color:#75715e"># example B</span>
+sB <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May&#34;</span>
+<span style="color:#75715e"># example C</span>
+sC <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;&#39;May
 </span><span style="color:#e6db74">June&#39;&#39;&#39;</span>
-<span style="color:#75715e"># example 4</span>
-s4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;May
+<span style="color:#75715e"># example D</span>
+sD <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;May
 </span><span style="color:#e6db74">June&#34;&#34;&#34;</span>
-<span style="color:#75715e"># example 5</span>
+<span style="color:#75715e"># example E</span>
 <span style="color:#f92672">import</span> io
 o <span style="color:#f92672">=</span> io<span style="color:#f92672">.</span>StringIO(<span style="color:#e6db74">&#39;May&#39;</span>)
-s5 <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>getvalue()
+sE <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>getvalue()
 <span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>([s, s2, s3, s4, s5])
+<span style="color:#66d9ef">print</span>([sA, sB, sC, sD, sE])
 </code></pre></div>
 <ul>
 <li><a href="https://docs.python.org/library/io.html#io.StringIO">https://docs.python.org/library/io.html#io.StringIO</a></li>
@@ -186,17 +186,17 @@ s5 <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>get
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May&#34;</span>;
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> String::from(<span style="color:#e6db74">&#34;May&#34;</span>);
-   <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s3 <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">&#34;</span>May
+   <span style="color:#75715e">// example A
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s_a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May&#34;</span>;
+   <span style="color:#75715e">// example B
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s_b <span style="color:#f92672">=</span> String::from(<span style="color:#e6db74">&#34;May&#34;</span>);
+   <span style="color:#75715e">// example C
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s_c <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">&#34;</span>May
 June<span style="color:#960050;background-color:#1e0010">&#34;</span>;
-   <span style="color:#75715e">// example 4
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s4 <span style="color:#f92672">=</span> <span style="color:#e6db74">r#&#34;May &#34;June&#34; July&#34;#</span>;
+   <span style="color:#75715e">// example D
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s_d <span style="color:#f92672">=</span> <span style="color:#e6db74">r#&#34;May &#34;June&#34; July&#34;#</span>;
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}|{}|{}|{}&#34;</span>, s, s2, s3, s4);
+</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{},{},{},{}&#34;</span>, s_a, s_b, s_c, s_d);
 }
 </code></pre></div>
 <ul>

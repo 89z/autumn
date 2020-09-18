@@ -1,6 +1,6 @@
-// example 1
-let o = new URL('https://example.com/one?two=even');
-// example 2
-let o2 = new URL('one?two=even', 'https://example.com');
+// example A
+let oA = new URL('https://example.com/one?two=even');
+// example B
+let oB = new URL('one?two=even', 'https://example.com');
 // print
-console.log(o, o2);
+console.log(oA, oB);

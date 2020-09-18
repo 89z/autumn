@@ -1,10 +1,10 @@
 import uri
 let o = "https://example.com/one?two=even".parseUri
-# example 1
-let s = o.hostname
-# example 2
-let s2 = o.path
-# example 3
-let s3 = o.query
+# example A
+let sA = o.hostname
+# example B
+let sB = o.path
+# example C
+let sC = o.query
 # print
-echo s == "example.com" and s2 == "/one" and s3 == "two=even"
+echo sA == "example.com" and sB == "/one" and sC == "two=even"

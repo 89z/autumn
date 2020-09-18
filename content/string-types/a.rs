@@ -1,13 +1,13 @@
 fn main() {
-   // example 1
-   let s = "May";
-   // example 2
-   let s2 = String::from("May");
-   // example 3
-   let s3 = "May
+   // example A
+   let s_a = "May";
+   // example B
+   let s_b = String::from("May");
+   // example C
+   let s_c = "May
 June";
-   // example 4
-   let s4 = r#"May "June" July"#;
+   // example D
+   let s_d = r#"May "June" July"#;
    // print
-   println!("{}|{}|{}|{}", s, s2, s3, s4);
+   println!("{},{},{},{}", s_a, s_b, s_c, s_d);
 }

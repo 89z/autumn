@@ -1,12 +1,12 @@
 n = 10
-# example 1
+# example A
 if n > 0:
-   s = '+'
+   sA = '+'
 elif n < 0:
-   s = '-'
+   sA = '-'
 else:
-   s = 'zero'
-# example 2
-s2 = '+' if n > 0 else '-'
+   sA = 'zero'
+# example B
+sB = '+' if n > 0 else '-'
 # print
-print(s == '+', s2 == '+')
+print(sA == '+', sB == '+')
