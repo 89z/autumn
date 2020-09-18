@@ -1,7 +1,8 @@
+s = '10'
 # example 1
-n = int('10')
+n1 = int(s)
 # example 2
 import locale
-n2 = locale.atoi('10')
+n2 = locale.atoi(s)
 # print
-print(n == 10, n2 == 10)
+print(n1 == 10, n2 == 10)

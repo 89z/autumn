@@ -1,3 +1,3 @@
 n = 9.9
-n2 = int(n)
-print(n2 == 9)
+n1 = int(n)
+print(n1 == 9)

@@ -1,8 +1,8 @@
 <?php
 $n = 9.9;
 # example 1
-$n2 = (int)($n);
+$n1 = (int)($n);
 # example 2
-$n3 = intval($n);
+$n2 = intval($n);
 # print
-var_dump($n2 == 9, $n3 == 9);
+var_dump($n1 == 9, $n2 == 9);

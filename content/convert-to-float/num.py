@@ -1,3 +1,3 @@
 n = 10
-n2 = float(n)
-print(n2)
+n1 = float(n)
+print(n1 == 10, n1 == 10.0)

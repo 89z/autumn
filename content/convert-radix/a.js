@@ -20,11 +20,13 @@ Radix64.prototype.decode = function (s_in) {
    return n_out;
 };
 
-let n = Math.trunc(new Date / 1000);
+let n = 1577858399;
 let o = new Radix64;
 // example 1
 let s1 = o.encode(n);
+let n1 = o.decode(s1);
 // example 2
-let n2 = o.decode(s1);
+let s2 = o.encode(n - 1);
+let n2 = o.decode(s2);
 // print
-console.log(n, s1, n2 == n);
+console.log(s1 == '0T22KU', n1 == n, s2 == '0T22KT', n2 == n - 1);

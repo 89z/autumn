@@ -22,11 +22,13 @@ class Radix64 {
    }
 }
 
-$n = time();
+$n = 1577858399;
 $o = new Radix64;
-# example 1
+// example 1
 $s1 = $o->encode($n);
-# example 2
-$n2 = $o->decode($s1);
-# print
-var_dump($n, $s1, $n2 == $n);
+$n1 = $o->decode($s1);
+// example 2
+$s2 = $o->encode($n - 1);
+$n2 = $o->decode($s2);
+// print
+var_dump($s1 == '0T22KU', $n1 == $n, $s2 == '0T22KT', $n2 == $n - 1);

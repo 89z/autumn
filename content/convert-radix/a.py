@@ -18,12 +18,13 @@ class Radix64:
          n_out = n_out * 64 + self.s_dig.find(s_chr)
       return n_out
 
-import time
-n = int(time.time())
+n = 1577858399
 o = Radix64()
 # example 1
 s1 = o.encode(n)
+n1 = o.decode(s1)
 # example 2
-n2 = o.decode(s1)
+s2 = o.encode(n - 1)
+n2 = o.decode(s2)
 # print
-print(n, s1, n2 == n)
+print(s1 == '0T22KU', n1 == n, s2 == '0T22KT', n2 == n - 1)

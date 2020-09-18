@@ -1,4 +1,4 @@
 import strutils
-let s = "10"
+let s = "9"
 let n = s.parseInt
-echo n == 10
+echo n == 9
