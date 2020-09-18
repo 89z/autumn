@@ -1,10 +1,8 @@
-# example 1
-proc f(n: int, n2: int): bool =
-   return n > n2
-# example 2
-proc f2(n, n2: int): bool =
-   return n > n2
+# example A
+proc fA(nY: int, nZ: int): bool =
+   return nY > nZ
+# example B
+proc fB(nY, nZ: int): bool =
+   return nY > nZ
 # print
-let b = f(9, 8)
-let b2 = f2(9, 8)
-echo b and b2
+echo fA(9, 8) and fB(9, 8)

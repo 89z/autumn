@@ -1,6 +1,6 @@
-// example 1
-let n = 10;
-// example 2
-let n2 = 1_000;
+// example A
+let nA = 9;
+// example B
+let nB = 1_000;
 // print
-console.log(n, n2);
+console.log(nA, nB);

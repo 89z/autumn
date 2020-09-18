@@ -1,6 +1,6 @@
-# example 1
-n = 10
-# example 2
-n2 = 1_000
+# example A
+nA = 9
+# example B
+nB = 1_000
 # print
-print(n, n2)
+print(nA, nB)

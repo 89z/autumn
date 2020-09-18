@@ -1,13 +1,13 @@
 <?php
 $s = 'php -v';
-# example 1
-$s2 = `$s`;
-# example 2
-$s3 = shell_exec($s);
-# example 3
+# example A
+$sA = `$s`;
+# example B
+$sB = shell_exec($s);
+# example C
 $r = popen($s, 'r');
-$s4 = stream_get_contents($r);
-# example 4
-exec($s, $a);
+$sC = stream_get_contents($r);
+# example D
+exec($s, $aD);
 # print
-var_dump($s2, $s3, $s4, $a);
+var_dump($sA, $sB, $sC, $aD);

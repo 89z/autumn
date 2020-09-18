@@ -1,8 +1,8 @@
-fn f(n: u8, n2: u8) -> bool {
-   return n > n2;
+fn f(na: u8, nb: u8) -> bool {
+   return na > nb;
 }
 
 fn main() {
-   let b = f(9, 8);
+   let b = f(10, 9);
    println!("{}", b);
 }

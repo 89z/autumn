@@ -1,5 +1,5 @@
-function f(n, n2) {
-   return n > n2;
+function f(nY, nZ) {
+   return nY > nZ;
 }
 let b = f(9, 8);
 console.log(b);

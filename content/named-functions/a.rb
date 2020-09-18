@@ -1,5 +1,5 @@
-def f(n, n2)
-   return n > n2
+def f(nA, nB)
+   return nA > nB
 end
 
 b = f(9, 8)

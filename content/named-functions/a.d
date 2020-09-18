@@ -1,11 +1,11 @@
 import std.stdio;
 // example 1
-bool f(int n, int n2) {
-   return n > n2;
+bool f1(int n1, int n2) {
+   return n1 > n2;
 }
 // example 2
-auto f2(int n, int n2) {
-   return n > n2;
+auto f2(int n1, int n2) {
+   return n1 > n2;
 }
 // print
 void main() {

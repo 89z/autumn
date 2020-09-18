@@ -1,6 +1,6 @@
-# example 1
-var n: int = 10
-# example 2
-var n2 = 10
+# example A
+var nA: int = 9
+# example B
+var nB = 9
 # print
-echo n == 10 and n2 == 10
+echo nA == 9 and nB == 9
