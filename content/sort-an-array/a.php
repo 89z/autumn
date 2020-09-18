@@ -1,12 +1,12 @@
 <?php
 $a = ['BBBB', 'AA', 'CCC'];
-# example 1
+# example A
 sort($a);
 print_r($a);
-# example 2
+# example B
 rsort($a);
 print_r($a);
-# example 3
-$f = fn ($s, $s2) => strlen($s) <=> strlen($s2);
+# example C
+$f = fn ($sA, $sB) => strlen($sA) <=> strlen($sB);
 usort($a, $f);
 print_r($a);

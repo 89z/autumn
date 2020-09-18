@@ -7,9 +7,9 @@ import (
 
 func main() {
    a := []string{"BBBB", "AA", "CCC"}
-   f := func (n, n2 int) bool {
-      s, s2 := a[n], a[n2]
-      return len(s) < len(s2)
+   f := func (nA, nB int) bool {
+      sA, sB := a[nA], a[nB]
+      return len(sA) < len(sB)
    }
    sort.Slice(a, f)
    fmt.Println(a)
