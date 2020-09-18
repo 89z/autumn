@@ -1,9 +1,15 @@
 ---
 title: Get array length
 categories: [array]
-tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
+
+<https://en.cppreference.com/w/cpp/iterator/size>
 
 ## D
 
@@ -61,6 +67,7 @@ date: 2020-09-11
 ## References
 
 - <https://hyperpolyglot.org/c#array-size>
+- <https://hyperpolyglot.org/cpp#resizable-array-size>
 - <https://hyperpolyglot.org/scripting#array-size>
 - <https://programming-idioms.org/idiom/117>
 - <https://rosettacode.org/wiki/Array_length>

@@ -26,10 +26,12 @@ date: 2020-09-11
 
 ## Go
 
-{{< r "a.go" >}}
+{{< r "fmt.go" >}}
+{{< r "str.go" >}}
 
 - <https://golang.org/pkg/fmt#Sprint>
 - <https://golang.org/pkg/fmt#Sprintf>
+- <https://golang.org/pkg/strconv#FormatInt>
 
 ## JavaScript
 
@@ -74,6 +76,7 @@ date: 2020-09-11
 
 ## References
 
+- <https://hyperpolyglot.org/c#num-to-str>
 - <https://hyperpolyglot.org/cpp#num-to-str>
 - <https://hyperpolyglot.org/scripting#num-to-str>
 - <https://hyperpolyglot.org/web#num-to-str>

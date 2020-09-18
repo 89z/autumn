@@ -26,7 +26,6 @@ date: 2020-09-17
 ## Go
 
 {{< r "a.go" >}}
-{{< r "b.go" >}}
 
 <https://golang.org/ref/spec#For_range>
 

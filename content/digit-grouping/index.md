@@ -1,9 +1,13 @@
 ---
-title: Format number
+title: Digit grouping
 categories: [number]
-tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-13
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
 
 ## D
 
@@ -40,7 +44,6 @@ date: 2020-09-13
 ## Python
 
 {{< r "a.py" >}}
-{{< r "b.py" >}}
 
 - <https://docs.python.org/library/functions.html#format>
 - <https://docs.python.org/library/locale.html#locale.setlocale>
