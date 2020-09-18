@@ -1,8 +1,8 @@
 void main () {
    // example 1
-   var b = true;
+   var b1 = true;
    // example 2
    var b2 = false;
    // print
-   print([b, b2]);
+   print([b1, b2]);
 }

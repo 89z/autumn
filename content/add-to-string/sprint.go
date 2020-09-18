@@ -4,9 +4,9 @@ import "fmt"
 func main() {
    s := "May"
    // example 1
-   s = fmt.Sprint(s, ",June")
+   s1 := fmt.Sprint(s, ",June")
    // example 2
-   s = fmt.Sprintf("%s,July", s)
+   s2 := fmt.Sprintf("%s,June", s)
    // print
-   println(s == "May,June,July")
+   println(s1 == "May,June", s2 == "May,June")
 }

@@ -1,10 +1,12 @@
 <?php
+
 # example 1
 $n = 10;
 do {
    var_dump($n);
    $n++;
 } while($n < 20);
+
 # example 2
 $n = 10;
 while (true) {
@@ -14,6 +16,7 @@ while (true) {
    }
    $n++;
 }
+
 # example 3
 $n = 10;
 for (;;) {

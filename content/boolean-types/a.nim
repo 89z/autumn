@@ -1,4 +1,6 @@
 # example 1
-echo true
+let b1 = true
 # example 2
-echo false
+let b2 = false
+# print
+echo [b1, b2]

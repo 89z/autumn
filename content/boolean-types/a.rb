@@ -1,6 +1,6 @@
 # example 1
-b = true
+b1 = true
 # example 2
 b2 = false
 # print
-puts b, b2
+puts b1, b2

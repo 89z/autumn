@@ -1,8 +1,8 @@
 fn main() {
    // example 1
-   let b = true;
+   let b1 = true;
    // example 2
    let b2 = false;
    // print
-   println!("{} {}", b, b2);
+   println!("{} {}", b1, b2);
 }
