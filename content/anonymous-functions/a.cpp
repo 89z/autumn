@@ -2,8 +2,8 @@
 
 int main() {
    // example 1
-   auto f1 = [](int n, int n2) -> bool {
-      return n > n2;
+   auto f1 = [](int n, int n1) -> bool {
+      return n > n1;
    };
    // example 2
    auto f2 = [](int n, int n2) {

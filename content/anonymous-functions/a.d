@@ -2,17 +2,17 @@ import std.stdio;
 
 void main() {
    // example 1
-   auto f1 = function bool (int n, int n2) {
-      return n > n2;
+   auto f1 = function bool (int n, int n1) {
+      return n > n1;
    };
    // example 2
    auto f2 = (int n, int n2) {
       return n > n2;
    };
    // example 3
-   auto f3 = function bool (int n, int n2) => n > n2;
+   auto f3 = function bool (int n, int n3) => n > n3;
    // example 4
-   auto f4 = (int n, int n2) => n > n2;
+   auto f4 = (int n, int n4) => n > n4;
    // print
    auto b1 = f1(9, 8);
    auto b2 = f2(9, 8);

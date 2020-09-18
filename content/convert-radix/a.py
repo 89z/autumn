@@ -21,6 +21,9 @@ class Radix64:
 import time
 n = int(time.time())
 o = Radix64()
-s = o.encode(n)
-n2 = o.decode(s)
-print(n, s, n2 == n)
+# example 1
+s1 = o.encode(n)
+# example 2
+n2 = o.decode(s1)
+# print
+print(n, s1, n2 == n)

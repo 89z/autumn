@@ -22,6 +22,9 @@ Radix64.prototype.decode = function (s_in) {
 
 let n = Math.trunc(new Date / 1000);
 let o = new Radix64;
-let s = o.encode(n);
-let n2 = o.decode(s);
-console.log(n, s, n2 == n);
+// example 1
+let s1 = o.encode(n);
+// example 2
+let n2 = o.decode(s1);
+// print
+console.log(n, s1, n2 == n);

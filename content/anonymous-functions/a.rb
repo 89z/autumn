@@ -1,12 +1,12 @@
 # example 1
-f1 = Proc.new { |n, n2| n > n2 }
+f1 = Proc.new { |n, n1| n > n1 }
 # example 2
 f2 = proc { |n, n2| n > n2 }
 # example 3
-f3 = lambda { |n, n2| n > n2 }
+f3 = lambda { |n, n3| n > n3 }
 # exmaple 4
-f4 = lambda do |n, n2|
-   return n > n2
+f4 = lambda do |n, n4|
+   return n > n4
 end
 # print
 b1 = f1.call(9, 8)

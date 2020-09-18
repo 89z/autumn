@@ -24,6 +24,9 @@ class Radix64 {
 
 $n = time();
 $o = new Radix64;
-$s = $o->encode($n);
-$n2 = $o->decode($s);
-var_dump($n, $s, $n2 == $n);
+# example 1
+$s1 = $o->encode($n);
+# example 2
+$n2 = $o->decode($s1);
+# print
+var_dump($n, $s1, $n2 == $n);

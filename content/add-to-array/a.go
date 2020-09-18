@@ -6,8 +6,8 @@ func main() {
    // example 1
    a1 := append(a, 12)
    // example 2
-   a2a := []int{12, 13}
-   a2 := append(a, a2a...)
+   a2 := []int{12, 13}
+   a2 = append(a, a2...)
    // print
    fmt.Println(a1, a2)
 }

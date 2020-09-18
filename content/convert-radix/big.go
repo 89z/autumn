@@ -21,9 +21,12 @@ func (o Radix) Decode(s_in string) int64 {
 }
 
 func main() {
-   n := time.Now().Unix()
    o := Radix{62}
-   s := o.Encode(n)
-   n2 := o.Decode(s)
-   println(n, s, n2 == n)
+   n := time.Now().Unix()
+   // example 1
+   s1 := o.Encode(n)
+   // example 2
+   n2 := o.Decode(s1)
+   // print
+   println(n, s1, n2 == n)
 }

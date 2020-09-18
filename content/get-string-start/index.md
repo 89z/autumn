@@ -9,8 +9,9 @@ date: 2020-09-18
 
 {{< r "a.cpp" >}}
 
-- <https://cplusplus.com/reference/string/string/at>
-- <https://cplusplus.com/reference/string/string/operator[]>
+- <https://en.cppreference.com/w/cpp/string/basic_string/at>
+- <https://en.cppreference.com/w/cpp/string/basic_string/front>
+- <https://en.cppreference.com/w/cpp/string/basic_string/operator_at>
 
 ## D
 

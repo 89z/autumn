@@ -1,6 +1,6 @@
 // example 1
-let f1 = function (n, n2) {
-   return n > n2;
+let f1 = function (n, n1) {
+   return n > n1;
 };
 // example 2
 let f2 = (n, n2) => n > n2;

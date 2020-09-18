@@ -39,7 +39,10 @@ func (o Radix64) Decode(s_in string) int {
 func main() {
    n := int(time.Now().Unix())
    o := NewRadix64()
-   s := o.Encode(n)
-   n2 := o.Decode(s)
-   println(n, s, n2 == n)
+   // example 1
+   s1 := o.Encode(n)
+   // example 2
+   n2 := o.Decode(s1)
+   // print
+   println(n, s1, n2 == n)
 }
