@@ -1,2 +1,2 @@
 # example 1
-puts 'May'
+puts 'example 1'

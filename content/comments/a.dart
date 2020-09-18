@@ -1,8 +1,8 @@
 void main() {
    // example 1
-   print('May');
+   print('example 1');
    /*
    example 2
    */
-   print('May');
+   print('example 2');
 }

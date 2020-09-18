@@ -2,9 +2,9 @@ package main
 
 func main() {
    // example 1
-   println("May")
+   println("example 1")
    /*
    example 2
    */
-   println("May")
+   println("example 2")
 }

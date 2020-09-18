@@ -1,7 +1,7 @@
 <?php
 # example 1
-$n = $argc;
+$n1 = $argc;
 # example 2
-$s = $argv[1];
+$s2 = $argv[1];
 # print
-var_dump($n == 2, $s == 'May');
+var_dump($n1 == 2, $s2 == 'May');

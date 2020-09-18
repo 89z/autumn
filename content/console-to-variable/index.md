@@ -1,7 +1,7 @@
 ---
 title: Console to variable
 categories: [input-output]
-tags: [d, dart, go, nim, php, python, rust]
+tags: [d, dart, go, php, rust]
 date: 2020-09-11
 ---
 
@@ -25,28 +25,12 @@ date: 2020-09-11
 - <https://golang.org/pkg/bufio#Scanner.Scan>
 - <https://golang.org/pkg/fmt#Scan>
 
-## Nim
-
-{{< r "a.nim" >}}
-
-- <https://nim-lang.org/docs/io.html#stderr>
-- <https://nim-lang.org/docs/io.html#stdin>
-- <https://nim-lang.org/docs/io.html#stdout>
-
 ## PHP
 
 {{< r "a.php" >}}
 
 - <https://php.net/features.commandline.io-streams>
 - <https://php.net/function.fscanf>
-
-## Python
-
-{{< r "a.py" >}}
-
-- <https://docs.python.org/library/sys.html#sys.stderr>
-- <https://docs.python.org/library/sys.html#sys.stdin>
-- <https://docs.python.org/library/sys.html#sys.stdout>
 
 ## Rust
 
