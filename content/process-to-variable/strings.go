@@ -6,10 +6,10 @@ import (
 )
 
 func main() {
-   o := exec.Command("go", "version")
-   o2 := strings.Builder{}
-   o.Stdout = &o2
-   o.Run()
-   s := o2.String()
+   oA := exec.Command("go", "version")
+   oB := strings.Builder{}
+   oA.Stdout = &oB
+   oA.Run()
+   s := oB.String()
    print(s)
 }

@@ -4,13 +4,13 @@
 
 int main() {
    std::vector<std::string> a = {"May", "June"};
-   // example 1
-   auto s = std::accumulate(a.begin(), a.end(), std::string());
-   // example 2
-   auto f = [](std::string sa, std::string sc) {
-      return sa + sc;
+   // example A
+   auto sA = std::accumulate(a.begin(), a.end(), std::string());
+   // example B
+   auto f = [](std::string sY, std::string sZ) {
+      return sY + sZ;
    };
-   auto s2 = std::accumulate(a.begin(), a.end(), std::string(), f);
+   auto sB = std::accumulate(a.begin(), a.end(), std::string(), f);
    // print
-   std::cout << (s == "MayJune" && s2 == "MayJune") << std::endl;
+   std::cout << (sA == "MayJune" && sB == "MayJune") << std::endl;
 }

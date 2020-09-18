@@ -1,12 +1,12 @@
 import subprocess
 a = ['python', '-V']
-# example 1
+# example A
 o = subprocess.Popen(a, stdout=subprocess.PIPE, text=True)
-s = o.stdout.read()
-# example 2
+sA = o.stdout.read()
+# example B
 o = subprocess.run(a, stdout=subprocess.PIPE, text=True)
-s2 = o.stdout
-# example 3
-s3 = subprocess.check_output(a, text=True)
+sB = o.stdout
+# example C
+sC = subprocess.check_output(a, text=True)
 # print
-print(s, s2, s3, end='', sep='')
+print(sA, sB, sC, end='', sep='')

@@ -7,17 +7,17 @@ import (
 )
 
 func main() {
-   // example 1
+   // example A
    m, e := url.ParseQuery("one=odd&two=even")
    if e != nil {
       os.Exit(1)
    }
-   // example 2
-   m2 := url.Values{
+   // example B
+   mB := url.Values{
       "one": []string{"odd"},
       "two": []string{"even"},
    }
-   s := m2.Encode()
+   s := mB.Encode()
    // print
    fmt.Println(m, s)
 }

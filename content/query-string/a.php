@@ -1,9 +1,9 @@
 <?php
-# example 1
+# example A
 $s = 'one=odd&two=even';
-parse_str($s, $m);
-# example 2
-$m2 = ['one' => 'odd', 'two' => 'even'];
-$s2 = http_build_query($m2);
+parse_str($s, $mA);
+# example B
+$m = ['one' => 'odd', 'two' => 'even'];
+$sB = http_build_query($m);
 # print
-var_dump($m, $s2);
+var_dump($mA, $sB);

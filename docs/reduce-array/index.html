@@ -41,15 +41,15 @@
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>string<span style="color:#f92672">&gt;</span> a <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span>};
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>accumulate(a.begin(), a.end(), std<span style="color:#f92672">::</span>string());
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> f <span style="color:#f92672">=</span> [](std<span style="color:#f92672">::</span>string sa, std<span style="color:#f92672">::</span>string sc) {
-      <span style="color:#66d9ef">return</span> sa <span style="color:#f92672">+</span> sc;
+   <span style="color:#75715e">// example A
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> sA <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>accumulate(a.begin(), a.end(), std<span style="color:#f92672">::</span>string());
+   <span style="color:#75715e">// example B
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> f <span style="color:#f92672">=</span> [](std<span style="color:#f92672">::</span>string sY, std<span style="color:#f92672">::</span>string sZ) {
+      <span style="color:#66d9ef">return</span> sY <span style="color:#f92672">+</span> sZ;
    };
-   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>accumulate(a.begin(), a.end(), std<span style="color:#f92672">::</span>string(), f);
+   <span style="color:#66d9ef">auto</span> sB <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>accumulate(a.begin(), a.end(), std<span style="color:#f92672">::</span>string(), f);
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> (s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span> <span style="color:#f92672">&amp;&amp;</span> s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>) <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span><span style="color:#75715e"></span>   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> (sA <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span> <span style="color:#f92672">&amp;&amp;</span> sB <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>) <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
 }
 </code></pre></div>
 <p><a href="https://en.cppreference.com/w/cpp/algorithm/accumulate">https://en.cppreference.com/w/cpp/algorithm/accumulate</a></p>
@@ -61,13 +61,13 @@
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;May&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;June&#34;</span><span style="color:#f92672">];</span>
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">reduce</span><span style="color:#f92672">!((</span>sa<span style="color:#f92672">,</span> sc<span style="color:#f92672">)</span> <span style="color:#f92672">=&gt;</span> sa <span style="color:#f92672">~</span> sc<span style="color:#f92672">);</span>
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> f <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">string</span> sa<span style="color:#f92672">,</span> <span style="color:#66d9ef">string</span> sc<span style="color:#f92672">)</span> <span style="color:#f92672">=&gt;</span> sa <span style="color:#f92672">~</span> sc<span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">reduce</span><span style="color:#f92672">!(</span>f<span style="color:#f92672">);</span>
+   <span style="color:#75715e">// example A
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> sA <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">reduce</span><span style="color:#f92672">!((</span>sY<span style="color:#f92672">,</span> sZ<span style="color:#f92672">)</span> <span style="color:#f92672">=&gt;</span> sY <span style="color:#f92672">~</span> sZ<span style="color:#f92672">);</span>
+   <span style="color:#75715e">// example B
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> f <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">string</span> sY<span style="color:#f92672">,</span> <span style="color:#66d9ef">string</span> sZ<span style="color:#f92672">)</span> <span style="color:#f92672">=&gt;</span> sY <span style="color:#f92672">~</span> sZ<span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> sB <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">reduce</span><span style="color:#f92672">!(</span>f<span style="color:#f92672">);</span>
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   writeln<span style="color:#f92672">(</span>s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span> <span style="color:#f92672">&amp;&amp;</span> s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span><span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>   writeln<span style="color:#f92672">(</span>sA <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span> <span style="color:#f92672">&amp;&amp;</span> sB <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 <p><a href="https://dlang.org/library/std/algorithm/iteration/reduce.html">https://dlang.org/library/std/algorithm/iteration/reduce.html</a></p>
@@ -77,13 +77,13 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
    <span style="color:#66d9ef">var</span> a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>];
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> a.reduce((sa, sc) <span style="color:#f92672">=&gt;</span> sa <span style="color:#f92672">+</span> sc);
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> f <span style="color:#f92672">=</span> (<span style="color:#66d9ef">String</span> sa, <span style="color:#66d9ef">String</span> sc) <span style="color:#f92672">=&gt;</span> sa <span style="color:#f92672">+</span> sc;
-   <span style="color:#66d9ef">var</span> s2 <span style="color:#f92672">=</span> a.reduce(f);
+   <span style="color:#75715e">// example A
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> sA <span style="color:#f92672">=</span> a.reduce((sY, sZ) <span style="color:#f92672">=&gt;</span> sY <span style="color:#f92672">+</span> sZ);
+   <span style="color:#75715e">// example B
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> f <span style="color:#f92672">=</span> (<span style="color:#66d9ef">String</span> sY, <span style="color:#66d9ef">String</span> sZ) <span style="color:#f92672">=&gt;</span> sY <span style="color:#f92672">+</span> sZ;
+   <span style="color:#66d9ef">var</span> sB <span style="color:#f92672">=</span> a.reduce(f);
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   print(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span> <span style="color:#f92672">&amp;&amp;</span> s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>);
+</span><span style="color:#75715e"></span>   print(sA <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span> <span style="color:#f92672">&amp;&amp;</span> sB <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>);
 }
 </code></pre></div>
 <p><a href="https://api.dart.dev/dart-core/Iterable/reduce.html">https://api.dart.dev/dart-core/Iterable/reduce.html</a></p>
@@ -113,13 +113,13 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;June&#39;</span>];
-<span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">sa</span>, <span style="color:#a6e22e">sc</span>) =&gt; <span style="color:#a6e22e">sa</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sc</span>);
-<span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">f</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">sa</span>, <span style="color:#a6e22e">sc</span>) =&gt; <span style="color:#a6e22e">sa</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sc</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">reduce</span>(<span style="color:#a6e22e">f</span>);
+<span style="color:#75715e">// example A
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sA</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">sY</span>, <span style="color:#a6e22e">sZ</span>) =&gt; <span style="color:#a6e22e">sY</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sZ</span>);
+<span style="color:#75715e">// example B
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">f</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">sY</span>, <span style="color:#a6e22e">sZ</span>) =&gt; <span style="color:#a6e22e">sY</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sZ</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sB</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">reduce</span>(<span style="color:#a6e22e">f</span>)
 <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>, <span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sA</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>, <span style="color:#a6e22e">sB</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MayJune&#39;</span>);
 </code></pre></div>
 <p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/Reduce">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/Reduce</a></p>
 <h2 id="nim">Nim</h2>
@@ -127,14 +127,14 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> sequtils
-<span style="color:#66d9ef">let</span> ab <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span><span style="color:#f92672">]</span>
-<span style="color:#75715e"># example 1</span>
-<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> foldl(ab, a <span style="color:#f92672">&amp;</span> b)
-<span style="color:#75715e"># example 2</span>
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">f</span>(sa, sc: <span style="color:#66d9ef">string</span>): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> sa <span style="color:#f92672">&amp;</span> sc
-<span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> foldl(ab, f(a, b))
+<span style="color:#66d9ef">let</span> aZ <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span><span style="color:#f92672">]</span>
+<span style="color:#75715e"># example A</span>
+<span style="color:#66d9ef">let</span> sA <span style="color:#f92672">=</span> foldl(aZ, a <span style="color:#f92672">&amp;</span> b)
+<span style="color:#75715e"># example B</span>
+<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">f</span>(sY, sZ: <span style="color:#66d9ef">string</span>): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> sY <span style="color:#f92672">&amp;</span> sZ
+<span style="color:#66d9ef">let</span> sB <span style="color:#f92672">=</span> foldl(aZ, f(a, b))
 <span style="color:#75715e"># print</span>
-echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span> <span style="color:#f92672">and</span> s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>
+echo sA <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span> <span style="color:#f92672">and</span> sB <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/sequtils.html#foldl.t,untyped,untyped">https://nim-lang.org/docs/sequtils.html#foldl.t,untyped,untyped</a></p>
 <h2 id="php">PHP</h2>

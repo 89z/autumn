@@ -1,9 +1,9 @@
 from urllib import parse
-# example 1
+# example A
 s = 'one=odd&two=even'
-m = parse.parse_qs(s)
-# example 2
-m2 = {'one': 'odd', 'two': 'even'}
-s2 = parse.urlencode(m2)
+mA = parse.parse_qs(s)
+# example B
+m = {'one': 'odd', 'two': 'even'}
+sB = parse.urlencode(m)
 # print
-print(m, s2, sep='\n')
+print(mA, sB, sep='\n')
