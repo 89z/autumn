@@ -1,8 +1,8 @@
 <?php
 $s = '8,9';
-# example 1
+# example A
 $a = sscanf($s, '%d,%d');
-# example 2
-sscanf($s, '%d,%d', $n, $n2);
+# example B
+sscanf($s, '%d,%d', $nA, $nB);
 # print
-var_dump($a, $n, $n2);
+var_dump($a, $nA, $nB);

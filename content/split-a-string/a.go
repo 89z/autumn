@@ -7,10 +7,10 @@ import (
 
 func main() {
    s := "May June"
-   // example 1
-   a := strings.Split(s, " ")
-   // example 2
-   a2 := strings.Fields(s)
+   // example A
+   aA := strings.Split(s, " ")
+   // example B
+   aB := strings.Fields(s)
    // print
-   fmt.Println(a, a2)
+   fmt.Println(aA, aB)
 }

@@ -1,8 +1,8 @@
 import strutils
 let s = "May June"
-# example 1
-let a = s.split(" ")
-# example 2
-let a2 = s.split
+# example A
+let aA = s.split(" ")
+# example B
+let aB = s.split
 # print
-echo a, a2
+echo aA, aB

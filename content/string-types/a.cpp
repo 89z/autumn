@@ -1,10 +1,10 @@
 #include <iostream>
 
 int main() {
-   // example 1
-   std::string s = "May";
-   // example 2
-   auto s2 = "May";
+   // example A
+   std::string sA = "May";
+   // example B
+   auto sB = "May";
    // print
-   std::cout << s << s2 << std::endl;
+   std::cout << sA << sB << std::endl;
 }

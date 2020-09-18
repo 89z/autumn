@@ -1,9 +1,9 @@
-// example 1
-let s = 'May';
-// example 2
-let s2 = "May";
-// example 3
-let s3 = `May
+// example A
+let sA = 'May';
+// example B
+let sB = "May";
+// example C
+let sC = `May
 June`;
 // print
-console.log(s, s2, s3);
+console.log(sA, sB, sC);
