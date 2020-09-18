@@ -1,10 +1,10 @@
 from urllib import parse
 
-# example 1
-o = parse.urlparse('https://example.com/one?two=even')
+# example A
+oA = parse.urlparse('https://example.com/one?two=even')
 
-# example 2
-o2 = parse.ParseResult(
+# example B
+o = parse.ParseResult(
    fragment = '',
    netloc = 'example.com',
    params = '',
@@ -12,7 +12,7 @@ o2 = parse.ParseResult(
    query = 'two=even',
    scheme = 'https'
 )
-s = o2.geturl()
+s = o.geturl()
 
 # print
-print(o, s, sep='\n')
+print(oA, s, sep='\n')

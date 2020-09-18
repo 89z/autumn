@@ -1,7 +1,7 @@
 ---
 title: Digit grouping
 categories: [number]
-tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby]
 date: 2020-09-13
 ---
 

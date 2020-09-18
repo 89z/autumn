@@ -11,6 +11,6 @@ func main() {
    if e != nil {
       os.Exit(1)
    }
-   o2 := o.Query()
-   fmt.Println(o2)
+   m := o.Query()
+   fmt.Println(m)
 }

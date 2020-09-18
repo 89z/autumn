@@ -1,2 +1,4 @@
 <?php
-$s4 = number_format($n);
+$n = 1000;
+$s = number_format($n);
+var_dump($s == '1,000');

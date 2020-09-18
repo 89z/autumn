@@ -1,7 +1,7 @@
 <?php
-# example 1
-$s = realpath('.');
-# example 2
-$s2 = getcwd();
+# example A
+$sA = realpath('.');
+# example B
+$sB = getcwd();
 # print
-var_dump($s, $s2);
+var_dump($sA, $sB);
