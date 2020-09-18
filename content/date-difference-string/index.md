@@ -27,7 +27,7 @@ date: 2020-09-11
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/datetime.html#datetime.datetime.fromisoformat>
+<https://docs.python.org/library/datetime.html#timedelta-objects>
 
 ## References
 

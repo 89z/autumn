@@ -1,5 +1,5 @@
-function f_date(n_date) {
-   const o_date = new Date(n_date * 1000);
+function f_date(n_ms) {
+   const o_date = new Date(n_ms);
    const o_fmt = new Intl.DateTimeFormat('en', {
       day: 'numeric', month: 'short', weekday: 'short', year: 'numeric'
    });
@@ -10,6 +10,6 @@ function f_date(n_date) {
 }
 
 let n = 1577858399;
-let m = f_date(n);
+let m = f_date(n * 1000);
 let s = [m.weekday, m.month, m.day, m.year].join(' ');
 console.log(s == 'Tue Dec 31 2019');
