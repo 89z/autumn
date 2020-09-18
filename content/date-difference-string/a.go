@@ -12,10 +12,10 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   o2, e := time.Parse(s, "2019-12-31T23:59:59")
+   o1a, e := time.Parse(s, "2019-12-31T23:59:59")
    if e != nil {
       log.Fatal(e)
    }
-   o3 := o2.Sub(o)
-   fmt.Println(o3)
+   o1 := o1a.Sub(o)
+   fmt.Println(o1)
 }

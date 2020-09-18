@@ -1,3 +1,3 @@
 let n = Date.now();
-let n2 = Math.trunc(n / 1000);
-console.log(n2);
+let n1 = Math.trunc(n / 1000);
+console.log(n1);
