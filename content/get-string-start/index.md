@@ -1,9 +1,16 @@
 ---
 title: Get string start
 categories: [string]
-tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
-date: 2020-09-11
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+date: 2020-09-18
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
+
+- <https://cplusplus.com/reference/string/string/at>
+- <https://cplusplus.com/reference/string/string/operator[]>
 
 ## D
 
@@ -66,6 +73,7 @@ date: 2020-09-11
 ## References
 
 - <https://hyperpolyglot.org/c#extract-substr>
+- <https://hyperpolyglot.org/cpp#extract-substr>
 - <https://hyperpolyglot.org/scripting#extract-substr>
 - <https://hyperpolyglot.org/web#extract-substr>
 - <https://programming-idioms.org/idiom/38/extract-a-substring>
