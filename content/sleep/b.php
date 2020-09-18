@@ -1,6 +1,6 @@
 <?php
-$n = microtime(true);
+$nA = microtime(true);
 echo "May\n";
-$n2 = microtime(true);
-$n3 = 3e6 - 1e6 * ($n2 - $n);
-usleep($n3);
+$nB = microtime(true);
+$nC = 3e6 - 1e6 * ($nB - $nA);
+usleep($nC);

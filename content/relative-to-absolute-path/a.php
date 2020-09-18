@@ -1,9 +1,9 @@
 <?php
 $s = 'index.md';
-# example 1
-$s2 = realpath($s);
-# example 2
+# example A
+$sA = realpath($s);
+# example B
 $o = new SplFileInfo($s);
-$s3 = $o->getRealPath();
+$sB = $o->getRealPath();
 # print
-var_dump($s2, $s3);
+var_dump($sA, $sB);

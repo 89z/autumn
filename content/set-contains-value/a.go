@@ -2,10 +2,10 @@ package main
 
 func main() {
    t := map[string]bool{"May": true}
-   // example 1
-   b, b2 := t["May"]
-   // example 2
-   b3 := t["May"]
+   // example A
+   bAa, bAb := t["May"]
+   // example B
+   bB := t["May"]
    // print
-   println(b, b2, b3)
+   println(bAa, bAb, bB)
 }

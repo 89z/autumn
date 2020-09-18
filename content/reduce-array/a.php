@@ -1,9 +1,9 @@
 <?php
 $a = ['May', 'June'];
-# example 1
-$s = array_reduce($a, fn ($sa, $sc) => $sa . $sc);
-# example 2
-$f = fn ($sa, $sc) => $sa . $sc;
-$s2 = array_reduce($a, $f);
+# example A
+$sA = array_reduce($a, fn ($sc, $sd) => $sc . $sd);
+# example B
+$f = fn ($sc, $sd) => $sc . $sd;
+$sB = array_reduce($a, $f);
 # print
-var_dump($s == 'MayJune', $s2 == 'MayJune');
+var_dump($sA == 'MayJune', $sB == 'MayJune');

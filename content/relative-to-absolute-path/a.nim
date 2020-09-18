@@ -1,4 +1,4 @@
 import os
-let s = "index.md"
-let s2 = s.absolutePath
-echo s2
+let sA = "index.md"
+let sB = sA.absolutePath
+echo sB

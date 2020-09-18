@@ -1,8 +1,8 @@
 import sets
 let t = ["May", "June"].toHashSet
-# example 1
-let b = t.contains("May")
-# example 2
-let b2 = "May" in t
+# example A
+let bA = t.contains("May")
+# example B
+let bB = "May" in t
 # print
-echo b and b2
+echo bA and bB

@@ -1,8 +1,8 @@
 a = ['May', 'June']
-# example 1
-s = a.reduce { |sa, sc| sa + sc }
-# example 2
-f = lambda { |sa, sc| sa + sc }
-s2 = a.reduce(&f)
+# example A
+sA = a.reduce { |sc, sd| sc + sd }
+# example B
+f = lambda { |sc, sd| sc + sd }
+sB = a.reduce(&f)
 # print
-puts s == 'MayJune', s2 == 'MayJune'
+puts sA == 'MayJune', sB == 'MayJune'

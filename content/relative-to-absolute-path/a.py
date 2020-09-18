@@ -1,4 +1,4 @@
 from os import path
-s = 'index.md'
-s2 = path.abspath(s)
-print(s2)
+sA = 'index.md'
+sB = path.abspath(sA)
+print(sB)
