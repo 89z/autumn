@@ -1,10 +1,10 @@
 package main
 
 func main() {
-   // example A
-   var nA int = 9
-   // example B
-   nB := 1_000
+   // example 1
+   var n1 int = 10
+   // example 2
+   n2 := 1_000
    // print
-   println(nA, nB)
+   println(n1, n2)
 }
