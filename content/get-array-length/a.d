@@ -1,7 +1,7 @@
 import std.stdio;
 
 void main() {
-   auto a = [10, 11];
+   auto a = ["May", "June"];
    auto n = a.length;
-   n.writeln;
+   writeln(n == 2);
 }

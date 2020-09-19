@@ -2,6 +2,6 @@
 
 int main() {
    std::string s = "📗";
-   size_t n = s.length();
+   auto n = s.length();
    std::cout << (n == 4) << std::endl;
 }

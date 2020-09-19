@@ -1,8 +1,8 @@
 s = '📗'
 # example 1
-n = len(s)
+n1 = len(s)
 # example 2
 y = s.encode()
 n2 = len(y)
 # print
-print(n == 1, n2 == 4)
+print(n1 == 1, n2 == 4)

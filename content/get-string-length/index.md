@@ -47,13 +47,9 @@ date: 2020-09-11
 
 ## PHP
 
-{{< r "str.php" >}}
-{{< r "mb.php" >}}
-{{< r "intl.php" >}}
+{{< r "a.php" >}}
 
-- <https://php.net/function.grapheme-strlen>
 - <https://php.net/function.iconv-strlen>
-- <https://php.net/function.mb-strlen>
 - <https://php.net/function.strlen>
 - <https://php.net/function.utf8-decode>
 
