@@ -1,7 +1,7 @@
-let m = {'📗/📕': 10};
+let a = ['/', '📗'];
 // example 1
-let s = JSON.stringify(m);
+let s1 = JSON.stringify(a);
 // example 2
-let s2 = JSON.stringify(m, null, 3);
+let s2 = JSON.stringify(a, null, 3);
 // print
-console.log(s, s2);
+console.log(s1, s2);

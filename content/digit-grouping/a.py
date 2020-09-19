@@ -1,11 +1,11 @@
 n = 1000
-# example A
-sA = '{:,}'.format(n)
-# example B
-sB = format(n, ',')
-# example C
+# example 1
+s1 = '{:,}'.format(n)
+# example 2
+s2 = format(n, ',')
+# example 3
 import locale
 locale.setlocale(locale.LC_ALL, '')
-sC = format(n, 'n')
+s3 = format(n, 'n')
 # print
-print(sA == '1,000', sB == '1,000', sC == '1,000')
+print(s1 == '1,000', s2 == '1,000', s3 == '1,000')

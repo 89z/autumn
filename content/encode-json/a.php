@@ -1,10 +1,10 @@
 <?php
-$m['📗/📕'] = 10;
+$a = ['/', '📗'];
 # example 1
-$s = json_encode($m);
+$s1 = json_encode($a);
 # example 2
-$s2 = json_encode($m, JSON_PRETTY_PRINT);
+$s2 = json_encode($a, JSON_PRETTY_PRINT);
 # example 3
-$s3 = json_encode($m, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+$s3 = json_encode($a, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 # print
-var_dump($s, $s2, $s3);
+echo $s1, "\n", $s2, "\n", $s3, "\n";

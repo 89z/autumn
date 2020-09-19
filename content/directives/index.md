@@ -7,8 +7,6 @@ date: 2020-08-25
 
 ## Go
 
-{{< r "a.go" >}}
-
 <https://golang.org/pkg/go/build>
 
 ## JavaScript

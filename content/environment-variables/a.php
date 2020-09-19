@@ -1,11 +1,12 @@
 <?php
 $s = 'USERPROFILE';
 # example 1
-$s2 = getenv($s);
+$s1 = getenv($s);
 # example 2
 $m = getenv();
-$s3 = $m[$s];
+$s2 = $m[$s];
 # example 3
-$s4 = $_SERVER[$s];
+$s3 = $_SERVER[$s];
 # print
-var_dump($s2, $s3, $s4);
+$s = 'C:\\Users\\Steven';
+var_dump($s1 == $s, $s2 == $s, $s3 == $s);

@@ -4,9 +4,10 @@ import "os"
 func main() {
    s := "USERPROFILE"
    // example 1
-   s2 := os.Getenv(s)
+   s1 := os.Getenv(s)
    // example 2
-   s3, b := os.LookupEnv(s)
+   s2, b2 := os.LookupEnv(s)
    // print
-   print(s2, "\n", s3, "\n", b, "\n")
+   s0 := `C:\Users\Steven`
+   println(s1 == s0, s2 == s0, b2)
 }

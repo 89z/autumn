@@ -7,8 +7,8 @@ import (
 )
 
 func main() {
-   m := map[string]int{"📗/📕": 10}
-   y, e := json.Marshal(m)
+   a := []string{"/", "📗"}
+   y, e := json.Marshal(a)
    if e != nil {
       os.Exit(1)
    }

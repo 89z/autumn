@@ -1,8 +1,9 @@
 import os
 s = 'USERPROFILE'
 # example 1
-s2 = os.getenv(s)
+s1 = os.getenv(s)
 # example 2
-s3 = os.environ[s]
+s2 = os.environ[s]
 # print
-print(s2, s3, sep='\n')
+s = 'C:\\Users\\Steven'
+print(s1 == s, s2 == s)
