@@ -8,9 +8,9 @@ import (
 func main() {
    o := regexp.MustCompile("a.")
    // example 1
-   s := o.FindString("January")
+   s1 := o.FindString("January")
    // example 2
-   a := o.FindAllString("January", -1)
+   a2 := o.FindAllString("January", -1)
    // print
-   fmt.Println(s, a)
+   fmt.Println(s1, a2)
 }

@@ -3,6 +3,6 @@ import "path"
 
 func main() {
    s := "C:/go/bin/go.exe"
-   s2 := path.Dir(s)
-   println(s2 == "C:/go/bin")
+   s1 := path.Dir(s)
+   println(s1 == "C:/go/bin")
 }

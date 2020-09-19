@@ -1,4 +1,4 @@
 import os
 var s = "C:\\Windows\\write.exe"
-let (s2, s3, s4) = splitFile(s)
-echo s2 == "C:\\Windows" and s3 == "write" and s4 == ".exe"
+let (s1, s1a, s1b) = splitFile(s)
+echo s1 == "C:\\Windows" and s1a == "write" and s1b == ".exe"

@@ -1,4 +1,4 @@
 from os import path
 s = 'C:\\python\\python.exe'
-s2 = path.basename(s)
-print(s2 == 'python.exe')
+s1 = path.basename(s)
+print(s1 == 'python.exe')

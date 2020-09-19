@@ -11,8 +11,8 @@ func main() {
    if e != nil {
       os.Exit(1)
    }
-   o2 := strings.Builder{}
-   io.Copy(&o2, o)
-   s := o2.String()
+   o1 := strings.Builder{}
+   io.Copy(&o1, o)
+   s := o1.String()
    print(s)
 }
