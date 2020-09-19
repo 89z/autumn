@@ -1,10 +1,10 @@
 void main() {
    // example 1
-   var b = ! false;
+   var b1 = ! false;
    // example 2
    var b2 = false || true;
    // example 3
    var b3 = true && true;
    // print
-   print(b && b2 && b3);
+   print(b1 && b2 && b3);
 }

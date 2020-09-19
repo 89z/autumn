@@ -13,9 +13,9 @@ func main() {
       os.Exit(1)
    }
    o := bytes.NewReader(y)
-   o2 := bufio.NewScanner(o)
-   for o2.Scan() {
-      s := o2.Text()
+   o1 := bufio.NewScanner(o)
+   for o1.Scan() {
+      s := o1.Text()
       println(s)
    }
 }

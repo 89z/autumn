@@ -77,9 +77,9 @@
       <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
    }
    <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">y</span>)
-   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">o</span>)
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Scan</span>() {
-      <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">Text</span>()
+   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">o</span>)
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Scan</span>() {
+      <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Text</span>()
       println(<span style="color:#a6e22e">s</span>)
    }
 }
@@ -97,11 +97,11 @@ $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;php -v&
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span>$r <span style="color:#f92672">=</span> <span style="color:#a6e22e">popen</span>($s, <span style="color:#e6db74">&#39;r&#39;</span>);
 <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
-   $s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgets</span>($r);
+   $s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgets</span>($r);
    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">feof</span>($r)) {
       <span style="color:#66d9ef">break</span>;
    }
-   <span style="color:#a6e22e">var_dump</span>($s2);
+   <span style="color:#a6e22e">var_dump</span>($s1);
 }
 <span style="color:#75715e"># example 2
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">exec</span>($s, $a);

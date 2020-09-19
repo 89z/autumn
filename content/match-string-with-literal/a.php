@@ -10,8 +10,8 @@ var_dump($n !== false);
 $n = stripos($s, 'ju');
 var_dump($n === 0);
 # example 4
-$s2 = $s[0];
-var_dump($s2 == 'J');
+$s4 = $s[0];
+var_dump($s4 == 'J');
 # example 5
-$s2 = $s[-1];
-var_dump($s2 == 'e');
+$s5 = $s[-1];
+var_dump($s5 == 'e');

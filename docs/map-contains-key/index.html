@@ -72,13 +72,13 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;year&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2019</span>};
 <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;year&#39;</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">m</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;year&#39;</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">m</span>;
 <span style="color:#75715e">// example 2
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">m</span>.<span style="color:#a6e22e">hasOwnProperty</span>(<span style="color:#e6db74">&#39;year&#39;</span>);
 <span style="color:#75715e">// example 3
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Reflect</span>.<span style="color:#a6e22e">has</span>(<span style="color:#a6e22e">m</span>, <span style="color:#e6db74">&#39;year&#39;</span>);
 <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">b2</span>, <span style="color:#a6e22e">b3</span>);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">b1</span>, <span style="color:#a6e22e">b2</span>, <span style="color:#a6e22e">b3</span>);
 </code></pre></div>
 <ul>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty</a></li>
@@ -100,7 +100,7 @@ echo b
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$m <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;year&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">2019</span>];
+$m[<span style="color:#e6db74">&#39;year&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2019</span>;
 $b <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_key_exists</span>(<span style="color:#e6db74">&#39;year&#39;</span>, $m);
 <span style="color:#a6e22e">var_dump</span>($b);
 </code></pre></div>

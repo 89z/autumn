@@ -4,11 +4,11 @@
 int main() {
    std::vector<std::string> a = {"May", "June"};
    std::string s;
-   for (auto s2: a) {
+   for (auto s1: a) {
       if (s != "") {
          s += ",";
       }
-      s += s2;
+      s += s1;
    }
    std::cout << s << std::endl;
 }

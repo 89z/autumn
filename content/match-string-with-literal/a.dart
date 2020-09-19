@@ -1,9 +1,9 @@
 void main() {
    var s = 'June';
    // example 1
-   var b = s.startsWith('Ju');
-   print(b);
+   var b1 = s.startsWith('Ju');
    // example 2
    var b2 = s.endsWith('ne');
-   print(b2);
+   // print
+   print(b1 && b2);
 }
