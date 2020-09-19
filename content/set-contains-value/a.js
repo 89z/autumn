@@ -1,8 +1,8 @@
-// example A
-let tA = new Set(['May', 'June']);
-let bA = tA.has('June');
-// example B
-let tB = {May: true, June: true};
-let bB = 'June' in tB;
+// example 1
+let t = new Set(['May', 'June']);
+let b1 = t.has('May');
+// example 2
+let t2 = {May: true, June: true};
+let b2 = 'June' in t2;
 // print
-console.log(bA, bB);
+console.log(b1, b2);

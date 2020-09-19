@@ -1,5 +1,5 @@
 void main() {
-   var t = {10};
-   var b = t.contains(10);
+   var t = {'May', 'June'};
+   var b = t.contains('May');
    print(b);
 }

@@ -1,11 +1,11 @@
 let a = ['May', 'June', 'July'];
-// example A
-let sA = a[0];
-// example B
-let sB = a[a.length - 1];
-// example C
-let aC = a.slice(0, 2);
-// example D
-let aD = a.slice(-2);
+// example 1
+let s1 = a[0];
+// example 2
+let s2 = a[a.length - 1];
+// example 3
+let a3 = a.slice(0, 2);
+// example 4
+let a4 = a.slice(-2);
 // print
-console.log(sA, sB, aC, aD);
+console.log(s1, s2, a3, a4);

@@ -3,14 +3,14 @@ import "fmt"
 
 func main() {
    a := []string{"May", "June", "July"}
-   // example A
-   sA := a[0]
-   // example B
-   aB := a[:2]
-   // example C
-   aC := a[len(a) - 2:]
-   // example D
-   sD := a[len(a) - 1]
+   // example 1
+   s1 := a[0]
+   // example 2
+   a2 := a[:2]
+   // example 3
+   a3 := a[len(a) - 2:]
+   // example 4
+   s4 := a[len(a) - 1]
    // print
-   fmt.Println(sA, aB, aC, sD)
+   fmt.Println(s1, a2, a3, s4)
 }

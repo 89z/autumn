@@ -1,11 +1,11 @@
 a = ['May', 'June', 'July']
-# example A
-sA = a[0]
-# example B
-sB = a[-1]
-# example C
-aC = a[:2]
-# example D
-aD = a[-2:]
+# example 1
+s1 = a[0]
+# example 2
+s2 = a[-1]
+# example 3
+a3 = a[:2]
+# example 4
+a4 = a[-2:]
 # print
-print(sA, sB, aC, aD)
+print(s1, s2, a3, a4)

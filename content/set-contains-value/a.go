@@ -1,11 +1,11 @@
 package main
 
 func main() {
-   t := map[string]bool{"May": true}
-   // example A
-   bAa, bAb := t["May"]
-   // example B
-   bB := t["May"]
+   t := map[string]bool{"May": true, "June": true}
+   // example 1
+   b1, b1a := t["May"]
+   // example 2
+   b2 := t["May"]
    // print
-   println(bAa, bAb, bB)
+   println(b1, b1a, b2)
 }
