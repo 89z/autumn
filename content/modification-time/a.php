@@ -1,5 +1,9 @@
 <?php
-$n = time();
-touch('index.md', $n);
-$n2 = filemtime('index.md');
-var_dump($n, $n2 == $n);
+$s = 'index.md';
+# example 1
+$n1 = time();
+touch($s, $n1);
+# example 2
+$n2 = filemtime($s);
+# print
+var_dump($n1 == $n2);

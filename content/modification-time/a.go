@@ -7,13 +7,17 @@ import (
 )
 
 func main() {
-   o := time.Now()
-   os.Chtimes("index.md", o, o)
-   o2, e := os.Stat("index.md")
+   s := "index.md"
+   // example 1
+   o1 := time.Now()
+   os.Chtimes(s, o1, o1)
+   // example 2
+   o2, e := os.Stat(s)
    if e != nil {
       os.Exit(1)
    }
-   n := o.Unix()
+   // print
+   n1 := o1.Unix()
    n2 := o2.ModTime().Unix()
-   fmt.Println(n, n2 == n)
+   fmt.Println(n1 == n2)
 }

@@ -1,7 +1,7 @@
 #include <iostream>
 
-bool f(int n, int n2) {
-   return n > n2;
+bool f(int n, int n1) {
+   return n > n1;
 }
 
 int main() {
