@@ -49,7 +49,6 @@ date: 2020-09-11
 ## Python
 
 {{< r "a.py" >}}
-{{< r "b.py" >}}
 
 <https://docs.python.org/reference/simple_stmts.html#import>
 

@@ -1,2 +1,2 @@
-import sys
-print(sys)
+import os, sys
+print(os, sys, sep='\n')

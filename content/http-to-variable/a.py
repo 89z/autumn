@@ -1,6 +1,5 @@
+from sys import stdout
 from urllib import request
 s = 'https://speedtest.lax.hivelocity.net'
-o = request.urlopen(s)
-from sys import stdout
-y = o.read()
+y = request.urlopen(s).read()
 stdout.buffer.write(y)

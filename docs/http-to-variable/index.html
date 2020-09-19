@@ -39,8 +39,8 @@
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span><span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">;</span>
-   s2<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">;</span>
+   s1<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 <p><a href="https://dlang.org/library/std/net/curl/get.html">https://dlang.org/library/std/net/curl/get.html</a></p>
@@ -107,6 +107,7 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_uri</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>;
+
 <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">s_uri</span>).<span style="color:#a6e22e">then</span>(
    <span style="color:#a6e22e">o_req</span> =&gt; <span style="color:#a6e22e">o_req</span>.<span style="color:#a6e22e">text</span>()
 ).<span style="color:#a6e22e">then</span>(
@@ -148,12 +149,12 @@ stdout.write s_out
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>;
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>($s);
+</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>($s);
 <span style="color:#75715e"># example 2
 </span><span style="color:#75715e"></span>$r <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>($s, <span style="color:#e6db74">&#39;r&#39;</span>);
-$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_contents</span>($r);
+$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_contents</span>($r);
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s2, $s3);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1, $s2);
 </code></pre></div>
 
 
@@ -163,7 +164,8 @@ $s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_
 <span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;openssl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;openssl&#39;</span>);
 $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>(<span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>);
 <span style="color:#a6e22e">curl_setopt</span>($r, <span style="color:#a6e22e">CURLOPT_RETURNTRANSFER</span>, <span style="color:#66d9ef">true</span>);
-<span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">curl_exec</span>($r);
+$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_exec</span>($r);
+<span style="color:#66d9ef">echo</span> $s;
 </code></pre></div></p>
 <ul>
 <li><a href="https://php.net/function.curl-init">https://php.net/function.curl-init</a></li>
@@ -174,11 +176,10 @@ $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</s
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> request
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> sys <span style="color:#f92672">import</span> stdout
+<span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> request
 s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>
-o <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>urlopen(s)
-<span style="color:#f92672">from</span> sys <span style="color:#f92672">import</span> stdout
-y <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>read()
+y <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>urlopen(s)<span style="color:#f92672">.</span>read()
 stdout<span style="color:#f92672">.</span>buffer<span style="color:#f92672">.</span>write(y)
 </code></pre></div>
 <p><a href="https://docs.python.org/library/urllib.request.html#urllib.request.urlopen">https://docs.python.org/library/urllib.request.html#urllib.request.urlopen</a></p>

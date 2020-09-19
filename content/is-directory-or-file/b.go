@@ -8,9 +8,9 @@ func main() {
       os.Exit(1)
    }
    // example 2
-   b := o.Mode().IsRegular()
+   b2 := o.Mode().IsRegular()
    // example 3
-   b2 := ! o.Mode().IsDir()
+   b3 := ! o.Mode().IsDir()
    // print
-   println(b, b2)
+   println(b2, b3)
 }

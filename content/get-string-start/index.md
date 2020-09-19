@@ -49,9 +49,7 @@ date: 2020-09-18
 ## PHP
 
 {{< r "a.php" >}}
-{{< r "b.php" >}}
 
-- <https://php.net/function.mb-substr>
 - <https://php.net/function.substr>
 - <https://php.net/types.string#example-54>
 
