@@ -1,10 +1,10 @@
 <?php
-$s = <<<eof
-{"year": 2019, "month": 12, "day": 31}
-eof;
+$s = '{"year": 2019, "month": 12}';
 # example 1
-$o = json_decode($s);
+$o1 = json_decode($s);
 # example 2
-$m = json_decode($s, true);
+$m2 = json_decode($s, true);
+# example 3
+$n3 = json_last_error();
 # print
-var_dump($o, $m);
+var_dump($o1, $m2, $n3 == JSON_ERROR_NONE);

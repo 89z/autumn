@@ -1,11 +1,9 @@
-#include <ctime>
+#include <iomanip>
 #include <iostream>
-#include <locale>
 
 int main() {
-    std::time_t t = std::time(nullptr);
-    char mbstr[100];
-    if (std::strftime(mbstr, sizeof(mbstr), "%A %c", std::localtime(&t))) {
-        std::cout << mbstr << '\n';
-    }
+   std::time_t n = 1577858399;
+   auto o = std::localtime(&n);
+   auto s = std::put_time(o, "%c");
+   std::cout << s << std::endl;
 }

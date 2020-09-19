@@ -8,16 +8,16 @@ import (
 )
 
 type Date struct {
-   Year, Month, Day int
+   Year, Month int
 }
 
 func main() {
-   // string to object
-   s := `{"year": 2019, "month": 12, "day": 31}`
+   // example 1
+   s := `{"year": 2019, "month": 12}`
    y := []byte(s)
-   a := Date{}
-   json.Unmarshal(y, &a)
-   // file to object
+   a1 := Date{}
+   json.Unmarshal(y, &a1)
+   // example 2
    o, e := os.Open("a.json")
    if e != nil {
       log.Fatal(e)
@@ -25,5 +25,5 @@ func main() {
    a2 := Date{}
    json.NewDecoder(o).Decode(&a2)
    // print
-   fmt.Printf("%+v\n%+v\n", a, a2)
+   fmt.Printf("%+v\n%+v\n", a1, a2)
 }

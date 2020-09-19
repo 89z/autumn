@@ -1,8 +1,8 @@
 # example 1
-const n = 9
+const n1 = 10
 # example 2
-let n2 = 9
+let n2 = 10
 # example 3
-var n3 = 9
+var n3 = 10
 # print
-echo n == 9 and n2 == 9 and n3 == 9
+echo [n1, n2, n3]

@@ -6,16 +6,19 @@ import (
    "time"
 )
 
+func f(s string) time.Time {
+   n := len(s)
+   s1 := time.RFC3339[:n]
+   o, e := time.Parse(s1, s)
+   if e != nil {
+      log.Fatal(e)
+   }
+   return o
+}
+
 func main() {
-   s := time.RFC3339[:19]
-   o, e := time.Parse(s, "2019-12-31T00:00:00")
-   if e != nil {
-      log.Fatal(e)
-   }
-   o1a, e := time.Parse(s, "2019-12-31T23:59:59")
-   if e != nil {
-      log.Fatal(e)
-   }
-   o1 := o1a.Sub(o)
-   fmt.Println(o1)
+   o := f("2019-12-31")
+   o1 := f("2019-12-31T23:59:59")
+   s := o1.Sub(o).String()
+   fmt.Println(s == "23h59m59s")
 }

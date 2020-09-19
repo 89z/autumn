@@ -9,7 +9,7 @@ date: 2020-09-13
 
 {{< r "a.cpp" >}}
 
-<https://en.cppreference.com/w/cpp/chrono/c/strftime>
+<https://en.cppreference.com/w/cpp/chrono/c/localtime>
 
 ## D
 
@@ -54,5 +54,6 @@ date: 2020-09-13
 
 ## References
 
-- <https://programming-idioms.org/idiom/99>
+- <https://programming-idioms.org/idiom/98/epoch-seconds-to-date>
+- <https://programming-idioms.org/idiom/99/format-date>
 - <https://rosettacode.org/wiki/Date_format>
