@@ -1,9 +1,9 @@
 from functools import reduce
 a = ['May', 'June']
-# example A
-sA = reduce(lambda sc, sd: sc + sd, a)
-# example B
-f = lambda sc, sd: sc + sd
-sB = reduce(f, a)
+# example 1
+s1 = reduce(lambda s, s1: s + s1, a)
+# example 2
+f = lambda s, s2: s + s2
+s2 = reduce(f, a)
 # print
-print(sA == 'MayJune', sB == 'MayJune')
+print(s1 == 'MayJune', s2 == 'MayJune')

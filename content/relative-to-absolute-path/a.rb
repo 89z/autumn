@@ -1,3 +1,3 @@
-sA = 'index.md'
-sB = File.absolute_path(sA)
-puts sB
+s = 'index.md'
+s1 = File.absolute_path(s)
+puts s1

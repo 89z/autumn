@@ -1,15 +1,15 @@
 package main
 
-func f(sa, sc string) string {
-   return sa + sc
+func f(s, s1 string) string {
+   return s + s1
 }
 
 func main() {
    a := []string{"May", "June"}
    s := ""
    for n := range a {
-      sc := a[n]
-      s = f(s, sc)
+      s1 := a[n]
+      s = f(s, s1)
    }
    println(s == "MayJune")
 }

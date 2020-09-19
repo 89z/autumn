@@ -1,7 +1,7 @@
 import std.path, std.stdio;
 
 void main() {
-   auto sA = "index.md";
-   auto sB = sA.absolutePath;
-   sB.writeln;
+   auto s = "index.md";
+   auto s1 = s.absolutePath;
+   s1.writeln;
 }

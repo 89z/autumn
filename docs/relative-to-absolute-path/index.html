@@ -51,9 +51,9 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.path<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> sA <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;index.md&#34;</span><span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">auto</span> sB <span style="color:#f92672">=</span> sA<span style="color:#f92672">.</span><span style="color:#a6e22e">absolutePath</span><span style="color:#f92672">;</span>
-   sB<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;index.md&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">absolutePath</span><span style="color:#f92672">;</span>
+   s1<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 <p><a href="https://dlang.org/library/std/path/absolute_path.html">https://dlang.org/library/std/path/absolute_path.html</a></p>
@@ -71,12 +71,12 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">sA</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;index.md&#34;</span>
-   <span style="color:#a6e22e">sB</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Abs</span>(<span style="color:#a6e22e">sA</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;index.md&#34;</span>
+   <span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Abs</span>(<span style="color:#a6e22e">s</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
    }
-   println(<span style="color:#a6e22e">sB</span>)
+   println(<span style="color:#a6e22e">s1</span>)
 }
 </code></pre></div>
 <p><a href="https://golang.org/pkg/path/filepath#Abs">https://golang.org/pkg/path/filepath#Abs</a></p>
@@ -85,9 +85,9 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> os
-<span style="color:#66d9ef">let</span> sA <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;index.md&#34;</span>
-<span style="color:#66d9ef">let</span> sB <span style="color:#f92672">=</span> sA.absolutePath
-echo sB
+<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;index.md&#34;</span>
+<span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> s.absolutePath
+echo s1
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/os.html#absolutePath,string">https://nim-lang.org/docs/os.html#absolutePath,string</a></p>
 <h2 id="php">PHP</h2>
@@ -96,13 +96,13 @@ echo sB
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;index.md&#39;</span>;
-<span style="color:#75715e"># example A
-</span><span style="color:#75715e"></span>$sA <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>($s);
-<span style="color:#75715e"># example B
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">realpath</span>($s);
+<span style="color:#75715e"># example 2
 </span><span style="color:#75715e"></span>$o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SplFileInfo</span>($s);
-$sB <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getRealPath</span>();
+$s2 <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getRealPath</span>();
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($sA, $sB);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1, $s2);
 </code></pre></div>
 <p><a href="https://php.net/function.realpath">https://php.net/function.realpath</a></p>
 <h2 id="python">Python</h2>
@@ -110,9 +110,9 @@ $sB <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</sp
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> os <span style="color:#f92672">import</span> path
-sA <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;index.md&#39;</span>
-sB <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>abspath(sA)
-<span style="color:#66d9ef">print</span>(sB)
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;index.md&#39;</span>
+s1 <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>abspath(s)
+<span style="color:#66d9ef">print</span>(s1)
 </code></pre></div>
 <ul>
 <li><a href="https://docs.python.org/library/os.path.html#os.path.abspath">https://docs.python.org/library/os.path.html#os.path.abspath</a></li>
@@ -122,9 +122,9 @@ sB <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">sA <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;index.md&#39;</span>
-sB <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>absolute_path(sA)
-puts sB
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;index.md&#39;</span>
+s1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>absolute_path(s)
+puts s1
 </code></pre></div>
 <p><a href="https://ruby-doc.org/core/File.html#method-c-absolute_path">https://ruby-doc.org/core/File.html#method-c-absolute_path</a></p>
 <h2 id="rust">Rust</h2>
@@ -134,9 +134,9 @@ puts sB
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{fs, io};
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> sa <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;index.md&#34;</span>;
-   <span style="color:#66d9ef">let</span> sb <span style="color:#f92672">=</span> fs::canonicalize(sa)<span style="color:#f92672">?</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, sb);
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;index.md&#34;</span>;
+   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> fs::canonicalize(s)<span style="color:#f92672">?</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, s1);
    Ok(())
 }
 </code></pre></div>

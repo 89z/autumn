@@ -1,8 +1,8 @@
 use std::{fs, io};
 
 fn main() -> io::Result<()> {
-   let sa = "index.md";
-   let sb = fs::canonicalize(sa)?;
-   println!("{:?}", sb);
+   let s = "index.md";
+   let s1 = fs::canonicalize(s)?;
+   println!("{:?}", s1);
    Ok(())
 }
