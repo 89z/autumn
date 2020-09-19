@@ -1,8 +1,8 @@
-// example A
+// example 1
 let s = 'one=odd&two=even';
-let oA = new URLSearchParams(s);
-// example B
+let o1 = new URLSearchParams(s);
+// example 2
 let m = {one: 'odd', two: 'even'};
-let sB = new URLSearchParams(m).toString();
+let s2 = new URLSearchParams(m).toString();
 // print
-console.log(oA, sB);
+console.log(o1, s2);
