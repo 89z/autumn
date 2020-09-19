@@ -21,8 +21,8 @@ date: 2020-09-11
 
 {{< r "a.go" >}}
 
-- <https://golang.org/doc/faq#Does_Go_have_a_ternary_form>
 - <https://golang.org/ref/spec#If_statements>
+- [Go `?:` operator](//golang.org/doc/faq#Does_Go_have_a_ternary_form)
 
 ## JavaScript
 
@@ -42,7 +42,7 @@ date: 2020-09-11
 {{< r "a.php" >}}
 
 - <https://php.net/control-structures.elseif>
-- <https://php.net/operators.comparison#language.operators.comparison.ternary>
+- [ternary operator](//php.net/operators.comparison#language.operators.comparison.ternary)
 
 ## Python
 

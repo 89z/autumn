@@ -38,9 +38,9 @@
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std<span style="color:#f92672">::</span>filesystem;
 
 <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Windows</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">write.exe&#34;</span>;
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Windows</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">notepad.exe&#34;</span>;
    <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> path(s).filename();
-   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> (s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;write.exe&#34;</span>) <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> (s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;notepad.exe&#34;</span>) <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
 }
 </code></pre></div>
 <p><a href="https://en.cppreference.com/w/cpp/filesystem/path/filename">https://en.cppreference.com/w/cpp/filesystem/path/filename</a></p>
@@ -51,9 +51,9 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.path<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:\\Windows\\write.exe&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:\\Windows\\notepad.exe&#34;</span><span style="color:#f92672">;</span>
    <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">baseName</span><span style="color:#f92672">;</span>
-   writeln<span style="color:#f92672">(</span>s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;write.exe&#34;</span><span style="color:#f92672">);</span>
+   writeln<span style="color:#f92672">(</span>s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;notepad.exe&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 <p><a href="https://dlang.org/library/std/path/base_name.html">https://dlang.org/library/std/path/base_name.html</a></p>
@@ -93,9 +93,9 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> os
-<span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Windows</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">write.exe&#34;</span>
+<span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Windows</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">notepad.exe&#34;</span>
 <span style="color:#66d9ef">let</span> (s1, s1a, s1b) <span style="color:#f92672">=</span> splitFile(s)
-echo s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Windows&#34;</span> <span style="color:#f92672">and</span> s1a <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;write&#34;</span> <span style="color:#f92672">and</span> s1b <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;.exe&#34;</span>
+echo s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Windows&#34;</span> <span style="color:#f92672">and</span> s1a <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;notepad&#34;</span> <span style="color:#f92672">and</span> s1b <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;.exe&#34;</span>
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/os.html#splitFile,string">https://nim-lang.org/docs/os.html#splitFile,string</a></p>
 <h2 id="php">PHP</h2>
@@ -155,9 +155,9 @@ s1 <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:\\Windows\\write.exe&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C:\\Windows\\notepad.exe&#39;</span>
 s1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>basename(s)
-puts s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;write.exe&#39;</span>
+puts s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;notepad.exe&#39;</span>
 </code></pre></div>
 <p><a href="https://ruby-doc.org/core/File.html#method-c-basename">https://ruby-doc.org/core/File.html#method-c-basename</a></p>
 <h2 id="rust">Rust</h2>
@@ -167,7 +167,7 @@ puts s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;w
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::path::Path;
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> Path::new(<span style="color:#e6db74">&#34;C:\\Windows\\write.exe&#34;</span>);
+   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> Path::new(<span style="color:#e6db74">&#34;C:\\Windows\\notepad.exe&#34;</span>);
    <span style="color:#75715e">// example 1
 </span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> o1 <span style="color:#f92672">=</span> o.file_name();
    <span style="color:#75715e">// example 2

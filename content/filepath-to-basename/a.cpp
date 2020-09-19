@@ -3,7 +3,7 @@
 using namespace std::filesystem;
 
 int main() {
-   auto s = "C:\\Windows\\write.exe";
+   auto s = "C:\\Windows\\notepad.exe";
    auto s1 = path(s).filename();
-   std::cout << (s1 == "write.exe") << std::endl;
+   std::cout << (s1 == "notepad.exe") << std::endl;
 }

@@ -1,7 +1,7 @@
 s = 'May June'
-# example A
-aA = s.split(' ')
-# example B
-aB = s.split()
+# example 1
+a1 = s.split(' ')
+# example 2
+a2 = s.split()
 # print
-print(aA, aB)
+print(a1, a2)

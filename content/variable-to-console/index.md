@@ -22,7 +22,9 @@ date: 2020-09-11
 {{< r "a.dart" >}}
 {{< r "b.dart" >}}
 
-<https://api.dart.dev/dart-core/print.html>
+- <https://api.dart.dev/dart-core/print.html>
+- <https://api.dart.dev/dart-io/Stdout/write.html>
+- <https://api.dart.dev/dart-io/Stdout/writeln.html>
 
 ## Go
 

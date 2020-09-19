@@ -2,10 +2,10 @@ import std.stdio, std.string;
 
 void main() {
    auto s = "May June";
-   // example A
-   auto aA = s.split(" ");
-   // example B
-   auto aB = s.split;
+   // example 1
+   auto a1 = s.split(" ");
+   // example 2
+   auto a2 = s.split;
    // print
-   writeln(aA, aB);
+   writeln(a1, a2);
 }

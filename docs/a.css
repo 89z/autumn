@@ -124,7 +124,12 @@ h1 {
    margin-left: 0;
 }
 .pagination li,
-section {
+h1,
+h2,
+p,
+pre,
+section,
+time {
    margin-left: .5rem;
 }
 body,
@@ -132,7 +137,9 @@ h1 {
    margin-right: 0;
 }
 .pagination li,
-section {
+pre,
+section,
+time {
    margin-right: .5rem;
 }
 body,
@@ -160,7 +167,6 @@ code {
 .category,
 .page-link,
 blockquote,
-main,
 td {
    padding-bottom: .5rem;
 }
@@ -172,8 +178,7 @@ section {
 pre code {
    padding-left: 0;
 }
-code,
-main {
+code {
    padding-left: .5rem;
 }
 .category,
@@ -185,8 +190,7 @@ section,
 td {
    padding-left: 1rem;
 }
-code,
-main {
+code {
    padding-right: .5rem;
 }
 .category,
@@ -206,8 +210,7 @@ th {
 .category,
 .page-link,
 blockquote,
-header,
-main {
+header {
    padding-top: .5rem;
 }
 pre,

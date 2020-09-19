@@ -1,5 +1,5 @@
 <?php
-$s = 'C:\\Windows\\write.exe';
+$s = 'C:\\Windows\\notepad.exe';
 # example 1
 $s1 = pathinfo($s, PATHINFO_DIRNAME);
 # example 2

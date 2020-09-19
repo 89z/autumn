@@ -1,13 +1,13 @@
 a = ['BBBB', 'AA', 'CCC']
-# example A
+# example 1
 a.sort()
 print(a)
-# example B
+# example 2
 a.sort(reverse = True)
 print(a)
-# example C
+# example 3
 a.sort(key = len)
 print(a)
-# example D
+# example 4
 a = sorted(a)
 print(a)

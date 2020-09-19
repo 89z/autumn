@@ -3,7 +3,7 @@
 namespace fs = std::filesystem;
 
 int main() {
-   fs::path o = "C:\\Windows\\write.exe";
+   fs::path o = "C:\\Windows\\notepad.exe";
    auto s = o.parent_path();
-   std::cout << s << std::endl;
+   std::cout << (s == "C:\\Windows") << std::endl;
 }
