@@ -1,7 +1,7 @@
 ---
 title: Sleep
 categories: [system]
-tags: [c++, d, dart, nim, php, ruby, rust]
+tags: [c++, d, dart, go, nim, php, ruby, rust]
 date: 2020-09-11
 ---
 
@@ -22,6 +22,12 @@ date: 2020-09-11
 {{< r "a.dart" >}}
 
 <https://api.dart.dev/dart-io/sleep.html>
+
+## Go
+
+{{< r "a.go" >}}
+
+<https://golang.org/pkg/time>
 
 ## Nim
 

@@ -6,7 +6,8 @@ import (
 )
 
 func main() {
-   o := exec.Command("less", "-V")
+   println("run")
+   o := exec.Command("pipe")
    o.Stdout = os.Stdout
    o.Run()
 }

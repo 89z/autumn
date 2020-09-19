@@ -5,27 +5,27 @@ tags: [dart, go, nim, php, python]
 date: 2020-09-11
 ---
 
+{{< r "pipe.go" >}}
+
 ## Dart
 
-{{< r "a.dart" >}}
+{{< r "n.dart" >}}
+{{< r "p.dart" >}}
 
 <https://api.dart.dev/dart-io/Process/runSync.html>
 
 ## Go
 
-{{< r "a.go" >}}
-{{< r "b.go" >}}
-{{< r "c.go" >}}
+{{< r "n.go" >}}
+{{< r "p.go" >}}
 
-- <https://golang.org/pkg/os#StartProcess>
 - <https://golang.org/pkg/os/exec#Cmd.Run>
 - <https://golang.org/pkg/os/exec#Cmd.Start>
 
 ## Nim
 
-{{< r "a.nim" >}}
-{{< r "b.nim" >}}
-{{< r "c.nim" >}}
+{{< r "n.nim" >}}
+{{< r "p.nim" >}}
 
 - <https://nim-lang.org/docs/osproc.html#execCmd,string>
 - <https://nim-lang.org/docs/osproc.html#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]>
