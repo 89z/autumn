@@ -24,7 +24,7 @@
 
 <main>
    <h1>Start process</h1>
-   <time>Fri Sep 11 2020</time>
+   <time>Sun Sep 20 2020</time>
    
    <a href="/autumn/categories/system/">system</a>
    
@@ -130,24 +130,27 @@ echo <span style="color:#e6db74">&#34;begin&#34;</span>
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;less -V&#39;</span>;
-<span style="color:#a6e22e">system</span>($s);
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Shell</span> {
+   <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">escape</span>(<span style="color:#a6e22e">string</span> $s_in)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
+      $s_brk <span style="color:#f92672">=</span> <span style="color:#a6e22e">strpbrk</span>($s_in, <span style="color:#e6db74">&#39; &#34;&amp;-&gt;^&#39;</span>);
+      <span style="color:#66d9ef">if</span> ($s_brk <span style="color:#f92672">===</span> <span style="color:#66d9ef">false</span>) {
+         <span style="color:#66d9ef">return</span> $s_in;
+      }
+      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#34;&#39;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">str_replace</span>(<span style="color:#e6db74">&#39;&#34;&#39;</span>, <span style="color:#e6db74">&#39;&#34;&#34;&#39;</span>, $s_in) <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&#34;&#39;</span>;
+   }
+}
+
+$o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Shell</span>;
+$s <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">escape</span>(<span style="color:#e6db74">&#39;google.com/search?tbm=vid&amp;q=squarepusher&#39;</span>);
+<span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#39;waterfox &#39;</span> <span style="color:#f92672">.</span> $s);
 </code></pre></div>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f_escape_sh</span>(<span style="color:#a6e22e">string</span> $s_in)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
-   $s_brk <span style="color:#f92672">=</span> <span style="color:#a6e22e">strpbrk</span>($s_in, <span style="color:#e6db74">&#39; &#34;&amp;-&gt;^&#39;</span>);
-   <span style="color:#66d9ef">if</span> ($s_brk <span style="color:#f92672">===</span> <span style="color:#66d9ef">false</span>) {
-      <span style="color:#66d9ef">return</span> $s_in;
-   }
-   <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#34;&#39;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">str_replace</span>(<span style="color:#e6db74">&#39;&#34;&#39;</span>, <span style="color:#e6db74">&#39;&#34;&#34;&#39;</span>, $s_in) <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&#34;&#39;</span>;
-}
-
-$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">f_escape_sh</span>(<span style="color:#e6db74">&#39;a b.txt&#39;</span>);
-<span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#39;less &#39;</span> <span style="color:#f92672">.</span> $s);
+<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;begin</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+<span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#39;pipe&#39;</span>);
 </code></pre></div></p>
 <p><a href="https://php.net/function.system">https://php.net/function.system</a></p>
 <h2 id="python">Python</h2>

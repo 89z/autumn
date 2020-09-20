@@ -3,6 +3,11 @@ title: Java
 tags: [reject]
 ---
 
+## Setup
+
+- <https://adoptopenjdk.net/installation.html>
+- <https://jdk.java.net>
+
 ## Boilerplate
 
 With a minimal program, these items are required:
@@ -45,7 +50,3 @@ currently, with Windows only the MSVC compiler is allowed:
 - <https://github.com/oracle/graal/blob/fb9b1d3b/substratevm/src/com.oracle.svm.hosted/src/com/oracle/svm/hosted/c/codegen/CCompilerInvoker.java#L106-L108>
 
 I think people should be able to choose what compiler they use.
-
-## Setup
-
-<https://jdk.java.net>

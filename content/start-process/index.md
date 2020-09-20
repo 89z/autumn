@@ -2,7 +2,7 @@
 title: Start process
 categories: [system]
 tags: [dart, go, nim, php, python]
-date: 2020-09-11
+date: 2020-09-20
 ---
 
 {{< r "pipe.go" >}}
@@ -32,8 +32,8 @@ date: 2020-09-11
 
 ## PHP
 
-{{< r "a.php" >}}
-{{< r "b.php" >}}
+{{< r "n.php" >}}
+{{< r "p.php" >}}
 
 <https://php.net/function.system>
 
