@@ -1,19 +1,19 @@
 <?php
 # example 1
-$s1 = 'May
-June';
+$s1 = 'One\One
+One';
 # example 2
-$s2 = "May
-June";
+$s2 = "Two
+Two";
 # example 3
 $s3 = <<<eof
-May
-June
+Three
+Three
 eof;
 # example 4
 $s4 = <<<'eof'
-May
-June
+Four\Four
+Four
 eof;
 # print
-var_dump($s1, $s2, $s3, $s4);
+echo $s1, $s2, $s3, $s4, "\n";

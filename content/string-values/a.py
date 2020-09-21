@@ -1,16 +1,12 @@
 # example 1
-s1 = 'May'
+s1 = 'One'
 # example 2
-s2 = "May"
+s2 = "Two"
 # example 3
-s3 = '''May
-June'''
+s3 = '''Three\Three
+Three'''
 # example 4
-s4 = """May
-June"""
-# example 5
-import io
-o = io.StringIO('May')
-s5 = o.getvalue()
+s4 = """Four\Four
+Four"""
 # print
-print([s1, s2, s3, s4, s5])
+print(s1, s2, s3, s4)

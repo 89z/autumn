@@ -9,13 +9,13 @@ date: 2020-09-11
 
 {{< r "a.cpp" >}}
 
-<https://en.cppreference.com/w/cpp/string/basic_string>
+<https://en.cppreference.com/w/cpp/language/string_literal>
 
 ## D
 
 {{< r "a.d" >}}
 
-<https://dlang.org/spec/arrays.html#strings>
+<https://dlang.org/spec/lex.html#string_literals>
 
 ## Dart
 
@@ -56,20 +56,18 @@ date: 2020-09-11
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/library/io.html#io.StringIO>
-- <https://docs.python.org/reference/lexical_analysis.html#strings>
+<https://docs.python.org/reference/lexical_analysis.html#strings>
 
 ## Rust
 
 {{< r "a.rs" >}}
 
-- <https://doc.rust-lang.org/std/primitive.str.html>
-- <https://doc.rust-lang.org/std/string/struct.String.html#method.from>
+<https://doc.rust-lang.org/std/primitive.str.html>
 
 ## References
 
 - <https://hyperpolyglot.org/c#str-literal>
-- <https://hyperpolyglot.org/cpp#str-type>
+- <https://hyperpolyglot.org/cpp#str-literal>
 - <https://hyperpolyglot.org/rust#str-literal>
 - <https://programming-idioms.org/idiom/48>
 - <https://rosettacode.org/wiki/Here_document>

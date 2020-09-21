@@ -2,12 +2,9 @@
 
 int main() {
    // example 1
-   std::string s1 = "One";
+   auto s1 = "May";
    // example 2
-   auto s2 = "Two";
-   // example 3
-   auto s3 = R"(Three\Three
-Three)";
+   std::string s2 = "May";
    // print
-   std::cout << s1 << s2 << s3 << std::endl;
+   std::cout << s1 << s2 << std::endl;
 }
