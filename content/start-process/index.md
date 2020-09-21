@@ -2,7 +2,7 @@
 title: Start process
 categories: [system]
 tags: [dart, go, nim, php, python]
-date: 2020-09-20
+date: 2020-09-21
 ---
 
 {{< r "pipe.go" >}}
@@ -28,7 +28,7 @@ date: 2020-09-20
 {{< r "b.nim" >}}
 
 - <https://nim-lang.org/docs/osproc.html#execCmd,string>
-- <https://nim-lang.org/docs/osproc.html#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]>
+- [osproc#startProcess](//nim-lang.org/docs/osproc.html#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption])
 
 ## PHP
 
