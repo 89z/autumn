@@ -1,22 +1,22 @@
 <?php
 $n = 10;
-# example A
+# example 1
 if ($n > 0) {
-   $sA = '+';
+   $s1 = '+';
 } else if ($n < 0) {
-   $sA = '-';
+   $s1 = '-';
 } else {
-   $sA = 'zero';
+   $s1 = 'zero';
 }
-# example B
+# example 2
 if ($n > 0) {
-   $sB = '+';
+   $s2 = '+';
 } elseif ($n < 0) {
-   $sB = '-';
+   $s2 = '-';
 } else {
-   $sB = 'zero';
+   $s2 = 'zero';
 }
-# example C
-$sC = $n < 0 ? '-' : '+';
+# example 3
+$s3 = $n < 0 ? '-' : '+';
 # print
-var_dump($sA == '+', $sB == '+', $sC == '+');
+var_dump($s1 == '+', $s2 == '+', $s3 == '+');

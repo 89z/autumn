@@ -1,19 +1,19 @@
 <?php
-# example A
-$sA = 'May
+# example 1
+$s1 = 'May
 June';
-# example B
-$sB = "May
+# example 2
+$s2 = "May
 June";
-# example C
-$sC = <<<eof
+# example 3
+$s3 = <<<eof
 May
 June
 eof;
-# example D
-$sD = <<<'eof'
+# example 4
+$s4 = <<<'eof'
 May
 June
 eof;
 # print
-var_dump($sA, $sB, $sC, $sD);
+var_dump($s1, $s2, $s3, $s4);

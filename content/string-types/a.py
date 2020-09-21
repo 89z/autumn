@@ -1,16 +1,16 @@
-# example A
-sA = 'May'
-# example B
-sB = "May"
-# example C
-sC = '''May
+# example 1
+s1 = 'May'
+# example 2
+s2 = "May"
+# example 3
+s3 = '''May
 June'''
-# example D
-sD = """May
+# example 4
+s4 = """May
 June"""
-# example E
+# example 5
 import io
 o = io.StringIO('May')
-sE = o.getvalue()
+s5 = o.getvalue()
 # print
-print([sA, sB, sC, sD, sE])
+print([s1, s2, s3, s4, s5])
