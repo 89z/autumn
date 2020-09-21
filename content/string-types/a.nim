@@ -1,9 +1,6 @@
 # example 1
-let s1: string = "May"
+let s1 = "May"
 # example 2
-let s2 = "May"
-# example 3
-let s3 = """May
-June"""
+let s2: string = "May"
 # print
-echo [s1, s2, s3]
+echo s1, s2

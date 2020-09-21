@@ -4,8 +4,9 @@ func main() {
    // example 1
    s1 := "May"
    // example 2
-   s2 := `May
-June`
+   var s2 = "May"
+   // example 3
+   var s3 string = "May"
    // print
-   println(s1, s2)
+   println(s1, s2, s3)
 }
