@@ -33,14 +33,7 @@ toolchain is installed on your system.
 Running again gives this:
 
 ~~~
-> bin\native-image -H:+ReportExceptionStackTraces HelloWorld
-[...]
-Caused by: java.io.IOException: Cannot run program "CL" (in directory
-"C:\Users\Steven\AppData\Local\Temp\SVM-8913641224192734383"): CreateProcess
-error=2, The system cannot find the file specified
-   at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
-   at com.oracle.svm.hosted.c.codegen.CCompilerInvoker.
-   startCommand(CCompilerInvoker.java:158)
+java.io.IOException: Cannot run program "CL"
 ~~~
 
 Its true, I dont have `CL.exe` on my system, but I do have GCC. It seems

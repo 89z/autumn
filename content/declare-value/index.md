@@ -1,15 +1,9 @@
 ---
 title: Declare value
 categories: [reference]
-tags: [c++, d, dart, go, javascript, nim, php, ruby, rust]
+tags: [d, dart, go, javascript, nim, php, ruby, rust]
 date: 2020-09-11
 ---
-
-## C++
-
-{{< r "a.cpp" >}}
-
-<https://en.cppreference.com/w/cpp/language/cv>
 
 ## D
 

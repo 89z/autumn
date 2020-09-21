@@ -48,14 +48,7 @@
 <pre><code>Error: Unable to compile C-ABI query code. Make sure native software development
 toolchain is installed on your system.
 </code></pre><p>Running again gives this:</p>
-<pre><code>&gt; bin\native-image -H:+ReportExceptionStackTraces HelloWorld
-[...]
-Caused by: java.io.IOException: Cannot run program &quot;CL&quot; (in directory
-&quot;C:\Users\Steven\AppData\Local\Temp\SVM-8913641224192734383&quot;): CreateProcess
-error=2, The system cannot find the file specified
-   at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
-   at com.oracle.svm.hosted.c.codegen.CCompilerInvoker.
-   startCommand(CCompilerInvoker.java:158)
+<pre><code>java.io.IOException: Cannot run program &quot;CL&quot;
 </code></pre><p>Its true, I dont have <code>CL.exe</code> on my system, but I do have GCC. It seems
 currently, with Windows only the MSVC compiler is allowed:</p>
 <ul>

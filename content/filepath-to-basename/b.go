@@ -2,7 +2,7 @@ package main
 import "path/filepath"
 
 func main() {
-   s := `C:\go\bin\go.exe`
+   s := `C:\Windows\notepad.exe`
    s1 := filepath.Base(s)
-   println(s1 == "go.exe")
+   println(s1 == "notepad.exe")
 }
