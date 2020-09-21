@@ -1,20 +1,18 @@
 void main() {
    // example 1
-   String s1 = 'One';
+   var s1 = 'One';
    // example 2
-   var s2 = 'Two';
+   var s2 = "Two";
    // example 3
-   var s3 = "Three";
+   var s3 = """Three
+Three""";
    // example 4
-   var s4 = r'Four\Four';
+   var s4 = '''Four
+Four''';
    // example 5
    var s5 = r"Five\Five";
    // example 6
-   var s6 = '''Six
-Six''';
-   // example 7
-   var s7 = """Seven
-Seven""";
+   var s6 = r'Six\Six';
    // print
-   print([s1, s2, s3, s4, s5, s6, s7]);
+   print(s1 + s2 + s3 + s4 + s5 + s6);
 }

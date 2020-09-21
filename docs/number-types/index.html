@@ -41,19 +41,12 @@
    <span style="color:#75715e">// example 1
 </span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span> n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">int</span> n3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#75715e">// example 4
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> n4 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">int</span> n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> n1 <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;,&#39;</span> <span style="color:#f92672">&lt;&lt;</span> n2 <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;,&#39;</span> <span style="color:#f92672">&lt;&lt;</span> n3 <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;,&#39;</span> <span style="color:#f92672">&lt;&lt;</span> n4 <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span><span style="color:#75715e"></span>   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> n1 <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;,&#39;</span> <span style="color:#f92672">&lt;&lt;</span> n2 <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
 }
 </code></pre></div>
-<ul>
-<li><a href="https://en.cppreference.com/w/cpp/language/cv">https://en.cppreference.com/w/cpp/language/cv</a></li>
-<li><a href="https://en.cppreference.com/w/cpp/language/types">https://en.cppreference.com/w/cpp/language/types</a></li>
-</ul>
+<p><a href="https://en.cppreference.com/w/cpp/language/types">https://en.cppreference.com/w/cpp/language/types</a></p>
 <h2 id="d">D</h2>
 
 
@@ -62,9 +55,9 @@
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">int</span> n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">;</span>
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">;</span>
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">;</span>
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">int</span> n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">;</span>
    <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span>   <span style="color:#f92672">[</span>n1<span style="color:#f92672">,</span> n2<span style="color:#f92672">].</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
@@ -76,11 +69,15 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">num</span> n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">num</span> n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+   <span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">int</span> n3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+   <span style="color:#75715e">// example 4
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">double</span> n4 <span style="color:#f92672">=</span> <span style="color:#ae81ff">9.9</span>;
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   print([n1, n2]);
+</span><span style="color:#75715e"></span>   print([n1, n2, n3, n4]);
 }
 </code></pre></div>
 <p><a href="https://dart.dev/guides/language/language-tour#numbers">https://dart.dev/guides/language/language-tour#numbers</a></p>
@@ -92,11 +89,13 @@
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n1</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">10</span>
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">10</span>
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">n2</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span><span style="color:#a6e22e">_000</span>
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n2</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n3</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">10</span>
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>)
+</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>, <span style="color:#a6e22e">n3</span>)
 }
 </code></pre></div>
 <p><a href="https://golang.org/ref/spec#Numeric_types">https://golang.org/ref/spec#Numeric_types</a></p>
@@ -104,27 +103,20 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-<span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n2</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#a6e22e">_000</span>;
-<span style="color:#75715e">// print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n</span>);
 </code></pre></div>
-<ul>
-<li><a href="https://developer.mozilla.org/Web/JavaScript/Guide/Numbers_and_dates#Decimal_numbers">https://developer.mozilla.org/Web/JavaScript/Guide/Numbers_and_dates#Decimal_numbers</a></li>
-<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators">https://developer.mozilla.org/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators</a></li>
-</ul>
+<p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number</a></p>
 <h2 id="nim">Nim</h2>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#75715e"># example 1</span>
-<span style="color:#66d9ef">var</span> n1: <span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+<span style="color:#66d9ef">let</span> n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
 <span style="color:#75715e"># example 2</span>
-<span style="color:#66d9ef">var</span> n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+<span style="color:#66d9ef">let</span> n2: <span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
 <span style="color:#75715e"># print</span>
-echo n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">and</span> n2 <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</span>
+echo <span style="color:#f92672">[</span>n1, n2<span style="color:#f92672">]</span>
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/manual.html#types-preminusdefined-integer-types">https://nim-lang.org/docs/manual.html#types-preminusdefined-integer-types</a></p>
 <h2 id="php">PHP</h2>
@@ -132,26 +124,16 @@ echo n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</sp
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-<span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#a6e22e">_000</span>;
-<span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$n3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">9.9</span>;
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1, $n2, $n3);
+$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+<span style="color:#a6e22e">var_dump</span>($n);
 </code></pre></div>
 <p><a href="https://php.net/language.types.float">https://php.net/language.types.float</a></p>
 <h2 id="python">Python</h2>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># example 1</span>
-n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
-<span style="color:#75715e"># example 2</span>
-n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>_000
-<span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(n1, n2)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+<span style="color:#66d9ef">print</span>(n)
 </code></pre></div>
 <p><a href="https://docs.python.org/library/stdtypes.html#typesnumeric">https://docs.python.org/library/stdtypes.html#typesnumeric</a></p>
 <h2 id="rust">Rust</h2>
@@ -159,8 +141,12 @@ n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>_000
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> n2: <span style="color:#66d9ef">u8</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+   <span style="color:#75715e">// print
+</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{} {}&#34;</span>, n1, n2);
 }
 </code></pre></div>
 <p><a href="https://doc.rust-lang.org/std/index.html#primitives">https://doc.rust-lang.org/std/index.html#primitives</a></p>

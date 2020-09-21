@@ -39,14 +39,12 @@
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   std<span style="color:#f92672">::</span>string s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;One&#34;</span>;
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;One&#34;</span>;
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Two&#34;</span>;
-   <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s3 <span style="color:#f92672">=</span> R<span style="color:#e6db74">&#34;(Three\Three</span>
-Three)<span style="color:#e6db74">&#34;;</span>
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> R<span style="color:#e6db74">&#34;(Two\Two</span>
+Two)<span style="color:#e6db74">&#34;;</span>
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> s1 <span style="color:#f92672">&lt;&lt;</span> s2 <span style="color:#f92672">&lt;&lt;</span> s3 <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span><span style="color:#75715e"></span>   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> s1 <span style="color:#f92672">&lt;&lt;</span> s2 <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
 }
 </code></pre></div>
 <p><a href="https://en.cppreference.com/w/cpp/string/basic_string">https://en.cppreference.com/w/cpp/string/basic_string</a></p>
@@ -58,20 +56,18 @@ Three)<span style="color:#e6db74">&#34;;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">string</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;One&#34;</span><span style="color:#f92672">;</span>
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;One&#34;</span><span style="color:#f92672">;</span>
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Two&#34;</span><span style="color:#f92672">;</span>
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Two
+</span><span style="color:#e6db74">Two&#34;</span><span style="color:#f92672">;</span>
    <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Three
-</span><span style="color:#e6db74">Three&#34;</span><span style="color:#f92672">;</span>
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">`Three\Three
+</span><span style="color:#e6db74">Three`</span><span style="color:#f92672">;</span>
    <span style="color:#75715e">// example 4
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s4 <span style="color:#f92672">=</span> <span style="color:#e6db74">`Four\Four
-</span><span style="color:#e6db74">Four`</span><span style="color:#f92672">;</span>
-   <span style="color:#75715e">// example 5
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s5 <span style="color:#f92672">=</span> <span style="color:#f92672">q{</span>FiveFive
-Five<span style="color:#f92672">};</span>
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s4 <span style="color:#f92672">=</span> <span style="color:#f92672">q{</span>Four
+Four<span style="color:#f92672">};</span>
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   writeln<span style="color:#f92672">(</span>s1<span style="color:#f92672">,</span> s2<span style="color:#f92672">,</span> s3<span style="color:#f92672">,</span> s4<span style="color:#f92672">,</span> s5<span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>   writeln<span style="color:#f92672">(</span>s1<span style="color:#f92672">,</span> s2<span style="color:#f92672">,</span> s3<span style="color:#f92672">,</span> s4<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 <p><a href="https://dlang.org/spec/arrays.html#strings">https://dlang.org/spec/arrays.html#strings</a></p>
@@ -81,23 +77,21 @@ Five<span style="color:#f92672">};</span>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">String</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;One&#39;</span>;
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;One&#39;</span>;
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Two&#39;</span>;
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Two&#34;</span>;
    <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Three&#34;</span>;
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;Three
+</span><span style="color:#e6db74">Three&#34;&#34;&#34;</span>;
    <span style="color:#75715e">// example 4
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s4 <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#39;Four\Four&#39;</span>;
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;&#39;Four
+</span><span style="color:#e6db74">Four&#39;&#39;&#39;</span>;
    <span style="color:#75715e">// example 5
 </span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s5 <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#34;Five\Five&#34;</span>;
    <span style="color:#75715e">// example 6
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s6 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;&#39;Six
-</span><span style="color:#e6db74">Six&#39;&#39;&#39;</span>;
-   <span style="color:#75715e">// example 7
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s7 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;Seven
-</span><span style="color:#e6db74">Seven&#34;&#34;&#34;</span>;
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s6 <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#39;Six\Six&#39;</span>;
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   print([s1, s2, s3, s4, s5, s6, s7]);
+</span><span style="color:#75715e"></span>   print(s1 <span style="color:#f92672">+</span> s2 <span style="color:#f92672">+</span> s3 <span style="color:#f92672">+</span> s4 <span style="color:#f92672">+</span> s5 <span style="color:#f92672">+</span> s6);
 }
 </code></pre></div>
 <p><a href="https://dart.dev/guides/language/language-tour#strings">https://dart.dev/guides/language/language-tour#strings</a></p>

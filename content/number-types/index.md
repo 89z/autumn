@@ -9,8 +9,7 @@ date: 2020-09-11
 
 {{< r "a.cpp" >}}
 
-- <https://en.cppreference.com/w/cpp/language/cv>
-- <https://en.cppreference.com/w/cpp/language/types>
+<https://en.cppreference.com/w/cpp/language/types>
 
 ## D
 
@@ -34,8 +33,7 @@ date: 2020-09-11
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Guide/Numbers_and_dates#Decimal_numbers>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number>
 
 ## Nim
 
