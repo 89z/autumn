@@ -1,6 +1,10 @@
 # example 1
-var n1: int = 10
+let n1 = 10
 # example 2
-var n2 = 10
+let n2 = 1_000
+# example 3
+let n3 = 1e6
+# example 4
+let n4 = 9.9
 # print
-echo n1 == 10 and n2 == 10
+echo n1, ',', n2, ',', n3, ',', n4

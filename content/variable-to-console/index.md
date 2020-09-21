@@ -9,7 +9,8 @@ date: 2020-09-11
 
 {{< r "a.cpp" >}}
 
-<https://en.cppreference.com/w/cpp/io/cout>
+- <https://en.cppreference.com/w/cpp/io/c/fprintf>
+- <https://en.cppreference.com/w/cpp/io/cout>
 
 ## D
 

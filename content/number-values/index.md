@@ -9,14 +9,13 @@ date: 2020-09-11
 
 {{< r "a.cpp" >}}
 
-- <https://en.cppreference.com/w/cpp/language/cv>
-- <https://en.cppreference.com/w/cpp/language/types>
+<https://en.cppreference.com/w/cpp/language/integer_literal>
 
 ## D
 
 {{< r "a.d" >}}
 
-<https://dlang.org/spec/type.html>
+<https://dlang.org/spec/lex.html#integerliteral>
 
 ## Dart
 
@@ -28,41 +27,40 @@ date: 2020-09-11
 
 {{< r "a.go" >}}
 
-<https://golang.org/ref/spec#Numeric_types>
+<https://golang.org/ref/spec#Integer_literals>
 
 ## JavaScript
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Guide/Numbers_and_dates#Decimal_numbers>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators>
 
 ## Nim
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/manual.html#types-preminusdefined-integer-types>
+<https://nim-lang.org/docs/manual.html#lexical-analysis-numerical-constants>
 
 ## PHP
 
 {{< r "a.php" >}}
 
-<https://php.net/language.types.float>
+- <https://php.net/language.types.float>
+- <https://php.net/language.types.integer>
 
 ## Python
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/stdtypes.html#typesnumeric>
+<https://docs.python.org/reference/lexical_analysis.html#integer-literals>
 
 ## Rust
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/index.html#primitives>
+<https://doc.rust-lang.org/reference/tokens.html#number-literals>
 
 ## References
 
-- <https://hyperpolyglot.org/c#int-type>
-- <https://hyperpolyglot.org/cpp#int-type>
-- <https://hyperpolyglot.org/web#int-type>
+- <https://rosettacode.org/wiki/Literals/Floating_point>
+- <https://rosettacode.org/wiki/Literals/Integer>
