@@ -1,6 +1,6 @@
 ---
-title: String types
-categories: [string]
+title: String values
+categories: [string, type]
 tags: [c++, d, dart, go, javascript, nim, php, python, rust]
 date: 2020-09-11
 ---
@@ -34,7 +34,8 @@ date: 2020-09-11
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Template_literals>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/raw>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Template_literals>
 
 ## Nim
 

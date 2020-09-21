@@ -1,21 +1,9 @@
 ---
-title: Declare value
-categories: [reference]
-tags: [d, dart, go, javascript, nim, php, ruby, rust]
+title: Type qualifiers
+categories: [type]
+tags: [go, javascript, nim, php, ruby, rust]
 date: 2020-09-11
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/spec/declaration.html>
-
-## Dart
-
-{{< r "a.dart" >}}
-
-<https://dart.dev/guides/language/language-tour#variables>
 
 ## Go
 

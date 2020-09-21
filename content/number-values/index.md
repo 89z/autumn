@@ -1,5 +1,5 @@
 ---
-title: Number types
+title: Number values
 categories: [number, type]
 tags: [c++, d, dart, go, javascript, nim, php, python, rust]
 date: 2020-09-11
