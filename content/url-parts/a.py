@@ -1,9 +1,9 @@
 from urllib import parse
 
-# example A
-oA = parse.urlparse('https://example.com/one?two=even')
+# example 1
+o1 = parse.urlparse('https://example.com/one?two=even')
 
-# example B
+# example 2
 o = parse.ParseResult(
    fragment = '',
    netloc = 'example.com',
@@ -12,7 +12,7 @@ o = parse.ParseResult(
    query = 'two=even',
    scheme = 'https'
 )
-s = o.geturl()
+s2 = o.geturl()
 
 # print
-print(oA, s, sep='\n')
+print(o1, s2, sep='\n')

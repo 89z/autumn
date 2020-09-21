@@ -10,12 +10,12 @@ func main() {
    if e != nil {
       os.Exit(1)
    }
-   // example A
-   sA := o.Host
-   // example B
-   sB := o.Path
-   // example C
-   sC := o.RawQuery
+   // example 1
+   s1 := o.Host
+   // example 2
+   s2 := o.Path
+   // example 3
+   s3 := o.RawQuery
    // print
-   println(sA == "example.com", sB == "/one", sC == "two=even")
+   println(s1 == "example.com", s2 == "/one", s3 == "two=even")
 }

@@ -6,10 +6,10 @@ import (
 )
 
 func main() {
-   oA := strings.NewReader("May\n")
-   oB, e := os.Create("a.txt")
+   o := strings.NewReader("May\n")
+   o1, e := os.Create("a.txt")
    if e != nil {
       os.Exit(1)
    }
-   oA.WriteTo(oB)
+   o.WriteTo(o1)
 }
