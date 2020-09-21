@@ -1,8 +1,10 @@
 import subprocess
-a = ['python', '-V']
 # example 1
-subprocess.call(a)
+print('BEGIN')
+subprocess.call('pipe')
 # example 2
-subprocess.check_call(a)
+print('BEGIN')
+subprocess.check_call('pipe')
 # example 3
-subprocess.run(a)
+print('BEGIN')
+subprocess.run('pipe')

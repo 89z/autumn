@@ -9,31 +9,31 @@ date: 2020-09-20
 
 ## Dart
 
-{{< r "n.dart" >}}
-{{< r "p.dart" >}}
+{{< r "a.dart" >}}
+{{< r "b.dart" >}}
 
 <https://api.dart.dev/dart-io/Process/runSync.html>
 
 ## Go
 
-{{< r "n.go" >}}
-{{< r "p.go" >}}
+{{< r "a.go" >}}
+{{< r "b.go" >}}
 
 - <https://golang.org/pkg/os/exec#Cmd.Run>
 - <https://golang.org/pkg/os/exec#Cmd.Start>
 
 ## Nim
 
-{{< r "n.nim" >}}
-{{< r "p.nim" >}}
+{{< r "a.nim" >}}
+{{< r "b.nim" >}}
 
 - <https://nim-lang.org/docs/osproc.html#execCmd,string>
 - <https://nim-lang.org/docs/osproc.html#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]>
 
 ## PHP
 
-{{< r "n.php" >}}
-{{< r "p.php" >}}
+{{< r "a.php" >}}
+{{< r "b.php" >}}
 
 <https://php.net/function.system>
 
@@ -41,6 +41,7 @@ date: 2020-09-20
 
 {{< r "a.py" >}}
 {{< r "b.py" >}}
+{{< r "c.py" >}}
 
 - <https://docs.python.org/library/os.html#os.system>
 - <https://docs.python.org/library/subprocess.html#subprocess.call>

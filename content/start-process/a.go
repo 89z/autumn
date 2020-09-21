@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-   println("run")
+   println("BEGIN")
    o := exec.Command("pipe")
    o.Stdout = os.Stdout
    o.Run()

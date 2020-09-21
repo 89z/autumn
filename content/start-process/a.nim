@@ -1,10 +1,10 @@
 import osproc
 
 # example 1
-echo "begin"
+echo "BEGIN"
 discard execCmd("pipe")
 
 # example 2
-echo "begin"
+echo "BEGIN"
 let o = startProcess("pipe", options={poParentStreams})
 discard o.waitForExit

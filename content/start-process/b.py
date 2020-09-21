@@ -1,2 +1,3 @@
 import os
-os.system('python -V')
+print('BEGIN')
+os.system('pipe')

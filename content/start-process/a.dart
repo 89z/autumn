@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main() async {
-   print('May');
-   var o = await Process.start('test', []);
+   print('BEGIN');
+   var o = await Process.start('pipe', []);
    o.stdout.pipe(stdout);
 }

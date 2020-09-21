@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-   fmt.Println("end")
+   fmt.Println("END")
    o := time.Duration(5 * time.Second)
    time.Sleep(o)
 }

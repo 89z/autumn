@@ -1,15 +1,15 @@
 import std.stdio;
 
 void main() {
-   // example A
-   auto sA = "May
+   // example 1
+   auto s1 = "May
 June";
-   // example B
-   auto sB = `May
+   // example 2
+   auto s2 = `May
 June`;
-   // example C
-   auto sC = q{May
+   // example 3
+   auto s3 = q{May
 June};
    // print
-   [sA, sB, sC].writeln;
+   [s1, s2, s3].writeln;
 }

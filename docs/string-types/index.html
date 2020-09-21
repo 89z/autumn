@@ -36,12 +36,12 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#75715e">// example A
-</span><span style="color:#75715e"></span>   std<span style="color:#f92672">::</span>string sA <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May&#34;</span>;
-   <span style="color:#75715e">// example B
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> sB <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May&#34;</span>;
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   std<span style="color:#f92672">::</span>string s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May&#34;</span>;
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May&#34;</span>;
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> sA <span style="color:#f92672">&lt;&lt;</span> sB <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span><span style="color:#75715e"></span>   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> s1 <span style="color:#f92672">&lt;&lt;</span> s2 <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
 }
 </code></pre></div>
 <p><a href="https://en.cppreference.com/w/cpp/string/basic_string">https://en.cppreference.com/w/cpp/string/basic_string</a></p>
@@ -52,17 +52,17 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#75715e">// example A
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> sA <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May
 </span><span style="color:#e6db74">June&#34;</span><span style="color:#f92672">;</span>
-   <span style="color:#75715e">// example B
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> sB <span style="color:#f92672">=</span> <span style="color:#e6db74">`May
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">`May
 </span><span style="color:#e6db74">June`</span><span style="color:#f92672">;</span>
-   <span style="color:#75715e">// example C
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> sC <span style="color:#f92672">=</span> <span style="color:#f92672">q{</span>May
+   <span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s3 <span style="color:#f92672">=</span> <span style="color:#f92672">q{</span>May
 June<span style="color:#f92672">};</span>
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   <span style="color:#f92672">[</span>sA<span style="color:#f92672">,</span> sB<span style="color:#f92672">,</span> sC<span style="color:#f92672">].</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+</span><span style="color:#75715e"></span>   <span style="color:#f92672">[</span>s1<span style="color:#f92672">,</span> s2<span style="color:#f92672">,</span> s3<span style="color:#f92672">].</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 <p><a href="https://dlang.org/spec/arrays.html#strings">https://dlang.org/spec/arrays.html#strings</a></p>
@@ -72,7 +72,7 @@ June<span style="color:#f92672">};</span>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
    <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;May&#39;</span>;
-   print(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;May&#39;</span>);
+   print(s);
 }
 </code></pre></div>
 <p><a href="https://dart.dev/guides/language/language-tour#strings">https://dart.dev/guides/language/language-tour#strings</a></p>
@@ -83,13 +83,13 @@ June<span style="color:#f92672">};</span>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#75715e">// example A
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">sA</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;May&#34;</span>
-   <span style="color:#75715e">// example B
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">sB</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`May
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;May&#34;</span>
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`May
 </span><span style="color:#e6db74">June`</span>
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">sA</span>, <span style="color:#a6e22e">sB</span>)
+</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>)
 }
 </code></pre></div>
 <ul>
@@ -100,15 +100,15 @@ June<span style="color:#f92672">};</span>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// example A
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sA</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;May&#39;</span>;
-<span style="color:#75715e">// example B
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sB</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May&#34;</span>;
-<span style="color:#75715e">// example C
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sC</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`May
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;May&#39;</span>;
+<span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May&#34;</span>;
+<span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s3</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`May
 </span><span style="color:#e6db74">June`</span>;
 <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sA</span>, <span style="color:#a6e22e">sB</span>, <span style="color:#a6e22e">sC</span>);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">s3</span>);
 </code></pre></div>
 <p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Template_literals">https://developer.mozilla.org/Web/JavaScript/Reference/Template_literals</a></p>
 <h2 id="nim">Nim</h2>
