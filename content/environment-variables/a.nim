@@ -1,3 +1,3 @@
 import os
 let s = getEnv("USERPROFILE")
-echo s == "C:\\Users\\Steven"
+echo s == r"C:\Users\Steven"

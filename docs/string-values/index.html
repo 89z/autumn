@@ -41,8 +41,8 @@
    <span style="color:#75715e">// example 1
 </span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;One&#34;</span>;
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> R<span style="color:#e6db74">&#34;(Two\Two</span>
-Two)<span style="color:#e6db74">&#34;;</span>
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> R<span style="color:#e6db74">&#34;(Two</span>
+Two<span style="color:#960050;background-color:#1e0010">\</span>)<span style="color:#e6db74">&#34;;</span>
    <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span>   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> s1 <span style="color:#f92672">&lt;&lt;</span> s2 <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
 }
@@ -61,8 +61,8 @@ Two)<span style="color:#e6db74">&#34;;</span>
 </span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Two
 </span><span style="color:#e6db74">Two&#34;</span><span style="color:#f92672">;</span>
    <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">`Three\Three
-</span><span style="color:#e6db74">Three`</span><span style="color:#f92672">;</span>
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">`Three
+</span><span style="color:#e6db74">Three\`</span><span style="color:#f92672">;</span>
    <span style="color:#75715e">// example 4
 </span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s4 <span style="color:#f92672">=</span> <span style="color:#f92672">q{</span>Four
 Four<span style="color:#f92672">};</span>
@@ -87,9 +87,9 @@ Four<span style="color:#f92672">};</span>
 </span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;&#39;Four
 </span><span style="color:#e6db74">Four&#39;&#39;&#39;</span>;
    <span style="color:#75715e">// example 5
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s5 <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#34;Five\Five&#34;</span>;
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s5 <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#39;Five\&#39;</span>;
    <span style="color:#75715e">// example 6
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s6 <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#39;Six\Six&#39;</span>;
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s6 <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#34;Six\&#34;</span>;
    <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span>   print(s1 <span style="color:#f92672">+</span> s2 <span style="color:#f92672">+</span> s3 <span style="color:#f92672">+</span> s4 <span style="color:#f92672">+</span> s5 <span style="color:#f92672">+</span> s6);
 }
@@ -105,8 +105,8 @@ Four<span style="color:#f92672">};</span>
    <span style="color:#75715e">// example 1
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;One&#34;</span>
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`Two\Two
-</span><span style="color:#e6db74">Two`</span>
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`Two
+</span><span style="color:#e6db74">Two\`</span>
    <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>)
 }
@@ -127,7 +127,7 @@ Four<span style="color:#f92672">};</span>
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s3</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Three
 </span><span style="color:#e6db74">Three`</span>;
 <span style="color:#75715e">// example 4
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s4</span> <span style="color:#f92672">=</span> String.<span style="color:#a6e22e">raw</span><span style="color:#e6db74">`Four</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#e6db74">Four
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s4</span> <span style="color:#f92672">=</span> String.<span style="color:#a6e22e">raw</span><span style="color:#e6db74">`Four
 </span><span style="color:#e6db74">Four`</span>;
 <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">s3</span>, <span style="color:#a6e22e">s4</span>);
@@ -143,19 +143,24 @@ Four<span style="color:#f92672">};</span>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#75715e"># example 1</span>
 <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;One&#34;</span>
 <span style="color:#75715e"># example 2</span>
-<span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;Two\Two
-</span><span style="color:#e6db74">Two&#34;&#34;&#34;</span>
+<span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#34;Two\&#34;</span>
+<span style="color:#75715e"># example 3</span>
+<span style="color:#66d9ef">let</span> s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;Three
+</span><span style="color:#e6db74">Three\&#34;&#34;&#34;</span>
 <span style="color:#75715e"># print</span>
-echo s1, s2
+echo s1, s2, s3
 </code></pre></div>
-<p><a href="https://nim-lang.org/docs/manual.html#lexical-analysis-string-literals">https://nim-lang.org/docs/manual.html#lexical-analysis-string-literals</a></p>
+<ul>
+<li><a href="https://nim-lang.org/docs/manual.html#lexical-analysis-raw-string-literals">https://nim-lang.org/docs/manual.html#lexical-analysis-raw-string-literals</a></li>
+<li><a href="https://nim-lang.org/docs/manual.html#lexical-analysis-triple-quoted-string-literals">https://nim-lang.org/docs/manual.html#lexical-analysis-triple-quoted-string-literals</a></li>
+</ul>
 <h2 id="php">PHP</h2>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;One\One
+</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;One
 </span><span style="color:#e6db74">One&#39;</span>;
 <span style="color:#75715e"># example 2
 </span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Two
@@ -163,12 +168,12 @@ echo s1, s2
 <span style="color:#75715e"># example 3
 </span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;&lt;</span><span style="color:#e6db74">eof</span><span style="color:#e6db74">
 </span><span style="color:#e6db74">Three
-</span><span style="color:#e6db74">Three
+</span><span style="color:#e6db74">Three\
 </span><span style="color:#e6db74"></span><span style="color:#e6db74">eof</span>;
 <span style="color:#75715e"># example 4
 </span><span style="color:#75715e"></span>$s4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;&lt;&#39;</span><span style="color:#e6db74">eof</span><span style="color:#e6db74">&#39;
-</span><span style="color:#e6db74">Four\Four
 </span><span style="color:#e6db74">Four
+</span><span style="color:#e6db74">Four\
 </span><span style="color:#e6db74"></span><span style="color:#e6db74">eof</span>;
 <span style="color:#75715e"># print
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">echo</span> $s1, $s2, $s3, $s4, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
@@ -188,15 +193,32 @@ s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;One&#39
 <span style="color:#75715e"># example 2</span>
 s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Two&#34;</span>
 <span style="color:#75715e"># example 3</span>
-s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;&#39;Three\Three
-</span><span style="color:#e6db74">Three&#39;&#39;&#39;</span>
+s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;Three\Three&#39;</span>
 <span style="color:#75715e"># example 4</span>
-s4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;Four\Four
-</span><span style="color:#e6db74">Four&#34;&#34;&#34;</span>
+s4 <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;Four\Four&#34;</span>
+<span style="color:#75715e"># example 5</span>
+s5 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;&#39;Five\Five
+</span><span style="color:#e6db74">Five&#39;&#39;&#39;</span>
+<span style="color:#75715e"># example 6</span>
+s6 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;Six\Six
+</span><span style="color:#e6db74">Six&#34;&#34;&#34;</span>
 <span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(s1, s2, s3, s4)
+<span style="color:#66d9ef">print</span>(s1, s2, s3, s4, s5, s6)
 </code></pre></div>
 <p><a href="https://docs.python.org/reference/lexical_analysis.html#strings">https://docs.python.org/reference/lexical_analysis.html#strings</a></p>
+<h2 id="ruby">Ruby</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#75715e"># example 1</span>
+s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;One\One
+</span><span style="color:#e6db74">One&#39;</span>
+<span style="color:#75715e"># example 2</span>
+s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Two
+</span><span style="color:#e6db74">Two&#34;</span>
+<span style="color:#75715e"># print</span>
+puts s1, s2
+</code></pre></div>
 <h2 id="rust">Rust</h2>
 
 
@@ -206,8 +228,8 @@ s4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#
 </span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">&#34;</span>One
 One<span style="color:#960050;background-color:#1e0010">&#34;</span>;
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> r<span style="color:#960050;background-color:#1e0010">#&#34;</span>Two<span style="color:#960050;background-color:#1e0010">\</span>Two
-Two<span style="color:#960050;background-color:#1e0010">&#34;#</span>;
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> r<span style="color:#960050;background-color:#1e0010">&#34;</span>Two<span style="color:#960050;background-color:#1e0010">\</span>Two
+Two<span style="color:#960050;background-color:#1e0010">&#34;</span>;
    <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}{}&#34;</span>, s1, s2);
 }

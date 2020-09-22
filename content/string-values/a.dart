@@ -10,9 +10,9 @@ Three""";
    var s4 = '''Four
 Four''';
    // example 5
-   var s5 = r"Five\Five";
+   var s5 = r'Five\';
    // example 6
-   var s6 = r'Six\Six';
+   var s6 = r"Six\";
    // print
    print(s1 + s2 + s3 + s4 + s5 + s6);
 }

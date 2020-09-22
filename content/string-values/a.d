@@ -7,8 +7,8 @@ void main() {
    auto s2 = "Two
 Two";
    // example 3
-   auto s3 = `Three\Three
-Three`;
+   auto s3 = `Three
+Three\`;
    // example 4
    auto s4 = q{Four
 Four};

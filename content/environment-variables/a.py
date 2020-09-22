@@ -5,5 +5,5 @@ s1 = os.getenv(s)
 # example 2
 s2 = os.environ[s]
 # print
-s = 'C:\\Users\\Steven'
+s = r'C:\Users\Steven'
 print(s1 == s, s2 == s)

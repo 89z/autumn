@@ -1,7 +1,7 @@
 ---
 title: String values
 categories: [string, type]
-tags: [c++, d, dart, go, javascript, nim, php, python, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
 
@@ -41,7 +41,8 @@ date: 2020-09-11
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/manual.html#lexical-analysis-string-literals>
+- <https://nim-lang.org/docs/manual.html#lexical-analysis-raw-string-literals>
+- <https://nim-lang.org/docs/manual.html#lexical-analysis-triple-quoted-string-literals>
 
 ## PHP
 
@@ -57,6 +58,10 @@ date: 2020-09-11
 {{< r "a.py" >}}
 
 <https://docs.python.org/reference/lexical_analysis.html#strings>
+
+## Ruby
+
+{{< r "a.rb" >}}
 
 ## Rust
 
