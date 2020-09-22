@@ -2,7 +2,7 @@
 title: Sort an array
 categories: [array]
 tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
-date: 2020-09-11
+date: 2020-09-22
 ---
 
 ## C++
@@ -46,15 +46,16 @@ date: 2020-09-11
 
 ## PHP
 
-{{< r "a.php" >}}
+{{< r "n.php" >}}
+{{< r "s.php" >}}
 
-- <https://php.net/function.rsort>
 - <https://php.net/function.sort>
 - <https://php.net/function.usort>
 
 ## Python
 
-{{< r "a.py" >}}
+{{< r "n.py" >}}
+{{< r "s.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#list.sort>
 
