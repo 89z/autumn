@@ -1,7 +1,7 @@
 ---
 title: Type qualifiers
 categories: [type]
-tags: [c++, go, javascript, nim, php, ruby, rust]
+tags: [c++, go, javascript, nim, php, rust]
 date: 2020-09-11
 ---
 
@@ -14,7 +14,6 @@ date: 2020-09-11
 {{< r "a.go" >}}
 
 - <https://golang.org/ref/spec#Constant_declarations>
-- <https://golang.org/ref/spec#Short_variable_declarations>
 - <https://golang.org/ref/spec#Variable_declarations>
 
 ## JavaScript
@@ -36,10 +35,6 @@ date: 2020-09-11
 {{< r "a.php" >}}
 
 <https://php.net/language.constants.syntax>
-
-## Ruby
-
-{{< r "a.rb" >}}
 
 ## Rust
 

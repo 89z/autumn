@@ -25,9 +25,12 @@ date: 2020-09-11
 
 ## Go
 
-{{< r "a.go" >}}
+{{< r "n.go" >}}
+{{< r "s.go" >}}
 
-<https://golang.org/pkg/sort>
+- <https://golang.org/pkg/sort#Ints>
+- <https://golang.org/pkg/sort#Slice>
+- <https://golang.org/pkg/sort#Strings>
 
 ## JavaScript
 
