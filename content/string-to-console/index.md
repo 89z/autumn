@@ -7,10 +7,7 @@ date: 2020-09-11
 
 ## C++
 
-{{< r "a.cpp" >}}
-
-- <https://en.cppreference.com/w/cpp/io/c/fprintf>
-- <https://en.cppreference.com/w/cpp/io/cout>
+<https://en.cppreference.com/w/cpp/io/cout>
 
 ## D
 
@@ -31,13 +28,11 @@ date: 2020-09-11
 
 {{< r "builtin.go" >}}
 {{< r "fmt.go" >}}
-{{< r "strings.go" >}}
 
 - <https://golang.org/pkg/builtin#print>
 - <https://golang.org/pkg/builtin#println>
 - <https://golang.org/pkg/fmt#Print>
 - <https://golang.org/pkg/fmt#Println>
-- <https://golang.org/pkg/strings#Reader.WriteTo>
 
 ## JavaScript
 
