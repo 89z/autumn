@@ -1,18 +1,24 @@
 package main
 
 import (
+   "log"
    "os"
    "path/filepath"
 )
 
 func f(s string, o os.FileInfo, e error) error {
-   if o.IsDir() {
+   if e != nil {
       return e
    }
-   println(s)
+   if ! o.IsDir() {
+      println(s)
+   }
    return nil
 }
 
 func main() {
-   filepath.Walk(".", f)
+   e := filepath.Walk(".", f)
+   if e != nil {
+      log.Fatal(e)
+   }
 }

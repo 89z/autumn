@@ -25,6 +25,7 @@ date: 2020-09-11
 
 - <https://golang.org/pkg/io/ioutil#ReadDir>
 - <https://golang.org/pkg/os#File.Readdirnames>
+- <https://golang.org/pkg/path/filepath#Walk>
 
 ## Nim
 
