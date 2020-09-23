@@ -1,5 +1,5 @@
 ---
-title: Convert to string
+title: Integer to string
 categories: [string]
 tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
