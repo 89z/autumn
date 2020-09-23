@@ -1,7 +1,7 @@
 ---
 title: Format float
 categories: [input-output]
-tags: [c++, d, go, php, python, ruby, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
 
@@ -15,13 +15,35 @@ date: 2020-09-11
 
 {{< r "a.d" >}}
 
-<https://dlang.org/library/std/stdio/writefln.html>
+- <https://dlang.org/library/std/stdio/writef.html>
+- <https://dlang.org/library/std/stdio/writefln.html>
+
+## Dart
+
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-core/num/toStringAsFixed.html>
 
 ## Go
 
-{{< r "a.go" >}}
+{{< r "fmt.go" >}}
+{{< r "os.go" >}}
+{{< r "str.go" >}}
 
-<https://golang.org/pkg/fmt#Printf>
+- <https://golang.org/pkg/fmt#Fprintf>
+- <https://golang.org/pkg/fmt#Printf>
+- <https://golang.org/pkg/fmt#Sprintf>
+- <https://golang.org/pkg/strconv#FormatFloat>
+
+## JavaScript
+
+{{< r "a.js" >}}
+
+## Nim
+
+{{< r "a.nim" >}}
+
+<https://nim-lang.org/docs/strformat.html>
 
 ## PHP
 
@@ -42,12 +64,16 @@ date: 2020-09-11
 
 ## Rust
 
+{{< r "a.rs" >}}
+
 <https://doc.rust-lang.org/std/macro.println.html>
 
 ## References
 
 - <https://hyperpolyglot.org/c#printf>
 - <https://hyperpolyglot.org/cpp#printf>
-- <https://hyperpolyglot.org/scripting2#write-fmt-stdout>
+- <https://hyperpolyglot.org/rust#format-str>
+- <https://hyperpolyglot.org/scripting#format-str>
+- <https://hyperpolyglot.org/web#format-str>
 - <https://programming-idioms.org/idiom/65>
 - <https://rosettacode.org/wiki/Formatted_numeric_output>

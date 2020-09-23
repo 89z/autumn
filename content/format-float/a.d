@@ -1,11 +1,9 @@
 import std.stdio;
- 
+
 void main() {
-    immutable r = 7.125;
-    writefln(" %9.3f",  -r);
-    writefln(" %9.3f",   r);
-    writefln(" %-9.3f",  r);
-    writefln(" %09.3f", -r);
-    writefln(" %09.3f",  r);
-    writefln(" %-09.3f", r);
+   auto n = 9.9;
+   // example 1
+   writef("%.0f\n", n);
+   // example 2
+   writefln("%.0f", n);
 }
