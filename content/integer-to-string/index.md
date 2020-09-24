@@ -30,16 +30,18 @@ date: 2020-09-11
 
 {{< r "fmt.go" >}}
 {{< r "str.go" >}}
+{{< r "x.go" >}}
 
-- <https://golang.org/pkg/fmt#Sprint>
-- <https://golang.org/pkg/fmt#Sprintf>
-- <https://golang.org/pkg/strconv#FormatInt>
+- <https://golang.org/pkg/fmt>
+- <https://golang.org/pkg/strconv>
+- <https://pkg.go.dev/golang.org/x/text/message>
 
 ## JavaScript
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString>
+- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String>
 
 ## Nim
 
@@ -51,6 +53,7 @@ date: 2020-09-11
 
 {{< r "a.php" >}}
 
+- <https://php.net/function.number-format>
 - <https://php.net/function.sprintf>
 - <https://php.net/function.strval>
 - <https://php.net/language.types.type-juggling>
@@ -60,8 +63,11 @@ date: 2020-09-11
 {{< r "a.py" >}}
 
 - <https://docs.python.org/library/functions.html#format>
+- <https://docs.python.org/library/functions.html#format>
 - <https://docs.python.org/library/functions.html#func-str>
 - <https://docs.python.org/library/functions.html#repr>
+- <https://docs.python.org/library/locale.html#locale.setlocale>
+- <https://docs.python.org/library/stdtypes.html#str.format>
 - <https://docs.python.org/library/stdtypes.html#str.format>
 
 ## Ruby

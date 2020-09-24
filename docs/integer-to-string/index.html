@@ -127,21 +127,39 @@
    <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s1</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;9&#34;</span>, <span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;9.9&#34;</span>)
 }
+</code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;golang.org/x/text/language&#34;</span>
+   <span style="color:#e6db74">&#34;golang.org/x/text/message&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1000</span>
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">NewPrinter</span>(<span style="color:#a6e22e">language</span>.<span style="color:#a6e22e">English</span>).<span style="color:#a6e22e">Sprint</span>(<span style="color:#a6e22e">n</span>)
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;1,000&#34;</span>)
+}
 </code></pre></div></p>
 <ul>
-<li><a href="https://golang.org/pkg/fmt#Sprint">https://golang.org/pkg/fmt#Sprint</a></li>
-<li><a href="https://golang.org/pkg/fmt#Sprintf">https://golang.org/pkg/fmt#Sprintf</a></li>
-<li><a href="https://golang.org/pkg/strconv#FormatInt">https://golang.org/pkg/strconv#FormatInt</a></li>
+<li><a href="https://golang.org/pkg/fmt">https://golang.org/pkg/fmt</a></li>
+<li><a href="https://golang.org/pkg/strconv">https://golang.org/pkg/strconv</a></li>
+<li><a href="https://pkg.go.dev/golang.org/x/text/message">https://pkg.go.dev/golang.org/x/text/message</a></li>
 </ul>
 <h2 id="javascript">JavaScript</h2>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> String(<span style="color:#a6e22e">n</span>);
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;9&#39;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> String(<span style="color:#a6e22e">n</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>.<span style="color:#a6e22e">toLocaleString</span>();
 </code></pre></div>
-<p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String</a></p>
+<ul>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString</a></li>
+<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String</a></li>
+</ul>
 <h2 id="nim">Nim</h2>
 
 
@@ -157,17 +175,13 @@ echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;9&
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> (<span style="color:#a6e22e">string</span>)($n);
-<span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">sprintf</span>(<span style="color:#e6db74">&#39;%d&#39;</span>, $n);
-<span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strval</span>($n);
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1 <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;9&#39;</span>, $s2 <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;9&#39;</span>, $s3 <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;9&#39;</span>);
+$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">number_format</span>($n);
+$s1 <span style="color:#f92672">=</span> (<span style="color:#a6e22e">string</span>)($n);
+$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">sprintf</span>(<span style="color:#e6db74">&#39;%d&#39;</span>, $n);
+$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strval</span>($n);
 </code></pre></div>
 <ul>
+<li><a href="https://php.net/function.number-format">https://php.net/function.number-format</a></li>
 <li><a href="https://php.net/function.sprintf">https://php.net/function.sprintf</a></li>
 <li><a href="https://php.net/function.strval">https://php.net/function.strval</a></li>
 <li><a href="https://php.net/language.types.type-juggling">https://php.net/language.types.type-juggling</a></li>
@@ -176,22 +190,20 @@ $n <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">n <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>
-<span style="color:#75715e"># example 1</span>
-s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{}&#39;</span><span style="color:#f92672">.</span>format(n)
-<span style="color:#75715e"># example 2</span>
-s2 <span style="color:#f92672">=</span> format(n)
-<span style="color:#75715e"># example 3</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> locale
+locale<span style="color:#f92672">.</span>setlocale(locale<span style="color:#f92672">.</span>LC_ALL, <span style="color:#e6db74">&#39;&#39;</span>)
+s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{:,}&#39;</span><span style="color:#f92672">.</span>format(n)
+s2 <span style="color:#f92672">=</span> format(n, <span style="color:#e6db74">&#39;,&#39;</span>)
 s3 <span style="color:#f92672">=</span> str(n)
-<span style="color:#75715e"># example 4</span>
 s4 <span style="color:#f92672">=</span> repr(n)
-<span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;9&#39;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;9&#39;</span>, s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;9&#39;</span>, s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;9&#39;</span>)
 </code></pre></div>
 <ul>
 <li><a href="https://docs.python.org/library/functions.html#format">https://docs.python.org/library/functions.html#format</a></li>
+<li><a href="https://docs.python.org/library/functions.html#format">https://docs.python.org/library/functions.html#format</a></li>
 <li><a href="https://docs.python.org/library/functions.html#func-str">https://docs.python.org/library/functions.html#func-str</a></li>
 <li><a href="https://docs.python.org/library/functions.html#repr">https://docs.python.org/library/functions.html#repr</a></li>
+<li><a href="https://docs.python.org/library/locale.html#locale.setlocale">https://docs.python.org/library/locale.html#locale.setlocale</a></li>
+<li><a href="https://docs.python.org/library/stdtypes.html#str.format">https://docs.python.org/library/stdtypes.html#str.format</a></li>
 <li><a href="https://docs.python.org/library/stdtypes.html#str.format">https://docs.python.org/library/stdtypes.html#str.format</a></li>
 </ul>
 <h2 id="ruby">Ruby</h2>
