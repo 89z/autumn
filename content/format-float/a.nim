@@ -1,6 +1,4 @@
-doAssert fmt"{123.456}" == "123.456"
-doAssert fmt"{123.456:>9.3f}" == "  123.456"
-doAssert fmt"{123.456:9.3f}" == "  123.456"
-doAssert fmt"{123.456:9.4f}" == " 123.4560"
-doAssert fmt"{123.456:>9.0f}" == "     123."
-doAssert fmt"{123.456:<9.4f}" == "123.4560 "
+import strformat
+let n = 9.9
+let s = "{n:.0f}".fmt
+echo s == "10."

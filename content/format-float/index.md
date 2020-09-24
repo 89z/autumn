@@ -39,11 +39,13 @@ date: 2020-09-11
 
 {{< r "a.js" >}}
 
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/toFixed>
+
 ## Nim
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/strformat.html>
+<https://nim-lang.org/docs/strformat.html#formatting-floats>
 
 ## PHP
 
@@ -51,22 +53,27 @@ date: 2020-09-11
 
 - <https://php.net/function.fprintf>
 - <https://php.net/function.printf>
+- <https://php.net/function.sprintf>
 
 ## Python
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/string.html>
+<https://docs.python.org/library/functions.html#format>
 
 ## Ruby
 
 {{< r "a.rb" >}}
 
+- <https://ruby-doc.org/core/Kernel.html#method-i-printf>
+- <https://ruby-doc.org/core/Kernel.html#method-i-sprintf>
+
 ## Rust
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/macro.println.html>
+- <https://doc.rust-lang.org/std/macro.format.html>
+- <https://doc.rust-lang.org/std/macro.println.html>
 
 ## References
 

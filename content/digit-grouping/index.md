@@ -1,19 +1,9 @@
 ---
 title: Digit grouping
 categories: [number]
-tags: [c++, d, dart, go, javascript, nim, php, python, ruby]
+tags: [dart, go, javascript, nim, php, python, ruby]
 date: 2020-09-13
 ---
-
-## C++
-
-{{< r "a.cpp" >}}
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/library/std/format.html>
 
 ## Dart
 

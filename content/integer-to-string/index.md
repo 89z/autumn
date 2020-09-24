@@ -14,9 +14,11 @@ date: 2020-09-11
 ## D
 
 {{< r "a.d" >}}
+{{< r "b.d" >}}
 
 - <https://dlang.org/library/std/conv/text.html>
 - <https://dlang.org/library/std/conv/to.html>
+- <https://dlang.org/library/std/format.html>
 
 ## Dart
 

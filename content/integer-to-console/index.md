@@ -31,13 +31,11 @@ date: 2020-09-11
 
 {{< r "builtin.go" >}}
 {{< r "fmt.go" >}}
-{{< r "strings.go" >}}
 
 - <https://golang.org/pkg/builtin#print>
 - <https://golang.org/pkg/builtin#println>
 - <https://golang.org/pkg/fmt#Print>
 - <https://golang.org/pkg/fmt#Println>
-- <https://golang.org/pkg/strings#Reader.WriteTo>
 
 ## JavaScript
 

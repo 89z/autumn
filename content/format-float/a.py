@@ -1,2 +1,3 @@
 n = 9.9
-print(f'{n:.0f}')
+s = format(n, '.0f')
+print(s == '10')
