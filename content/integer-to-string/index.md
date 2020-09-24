@@ -47,7 +47,8 @@ date: 2020-09-11
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/strformat.html#fmt.m,string>
+- <https://nim-lang.org/docs/strformat.html#fmt.m,string>
+- <https://nim-lang.org/docs/strutils.html#insertSep,string,char,int>
 
 ## PHP
 
@@ -74,7 +75,8 @@ date: 2020-09-11
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Integer.html#method-i-to_s>
+- <https://ruby-doc.org/core/Integer.html#method-i-to_s>
+- <https://ruby-doc.org/core/String.html#method-i-gsub>
 
 ## Rust
 
@@ -88,4 +90,6 @@ date: 2020-09-11
 - <https://hyperpolyglot.org/cpp#num-to-str>
 - <https://hyperpolyglot.org/scripting#num-to-str>
 - <https://hyperpolyglot.org/web#num-to-str>
+- <https://programming-idioms.org/idiom/173>
 - <https://programming-idioms.org/idiom/55>
+- <https://rosettacode.org/wiki/Commatizing_numbers>

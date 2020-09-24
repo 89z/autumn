@@ -169,7 +169,10 @@
 <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;{n}&#34;</span>.fmt
 echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;9&#34;</span>
 </code></pre></div>
-<p><a href="https://nim-lang.org/docs/strformat.html#fmt.m,string">https://nim-lang.org/docs/strformat.html#fmt.m,string</a></p>
+<ul>
+<li><a href="https://nim-lang.org/docs/strformat.html#fmt.m,string">https://nim-lang.org/docs/strformat.html#fmt.m,string</a></li>
+<li><a href="https://nim-lang.org/docs/strutils.html#insertSep,string,char,int">https://nim-lang.org/docs/strutils.html#insertSep,string,char,int</a></li>
+</ul>
 <h2 id="php">PHP</h2>
 
 
@@ -210,11 +213,12 @@ s4 <span style="color:#f92672">=</span> repr(n)
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">n <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>
-s <span style="color:#f92672">=</span> n<span style="color:#f92672">.</span>to_s
-puts s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;9&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> n<span style="color:#f92672">.</span>to_s<span style="color:#f92672">.</span>gsub(<span style="color:#e6db74">/(?=(...)+$)/</span>, <span style="color:#e6db74">&#39;,&#39;</span>)
 </code></pre></div>
-<p><a href="https://ruby-doc.org/core/Integer.html#method-i-to_s">https://ruby-doc.org/core/Integer.html#method-i-to_s</a></p>
+<ul>
+<li><a href="https://ruby-doc.org/core/Integer.html#method-i-to_s">https://ruby-doc.org/core/Integer.html#method-i-to_s</a></li>
+<li><a href="https://ruby-doc.org/core/String.html#method-i-gsub">https://ruby-doc.org/core/String.html#method-i-gsub</a></li>
+</ul>
 <h2 id="rust">Rust</h2>
 
 
@@ -236,7 +240,9 @@ puts s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;9&
 <li><a href="https://hyperpolyglot.org/cpp#num-to-str">https://hyperpolyglot.org/cpp#num-to-str</a></li>
 <li><a href="https://hyperpolyglot.org/scripting#num-to-str">https://hyperpolyglot.org/scripting#num-to-str</a></li>
 <li><a href="https://hyperpolyglot.org/web#num-to-str">https://hyperpolyglot.org/web#num-to-str</a></li>
+<li><a href="https://programming-idioms.org/idiom/173">https://programming-idioms.org/idiom/173</a></li>
 <li><a href="https://programming-idioms.org/idiom/55">https://programming-idioms.org/idiom/55</a></li>
+<li><a href="https://rosettacode.org/wiki/Commatizing_numbers">https://rosettacode.org/wiki/Commatizing_numbers</a></li>
 </ul>
 
 </main>
