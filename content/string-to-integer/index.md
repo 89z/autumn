@@ -1,5 +1,5 @@
 ---
-title: Convert to integer
+title: String to integer
 categories: [number]
 tags: [d, dart, go, javascript, php, python, rust]
 date: 2020-09-11

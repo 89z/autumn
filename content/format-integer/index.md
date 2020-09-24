@@ -1,13 +1,16 @@
 ---
-title: String to console
-categories: [input-output]
-tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+title: Format integer
+categories: [number]
+tags: [c++, d, dart, go, javascript, nim, php, python, rust]
 date: 2020-09-11
 ---
 
 ## C++
 
-<https://en.cppreference.com/w/cpp/io/cout>
+{{< r "a.cpp" >}}
+
+- <https://en.cppreference.com/w/cpp/io/c/fprintf>
+- <https://en.cppreference.com/w/cpp/io/cout>
 
 ## D
 
@@ -17,17 +20,13 @@ date: 2020-09-11
 
 ## Dart
 
-{{< r "a.dart" >}}
-{{< r "b.dart" >}}
-
 - <https://api.dart.dev/dart-core/print.html>
 - <https://api.dart.dev/dart-io/Stdout/write.html>
 - <https://api.dart.dev/dart-io/Stdout/writeln.html>
 
 ## Go
 
-{{< r "builtin.go" >}}
-{{< r "fmt.go" >}}
+{{< r "a.go" >}}
 
 - <https://golang.org/pkg/builtin#print>
 - <https://golang.org/pkg/builtin#println>
@@ -41,8 +40,6 @@ date: 2020-09-11
 <https://developer.mozilla.org/Web/API/Console/log>
 
 ## Nim
-
-{{< r "a.nim" >}}
 
 <https://nim-lang.org/docs/system.html#echo,varargs[typed,]>
 
@@ -61,13 +58,7 @@ date: 2020-09-11
 - <https://docs.python.org/library/functions.html#print>
 - <https://docs.python.org/library/io.html#io.TextIOBase.write>
 
-## Ruby
-
-{{< r "a.rb" >}}
-
 ## Rust
-
-{{< r "a.rs" >}}
 
 <https://doc.rust-lang.org/std/macro.println.html>
 

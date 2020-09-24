@@ -1,9 +1,15 @@
 ---
-title: Convert to float
+title: String to float
 categories: [number]
-tags: [d, dart, go, javascript, nim, php, python, rust]
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
+
+## C++
+
+{{< r "a.cpp" >}}
+
+<https://en.cppreference.com/w/cpp/string/basic_string/stof>
 
 ## D
 
@@ -59,13 +65,22 @@ date: 2020-09-11
 - <https://docs.python.org/library/functions.html#float>
 - <https://docs.python.org/library/locale.html#locale.atof>
 
+## Ruby
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/String.html#method-i-to_f>
+
 ## Rust
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/std/primitive.str.html#method.parse>
+
 ## References
 
 - <https://hyperpolyglot.org/c#str-to-num>
+- <https://hyperpolyglot.org/cpp#str-to-num>
 - <https://hyperpolyglot.org/rust#str-to-num>
 - <https://hyperpolyglot.org/web#str-to-num>
 - <https://programming-idioms.org/idiom/146>

@@ -1,5 +1,5 @@
 ---
-title: Integer to string
+title: Convert to string
 categories: [string]
 tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
@@ -14,7 +14,6 @@ date: 2020-09-11
 ## D
 
 {{< r "a.d" >}}
-{{< r "b.d" >}}
 
 - <https://dlang.org/library/std/conv/text.html>
 - <https://dlang.org/library/std/conv/to.html>
@@ -30,7 +29,6 @@ date: 2020-09-11
 
 {{< r "fmt.go" >}}
 {{< r "str.go" >}}
-{{< r "x.go" >}}
 
 - <https://golang.org/pkg/fmt>
 - <https://golang.org/pkg/strconv>
