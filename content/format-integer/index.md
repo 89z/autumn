@@ -1,8 +1,8 @@
 ---
 title: Format integer
 categories: [number]
-tags: [c++, d, dart, go, javascript, nim, php, python, rust]
-date: 2020-09-11
+tags: [c++, d, dart, go, javascript, nim, php, python, ruby]
+date: 2020-09-24
 ---
 
 ## C++
@@ -20,53 +20,35 @@ date: 2020-09-11
 
 ## Dart
 
-- <https://api.dart.dev/dart-core/print.html>
-- <https://api.dart.dev/dart-io/Stdout/write.html>
-- <https://api.dart.dev/dart-io/Stdout/writeln.html>
+{{< r "a.dart" >}}
 
 ## Go
 
 {{< r "a.go" >}}
 
-- <https://golang.org/pkg/builtin#print>
-- <https://golang.org/pkg/builtin#println>
-- <https://golang.org/pkg/fmt#Print>
-- <https://golang.org/pkg/fmt#Println>
-
 ## JavaScript
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/API/Console/log>
-
 ## Nim
 
-<https://nim-lang.org/docs/system.html#echo,varargs[typed,]>
+<https://nim-lang.org/docs/strutils.html#insertSep,string,char,int>
 
 ## PHP
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.echo>
-- <https://php.net/function.fwrite>
-- <https://php.net/function.print>
-
 ## Python
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/library/functions.html#print>
-- <https://docs.python.org/library/io.html#io.TextIOBase.write>
+## Ruby
 
-## Rust
+{{< r "a.rb" >}}
 
-<https://doc.rust-lang.org/std/macro.println.html>
+<https://ruby-doc.org/core/String.html#method-i-gsub>
 
 ## References
 
-- <https://hyperpolyglot.org/c#write-line-stdout>
-- <https://hyperpolyglot.org/cpp#printf>
-- <https://hyperpolyglot.org/scripting2#write-stdout>
-- <https://programming-idioms.org/idiom/1>
-- <https://rosettacode.org/wiki/Hello_world/Newline_omission>
-- <https://rosettacode.org/wiki/Hello_world/Text>
+- <https://programming-idioms.org/idiom/173>
+- <https://rosettacode.org/wiki/Commatizing_numbers>

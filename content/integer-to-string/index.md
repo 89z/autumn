@@ -1,6 +1,6 @@
 ---
-title: Convert to string
-categories: [string]
+title: Integer to string
+categories: [number]
 tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
@@ -45,8 +45,7 @@ date: 2020-09-11
 
 {{< r "a.nim" >}}
 
-- <https://nim-lang.org/docs/strformat.html#fmt.m,string>
-- <https://nim-lang.org/docs/strutils.html#insertSep,string,char,int>
+<https://nim-lang.org/docs/strformat.html#fmt.m,string>
 
 ## PHP
 
@@ -71,10 +70,7 @@ date: 2020-09-11
 
 ## Ruby
 
-{{< r "a.rb" >}}
-
-- <https://ruby-doc.org/core/Integer.html#method-i-to_s>
-- <https://ruby-doc.org/core/String.html#method-i-gsub>
+<https://ruby-doc.org/core/Integer.html#method-i-to_s>
 
 ## Rust
 
