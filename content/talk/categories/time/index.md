@@ -1,5 +1,5 @@
 ---
-title: 'Category talk:date'
+title: 'Category talk:time'
 date: 2020-09-18
 ---
 

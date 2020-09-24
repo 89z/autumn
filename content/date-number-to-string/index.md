@@ -1,6 +1,6 @@
 ---
 title: Date number to string
-categories: [date]
+categories: [time]
 tags: [c++, d, dart, go, javascript, nim, php, python]
 date: 2020-09-13
 ---

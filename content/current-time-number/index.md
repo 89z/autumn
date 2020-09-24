@@ -1,6 +1,6 @@
 ---
-title: Current date number
-categories: [date]
+title: Current time number
+categories: [time]
 tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---

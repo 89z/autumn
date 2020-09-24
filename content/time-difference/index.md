@@ -1,6 +1,6 @@
 ---
-title: Date difference string
-categories: [date]
+title: Time difference
+categories: [time]
 tags: [go, javascript, php, python]
 date: 2020-09-11
 ---
