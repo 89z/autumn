@@ -1,13 +1,13 @@
 ---
 title: Command line tools
 categories: [reference]
-tags: [c++, d, dart, go, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, nim, php, python, ruby, rust]
 date: 2020-09-23
 ---
 
-## C++
+## C#
 
-{{< r "cpp.ps1" >}}
+{{< r "cs.ps1" >}}
 
 ## D
 
