@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main() {
-   var s = 'May';
+   var s = '📗📕';
    // example 1
    stdout.write(s);
    // example 2

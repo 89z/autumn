@@ -2,10 +2,12 @@
 title: Print to console
 categories: [input-output]
 tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
-date: 2020-09-11
+date: 2020-09-25
 ---
 
 ## C++
+
+{{< r "a.cpp" >}}
 
 <https://en.cppreference.com/w/cpp/io/cout>
 

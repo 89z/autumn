@@ -24,12 +24,25 @@
 
 <main>
    <h1>Print to console</h1>
-   <time>Fri Sep 11 2020</time>
+   <time>Fri Sep 25 2020</time>
    
    <a href="/autumn/categories/input-output/">input-output</a>
    
    
    <h2 id="c">C++</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;codecvt&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+   std<span style="color:#f92672">::</span>ios_base<span style="color:#f92672">::</span>sync_with_stdio(false);
+   std<span style="color:#f92672">::</span>locale utf8(std<span style="color:#f92672">::</span>locale(), <span style="color:#66d9ef">new</span> std<span style="color:#f92672">::</span>codecvt_utf8_utf16<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">wchar_t</span><span style="color:#f92672">&gt;</span>);
+   std<span style="color:#f92672">::</span>wcout.imbue(utf8);
+   std<span style="color:#f92672">::</span>wcout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">L</span><span style="color:#e6db74">&#34;📗📕&#34;</span> <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+}
+</code></pre></div>
 <p><a href="https://en.cppreference.com/w/cpp/io/cout">https://en.cppreference.com/w/cpp/io/cout</a></p>
 <h2 id="d">D</h2>
 
@@ -38,8 +51,7 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May&#34;</span><span style="color:#f92672">;</span>
-   s<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+   writeln<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;📗📕&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 <p><a href="https://dlang.org/library/std/stdio/writeln.html">https://dlang.org/library/std/stdio/writeln.html</a></p>
@@ -48,8 +60,7 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;May&#39;</span>;
-   print(s);
+   print(<span style="color:#e6db74">&#39;📗📕&#39;</span>);
 }
 </code></pre></div>
 
@@ -58,7 +69,7 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
 
 <span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;May&#39;</span>;
+   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;📗📕&#39;</span>;
    <span style="color:#75715e">// example 1
 </span><span style="color:#75715e"></span>   stdout.write(s);
    <span style="color:#75715e">// example 2
@@ -77,7 +88,7 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;May&#34;</span>
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;📗📕&#34;</span>
    <span style="color:#75715e">// example 1
 </span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s</span>)
    <span style="color:#75715e">// example 2
@@ -91,7 +102,7 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;May&#34;</span>
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;📗📕&#34;</span>
    <span style="color:#75715e">// example 1
 </span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">s</span>)
    <span style="color:#75715e">// example 2
@@ -108,15 +119,14 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;May&#39;</span>;
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;May&#39;</span>);
 </code></pre></div>
 <p><a href="https://developer.mozilla.org/Web/API/Console/log">https://developer.mozilla.org/Web/API/Console/log</a></p>
 <h2 id="nim">Nim</h2>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;📗📕&#34;</span>
 <span style="color:#75715e"># example 1</span>
 echo s
 <span style="color:#75715e"># example 2</span>
@@ -128,7 +138,7 @@ stdout.write s, <span style="color:#e6db74">&#34;</span><span style="color:#ae81
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;📗📕</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 <span style="color:#75715e"># example 1
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">echo</span> $s;
 <span style="color:#75715e"># example 2
@@ -145,7 +155,7 @@ $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May</sp
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;May&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;📗📕&#39;</span>
 <span style="color:#75715e"># example 1</span>
 <span style="color:#66d9ef">print</span>(s)
 <span style="color:#75715e"># exmaple 2</span>
@@ -162,7 +172,7 @@ sys<span style="color:#f92672">.</span>stdout<span style="color:#f92672">.</span
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;May&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;📗📕&#39;</span>
 puts s
 </code></pre></div>
 <h2 id="rust">Rust</h2>
@@ -170,8 +180,7 @@ puts s
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May&#34;</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;📗📕&#34;</span>);
 }
 </code></pre></div>
 <p><a href="https://doc.rust-lang.org/std/macro.println.html">https://doc.rust-lang.org/std/macro.println.html</a></p>

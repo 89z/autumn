@@ -1,5 +1,5 @@
 <?php
-$s = "May\n";
+$s = "📗📕\n";
 # example 1
 echo $s;
 # example 2

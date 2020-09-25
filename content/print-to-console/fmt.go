@@ -2,7 +2,7 @@ package main
 import "fmt"
 
 func main() {
-   s := "May"
+   s := "📗📕"
    // example 1
    fmt.Println(s)
    // example 2

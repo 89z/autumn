@@ -1,4 +1,4 @@
-s = 'May'
+s = '📗📕'
 # example 1
 print(s)
 # exmaple 2

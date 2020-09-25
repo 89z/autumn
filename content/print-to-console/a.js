@@ -1,2 +1,1 @@
-let s = 'May';
-console.log(s);
+console.log('May');

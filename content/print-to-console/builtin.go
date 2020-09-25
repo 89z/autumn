@@ -1,7 +1,7 @@
 package main
 
 func main() {
-   s := "May"
+   s := "📗📕"
    // example 1
    println(s)
    // example 2

@@ -1,4 +1,4 @@
-var s = "May"
+var s = "📗📕"
 # example 1
 echo s
 # example 2
