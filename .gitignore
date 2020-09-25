@@ -1,3 +1,4 @@
 # C#
+**/cs/bin
+**/cs/obj
 *.csproj
-obj

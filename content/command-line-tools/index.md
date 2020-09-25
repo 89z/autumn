@@ -1,7 +1,7 @@
 ---
 title: Command line tools
 categories: [reference]
-tags: [c-sharp, d, dart, go, nim, php, python, ruby, rust]
+tags: [cs, d, dart, go, nim, php, python, ruby, rust]
 date: 2020-09-23
 ---
 

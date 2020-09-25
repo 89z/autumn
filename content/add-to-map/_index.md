@@ -1,13 +1,13 @@
 ---
 title: Add to map
 categories: [map]
-tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [cs, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
 
-## C++
+## C#
 
-{{< r "a.cpp" >}}
+{{< r "cs/Program.cs" >}}
 
 ## D
 
@@ -68,6 +68,7 @@ date: 2020-09-11
 
 ## References
 
+- <https://hyperpolyglot.org/cpp#dict-lookup>
 - <https://hyperpolyglot.org/scripting#dict-update>
 - <https://hyperpolyglot.org/web#dict-update>
 - <https://programming-idioms.org/idiom/172>

@@ -1,15 +1,13 @@
 ---
 title: Anonymous functions
 categories: [function]
-tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [cs, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-15
 ---
 
-## C++
+## C#
 
-{{< r "a.cpp" >}}
-
-<https://en.cppreference.com/w/cpp/language/lambda>
+{{< r "cs/Program.cs" >}}
 
 ## D
 

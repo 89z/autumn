@@ -1,7 +1,7 @@
 ---
 title: Print to console
 categories: [input-output]
-tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [cs, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-25
 ---
 

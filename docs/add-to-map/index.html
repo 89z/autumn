@@ -22,25 +22,25 @@
    </header>
 
 
-<main>
-   <h1>Add to map</h1>
-   <time>Fri Sep 11 2020</time>
+<h1>Add to map</h1>
+<time>Fri Sep 11 2020</time>
    
-   <a href="/autumn/categories/map/">map</a>
+<a href="/autumn/categories/map/">map</a>
    
-   
-   <h2 id="c">C++</h2>
+   <h2 id="c">C#</h2>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;map&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-   std<span style="color:#f92672">::</span>map<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>string, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> m <span style="color:#f92672">=</span> {{<span style="color:#e6db74">&#34;year&#34;</span>, <span style="color:#ae81ff">2019</span>}, {<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">12</span>}};
-   <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>[s, n]<span style="color:#f92672">:</span> m) {
-      std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> s <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">&lt;&lt;</span> n <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#960050;background-color:#1e0010">﻿</span><span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">using</span> System.Collections.Generic;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">var</span> m = <span style="color:#66d9ef">new</span> Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;();
+      m.Add(<span style="color:#e6db74">&#34;year&#34;</span>, <span style="color:#ae81ff">2019</span>);
+      <span style="color:#66d9ef">foreach</span> (KeyValuePair&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt; o <span style="color:#66d9ef">in</span> m) {
+         Console.WriteLine(<span style="color:#e6db74">&#34;{0} {1}&#34;</span>, o.Key, o.Value);
+      }
    }
 }
 </code></pre></div>
@@ -174,13 +174,13 @@ puts m
 <p><a href="https://doc.rust-lang.org/std/collections/struct.HashMap.html">https://doc.rust-lang.org/std/collections/struct.HashMap.html</a></p>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://hyperpolyglot.org/cpp#dict-lookup">https://hyperpolyglot.org/cpp#dict-lookup</a></li>
 <li><a href="https://hyperpolyglot.org/scripting#dict-update">https://hyperpolyglot.org/scripting#dict-update</a></li>
 <li><a href="https://hyperpolyglot.org/web#dict-update">https://hyperpolyglot.org/web#dict-update</a></li>
 <li><a href="https://programming-idioms.org/idiom/172">https://programming-idioms.org/idiom/172</a></li>
 <li><a href="https://rosettacode.org/wiki/Associative_array/Creation">https://rosettacode.org/wiki/Associative_array/Creation</a></li>
 </ul>
 
-</main>
 
 </body>
 </html>
