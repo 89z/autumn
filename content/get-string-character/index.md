@@ -1,5 +1,5 @@
 ---
-title: Get string start
+title: Get string character
 categories: [string]
 tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-18
@@ -29,8 +29,10 @@ date: 2020-09-18
 
 {{< r "a.go" >}}
 {{< r "b.go" >}}
+{{< r "c.go" >}}
 
-<https://golang.org/ref/spec#Slice_expressions>
+- <https://golang.org/pkg/strings#Split>
+- <https://golang.org/ref/spec#Slice_expressions>
 
 ## JavaScript
 

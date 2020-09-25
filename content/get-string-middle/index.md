@@ -1,37 +1,9 @@
 ---
 title: Get string middle
 categories: [string]
-tags: [d, dart, go, javascript, nim, php, python, rust]
+tags: [nim, php, python, rust]
 date: 2020-09-11
 ---
-
-## D
-
-{{< r "a.d" >}}
-
-<https://dlang.org/spec/arrays.html#slicing>
-
-## Dart
-
-{{< r "a.dart" >}}
-
-<https://api.dart.dev/dart-core/String/substring.html>
-
-## Go
-
-{{< r "a.go" >}}
-{{< r "b.go" >}}
-
-- <https://golang.org/ref/spec#Slice_expressions>
-- <https://golang.org/pkg/strings#Split>
-
-## JavaScript
-
-{{< r "a.js" >}}
-
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/charAt>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/slice>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/substring>
 
 ## Nim
 

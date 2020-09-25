@@ -1,6 +1,6 @@
 ---
 title: Filepath to basename
-categories: [string]
+categories: [system]
 tags: [c++, d, dart, go, nim, php, python, ruby, rust]
 date: 2020-09-10
 ---
