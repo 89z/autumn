@@ -1,15 +1,13 @@
 ---
 title: Delete file
 categories: [system]
-tags: [c++, d, dart, go, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
 
-## C++
+## C#
 
-{{< r "a.cpp" >}}
-
-<https://en.cppreference.com/w/cpp/filesystem/remove>
+{{< r "cs/Program.cs" >}}
 
 ## D
 

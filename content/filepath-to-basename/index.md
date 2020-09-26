@@ -1,15 +1,9 @@
 ---
 title: Filepath to basename
 categories: [system]
-tags: [c++, d, dart, go, nim, php, python, ruby, rust]
+tags: [d, dart, go, nim, php, python, ruby, rust]
 date: 2020-09-10
 ---
-
-## C++
-
-{{< r "a.cpp" >}}
-
-<https://en.cppreference.com/w/cpp/filesystem/path/filename>
 
 ## D
 

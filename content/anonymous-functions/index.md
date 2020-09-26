@@ -1,7 +1,7 @@
 ---
 title: Anonymous functions
 categories: [function]
-tags: [cs, d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-15
 ---
 

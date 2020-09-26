@@ -1,16 +1,15 @@
 ---
 title: File to file
 categories: [input-output]
-tags: [c++, d, dart, go, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
 
-## C++
+## C#
 
-{{< r "a.cpp" >}}
+{{< r "cs/Program.cs" >}}
 
-- <https://en.cppreference.com/w/cpp/filesystem/copy>
-- <https://en.cppreference.com/w/cpp/filesystem/copy_file>
+<https://docs.microsoft.com/dotnet/api/system.io.file.copy>
 
 ## D
 

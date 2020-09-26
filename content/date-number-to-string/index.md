@@ -1,15 +1,15 @@
 ---
 title: Date number to string
 categories: [time]
-tags: [c++, d, dart, go, javascript, nim, php, python]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python]
 date: 2020-09-13
 ---
 
-## C++
+## C#
 
-{{< r "a.cpp" >}}
+{{< r "cs/Program.cs" >}}
 
-<https://en.cppreference.com/w/cpp/chrono/c/localtime>
+<https://docs.microsoft.com/dotnet/api/system.datetimeoffset.fromunixtimeseconds>
 
 ## D
 
