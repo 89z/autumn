@@ -22,26 +22,26 @@
    </header>
 
 
-<main>
-   <h1>Is directory or file</h1>
-   <time>Fri Sep 11 2020</time>
+<h1>Is directory or file</h1>
+<time>Fri Sep 11 2020</time>
    
-   <a href="/autumn/categories/system/">system</a>
+<a href="/autumn/categories/system/">system</a>
    
-   
-   <h2 id="c">C++</h2>
+   <h2 id="c">C#</h2>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;unistd.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> access(<span style="color:#e6db74">&#34;index.md&#34;</span>, F_OK);
-   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> (n <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#960050;background-color:#1e0010">﻿</span><span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">using</span> System.IO;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">var</span> b = File.Exists(<span style="color:#e6db74">&#34;Program.cs&#34;</span>);
+      Console.WriteLine(b);
+   }
 }
+
 </code></pre></div>
-<p><a href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/access.html">https://pubs.opengroup.org/onlinepubs/9699919799/functions/access.html</a></p>
 <h2 id="d">D</h2>
 
 
@@ -206,13 +206,13 @@ puts b
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#file-test">https://hyperpolyglot.org/c#file-test</a></li>
+<li><a href="https://hyperpolyglot.org/cpp#file-test">https://hyperpolyglot.org/cpp#file-test</a></li>
 <li><a href="https://hyperpolyglot.org/scripting2#file-test">https://hyperpolyglot.org/scripting2#file-test</a></li>
 <li><a href="https://hyperpolyglot.org/web#file-test">https://hyperpolyglot.org/web#file-test</a></li>
 <li><a href="https://programming-idioms.org/idiom/144">https://programming-idioms.org/idiom/144</a></li>
 <li><a href="https://rosettacode.org/wiki/Check_that_file_exists">https://rosettacode.org/wiki/Check_that_file_exists</a></li>
 </ul>
 
-</main>
 
 </body>
 </html>

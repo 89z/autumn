@@ -1,15 +1,13 @@
 ---
 title: Iterate an array
 categories: [iterate, array]
-tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-13
 ---
 
-## C++
+## C#
 
-{{< r "a.cpp" >}}
-
-<https://en.cppreference.com/w/cpp/language/range-for>
+{{< r "cs/Program.cs" >}}
 
 ## D
 

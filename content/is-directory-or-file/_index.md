@@ -1,15 +1,13 @@
 ---
 title: Is directory or file
 categories: [system]
-tags: [c++, d, dart, go, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
 
-## C++
+## C#
 
-{{< r "a.cpp" >}}
-
-<https://pubs.opengroup.org/onlinepubs/9699919799/functions/access.html>
+{{< r "cs/Program.cs" >}}
 
 ## D
 
@@ -71,6 +69,7 @@ date: 2020-09-11
 ## References
 
 - <https://hyperpolyglot.org/c#file-test>
+- <https://hyperpolyglot.org/cpp#file-test>
 - <https://hyperpolyglot.org/scripting2#file-test>
 - <https://hyperpolyglot.org/web#file-test>
 - <https://programming-idioms.org/idiom/144>

@@ -1,15 +1,13 @@
 ---
 title: Import package
 categories: [reference]
-tags: [c++, d, dart, go, javascript, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, rust]
 date: 2020-09-11
 ---
 
-## C++
+## C#
 
-{{< r "a.cpp" >}}
-
-<https://en.cppreference.com/w/cpp/preprocessor/include>
+{{< r "cs/Program.cs" >}}
 
 ## D
 

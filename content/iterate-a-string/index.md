@@ -1,13 +1,9 @@
 ---
 title: Iterate a string
 categories: [iterate, string]
-tags: [c++, d, dart, javascript]
+tags: [d, dart, javascript]
 date: 2020-09-24
 ---
-
-## C++
-
-{{< r "a.cpp" >}}
 
 ## D
 

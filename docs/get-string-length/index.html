@@ -22,26 +22,30 @@
    </header>
 
 
-<main>
-   <h1>Get string length</h1>
-   <time>Fri Sep 11 2020</time>
+<h1>Get string length</h1>
+<time>Fri Sep 11 2020</time>
    
-   <a href="/autumn/categories/string/">string</a>
+<a href="/autumn/categories/string/">string</a>
    
-   
-   <h2 id="c">C++</h2>
+   <h2 id="c">C#</h2>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-   std<span style="color:#f92672">::</span>string s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;📗&#34;</span>;
-   <span style="color:#66d9ef">auto</span> n <span style="color:#f92672">=</span> s.length();
-   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> (n <span style="color:#f92672">==</span> <span style="color:#ae81ff">4</span>) <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#960050;background-color:#1e0010">﻿</span><span style="color:#66d9ef">using</span> System;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> s = <span style="color:#e6db74">&#34;May&#34;</span>;
+      <span style="color:#66d9ef">var</span> n1 = s.Length;
+      <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> s2 = <span style="color:#e6db74">&#34;📗&#34;</span>;
+      <span style="color:#66d9ef">var</span> n2 = s2.Length;
+      <span style="color:#75715e">// print
+</span><span style="color:#75715e"></span>      Console.WriteLine(<span style="color:#e6db74">&#34;{0} {1}&#34;</span>, n1 == <span style="color:#ae81ff">3</span>, n2 == <span style="color:#ae81ff">2</span>);
+   }
 }
 </code></pre></div>
-<p><a href="https://en.cppreference.com/w/cpp/string/basic_string/size">https://en.cppreference.com/w/cpp/string/basic_string/size</a></p>
 <h2 id="d">D</h2>
 
 
@@ -206,7 +210,6 @@ n2 <span style="color:#f92672">=</span> len(y)
 <li><a href="https://rosettacode.org/wiki/String_length">https://rosettacode.org/wiki/String_length</a></li>
 </ul>
 
-</main>
 
 </body>
 </html>

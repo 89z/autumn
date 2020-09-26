@@ -22,24 +22,25 @@
    </header>
 
 
-<main>
-   <h1>Integer to string</h1>
-   <time>Fri Sep 11 2020</time>
+<h1>Integer to string</h1>
+<time>Fri Sep 11 2020</time>
    
-   <a href="/autumn/categories/number/">number</a>
+<a href="/autumn/categories/number/">number</a>
    
-   
-   <h2 id="c">C++</h2>
+   <h2 id="c">C#</h2>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>to_string(n);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#960050;background-color:#1e0010">﻿</span><span style="color:#66d9ef">using</span> System;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">var</span> n = <span style="color:#ae81ff">10</span>;
+      <span style="color:#66d9ef">var</span> s = n.ToString();
+      Console.WriteLine(s == <span style="color:#e6db74">&#34;10&#34;</span>);
+   }
 }
 </code></pre></div>
-<p><a href="https://en.cppreference.com/w/cpp/string/basic_string/to_string">https://en.cppreference.com/w/cpp/string/basic_string/to_string</a></p>
 <h2 id="d">D</h2>
 
 
@@ -196,7 +197,6 @@ s4 <span style="color:#f92672">=</span> repr(n)
 <li><a href="https://rosettacode.org/wiki/Commatizing_numbers">https://rosettacode.org/wiki/Commatizing_numbers</a></li>
 </ul>
 
-</main>
 
 </body>
 </html>
