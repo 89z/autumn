@@ -1,15 +1,15 @@
 ---
 title: Reduce array
 categories: [array]
-tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-17
 ---
 
-## C++
+## C#
 
-{{< r "a.cpp" >}}
+{{< r "cs/Program.cs" >}}
 
-<https://en.cppreference.com/w/cpp/algorithm/accumulate>
+<https://docs.microsoft.com/dotnet/api/system.linq.enumerable.aggregate>
 
 ## D
 

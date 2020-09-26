@@ -1,15 +1,9 @@
 ---
 title: Sleep
 categories: [system]
-tags: [c++, d, dart, go, nim, php, ruby, rust]
+tags: [d, dart, go, nim, php, ruby, rust]
 date: 2020-09-11
 ---
-
-## C++
-
-{{< r "a.cpp" >}}
-
-<https://en.cppreference.com/w/cpp/thread/sleep_for>
 
 ## D
 

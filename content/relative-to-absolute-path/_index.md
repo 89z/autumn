@@ -1,15 +1,15 @@
 ---
 title: Relative to absolute path
 categories: [system]
-tags: [c++, d, dart, go, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, php, python, ruby, rust]
 date: 2020-08-30
 ---
 
-## C++
+## C#
 
-{{< r "a.cpp" >}}
+{{< r "cs/Program.cs" >}}
 
-<https://en.cppreference.com/w/cpp/filesystem/absolute>
+<https://docs.microsoft.com/dotnet/api/system.io.path.getfullpath>
 
 ## D
 
