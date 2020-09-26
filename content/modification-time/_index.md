@@ -2,12 +2,14 @@
 title: Modification time
 categories: [system]
 tags: [c-sharp, d, dart, go, nim, php, python, ruby, rust]
-date: 2020-08-18
+date: 2020-09-26
 ---
 
 ## C#
 
 {{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/api/system.io.file.getlastwritetime>
 
 ## D
 
