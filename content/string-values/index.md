@@ -1,15 +1,9 @@
 ---
 title: String values
 categories: [string, type]
-tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
-
-## C++
-
-{{< r "a.cpp" >}}
-
-<https://en.cppreference.com/w/cpp/language/string_literal>
 
 ## D
 

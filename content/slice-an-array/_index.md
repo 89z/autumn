@@ -1,15 +1,13 @@
 ---
 title: Slice an array
 categories: [array]
-tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-08-05
 ---
 
-## C++
+## C#
 
-{{< r "a.cpp" >}}
-
-<https://en.cppreference.com/w/cpp/language/expressions>
+{{< r "cs/Program.cs" >}}
 
 ## D
 
