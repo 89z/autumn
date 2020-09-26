@@ -1,6 +1,7 @@
 ---
 title: Racket
 tags: [draft]
+date: 2020-09-25
 ---
 
 **Docs**:

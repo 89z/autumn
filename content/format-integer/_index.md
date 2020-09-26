@@ -1,16 +1,13 @@
 ---
 title: Format integer
 categories: [number]
-tags: [c++, d, dart, go, javascript, nim, php, python, ruby]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby]
 date: 2020-09-24
 ---
 
-## C++
+## C#
 
-{{< r "a.cpp" >}}
-
-- <https://en.cppreference.com/w/cpp/io/c/fprintf>
-- <https://en.cppreference.com/w/cpp/io/cout>
+{{< r "cs/Program.cs" >}}
 
 ## D
 

@@ -1,15 +1,15 @@
 ---
 title: Filepath to dirname
 categories: [system]
-tags: [c++, d, dart, go, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, nim, php, python, ruby, rust]
 date: 2020-09-10
 ---
 
-## C++
+## C#
 
-{{< r "a.cpp" >}}
+{{< r "cs/Program.cs" >}}
 
-<https://en.cppreference.com/w/cpp/filesystem/path/parent_path>
+<https://docs.microsoft.com/dotnet/api/system.io.path.getdirectoryname>
 
 ## D
 

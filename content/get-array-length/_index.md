@@ -1,15 +1,13 @@
 ---
 title: Get array length
 categories: [array]
-tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
 
-## C++
+## C#
 
-{{< r "a.cpp" >}}
-
-<https://en.cppreference.com/w/cpp/iterator/size>
+{{< r "cs/Program.cs" >}}
 
 ## D
 

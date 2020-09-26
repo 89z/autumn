@@ -1,15 +1,13 @@
 ---
 title: Format float
 categories: [number]
-tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
 
-## C++
+## C#
 
-{{< r "a.cpp" >}}
-
-<https://en.cppreference.com/w/cpp/io/c/fprintf>
+{{< r "cs/Program.cs" >}}
 
 ## D
 

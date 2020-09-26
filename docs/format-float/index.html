@@ -22,25 +22,25 @@
    </header>
 
 
-<main>
-   <h1>Format float</h1>
-   <time>Fri Sep 11 2020</time>
+<h1>Format float</h1>
+<time>Fri Sep 11 2020</time>
    
-   <a href="/autumn/categories/number/">number</a>
+<a href="/autumn/categories/number/">number</a>
    
-   
-   <h2 id="c">C++</h2>
+   <h2 id="c">C#</h2>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">auto</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">9.9</span>;
-   std<span style="color:#f92672">::</span>printf(<span style="color:#e6db74">&#34;%.0f</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, n);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#960050;background-color:#1e0010">﻿</span><span style="color:#66d9ef">using</span> System;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">var</span> n = <span style="color:#ae81ff">9.9</span>;
+      <span style="color:#66d9ef">var</span> s = n.ToString(<span style="color:#e6db74">&#34;#&#34;</span>);
+      Console.WriteLine(s == <span style="color:#e6db74">&#34;10&#34;</span>);
+   }
 }
 </code></pre></div>
-<p><a href="https://en.cppreference.com/w/cpp/io/c/fprintf">https://en.cppreference.com/w/cpp/io/c/fprintf</a></p>
 <h2 id="d">D</h2>
 
 
@@ -217,7 +217,6 @@ puts s
 <li><a href="https://rosettacode.org/wiki/Formatted_numeric_output">https://rosettacode.org/wiki/Formatted_numeric_output</a></li>
 </ul>
 
-</main>
 
 </body>
 </html>

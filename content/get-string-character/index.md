@@ -1,17 +1,9 @@
 ---
 title: Get string character
 categories: [string]
-tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-18
 ---
-
-## C++
-
-{{< r "a.cpp" >}}
-
-- <https://en.cppreference.com/w/cpp/string/basic_string/at>
-- <https://en.cppreference.com/w/cpp/string/basic_string/front>
-- <https://en.cppreference.com/w/cpp/string/basic_string/operator_at>
 
 ## D
 
