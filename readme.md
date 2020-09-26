@@ -30,8 +30,6 @@ Comparison of programming languages
 59 d examples
 58 rust links
 57 rust examples
-15 c++ links
-15 c++ examples
 11 ruby links
 11 ruby examples
 

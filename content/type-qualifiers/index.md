@@ -1,13 +1,9 @@
 ---
 title: Type qualifiers
 categories: [type]
-tags: [c++, go, javascript, nim, php, rust]
+tags: [go, javascript, nim, php, rust]
 date: 2020-09-11
 ---
-
-## C++
-
-<https://en.cppreference.com/w/cpp/language/cv>
 
 ## Go
 

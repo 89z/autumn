@@ -1,13 +1,9 @@
 ---
 title: Logical operators
 categories: [reference]
-tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-08-02
 ---
-
-## C++
-
-<https://en.cppreference.com/w/cpp/language/expressions>
 
 ## D
 

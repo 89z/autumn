@@ -1,15 +1,13 @@
 ---
 title: String types
 categories: [string, type]
-tags: [c++, d, dart, go, javascript, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, rust]
 date: 2020-09-11
 ---
 
-## C++
+## C#
 
-{{< r "a.cpp" >}}
-
-<https://en.cppreference.com/w/cpp/string/basic_string>
+{{< r "cs/Program.cs" >}}
 
 ## D
 

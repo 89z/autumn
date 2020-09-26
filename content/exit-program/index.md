@@ -1,13 +1,9 @@
 ---
 title: Exit program
 categories: [system]
-tags: [c++, d, dart, go, nim, php, python, rust]
+tags: [d, dart, go, nim, php, python, rust]
 date: 2020-08-23
 ---
-
-## C++
-
-<https://en.cppreference.com/w/cpp/utility/program/exit>
 
 ## D
 

@@ -51,10 +51,7 @@ toolchain is installed on your system.
 <pre><code>java.io.IOException: Cannot run program &quot;CL&quot;
 </code></pre><p>Its true, I dont have <code>CL.exe</code> on my system, but I do have GCC. It seems
 currently, with Windows only the MSVC compiler is allowed:</p>
-<ul>
-<li><a href="https://docs.microsoft.com/cpp/build/reference/compiling-a-c-cpp-program">https://docs.microsoft.com/cpp/build/reference/compiling-a-c-cpp-program</a></li>
-<li><a href="https://github.com/oracle/graal/blob/fb9b1d3b/substratevm/src/com.oracle.svm.hosted/src/com/oracle/svm/hosted/c/codegen/CCompilerInvoker.java#L106-L108">https://github.com/oracle/graal/blob/fb9b1d3b/substratevm/src/com.oracle.svm.hosted/src/com/oracle/svm/hosted/c/codegen/CCompilerInvoker.java#L106-L108</a></li>
-</ul>
+<p><a href="https://github.com/oracle/graal/blob/fb9b1d3b/substratevm/src/com.oracle.svm.hosted/src/com/oracle/svm/hosted/c/codegen/CCompilerInvoker.java#L106-L108">https://github.com/oracle/graal/blob/fb9b1d3b/substratevm/src/com.oracle.svm.hosted/src/com/oracle/svm/hosted/c/codegen/CCompilerInvoker.java#L106-L108</a></p>
 <p>I think people should be able to choose what compiler they use.</p>
 
 </main>

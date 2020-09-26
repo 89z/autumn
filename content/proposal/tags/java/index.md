@@ -39,7 +39,6 @@ java.io.IOException: Cannot run program "CL"
 Its true, I dont have `CL.exe` on my system, but I do have GCC. It seems
 currently, with Windows only the MSVC compiler is allowed:
 
-- <https://docs.microsoft.com/cpp/build/reference/compiling-a-c-cpp-program>
-- <https://github.com/oracle/graal/blob/fb9b1d3b/substratevm/src/com.oracle.svm.hosted/src/com/oracle/svm/hosted/c/codegen/CCompilerInvoker.java#L106-L108>
+<https://github.com/oracle/graal/blob/fb9b1d3b/substratevm/src/com.oracle.svm.hosted/src/com/oracle/svm/hosted/c/codegen/CCompilerInvoker.java#L106-L108>
 
 I think people should be able to choose what compiler they use.

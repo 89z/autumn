@@ -41,7 +41,8 @@ date: 2020-09-11
 
 {{< r "a.php" >}}
 
-<https://php.net/function.array-key-exists>
+- <https://php.net/function.array-key-exists>
+- <https://php.net/function.key-exists>
 
 ## Python
 

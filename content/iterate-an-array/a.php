@@ -12,13 +12,17 @@ foreach ($a as $n => $s) {
 }
 
 echo "example 3\n";
-for ($n = 0; $n < count($a); $n++) {
+$n = count($a) - 1;
+while ($n >= 0) {
    echo $n, "\t", $a[$n], "\n";
+   $n--;
 }
 
 echo "example 4\n";
-for (reset($a); key($a) !== null; next($a)) {
-   echo current($a), "\n";
+$n = array_key_last($a);
+while ($n >= 0) {
+   echo $n, "\t", $a[$n], "\n";
+   $n--;
 }
 
 echo "example 5\n";
