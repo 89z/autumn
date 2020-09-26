@@ -1,15 +1,9 @@
 ---
 title: Number types
 categories: [number, type]
-tags: [c++, d, dart, go, javascript, nim, php, python, rust]
+tags: [d, dart, go, javascript, nim, php, python, rust]
 date: 2020-09-11
 ---
-
-## C++
-
-{{< r "a.cpp" >}}
-
-<https://en.cppreference.com/w/cpp/language/types>
 
 ## D
 

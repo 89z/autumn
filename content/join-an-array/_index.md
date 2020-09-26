@@ -1,15 +1,13 @@
 ---
 title: Join an array
 categories: [array, string]
-tags: [c++, d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-14
 ---
 
-## C++
+## C#
 
-{{< r "a.cpp" >}}
-
-<https://en.cppreference.com/w/cpp/language/range-for>
+{{< r "cs/Program.cs" >}}
 
 ## D
 
@@ -69,6 +67,7 @@ date: 2020-09-14
 
 ## References
 
+- <https://hyperpolyglot.org/cpp#join>
 - <https://hyperpolyglot.org/scripting#str-join>
 - <https://hyperpolyglot.org/web#str-join>
 - <https://programming-idioms.org/idiom/53>

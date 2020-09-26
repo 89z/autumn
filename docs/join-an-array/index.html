@@ -22,35 +22,27 @@
    </header>
 
 
-<main>
-   <h1>Join an array</h1>
-   <time>Mon Sep 14 2020</time>
+<h1>Join an array</h1>
+<time>Mon Sep 14 2020</time>
    
-   <a href="/autumn/categories/array/">array</a>
+<a href="/autumn/categories/array/">array</a>
    
-   <a href="/autumn/categories/string/">string</a>
+<a href="/autumn/categories/string/">string</a>
    
-   
-   <h2 id="c">C++</h2>
+   <h2 id="c">C#</h2>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-   std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>string<span style="color:#f92672">&gt;</span> a <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span>};
-   std<span style="color:#f92672">::</span>string s;
-   <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> s1: a) {
-      <span style="color:#66d9ef">if</span> (s <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;&#34;</span>) {
-         s <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;,&#34;</span>;
-      }
-      s <span style="color:#f92672">+=</span> s1;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#960050;background-color:#1e0010">﻿</span><span style="color:#66d9ef">using</span> System;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">string</span>[] a = {<span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span>};
+      <span style="color:#66d9ef">var</span> s = String.Join(<span style="color:#e6db74">&#34;,&#34;</span>, a);
+      Console.WriteLine(s == <span style="color:#e6db74">&#34;May,June&#34;</span>);
    }
-   std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> s <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
 }
 </code></pre></div>
-<p><a href="https://en.cppreference.com/w/cpp/language/range-for">https://en.cppreference.com/w/cpp/language/range-for</a></p>
 <h2 id="d">D</h2>
 
 
@@ -183,13 +175,13 @@ puts s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;M
 </ul>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://hyperpolyglot.org/cpp#join">https://hyperpolyglot.org/cpp#join</a></li>
 <li><a href="https://hyperpolyglot.org/scripting#str-join">https://hyperpolyglot.org/scripting#str-join</a></li>
 <li><a href="https://hyperpolyglot.org/web#str-join">https://hyperpolyglot.org/web#str-join</a></li>
 <li><a href="https://programming-idioms.org/idiom/53">https://programming-idioms.org/idiom/53</a></li>
 <li><a href="https://rosettacode.org/wiki/Arrays">https://rosettacode.org/wiki/Arrays</a></li>
 </ul>
 
-</main>
 
 </body>
 </html>

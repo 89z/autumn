@@ -22,34 +22,26 @@
    </header>
 
 
-<main>
-   <h1>Modification time</h1>
-   <time>Tue Aug 18 2020</time>
+<h1>Modification time</h1>
+<time>Tue Aug 18 2020</time>
    
-   <a href="/autumn/categories/system/">system</a>
+<a href="/autumn/categories/system/">system</a>
    
-   
-   <h2 id="c">C++</h2>
+   <h2 id="c">C#</h2>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;chrono&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;filesystem&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;fstream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iomanip&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">namespace</span> fs <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>filesystem;
-<span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std<span style="color:#f92672">::</span>chrono_literals;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#960050;background-color:#1e0010">﻿</span><span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">using</span> System.IO;
 
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-   fs<span style="color:#f92672">::</span>path p <span style="color:#f92672">=</span> fs<span style="color:#f92672">::</span>current_path() <span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;example.bin&#34;</span>;
-   std<span style="color:#f92672">::</span>ofstream(p.c_str()).put(<span style="color:#e6db74">&#39;a&#39;</span>); <span style="color:#75715e">// create file
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> ftime <span style="color:#f92672">=</span> fs<span style="color:#f92672">::</span>last_write_time(p);
-   std<span style="color:#f92672">::</span>time_t cftime <span style="color:#f92672">=</span> <span style="color:#66d9ef">decltype</span>(ftime)<span style="color:#f92672">::</span>clock<span style="color:#f92672">::</span>to_time_t(ftime);
-   fs<span style="color:#f92672">::</span>last_write_time(p, ftime <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>h); <span style="color:#75715e">// move file write time 1 hour to the future
-</span><span style="color:#75715e"></span>}
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">var</span> o = File.GetLastWriteTime(<span style="color:#e6db74">&#34;Program.cs&#34;</span>);
+      Console.WriteLine(o);
+   }
+}
+
 </code></pre></div>
-<p><a href="https://en.cppreference.com/w/cpp/filesystem/last_write_time">https://en.cppreference.com/w/cpp/filesystem/last_write_time</a></p>
 <h2 id="d">D</h2>
 
 
@@ -182,7 +174,6 @@ puts o1 <span style="color:#f92672">==</span> o2
 <h2 id="references">References</h2>
 <p><a href="https://rosettacode.org/wiki/File_modification_time">https://rosettacode.org/wiki/File_modification_time</a></p>
 
-</main>
 
 </body>
 </html>

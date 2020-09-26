@@ -1,15 +1,13 @@
 ---
 title: Modification time
 categories: [system]
-tags: [c++, d, dart, go, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, nim, php, python, ruby, rust]
 date: 2020-08-18
 ---
 
-## C++
+## C#
 
-{{< r "a.cpp" >}}
-
-<https://en.cppreference.com/w/cpp/filesystem/last_write_time>
+{{< r "cs/Program.cs" >}}
 
 ## D
 
