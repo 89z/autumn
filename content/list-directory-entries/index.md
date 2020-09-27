@@ -43,7 +43,8 @@ date: 2020-09-11
 
 ## Python
 
-{{< r "a.py" >}}
+{{< r "os.py" >}}
+{{< r "path.py" >}}
 
 <https://docs.python.org/library/os.html#os.listdir>
 
