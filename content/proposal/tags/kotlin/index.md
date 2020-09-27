@@ -1,6 +1,6 @@
 ---
 title: Kotlin
-tags: [reject]
+tags: [proposal]
 ---
 
 > install JDK for your platform, instead of JRE.

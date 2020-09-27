@@ -1,6 +1,6 @@
 ---
 title: Haskell
-tags: [reject]
+tags: [proposal]
 ---
 
 **Haskell platform size**:

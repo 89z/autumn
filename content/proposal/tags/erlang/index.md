@@ -1,6 +1,6 @@
 ---
 title: Erlang
-tags: [reject]
+tags: [proposal]
 ---
 
 Download speed:

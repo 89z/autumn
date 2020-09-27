@@ -1,6 +1,6 @@
 ---
 title: Red
-tags: [reject]
+tags: [proposal]
 ---
 
 Shared is slow on first compile, but then fast:

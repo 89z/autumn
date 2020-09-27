@@ -1,6 +1,6 @@
 ---
 title: Lua
-tags: [reject]
+tags: [proposal]
 ---
 
 Better binary support for Windows

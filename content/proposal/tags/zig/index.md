@@ -1,6 +1,6 @@
 ---
 title: Zig
-tags: [reject]
+tags: [proposal]
 ---
 
 Zig emits `NUL` file when compiling on Windows
