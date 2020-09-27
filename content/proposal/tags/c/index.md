@@ -1,6 +1,6 @@
 ---
 title: C
-tags: [reject]
+tags: [proposal]
 ---
 
 No hashtables in the C standard library:

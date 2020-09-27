@@ -1,6 +1,6 @@
 ---
 title: C++
-tags: [reject]
+tags: [proposal]
 ---
 
 Unicode support is not good:

@@ -1,6 +1,6 @@
 ---
 title: Boo
-tags: [reject]
+tags: [proposal]
 ---
 
 Old

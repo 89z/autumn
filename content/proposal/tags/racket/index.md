@@ -1,6 +1,6 @@
 ---
 title: Racket
-tags: [draft]
+tags: [proposal]
 date: 2020-09-25
 ---
 
