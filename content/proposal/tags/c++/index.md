@@ -1,6 +1,7 @@
 ---
 title: C++
 tags: [proposal]
+date: 2020-09-26
 ---
 
 Unicode support is not good:

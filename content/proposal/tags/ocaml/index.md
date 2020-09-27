@@ -1,6 +1,6 @@
 ---
 title: OCaml
-tags: [reject]
+tags: [proposal]
 ---
 
 Windows Console Unicode Support

@@ -1,6 +1,6 @@
 ---
 title: Pony
-tags: [reject]
+tags: [proposal]
 ---
 
 Support GCC on windows

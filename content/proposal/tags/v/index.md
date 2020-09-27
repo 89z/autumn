@@ -1,6 +1,6 @@
 ---
 title: V
-tags: [reject]
+tags: [proposal]
 ---
 
 Program generated after compiling on Windows display nothing:

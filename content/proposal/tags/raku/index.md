@@ -1,6 +1,6 @@
 ---
 title: Raku
-tags: [reject]
+tags: [proposal]
 ---
 
 zef tar.gz:

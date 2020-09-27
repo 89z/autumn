@@ -1,6 +1,6 @@
 ---
 title: Scala
-tags: [reject]
+tags: [proposal]
 ---
 
 Windows support
