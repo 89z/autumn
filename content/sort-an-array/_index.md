@@ -61,6 +61,8 @@ date: 2020-09-22
 
 ## Ruby
 
+{{< r "a.rb" >}}
+
 <https://ruby-doc.org/core/Array.html#method-i-sort>
 
 ## Rust
@@ -74,6 +76,7 @@ date: 2020-09-22
 - <https://hyperpolyglot.org/c#sort-resizable-array>
 - <https://hyperpolyglot.org/cpp#sort-array>
 - <https://hyperpolyglot.org/rust#sort-array>
+- <https://hyperpolyglot.org/scripting#array-sort>
 - <https://hyperpolyglot.org/web#array-sort>
 - <https://programming-idioms.org/idiom/100>
 - <https://rosettacode.org/wiki/Sort_using_a_custom_comparator>

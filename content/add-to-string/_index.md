@@ -1,9 +1,15 @@
 ---
 title: Add to string
 categories: [string]
-tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-14
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/api/system.string.concat>
 
 ## D
 
@@ -20,13 +26,11 @@ date: 2020-09-14
 ## Go
 
 {{< r "concat.go" >}}
-{{< r "fprint.go" >}}
 {{< r "sprint.go" >}}
 {{< r "writestr.go" >}}
 
 - <https://golang.org/pkg/fmt#Sprint>
 - <https://golang.org/pkg/fmt#Sprintf>
-- <https://golang.org/pkg/fmt#Fprint>
 - <https://golang.org/pkg/strings#Builder.WriteString>
 - <https://golang.org/ref/spec#String_concatenation>
 
@@ -59,6 +63,8 @@ date: 2020-09-14
 
 {{< r "a.rb" >}}
 
+<https://ruby-doc.org/core/String.html#method-i-2B>
+
 ## Rust
 
 {{< r "from.rs" >}}
@@ -68,6 +74,7 @@ date: 2020-09-14
 
 ## References
 
+- <https://hyperpolyglot.org/cpp#str-concat>
 - <https://hyperpolyglot.org/rust#str-concat>
 - <https://hyperpolyglot.org/web#str-concat>
 - <https://rosettacode.org/wiki/String_append>

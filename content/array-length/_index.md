@@ -1,5 +1,5 @@
 ---
-title: Get array length
+title: Array length
 categories: [array]
 tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
@@ -55,6 +55,8 @@ date: 2020-09-11
 <https://docs.python.org/library/functions.html#len>
 
 ## Ruby
+
+{{< r "a.rb" >}}
 
 <https://ruby-doc.org/core/Array.html#method-i-length>
 

@@ -1,9 +1,13 @@
 ---
 title: Block-first loops
 categories: [reference]
-tags: [d, dart, go, javascript, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, rust]
 date: 2020-09-11
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
 
 ## D
 
@@ -59,5 +63,5 @@ date: 2020-09-11
 
 - <https://hyperpolyglot.org/scripting#while>
 - <https://hyperpolyglot.org/web#infinite-loop>
-- <https://programming-idioms.org/idiom/78/do-while-loop>
+- <https://programming-idioms.org/idiom/78>
 - <https://rosettacode.org/wiki/Loops/Do-while>

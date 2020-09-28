@@ -9,6 +9,8 @@ date: 2020-09-15
 
 {{< r "cs/Program.cs" >}}
 
+<https://docs.microsoft.com/dotnet/csharp/language-reference/operators/lambda-expressions>
+
 ## D
 
 {{< r "a.d" >}}
