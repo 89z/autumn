@@ -1,9 +1,15 @@
 ---
 title: Comments
 categories: [reference]
-tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/csharp/language-reference/language-specification/lexical-structure#comments>
 
 ## D
 

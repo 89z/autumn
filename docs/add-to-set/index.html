@@ -140,6 +140,53 @@ t2<span style="color:#f92672">.</span>add(<span style="color:#e6db74">&#39;July&
 <span style="color:#66d9ef">print</span>(t1, t2)
 </code></pre></div>
 <p><a href="https://docs.python.org/library/stdtypes.html#set">https://docs.python.org/library/stdtypes.html#set</a></p>
+<h2 id="ruby">Ruby</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#f92672">&gt;&gt;</span> require <span style="color:#e6db74">&#39;set&#39;</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
+<span style="color:#f92672">&gt;&gt;</span> s1, s2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">Set</span><span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span><span style="color:#f92672">]</span>, <span style="color:#f92672">[</span><span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span><span style="color:#f92672">].</span>to_set <span style="color:#75715e"># different ways of creating a set</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#f92672">[</span><span style="color:#75715e">#&lt;Set: {1, 2, 3, 4}&gt;, #&lt;Set: {5, 6, 3, 4}&gt;]</span>
+<span style="color:#f92672">&gt;&gt;</span> s1 <span style="color:#f92672">|</span> s2 <span style="color:#75715e"># Union</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#75715e">#&lt;Set: {5, 6, 1, 2, 3, 4}&gt;</span>
+<span style="color:#f92672">&gt;&gt;</span> s1 <span style="color:#f92672">&amp;</span> s2 <span style="color:#75715e"># Intersection</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#75715e">#&lt;Set: {3, 4}&gt;</span>
+<span style="color:#f92672">&gt;&gt;</span> s1 <span style="color:#f92672">-</span> s2 <span style="color:#75715e"># Difference</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#75715e">#&lt;Set: {1, 2}&gt;</span>
+<span style="color:#f92672">&gt;&gt;</span> s1<span style="color:#f92672">.</span>proper_subset?(s1) <span style="color:#75715e"># Proper subset</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">false</span>
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">Set</span><span style="color:#f92672">[</span><span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span><span style="color:#f92672">].</span>proper_subset?(s1) <span style="color:#75715e"># Proper subset</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
+<span style="color:#f92672">&gt;&gt;</span> s1<span style="color:#f92672">.</span>subset?(s1) <span style="color:#75715e"># Subset</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">Set</span><span style="color:#f92672">[</span><span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span><span style="color:#f92672">].</span>subset?(s1) <span style="color:#75715e"># Subset</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">Set</span><span style="color:#f92672">[</span><span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span><span style="color:#f92672">]</span> <span style="color:#f92672">==</span> s1 <span style="color:#75715e"># Equality</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
+<span style="color:#f92672">&gt;&gt;</span> s1 <span style="color:#f92672">==</span> s2 <span style="color:#75715e"># Equality</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">false</span>
+<span style="color:#f92672">&gt;&gt;</span> s1<span style="color:#f92672">.</span>include?(<span style="color:#ae81ff">2</span>) <span style="color:#75715e"># Membership</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">Set</span><span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span><span style="color:#f92672">].</span>proper_superset?(s1) <span style="color:#75715e"># Proper superset</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">Set</span><span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span><span style="color:#f92672">].</span>proper_superset?(s1) <span style="color:#75715e"># Proper superset</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">false</span>
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">Set</span><span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span><span style="color:#f92672">].</span>superset?(s1) <span style="color:#75715e"># Superset</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
+<span style="color:#f92672">&gt;&gt;</span> s1 <span style="color:#f92672">^</span> s2 <span style="color:#75715e"># Symmetric difference</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#75715e">#&lt;Set: {5, 6, 1, 2}&gt;</span>
+<span style="color:#f92672">&gt;&gt;</span> s1<span style="color:#f92672">.</span>size <span style="color:#75715e"># Cardinality</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">4</span>
+<span style="color:#f92672">&gt;&gt;</span> s1 <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">99</span> <span style="color:#75715e"># Mutability (or s1.add(99) )</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#75715e">#&lt;Set: {99, 1, 2, 3, 4}&gt;</span>
+<span style="color:#f92672">&gt;&gt;</span> s1<span style="color:#f92672">.</span>delete(<span style="color:#ae81ff">99</span>) <span style="color:#75715e"># Mutability</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#75715e">#&lt;Set: {1, 2, 3, 4}&gt;</span>
+<span style="color:#f92672">&gt;&gt;</span> s1<span style="color:#f92672">.</span>merge(s2) <span style="color:#75715e"># Mutability</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#75715e">#&lt;Set: {5, 6, 1, 2, 3, 4}&gt;</span>
+<span style="color:#f92672">&gt;&gt;</span> s1<span style="color:#f92672">.</span>subtract(s2) <span style="color:#75715e"># Mutability</span>
+<span style="color:#f92672">=&gt;</span> <span style="color:#75715e">#&lt;Set: {1, 2}&gt;</span>
+</code></pre></div>
 <h2 id="rust">Rust</h2>
 
 

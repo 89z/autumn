@@ -1,7 +1,7 @@
 ---
 title: Add to set
 categories: [set]
-tags: [d, dart, go, javascript, nim, php, python, rust]
+tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
 
@@ -47,6 +47,10 @@ date: 2020-09-11
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#set>
+
+## Ruby
+
+{{< r "a.rb" >}}
 
 ## Rust
 

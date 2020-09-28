@@ -1,7 +1,7 @@
 ---
 title: Exit program
 categories: [system]
-tags: [c-sharp, d, dart, go, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, nim, php, python, ruby, rust]
 date: 2020-08-23
 ---
 
@@ -58,6 +58,12 @@ date: 2020-08-23
 
 - <https://docs.python.org/library/os.html#os.abort>
 - <https://docs.python.org/library/sys.html#sys.exit>
+
+## Ruby
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/Process.html#method-c-exit>
 
 ## Rust
 
