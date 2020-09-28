@@ -1,9 +1,15 @@
 ---
 title: Exit program
 categories: [system]
-tags: [d, dart, go, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, nim, php, python, rust]
 date: 2020-08-23
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/api/system.environment.exit>
 
 ## D
 

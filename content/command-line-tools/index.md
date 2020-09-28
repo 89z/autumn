@@ -9,6 +9,8 @@ date: 2020-09-23
 
 {{< r "cs.ps1" >}}
 
+<https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/create>
+
 ## D
 
 {{< r "d.ps1" >}}

@@ -22,14 +22,31 @@
    </header>
 
 
-<main>
-   <h1>Add to array</h1>
-   <time>Fri Sep 11 2020</time>
+<h1>Add to array</h1>
+<time>Fri Sep 11 2020</time>
    
-   <a href="/autumn/categories/array/">array</a>
+<a href="/autumn/categories/array/">array</a>
    
-   
-   <h2 id="d">D</h2>
+   <h2 id="c">C#</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#960050;background-color:#1e0010">﻿</span><span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">using</span> System.Collections.Generic;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">var</span> a = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
+      a.Add(<span style="color:#e6db74">&#34;May&#34;</span>);
+      a.Add(<span style="color:#e6db74">&#34;June&#34;</span>);
+      <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> s <span style="color:#66d9ef">in</span> a) {
+         Console.WriteLine(s);
+      }
+   }
+}
+</code></pre></div>
+<p><a href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.add">https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.add</a></p>
+<h2 id="d">D</h2>
 
 
 
@@ -165,6 +182,7 @@ puts a
 <p><a href="https://doc.rust-lang.org/std/vec/struct.Vec.html#method.push">https://doc.rust-lang.org/std/vec/struct.Vec.html#method.push</a></p>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://hyperpolyglot.org/cpp#resizable-array-back">https://hyperpolyglot.org/cpp#resizable-array-back</a></li>
 <li><a href="https://hyperpolyglot.org/rust#array-back">https://hyperpolyglot.org/rust#array-back</a></li>
 <li><a href="https://hyperpolyglot.org/web#array-back">https://hyperpolyglot.org/web#array-back</a></li>
 <li><a href="https://programming-idioms.org/idiom/166/concatenate-two-lists">https://programming-idioms.org/idiom/166/concatenate-two-lists</a></li>
@@ -172,7 +190,6 @@ puts a
 <li><a href="https://rosettacode.org/wiki/Array_concatenation">https://rosettacode.org/wiki/Array_concatenation</a></li>
 </ul>
 
-</main>
 
 </body>
 </html>

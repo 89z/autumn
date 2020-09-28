@@ -1,7 +1,7 @@
 ---
 title: Environment variables
 categories: [system]
-tags: [c-sharp, d, dart, go, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
 
@@ -49,6 +49,10 @@ date: 2020-09-11
 
 - <https://docs.python.org/library/os.html#os.environ>
 - <https://docs.python.org/library/os.html#os.getenv>
+
+## Ruby
+
+{{< r "a.rb" >}}
 
 ## Rust
 

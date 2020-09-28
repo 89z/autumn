@@ -1,7 +1,7 @@
 ---
 title: Import package
 categories: [reference]
-tags: [c-sharp, d, dart, go, javascript, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
 
@@ -51,6 +51,12 @@ date: 2020-09-11
 {{< r "a.py" >}}
 
 <https://docs.python.org/reference/simple_stmts.html#import>
+
+## Ruby
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/Kernel.html#method-i-require>
 
 ## Rust
 

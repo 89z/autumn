@@ -1,9 +1,15 @@
 ---
 title: Add to array
 categories: [array]
-tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.add>
 
 ## D
 
@@ -63,6 +69,7 @@ date: 2020-09-11
 
 ## References
 
+- <https://hyperpolyglot.org/cpp#resizable-array-back>
 - <https://hyperpolyglot.org/rust#array-back>
 - <https://hyperpolyglot.org/web#array-back>
 - <https://programming-idioms.org/idiom/166/concatenate-two-lists>

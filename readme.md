@@ -12,9 +12,9 @@ Comparison of programming languages
 
 ~~~
 81 php examples
-79 go links
 79 go examples
 79 php links
+79 go links
 77 python examples
 75 python links
 71 d examples
@@ -24,16 +24,16 @@ Comparison of programming languages
 64 nim links
 62 dart examples
 62 d links
-58 dart links
 58 javascript links
+58 dart links
 57 javascript examples
-39 c-sharp examples
-29 ruby examples
-27 c-sharp links
-27 ruby links
+41 c-sharp examples
+32 ruby examples
+30 c-sharp links
+29 ruby links
 
-625 examples
-596 links
+630 examples
+601 links
 57 goal 7/10
 ~~~
 
