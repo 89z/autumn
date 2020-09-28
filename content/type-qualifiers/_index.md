@@ -1,9 +1,15 @@
 ---
 title: Type qualifiers
 categories: [type]
-tags: [go, javascript, nim, php, rust]
+tags: [c-sharp, go, javascript, nim, php, rust]
 date: 2020-09-11
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/const>
 
 ## Go
 
@@ -40,6 +46,7 @@ date: 2020-09-11
 
 ## References
 
-- <https://hyperpolyglot.org/cpp#local-var>
+- <https://hyperpolyglot.org/cpp#write-once-var>
 - <https://hyperpolyglot.org/scripting#const>
-- <https://hyperpolyglot.org/web#local-var>
+- <https://hyperpolyglot.org/web#const>
+

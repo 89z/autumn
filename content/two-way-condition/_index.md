@@ -1,9 +1,15 @@
 ---
 title: Two-way condition
 categories: [reference]
-tags: [d, dart, go, javascript, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, rust]
 date: 2020-09-11
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/if-else>
 
 ## D
 
@@ -60,6 +66,7 @@ date: 2020-09-11
 ## References
 
 - <https://hyperpolyglot.org/c#if>
+- <https://hyperpolyglot.org/cpp#if>
 - <https://hyperpolyglot.org/rust#if>
 - <https://hyperpolyglot.org/scripting#if>
 - <https://hyperpolyglot.org/web#if-note>

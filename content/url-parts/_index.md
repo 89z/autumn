@@ -9,6 +9,8 @@ date: 2020-09-10
 
 {{< r "cs/Program.cs" >}}
 
+<https://docs.microsoft.com/dotnet/api/system.uri>
+
 ## Go
 
 {{< r "a.go" >}}
