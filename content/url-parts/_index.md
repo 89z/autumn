@@ -1,9 +1,13 @@
 ---
 title: URL parts
 categories: [network]
-tags: [go, javascript, nim, php, python]
+tags: [c-sharp, go, javascript, nim, php, python]
 date: 2020-09-10
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
 
 ## Go
 

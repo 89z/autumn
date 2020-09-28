@@ -22,14 +22,51 @@
    </header>
 
 
-<main>
-   <h1>URL parts</h1>
-   <time>Thu Sep 10 2020</time>
+<h1>URL parts</h1>
+<time>Thu Sep 10 2020</time>
    
-   <a href="/autumn/categories/network/">network</a>
+<a href="/autumn/categories/network/">network</a>
    
-   
-   <h2 id="go">Go</h2>
+   <h2 id="c">C#</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#960050;background-color:#1e0010">﻿</span><span style="color:#66d9ef">using</span> System;
+ 
+<span style="color:#66d9ef">namespace</span> RosettaUrlParse
+{
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span>
+    {
+        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> ParseUrl(<span style="color:#66d9ef">string</span> url)
+        {
+            <span style="color:#66d9ef">var</span> u = <span style="color:#66d9ef">new</span> Uri(url);
+            Console.WriteLine(<span style="color:#e6db74">&#34;URL:         {0}&#34;</span>, u.AbsoluteUri);
+            Console.WriteLine(<span style="color:#e6db74">&#34;Scheme:      {0}&#34;</span>, u.Scheme);
+            Console.WriteLine(<span style="color:#e6db74">&#34;Host:        {0}&#34;</span>, u.DnsSafeHost);
+            Console.WriteLine(<span style="color:#e6db74">&#34;Port:        {0}&#34;</span>, u.Port);
+            Console.WriteLine(<span style="color:#e6db74">&#34;Path:        {0}&#34;</span>, u.LocalPath);
+            Console.WriteLine(<span style="color:#e6db74">&#34;Query:       {0}&#34;</span>, u.Query);
+            Console.WriteLine(<span style="color:#e6db74">&#34;Fragment:    {0}&#34;</span>, u.Fragment);
+            Console.WriteLine();
+        }
+        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
+        {
+            ParseUrl(<span style="color:#e6db74">&#34;foo://example.com:8042/over/there?name=ferret#nose&#34;</span>);
+            ParseUrl(<span style="color:#e6db74">&#34;urn:example:animal:ferret:nose&#34;</span>);
+            ParseUrl(<span style="color:#e6db74">&#34;jdbc:mysql://test_user:ouupppssss@localhost:3306/sakila?profileSQL=true&#34;</span>);
+            ParseUrl(<span style="color:#e6db74">&#34;ftp://ftp.is.co.za/rfc/rfc1808.txt&#34;</span>);
+            ParseUrl(<span style="color:#e6db74">&#34;http://www.ietf.org/rfc/rfc2396.txt#header1&#34;</span>);
+            ParseUrl(<span style="color:#e6db74">&#34;ldap://[2001:db8::7]/c=GB?objectClass?one&#34;</span>);
+            ParseUrl(<span style="color:#e6db74">&#34;mailto:John.Doe@example.com&#34;</span>);
+            ParseUrl(<span style="color:#e6db74">&#34;news:comp.infosystems.www.servers.unix&#34;</span>);
+            ParseUrl(<span style="color:#e6db74">&#34;tel:+1-816-555-1212&#34;</span>);
+            ParseUrl(<span style="color:#e6db74">&#34;telnet://192.0.2.16:80/&#34;</span>);
+            ParseUrl(<span style="color:#e6db74">&#34;urn:oasis:names:specification:docbook:dtd:xml:4.1.2&#34;</span>);
+        }
+    }
+}
+</code></pre></div>
+<h2 id="go">Go</h2>
 <p>
 
 
@@ -167,7 +204,6 @@ s2 <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>get
 <li><a href="https://rosettacode.org/wiki/URL_parser">https://rosettacode.org/wiki/URL_parser</a></li>
 </ul>
 
-</main>
 
 </body>
 </html>

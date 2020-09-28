@@ -22,14 +22,28 @@
    </header>
 
 
-<main>
-   <h1>Variable to file</h1>
-   <time>Fri Sep 11 2020</time>
+<h1>Variable to file</h1>
+<time>Fri Sep 11 2020</time>
    
-   <a href="/autumn/categories/input-output/">input-output</a>
+<a href="/autumn/categories/input-output/">input-output</a>
    
-   
-   <h2 id="d">D</h2>
+   <h2 id="c">C#</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#960050;background-color:#1e0010">﻿</span><span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">using</span> System.IO;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">var</span> o = <span style="color:#66d9ef">new</span> StreamWriter(<span style="color:#e6db74">&#34;a.txt&#34;</span>);
+      o.WriteLine(<span style="color:#e6db74">&#34;May&#34;</span>);
+      o.Close();
+   }
+}
+</code></pre></div>
+<p><a href="https://docs.microsoft.com/dotnet/api/system.io.streamwriter">https://docs.microsoft.com/dotnet/api/system.io.streamwriter</a></p>
+<h2 id="d">D</h2>
 
 
 
@@ -57,26 +71,6 @@
 <p><a href="https://api.dart.dev/dart-io/File-class.html">https://api.dart.dev/dart-io/File-class.html</a></p>
 <h2 id="go">Go</h2>
 <p>
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;io&#34;</span>
-   <span style="color:#e6db74">&#34;os&#34;</span>
-   <span style="color:#e6db74">&#34;strings&#34;</span>
-)
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#e6db74">&#34;May\n&#34;</span>)
-   <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
-   }
-   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">o</span>)
-}
-</code></pre></div>
-
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
@@ -131,7 +125,6 @@
 </code></pre></div></p>
 <ul>
 <li><a href="https://golang.org/pkg/fmt#Fprintln">https://golang.org/pkg/fmt#Fprintln</a></li>
-<li><a href="https://golang.org/pkg/io#Copy">https://golang.org/pkg/io#Copy</a></li>
 <li><a href="https://golang.org/pkg/os#File.WriteString">https://golang.org/pkg/os#File.WriteString</a></li>
 <li><a href="https://golang.org/pkg/strings#Reader.WriteTo">https://golang.org/pkg/strings#Reader.WriteTo</a></li>
 </ul>
@@ -215,11 +208,11 @@ o <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;a.t
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#write-str">https://hyperpolyglot.org/c#write-str</a></li>
+<li><a href="https://hyperpolyglot.org/cpp#file-handles">https://hyperpolyglot.org/cpp#file-handles</a></li>
 <li><a href="https://rosettacode.org/wiki/Write_entire_file">https://rosettacode.org/wiki/Write_entire_file</a></li>
 <li><a href="https://rosettacode.org/wiki/Create_a_file">https://rosettacode.org/wiki/Create_a_file</a></li>
 </ul>
 
-</main>
 
 </body>
 </html>

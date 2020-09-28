@@ -48,7 +48,8 @@ date: 2020-09-11
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/env/fn.var.html>
+- <https://doc.rust-lang.org/std/env/fn.var.html>
+- <https://doc.rust-lang.org/std/macro.env.html>
 
 ## References
 

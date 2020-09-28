@@ -1,10 +1,12 @@
 # example 1
 go build -ldflags -s a.go
 # example 2
-go list -deps
+go install
 # example 3
-go mod init may
+go list -deps
 # exmaple 4
-go run a.go
+go mod init may
 # example 5
+go run a.go
+# example 6
 go test -bench='.'

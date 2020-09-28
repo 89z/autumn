@@ -1,9 +1,15 @@
 ---
 title: Variable to file
 categories: [input-output]
-tags: [d, dart, go, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, nim, php, python, rust]
 date: 2020-09-11
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/api/system.io.streamwriter>
 
 ## D
 
@@ -19,13 +25,11 @@ date: 2020-09-11
 
 ## Go
 
-{{< r "copy.go" >}}
 {{< r "fprintln.go" >}}
 {{< r "writestring.go" >}}
 {{< r "writeto.go" >}}
 
 - <https://golang.org/pkg/fmt#Fprintln>
-- <https://golang.org/pkg/io#Copy>
 - <https://golang.org/pkg/os#File.WriteString>
 - <https://golang.org/pkg/strings#Reader.WriteTo>
 
@@ -62,5 +66,6 @@ date: 2020-09-11
 ## References
 
 - <https://hyperpolyglot.org/c#write-str>
+- <https://hyperpolyglot.org/cpp#file-handles>
 - <https://rosettacode.org/wiki/Write_entire_file>
 - <https://rosettacode.org/wiki/Create_a_file>
