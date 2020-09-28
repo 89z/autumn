@@ -1,9 +1,15 @@
 ---
 title: Iterate a map
 categories: [iterate, map]
-tags: [go, javascript, php, python]
+tags: [c-sharp, go, javascript, php, python]
 date: 2020-09-12
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/foreach-in>
 
 ## Go
 
@@ -34,4 +40,5 @@ date: 2020-09-12
 ## References
 
 - <https://hyperpolyglot.org/c#dict-iter>
+- <https://hyperpolyglot.org/cpp#dict-iter>
 - <https://hyperpolyglot.org/scripting#dict-iter>

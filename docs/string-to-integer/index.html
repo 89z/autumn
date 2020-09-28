@@ -35,19 +35,21 @@
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">var</span> s = <span style="color:#e6db74">&#34;10&#34;</span>;
       <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> n1 = <span style="color:#66d9ef">int</span>.Parse(<span style="color:#e6db74">&#34;2147483647&#34;</span>);
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> n1 = <span style="color:#66d9ef">int</span>.Parse(s);
       <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> n2 = <span style="color:#66d9ef">uint</span>.Parse(<span style="color:#e6db74">&#34;4294967295&#34;</span>);
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> n2 = <span style="color:#66d9ef">uint</span>.Parse(s);
       <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> n3 = <span style="color:#66d9ef">long</span>.Parse(<span style="color:#e6db74">&#34;9223372036854775807&#34;</span>);
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> n3 = <span style="color:#66d9ef">long</span>.Parse(s);
       <span style="color:#75715e">// example 4
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> n4 = <span style="color:#66d9ef">ulong</span>.Parse(<span style="color:#e6db74">&#34;18446744073709551615&#34;</span>);
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> n4 = <span style="color:#66d9ef">ulong</span>.Parse(s);
       <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>      Console.WriteLine(<span style="color:#e6db74">&#34;{0} {1} {2} {3}&#34;</span>, n1, n2, n3, n4);
+</span><span style="color:#75715e"></span>      Console.WriteLine(n1 == <span style="color:#ae81ff">10</span> &amp;&amp; n2 == <span style="color:#ae81ff">10</span> &amp;&amp; n3 == <span style="color:#ae81ff">10</span> &amp;&amp; n4 == <span style="color:#ae81ff">10</span>);
    }
 }
 </code></pre></div>
+<p><a href="https://docs.microsoft.com/dotnet/api/system.int32.parse">https://docs.microsoft.com/dotnet/api/system.int32.parse</a></p>
 <h2 id="d">D</h2>
 
 

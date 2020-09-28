@@ -9,6 +9,8 @@ date: 2020-09-11
 
 {{< r "cs/Program.cs" >}}
 
+<https://docs.microsoft.com/dotnet/api/system.int32.tostring>
+
 ## D
 
 {{< r "a.d" >}}

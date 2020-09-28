@@ -9,6 +9,8 @@ date: 2020-09-14
 
 {{< r "cs/Program.cs" >}}
 
+<https://docs.microsoft.com/dotnet/api/system.string.join>
+
 ## D
 
 {{< r "a.d" >}}

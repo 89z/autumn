@@ -9,6 +9,8 @@ date: 2020-09-13
 
 {{< r "cs/Program.cs" >}}
 
+<https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/foreach-in>
+
 ## D
 
 {{< r "a.d" >}}

@@ -1,9 +1,15 @@
 ---
 title: Sleep
 categories: [system]
-tags: [d, dart, go, nim, php, ruby, rust]
+tags: [c-sharp, d, dart, go, nim, php, ruby, rust]
 date: 2020-09-11
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/api/system.threading.thread.sleep>
 
 ## D
 
