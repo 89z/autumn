@@ -9,6 +9,8 @@ date: 2020-09-18
 
 {{< r "cs/Program.cs" >}}
 
+<https://docs.microsoft.com/dotnet/api/system.string.substring>
+
 ## D
 
 {{< r "a.d" >}}

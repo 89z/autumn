@@ -1,9 +1,15 @@
 ---
 title: Map contains key
 categories: [map]
-tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.containskey>
 
 ## D
 

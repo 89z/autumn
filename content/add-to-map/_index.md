@@ -60,6 +60,8 @@ date: 2020-09-11
 
 {{< r "a.rb" >}}
 
+<https://ruby-doc.org/core/Hash.html#method-i-5B-5D-3D>
+
 ## Rust
 
 {{< r "a.rs" >}}

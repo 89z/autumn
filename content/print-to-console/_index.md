@@ -65,6 +65,8 @@ date: 2020-09-25
 
 {{< r "a.rb" >}}
 
+<https://ruby-doc.org/core/Kernel.html#method-i-puts>
+
 ## Rust
 
 {{< r "a.rs" >}}

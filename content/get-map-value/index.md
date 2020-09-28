@@ -1,7 +1,7 @@
 ---
 title: Get map value
 categories: [map]
-tags: [d, dart, go, javascript, nim, php, python, rust]
+tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
 
@@ -47,6 +47,10 @@ date: 2020-09-11
 
 - <https://docs.python.org/library/stdtypes.html#dict>
 - <https://docs.python.org/library/stdtypes.html#dict.get>
+
+## Ruby
+
+{{< r "a.rb" >}}
 
 ## Rust
 

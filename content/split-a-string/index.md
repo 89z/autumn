@@ -55,6 +55,12 @@ date: 2020-09-11
 - <https://docs.python.org/library/stdtypes.html#str.split>
 - <https://docs.python.org/library/stdtypes.html#str.splitlines>
 
+## Ruby
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/String.html#method-i-split>
+
 ## Rust
 
 {{< r "a.rs" >}}
