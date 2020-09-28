@@ -1,7 +1,7 @@
 ---
 title: Get string length
 categories: [string]
-tags: [c-sharp, d, dart, go, javascript, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
 
@@ -59,6 +59,12 @@ date: 2020-09-11
 
 - <https://docs.python.org/library/functions.html#len>
 - <https://docs.python.org/library/stdtypes.html#str.encode>
+
+## Ruby
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/String.html#method-i-length>
 
 ## Rust
 

@@ -1,9 +1,15 @@
 ---
 title: Number types
 categories: [number, type]
-tags: [d, dart, go, javascript, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, rust]
 date: 2020-09-11
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types>
 
 ## D
 

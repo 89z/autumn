@@ -1,9 +1,13 @@
 ---
 title: Get string character
 categories: [string]
-tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-18
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
 
 ## D
 

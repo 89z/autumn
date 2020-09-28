@@ -61,6 +61,8 @@ date: 2020-09-11
 
 {{< r "a.rb" >}}
 
+<https://ruby-doc.org/core/Array.html#method-i-push>
+
 ## Rust
 
 {{< r "a.rs" >}}
