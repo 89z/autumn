@@ -1,7 +1,7 @@
 ---
 title: Command line arguments
 categories: [system]
-tags: [d, dart, go, nim, php, python, rust]
+tags: [d, dart, go, nim, php, python, ruby, rust]
 date: 2020-07-14
 ---
 
@@ -41,6 +41,12 @@ date: 2020-07-14
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/sys.html#sys.argv>
+
+## Ruby
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/ARGF.html>
 
 ## Rust
 

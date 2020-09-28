@@ -22,14 +22,39 @@
    </header>
 
 
-<main>
-   <h1>Multi-way condition</h1>
-   <time>Fri Sep 11 2020</time>
+<h1>Multi-way condition</h1>
+<time>Fri Sep 11 2020</time>
    
-   <a href="/autumn/categories/reference/">reference</a>
+<a href="/autumn/categories/reference/">reference</a>
    
-   
-   <h2 id="dart">Dart</h2>
+   <h2 id="c">C#</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#960050;background-color:#1e0010">﻿</span><span style="color:#66d9ef">using</span> System;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">int</span> n = <span style="color:#ae81ff">10</span>;
+      <span style="color:#66d9ef">string</span> s;
+      <span style="color:#66d9ef">switch</span> (n) {
+      <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">12</span>:
+         s = <span style="color:#e6db74">&#34;all&#34;</span>;
+         <span style="color:#66d9ef">break</span>;
+      <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">11</span>:
+      <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">10</span>:
+         s = <span style="color:#e6db74">&#34;some&#34;</span>;
+         <span style="color:#66d9ef">break</span>;
+      <span style="color:#66d9ef">default</span>:
+         s = <span style="color:#e6db74">&#34;none&#34;</span>;
+         <span style="color:#66d9ef">break</span>;
+      }
+      Console.WriteLine(s == <span style="color:#e6db74">&#34;some&#34;</span>);
+   }
+}
+</code></pre></div>
+<p><a href="https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/switch">https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/switch</a></p>
+<h2 id="dart">Dart</h2>
 
 
 
@@ -130,11 +155,11 @@ $n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#switch">https://hyperpolyglot.org/c#switch</a></li>
+<li><a href="https://hyperpolyglot.org/cpp#switch">https://hyperpolyglot.org/cpp#switch</a></li>
 <li><a href="https://hyperpolyglot.org/scripting#switch">https://hyperpolyglot.org/scripting#switch</a></li>
 <li><a href="https://hyperpolyglot.org/web#switch">https://hyperpolyglot.org/web#switch</a></li>
 </ul>
 
-</main>
 
 </body>
 </html>

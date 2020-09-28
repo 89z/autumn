@@ -58,6 +58,8 @@ date: 2020-08-05
 
 ## Ruby
 
+{{< r "a.rb" >}}
+
 <https://ruby-doc.org/core/Array.html#method-i-slice>
 
 ## Rust

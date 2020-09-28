@@ -9,6 +9,8 @@ date: 2020-09-11
 
 {{< r "cs/Program.cs" >}}
 
+<https://docs.microsoft.com/dotnet/csharp/programming-guide/arrays>
+
 ## D
 
 {{< r "a.d" >}}

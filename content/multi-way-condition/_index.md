@@ -1,9 +1,15 @@
 ---
 title: Multi-way condition
 categories: [reference]
-tags: [dart, go, javascript, php, rust]
+tags: [c-sharp, dart, go, javascript, php, rust]
 date: 2020-09-11
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/switch>
 
 ## Dart
 
@@ -36,5 +42,6 @@ date: 2020-09-11
 ## Reference
 
 - <https://hyperpolyglot.org/c#switch>
+- <https://hyperpolyglot.org/cpp#switch>
 - <https://hyperpolyglot.org/scripting#switch>
 - <https://hyperpolyglot.org/web#switch>
