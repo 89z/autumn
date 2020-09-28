@@ -22,14 +22,33 @@
    </header>
 
 
-<main>
-   <h1>String to integer</h1>
-   <time>Fri Sep 11 2020</time>
+<h1>String to integer</h1>
+<time>Mon Sep 28 2020</time>
    
-   <a href="/autumn/categories/number/">number</a>
+<a href="/autumn/categories/number/">number</a>
    
-   
-   <h2 id="d">D</h2>
+   <h2 id="c">C#</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#960050;background-color:#1e0010">﻿</span><span style="color:#66d9ef">using</span> System;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> n1 = <span style="color:#66d9ef">int</span>.Parse(<span style="color:#e6db74">&#34;2147483647&#34;</span>);
+      <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> n2 = <span style="color:#66d9ef">uint</span>.Parse(<span style="color:#e6db74">&#34;4294967295&#34;</span>);
+      <span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> n3 = <span style="color:#66d9ef">long</span>.Parse(<span style="color:#e6db74">&#34;9223372036854775807&#34;</span>);
+      <span style="color:#75715e">// example 4
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> n4 = <span style="color:#66d9ef">ulong</span>.Parse(<span style="color:#e6db74">&#34;18446744073709551615&#34;</span>);
+      <span style="color:#75715e">// print
+</span><span style="color:#75715e"></span>      Console.WriteLine(<span style="color:#e6db74">&#34;{0} {1} {2} {3}&#34;</span>, n1, n2, n3, n4);
+   }
+}
+</code></pre></div>
+<h2 id="d">D</h2>
 
 
 
@@ -113,33 +132,14 @@
    }
    println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">11</span>)
 }
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">9.9</span>
-   <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> int(<span style="color:#a6e22e">n</span>)
-   println(<span style="color:#a6e22e">n1</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>)
-}
 </code></pre></div></p>
 <ul>
 <li><a href="https://golang.org/pkg/fmt#Sscan">https://golang.org/pkg/fmt#Sscan</a></li>
 <li><a href="https://golang.org/pkg/fmt#Sscanf">https://golang.org/pkg/fmt#Sscanf</a></li>
 <li><a href="https://golang.org/pkg/fmt#Sscanln">https://golang.org/pkg/fmt#Sscanln</a></li>
 <li><a href="https://golang.org/pkg/strconv#ParseInt">https://golang.org/pkg/strconv#ParseInt</a></li>
-<li><a href="https://golang.org/ref/spec#Conversions">https://golang.org/ref/spec#Conversions</a></li>
 </ul>
 <h2 id="javascript">JavaScript</h2>
-<p>
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">9.9</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">trunc</span>(<span style="color:#a6e22e">n</span>);
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>);
-</code></pre></div>
 
 
 
@@ -154,9 +154,8 @@
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n4</span> <span style="color:#f92672">=</span> <span style="color:#f92672">+</span>(<span style="color:#a6e22e">s</span>);
 <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">10</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">10</span>, <span style="color:#a6e22e">n3</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">10</span>, <span style="color:#a6e22e">n4</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">10</span>);
-</code></pre></div></p>
+</code></pre></div>
 <ul>
-<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Math/trunc">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Math/trunc</a></li>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/parseInt">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/parseInt</a></li>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number</a></li>
 <li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/parseInt">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/parseInt</a></li>
@@ -173,18 +172,6 @@ echo n <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/strutils.html#parseInt,string">https://nim-lang.org/docs/strutils.html#parseInt,string</a></p>
 <h2 id="php">PHP</h2>
-<p>
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">9.9</span>;
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> (<span style="color:#a6e22e">int</span>)($n);
-<span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">intval</span>($n);
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>, $n2 <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>);
-</code></pre></div>
 
 
 
@@ -200,14 +187,14 @@ $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;11&#39;
 </span><span style="color:#75715e"></span>$n4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">intval</span>($s, <span style="color:#ae81ff">10</span>);
 <span style="color:#75715e"># print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1 <span style="color:#f92672">===</span> <span style="color:#ae81ff">11</span>, $n2 <span style="color:#f92672">===</span> <span style="color:#ae81ff">11</span>, $n3 <span style="color:#f92672">===</span> <span style="color:#ae81ff">11</span>, $n4 <span style="color:#f92672">===</span> <span style="color:#ae81ff">11</span>);
-</code></pre></div></p>
+</code></pre></div>
 <ul>
 <li><a href="https://php.net/function.intval">https://php.net/function.intval</a></li>
 <li><a href="https://php.net/language.operators.arithmetic">https://php.net/language.operators.arithmetic</a></li>
 <li><a href="https://php.net/language.types.type-juggling">https://php.net/language.types.type-juggling</a></li>
 </ul>
 <h2 id="python">Python</h2>
-<p>
+
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;10&#39;</span>
@@ -219,13 +206,6 @@ n2 <span style="color:#f92672">=</span> locale<span style="color:#f92672">.</spa
 <span style="color:#75715e"># print</span>
 <span style="color:#66d9ef">print</span>(n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</span>, n2 <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</span>)
 </code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">n <span style="color:#f92672">=</span> <span style="color:#ae81ff">9.9</span>
-n1 <span style="color:#f92672">=</span> int(n)
-<span style="color:#66d9ef">print</span>(n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>)
-</code></pre></div></p>
 <ul>
 <li><a href="https://docs.python.org/library/functions.html#int">https://docs.python.org/library/functions.html#int</a></li>
 <li><a href="https://docs.python.org/library/locale.html#locale.atoi">https://docs.python.org/library/locale.html#locale.atoi</a></li>
@@ -247,12 +227,12 @@ n1 <span style="color:#f92672">=</span> int(n)
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#str-to-num">https://hyperpolyglot.org/c#str-to-num</a></li>
+<li><a href="https://hyperpolyglot.org/cpp#str-to-num">https://hyperpolyglot.org/cpp#str-to-num</a></li>
 <li><a href="https://hyperpolyglot.org/rust#str-to-num">https://hyperpolyglot.org/rust#str-to-num</a></li>
 <li><a href="https://hyperpolyglot.org/web#str-to-num">https://hyperpolyglot.org/web#str-to-num</a></li>
 <li><a href="https://programming-idioms.org/idiom/22">https://programming-idioms.org/idiom/22</a></li>
 </ul>
 
-</main>
 
 </body>
 </html>

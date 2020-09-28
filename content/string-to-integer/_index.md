@@ -1,9 +1,13 @@
 ---
 title: String to integer
 categories: [number]
-tags: [d, dart, go, javascript, php, python, rust]
-date: 2020-09-11
+tags: [c-sharp, d, dart, go, javascript, php, python, rust]
+date: 2020-09-28
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
 
 ## D
 
@@ -22,20 +26,16 @@ date: 2020-09-11
 {{< r "atoi.go" >}}
 {{< r "fmt.go" >}}
 {{< r "parseint.go" >}}
-{{< r "spec.go" >}}
 
 - <https://golang.org/pkg/fmt#Sscan>
 - <https://golang.org/pkg/fmt#Sscanf>
 - <https://golang.org/pkg/fmt#Sscanln>
 - <https://golang.org/pkg/strconv#ParseInt>
-- <https://golang.org/ref/spec#Conversions>
 
 ## JavaScript
 
-{{< r "num.js" >}}
-{{< r "str.js" >}}
+{{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Math/trunc>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/parseInt>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number>
 - <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/parseInt>
@@ -49,8 +49,7 @@ date: 2020-09-11
 
 ## PHP
 
-{{< r "num.php" >}}
-{{< r "str.php" >}}
+{{< r "a.php" >}}
 
 - <https://php.net/function.intval>
 - <https://php.net/language.operators.arithmetic>
@@ -58,8 +57,7 @@ date: 2020-09-11
 
 ## Python
 
-{{< r "str.py" >}}
-{{< r "num.py" >}}
+{{< r "a.py" >}}
 
 - <https://docs.python.org/library/functions.html#int>
 - <https://docs.python.org/library/locale.html#locale.atoi>
@@ -73,6 +71,7 @@ date: 2020-09-11
 ## References
 
 - <https://hyperpolyglot.org/c#str-to-num>
+- <https://hyperpolyglot.org/cpp#str-to-num>
 - <https://hyperpolyglot.org/rust#str-to-num>
 - <https://hyperpolyglot.org/web#str-to-num>
 - <https://programming-idioms.org/idiom/22>

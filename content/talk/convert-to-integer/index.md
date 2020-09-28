@@ -6,9 +6,8 @@ date: 2020-09-14
 ## Float
 
 Some functions return floats rather than integers. With PHP this is fine, but
-with other languages like Go it can be a problem. However this is a
-misrepresentation of the problem. Even this is a misrepresentation, as we want
-rounding rather than truncation.
+with other languages like Go it can be a problem. We want rounding rather than
+truncation.
 
 ## String
 
