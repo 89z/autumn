@@ -9,6 +9,8 @@ date: 2020-09-11
 
 {{< r "cs/Program.cs" >}}
 
+<https://docs.microsoft.com/dotnet/api/system.io.file.exists>
+
 ## D
 
 {{< r "a.d" >}}

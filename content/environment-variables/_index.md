@@ -1,9 +1,15 @@
 ---
 title: Environment variables
 categories: [system]
-tags: [d, dart, go, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, nim, php, python, rust]
 date: 2020-09-11
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/api/system.environment.getenvironmentvariable>
 
 ## D
 
@@ -54,6 +60,7 @@ date: 2020-09-11
 ## References
 
 - <https://hyperpolyglot.org/c#env-var>
+- <https://hyperpolyglot.org/cpp#processes-environment>
 - <https://hyperpolyglot.org/scripting2#env-var>
 - <https://programming-idioms.org/idiom/205>
 - <https://rosettacode.org/wiki/Environment_variables>

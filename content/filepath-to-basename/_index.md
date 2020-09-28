@@ -1,9 +1,15 @@
 ---
 title: Filepath to basename
 categories: [system]
-tags: [d, dart, go, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, nim, php, python, ruby, rust]
 date: 2020-09-10
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/api/system.io.path.getfilename>
 
 ## D
 
@@ -60,5 +66,4 @@ date: 2020-09-10
 ## References
 
 - <https://hyperpolyglot.org/c#dirname-basename>
-- <https://hyperpolyglot.org/cpp#dirname-basename>
 - <https://hyperpolyglot.org/scripting2#dirname-basename>
