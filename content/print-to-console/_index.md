@@ -9,6 +9,8 @@ date: 2020-09-25
 
 {{< r "cs/Program.cs" >}}
 
+<https://docs.microsoft.com/dotnet/api/system.console.writeline>
+
 ## D
 
 {{< r "a.d" >}}

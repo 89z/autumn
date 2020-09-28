@@ -1,7 +1,7 @@
 ---
 title: Query string
 categories: [network]
-tags: [go, javascript, php, python]
+tags: [go, javascript, php, python, ruby]
 date: 2020-09-19
 ---
 
@@ -31,6 +31,10 @@ date: 2020-09-19
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/urllib.parse.html#urllib.parse.parse_qs>
+
+## Ruby
+
+{{< r "a.rb" >}}
 
 ## References
 

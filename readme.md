@@ -22,18 +22,18 @@ Comparison of programming languages
 66 rust examples
 64 nim links
 64 nim examples
-62 dart examples
 62 d links
+62 dart examples
 58 dart links
 58 javascript links
 57 javascript examples
-50 c-sharp examples
-42 ruby examples
-42 ruby links
-42 c-sharp links
+51 c-sharp examples
+46 ruby examples
+45 ruby links
+45 c-sharp links
 
-649 examples
-626 links
+654 examples
+632 links
 57 goal 7/10
 ~~~
 

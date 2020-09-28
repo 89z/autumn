@@ -1,9 +1,15 @@
 ---
 title: Command line arguments
 categories: [system]
-tags: [d, dart, go, nim, php, python, ruby, rust]
+tags: [c-sharp, d, dart, go, nim, php, python, ruby, rust]
 date: 2020-07-14
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/csharp/programming-guide/main-and-command-args>
 
 ## D
 
@@ -57,5 +63,5 @@ date: 2020-07-14
 ## References
 
 - <https://hyperpolyglot.org/scripting2#cmd-line-arg>
-- <https://programming-idioms.org/idiom/60/read-command-line-arg>
+- <https://programming-idioms.org/idiom/60>
 - <https://rosettacode.org/wiki/Command-line_arguments>

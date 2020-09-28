@@ -1,13 +1,15 @@
 ---
 title: Block-first loops
 categories: [reference]
-tags: [c-sharp, d, dart, go, javascript, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
 
 ## C#
 
 {{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/do>
 
 ## D
 
@@ -52,6 +54,12 @@ date: 2020-09-11
 {{< r "a.py" >}}
 
 <https://docs.python.org/reference/compound_stmts.html#while>
+
+## Ruby
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-Modifier+while+and+until>
 
 ## Rust
 

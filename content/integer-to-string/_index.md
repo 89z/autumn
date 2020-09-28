@@ -70,6 +70,8 @@ date: 2020-09-11
 
 ## Ruby
 
+{{< r "a.rb" >}}
+
 <https://ruby-doc.org/core/Integer.html#method-i-to_s>
 
 ## Rust

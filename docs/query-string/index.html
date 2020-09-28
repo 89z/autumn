@@ -111,6 +111,25 @@ s2 <span style="color:#f92672">=</span> parse<span style="color:#f92672">.</span
 <span style="color:#66d9ef">print</span>(m1, s2, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
 </code></pre></div>
 <p><a href="https://docs.python.org/library/urllib.parse.html#urllib.parse.parse_qs">https://docs.python.org/library/urllib.parse.html#urllib.parse.parse_qs</a></p>
+<h2 id="ruby">Ruby</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;uri&#39;</span>
+
+url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://google.com:80/foo?q=3#bar&#34;</span>
+up <span style="color:#f92672">=</span> <span style="color:#66d9ef">URI</span>(url)
+
+protocol <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>scheme
+hostname <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>host
+port <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>port
+path <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>path
+query_str <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>query
+fragment <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>fragment
+
+<span style="color:#75715e"># Ruby 1.9; returns array of pairs:</span>
+params <span style="color:#f92672">=</span> <span style="color:#66d9ef">URI</span><span style="color:#f92672">.</span>decode_www_form(query_str)
+</code></pre></div>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#parse-url">https://hyperpolyglot.org/scripting2#parse-url</a></li>
