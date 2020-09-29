@@ -1,9 +1,13 @@
 ---
 title: String index
 categories: [string]
-tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
-date: 2020-09-11
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
+date: 2020-09-29
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
 
 ## D
 
@@ -52,6 +56,7 @@ date: 2020-09-11
 ## References
 
 - <https://hyperpolyglot.org/c#index-substr>
+- <https://hyperpolyglot.org/cpp#index-substr>
 - <https://hyperpolyglot.org/scripting#index-substr>
 - <https://hyperpolyglot.org/web#index-substr>
 - <https://programming-idioms.org/idiom/62>
