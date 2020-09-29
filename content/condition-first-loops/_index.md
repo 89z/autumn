@@ -1,9 +1,15 @@
 ---
 title: Condition-first loops
 categories: [reference]
-tags: [d, dart, go, javascript, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/while>
 
 ## D
 
@@ -49,6 +55,12 @@ date: 2020-09-11
 - <https://docs.python.org/library/functions.html#func-range>
 - <https://docs.python.org/reference/compound_stmts.html#while>
 
+## Ruby
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-until+Loop>
+
 ## Rust
 
 {{< r "a.rs" >}}
@@ -57,6 +69,7 @@ date: 2020-09-11
 
 ## References
 
+- <https://hyperpolyglot.org/cpp#while>
 - <https://hyperpolyglot.org/rust#while>
 - <https://hyperpolyglot.org/scripting#while>
 - <https://hyperpolyglot.org/web#while>

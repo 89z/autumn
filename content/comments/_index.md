@@ -59,6 +59,8 @@ date: 2020-09-11
 
 {{< r "a.rb" >}}
 
+<https://ruby-doc.org/core/doc/syntax/comments_rdoc.html>
+
 ## Rust
 
 {{< r "a.rs" >}}

@@ -9,6 +9,9 @@ date: 2020-09-11
 
 {{< r "cs/Program.cs" >}}
 
+- <https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types>
+- <https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types>
+
 ## D
 
 {{< r "a.d" >}}

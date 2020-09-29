@@ -1,7 +1,7 @@
 ---
 title: Multi-way condition
 categories: [reference]
-tags: [c-sharp, dart, go, javascript, php, rust]
+tags: [c-sharp, dart, go, javascript, php, ruby, rust]
 date: 2020-09-11
 ---
 
@@ -32,6 +32,12 @@ date: 2020-09-11
 {{< r "a.php" >}}
 
 <https://php.net/control-structures.switch>
+
+## Ruby
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-case+Expression>
 
 ## Rust
 
