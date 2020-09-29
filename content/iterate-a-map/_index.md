@@ -1,7 +1,7 @@
 ---
 title: Iterate a map
 categories: [iterate, map]
-tags: [c-sharp, go, javascript, php, python]
+tags: [c-sharp, go, javascript, php, python, ruby]
 date: 2020-09-12
 ---
 
@@ -36,6 +36,10 @@ date: 2020-09-12
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/stdtypes#dict.items>
+
+## Ruby
+
+{{< r "a.rb" >}}
 
 ## References
 

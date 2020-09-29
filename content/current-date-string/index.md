@@ -1,7 +1,7 @@
 ---
 title: Current date string
 categories: [time]
-tags: [d, dart, go, javascript, nim, php, python, rust]
+tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-07-19
 ---
 
@@ -53,6 +53,10 @@ date: 2020-07-19
 - <https://docs.python.org/library/datetime.html#datetime.date.isoformat>
 - <https://docs.python.org/library/datetime.html#datetime.date.strftime>
 
+## Ruby
+
+{{< r "a.rb" >}}
+
 ## Rust
 
 {{< r "main.rs" >}}
@@ -61,5 +65,6 @@ date: 2020-07-19
 
 ## References
 
+- <https://hyperpolyglot.org/scripting#fmt-datetime>
 - <https://programming-idioms.org/idiom/99>
 - <https://rosettacode.org/wiki/Date_format>

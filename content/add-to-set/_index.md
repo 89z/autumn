@@ -9,6 +9,8 @@ date: 2020-09-11
 
 {{< r "cs/Program.cs" >}}
 
+<https://docs.microsoft.com/dotnet/api/system.collections.generic.hashset-1.add>
+
 ## D
 
 {{< r "a.d" >}}

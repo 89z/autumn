@@ -45,6 +45,8 @@ date: 2020-09-29
 
 ## Ruby
 
+{{< r "a.rb" >}}
+
 <https://ruby-doc.org/core/String.html#method-i-index>
 
 ## Rust

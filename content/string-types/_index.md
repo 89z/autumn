@@ -1,7 +1,7 @@
 ---
 title: String types
 categories: [string, type]
-tags: [c-sharp, d, dart, go, javascript, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
 
@@ -52,6 +52,10 @@ date: 2020-09-11
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#str>
+
+## Ruby
+
+<https://ruby-doc.org/core/String.html>
 
 ## Rust
 

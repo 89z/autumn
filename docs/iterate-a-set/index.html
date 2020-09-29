@@ -22,16 +22,31 @@
    </header>
 
 
-<main>
-   <h1>Iterate a set</h1>
-   <time>Thu Aug 27 2020</time>
+<h1>Iterate a set</h1>
+<time>Thu Aug 27 2020</time>
    
-   <a href="/autumn/categories/iterate/">iterate</a>
+<a href="/autumn/categories/iterate/">iterate</a>
    
-   <a href="/autumn/categories/set/">set</a>
+<a href="/autumn/categories/set/">set</a>
    
-   
-   <h2 id="javascript">JavaScript</h2>
+   <h2 id="c">C#</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">using</span> System.Collections.Generic;
+ 
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">var</span> t = <span style="color:#66d9ef">new</span> HashSet&lt;<span style="color:#66d9ef">string</span>&gt;{<span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span>};
+      <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> s <span style="color:#66d9ef">in</span> t) {
+         Console.WriteLine(s);
+      }
+   }
+}
+</code></pre></div>
+<p><a href="https://docs.microsoft.com/dotnet/api/system.collections.generic.hashset-1">https://docs.microsoft.com/dotnet/api/system.collections.generic.hashset-1</a></p>
+<h2 id="javascript">JavaScript</h2>
 <p>
 
 
@@ -87,7 +102,6 @@ $a <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_keys</
 </code></pre></div>
 <p><a href="https://doc.rust-lang.org/std/collections/struct.HashSet.html">https://doc.rust-lang.org/std/collections/struct.HashSet.html</a></p>
 
-</main>
 
 </body>
 </html>

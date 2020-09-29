@@ -33,61 +33,18 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
 <span style="color:#66d9ef">using</span> System.Collections.Generic;
-<span style="color:#66d9ef">using</span> System.Linq;
-<span style="color:#66d9ef">using</span> System.Text;
  
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span>
-{
-    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> PrintCollection(IEnumerable&lt;<span style="color:#66d9ef">int</span>&gt; x)
-    {
-        Console.WriteLine(<span style="color:#66d9ef">string</span>.Join(<span style="color:#e6db74">&#34; &#34;</span>, x));
-    }
-    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
-    {
-        Console.OutputEncoding = Encoding.UTF8;
-        Console.WriteLine(<span style="color:#e6db74">&#34;Set creation&#34;</span>);
-        <span style="color:#66d9ef">var</span> A = <span style="color:#66d9ef">new</span> HashSet&lt;<span style="color:#66d9ef">int</span>&gt; { <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">20</span> };
-        <span style="color:#66d9ef">var</span> B = <span style="color:#66d9ef">new</span> HashSet&lt;<span style="color:#66d9ef">int</span>&gt; { <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">20</span> };
- 
-        PrintCollection(A);
-        PrintCollection(B);
- 
-        Console.WriteLine(<span style="color:#e6db74">&#34;Test m ∈ S -- \&#34;m is an element in set S\&#34;&#34;</span>);
-        Console.WriteLine(<span style="color:#e6db74">&#34;14 is an element in set A: {0}&#34;</span>, A.Contains(<span style="color:#ae81ff">14</span>));
-        Console.WriteLine(<span style="color:#e6db74">&#34;15 is an element in set A: {0}&#34;</span>, A.Contains(<span style="color:#ae81ff">15</span>));
- 
-        Console.WriteLine(<span style="color:#e6db74">&#34;A ∪ B -- union; a set of all elements either in set A or in set B.&#34;</span>);
-        <span style="color:#66d9ef">var</span> aUb = A.Union(B);
-        PrintCollection(aUb);
- 
-        Console.WriteLine(<span style="color:#e6db74">&#34;A ∖ B -- difference; a set of all elements in set A, except those in set B.&#34;</span>);
-        <span style="color:#66d9ef">var</span> aDb = A.Except(B);
-        PrintCollection(aDb);
- 
-        Console.WriteLine(<span style="color:#e6db74">&#34;A ⊆ B -- subset; true if every element in set A is also in set B.&#34;</span>);
-        Console.WriteLine(A.IsSubsetOf(B));
-        <span style="color:#66d9ef">var</span> C = <span style="color:#66d9ef">new</span> HashSet&lt;<span style="color:#66d9ef">int</span>&gt; { <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">18</span> };
-        Console.WriteLine(C.IsSubsetOf(A));
- 
-        Console.WriteLine(<span style="color:#e6db74">&#34;A = B -- equality; true if every element of set A is in set B and vice versa.&#34;</span>);
-        Console.WriteLine(A.SetEquals(B));
-        <span style="color:#66d9ef">var</span> D = <span style="color:#66d9ef">new</span> HashSet&lt;<span style="color:#66d9ef">int</span>&gt; { <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">20</span> };
-        Console.WriteLine(A.SetEquals(D));
- 
-        Console.WriteLine(<span style="color:#e6db74">&#34;If A ⊆ B, but A ≠ B, then A is called a true or proper subset of B, written A ⊂ B or A ⊊ B&#34;</span>);
-        Console.WriteLine(A.IsProperSubsetOf(B));
-        Console.WriteLine(C.IsProperSubsetOf(A));
- 
-        Console.WriteLine(<span style="color:#e6db74">&#34;Modify a mutable set.  (Add 10 to A; remove 12 from B).&#34;</span>);
-        A.Add(<span style="color:#ae81ff">10</span>);
-        B.Remove(<span style="color:#ae81ff">12</span>);
-        PrintCollection(A);
-        PrintCollection(B);
- 
-        Console.ReadKey();
-    }
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">var</span> t = <span style="color:#66d9ef">new</span> HashSet&lt;<span style="color:#66d9ef">string</span>&gt;{<span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span>};
+      t.Add(<span style="color:#e6db74">&#34;July&#34;</span>);
+      <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> s <span style="color:#66d9ef">in</span> t) {
+         Console.WriteLine(s);
+      }
+   }
 }
 </code></pre></div>
+<p><a href="https://docs.microsoft.com/dotnet/api/system.collections.generic.hashset-1.add">https://docs.microsoft.com/dotnet/api/system.collections.generic.hashset-1.add</a></p>
 <h2 id="d">D</h2>
 <p>
 

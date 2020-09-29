@@ -1,9 +1,15 @@
 ---
 title: Iterate a set
 categories: [iterate, set]
-tags: [javascript, php, rust]
+tags: [c-sharp, javascript, php, rust]
 date: 2020-08-27
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/api/system.collections.generic.hashset-1>
 
 ## JavaScript
 

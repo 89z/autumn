@@ -1,7 +1,7 @@
 ---
 title: List directory entries
 categories: [system]
-tags: [d, dart, go, nim, php, python, rust]
+tags: [d, dart, go, nim, php, python, ruby, rust]
 date: 2020-09-27
 ---
 
@@ -47,6 +47,10 @@ date: 2020-09-27
 {{< r "path.py" >}}
 
 <https://docs.python.org/library/os.html#os.listdir>
+
+## Ruby
+
+{{< r "a.rb" >}}
 
 ## Rust
 
