@@ -1,9 +1,13 @@
 ---
 title: Split a string
 categories: [array, string]
-tags: [d, dart, go, javascript, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, rust]
 date: 2020-09-11
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
 
 ## D
 
@@ -70,6 +74,7 @@ date: 2020-09-11
 ## References
 
 - <https://hyperpolyglot.org/c#split>
+- <https://hyperpolyglot.org/cpp#split>
 - <https://hyperpolyglot.org/scripting#split>
 - <https://programming-idioms.org/idiom/49>
 - <https://rosettacode.org/wiki/Tokenize_a_string>

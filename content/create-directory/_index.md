@@ -1,7 +1,7 @@
 ---
 title: Create directory
 categories: [system]
-tags: [c-sharp, d, dart, go, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, nim, php, python, ruby, rust]
 date: 2020-07-18
 ---
 
@@ -48,6 +48,10 @@ date: 2020-07-18
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/os.html#os.makedirs>
+
+## Ruby
+
+{{< r "a.rb" >}}
 
 ## Rust
 
