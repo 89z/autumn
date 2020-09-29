@@ -1,9 +1,13 @@
 ---
 title: Set contains value
 categories: [set]
-tags: [dart, go, javascript, nim, php, python, ruby, rust]
+tags: [c-sharp, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
+
+## C#
+
+<https://docs.microsoft.com/dotnet/api/system.collections.generic.hashset-1.contains>
 
 ## Dart
 

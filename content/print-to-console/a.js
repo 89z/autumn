@@ -1,1 +1,2 @@
-console.log('May');
+let s = '📗📕';
+console.log(s);

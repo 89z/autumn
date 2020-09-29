@@ -1,6 +1,6 @@
 ---
-title: Number values
-categories: [number, type]
+title: Integer values
+categories: [number]
 tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---

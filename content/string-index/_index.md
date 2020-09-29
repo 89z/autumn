@@ -9,6 +9,8 @@ date: 2020-09-29
 
 {{< r "cs/Program.cs" >}}
 
+<https://docs.microsoft.com/dotnet/api/system.string.indexof>
+
 ## D
 
 {{< r "a.d" >}}

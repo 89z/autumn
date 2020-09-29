@@ -1,6 +1,6 @@
 ---
-title: Number types
-categories: [number, type]
+title: Float values
+categories: [number]
 tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
