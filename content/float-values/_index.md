@@ -39,7 +39,7 @@ date: 2020-09-11
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/manual.html#types-preminusdefined-integer-types>
+<https://nim-lang.org/docs/manual.html#types-preminusdefined-floating-point-types>
 
 ## PHP
 
@@ -55,16 +55,17 @@ date: 2020-09-11
 
 ## Ruby
 
-<https://ruby-doc.org/core/Numeric.html>
+<https://ruby-doc.org/core/Float.html>
 
 ## Rust
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/index.html#primitives>
+- <https://doc.rust-lang.org/std/primitive.f32.html>
+- <https://doc.rust-lang.org/std/primitive.f64.html>
 
 ## References
 
-- <https://hyperpolyglot.org/c#int-type>
-- <https://hyperpolyglot.org/cpp#int-type>
-- <https://hyperpolyglot.org/web#int-type>
+- <https://hyperpolyglot.org/c#float-type>
+- <https://hyperpolyglot.org/cpp#float-type>
+- <https://hyperpolyglot.org/web#float-type>

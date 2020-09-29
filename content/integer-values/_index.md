@@ -28,7 +28,8 @@ date: 2020-09-11
 
 {{< r "a.go" >}}
 
-<https://golang.org/ref/spec#Integer_literals>
+- <https://golang.org/ref/spec#Integer_literals>
+- <https://golang.org/ref/spec#Numeric_types>
 
 ## JavaScript
 
