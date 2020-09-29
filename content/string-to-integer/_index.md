@@ -1,7 +1,7 @@
 ---
 title: String to integer
 categories: [number]
-tags: [c-sharp, d, dart, go, javascript, php, python, rust]
+tags: [c-sharp, d, dart, go, javascript, php, python, ruby, rust]
 date: 2020-09-28
 ---
 
@@ -63,6 +63,12 @@ date: 2020-09-28
 
 - <https://docs.python.org/library/functions.html#int>
 - <https://docs.python.org/library/locale.html#locale.atoi>
+
+## Ruby
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/String.html#method-i-to_i>
 
 ## Rust
 

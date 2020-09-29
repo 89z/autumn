@@ -1,7 +1,7 @@
 ---
 title: Two-way condition
 categories: [reference]
-tags: [c-sharp, d, dart, go, javascript, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
 
@@ -56,6 +56,10 @@ date: 2020-09-11
 
 - <https://docs.python.org/reference/compound_stmts.html#if>
 - <https://docs.python.org/reference/expressions.html#if-expr>
+
+## Ruby
+
+<https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-if+Expression>
 
 ## Rust
 
