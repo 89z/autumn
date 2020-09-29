@@ -1,9 +1,15 @@
 ---
 title: Create directory
 categories: [system]
-tags: [d, dart, go, nim, php, python, rust]
+tags: [c-sharp, d, dart, go, nim, php, python, rust]
 date: 2020-07-18
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/api/system.io.directory.createdirectory>
 
 ## D
 
@@ -53,5 +59,5 @@ date: 2020-07-18
 
 - <https://hyperpolyglot.org/c#mkdir>
 - <https://hyperpolyglot.org/scripting2#mkdir>
-- <https://programming-idioms.org/idiom/211/create-folder>
+- <https://programming-idioms.org/idiom/211>
 - <https://rosettacode.org/wiki/Make_directory_path>

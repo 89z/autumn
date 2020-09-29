@@ -1,9 +1,15 @@
 ---
 title: Query string
 categories: [network]
-tags: [go, javascript, php, python, ruby]
+tags: [c-sharp, go, javascript, php, python, ruby]
 date: 2020-09-19
 ---
+
+## C#
+
+{{< r "cs/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/api/system.web.httputility.parsequerystring>
 
 ## Go
 
@@ -39,5 +45,4 @@ date: 2020-09-19
 ## References
 
 - <https://hyperpolyglot.org/scripting2#parse-url>
-- <https://programming-idioms.org/idiom/183/make-http-put-request>
 - <https://rosettacode.org/wiki/URL_parser>

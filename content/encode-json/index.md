@@ -1,7 +1,7 @@
 ---
 title: Encode JSON
 categories: [file-format]
-tags: [d, dart, go, javascript, nim, php, python]
+tags: [d, dart, go, javascript, nim, php, python, ruby]
 date: 2020-09-11
 ---
 
@@ -46,6 +46,12 @@ date: 2020-09-11
 {{< r "a.py" >}}
 
 <https://docs.python.org/library/json.html#json.dumps>
+
+## Ruby
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/stdlib/libdoc/json/rdoc>
 
 ## References
 

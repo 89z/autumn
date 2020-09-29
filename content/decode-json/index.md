@@ -1,7 +1,7 @@
 ---
 title: Decode JSON
 categories: [file-format]
-tags: [d, dart, go, javascript, nim, php, python, rust]
+tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---
 
@@ -50,6 +50,12 @@ date: 2020-09-11
 
 - <https://docs.python.org/library/json.html#json.load>
 - <https://docs.python.org/library/json.html#json.loads>
+
+## Ruby
+
+{{< r "a.rb" >}}
+
+<https://ruby-doc.org/stdlib/libdoc/json/rdoc>
 
 ## Rust
 

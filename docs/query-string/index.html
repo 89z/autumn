@@ -22,14 +22,30 @@
    </header>
 
 
-<main>
-   <h1>Query string</h1>
-   <time>Sat Sep 19 2020</time>
+<h1>Query string</h1>
+<time>Sat Sep 19 2020</time>
    
-   <a href="/autumn/categories/network/">network</a>
+<a href="/autumn/categories/network/">network</a>
    
-   
-   <h2 id="go">Go</h2>
+   <h2 id="c">C#</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#960050;background-color:#1e0010">﻿</span><span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">using</span> System.Web;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">var</span> m = HttpUtility.ParseQueryString(<span style="color:#e6db74">&#34;one=odd&amp;two=even&#34;</span>);
+      <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> s_k <span style="color:#66d9ef">in</span> m.AllKeys) {
+         <span style="color:#66d9ef">var</span> s_v = m[s_k];
+         Console.WriteLine(<span style="color:#e6db74">&#34;{0} {1}&#34;</span>, s_k, s_v);
+      }
+   }
+}
+</code></pre></div>
+<p><a href="https://docs.microsoft.com/dotnet/api/system.web.httputility.parsequerystring">https://docs.microsoft.com/dotnet/api/system.web.httputility.parsequerystring</a></p>
+<h2 id="go">Go</h2>
 
 
 
@@ -133,11 +149,9 @@ params <span style="color:#f92672">=</span> <span style="color:#66d9ef">URI</spa
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#parse-url">https://hyperpolyglot.org/scripting2#parse-url</a></li>
-<li><a href="https://programming-idioms.org/idiom/183/make-http-put-request">https://programming-idioms.org/idiom/183/make-http-put-request</a></li>
 <li><a href="https://rosettacode.org/wiki/URL_parser">https://rosettacode.org/wiki/URL_parser</a></li>
 </ul>
 
-</main>
 
 </body>
 </html>

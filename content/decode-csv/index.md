@@ -1,7 +1,7 @@
 ---
 title: Decode CSV
 categories: [file-format]
-tags: [go, javascript, php, python]
+tags: [go, javascript, php, python, ruby]
 date: 2020-06-22
 ---
 
@@ -29,6 +29,10 @@ date: 2020-06-22
 {{< r "b.py" >}}
 
 <https://docs.python.org/library/csv.html>
+
+## Ruby
+
+<https://ruby-doc.org/stdlib/libdoc/csv/rdoc>
 
 ## References
 
