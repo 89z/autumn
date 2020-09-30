@@ -1,5 +1,5 @@
 ---
-title: Integer values
+title: Declare integer
 categories: [number]
 tags: [d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11

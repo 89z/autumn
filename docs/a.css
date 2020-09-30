@@ -108,6 +108,7 @@ h2 {
    margin-bottom: 0;
 }
 .pagination li,
+h1,
 main nav,
 section {
    margin-bottom: .5rem;
@@ -132,6 +133,10 @@ section,
 time {
    margin-left: .5rem;
 }
+.talk,
+table {
+   margin-left: 1rem;
+}
 body,
 h1 {
    margin-right: 0;
@@ -152,7 +157,8 @@ header p,
 section {
    margin-top: .5rem;
 }
-main nav {
+main nav,
+table {
    margin-top: 1rem;
 }
 header p {

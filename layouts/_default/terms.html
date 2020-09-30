@@ -2,7 +2,7 @@
 <main>
    <h1>{{ .Title }}</h1>
    {{ with (.GetPage (path.Join "talk" .Path)) }}
-   <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+   <a class="talk" href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
    <table>
    {{ range .Data.Terms }}

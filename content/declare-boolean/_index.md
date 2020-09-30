@@ -1,5 +1,5 @@
 ---
-title: Boolean values
+title: Declare boolean
 categories: [reference]
 tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11

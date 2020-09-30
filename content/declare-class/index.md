@@ -1,5 +1,5 @@
 ---
-title: Create class instance
+title: Declare class
 categories: [class]
 tags: [go, javascript, php, python, rust]
 date: 2020-09-04
