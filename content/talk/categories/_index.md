@@ -12,7 +12,7 @@ declare function | done
 declare integer  | done
 declare map      | done
 declare set      | done
-declare string   |
+declare string   | done
 
 We need to put Type Qualifiers in its own page, otherwise we would have to deal
 with the extra links.

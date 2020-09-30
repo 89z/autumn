@@ -1,7 +1,8 @@
 <?php
 
 class Date {
-   public $year = 2019;
+   var $year = 2019;
+   var $month = 12;
 }
 
 $o = new Date;

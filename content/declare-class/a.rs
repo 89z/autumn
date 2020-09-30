@@ -4,9 +4,8 @@ fn main() {
    struct Date {
       year: u16,
       month: Option<u8>,
-      day: Option<u8>
    }
 
-   let o = Date {year: 2019, month: None, day: None};
+   let o = Date {year: 2019, month: None};
    println!("{:?}", o);
 }
