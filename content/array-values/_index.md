@@ -1,6 +1,6 @@
 ---
 title: Array values
-categories: [array, type]
+categories: [array]
 tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---

@@ -3,7 +3,7 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>String types / Autumn</title>
+<title>Multi-line strings / Autumn</title>
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/a.css">
    <link rel="stylesheet" href="/autumn/b.css">
@@ -22,12 +22,10 @@
    </header>
 
 
-<h1>String types</h1>
+<h1>Multi-line strings</h1>
 <time>Fri Sep 11 2020</time>
    
 <a href="/autumn/categories/string/">string</a>
-   
-<a href="/autumn/categories/type/">type</a>
    
    <h2 id="c">C#</h2>
 
@@ -36,13 +34,10 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
-   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args) {
-      <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">string</span> s1 = <span style="color:#e6db74">&#34;May&#34;</span>;
-      <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>      String s2 = <span style="color:#e6db74">&#34;May&#34;</span>;
-      <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>      Console.WriteLine(s1 + s2);
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">var</span> s = <span style="color:#e6db74">@&#34;May
+</span><span style="color:#e6db74">June&#34;</span>;
+      Console.WriteLine(s);
    }
 }
 </code></pre></div>

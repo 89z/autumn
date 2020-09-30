@@ -9,8 +9,7 @@ date: 2020-09-11
 
 {{< r "cs/Program.cs" >}}
 
-- <https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types>
-- <https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types>
+<https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types>
 
 ## D
 
@@ -47,8 +46,7 @@ date: 2020-09-11
 
 {{< r "a.php" >}}
 
-- <https://php.net/language.types.float>
-- <https://php.net/language.types.integer>
+<https://php.net/language.types.integer>
 
 ## Python
 
@@ -70,5 +68,4 @@ date: 2020-09-11
 
 ## References
 
-- <https://rosettacode.org/wiki/Literals/Floating_point>
-- <https://rosettacode.org/wiki/Literals/Integer>
+<https://rosettacode.org/wiki/Literals/Integer>

@@ -1,6 +1,6 @@
 ---
-title: String types
-categories: [string, type]
+title: Multi-line strings
+categories: [string]
 tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
 date: 2020-09-11
 ---

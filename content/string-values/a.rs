@@ -4,7 +4,7 @@ fn main() {
 One";
    // example 2
    let s2 = r"Two\Two
-Two";
+Two\";
    // print
    println!("{}{}", s1, s2);
 }

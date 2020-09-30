@@ -2,7 +2,11 @@ using System;
 
 class Program {
    static void Main() {
-      var s = "May";
-      Console.WriteLine(s);
+      // example 1
+      var s1 = "May";
+      // example 2
+      var s2 = @"May\";
+      // print
+      Console.WriteLine(s1 + s2);
    }
 }

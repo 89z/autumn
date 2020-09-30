@@ -6,7 +6,7 @@ let s2 = "Two";
 let s3 = `Three
 Three`;
 // example 4
-let s4 = String.raw`Four
+let s4 = String.raw`Four\
 Four`;
 // print
 console.log(s1, s2, s3, s4);

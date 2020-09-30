@@ -41,6 +41,8 @@ date: 2020-09-12
 
 {{< r "a.rb" >}}
 
+<https://ruby-doc.org/core/Hash.html#method-i-each>
+
 ## References
 
 - <https://hyperpolyglot.org/c#dict-iter>

@@ -1,6 +1,6 @@
 ---
 title: Type qualifiers
-categories: [type]
+categories: [reference]
 tags: [c-sharp, go, javascript, nim, php, rust]
 date: 2020-09-11
 ---
