@@ -2,88 +2,12 @@
 title: 'Category talk'
 ---
 
-~~~
-add-to-array
-add-to-map
-add-to-set
-add-to-string
-anonymous-functions
-array-length
-array-values
-block-first-loops
-boolean-values
-command-line-arguments
-command-line-tools
-comments
-condition-first-loops
-create-class-instance
-create-directory
-current-date-string
-current-time-number
-date-difference
-date-number-to-string
-decode-csv
-decode-json
-define-class-property
-delete-file
-directives
-divide-a-number
-encode-json
-environment-variables
-exit-program
-extract-string-by-pattern
-file-to-file
-file-to-variable
-filepath-to-basename
-filepath-to-dirname
-float-values
-format-float
-format-integer
-get-map-value
-get-string-character
-get-string-length
-http-to-file
-http-to-variable
-import-package
-integer-to-string
-integer-values
-is-directory-or-file
-iterate-a-file
-iterate-a-map
-iterate-a-process
-iterate-a-set
-iterate-a-string
-iterate-an-array
-join-an-array
-list-directory-entries
-logical-operators
-map-contains-key
-match-string-with-literal
-match-string-with-pattern
-modification-time
-multi-line-strings
-multi-way-condition
-named-functions
-print-to-console
-process-to-variable
-proposal
-query-string
-reduce-array
-relative-to-absolute-path
-set-contains-value
-sleep
-slice-an-array
-sort-an-array
-split-a-string
-start-process
-string-index
-string-to-float
-string-to-integer
-string-values
-talk
-time-difference
-two-way-condition
-type-qualifiers
-url-parts
-variable-to-file
-~~~
+- Declare array
+- Declare bool
+- Declare class
+- Declare float
+- Declare function
+- Declare integer
+- Declare map
+- Declare set
+- Declare string
