@@ -10,7 +10,7 @@ declare class    | done
 declare float    | done
 declare function | done
 declare integer  | done
-declare map      |
+declare map      | done
 declare set      |
 declare string   |
 
