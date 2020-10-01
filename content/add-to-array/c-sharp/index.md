@@ -1,7 +1,6 @@
 ---
 title: C#
 tags: [c-sharp]
-date: 2020-09-11
 ---
 
 {{< r "Program.cs" >}}

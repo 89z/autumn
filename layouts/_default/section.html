@@ -2,7 +2,7 @@
 <h1>{{ .Title }}</h1>
 <time>{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
    {{ range (.GetTerms "categories") }}
-<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+<a class="category" href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
 <table>
    {{ range .Pages }}

@@ -1,7 +1,6 @@
 ---
 title: Dart
 tags: [dart]
-date: 2020-09-11
 ---
 
 {{< r "a.dart" >}}

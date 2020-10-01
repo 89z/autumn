@@ -1,7 +1,6 @@
 ---
 title: PHP
 tags: [php]
-date: 2020-09-11
 ---
 
 {{< r "a.php" >}}
