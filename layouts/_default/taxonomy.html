@@ -9,7 +9,7 @@
       {{ $s := printf "%v / %v" .Parent.Title .Title }}
       <tr>
          <td><a href="{{ .RelPermalink }}">{{ $s }}</a></td>
-         <td><time>{{ .Lastmod.Format "Mon Jan 2 2006" }}</time></td>
+         <td><time>{{ .Parent.Lastmod.Format "Mon Jan 2 2006" }}</time></td>
       </tr>
    {{ end }}
    </table>
