@@ -3,11 +3,11 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{{ if .IsHome -}}
+{{ if .IsHome }}
    <title>Autumn</title>
-{{- else -}}
-   <title>{{ .Title }} / Autumn</title>
-{{- end }}
+{{ else }}
+   <title>{{ printf "%v / %v" .Parent.Title .Title }}</title>
+{{ end }}
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/a.css">
    <link rel="stylesheet" href="/autumn/b.css">

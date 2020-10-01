@@ -1,9 +1,9 @@
 {{ define "main" }}
 <main>
-   <h1>{{ .Title }}</h1>
+   <h1>{{ printf "%v / %v" .Parent.Title .Title }}</h1>
    <time>{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
-   {{ range (.GetTerms "categories") }}
-   <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+   {{ range (.Parent.GetTerms "categories") }}
+   <a class="category" href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
    {{ with (.GetPage (path.Join "talk" .Path)) }}
    <a href="{{ .RelPermalink }}">{{ .Title }}</a>

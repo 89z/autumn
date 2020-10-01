@@ -1,7 +1,6 @@
 ---
-title: Add to array
-categories: [array]
-tags: [c-sharp, d, dart, go, javascript, nim, php, python, ruby, rust]
+title: D
+tags: [d]
 date: 2020-09-11
 ---
 

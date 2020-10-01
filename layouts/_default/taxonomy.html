@@ -6,8 +6,9 @@
    {{ end }}
    <table>
    {{ range .Pages.ByTitle }}
+      {{ $s := printf "%v / %v" .Parent.Title .Title }}
       <tr>
-         <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
+         <td><a href="{{ .RelPermalink }}">{{ $s }}</a></td>
          <td><time>{{ .Lastmod.Format "Mon Jan 2 2006" }}</time></td>
       </tr>
    {{ end }}

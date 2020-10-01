@@ -4,5 +4,12 @@
    {{ range (.GetTerms "categories") }}
 <a href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
+<table>
+   {{ range .Pages }}
+   <tr>
+      <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
+   </tr>
+   {{ end }}
+</table>
    {{ .Content }}
 {{ end }}
