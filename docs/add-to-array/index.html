@@ -3,7 +3,7 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Add to array / Autumn</title>
+<title> / Autumn</title>
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/a.css">
    <link rel="stylesheet" href="/autumn/b.css">
@@ -22,175 +22,10 @@
    </header>
 
 
-<h1>Add to array</h1>
+<h1></h1>
 <time>Fri Sep 11 2020</time>
    
-<a href="/autumn/categories/array/">array</a>
    
-   <h2 id="c">C#</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
-<span style="color:#66d9ef">using</span> System.Collections.Generic;
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
-   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">var</span> a = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
-      a.Add(<span style="color:#e6db74">&#34;May&#34;</span>);
-      a.Add(<span style="color:#e6db74">&#34;June&#34;</span>);
-      <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> s <span style="color:#66d9ef">in</span> a) {
-         Console.WriteLine(s);
-      }
-   }
-}
-</code></pre></div>
-<p><a href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.add">https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.add</a></p>
-<h2 id="d">D</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">10</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">11</span><span style="color:#f92672">];</span>
-   a <span style="color:#f92672">~=</span> <span style="color:#ae81ff">12</span><span style="color:#f92672">;</span>
-   a<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
-<p><a href="https://dlang.org/spec/arrays.html#array-concatenation">https://dlang.org/spec/arrays.html#array-concatenation</a></p>
-<h2 id="dart">Dart</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>];
-   a.add(<span style="color:#ae81ff">12</span>);
-   print(a);
-}
-</code></pre></div>
-<p><a href="https://api.dart.dev/dart-core/List-class.html">https://api.dart.dev/dart-core/List-class.html</a></p>
-<h2 id="go">Go</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>}
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">a1</span> <span style="color:#f92672">:=</span> append(<span style="color:#a6e22e">a</span>, <span style="color:#ae81ff">12</span>)
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">a2</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">13</span>}
-   <span style="color:#a6e22e">a2</span> = append(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">a2</span><span style="color:#f92672">...</span>)
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a1</span>, <span style="color:#a6e22e">a2</span>)
-}
-</code></pre></div>
-<p><a href="https://golang.org/pkg/builtin#append">https://golang.org/pkg/builtin#append</a></p>
-<h2 id="javascript">JavaScript</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>];
-<span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">12</span>);
-<span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#ae81ff">13</span>);
-<span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">15</span>);
-<span style="color:#75715e">// example 4
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a4</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">17</span>];
-<span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">a4</span>);
-<span style="color:#75715e">// example 5
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">a</span>, <span style="color:#ae81ff">18</span>];
-<span style="color:#75715e">// print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span>);
-</code></pre></div>
-<ul>
-<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/concat">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/concat</a></li>
-<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/push">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/push</a></li>
-<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Spread_syntax">https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Spread_syntax</a></li>
-</ul>
-<h2 id="nim">Nim</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">var</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">@[</span><span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span><span style="color:#f92672">]</span>
-a.add(<span style="color:#ae81ff">12</span>)
-echo a
-</code></pre></div>
-<p><a href="https://nim-lang.org/docs/system.html#add,seq%5BT%5D,T">https://nim-lang.org/docs/system.html#add,seq[T],T</a></p>
-<h2 id="php">PHP</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>];
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">array_push</span>($a, <span style="color:#ae81ff">12</span>);
-<span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$a[] <span style="color:#f92672">=</span> <span style="color:#ae81ff">13</span>;
-<span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$a3 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">15</span>];
-$a <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_merge</span>($a, $a3);
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($a);
-</code></pre></div>
-<ul>
-<li><a href="https://php.net/function.array-merge">https://php.net/function.array-merge</a></li>
-<li><a href="https://php.net/function.array-push">https://php.net/function.array-push</a></li>
-<li><a href="https://php.net/types.array#language.types.array.syntax.modifying">https://php.net/types.array#language.types.array.syntax.modifying</a></li>
-</ul>
-<h2 id="python">Python</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>]
-<span style="color:#75715e"># example 1</span>
-a<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">13</span>)
-<span style="color:#75715e"># example 2</span>
-a2 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">15</span>]
-a<span style="color:#f92672">.</span>extend(a2)
-<span style="color:#75715e"># example 3</span>
-a <span style="color:#f92672">=</span> [<span style="color:#f92672">*</span>a, <span style="color:#ae81ff">16</span>]
-<span style="color:#75715e"># example 4</span>
-a <span style="color:#f92672">+=</span> [<span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">18</span>]
-<span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(a)
-</code></pre></div>
-<p><a href="https://docs.python.org/library/stdtypes.html#typesseq-mutable">https://docs.python.org/library/stdtypes.html#typesseq-mutable</a></p>
-<h2 id="ruby">Ruby</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span><span style="color:#f92672">]</span>
-a<span style="color:#f92672">.</span>push(<span style="color:#ae81ff">12</span>)
-puts a
-</code></pre></div>
-<p><a href="https://ruby-doc.org/core/Array.html#method-i-push">https://ruby-doc.org/core/Array.html#method-i-push</a></p>
-<h2 id="rust">Rust</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> a <span style="color:#f92672">=</span> vec<span style="color:#f92672">!</span>[<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>];
-   a.push(<span style="color:#ae81ff">12</span>);
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, a);
-}
-</code></pre></div>
-<p><a href="https://doc.rust-lang.org/std/vec/struct.Vec.html#method.push">https://doc.rust-lang.org/std/vec/struct.Vec.html#method.push</a></p>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://hyperpolyglot.org/cpp#resizable-array-back">https://hyperpolyglot.org/cpp#resizable-array-back</a></li>
-<li><a href="https://hyperpolyglot.org/rust#array-back">https://hyperpolyglot.org/rust#array-back</a></li>
-<li><a href="https://hyperpolyglot.org/web#array-back">https://hyperpolyglot.org/web#array-back</a></li>
-<li><a href="https://programming-idioms.org/idiom/166/concatenate-two-lists">https://programming-idioms.org/idiom/166/concatenate-two-lists</a></li>
-<li><a href="https://programming-idioms.org/idiom/171/add-an-element-at-end">https://programming-idioms.org/idiom/171/add-an-element-at-end</a></li>
-<li><a href="https://rosettacode.org/wiki/Array_concatenation">https://rosettacode.org/wiki/Array_concatenation</a></li>
-</ul>
-
 
 </body>
 </html>
