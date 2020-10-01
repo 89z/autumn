@@ -25,6 +25,7 @@ th {
 code {
    border-radius: 5px;
 }
+.tag,
 section {
    border-radius: 10px;
 }
@@ -95,11 +96,12 @@ header nav,
 header p {
    font-size: 1.4rem;
 }
+.tag,
 h2 {
    font-size: 1.6rem;
 }
 .pagination,
-article,
+article.index,
 header nav {
    justify-content: center;
 }
@@ -114,6 +116,7 @@ section {
    margin-bottom: .5rem;
 }
 .highlight,
+.tag,
 ol,
 pre,
 table,
@@ -126,16 +129,17 @@ h1 {
 }
 .category,
 .pagination li,
-h1,
 h2,
 p,
 pre,
-section,
-time {
+section {
    margin-left: .5rem;
 }
+.tag,
 .talk,
-table {
+h1,
+table,
+time {
    margin-left: 1rem;
 }
 body,
@@ -144,9 +148,12 @@ h1 {
 }
 .pagination li,
 pre,
-section,
-time {
+section {
    margin-right: .5rem;
+}
+.tag,
+time {
+   margin-right: 1rem;
 }
 body,
 h1,
@@ -158,6 +165,8 @@ header p,
 section {
    margin-top: .5rem;
 }
+.tag,
+article.section,
 main nav,
 table {
    margin-top: 1rem;
@@ -177,6 +186,7 @@ blockquote,
 td {
    padding-bottom: .5rem;
 }
+.tag,
 header,
 pre,
 section {
@@ -190,6 +200,7 @@ code {
 }
 .category,
 .page-link,
+.tag,
 blockquote,
 header,
 pre,
@@ -202,6 +213,7 @@ code {
 }
 .category,
 .page-link,
+.tag,
 blockquote,
 header,
 pre,
@@ -220,6 +232,7 @@ blockquote,
 header {
    padding-top: .5rem;
 }
+.tag,
 pre,
 section {
    padding-top: 1rem;
