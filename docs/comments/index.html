@@ -31,161 +31,27 @@
    
 <article class="section">
    
-   <h2 id="c">C#</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
-   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>      Console.WriteLine(<span style="color:#e6db74">&#34;May&#34;</span>);
-      <span style="color:#75715e">/*
-</span><span style="color:#75715e">      example 2
-</span><span style="color:#75715e">      */</span>
-      Console.WriteLine(<span style="color:#e6db74">&#34;May&#34;</span>);
-   }
-}
-</code></pre></div>
-<p><a href="https://docs.microsoft.com/dotnet/csharp/language-reference/language-specification/lexical-structure#comments">https://docs.microsoft.com/dotnet/csharp/language-reference/language-specification/lexical-structure#comments</a></p>
-<h2 id="d">D</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#e6db74">&#34;example 1&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
-   <span style="color:#f92672">/*</span>
-   example <span style="color:#ae81ff">2</span>
-   <span style="color:#f92672">*/</span>
-   <span style="color:#e6db74">&#34;example 2&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
-<p><a href="https://dlang.org/spec/lex.html#comment">https://dlang.org/spec/lex.html#comment</a></p>
-<h2 id="dart">Dart</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   print(<span style="color:#e6db74">&#39;example 1&#39;</span>);
-   <span style="color:#75715e">/*
-</span><span style="color:#75715e">   example 2
-</span><span style="color:#75715e">   */</span>
-   print(<span style="color:#e6db74">&#39;example 2&#39;</span>);
-}
-</code></pre></div>
-<p><a href="https://dart.dev/guides/language/language-tour#comments">https://dart.dev/guides/language/language-tour#comments</a></p>
-<h2 id="go">Go</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   println(<span style="color:#e6db74">&#34;example 1&#34;</span>)
-   <span style="color:#75715e">/*
-</span><span style="color:#75715e">   example 2
-</span><span style="color:#75715e">   */</span>
-   println(<span style="color:#e6db74">&#34;example 2&#34;</span>)
-}
-</code></pre></div>
-<p><a href="https://golang.org/ref/spec#Comments">https://golang.org/ref/spec#Comments</a></p>
-<h2 id="javascript">JavaScript</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;example 1&#39;</span>);
-<span style="color:#75715e">/*
-</span><span style="color:#75715e">example 2
-</span><span style="color:#75715e">*/</span>
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;example 2&#39;</span>);
-</code></pre></div>
-<p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Lexical_grammar">https://developer.mozilla.org/Web/JavaScript/Reference/Lexical_grammar</a></p>
-<h2 id="nim">Nim</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#75715e"># example 1</span>
-echo <span style="color:#e6db74">&#34;example 1&#34;</span>
-<span style="color:#75715e">#[
-</span><span style="color:#75715e">example 2
-</span><span style="color:#75715e">]#</span>
-echo <span style="color:#e6db74">&#34;example 2&#34;</span>
-</code></pre></div>
-<ul>
-<li><a href="https://nim-lang.org/docs/manual.html#lexical-analysis-comments">https://nim-lang.org/docs/manual.html#lexical-analysis-comments</a></li>
-<li><a href="https://nim-lang.org/docs/manual.html#lexical-analysis-multiline-comments">https://nim-lang.org/docs/manual.html#lexical-analysis-multiline-comments</a></li>
-</ul>
-<h2 id="php">PHP</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;example 1</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-<span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;example 2</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-<span style="color:#75715e">/*
-</span><span style="color:#75715e">example 3
-</span><span style="color:#75715e">*/</span>
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;example 3</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-</code></pre></div>
-<p><a href="https://php.net/language.basic-syntax.comments">https://php.net/language.basic-syntax.comments</a></p>
-<h2 id="python">Python</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># example 1</span>
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;example 1&#39;</span>)
-<span style="color:#e6db74">&#39;&#39;&#39;
-</span><span style="color:#e6db74">example 2
-</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;example 2&#39;</span>)
-<span style="color:#e6db74">&#34;&#34;&#34;
-</span><span style="color:#e6db74">example 3
-</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;example 3&#39;</span>)
-</code></pre></div>
-<ul>
-<li><a href="https://docs.python.org/reference/lexical_analysis.html#comments">https://docs.python.org/reference/lexical_analysis.html#comments</a></li>
-<li><a href="https://docs.python.org/reference/lexical_analysis.html#strings">https://docs.python.org/reference/lexical_analysis.html#strings</a></li>
-</ul>
-<h2 id="ruby">Ruby</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#75715e"># example 1</span>
-puts <span style="color:#e6db74">&#39;example 1&#39;</span>
-</code></pre></div>
-<p><a href="https://ruby-doc.org/core/doc/syntax/comments_rdoc.html">https://ruby-doc.org/core/doc/syntax/comments_rdoc.html</a></p>
-<h2 id="rust">Rust</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;example 1&#34;</span>);
-   <span style="color:#75715e">/*
-</span><span style="color:#75715e">   example 2
-</span><span style="color:#75715e">   */</span>
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;example 2&#34;</span>);
-}
-</code></pre></div>
-<p><a href="https://doc.rust-lang.org/reference/comments.html">https://doc.rust-lang.org/reference/comments.html</a></p>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://hyperpolyglot.org/cpp#eol-comment">https://hyperpolyglot.org/cpp#eol-comment</a></li>
-<li><a href="https://hyperpolyglot.org/scripting#eol-comment">https://hyperpolyglot.org/scripting#eol-comment</a></li>
-<li><a href="https://hyperpolyglot.org/web#eol-comment">https://hyperpolyglot.org/web#eol-comment</a></li>
-<li><a href="https://rosettacode.org/wiki/Comments">https://rosettacode.org/wiki/Comments</a></li>
-</ul>
-
+   <a class="tag" href="/autumn/comments/c-sharp/">C#</a>
+   
+   <a class="tag" href="/autumn/comments/d/">D</a>
+   
+   <a class="tag" href="/autumn/comments/dart/">Dart</a>
+   
+   <a class="tag" href="/autumn/comments/go/">Go</a>
+   
+   <a class="tag" href="/autumn/comments/javascript/">JavaScript</a>
+   
+   <a class="tag" href="/autumn/comments/nim/">Nim</a>
+   
+   <a class="tag" href="/autumn/comments/php/">PHP</a>
+   
+   <a class="tag" href="/autumn/comments/python/">Python</a>
+   
+   <a class="tag" href="/autumn/comments/ruby/">Ruby</a>
+   
+   <a class="tag" href="/autumn/comments/rust/">Rust</a>
+   
+   
 </article>
 
 </body>
