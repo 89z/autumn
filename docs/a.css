@@ -19,13 +19,11 @@ td,
 th {
    border-color: #e5e5e5;
 }
-.highlight,
-.page-link,
 a.category,
+a.page-link,
 code {
    border-radius: 5px;
 }
-.tag,
 section {
    border-radius: 10px;
 }
@@ -52,22 +50,20 @@ body {
 time {
    color: #9a9a9a;
 }
-.active .page-link,
-.light,
+a.light,
+li.active a.page-link,
+p.light,
 pre code,
 pre {
    color: #f8f8f2;
 }
-.pagination,
 article,
 nav.header,
-nav.section {
+nav.section,
+ul.pagination {
    display: flex;
 }
-.pagination .disabled {
-   display: none;
-}
-.header a,
+a.light,
 section.terms {
    flex-basis: 200px;
 }
@@ -94,28 +90,24 @@ header p,
 nav.header {
    font-size: 1.4rem;
 }
-.tag,
 h2 {
    font-size: 1.6rem;
 }
-.pagination,
 article.index,
-nav.header {
+nav.header,
+ul.pagination {
    justify-content: center;
 }
 h1,
 h2 {
    margin-bottom: 0;
 }
-.pagination li,
 h1.section,
 h1.term,
 nav.category,
 section {
    margin-bottom: .5rem;
 }
-.highlight,
-.tag,
 ol,
 pre,
 table,
@@ -125,30 +117,28 @@ ul {
 body {
    margin-left: 0;
 }
-.pagination li,
-.tag,
 h1.section,
 h1.term,
 h2[id],
+li.page-item,
 p,
 pre,
 section,
 time.section {
    margin-left: .5rem;
 }
-.talk,
+h1.taxo,
 table {
    margin-left: 1rem;
 }
 body {
    margin-right: 0;
 }
-.pagination li,
+li.page-item,
 pre,
 section {
    margin-right: .5rem;
 }
-.tag,
 time.section {
    margin-right: 1rem;
 }
@@ -157,13 +147,11 @@ h1,
 h2 {
    margin-top: 0;
 }
-.pagination li,
 header p,
 nav.section,
 section {
    margin-top: .5rem;
 }
-.tag,
 nav.category,
 table {
    margin-top: 1rem;
@@ -177,13 +165,12 @@ pre {
 code {
    padding-bottom: .25rem;
 }
-.page-link,
 a.category,
+a.page-link,
 blockquote,
 td {
    padding-bottom: .5rem;
 }
-.tag,
 header,
 pre,
 section {
@@ -195,9 +182,8 @@ pre code {
 code {
    padding-left: .5rem;
 }
-.page-link,
-.tag,
 a.category,
+a.page-link,
 blockquote,
 header,
 pre,
@@ -208,9 +194,8 @@ td {
 code {
    padding-right: .5rem;
 }
-.page-link,
-.tag,
 a.category,
+a.page-link,
 blockquote,
 header,
 pre,
@@ -223,13 +208,12 @@ td,
 th {
    padding-top: .25em;
 }
-.page-link,
 a.category,
+a.page-link,
 blockquote,
 header {
    padding-top: .5rem;
 }
-.tag,
 pre,
 section {
    padding-top: 1rem;
