@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Process to variable / Python</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/a.css">
+   <link rel="stylesheet" href="/autumn/b.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a class="light" href="/autumn">Autumn</a>
+      </h1>
+      <p class="light">Comparison of programming languages</p>
+      <nav class="header">
+         <a class="light" href="/autumn/categories">Categories</a>
+         <a class="light" href="/autumn/tags">Tags</a>
+         <a class="light" href="https://github.com/nu8/autumn">Repo</a>
+      </nav>
+   </header>
+
+
+<main>
+   <h1>Process to variable / Python</h1>
+   <time>Fri Sep 11 2020</time>
+   
+   <a class="category" href="/autumn/categories/input-output/">input-output</a>
+   
+   
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> subprocess
+a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;python&#39;</span>, <span style="color:#e6db74">&#39;-V&#39;</span>]
+<span style="color:#75715e"># example 1</span>
+o <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>Popen(a, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE, text<span style="color:#f92672">=</span>True)
+s1 <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>stdout<span style="color:#f92672">.</span>read()
+<span style="color:#75715e"># example 2</span>
+o <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>run(a, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE, text<span style="color:#f92672">=</span>True)
+s2 <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>stdout
+<span style="color:#75715e"># example 3</span>
+s3 <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>check_output(a, text<span style="color:#f92672">=</span>True)
+<span style="color:#75715e"># print</span>
+<span style="color:#66d9ef">print</span>(s1, s2, s3, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+</code></pre></div>
+<ul>
+<li><a href="https://docs.python.org/library/subprocess.html#subprocess.Popen">https://docs.python.org/library/subprocess.html#subprocess.Popen</a></li>
+<li><a href="https://docs.python.org/library/subprocess.html#subprocess.check_output">https://docs.python.org/library/subprocess.html#subprocess.check_output</a></li>
+<li><a href="https://docs.python.org/library/subprocess.html#subprocess.run">https://docs.python.org/library/subprocess.html#subprocess.run</a></li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/scripting2#cmd-subst">https://hyperpolyglot.org/scripting2#cmd-subst</a></li>
+<li><a href="https://hyperpolyglot.org/web#external-cmd">https://hyperpolyglot.org/web#external-cmd</a></li>
+<li><a href="https://rosettacode.org/wiki/Get_system_command_output">https://rosettacode.org/wiki/Get_system_command_output</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
