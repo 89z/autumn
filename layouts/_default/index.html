@@ -7,7 +7,7 @@
             <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
          </h2>
          <time>{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
-         <nav>
+         <nav class="category">
       {{ range (.GetTerms "categories") }}
             <a class="category" href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}

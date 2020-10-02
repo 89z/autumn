@@ -2,7 +2,7 @@
    --light-red: hsl(359, 45%, 90%);
    --red: hsl(359, 45%, 46%);
 }
-.theme-base-08 .category,
+.theme-base-08 a.category,
 .theme-base-08 .page-link {
    background: var(--light-red);
 }
