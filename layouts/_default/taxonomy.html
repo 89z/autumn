@@ -2,7 +2,7 @@
 <main>
    <h1 class="taxo">{{ .Title }}</h1>
    {{ with (.GetPage (path.Join "talk" .Path)) }}
-   <a class="talk" href="{{ .RelPermalink }}">{{ .Title }}</a>
+   <a class="taxo" href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
    <table>
    {{ range .Pages.ByTitle }}
