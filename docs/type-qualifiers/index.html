@@ -31,97 +31,19 @@
    
 <article class="section">
    
-   <h2 id="c">C#</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
-   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> n = <span style="color:#ae81ff">10</span>;
-      Console.WriteLine(n);
-   }
-}
-</code></pre></div>
-<p><a href="https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/const">https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/const</a></p>
-<h2 id="go">Go</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n1</span> = <span style="color:#ae81ff">10</span>
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">n2</span> = <span style="color:#ae81ff">10</span>
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>)
-}
-</code></pre></div>
-<ul>
-<li><a href="https://golang.org/ref/spec#Constant_declarations">https://golang.org/ref/spec#Constant_declarations</a></li>
-<li><a href="https://golang.org/ref/spec#Variable_declarations">https://golang.org/ref/spec#Variable_declarations</a></li>
-</ul>
-<h2 id="javascript">JavaScript</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-<span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n2</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-<span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n3</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-<span style="color:#75715e">// print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>, <span style="color:#a6e22e">n3</span>);
-</code></pre></div>
-<ul>
-<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Statements/const">https://developer.mozilla.org/Web/JavaScript/Reference/Statements/const</a></li>
-<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Statements/let">https://developer.mozilla.org/Web/JavaScript/Reference/Statements/let</a></li>
-<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Statements/var">https://developer.mozilla.org/Web/JavaScript/Reference/Statements/var</a></li>
-</ul>
-<h2 id="nim">Nim</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#75715e"># example 1</span>
-<span style="color:#66d9ef">const</span> n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
-<span style="color:#75715e"># example 2</span>
-<span style="color:#66d9ef">let</span> n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
-<span style="color:#75715e"># example 3</span>
-<span style="color:#66d9ef">var</span> n3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
-<span style="color:#75715e"># print</span>
-echo <span style="color:#f92672">[</span>n1, n2, n3<span style="color:#f92672">]</span>
-</code></pre></div>
-<p><a href="https://nim-lang.org/docs/manual.html#statements-and-expressions-var-statement">https://nim-lang.org/docs/manual.html#statements-and-expressions-var-statement</a></p>
-<h2 id="php">PHP</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">n</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-<span style="color:#a6e22e">var_dump</span>(<span style="color:#a6e22e">n</span>);
-</code></pre></div>
-<p><a href="https://php.net/language.constants.syntax">https://php.net/language.constants.syntax</a></p>
-<h2 id="rust">Rust</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
-}
-</code></pre></div>
-<p><a href="https://doc.rust-lang.org/std/keyword.let.html">https://doc.rust-lang.org/std/keyword.let.html</a></p>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://hyperpolyglot.org/cpp#write-once-var">https://hyperpolyglot.org/cpp#write-once-var</a></li>
-<li><a href="https://hyperpolyglot.org/scripting#const">https://hyperpolyglot.org/scripting#const</a></li>
-<li><a href="https://hyperpolyglot.org/web#const">https://hyperpolyglot.org/web#const</a></li>
-</ul>
-
+   <a class="tag" href="/autumn/type-qualifiers/c-sharp/">C#</a>
+   
+   <a class="tag" href="/autumn/type-qualifiers/go/">Go</a>
+   
+   <a class="tag" href="/autumn/type-qualifiers/javascript/">JavaScript</a>
+   
+   <a class="tag" href="/autumn/type-qualifiers/nim/">Nim</a>
+   
+   <a class="tag" href="/autumn/type-qualifiers/php/">PHP</a>
+   
+   <a class="tag" href="/autumn/type-qualifiers/rust/">Rust</a>
+   
+   
 </article>
 
 </body>
