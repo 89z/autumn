@@ -31,180 +31,27 @@
    
 <article class="section">
    
-   <h2 id="c">C#</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
-   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">var</span> n = <span style="color:#ae81ff">10</span>;
-      <span style="color:#66d9ef">while</span> (n &lt; <span style="color:#ae81ff">20</span>) {
-         Console.WriteLine(n);
-         n++;
-      }
-   }
-}
-</code></pre></div>
-<p><a href="https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/while">https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/while</a></p>
-<h2 id="d">D</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      n<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
-      n<span style="color:#f92672">++;</span>
-   <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
-<p><a href="https://dlang.org/spec/statement.html#while-statement">https://dlang.org/spec/statement.html#while-statement</a></p>
-<h2 id="dart">Dart</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#66d9ef">while</span> (n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span>) {
-      print(n);
-      n<span style="color:#f92672">++</span>;
-   }
-}
-</code></pre></div>
-<p><a href="https://dart.dev/guides/language/language-tour#while-and-do-while">https://dart.dev/guides/language/language-tour#while-and-do-while</a></p>
-<h2 id="go">Go</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   println(<span style="color:#e6db74">&#34;example 1&#34;</span>)
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">10</span>; <span style="color:#a6e22e">n</span> &lt; <span style="color:#ae81ff">20</span>; <span style="color:#a6e22e">n</span><span style="color:#f92672">++</span> {
-      println(<span style="color:#a6e22e">n</span>)
-   }
-   println(<span style="color:#e6db74">&#34;example 2&#34;</span>)
-   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">10</span>
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">n</span> &lt; <span style="color:#ae81ff">20</span> {
-      println(<span style="color:#a6e22e">n</span>)
-      <span style="color:#a6e22e">n</span><span style="color:#f92672">++</span>
-   }
-}
-</code></pre></div>
-<p><a href="https://golang.org/ref/spec#For_statements">https://golang.org/ref/spec#For_statements</a></p>
-<h2 id="javascript">JavaScript</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;example 1&#39;</span>);
-<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>; <span style="color:#a6e22e">n</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span>; <span style="color:#a6e22e">n</span><span style="color:#f92672">++</span>) {
-   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n</span>);
-}
-
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;example 2&#39;</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-<span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">n</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span>) {
-   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n</span>);
-   <span style="color:#a6e22e">n</span><span style="color:#f92672">++</span>;
-}
-</code></pre></div>
-<ul>
-<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for">https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for</a></li>
-<li><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Statements/while">https://developer.mozilla.org/Web/JavaScript/Reference/Statements/while</a></li>
-</ul>
-<h2 id="nim">Nim</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">var</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
-<span style="color:#66d9ef">while</span> n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span>:
-   echo n
-   n <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-</code></pre></div>
-<h2 id="php">PHP</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;example 1</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-<span style="color:#66d9ef">for</span> ($n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>; $n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span>; $n<span style="color:#f92672">++</span>) {
-   <span style="color:#a6e22e">var_dump</span>($n);
-}
-
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;example 2</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-<span style="color:#66d9ef">while</span> ($n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span>) {
-   <span style="color:#a6e22e">var_dump</span>($n);
-   $n<span style="color:#f92672">++</span>;
-}
-
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;example 3</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-$a <span style="color:#f92672">=</span> <span style="color:#a6e22e">range</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">19</span>);
-<span style="color:#66d9ef">foreach</span> ($a <span style="color:#66d9ef">as</span> $n) {
-   <span style="color:#a6e22e">var_dump</span>($n);
-}
-</code></pre></div>
-<ul>
-<li><a href="https://php.net/control-structures.for">https://php.net/control-structures.for</a></li>
-<li><a href="https://php.net/control-structures.while">https://php.net/control-structures.while</a></li>
-<li><a href="https://php.net/function.range">https://php.net/function.range</a></li>
-</ul>
-<h2 id="python">Python</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;example 1&#39;</span>)
-n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
-<span style="color:#66d9ef">while</span> n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span>:
-   <span style="color:#66d9ef">print</span>(n)
-   n <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;example 2&#39;</span>)
-<span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>):
-   <span style="color:#66d9ef">print</span>(n)
-</code></pre></div>
-<ul>
-<li><a href="https://docs.python.org/library/functions.html#func-range">https://docs.python.org/library/functions.html#func-range</a></li>
-<li><a href="https://docs.python.org/reference/compound_stmts.html#while">https://docs.python.org/reference/compound_stmts.html#while</a></li>
-</ul>
-<h2 id="ruby">Ruby</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">100</span> <span style="color:#66d9ef">do</span>
-  i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-<span style="color:#66d9ef">end</span>
-</code></pre></div>
-<p><a href="https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-until+Loop">https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-until+Loop</a></p>
-<h2 id="rust">Rust</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#66d9ef">while</span> n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span> {
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
-      n <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
-   }
-}
-</code></pre></div>
-<p><a href="https://doc.rust-lang.org/std/keyword.while.html">https://doc.rust-lang.org/std/keyword.while.html</a></p>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://hyperpolyglot.org/cpp#while">https://hyperpolyglot.org/cpp#while</a></li>
-<li><a href="https://hyperpolyglot.org/rust#while">https://hyperpolyglot.org/rust#while</a></li>
-<li><a href="https://hyperpolyglot.org/scripting#while">https://hyperpolyglot.org/scripting#while</a></li>
-<li><a href="https://hyperpolyglot.org/web#while">https://hyperpolyglot.org/web#while</a></li>
-<li><a href="https://programming-idioms.org/idiom/2">https://programming-idioms.org/idiom/2</a></li>
-<li><a href="https://rosettacode.org/wiki/Loops/For">https://rosettacode.org/wiki/Loops/For</a></li>
-<li><a href="https://rosettacode.org/wiki/Loops/While">https://rosettacode.org/wiki/Loops/While</a></li>
-</ul>
-
+   <a class="tag" href="/autumn/condition-first-loops/c-sharp/">C#</a>
+   
+   <a class="tag" href="/autumn/condition-first-loops/d/">D</a>
+   
+   <a class="tag" href="/autumn/condition-first-loops/dart/">Dart</a>
+   
+   <a class="tag" href="/autumn/condition-first-loops/go/">Go</a>
+   
+   <a class="tag" href="/autumn/condition-first-loops/javascript/">JavaScript</a>
+   
+   <a class="tag" href="/autumn/condition-first-loops/nim/">Nim</a>
+   
+   <a class="tag" href="/autumn/condition-first-loops/php/">PHP</a>
+   
+   <a class="tag" href="/autumn/condition-first-loops/python/">Python</a>
+   
+   <a class="tag" href="/autumn/condition-first-loops/ruby/">Ruby</a>
+   
+   <a class="tag" href="/autumn/condition-first-loops/rust/">Rust</a>
+   
+   
 </article>
 
 </body>
