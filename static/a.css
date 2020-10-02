@@ -118,7 +118,6 @@ body {
    margin-left: 0;
 }
 h1.section,
-h1.term,
 h2[id],
 li.page-item,
 p,
@@ -127,7 +126,9 @@ section,
 time.section {
    margin-left: .5rem;
 }
+a.term,
 h1.taxo,
+h1.term,
 table {
    margin-left: 1rem;
 }
