@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Current time number / Rust</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/a.css">
+   <link rel="stylesheet" href="/autumn/b.css">
+</head>
+<body class="theme-base-08">
+   <header>
+      <h1>
+         <a href="/autumn">Autumn</a>
+      </h1>
+      <p>Comparison of programming languages</p>
+      <nav>
+         <a href="/autumn/categories">Categories</a>
+         <a href="/autumn/tags">Tags</a>
+         <a href="https://github.com/nu8/autumn">Repo</a>
+      </nav>
+   </header>
+
+
+<main>
+   <h1>Current time number / Rust</h1>
+   <time>Fri Sep 11 2020</time>
+   
+   <a class="category" href="/autumn/categories/time/">time</a>
+   
+   
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::time::{SystemTime, UNIX_EPOCH};
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> SystemTime::now();
+   <span style="color:#66d9ef">let</span> r <span style="color:#f92672">=</span> o.duration_since(UNIX_EPOCH);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, r);
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/time">https://doc.rust-lang.org/std/time</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/c#current-unix-epoch">https://hyperpolyglot.org/c#current-unix-epoch</a></li>
+<li><a href="https://hyperpolyglot.org/scripting#current-unix-epoch">https://hyperpolyglot.org/scripting#current-unix-epoch</a></li>
+<li><a href="https://programming-idioms.org/idiom/61">https://programming-idioms.org/idiom/61</a></li>
+<li><a href="https://rosettacode.org/wiki/System_time">https://rosettacode.org/wiki/System_time</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
