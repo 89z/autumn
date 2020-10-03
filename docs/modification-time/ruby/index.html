@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Modification time / Ruby</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body class="base">
+   <header class="base">
+      <h1 class="base">
+         <a class="base" href="/autumn">Autumn</a>
+      </h1>
+      <div class="base">Comparison of programming languages</div>
+      <nav class="base">
+         <a class="base" href="/autumn/categories">Categories</a>
+         <a class="base" href="/autumn/tags">Tags</a>
+         <a class="base" href="https://github.com/nu8/autumn">Repo</a>
+      </nav>
+   </header>
+
+
+<main class="sing">
+   <h1 class="sing">Modification time / Ruby</h1>
+   <section class="sing">
+      <time class="sing">Sat Oct 3 2020</time>
+   
+      <a class="sing" href="/autumn/categories/system/">system</a>
+   
+   </section>
+   
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;index.md&#39;</span>
+<span style="color:#75715e"># example 1</span>
+o1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>now
+<span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>utime(o1, o1, s)
+<span style="color:#75715e"># example 2</span>
+o2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>mtime(s)
+<span style="color:#75715e"># print</span>
+puts o1 <span style="color:#f92672">==</span> o2
+</code></pre></div>
+<ul>
+<li><a href="https://ruby-doc.org/core/File.html#method-c-mtime">https://ruby-doc.org/core/File.html#method-c-mtime</a></li>
+<li><a href="https://ruby-doc.org/core/File.html#method-i-mtime">https://ruby-doc.org/core/File.html#method-i-mtime</a></li>
+<li><a href="https://ruby-doc.org/core/File/Stat.html#method-i-mtime">https://ruby-doc.org/core/File/Stat.html#method-i-mtime</a></li>
+</ul>
+<h2 id="references">References</h2>
+<p><a href="https://rosettacode.org/wiki/File_modification_time">https://rosettacode.org/wiki/File_modification_time</a></p>
+
+</main>
+
+</body>
+</html>

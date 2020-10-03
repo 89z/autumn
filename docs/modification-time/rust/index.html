@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Modification time / Rust</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body class="base">
+   <header class="base">
+      <h1 class="base">
+         <a class="base" href="/autumn">Autumn</a>
+      </h1>
+      <div class="base">Comparison of programming languages</div>
+      <nav class="base">
+         <a class="base" href="/autumn/categories">Categories</a>
+         <a class="base" href="/autumn/tags">Tags</a>
+         <a class="base" href="https://github.com/nu8/autumn">Repo</a>
+      </nav>
+   </header>
+
+
+<main class="sing">
+   <h1 class="sing">Modification time / Rust</h1>
+   <section class="sing">
+      <time class="sing">Sat Oct 3 2020</time>
+   
+      <a class="sing" href="/autumn/categories/system/">system</a>
+   
+   </section>
+   
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{fs, io};
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> o_meta <span style="color:#f92672">=</span> fs::metadata(<span style="color:#e6db74">&#34;index.md&#34;</span>)<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> o_mod <span style="color:#f92672">=</span> o_meta.modified()<span style="color:#f92672">?</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o_mod);
+   Ok(())
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/fs">https://doc.rust-lang.org/std/fs</a></p>
+<h2 id="references">References</h2>
+<p><a href="https://rosettacode.org/wiki/File_modification_time">https://rosettacode.org/wiki/File_modification_time</a></p>
+
+</main>
+
+</body>
+</html>

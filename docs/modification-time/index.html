@@ -24,163 +24,33 @@
 
 
 <main class="sect">
-   <h1>Modification time</h1>
+   <h1 class="sect">Modification time</h1>
    <section class="sect">
-      <time class="sect">Sat Sep 26 2020</time>
+      <time class="sect">Sat Oct 3 2020</time>
    
       <a class="sect" href="/autumn/categories/system/">system</a>
    
    </section>
    <nav class="sect">
    
+      <a class="sect-2" href="/autumn/modification-time/c-sharp/">C#</a>
+   
+      <a class="sect-2" href="/autumn/modification-time/d/">D</a>
+   
+      <a class="sect-2" href="/autumn/modification-time/go/">Go</a>
+   
+      <a class="sect-2" href="/autumn/modification-time/nim/">Nim</a>
+   
+      <a class="sect-2" href="/autumn/modification-time/php/">PHP</a>
+   
+      <a class="sect-2" href="/autumn/modification-time/python/">Python</a>
+   
+      <a class="sect-2" href="/autumn/modification-time/ruby/">Ruby</a>
+   
+      <a class="sect-2" href="/autumn/modification-time/rust/">Rust</a>
+   
    </nav>
-   <h2 id="c">C#</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
-<span style="color:#66d9ef">using</span> System.IO;
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
-   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">var</span> o = File.GetLastWriteTime(<span style="color:#e6db74">&#34;Program.cs&#34;</span>);
-      Console.WriteLine(o);
-   }
-}
-</code></pre></div>
-<p><a href="https://docs.microsoft.com/dotnet/api/system.io.file.getlastwritetime">https://docs.microsoft.com/dotnet/api/system.io.file.getlastwritetime</a></p>
-<h2 id="d">D</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.file<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> fname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;unixdict.txt&#34;</span><span style="color:#f92672">;</span>
-   SysTime fileAccessTime<span style="color:#f92672">,</span> fileModificationTime<span style="color:#f92672">;</span>
-   getTimes<span style="color:#f92672">(</span>fname<span style="color:#f92672">,</span> fileAccessTime<span style="color:#f92672">,</span> fileModificationTime<span style="color:#f92672">);</span>
-   setTimes<span style="color:#f92672">(</span>fname<span style="color:#f92672">,</span> fileAccessTime<span style="color:#f92672">,</span> fileModificationTime<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
-<p><a href="https://dlang.org/library/std/file/set_times.html">https://dlang.org/library/std/file/set_times.html</a></p>
-<h2 id="dart">Dart</h2>
-<p><a href="https://api.dart.dev/dart-io/File/setLastModified.html">https://api.dart.dev/dart-io/File/setLastModified.html</a></p>
-<h2 id="go">Go</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
-   <span style="color:#e6db74">&#34;os&#34;</span>
-   <span style="color:#e6db74">&#34;time&#34;</span>
-)
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;index.md&#34;</span>
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Now</span>()
-   <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Chtimes</span>(<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">o1</span>)
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o2</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stat</span>(<span style="color:#a6e22e">s</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
-   }
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Unix</span>()
-   <span style="color:#a6e22e">n2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o2</span>.<span style="color:#a6e22e">ModTime</span>().<span style="color:#a6e22e">Unix</span>()
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">n1</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">n2</span>)
-}
-</code></pre></div>
-<p><a href="https://golang.org/pkg/os#Chtimes">https://golang.org/pkg/os#Chtimes</a></p>
-<h2 id="nim">Nim</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> os, times
-<span style="color:#66d9ef">let</span> accTime <span style="color:#f92672">=</span> getLastAccessTime(<span style="color:#e6db74">&#34;filename&#34;</span>)
-<span style="color:#66d9ef">let</span> modTime <span style="color:#f92672">=</span> getLastModificationTime(<span style="color:#e6db74">&#34;filename&#34;</span>)
- 
-<span style="color:#f92672">import</span> posix
-<span style="color:#66d9ef">var</span> unixAccTime <span style="color:#f92672">=</span> Timeval(tv_sec: <span style="color:#66d9ef">int</span>(accTime))
-<span style="color:#66d9ef">var</span> unixModTime <span style="color:#f92672">=</span> Timeval(tv_sec: <span style="color:#66d9ef">int</span>(modTime))
- 
-<span style="color:#75715e"># Set the modification time</span>
-unixModTime.tv_sec <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
- 
-<span style="color:#66d9ef">var</span> times <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>unixAccTime, unixModTime<span style="color:#f92672">]</span>
-<span style="color:#66d9ef">discard</span> utimes(<span style="color:#e6db74">&#34;filename&#34;</span>, <span style="color:#66d9ef">addr</span>(times))
- 
-<span style="color:#75715e"># Set the access and modification times to the current time</span>
-<span style="color:#66d9ef">discard</span> utimes(<span style="color:#e6db74">&#34;filename&#34;</span>, <span style="color:#66d9ef">nil</span>)
-</code></pre></div>
-<p><a href="https://nim-lang.org/docs/os.html#setLastModificationTime,string,">https://nim-lang.org/docs/os.html#setLastModificationTime,string,</a></p>
-<h2 id="php">PHP</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;index.md&#39;</span>;
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">time</span>();
-<span style="color:#a6e22e">touch</span>($s, $n1);
-<span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">filemtime</span>($s);
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1 <span style="color:#f92672">==</span> $n2);
-</code></pre></div>
-<p><a href="https://php.net/function.touch">https://php.net/function.touch</a></p>
-<h2 id="python">Python</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> os<span style="color:#f92672">,</span> time
-s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;index.md&#39;</span>
-<span style="color:#75715e"># example 1</span>
-n1 <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
-os<span style="color:#f92672">.</span>utime(s, (n1, n1))
-<span style="color:#75715e"># example 2</span>
-n2 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>getmtime(s)
-<span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(n1 <span style="color:#f92672">==</span> n2)
-</code></pre></div>
-<p><a href="https://docs.python.org/library/os.html">https://docs.python.org/library/os.html</a></p>
-<h2 id="ruby">Ruby</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;index.md&#39;</span>
-<span style="color:#75715e"># example 1</span>
-o1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>now
-<span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>utime(o1, o1, s)
-<span style="color:#75715e"># example 2</span>
-o2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>mtime(s)
-<span style="color:#75715e"># print</span>
-puts o1 <span style="color:#f92672">==</span> o2
-</code></pre></div>
-<ul>
-<li><a href="https://ruby-doc.org/core/File.html#method-c-mtime">https://ruby-doc.org/core/File.html#method-c-mtime</a></li>
-<li><a href="https://ruby-doc.org/core/File.html#method-i-mtime">https://ruby-doc.org/core/File.html#method-i-mtime</a></li>
-<li><a href="https://ruby-doc.org/core/File/Stat.html#method-i-mtime">https://ruby-doc.org/core/File/Stat.html#method-i-mtime</a></li>
-</ul>
-<h2 id="rust">Rust</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{fs, io};
-
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> o_meta <span style="color:#f92672">=</span> fs::metadata(<span style="color:#e6db74">&#34;index.md&#34;</span>)<span style="color:#f92672">?</span>;
-   <span style="color:#66d9ef">let</span> o_mod <span style="color:#f92672">=</span> o_meta.modified()<span style="color:#f92672">?</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o_mod);
-   Ok(())
-}
-</code></pre></div>
-<p><a href="https://doc.rust-lang.org/std/fs">https://doc.rust-lang.org/std/fs</a></p>
-<h2 id="references">References</h2>
-<p><a href="https://rosettacode.org/wiki/File_modification_time">https://rosettacode.org/wiki/File_modification_time</a></p>
-
+   
 </main>
 
 </body>

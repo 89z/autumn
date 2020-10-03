@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Modification time / D</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body class="base">
+   <header class="base">
+      <h1 class="base">
+         <a class="base" href="/autumn">Autumn</a>
+      </h1>
+      <div class="base">Comparison of programming languages</div>
+      <nav class="base">
+         <a class="base" href="/autumn/categories">Categories</a>
+         <a class="base" href="/autumn/tags">Tags</a>
+         <a class="base" href="https://github.com/nu8/autumn">Repo</a>
+      </nav>
+   </header>
+
+
+<main class="sing">
+   <h1 class="sing">Modification time / D</h1>
+   <section class="sing">
+      <time class="sing">Sat Oct 3 2020</time>
+   
+      <a class="sing" href="/autumn/categories/system/">system</a>
+   
+   </section>
+   
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.file<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> fname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;unixdict.txt&#34;</span><span style="color:#f92672">;</span>
+   SysTime fileAccessTime<span style="color:#f92672">,</span> fileModificationTime<span style="color:#f92672">;</span>
+   getTimes<span style="color:#f92672">(</span>fname<span style="color:#f92672">,</span> fileAccessTime<span style="color:#f92672">,</span> fileModificationTime<span style="color:#f92672">);</span>
+   setTimes<span style="color:#f92672">(</span>fname<span style="color:#f92672">,</span> fileAccessTime<span style="color:#f92672">,</span> fileModificationTime<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+<p><a href="https://dlang.org/library/std/file/set_times.html">https://dlang.org/library/std/file/set_times.html</a></p>
+<h2 id="references">References</h2>
+<p><a href="https://rosettacode.org/wiki/File_modification_time">https://rosettacode.org/wiki/File_modification_time</a></p>
+
+</main>
+
+</body>
+</html>
