@@ -23,219 +23,34 @@
    </header>
 
 
-<main class="sing">
-   <h1 class="sing">Autumn / List directory entries</h1>
-   <section class="sing">
-      <time class="sing">Sat Oct 3 2020</time>
+<main class="sect">
+   <h1 class="sect">List directory entries</h1>
+   <section class="sect">
+      <time class="sect">Sun Sep 27 2020</time>
+   
+      <a class="sect" href="/autumn/categories/system/">system</a>
    
    </section>
+   <nav class="sect">
    
-   <a class="sing" href="/autumn/talk/"></a>
+      <a class="sect-2" href="/autumn/list-directory-entries/d/">D</a>
    
-   <h2 id="d">D</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.file<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> a <span style="color:#f92672">=</span> dirEntries<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">,</span> SpanMode<span style="color:#f92672">.</span><span style="color:#a6e22e">shallow</span><span style="color:#f92672">);</span>
-   writeln<span style="color:#f92672">(</span>a<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
-<p><a href="https://dlang.org/library/std/file/dir_entries.html">https://dlang.org/library/std/file/dir_entries.html</a></p>
-<h2 id="dart">Dart</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
-
-<span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Directory(<span style="color:#e6db74">&#39;.&#39;</span>);
-   <span style="color:#66d9ef">var</span> a <span style="color:#f92672">=</span> o.listSync();
-   print(a);
-}
-</code></pre></div>
-<p><a href="https://api.dart.dev/dart-io/Directory-class.html">https://api.dart.dev/dart-io/Directory-class.html</a></p>
-<h2 id="go">Go</h2>
-<p>
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
-   <span style="color:#e6db74">&#34;os&#34;</span>
-)
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadDir</span>(<span style="color:#e6db74">&#34;.&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
-   }
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">a</span> {
-      <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Name</span>()
-      println(<span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">s</span>)
-   }
-}
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
-   <span style="color:#e6db74">&#34;log&#34;</span>
-   <span style="color:#e6db74">&#34;os&#34;</span>
-)
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;.&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
-   }
-   <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Readdirnames</span>(<span style="color:#ae81ff">0</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
-   }
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span>)
-}
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;log&#34;</span>
-   <span style="color:#e6db74">&#34;os&#34;</span>
-   <span style="color:#e6db74">&#34;path/filepath&#34;</span>
-)
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">f</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">o</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">FileInfo</span>, <span style="color:#a6e22e">e</span> <span style="color:#66d9ef">error</span>) <span style="color:#66d9ef">error</span> {
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span>
-   }
-   <span style="color:#66d9ef">if</span> ! <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">IsDir</span>() {
-      println(<span style="color:#a6e22e">s</span>)
-   }
-   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
-}
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Walk</span>(<span style="color:#e6db74">&#34;.&#34;</span>, <span style="color:#a6e22e">f</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
-   }
-}
-</code></pre></div></p>
-<ul>
-<li><a href="https://golang.org/pkg/io/ioutil#ReadDir">https://golang.org/pkg/io/ioutil#ReadDir</a></li>
-<li><a href="https://golang.org/pkg/os#File.Readdirnames">https://golang.org/pkg/os#File.Readdirnames</a></li>
-<li><a href="https://golang.org/pkg/path/filepath#Walk">https://golang.org/pkg/path/filepath#Walk</a></li>
-</ul>
-<h2 id="nim">Nim</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> os
-<span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> walkFiles(<span style="color:#e6db74">&#34;*&#34;</span>):
-   echo s
-</code></pre></div>
-<p><a href="https://nim-lang.org/docs/os.html#walkFiles.i,string">https://nim-lang.org/docs/os.html#walkFiles.i,string</a></p>
-<h2 id="php">PHP</h2>
-<p>
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$o_iter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FilesystemIterator</span>(<span style="color:#e6db74">&#39;.&#39;</span>);
-
-<span style="color:#66d9ef">foreach</span> ($o_iter <span style="color:#66d9ef">as</span> $o_info) {
-   <span style="color:#66d9ef">echo</span> $o_info<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getPathname</span>(), <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-}
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$o_dir <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveDirectoryIterator</span>(<span style="color:#e6db74">&#39;.&#39;</span>);
-$o_dir<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setFlags</span>(<span style="color:#a6e22e">RecursiveDirectoryIterator</span><span style="color:#f92672">::</span><span style="color:#a6e22e">SKIP_DOTS</span>);
-$o_iter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveIteratorIterator</span>($o_dir);
-
-<span style="color:#66d9ef">foreach</span> ($o_iter <span style="color:#66d9ef">as</span> $o_info) {
-   <span style="color:#66d9ef">echo</span> $o_info<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getPathname</span>(), <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-}
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$o_dir <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveDirectoryIterator</span>(<span style="color:#e6db74">&#39;.&#39;</span>);
-$o_dir<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setFlags</span>(<span style="color:#a6e22e">RecursiveDirectoryIterator</span><span style="color:#f92672">::</span><span style="color:#a6e22e">SKIP_DOTS</span>);
-$f_filter <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span> ($o_info) <span style="color:#f92672">=&gt;</span> $o_info<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getFilename</span>() <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;.git&#39;</span> <span style="color:#f92672">?</span> <span style="color:#66d9ef">false</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>;
-$o_filter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveCallbackFilterIterator</span>($o_dir, $f_filter);
-$o_iter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">RecursiveIteratorIterator</span>($o_filter);
-
-<span style="color:#66d9ef">foreach</span> ($o_iter <span style="color:#66d9ef">as</span> $o_info) {
-   <span style="color:#66d9ef">echo</span> $o_info<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getPathname</span>(), <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-}
-</code></pre></div></p>
-<p><a href="https://php.net/class.filesystemiterator">https://php.net/class.filesystemiterator</a></p>
-<h2 id="python">Python</h2>
-<p>
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> os
-<span style="color:#75715e"># example 1</span>
-a <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>listdir(<span style="color:#e6db74">&#39;.&#39;</span>)
-<span style="color:#66d9ef">print</span>(a)
-<span style="color:#75715e"># example 2</span>
-<span style="color:#66d9ef">for</span> root, dirs, files <span style="color:#f92672">in</span> os<span style="color:#f92672">.</span>walk(<span style="color:#e6db74">&#39;.&#39;</span>):
-   <span style="color:#66d9ef">print</span>(root, dirs, files)
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
-
-<span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> Path(<span style="color:#e6db74">&#39;.&#39;</span>)<span style="color:#f92672">.</span>iterdir():
-   <span style="color:#66d9ef">print</span>(s)
-</code></pre></div></p>
-<p><a href="https://docs.python.org/library/os.html#os.listdir">https://docs.python.org/library/os.html#os.listdir</a></p>
-<h2 id="ruby">Ruby</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#66d9ef">Dir</span><span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#34;/etc&#34;</span>)<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>file<span style="color:#f92672">|</span>
-  puts file
-<span style="color:#66d9ef">end</span>
-</code></pre></div>
-<h2 id="rust">Rust</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{fs, io};
-
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">for</span> r_ent <span style="color:#66d9ef">in</span> fs::read_dir(<span style="color:#e6db74">&#34;.&#34;</span>)<span style="color:#f92672">?</span> {
-      <span style="color:#66d9ef">let</span> s_ent <span style="color:#f92672">=</span> r_ent<span style="color:#f92672">?</span>.path();
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, s_ent);
-   }
-   Ok(())
-}
-</code></pre></div>
-<p><a href="https://doc.rust-lang.org/std/fs/fn.read_dir.html">https://doc.rust-lang.org/std/fs/fn.read_dir.html</a></p>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://hyperpolyglot.org/c#dir-iterate">https://hyperpolyglot.org/c#dir-iterate</a></li>
-<li><a href="https://hyperpolyglot.org/scripting2#dir-iterate">https://hyperpolyglot.org/scripting2#dir-iterate</a></li>
-<li><a href="https://programming-idioms.org/idiom/180">https://programming-idioms.org/idiom/180</a></li>
-<li><a href="https://rosettacode.org/wiki/Unix/ls">https://rosettacode.org/wiki/Unix/ls</a></li>
-<li><a href="https://rosettacode.org/wiki/Walk_a_directory/Non-recursively">https://rosettacode.org/wiki/Walk_a_directory/Non-recursively</a></li>
-<li><a href="https://rosettacode.org/wiki/Walk_a_directory/Recursively">https://rosettacode.org/wiki/Walk_a_directory/Recursively</a></li>
-</ul>
-
+      <a class="sect-2" href="/autumn/list-directory-entries/dart/">Dart</a>
+   
+      <a class="sect-2" href="/autumn/list-directory-entries/go/">Go</a>
+   
+      <a class="sect-2" href="/autumn/list-directory-entries/nim/">Nim</a>
+   
+      <a class="sect-2" href="/autumn/list-directory-entries/php/">PHP</a>
+   
+      <a class="sect-2" href="/autumn/list-directory-entries/python/">Python</a>
+   
+      <a class="sect-2" href="/autumn/list-directory-entries/ruby/">Ruby</a>
+   
+      <a class="sect-2" href="/autumn/list-directory-entries/rust/">Rust</a>
+   
+   </nav>
+   
 </main>
 
 </body>

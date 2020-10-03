@@ -165,7 +165,9 @@ main.sing div.highlight {
    margin-right: .5rem;
 }
 a.index-2,
+a.sect,
 a.sect-2,
+a.sing,
 time {
    margin-right: 1rem;
 }
