@@ -1,22 +1,20 @@
 {{ define "main" }}
-<main>
+<main class="index">
+   {{ range (.Paginate .Pages.ByLastmod.Reverse 24).Pages }}
    <article class="index">
-   {{- range (.Paginate .Pages.ByLastmod.Reverse 24).Pages }}
+      <h2>
+         <a class="index" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h2>
       <section class="index">
-         <h2>
-            <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
-         </h2>
-         <time>{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
-         <nav class="category">
+         <time class="index">{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
       {{ range (.GetTerms "categories") }}
-            <a class="category" href="{{ .RelPermalink }}">{{ .Title }}</a>
+         <a class="index-2" href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}
-         </nav>
       </section>
-   {{ end }}
    </article>
+   {{ end }}
 </main>
-<footer>
+<footer class="index">
    {{ template "_internal/pagination.html" . }}
 </footer>
 {{ end }}

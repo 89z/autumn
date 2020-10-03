@@ -1,0 +1,216 @@
+:root {
+   --gray-5: #555;
+   --gray-9: #999;
+   --gray-d: #ddd;
+   --ivory: #f8f8f2;
+   --light-red: hsl(359, 45%, 90%);
+   --red: hsl(359, 45%, 46%);
+}
+section.index,
+section.sect {
+   align-items: center;
+}
+a.index-2,
+a.sect,
+footer.index li.page-item {
+   background: var(--light-red);
+}
+a.sect-2,
+header.base {
+   background: var(--red);
+}
+tr.taxon:nth-child(odd) td,
+tr.terms:nth-child(odd) td {
+   background: var(--light-red);
+}
+table.taxon,
+table.terms {
+   border-collapse: collapse;
+}
+td.taxon,
+td.terms {
+   border-color: var(--gray-d);
+}
+article.index {
+   border-color: var(--red);
+}
+a.index-2,
+a.sect,
+a.sect-2,
+article.index,
+footer.index li.page-item {
+   border-radius: .5rem;
+}
+article.index,
+td.taxon,
+td.terms {
+   border-style: solid;
+}
+article.index {
+   border-width: thick;
+}
+td.taxon,
+td.terms {
+   color: var(--gray-5);
+}
+time.sect,
+time.index {
+   color: var(--gray-9);
+}
+a.base,
+div.base {
+   color: var(--ivory);
+}
+a.sect-2 {
+   color: var(--light-red);
+}
+a.index,
+a.index-2,
+a.sect,
+a.taxon,
+a.terms,
+footer.index a.page-link {
+   color: var(--red);
+}
+footer.index ul.pagination,
+main.index,
+nav.base,
+nav.sect,
+section.index,
+section.sect {
+   display: flex;
+}
+a.base,
+section.terms {
+   flex-basis: 200px;
+}
+article.index {
+   flex-basis: 400px;
+}
+main.index,
+nav.sect {
+   flex-wrap: wrap;
+}
+body.base {
+   font-family: sans-serif;
+}
+a.taxon,
+a.terms,
+table.taxon,
+table.terms,
+time.index,
+time.sect {
+   font-size: 1.2rem;
+}
+div.base,
+footer.index,
+nav.base,
+nav.sect {
+   font-size: 1.4rem;
+}
+footer.index ul.pagination,
+main.index,
+nav.base {
+   justify-content: center;
+}
+article.index,
+div.base,
+h1.base {
+   margin-bottom: .5rem;
+}
+a.sect-2,
+header.base {
+   margin-bottom: 1rem;
+}
+body.base {
+   margin-bottom: 2rem;
+}
+body.base {
+   margin-left: 0;
+}
+article.index,
+footer.index li.page-item {
+   margin-left: .5rem;
+}
+main.sect,
+main.taxon,
+main.terms {
+   margin-left: 1rem;
+}
+body.base {
+   margin-right: 0;
+}
+article.index,
+footer.index li.page-item {
+   margin-right: .5rem;
+}
+a.index-2,
+a.sect-2,
+time.index,
+time.sect {
+   margin-right: 1rem;
+}
+body.base,
+h1.base {
+   margin-top: 0;
+}
+article.index,
+table.taxon,
+table.terms {
+   margin-top: .5rem;
+}
+nav.sect {
+   margin-top: 1rem;
+}
+div.base {
+   opacity: 0.5;
+}
+a.index-2,
+a.sect,
+footer.index li.page-item,
+td.taxon,
+td.terms {
+   padding-bottom: .5rem;
+}
+a.sect-2,
+article.index,
+header.base {
+   padding-bottom: 1rem;
+}
+a.index-2,
+a.sect,
+a.sect-2,
+article.index,
+footer.index li.page-item,
+td.taxon,
+td.terms {
+   padding-left: 1rem;
+}
+a.index-2,
+a.sect,
+a.sect-2,
+footer.index li.page-item,
+td.taxon,
+td.terms {
+   padding-right: 1rem;
+}
+a.index-2,
+a.sect,
+footer.index li.page-item,
+header.base,
+td.taxon,
+td.terms {
+   padding-top: .5rem;
+}
+a.sect-2 {
+   padding-top: 1rem;
+}
+header.base {
+   text-align: center;
+}
+a {
+   text-decoration: none;
+}
+a:hover {
+   text-decoration: underline;
+}

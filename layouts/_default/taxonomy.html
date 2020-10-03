@@ -1,15 +1,19 @@
 {{ define "main" }}
-<main>
-   <h1 class="taxo">{{ .Title }}</h1>
+<main class="taxon">
+   <h1>{{ .Title }}</h1>
    {{ with (.GetPage (path.Join "talk" .Path)) }}
-   <a class="taxo" href="{{ .RelPermalink }}">{{ .Title }}</a>
+   <a class="taxon" href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
-   <table>
+   <table class="taxon">
    {{ range .Pages.ByTitle }}
       {{ $s := printf "%v / %v" .Parent.Title .Title }}
-      <tr>
-         <td><a href="{{ .RelPermalink }}">{{ $s }}</a></td>
-         <td><time>{{ .Parent.Lastmod.Format "Mon Jan 2 2006" }}</time></td>
+      <tr class="taxon">
+         <td class="taxon">
+            <a class="taxon" href="{{ .RelPermalink }}">{{ $s }}</a>
+         </td>
+         <td class="taxon">
+            <time>{{ .Parent.Lastmod.Format "Mon Jan 2 2006" }}</time>
+         </td>
       </tr>
    {{ end }}
    </table>
