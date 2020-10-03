@@ -98,6 +98,7 @@ section.terms {
 article.index {
    flex-basis: 400px;
 }
+header,
 main.index,
 nav.sect {
    flex-wrap: wrap;
