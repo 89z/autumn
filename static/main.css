@@ -149,6 +149,7 @@ article.index,
 footer.index li.page-item,
 h1.sing,
 main.sing div.highlight,
+main.sing p,
 main.sing h2,
 time.sing {
    margin-left: .5rem;

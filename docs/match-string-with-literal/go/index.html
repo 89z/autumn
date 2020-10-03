@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Match string with literal / Go</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body class="base">
+   <header class="base">
+      <h1 class="base">
+         <a class="base" href="/autumn">Autumn</a>
+      </h1>
+      <div class="base">Comparison of programming languages</div>
+      <nav class="base">
+         <a class="base" href="/autumn/categories">Categories</a>
+         <a class="base" href="/autumn/tags">Tags</a>
+         <a class="base" href="https://github.com/nu8/autumn">Repo</a>
+      </nav>
+   </header>
+
+
+<main class="sing">
+   <h1 class="sing">Match string with literal / Go</h1>
+   <section class="sing">
+      <time class="sing">Fri Sep 11 2020</time>
+   
+      <a class="sing" href="/autumn/categories/string/">string</a>
+   
+   </section>
+   
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;June&#34;</span>
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">b1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">HasPrefix</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;Ju&#34;</span>)
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">b2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Contains</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;un&#34;</span>)
+   <span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">b3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">HasSuffix</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;ne&#34;</span>)
+   <span style="color:#75715e">// print
+</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">b1</span>, <span style="color:#a6e22e">b2</span>, <span style="color:#a6e22e">b3</span>)
+}
+</code></pre></div>
+<ul>
+<li><a href="https://golang.org/pkg/strings#Contains">https://golang.org/pkg/strings#Contains</a></li>
+<li><a href="https://golang.org/pkg/strings#HasPrefix">https://golang.org/pkg/strings#HasPrefix</a></li>
+<li><a href="https://golang.org/pkg/strings#HasSuffix">https://golang.org/pkg/strings#HasSuffix</a></li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/scripting#prefix-suffix-test">https://hyperpolyglot.org/scripting#prefix-suffix-test</a></li>
+<li><a href="https://hyperpolyglot.org/web#prefix-suffix-test">https://hyperpolyglot.org/web#prefix-suffix-test</a></li>
+<li><a href="https://programming-idioms.org/idiom/39/check-string-contains">https://programming-idioms.org/idiom/39/check-string-contains</a></li>
+<li><a href="https://programming-idioms.org/idiom/96/check-string-prefix">https://programming-idioms.org/idiom/96/check-string-prefix</a></li>
+<li><a href="https://programming-idioms.org/idiom/97/check-string-suffix">https://programming-idioms.org/idiom/97/check-string-suffix</a></li>
+<li><a href="https://rosettacode.org/wiki/String_matching">https://rosettacode.org/wiki/String_matching</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
