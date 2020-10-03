@@ -1,20 +1,23 @@
+{{ define "head" }}
+<h1 class="index"><a href="/autumn">Autumn</a></h1>
+{{ end }}
 {{ define "main" }}
 <main class="index">
    {{ range (.Paginate .Pages.ByLastmod.Reverse 24).Pages }}
    <article class="index">
       <h2 class="index">
-         <a class="index" href="{{ .RelPermalink }}">{{ .Title }}</a>
+         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       </h2>
       <section class="index">
          <time class="index">{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
       {{ range (.GetTerms "categories") }}
-         <a class="index-2" href="{{ .RelPermalink }}">{{ .Title }}</a>
+         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}
       </section>
    </article>
    {{ end }}
 </main>
-<footer class="index">
-   {{ template "_internal/pagination.html" . }}
-</footer>
+{{ end }}
+{{ define "foot" }}
+<footer class="index">{{ template "_internal/pagination.html" . }}</footer>
 {{ end }}

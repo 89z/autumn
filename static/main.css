@@ -8,17 +8,17 @@
    --red: hsl(359, 45%, 46%);
    --dark-red: hsl(359, 45%, 40%);
 }
+header.base,
 section {
    align-items: center;
 }
-a.index-2,
+section.index > a,
 a.sect,
 a.sing,
-footer.index li.page-item,
-tr:nth-child(odd) td {
+footer.index > ul > li,
+tr:nth-child(odd) > td {
    background: var(--light-red);
 }
-a.sect-2,
 header.base {
    background: var(--red);
 }
@@ -33,12 +33,11 @@ td.terms {
 article.index {
    border-color: var(--red);
 }
-a.index-2,
+section.index > a,
 a.sect,
-a.sect-2,
 a.sing,
 article.index,
-footer.index li.page-item {
+footer.index > ul > li {
    border-radius: .5rem;
 }
 article.index,
@@ -49,12 +48,12 @@ td.terms {
 article.index {
    border-width: thick;
 }
-main.sing a {
+main.sing > p > a {
    color: var(--dark-red);
 }
 h1.sect,
 h1.sing,
-main.sing h2 {
+main.sing > h2 {
    color: var(--gray-3);
 }
 td.taxon,
@@ -65,29 +64,27 @@ time {
    color: var(--gray-9);
 }
 a.base,
-div.base {
+div.base,
+h1.index > a,
+h2.terms > a {
    color: var(--ivory);
 }
-a.sect-2 {
-   color: var(--light-red);
-}
-a.index,
-a.index-2,
 a.sect,
 a.sing,
 a.taxon,
 a.terms,
-footer.index a.page-link {
+footer.index > ul > li > a,
+h2.index > a,
+section.index > a {
    color: var(--red);
 }
-footer.index ul.pagination,
+footer.index > ul,
+header.base,
 main.index,
-nav.base,
 nav.sect,
 section {
    display: flex;
 }
-a.base,
 section.terms {
    flex-basis: 200px;
 }
@@ -101,7 +98,7 @@ nav.sect {
 body.base {
    font-family: sans-serif;
 }
-main.sing div.highlight {
+main.sing > div.highlight {
    font-size: 1rem;
 }
 a.taxon,
@@ -110,28 +107,34 @@ table,
 time {
    font-size: 1.2rem;
 }
+a.base,
 div.base,
 footer.index,
-nav.base,
 nav.sect {
    font-size: 1.4rem;
 }
-footer.index ul.pagination,
-main.index,
-nav.base {
+h1.index {
+   font-size: 3rem;
+}
+footer.index > ul,
+main.index {
    justify-content: center;
 }
-main.sing ul {
+header.base {
+   justify-content: space-evenly;
+}
+main.sing > ul {
    line-height: 1.4rem;
+}
+h1.index {
+   margin-bottom: 0;
 }
 article.index,
 div.base,
-h1.base,
 h1.sing,
 h2.index {
    margin-bottom: .5rem;
 }
-a.sect-2,
 h1.sect,
 header.base {
    margin-bottom: 1rem;
@@ -143,11 +146,11 @@ body.base {
    margin-left: 0;
 }
 article.index,
-footer.index li.page-item,
+footer.index > ul > li,
 h1.sing,
-main.sing div.highlight,
-main.sing p,
-main.sing h2,
+main.sing > div.highlight,
+main.sing > p,
+main.sing > h2,
 time.sing {
    margin-left: .5rem;
 }
@@ -160,19 +163,18 @@ body.base {
    margin-right: 0;
 }
 article.index,
-footer.index li.page-item,
-main.sing div.highlight {
+footer.index > ul > li,
+main.sing > div.highlight {
    margin-right: .5rem;
 }
-a.index-2,
+section.index > a,
 a.sect,
-a.sect-2,
 a.sing,
 time {
    margin-right: 1rem;
 }
 body.base,
-h1.base {
+h1.index {
    margin-top: 0;
 }
 article.index,
@@ -186,54 +188,47 @@ nav.sect {
 div.base {
    opacity: 0.5;
 }
-a.index-2,
+section.index > a,
 a.sect,
 a.sing,
-footer.index li.page-item,
+footer.index > ul > li,
 td {
    padding-bottom: .5rem;
 }
-a.sect-2,
 article.index,
 header.base,
-main.sing pre {
+main.sing > div > pre {
    padding-bottom: 1rem;
 }
-a.index-2,
+section.index > a,
 a.sect,
-a.sect-2,
 a.sing,
 article.index,
-footer.index li.page-item,
-main.sing pre,
+footer.index > ul > li,
+main.sing > pre,
 td {
    padding-left: 1rem;
 }
-main.sing ul {
+main.sing > ul {
    padding-left: 2rem;
 }
-a.index-2,
+section.index > a,
 a.sect,
-a.sect-2,
 a.sing,
-footer.index li.page-item,
+footer.index > ul > li,
 td {
    padding-right: 1rem;
 }
-a.index-2,
+section.index > a,
 a.sect,
 a.sing,
-footer.index li.page-item,
-header.base,
+footer.index > ul > li,
 td {
    padding-top: .5rem;
 }
-a.sect-2,
-main.sing pre {
+header.base,
+main.sing > div > pre {
    padding-top: 1rem;
-}
-header.base {
-   text-align: center;
 }
 a {
    text-decoration: none;

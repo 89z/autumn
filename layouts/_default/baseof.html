@@ -4,7 +4,7 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {{ if .IsHome }}
-   <title>Autumn</title>
+   <title>Autumn | comparison of programming languages</title>
 {{ else }}
    <title>{{ printf "%v / %v" .Parent.Title .Title }}</title>
 {{ end }}
@@ -13,26 +13,12 @@
 </head>
 <body class="base">
    <header class="base">
-      <h1 class="base">
-         <a class="base" href="/autumn">Autumn</a>
-      </h1>
-      <div class="base">Comparison of programming languages</div>
-      <nav class="base">
-         <a class="base" href="/autumn/categories">Categories</a>
-         <a class="base" href="/autumn/tags">Tags</a>
-         <a class="base" href="https://github.com/nu8/autumn">Repo</a>
-      </nav>
+{{ block "head" . }}{{ end }}
+      <a class="base" href="/autumn/categories">Categories</a>
+      <a class="base" href="/autumn/tags">Tags</a>
+      <a class="base" href="https://github.com/nu8/autumn">Repository</a>
    </header>
-{{ if ne (getenv "DEBUG") "" }}
-<dl>
-   <dt>.</dt>
-   <dd>{{ . }}</dd>
-   <dt>.Kind</dt>
-   <dd>{{ .Kind }}</dd>
-   <dt>.GetPage</dt>
-   <dd>{{ .GetPage (path.Join "talk" .Path) }}</dd>
-</dl>
-{{ end }}
 {{ block "main" . }}{{ end }}
+{{ block "foot" . }}{{ end }}
 </body>
 </html>

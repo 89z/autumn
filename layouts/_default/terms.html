@@ -1,14 +1,17 @@
+{{ define "head" }}
+<h2 class="terms"><a href="/autumn">Autumn</a></h2>
+{{ end }}
 {{ define "main" }}
 <main class="terms">
    <h1>{{ .Title }}</h1>
    {{ with (.GetPage (path.Join "talk" .Path)) }}
-   <a class="terms" href="{{ .RelPermalink }}">{{ .Title }}</a>
+   <a href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
    <table class="terms">
    {{ range .Data.Terms }}
       <tr class="terms">
          <td class="terms">
-            <a class="terms" href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+            <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
          </td>
          <td class="terms">{{ .Count }}</td>
       </tr>
