@@ -4,12 +4,12 @@
    <section class="sect">
       <time class="sect">{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
    {{ range (.GetTerms "categories") }}
-      <a class="sect" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
    </section>
    <nav class="sect">
    {{ range .Pages }}
-      <a class="sect-2" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
    </nav>
    {{ .Content }}

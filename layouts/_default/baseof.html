@@ -4,7 +4,7 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {{ if .IsHome }}
-   <title>Autumn | comparison of programming languages</title>
+   <title>Autumn / comparison of programming languages</title>
 {{ else }}
    <title>{{ printf "%v / %v" .Parent.Title .Title }}</title>
 {{ end }}
@@ -12,13 +12,17 @@
    <link rel="stylesheet" href="/autumn/main.css">
 </head>
 <body class="base">
-   <header class="base">
-{{ block "head" . }}{{ end }}
+{{ if .IsHome }}
+   <header class="h1">
+      <h1 class="base"><a href="/autumn">Autumn</a></h1>
+{{ else }}
+   <header class="h2">
+      <h2 class="base"><a href="/autumn">Autumn</a></h2>
+{{ end }}
       <a class="base" href="/autumn/categories">Categories</a>
       <a class="base" href="/autumn/tags">Tags</a>
       <a class="base" href="https://github.com/nu8/autumn">Repository</a>
    </header>
 {{ block "main" . }}{{ end }}
-{{ block "foot" . }}{{ end }}
 </body>
 </html>

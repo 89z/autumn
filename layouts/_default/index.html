@@ -1,6 +1,3 @@
-{{ define "head" }}
-<h1 class="index"><a href="/autumn">Autumn</a></h1>
-{{ end }}
 {{ define "main" }}
 <main class="index">
    {{ range (.Paginate .Pages.ByLastmod.Reverse 24).Pages }}
@@ -17,7 +14,5 @@
    </article>
    {{ end }}
 </main>
-{{ end }}
-{{ define "foot" }}
 <footer class="index">{{ template "_internal/pagination.html" . }}</footer>
 {{ end }}

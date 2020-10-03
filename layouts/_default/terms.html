@@ -1,9 +1,6 @@
-{{ define "head" }}
-<h2 class="terms"><a href="/autumn">Autumn</a></h2>
-{{ end }}
 {{ define "main" }}
 <main class="terms">
-   <h1>{{ .Title }}</h1>
+   <h1 class="terms">{{ .Title }}</h1>
    {{ with (.GetPage (path.Join "talk" .Path)) }}
    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
