@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Iterate a set / PHP</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body class="base">
+
+   <header class="h2">
+      <h2 class="base"><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/nu8/autumn">Repository</a>
+   </header>
+
+<main class="sing">
+   <h1 class="sing">Iterate a set / PHP</h1>
+   <section class="sing">
+      <time class="sing">Thu Aug 27 2020</time>
+   
+      <a class="sing" href="/autumn/categories/iterate/">iterate</a>
+   
+      <a class="sing" href="/autumn/categories/set/">set</a>
+   
+   </section>
+   
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$t <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;May&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">&#39;June&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>];
+$a <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_keys</span>($t);
+
+<span style="color:#66d9ef">foreach</span> ($a <span style="color:#66d9ef">as</span> $s) {
+   <span style="color:#a6e22e">var_dump</span>($s);
+}
+</code></pre></div>
+
+</main>
+
+</body>
+</html>

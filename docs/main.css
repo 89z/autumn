@@ -65,11 +65,10 @@ td.terms {
 time {
    color: var(--gray-9);
 }
-a.base,
-div.base,
 h1.base > a,
 h2.base > a,
-h2.terms > a {
+h2.terms > a,
+header > a {
    color: var(--ivory);
 }
 nav.sect > a {
@@ -115,8 +114,8 @@ table,
 time {
    font-size: 1.2rem;
 }
-a.base,
 footer.index,
+header > a,
 nav.sect {
    font-size: 1.4rem;
 }
@@ -147,7 +146,8 @@ h2.index,
 header {
    margin-bottom: .5rem;
 }
-h1.sect {
+h1.sect,
+nav.sect > a {
    margin-bottom: 1rem;
 }
 body.base {
@@ -165,6 +165,7 @@ main.sing > h2,
 time.sing {
    margin-left: .5rem;
 }
+header > a,
 main.sect,
 main.taxon,
 main.terms {
