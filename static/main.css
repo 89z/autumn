@@ -14,16 +14,13 @@ section {
 a.index-2,
 a.sect,
 a.sing,
-footer.index li.page-item {
+footer.index li.page-item,
+tr:nth-child(odd) td {
    background: var(--light-red);
 }
 a.sect-2,
 header.base {
    background: var(--red);
-}
-tr.taxon:nth-child(odd) td,
-tr.terms:nth-child(odd) td {
-   background: var(--light-red);
 }
 table.taxon,
 table.terms {
