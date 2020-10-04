@@ -2,7 +2,7 @@
 <nav class="{{ .Kind }}">
    {{ range (.Paginate .Pages.ByLastmod.Reverse 24).Pages }}
    <article class="{{ .Kind }}">
-      <h2 class="{{ .Kind }}">
+      <h2>
          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       </h2>
       <section class="{{ .Kind }}">

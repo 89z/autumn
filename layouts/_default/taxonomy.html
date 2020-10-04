@@ -1,5 +1,5 @@
 {{ define "main" }}
-<h1 class="{{ .Kind }}">{{ .Title }}</h1>
+<h1>{{ .Title }}</h1>
    {{ with (.GetPage (path.Join "talk" .Path)) }}
 <a class="{{ .Kind }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}

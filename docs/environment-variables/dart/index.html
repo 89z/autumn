@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Environment variables / Dart</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/nu8/autumn">Repository</a>
+   </header>
+   <main class="page">
+<h1>Environment variables / Dart</h1>
+<section class="page">
+   <time>Fri Sep 11 2020</time>
+   
+   <a href="/autumn/categories/system/">system</a>
+   
+</section>
+   
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
+
+<span style="color:#66d9ef">void</span> main() {
+   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> Platform.environment[<span style="color:#e6db74">&#39;USERPROFILE&#39;</span>];
+   print(s <span style="color:#f92672">==</span> <span style="color:#e6db74">r&#39;C:\Users\Steven&#39;</span>);
+}
+</code></pre></div>
+<p><a href="https://api.dart.dev/dart-io/Platform-class.html">https://api.dart.dev/dart-io/Platform-class.html</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/c#env-var">https://hyperpolyglot.org/c#env-var</a></li>
+<li><a href="https://hyperpolyglot.org/cpp#processes-environment">https://hyperpolyglot.org/cpp#processes-environment</a></li>
+<li><a href="https://hyperpolyglot.org/scripting2#env-var">https://hyperpolyglot.org/scripting2#env-var</a></li>
+<li><a href="https://programming-idioms.org/idiom/205">https://programming-idioms.org/idiom/205</a></li>
+<li><a href="https://rosettacode.org/wiki/Environment_variables">https://rosettacode.org/wiki/Environment_variables</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>

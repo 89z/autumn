@@ -1,5 +1,5 @@
 {{ define "main" }}
-<h1 class="{{ .Kind }}">{{ printf "%v / %v" .Parent.Title .Title }}</h1>
+<h1>{{ printf "%v / %v" .Parent.Title .Title }}</h1>
 <section class="{{ .Kind }}">
    <time>{{ .Parent.Lastmod.Format "Mon Jan 2 2006" }}</time>
    {{ range (.Parent.GetTerms "categories") }}

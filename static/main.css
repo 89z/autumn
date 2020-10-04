@@ -47,10 +47,6 @@ td {
 article.section {
    border-width: thick;
 }
-h1.page,
-h1.section,
-h1.taxonomy,
-h1.term,
 section.term,
 td.page,
 td.section {
@@ -59,18 +55,16 @@ td.section {
 time {
    color: var(--gray-60);
 }
-h2.page > a,
-h2.section > a,
-h2.taxonomy > a,
-h2.term > a,
 header > a,
-header > h1 > a {
+header > h1 > a,
+header > h2 > a {
    color: var(--ivory);
 }
 nav.section > a {
    color: var(--light-red);
 }
 a.page,
+article.section > h2 > a,
 article.term > a,
 footer > ul > li > a,
 main.page > p > a,
@@ -121,13 +115,10 @@ footer,
 header > a {
    font-size: 1.4rem;
 }
-h2.page,
-h2.section,
-h2.taxonomy,
-h2.term {
+header > h2 {
    font-size: 2rem;
 }
-h1.home {
+header > h1 {
    font-size: 3rem;
 }
 footer > ul,
@@ -143,13 +134,11 @@ main.page > div.highlight {
 main.page > ul {
    line-height: 1.5rem;
 }
-h1.home,
-h2.page,
-h2.section,
-h2.taxonomy,
-h2.term {
+header > h1,
+header > h2 {
    margin-bottom: 0;
 }
+article.section > h2,
 article.section,
 header {
    margin-bottom: .5rem;
@@ -184,12 +173,10 @@ section.section > a,
 time.section {
    margin-right: 1rem;
 }
+article.section > h2,
 body,
-h1.home,
-h2.page,
-h2.section,
-h2.taxonomy,
-h2.term {
+header > h1,
+header > h2 {
    margin-top: 0;
 }
 article.section {
