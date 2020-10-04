@@ -1,0 +1,14 @@
+---
+title: Python
+tags: [python]
+---
+
+{{< r "a.py" >}}
+
+<https://docs.python.org/reference/simple_stmts.html#import>
+
+## References
+
+- <https://hyperpolyglot.org/c#load-lib>
+- <https://hyperpolyglot.org/scripting2#load-lib>
+- <https://rosettacode.org/wiki/Include_a_file>
