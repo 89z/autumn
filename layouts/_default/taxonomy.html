@@ -1,7 +1,7 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
+<h1 class="{{ .Kind }}">{{ .Title }}</h1>
    {{ with (.GetPage (path.Join "talk" .Path)) }}
-<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+<a class="{{ .Kind }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
 <table>
    {{ range .Pages.ByTitle }}
@@ -10,7 +10,7 @@
       <td>
          <a href="{{ .RelPermalink }}">{{ $s }}</a>
       </td>
-      <td>{{ .Parent.Lastmod.Format "Mon Jan 2 2006" }}</td>
+      <td class="{{ .Kind }}">{{ .Parent.Lastmod.Format "Mon Jan 2 2006" }}</td>
    </tr>
    {{ end }}
 </table>

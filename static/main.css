@@ -1,4 +1,4 @@
-:root {
+body {
    --gray-25: hsl(0, 0%, 25%);
    --gray-60: hsl(0, 0%, 60%);
    --gray-80: hsl(0, 0%, 80%);
@@ -7,16 +7,19 @@
    --red: hsl(0, 45%, 45%);
 }
 header,
+section.page,
 section.section {
    align-items: center;
 }
 article.term,
 footer > ul > li,
+section.page > a,
 section.section > a,
 tr:nth-child(odd) > td {
    background: var(--light-red);
 }
-header {
+header,
+nav.section > a {
    background: var(--red);
 }
 table {
@@ -31,6 +34,8 @@ article.section {
 article.section,
 article.term,
 footer > ul > li,
+nav.section > a,
+section.page > a,
 section.section > a {
    border-radius: .5rem;
 }
@@ -42,18 +47,35 @@ td {
 article.section {
    border-width: thick;
 }
-td {
+h1.page,
+h1.section,
+h1.taxonomy,
+h1.term,
+td.page,
+td.section {
    color: var(--gray-25);
 }
 time {
    color: var(--gray-60);
 }
+h2.page > a,
+h2.taxonomy > a,
+h2.term > a,
 header > a,
 header > h1 > a {
    color: var(--ivory);
 }
+nav.section > a {
+   color: var(--light-red);
+}
+a.page,
+article.term > a,
 footer > ul > li > a,
 h2.section > a,
+main.page > p > a,
+main.page > ul > li > a,
+main.taxonomy > a,
+section.page > a,
 section.section > a,
 td > a {
    color: var(--red);
@@ -61,7 +83,9 @@ td > a {
 footer > ul,
 header,
 nav.home,
+nav.section,
 nav.taxonomy,
+section.page,
 section.section {
    display: flex;
 }
@@ -71,12 +95,22 @@ article.section {
 }
 header,
 nav.home,
+nav.section,
 nav.taxonomy {
    flex-wrap: wrap;
 }
 body {
    font-family: sans-serif;
 }
+main.page > div.highlight {
+   font-size: 1rem;
+}
+a.page,
+main.page > p,
+main.page > ul,
+main.taxonomy > a,
+nav.section,
+nav.taxonomy,
 table,
 time {
    font-size: 1.2rem;
@@ -84,6 +118,11 @@ time {
 footer,
 header > a {
    font-size: 1.4rem;
+}
+h2.page,
+h2.taxonomy,
+h2.term {
+   font-size: 2rem;
 }
 h1.home {
    font-size: 3rem;
@@ -95,7 +134,16 @@ nav.home {
 header {
    justify-content: space-evenly;
 }
-h1.home {
+main.page > div.highlight {
+   line-height: 1.2rem;
+}
+main.page > ul {
+   line-height: 1.5rem;
+}
+h1.home,
+h2.page,
+h2.taxonomy,
+h2.term {
    margin-bottom: 0;
 }
 article.section,
@@ -127,51 +175,74 @@ footer > ul > li {
    margin-right: .5rem;
 }
 article.term,
+nav.section > a,
 time {
    margin-right: 1rem;
 }
 body,
-h1.home {
+h1.home,
+h2.page,
+h2.taxonomy,
+h2.term {
    margin-top: 0;
 }
 article.section {
    margin-top: .5rem;
 }
 article.term,
+nav.section > a,
 section.term,
 table {
    margin-top: 1rem;
 }
 footer > ul > li,
+header.page,
+header.taxonomy,
+header.term,
+section.page > a,
 section.section > a,
 td {
    padding-bottom: .5rem;
 }
 article.section,
 article.term,
-header.home {
+header.home,
+main.page > div > pre,
+nav.section > a {
    padding-bottom: 1rem;
 }
 article.section,
 article.term,
 footer > ul > li,
+main.page > div > pre,
+main.page > ul,
+nav.section > a,
+section.page > a,
 section.section > a,
 td {
    padding-left: 1rem;
 }
 article.term,
 footer > ul > li,
+nav.section > a,
+section.page > a,
 section.section > a,
 td {
    padding-right: 1rem;
 }
 footer > ul > li,
+header.page,
+header.taxonomy,
+header.term,
+section.page > a,
 section.section > a,
 td {
    padding-top: .5rem;
 }
 article.term,
-header.home {
+header.home,
+main.page > div > pre,
+nav.section > a {
    padding-top: 1rem;
 }
 section.term {

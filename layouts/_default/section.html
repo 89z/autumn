@@ -1,12 +1,12 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-<section>
+<h1 class="{{ .Kind }}">{{ .Title }}</h1>
+<section class="{{ .Kind }}">
    <time>{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
    {{ range (.GetTerms "categories") }}
    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
 </section>
-<nav>
+<nav class="{{ .Kind }}">
    {{ range .Pages }}
    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
