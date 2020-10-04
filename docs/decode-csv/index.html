@@ -10,7 +10,7 @@
    <link rel="stylesheet" href="/autumn/main.css">
 </head>
 <body>
-   <header class="page">
+   <header class="section">
 
       <h2><a href="/autumn">Autumn</a></h2>
 
@@ -18,129 +18,24 @@
       <a href="/autumn/tags">Tags</a>
       <a href="https://github.com/nu8/autumn">Repository</a>
    </header>
-   <main class="page">
-<h1>
-   <a href="/autumn/">Autumn</a> / Decode CSV
-</h1>
-<section class="page">
-   <time>Sun Oct 4 2020</time>
+   <main class="section">
+<h1>Decode CSV</h1>
+<section class="section">
+   <time class="section">Mon Jun 22 2020</time>
+   
+   <a href="/autumn/categories/file-format/">file-format</a>
    
 </section>
+<nav class="section">
    
-<a href="/autumn/talk/"></a>
+   <a href="/autumn/decode-csv/go/">Go</a>
    
+   <a href="/autumn/decode-csv/php/">PHP</a>
    
-
-
-<pre><code class="language-csv" data-lang="csv">city,country
-london,england
-nice,france
-</code></pre>
-<h2 id="go">Go</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;encoding/csv&#34;</span>
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
-   <span style="color:#e6db74">&#34;log&#34;</span>
-   <span style="color:#e6db74">&#34;os&#34;</span>
-)
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o_csv</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.csv&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
-   }
-   <span style="color:#a6e22e">o_table</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">csv</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">o_csv</span>)
-   <span style="color:#a6e22e">a_head</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o_table</span>.<span style="color:#a6e22e">Read</span>()
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
-   }
-   <span style="color:#a6e22e">a_body</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o_table</span>.<span style="color:#a6e22e">ReadAll</span>()
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
-   }
-   <span style="color:#a6e22e">m_row</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{}
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">n_row</span>, <span style="color:#a6e22e">a_row</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">a_body</span> {
-      <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">n_col</span>, <span style="color:#a6e22e">s_col</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">a_head</span> {
-         <span style="color:#a6e22e">m_row</span>[<span style="color:#a6e22e">s_col</span>] = <span style="color:#a6e22e">a_row</span>[<span style="color:#a6e22e">n_col</span>]
-      }
-      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">n_row</span>, <span style="color:#a6e22e">m_row</span>)
-   }
-}
-</code></pre></div>
-<p><a href="https://golang.org/pkg/encoding/csv">https://golang.org/pkg/encoding/csv</a></p>
-<h2 id="php">PHP</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$r_tab <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.csv&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
-$a_head <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgetcsv</span>($r_tab);
-
-<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
-   $a_row <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgetcsv</span>($r_tab);
-   <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">feof</span>($r_tab)) {
-      <span style="color:#66d9ef">break</span>;
-   }
-   $m_row <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_combine</span>($a_head, $a_row);
-   $s_city <span style="color:#f92672">=</span> $m_row[<span style="color:#e6db74">&#39;city&#39;</span>];
-   <span style="color:#a6e22e">var_dump</span>($s_city);
-}
-</code></pre></div>
-<p><a href="https://php.net/function.fgetcsv">https://php.net/function.fgetcsv</a></p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$a_tab <span style="color:#f92672">=</span> <span style="color:#a6e22e">file</span>(<span style="color:#e6db74">&#39;a.csv&#39;</span>);
-$s_head <span style="color:#f92672">=</span> $a_tab[<span style="color:#ae81ff">0</span>];
-$a_head <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_getcsv</span>($s_head);
-$a_body <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_slice</span>($a_tab, <span style="color:#ae81ff">1</span>);
-
-<span style="color:#66d9ef">foreach</span> ($a_body <span style="color:#66d9ef">as</span> $s_row) {
-   $a_row <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_getcsv</span>($s_row);
-   $m_row <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_combine</span>($a_head, $a_row);
-   $s_city <span style="color:#f92672">=</span> $m_row[<span style="color:#e6db74">&#39;city&#39;</span>];
-   <span style="color:#a6e22e">var_dump</span>($s_city);
-}
-</code></pre></div>
-<p><a href="https://php.net/function.str-getcsv">https://php.net/function.str-getcsv</a></p>
-<h2 id="python">Python</h2>
-<p>
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> csv
-o_db <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;a.csv&#39;</span>)
-
-<span style="color:#66d9ef">for</span> m_row <span style="color:#f92672">in</span> csv<span style="color:#f92672">.</span>DictReader(o_db):
-   <span style="color:#66d9ef">print</span>(m_row)
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> csv
-o_db <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;a.csv&#39;</span>)
-o_tab <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>reader(o_db)
-a_head <span style="color:#f92672">=</span> next(o_tab)
-
-<span style="color:#66d9ef">for</span> a_row <span style="color:#f92672">in</span> o_tab:
-   m_row <span style="color:#f92672">=</span> dict(zip(a_head, a_row))
-   s_city <span style="color:#f92672">=</span> m_row[<span style="color:#e6db74">&#39;city&#39;</span>]
-   <span style="color:#66d9ef">print</span>(s_city)
-</code></pre></div></p>
-<p><a href="https://docs.python.org/library/csv.html">https://docs.python.org/library/csv.html</a></p>
-<h2 id="ruby">Ruby</h2>
-<p><a href="https://ruby-doc.org/stdlib/libdoc/csv/rdoc">https://ruby-doc.org/stdlib/libdoc/csv/rdoc</a></p>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://hyperpolyglot.org/scripting2#parse-csv">https://hyperpolyglot.org/scripting2#parse-csv</a></li>
-<li><a href="https://rosettacode.org/wiki/Hash_from_two_arrays">https://rosettacode.org/wiki/Hash_from_two_arrays</a></li>
-</ul>
-
+   <a href="/autumn/decode-csv/python/">Python</a>
+   
+</nav>
+   
 </main>
 
 </body>
