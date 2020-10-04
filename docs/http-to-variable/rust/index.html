@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>HTTP to variable / Rust</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body class="base">
+
+   <header class="h2">
+      <h2 class="base"><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/nu8/autumn">Repository</a>
+   </header>
+
+<main class="sing">
+   <h1 class="sing">HTTP to variable / Rust</h1>
+   <section class="sing">
+      <time class="sing">Fri Sep 11 2020</time>
+   
+      <a class="sing" href="/autumn/categories/input-output/">input-output</a>
+   
+      <a class="sing" href="/autumn/categories/network/">network</a>
+   
+   </section>
+   
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> curl::easy::{Easy, WriteError};
+<span style="color:#66d9ef">use</span> std::io::{stdout, Write};
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), curl::Error<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> o <span style="color:#f92672">=</span> Easy::new();
+   o.url(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>)<span style="color:#f92672">?</span>;
+   o.write_function(<span style="color:#f92672">|</span>y<span style="color:#f92672">|</span> {
+      <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> Ok(n) <span style="color:#f92672">=</span> stdout().write(y) {
+         <span style="color:#66d9ef">return</span> Ok(n)
+      }
+      Err(WriteError::Pause)
+   })<span style="color:#f92672">?</span>;
+   o.perform()<span style="color:#f92672">?</span>;
+   Ok(())
+}
+</code></pre></div>
+<p><a href="https://docs.rs/curl">https://docs.rs/curl</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/c#http-get">https://hyperpolyglot.org/c#http-get</a></li>
+<li><a href="https://hyperpolyglot.org/scripting2#http-get">https://hyperpolyglot.org/scripting2#http-get</a></li>
+<li><a href="https://programming-idioms.org/idiom/101">https://programming-idioms.org/idiom/101</a></li>
+<li><a href="https://rosettacode.org/wiki/HTTP">https://rosettacode.org/wiki/HTTP</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>

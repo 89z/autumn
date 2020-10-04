@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>HTTP to variable / Go</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body class="base">
+
+   <header class="h2">
+      <h2 class="base"><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/nu8/autumn">Repository</a>
+   </header>
+
+<main class="sing">
+   <h1 class="sing">HTTP to variable / Go</h1>
+   <section class="sing">
+      <time class="sing">Fri Sep 11 2020</time>
+   
+      <a class="sing" href="/autumn/categories/input-output/">input-output</a>
+   
+      <a class="sing" href="/autumn/categories/network/">network</a>
+   
+   </section>
+   
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
+   <span style="color:#e6db74">&#34;log&#34;</span>
+   <span style="color:#e6db74">&#34;net/http&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+   <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Body</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s&#34;</span>, <span style="color:#a6e22e">y</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/net/http#Get">https://golang.org/pkg/net/http#Get</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/c#http-get">https://hyperpolyglot.org/c#http-get</a></li>
+<li><a href="https://hyperpolyglot.org/scripting2#http-get">https://hyperpolyglot.org/scripting2#http-get</a></li>
+<li><a href="https://programming-idioms.org/idiom/101">https://programming-idioms.org/idiom/101</a></li>
+<li><a href="https://rosettacode.org/wiki/HTTP">https://rosettacode.org/wiki/HTTP</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>

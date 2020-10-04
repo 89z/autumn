@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>HTTP to variable / PHP</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body class="base">
+
+   <header class="h2">
+      <h2 class="base"><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/nu8/autumn">Repository</a>
+   </header>
+
+<main class="sing">
+   <h1 class="sing">HTTP to variable / PHP</h1>
+   <section class="sing">
+      <time class="sing">Fri Sep 11 2020</time>
+   
+      <a class="sing" href="/autumn/categories/input-output/">input-output</a>
+   
+      <a class="sing" href="/autumn/categories/network/">network</a>
+   
+   </section>
+   
+   <p>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>;
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>($s);
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span>$r <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>($s, <span style="color:#e6db74">&#39;r&#39;</span>);
+$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_contents</span>($r);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1, $s2);
+</code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;curl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;curl&#39;</span>);
+<span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;openssl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;openssl&#39;</span>);
+$r <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>(<span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>);
+<span style="color:#a6e22e">curl_setopt</span>($r, <span style="color:#a6e22e">CURLOPT_RETURNTRANSFER</span>, <span style="color:#66d9ef">true</span>);
+$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_exec</span>($r);
+<span style="color:#66d9ef">echo</span> $s;
+</code></pre></div></p>
+<ul>
+<li><a href="https://php.net/function.curl-init">https://php.net/function.curl-init</a></li>
+<li><a href="https://php.net/function.file-get-contents">https://php.net/function.file-get-contents</a></li>
+<li><a href="https://php.net/function.stream-get-contents">https://php.net/function.stream-get-contents</a></li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/c#http-get">https://hyperpolyglot.org/c#http-get</a></li>
+<li><a href="https://hyperpolyglot.org/scripting2#http-get">https://hyperpolyglot.org/scripting2#http-get</a></li>
+<li><a href="https://programming-idioms.org/idiom/101">https://programming-idioms.org/idiom/101</a></li>
+<li><a href="https://rosettacode.org/wiki/HTTP">https://rosettacode.org/wiki/HTTP</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
