@@ -13,10 +13,10 @@ section.sing {
    align-items: center;
 }
 a.sing,
-footer.index > ul > li,
+article.terms,
+footer > ul > li,
 section.index > a,
 section.sect > a,
-section.terms,
 tr:nth-child(odd) > td {
    background: var(--light-red);
 }
@@ -24,8 +24,7 @@ header,
 nav.sect > a {
    background: var(--red);
 }
-table.taxon,
-table.terms {
+table {
    border-collapse: collapse;
 }
 td {
@@ -36,27 +35,25 @@ article.index {
 }
 a.sing,
 article.index,
-footer.index > ul > li,
+article.terms,
+footer > ul > li,
 nav.sect > a,
 section.index > a,
-section.sect > a,
-section.terms {
+section.sect > a {
    border-radius: .5rem;
 }
 article.index,
-td.taxon,
-td.terms {
+td {
    border-style: solid;
 }
 article.index {
    border-width: thick;
 }
-div.terms,
 h1.sect,
 h1.sing,
 h1.terms,
-main.sing > h2,
-td {
+section.terms,
+time.taxon {
    color: var(--gray-25);
 }
 time {
@@ -64,7 +61,6 @@ time {
 }
 h1.base > a,
 h2.base > a,
-h2.terms > a,
 header > a {
    color: var(--ivory);
 }
@@ -73,20 +69,20 @@ nav.sect > a {
 }
 a.sing,
 a.taxon,
-a.terms,
-footer.index > ul > li > a,
+article.terms > a,
+footer > ul > li > a,
 h2.index > a,
-main.sing > p > a,
+main.base > a,
 section.index > a,
 section.sect > a,
 td > a {
    color: var(--red);
 }
-article.terms,
-footer.index > ul,
+footer > ul,
 header,
-main.index,
+nav.index,
 nav.sect,
+nav.terms,
 section.index,
 section.sect,
 section.sing {
@@ -95,29 +91,25 @@ section.sing {
 article.index {
    flex-basis: 400px;
 }
-article.terms,
 header,
-main.index,
-nav.sect {
+nav.index,
+nav.sect,
+nav.terms {
    flex-wrap: wrap;
 }
 body.base {
    font-family: sans-serif;
 }
-main.sing > div.highlight {
-   font-size: 1rem;
-}
 a.taxon,
-main.sing > p,
-main.terms > a,
+main.base > a,
 table,
 time {
    font-size: 1.2rem;
 }
-article.terms,
-footer.index,
+footer,
 header > a,
-nav.sect {
+nav.sect,
+nav.terms {
    font-size: 1.4rem;
 }
 h2.base {
@@ -126,15 +118,12 @@ h2.base {
 h1.base {
    font-size: 3rem;
 }
-footer.index > ul,
-main.index {
+footer > ul,
+nav.index {
    justify-content: center;
 }
 header {
    justify-content: space-evenly;
-}
-main.sing > ul {
-   line-height: 1.4rem;
 }
 h1.base,
 h2.base {
@@ -158,32 +147,25 @@ body.base {
    margin-left: 0;
 }
 article.index,
-footer.index > ul > li,
-h1.sing,
-main.sing > div.highlight,
-main.sing > p,
-main.sing > h2,
-time.sing {
+article.terms,
+footer > ul > li,
+main.base {
    margin-left: .5rem;
 }
-header > a,
-main.sect,
-main.taxon,
-main.terms {
+header > a {
    margin-left: 1rem;
 }
 body.base {
    margin-right: 0;
 }
 article.index,
-footer.index > ul > li,
-main.sing > div.highlight {
+article.terms,
+footer > ul > li {
    margin-right: .5rem;
 }
 a.sing,
 nav.sect > a,
 section.index > a,
-section.terms,
 time {
    margin-right: 1rem;
 }
@@ -195,7 +177,7 @@ h2.base {
 article.index {
    margin-top: .5rem;
 }
-div.terms,
+article.terms,
 nav.sect,
 section.terms,
 table {
@@ -205,7 +187,7 @@ div.base {
    opacity: 0.5;
 }
 a.sing,
-footer.index > ul > li,
+footer > ul > li,
 header.h2,
 section.index > a,
 section.sect > a,
@@ -213,50 +195,44 @@ td {
    padding-bottom: .5rem;
 }
 article.index,
+article.terms,
 header.h1,
-main.sing > div > pre,
-nav.sect > a,
-section.terms {
+nav.sect > a {
    padding-bottom: 1rem;
 }
 a.sing,
 article.index,
-footer.index > ul > li,
-main.sing > div > pre,
+article.terms,
+footer > ul > li,
 nav.sect > a,
 section.index > a,
 section.sect > a,
-section.terms,
 td {
    padding-left: 1rem;
 }
-main.sing > ul {
-   padding-left: 2rem;
-}
 a.sing,
-footer.index > ul > li,
+article.terms,
+footer > ul > li,
 nav.sect > a,
 section.index > a,
 section.sect > a,
-section.terms,
 td {
    padding-right: 1rem;
 }
 a.sing,
-footer.index > ul > li,
+footer > ul > li,
 header.h2,
 section.index > a,
 section.sect > a,
 td {
    padding-top: .5rem;
 }
+article.terms,
 header.h1,
-main.sing > div > pre,
-nav.sect > a,
-section.terms {
+nav.sect > a {
    padding-top: 1rem;
 }
-article.terms {
+nav.terms {
    text-align: center;
 }
 a {

@@ -1,17 +1,15 @@
 {{ define "main" }}
-<main class="sect">
-   <h1 class="sect">{{ .Title }}</h1>
-   <section class="sect">
-      <time class="sect">{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
+<h1 class="sect">{{ .Title }}</h1>
+<section class="sect">
+   <time class="sect">{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
    {{ range (.GetTerms "categories") }}
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+   <a href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
-   </section>
-   <nav class="sect">
+</section>
+<nav class="sect">
    {{ range .Pages }}
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+   <a href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
-   </nav>
+</nav>
    {{ .Content }}
-</main>
 {{ end }}

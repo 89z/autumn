@@ -1,16 +1,14 @@
 {{ define "main" }}
-<main class="terms">
-   <h1 class="terms">{{ .Title }}</h1>
+<h1 class="terms">{{ .Title }}</h1>
    {{ with (.GetPage (path.Join "talk" .Path)) }}
-   <a class="terms" href="{{ .RelPermalink }}">{{ .Title }}</a>
+<a href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
-   <article class="terms">
+<nav class="terms">
    {{ range .Data.Terms }}
-      <section class="terms">
-         <a class="terms" href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
-         <div class="terms">{{ .Count }}</div>
-      </section>
-   {{ end }}
+   <article class="terms">
+      <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+      <section class="terms">{{ .Count }}</section>
    </article>
-</main>
+   {{ end }}
+</nav>
 {{ end }}

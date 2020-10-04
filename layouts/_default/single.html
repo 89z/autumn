@@ -1,15 +1,13 @@
 {{ define "main" }}
-<main class="sing">
-   <h1 class="sing">{{ printf "%v / %v" .Parent.Title .Title }}</h1>
-   <section class="sing">
-      <time class="sing">{{ .Parent.Lastmod.Format "Mon Jan 2 2006" }}</time>
+<h1 class="sing">{{ printf "%v / %v" .Parent.Title .Title }}</h1>
+<section class="sing">
+   <time class="sing">{{ .Parent.Lastmod.Format "Mon Jan 2 2006" }}</time>
    {{ range (.Parent.GetTerms "categories") }}
-      <a class="sing" href="{{ .RelPermalink }}">{{ .Title }}</a>
-   {{ end }}
-   </section>
-   {{ with (.GetPage (path.Join "talk" .Parent.Path)) }}
    <a class="sing" href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
+</section>
+   {{ with (.GetPage (path.Join "talk" .Parent.Path)) }}
+<a class="sing" href="{{ .RelPermalink }}">{{ .Title }}</a>
+   {{ end }}
    {{ .Content }}
-</main>
 {{ end }}

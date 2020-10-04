@@ -23,6 +23,9 @@
       <a href="/autumn/tags">Tags</a>
       <a href="https://github.com/nu8/autumn">Repository</a>
    </header>
-{{ block "main" . }}{{ end }}
+   <main class="base">{{ block "main" . }}{{ end }}</main>
+{{ if .IsHome }}
+   <footer>{{ template "_internal/pagination.html" . }}</footer>
+{{ end }}
 </body>
 </html>
