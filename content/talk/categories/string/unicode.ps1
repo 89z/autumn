@@ -1,6 +1,14 @@
+# example 1
 'द U+0926 DEVANAGARI LETTER DA (Other_Letter)'
 'न U+0928 DEVANAGARI LETTER NA (Other_Letter)'
 'र U+0930 DEVANAGARI LETTER RA (Other_Letter)'
+# example 2
+'👦🏻 Boy: Light Skin Tone'
+'👨🏻 Man: Light Skin Tone'
+'👶🏻 Baby: Light Skin Tone'
+'🧑🏻 Person: Light Skin Tone'
+'🧒🏻 Child: Light Skin Tone'
+# example 3
 '👨‍🌾 Man Farmer'
 '👨‍🍳 Man Cook'
 '👨‍🎓 Man Student'
