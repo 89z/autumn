@@ -6,7 +6,7 @@
          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       </h2>
       <section class="{{ .Kind }}">
-         <time class="{{ .Kind }}">{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
+         <time>{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
       {{ range (.GetTerms "categories") }}
          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}
