@@ -1,7 +1,7 @@
 {{ define "main" }}
 <h1 class="{{ .Kind }}">{{ .Title }}</h1>
 <section class="{{ .Kind }}">
-   <time>{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
+   <time class="{{ .Kind }}">{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
    {{ range (.GetTerms "categories") }}
    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}

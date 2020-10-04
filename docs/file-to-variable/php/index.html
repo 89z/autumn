@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>File to variable / PHP</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2 class="page"><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/nu8/autumn">Repository</a>
+   </header>
+   <main class="page">
+<h1 class="page">File to variable / PHP</h1>
+<section class="page">
+   <time>Fri Sep 11 2020</time>
+   
+   <a href="/autumn/categories/input-output/">input-output</a>
+   
+</section>
+   
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>);
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span>$r <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
+$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_contents</span>($r);
+<span style="color:#75715e"># example 3
+</span><span style="color:#75715e"></span>$a3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>);
+<span style="color:#75715e"># example 4
+</span><span style="color:#75715e"></span>$a4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>, <span style="color:#a6e22e">FILE_IGNORE_NEW_LINES</span>);
+<span style="color:#75715e"># example 5
+</span><span style="color:#75715e"></span>$a5 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>, <span style="color:#a6e22e">FILE_IGNORE_NEW_LINES</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">FILE_SKIP_EMPTY_LINES</span>);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1, $s2, $a3, $a4, $a5);
+</code></pre></div>
+<ul>
+<li><a href="https://php.net/function.file">https://php.net/function.file</a></li>
+<li><a href="https://php.net/function.file-get-contents">https://php.net/function.file-get-contents</a></li>
+<li><a href="https://php.net/function.stream-get-contents">https://php.net/function.stream-get-contents</a></li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/c#read-file-str">https://hyperpolyglot.org/c#read-file-str</a></li>
+<li><a href="https://hyperpolyglot.org/scripting2#read-file-str">https://hyperpolyglot.org/scripting2#read-file-str</a></li>
+<li><a href="https://hyperpolyglot.org/web#read-file-str">https://hyperpolyglot.org/web#read-file-str</a></li>
+<li><a href="https://programming-idioms.org/idiom/58">https://programming-idioms.org/idiom/58</a></li>
+<li><a href="https://rosettacode.org/wiki/Read_entire_file">https://rosettacode.org/wiki/Read_entire_file</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>

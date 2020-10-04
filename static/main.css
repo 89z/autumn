@@ -97,7 +97,8 @@ article.section {
 header,
 nav.home,
 nav.section,
-nav.taxonomy {
+nav.taxonomy,
+section.section {
    flex-wrap: wrap;
 }
 body {
@@ -163,8 +164,7 @@ footer > ul > li {
    margin-left: .5rem;
 }
 header > a,
-section.page > a,
-section.section > a {
+section.page > a {
    margin-left: 1rem;
 }
 body {
@@ -178,12 +178,15 @@ footer > ul > li {
    margin-right: .5rem;
 }
 article.term,
-nav.section > a {
+nav.section > a,
+section.section > a,
+time.section {
    margin-right: 1rem;
 }
 body,
 h1.home,
 h2.page,
+h2.section,
 h2.taxonomy,
 h2.term {
    margin-top: 0;
@@ -224,6 +227,7 @@ section.section > a,
 td {
    padding-left: 1rem;
 }
+article.section,
 article.term,
 footer > ul > li,
 nav.section > a,
@@ -241,6 +245,7 @@ section.section > a,
 td {
    padding-top: .5rem;
 }
+article.section,
 article.term,
 header.home,
 main.page > div > pre,
