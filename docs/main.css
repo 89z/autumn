@@ -121,6 +121,13 @@ header > h2 {
 header > h1 {
    font-size: 3rem;
 }
+header.home,
+nav.home,
+nav.section,
+nav.taxonomy,
+section.section {
+   gap: 1rem;
+}
 footer > ul,
 nav.home {
    justify-content: center;
@@ -138,10 +145,11 @@ header > h1,
 header > h2 {
    margin-bottom: 0;
 }
-article.section > h2,
-article.section,
-header {
+article.section > h2 {
    margin-bottom: .5rem;
+}
+header.home {
+   margin-bottom: 1rem;
 }
 body {
    margin-left: 0;
@@ -149,11 +157,9 @@ body {
 main {
    margin-left: 2%;
 }
-article.section,
 footer > ul > li {
    margin-left: .5rem;
 }
-header > a,
 section.page > a {
    margin-left: 1rem;
 }
@@ -163,15 +169,8 @@ body {
 main {
    margin-right: 2%;
 }
-article.section,
 footer > ul > li {
    margin-right: .5rem;
-}
-article.term,
-nav.section > a,
-section.section > a,
-time.section {
-   margin-right: 1rem;
 }
 article.section > h2,
 body,
@@ -179,11 +178,8 @@ header > h1,
 header > h2 {
    margin-top: 0;
 }
-article.section {
-   margin-top: .5rem;
-}
-article.term,
-nav.section > a,
+nav.section,
+nav.taxonomy,
 section.term,
 table {
    margin-top: 1rem;
