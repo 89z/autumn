@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Define class property / Rust</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/nu8/autumn">Repository</a>
+   </header>
+   <main class="page">
+<h1>
+   <a href="/autumn/define-class-property/">Define class property</a> / Rust
+</h1>
+<section class="page">
+   <time>Sat Sep 5 2020</time>
+   
+   <a href="/autumn/categories/class/">class</a>
+   
+</section>
+   
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+
+   <span style="color:#75715e">#[derive(Debug)]</span>
+   <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Date</span> {
+      year: <span style="color:#66d9ef">u16</span>,
+      month: Option<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span>,
+      day: Option<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span>
+   }
+
+   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> Date {year: <span style="color:#ae81ff">2019</span>, month: None, day: None};
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o);
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/keyword.struct.html">https://doc.rust-lang.org/std/keyword.struct.html</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/c#def-class">https://hyperpolyglot.org/c#def-class</a></li>
+<li><a href="https://hyperpolyglot.org/scripting2#def-class">https://hyperpolyglot.org/scripting2#def-class</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>

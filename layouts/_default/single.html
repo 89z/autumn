@@ -1,5 +1,7 @@
 {{ define "main" }}
-<h1>{{ printf "%v / %v" .Parent.Title .Title }}</h1>
+<h1>
+   <a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a> / {{ .Title }}
+</h1>
 <section class="{{ .Kind }}">
    <time>{{ .Parent.Lastmod.Format "Mon Jan 2 2006" }}</time>
    {{ range (.Parent.GetTerms "categories") }}
