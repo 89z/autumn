@@ -7,21 +7,16 @@
    --red: hsl(0, 45%, 45%);
 }
 header,
-section.index,
-section.sect,
-section.sing {
+section.section {
    align-items: center;
 }
-a.sing,
-article.terms,
+article.term,
 footer > ul > li,
-section.index > a,
-section.sect > a,
+section.section > a,
 tr:nth-child(odd) > td {
    background: var(--light-red);
 }
-header,
-nav.sect > a {
+header {
    background: var(--red);
 }
 table {
@@ -30,227 +25,156 @@ table {
 td {
    border-color: var(--gray-80);
 }
-article.index {
+article.section {
    border-color: var(--red);
 }
-a.sing,
-article.index,
-article.terms,
+article.section,
+article.term,
 footer > ul > li,
-nav.sect > a,
-section.index > a,
-section.sect > a {
+section.section > a {
    border-radius: .5rem;
 }
-article.index,
+article.page,
+article.section,
 td {
    border-style: solid;
 }
-article.index {
+article.section {
    border-width: thick;
 }
-h1.sect,
-h1.sing,
-h1.terms,
-section.terms,
 td {
    color: var(--gray-25);
 }
 time {
    color: var(--gray-60);
 }
-h1.base > a,
-h2.base > a,
-header > a {
+header > a,
+header > h1 > a {
    color: var(--ivory);
 }
-nav.sect > a {
-   color: var(--light-red);
-}
-a.sing,
-a.taxon,
-article.terms > a,
 footer > ul > li > a,
-h2.index > a,
-main > a.terms,
-main > p > a,
-main > ul > li > a,
-section.index > a,
-section.sect > a,
+h2.section > a,
+section.section > a,
 td > a {
    color: var(--red);
 }
 footer > ul,
 header,
-nav.index,
-nav.sect,
-nav.terms,
-section.index,
-section.sect,
-section.sing {
+nav.home,
+nav.taxonomy,
+section.section {
    display: flex;
 }
-article.index {
+article.page,
+article.section {
    flex-basis: 400px;
 }
 header,
-nav.index,
-nav.sect,
-nav.terms {
+nav.home,
+nav.taxonomy {
    flex-wrap: wrap;
 }
-body.base {
+body {
    font-family: sans-serif;
 }
-main > div.highlight {
-   font-size: 1rem;
-}
-a.taxon,
-main > a.terms,
-main > p > a,
-main > ul,
 table,
 time {
    font-size: 1.2rem;
 }
 footer,
-header > a,
-nav.sect,
-nav.terms {
+header > a {
    font-size: 1.4rem;
 }
-h2.base {
-   font-size: 2rem;
-}
-h1.base {
+h1.home {
    font-size: 3rem;
 }
 footer > ul,
-nav.index {
+nav.home {
    justify-content: center;
 }
 header {
    justify-content: space-evenly;
 }
-main > ul {
-   line-height: 1.5rem;
-}
-h1.base,
-h2.base {
+h1.home {
    margin-bottom: 0;
 }
-article.index,
-div.base,
-h1.sing,
-h2.index,
+article.section,
+h2.section,
 header {
    margin-bottom: .5rem;
 }
-h1.sect,
-nav.sect > a {
-   margin-bottom: 1rem;
-}
-body.base {
-   margin-bottom: 2rem;
-}
-body.base {
+body {
    margin-left: 0;
 }
 main {
    margin-left: 2%;
 }
-article.index,
+article.section,
 footer > ul > li {
    margin-left: .5rem;
 }
 header > a {
    margin-left: 1rem;
 }
-body.base {
+body {
    margin-right: 0;
 }
 main {
    margin-right: 2%;
 }
-article.index,
-footer > ul > li,
-nav.sect > a {
+article.section,
+footer > ul > li {
    margin-right: .5rem;
 }
-a.sing,
-article.terms,
-nav.sect > a,
-section.index > a,
+article.term,
 time {
    margin-right: 1rem;
 }
-body.base,
-h1.base,
-h2.base {
+body,
+h1.home {
    margin-top: 0;
 }
-article.index {
+article.section {
    margin-top: .5rem;
 }
-article.terms,
-nav.sect,
-section.terms,
+article.term,
+section.term,
 table {
    margin-top: 1rem;
 }
-div.base {
-   opacity: 0.5;
-}
-a.sing,
 footer > ul > li,
-header.h2,
-section.index > a,
-section.sect > a,
+section.section > a,
 td {
    padding-bottom: .5rem;
 }
-article.index,
-article.terms,
-header.h1,
-main > div.highlight > pre,
-nav.sect > a {
+article.section,
+article.term,
+header.home {
    padding-bottom: 1rem;
 }
-a.sing,
-article.index,
-article.terms,
+article.section,
+article.term,
 footer > ul > li,
-main > div.highlight > pre,
-nav.sect > a,
-section.index > a,
-section.sect > a,
+section.section > a,
 td {
    padding-left: 1rem;
 }
-a.sing,
-article.terms,
+article.term,
 footer > ul > li,
-nav.sect > a,
-section.index > a,
-section.sect > a,
+section.section > a,
 td {
    padding-right: 1rem;
 }
-a.sing,
 footer > ul > li,
-header.h2,
-section.index > a,
-section.sect > a,
+section.section > a,
 td {
    padding-top: .5rem;
 }
-article.terms,
-header.h1,
-main > div.highlight > pre,
-nav.sect > a {
+article.term,
+header.home {
    padding-top: 1rem;
 }
-nav.terms {
+section.term {
    text-align: center;
 }
 a {

@@ -11,19 +11,18 @@
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/main.css">
 </head>
-<body class="base">
+<body>
+   <header class="{{ .Kind }}">
 {{ if .IsHome }}
-   <header class="h1">
-      <h1 class="base"><a href="/autumn">Autumn</a></h1>
+      <h1 class="{{ .Kind }}"><a href="/autumn">Autumn</a></h1>
 {{ else }}
-   <header class="h2">
-      <h2 class="base"><a href="/autumn">Autumn</a></h2>
+      <h2 class="{{ .Kind }}"><a href="/autumn">Autumn</a></h2>
 {{ end }}
       <a href="/autumn/categories">Categories</a>
       <a href="/autumn/tags">Tags</a>
       <a href="https://github.com/nu8/autumn">Repository</a>
    </header>
-   <main class="base">{{ block "main" . }}{{ end }}</main>
+   <main class="{{ .Kind }}">{{ block "main" . }}{{ end }}</main>
 {{ if .IsHome }}
    <footer>{{ template "_internal/pagination.html" . }}</footer>
 {{ end }}

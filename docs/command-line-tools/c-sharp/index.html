@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Command line tools / C#</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2 class="page"><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/nu8/autumn">Repository</a>
+   </header>
+   <main class="page">
+<h1>Command line tools / C#</h1>
+<section>
+   <time>Wed Sep 23 2020</time>
+   
+   <a href="/autumn/categories/reference/">reference</a>
+   
+</section>
+   
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps1" data-lang="ps1"><span style="color:#75715e"># example 1</span>
+dotnet new console -o May
+
+<span style="color:#75715e"># example 2</span>
+dotnet publish `
+-p<span style="color:#960050;background-color:#1e0010">:</span>Configuration=Release `
+-p<span style="color:#960050;background-color:#1e0010">:</span>PublishSingleFile=true `
+-p<span style="color:#960050;background-color:#1e0010">:</span>RuntimeIdentifier=win-x64 `
+-p<span style="color:#960050;background-color:#1e0010">:</span>SelfContained=false
+
+<span style="color:#75715e"># example 3</span>
+dotnet run
+</code></pre></div>
+<p><a href="https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/create">https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/create</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/c#hello-world">https://hyperpolyglot.org/c#hello-world</a></li>
+<li><a href="https://hyperpolyglot.org/cpp#hello-world">https://hyperpolyglot.org/cpp#hello-world</a></li>
+<li><a href="https://hyperpolyglot.org/rust#compiler">https://hyperpolyglot.org/rust#compiler</a></li>
+<li><a href="https://hyperpolyglot.org/scripting#interpreter">https://hyperpolyglot.org/scripting#interpreter</a></li>
+<li><a href="https://hyperpolyglot.org/web#hello-world">https://hyperpolyglot.org/web#hello-world</a></li>
+<li><a href="https://rosettacode.org/wiki/Hello_world/Newbie">https://rosettacode.org/wiki/Hello_world/Newbie</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>

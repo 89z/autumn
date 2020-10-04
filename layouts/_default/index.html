@@ -1,10 +1,12 @@
 {{ define "main" }}
-<nav class="index">
+<nav class="{{ .Kind }}">
    {{ range (.Paginate .Pages.ByLastmod.Reverse 24).Pages }}
-   <article class="index">
-      <h2 class="index"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-      <section class="index">
-         <time class="index">{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
+   <article class="{{ .Kind }}">
+      <h2 class="{{ .Kind }}">
+         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h2>
+      <section class="{{ .Kind }}">
+         <time>{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
       {{ range (.GetTerms "categories") }}
          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}
