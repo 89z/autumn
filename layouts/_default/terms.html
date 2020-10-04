@@ -2,17 +2,15 @@
 <main class="terms">
    <h1 class="terms">{{ .Title }}</h1>
    {{ with (.GetPage (path.Join "talk" .Path)) }}
-   <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+   <a class="terms" href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
-   <table class="terms">
+   <article class="terms">
    {{ range .Data.Terms }}
-      <tr class="terms">
-         <td class="terms">
-            <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
-         </td>
-         <td class="terms">{{ .Count }}</td>
-      </tr>
+      <section class="terms">
+         <a class="terms" href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+         <div class="terms">{{ .Count }}</div>
+      </section>
    {{ end }}
-   </table>
+   </article>
 </main>
 {{ end }}

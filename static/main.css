@@ -1,5 +1,5 @@
 :root {
-   --gray-30: hsl(0, 0%, 30%);
+   --gray-25: hsl(0, 0%, 25%);
    --gray-60: hsl(0, 0%, 60%);
    --gray-80: hsl(0, 0%, 80%);
    --ivory: hsl(60, 30%, 95%);
@@ -7,13 +7,16 @@
    --red: hsl(0, 45%, 45%);
 }
 header,
-section {
+section.index,
+section.sect,
+section.sing {
    align-items: center;
 }
 a.sing,
 footer.index > ul > li,
 section.index > a,
 section.sect > a,
+section.terms,
 tr:nth-child(odd) > td {
    background: var(--light-red);
 }
@@ -36,7 +39,8 @@ article.index,
 footer.index > ul > li,
 nav.sect > a,
 section.index > a,
-section.sect > a {
+section.sect > a,
+section.terms {
    border-radius: .5rem;
 }
 article.index,
@@ -47,15 +51,13 @@ td.terms {
 article.index {
    border-width: thick;
 }
-main.sing > p > a {
-   color: var(--red);
-}
+div.terms,
 h1.sect,
 h1.sing,
 h1.terms,
 main.sing > h2,
 td {
-   color: var(--gray-30);
+   color: var(--gray-25);
 }
 time {
    color: var(--gray-60);
@@ -71,27 +73,29 @@ nav.sect > a {
 }
 a.sing,
 a.taxon,
+a.terms,
 footer.index > ul > li > a,
 h2.index > a,
-main.terms > a,
+main.sing > p > a,
 section.index > a,
 section.sect > a,
-td.terms > a {
+td > a {
    color: var(--red);
 }
+article.terms,
 footer.index > ul,
 header,
 main.index,
 nav.sect,
-section {
+section.index,
+section.sect,
+section.sing {
    display: flex;
-}
-section.terms {
-   flex-basis: 200px;
 }
 article.index {
    flex-basis: 400px;
 }
+article.terms,
 header,
 main.index,
 nav.sect {
@@ -104,11 +108,13 @@ main.sing > div.highlight {
    font-size: 1rem;
 }
 a.taxon,
+main.sing > p,
 main.terms > a,
 table,
 time {
    font-size: 1.2rem;
 }
+article.terms,
 footer.index,
 header > a,
 nav.sect {
@@ -177,6 +183,7 @@ main.sing > div.highlight {
 a.sing,
 nav.sect > a,
 section.index > a,
+section.terms,
 time {
    margin-right: 1rem;
 }
@@ -189,6 +196,7 @@ article.index {
    margin-top: .5rem;
 }
 nav.sect,
+section.terms,
 table {
    margin-top: 1rem;
 }
@@ -206,7 +214,8 @@ td {
 article.index,
 header.h1,
 main.sing > div > pre,
-nav.sect > a {
+nav.sect > a,
+section.terms {
    padding-bottom: 1rem;
 }
 a.sing,
@@ -216,6 +225,7 @@ main.sing > div > pre,
 nav.sect > a,
 section.index > a,
 section.sect > a,
+section.terms,
 td {
    padding-left: 1rem;
 }
@@ -227,6 +237,7 @@ footer.index > ul > li,
 nav.sect > a,
 section.index > a,
 section.sect > a,
+section.terms,
 td {
    padding-right: 1rem;
 }
@@ -240,8 +251,12 @@ td {
 }
 header.h1,
 main.sing > div > pre,
-nav.sect > a {
+nav.sect > a,
+section.terms {
    padding-top: 1rem;
+}
+article.terms {
+   text-align: center;
 }
 a {
    text-decoration: none;

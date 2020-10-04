@@ -19,101 +19,30 @@
       <a href="https://github.com/nu8/autumn">Repository</a>
    </header>
 
-<main class="sing">
-   <h1 class="sing">Autumn / Iterate a file</h1>
-   <section class="sing">
-      <time class="sing">Sat Oct 3 2020</time>
+<main class="sect">
+   <h1 class="sect">Iterate a file</h1>
+   <section class="sect">
+      <time class="sect">Fri Sep 11 2020</time>
+   
+      <a href="/autumn/categories/iterate/">iterate</a>
+   
+      <a href="/autumn/categories/input-output/">input-output</a>
    
    </section>
+   <nav class="sect">
    
-   <a class="sing" href="/autumn/talk/"></a>
+      <a href="/autumn/iterate-a-file/d/">D</a>
    
-   <h2 id="d">D</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;a.txt&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">File</span><span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">foreach</span> <span style="color:#f92672">(</span>s<span style="color:#f92672">;</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">byLine</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      s<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
-   <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
-<p><a href="https://dlang.org/library/std/stdio/file.by_line.html">https://dlang.org/library/std/stdio/file.by_line.html</a></p>
-<h2 id="go">Go</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;bufio&#34;</span>
-   <span style="color:#e6db74">&#34;os&#34;</span>
-)
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.txt&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
-   }
-   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">o</span>)
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Scan</span>() {
-      <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Text</span>()
-      println(<span style="color:#a6e22e">s</span>)
-   }
-}
-</code></pre></div>
-<h2 id="php">PHP</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$r <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
-
-<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
-   $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgets</span>($r);
-   <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">feof</span>($r)) {
-      <span style="color:#66d9ef">break</span>;
-   }
-   <span style="color:#a6e22e">var_dump</span>($s);
-}
-</code></pre></div>
-<p><code>feof</code> is triggered after <code>fgets</code>. Further, <code>trim</code> expects a string, so we
-cannot use it until we are certain that we have a string.</p>
-<p><a href="https://php.net/function.feof">https://php.net/function.feof</a></p>
-<h2 id="python">Python</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> open(<span style="color:#e6db74">&#39;a.txt&#39;</span>):
-   <span style="color:#66d9ef">print</span>(s, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
-</code></pre></div>
-<p><a href="https://docs.python.org/reference/compound_stmts.html#for">https://docs.python.org/reference/compound_stmts.html#for</a></p>
-<h2 id="rust">Rust</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::fs::File;
-<span style="color:#66d9ef">use</span> std::io::{BufRead, BufReader, Error};
-
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Error<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> r_file <span style="color:#f92672">=</span> File::open(<span style="color:#e6db74">&#34;a.txt&#34;</span>)<span style="color:#f92672">?</span>;
-   <span style="color:#66d9ef">for</span> r_line <span style="color:#66d9ef">in</span> BufReader::new(r_file).lines() {
-      <span style="color:#66d9ef">let</span> s_line <span style="color:#f92672">=</span> r_line<span style="color:#f92672">?</span>;
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s_line);
-   }
-   Ok(())
-}
-</code></pre></div>
-<p><a href="https://doc.rust-lang.org/std/io/trait.BufRead.html#method.lines">https://doc.rust-lang.org/std/io/trait.BufRead.html#method.lines</a></p>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://hyperpolyglot.org/scripting2#iterate-by-line">https://hyperpolyglot.org/scripting2#iterate-by-line</a></li>
-<li><a href="https://rosettacode.org/wiki/Read_a_file_line_by_line">https://rosettacode.org/wiki/Read_a_file_line_by_line</a></li>
-</ul>
-
+      <a href="/autumn/iterate-a-file/go/">Go</a>
+   
+      <a href="/autumn/iterate-a-file/php/">PHP</a>
+   
+      <a href="/autumn/iterate-a-file/python/">Python</a>
+   
+      <a href="/autumn/iterate-a-file/rust/">Rust</a>
+   
+   </nav>
+   
 </main>
 
 </body>
