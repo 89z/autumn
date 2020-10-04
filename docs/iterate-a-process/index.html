@@ -19,117 +19,26 @@
       <a href="https://github.com/nu8/autumn">Repository</a>
    </header>
 
-<main class="sing">
-   <h1 class="sing">Autumn / Iterate a process</h1>
-   <section class="sing">
-      <time class="sing">Sat Oct 3 2020</time>
+<main class="sect">
+   <h1 class="sect">Iterate a process</h1>
+   <section class="sect">
+      <time class="sect">Fri Sep 11 2020</time>
+   
+      <a href="/autumn/categories/iterate/">iterate</a>
+   
+      <a href="/autumn/categories/input-output/">input-output</a>
    
    </section>
+   <nav class="sect">
    
-   <a class="sing" href="/autumn/talk/"></a>
+      <a href="/autumn/iterate-a-process/go/">Go</a>
    
-   <h2 id="go">Go</h2>
-<p>
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;bytes&#34;</span>
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
-   <span style="color:#e6db74">&#34;os&#34;</span>
-   <span style="color:#e6db74">&#34;os/exec&#34;</span>
-)
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">f</span>(<span style="color:#a6e22e">r</span> <span style="color:#66d9ef">rune</span>) <span style="color:#66d9ef">bool</span> {
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">r</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;\n&#39;</span>
-}
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;go&#34;</span>, <span style="color:#e6db74">&#34;env&#34;</span>).<span style="color:#a6e22e">Output</span>()
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
-   }
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">FieldsFunc</span>(<span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">f</span>)
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">a</span> {
-      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%v %s\n&#34;</span>, <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">y</span>)
-   }
-}
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;bufio&#34;</span>
-   <span style="color:#e6db74">&#34;bytes&#34;</span>
-   <span style="color:#e6db74">&#34;os&#34;</span>
-   <span style="color:#e6db74">&#34;os/exec&#34;</span>
-)
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;go&#34;</span>, <span style="color:#e6db74">&#34;env&#34;</span>).<span style="color:#a6e22e">Output</span>()
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
-   }
-   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">y</span>)
-   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">o</span>)
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Scan</span>() {
-      <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o1</span>.<span style="color:#a6e22e">Text</span>()
-      println(<span style="color:#a6e22e">s</span>)
-   }
-}
-</code></pre></div></p>
-<ul>
-<li><a href="https://golang.org/pkg/bufio#NewScanner">https://golang.org/pkg/bufio#NewScanner</a></li>
-<li><a href="https://golang.org/pkg/bytes#FieldsFunc">https://golang.org/pkg/bytes#FieldsFunc</a></li>
-</ul>
-<h2 id="php">PHP</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;php -v&#39;</span>;
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$r <span style="color:#f92672">=</span> <span style="color:#a6e22e">popen</span>($s, <span style="color:#e6db74">&#39;r&#39;</span>);
-<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
-   $s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgets</span>($r);
-   <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">feof</span>($r)) {
-      <span style="color:#66d9ef">break</span>;
-   }
-   <span style="color:#a6e22e">var_dump</span>($s1);
-}
-<span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">exec</span>($s, $a);
-<span style="color:#66d9ef">foreach</span> ($a <span style="color:#66d9ef">as</span> $s2) {
-   <span style="color:#a6e22e">var_dump</span>($s2);
-}
-</code></pre></div>
-<ul>
-<li><a href="https://php.net/function.feof">https://php.net/function.feof</a></li>
-<li><a href="https://php.net/function.fgets">https://php.net/function.fgets</a></li>
-</ul>
-<h2 id="python">Python</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> subprocess
-a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;ag&#39;</span>, <span style="color:#e6db74">&#39;-V&#39;</span>]
-o <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>Popen(a, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE, text<span style="color:#f92672">=</span>True)
-<span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> o<span style="color:#f92672">.</span>stdout:
-   <span style="color:#66d9ef">print</span>(s, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
-</code></pre></div>
-<ul>
-<li><a href="https://docs.python.org/library/subprocess.html#subprocess.check_output">https://docs.python.org/library/subprocess.html#subprocess.check_output</a></li>
-<li><a href="https://docs.python.org/library/subprocess.html#subprocess.Popen">https://docs.python.org/library/subprocess.html#subprocess.Popen</a></li>
-</ul>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://hyperpolyglot.org/scripting2#cmd-subst">https://hyperpolyglot.org/scripting2#cmd-subst</a></li>
-<li><a href="https://rosettacode.org/wiki/Get_system_command_output">https://rosettacode.org/wiki/Get_system_command_output</a></li>
-</ul>
-
+      <a href="/autumn/iterate-a-process/php/">PHP</a>
+   
+      <a href="/autumn/iterate-a-process/python/">Python</a>
+   
+   </nav>
+   
 </main>
 
 </body>

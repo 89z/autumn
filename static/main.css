@@ -1,11 +1,10 @@
 :root {
-   --gray-3: #333;
-   --gray-5: #555;
-   --gray-9: #999;
-   --gray-d: #ddd;
-   --ivory: #f8f8f2;
-   --light-red: hsl(359, 45%, 90%);
-   --red: hsl(359, 45%, 46%);
+   --gray-30: hsl(0, 0%, 30%);
+   --gray-60: hsl(0, 0%, 60%);
+   --gray-80: hsl(0, 0%, 80%);
+   --ivory: hsl(60, 30%, 95%);
+   --light-red: hsl(0, 45%, 90%);
+   --red: hsl(0, 45%, 45%);
 }
 header,
 section {
@@ -26,9 +25,8 @@ table.taxon,
 table.terms {
    border-collapse: collapse;
 }
-td.taxon,
-td.terms {
-   border-color: var(--gray-d);
+td {
+   border-color: var(--gray-80);
 }
 article.index {
    border-color: var(--red);
@@ -55,15 +53,12 @@ main.sing > p > a {
 h1.sect,
 h1.sing,
 h1.terms,
-main.sing > h2 {
-   color: var(--gray-3);
-}
-td.taxon,
-td.terms {
-   color: var(--gray-5);
+main.sing > h2,
+td {
+   color: var(--gray-30);
 }
 time {
-   color: var(--gray-9);
+   color: var(--gray-60);
 }
 h1.base > a,
 h2.base > a,
