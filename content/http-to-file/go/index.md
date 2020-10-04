@@ -1,23 +1,11 @@
 ---
-title: HTTP to file
-categories: [input-output, network]
-tags: [go, php]
-date: 2020-08-13
+title: Go
+tags: [go]
 ---
-
-## Go
 
 {{< r "a.go" >}}
 
 <https://golang.org/pkg/net/http#Get>
-
-## PHP
-
-{{< r "a.php" >}}
-{{< r "b.php" >}}
-
-- <https://php.net/function.copy>
-- <https://php.net/function.curl-init>
 
 ## References
 

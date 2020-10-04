@@ -10,9 +10,7 @@
       <td class="taxon">
          <a class="taxon" href="{{ .RelPermalink }}">{{ $s }}</a>
       </td>
-      <td class="taxon">
-         <time class="taxon">{{ .Parent.Lastmod.Format "Mon Jan 2 2006" }}</time>
-      </td>
+      <td class="taxon">{{ .Parent.Lastmod.Format "Mon Jan 2 2006" }}</td>
    </tr>
    {{ end }}
 </table>

@@ -53,7 +53,7 @@ h1.sect,
 h1.sing,
 h1.terms,
 section.terms,
-time.taxon {
+td {
    color: var(--gray-25);
 }
 time {
@@ -72,7 +72,7 @@ a.taxon,
 article.terms > a,
 footer > ul > li > a,
 h2.index > a,
-main.base > a,
+main.base > p > a,
 section.index > a,
 section.sect > a,
 td > a {
@@ -100,8 +100,11 @@ nav.terms {
 body.base {
    font-family: sans-serif;
 }
+main.base > div.highlight {
+   font-size: 1rem;
+}
 a.taxon,
-main.base > a,
+main.base > p > a,
 table,
 time {
    font-size: 1.2rem;
@@ -149,7 +152,8 @@ body.base {
 article.index,
 article.terms,
 footer > ul > li,
-main.base {
+main.base,
+nav.sect > a {
    margin-left: .5rem;
 }
 header > a {
@@ -160,11 +164,12 @@ body.base {
 }
 article.index,
 article.terms,
-footer > ul > li {
+footer > ul > li,
+main.base,
+nav.sect > a {
    margin-right: .5rem;
 }
 a.sing,
-nav.sect > a,
 section.index > a,
 time {
    margin-right: 1rem;
@@ -197,6 +202,7 @@ td {
 article.index,
 article.terms,
 header.h1,
+main.base > div.highlight > pre,
 nav.sect > a {
    padding-bottom: 1rem;
 }
@@ -204,6 +210,7 @@ a.sing,
 article.index,
 article.terms,
 footer > ul > li,
+main.base > div.highlight > pre,
 nav.sect > a,
 section.index > a,
 section.sect > a,
@@ -229,6 +236,7 @@ td {
 }
 article.terms,
 header.h1,
+main.base > div.highlight > pre,
 nav.sect > a {
    padding-top: 1rem;
 }
