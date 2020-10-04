@@ -72,6 +72,7 @@ a.taxon,
 article.terms > a,
 footer > ul > li > a,
 h2.index > a,
+main.base > a,
 main.base > p > a,
 section.index > a,
 section.sect > a,
@@ -104,6 +105,7 @@ main.base > div.highlight {
    font-size: 1rem;
 }
 a.taxon,
+main.base > a,
 main.base > p > a,
 table,
 time {
@@ -149,11 +151,11 @@ body.base {
 body.base {
    margin-left: 0;
 }
+main.base {
+   margin-left: 2%;
+}
 article.index,
-article.terms,
-footer > ul > li,
-main.base,
-nav.sect > a {
+footer > ul > li {
    margin-left: .5rem;
 }
 header > a {
@@ -162,14 +164,17 @@ header > a {
 body.base {
    margin-right: 0;
 }
+main.base {
+   margin-right: 2%;
+}
 article.index,
-article.terms,
 footer > ul > li,
-main.base,
 nav.sect > a {
    margin-right: .5rem;
 }
 a.sing,
+article.terms,
+nav.sect > a,
 section.index > a,
 time {
    margin-right: 1rem;
