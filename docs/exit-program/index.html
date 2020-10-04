@@ -28,186 +28,26 @@
 </section>
 <nav class="section">
    
+   <a href="/autumn/exit-program/c-sharp/">C#</a>
+   
+   <a href="/autumn/exit-program/d/">D</a>
+   
+   <a href="/autumn/exit-program/dart/">Dart</a>
+   
+   <a href="/autumn/exit-program/go/">Go</a>
+   
+   <a href="/autumn/exit-program/nim/">Nim</a>
+   
+   <a href="/autumn/exit-program/php/">PHP</a>
+   
+   <a href="/autumn/exit-program/python/">Python</a>
+   
+   <a href="/autumn/exit-program/ruby/">Ruby</a>
+   
+   <a href="/autumn/exit-program/rust/">Rust</a>
+   
 </nav>
-   <h2 id="c">C#</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
-   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      Environment.Exit(<span style="color:#ae81ff">1</span>);
-   }
-}
-</code></pre></div>
-<p><a href="https://docs.microsoft.com/dotnet/api/system.environment.exit">https://docs.microsoft.com/dotnet/api/system.environment.exit</a></p>
-<h2 id="d">D</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>
-   <span style="color:#e6db74">&#34;May&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
-<p><a href="https://dlang.org/spec/statement.html#return-statement">https://dlang.org/spec/statement.html#return-statement</a></p>
-<h2 id="dart">Dart</h2>
-<p>
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
-
-<span style="color:#66d9ef">void</span> main() {
-   exit(<span style="color:#ae81ff">1</span>);
-   print(<span style="color:#e6db74">&#39;May&#39;</span>);
-}
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> b <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-   <span style="color:#66d9ef">if</span> (b) {
-      <span style="color:#66d9ef">return</span>;
-   }
-   print(<span style="color:#e6db74">&#39;May&#39;</span>);
-}
-</code></pre></div></p>
-<ul>
-<li><a href="https://api.dart.dev/dart-io/exit.html">https://api.dart.dev/dart-io/exit.html</a></li>
-<li><a href="https://dart.dev/guides/language/language-tour#functions">https://dart.dev/guides/language/language-tour#functions</a></li>
-</ul>
-<h2 id="go">Go</h2>
-<p>
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os&#34;</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
-   println(<span style="color:#e6db74">&#34;May&#34;</span>)
-}
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;log&#34;</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#e6db74">&#34;May&#34;</span>)
-   println(<span style="color:#e6db74">&#34;June&#34;</span>)
-}
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">return</span>
-   println(<span style="color:#e6db74">&#34;May&#34;</span>)
-}
-</code></pre></div></p>
-<ul>
-<li><a href="https://golang.org/pkg/log#Fatal">https://golang.org/pkg/log#Fatal</a></li>
-<li><a href="https://golang.org/pkg/os#Exit">https://golang.org/pkg/os#Exit</a></li>
-<li><a href="https://golang.org/ref/spec#Return_statements">https://golang.org/ref/spec#Return_statements</a></li>
-</ul>
-<h2 id="nim">Nim</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">if</span> <span style="color:#66d9ef">true</span>:
-   quit(QuitFailure)
-
-echo <span style="color:#e6db74">&#34;May&#34;</span>
-</code></pre></div>
-<p><a href="https://nim-lang.org/docs/system.html#quit,int">https://nim-lang.org/docs/system.html#quit,int</a></p>
-<h2 id="php">PHP</h2>
-<p>
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#66d9ef">die</span>(<span style="color:#ae81ff">1</span>);
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;May&#39;</span>;
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#a6e22e">user_error</span>(<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#a6e22e">E_USER_ERROR</span>);
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;June&#39;</span>;
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#66d9ef">exit</span>(<span style="color:#ae81ff">1</span>);
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;May</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-</code></pre></div></p>
-<ul>
-<li><a href="https://php.net/function.die">https://php.net/function.die</a></li>
-<li><a href="https://php.net/function.exit">https://php.net/function.exit</a></li>
-</ul>
-<h2 id="python">Python</h2>
-<p>
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> os
-os<span style="color:#f92672">.</span>abort()
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;May&#39;</span>)
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> sys
-sys<span style="color:#f92672">.</span>exit(<span style="color:#ae81ff">1</span>)
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;May&#39;</span>)
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> sys
-sys<span style="color:#f92672">.</span>exit(<span style="color:#e6db74">&#39;May&#39;</span>)
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;June&#39;</span>)
-</code></pre></div></p>
-<ul>
-<li><a href="https://docs.python.org/library/os.html#os.abort">https://docs.python.org/library/os.html#os.abort</a></li>
-<li><a href="https://docs.python.org/library/sys.html#sys.exit">https://docs.python.org/library/sys.html#sys.exit</a></li>
-</ul>
-<h2 id="ruby">Ruby</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">exit(<span style="color:#ae81ff">1</span>)
-</code></pre></div>
-<p><a href="https://ruby-doc.org/core/Process.html#method-c-exit">https://ruby-doc.org/core/Process.html#method-c-exit</a></p>
-<h2 id="rust">Rust</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), <span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">true</span> {
-      <span style="color:#66d9ef">return</span> Err(<span style="color:#ae81ff">1</span>);
-   }
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;May&#34;</span>);
-   Ok(())
-}
-</code></pre></div>
-<p><a href="https://doc.rust-lang.org/std/process/fn.exit.html">https://doc.rust-lang.org/std/process/fn.exit.html</a></p>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://hyperpolyglot.org/c#exit">https://hyperpolyglot.org/c#exit</a></li>
-<li><a href="https://hyperpolyglot.org/scripting2#exit">https://hyperpolyglot.org/scripting2#exit</a></li>
-<li><a href="https://programming-idioms.org/idiom/87">https://programming-idioms.org/idiom/87</a></li>
-<li><a href="https://rosettacode.org/wiki/Program_termination">https://rosettacode.org/wiki/Program_termination</a></li>
-</ul>
-
+   
 </main>
 
 </body>

@@ -75,6 +75,13 @@ section.section > a,
 td > a {
    color: var(--red);
 }
+header.home,
+nav.home,
+nav.section,
+nav.taxonomy,
+section.section {
+   column-gap: 1rem;
+}
 footer > ul,
 header,
 nav.home,
@@ -120,13 +127,6 @@ header > h2 {
 }
 header > h1 {
    font-size: 3rem;
-}
-header.home,
-nav.home,
-nav.section,
-nav.taxonomy,
-section.section {
-   gap: 1rem;
 }
 footer > ul,
 nav.home {
@@ -237,6 +237,11 @@ header.home,
 main.page > div > pre,
 nav.section > a {
    padding-top: 1rem;
+}
+nav.home,
+nav.section,
+nav.taxonomy {
+   row-gap: 1rem;
 }
 section.term {
    text-align: center;
