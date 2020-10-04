@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Filepath to dirname / D</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body class="base">
+
+   <header class="h2">
+      <h2 class="base"><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/nu8/autumn">Repository</a>
+   </header>
+   <main class="base">
+<h1 class="sing">Filepath to dirname / D</h1>
+<section class="sing">
+   <time class="sing">Thu Sep 10 2020</time>
+   
+   <a class="sing" href="/autumn/categories/system/">system</a>
+   
+</section>
+   
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.path<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">`C:\Windows\notepad.exe`</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">dirName</span><span style="color:#f92672">;</span>
+   writeln<span style="color:#f92672">(</span>s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">`C:\Windows`</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+<p><a href="https://dlang.org/library/std/path.html">https://dlang.org/library/std/path.html</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/c#dirname-basename">https://hyperpolyglot.org/c#dirname-basename</a></li>
+<li><a href="https://hyperpolyglot.org/scripting2#dirname-basename">https://hyperpolyglot.org/scripting2#dirname-basename</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>

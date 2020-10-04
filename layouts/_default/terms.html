@@ -1,7 +1,7 @@
 {{ define "main" }}
 <h1 class="terms">{{ .Title }}</h1>
    {{ with (.GetPage (path.Join "talk" .Path)) }}
-<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+<a class="terms" href="{{ .RelPermalink }}">{{ .Title }}</a>
    {{ end }}
 <nav class="terms">
    {{ range .Data.Terms }}

@@ -72,8 +72,9 @@ a.taxon,
 article.terms > a,
 footer > ul > li > a,
 h2.index > a,
-main.base > a,
-main.base > p > a,
+main > a.terms,
+main > p > a,
+main > ul > li > a,
 section.index > a,
 section.sect > a,
 td > a {
@@ -101,12 +102,13 @@ nav.terms {
 body.base {
    font-family: sans-serif;
 }
-main.base > div.highlight {
+main > div.highlight {
    font-size: 1rem;
 }
 a.taxon,
-main.base > a,
-main.base > p > a,
+main > a.terms,
+main > p > a,
+main > ul,
 table,
 time {
    font-size: 1.2rem;
@@ -130,6 +132,9 @@ nav.index {
 header {
    justify-content: space-evenly;
 }
+main > ul {
+   line-height: 1.5rem;
+}
 h1.base,
 h2.base {
    margin-bottom: 0;
@@ -151,7 +156,7 @@ body.base {
 body.base {
    margin-left: 0;
 }
-main.base {
+main {
    margin-left: 2%;
 }
 article.index,
@@ -164,7 +169,7 @@ header > a {
 body.base {
    margin-right: 0;
 }
-main.base {
+main {
    margin-right: 2%;
 }
 article.index,
@@ -207,7 +212,7 @@ td {
 article.index,
 article.terms,
 header.h1,
-main.base > div.highlight > pre,
+main > div.highlight > pre,
 nav.sect > a {
    padding-bottom: 1rem;
 }
@@ -215,7 +220,7 @@ a.sing,
 article.index,
 article.terms,
 footer > ul > li,
-main.base > div.highlight > pre,
+main > div.highlight > pre,
 nav.sect > a,
 section.index > a,
 section.sect > a,
@@ -241,7 +246,7 @@ td {
 }
 article.terms,
 header.h1,
-main.base > div.highlight > pre,
+main > div.highlight > pre,
 nav.sect > a {
    padding-top: 1rem;
 }
