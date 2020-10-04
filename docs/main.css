@@ -47,6 +47,7 @@ td {
 article.section {
    border-width: thick;
 }
+main > h1,
 section.term,
 td.page,
 td.section {
