@@ -10,7 +10,7 @@
    <link rel="stylesheet" href="/autumn/main.css">
 </head>
 <body>
-   <header class="page">
+   <header class="section">
 
       <h2><a href="/autumn">Autumn</a></h2>
 
@@ -18,71 +18,24 @@
       <a href="/autumn/tags">Tags</a>
       <a href="https://github.com/nu8/autumn">Repository</a>
    </header>
-   <main class="page">
-<h1>Autumn / Directives</h1>
-<section class="page">
-   <time>Sun Oct 4 2020</time>
+   <main class="section">
+<h1>Directives</h1>
+<section class="section">
+   <time class="section">Tue Aug 25 2020</time>
+   
+   <a href="/autumn/categories/reference/">reference</a>
    
 </section>
+<nav class="section">
    
-<a href="/autumn/talk/"></a>
+   <a href="/autumn/directives/javascript/">JavaScript</a>
    
-   <h2 id="go">Go</h2>
-<p><a href="https://golang.org/pkg/go/build">https://golang.org/pkg/go/build</a></p>
-<h2 id="javascript">JavaScript</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#e6db74">&#39;use strict&#39;</span>;
-<span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n</span>);
-</code></pre></div>
-<p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Strict_mode">https://developer.mozilla.org/Web/JavaScript/Reference/Strict_mode</a></p>
-<h2 id="php">PHP</h2>
-<p>
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>);
-<span style="color:#a6e22e">strlen</span>(<span style="color:#ae81ff">10</span>);
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#a6e22e">error_reporting</span>(<span style="color:#66d9ef">E_ALL</span>);
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Day</span> {
-   <span style="color:#66d9ef">public</span> $year <span style="color:#f92672">=</span> <span style="color:#ae81ff">2019</span>;
-}
-
-$o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Day</span>;
-<span style="color:#a6e22e">array_key_exists</span>(<span style="color:#e6db74">&#39;year&#39;</span>, $o);
-</code></pre></div></p>
-<p><a href="https://php.net/control-structures.declare">https://php.net/control-structures.declare</a></p>
-<h2 id="python">Python</h2>
-<p><a href="https://docs.python.org/library/__future__.html">https://docs.python.org/library/__future__.html</a></p>
-<h2 id="rust">Rust</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-
-   <span style="color:#75715e">#[derive(Debug)]</span>
-   <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Date</span> {
-      year: <span style="color:#66d9ef">u16</span>,
-      month: Option<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span>,
-      day: Option<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span>
-   }
-
-   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> Date {year: <span style="color:#ae81ff">2019</span>, month: None, day: None};
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o);
-}
-</code></pre></div>
-<p><a href="https://doc.rust-lang.org/std/fmt/trait.Debug.html">https://doc.rust-lang.org/std/fmt/trait.Debug.html</a></p>
-<h2 id="references">References</h2>
-<p><a href="https://rosettacode.org/wiki/Pragmatic_directives">https://rosettacode.org/wiki/Pragmatic_directives</a></p>
-
+   <a href="/autumn/directives/php/">PHP</a>
+   
+   <a href="/autumn/directives/rust/">Rust</a>
+   
+</nav>
+   
 </main>
 
 </body>
