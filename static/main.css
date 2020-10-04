@@ -51,6 +51,7 @@ h1.page,
 h1.section,
 h1.taxonomy,
 h1.term,
+section.term,
 td.page,
 td.section {
    color: var(--gray-25);
@@ -161,7 +162,9 @@ article.section,
 footer > ul > li {
    margin-left: .5rem;
 }
-header > a {
+header > a,
+section.page > a,
+section.section > a {
    margin-left: 1rem;
 }
 body {
@@ -175,8 +178,7 @@ footer > ul > li {
    margin-right: .5rem;
 }
 article.term,
-nav.section > a,
-time {
+nav.section > a {
    margin-right: 1rem;
 }
 body,
