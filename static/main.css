@@ -60,6 +60,7 @@ time {
    color: var(--gray-60);
 }
 h2.page > a,
+h2.section > a,
 h2.taxonomy > a,
 h2.term > a,
 header > a,
@@ -72,7 +73,6 @@ nav.section > a {
 a.page,
 article.term > a,
 footer > ul > li > a,
-h2.section > a,
 main.page > p > a,
 main.page > ul > li > a,
 main.taxonomy > a,
@@ -122,6 +122,7 @@ header > a {
    font-size: 1.4rem;
 }
 h2.page,
+h2.section,
 h2.taxonomy,
 h2.term {
    font-size: 2rem;
@@ -144,12 +145,12 @@ main.page > ul {
 }
 h1.home,
 h2.page,
+h2.section,
 h2.taxonomy,
 h2.term {
    margin-bottom: 0;
 }
 article.section,
-h2.section,
 header {
    margin-bottom: .5rem;
 }
@@ -202,6 +203,7 @@ table {
 }
 footer > ul > li,
 header.page,
+header.section,
 header.taxonomy,
 header.term,
 section.page > a,
@@ -238,6 +240,7 @@ td {
 }
 footer > ul > li,
 header.page,
+header.section,
 header.taxonomy,
 header.term,
 section.page > a,
