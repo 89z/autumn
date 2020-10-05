@@ -10,5 +10,4 @@ tags: [nim]
 
 ## References
 
-- <https://programming-idioms.org/idiom/211>
-- <https://rosettacode.org/wiki/Make_directory_path>
+<https://rosettacode.org/wiki/Make_directory_path>

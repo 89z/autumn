@@ -9,5 +9,4 @@ tags: [nim]
 
 ## References
 
-- <https://programming-idioms.org/idiom/117>
-- <https://rosettacode.org/wiki/Array_length>
+<https://rosettacode.org/wiki/Array_length>

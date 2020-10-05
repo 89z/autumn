@@ -10,6 +10,4 @@ tags: [php]
 
 ## References
 
-- <https://hyperpolyglot.org/c#dict-iter>
-- <https://hyperpolyglot.org/cpp#dict-iter>
-- <https://hyperpolyglot.org/scripting#dict-iter>
+<https://hyperpolyglot.org/scripting#dict-iter>

@@ -11,6 +11,5 @@ tags: [php]
 
 ## References
 
-- <https://hyperpolyglot.org/c#sleep>
 - <https://hyperpolyglot.org/scripting#sleep>
 - <https://programming-idioms.org/idiom/45>

@@ -9,5 +9,4 @@ tags: [nim]
 
 ## References
 
-- <https://programming-idioms.org/idiom/61>
-- <https://rosettacode.org/wiki/System_time>
+<https://rosettacode.org/wiki/System_time>

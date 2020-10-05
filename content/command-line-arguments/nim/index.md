@@ -9,5 +9,4 @@ tags: [nim]
 
 ## References
 
-- <https://programming-idioms.org/idiom/60>
-- <https://rosettacode.org/wiki/Command-line_arguments>
+<https://rosettacode.org/wiki/Command-line_arguments>
