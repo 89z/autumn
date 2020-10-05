@@ -7,7 +7,6 @@ tags: [ruby]
 
 ## References
 
-- <https://hyperpolyglot.org/c#dir-iterate>
 - <https://hyperpolyglot.org/scripting2#dir-iterate>
 - <https://programming-idioms.org/idiom/180>
 - <https://rosettacode.org/wiki/Unix/ls>
