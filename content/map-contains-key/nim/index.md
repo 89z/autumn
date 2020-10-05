@@ -9,5 +9,4 @@ tags: [nim]
 
 ## References
 
-- <https://programming-idioms.org/idiom/51>
-- <https://rosettacode.org/wiki/Associative_array/Creation>
+<https://rosettacode.org/wiki/Associative_array/Creation>

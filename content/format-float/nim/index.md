@@ -9,5 +9,4 @@ tags: [nim]
 
 ## References
 
-- <https://programming-idioms.org/idiom/65>
-- <https://rosettacode.org/wiki/Formatted_numeric_output>
+<https://rosettacode.org/wiki/Formatted_numeric_output>

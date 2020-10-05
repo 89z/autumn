@@ -9,5 +9,4 @@ tags: [nim]
 
 ## References
 
-- <https://programming-idioms.org/idiom/92>
-- <https://rosettacode.org/wiki/JSON>
+<https://rosettacode.org/wiki/JSON>

@@ -10,5 +10,4 @@ tags: [nim]
 
 ## References
 
-- <https://programming-idioms.org/idiom/169>
-- <https://rosettacode.org/wiki/String_length>
+<https://rosettacode.org/wiki/String_length>

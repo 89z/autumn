@@ -9,5 +9,4 @@ tags: [nim]
 
 ## References
 
-- <https://programming-idioms.org/idiom/205>
-- <https://rosettacode.org/wiki/Environment_variables>
+<https://rosettacode.org/wiki/Environment_variables>

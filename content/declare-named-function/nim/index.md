@@ -9,5 +9,4 @@ tags: [nim]
 
 ## References
 
-- <https://programming-idioms.org/idiom/4>
-- <https://rosettacode.org/wiki/Function_definition>
+<https://rosettacode.org/wiki/Function_definition>

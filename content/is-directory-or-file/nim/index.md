@@ -9,5 +9,4 @@ tags: [nim]
 
 ## References
 
-- <https://programming-idioms.org/idiom/144>
-- <https://rosettacode.org/wiki/Check_that_file_exists>
+<https://rosettacode.org/wiki/Check_that_file_exists>

@@ -9,5 +9,4 @@ tags: [nim]
 
 ## References
 
-- <https://programming-idioms.org/idiom/53>
-- <https://rosettacode.org/wiki/Arrays>
+<https://rosettacode.org/wiki/Arrays>

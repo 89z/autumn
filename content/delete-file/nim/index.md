@@ -9,5 +9,4 @@ tags: [nim]
 
 ## References
 
-- <https://programming-idioms.org/idiom/155>
-- <https://rosettacode.org/wiki/Delete_a_file>
+<https://rosettacode.org/wiki/Delete_a_file>

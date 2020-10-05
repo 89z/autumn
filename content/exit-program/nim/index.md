@@ -9,5 +9,4 @@ tags: [nim]
 
 ## References
 
-- <https://programming-idioms.org/idiom/87>
-- <https://rosettacode.org/wiki/Program_termination>
+<https://rosettacode.org/wiki/Program_termination>
