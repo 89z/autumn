@@ -10,5 +10,4 @@ tags: [php]
 
 ## References
 
-- <https://hyperpolyglot.org/c#def-class>
-- <https://hyperpolyglot.org/scripting2#def-class>
+<https://hyperpolyglot.org/scripting2#def-class>
