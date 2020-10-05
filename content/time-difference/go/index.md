@@ -9,5 +9,4 @@ tags: [go]
 
 ## References
 
-- <https://hyperpolyglot.org/c#date-subtraction>
-- <https://hyperpolyglot.org/scripting#datetime-subtraction>
+<https://hyperpolyglot.org/c#date-subtraction>

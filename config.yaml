@@ -10,7 +10,5 @@ markup:
    goldmark:
       extensions:
          linkify: false
-params:
-   themeColor: theme-base-08
 publishDir: docs
 title: Autumn
