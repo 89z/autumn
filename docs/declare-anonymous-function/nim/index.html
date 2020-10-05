@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Declare anonymous function / Nim</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/nu8/autumn">Repository</a>
+   </header>
+   <main class="page">
+<h1>
+   <a href="/autumn/declare-anonymous-function/">Declare anonymous function</a> / Nim
+</h1>
+<section class="page">
+   <time>Tue Sep 15 2020</time>
+   
+   <a href="/autumn/categories/function/">function</a>
+   
+</section>
+   
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#75715e"># example 1</span>
+<span style="color:#66d9ef">let</span> f1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">proc</span> (n: <span style="color:#66d9ef">int</span>, n1: <span style="color:#66d9ef">int</span>): <span style="color:#66d9ef">bool</span> <span style="color:#f92672">=</span>
+   <span style="color:#66d9ef">return</span> n <span style="color:#f92672">&gt;</span> n1
+<span style="color:#75715e"># example 2</span>
+<span style="color:#66d9ef">let</span> f2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">proc</span> (n, n2: <span style="color:#66d9ef">int</span>): <span style="color:#66d9ef">bool</span> <span style="color:#f92672">=</span>
+   <span style="color:#66d9ef">return</span> n <span style="color:#f92672">&gt;</span> n2
+<span style="color:#75715e"># example 3</span>
+<span style="color:#66d9ef">let</span> f3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">proc</span> (n, n3: <span style="color:#66d9ef">int</span>): <span style="color:#66d9ef">bool</span> <span style="color:#f92672">=</span> n <span style="color:#f92672">&gt;</span> n3
+<span style="color:#75715e"># print</span>
+<span style="color:#66d9ef">let</span> b1 <span style="color:#f92672">=</span> f1(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>)
+<span style="color:#66d9ef">let</span> b2 <span style="color:#f92672">=</span> f2(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>)
+<span style="color:#66d9ef">let</span> b3 <span style="color:#f92672">=</span> f3(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>)
+echo b1 <span style="color:#f92672">and</span> b2 <span style="color:#f92672">and</span> b3
+</code></pre></div>
+<p><a href="https://nim-lang.org/docs/manual.html#procedures-anonymous-procs">https://nim-lang.org/docs/manual.html#procedures-anonymous-procs</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/c#anonymous-func-literal">https://hyperpolyglot.org/c#anonymous-func-literal</a></li>
+<li><a href="https://hyperpolyglot.org/cpp#anon-func-literal">https://hyperpolyglot.org/cpp#anon-func-literal</a></li>
+<li><a href="https://hyperpolyglot.org/scripting#anonymous-func-literal">https://hyperpolyglot.org/scripting#anonymous-func-literal</a></li>
+<li><a href="https://hyperpolyglot.org/web#anonymous-func-literal">https://hyperpolyglot.org/web#anonymous-func-literal</a></li>
+<li><a href="https://programming-idioms.org/idiom/4">https://programming-idioms.org/idiom/4</a></li>
+<li><a href="https://rosettacode.org/wiki/Function_definition">https://rosettacode.org/wiki/Function_definition</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
