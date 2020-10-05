@@ -9,7 +9,4 @@ tags: [c-sharp]
 
 ## Reference
 
-- <https://hyperpolyglot.org/c#switch>
-- <https://hyperpolyglot.org/cpp#switch>
-- <https://hyperpolyglot.org/scripting#switch>
-- <https://hyperpolyglot.org/web#switch>
+<https://hyperpolyglot.org/cpp#switch>

@@ -9,5 +9,4 @@ tags: [c-sharp]
 
 ## References
 
-- <https://hyperpolyglot.org/scripting2#parse-url>
-- <https://rosettacode.org/wiki/URL_parser>
+<https://rosettacode.org/wiki/URL_parser>
