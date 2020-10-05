@@ -99,6 +99,7 @@ article.page,
 article.section {
    flex-basis: 400px;
 }
+footer,
 header,
 nav.home,
 nav.section,
@@ -122,10 +123,10 @@ table,
 time {
    font-size: 1.2rem;
 }
+footer,
 header > a {
    font-size: 1.4rem;
 }
-footer,
 header > h2 {
    font-size: 2rem;
 }
@@ -152,15 +153,14 @@ header > h2 {
 article.section > h2 {
    margin-bottom: .5rem;
 }
+footer,
 header.home {
    margin-bottom: 1rem;
-}
-footer {
-   margin-bottom: 2rem;
 }
 body {
    margin-left: 0;
 }
+footer,
 main {
    margin-left: 2%;
 }
@@ -170,6 +170,7 @@ section.page > a {
 body {
    margin-right: 0;
 }
+footer,
 main {
    margin-right: 2%;
 }
@@ -240,6 +241,7 @@ main.page > div > pre,
 nav.section > a {
    padding-top: 1rem;
 }
+footer,
 nav.home,
 nav.section,
 nav.taxonomy {
