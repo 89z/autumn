@@ -1,6 +1,6 @@
 {{ define "main" }}
 <nav class="{{ .Kind }}">
-   {{ range (.Paginate .Pages.ByLastmod.Reverse 24).Pages }}
+   {{ range (.Paginate .Pages.ByLastmod.Reverse 15).Pages }}
    <article class="{{ .Kind }}">
       <h2>
          <a href="{{ .RelPermalink }}">{{ .Title }}</a>

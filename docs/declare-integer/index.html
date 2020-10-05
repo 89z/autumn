@@ -28,182 +28,28 @@
 </section>
 <nav class="section">
    
+   <a href="/autumn/declare-integer/c-sharp/">C#</a>
+   
+   <a href="/autumn/declare-integer/d/">D</a>
+   
+   <a href="/autumn/declare-integer/dart/">Dart</a>
+   
+   <a href="/autumn/declare-integer/go/">Go</a>
+   
+   <a href="/autumn/declare-integer/javascript/">JavaScript</a>
+   
+   <a href="/autumn/declare-integer/nim/">Nim</a>
+   
+   <a href="/autumn/declare-integer/php/">PHP</a>
+   
+   <a href="/autumn/declare-integer/python/">Python</a>
+   
+   <a href="/autumn/declare-integer/ruby/">Ruby</a>
+   
+   <a href="/autumn/declare-integer/rust/">Rust</a>
+   
 </nav>
-   <h2 id="c">C#</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
-   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">int</span> n1 = <span style="color:#ae81ff">1</span>_000;
-      <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">uint</span> n2 = <span style="color:#ae81ff">10</span>;
-      <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">long</span> n3 = <span style="color:#ae81ff">10</span>;
-      <span style="color:#75715e">// example 4
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">ulong</span> n4 = <span style="color:#ae81ff">10</span>;
-      <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>      Console.WriteLine(<span style="color:#e6db74">&#34;{0} {1} {2} {3}&#34;</span>, n1, n2, n3, n4);
-   }
-}
-</code></pre></div>
-<p><a href="https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types</a></p>
-<h2 id="d">D</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">int</span> n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">;</span>
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">int</span> n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1_000</span><span style="color:#f92672">;</span>
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   <span style="color:#f92672">[</span>n1<span style="color:#f92672">,</span> n2<span style="color:#f92672">].</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
-<p><a href="https://dlang.org/spec/lex.html#integerliteral">https://dlang.org/spec/lex.html#integerliteral</a></p>
-<h2 id="dart">Dart</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">int</span> n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">num</span> n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   print([n1, n2]);
-}
-</code></pre></div>
-<p><a href="https://dart.dev/guides/language/language-tour#numbers">https://dart.dev/guides/language/language-tour#numbers</a></p>
-<h2 id="go">Go</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n1</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">10</span>
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n2</span> <span style="color:#66d9ef">uint8</span> = <span style="color:#ae81ff">10</span>
-   <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n3</span> <span style="color:#66d9ef">uint16</span> = <span style="color:#ae81ff">10</span>
-   <span style="color:#75715e">// example 4
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n4</span> <span style="color:#66d9ef">uint32</span> = <span style="color:#ae81ff">10</span>
-   <span style="color:#75715e">// example 5
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n5</span> <span style="color:#66d9ef">uint64</span> = <span style="color:#ae81ff">10</span>
-   <span style="color:#75715e">// example 6
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n6</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">1</span><span style="color:#a6e22e">_000</span>
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>, <span style="color:#a6e22e">n3</span>, <span style="color:#a6e22e">n4</span>, <span style="color:#a6e22e">n5</span>, <span style="color:#a6e22e">n6</span>)
-}
-</code></pre></div>
-<ul>
-<li><a href="https://golang.org/ref/spec#Integer_literals">https://golang.org/ref/spec#Integer_literals</a></li>
-<li><a href="https://golang.org/ref/spec#Numeric_types">https://golang.org/ref/spec#Numeric_types</a></li>
-</ul>
-<h2 id="javascript">JavaScript</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-<span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n2</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#a6e22e">_000</span>;
-<span style="color:#75715e">// print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>);
-</code></pre></div>
-<p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators">https://developer.mozilla.org/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators</a></p>
-<h2 id="nim">Nim</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#75715e"># example 1</span>
-<span style="color:#66d9ef">let</span> n1: <span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
-<span style="color:#75715e"># example 2</span>
-<span style="color:#66d9ef">let</span> n2: <span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1_000</span>
-<span style="color:#75715e"># print</span>
-echo <span style="color:#f92672">[</span>n1, n2<span style="color:#f92672">]</span>
-</code></pre></div>
-<p><a href="https://nim-lang.org/docs/manual.html#lexical-analysis-numerical-constants">https://nim-lang.org/docs/manual.html#lexical-analysis-numerical-constants</a></p>
-<h2 id="php">PHP</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-<span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#a6e22e">_000</span>;
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1, $n2);
-</code></pre></div>
-<p><a href="https://php.net/language.types.integer">https://php.net/language.types.integer</a></p>
-<h2 id="python">Python</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># example 1</span>
-n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
-<span style="color:#75715e"># exmaple 2</span>
-n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>_000
-<span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(n1, n2)
-</code></pre></div>
-<p><a href="https://docs.python.org/reference/lexical_analysis.html#integer-literals">https://docs.python.org/reference/lexical_analysis.html#integer-literals</a></p>
-<h2 id="ruby">Ruby</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#75715e"># example 1</span>
-n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
-<span style="color:#75715e"># example 2</span>
-n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1_000</span>
-<span style="color:#75715e"># print</span>
-puts n1, n2
-</code></pre></div>
-<p><a href="https://ruby-doc.org/core/Integer.html">https://ruby-doc.org/core/Integer.html</a></p>
-<h2 id="rust">Rust</h2>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> n1: <span style="color:#a6e22e">i128</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> n2: <span style="color:#66d9ef">i16</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> n3: <span style="color:#66d9ef">i32</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#75715e">// example 4
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> n4: <span style="color:#66d9ef">i64</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#75715e">// example 5
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> n5: <span style="color:#66d9ef">i8</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#75715e">// example 6
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> n6: <span style="color:#a6e22e">u128</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#75715e">// example 7
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> n7: <span style="color:#66d9ef">u16</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1_000</span>;
-   <span style="color:#75715e">// example 8
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> n8: <span style="color:#66d9ef">u32</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#75715e">// example 9
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> n9: <span style="color:#66d9ef">u64</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#75715e">// example 10
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> n10: <span style="color:#66d9ef">u8</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(
-      <span style="color:#e6db74">&#34;{} {} {} {} {} {} {} {} {} {}&#34;</span>, n1, n2, n3, n4, n5, n6, n7, n8, n9, n10
-   );
-}
-</code></pre></div>
-<p><a href="https://doc.rust-lang.org/reference/tokens.html#number-literals">https://doc.rust-lang.org/reference/tokens.html#number-literals</a></p>
-<h2 id="references">References</h2>
-<p><a href="https://rosettacode.org/wiki/Literals/Integer">https://rosettacode.org/wiki/Literals/Integer</a></p>
-
+   
 </main>
 
 </body>
