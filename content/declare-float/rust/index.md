@@ -10,6 +10,3 @@ tags: [rust]
 
 ## References
 
-- <https://hyperpolyglot.org/c#float-type>
-- <https://hyperpolyglot.org/cpp#float-type>
-- <https://hyperpolyglot.org/web#float-type>

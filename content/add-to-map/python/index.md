@@ -1,12 +1,12 @@
 ---
 title: Python
 tags: [python]
-date: 2020-09-11
 ---
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/stdtypes.html#dict>
+- <https://docs.python.org/library/stdtypes.html#dict>
+- <https://docs.python.org/library/stdtypes.html#dict.update>
 
 ## References
 

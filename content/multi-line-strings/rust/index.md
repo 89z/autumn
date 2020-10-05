@@ -9,6 +9,4 @@ tags: [rust]
 
 ## References
 
-- <https://hyperpolyglot.org/c#str-type>
-- <https://hyperpolyglot.org/cpp#str-type>
 - <https://hyperpolyglot.org/rust#str-type>

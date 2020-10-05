@@ -1,7 +1,6 @@
 ---
 title: Go
 tags: [go]
-date: 2020-09-11
 ---
 
 {{< r "a.go" >}}

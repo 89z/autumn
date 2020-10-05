@@ -6,7 +6,7 @@
 <table>
    {{ range .Pages.ByTitle }}
    <tr>
-      {{ if .Parent.IsHome }}
+      {{ if isset .Params "date" }}
       <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
       <td class="{{ .Kind }}">{{ .Lastmod.Format "Mon Jan 2 2006" }}</td>
       {{ else }}
