@@ -11,6 +11,4 @@ tags: [javascript]
 
 ## References
 
-- <https://hyperpolyglot.org/cpp#write-once-var>
-- <https://hyperpolyglot.org/scripting#const>
-- <https://hyperpolyglot.org/web#const>
+<https://hyperpolyglot.org/scripting#const>
