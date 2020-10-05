@@ -10,6 +10,5 @@ tags: [dart]
 
 ## References
 
-- <https://hyperpolyglot.org/scripting2#external-cmd>
-- <https://programming-idioms.org/idiom/111/launch-other-program>
+- <https://programming-idioms.org/idiom/111>
 - <https://rosettacode.org/wiki/Execute_a_system_command>
