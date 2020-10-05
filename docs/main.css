@@ -12,7 +12,7 @@ section.section {
    align-items: center;
 }
 article.term,
-footer > ul > li,
+footer > a,
 section.page > a,
 section.section > a,
 tr:nth-child(odd) > td {
@@ -33,7 +33,7 @@ article.section {
 }
 article.section,
 article.term,
-footer > ul > li,
+footer > a,
 nav.section > a,
 section.page > a,
 section.section > a {
@@ -68,7 +68,7 @@ nav.section > a {
 a.page,
 article.section > h2 > a,
 article.term > a,
-footer > ul > li > a,
+footer > a,
 main.page > h1 > a,
 main.page > p > a,
 main.page > ul > li > a,
@@ -78,6 +78,7 @@ section.section > a,
 td > a {
    color: var(--red);
 }
+footer,
 header.home,
 nav.home,
 nav.section,
@@ -85,7 +86,7 @@ nav.taxonomy,
 section.section {
    column-gap: 1rem;
 }
-footer > ul,
+footer,
 header,
 nav.home,
 nav.section,
@@ -121,17 +122,17 @@ table,
 time {
    font-size: 1.2rem;
 }
-footer,
 header > a {
    font-size: 1.4rem;
 }
+footer,
 header > h2 {
    font-size: 2rem;
 }
 header > h1 {
    font-size: 3rem;
 }
-footer > ul,
+footer,
 nav.home {
    justify-content: center;
 }
@@ -154,14 +155,14 @@ article.section > h2 {
 header.home {
    margin-bottom: 1rem;
 }
+footer {
+   margin-bottom: 2rem;
+}
 body {
    margin-left: 0;
 }
 main {
    margin-left: 2%;
-}
-footer > ul > li {
-   margin-left: .5rem;
 }
 section.page > a {
    margin-left: 1rem;
@@ -172,22 +173,20 @@ body {
 main {
    margin-right: 2%;
 }
-footer > ul > li {
-   margin-right: .5rem;
-}
 article.section > h2,
 body,
 header > h1,
 header > h2 {
    margin-top: 0;
 }
+footer,
 nav.section,
 nav.taxonomy,
 section.term,
 table {
    margin-top: 1rem;
 }
-footer > ul > li,
+footer > a,
 header.page,
 header.section,
 header.taxonomy,
@@ -206,7 +205,7 @@ nav.section > a {
 }
 article.section,
 article.term,
-footer > ul > li,
+footer > a,
 main.page > div > pre,
 main.page > ul,
 nav.section > a,
@@ -217,14 +216,14 @@ td {
 }
 article.section,
 article.term,
-footer > ul > li,
+footer > a,
 nav.section > a,
 section.page > a,
 section.section > a,
 td {
    padding-right: 1rem;
 }
-footer > ul > li,
+footer > a,
 header.page,
 header.section,
 header.taxonomy,

@@ -24,7 +24,11 @@
    </header>
    <main class="{{ .Kind }}">{{ block "main" . }}{{ end }}</main>
 {{ if .IsHome }}
-   <footer>{{ template "_internal/pagination.html" . }}</footer>
+   <footer>
+   {{ range $.Paginator.Pagers }}
+      <a href="{{ .URL }}">{{ .PageNumber }}</a>
+   {{ end }}
+   </footer>
 {{ end }}
 </body>
 </html>
