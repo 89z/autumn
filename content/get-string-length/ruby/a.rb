@@ -1,2 +1,0 @@
-"lorem".length
-"lorem".size

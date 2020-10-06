@@ -1,2 +1,4 @@
 # C#
 *.csproj
+**/c-sharp/bin
+**/c-sharp/obj
