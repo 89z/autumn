@@ -72,6 +72,9 @@ footer > a,
 main.page > h1 > a,
 main.page > p > a,
 main.page > ul > li > a,
+main.section > h1 > a,
+main.section > p > a,
+main.section > ul > li > a,
 main.taxonomy > a,
 section.page > a,
 section.section > a,
@@ -110,12 +113,15 @@ section.section {
 body {
    font-family: sans-serif;
 }
-main.page > div.highlight {
+main.page > div.highlight,
+main.section > div.highlight {
    font-size: 1rem;
 }
 a.page,
 main.page > p,
 main.page > ul,
+main.section > p,
+main.section > ul,
 main.taxonomy > a,
 nav.section,
 nav.taxonomy,
@@ -143,7 +149,8 @@ header {
 main.page > div.highlight {
    line-height: 1.2rem;
 }
-main.page > ul {
+main.page > ul,
+main.section > ul {
    line-height: 1.5rem;
 }
 header > h1,
@@ -197,18 +204,25 @@ section.section > a,
 td {
    padding-bottom: .5rem;
 }
+main.page > div > pre,
+main.section > div > pre {
+   padding-bottom: .8rem;
+}
 article.section,
 article.term,
 header.home,
-main.page > div > pre,
 nav.section > a {
    padding-bottom: 1rem;
+}
+main.page > div > pre,
+main.section > div > pre {
+   padding-left: .8rem;
 }
 article.section,
 article.term,
 footer > a,
-main.page > div > pre,
 main.page > ul,
+main.section > ul,
 nav.section > a,
 section.page > a,
 section.section > a,
@@ -234,10 +248,13 @@ section.section > a,
 td {
    padding-top: .5rem;
 }
+main.page > div > pre,
+main.section > div > pre {
+   padding-top: .8rem;
+}
 article.section,
 article.term,
 header.home,
-main.page > div > pre,
 nav.section > a {
    padding-top: 1rem;
 }

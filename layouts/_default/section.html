@@ -1,15 +1,29 @@
 {{ define "main" }}
+   {{ if .Parent.IsHome }}
 <h1>{{ .Title }}</h1>
 <section class="{{ .Kind }}">
    <time>{{ .Lastmod.Format "Mon Jan 2 2006" }}</time>
-   {{ range (.GetTerms "categories") }}
+      {{ range (.GetTerms "categories") }}
    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-   {{ end }}
+      {{ end }}
 </section>
 <nav class="{{ .Kind }}">
-   {{ range .Pages }}
+      {{ with (.GetPage (path.Join "talk" .Path)) }}
    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-   {{ end }}
+      {{ end }}
+      {{ range .Pages }}
+   <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ end }}
 </nav>
+   {{ else }}
+      {{ $o := .Parent }}
+<h1><a href="{{ $o.RelPermalink }}">{{ $o.Title }}</a> / {{ .Title }}</h1>
+<section class="{{ .Kind }}">
+   <time>{{ $o.Lastmod.Format "Mon Jan 2 2006" }}</time>
+      {{ range ($o.GetTerms "categories") }}
+   <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ end }}
+</section>
+   {{ end }}
    {{ .Content }}
 {{ end }}

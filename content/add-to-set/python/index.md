@@ -5,7 +5,11 @@ tags: [python]
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/stdtypes.html#set>
+<https://docs.python.org/library/stdtypes.html#frozenset.add>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/library/stdtypes.html#frozenset.union>
 
 ## References
 
