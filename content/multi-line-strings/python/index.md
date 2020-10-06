@@ -9,3 +9,4 @@ tags: [python]
 
 ## References
 
+<https://programming-idioms.org/idiom/48>

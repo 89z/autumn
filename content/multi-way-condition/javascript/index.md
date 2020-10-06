@@ -7,6 +7,6 @@ tags: [javascript]
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/switch>
 
-## Reference
+## References
 
 <https://hyperpolyglot.org/scripting#switch>

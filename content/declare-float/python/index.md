@@ -9,3 +9,4 @@ tags: [python]
 
 ## References
 
+<https://rosettacode.org/wiki/Literals/Floating_point>

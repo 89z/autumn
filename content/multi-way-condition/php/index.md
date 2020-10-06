@@ -7,6 +7,6 @@ tags: [php]
 
 <https://php.net/control-structures.switch>
 
-## Reference
+## References
 
 <https://hyperpolyglot.org/scripting#switch>

@@ -9,3 +9,4 @@ tags: [rust]
 
 ## References
 
+<https://hyperpolyglot.org/rust#user-defined-types>

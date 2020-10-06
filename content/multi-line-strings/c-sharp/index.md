@@ -9,4 +9,5 @@ tags: [c-sharp]
 
 ## References
 
-<https://hyperpolyglot.org/cpp#str-type>
+- <https://hyperpolyglot.org/cpp#str-type>
+- <https://programming-idioms.org/idiom/48>

@@ -7,6 +7,6 @@ tags: [ruby]
 
 <https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-case+Expression>
 
-## Reference
+## References
 
 - <https://hyperpolyglot.org/scripting#switch>

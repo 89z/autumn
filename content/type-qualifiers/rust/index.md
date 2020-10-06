@@ -9,3 +9,4 @@ tags: [rust]
 
 ## References
 
+<https://rosettacode.org/wiki/Enforced_immutability>

@@ -7,6 +7,6 @@ tags: [go]
 
 <https://golang.org/ref/spec#Switch_statements>
 
-## Reference
+## References
 
 <https://hyperpolyglot.org/c#switch>

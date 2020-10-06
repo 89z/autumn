@@ -9,4 +9,5 @@ tags: [go]
 
 ## References
 
-<https://hyperpolyglot.org/c#str-type>
+- <https://hyperpolyglot.org/c#str-type>
+- <https://programming-idioms.org/idiom/48>

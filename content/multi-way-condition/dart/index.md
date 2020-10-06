@@ -5,6 +5,6 @@ tags: [dart]
 
 {{< r "a.dart" >}}
 
-## Reference
+## References
 
 <https://hyperpolyglot.org/web#switch>

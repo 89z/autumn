@@ -7,6 +7,6 @@ tags: [c-sharp]
 
 <https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/switch>
 
-## Reference
+## References
 
 <https://hyperpolyglot.org/cpp#switch>

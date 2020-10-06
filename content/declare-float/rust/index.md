@@ -10,3 +10,4 @@ tags: [rust]
 
 ## References
 
+<https://rosettacode.org/wiki/Literals/Floating_point>
