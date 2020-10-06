@@ -7,6 +7,7 @@ tags: [python]
 
 - <https://docs.python.org/library/stdtypes.html#dict>
 - <https://docs.python.org/library/stdtypes.html#dict.update>
+- <https://docs.python.org/reference/expressions.html#dictionary-displays>
 
 ## References
 
