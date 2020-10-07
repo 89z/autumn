@@ -1,13 +1,12 @@
 ---
-title: Rust
-tags: [rust]
+title: Ruby
+tags: [ruby]
 ---
 
-{{< r "a.rs" >}}
-{{< r "b.rs" >}}
-{{< r "c.rs" >}}
+{{< r "a.rb" >}}
+{{< r "b.rb" >}}
 
-<https://doc.rust-lang.org/std/primitive.str.html#method.get>
+<https://ruby-doc.org/core/String.html#method-i-slice>
 
 ## References
 

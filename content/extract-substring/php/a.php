@@ -1,10 +1,8 @@
 <?php
 $s = 'May';
 # example 1
-$s1 = substr($s, 0, 1);
+$s1 = $s[1];
 # example 2
-$s2 = $s[0];
-# example 3
-$s3 = substr($s, 0, 2);
+$s2 = substr($s, 1, 1);
 # print
-var_dump($s1 == 'M', $s2 == 'M', $s3 == 'Ma');
+var_dump($s1 == 'a', $s2 == 'a');
