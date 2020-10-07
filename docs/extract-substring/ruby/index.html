@@ -31,62 +31,62 @@
    <p>
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;June&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;March&#39;</span>
 <span style="color:#75715e"># example 1</span>
-s1 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]</span>
+s1 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span><span style="color:#f92672">]</span>
 <span style="color:#75715e"># example 2</span>
-s2 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>slice(<span style="color:#ae81ff">1</span>)
+s2 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>slice(<span style="color:#ae81ff">2</span>)
 <span style="color:#75715e"># print</span>
-puts s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;u&#39;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;u&#39;</span>
+puts s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;r&#39;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;r&#39;</span>
 </code></pre></div>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;June&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;March&#39;</span>
 <span style="color:#75715e"># example 1</span>
-s1 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span><span style="color:#f92672">]</span>
+s1 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span><span style="color:#f92672">]</span>
 <span style="color:#75715e"># example 2</span>
-s2 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>slice(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>)
+s2 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>slice(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>)
 <span style="color:#75715e"># print</span>
-puts s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;u&#39;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;u&#39;</span>
+puts s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;r&#39;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;r&#39;</span>
 </code></pre></div>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;June&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;March&#39;</span>
 <span style="color:#75715e"># example 1</span>
 s1 <span style="color:#f92672">=</span> s<span style="color:#f92672">[..</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">]</span>
 <span style="color:#75715e"># example 2</span>
-s2 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">..]</span>
+s2 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">..]</span>
 <span style="color:#75715e"># example 3</span>
-s3 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">..</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">]</span>
+s3 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">..</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">]</span>
 <span style="color:#75715e"># example 4</span>
 s4 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>slice(<span style="color:#f92672">..</span> <span style="color:#ae81ff">1</span>)
 <span style="color:#75715e"># example 5</span>
-s5 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>slice(<span style="color:#ae81ff">1</span> <span style="color:#f92672">..</span>)
+s5 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>slice(<span style="color:#ae81ff">2</span> <span style="color:#f92672">..</span>)
 <span style="color:#75715e"># example 6</span>
-s6 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>slice(<span style="color:#ae81ff">1</span> <span style="color:#f92672">..</span> <span style="color:#ae81ff">2</span>)
+s6 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>slice(<span style="color:#ae81ff">2</span> <span style="color:#f92672">..</span> <span style="color:#ae81ff">3</span>)
 <span style="color:#75715e"># print</span>
-puts s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Ju&#39;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;une&#39;</span>, s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;un&#39;</span>, s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Ju&#39;</span>, s5 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;une&#39;</span>, s6 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;un&#39;</span>
+puts s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Ma&#39;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;rch&#39;</span>, s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;rc&#39;</span>, s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Ma&#39;</span>, s5 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;rch&#39;</span>, s6 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;rc&#39;</span>
 </code></pre></div>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;June&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;March&#39;</span>
 <span style="color:#75715e"># example 1</span>
 s1 <span style="color:#f92672">=</span> s<span style="color:#f92672">[...</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">]</span>
 <span style="color:#75715e"># example 2</span>
-s2 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">...]</span>
+s2 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">...]</span>
 <span style="color:#75715e"># example 3</span>
-s3 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">...</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">]</span>
+s3 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">...</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">]</span>
 <span style="color:#75715e"># example 4</span>
 s4 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>slice(<span style="color:#f92672">...</span> <span style="color:#ae81ff">2</span>)
 <span style="color:#75715e"># example 5</span>
-s5 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>slice(<span style="color:#ae81ff">1</span> <span style="color:#f92672">...</span>)
+s5 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>slice(<span style="color:#ae81ff">2</span> <span style="color:#f92672">...</span>)
 <span style="color:#75715e"># example 6</span>
-s6 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>slice(<span style="color:#ae81ff">1</span> <span style="color:#f92672">...</span> <span style="color:#ae81ff">3</span>)
+s6 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>slice(<span style="color:#ae81ff">2</span> <span style="color:#f92672">...</span> <span style="color:#ae81ff">4</span>)
 <span style="color:#75715e"># print</span>
-puts s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Ju&#39;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;une&#39;</span>, s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;un&#39;</span>, s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Ju&#39;</span>, s5 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;une&#39;</span>, s6 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;un&#39;</span>
+puts s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Ma&#39;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;rch&#39;</span>, s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;rc&#39;</span>, s4 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Ma&#39;</span>, s5 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;rch&#39;</span>, s6 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;rc&#39;</span>
 </code></pre></div></p>
 <p><a href="https://ruby-doc.org/core/String.html#method-i-slice">https://ruby-doc.org/core/String.html#method-i-slice</a></p>
 <h2 id="references">References</h2>

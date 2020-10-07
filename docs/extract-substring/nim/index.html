@@ -31,24 +31,23 @@
    <p>
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May&#34;</span>
-<span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]</span>
-echo s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;a&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;March&#34;</span>
+<span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span><span style="color:#f92672">]</span>
+echo s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;r&#39;</span>
 </code></pre></div>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May&#34;</span>
-<span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span> .. <span style="color:#ae81ff">1</span><span style="color:#f92672">]</span>
-echo s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;a&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;March&#34;</span>
+<span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span> .. <span style="color:#ae81ff">3</span><span style="color:#f92672">]</span>
+echo s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;rc&#34;</span>
 </code></pre></div>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May&#34;</span>
-<span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span> ..<span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">]</span>
-<span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span> ..<span style="color:#f92672">&lt;</span> ^<span style="color:#ae81ff">0</span><span style="color:#f92672">]</span>
-<span style="color:#66d9ef">let</span> s3 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span> ..<span style="color:#f92672">&lt;</span> s.len<span style="color:#f92672">]</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;March&#34;</span>
+<span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span> ..<span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">]</span>
+echo s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;r&#34;</span>
 </code></pre></div></p>
 <ul>
 <li><a href="https://nim-lang.org/docs/system.html#%5B%5D,string,HSlice%5BT,U%5D">https://nim-lang.org/docs/system.html#[],string,HSlice[T,U]</a></li>

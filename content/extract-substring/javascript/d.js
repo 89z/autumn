@@ -1,7 +1,7 @@
-let s = 'May';
+let s = 'March';
 // example 1
-let s1 = s.slice(1, 2);
+let s1 = s.slice(2, 3);
 // example 2
-let s2 = s.slice(1);
+let s2 = s.slice(2);
 // print
-console.log(s1 == 'a', s2 == 'ay');
+console.log(s1 == 'r', s2 == 'rch');
