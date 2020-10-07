@@ -1,5 +1,6 @@
 ---
 title: 'Talk:Extract substring'
+date: 2020-10-06
 ---
 
 Points of ambiguity:

@@ -5,6 +5,8 @@ tags: [ruby]
 
 {{< r "a.rb" >}}
 {{< r "b.rb" >}}
+{{< r "c.rb" >}}
+{{< r "d.rb" >}}
 
 <https://ruby-doc.org/core/String.html#method-i-slice>
 
