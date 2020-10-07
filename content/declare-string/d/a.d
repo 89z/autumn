@@ -2,16 +2,11 @@ import std.stdio;
 
 void main() {
    // example 1
-   auto s1 = "One";
+   auto s1 = "May June";
    // example 2
-   auto s2 = "Two
-Two";
+   auto s2 = q{May June};
    // example 3
-   auto s3 = `Three
-Three\`;
-   // example 4
-   auto s4 = q{Four
-Four};
+   auto s3 = `May\June`;
    // print
-   writeln(s1, s2, s3, s4);
+   writeln(s1, "\n", s2, "\n", s3);
 }

@@ -5,7 +5,7 @@ tags: [d]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/spec/module.html>
+<https://dlang.org/spec/module.html#import-declaration>
 
 ## References
 

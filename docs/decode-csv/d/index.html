@@ -23,7 +23,7 @@
    <a href="/autumn/decode-csv/">Decode CSV</a> / D
 </h1>
 <section class="page">
-   <time>Mon Jun 22 2020</time>
+   <time>Wed Oct 7 2020</time>
    
    <a href="/autumn/categories/file-format/">file-format</a>
    
@@ -31,17 +31,21 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    <span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">csv</span><span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">file</span><span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">typecons</span><span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">array</span><span style="color:#f92672">,</span>
-           std<span style="color:#f92672">.</span><span style="color:#a6e22e">algorithm</span><span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">conv</span><span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">range</span><span style="color:#f92672">;</span>
- 
-    <span style="color:#66d9ef">auto</span> rows <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;csv_data_in.csv&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">File</span><span style="color:#f92672">.</span><span style="color:#a6e22e">byLine</span><span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">auto</span> fout <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;csv_data_out.csv&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">File</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;w&#34;</span><span style="color:#f92672">);</span>
-    fout<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>rows<span style="color:#f92672">.</span><span style="color:#a6e22e">front</span><span style="color:#f92672">);</span>
-    fout<span style="color:#f92672">.</span><span style="color:#a6e22e">writef</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;%(%(%d,%)\n%)&#34;</span><span style="color:#f92672">,</span> rows<span style="color:#f92672">.</span><span style="color:#a6e22e">dropOne</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">!(</span>r <span style="color:#f92672">=&gt;</span> r<span style="color:#f92672">.</span><span style="color:#a6e22e">csvReader</span><span style="color:#f92672">!</span><span style="color:#66d9ef">int</span><span style="color:#f92672">.</span><span style="color:#a6e22e">front</span><span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">!(</span>x <span style="color:#f92672">=&gt;</span> x <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">)));</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.algorithm<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> std.array<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> std.conv<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> std.csv<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> std.file<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> std.range<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> std.typecons<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> rows <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;csv_data_in.csv&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">File</span><span style="color:#f92672">.</span><span style="color:#a6e22e">byLine</span><span style="color:#f92672">;</span>
+   r<span style="color:#f92672">.</span><span style="color:#a6e22e">csvReader</span><span style="color:#f92672">!</span><span style="color:#66d9ef">int</span><span style="color:#f92672">.</span><span style="color:#a6e22e">front</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
+<p><a href="https://dlang.org/library/std/csv/csv_reader.html">https://dlang.org/library/std/csv/csv_reader.html</a></p>
 <h2 id="references">References</h2>
 <p><a href="https://rosettacode.org/wiki/CSV_data_manipulation">https://rosettacode.org/wiki/CSV_data_manipulation</a></p>
 
