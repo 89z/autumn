@@ -1,6 +1,5 @@
 ---
-title: 'Talk:Declare value'
-date: 2020-09-14
+title: 'Category talk:reference'
 ---
 
 Letter | Type

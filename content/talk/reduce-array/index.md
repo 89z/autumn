@@ -1,6 +1,5 @@
 ---
 title: 'Talk:Reduce array'
-date: 2020-09-14
 ---
 
 We can approach this three ways. Using the reduce function:

@@ -1,6 +1,5 @@
 ---
 title: 'Category talk:time'
-date: 2020-09-18
 ---
 
 If we do our base with UTC, it will be the same short date as my time zone:

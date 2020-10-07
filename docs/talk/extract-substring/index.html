@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Talk / Talk:Extract substring</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/nu8/autumn">Repository</a>
+   </header>
+   <main class="page">
+<h1>
+   <a href="/autumn/talk/">Talk</a> / Talk:Extract substring
+</h1>
+<section class="page">
+   <time>Mon Jan 1 0001</time>
+   
+</section>
+   <p>Points of ambiguity:</p>
+<ol>
+<li>How many characters are returned?</li>
+<li>Is second argument length, inclusive or exclusive?</li>
+</ol>
+<p>First question is solved by showing the result, example with JavaScript:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;May&#39;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ay&#39;</span>);
+</code></pre></div>
+<p>For second question, we could try some examples. This fails as it could be
+length or exclusive:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;June&#39;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;J&#39;</span>);
+</code></pre></div>
+<p>This fails as it could be length of exclusive:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;June&#39;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Ju&#39;</span>);
+</code></pre></div>
+<p>This is good:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;June&#39;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;u&#39;</span>);
+</code></pre></div>
+<p>This is good:</p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;June&#39;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;un&#39;</span>);
+</code></pre></div>
+
+</main>
+
+</body>
+</html>

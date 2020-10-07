@@ -1,6 +1,5 @@
 ---
 title: 'Tag talk:Python'
-date: 2020-09-14
 ---
 
 Python:

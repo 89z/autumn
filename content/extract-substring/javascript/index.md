@@ -5,9 +5,19 @@ tags: [javascript]
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/charAt>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/slice>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/substring>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String#Character_access>
+
+{{< r "b.js" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/charAt>
+
+{{< r "c.js" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/substring>
+
+{{< r "d.js" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/slice>
 
 ## References
 

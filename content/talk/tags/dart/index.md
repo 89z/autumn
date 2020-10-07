@@ -1,6 +1,5 @@
 ---
 title: 'Tag talk:Dart'
-date: 2020-09-14
 ---
 
 Code:

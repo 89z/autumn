@@ -1,6 +1,5 @@
 ---
 title: 'Tag talk:Go'
-date: 2020-09-14
 ---
 
 {{< r "a_test.go" >}}
