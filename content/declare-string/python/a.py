@@ -1,16 +1,10 @@
 # example 1
-s1 = 'One'
+s1 = 'one\\two'
 # example 2
-s2 = "Two"
+s2 = "one\\two"
 # example 3
-s3 = r'Three'
-# example 4
-s4 = r"Four\Four"
-# example 5
-s5 = '''Five
-Five'''
-# example 6
-s6 = """Six
-Six"""
+s3 = r'one\two'
+# exmaple 4
+s4 = r"one\two"
 # print
-print(s1, s2, s3, s4, s5, s6)
+print(s1, s2, s3, s4)

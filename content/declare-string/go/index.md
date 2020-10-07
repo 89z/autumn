@@ -5,8 +5,11 @@ tags: [go]
 
 {{< r "a.go" >}}
 
-- <https://golang.org/ref/spec#interpreted_string_lit>
-- <https://golang.org/ref/spec#raw_string_lit>
+<https://golang.org/ref/spec#interpreted_string_lit>
+
+{{< r "b.go" >}}
+
+<https://golang.org/ref/spec#raw_string_lit>
 
 ## References
 

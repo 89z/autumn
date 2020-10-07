@@ -1,12 +1,6 @@
 # example 1
-s1 = 'One\One
-One'
+s1 = "one\\two"
 # example 2
-s2 = "Two
-Two"
-# example 3
-s3 = <<'eof'
-May\
-eof
+s2 = 'one\two'
 # print
-puts s1, s2, s3
+puts s1, s2

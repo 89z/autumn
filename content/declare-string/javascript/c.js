@@ -1,2 +1,2 @@
-let s = String.raw`May\June`;
+let s = String.raw`one\two`;
 console.log(s);

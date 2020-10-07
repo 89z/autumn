@@ -1,2 +1,2 @@
-let s = r"May\June"
+let s = r"one\two"
 echo s

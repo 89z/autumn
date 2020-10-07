@@ -1,7 +1,7 @@
 import std.stdio;
 
 void main() {
-   auto s = "May
-June";
+   auto s = q"[May
+June]";
    s.writeln;
 }

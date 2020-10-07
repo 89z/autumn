@@ -1,3 +1,3 @@
 <?php
-$s = "one\\two";
+$s = 'one\two';
 var_dump($s);

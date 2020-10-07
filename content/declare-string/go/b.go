@@ -1,6 +1,6 @@
 package main
 
 func main() {
-   s := "one\\two"
+   s := `one\two`
    println(s)
 }
