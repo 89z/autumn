@@ -1,9 +1,6 @@
 # example 1
-let s1 = "One"
+let s1 = "May June"
 # example 2
-let s2 = r"Two\"
-# example 3
-let s3 = """Three
-Three\"""
+let s2 = r"May\June"
 # print
 echo s1, s2, s3
