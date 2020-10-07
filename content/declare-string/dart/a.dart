@@ -1,12 +1,12 @@
 void main() {
    // example 1
-   var s1 = 'May June';
+   var s1 = 'one\\two';
    // example 2
-   var s2 = "May June";
+   var s2 = "one\\two";
    // example 3
-   var s3 = r'May\June';
+   var s3 = r'one\two';
    // example 4
-   var s4 = r"May\June";
+   var s4 = r"one\two";
    // print
-   print(s1 + '\n' + s2 + '\n' + s3 + '\n' + s4);
+   print(s1 + ',' + s2 + ',' + s3 + ',' + s4);
 }

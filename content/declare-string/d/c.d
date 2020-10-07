@@ -1,6 +1,6 @@
 import std.stdio;
 
 void main() {
-   auto s = "one\\two";
+   auto s = q"[one\two]";
    s.writeln;
 }

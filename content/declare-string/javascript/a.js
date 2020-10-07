@@ -1,12 +1,6 @@
 // example 1
-let s1 = 'One';
+let s1 = 'May\\June';
 // example 2
-let s2 = "Two";
-// example 3
-let s3 = `Three
-Three`;
-// example 4
-let s4 = String.raw`Four\
-Four`;
+let s2 = "May\\June";
 // print
-console.log(s1, s2, s3, s4);
+console.log(s1, s2);
