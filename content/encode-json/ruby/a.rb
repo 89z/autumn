@@ -1,2 +1,4 @@
 require 'json'
-s = {'t' => 1,'f' => 0}.to_json
+a = ['/', '📗']
+s = a.to_json
+puts s

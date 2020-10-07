@@ -1,5 +1,5 @@
 fn main() {
-   let s = "May";
-   let s1 = s.chars().nth(1);
-   println!("{}", s1 == Some('a'));
+   let s = "March";
+   let s1 = s.chars().nth(2);
+   println!("{}", s1 == Some('r'));
 }
