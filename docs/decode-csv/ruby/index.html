@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Decode CSV / Ruby</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/nu8/autumn">Repository</a>
+   </header>
+   <main class="page">
+<h1>
+   <a href="/autumn/decode-csv/">Decode CSV</a> / Ruby
+</h1>
+<section class="page">
+   <time>Mon Jun 22 2020</time>
+   
+   <a href="/autumn/categories/file-format/">file-format</a>
+   
+</section>
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;csv&#39;</span>
+
+<span style="color:#66d9ef">CSV</span><span style="color:#f92672">.</span>foreach(<span style="color:#e6db74">&#34;foo.csv&#34;</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>row<span style="color:#f92672">|</span>
+  puts row<span style="color:#f92672">.</span>join(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&#34;</span>)
+<span style="color:#66d9ef">end</span>
+</code></pre></div>
+<h2 id="references">References</h2>
+<p><a href="https://hyperpolyglot.org/scripting2#parse-csv">https://hyperpolyglot.org/scripting2#parse-csv</a></p>
+
+</main>
+
+</body>
+</html>
