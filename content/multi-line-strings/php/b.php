@@ -1,4 +1,4 @@
 <?php
-$s = "May
-June";
+$s = 'May
+June';
 var_dump($s);
