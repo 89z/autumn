@@ -10,7 +10,7 @@
    <link rel="stylesheet" href="/autumn/main.css">
 </head>
 <body>
-   <header class="page">
+   <header class="section">
 
       <h2><a href="/autumn">Autumn</a></h2>
 
@@ -18,16 +18,17 @@
       <a href="/autumn/tags">Tags</a>
       <a href="https://github.com/nu8/autumn">Repository</a>
    </header>
-   <main class="page">
-<h1>
-   <a href="/autumn/declare-map/">Declare map</a> / C#
-</h1>
-<section class="page">
+   <main class="section">
+   
+      
+<h1><a href="/autumn/declare-map/">Declare map</a> / C#</h1>
+<section class="section">
    <time>Fri Sep 11 2020</time>
-   
+      
    <a href="/autumn/categories/map/">map</a>
-   
+      
 </section>
+   
    
 
 
@@ -37,19 +38,31 @@
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
       <span style="color:#66d9ef">var</span> m = <span style="color:#66d9ef">new</span> Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;();
-      m.Add(<span style="color:#e6db74">&#34;year&#34;</span>, <span style="color:#ae81ff">2019</span>);
-      m.Add(<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">12</span>);
-      <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> o <span style="color:#66d9ef">in</span> m) {
-         Console.WriteLine(<span style="color:#e6db74">&#34;{0} {1}&#34;</span>, o.Key, o.Value);
-      }
+      Console.WriteLine(m);
    }
 }
 </code></pre></div>
-<p><a href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.add">https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.add</a></p>
+<p><a href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">using</span> System.Collections.Generic;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">var</span> m = <span style="color:#66d9ef">new</span> Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;() {
+         {<span style="color:#e6db74">&#34;year&#34;</span>, <span style="color:#ae81ff">2019</span>}, {<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">12</span>}
+      };
+      Console.WriteLine(m);
+   }
+}
+</code></pre></div>
+<p><a href="https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer">https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer</a></p>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://hyperpolyglot.org/cpp#dict-lookup">https://hyperpolyglot.org/cpp#dict-lookup</a></li>
-<li><a href="https://programming-idioms.org/idiom/172">https://programming-idioms.org/idiom/172</a></li>
+<li><a href="https://hyperpolyglot.org/cpp#dict-ctor">https://hyperpolyglot.org/cpp#dict-ctor</a></li>
+<li><a href="https://programming-idioms.org/idiom/8">https://programming-idioms.org/idiom/8</a></li>
 <li><a href="https://rosettacode.org/wiki/Associative_array/Creation">https://rosettacode.org/wiki/Associative_array/Creation</a></li>
 </ul>
 
