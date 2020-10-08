@@ -1,13 +1,11 @@
-import std.algorithm;
-import std.array;
-import std.conv;
-import std.csv;
-import std.file;
-import std.range;
-import std.stdio;
-import std.typecons;
+import std.csv, std.stdio;
 
 void main() {
-   auto rows = "csv_data_in.csv".File.byLine;
-   r.csvReader!int.front
+   auto s = "Month,Day
+January,Sunday
+February,Monday";
+   auto a = csvReader!(string[string])(s, null);
+   foreach (m; a) {
+      m["Day"].writeln;
+   }
 }

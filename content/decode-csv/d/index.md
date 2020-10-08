@@ -5,7 +5,7 @@ tags: [d]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/library/std/csv/csv_reader.html>
+<https://dlang.org/library/std/csv.html>
 
 ## References
 

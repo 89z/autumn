@@ -2,30 +2,33 @@ package main
 
 import (
    "encoding/csv"
-   "fmt"
    "log"
-   "os"
+   "strings"
 )
 
-func main() {
-   o_csv, e := os.Open("a.csv")
+func f(s_in string) []map[string]string {
+   a_in, e := csv.NewReader(strings.NewReader(s_in)).ReadAll()
    if e != nil {
       log.Fatal(e)
    }
-   o_table := csv.NewReader(o_csv)
-   a_head, e := o_table.Read()
-   if e != nil {
-      log.Fatal(e)
-   }
-   a_body, e := o_table.ReadAll()
-   if e != nil {
-      log.Fatal(e)
-   }
-   m_row := map[string]string{}
-   for n_row, a_row := range a_body {
-      for n_col, s_col := range a_head {
+   a_out := []map[string]string{}
+   for n_row, a_row := range a_in {
+      if n_row == 0 {
+         continue
+      }
+      m_row := map[string]string{}
+      for n_col, s_col := range a_in[0] {
          m_row[s_col] = a_row[n_col]
       }
-      fmt.Println(n_row, m_row)
+      a_out = append(a_out, m_row)
    }
+   return a_out
+}
+
+func main() {
+   s := `Month,Day
+January,Sunday
+February,Monday`
+   a := f(s)
+   log.Print(a)
 }

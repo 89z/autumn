@@ -35,32 +35,35 @@
 
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;encoding/csv&#34;</span>
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
    <span style="color:#e6db74">&#34;log&#34;</span>
-   <span style="color:#e6db74">&#34;os&#34;</span>
+   <span style="color:#e6db74">&#34;strings&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o_csv</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.csv&#34;</span>)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">f</span>(<span style="color:#a6e22e">s_in</span> <span style="color:#66d9ef">string</span>) []<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span> {
+   <span style="color:#a6e22e">a_in</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">csv</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">s_in</span>)).<span style="color:#a6e22e">ReadAll</span>()
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">o_table</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">csv</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">o_csv</span>)
-   <span style="color:#a6e22e">a_head</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o_table</span>.<span style="color:#a6e22e">Read</span>()
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
-   }
-   <span style="color:#a6e22e">a_body</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o_table</span>.<span style="color:#a6e22e">ReadAll</span>()
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
-   }
-   <span style="color:#a6e22e">m_row</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{}
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">n_row</span>, <span style="color:#a6e22e">a_row</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">a_body</span> {
-      <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">n_col</span>, <span style="color:#a6e22e">s_col</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">a_head</span> {
+   <span style="color:#a6e22e">a_out</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{}
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">n_row</span>, <span style="color:#a6e22e">a_row</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">a_in</span> {
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">n_row</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
+         <span style="color:#66d9ef">continue</span>
+      }
+      <span style="color:#a6e22e">m_row</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{}
+      <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">n_col</span>, <span style="color:#a6e22e">s_col</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">a_in</span>[<span style="color:#ae81ff">0</span>] {
          <span style="color:#a6e22e">m_row</span>[<span style="color:#a6e22e">s_col</span>] = <span style="color:#a6e22e">a_row</span>[<span style="color:#a6e22e">n_col</span>]
       }
-      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">n_row</span>, <span style="color:#a6e22e">m_row</span>)
+      <span style="color:#a6e22e">a_out</span> = append(<span style="color:#a6e22e">a_out</span>, <span style="color:#a6e22e">m_row</span>)
    }
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a_out</span>
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`Month,Day
+</span><span style="color:#e6db74">January,Sunday
+</span><span style="color:#e6db74">February,Monday`</span>
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">f</span>(<span style="color:#a6e22e">s</span>)
+   <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">a</span>)
 }
 </code></pre></div>
 <p><a href="https://golang.org/pkg/encoding/csv">https://golang.org/pkg/encoding/csv</a></p>
