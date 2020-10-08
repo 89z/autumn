@@ -1,6 +1,6 @@
 // example 1
-let t1 = new Set;
+let t1 = {};
 // example 2
-let t2 = new Set([10, 11]);
+let t2 = {May: true, June: true};
 // print
 console.log(t1, t2);
