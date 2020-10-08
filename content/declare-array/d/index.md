@@ -5,7 +5,7 @@ tags: [d]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/spec/arrays.html>
+<https://dlang.org/spec/arrays.html#dynamic-arrays>
 
 ## References
 

@@ -10,7 +10,7 @@
    <link rel="stylesheet" href="/autumn/main.css">
 </head>
 <body>
-   <header class="page">
+   <header class="section">
 
       <h2><a href="/autumn">Autumn</a></h2>
 
@@ -18,16 +18,17 @@
       <a href="/autumn/tags">Tags</a>
       <a href="https://github.com/nu8/autumn">Repository</a>
    </header>
-   <main class="page">
-<h1>
-   <a href="/autumn/add-to-array/">Add to array</a> / C#
-</h1>
-<section class="page">
+   <main class="section">
+   
+      
+<h1><a href="/autumn/add-to-array/">Add to array</a> / C#</h1>
+<section class="section">
    <time>Wed Sep 30 2020</time>
-   
+      
    <a href="/autumn/categories/array/">array</a>
-   
+      
 </section>
+   
    
 
 
@@ -38,10 +39,8 @@
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
       <span style="color:#66d9ef">var</span> a = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
       a.Add(<span style="color:#e6db74">&#34;May&#34;</span>);
-      a.Add(<span style="color:#e6db74">&#34;June&#34;</span>);
-      <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> s <span style="color:#66d9ef">in</span> a) {
-         Console.WriteLine(s);
-      }
+      <span style="color:#66d9ef">var</span> s = a[<span style="color:#ae81ff">0</span>];
+      Console.WriteLine(s);
    }
 }
 </code></pre></div>

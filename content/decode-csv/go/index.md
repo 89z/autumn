@@ -9,4 +9,4 @@ tags: [go]
 
 ## References
 
-<https://rosettacode.org/wiki/Hash_from_two_arrays>
+<https://rosettacode.org/wiki/CSV_data_manipulation>

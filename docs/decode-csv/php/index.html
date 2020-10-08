@@ -32,22 +32,25 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-$r_in <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.csv&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
 
-<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
-   $n_row <span style="color:#f92672">=</span> <span style="color:#a6e22e">ftell</span>($r_in);
-   $a_row <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgetcsv</span>($r_in);
-   <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">feof</span>($r_in)) {
-      <span style="color:#66d9ef">break</span>;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f</span>($r_in)<span style="color:#f92672">:</span> <span style="color:#66d9ef">array</span> {
+   <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+      $n_row <span style="color:#f92672">=</span> <span style="color:#a6e22e">ftell</span>($r_in);
+      $a_row <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgetcsv</span>($r_in);
+      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">feof</span>($r_in)) {
+         <span style="color:#66d9ef">return</span> $a_out;
+      }
+      <span style="color:#66d9ef">if</span> ($n_row <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+         $a_head <span style="color:#f92672">=</span> $a_row;
+         <span style="color:#66d9ef">continue</span>;
+      }
+      $a_out[] <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_combine</span>($a_head, $a_row);
    }
-   <span style="color:#66d9ef">if</span> ($n_row <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
-      $a_head <span style="color:#f92672">=</span> $a_row;
-      <span style="color:#66d9ef">continue</span>;
-   }
-   $a_out[] <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_combine</span>($a_head, $a_row);
 }
 
-<span style="color:#a6e22e">print_r</span>($a_out);
+$r <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.csv&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
+$a <span style="color:#f92672">=</span> <span style="color:#a6e22e">f</span>($r);
+<span style="color:#a6e22e">print_r</span>($a);
 </code></pre></div>
 <p><a href="https://php.net/function.fgetcsv">https://php.net/function.fgetcsv</a></p>
 
@@ -55,30 +58,33 @@ $r_in <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</sp
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 
-$s_in <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;&lt;</span><span style="color:#e6db74">eof</span><span style="color:#e6db74">
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f</span>(<span style="color:#a6e22e">string</span> $s_in)<span style="color:#f92672">:</span> <span style="color:#66d9ef">array</span> {
+   $a_in <span style="color:#f92672">=</span> <span style="color:#a6e22e">explode</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, $s_in);
+   <span style="color:#66d9ef">foreach</span> ($a_in <span style="color:#66d9ef">as</span> $n_row <span style="color:#f92672">=&gt;</span> $s_row) {
+      $a_row <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_getcsv</span>($s_row);
+      <span style="color:#66d9ef">if</span> ($n_row <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+         $a_head <span style="color:#f92672">=</span> $a_row;
+         <span style="color:#66d9ef">continue</span>;
+      }
+      $a_out[] <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_combine</span>($a_head, $a_row);
+   }
+   <span style="color:#66d9ef">return</span> $a_out;
+}
+
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;&lt;</span><span style="color:#e6db74">eof</span><span style="color:#e6db74">
 </span><span style="color:#e6db74">Month,Day
 </span><span style="color:#e6db74">January,Sunday
 </span><span style="color:#e6db74">February,Monday
 </span><span style="color:#e6db74"></span><span style="color:#e6db74">eof</span>;
 
-$a_in <span style="color:#f92672">=</span> <span style="color:#a6e22e">explode</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, $s_in);
-
-<span style="color:#66d9ef">foreach</span> ($a_in <span style="color:#66d9ef">as</span> $n_row <span style="color:#f92672">=&gt;</span> $s_row) {
-   $a_row <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_getcsv</span>($s_row);
-   <span style="color:#66d9ef">if</span> ($n_row <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
-      $a_head <span style="color:#f92672">=</span> $a_row;
-      <span style="color:#66d9ef">continue</span>;
-   }
-   $a_out[] <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_combine</span>($a_head, $a_row);
-}
-
-<span style="color:#a6e22e">print_r</span>($a_out);
+$a <span style="color:#f92672">=</span> <span style="color:#a6e22e">f</span>($s);
+<span style="color:#a6e22e">print_r</span>($a);
 </code></pre></div>
 <p><a href="https://php.net/function.str-getcsv">https://php.net/function.str-getcsv</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#parse-csv">https://hyperpolyglot.org/scripting2#parse-csv</a></li>
-<li><a href="https://rosettacode.org/wiki/Hash_from_two_arrays">https://rosettacode.org/wiki/Hash_from_two_arrays</a></li>
+<li><a href="https://rosettacode.org/wiki/CSV_data_manipulation">https://rosettacode.org/wiki/CSV_data_manipulation</a></li>
 </ul>
 
 </main>

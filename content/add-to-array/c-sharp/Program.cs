@@ -5,9 +5,7 @@ class Program {
    static void Main() {
       var a = new List<string>();
       a.Add("May");
-      a.Add("June");
-      foreach (var s in a) {
-         Console.WriteLine(s);
-      }
+      var s = a[0];
+      Console.WriteLine(s);
    }
 }
