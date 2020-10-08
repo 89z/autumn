@@ -1,13 +1,10 @@
 using System;
-using System.Text.Json;
+using static System.Text.Json.JsonSerializer;
 
 class Program {
    static void Main() {
-      // example 1
       string[] a = {"May", "June"};
-      var s1 = JsonSerializer.Serialize(a);
-      // example 2
-      // print
+      var s = Serialize(a);
       Console.WriteLine(s);
    }
 }
