@@ -1,9 +1,11 @@
 import csv
-o_db = open('a.csv')
-o_tab = csv.reader(o_db)
-a_head = next(o_tab)
 
-for a_row in o_tab:
-   m_row = dict(zip(a_head, a_row))
-   s_city = m_row['city']
-   print(s_city)
+def f(o_in):
+   a_out = []
+   for m_row in csv.DictReader(o_in):
+      a_out.append(m_row)
+   return a_out
+
+o = open('a.csv')
+a = f(o)
+print(a)

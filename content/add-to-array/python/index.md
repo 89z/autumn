@@ -5,8 +5,11 @@ tags: [python]
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/library/stdtypes.html#typesseq-mutable>
-- <https://docs.python.org/reference/expressions.html#expression-lists>
+<https://docs.python.org/library/stdtypes.html#typesseq-mutable>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/reference/expressions.html#expression-lists>
 
 ## References
 

@@ -5,8 +5,11 @@ tags: [python]
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/library/functions.html#enumerate>
-- <https://docs.python.org/reference/compound_stmts.html#for>
+<https://docs.python.org/reference/compound_stmts.html#for>
+
+{{< r "a.py" >}}
+
+<https://docs.python.org/library/functions.html#enumerate>
 
 ## References
 

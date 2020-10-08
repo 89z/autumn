@@ -1,8 +1,16 @@
 import csv
-s_in = '''Month,Day
-January,Sunday
-February,Monday'''
-a_in = s_in.splitlines()
-a_out = []
-for m_row in csv.DictReader(a_in):
-   print(m_row)
+
+def f(o_in):   
+   a_in = csv.reader(o_in)
+   a_out = []
+   for n_row, a_row in enumerate(a_in):
+      if n_row == 0:
+         a_head = a_row
+         continue
+      m_row = dict(zip(a_head, a_row))
+      a_out.append(m_row)
+   return a_out   
+
+o = open('a.csv')
+a = f(o)
+print(a)

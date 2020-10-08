@@ -1,11 +1,10 @@
 using System;
+using static System.Text.Json.JsonSerializer;
 
 class Program {
    static void Main() {
       var s = "May June";
       var a = s.Split();
-      foreach (var s1 in a) {
-         Console.WriteLine(s1);
-      }
+      Console.WriteLine(Serialize(a));
    }
 }
