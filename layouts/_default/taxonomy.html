@@ -1,4 +1,8 @@
 {{ define "main" }}
+<!--
+localhost:1313/autumn/categories/string
+localhost:1313/autumn/tags/c-sharp
+-->
 <h1>{{ .Title }}</h1>
    {{ with (.GetPage (path.Join "talk" .Path)) }}
 <a class="{{ .Kind }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
@@ -6,8 +10,9 @@
 <table>
    {{ range .Pages.ByTitle }}
    <tr>
-      <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
-      <td class="{{ .Kind }}">{{ .Lastmod.Format "Mon Jan 2 2006" }}</td>
+      {{ $o := .Parent }}{{ if .Parent.IsHome }}{{ $o = . }}{{ end }}
+      <td><a href="{{ .RelPermalink }}">{{ $o.Title }}</a></td>
+      <td class="{{ .Kind }}">{{ $o.Lastmod.Format "Mon Jan 2 2006" }}</td>
    </tr>
    {{ end }}
 </table>

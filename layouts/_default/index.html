@@ -1,4 +1,7 @@
 {{ define "main" }}
+<!--
+localhost:1313/autumn
+-->
 <nav class="{{ .Kind }}">
    {{ range (.Paginate .Pages.ByLastmod.Reverse 18).Pages }}
    <article class="{{ .Kind }}">

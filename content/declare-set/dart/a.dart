@@ -1,10 +1,8 @@
 void main() {
    // example 1
-   var t1 = new Set();
-   t1.add(10);
+   var t1 = new Set<num>();
    // example 2
-   var t2 = new Set();
-   t2.add('May');
+   var t2 = Set<num>();
    // print
    print([t1, t2]);
 }

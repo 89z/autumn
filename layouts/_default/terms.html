@@ -1,4 +1,7 @@
 {{ define "main" }}
+<!--
+localhost:1313/autumn/tags
+-->
 <h1>{{ .Title }}</h1>
    {{ with (.GetPage (path.Join "talk" .Path)) }}
 <a href="{{ .RelPermalink }}">{{ .Title }}</a>
