@@ -1,3 +1,3 @@
-t = {'May', 'Jun'}
-t |= {'Aug', 'Sep'}
+t = {'May', 'June'}
+t |= {'July', 'August'}
 print(t)

@@ -1,2 +1,9 @@
->> require 'set'
->> s1, s2 = Set[1, 2, 3, 4], [3, 4, 5, 6].to_set # different ways of creating a set
+require 'set'
+# example 1
+t1 = Set[]
+# example 2
+t2 = Set[10, 11]
+# example 3
+t3 = [10, 11].to_set
+# print
+puts t1, t2, t3

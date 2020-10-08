@@ -1,3 +1,3 @@
-t = {'May', 'Jun'}
-t.add('Jul')
+t = {'May', 'June'}
+t.add('July')
 print(t)
