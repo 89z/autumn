@@ -1,5 +1,5 @@
 require 'csv'
 
-CSV.foreach("foo.csv") do |row|
-  puts row.join("\t")
+CSV.foreach('a.csv').with_index do |a_row, n_row|
+   print n_row, a_row, "\n"
 end

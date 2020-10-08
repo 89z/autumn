@@ -5,8 +5,11 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.pathinfo>
-- <https://php.net/splfileinfo.getpath>
+<https://php.net/function.pathinfo>
+
+{{< r "b.php" >}}
+
+<https://php.net/splfileinfo.getpath>
 
 ## References
 

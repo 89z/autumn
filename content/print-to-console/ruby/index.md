@@ -7,6 +7,10 @@ tags: [ruby]
 
 <https://ruby-doc.org/core/Kernel.html#method-i-puts>
 
+{{< r "b.rb" >}}
+
+<https://ruby-doc.org/core/Kernel.html#method-i-print>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting2#write-stdout>

@@ -34,8 +34,8 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;csv&#39;</span>
 
-<span style="color:#66d9ef">CSV</span><span style="color:#f92672">.</span>foreach(<span style="color:#e6db74">&#34;foo.csv&#34;</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>row<span style="color:#f92672">|</span>
-  puts row<span style="color:#f92672">.</span>join(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&#34;</span>)
+<span style="color:#66d9ef">CSV</span><span style="color:#f92672">.</span>foreach(<span style="color:#e6db74">&#39;a.csv&#39;</span>)<span style="color:#f92672">.</span>with_index <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>a_row, n_row<span style="color:#f92672">|</span>
+   print n_row, a_row, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div>
 <h2 id="references">References</h2>

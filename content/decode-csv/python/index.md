@@ -4,10 +4,16 @@ tags: [python]
 ---
 
 {{< r "a.py" >}}
+
+<https://docs.python.org/library/csv.html#examples>
+
 {{< r "b.py" >}}
+
+<https://docs.python.org/library/csv.html#csv.DictReader>
+
 {{< r "c.py" >}}
 
-<https://docs.python.org/library/csv.html>
+<https://docs.python.org/library/csv.html#csv.reader>
 
 ## References
 
