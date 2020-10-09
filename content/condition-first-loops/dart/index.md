@@ -7,6 +7,10 @@ tags: [dart]
 
 <https://dart.dev/guides/language/language-tour#while-and-do-while>
 
+{{< r "b.dart" >}}
+
+<https://dart.dev/guides/language/language-tour#for-loops>
+
 ## References
 
 - <https://hyperpolyglot.org/web#while>

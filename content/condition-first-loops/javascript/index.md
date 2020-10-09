@@ -5,8 +5,11 @@ tags: [javascript]
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/while>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Statements/while>
+
+{{< r "b.js" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for>
 
 ## References
 

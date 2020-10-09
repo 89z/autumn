@@ -1,9 +1,7 @@
 package main
 
 func main() {
-   n := 10
-   for n < 20 {
+   for n := 10; n < 20; n++ {
       println(n)
-      n++
    }
 }

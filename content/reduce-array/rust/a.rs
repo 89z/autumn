@@ -1,10 +1,9 @@
 fn main() {
    let a = vec!["May", "June"];
    // example 1
-   let s1 = a.iter().fold(String::new(), |s, s1| s + s1);
+   let s = a.iter().fold(String::new(), |s, s1| s + s1);
    // example 2
-   let f = |s: String, s2: &&str| s + s2;
-   let s2 = a.iter().fold(String::new(), f);
+   let n = a.iter().fold(0, |n, s| n + s.len());
    // print
-   println!("{}", s1 == "MayJune" && s2 == "MayJune");
+   println!("{}", s == "MayJune" && n == 7);
 }
