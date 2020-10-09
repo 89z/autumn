@@ -5,9 +5,15 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/control-structures.for>
-- <https://php.net/control-structures.while>
-- <https://php.net/function.range>
+<https://php.net/control-structures.while>
+
+{{< r "b.php" >}}
+
+<https://php.net/control-structures.for>
+
+{{< r "c.php" >}}
+
+<https://php.net/function.range>
 
 ## References
 
