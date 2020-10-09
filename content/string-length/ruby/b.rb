@@ -1,3 +1,3 @@
 s = '📗'
-n = s.length
+n = s.size
 puts n == 1

@@ -5,9 +5,15 @@ tags: [ruby]
 
 {{< r "a.rb" >}}
 
-- <https://ruby-doc.org/core-2.7.2/String.html#method-i-bytesize>
-- <https://ruby-doc.org/core/String.html#method-i-length>
-- <https://ruby-doc.org/core/String.html#method-i-size>
+<https://ruby-doc.org/core/String.html#method-i-length>
+
+{{< r "b.rb" >}}
+
+<https://ruby-doc.org/core/String.html#method-i-size>
+
+{{< r "c.rb" >}}
+
+<https://ruby-doc.org/core/String.html#method-i-bytesize>
 
 ## References
 
