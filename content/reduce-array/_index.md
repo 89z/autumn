@@ -1,5 +1,5 @@
 ---
 title: Reduce array
 categories: [array]
-date: 2020-09-17
+date: 2020-10-09
 ---

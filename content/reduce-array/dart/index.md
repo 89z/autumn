@@ -7,6 +7,10 @@ tags: [dart]
 
 <https://api.dart.dev/dart-core/Iterable/reduce.html>
 
+{{< r "b.dart" >}}
+
+<https://api.dart.dev/dart-core/Iterable/fold.html>
+
 ## References
 
 - <https://hyperpolyglot.org/web#reduce-note>

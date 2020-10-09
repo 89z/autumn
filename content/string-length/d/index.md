@@ -5,7 +5,7 @@ tags: [d]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/spec/arrays.html#array-length>
+<https://dlang.org/library/std/container/array/array.length.html>
 
 ## References
 

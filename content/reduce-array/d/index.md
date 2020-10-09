@@ -7,6 +7,10 @@ tags: [d]
 
 <https://dlang.org/library/std/algorithm/iteration/reduce.html>
 
+{{< r "b.d" >}}
+
+<https://dlang.org/library/std/algorithm/iteration/fold.html>
+
 ## References
 
 - <https://programming-idioms.org/idiom/202/sum-of-squares>
