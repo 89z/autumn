@@ -4,9 +4,12 @@ tags: [c-sharp]
 ---
 
 {{< r "a/Program.cs" >}}
-{{< r "b/Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/api/system.console.writeline>
+
+{{< r "b/Program.cs" >}}
+
+<https://docs.microsoft.com/en-us/dotnet/api/system.console.write>
 
 ## References
 

@@ -7,6 +7,10 @@ tags: [d]
 
 <https://dlang.org/library/std/stdio/writeln.html>
 
+{{< r "b.d" >}}
+
+<https://dlang.org/library/std/stdio/write.html>
+
 ## References
 
 - <https://programming-idioms.org/idiom/1>

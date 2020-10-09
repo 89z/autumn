@@ -36,16 +36,14 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
-    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args) {
-        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">1</span>; i &lt;= <span style="color:#ae81ff">10</span>; i++) {
-            Console.Write(i);
-            <span style="color:#66d9ef">if</span> (i % <span style="color:#ae81ff">5</span> == <span style="color:#ae81ff">0</span>) {
-                Console.WriteLine();
-                <span style="color:#66d9ef">continue</span>;
-            }
-            Console.Write(<span style="color:#e6db74">&#34;, &#34;</span>);
-        }
-    }
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> n = <span style="color:#ae81ff">0</span>; n &lt; <span style="color:#ae81ff">10</span>; n++) {
+         <span style="color:#66d9ef">if</span> (n % <span style="color:#ae81ff">3</span> == <span style="color:#ae81ff">0</span>) {
+            <span style="color:#66d9ef">continue</span>;
+         }
+         Console.WriteLine(n);
+      }
+   }
 }
 </code></pre></div>
 <h2 id="references">References</h2>
