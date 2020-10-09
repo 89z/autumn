@@ -3,7 +3,11 @@ title: D
 tags: [d]
 ---
 
-{{< r "d.ps1" >}}
+{{< r "dmd.ps1" >}}
+
+<https://dlang.org/dmd-windows.html>
+
+{{< r "ldc.ps1" >}}
 
 <https://wiki.dlang.org/Using_LDC>
 

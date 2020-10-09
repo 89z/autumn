@@ -2,4 +2,5 @@
 title: 'Tag talk:D'
 ---
 
-<https://github.com/ldc-developers/ldc/releases>
+- <https://dlang.org/download.html>
+- <https://github.com/ldc-developers/ldc/releases>
