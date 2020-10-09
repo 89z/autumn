@@ -7,6 +7,10 @@ tags: [rust]
 
 <https://doc.rust-lang.org/std/keyword.while.html>
 
+{{< r "b.rs" >}}
+
+<https://doc.rust-lang.org/std/keyword.for.html>
+
 ## References
 
 - <https://hyperpolyglot.org/rust#while>

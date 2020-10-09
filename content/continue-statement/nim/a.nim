@@ -1,5 +1,4 @@
-for i in 1..10:
-  if i mod 5 == 0:
-    echo i
-    continue
-  stdout.write i, ","
+for n in 0 .. 9:
+   if n mod 3 == 0:
+      continue
+   echo n

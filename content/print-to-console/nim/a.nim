@@ -1,5 +1,2 @@
-var s = "📗📕"
-# example 1
+let s = "📗📕"
 echo s
-# example 2
-stdout.write s, "\n"
