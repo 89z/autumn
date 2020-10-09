@@ -7,6 +7,14 @@ tags: [ruby]
 
 <https://ruby-doc.org/core/Array.html#method-i-push>
 
+{{< r "b.rb" >}}
+
+<https://ruby-doc.org/core/Array.html#method-i-append>
+
+{{< r "c.rb" >}}
+
+<https://ruby-doc.org/core/Array.html#method-i-3C-3C>
+
 ## References
 
 - <https://programming-idioms.org/idiom/166/concatenate-two-lists>
