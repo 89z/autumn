@@ -1,5 +1,5 @@
 ---
 title: Block-first loops
-categories: [reference]
+categories: [loop]
 date: 2020-10-01
 ---

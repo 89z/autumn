@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Continue statement / C#</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="section">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/nu8/autumn">Repository</a>
+   </header>
+   <main class="section">
+
+   
+      
+<h1><a href="/autumn/continue-statement/">Continue statement</a> / C#</h1>
+<section class="section">
+   <time>Thu Oct 8 2020</time>
+      
+   <a href="/autumn/categories/loop/">loop</a>
+      
+</section>
+   
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args) {
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">1</span>; i &lt;= <span style="color:#ae81ff">10</span>; i++) {
+            Console.Write(i);
+            <span style="color:#66d9ef">if</span> (i % <span style="color:#ae81ff">5</span> == <span style="color:#ae81ff">0</span>) {
+                Console.WriteLine();
+                <span style="color:#66d9ef">continue</span>;
+            }
+            Console.Write(<span style="color:#e6db74">&#34;, &#34;</span>);
+        }
+    }
+}
+</code></pre></div>
+<h2 id="references">References</h2>
+<p><a href="https://rosettacode.org/wiki/Loops/Continue">https://rosettacode.org/wiki/Loops/Continue</a></p>
+
+</main>
+
+</body>
+</html>

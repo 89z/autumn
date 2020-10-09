@@ -1,5 +1,5 @@
 ---
 title: Condition-first loops
-categories: [reference]
+categories: [loop]
 date: 2020-09-11
 ---
