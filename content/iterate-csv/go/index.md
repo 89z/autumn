@@ -5,7 +5,7 @@ tags: [go]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/encoding/csv>
+<https://golang.org/pkg/encoding/csv#Reader.Read>
 
 ## References
 

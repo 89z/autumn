@@ -21,12 +21,14 @@
    <main class="page">
 
 <h1>
-   <a href="/autumn/decode-csv/">Decode CSV</a> / Ruby
+   <a href="/autumn/iterate-csv/">Decode CSV</a> / Ruby
 </h1>
 <section class="page">
    <time>Wed Oct 7 2020</time>
    
    <a href="/autumn/categories/file-format/">file-format</a>
+   
+   <a href="/autumn/categories/iterate/">iterate</a>
    
 </section>
    <p>
@@ -73,8 +75,8 @@ s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Month,Da
 </span><span style="color:#e6db74">January,Sunday
 </span><span style="color:#e6db74">February,Monday&#39;</span>
 
-a <span style="color:#f92672">=</span> f(s)
-p a
+p <span style="color:#66d9ef">CSV</span><span style="color:#f92672">.</span>table(<span style="color:#e6db74">&#39;a.csv&#39;</span>)<span style="color:#f92672">.</span>map(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:to_h</span>)
+p <span style="color:#66d9ef">CSV</span><span style="color:#f92672">.</span>parse(s, <span style="color:#e6db74">headers</span>: <span style="color:#66d9ef">true</span>)<span style="color:#f92672">.</span>map(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:to_h</span>)
 </code></pre></div></p>
 <p><a href="https://ruby-doc.org/stdlib/libdoc/csv/rdoc/CSV.html">https://ruby-doc.org/stdlib/libdoc/csv/rdoc/CSV.html</a></p>
 <h2 id="references">References</h2>

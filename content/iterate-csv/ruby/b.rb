@@ -17,5 +17,5 @@ s = 'Month,Day
 January,Sunday
 February,Monday'
 
-a = f(s)
-p a
+p CSV.table('a.csv').map(&:to_h)
+p CSV.parse(s, headers: true).map(&:to_h)

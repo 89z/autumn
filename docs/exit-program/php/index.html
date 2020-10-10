@@ -29,13 +29,30 @@
    <a href="/autumn/categories/system/">system</a>
    
 </section>
-   <p>
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">exit</span>(<span style="color:#ae81ff">1</span>);
+<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;May&#39;</span>;
+</code></pre></div>
+<p><a href="https://php.net/function.exit">https://php.net/function.exit</a></p>
+
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 <span style="color:#66d9ef">die</span>(<span style="color:#ae81ff">1</span>);
 <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;May&#39;</span>;
 </code></pre></div>
+<p><a href="https://php.net/function.die">https://php.net/function.die</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">trigger_error</span>(<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#a6e22e">E_USER_ERROR</span>);
+<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;June&#39;</span>;
+</code></pre></div>
+<p><a href="https://php.net/function.trigger-error">https://php.net/function.trigger-error</a></p>
 
 
 
@@ -43,17 +60,7 @@
 <span style="color:#a6e22e">user_error</span>(<span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#a6e22e">E_USER_ERROR</span>);
 <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;June&#39;</span>;
 </code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#66d9ef">exit</span>(<span style="color:#ae81ff">1</span>);
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;May</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-</code></pre></div></p>
-<ul>
-<li><a href="https://php.net/function.die">https://php.net/function.die</a></li>
-<li><a href="https://php.net/function.exit">https://php.net/function.exit</a></li>
-</ul>
+<p><a href="https://php.net/function.user-error">https://php.net/function.user-error</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#exit">https://hyperpolyglot.org/scripting2#exit</a></li>
