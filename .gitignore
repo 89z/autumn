@@ -1,6 +1,14 @@
-# C#
-**/c-sharp/*/bin
-**/c-sharp/*/obj
+**/c-sharp/a/a.csproj
+**/c-sharp/a/bin
+**/c-sharp/a/obj
+**/c-sharp/b/b.csproj
+**/c-sharp/b/bin
+**/c-sharp/b/obj
 **/c-sharp/bin
+**/c-sharp/c-sharp.csproj
+**/c-sharp/c/bin
+**/c-sharp/c/c.csproj
+**/c-sharp/c/obj
 **/c-sharp/obj
-*.csproj
+**/rust/Cargo.lock
+**/rust/target

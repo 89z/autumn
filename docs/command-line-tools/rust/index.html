@@ -32,27 +32,46 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps1" data-lang="ps1"><span style="color:#75715e"># example 1</span>
-rustc a.rs
-<span style="color:#75715e"># example 2</span>
-cargo new may
-<span style="color:#75715e"># example 3</span>
-<span style="color:#e6db74">&#39;
-</span><span style="color:#e6db74">[package]
-</span><span style="color:#e6db74">name = &#34;may&#34;
-</span><span style="color:#e6db74">version = &#34;1.0.0&#34;
-</span><span style="color:#e6db74">edition = &#34;2018&#34;
-</span><span style="color:#e6db74">[dependencies]
-</span><span style="color:#e6db74">curl = &#34;&#34;
-</span><span style="color:#e6db74">&#39;</span> &gt; Cargo.toml
-<span style="color:#75715e"># example 4</span>
-cargo run
-<span style="color:#75715e"># example 5</span>
-$env:RUSTFLAGS = <span style="color:#e6db74">&#39;-C link-arg=-s&#39;</span>
-cargo build --release
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">package</span>]
+<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;may&#34;</span>
+<span style="color:#a6e22e">version</span> = <span style="color:#e6db74">&#34;1.0.0&#34;</span>
+<span style="color:#a6e22e">edition</span> = <span style="color:#e6db74">&#34;2018&#34;</span>
+[<span style="color:#a6e22e">dependencies</span>]
+<span style="color:#a6e22e">curl</span> = <span style="color:#e6db74">&#34;&#34;</span>
 </code></pre></div>
 <p><code>edition</code> allows to omit <code>extern crate</code>.</p>
-<p><a href="https://doc.rust-lang.org/cargo/getting-started/first-steps.html">https://doc.rust-lang.org/cargo/getting-started/first-steps.html</a></p>
+<p><a href="https://doc.rust-lang.org/cargo/reference/manifest.html">https://doc.rust-lang.org/cargo/reference/manifest.html</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps1" data-lang="ps1">$env:RUSTFLAGS = <span style="color:#e6db74">&#39;-C link-arg=-s&#39;</span>
+cargo build --release
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/cargo/commands/cargo-build.html">https://doc.rust-lang.org/cargo/commands/cargo-build.html</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps1" data-lang="ps1">cargo init
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/cargo/commands/cargo-init.html">https://doc.rust-lang.org/cargo/commands/cargo-init.html</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps1" data-lang="ps1">cargo new May
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/cargo/commands/cargo-new.html">https://doc.rust-lang.org/cargo/commands/cargo-new.html</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps1" data-lang="ps1">cargo run
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/cargo/commands/cargo-run.html">https://doc.rust-lang.org/cargo/commands/cargo-run.html</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps1" data-lang="ps1">rustc a.rs
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/rustc/what-is-rustc.html">https://doc.rust-lang.org/rustc/what-is-rustc.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/rust#compiler">https://hyperpolyglot.org/rust#compiler</a></li>
