@@ -31,54 +31,54 @@
    <a href="/autumn/categories/iterate/">iterate</a>
    
 </section>
-   <p>
+   
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;csv&#39;</span>
 
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(s_in)
-   a_head <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
-   a_out <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
-   <span style="color:#66d9ef">CSV</span><span style="color:#f92672">.</span>foreach(s_in)<span style="color:#f92672">.</span>with_index <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>a_row, n_row<span style="color:#f92672">|</span>
-      <span style="color:#66d9ef">if</span> n_row <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>
-         a_head <span style="color:#f92672">=</span> a_row
-         <span style="color:#66d9ef">next</span>
-      <span style="color:#66d9ef">end</span>
-      a_out <span style="color:#f92672">&lt;&lt;</span> a_head<span style="color:#f92672">.</span>zip(a_row)<span style="color:#f92672">.</span>to_h
-   <span style="color:#66d9ef">end</span>
-   <span style="color:#66d9ef">return</span> a_out
+<span style="color:#66d9ef">CSV</span><span style="color:#f92672">.</span>foreach(<span style="color:#e6db74">&#39;a.csv&#39;</span>, <span style="color:#e6db74">headers</span>: <span style="color:#66d9ef">true</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>m<span style="color:#f92672">|</span>
+   p m
 <span style="color:#66d9ef">end</span>
-
-s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a.csv&#39;</span>
-a <span style="color:#f92672">=</span> f(s)
-p a
 </code></pre></div>
+<p><a href="https://ruby-doc.org/stdlib/libdoc/csv/rdoc/CSV.html#method-c-foreach">https://ruby-doc.org/stdlib/libdoc/csv/rdoc/CSV.html#method-c-foreach</a></p>
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;csv&#39;</span>
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(s_in)
-   a_head <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
-   a_out <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
-   <span style="color:#66d9ef">CSV</span><span style="color:#f92672">.</span>new(s_in)<span style="color:#f92672">.</span>each<span style="color:#f92672">.</span>with_index <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>a_row, n_row<span style="color:#f92672">|</span>
-      <span style="color:#66d9ef">if</span> n_row <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>
-         a_head <span style="color:#f92672">=</span> a_row
-         <span style="color:#66d9ef">next</span>
-      <span style="color:#66d9ef">end</span>
-      a_out <span style="color:#f92672">&lt;&lt;</span> a_head<span style="color:#f92672">.</span>zip(a_row)<span style="color:#f92672">.</span>to_h
-   <span style="color:#66d9ef">end</span>
-   <span style="color:#66d9ef">return</span> a_out
-<span style="color:#66d9ef">end</span>
 
 s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Month,Day
 </span><span style="color:#e6db74">January,Sunday
 </span><span style="color:#e6db74">February,Monday&#39;</span>
 
-p <span style="color:#66d9ef">CSV</span><span style="color:#f92672">.</span>table(<span style="color:#e6db74">&#39;a.csv&#39;</span>)<span style="color:#f92672">.</span>map(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:to_h</span>)
-p <span style="color:#66d9ef">CSV</span><span style="color:#f92672">.</span>parse(s, <span style="color:#e6db74">headers</span>: <span style="color:#66d9ef">true</span>)<span style="color:#f92672">.</span>map(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:to_h</span>)
-</code></pre></div></p>
-<p><a href="https://ruby-doc.org/stdlib/libdoc/csv/rdoc/CSV.html">https://ruby-doc.org/stdlib/libdoc/csv/rdoc/CSV.html</a></p>
+<span style="color:#66d9ef">CSV</span><span style="color:#f92672">.</span>new(s, <span style="color:#e6db74">headers</span>: <span style="color:#66d9ef">true</span>)<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>m<span style="color:#f92672">|</span>
+   p m
+<span style="color:#66d9ef">end</span>
+</code></pre></div>
+<p><a href="https://ruby-doc.org/stdlib/libdoc/csv/rdoc/CSV.html#method-c-new">https://ruby-doc.org/stdlib/libdoc/csv/rdoc/CSV.html#method-c-new</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;csv&#39;</span>
+
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Month,Day
+</span><span style="color:#e6db74">January,Sunday
+</span><span style="color:#e6db74">February,Monday&#39;</span>
+
+<span style="color:#66d9ef">CSV</span><span style="color:#f92672">.</span>parse(s, <span style="color:#e6db74">headers</span>: <span style="color:#66d9ef">true</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>m<span style="color:#f92672">|</span>
+   p m
+<span style="color:#66d9ef">end</span>
+</code></pre></div>
+<p><a href="https://ruby-doc.org/stdlib/libdoc/csv/rdoc/CSV.html#method-c-parse">https://ruby-doc.org/stdlib/libdoc/csv/rdoc/CSV.html#method-c-parse</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;csv&#39;</span>
+
+<span style="color:#66d9ef">CSV</span><span style="color:#f92672">.</span>table(<span style="color:#e6db74">&#39;a.csv&#39;</span>)<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>m<span style="color:#f92672">|</span>
+   p m
+<span style="color:#66d9ef">end</span>
+</code></pre></div>
+<p><a href="https://ruby-doc.org/stdlib/libdoc/csv/rdoc/CSV.html#method-c-table">https://ruby-doc.org/stdlib/libdoc/csv/rdoc/CSV.html#method-c-table</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#parse-csv">https://hyperpolyglot.org/scripting2#parse-csv</a></li>

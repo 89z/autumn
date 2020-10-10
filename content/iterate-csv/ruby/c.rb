@@ -4,6 +4,6 @@ s = 'Month,Day
 January,Sunday
 February,Monday'
 
-CSV.new(s, headers: true).each do |m|
+CSV.parse(s, headers: true) do |m|
    p m
 end
