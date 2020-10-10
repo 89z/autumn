@@ -3,6 +3,7 @@ disableKinds:
 - RSS
 - sitemap
 ignoreFiles:
+- /content/.*/.*/.*/.*/
 - /content/.*\.[^m]
 - /content/.*\.m[^d]
 - /content/.*\.md.
