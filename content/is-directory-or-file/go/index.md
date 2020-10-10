@@ -4,10 +4,20 @@ tags: [go]
 ---
 
 {{< r "a.go" >}}
+
+<https://golang.org/pkg/os#FileMode.IsDir>
+
 {{< r "b.go" >}}
 
-- <https://golang.org/pkg/os#IsNotExist>
-- <https://golang.org/pkg/os#Stat>
+<https://golang.org/pkg/os#FileMode.IsRegular>
+
+{{< r "c.go" >}}
+
+<https://golang.org/pkg/os#IsNotExist>
+
+{{< r "d.go" >}}
+
+<https://golang.org/pkg/os#Stat>
 
 ## References
 

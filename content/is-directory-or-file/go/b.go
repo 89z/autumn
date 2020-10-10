@@ -3,14 +3,9 @@ import "os"
 
 func main() {
    o, e := os.Stat("index.md")
-   // example 1
-   if os.IsNotExist(e) {
+   if e != nil {
       os.Exit(1)
    }
-   // example 2
-   b2 := o.Mode().IsRegular()
-   // example 3
-   b3 := ! o.Mode().IsDir()
-   // print
-   println(b2, b3)
+   b := o.Mode().IsRegular()
+   println(b)
 }
