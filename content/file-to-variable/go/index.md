@@ -3,15 +3,21 @@ title: Go
 tags: [go]
 ---
 
-{{< r "copy.go" >}}
-{{< r "readall.go" >}}
-{{< r "readfile.go" >}}
-{{< r "scan.go" >}}
+{{< r "a.go" >}}
 
-- <https://golang.org/pkg/bufio#Scanner.Scan>
-- <https://golang.org/pkg/io#Copy>
-- <https://golang.org/pkg/io/ioutil#ReadAll>
-- <https://golang.org/pkg/io/ioutil#ReadFile>
+<https://golang.org/pkg/bufio#Scanner.Scan>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/io#Copy>
+
+{{< r "c.go" >}}
+
+<https://golang.org/pkg/io/ioutil#ReadAll>
+
+{{< r "d.go" >}}
+
+<https://golang.org/pkg/io/ioutil#ReadFile>
 
 ## References
 

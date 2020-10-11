@@ -1,1 +1,3 @@
-Dir.chdir("/tmp")
+Dir.chdir('..')
+s = Dir.getwd
+puts s

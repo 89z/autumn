@@ -3,13 +3,17 @@ title: Go
 tags: [go]
 ---
 
-{{< r "fprintln.go" >}}
-{{< r "writestring.go" >}}
-{{< r "writeto.go" >}}
+{{< r "a.go" >}}
 
-- <https://golang.org/pkg/fmt#Fprintln>
-- <https://golang.org/pkg/os#File.WriteString>
-- <https://golang.org/pkg/strings#Reader.WriteTo>
+<https://golang.org/pkg/fmt#Fprintln>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/os#File.WriteString>
+
+{{< r "c.go" >}}
+
+<https://golang.org/pkg/strings#Reader.WriteTo>
 
 ## References
 

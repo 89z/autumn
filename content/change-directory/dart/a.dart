@@ -1,3 +1,10 @@
 import 'dart:io';
-Directory.current = new Directory('your/path/here'); 
-Directory.current = 'your/path/here';
+
+void main() {
+   // example 1
+   Directory.current = new Directory('..');
+   print(Directory.current);
+   // example 2
+   Directory.current = 'dart';
+   print(Directory.current);
+}
