@@ -4,11 +4,16 @@ tags: [php]
 ---
 
 {{< r "a.php" >}}
+
+<https://php.net/function.curl-init>
+
 {{< r "b.php" >}}
 
-- <https://php.net/function.curl-init>
-- <https://php.net/function.file-get-contents>
-- <https://php.net/function.stream-get-contents>
+<https://php.net/function.file-get-contents>
+
+{{< r "c.php" >}}
+
+<https://php.net/function.stream-get-contents>
 
 ## References
 

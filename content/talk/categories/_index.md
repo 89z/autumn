@@ -1,3 +1,3 @@
 ---
-title: 'Category talk'
+title: Category talk
 ---

@@ -1,4 +1,5 @@
 <?php
 $s = 'https://speedtest.lax.hivelocity.net';
-$s1 = file_get_contents($s);
+$r = fopen($s, 'r');
+$s1 = stream_get_contents($r);
 echo $s1;

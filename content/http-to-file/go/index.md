@@ -7,6 +7,10 @@ tags: [go]
 
 <https://golang.org/pkg/net/http#Get>
 
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/io#TeeReader>
+
 ## References
 
 - <https://hyperpolyglot.org/c#http-get>
