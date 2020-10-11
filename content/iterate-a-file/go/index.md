@@ -7,6 +7,10 @@ tags: [go]
 
 <https://golang.org/pkg/bufio>
 
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/os>
+
 ## References
 
 <https://rosettacode.org/wiki/Read_a_file_line_by_line>
