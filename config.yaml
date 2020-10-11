@@ -1,15 +1,16 @@
 baseURL: https://nu8.github.io/autumn
+
 disableKinds:
 - RSS
 - sitemap
-ignoreFiles:
-- /content/.*/.*/.*/.*/
-- /content/.*\.[^m]
-- /content/.*\.m[^d]
-- /content/.*\.md.
+
 markup:
    goldmark:
       extensions:
          linkify: false
+
 publishDir: docs
 title: Autumn
+
+watchFiles:
+- /content/.*index\.md$

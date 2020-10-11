@@ -45,10 +45,10 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">main</span>() {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_uri</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://speedtest.lax.hivelocity.net&#39;</span>;
-   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">o_req</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">s_uri</span>);
-   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_resp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">o_req</span>.<span style="color:#a6e22e">text</span>();
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">o_req</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">s_uri</span>);
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s_resp</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">o_req</span>.<span style="color:#a6e22e">text</span>();
    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s_resp</span>);
 }
 

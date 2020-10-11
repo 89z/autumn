@@ -32,7 +32,14 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps1" data-lang="ps1">go build -ldflags -s a.go
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps1" data-lang="ps1"><span style="color:#75715e"># example 1</span>
+go build a.go
+<span style="color:#75715e"># example 2</span>
+go build
+<span style="color:#75715e"># example 3</span>
+go build -v
+<span style="color:#75715e"># example 4</span>
+go build -ldflags -s
 </code></pre></div>
 <p><a href="https://golang.org/cmd/go#hdr-Compile_packages_and_dependencies">https://golang.org/cmd/go#hdr-Compile_packages_and_dependencies</a></p>
 
