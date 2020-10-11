@@ -1,5 +1,5 @@
 ---
-title: 'Tag talk:Python'
+title: Python
 ---
 
 Python:

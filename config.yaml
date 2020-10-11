@@ -14,3 +14,5 @@ title: Autumn
 
 watchFiles:
 - /content/.*index\.md$
+- /layouts/_default/.*\.html$
+- /static/main.css$

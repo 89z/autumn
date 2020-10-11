@@ -1,5 +1,5 @@
 ---
-title: 'Category talk:time'
+title: Time
 ---
 
 If we do our base with UTC, it will be the same short date as my time zone:

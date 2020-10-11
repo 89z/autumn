@@ -72,6 +72,7 @@ footer > a,
 main.page > h1 > a,
 main.page > p > a,
 main.page > ul > li > a,
+main.section > a,
 main.section > h1 > a,
 main.section > p > a,
 main.section > ul > li > a,
@@ -120,6 +121,7 @@ main.section > div.highlight {
 a.page,
 main.page > p,
 main.page > ul,
+main.section > a,
 main.section > p,
 main.section > ul,
 main.taxonomy > a,
@@ -157,7 +159,8 @@ header > h1,
 header > h2 {
    margin-bottom: 0;
 }
-article.section > h2 {
+article.section > h2,
+section.section {
    margin-bottom: .5rem;
 }
 footer,

@@ -1,5 +1,5 @@
 ---
-title: 'Category talk:reference'
+title: Reference
 ---
 
 Letter | Type

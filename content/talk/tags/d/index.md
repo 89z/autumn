@@ -1,5 +1,5 @@
 ---
-title: 'Tag talk:D'
+title: D
 ---
 
 - <https://dlang.org/download.html>

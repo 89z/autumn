@@ -1,5 +1,5 @@
 ---
-title: 'Tag talk:JavaScript'
+title: JavaScript
 ---
 
 - <https://developer.mozilla.org/docs/Web/JavaScript>

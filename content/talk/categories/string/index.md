@@ -1,5 +1,5 @@
 ---
-title: 'Category talk:string'
+title: String
 ---
 
 {{< r "unicode.ps1" >}}

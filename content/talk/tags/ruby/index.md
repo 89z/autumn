@@ -1,5 +1,5 @@
 ---
-title: 'Tag talk:Ruby'
+title: Ruby
 ---
 
 <https://en.wikipedia.org/wiki/There's_more_than_one_way_to_do_it>

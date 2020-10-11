@@ -1,5 +1,5 @@
 ---
-title: 'Tag talk:PHP'
+title: PHP
 ---
 
 ## php.ini

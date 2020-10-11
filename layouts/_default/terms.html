@@ -4,7 +4,7 @@ localhost:1313/autumn/tags
 -->
 <h1>{{ .Title }}</h1>
    {{ with (.GetPage (path.Join "talk" .Path)) }}
-<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+<a href="{{ .RelPermalink }}">Talk</a>
    {{ end }}
 <nav class="{{ .Kind }}">
    {{ range .Data.Terms }}

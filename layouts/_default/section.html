@@ -1,6 +1,6 @@
 {{ define "main" }}
 <!--
-localhost:1313/autumn/encode-json
+localhost:1313/autumn/match-string-with-literal
 -->
    {{ if .Parent.IsHome }}
 <h1>{{ .Title }}</h1>
@@ -10,10 +10,10 @@ localhost:1313/autumn/encode-json
    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}
 </section>
-<nav class="{{ .Kind }}">
       {{ with (.GetPage (path.Join "talk" .Path)) }}
-   <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+<a href="{{ .RelPermalink }}">Talk</a>
       {{ end }}
+<nav class="{{ .Kind }}">
       {{ range .Pages }}
    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}

@@ -1,5 +1,5 @@
 ---
-title: 'Talk:Reduce array'
+title: Reduce array
 ---
 
 We can approach this three ways. Using the reduce function:
