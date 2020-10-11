@@ -29,7 +29,32 @@
    <a href="/autumn/categories/system/">system</a>
    
 </section>
-   <p><a href="https://dlang.org/library/std/file/chdir.html">https://dlang.org/library/std/file/chdir.html</a></p>
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span>
+<span style="color:#f92672">{</span>
+    <span style="color:#f92672">import</span> std.file<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">:</span> writeln<span style="color:#f92672">,</span> writef<span style="color:#f92672">,</span> writefln<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> std.algorithm.comparison <span style="color:#f92672">:</span> equal<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> std.path <span style="color:#f92672">:</span> buildPath<span style="color:#f92672">;</span>
+    
+    <span style="color:#66d9ef">auto</span> cwd <span style="color:#f92672">=</span> getcwd<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">auto</span> dir <span style="color:#f92672">=</span> deleteme <span style="color:#f92672">~</span> <span style="color:#e6db74">&#34;dir&#34;</span><span style="color:#f92672">;</span>
+    dir<span style="color:#f92672">.</span><span style="color:#a6e22e">mkdir</span><span style="color:#f92672">;</span>
+    scope<span style="color:#f92672">(</span>exit<span style="color:#f92672">)</span> cwd<span style="color:#f92672">.</span><span style="color:#a6e22e">chdir</span><span style="color:#f92672">,</span> dir<span style="color:#f92672">.</span><span style="color:#a6e22e">rmdirRecurse</span><span style="color:#f92672">;</span>
+    
+    dir<span style="color:#f92672">.</span><span style="color:#a6e22e">buildPath</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">);</span>
+    dir<span style="color:#f92672">.</span><span style="color:#a6e22e">chdir</span><span style="color:#f92672">;</span> <span style="color:#75715e">// step into dir
+</span><span style="color:#75715e"></span>    <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">);</span>
+    dirEntries<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">,</span> SpanMode<span style="color:#f92672">.</span><span style="color:#a6e22e">shallow</span><span style="color:#f92672">).</span><span style="color:#a6e22e">equal</span><span style="color:#f92672">(</span>
+        <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">buildPath</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">),</span> <span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">buildPath</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">)]</span>
+    <span style="color:#f92672">);</span>
+    
+    
+<span style="color:#f92672">}</span>
+</code></pre></div>
+<p><a href="https://dlang.org/library/std/file/chdir.html">https://dlang.org/library/std/file/chdir.html</a></p>
 
 </main>
 
