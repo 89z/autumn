@@ -1,5 +1,5 @@
 ---
-title: 'Talk:Extract substring'
+title: Extract substring
 date: 2020-10-06
 ---
 

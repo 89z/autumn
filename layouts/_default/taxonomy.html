@@ -6,7 +6,7 @@ localhost:1313/autumn/tags/proposal
 -->
 <h1>{{ .Title }}</h1>
    {{ with (.GetPage (path.Join "talk" .Path)) }}
-<a class="{{ .Kind }}" href="{{ .RelPermalink }}">Talk</a>
+<a href="{{ .RelPermalink }}">Talk</a>
    {{ end }}
 <table>
    {{ range .Pages.ByTitle }}

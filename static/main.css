@@ -1,10 +1,12 @@
 body {
-   --gray-25: hsl(0, 0%, 25%);
-   --gray-60: hsl(0, 0%, 60%);
-   --gray-80: hsl(0, 0%, 80%);
+   --blue-dark: hsl(240, 88%, 38%);
+   --blue-light: hsl(228, 100%, 87%);
+   --gray-dark: hsl(0, 0%, 25%);
+   --gray-light: hsl(0, 0%, 80%);
+   --gray-medium: hsl(0, 0%, 60%);
    --ivory: hsl(60, 30%, 95%);
-   --light-red: hsl(0, 45%, 90%);
-   --red: hsl(0, 45%, 45%);
+   --red-dark: hsl(0, 45%, 45%);
+   --red-light: hsl(0, 45%, 90%);
 }
 header,
 section.page,
@@ -12,28 +14,34 @@ section.section {
    align-items: center;
 }
 article.term,
+nav.section > a {
+   background: var(--blue-light);
+}
+header {
+   background: var(--red-dark);
+}
 footer > a,
+main.taxonomy > a,
+main.term > a,
 section.page > a,
 section.section > a,
 tr:nth-child(odd) > td {
-   background: var(--light-red);
-}
-header,
-nav.section > a {
-   background: var(--red);
+   background: var(--red-light);
 }
 table {
    border-collapse: collapse;
 }
 td {
-   border-color: var(--gray-80);
+   border-color: var(--gray-light);
 }
 article.section {
-   border-color: var(--red);
+   border-color: var(--red-dark);
 }
 article.section,
 article.term,
 footer > a,
+main.taxonomy > a,
+main.term > a,
 nav.section > a,
 section.page > a,
 section.section > a {
@@ -47,27 +55,28 @@ td {
 article.section {
    border-width: thick;
 }
+article.term > a,
+nav.section > a {
+   color: var(--blue-dark);
+}
 main > h1,
 main.page > h2,
 section.term,
 td.page,
 td.section {
-   color: var(--gray-25);
+   color: var(--gray-dark);
 }
 time {
-   color: var(--gray-60);
+   color: var(--gray-medium);
 }
 header > a,
 header > h1 > a,
-header > h2 > a {
+header > h2 > a,
+main.taxonomy > a {
    color: var(--ivory);
-}
-nav.section > a {
-   color: var(--light-red);
 }
 a.page,
 article.section > h2 > a,
-article.term > a,
 footer > a,
 main.page > h1 > a,
 main.page > p > a,
@@ -77,10 +86,11 @@ main.section > h1 > a,
 main.section > p > a,
 main.section > ul > li > a,
 main.taxonomy > a,
+main.term > a,
 section.page > a,
 section.section > a,
 td > a {
-   color: var(--red);
+   color: var(--red-dark);
 }
 footer,
 header.home,
@@ -159,8 +169,7 @@ header > h1,
 header > h2 {
    margin-bottom: 0;
 }
-article.section > h2,
-section.section {
+article.section > h2 {
    margin-bottom: .5rem;
 }
 footer,
@@ -202,6 +211,8 @@ header.page,
 header.section,
 header.taxonomy,
 header.term,
+main.taxonomy > a,
+main.term > a,
 section.page > a,
 section.section > a,
 td {
@@ -226,6 +237,8 @@ article.term,
 footer > a,
 main.page > ul,
 main.section > ul,
+main.taxonomy > a,
+main.term > a,
 nav.section > a,
 section.page > a,
 section.section > a,
@@ -235,6 +248,8 @@ td {
 article.section,
 article.term,
 footer > a,
+main.taxonomy > a,
+main.term > a,
 nav.section > a,
 section.page > a,
 section.section > a,
@@ -246,6 +261,8 @@ header.page,
 header.section,
 header.taxonomy,
 header.term,
+main.taxonomy > a,
+main.term > a,
 section.page > a,
 section.section > a,
 td {
