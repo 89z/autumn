@@ -1,3 +1,3 @@
 let n = 10;
-let s = n.toString();
+let s = String(n);
 console.log(s === '10');
