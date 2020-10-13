@@ -33,83 +33,60 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;flag&#34;</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;flag&#34;</span>
+   <span style="color:#e6db74">&#34;image&#34;</span>
+   <span style="color:#e6db74">&#34;image/jpeg&#34;</span>
+   <span style="color:#e6db74">&#34;log&#34;</span>
+   <span style="color:#e6db74">&#34;os&#34;</span>
+   <span style="color:#e6db74">&#34;path/filepath&#34;</span>
+)
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Bool</span>(<span style="color:#e6db74">&#34;year&#34;</span>, <span style="color:#66d9ef">false</span>, <span style="color:#e6db74">&#34;print year&#34;</span>)
+   <span style="color:#a6e22e">n_bottom</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Int</span>(<span style="color:#e6db74">&#34;bottom&#34;</span>, <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;pixels&#34;</span>)
+   <span style="color:#a6e22e">n_left</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Int</span>(<span style="color:#e6db74">&#34;left&#34;</span>, <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;pixels&#34;</span>)
+   <span style="color:#a6e22e">n_right</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Int</span>(<span style="color:#e6db74">&#34;right&#34;</span>, <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;pixels&#34;</span>)
+   <span style="color:#a6e22e">n_top</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Int</span>(<span style="color:#e6db74">&#34;top&#34;</span>, <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;pixels&#34;</span>)
+
    <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Parse</span>()
-   println(<span style="color:#f92672">*</span><span style="color:#a6e22e">b</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">NArg</span>() <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span> {
+      println(<span style="color:#e6db74">&#34;crop-image [flags] &lt;file&gt;&#34;</span>)
+      <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">PrintDefaults</span>()
+      <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
+   }
+
+   <span style="color:#a6e22e">s_in</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Arg</span>(<span style="color:#ae81ff">0</span>)
+   <span style="color:#a6e22e">s_out</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;crop-&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Base</span>(<span style="color:#a6e22e">s_in</span>)
+
+   <span style="color:#a6e22e">file_in</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#a6e22e">s_in</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+
+   <span style="color:#a6e22e">file_out</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#a6e22e">s_out</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+
+   <span style="color:#a6e22e">img_in</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">jpeg</span>.<span style="color:#a6e22e">Decode</span>(<span style="color:#a6e22e">file_in</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+
+   <span style="color:#a6e22e">rect_in</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">img_in</span>.<span style="color:#a6e22e">Bounds</span>()
+   <span style="color:#a6e22e">rect_out</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">image</span>.<span style="color:#a6e22e">Rect</span>(
+      <span style="color:#f92672">*</span><span style="color:#a6e22e">n_left</span>,
+      <span style="color:#f92672">*</span><span style="color:#a6e22e">n_top</span>,
+      <span style="color:#a6e22e">rect_in</span>.<span style="color:#a6e22e">Max</span>.<span style="color:#a6e22e">X</span> <span style="color:#f92672">-</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">n_right</span>,
+      <span style="color:#a6e22e">rect_in</span>.<span style="color:#a6e22e">Max</span>.<span style="color:#a6e22e">Y</span> <span style="color:#f92672">-</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">n_bottom</span>,
+   )
+
+   <span style="color:#a6e22e">img_out</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">img_in</span>.(<span style="color:#f92672">*</span><span style="color:#a6e22e">image</span>.<span style="color:#a6e22e">YCbCr</span>).<span style="color:#a6e22e">SubImage</span>(<span style="color:#a6e22e">rect_out</span>)
+   <span style="color:#a6e22e">jpeg</span>.<span style="color:#a6e22e">Encode</span>(<span style="color:#a6e22e">file_out</span>, <span style="color:#a6e22e">img_out</span>, <span style="color:#66d9ef">nil</span>)
 }
 </code></pre></div>
-<p><a href="https://golang.org/pkg/flag#Bool">https://golang.org/pkg/flag#Bool</a></p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;flag&#34;</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#66d9ef">bool</span>
-   <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">BoolVar</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">b</span>, <span style="color:#e6db74">&#34;year&#34;</span>, <span style="color:#66d9ef">false</span>, <span style="color:#e6db74">&#34;print year&#34;</span>)
-   <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Parse</span>()
-   println(<span style="color:#a6e22e">b</span>)
-}
-</code></pre></div>
-<p><a href="https://golang.org/pkg/flag#BoolVar">https://golang.org/pkg/flag#BoolVar</a></p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;flag&#34;</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Int</span>(<span style="color:#e6db74">&#34;year&#34;</span>, <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;print year&#34;</span>)
-   <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Parse</span>()
-   println(<span style="color:#f92672">*</span><span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">2019</span>)
-}
-</code></pre></div>
-<p><a href="https://golang.org/pkg/flag#Int">https://golang.org/pkg/flag#Int</a></p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;flag&#34;</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n</span> <span style="color:#66d9ef">int</span>
-   <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">IntVar</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n</span>, <span style="color:#e6db74">&#34;year&#34;</span>, <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;print year&#34;</span>)
-   <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Parse</span>()
-   println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">2019</span>)
-}
-</code></pre></div>
-<p><a href="https://golang.org/pkg/flag#IntVar">https://golang.org/pkg/flag#IntVar</a></p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;flag&#34;</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">String</span>(<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;print month&#34;</span>)
-   <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Parse</span>()
-   println(<span style="color:#f92672">*</span><span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;May&#34;</span>)
-}
-</code></pre></div>
-<p><a href="https://golang.org/pkg/flag#String">https://golang.org/pkg/flag#String</a></p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;flag&#34;</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>
-   <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">StringVar</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;print month&#34;</span>)
-   <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Parse</span>()
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;May&#34;</span>)
-}
-</code></pre></div>
-<p><a href="https://golang.org/pkg/flag#StringVar">https://golang.org/pkg/flag#StringVar</a></p>
+<p><a href="https://golang.org/pkg/flag">https://golang.org/pkg/flag</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#getopt">https://hyperpolyglot.org/c#getopt</a></li>
