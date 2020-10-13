@@ -13,7 +13,6 @@ Letter | Type
 `o`    | Object
 `r`    | Resource
 `s`    | String
-`t`    | Set (`t` in `set`, also `t` in `true`)
 `y`    | Byte (`y` in `byte`)
 
 ## Byte
