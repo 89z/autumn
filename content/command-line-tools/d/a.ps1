@@ -1,4 +1,4 @@
 # example 1
-dmd a.d
+dub build
 # example 2
-dmd -run a.d
+dub build -b release

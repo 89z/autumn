@@ -1,4 +1,4 @@
 # example 1
-dub init
+ldc2 a.d
 # example 2
-dub init May
+ldc2 -run a.d

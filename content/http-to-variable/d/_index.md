@@ -3,9 +3,9 @@ title: D
 tags: [d]
 ---
 
-{{< r "a.d" >}}
+{{< r "source/app.d" >}}
 
-<https://dlang.org/library/std/net/curl/get.html>
+<https://github.com/CyberShadow/ae>
 
 ## References
 

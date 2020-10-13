@@ -3,11 +3,21 @@ title: PHP
 tags: [php]
 ---
 
-{{< r "iso.php" >}}
-{{< r "short.php" >}}
+{{< r "a.php" >}}
 
-- <https://php.net/function.date>
-- <https://php.net/function.strftime>
+<https://php.net/datetime.format>
+
+{{< r "b.php" >}}
+
+<https://php.net/function.date-format>
+
+{{< r "c.php" >}}
+
+<https://php.net/function.date>
+
+{{< r "d.php" >}}
+
+<https://php.net/function.strftime>
 
 ## References
 

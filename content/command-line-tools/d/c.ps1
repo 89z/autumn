@@ -1,6 +1,4 @@
 # example 1
-dub init
+dub run
 # example 2
-dub init May
-# example 2
-dub build
+dub run -b release

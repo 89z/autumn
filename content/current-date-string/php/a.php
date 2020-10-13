@@ -1,11 +1,9 @@
 <?php
 date_default_timezone_set('America/Chicago');
-# example 1
-$s1 = date('Y-m-d');
-# example 2
 $o = new DateTime;
+# example 1
+$s1 = $o->format(DATE_W3C);
+# example 2
 $s2 = $o->format('Y-m-d');
-# example 3
-$s3 = strftime('%F');
 # print
-var_dump($s1, $s2, $s3);
+var_dump($s1, $s2);

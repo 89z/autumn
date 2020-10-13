@@ -1,0 +1,7 @@
+name "d"
+description "A minimal D application."
+authors "Steven"
+copyright "Copyright © 2020, Steven"
+license "proprietary"
+dependency "ae:sys-net-wininet" version="~>0.0.2824"
+libs "ucrtbase"
