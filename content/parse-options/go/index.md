@@ -1,12 +1,12 @@
 ---
-title: PHP
-tags: [php]
+title: Go
+tags: [go]
 ---
 
-<https://php.net/function.getopt>
+<https://golang.org/pkg/flag>
 
 ## References
 
-- <https://hyperpolyglot.org/scripting2#option-parsing>
+- <https://hyperpolyglot.org/c#getopt-note>
 - <https://programming-idioms.org/idiom/162>
 - <https://rosettacode.org/wiki/Parse_command-line_arguments>
