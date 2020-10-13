@@ -5,9 +5,15 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.intval>
-- <https://php.net/language.operators.arithmetic>
-- <https://php.net/language.types.type-juggling>
+<https://php.net/function.intval>
+
+{{< r "b.php" >}}
+
+<https://php.net/language.operators.arithmetic>
+
+{{< r "c.php" >}}
+
+<https://php.net/language.types.type-juggling>
 
 ## References
 
