@@ -29,9 +29,4 @@ localhost:1313/autumn/match-string-with-literal
 </section>
    {{ end }}
    {{ .Content }}
-   {{ if eq hugo.Environment "example" }}
-      {{ if isset .Params "example" }}
-<a href="{{ .Params.example }}">Example</a>
-      {{ end }}
-   {{ end }}
 {{ end }}

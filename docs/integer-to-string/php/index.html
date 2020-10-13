@@ -24,7 +24,7 @@
    <a href="/autumn/integer-to-string/">Integer to string</a> / PHP
 </h1>
 <section class="page">
-   <time>Fri Sep 11 2020</time>
+   <time>Mon Oct 12 2020</time>
    
    <a href="/autumn/categories/number/">number</a>
    
@@ -33,23 +33,33 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">number_format</span>($n);
-$s1 <span style="color:#f92672">=</span> (<span style="color:#a6e22e">string</span>)($n);
-$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">sprintf</span>(<span style="color:#e6db74">&#39;%d&#39;</span>, $n);
-$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strval</span>($n);
+$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+$s <span style="color:#f92672">=</span> (<span style="color:#a6e22e">string</span>)($n);
+<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;10&#39;</span>);
 </code></pre></div>
-<ul>
-<li><a href="https://php.net/function.number-format">https://php.net/function.number-format</a></li>
-<li><a href="https://php.net/function.sprintf">https://php.net/function.sprintf</a></li>
-<li><a href="https://php.net/function.strval">https://php.net/function.strval</a></li>
-<li><a href="https://php.net/language.types.type-juggling">https://php.net/language.types.type-juggling</a></li>
-</ul>
+<p><a href="https://php.net/language.types.type-juggling">https://php.net/language.types.type-juggling</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">strval</span>($n);
+<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;10&#39;</span>);
+</code></pre></div>
+<p><a href="https://php.net/function.strval">https://php.net/function.strval</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">sprintf</span>(<span style="color:#e6db74">&#39;%d&#39;</span>, $n);
+<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;10&#39;</span>);
+</code></pre></div>
+<p><a href="https://php.net/function.sprintf">https://php.net/function.sprintf</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting#num-to-str">https://hyperpolyglot.org/scripting#num-to-str</a></li>
-<li><a href="https://programming-idioms.org/idiom/173">https://programming-idioms.org/idiom/173</a></li>
 <li><a href="https://programming-idioms.org/idiom/55">https://programming-idioms.org/idiom/55</a></li>
-<li><a href="https://rosettacode.org/wiki/Commatizing_numbers">https://rosettacode.org/wiki/Commatizing_numbers</a></li>
 </ul>
 
 </main>

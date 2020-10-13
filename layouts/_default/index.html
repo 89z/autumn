@@ -14,6 +14,11 @@ localhost:1313/autumn
          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}
       </section>
+   {{ if eq hugo.Environment "example" }}
+      {{ if isset .Params "example" }}
+<a href="{{ .Params.example }}">Example</a>
+      {{ end }}
+   {{ end }}
    </article>
    {{ end }}
 </nav>
