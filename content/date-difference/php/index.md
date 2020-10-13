@@ -3,9 +3,6 @@ title: PHP
 tags: [php]
 ---
 
-Note that if you use the `days` property, it is an integer, so you are limited
-to one day accuracy.
-
 {{< r "a.php" >}}
 
 <https://php.net/datetime.diff>

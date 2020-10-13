@@ -1,5 +1,6 @@
 <?php
-$o = new DateTime('2019-12-31');
+$o1 = new DateTime('2019-12-31');
 $o2 = new DateTime;
-$n = $o2->diff($o)->days;
+$o = $o2->diff($o1);
+$n = $o->days * 24 * 60 * 60 + $o->h * 60 * 60 + $o->i * 60 + $o->s;
 var_dump($n);
