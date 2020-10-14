@@ -5,7 +5,11 @@ tags: [go]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/flag>
+<https://golang.org/pkg/flag#Int>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/flag#IntVar>
 
 ## References
 
