@@ -2,6 +2,6 @@ import std.algorithm.searching, std.stdio;
 
 void main() {
    auto s = "June";
-   auto b = endsWith(s, "ne");
+   auto b = s.startsWith("Ju");
    b.writeln;
 }

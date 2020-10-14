@@ -5,9 +5,19 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.stripos>
-- <https://php.net/function.strpbrk>
-- <https://php.net/function.strpos>
+<https://php.net/function.stripos>
+
+{{< r "b.php" >}}
+
+<https://php.net/function.strpbrk>
+
+{{< r "c.php" >}}
+
+<https://php.net/function.strpos>
+
+{{< r "d.php" >}}
+
+<https://php.net/types.string#example-54>
 
 ## References
 

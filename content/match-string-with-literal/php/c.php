@@ -1,6 +1,6 @@
 <?php
 $s = 'June';
-$n = stripos($s, 'ju');
+$n = strpos($s, 'Ju');
 # example 1
 var_dump($n === 0);
 # example 2

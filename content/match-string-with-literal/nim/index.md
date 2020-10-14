@@ -5,8 +5,7 @@ tags: [nim]
 
 {{< r "a.nim" >}}
 
-- <https://nim-lang.org/docs/strutils.html#contains,string,string>
-- <https://nim-lang.org/docs/strutils.html#endsWith,string,string>
+<https://nim-lang.org/docs/strutils.html#contains,string,string>
 
 ## References
 
