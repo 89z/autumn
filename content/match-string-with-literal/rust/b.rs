@@ -1,5 +1,5 @@
 fn main() {
    let s = "June";
-   let b = s.contains("un");
+   let b = s.starts_with("Ju");
    println!("{}", b);
 }

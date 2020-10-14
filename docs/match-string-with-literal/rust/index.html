@@ -33,8 +33,18 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May&#34;</span>;
-   <span style="color:#66d9ef">let</span> b <span style="color:#f92672">=</span> s.starts_with(<span style="color:#e6db74">&#34;Ma&#34;</span>);
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;June&#34;</span>;
+   <span style="color:#66d9ef">let</span> b <span style="color:#f92672">=</span> s.contains(<span style="color:#e6db74">&#34;un&#34;</span>);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, b);
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/string/struct.String.html#method.contains">https://doc.rust-lang.org/std/string/struct.String.html#method.contains</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;June&#34;</span>;
+   <span style="color:#66d9ef">let</span> b <span style="color:#f92672">=</span> s.starts_with(<span style="color:#e6db74">&#34;Ju&#34;</span>);
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, b);
 }
 </code></pre></div>

@@ -1,1 +1,3 @@
-'foobar'.start_with?('foo')
+s = 'June'
+b = s.include?('un')
+puts b

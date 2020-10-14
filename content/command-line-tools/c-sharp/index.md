@@ -3,9 +3,21 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< r "cs.ps1" >}}
+{{< r "a.ps1" >}}
 
-<https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/create>
+<https://docs.microsoft.com/dotnet/core/tools/dotnet-add-package>
+
+{{< r "b.ps1" >}}
+
+<https://docs.microsoft.com/dotnet/core/tools/dotnet-new>
+
+{{< r "c.ps1" >}}
+
+<https://docs.microsoft.com/dotnet/core/tools/dotnet-publish>
+
+{{< r "d.ps1" >}}
+
+<https://docs.microsoft.com/dotnet/core/tools/dotnet-run>
 
 ## References
 

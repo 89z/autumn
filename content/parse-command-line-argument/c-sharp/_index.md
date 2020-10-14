@@ -3,7 +3,9 @@ title: C#
 tags: [c-sharp]
 ---
 
-<https://docs.microsoft.com/archive/msdn-magazine/2019/march/net-parse-the-command-line-with-system-commandline>
+{{< r "Program.cs" >}}
+
+<https://github.com/dotnet/command-line-api/blob/main/docs/Your-first-app-with-System-CommandLine.md>
 
 ## References
 
