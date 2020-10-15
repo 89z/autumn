@@ -5,6 +5,8 @@ tags: [php]
 
 {{< r "a.php" >}}
 
+<https://php.net/function.strpos>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting#index-substr>

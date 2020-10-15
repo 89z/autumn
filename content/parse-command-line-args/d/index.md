@@ -5,7 +5,7 @@ tags: [d]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/phobos/std_getopt.html#.getopt>
+<https://dlang.org/library/std/getopt/getopt.html>
 
 ## References
 

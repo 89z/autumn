@@ -4,14 +4,25 @@ using System;
 
 class Program {
    static void Main(string[] a) {
-      var rootCommand = new RootCommand {
-         new Option<int>("-year")
+      int n_start = default;
+      int n_len = default;
+      string s_in = default;
+
+      var o = new RootCommand {
+         new Option<int>("-start"),
+         new Option<int>("-len", getDefaultValue: () => 1),
+         new Argument<string>("input")
       };
-      var n_year = 0;
-      rootCommand.Handler = CommandHandler.Create<int>((year) => {
-         n_year = year;
-      });
-      rootCommand.Invoke(a);
-      Console.WriteLine(n_year);
+
+      void Execute(int start, int len, string input) {
+         n_start = start;
+         n_len = len;
+         s_in = input;
+      }
+
+      o.Handler = CommandHandler.Create<int, int, string>(Execute);
+      o.Invoke(a);
+      var s_out = s_in.Substring(n_start, n_len);
+      Console.WriteLine(s_out);
    }
 }

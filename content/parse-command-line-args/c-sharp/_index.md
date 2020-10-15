@@ -9,7 +9,11 @@ tags: [c-sharp]
 
 {{< r "b/Program.cs" >}}
 
-<https://github.com/dotnet/command-line-api>
+<https://github.com/dotnet/command-line-api/wiki/Your-first-app-with-System.CommandLine>
+
+{{< r "c/Program.cs" >}}
+
+<https://github.com/dotnet/command-line-api/wiki/Your-first-app-with-System.CommandLine.DragonFruit>
 
 ## References
 

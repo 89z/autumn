@@ -32,15 +32,27 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.getopt<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span><span style="color:#66d9ef">string</span><span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span>
 <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">bat</span><span style="color:#f92672">(){}</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">fox</span><span style="color:#f92672">(){}</span>
-    getopt<span style="color:#f92672">(</span>args<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">&amp;</span>bat<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;f&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">&amp;</span>fox<span style="color:#f92672">);</span>
+    <span style="color:#f92672">import</span> std.getopt<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">:</span> write<span style="color:#f92672">,</span> writeln<span style="color:#f92672">,</span> writef<span style="color:#f92672">,</span> writefln<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">auto</span> args <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;prog&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;--foo&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;-b&#34;</span><span style="color:#f92672">];</span>
+    
+    <span style="color:#66d9ef">bool</span> foo<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">bool</span> bar<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">auto</span> rslt <span style="color:#f92672">=</span> getopt<span style="color:#f92672">(</span>args<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;foo|f&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Some information about foo.&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">&amp;</span>foo<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;bar|b&#34;</span><span style="color:#f92672">,</span>
+        <span style="color:#e6db74">&#34;Some help message about bar.&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">&amp;</span>bar<span style="color:#f92672">);</span>
+    
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>rslt<span style="color:#f92672">.</span><span style="color:#a6e22e">helpWanted</span><span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+        defaultGetoptPrinter<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Some information about the program.&#34;</span><span style="color:#f92672">,</span>
+            rslt<span style="color:#f92672">.</span><span style="color:#a6e22e">options</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+    
+    
 <span style="color:#f92672">}</span>
 </code></pre></div>
-<p><a href="https://dlang.org/phobos/std_getopt.html#.getopt">https://dlang.org/phobos/std_getopt.html#.getopt</a></p>
+<p><a href="https://dlang.org/library/std/getopt/getopt.html">https://dlang.org/library/std/getopt/getopt.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/162">https://programming-idioms.org/idiom/162</a></li>
