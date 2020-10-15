@@ -4,6 +4,7 @@ tags: [dart]
 ---
 
 {{< r "a.dart" >}}
+{{< r "b.dart" >}}
 
 <https://dart.dev/guides/language/language-tour#using-libraries>
 

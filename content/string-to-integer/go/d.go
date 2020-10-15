@@ -6,7 +6,8 @@ import (
 )
 
 func main() {
-   n, e := strconv.ParseInt("11", 10, 0)
+   s := "11"
+   n, e := strconv.ParseInt(s, 10, 0)
    if e != nil {
       os.Exit(1)
    }

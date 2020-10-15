@@ -1,3 +1,3 @@
-s = '10'
+s = '11'
 n = s.to_i
-puts n == 10
+puts n == 11

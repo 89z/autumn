@@ -2,7 +2,7 @@ using System;
 
 class Program {
    static void Main() {
-      var s = "10";
+      var s = "11";
       // example 1
       var n1 = int.Parse(s);
       // example 2
@@ -12,6 +12,6 @@ class Program {
       // example 4
       var n4 = ulong.Parse(s);
       // print
-      Console.WriteLine(n1 == 10 && n2 == 10 && n3 == 10 && n4 == 10);
+      Console.WriteLine(n1 == 11 && n2 == 11 && n3 == 11 && n4 == 11);
    }
 }

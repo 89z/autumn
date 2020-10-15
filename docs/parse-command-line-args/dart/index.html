@@ -37,9 +37,11 @@
 <span style="color:#66d9ef">void</span> main(a) {
    <span style="color:#66d9ef">var</span> o <span style="color:#f92672">=</span> ArgParser();
    o.addOption(<span style="color:#e6db74">&#39;start&#39;</span>);
-   o.addOption(<span style="color:#e6db74">&#39;len&#39;</span>, defaultsTo: <span style="color:#ae81ff">1</span>);
+   o.addOption(<span style="color:#e6db74">&#39;len&#39;</span>, defaultsTo: <span style="color:#e6db74">&#39;1&#39;</span>);
    <span style="color:#66d9ef">var</span> m <span style="color:#f92672">=</span> o.parse(a);
-   print(m);
+   <span style="color:#66d9ef">if</span> (m.rest.length <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>) {
+   }
+   <span style="color:#66d9ef">var</span> nbOfIsolates <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span>.parse(arguments[<span style="color:#e6db74">&#39;isolates&#39;</span>]);
 }
 </code></pre></div>
 <p><a href="https://github.com/dart-lang/args">https://github.com/dart-lang/args</a></p>

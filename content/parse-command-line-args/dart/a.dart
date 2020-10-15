@@ -3,7 +3,9 @@ import 'package:args/args.dart';
 void main(a) {
    var o = ArgParser();
    o.addOption('start');
-   o.addOption('len', defaultsTo: 1);
+   o.addOption('len', defaultsTo: '1');
    var m = o.parse(a);
-   print(m);
+   if (m.rest.length != 1) {
+   }
+   var nbOfIsolates = int.parse(arguments['isolates']);
 }

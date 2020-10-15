@@ -3,14 +3,21 @@ title: Go
 tags: [go]
 ---
 
-{{< r "atoi.go" >}}
-{{< r "fmt.go" >}}
-{{< r "parseint.go" >}}
+{{< r "a.go" >}}
 
-- <https://golang.org/pkg/fmt#Sscan>
-- <https://golang.org/pkg/fmt#Sscanf>
-- <https://golang.org/pkg/fmt#Sscanln>
-- <https://golang.org/pkg/strconv#ParseInt>
+<https://golang.org/pkg/fmt#Sscan>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/fmt#Sscanf>
+
+{{< r "c.go" >}}
+
+<https://golang.org/pkg/fmt#Sscanln>
+
+{{< r "d.go" >}}
+
+<https://golang.org/pkg/strconv#ParseInt>
 
 ## References
 
