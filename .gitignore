@@ -10,5 +10,8 @@
 **/c-sharp/c/c.csproj
 **/c-sharp/c/obj
 **/c-sharp/obj
+**/dart/.dart_tool
+**/dart/.packages
+**/dart/pubspec.lock
 **/rust/Cargo.lock
 **/rust/target

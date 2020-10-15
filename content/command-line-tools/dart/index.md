@@ -3,9 +3,21 @@ title: Dart
 tags: [dart]
 ---
 
-{{< r "dart.ps1" >}}
+{{< r "a.ps1" >}}
 
 <https://dart.dev/tools/dart-vm>
+
+{{< r "b.ps1" >}}
+
+<https://dart.dev/tools/dart2native>
+
+{{< r "c.ps1" >}}
+
+<https://dart.dev/tools/dartanalyzer>
+
+{{< r "d.ps1" >}}
+
+<https://dart.dev/tools/pub>
 
 ## References
 

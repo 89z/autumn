@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Declare class / Dart</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/nu8/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/declare-class/">Declare class</a> / Dart
+</h1>
+<section class="page">
+   <time>Fri Sep 4 2020</time>
+   
+   <a href="/autumn/categories/class/">class</a>
+   
+</section>
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ShuffleCommand</span> <span style="color:#66d9ef">extends</span> Command {
+   <span style="color:#66d9ef">final</span> name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;shuffle&#34;</span>;
+   <span style="color:#66d9ef">final</span> description <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Shuffle and choose cards from a deck&#34;</span>;
+
+   ShuffleCommand() {
+      argParser..addFlag(<span style="color:#e6db74">&#39;count&#39;</span>, abbr: <span style="color:#e6db74">&#39;c&#39;</span>, defaultsTo: <span style="color:#66d9ef">true</span>);
+   }
+
+   <span style="color:#66d9ef">void</span> run() {
+      print(argParser.options);
+   }
+}
+
+<span style="color:#66d9ef">void</span> main() {
+   <span style="color:#66d9ef">var</span> o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SuffleCommand();
+}
+</code></pre></div>
+<h2 id="references">References</h2>
+<p>https://stackoverflow.com/questions/29066973</p>
+
+</main>
+
+</body>
+</html>
