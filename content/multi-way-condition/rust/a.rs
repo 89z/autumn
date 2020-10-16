@@ -1,9 +1,11 @@
 fn main() {
-   let n = 10;
-   let s = match n {
-      12 => "all",
-      11 | 10 => "some",
-      _ => "none"
+   let s = "minute";
+
+   let n = match s {
+      "hour" => 23,
+      "minute" | "second" => 59,
+      _ => -1
    };
-   println!("{}", s == "some");
+
+   println!("{}", n == 59);
 }

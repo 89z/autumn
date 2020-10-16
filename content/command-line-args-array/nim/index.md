@@ -9,6 +9,10 @@ tags: [nim]
 
 {{< r "b.nim" >}}
 
+<https://nim-lang.org/docs/os.html#paramCount>
+
+{{< r "c.nim" >}}
+
 <https://nim-lang.org/docs/os.html#paramStr,int>
 
 ## References

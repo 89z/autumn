@@ -1,14 +1,17 @@
 package main
 
 func main() {
-   n, s := 10, ""
-   switch n {
-   case 12:
-      s = "all"
-   case 11, 10:
-      s = "some"
+   var s = "minute"
+   var n int
+
+   switch s {
+   case "hour":
+      n = 23
+   case "minute", "second":
+      n = 59
    default:
-      s = "none"
+      n = -1
    }
-   println(s == "some")
+
+   println(n == 59)
 }

@@ -1,15 +1,18 @@
 void main() {
-   var s, n = 10;
-   switch (n) {
-   case 12:
-      s = 'all';
+   String s = 'minute';
+   int n;
+
+   switch (s) {
+   case 'hour':
+      n = 23;
       break;
-   case 11:
-   case 10:
-      s = 'some';
+   case 'minute':
+   case 'second':
+      n = 59;
       break;
    default:
-      s = 'none';
+      n = -1;
    }
-   print(s == 'some');
+
+   print(n == 59);
 }

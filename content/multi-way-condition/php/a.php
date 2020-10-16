@@ -1,16 +1,16 @@
 <?php
-$n = 10;
+$s = 'minute';
 
-switch ($n) {
-case 12:
-   $s = 'all';
+switch ($s) {
+case 'hour':
+   $n = 23;
    break;
-case 11:
-case 10:
-   $s = 'some';
+case 'minute':
+case 'second':
+   $n = 59;
    break;
 default:
-   $s = 'none';
+   $n = -1;
 }
 
-var_dump($s == 'some');
+var_dump($n == 59);

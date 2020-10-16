@@ -33,21 +33,21 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;minute&#39;</span>;
 
-<span style="color:#66d9ef">switch</span> ($n) {
-<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">12</span><span style="color:#f92672">:</span>
-   $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;all&#39;</span>;
+<span style="color:#66d9ef">switch</span> ($s) {
+<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;hour&#39;</span><span style="color:#f92672">:</span>
+   $n <span style="color:#f92672">=</span> <span style="color:#ae81ff">23</span>;
    <span style="color:#66d9ef">break</span>;
-<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">11</span><span style="color:#f92672">:</span>
-<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">:</span>
-   $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;some&#39;</span>;
+<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;minute&#39;</span><span style="color:#f92672">:</span>
+<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;second&#39;</span><span style="color:#f92672">:</span>
+   $n <span style="color:#f92672">=</span> <span style="color:#ae81ff">59</span>;
    <span style="color:#66d9ef">break</span>;
 <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
-   $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;none&#39;</span>;
+   $n <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
 }
 
-<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;some&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">59</span>);
 </code></pre></div>
 <p><a href="https://php.net/control-structures.switch">https://php.net/control-structures.switch</a></p>
 <h2 id="references">References</h2>

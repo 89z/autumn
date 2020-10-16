@@ -1,3 +1,3 @@
 import os
-var s = paramStr(1)
-echo s == "May"
+let n = paramCount()
+echo n == 1

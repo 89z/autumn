@@ -1,8 +1,12 @@
-case n
-when 0
-  puts "no hits"
-when 1
-  puts "one hit"
+s = 'minute'
+
+case s
+when 'hour'
+   n = 23
+when 'minute', 'second'
+   n = 59
 else
-  puts "#{n} hits"
+   n = -1
 end
+
+puts n == 59
