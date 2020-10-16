@@ -10,7 +10,7 @@
    <link rel="stylesheet" href="/autumn/main.css">
 </head>
 <body>
-   <header class="page">
+   <header class="section">
 
       <h2><a href="/autumn">Autumn</a></h2>
 
@@ -18,17 +18,18 @@
       <a href="/autumn/tags">Tags</a>
       <a href="https://github.com/nu8/autumn">Repository</a>
    </header>
-   <main class="page">
+   <main class="section">
 
-<h1>
-   <a href="/autumn/multi-way-condition/">Multi-way condition</a> / C#
-</h1>
-<section class="page">
+   
+      
+<h1><a href="/autumn/multi-way-condition/">Multi-way condition</a> / C#</h1>
+<section class="section">
    <time>Fri Sep 11 2020</time>
-   
+      
    <a href="/autumn/categories/reference/">reference</a>
-   
+      
 </section>
+   
    
 
 
@@ -36,27 +37,32 @@
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">int</span> n = <span style="color:#ae81ff">10</span>;
-      <span style="color:#66d9ef">string</span> s;
-      <span style="color:#66d9ef">switch</span> (n) {
-      <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">12</span>:
-         s = <span style="color:#e6db74">&#34;all&#34;</span>;
+      <span style="color:#66d9ef">string</span> s = <span style="color:#e6db74">&#34;minute&#34;</span>;
+      <span style="color:#66d9ef">int</span> n;
+
+      <span style="color:#66d9ef">switch</span> (s) {
+      <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;hour&#34;</span>:
+         n = <span style="color:#ae81ff">23</span>;
          <span style="color:#66d9ef">break</span>;
-      <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">11</span>:
-      <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">10</span>:
-         s = <span style="color:#e6db74">&#34;some&#34;</span>;
+      <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;minute&#34;</span>:
+      <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;second&#34;</span>:
+         n = <span style="color:#ae81ff">59</span>;
          <span style="color:#66d9ef">break</span>;
       <span style="color:#66d9ef">default</span>:
-         s = <span style="color:#e6db74">&#34;none&#34;</span>;
+         n = -<span style="color:#ae81ff">1</span>;
          <span style="color:#66d9ef">break</span>;
       }
-      Console.WriteLine(s == <span style="color:#e6db74">&#34;some&#34;</span>);
+
+      Console.WriteLine(n == <span style="color:#ae81ff">59</span>);
    }
 }
 </code></pre></div>
 <p><a href="https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/switch">https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/switch</a></p>
 <h2 id="references">References</h2>
-<p><a href="https://hyperpolyglot.org/cpp#switch">https://hyperpolyglot.org/cpp#switch</a></p>
+<ul>
+<li><a href="https://hyperpolyglot.org/cpp#switch">https://hyperpolyglot.org/cpp#switch</a></li>
+<li><a href="https://rosettacode.org/wiki/Conditional_structures">https://rosettacode.org/wiki/Conditional_structures</a></li>
+</ul>
 
 </main>
 

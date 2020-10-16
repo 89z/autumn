@@ -9,4 +9,5 @@ tags: [go]
 
 ## References
 
-<https://hyperpolyglot.org/c#switch>
+- <https://hyperpolyglot.org/c#switch>
+- <https://rosettacode.org/wiki/Conditional_structures>

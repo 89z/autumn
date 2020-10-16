@@ -9,4 +9,5 @@ tags: [php]
 
 ## References
 
-<https://hyperpolyglot.org/scripting#switch>
+- <https://hyperpolyglot.org/scripting#switch>
+- <https://rosettacode.org/wiki/Conditional_structures>

@@ -2,20 +2,22 @@ using System;
 
 class Program {
    static void Main() {
-      int n = 10;
-      string s;
-      switch (n) {
-      case 12:
-         s = "all";
+      string s = "minute";
+      int n;
+
+      switch (s) {
+      case "hour":
+         n = 23;
          break;
-      case 11:
-      case 10:
-         s = "some";
+      case "minute":
+      case "second":
+         n = 59;
          break;
       default:
-         s = "none";
+         n = -1;
          break;
       }
-      Console.WriteLine(s == "some");
+
+      Console.WriteLine(n == 59);
    }
 }

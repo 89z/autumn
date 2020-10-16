@@ -10,3 +10,4 @@ tags: [ruby]
 ## References
 
 - <https://hyperpolyglot.org/scripting#switch>
+- <https://rosettacode.org/wiki/Conditional_structures>

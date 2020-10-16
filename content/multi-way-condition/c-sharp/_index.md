@@ -9,4 +9,5 @@ tags: [c-sharp]
 
 ## References
 
-<https://hyperpolyglot.org/cpp#switch>
+- <https://hyperpolyglot.org/cpp#switch>
+- <https://rosettacode.org/wiki/Conditional_structures>

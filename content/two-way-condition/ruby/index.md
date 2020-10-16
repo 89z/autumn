@@ -9,4 +9,5 @@ tags: [ruby]
 
 ## References
 
-<https://hyperpolyglot.org/scripting#if>
+- <https://hyperpolyglot.org/scripting#if>
+- <https://rosettacode.org/wiki/Conditional_structures>
