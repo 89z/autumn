@@ -1,7 +1,4 @@
 import os, parseopt
-echo "# parameters: ", paramCount()
-for ii in 1 .. paramCount():    # 1st param is at index 1
-   echo "param ", ii, ": ", paramStr(ii)
 var argCtr: int
 for kind, key, value in getOpt():
    case kind

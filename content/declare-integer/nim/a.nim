@@ -1,8 +1,10 @@
 # example 1
-let n1: int = 10
+var n1: int
 # example 2
-let n2 = 10
+var n2: int = 10
 # example 3
-let n3 = 1_000
+var n3 = 10
+# example 4
+var n4 = 1_000
 # print
-echo [n1, n2, n3]
+echo [n1, n2, n3, n4]

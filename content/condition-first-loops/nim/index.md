@@ -5,11 +5,11 @@ tags: [nim]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/tut1.html#control-flow-statements-while-statement>
+<https://nim-lang.org/docs/manual.html#statements-and-expressions-while-statement>
 
 {{< r "b.nim" >}}
 
-<https://nim-lang.org/docs/tut1.html#control-flow-statements-for-statement>
+<https://nim-lang.org/docs/manual.html#iterators-and-the-for-statement>
 
 ## References
 

@@ -1,4 +1,4 @@
-import tables
-var m = {"year": 2019}.toTable
-m["month"] = 12
+import strtabs
+let m = newStringTable()
+m["one"] = "even"
 echo m
