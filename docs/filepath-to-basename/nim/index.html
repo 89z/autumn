@@ -33,9 +33,27 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> os
+<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#34;C:\Windows\notepad.exe&#34;</span>
+<span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> s.extractFilename
+echo s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;notepad.exe&#34;</span>
+</code></pre></div>
+<p><a href="https://nim-lang.org/docs/os.html#extractFilename,string">https://nim-lang.org/docs/os.html#extractFilename,string</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> os
+<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#34;C:\Windows\notepad.exe&#34;</span>
+<span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> s.lastPathPart
+echo s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;notepad.exe&#34;</span>
+</code></pre></div>
+<p><a href="https://nim-lang.org/docs/os.html#lastPathPart,string">https://nim-lang.org/docs/os.html#lastPathPart,string</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> os
 <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#34;C:\Windows\notepad.exe&#34;</span>
-<span style="color:#66d9ef">let</span> (s1, s1a, s1b) <span style="color:#f92672">=</span> splitFile(s)
-echo s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">r&#34;C:\Windows&#34;</span> <span style="color:#f92672">and</span> s1a <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;notepad&#34;</span> <span style="color:#f92672">and</span> s1b <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;.exe&#34;</span>
+<span style="color:#66d9ef">let</span> (s1, s2, s3) <span style="color:#f92672">=</span> s.splitFile
+echo s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">r&#34;C:\Windows&#34;</span> <span style="color:#f92672">and</span> s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;notepad&#34;</span> <span style="color:#f92672">and</span> s3 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;.exe&#34;</span>
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/os.html#splitFile,string">https://nim-lang.org/docs/os.html#splitFile,string</a></p>
 

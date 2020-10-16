@@ -32,16 +32,24 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:args/args.dart&#39;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:args/args.dart&#39;</span>;
 
 <span style="color:#66d9ef">void</span> main(a) {
    <span style="color:#66d9ef">var</span> o <span style="color:#f92672">=</span> ArgParser();
-   o.addOption(<span style="color:#e6db74">&#39;start&#39;</span>);
+   o.addOption(<span style="color:#e6db74">&#39;start&#39;</span>, defaultsTo: <span style="color:#e6db74">&#39;0&#39;</span>);
    o.addOption(<span style="color:#e6db74">&#39;len&#39;</span>, defaultsTo: <span style="color:#e6db74">&#39;1&#39;</span>);
    <span style="color:#66d9ef">var</span> m <span style="color:#f92672">=</span> o.parse(a);
+
    <span style="color:#66d9ef">if</span> (m.rest.length <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>) {
+      print(<span style="color:#e6db74">&#39;slice [flags] &lt;string&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">+</span> o.usage);
+      exit(<span style="color:#ae81ff">1</span>);
    }
-   <span style="color:#66d9ef">var</span> nbOfIsolates <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span>.parse(arguments[<span style="color:#e6db74">&#39;isolates&#39;</span>]);
+
+   <span style="color:#66d9ef">var</span> n_start <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span>.parse(m[<span style="color:#e6db74">&#39;start&#39;</span>]);
+   <span style="color:#66d9ef">var</span> n_len <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span>.parse(m[<span style="color:#e6db74">&#39;len&#39;</span>]);
+   <span style="color:#66d9ef">var</span> s_out <span style="color:#f92672">=</span> m.rest[<span style="color:#ae81ff">0</span>].substring(n_start, n_start <span style="color:#f92672">+</span> n_len);
+   print(s_out);
 }
 </code></pre></div>
 <p><a href="https://github.com/dart-lang/args">https://github.com/dart-lang/args</a></p>

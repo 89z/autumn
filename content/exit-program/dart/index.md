@@ -3,11 +3,10 @@ title: Dart
 tags: [dart]
 ---
 
-{{< r "exit.dart" >}}
-{{< r "return.dart" >}}
+{{< r "a.dart" >}}
 
 - <https://api.dart.dev/dart-io/exit.html>
-- <https://dart.dev/guides/language/language-tour#functions>
+- <https://github.com/dart-lang/sdk/issues/43821>
 
 ## References
 

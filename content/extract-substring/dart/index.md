@@ -5,6 +5,10 @@ tags: [dart]
 
 {{< r "a.dart" >}}
 
+<https://api.dart.dev/dart-core/String/operator_get.html>
+
+{{< r "b.dart" >}}
+
 <https://api.dart.dev/dart-core/String/substring.html>
 
 ## References
