@@ -1,15 +1,26 @@
-import os, parseopt
-var argCtr: int
-for kind, key, value in getOpt():
-   case kind
-   of cmdArgument:
-      echo "Got arg ", argCtr, ": \"", key, "\""
-      argCtr.inc
-   of cmdLongOption, cmdShortOption:
-      case key
-      of "v", "n", "z", "w":
-         echo "Got a \"", key, "\" option with value: \"", value, "\""
-      else:
-      echo "Unknown option: ", key
-   of cmdEnd:
-      discard
+import parseopt, strutils
+
+var
+   n_len = 1
+   n_start = 0
+   o_opt = initOptParser()
+   s_in = ""
+
+for n_kind, s_key, s_val in o_opt.getOpt():
+   case o_opt.key
+   of "start":
+      n_start = s_val.parseInt
+   of "len":
+      n_len = s_val.parseInt
+   else:
+      s_in = s_key
+
+if s_in == "":
+   echo """slice [flags] <string>
+--start int
+   starting position
+--len int
+   substring length (default 1)"""
+   quit(1)
+
+echo s_in[n_start ..< n_start + n_len]

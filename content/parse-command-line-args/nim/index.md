@@ -9,7 +9,7 @@ tags: [nim]
 
 {{< r "b.nim" >}}
 
-<https://nim-lang.org/docs/parseopt.html#initOptParser,string,set[char],seq[string]>
+<https://nim-lang.org/docs/parseopt.html#next,OptParser>
 
 ## References
 

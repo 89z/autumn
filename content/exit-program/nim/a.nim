@@ -1,4 +1,1 @@
-if true:
-   quit(QuitFailure)
-
-echo "May"
+quit(QuitFailure)
