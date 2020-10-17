@@ -4,9 +4,10 @@ tags: [ruby]
 ---
 
 {{< r "a.rb" >}}
+
+<https://ruby-doc.org/core/String.html#method-i-5B-5D>
+
 {{< r "b.rb" >}}
-{{< r "c.rb" >}}
-{{< r "d.rb" >}}
 
 <https://ruby-doc.org/core/String.html#method-i-slice>
 
