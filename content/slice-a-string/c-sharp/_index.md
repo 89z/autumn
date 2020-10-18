@@ -10,5 +10,5 @@ tags: [c-sharp]
 ## References
 
 - <https://hyperpolyglot.org/cpp#extract-substr>
-- <https://programming-idioms.org/idiom/38/extract-a-substring>
+- <https://programming-idioms.org/idiom/38>
 - <https://rosettacode.org/wiki/Substring>

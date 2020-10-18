@@ -4,6 +4,6 @@ tags: [proposal]
 date: 2020-09-26
 ---
 
-Unicode support is not good:
+Unicode works now:
 
-<https://stackoverflow.com/questions/50053386#50055280>
+<https://lobste.rs/s/tijvfk#c_hwidfx>

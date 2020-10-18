@@ -1,15 +1,11 @@
 package main
 
 func main() {
-   s := "March"
+   s := "June"
    // example 1
    s1 := s[2]
    // example 2
-   s2 := s[:1]
-   // example 3
-   s3 := s[2:3]
-   // example 4
-   s4 := s[2:]
+   s2 := s[2:3]
    // print
-   println(s1 == 'r', s2 == "M", s3 == "r", s4 == "rch")
+   println(s1 == 'n', s2 == "n")
 }
