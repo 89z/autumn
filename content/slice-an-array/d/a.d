@@ -1,7 +1,7 @@
 import std.stdio;
 
 void main() {
-   auto a = ["May", "June"];
-   auto s = a[0];
-   writeln(s == "May");
+   auto a = ["J", "u", "n", "e"];
+   auto s = a[2];
+   writeln(s == "n");
 }

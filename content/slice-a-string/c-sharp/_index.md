@@ -5,9 +5,13 @@ tags: [c-sharp]
 
 {{< r "a/Program.cs" >}}
 
-<https://docs.microsoft.com/dotnet/api/system.range>
+<https://docs.microsoft.com/dotnet/api/system.index>
 
 {{< r "b/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/api/system.range>
+
+{{< r "c/Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/api/system.string.substring>
 

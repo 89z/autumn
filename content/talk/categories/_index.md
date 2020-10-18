@@ -2,7 +2,7 @@
 title: Category talk
 ---
 
-## "June" to "n" (string not char)
+## "June" to "n" (string or char)
 
 <https://github.com/nu8/cove/blob/master/git-train/git-board.php>
 

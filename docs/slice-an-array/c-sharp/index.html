@@ -24,28 +24,13 @@
       
 <h1><a href="/autumn/slice-an-array/">Slice an array</a> / C#</h1>
 <section class="section">
-   <time>Wed Aug 5 2020</time>
+   <time>Sun Oct 18 2020</time>
       
    <a href="/autumn/categories/array/">array</a>
       
 </section>
    
    
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
-<span style="color:#66d9ef">using</span> static System.Text.Json.JsonSerializer;
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
-   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">string</span>[] a = {<span style="color:#e6db74">&#34;J&#34;</span>, <span style="color:#e6db74">&#34;u&#34;</span>, <span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;e&#34;</span>};
-      <span style="color:#66d9ef">var</span> a2 = <span style="color:#66d9ef">new</span> ArraySegment&lt;<span style="color:#66d9ef">string</span>&gt;(a, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>);
-      Console.WriteLine(Serialize(a2));
-   }
-}
-</code></pre></div>
-<p><a href="https://docs.microsoft.com/dotnet/api/system.arraysegment-1">https://docs.microsoft.com/dotnet/api/system.arraysegment-1</a></p>
-
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
@@ -84,7 +69,7 @@
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
       <span style="color:#66d9ef">string</span>[] a = {<span style="color:#e6db74">&#34;J&#34;</span>, <span style="color:#e6db74">&#34;u&#34;</span>, <span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#e6db74">&#34;e&#34;</span>};
-      <span style="color:#66d9ef">var</span> a2 = a[<span style="color:#ae81ff">2</span> .. <span style="color:#ae81ff">3</span>];
+      <span style="color:#66d9ef">var</span> a2 = a[<span style="color:#ae81ff">2</span> ..];
       Console.WriteLine(Serialize(a2));
    }
 }
