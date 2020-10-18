@@ -9,6 +9,9 @@
 **/c-sharp/c/bin
 **/c-sharp/c/c.csproj
 **/c-sharp/c/obj
+**/c-sharp/d/bin
+**/c-sharp/d/d.csproj
+**/c-sharp/d/obj
 **/c-sharp/obj
 **/dart/.dart_tool
 **/dart/.packages
