@@ -1,3 +1,3 @@
-let s = "March"
-let s1 = s[2]
-echo s1 == 'r'
+let s = "June"
+let s2 = s[2]
+echo s2 == 'n'

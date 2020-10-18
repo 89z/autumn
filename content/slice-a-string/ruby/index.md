@@ -13,6 +13,6 @@ tags: [ruby]
 
 ## References
 
-- <https://programming-idioms.org/idiom/38/extract-a-substring>
-- <https://programming-idioms.org/idiom/46/extract-beginning>
+- <https://hyperpolyglot.org/scripting#extract-substr>
+- <https://programming-idioms.org/idiom/38>
 - <https://rosettacode.org/wiki/Substring>
