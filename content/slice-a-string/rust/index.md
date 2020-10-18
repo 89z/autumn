@@ -5,13 +5,9 @@ tags: [rust]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.nth>
-
-{{< r "b.rs" >}}
-
 <https://doc.rust-lang.org/std/primitive.str.html#method.get>
 
-{{< r "c.rs" >}}
+{{< r "b.rs" >}}
 
 <https://doc.rust-lang.org/std/slice/trait.SliceIndex.html>
 

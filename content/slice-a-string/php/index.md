@@ -5,7 +5,7 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-<https://php.net/types.string#example-54>
+<https://php.net/types.string#language.types.string.substr>
 
 {{< r "b.php" >}}
 

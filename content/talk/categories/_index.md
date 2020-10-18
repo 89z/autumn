@@ -2,18 +2,14 @@
 title: Category talk
 ---
 
-## string.slice[3]
+## "June" to "n" (string not char)
 
-<https://github.com/nu8/sienna/blob/master/library/radix-64.php>
+<https://github.com/nu8/cove/blob/master/git-train/git-board.php>
 
-## array.slice[3]
+## ["J","u","n","e"] to "n" (string not list)
 
-<https://github.com/nu8/sienna/blob/master/mb-release/mb-release.php>
+<https://github.com/nu8/sienna/blob/master/yt-views/yt-views.php>
 
-## array.slice(3)
+## ["J","u","n","e"] to ["n", "e"]
 
-<https://github.com/nu8/sienna/blob/master/insert/yt-insert.php>
-
-## array.slice(3, 2)
-
-<https://github.com/nu8/umber/blob/master/js/umber.js>
+<https://github.com/nu8/cove/blob/master/fs-iterate/fs-iterate.php>

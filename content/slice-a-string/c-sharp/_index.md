@@ -3,7 +3,11 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< r "Program.cs" >}}
+{{< r "a/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/api/system.range>
+
+{{< r "b/Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/api/system.string.substring>
 

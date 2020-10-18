@@ -1,5 +1,9 @@
 fn main() {
    let s = "June";
-   let s2 = s.chars().nth(2);
-   println!("{}", s2 == Some('n'));
+   // example 1
+   let s1 = s.get(2 .. 3);
+   // example 2
+   let s2 = s.get(2 ..= 2);
+   // print
+   println!("{}", s1 == Some("n") && s2 == Some("n"));
 }

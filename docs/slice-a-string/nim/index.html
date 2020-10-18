@@ -29,27 +29,17 @@
    <a href="/autumn/categories/string/">string</a>
    
 </section>
-   <p>
+   
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;June&#34;</span>
-<span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span><span style="color:#f92672">]</span>
-echo s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;n&#39;</span>
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;June&#34;</span>
-<span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span> .. <span style="color:#ae81ff">2</span><span style="color:#f92672">]</span>
-echo s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;n&#34;</span>
-</code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;June&#34;</span>
+<span style="color:#75715e"># example 1</span>
+<span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span> .. <span style="color:#ae81ff">2</span><span style="color:#f92672">]</span>
+<span style="color:#75715e"># example 2</span>
 <span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span> ..<span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">]</span>
-echo s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;n&#34;</span>
-</code></pre></div></p>
+<span style="color:#75715e"># print</span>
+echo s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;n&#34;</span> <span style="color:#f92672">and</span> s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;n&#34;</span>
+</code></pre></div>
 <p><a href="https://nim-lang.org/docs/system.html#%5B%5D,string,HSlice%5BT,U%5D">https://nim-lang.org/docs/system.html#[],string,HSlice[T,U]</a></p>
 <h2 id="references">References</h2>
 <p><a href="https://rosettacode.org/wiki/Substring">https://rosettacode.org/wiki/Substring</a></p>
