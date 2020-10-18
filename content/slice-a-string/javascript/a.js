@@ -1,3 +1,3 @@
-let s = 'March';
-let s1 = s[2];
-console.log(s1 == 'r');
+let s = 'June';
+let s2 = s[2];
+console.log(s2 == 'n');
