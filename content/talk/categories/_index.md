@@ -2,14 +2,18 @@
 title: Category talk
 ---
 
-## "June" to "n" (string or char)
+## "March" to "r" (string or char)
 
 <https://github.com/nu8/cove/blob/master/git-train/git-board.php>
 
-## ["J","u","n","e"] to "n" (string not list)
+## ["M","a","r","c","h"] to "r" (string not list)
 
 <https://github.com/nu8/sienna/blob/master/yt-views/yt-views.php>
 
-## ["J","u","n","e"] to ["n", "e"]
+## ["M","a","r","c","h"] to ["r","c","h"]
 
 <https://github.com/nu8/cove/blob/master/fs-iterate/fs-iterate.php>
+
+## ["M","a","r","c","h"] to ["r","c"]
+
+<https://github.com/nu8/umber/blob/master/js/umber.js>

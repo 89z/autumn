@@ -1,5 +1,5 @@
 void main() {
-   var s = 'June';
+   var s = 'March';
    var s2 = s.substring(2, 3);
-   print(s2 == 'n');
+   print(s2 == 'r');
 }

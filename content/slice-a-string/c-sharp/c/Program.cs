@@ -2,8 +2,8 @@ using System;
 
 class Program {
    static void Main() {
-      var s = "June";
+      var s = "March";
       var s2 = s.Substring(2, 1);
-      Console.WriteLine(s2 == "n");
+      Console.WriteLine(s2 == "r");
    }
 }

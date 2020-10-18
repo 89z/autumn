@@ -2,6 +2,10 @@ import std.stdio;
 
 void main() {
    auto a = ["J", "u", "n", "e"];
-   auto s = a[2];
-   writeln(s == "n");
+   // example 1
+   auto s1 = a[2];
+   // example 2
+   auto a2 = a[2 .. $];
+   // print
+   writeln(s1, a2);
 }

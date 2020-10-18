@@ -2,8 +2,8 @@ using System;
 
 class Program {
    static void Main() {
-      string[] a = {"J", "u", "n", "e"};
+      string[] a = {"M", "a", "r", "c", "h"};
       var s = a[2];
-      Console.WriteLine(s == "n");
+      Console.WriteLine(s == "r");
    }
 }
