@@ -5,8 +5,11 @@ tags: [python]
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/library/datetime.html#datetime.date.isoformat>
-- <https://docs.python.org/library/datetime.html#datetime.date.strftime>
+<https://docs.python.org/library/datetime.html#datetime.date.isoformat>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/library/datetime.html#datetime.date.strftime>
 
 ## References
 

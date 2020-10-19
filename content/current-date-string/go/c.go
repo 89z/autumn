@@ -3,6 +3,6 @@ import "time"
 
 func main() {
    o := time.Now()
-   s := o.Format(time.RFC3339)
+   s := o.String()
    println(s)
 }

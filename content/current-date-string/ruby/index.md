@@ -5,6 +5,8 @@ tags: [ruby]
 
 {{< r "a.rb" >}}
 
+<https://ruby-doc.org/core/Time.html#method-i-strftime>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting#fmt-datetime>
