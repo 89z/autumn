@@ -1,9 +1,5 @@
 fn main() {
-   let a = vec!["May", "June"];
-   // example 1
-   let s1 = a.concat();
-   // example 2
-   let s2 = a.join(",");
-   // print
-   println!("{}", s1 == "MayJune" && s2 == "May,June");
+   let a = ["May", "June"];
+   let s = a.concat();
+   println!("{}", s == "MayJune");
 }

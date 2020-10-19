@@ -1,5 +1,5 @@
 fn main() {
-   let a = vec!["May", "June"];
+   let a = ["May", "June"];
    let n = a.len();
    println!("{}", n == 2);
 }

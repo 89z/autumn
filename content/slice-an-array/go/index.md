@@ -10,5 +10,5 @@ tags: [go]
 ## References
 
 - <https://hyperpolyglot.org/c#resizable-array-lookup>
-- <https://programming-idioms.org/idiom/165/last-element>
+- <https://programming-idioms.org/idiom/165>
 - <https://rosettacode.org/wiki/Arrays>

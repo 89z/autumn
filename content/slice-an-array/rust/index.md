@@ -5,9 +5,13 @@ tags: [rust]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/vec/index.html>
+<https://doc.rust-lang.org/std/primitive.slice.html#method.get>
+
+{{< r "b.rs" >}}
+
+<https://doc.rust-lang.org/std/slice/trait.SliceIndex.html>
 
 ## References
 
-- <https://programming-idioms.org/idiom/165/last-element>
+- <https://programming-idioms.org/idiom/165>
 - <https://rosettacode.org/wiki/Arrays>

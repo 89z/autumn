@@ -1,9 +1,13 @@
 fn main() {
-   let a = vec!["May", "June", "July"];
+   let a = ["M", "a", "r", "c", "h"];
    // example 1
-   let s1 = a[0];
+   let s1 = a.get(2);
    // example 2
-   let s2 = a[a.len() - 1];
+   let a2 = a.get(2 .. 4);
+   // example 3
+   let a3 = a.get(2 ..= 3);
+   // example 4
+   let a4 = a.get(2 ..);
    // print
-   println!("{}", s1 == "May" && s2 == "July");
+   println!("{:?} {:?} {:?} {:?}", s1, a2, a3, a4);
 }
