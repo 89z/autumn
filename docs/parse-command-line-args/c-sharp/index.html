@@ -47,9 +47,9 @@
    }
 
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] a) {
-      <span style="color:#66d9ef">var</span> n_start = <span style="color:#ae81ff">0</span>;
-      <span style="color:#66d9ef">var</span> n_len = <span style="color:#ae81ff">0</span>;
-      <span style="color:#66d9ef">var</span> s_in = <span style="color:#e6db74">&#34;&#34;</span>;
+      <span style="color:#66d9ef">int</span> n_start = <span style="color:#66d9ef">default</span>;
+      <span style="color:#66d9ef">int</span> n_len = <span style="color:#66d9ef">default</span>;
+      <span style="color:#66d9ef">string</span> s_in = <span style="color:#66d9ef">default</span>;
 
       Parser.Default.ParseArguments&lt;Options&gt;(a).WithParsed&lt;Options&gt;(o =&gt; {
          n_start = o.Start;

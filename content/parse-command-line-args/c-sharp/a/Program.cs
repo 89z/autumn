@@ -12,9 +12,9 @@ class Program {
    }
 
    static void Main(string[] a) {
-      var n_start = 0;
-      var n_len = 0;
-      var s_in = "";
+      int n_start = default;
+      int n_len = default;
+      string s_in = default;
 
       Parser.Default.ParseArguments<Options>(a).WithParsed<Options>(o => {
          n_start = o.Start;
