@@ -1,11 +1,11 @@
-let a = ["May", "June", "July"]
+let a = ["M", "a", "r", "c", "h"]
 # example 1
-let s1 = a[0]
+let s1 = a[2]
 # example 2
-let s2 = a[^1]
+let a2 = a[2 .. 3]
 # example 3
-let a3 = a[0 .. 1]
+let a3 = a[2 ..< 4]
 # example 4
-let a4 = a[^2 .. ^1]
+let a4 = a[2 .. ^1]
 # print
-echo s1, s2, a3, a4
+echo s1, a2, a3, a4

@@ -5,8 +5,11 @@ tags: [javascript]
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array#Accessing_array_elements>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/slice>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array#Accessing_array_elements>
+
+{{< r "b.js" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/slice>
 
 ## References
 
