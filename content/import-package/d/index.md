@@ -5,7 +5,11 @@ tags: [d]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/spec/module.html#import-declaration>
+<https://dlang.org/spec/module.html#name_lookup>
+
+{{< r "b.d" >}}
+
+<https://dlang.org/spec/module.html#selective_imports>
 
 ## References
 

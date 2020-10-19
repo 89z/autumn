@@ -1,5 +1,5 @@
 void main() {
    var a = ['M', 'a', 'r', 'c', 'h'];
-   var s = a.elementAt(2);
-   print(s == 'r');
+   var a2 = a.getRange(2, 4);
+   print(a2);
 }

@@ -32,13 +32,28 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.conv<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#e6db74">&#34;May&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">11</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> text<span style="color:#f92672">(</span>n<span style="color:#f92672">);</span>
+   writeln<span style="color:#f92672">(</span>s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;11&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
-<p><a href="https://dlang.org/spec/module.html#import-declaration">https://dlang.org/spec/module.html#import-declaration</a></p>
+<p><a href="https://dlang.org/spec/module.html#name_lookup">https://dlang.org/spec/module.html#name_lookup</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.conv<span style="color:#f92672">:</span> text<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">:</span> writeln<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">11</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> text<span style="color:#f92672">(</span>n<span style="color:#f92672">);</span>
+   writeln<span style="color:#f92672">(</span>s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;11&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+<p><a href="https://dlang.org/spec/module.html#selective_imports">https://dlang.org/spec/module.html#selective_imports</a></p>
 <h2 id="references">References</h2>
 <p><a href="https://rosettacode.org/wiki/Include_a_file">https://rosettacode.org/wiki/Include_a_file</a></p>
 

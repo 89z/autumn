@@ -1,4 +1,5 @@
-import std.conv, std.stdio;
+import std.conv: text;
+import std.stdio: writeln;
 
 void main() {
    auto n = 11;

@@ -9,6 +9,14 @@ tags: [dart]
 
 {{< r "b.dart" >}}
 
+<https://api.dart.dev/dart-core/Iterable/skip.html>
+
+{{< r "c.dart" >}}
+
+<https://api.dart.dev/dart-core/List/getRange.html>
+
+{{< r "d.dart" >}}
+
 <https://api.dart.dev/dart-core/List/operator_get.html>
 
 ## References
