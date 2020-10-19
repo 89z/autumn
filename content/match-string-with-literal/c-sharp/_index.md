@@ -5,9 +5,13 @@ tags: [c-sharp]
 
 {{< r "a/Program.cs" >}}
 
-<https://docs.microsoft.com/dotnet/api/system.string.contains>
+<https://docs.microsoft.com/dotnet/api/system.index>
 
 {{< r "b/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/api/system.string.contains>
+
+{{< r "c/Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/api/system.string.startswith>
 

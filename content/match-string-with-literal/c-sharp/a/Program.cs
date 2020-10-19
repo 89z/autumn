@@ -3,7 +3,7 @@ using System;
 class Program {
    static void Main() {
       var s = "June";
-      var b = s.Contains("un");
-      Console.WriteLine(b);
+      var s2 = s[0];
+      Console.WriteLine(s2 == "J");
    }
 }

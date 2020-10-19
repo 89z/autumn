@@ -2,17 +2,25 @@ package main
 
 import (
    "bytes"
-   "io/ioutil"
-   "log"
    "strings"
    "testing"
 )
 
+const s = `January
+February
+March
+April
+May
+June
+July
+August
+September
+October
+November
+December`
+
 func BenchmarkBytes(b *testing.B) {
-   y, e := ioutil.ReadFile("months.txt")
-   if e != nil {
-      log.Fatal(e)
-   }
+   y := []byte(s)
    for n := 0; n < b.N; n++ {
       y2 := []byte("December")
       bytes.Contains(y, y2)
@@ -20,12 +28,9 @@ func BenchmarkBytes(b *testing.B) {
 }
 
 func BenchmarkStrings(b *testing.B) {
-   y, e := ioutil.ReadFile("months.txt")
-   if e != nil {
-      log.Fatal(e)
-   }
+   y := []byte(s)
    for n := 0; n < b.N; n++ {
-      s := string(y)
-      strings.Contains(s, "December")
+      s2 := string(y)
+      strings.Contains(s2, "December")
    }
 }

@@ -13,6 +13,6 @@ class Program {
       };
       var s2 = JsonSerializer.Serialize(m);
       // print
-      Console.WriteLine("{0} {1}", s1, s2);
+      Console.WriteLine(s1 + s2);
    }
 }
