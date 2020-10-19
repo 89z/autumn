@@ -5,8 +5,9 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-<https://php.net/types.object#language.types.object.init>
+<https://php.net/language.oop5.basic>
 
 ## References
 
-<https://hyperpolyglot.org/scripting2#def-class>
+- <https://hyperpolyglot.org/scripting2#def-class>
+- <https://rosettacode.org/wiki/Classes>

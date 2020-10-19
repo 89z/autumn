@@ -1,10 +1,11 @@
 package main
 import "fmt"
 
+type Date struct {
+   Year, Month int
+}
+
 func main() {
-   type Date struct {
-      Year, Month int
-   }
    // example 1
    o1 := Date{2019, 12}
    // example 2

@@ -5,6 +5,8 @@ tags: [dart]
 
 {{< r "a.dart" >}}
 
+<https://dart.dev/guides/language/language-tour#classes>
+
 ## References
 
-https://stackoverflow.com/questions/29066973
+<https://rosettacode.org/wiki/Classes>
