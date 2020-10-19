@@ -11,19 +11,19 @@ while true:
    if o_opt.kind == cmdEnd:
       break
    case o_opt.key
-   of "start":
+   of "a":
       n_start = o_opt.val.parseInt
-   of "len":
+   of "b":
       n_len = o_opt.val.parseInt
    else:
       s_in = o_opt.key
 
 if s_in == "":
-   echo """slice [flags] <string>
---start int
-   starting position
---len int
-   substring length (default 1)"""
+   echo """slice [flags] <input>
+-a int
+   start
+-b int
+   length (default 1)"""
    quit(1)
 
 echo s_in[n_start ..< n_start + n_len]

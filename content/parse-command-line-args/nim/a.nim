@@ -8,19 +8,19 @@ var
 
 for n_kind, s_key, s_val in o_opt.getOpt():
    case o_opt.key
-   of "start":
+   of "a":
       n_start = s_val.parseInt
-   of "len":
+   of "b":
       n_len = s_val.parseInt
    else:
       s_in = s_key
 
 if s_in == "":
-   echo """slice [flags] <string>
---start int
-   starting position
---len int
-   substring length (default 1)"""
+   echo """slice [flags] <input>
+-a int
+   start
+-b int
+   length (default 1)"""
    quit(1)
 
 echo s_in[n_start ..< n_start + n_len]

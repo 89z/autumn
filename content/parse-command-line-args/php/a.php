@@ -2,11 +2,12 @@
 
 if ($argc == 1) {
    echo <<<eof
-slice.php [flags] <string>
+slice.php [flags] <input>
 -a int
-   starting position
+   start
 -b int
-   substring length (default 1)
+   length (default 1)
+
 eof;
    exit(1);
 }

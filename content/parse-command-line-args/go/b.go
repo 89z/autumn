@@ -7,12 +7,12 @@ import (
 
 func main() {
    var n_start, n_len int
-   flag.IntVar(&n_start, "start", 0, "starting position")
-   flag.IntVar(&n_len, "len", 1, "substring length")
+   flag.IntVar(&n_start, "a", 0, "start")
+   flag.IntVar(&n_len, "b", 1, "length")
    flag.Parse()
 
    if flag.NArg() != 1 {
-      println("slice [flags] <string>")
+      println("slice [flags] <input>")
       flag.PrintDefaults()
       os.Exit(1)
    }

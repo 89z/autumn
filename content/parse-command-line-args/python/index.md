@@ -5,6 +5,8 @@ tags: [python]
 
 {{< r "a.py" >}}
 
+<https://docs.python.org/library/argparse.html>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting2#option-parsing>

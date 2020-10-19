@@ -42,19 +42,19 @@
 
 <span style="color:#66d9ef">for</span> n_kind, s_key, s_val <span style="color:#f92672">in</span> o_opt.getOpt():
    <span style="color:#66d9ef">case</span> o_opt.key
-   <span style="color:#66d9ef">of</span> <span style="color:#e6db74">&#34;start&#34;</span>:
+   <span style="color:#66d9ef">of</span> <span style="color:#e6db74">&#34;a&#34;</span>:
       n_start <span style="color:#f92672">=</span> s_val.parseInt
-   <span style="color:#66d9ef">of</span> <span style="color:#e6db74">&#34;len&#34;</span>:
+   <span style="color:#66d9ef">of</span> <span style="color:#e6db74">&#34;b&#34;</span>:
       n_len <span style="color:#f92672">=</span> s_val.parseInt
    <span style="color:#66d9ef">else</span>:
       s_in <span style="color:#f92672">=</span> s_key
 
 <span style="color:#66d9ef">if</span> s_in <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>:
-   echo <span style="color:#e6db74">&#34;&#34;&#34;slice [flags] &lt;string&gt;
-</span><span style="color:#e6db74">--start int
-</span><span style="color:#e6db74">   starting position
-</span><span style="color:#e6db74">--len int
-</span><span style="color:#e6db74">   substring length (default 1)&#34;&#34;&#34;</span>
+   echo <span style="color:#e6db74">&#34;&#34;&#34;slice [flags] &lt;input&gt;
+</span><span style="color:#e6db74">-a int
+</span><span style="color:#e6db74">   start
+</span><span style="color:#e6db74">-b int
+</span><span style="color:#e6db74">   length (default 1)&#34;&#34;&#34;</span>
    quit(<span style="color:#ae81ff">1</span>)
 
 echo s_in<span style="color:#f92672">[</span>n_start ..<span style="color:#f92672">&lt;</span> n_start <span style="color:#f92672">+</span> n_len<span style="color:#f92672">]</span>
@@ -76,19 +76,19 @@ echo s_in<span style="color:#f92672">[</span>n_start ..<span style="color:#f9267
    <span style="color:#66d9ef">if</span> o_opt.kind <span style="color:#f92672">==</span> cmdEnd:
       <span style="color:#66d9ef">break</span>
    <span style="color:#66d9ef">case</span> o_opt.key
-   <span style="color:#66d9ef">of</span> <span style="color:#e6db74">&#34;start&#34;</span>:
+   <span style="color:#66d9ef">of</span> <span style="color:#e6db74">&#34;a&#34;</span>:
       n_start <span style="color:#f92672">=</span> o_opt.val.parseInt
-   <span style="color:#66d9ef">of</span> <span style="color:#e6db74">&#34;len&#34;</span>:
+   <span style="color:#66d9ef">of</span> <span style="color:#e6db74">&#34;b&#34;</span>:
       n_len <span style="color:#f92672">=</span> o_opt.val.parseInt
    <span style="color:#66d9ef">else</span>:
       s_in <span style="color:#f92672">=</span> o_opt.key
 
 <span style="color:#66d9ef">if</span> s_in <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>:
-   echo <span style="color:#e6db74">&#34;&#34;&#34;slice [flags] &lt;string&gt;
-</span><span style="color:#e6db74">--start int
-</span><span style="color:#e6db74">   starting position
-</span><span style="color:#e6db74">--len int
-</span><span style="color:#e6db74">   substring length (default 1)&#34;&#34;&#34;</span>
+   echo <span style="color:#e6db74">&#34;&#34;&#34;slice [flags] &lt;input&gt;
+</span><span style="color:#e6db74">-a int
+</span><span style="color:#e6db74">   start
+</span><span style="color:#e6db74">-b int
+</span><span style="color:#e6db74">   length (default 1)&#34;&#34;&#34;</span>
    quit(<span style="color:#ae81ff">1</span>)
 
 echo s_in<span style="color:#f92672">[</span>n_start ..<span style="color:#f92672">&lt;</span> n_start <span style="color:#f92672">+</span> n_len<span style="color:#f92672">]</span>

@@ -39,12 +39,12 @@
    <span style="color:#66d9ef">auto</span> n_len <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>
 
    <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> getopt<span style="color:#f92672">(</span>a<span style="color:#f92672">,</span>
-      <span style="color:#e6db74">&#34;start&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;starting position&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">&amp;</span>n_start<span style="color:#f92672">,</span>
-      <span style="color:#e6db74">&#34;len&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;substring length&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">&amp;</span>n_len
+      <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;start&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">&amp;</span>n_start<span style="color:#f92672">,</span>
+      <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;length&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">&amp;</span>n_len
    <span style="color:#f92672">);</span>
 
    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      defaultGetoptPrinter<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;slice [flags] &lt;string&gt;&#34;</span><span style="color:#f92672">,</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">options</span><span style="color:#f92672">);</span>
+      defaultGetoptPrinter<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;slice [flags] &lt;input&gt;&#34;</span><span style="color:#f92672">,</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">options</span><span style="color:#f92672">);</span>
       <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>
    <span style="color:#f92672">}</span>
 

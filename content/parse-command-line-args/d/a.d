@@ -5,12 +5,12 @@ int main(string[] a) {
    auto n_len = 1;
 
    auto o = getopt(a,
-      "start", "starting position", &n_start,
-      "len", "substring length", &n_len
+      "a", "start", &n_start,
+      "b", "length", &n_len
    );
 
    if (a.length != 2) {
-      defaultGetoptPrinter("slice [flags] <string>", o.options);
+      defaultGetoptPrinter("slice [flags] <input>", o.options);
       return 1;
    }
 

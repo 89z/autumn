@@ -3,11 +3,11 @@ using System;
 
 class Program {
    class Options {
-      [Option("start")]
+      [Option('a', HelpText = "start")]
       public int Start { get; set; }
-      [Option("len", Default = 1)]
+      [Option('b', Default = 1, HelpText = "length")]
       public int Length { get; set; }
-      [Value(0, Required = true)]
+      [Value(0, MetaName = "input", Required = true)]
       public string Input { get; set; }
    }
 

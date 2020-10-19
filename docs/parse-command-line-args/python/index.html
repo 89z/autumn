@@ -35,51 +35,27 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> argparse
 
 parser <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser()
-parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--count&#39;</span>, <span style="color:#e6db74">&#39;-c&#39;</span>,
-  dest<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;count&#39;</span>, type<span style="color:#f92672">=</span>int)
-parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--ratio&#39;</span>, <span style="color:#e6db74">&#39;-r&#39;</span>,
-  dest<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ratio&#39;</span>, type<span style="color:#f92672">=</span>float)
+parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--count&#39;</span>, <span style="color:#e6db74">&#39;-c&#39;</span>, dest<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;count&#39;</span>, type<span style="color:#f92672">=</span>int)
+parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--ratio&#39;</span>, <span style="color:#e6db74">&#39;-r&#39;</span>, dest<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ratio&#39;</span>, type<span style="color:#f92672">=</span>float)
 args <span style="color:#f92672">=</span> parser<span style="color:#f92672">.</span>parse_args()
-
-<span style="color:#66d9ef">if</span> args<span style="color:#f92672">.</span>count:
-  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Count: </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> args<span style="color:#f92672">.</span>count)
-<span style="color:#66d9ef">if</span> args<span style="color:#f92672">.</span>ratio:
-  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Ratio: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> args<span style="color:#f92672">.</span>ratio)
 
 parser <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser()
-parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--input&#39;</span>, <span style="color:#e6db74">&#39;-i&#39;</span>,
-  dest<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;input&#39;</span>, required<span style="color:#f92672">=</span>True)
+parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--input&#39;</span>, <span style="color:#e6db74">&#39;-i&#39;</span>, dest<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;input&#39;</span>, required<span style="color:#f92672">=</span>True)
 args <span style="color:#f92672">=</span> parser<span style="color:#f92672">.</span>parse_args()
-
-f <span style="color:#f92672">=</span> open(args<span style="color:#f92672">.</span>input)
 
 parser <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser()
-parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--hosts&#39;</span>, <span style="color:#e6db74">&#39;-H&#39;</span>,
-  dest<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;hosts&#39;</span>, default<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/etc/hosts&#39;</span>)
+parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--hosts&#39;</span>, <span style="color:#e6db74">&#39;-H&#39;</span>, dest<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;hosts&#39;</span>, default<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/etc/hosts&#39;</span>)
 args <span style="color:#f92672">=</span> parser<span style="color:#f92672">.</span>parse_args()
 
-f <span style="color:#f92672">=</span> open(args<span style="color:#f92672">.</span>hosts)
-
-parser <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser(
-  description<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Twiddles data&#39;</span>)
-parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--input&#39;</span>, <span style="color:#e6db74">&#39;-i&#39;</span>,
-  dest<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;input&#39;</span>, help<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;path of input file&#39;</span>)
+parser <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser(description<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Twiddles data&#39;</span>)
+parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--input&#39;</span>, <span style="color:#e6db74">&#39;-i&#39;</span>, dest<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;input&#39;</span>, help<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;path of input file&#39;</span>)
 args <span style="color:#f92672">=</span> parser<span style="color:#f92672">.</span>parse_args()
 
 <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> args<span style="color:#f92672">.</span>input:
-  parser<span style="color:#f92672">.</span>print_help()
-  sys<span style="color:#f92672">.</span>exit(<span style="color:#ae81ff">1</span>)
-
-<span style="color:#f92672">from</span> optparse <span style="color:#f92672">import</span> OptionParser
-parser <span style="color:#f92672">=</span> OptionParser()
-parser<span style="color:#f92672">.</span>add_option(<span style="color:#e6db74">&#34;-f&#34;</span>, <span style="color:#e6db74">&#34;--file&#34;</span>, dest<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;filename&#34;</span>,
-                  help<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;write report to FILE&#34;</span>, metavar<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;FILE&#34;</span>)
-parser<span style="color:#f92672">.</span>add_option(<span style="color:#e6db74">&#34;-q&#34;</span>, <span style="color:#e6db74">&#34;--quiet&#34;</span>,
-                  action<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;store_false&#34;</span>, dest<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;verbose&#34;</span>, default<span style="color:#f92672">=</span>True,
-                  help<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;don&#39;t print status messages to stdout&#34;</span>)
- 
-(options, args) <span style="color:#f92672">=</span> parser<span style="color:#f92672">.</span>parse_args()
+   parser<span style="color:#f92672">.</span>print_help()
+   sys<span style="color:#f92672">.</span>exit(<span style="color:#ae81ff">1</span>)
 </code></pre></div>
+<p><a href="https://docs.python.org/library/argparse.html">https://docs.python.org/library/argparse.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#option-parsing">https://hyperpolyglot.org/scripting2#option-parsing</a></li>

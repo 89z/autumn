@@ -38,11 +38,11 @@
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Options</span> {
-<span style="color:#a6e22e">      [Option(&#34;start&#34;)]</span>
+<span style="color:#a6e22e">      [Option(&#39;a&#39;, HelpText = &#34;start&#34;)]</span>
       <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Start { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
-<span style="color:#a6e22e">      [Option(&#34;len&#34;, Default = 1)]</span>
+<span style="color:#a6e22e">      [Option(&#39;b&#39;, Default = 1, HelpText = &#34;length&#34;)]</span>
       <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Length { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
-<span style="color:#a6e22e">      [Value(0, Required = true)]</span>
+<span style="color:#a6e22e">      [Value(0, MetaName = &#34;input&#34;, Required = true)]</span>
       <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Input { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
    }
 
@@ -77,8 +77,8 @@
       <span style="color:#66d9ef">string</span> s_in = <span style="color:#66d9ef">default</span>;
 
       <span style="color:#66d9ef">var</span> o = <span style="color:#66d9ef">new</span> RootCommand {
-         <span style="color:#66d9ef">new</span> Option&lt;<span style="color:#66d9ef">int</span>&gt;(<span style="color:#e6db74">&#34;-start&#34;</span>),
-         <span style="color:#66d9ef">new</span> Option&lt;<span style="color:#66d9ef">int</span>&gt;(<span style="color:#e6db74">&#34;-len&#34;</span>, getDefaultValue: () =&gt; <span style="color:#ae81ff">1</span>),
+         <span style="color:#66d9ef">new</span> Option&lt;<span style="color:#66d9ef">int</span>&gt;(<span style="color:#e6db74">&#34;-a&#34;</span>, description: <span style="color:#e6db74">&#34;start&#34;</span>),
+         <span style="color:#66d9ef">new</span> Option&lt;<span style="color:#66d9ef">int</span>&gt;(<span style="color:#e6db74">&#34;-b&#34;</span>, description: <span style="color:#e6db74">&#34;length&#34;</span>, getDefaultValue: () =&gt; <span style="color:#ae81ff">1</span>),
          <span style="color:#66d9ef">new</span> Argument&lt;<span style="color:#66d9ef">string</span>&gt;(<span style="color:#e6db74">&#34;input&#34;</span>)
       };
 
@@ -90,6 +90,11 @@
 
       o.Handler = CommandHandler.Create&lt;<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">string</span>&gt;(Execute);
       o.Invoke(a);
+
+      <span style="color:#66d9ef">if</span> (s_in == <span style="color:#66d9ef">default</span>) {
+         Environment.Exit(<span style="color:#ae81ff">1</span>);
+      }
+
       <span style="color:#66d9ef">var</span> s_out = s_in.Substring(n_start, n_len);
       Console.WriteLine(s_out);
    }

@@ -9,8 +9,8 @@ class Program {
       string s_in = default;
 
       var o = new RootCommand {
-         new Option<int>("-start"),
-         new Option<int>("-len", getDefaultValue: () => 1),
+         new Option<int>("-a", description: "start"),
+         new Option<int>("-b", description: "length", getDefaultValue: () => 1),
          new Argument<string>("input")
       };
 
@@ -22,6 +22,11 @@ class Program {
 
       o.Handler = CommandHandler.Create<int, int, string>(Execute);
       o.Invoke(a);
+
+      if (s_in == default) {
+         Environment.Exit(1);
+      }
+
       var s_out = s_in.Substring(n_start, n_len);
       Console.WriteLine(s_out);
    }

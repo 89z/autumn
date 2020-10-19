@@ -8,7 +8,7 @@ void main(a) {
    var m = o.parse(a);
 
    if (m.rest.length != 1) {
-      print('slice [flags] <string>\n' + o.usage);
+      print('slice [flags] <input>\n' + o.usage);
       exit(1);
    }
 
