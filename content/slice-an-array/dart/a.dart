@@ -1,5 +1,5 @@
 void main() {
-   var a = ['May', 'June'];
-   var s = a[0];
-   print(s == 'May');
+   var a = 'March'.split('');
+   var s = a.elementAt(2);
+   print(s == 'r');
 }

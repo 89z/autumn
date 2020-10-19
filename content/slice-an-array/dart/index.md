@@ -5,6 +5,10 @@ tags: [dart]
 
 {{< r "a.dart" >}}
 
+<https://api.dart.dev/dart-core/Iterable/elementAt.html>
+
+{{< r "b.dart" >}}
+
 <https://api.dart.dev/dart-core/List/operator_get.html>
 
 ## References

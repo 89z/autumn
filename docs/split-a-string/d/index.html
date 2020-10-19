@@ -24,7 +24,7 @@
    <a href="/autumn/split-a-string/">Split a string</a> / D
 </h1>
 <section class="page">
-   <time>Fri Sep 11 2020</time>
+   <time>Sun Oct 18 2020</time>
    
    <a href="/autumn/categories/array/">array</a>
    
@@ -34,10 +34,10 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">string</span><span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.array<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May June&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;M a r c h&#34;</span><span style="color:#f92672">;</span>
    <span style="color:#75715e">// example 1
 </span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> a1 <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
    <span style="color:#75715e">// example 2
@@ -47,6 +47,26 @@
 <span style="color:#f92672">}</span>
 </code></pre></div>
 <p><a href="https://dlang.org/library/std/array/split.html">https://dlang.org/library/std/array/split.html</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span>
+<span style="color:#f92672">{</span>
+    <span style="color:#f92672">import</span> std.conv<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">:</span> write<span style="color:#f92672">,</span> writeln<span style="color:#f92672">,</span> writef<span style="color:#f92672">,</span> writefln<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> std.algorithm.comparison <span style="color:#f92672">:</span> equal<span style="color:#f92672">;</span>
+    
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>toChars<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">).</span><span style="color:#a6e22e">equal</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">));</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>toChars<span style="color:#f92672">(</span><span style="color:#ae81ff">1_000_000</span><span style="color:#f92672">).</span><span style="color:#a6e22e">equal</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;1000000&#34;</span><span style="color:#f92672">));</span>
+    
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>toChars<span style="color:#f92672">!(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)(</span><span style="color:#ae81ff">2</span>U<span style="color:#f92672">).</span><span style="color:#a6e22e">equal</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;10&#34;</span><span style="color:#f92672">));</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>toChars<span style="color:#f92672">!(</span><span style="color:#ae81ff">16</span><span style="color:#f92672">)(</span><span style="color:#ae81ff">255</span>U<span style="color:#f92672">).</span><span style="color:#a6e22e">equal</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;ff&#34;</span><span style="color:#f92672">));</span>
+    <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>toChars<span style="color:#f92672">!(</span><span style="color:#ae81ff">16</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">,</span> LetterCase<span style="color:#f92672">.</span><span style="color:#a6e22e">upper</span><span style="color:#f92672">)(</span><span style="color:#ae81ff">255</span>U<span style="color:#f92672">).</span><span style="color:#a6e22e">equal</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;FF&#34;</span><span style="color:#f92672">));</span>
+    
+    
+<span style="color:#f92672">}</span>
+</code></pre></div>
+<p><a href="https://dlang.org/library/std/conv/to_chars.html">https://dlang.org/library/std/conv/to_chars.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/49">https://programming-idioms.org/idiom/49</a></li>

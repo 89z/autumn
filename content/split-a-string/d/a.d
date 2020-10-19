@@ -1,7 +1,7 @@
-import std.stdio, std.string;
+import std.array, std.stdio;
 
 void main() {
-   auto s = "May June";
+   auto s = "M a r c h";
    // example 1
    auto a1 = s.split(" ");
    // example 2

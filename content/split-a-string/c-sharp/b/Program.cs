@@ -3,8 +3,8 @@ using static System.Text.Json.JsonSerializer;
 
 class Program {
    static void Main() {
-      var s = "May June";
-      var a = s.Split();
+      var s = "March";
+      var a = s.ToCharArray();
       Console.WriteLine(Serialize(a));
    }
 }
