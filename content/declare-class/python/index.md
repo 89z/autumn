@@ -5,10 +5,6 @@ tags: [python]
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/types.html>
-
-{{< r "b.py" >}}
-
 <https://docs.python.org/tutorial/classes.html>
 
 ## References

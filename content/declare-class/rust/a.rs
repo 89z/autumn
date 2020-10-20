@@ -1,11 +1,15 @@
-fn main() {
+struct Time {
+   hours: u16
+}
 
-   #[derive(Debug)]
-   struct Date {
-      year: u16,
-      month: Option<u8>,
+impl Time {
+   fn duration(self, minutes: u16) -> u16 {
+      self.hours * 60 + minutes
    }
+}
 
-   let o = Date {year: 2019, month: None};
-   println!("{:?}", o);
+fn main () {
+   let o = Time{hours: 23};
+   let n = o.duration(59);
+   println!("{}", n == 1439);
 }

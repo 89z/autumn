@@ -18,3 +18,4 @@
 **/dart/pubspec.lock
 **/rust/Cargo.lock
 **/rust/target
+*.exe

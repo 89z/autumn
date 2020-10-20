@@ -1,3 +1,8 @@
-import types
-o = types.SimpleNamespace(year = 2019, month = 12)
-print(o.year == 2019)
+class Time:
+   hours = 23
+   def duration(self, minutes):
+      return self.hours * 60 + minutes
+
+o = Time()
+n = o.duration(59)
+print(n == 1439)

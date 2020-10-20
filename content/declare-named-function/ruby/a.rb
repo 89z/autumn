@@ -1,6 +1,5 @@
-def f(n, n1)
-   return n > n1
+def f(s, c)
+   return s[0] == c
 end
 
-b = f(9, 8)
-puts b
+puts f('June', 'J')

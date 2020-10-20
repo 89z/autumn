@@ -1,5 +1,5 @@
-def f(n, n1):
-   return n > n1
+def f(s, c):
+   return s[0] == c
 
-b = f(9, 8)
+b = f('June', 'J')
 print(b)
