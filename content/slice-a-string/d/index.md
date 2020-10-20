@@ -5,7 +5,11 @@ tags: [d]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/spec/arrays.html#slicing>
+<https://dlang.org/spec/expression.html#index_expressions>
+
+{{< r "b.d" >}}
+
+<https://dlang.org/spec/expression.html#slice_expressions>
 
 ## References
 

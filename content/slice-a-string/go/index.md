@@ -5,6 +5,10 @@ tags: [go]
 
 {{< r "a.go" >}}
 
+<https://golang.org/ref/spec#Index_expressions>
+
+{{< r "b.go" >}}
+
 <https://golang.org/ref/spec#Slice_expressions>
 
 ## References

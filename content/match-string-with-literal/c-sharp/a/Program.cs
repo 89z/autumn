@@ -1,9 +1,9 @@
 using System;
 
 class Program {
+   static bool StartsWith(string s, char c) => s[0] == c;
    static void Main() {
-      var s = "June";
-      var s2 = s[0];
-      Console.WriteLine(s2 == "J");
+      var b = StartsWith("June", 'J');
+      Console.WriteLine(b);
    }
 }

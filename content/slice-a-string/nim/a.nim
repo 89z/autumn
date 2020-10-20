@@ -1,9 +1,7 @@
-let s = "March"
+let s = "May"
 # example 1
-let s1 = s[2]
+let s1 = s[1 .. 1]
 # example 2
-let s2 = s[2 .. 2]
-# example 3
-let s3 = s[2 ..< 3]
+let s2 = s[1 ..< 2]
 # print
-echo s1 == 'r' and s2 == "r" and s3 == "r"
+echo s1 == "a" and s2 == "a"

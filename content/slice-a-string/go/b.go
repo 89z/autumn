@@ -2,6 +2,6 @@ package main
 
 func main() {
    s := "May"
-   y := s[1]
-   println(y == 'a')
+   s2 := s[1:2]
+   println(s2 == "a")
 }
