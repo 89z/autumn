@@ -1,9 +1,9 @@
 using System;
 
 class Program {
-   static bool StartsWith(string s, char c) => s[0] == c;
    static void Main() {
-      var b = StartsWith("June", 'J');
+      var s = "June";
+      var b = s.Contains("un");
       Console.WriteLine(b);
    }
 }
