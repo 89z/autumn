@@ -11,6 +11,10 @@ tags: [d]
 
 <https://dlang.org/library/std/algorithm/searching/starts_with.html>
 
+{{< r "c.d" >}}
+
+<https://dlang.org/spec/expression.html#index_expressions>
+
 ## References
 
 - <https://programming-idioms.org/idiom/39/check-string-contains>

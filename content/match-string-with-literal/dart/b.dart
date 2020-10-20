@@ -1,5 +1,9 @@
+bool startsWith(String s, String c) {
+   return s[0] == c;
+}
+
 void main() {
    var s = 'June';
-   var b = s.startsWith('Ju');
+   var b = startsWith(s, 'J');
    print(b);
 }

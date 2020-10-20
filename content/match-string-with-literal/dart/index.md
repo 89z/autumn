@@ -9,6 +9,10 @@ tags: [dart]
 
 {{< r "b.dart" >}}
 
+<https://api.dart.dev/dart-core/String/operator_get.html>
+
+{{< r "c.dart" >}}
+
 <https://api.dart.dev/dart-core/String/startsWith.html>
 
 ## References

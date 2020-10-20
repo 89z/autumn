@@ -1,3 +1,3 @@
 let s = 'June';
-let b = s.includes('un');
+let b = s.startsWith('Ju');
 console.log(b);
