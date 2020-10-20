@@ -5,13 +5,9 @@ tags: [go]
 
 {{< r "a.go" >}}
 
-<https://golang.org/ref/spec#Index_expressions>
-
-{{< r "b.go" >}}
-
 <https://golang.org/pkg/strings#Contains>
 
-{{< r "c.go" >}}
+{{< r "b.go" >}}
 
 <https://golang.org/pkg/strings#HasPrefix>
 

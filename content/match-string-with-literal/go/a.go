@@ -1,11 +1,8 @@
 package main
-
-func HasPrefix(s string, c byte) bool {
-   return s[0] == c
-}
+import "strings"
 
 func main() {
    s := "June"
-   b := HasPrefix(s, 'J')
+   b := strings.Contains(s, "un")
    println(b)
 }
