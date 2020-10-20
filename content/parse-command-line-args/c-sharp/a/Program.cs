@@ -3,26 +3,23 @@ using System;
 
 class Program {
    class Options {
-      [Option('a', HelpText = "start")]
-      public int Start { get; set; }
-      [Option('b', Default = 1, HelpText = "length")]
-      public int Length { get; set; }
+      [Option("start")]
+      public string Start { get; set; }
+      [Option("end")]
+      public string End { get; set; }
       [Value(0, MetaName = "input", Required = true)]
       public string Input { get; set; }
    }
 
    static void Main(string[] a) {
-      int n_start = default;
-      int n_len = default;
-      string s_in = default;
-
+      var s_start = "";
+      var s_end = "";
+      var s_input = "";
       Parser.Default.ParseArguments<Options>(a).WithParsed<Options>(o => {
-         n_start = o.Start;
-         n_len = o.Length;
-         s_in = o.Input;
+         s_start = o.Start;
+         s_end = o.End;
+         s_input = o.Input;
       });
-
-      var s_out = s_in.Substring(n_start, n_len);
-      Console.WriteLine(s_out);
+      Console.WriteLine(s_start + s_input + s_end);
    }
 }

@@ -38,27 +38,24 @@
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Options</span> {
-<span style="color:#a6e22e">      [Option(&#39;a&#39;, HelpText = &#34;start&#34;)]</span>
-      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Start { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
-<span style="color:#a6e22e">      [Option(&#39;b&#39;, Default = 1, HelpText = &#34;length&#34;)]</span>
-      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Length { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+<span style="color:#a6e22e">      [Option(&#34;start&#34;)]</span>
+      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Start { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+<span style="color:#a6e22e">      [Option(&#34;end&#34;)]</span>
+      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> End { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
 <span style="color:#a6e22e">      [Value(0, MetaName = &#34;input&#34;, Required = true)]</span>
       <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Input { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
    }
 
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] a) {
-      <span style="color:#66d9ef">int</span> n_start = <span style="color:#66d9ef">default</span>;
-      <span style="color:#66d9ef">int</span> n_len = <span style="color:#66d9ef">default</span>;
-      <span style="color:#66d9ef">string</span> s_in = <span style="color:#66d9ef">default</span>;
-
+      <span style="color:#66d9ef">var</span> s_start = <span style="color:#e6db74">&#34;&#34;</span>;
+      <span style="color:#66d9ef">var</span> s_end = <span style="color:#e6db74">&#34;&#34;</span>;
+      <span style="color:#66d9ef">var</span> s_input = <span style="color:#e6db74">&#34;&#34;</span>;
       Parser.Default.ParseArguments&lt;Options&gt;(a).WithParsed&lt;Options&gt;(o =&gt; {
-         n_start = o.Start;
-         n_len = o.Length;
-         s_in = o.Input;
+         s_start = o.Start;
+         s_end = o.End;
+         s_input = o.Input;
       });
-
-      <span style="color:#66d9ef">var</span> s_out = s_in.Substring(n_start, n_len);
-      Console.WriteLine(s_out);
+      Console.WriteLine(s_start + s_input + s_end);
    }
 }
 </code></pre></div>
@@ -72,31 +69,30 @@
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] a) {
-      <span style="color:#66d9ef">int</span> n_start = <span style="color:#66d9ef">default</span>;
-      <span style="color:#66d9ef">int</span> n_len = <span style="color:#66d9ef">default</span>;
-      <span style="color:#66d9ef">string</span> s_in = <span style="color:#66d9ef">default</span>;
+      <span style="color:#66d9ef">var</span> s_start = <span style="color:#e6db74">&#34;&#34;</span>;
+      <span style="color:#66d9ef">var</span> s_end = <span style="color:#e6db74">&#34;&#34;</span>;
+      <span style="color:#66d9ef">var</span> s_input = <span style="color:#e6db74">&#34;&#34;</span>;
 
       <span style="color:#66d9ef">var</span> o = <span style="color:#66d9ef">new</span> RootCommand {
-         <span style="color:#66d9ef">new</span> Option&lt;<span style="color:#66d9ef">int</span>&gt;(<span style="color:#e6db74">&#34;-a&#34;</span>, description: <span style="color:#e6db74">&#34;start&#34;</span>),
-         <span style="color:#66d9ef">new</span> Option&lt;<span style="color:#66d9ef">int</span>&gt;(<span style="color:#e6db74">&#34;-b&#34;</span>, description: <span style="color:#e6db74">&#34;length&#34;</span>, getDefaultValue: () =&gt; <span style="color:#ae81ff">1</span>),
+         <span style="color:#66d9ef">new</span> Option&lt;<span style="color:#66d9ef">string</span>&gt;(<span style="color:#e6db74">&#34;-start&#34;</span>),
+         <span style="color:#66d9ef">new</span> Option&lt;<span style="color:#66d9ef">string</span>&gt;(<span style="color:#e6db74">&#34;-end&#34;</span>),
          <span style="color:#66d9ef">new</span> Argument&lt;<span style="color:#66d9ef">string</span>&gt;(<span style="color:#e6db74">&#34;input&#34;</span>)
       };
 
-      <span style="color:#66d9ef">void</span> Execute(<span style="color:#66d9ef">int</span> start, <span style="color:#66d9ef">int</span> len, <span style="color:#66d9ef">string</span> input) {
-         n_start = start;
-         n_len = len;
-         s_in = input;
+      <span style="color:#66d9ef">void</span> Execute(<span style="color:#66d9ef">string</span> start, <span style="color:#66d9ef">string</span> end, <span style="color:#66d9ef">string</span> input) {
+         s_start = start;
+         s_end = end;
+         s_input = input;
       }
 
-      o.Handler = CommandHandler.Create&lt;<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">string</span>&gt;(Execute);
+      o.Handler = CommandHandler.Create&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">string</span>&gt;(Execute);
       o.Invoke(a);
 
-      <span style="color:#66d9ef">if</span> (s_in == <span style="color:#66d9ef">default</span>) {
-         Environment.Exit(<span style="color:#ae81ff">1</span>);
+      <span style="color:#66d9ef">if</span> (s_input == <span style="color:#e6db74">&#34;&#34;</span>) {
+         Environment.Exit(<span style="color:#ae81ff">2</span>);
       }
 
-      <span style="color:#66d9ef">var</span> s_out = s_in.Substring(n_start, n_len);
-      Console.WriteLine(s_out);
+      Console.WriteLine(s_start + s_input + s_end);
    }
 }
 </code></pre></div>
@@ -108,9 +104,8 @@
 <span style="color:#66d9ef">using</span> System;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
-   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span> argument, <span style="color:#66d9ef">int</span> start, <span style="color:#66d9ef">int</span> len = <span style="color:#ae81ff">1</span>) {
-      <span style="color:#66d9ef">var</span> s_out = argument.Substring(start, len);
-      Console.WriteLine(s_out);
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span> argument, <span style="color:#66d9ef">string</span> start, <span style="color:#66d9ef">string</span> end) {
+      Console.WriteLine(start + argument + end);
    }
 }
 </code></pre></div>

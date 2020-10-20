@@ -1,10 +1,5 @@
 fn main() {
-   // example 1
-   let mut s1 = String::new();
-   s1.push_str("May");
-   // example 2
-   let mut s2 = String::from("May");
-   s2.push_str("June");
-   // print
-   println!("{}", s1 == "May" && s2 == "MayJune");
+   let mut s = String::new();
+   s.push_str("May");
+   println!("{}", s);
 }

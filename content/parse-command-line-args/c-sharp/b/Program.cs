@@ -4,30 +4,29 @@ using System;
 
 class Program {
    static void Main(string[] a) {
-      int n_start = default;
-      int n_len = default;
-      string s_in = default;
+      var s_start = "";
+      var s_end = "";
+      var s_input = "";
 
       var o = new RootCommand {
-         new Option<int>("-a", description: "start"),
-         new Option<int>("-b", description: "length", getDefaultValue: () => 1),
+         new Option<string>("-start"),
+         new Option<string>("-end"),
          new Argument<string>("input")
       };
 
-      void Execute(int start, int len, string input) {
-         n_start = start;
-         n_len = len;
-         s_in = input;
+      void Execute(string start, string end, string input) {
+         s_start = start;
+         s_end = end;
+         s_input = input;
       }
 
-      o.Handler = CommandHandler.Create<int, int, string>(Execute);
+      o.Handler = CommandHandler.Create<string, string, string>(Execute);
       o.Invoke(a);
 
-      if (s_in == default) {
-         Environment.Exit(1);
+      if (s_input == "") {
+         Environment.Exit(2);
       }
 
-      var s_out = s_in.Substring(n_start, n_len);
-      Console.WriteLine(s_out);
+      Console.WriteLine(s_start + s_input + s_end);
    }
 }
