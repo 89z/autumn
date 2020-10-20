@@ -34,14 +34,14 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> f1 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">String</span> s, <span style="color:#66d9ef">String</span> c) {
-      <span style="color:#66d9ef">return</span> s[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> c;
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> f1 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">num</span> n, <span style="color:#66d9ef">num</span> n1) {
+      <span style="color:#66d9ef">return</span> n <span style="color:#f92672">&gt;</span> n1;
    };
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> f2 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">String</span> s, <span style="color:#66d9ef">String</span> c) <span style="color:#f92672">=&gt;</span> s[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> c;
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> f2 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">num</span> n, <span style="color:#66d9ef">num</span> n1) <span style="color:#f92672">=&gt;</span> n <span style="color:#f92672">&gt;</span> n1;
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> b1 <span style="color:#f92672">=</span> f1(<span style="color:#e6db74">&#39;June&#39;</span>, <span style="color:#e6db74">&#39;J&#39;</span>);
-   <span style="color:#66d9ef">var</span> b2 <span style="color:#f92672">=</span> f2(<span style="color:#e6db74">&#39;June&#39;</span>, <span style="color:#e6db74">&#39;J&#39;</span>);
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> b1 <span style="color:#f92672">=</span> f1(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>);
+   <span style="color:#66d9ef">var</span> b2 <span style="color:#f92672">=</span> f2(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>);
    print(b1 <span style="color:#f92672">&amp;&amp;</span> b2);
 }
 </code></pre></div>

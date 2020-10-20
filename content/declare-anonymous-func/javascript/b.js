@@ -1,6 +1,6 @@
-let f = function (s, c) {
-   return s[0] == c;
+let f = function (n, n2) {
+   return n > n2;
 };
 
-let b = f('June', 'J');
+let b = f(9, 8);
 console.log(b);

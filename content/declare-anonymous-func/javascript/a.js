@@ -1,3 +1,3 @@
-let f = (s, c) => s[0] == c;
-let b = f('June', 'J');
+let f = (n, n2) => n > n2;
+let b = f(9, 8);
 console.log(b);

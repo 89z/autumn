@@ -1,5 +1,5 @@
-def f(s, c)
-   return s[0] == c
+def f(n, n2)
+   return n > n2
 end
 
-puts f('June', 'J')
+puts f(9, 8)
