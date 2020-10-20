@@ -37,19 +37,18 @@
 
 <span style="color:#66d9ef">void</span> main(a) {
    <span style="color:#66d9ef">var</span> o <span style="color:#f92672">=</span> ArgParser();
-   o.addOption(<span style="color:#e6db74">&#39;start&#39;</span>, defaultsTo: <span style="color:#e6db74">&#39;0&#39;</span>);
-   o.addOption(<span style="color:#e6db74">&#39;len&#39;</span>, defaultsTo: <span style="color:#e6db74">&#39;1&#39;</span>);
+   o.addOption(<span style="color:#e6db74">&#39;start&#39;</span>, defaultsTo: <span style="color:#e6db74">&#39;&#39;</span>);
+   o.addOption(<span style="color:#e6db74">&#39;in&#39;</span>, defaultsTo: <span style="color:#e6db74">&#39;&#39;</span>);
    <span style="color:#66d9ef">var</span> m <span style="color:#f92672">=</span> o.parse(a);
-
    <span style="color:#66d9ef">if</span> (m.rest.length <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>) {
-      print(<span style="color:#e6db74">&#39;slice [flags] &lt;input&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">+</span> o.usage);
+      print(<span style="color:#e6db74">&#39;match [flags] &lt;input&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">+</span> o.usage);
       exit(<span style="color:#ae81ff">1</span>);
    }
-
-   <span style="color:#66d9ef">var</span> n_start <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span>.parse(m[<span style="color:#e6db74">&#39;start&#39;</span>]);
-   <span style="color:#66d9ef">var</span> n_len <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span>.parse(m[<span style="color:#e6db74">&#39;len&#39;</span>]);
-   <span style="color:#66d9ef">var</span> s_out <span style="color:#f92672">=</span> m.rest[<span style="color:#ae81ff">0</span>].substring(n_start, n_start <span style="color:#f92672">+</span> n_len);
-   print(s_out);
+   <span style="color:#66d9ef">var</span> s_start <span style="color:#f92672">=</span> m[<span style="color:#e6db74">&#39;start&#39;</span>];
+   <span style="color:#66d9ef">var</span> s_in <span style="color:#f92672">=</span> m[<span style="color:#e6db74">&#39;in&#39;</span>];
+   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> m.rest[<span style="color:#ae81ff">0</span>];
+   <span style="color:#66d9ef">var</span> b <span style="color:#f92672">=</span> s.startsWith(s_start) <span style="color:#f92672">&amp;&amp;</span> s.contains(s_in);
+   print(b);
 }
 </code></pre></div>
 <p><a href="https://github.com/dart-lang/args">https://github.com/dart-lang/args</a></p>

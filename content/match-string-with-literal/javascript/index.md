@@ -5,13 +5,9 @@ tags: [javascript]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String#Character_access>
-
-{{< r "b.js" >}}
-
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/includes>
 
-{{< r "c.js" >}}
+{{< r "b.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/startsWith>
 

@@ -9,4 +9,5 @@ tags: [php]
 
 ## References
 
-<https://rosettacode.org/wiki/String_append>
+- <https://hyperpolyglot.org/scripting#str-concat>
+- <https://rosettacode.org/wiki/String_append>

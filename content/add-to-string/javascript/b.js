@@ -1,3 +1,3 @@
 let s = 'May';
-s = s.concat('June');
+s += 'June';
 console.log(s == 'MayJune');
