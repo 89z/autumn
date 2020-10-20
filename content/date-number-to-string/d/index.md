@@ -5,8 +5,7 @@ tags: [d]
 
 {{< r "a.d" >}}
 
-- <https://dlang.org/library/std/datetime/systime/sys_time.from_unix_time.html>
-- <https://github.com/dhasenan/datefmt>
+<https://dlang.org/library/std/datetime/systime/sys_time.from_unix_time.html>
 
 ## References
 

@@ -24,7 +24,7 @@
    <a href="/autumn/declare-class/">Declare class</a> / Dart
 </h1>
 <section class="page">
-   <time>Thu Oct 15 2020</time>
+   <time>Mon Oct 19 2020</time>
    
    <a href="/autumn/categories/class/">class</a>
    
@@ -32,21 +32,17 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ShuffleCommand</span> <span style="color:#66d9ef">extends</span> Command {
-   <span style="color:#66d9ef">final</span> name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;shuffle&#34;</span>;
-   <span style="color:#66d9ef">final</span> description <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Shuffle and choose cards from a deck&#34;</span>;
-
-   ShuffleCommand() {
-      argParser..addFlag(<span style="color:#e6db74">&#39;count&#39;</span>, abbr: <span style="color:#e6db74">&#39;c&#39;</span>, defaultsTo: <span style="color:#66d9ef">true</span>);
-   }
-
-   <span style="color:#66d9ef">void</span> run() {
-      print(argParser.options);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Time</span> {
+   <span style="color:#66d9ef">final</span> hours <span style="color:#f92672">=</span> <span style="color:#ae81ff">23</span>;
+   <span style="color:#66d9ef">num</span> duration(<span style="color:#66d9ef">num</span> minutes) {
+      <span style="color:#66d9ef">return</span> hours <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> minutes;
    }
 }
 
 <span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SuffleCommand();
+   <span style="color:#66d9ef">var</span> o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Time();
+   <span style="color:#66d9ef">var</span> n <span style="color:#f92672">=</span> o.duration(<span style="color:#ae81ff">59</span>);
+   print(n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1439</span>);
 }
 </code></pre></div>
 <p><a href="https://dart.dev/guides/language/language-tour#classes">https://dart.dev/guides/language/language-tour#classes</a></p>

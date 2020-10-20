@@ -5,9 +5,19 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.date-timestamp-get>
-- <https://php.net/function.strtotime>
-- <https://php.net/function.time>
+<https://php.net/datetime.gettimestamp>
+
+{{< r "b.php" >}}
+
+<https://php.net/function.date-timestamp-get>
+
+{{< r "c.php" >}}
+
+<https://php.net/function.strtotime>
+
+{{< r "d.php" >}}
+
+<https://php.net/function.time>
 
 ## References
 

@@ -32,19 +32,20 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># example 1</span>
-<span style="color:#f92672">import</span> time
-n1 <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
-<span style="color:#75715e"># example 2</span>
-<span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
-n2 <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>timestamp()
-<span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(n1, n2, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+o <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now()
+n <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>timestamp()
+<span style="color:#66d9ef">print</span>(n)
 </code></pre></div>
-<ul>
-<li><a href="https://docs.python.org/library/datetime.html#datetime.datetime.timestamp">https://docs.python.org/library/datetime.html#datetime.datetime.timestamp</a></li>
-<li><a href="https://docs.python.org/library/time.html#time.time">https://docs.python.org/library/time.html#time.time</a></li>
-</ul>
+<p><a href="https://docs.python.org/library/datetime.html#datetime.datetime.timestamp">https://docs.python.org/library/datetime.html#datetime.datetime.timestamp</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> time
+n <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+<span style="color:#66d9ef">print</span>(n)
+</code></pre></div>
+<p><a href="https://docs.python.org/library/time.html#time.time">https://docs.python.org/library/time.html#time.time</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting#current-unix-epoch">https://hyperpolyglot.org/scripting#current-unix-epoch</a></li>

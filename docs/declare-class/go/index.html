@@ -24,7 +24,7 @@
    <a href="/autumn/declare-class/">Declare class</a> / Go
 </h1>
 <section class="page">
-   <time>Thu Oct 15 2020</time>
+   <time>Mon Oct 19 2020</time>
    
    <a href="/autumn/categories/class/">class</a>
    
@@ -33,19 +33,19 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 
-<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Date</span> <span style="color:#66d9ef">struct</span> {
-   <span style="color:#a6e22e">Year</span>, <span style="color:#a6e22e">Month</span> <span style="color:#66d9ef">int</span>
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Time</span> <span style="color:#66d9ef">struct</span> {
+   <span style="color:#a6e22e">Hours</span> <span style="color:#66d9ef">int</span>
+}
+
+<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">o</span> <span style="color:#a6e22e">Time</span>) <span style="color:#a6e22e">Duration</span>(<span style="color:#a6e22e">minutes</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> {
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Hours</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">minutes</span>
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Date</span>{<span style="color:#ae81ff">2019</span>, <span style="color:#ae81ff">12</span>}
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">o2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Date</span>{<span style="color:#a6e22e">Year</span>: <span style="color:#ae81ff">2019</span>}
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">o1</span>, <span style="color:#a6e22e">o2</span>)
+   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Time</span>{<span style="color:#ae81ff">23</span>}
+   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Duration</span>(<span style="color:#ae81ff">59</span>)
+   println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1439</span>)
 }
 </code></pre></div>
 <p><a href="https://golang.org/ref/spec#Type_declarations">https://golang.org/ref/spec#Type_declarations</a></p>

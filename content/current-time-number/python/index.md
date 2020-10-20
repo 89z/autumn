@@ -5,8 +5,11 @@ tags: [python]
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/library/datetime.html#datetime.datetime.timestamp>
-- <https://docs.python.org/library/time.html#time.time>
+<https://docs.python.org/library/datetime.html#datetime.datetime.timestamp>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/library/time.html#time.time>
 
 ## References
 

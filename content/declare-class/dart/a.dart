@@ -1,16 +1,12 @@
-class ShuffleCommand extends Command {
-   final name = "shuffle";
-   final description = "Shuffle and choose cards from a deck";
-
-   ShuffleCommand() {
-      argParser..addFlag('count', abbr: 'c', defaultsTo: true);
-   }
-
-   void run() {
-      print(argParser.options);
+class Time {
+   final hours = 23;
+   num duration(num minutes) {
+      return hours * 60 + minutes;
    }
 }
 
 void main() {
-   var o = new SuffleCommand();
+   var o = new Time();
+   var n = o.duration(59);
+   print(n == 1439);
 }

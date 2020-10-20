@@ -1,9 +1,12 @@
 <?php
 
-class Date {
-   var $year = 2019;
-   var $month = 12;
+class Time {
+   var $hours = 23;
+   function duration($minutes) {
+      return $this->hours * 60 + $minutes;
+   }
 }
 
-$o = new Date;
-var_dump($o);
+$o = new Time;
+$n = $o->duration(59);
+var_dump($n == 1439);
