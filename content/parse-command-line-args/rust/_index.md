@@ -5,23 +5,33 @@ tags: [rust]
 
 {{< r "a/src/main.rs" >}}
 
-<https://github.com/RazrFalcon/pico-args>
+0 deps
+
+<https://crates.io/crates/pico-args>
 
 {{< r "b/src/main.rs" >}}
 
-<https://github.com/TeXitoi/structopt>
+8 deps
+
+<https://crates.io/crates/argh>
 
 {{< r "c/src/main.rs" >}}
 
-<https://github.com/agnipau/slap>
+12 deps
+
+<https://crates.io/crates/clap>
 
 {{< r "d/src/main.rs" >}}
 
-<https://github.com/clap-rs/clap>
+24 deps
+
+<https://crates.io/crates/structopt>
 
 {{< r "e/src/main.rs" >}}
 
-<https://github.com/google/argh>
+34 deps
+
+<https://crates.io/crates/slap-cli>
 
 ## References
 

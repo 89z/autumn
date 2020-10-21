@@ -33,6 +33,80 @@
    
 
 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Args</span> {
+    help: <span style="color:#66d9ef">bool</span>,
+    version: <span style="color:#66d9ef">bool</span>,
+    number: <span style="color:#66d9ef">u32</span>,
+    opt_number: Option<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u32</span><span style="color:#f92672">&gt;</span>,
+    width: <span style="color:#66d9ef">u32</span>,
+    free: Vec<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>,
+}
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">parse_width</span>(s: <span style="color:#66d9ef">&amp;</span><span style="color:#66d9ef">str</span>) -&gt; Result<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u32</span>, String<span style="color:#f92672">&gt;</span> {
+    s.parse().map_err(<span style="color:#f92672">|</span>_<span style="color:#f92672">|</span> <span style="color:#e6db74">&#34;not a number&#34;</span>.to_string())
+}
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn std::error::Error<span style="color:#f92672">&gt;&gt;</span> {
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> args <span style="color:#f92672">=</span> pico_args::Arguments::from_env();
+    <span style="color:#75715e">// Arguments can be parsed in any order.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> args <span style="color:#f92672">=</span> Args {
+        <span style="color:#75715e">// You can use a slice for multiple commands
+</span><span style="color:#75715e"></span>        help: <span style="color:#a6e22e">args</span>.contains([<span style="color:#e6db74">&#34;-h&#34;</span>, <span style="color:#e6db74">&#34;--help&#34;</span>]),
+        <span style="color:#75715e">// or just a string for a single one.
+</span><span style="color:#75715e"></span>        version: <span style="color:#a6e22e">args</span>.contains(<span style="color:#e6db74">&#34;-V&#34;</span>),
+        <span style="color:#75715e">// Parses an optional value that implements `FromStr`.
+</span><span style="color:#75715e"></span>        number: <span style="color:#a6e22e">args</span>.opt_value_from_str(<span style="color:#e6db74">&#34;--number&#34;</span>)<span style="color:#f92672">?</span>.unwrap_or(<span style="color:#ae81ff">5</span>),
+        <span style="color:#75715e">// Parses an optional value that implements `FromStr`.
+</span><span style="color:#75715e"></span>        opt_number: <span style="color:#a6e22e">args</span>.opt_value_from_str(<span style="color:#e6db74">&#34;--opt-number&#34;</span>)<span style="color:#f92672">?</span>,
+        <span style="color:#75715e">// Parses an optional value using a specified function.
+</span><span style="color:#75715e"></span>        width: <span style="color:#a6e22e">args</span>.opt_value_from_fn(<span style="color:#e6db74">&#34;--width&#34;</span>, parse_width)<span style="color:#f92672">?</span>.unwrap_or(<span style="color:#ae81ff">10</span>),
+        <span style="color:#75715e">// Will return all free arguments or an error if any flags are left.
+</span><span style="color:#75715e"></span>        free: <span style="color:#a6e22e">args</span>.free()<span style="color:#f92672">?</span>,
+    };
+    Ok(())
+}
+</code></pre></div>
+<p>0 deps</p>
+<p><a href="https://crates.io/crates/pico-args">https://crates.io/crates/pico-args</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> argh::FromArgs;
+
+<span style="color:#75715e">#[derive(FromArgs)]</span>
+<span style="color:#e6db74">/// Reach new heights.
+</span><span style="color:#e6db74"></span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">GoUp</span> {
+    <span style="color:#e6db74">/// whether or not to jump
+</span><span style="color:#e6db74"></span>    <span style="color:#75715e">#[argh(switch, short = &#39;j&#39;)]</span>
+    jump: <span style="color:#66d9ef">bool</span>,
+
+    <span style="color:#e6db74">/// how high to go
+</span><span style="color:#e6db74"></span>    <span style="color:#75715e">#[argh(option)]</span>
+    height: <span style="color:#66d9ef">usize</span>,
+
+    <span style="color:#e6db74">/// an optional nickname for the pilot
+</span><span style="color:#e6db74"></span>    <span style="color:#75715e">#[argh(option)]</span>
+    pilot_nickname: Option<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>,
+}
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> up: <span style="color:#a6e22e">GoUp</span> <span style="color:#f92672">=</span> argh::from_env();
+}
+</code></pre></div>
+<p>8 deps</p>
+<p><a href="https://crates.io/crates/argh">https://crates.io/crates/argh</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
+}
+</code></pre></div>
+<p>12 deps</p>
+<p><a href="https://crates.io/crates/clap">https://crates.io/crates/clap</a></p>
+
+
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> structopt::StructOpt;
  
 <span style="color:#75715e">#[derive(StructOpt)]</span>
@@ -52,7 +126,8 @@
     println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;n: {}&#34;</span>, opt.n);
 }
 </code></pre></div>
-<p><a href="https://github.com/RazrFalcon/pico-args">https://github.com/RazrFalcon/pico-args</a></p>
+<p>24 deps</p>
+<p><a href="https://crates.io/crates/structopt">https://crates.io/crates/structopt</a></p>
 
 
 
@@ -60,31 +135,8 @@
     println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
 }
 </code></pre></div>
-<p><a href="https://github.com/TeXitoi/structopt">https://github.com/TeXitoi/structopt</a></p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
-}
-</code></pre></div>
-<p><a href="https://github.com/agnipau/slap">https://github.com/agnipau/slap</a></p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
-}
-</code></pre></div>
-<p><a href="https://github.com/clap-rs/clap">https://github.com/clap-rs/clap</a></p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
-}
-</code></pre></div>
-<p><a href="https://github.com/google/argh">https://github.com/google/argh</a></p>
+<p>34 deps</p>
+<p><a href="https://crates.io/crates/slap-cli">https://crates.io/crates/slap-cli</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/162">https://programming-idioms.org/idiom/162</a></li>
