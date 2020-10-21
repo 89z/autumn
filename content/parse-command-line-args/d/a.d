@@ -1,21 +1,19 @@
 import std.getopt, std.stdio;
 
 int main(string[] a) {
-   auto n_start = 0;
-   auto n_len = 1;
+   string s_start, s_end;
 
    auto o = getopt(a,
-      "a", "start", &n_start,
-      "b", "length", &n_len
+      "s", "start", &s_start,
+      "e", "end", &s_end
    );
 
    if (a.length != 2) {
-      defaultGetoptPrinter("slice [flags] <input>", o.options);
+      defaultGetoptPrinter("cat [flags] <input>", o.options);
       return 1;
    }
 
-   auto s_in = a[1];
-   auto s_out = s_in[n_start .. n_start + n_len];
-   s_out.writeln;
+   string s_in = a[1];
+   writeln(s_start ~ s_in ~ s_end);
    return 0;
 }

@@ -40,19 +40,18 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">n_start</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Int</span>(<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;start&#34;</span>)
-   <span style="color:#a6e22e">n_len</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Int</span>(<span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;length&#34;</span>)
+   <span style="color:#a6e22e">s_start</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">String</span>(<span style="color:#e6db74">&#34;s&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;start&#34;</span>)
+   <span style="color:#a6e22e">s_end</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">String</span>(<span style="color:#e6db74">&#34;e&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;end&#34;</span>)
    <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Parse</span>()
 
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">NArg</span>() <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span> {
-      println(<span style="color:#e6db74">&#34;slice [flags] &lt;input&gt;&#34;</span>)
+      println(<span style="color:#e6db74">&#34;cat [flags] &lt;input&gt;&#34;</span>)
       <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">PrintDefaults</span>()
       <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
    }
 
    <span style="color:#a6e22e">s_in</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Arg</span>(<span style="color:#ae81ff">0</span>)
-   <span style="color:#a6e22e">s_out</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s_in</span>[<span style="color:#f92672">*</span><span style="color:#a6e22e">n_start</span> : <span style="color:#f92672">*</span><span style="color:#a6e22e">n_start</span> <span style="color:#f92672">+</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">n_len</span>]
-   println(<span style="color:#a6e22e">s_out</span>)
+   println(<span style="color:#f92672">*</span><span style="color:#a6e22e">s_start</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s_in</span> <span style="color:#f92672">+</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">s_end</span>)
 }
 </code></pre></div>
 <p><a href="https://golang.org/pkg/flag#String">https://golang.org/pkg/flag#String</a></p>
@@ -67,20 +66,19 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n_start</span>, <span style="color:#a6e22e">n_len</span> <span style="color:#66d9ef">int</span>
-   <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">IntVar</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n_start</span>, <span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;start&#34;</span>)
-   <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">IntVar</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">n_len</span>, <span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;length&#34;</span>)
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s_start</span>, <span style="color:#a6e22e">s_end</span> <span style="color:#66d9ef">string</span>
+   <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">StringVar</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">s_start</span>, <span style="color:#e6db74">&#34;s&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;start&#34;</span>)
+   <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">StringVar</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">s_end</span>, <span style="color:#e6db74">&#34;e&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;end&#34;</span>)
    <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Parse</span>()
 
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">NArg</span>() <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span> {
-      println(<span style="color:#e6db74">&#34;slice [flags] &lt;input&gt;&#34;</span>)
+      println(<span style="color:#e6db74">&#34;cat [flags] &lt;input&gt;&#34;</span>)
       <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">PrintDefaults</span>()
       <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
    }
 
    <span style="color:#a6e22e">s_in</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Arg</span>(<span style="color:#ae81ff">0</span>)
-   <span style="color:#a6e22e">s_out</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s_in</span>[<span style="color:#a6e22e">n_start</span> : <span style="color:#a6e22e">n_start</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">n_len</span>]
-   println(<span style="color:#a6e22e">s_out</span>)
+   println(<span style="color:#a6e22e">s_start</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s_in</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s_end</span>)
 }
 </code></pre></div>
 <p><a href="https://golang.org/pkg/flag#StringVar">https://golang.org/pkg/flag#StringVar</a></p>

@@ -3,10 +3,14 @@ using System;
 class Program {
    static void Main() {
       // example 1
-      var s1 = "one\\two";
+      string s1 = default;
       // example 2
-      var s2 = @"one\two";
+      string s2 = "one\\two";
+      // example 3
+      var s3 = "one\\two";
+      // example 4
+      var s4 = @"one\two";
       // print
-      Console.WriteLine(s1 + "," + s2);
+      Console.WriteLine("{0},{1},{2},{3}", s1, s2, s3, s4);
    }
 }

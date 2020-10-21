@@ -6,17 +6,16 @@ import (
 )
 
 func main() {
-   n_start := flag.Int("a", 0, "start")
-   n_len := flag.Int("b", 1, "length")
+   s_start := flag.String("s", "", "start")
+   s_end := flag.String("e", "", "end")
    flag.Parse()
 
    if flag.NArg() != 1 {
-      println("slice [flags] <input>")
+      println("cat [flags] <input>")
       flag.PrintDefaults()
       os.Exit(1)
    }
 
    s_in := flag.Arg(0)
-   s_out := s_in[*n_start : *n_start + *n_len]
-   println(s_out)
+   println(*s_start + s_in + *s_end)
 }

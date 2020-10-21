@@ -1,29 +1,29 @@
-import parseopt, strutils
+import parseopt
 
 var
-   n_len = 1
-   n_start = 0
-   o_opt = initOptParser()
+   s_start = ""
+   s_end = ""
    s_in = ""
+   o_opt = initOptParser()
 
 while true:
    o_opt.next()
    if o_opt.kind == cmdEnd:
       break
    case o_opt.key
-   of "a":
-      n_start = o_opt.val.parseInt
-   of "b":
-      n_len = o_opt.val.parseInt
+   of "s":
+      s_start = o_opt.val
+   of "e":
+      s_end = o_opt.val
    else:
       s_in = o_opt.key
 
 if s_in == "":
-   echo """slice [flags] <input>
--a int
+   echo """cat [flags] <input>
+-s string
    start
--b int
-   length (default 1)"""
+-e string
+   end"""
    quit(1)
 
-echo s_in[n_start ..< n_start + n_len]
+echo s_start & s_in & s_end

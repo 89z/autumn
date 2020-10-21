@@ -2,18 +2,17 @@
 
 if ($argc == 1) {
    echo <<<eof
-slice.php [flags] <input>
--a int
+cat.php [flags] <input>
+-s string
    start
--b int
-   length (default 1)
+-e string
+   end
 
 eof;
    exit(1);
 }
 
-$m = getopt('a:b:', [], $n);
-$s_in = $argv[$n];
-$n_start = array_key_exists('a', $m) ? +$m['a'] : 0;
-$n_len = array_key_exists('b', $m) ? +$m['b'] : 1;
-echo substr($s_in, $n_start, $n_len), "\n";
+$m = getopt('s:e:', [], $n);
+$s_start = array_key_exists('s', $m) ? $m['s'] : '';
+$s_end = array_key_exists('e', $m) ? $m['e'] : '';
+echo $s_start, $argv[$n], $s_end, "\n";
