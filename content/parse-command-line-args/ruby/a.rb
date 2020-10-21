@@ -1,16 +1,29 @@
 require 'getoptlong'
-opts = GetoptLong.new(
+
+s_start = ''
+s_end = ''
+
+GetoptLong.new(
    ['--start', '-s', GetoptLong::REQUIRED_ARGUMENT],
    ['--end', '-e', GetoptLong::REQUIRED_ARGUMENT]
-)
-opts.each { |option, value|
-   case option
+).each { |s_key, s_val|
+   case s_key
    when '--start'
-      s_start = value
+      s_start = s_val
    when '--end'
-      s_end = value
+      s_end = s_val
    end
 }
 
-if ARGV.length
+if ARGV.length != 1
+   puts <<eof
+cat [flags] <input>
+-s string
+   start
+-e string
+   end
+eof
+   exit 1
 end
+
+puts s_start + ARGV[0] + s_end

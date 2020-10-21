@@ -5,7 +5,7 @@ tags: [ruby]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/ARGF.html>
+<https://ruby-doc.org/core/doc/globals_rdoc.html>
 
 ## References
 

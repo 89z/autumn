@@ -7,7 +7,8 @@ tags: [ruby]
 
 <https://ruby-doc.org/stdlib/libdoc/getoptlong/rdoc/GetoptLong.html>
 
-{{< r "b.rb" >}}
+{{< r "map.rb" >}}
+{{< r "str.rb" >}}
 
 <https://ruby-doc.org/stdlib/libdoc/optparse/rdoc/OptionParser.html>
 
