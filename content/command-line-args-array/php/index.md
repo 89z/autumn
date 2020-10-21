@@ -5,8 +5,11 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/reserved.variables.argc>
-- <https://php.net/reserved.variables.argv>
+<https://php.net/reserved.variables.argc>
+
+{{< r "b.php" >}}
+
+<https://php.net/reserved.variables.argv>
 
 ## References
 

@@ -32,64 +32,21 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#34;getoptlong&#34;</span>
-require <span style="color:#e6db74">&#34;rdoc/usage&#34;</span>
- 
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">phone</span>(name, message)
-	puts <span style="color:#e6db74">&#34;Calling </span><span style="color:#e6db74">#{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">...&#34;</span>
-	puts message
-<span style="color:#66d9ef">end</span>
- 
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test</span>
-	phone(<span style="color:#e6db74">&#34;Barry&#34;</span>, <span style="color:#e6db74">&#34;Hi!&#34;</span>)
-	phone(<span style="color:#e6db74">&#34;Cindy&#34;</span>, <span style="color:#e6db74">&#34;Hello!&#34;</span>)
-<span style="color:#66d9ef">end</span>
- 
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>
-	mode <span style="color:#f92672">=</span> <span style="color:#e6db74">:usage</span>
- 
-	name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
-	message <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
- 
-	opts<span style="color:#f92672">=</span><span style="color:#66d9ef">GetoptLong</span><span style="color:#f92672">.</span>new(
-		<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;--help&#34;</span>, <span style="color:#e6db74">&#34;-h&#34;</span>, <span style="color:#66d9ef">GetoptLong</span><span style="color:#f92672">::</span><span style="color:#66d9ef">NO_ARGUMENT</span><span style="color:#f92672">]</span>,
-		<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;--eddy&#34;</span>, <span style="color:#e6db74">&#34;-e&#34;</span>, <span style="color:#66d9ef">GetoptLong</span><span style="color:#f92672">::</span><span style="color:#66d9ef">REQUIRED_ARGUMENT</span><span style="color:#f92672">]</span>,
-		<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;--daniel&#34;</span>, <span style="color:#e6db74">&#34;-d&#34;</span>, <span style="color:#66d9ef">GetoptLong</span><span style="color:#f92672">::</span><span style="color:#66d9ef">REQUIRED_ARGUMENT</span><span style="color:#f92672">]</span>,
-		<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;--test&#34;</span>, <span style="color:#e6db74">&#34;-t&#34;</span>, <span style="color:#66d9ef">GetoptLong</span><span style="color:#f92672">::</span><span style="color:#66d9ef">NO_ARGUMENT</span><span style="color:#f92672">]</span>
-	)
- 
-	opts<span style="color:#f92672">.</span>each { <span style="color:#f92672">|</span>option, value<span style="color:#f92672">|</span>
-		<span style="color:#66d9ef">case</span> option
-		<span style="color:#66d9ef">when</span> <span style="color:#e6db74">&#34;--help&#34;</span>
-			<span style="color:#66d9ef">RDoc</span><span style="color:#f92672">::</span>usage(<span style="color:#e6db74">&#34;Usage&#34;</span>)
-		<span style="color:#66d9ef">when</span> <span style="color:#e6db74">&#34;--eddy&#34;</span>
-			mode <span style="color:#f92672">=</span> <span style="color:#e6db74">:call</span>
-			name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;eddy&#34;</span>
-			message <span style="color:#f92672">=</span> value
-		<span style="color:#66d9ef">when</span> <span style="color:#e6db74">&#34;--daniel&#34;</span>
-			mode <span style="color:#f92672">=</span> <span style="color:#e6db74">:call</span>
-			name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;daniel&#34;</span>
-			message <span style="color:#f92672">=</span> value
-		<span style="color:#66d9ef">when</span> <span style="color:#e6db74">&#34;--test&#34;</span>
-			mode <span style="color:#f92672">=</span> <span style="color:#e6db74">:test</span>
-		<span style="color:#66d9ef">end</span>
-	}
- 
-	<span style="color:#66d9ef">case</span> mode
-	<span style="color:#66d9ef">when</span> <span style="color:#e6db74">:usage</span>
-		<span style="color:#66d9ef">RDoc</span><span style="color:#f92672">::</span>usage(<span style="color:#e6db74">&#34;Usage&#34;</span>)
-	<span style="color:#66d9ef">when</span> <span style="color:#e6db74">:call</span>
-		phone(name, message)
-	<span style="color:#66d9ef">when</span> <span style="color:#e6db74">:test</span>
-		test
-	<span style="color:#66d9ef">end</span>
-<span style="color:#66d9ef">end</span>
-<span style="color:#66d9ef">if</span> __FILE__<span style="color:#f92672">==</span>$0
-	<span style="color:#66d9ef">begin</span>
-		main
-	<span style="color:#66d9ef">rescue</span> <span style="color:#66d9ef">Interrupt</span> <span style="color:#f92672">=&gt;</span> e
-		<span style="color:#66d9ef">nil</span>
-	<span style="color:#66d9ef">end</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;getoptlong&#39;</span>
+opts <span style="color:#f92672">=</span> <span style="color:#66d9ef">GetoptLong</span><span style="color:#f92672">.</span>new(
+   <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;--start&#39;</span>, <span style="color:#e6db74">&#39;-s&#39;</span>, <span style="color:#66d9ef">GetoptLong</span><span style="color:#f92672">::</span><span style="color:#66d9ef">REQUIRED_ARGUMENT</span><span style="color:#f92672">]</span>,
+   <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;--end&#39;</span>, <span style="color:#e6db74">&#39;-e&#39;</span>, <span style="color:#66d9ef">GetoptLong</span><span style="color:#f92672">::</span><span style="color:#66d9ef">REQUIRED_ARGUMENT</span><span style="color:#f92672">]</span>
+)
+opts<span style="color:#f92672">.</span>each { <span style="color:#f92672">|</span>option, value<span style="color:#f92672">|</span>
+   <span style="color:#66d9ef">case</span> option
+   <span style="color:#66d9ef">when</span> <span style="color:#e6db74">&#39;--start&#39;</span>
+      s_start <span style="color:#f92672">=</span> value
+   <span style="color:#66d9ef">when</span> <span style="color:#e6db74">&#39;--end&#39;</span>
+      s_end <span style="color:#f92672">=</span> value
+   <span style="color:#66d9ef">end</span>
+}
+
+<span style="color:#66d9ef">if</span> <span style="color:#66d9ef">ARGV</span><span style="color:#f92672">.</span>length
 <span style="color:#66d9ef">end</span>
 </code></pre></div>
 <p><a href="https://ruby-doc.org/stdlib/libdoc/getoptlong/rdoc/GetoptLong.html">https://ruby-doc.org/stdlib/libdoc/getoptlong/rdoc/GetoptLong.html</a></p>
