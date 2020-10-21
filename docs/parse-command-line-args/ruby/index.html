@@ -32,34 +32,7 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;optparse&#39;</span>
-
-options <span style="color:#f92672">=</span> {}
-<span style="color:#66d9ef">OptionParser</span><span style="color:#f92672">.</span>new <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>opts<span style="color:#f92672">|</span>
-  opts<span style="color:#f92672">.</span>on(<span style="color:#e6db74">&#39;-i&#39;</span>, <span style="color:#e6db74">&#39;--input PATH&#39;</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>arg<span style="color:#f92672">|</span>
-    options<span style="color:#f92672">[</span><span style="color:#e6db74">:input</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arg
-  <span style="color:#66d9ef">end</span>
-<span style="color:#66d9ef">end</span><span style="color:#f92672">.</span>parse!
-
-<span style="color:#66d9ef">if</span> options<span style="color:#f92672">[</span><span style="color:#e6db74">:input</span><span style="color:#f92672">].</span>nil?
-  f <span style="color:#f92672">=</span> $stdin
-<span style="color:#66d9ef">else</span>
-  f <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>open(options<span style="color:#f92672">[</span><span style="color:#e6db74">:input</span><span style="color:#f92672">]</span>)
-<span style="color:#66d9ef">end</span>
-
-<span style="color:#66d9ef">OptionParser</span><span style="color:#f92672">.</span>new <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>opts<span style="color:#f92672">|</span>
-  opts<span style="color:#f92672">.</span>banner <span style="color:#f92672">=</span>
-    <span style="color:#e6db74">&#34;usage: </span><span style="color:#e6db74">#{</span>$PROGRAM_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74"> [OPTIONS] [ARG ...]&#34;</span>
-  opts<span style="color:#f92672">.</span>on(<span style="color:#e6db74">&#39;-i&#39;</span>, <span style="color:#e6db74">&#39;--input PATH&#39;</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>arg<span style="color:#f92672">|</span>
-    options<span style="color:#f92672">[</span><span style="color:#e6db74">:input</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arg
-  <span style="color:#66d9ef">end</span>
-  <span style="color:#66d9ef">if</span> options<span style="color:#f92672">[</span><span style="color:#e6db74">:input</span><span style="color:#f92672">].</span>nil?
-    puts opts
-    exit <span style="color:#ae81ff">1</span>
-  <span style="color:#66d9ef">end</span>
-<span style="color:#66d9ef">end</span><span style="color:#f92672">.</span>parse!
-
-require <span style="color:#e6db74">&#34;getoptlong&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#34;getoptlong&#34;</span>
 require <span style="color:#e6db74">&#34;rdoc/usage&#34;</span>
  
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">phone</span>(name, message)
@@ -111,7 +84,6 @@ require <span style="color:#e6db74">&#34;rdoc/usage&#34;</span>
 		test
 	<span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
- 
 <span style="color:#66d9ef">if</span> __FILE__<span style="color:#f92672">==</span>$0
 	<span style="color:#66d9ef">begin</span>
 		main
@@ -119,6 +91,35 @@ require <span style="color:#e6db74">&#34;rdoc/usage&#34;</span>
 		<span style="color:#66d9ef">nil</span>
 	<span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
+</code></pre></div>
+<p><a href="https://ruby-doc.org/stdlib/libdoc/getoptlong/rdoc/GetoptLong.html">https://ruby-doc.org/stdlib/libdoc/getoptlong/rdoc/GetoptLong.html</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;optparse&#39;</span>
+options <span style="color:#f92672">=</span> {}
+<span style="color:#66d9ef">OptionParser</span><span style="color:#f92672">.</span>new <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>opts<span style="color:#f92672">|</span>
+   opts<span style="color:#f92672">.</span>on(<span style="color:#e6db74">&#39;-i&#39;</span>, <span style="color:#e6db74">&#39;--input PATH&#39;</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>arg<span style="color:#f92672">|</span>
+      options<span style="color:#f92672">[</span><span style="color:#e6db74">:input</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arg
+   <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span><span style="color:#f92672">.</span>parse!
+
+<span style="color:#66d9ef">if</span> options<span style="color:#f92672">[</span><span style="color:#e6db74">:input</span><span style="color:#f92672">].</span>nil?
+   f <span style="color:#f92672">=</span> $stdin
+<span style="color:#66d9ef">else</span>
+   f <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>open(options<span style="color:#f92672">[</span><span style="color:#e6db74">:input</span><span style="color:#f92672">]</span>)
+<span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">OptionParser</span><span style="color:#f92672">.</span>new <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>opts<span style="color:#f92672">|</span>
+  opts<span style="color:#f92672">.</span>banner <span style="color:#f92672">=</span>
+    <span style="color:#e6db74">&#34;usage: </span><span style="color:#e6db74">#{</span>$PROGRAM_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74"> [OPTIONS] [ARG ...]&#34;</span>
+  opts<span style="color:#f92672">.</span>on(<span style="color:#e6db74">&#39;-i&#39;</span>, <span style="color:#e6db74">&#39;--input PATH&#39;</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>arg<span style="color:#f92672">|</span>
+    options<span style="color:#f92672">[</span><span style="color:#e6db74">:input</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arg
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">if</span> options<span style="color:#f92672">[</span><span style="color:#e6db74">:input</span><span style="color:#f92672">].</span>nil?
+    puts opts
+    exit <span style="color:#ae81ff">1</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span><span style="color:#f92672">.</span>parse!
 
 require <span style="color:#e6db74">&#39;optparse&#39;</span>
 sflag <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>
@@ -154,6 +155,7 @@ print <span style="color:#e6db74">&lt;&lt;EOF
 <span style="color:#e6db74">Arguments</span>: <span style="color:#75715e">#{ARGV.inspect}</span>
 <span style="color:#66d9ef">EOF</span>
 </code></pre></div>
+<p><a href="https://ruby-doc.org/stdlib/libdoc/optparse/rdoc/OptionParser.html">https://ruby-doc.org/stdlib/libdoc/optparse/rdoc/OptionParser.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#option-parsing">https://hyperpolyglot.org/scripting2#option-parsing</a></li>
