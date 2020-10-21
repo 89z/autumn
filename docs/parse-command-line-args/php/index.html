@@ -47,8 +47,8 @@
 }
 
 $m <span style="color:#f92672">=</span> <span style="color:#a6e22e">getopt</span>(<span style="color:#e6db74">&#39;s:e:&#39;</span>, [], $n);
-$s_start <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_key_exists</span>(<span style="color:#e6db74">&#39;s&#39;</span>, $m) <span style="color:#f92672">?</span> $m[<span style="color:#e6db74">&#39;s&#39;</span>] <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>;
-$s_end <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_key_exists</span>(<span style="color:#e6db74">&#39;e&#39;</span>, $m) <span style="color:#f92672">?</span> $m[<span style="color:#e6db74">&#39;e&#39;</span>] <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>;
+$s_start <span style="color:#f92672">=</span> <span style="color:#a6e22e">key_exists</span>(<span style="color:#e6db74">&#39;s&#39;</span>, $m) <span style="color:#f92672">?</span> $m[<span style="color:#e6db74">&#39;s&#39;</span>] <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>;
+$s_end <span style="color:#f92672">=</span> <span style="color:#a6e22e">key_exists</span>(<span style="color:#e6db74">&#39;e&#39;</span>, $m) <span style="color:#f92672">?</span> $m[<span style="color:#e6db74">&#39;e&#39;</span>] <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>;
 <span style="color:#66d9ef">echo</span> $s_start, $argv[$n], $s_end, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 </code></pre></div>
 <p><a href="https://php.net/function.getopt">https://php.net/function.getopt</a></p>

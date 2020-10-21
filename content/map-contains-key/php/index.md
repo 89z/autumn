@@ -5,8 +5,11 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.array-key-exists>
-- <https://php.net/function.key-exists>
+<https://php.net/function.array-key-exists>
+
+{{< r "b.php" >}}
+
+<https://php.net/function.key-exists>
 
 ## References
 

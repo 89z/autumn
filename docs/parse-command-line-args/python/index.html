@@ -33,27 +33,12 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> argparse
-
-parser <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser()
-parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--count&#39;</span>, <span style="color:#e6db74">&#39;-c&#39;</span>, dest<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;count&#39;</span>, type<span style="color:#f92672">=</span>int)
-parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--ratio&#39;</span>, <span style="color:#e6db74">&#39;-r&#39;</span>, dest<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ratio&#39;</span>, type<span style="color:#f92672">=</span>float)
-args <span style="color:#f92672">=</span> parser<span style="color:#f92672">.</span>parse_args()
-
-parser <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser()
-parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--input&#39;</span>, <span style="color:#e6db74">&#39;-i&#39;</span>, dest<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;input&#39;</span>, required<span style="color:#f92672">=</span>True)
-args <span style="color:#f92672">=</span> parser<span style="color:#f92672">.</span>parse_args()
-
-parser <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser()
-parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--hosts&#39;</span>, <span style="color:#e6db74">&#39;-H&#39;</span>, dest<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;hosts&#39;</span>, default<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/etc/hosts&#39;</span>)
-args <span style="color:#f92672">=</span> parser<span style="color:#f92672">.</span>parse_args()
-
-parser <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser(description<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Twiddles data&#39;</span>)
-parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--input&#39;</span>, <span style="color:#e6db74">&#39;-i&#39;</span>, dest<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;input&#39;</span>, help<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;path of input file&#39;</span>)
-args <span style="color:#f92672">=</span> parser<span style="color:#f92672">.</span>parse_args()
-
-<span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> args<span style="color:#f92672">.</span>input:
-   parser<span style="color:#f92672">.</span>print_help()
-   sys<span style="color:#f92672">.</span>exit(<span style="color:#ae81ff">1</span>)
+o_in <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser()
+o_in<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--start&#39;</span>, default<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+o_in<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--end&#39;</span>, default<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+o_in<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;input&#39;</span>)
+o_out <span style="color:#f92672">=</span> o_in<span style="color:#f92672">.</span>parse_args()
+<span style="color:#66d9ef">print</span>(o_out<span style="color:#f92672">.</span>start <span style="color:#f92672">+</span> o_out<span style="color:#f92672">.</span>input <span style="color:#f92672">+</span> o_out<span style="color:#f92672">.</span>end)
 </code></pre></div>
 <p><a href="https://docs.python.org/library/argparse.html">https://docs.python.org/library/argparse.html</a></p>
 <h2 id="references">References</h2>

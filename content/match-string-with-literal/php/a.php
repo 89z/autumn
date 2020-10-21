@@ -1,13 +1,8 @@
 <?php
-# example 1
-function hasprefix($s, $s1) {
-   return strpos($s, $s1) === 0;
+
+function str_starts_with($s, $s2) {
+   return strpos($s, $s2) === 0;
 }
-# example 2
-function contains($s, $s2) {
-   return strpos($s, $s2) !== false;
-}
-# print
-$b1 = hasprefix('June', 'Ju');
-$b2 = contains('June', 'un');
-var_dump($b1, $b2);
+
+$b = str_starts_with('June', 'Ju');
+var_dump($b);

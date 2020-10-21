@@ -13,6 +13,6 @@ eof;
 }
 
 $m = getopt('s:e:', [], $n);
-$s_start = array_key_exists('s', $m) ? $m['s'] : '';
-$s_end = array_key_exists('e', $m) ? $m['e'] : '';
+$s_start = key_exists('s', $m) ? $m['s'] : '';
+$s_end = key_exists('e', $m) ? $m['e'] : '';
 echo $s_start, $argv[$n], $s_end, "\n";
