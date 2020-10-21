@@ -1,12 +1,16 @@
 void main() {
    // example 1
-   var s1 = 'one\\two';
+   String s1;
    // example 2
-   var s2 = "one\\two";
+   String s2 = 'one\\two';
    // example 3
-   var s3 = r'one\two';
+   var s3 = 'one\\two';
    // example 4
-   var s4 = r"one\two";
+   var s4 = "one\\two";
+   // example 5
+   var s5 = r'one\two';
+   // example 6
+   var s6 = r"one\two";
    // print
-   print(s1 + ',' + s2 + ',' + s3 + ',' + s4);
+   print([s1, s2, s3, s4, s5, s6]);
 }
