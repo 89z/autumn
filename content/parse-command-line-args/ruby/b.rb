@@ -1,13 +1,14 @@
 require 'optparse'
-o = OptionParser.new do |opts|
-   opts.banner = 'cat [flags] <input>'
-   opts.on('-s', '--start string')
-   opts.on('-e', '--end string')
-end
 m = {:start => '', :end => ''}
+o = OptionParser.new
+o.on('--start string')
+o.on('--end string')
 o.parse!(into: m)
+
 if ARGV.length != 1
+   o.banner = 'cat [flags] <input>'
    puts o
    exit 1
 end
+
 puts m[:start] + ARGV[0] + m[:end]
