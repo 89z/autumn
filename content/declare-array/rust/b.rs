@@ -1,3 +1,4 @@
 fn main() {
-   let a = [10, 11];
+   let a = ["May", "June"];
+   println!("{:?}", a);
 }

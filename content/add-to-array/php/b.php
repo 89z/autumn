@@ -1,4 +1,4 @@
 <?php
-$a = [10, 11];
-array_push($a, 12);
+$a = [];
+array_push($a, 10);
 var_dump($a);

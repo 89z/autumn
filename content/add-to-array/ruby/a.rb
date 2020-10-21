@@ -1,3 +1,3 @@
-a = [10, 11]
-a.push(12)
-puts a
+a = []
+a.push(10)
+p a

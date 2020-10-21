@@ -2,12 +2,12 @@ package main
 import "fmt"
 
 func main() {
-   a := []int{10, 11}
+   var a []int
    // example 1
-   a1 := append(a, 12)
+   a = append(a, 10)
    // example 2
-   a2 := []int{12, 13}
-   a2 = append(a, a2...)
+   a2 := []int{11, 12}
+   a = append(a, a2...)
    // print
-   fmt.Println(a1, a2)
+   fmt.Println(a)
 }

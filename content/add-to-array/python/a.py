@@ -1,10 +1,10 @@
-a = [10, 11]
+a = []
 # example 1
-a += [12, 13]
+a.append(10)
 # example 2
-a.append(14)
+a2 = [11, 12]
+a.extend(a2)
 # example 3
-a3 = [15, 16]
-a.extend(a3)
+a += [13, 14]
 # print
 print(a)
