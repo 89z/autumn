@@ -1,3 +1,3 @@
-var s = "May"
-s &= "June"
-echo s == "MayJune"
+var s: string
+s &= "May"
+echo s

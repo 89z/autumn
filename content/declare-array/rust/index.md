@@ -5,7 +5,8 @@ tags: [rust]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/macro.vec.html>
+- <https://doc.rust-lang.org/std/macro.vec.html>
+- <https://doc.rust-lang.org/std/vec/struct.Vec.html#method.new>
 
 {{< r "b.rs" >}}
 
@@ -14,10 +15,6 @@ tags: [rust]
 {{< r "c.rs" >}}
 
 <https://doc.rust-lang.org/std/primitive.slice.html>
-
-{{< r "d.rs" >}}
-
-<https://doc.rust-lang.org/std/vec/struct.Vec.html#method.new>
 
 ## References
 
