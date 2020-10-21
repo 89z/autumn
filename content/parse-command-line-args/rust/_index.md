@@ -27,12 +27,6 @@ tags: [rust]
 
 <https://crates.io/crates/structopt>
 
-{{< r "e/src/main.rs" >}}
-
-34 deps
-
-<https://crates.io/crates/slap-cli>
-
 ## References
 
 - <https://programming-idioms.org/idiom/162>

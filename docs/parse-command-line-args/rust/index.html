@@ -24,7 +24,7 @@
       
 <h1><a href="/autumn/parse-command-line-args/">Parse command line arguments</a> / Rust</h1>
 <section class="section">
-   <time>Fri Oct 16 2020</time>
+   <time>Wed Oct 21 2020</time>
       
    <a href="/autumn/categories/system/">system</a>
       
@@ -34,36 +34,29 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Args</span> {
-    help: <span style="color:#66d9ef">bool</span>,
-    version: <span style="color:#66d9ef">bool</span>,
-    number: <span style="color:#66d9ef">u32</span>,
-    opt_number: Option<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u32</span><span style="color:#f92672">&gt;</span>,
-    width: <span style="color:#66d9ef">u32</span>,
-    free: Vec<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>,
+   help: <span style="color:#66d9ef">bool</span>,
+   version: <span style="color:#66d9ef">bool</span>,
+   number: <span style="color:#66d9ef">u32</span>,
+   opt_number: Option<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u32</span><span style="color:#f92672">&gt;</span>,
+   width: <span style="color:#66d9ef">u32</span>,
+   free: Vec<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>,
 }
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">parse_width</span>(s: <span style="color:#66d9ef">&amp;</span><span style="color:#66d9ef">str</span>) -&gt; Result<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u32</span>, String<span style="color:#f92672">&gt;</span> {
-    s.parse().map_err(<span style="color:#f92672">|</span>_<span style="color:#f92672">|</span> <span style="color:#e6db74">&#34;not a number&#34;</span>.to_string())
+   s.parse().map_err(<span style="color:#f92672">|</span>_<span style="color:#f92672">|</span> <span style="color:#e6db74">&#34;not a number&#34;</span>.to_string())
 }
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn std::error::Error<span style="color:#f92672">&gt;&gt;</span> {
-    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> args <span style="color:#f92672">=</span> pico_args::Arguments::from_env();
-    <span style="color:#75715e">// Arguments can be parsed in any order.
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> args <span style="color:#f92672">=</span> Args {
-        <span style="color:#75715e">// You can use a slice for multiple commands
-</span><span style="color:#75715e"></span>        help: <span style="color:#a6e22e">args</span>.contains([<span style="color:#e6db74">&#34;-h&#34;</span>, <span style="color:#e6db74">&#34;--help&#34;</span>]),
-        <span style="color:#75715e">// or just a string for a single one.
-</span><span style="color:#75715e"></span>        version: <span style="color:#a6e22e">args</span>.contains(<span style="color:#e6db74">&#34;-V&#34;</span>),
-        <span style="color:#75715e">// Parses an optional value that implements `FromStr`.
-</span><span style="color:#75715e"></span>        number: <span style="color:#a6e22e">args</span>.opt_value_from_str(<span style="color:#e6db74">&#34;--number&#34;</span>)<span style="color:#f92672">?</span>.unwrap_or(<span style="color:#ae81ff">5</span>),
-        <span style="color:#75715e">// Parses an optional value that implements `FromStr`.
-</span><span style="color:#75715e"></span>        opt_number: <span style="color:#a6e22e">args</span>.opt_value_from_str(<span style="color:#e6db74">&#34;--opt-number&#34;</span>)<span style="color:#f92672">?</span>,
-        <span style="color:#75715e">// Parses an optional value using a specified function.
-</span><span style="color:#75715e"></span>        width: <span style="color:#a6e22e">args</span>.opt_value_from_fn(<span style="color:#e6db74">&#34;--width&#34;</span>, parse_width)<span style="color:#f92672">?</span>.unwrap_or(<span style="color:#ae81ff">10</span>),
-        <span style="color:#75715e">// Will return all free arguments or an error if any flags are left.
-</span><span style="color:#75715e"></span>        free: <span style="color:#a6e22e">args</span>.free()<span style="color:#f92672">?</span>,
-    };
-    Ok(())
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> args <span style="color:#f92672">=</span> pico_args::Arguments::from_env();
+   <span style="color:#66d9ef">let</span> args <span style="color:#f92672">=</span> Args {
+      help: <span style="color:#a6e22e">args</span>.contains([<span style="color:#e6db74">&#34;-h&#34;</span>, <span style="color:#e6db74">&#34;--help&#34;</span>]),
+      version: <span style="color:#a6e22e">args</span>.contains(<span style="color:#e6db74">&#34;-V&#34;</span>),
+      number: <span style="color:#a6e22e">args</span>.opt_value_from_str(<span style="color:#e6db74">&#34;--number&#34;</span>)<span style="color:#f92672">?</span>.unwrap_or(<span style="color:#ae81ff">5</span>),
+      opt_number: <span style="color:#a6e22e">args</span>.opt_value_from_str(<span style="color:#e6db74">&#34;--opt-number&#34;</span>)<span style="color:#f92672">?</span>,
+      width: <span style="color:#a6e22e">args</span>.opt_value_from_fn(<span style="color:#e6db74">&#34;--width&#34;</span>, parse_width)<span style="color:#f92672">?</span>.unwrap_or(<span style="color:#ae81ff">10</span>),
+      free: <span style="color:#a6e22e">args</span>.free()<span style="color:#f92672">?</span>,
+   };
+   Ok(())
 }
 </code></pre></div>
 <p>0 deps</p>
@@ -98,9 +91,66 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> clap::Clap;
+<span style="color:#75715e">#[derive(Clap)]</span>
+<span style="color:#75715e">#[clap(version = </span><span style="color:#e6db74">&#34;1.0&#34;</span><span style="color:#75715e">, author = </span><span style="color:#e6db74">&#34;Kevin K. &lt;kbknapp@gmail.com&gt;&#34;</span><span style="color:#75715e">)]</span>
+<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Opts</span> {
+    <span style="color:#e6db74">/// Sets a custom config file. Could have been an Option&lt;T&gt; with no default too
+</span><span style="color:#e6db74"></span>    <span style="color:#75715e">#[clap(short, long, default_value = </span><span style="color:#e6db74">&#34;default.conf&#34;</span><span style="color:#75715e">)]</span>
+    config: String,
+    <span style="color:#e6db74">/// Some input. Because this isn&#39;t an Option&lt;T&gt; it&#39;s required to be used
+</span><span style="color:#e6db74"></span>    input: String,
+    <span style="color:#e6db74">/// A level of verbosity, and can be used multiple times
+</span><span style="color:#e6db74"></span>    <span style="color:#75715e">#[clap(short, long, parse(from_occurrences))]</span>
+    verbose: <span style="color:#66d9ef">i32</span>,
+    <span style="color:#75715e">#[clap(subcommand)]</span>
+    subcmd: <span style="color:#a6e22e">SubCommand</span>,
 }
+
+<span style="color:#75715e">#[derive(Clap)]</span>
+<span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">SubCommand</span> {
+    <span style="color:#75715e">#[clap(version = </span><span style="color:#e6db74">&#34;1.3&#34;</span><span style="color:#75715e">, author = </span><span style="color:#e6db74">&#34;Someone E. &lt;someone_else@other.com&gt;&#34;</span><span style="color:#75715e">)]</span>
+    Test(Test),
+}
+
+<span style="color:#e6db74">/// A subcommand for controlling testing
+</span><span style="color:#e6db74"></span><span style="color:#75715e">#[derive(Clap)]</span>
+<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Test</span> {
+    <span style="color:#e6db74">/// Print debug info
+</span><span style="color:#e6db74"></span>    <span style="color:#75715e">#[clap(short)]</span>
+    debug: <span style="color:#66d9ef">bool</span>
+}
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> opts: <span style="color:#a6e22e">Opts</span> <span style="color:#f92672">=</span> Opts::parse();
+
+    <span style="color:#75715e">// Gets a value for config if supplied by user, or defaults to &#34;default.conf&#34;
+</span><span style="color:#75715e"></span>    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Value for config: {}&#34;</span>, opts.config);
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Using input file: {}&#34;</span>, opts.input);
+
+    <span style="color:#75715e">// Vary the output based on how many times the user used the &#34;verbose&#34; flag
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// (i.e. &#39;myprog -v -v -v&#39; or &#39;myprog -vvv&#39; vs &#39;myprog -v&#39;
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">match</span> opts.verbose {
+        <span style="color:#ae81ff">0</span> <span style="color:#f92672">=&gt;</span> println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;No verbose info&#34;</span>),
+        <span style="color:#ae81ff">1</span> <span style="color:#f92672">=&gt;</span> println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Some verbose info&#34;</span>),
+        <span style="color:#ae81ff">2</span> <span style="color:#f92672">=&gt;</span> println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Tons of verbose info&#34;</span>),
+        <span style="color:#ae81ff">3</span> <span style="color:#f92672">|</span> _ <span style="color:#f92672">=&gt;</span> println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Don&#39;t be crazy&#34;</span>),
+    }
+
+    <span style="color:#75715e">// You can handle information about subcommands by requesting their matches by name
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// (as below), requesting just the name used, or both at the same time
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">match</span> opts.subcmd {
+        SubCommand::Test(t) <span style="color:#f92672">=&gt;</span> {
+            <span style="color:#66d9ef">if</span> t.debug {
+                println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Printing debug info...&#34;</span>);
+            } <span style="color:#66d9ef">else</span> {
+                println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Printing normally...&#34;</span>);
+            }
+        }
+    }
+
+    <span style="color:#75715e">// more program logic goes here...
+</span><span style="color:#75715e"></span>}
 </code></pre></div>
 <p>12 deps</p>
 <p><a href="https://crates.io/crates/clap">https://crates.io/crates/clap</a></p>
@@ -128,15 +178,6 @@
 </code></pre></div>
 <p>24 deps</p>
 <p><a href="https://crates.io/crates/structopt">https://crates.io/crates/structopt</a></p>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
-}
-</code></pre></div>
-<p>34 deps</p>
-<p><a href="https://crates.io/crates/slap-cli">https://crates.io/crates/slap-cli</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/162">https://programming-idioms.org/idiom/162</a></li>
