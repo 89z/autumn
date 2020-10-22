@@ -16,7 +16,5 @@ if ($n > 0) {
 } else {
    $s2 = 'zero';
 }
-# example 3
-$s3 = $n < 0 ? '-' : '+';
 # print
-var_dump($s1 == '+', $s2 == '+', $s3 == '+');
+var_dump($s1 == '+', $s2 == '+');

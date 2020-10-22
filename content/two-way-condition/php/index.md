@@ -5,8 +5,11 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/control-structures.elseif>
-- [ternary operator](//php.net/operators.comparison#language.operators.comparison.ternary)
+<https://php.net/control-structures.elseif>
+
+{{< r "b.php" >}}
+
+<https://php.net/operators.comparison#language.operators.comparison.ternary>
 
 ## References
 

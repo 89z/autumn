@@ -5,8 +5,11 @@ tags: [javascript]
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Logical_Operators>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/if...else>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Statements/if...else>
+
+{{< r "b.js" >}}
+
+<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator>
 
 ## References
 

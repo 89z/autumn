@@ -5,11 +5,21 @@ tags: [javascript]
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/parseInt>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/parseInt>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/parseInt>
+
+{{< r "b.js" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number>
+
+{{< r "c.js" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/parseInt>
+
+{{< r "d.js" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators>
 
 ## References
 
-<https://programming-idioms.org/idiom/22>
+- <https://hyperpolyglot.org/scripting#str-to-num>
+- <https://programming-idioms.org/idiom/22>

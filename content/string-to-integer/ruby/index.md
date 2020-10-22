@@ -9,4 +9,5 @@ tags: [ruby]
 
 ## References
 
+- <https://hyperpolyglot.org/scripting#str-to-num>
 - <https://programming-idioms.org/idiom/22>

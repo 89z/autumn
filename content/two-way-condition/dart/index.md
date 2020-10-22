@@ -9,6 +9,6 @@ tags: [dart]
 
 ## References
 
-- <https://hyperpolyglot.org/web#if-note>
+- <https://hyperpolyglot.org/web#if>
 - <https://programming-idioms.org/idiom/131>
 - <https://rosettacode.org/wiki/Conditional_structures>

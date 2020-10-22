@@ -1,15 +1,10 @@
 n = 10
 
-# example 1
 if n > 0:
-   s1 = '+'
+   s = '+'
 elif n < 0:
-   s1 = '-'
+   s = '-'
 else:
-   s1 = 'zero'
+   s = 'zero'
 
-# example 2
-s2 = '+' if n > 0 else '-'
-
-# print
-print(s1 == '+', s2 == '+')
+print(s == '+')

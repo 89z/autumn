@@ -1,14 +1,11 @@
-let n = 10;
-// example 1
-let s1;
+let s, n = 10;
+
 if (n > 0) {
-   s1 = '+';
+   s = '+';
 } else if (n < 0) {
-   s1 = '-';
+   s = '-';
 } else {
-   s1 = 'zero';
+   s = 'zero';
 }
-// example 2
-let s2 = n > 0 ? '+' : '-';
-// print
-console.log(s1 == '+', s2 == '+');
+
+console.log(s == '+');

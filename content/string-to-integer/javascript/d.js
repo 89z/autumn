@@ -1,3 +1,3 @@
 let s = '11';
-let n = Number.parseInt(s);
+let n = +(s);
 console.log(n === 11);

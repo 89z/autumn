@@ -5,8 +5,11 @@ tags: [python]
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/reference/compound_stmts.html#if>
-- <https://docs.python.org/reference/expressions.html#if-expr>
+<https://docs.python.org/reference/compound_stmts.html#if>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/reference/expressions.html#if-expr>
 
 ## References
 
