@@ -1,13 +1,26 @@
-use pico_args::{Arguments, Error};
+use pico_args::Arguments;
+use std::process;
 
-fn main() -> Result<(), Error> {
+fn main() {
    let mut o = Arguments::from_env();
-   let s_start = o.opt_value_from_str("--start")?.unwrap_or(String::new());
-   let s_end = o.opt_value_from_str("--end")?.unwrap_or(String::new());
-   let a = o.free()?;
+
+   let s_start: String = o.opt_value_from_str("-s").
+   unwrap_or(None).unwrap_or_default();
+
+   let s_end: String = o.opt_value_from_str("-e").
+   unwrap_or(None).unwrap_or_default();
+
+   let a = o.free().unwrap_or_default();
+
    if a.len() != 1 {
-      let a = Error::ArgumentParsingFailed{cause:String::from("free")};
-      return Err(a);
+      println!("cat [flags] <input>
+-s string
+   start
+-e string
+   end");
+      process::exit(1);
    }
-   Ok(())
+
+   let s_in = &a[0];
+   println!("{}", s_start + &s_in + &s_end);
 }
