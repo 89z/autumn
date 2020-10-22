@@ -17,5 +17,6 @@
 **/dart/.packages
 **/dart/pubspec.lock
 **/rust/Cargo.lock
+**/rust/a/Cargo.lock
+**/rust/a/target
 **/rust/target
-*.exe

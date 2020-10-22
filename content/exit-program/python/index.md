@@ -4,11 +4,13 @@ tags: [python]
 ---
 
 {{< r "abort.py" >}}
+
+<https://docs.python.org/library/os.html#os.abort>
+
 {{< r "exit-num.py" >}}
 {{< r "exit-str.py" >}}
 
-- <https://docs.python.org/library/os.html#os.abort>
-- <https://docs.python.org/library/sys.html#sys.exit>
+<https://docs.python.org/library/sys.html#sys.exit>
 
 ## References
 

@@ -1,6 +1,6 @@
 package main
+import "os"
 
 func main() {
-   return
-   println("May")
+   os.Exit(1)
 }

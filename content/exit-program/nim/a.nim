@@ -1,1 +1,1 @@
-quit(QuitFailure)
+quit QuitFailure

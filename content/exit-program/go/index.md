@@ -3,13 +3,17 @@ title: Go
 tags: [go]
 ---
 
-{{< r "exit.go" >}}
-{{< r "log.go" >}}
-{{< r "return.go" >}}
+{{< r "a.go" >}}
 
-- <https://golang.org/pkg/log#Fatal>
-- <https://golang.org/pkg/os#Exit>
-- <https://golang.org/ref/spec#Return_statements>
+<https://golang.org/pkg/log#Fatal>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/os#Exit>
+
+{{< r "c.go" >}}
+
+<https://golang.org/ref/spec#Return_statements>
 
 ## References
 
