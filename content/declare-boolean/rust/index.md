@@ -9,4 +9,5 @@ tags: [rust]
 
 ## References
 
+- <https://hyperpolyglot.org/rust#true-false>
 - <https://rosettacode.org/wiki/Boolean_values>

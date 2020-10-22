@@ -1,8 +1,6 @@
-use std::{env, io};
+use std::env;
 
-fn main() -> io::Result<()> {
-   env::set_current_dir("..")?;
-   let o = env::current_dir()?;
-   println!("{:?}", o);
-   Ok(())
+fn main() {
+   let r = env::set_current_dir("..");
+   println!("{:?}", r);
 }

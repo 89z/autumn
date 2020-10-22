@@ -9,4 +9,5 @@ tags: [rust]
 
 ## References
 
+- <https://hyperpolyglot.org/rust#end-of-line-comment>
 - <https://rosettacode.org/wiki/Comments>

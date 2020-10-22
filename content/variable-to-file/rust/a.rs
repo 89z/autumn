@@ -1,7 +1,8 @@
-use std::{io, fs};
+use std::fs;
 
-fn main() -> io::Result<()> {
-   let s = "May\n";
-   fs::write("a.txt", s)?;
-   Ok(())
+fn main() {
+   let r = fs::write("a.txt", "May\n");
+   if let Err(e) = r {
+      println!("{}", e);
+   }
 }

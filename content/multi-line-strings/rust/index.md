@@ -5,7 +5,7 @@ tags: [rust]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/primitive.str.html>
+<https://doc.rust-lang.org/reference/tokens.html#string-literals>
 
 ## References
 

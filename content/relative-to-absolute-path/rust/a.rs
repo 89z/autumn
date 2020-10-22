@@ -1,8 +1,7 @@
-use std::{fs, io};
+use std::fs;
 
-fn main() -> io::Result<()> {
-   let s = "index.md";
-   let s1 = fs::canonicalize(s)?;
-   println!("{:?}", s1);
-   Ok(())
+fn main() {
+   let r = fs::canonicalize("index.md");
+   let s = r.unwrap_or_default();
+   println!("{:?}", s);
 }

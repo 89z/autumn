@@ -4,10 +4,12 @@ tags: [rust]
 ---
 
 {{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/fs/fn.write.html>
+
 {{< r "b.rs" >}}
 
-- <https://doc.rust-lang.org/std/fs/fn.write.html>
-- <https://doc.rust-lang.org/std/io/trait.Write.html#tymethod.write>
+<https://doc.rust-lang.org/std/io/trait.Write.html#tymethod.write>
 
 ## References
 

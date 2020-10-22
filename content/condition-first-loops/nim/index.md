@@ -13,5 +13,4 @@ tags: [nim]
 
 ## References
 
-- <https://rosettacode.org/wiki/Loops/For>
-- <https://rosettacode.org/wiki/Loops/While>
+<https://rosettacode.org/wiki/Loops/While>

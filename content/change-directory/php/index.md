@@ -9,4 +9,5 @@ tags: [php]
 
 ## Refereces
 
-<https://hyperpolyglot.org/scripting2#working-dir>
+- <https://hyperpolyglot.org/scripting2#working-dir>
+- <https://programming-idioms.org/idiom/106>

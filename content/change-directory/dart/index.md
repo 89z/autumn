@@ -9,4 +9,4 @@ tags: [dart]
 
 ## References
 
-<https://stackoverflow.com/questions/33020117>
+<https://programming-idioms.org/idiom/106>

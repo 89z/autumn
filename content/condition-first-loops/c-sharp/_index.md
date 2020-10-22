@@ -15,5 +15,4 @@ tags: [c-sharp]
 
 - <https://hyperpolyglot.org/cpp#while>
 - <https://programming-idioms.org/idiom/2>
-- <https://rosettacode.org/wiki/Loops/For>
 - <https://rosettacode.org/wiki/Loops/While>
