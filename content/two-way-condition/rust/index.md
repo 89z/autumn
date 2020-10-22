@@ -5,7 +5,8 @@ tags: [rust]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/keyword.else.html>
+- <https://doc.rust-lang.org/std/keyword.else.html>
+- <https://doc.rust-lang.org/std/result/enum.Result.html#method.unwrap_or>
 
 ## References
 
