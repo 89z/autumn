@@ -15,12 +15,6 @@ tags: [rust]
 
 <https://crates.io/crates/minreq>
 
-{{< r "c/src/main.rs" >}}
-
-3 deps
-
-<https://crates.io/crates/solicit>
-
 ## References
 
 - <https://programming-idioms.org/idiom/101>
