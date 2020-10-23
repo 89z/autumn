@@ -30,7 +30,7 @@
       
 </section>
    
-   <p>
+   
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System.Collections.Generic;
@@ -38,15 +38,12 @@
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> m1 = <span style="color:#66d9ef">new</span> Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;();
-      <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> m2 = <span style="color:#66d9ef">new</span> Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;{};
-      <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>      Console.WriteLine(<span style="color:#e6db74">&#34;{0}\n{1}&#34;</span>, m1, m2);
+      <span style="color:#66d9ef">var</span> m = <span style="color:#66d9ef">new</span> Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;{};
+      Console.WriteLine(m);
    }
 }
 </code></pre></div>
+<p><a href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2</a></p>
 
 
 
@@ -62,28 +59,7 @@
    }
 }
 </code></pre></div>
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
-<span style="color:#66d9ef">using</span> System.Collections.Generic;
-
-<span style="color:#66d9ef">namespace</span> Autumn {
-   <span style="color:#66d9ef">using</span> Dict = Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;;
-   <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
-      <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-         <span style="color:#66d9ef">var</span> m = <span style="color:#66d9ef">new</span> Dict {
-            {<span style="color:#e6db74">&#34;year&#34;</span>, <span style="color:#ae81ff">2019</span>}, {<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">12</span>}
-         };
-         Console.WriteLine(m);
-      }
-   }
-}
-</code></pre></div></p>
-<ul>
-<li><a href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2</a></li>
-<li><a href="https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer">https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer</a></li>
-</ul>
+<p><a href="https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer">https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/cpp#dict-ctor">https://hyperpolyglot.org/cpp#dict-ctor</a></li>

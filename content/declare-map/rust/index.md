@@ -10,5 +10,5 @@ tags: [rust]
 ## References
 
 - <https://hyperpolyglot.org/rust#declare-dict>
-- <https://programming-idioms.org/idiom/172>
+- <https://programming-idioms.org/idiom/8>
 - <https://rosettacode.org/wiki/Associative_array/Creation>

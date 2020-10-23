@@ -5,10 +5,10 @@ tags: [ruby]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Hash.html#method-i-5B-5D-3D>
+<https://ruby-doc.org/core/Hash.html>
 
 ## References
 
-- <https://hyperpolyglot.org/scripting#dict-update>
-- <https://programming-idioms.org/idiom/172>
+- <https://hyperpolyglot.org/scripting#dict-literal>
+- <https://programming-idioms.org/idiom/8>
 - <https://rosettacode.org/wiki/Associative_array/Creation>

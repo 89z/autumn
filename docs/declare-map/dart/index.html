@@ -33,16 +33,25 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> m <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;year&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2019</span>};
-   m[<span style="color:#e6db74">&#39;month&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>;
-   print(m);
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   Map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> m1;
+   print(m1);
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> m2 <span style="color:#f92672">=</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>{};
+   print(m2);
+   <span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> m3 <span style="color:#f92672">=</span> Map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>();
+   print(m3);
+   <span style="color:#75715e">// example 4
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> m4 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;year&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2019</span>, <span style="color:#e6db74">&#39;month&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">12</span>};
+   print(m4);
 }
 </code></pre></div>
-<p><a href="https://api.dart.dev/dart-core/Map/operator_put.html">https://api.dart.dev/dart-core/Map/operator_put.html</a></p>
+<p><a href="https://dart.dev/guides/language/language-tour#maps">https://dart.dev/guides/language/language-tour#maps</a></p>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://hyperpolyglot.org/web#dict-update">https://hyperpolyglot.org/web#dict-update</a></li>
-<li><a href="https://programming-idioms.org/idiom/172">https://programming-idioms.org/idiom/172</a></li>
+<li><a href="https://hyperpolyglot.org/web#dict-literal-note">https://hyperpolyglot.org/web#dict-literal-note</a></li>
+<li><a href="https://programming-idioms.org/idiom/8">https://programming-idioms.org/idiom/8</a></li>
 <li><a href="https://rosettacode.org/wiki/Associative_array/Creation">https://rosettacode.org/wiki/Associative_array/Creation</a></li>
 </ul>
 

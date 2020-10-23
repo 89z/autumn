@@ -5,10 +5,10 @@ tags: [dart]
 
 {{< r "a.dart" >}}
 
-<https://api.dart.dev/dart-core/Map/operator_put.html>
+<https://dart.dev/guides/language/language-tour#maps>
 
 ## References
 
-- <https://hyperpolyglot.org/web#dict-update>
-- <https://programming-idioms.org/idiom/172>
+- <https://hyperpolyglot.org/web#dict-literal-note>
+- <https://programming-idioms.org/idiom/8>
 - <https://rosettacode.org/wiki/Associative_array/Creation>
