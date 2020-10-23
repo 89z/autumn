@@ -10,7 +10,7 @@
    <link rel="stylesheet" href="/autumn/main.css">
 </head>
 <body>
-   <header class="page">
+   <header class="section">
 
       <h2><a href="/autumn">Autumn</a></h2>
 
@@ -18,36 +18,54 @@
       <a href="/autumn/tags">Tags</a>
       <a href="https://github.com/nu8/autumn">Repository</a>
    </header>
-   <main class="page">
+   <main class="section">
 
-<h1>
-   <a href="/autumn/extract-string-by-pattern/">Extract string by pattern</a> / Rust
-</h1>
-<section class="page">
+   
+      
+<h1><a href="/autumn/extract-string-by-pattern/">Extract string by pattern</a> / Rust</h1>
+<section class="section">
    <time>Wed Aug 26 2020</time>
-   
+      
    <a href="/autumn/categories/string/">string</a>
-   
+      
 </section>
    
+   
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> regex::{Error, Regex};
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> regex::Regex;
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Error<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> o_re <span style="color:#f92672">=</span> Regex::new(<span style="color:#e6db74">&#34;a(..)&#34;</span>)<span style="color:#f92672">?</span>;
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> o_cap <span style="color:#f92672">=</span> o_re.captures(<span style="color:#e6db74">&#34;January&#34;</span>);
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), <span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> o_re <span style="color:#f92672">=</span> Regex::new(<span style="color:#e6db74">&#34;a(..)&#34;</span>).or_else(<span style="color:#f92672">|</span>e<span style="color:#f92672">|</span> {
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e);
+      <span style="color:#66d9ef">return</span> Err(<span style="color:#ae81ff">1</span>);
+   })<span style="color:#f92672">?</span>;
+
+   <span style="color:#66d9ef">let</span> o_cap <span style="color:#f92672">=</span> o_re.captures(<span style="color:#e6db74">&#34;January&#34;</span>);
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o_cap);
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">for</span> o_cap <span style="color:#66d9ef">in</span> o_re.captures_iter(<span style="color:#e6db74">&#34;January&#34;</span>) {
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o_cap);
-   }
-   <span style="color:#75715e">// return
-</span><span style="color:#75715e"></span>   Ok(())
+   Ok(())
 }
 </code></pre></div>
-<p><a href="https://docs.rs/regex">https://docs.rs/regex</a></p>
+<p><a href="https://docs.rs/regex/1.4.1/regex/struct.Regex.html#method.captures">https://docs.rs/regex/1.4.1/regex/struct.Regex.html#method.captures</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> regex::Regex;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), <span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> o_re <span style="color:#f92672">=</span> Regex::new(<span style="color:#e6db74">&#34;a(..)&#34;</span>).or_else(<span style="color:#f92672">|</span>e<span style="color:#f92672">|</span> {
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e);
+      <span style="color:#66d9ef">return</span> Err(<span style="color:#ae81ff">1</span>);
+   })<span style="color:#f92672">?</span>;
+
+   <span style="color:#66d9ef">for</span> o_cap <span style="color:#66d9ef">in</span> o_re.captures_iter(<span style="color:#e6db74">&#34;January&#34;</span>) {
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o_cap);
+   }
+
+   Ok(())
+}
+</code></pre></div>
+<p><a href="https://docs.rs/regex/1.4.1/regex/struct.Regex.html#method.captures_iter">https://docs.rs/regex/1.4.1/regex/struct.Regex.html#method.captures_iter</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/83">https://programming-idioms.org/idiom/83</a></li>

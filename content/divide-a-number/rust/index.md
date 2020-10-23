@@ -9,4 +9,5 @@ tags: [rust]
 
 ## References
 
+- <https://hyperpolyglot.org/rust#arith-op>
 - <https://rosettacode.org/wiki/Arithmetic/Integer>

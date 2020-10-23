@@ -5,8 +5,11 @@ tags: [rust]
 
 {{< r "a.rs" >}}
 
-- <https://doc.rust-lang.org/std/env/fn.var.html>
-- <https://doc.rust-lang.org/std/macro.env.html>
+<https://doc.rust-lang.org/std/env/fn.var.html>
+
+{{< r "b.rs" >}}
+
+<https://doc.rust-lang.org/std/macro.env.html>
 
 ## References
 
