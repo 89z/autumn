@@ -9,4 +9,5 @@ tags: [rust]
 
 ## References
 
-<https://rosettacode.org/wiki/Literals/Integer>
+- <https://hyperpolyglot.org/rust#int-type>
+- <https://rosettacode.org/wiki/Literals/Integer>

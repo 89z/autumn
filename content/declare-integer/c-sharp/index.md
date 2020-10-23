@@ -9,4 +9,5 @@ tags: [c-sharp]
 
 ## References
 
-<https://rosettacode.org/wiki/Literals/Integer>
+- <https://hyperpolyglot.org/cpp#int-type>
+- <https://rosettacode.org/wiki/Literals/Integer>

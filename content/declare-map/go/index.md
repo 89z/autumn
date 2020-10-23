@@ -9,5 +9,6 @@ tags: [go]
 
 ## References
 
+- <https://hyperpolyglot.org/c#declare-dict>
 - <https://programming-idioms.org/idiom/172>
 - <https://rosettacode.org/wiki/Associative_array/Creation>

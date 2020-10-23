@@ -5,11 +5,18 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.array-merge>
-- <https://php.net/language.types.array>
+<https://php.net/function.array>
+
+{{< r "b.php" >}}
+
+<https://php.net/language.types.array>
+
+{{< r "c.php" >}}
+
+<https://php.net/types.array#language.types.array.syntax.modifying>
 
 ## References
 
-- <https://hyperpolyglot.org/scripting#dict-update>
+- <https://hyperpolyglot.org/scripting#dict-literal>
 - <https://programming-idioms.org/idiom/172>
 - <https://rosettacode.org/wiki/Associative_array/Creation>

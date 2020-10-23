@@ -9,4 +9,5 @@ tags: [dart]
 
 ## References
 
-<https://rosettacode.org/wiki/Literals/Integer>
+- <https://hyperpolyglot.org/web#int-type>
+- <https://rosettacode.org/wiki/Literals/Integer>
