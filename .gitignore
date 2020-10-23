@@ -21,4 +21,6 @@
 **/rust/a/target
 **/rust/b/Cargo.lock
 **/rust/b/target
+**/rust/c/Cargo.lock
+**/rust/c/target
 **/rust/target

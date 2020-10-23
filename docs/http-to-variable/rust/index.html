@@ -35,39 +35,54 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> curl::easy::{Easy, WriteError};
-<span style="color:#66d9ef">use</span> std::io::{stdout, Write};
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> h2::client;
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), <span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> o <span style="color:#f92672">=</span> Easy::new();
+<span style="color:#66d9ef">use</span> http::{Request, Method};
+<span style="color:#66d9ef">use</span> std::error::Error;
+<span style="color:#66d9ef">use</span> tokio::net::TcpStream;
 
-   o.url(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>).or_else(<span style="color:#f92672">|</span>e<span style="color:#f92672">|</span> {
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e);
-      Err(<span style="color:#ae81ff">1</span>)
-   })<span style="color:#f92672">?</span>;
+<span style="color:#75715e">#[tokio::main]</span>
+<span style="color:#66d9ef">pub</span> async <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
+    <span style="color:#75715e">// Establish TCP connection to the server.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> tcp <span style="color:#f92672">=</span> TcpStream::connect(<span style="color:#e6db74">&#34;127.0.0.1:5928&#34;</span>).await<span style="color:#f92672">?</span>;
+    <span style="color:#66d9ef">let</span> (h2, connection) <span style="color:#f92672">=</span> client::handshake(tcp).await<span style="color:#f92672">?</span>;
+    tokio::spawn(async <span style="color:#66d9ef">move</span> {
+        connection.await.unwrap();
+    });
 
-   o.write_function(<span style="color:#f92672">|</span>y<span style="color:#f92672">|</span> {
-      stdout().write(y).or(Err(WriteError::Pause))
-   }).or_else(<span style="color:#f92672">|</span>e<span style="color:#f92672">|</span> {
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e);
-      Err(<span style="color:#ae81ff">1</span>)
-   })<span style="color:#f92672">?</span>;
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> h2 <span style="color:#f92672">=</span> h2.ready().await<span style="color:#f92672">?</span>;
+    <span style="color:#75715e">// Prepare the HTTP request to send to the server.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> request <span style="color:#f92672">=</span> Request::builder()
+                    .method(Method::GET)
+                    .uri(<span style="color:#e6db74">&#34;https://www.example.com/&#34;</span>)
+                    .body(())
+                    .unwrap();
 
-   o.perform().or_else(<span style="color:#f92672">|</span>e<span style="color:#f92672">|</span> {
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e);
-      Err(<span style="color:#ae81ff">1</span>)
-   })<span style="color:#f92672">?</span>;
+    <span style="color:#75715e">// Send the request. The second tuple item allows the caller
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// to stream a request body.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> (response, _) <span style="color:#f92672">=</span> h2.send_request(request, <span style="color:#66d9ef">true</span>).unwrap();
 
-   Ok(())
-}
-</code></pre></div>
-<p>17 deps</p>
-<p><a href="https://crates.io/crates/curl">https://crates.io/crates/curl</a></p>
+    <span style="color:#66d9ef">let</span> (head, <span style="color:#66d9ef">mut</span> body) <span style="color:#f92672">=</span> response.await<span style="color:#f92672">?</span>.into_parts();
 
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Received response: {:?}&#34;</span>, head);
 
+    <span style="color:#75715e">// The `flow_control` handle allows the caller to manage
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// flow control.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Whenever data is received, the caller is responsible for
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// releasing capacity back to the server once it has freed
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// the data from memory.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> flow_control <span style="color:#f92672">=</span> body.flow_control().clone();
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
+    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">let</span> Some(chunk) <span style="color:#f92672">=</span> body.data().await {
+        <span style="color:#66d9ef">let</span> chunk <span style="color:#f92672">=</span> chunk<span style="color:#f92672">?</span>;
+        println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;RX: {:?}&#34;</span>, chunk);
+
+        <span style="color:#75715e">// Let the server send more data.
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">let</span> _ <span style="color:#f92672">=</span> flow_control.release_capacity(chunk.len());
+    }
+
+    Ok(())
 }
 </code></pre></div>
 <p>28 deps</p>
@@ -75,8 +90,14 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> minreq;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), minreq::Error<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> s_in <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>;
+   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> minreq::get(s_in).send()<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> s_out <span style="color:#f92672">=</span> o.as_str()<span style="color:#f92672">?</span>;
+   print<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s_out);
+   Ok(())
 }
 </code></pre></div>
 <p>0 deps</p>
@@ -84,8 +105,41 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">crate</span> solicit;
+<span style="color:#66d9ef">use</span> solicit::http::client::CleartextConnector;
+<span style="color:#66d9ef">use</span> solicit::client::SimpleClient;
+<span style="color:#66d9ef">use</span> std::<span style="color:#66d9ef">str</span>;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+  <span style="color:#75715e">// Connect to an HTTP/2 aware server
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> connector <span style="color:#f92672">=</span> CleartextConnector::new(<span style="color:#e6db74">&#34;http2bin.org&#34;</span>);
+  <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> client <span style="color:#f92672">=</span> SimpleClient::with_connector(connector).unwrap();
+  <span style="color:#66d9ef">let</span> response <span style="color:#f92672">=</span> client.get(<span style="color:#e6db74">b&#34;/get&#34;</span>, <span style="color:#f92672">&amp;</span>[]).unwrap();
+  assert_eq<span style="color:#f92672">!</span>(response.stream_id, <span style="color:#ae81ff">1</span>);
+  assert_eq<span style="color:#f92672">!</span>(response.status_code().unwrap(), <span style="color:#ae81ff">200</span>);
+  <span style="color:#75715e">// Dump the headers and the response body to stdout.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// They are returned as raw bytes for the user to do as they please.
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// (Note: in general directly decoding assuming a utf8 encoding might not
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// always work -- this is meant as a simple example that shows that the
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// response is well formed.)
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> header <span style="color:#66d9ef">in</span> response.headers.iter() {
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}: {}&#34;</span>,
+        <span style="color:#66d9ef">str</span>::from_utf8(header.name()).unwrap(),
+        <span style="color:#66d9ef">str</span>::from_utf8(header.value()).unwrap());
+  }
+  println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, <span style="color:#66d9ef">str</span>::from_utf8(<span style="color:#f92672">&amp;</span>response.body).unwrap());
+  <span style="color:#75715e">// We can issue more requests after reading this one...
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// These calls block until the request itself is sent, but do not wait
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// for a response.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> req_id1 <span style="color:#f92672">=</span> client.request(<span style="color:#e6db74">b&#34;GET&#34;</span>, <span style="color:#e6db74">b&#34;/get?hi=hello&#34;</span>, <span style="color:#f92672">&amp;</span>[], None).unwrap();
+  <span style="color:#66d9ef">let</span> req_id2 <span style="color:#f92672">=</span> client.request(<span style="color:#e6db74">b&#34;GET&#34;</span>, <span style="color:#e6db74">b&#34;/asdf&#34;</span>, <span style="color:#f92672">&amp;</span>[], None).unwrap();
+  <span style="color:#75715e">// Now we get a response for both requests... This does block.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> (resp1, resp2) <span style="color:#f92672">=</span> (
+      client.get_response(req_id1).unwrap(),
+      client.get_response(req_id2).unwrap(),
+  );
+  assert_eq<span style="color:#f92672">!</span>(resp1.status_code().unwrap(), <span style="color:#ae81ff">200</span>);
+  assert_eq<span style="color:#f92672">!</span>(resp2.status_code().unwrap(), <span style="color:#ae81ff">404</span>);
 }
 </code></pre></div>
 <p>3 deps</p>
