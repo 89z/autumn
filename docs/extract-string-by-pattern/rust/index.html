@@ -38,7 +38,7 @@
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), <span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span> {
    <span style="color:#66d9ef">let</span> o_re <span style="color:#f92672">=</span> Regex::new(<span style="color:#e6db74">&#34;a(..)&#34;</span>).or_else(<span style="color:#f92672">|</span>e<span style="color:#f92672">|</span> {
       println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e);
-      <span style="color:#66d9ef">return</span> Err(<span style="color:#ae81ff">1</span>);
+      Err(<span style="color:#ae81ff">1</span>)
    })<span style="color:#f92672">?</span>;
 
    <span style="color:#66d9ef">let</span> o_cap <span style="color:#f92672">=</span> o_re.captures(<span style="color:#e6db74">&#34;January&#34;</span>);

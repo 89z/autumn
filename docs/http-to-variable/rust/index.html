@@ -10,7 +10,7 @@
    <link rel="stylesheet" href="/autumn/main.css">
 </head>
 <body>
-   <header class="page">
+   <header class="section">
 
       <h2><a href="/autumn">Autumn</a></h2>
 
@@ -18,39 +18,78 @@
       <a href="/autumn/tags">Tags</a>
       <a href="https://github.com/nu8/autumn">Repository</a>
    </header>
-   <main class="page">
+   <main class="section">
 
-<h1>
-   <a href="/autumn/http-to-variable/">HTTP to variable</a> / Rust
-</h1>
-<section class="page">
-   <time>Fri Sep 11 2020</time>
    
+      
+<h1><a href="/autumn/http-to-variable/">HTTP to variable</a> / Rust</h1>
+<section class="section">
+   <time>Fri Oct 23 2020</time>
+      
    <a href="/autumn/categories/input-output/">input-output</a>
-   
+      
    <a href="/autumn/categories/network/">network</a>
-   
+      
 </section>
+   
    
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> curl::easy::{Easy, WriteError};
 <span style="color:#66d9ef">use</span> std::io::{stdout, Write};
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), curl::Error<span style="color:#f92672">&gt;</span> {
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), <span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span> {
    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> o <span style="color:#f92672">=</span> Easy::new();
-   o.url(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>)<span style="color:#f92672">?</span>;
-   o.write_function(<span style="color:#f92672">|</span>y<span style="color:#f92672">|</span> {
-      <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> Ok(n) <span style="color:#f92672">=</span> stdout().write(y) {
-         <span style="color:#66d9ef">return</span> Ok(n)
-      }
-      Err(WriteError::Pause)
+
+   o.url(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>).or_else(<span style="color:#f92672">|</span>e<span style="color:#f92672">|</span> {
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e);
+      Err(<span style="color:#ae81ff">1</span>)
    })<span style="color:#f92672">?</span>;
-   o.perform()<span style="color:#f92672">?</span>;
+
+   o.write_function(<span style="color:#f92672">|</span>y<span style="color:#f92672">|</span> {
+      stdout().write(y).or(Err(WriteError::Pause))
+   }).or_else(<span style="color:#f92672">|</span>e<span style="color:#f92672">|</span> {
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e);
+      Err(<span style="color:#ae81ff">1</span>)
+   })<span style="color:#f92672">?</span>;
+
+   o.perform().or_else(<span style="color:#f92672">|</span>e<span style="color:#f92672">|</span> {
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e);
+      Err(<span style="color:#ae81ff">1</span>)
+   })<span style="color:#f92672">?</span>;
+
    Ok(())
 }
 </code></pre></div>
-<p><a href="https://docs.rs/curl">https://docs.rs/curl</a></p>
+<p>17 deps</p>
+<p><a href="https://crates.io/crates/curl">https://crates.io/crates/curl</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
+}
+</code></pre></div>
+<p>28 deps</p>
+<p><a href="https://crates.io/crates/h2">https://crates.io/crates/h2</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
+}
+</code></pre></div>
+<p>0 deps</p>
+<p><a href="https://crates.io/crates/minreq">https://crates.io/crates/minreq</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
+}
+</code></pre></div>
+<p>3 deps</p>
+<p><a href="https://crates.io/crates/solicit">https://crates.io/crates/solicit</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/101">https://programming-idioms.org/idiom/101</a></li>
