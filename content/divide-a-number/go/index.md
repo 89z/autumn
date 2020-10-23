@@ -4,10 +4,16 @@ tags: [go]
 ---
 
 {{< r "a.go" >}}
+
+<https://golang.org/pkg/math#Mod>
+
 {{< r "b.go" >}}
 
-- <https://golang.org/pkg/math#Mod>
-- <https://golang.org/pkg/math#Remainder>
+<https://golang.org/pkg/math#Remainder>
+
+{{< r "c.go" >}}
+
+<https://golang.org/ref/spec#Arithmetic_operators>
 
 ## References
 

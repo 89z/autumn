@@ -5,8 +5,11 @@ tags: [javascript]
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division>
+
+{{< r "b.js" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder>
 
 ## References
 

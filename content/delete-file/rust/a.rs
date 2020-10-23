@@ -1,6 +1,6 @@
-use std::{fs, io};
+use std::fs;
 
-fn main() -> io::Result<()> {
-   fs::remove_file("a.txt")?;
-   Ok(())
+fn main() {
+   let r = fs::remove_file("a.txt");
+   println!("{:?}", r);
 }
