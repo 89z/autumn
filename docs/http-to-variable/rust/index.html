@@ -32,37 +32,7 @@
       
 </section>
    
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> h2::client;
-<span style="color:#66d9ef">use</span> http::{Request, Method};
-<span style="color:#66d9ef">use</span> std::error::Error;
-<span style="color:#66d9ef">use</span> tokio::net::TcpStream;
-
-<span style="color:#75715e">#[tokio::main]</span>
-<span style="color:#66d9ef">pub</span> async <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
-   <span style="color:#66d9ef">let</span> tcp <span style="color:#f92672">=</span> TcpStream::connect(<span style="color:#e6db74">&#34;127.0.0.1:5928&#34;</span>).await<span style="color:#f92672">?</span>;
-   <span style="color:#66d9ef">let</span> (h2, connection) <span style="color:#f92672">=</span> client::handshake(tcp).await<span style="color:#f92672">?</span>;
-   tokio::spawn(async <span style="color:#66d9ef">move</span> {
-      connection.await.unwrap();
-   });
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> h2 <span style="color:#f92672">=</span> h2.ready().await<span style="color:#f92672">?</span>;
-   <span style="color:#66d9ef">let</span> request <span style="color:#f92672">=</span> Request::builder().method(Method::GET).uri(<span style="color:#e6db74">&#34;https://www.example.com/&#34;</span>).body(()).unwrap();
-   <span style="color:#66d9ef">let</span> (response, _) <span style="color:#f92672">=</span> h2.send_request(request, <span style="color:#66d9ef">true</span>).unwrap();
-   <span style="color:#66d9ef">let</span> (head, <span style="color:#66d9ef">mut</span> body) <span style="color:#f92672">=</span> response.await<span style="color:#f92672">?</span>.into_parts();
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Received response: {:?}&#34;</span>, head);
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> flow_control <span style="color:#f92672">=</span> body.flow_control().clone();
-   <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">let</span> Some(chunk) <span style="color:#f92672">=</span> body.data().await {
-      <span style="color:#66d9ef">let</span> chunk <span style="color:#f92672">=</span> chunk<span style="color:#f92672">?</span>;
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;RX: {:?}&#34;</span>, chunk);
-      <span style="color:#66d9ef">let</span> _ <span style="color:#f92672">=</span> flow_control.release_capacity(chunk.len());
-   }
-   Ok(())
-}
-</code></pre></div>
-<p>28 deps</p>
-<p><a href="https://crates.io/crates/h2">https://crates.io/crates/h2</a></p>
+   <h2 id="0-deps">0 deps</h2>
 
 
 
@@ -76,8 +46,39 @@
    Ok(())
 }
 </code></pre></div>
-<p>0 deps</p>
 <p><a href="https://crates.io/crates/minreq">https://crates.io/crates/minreq</a></p>
+<h2 id="35-deps">35 deps</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> {
+   http_req::request,
+   std::error::Error
+};
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>;
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> a <span style="color:#f92672">=</span> Vec::new();
+   request::get(s, <span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> a)<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> String::from_utf8(a)<span style="color:#f92672">?</span>;
+   print<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
+   Ok(())
+}
+</code></pre></div>
+<p><a href="https://crates.io/crates/http_req">https://crates.io/crates/http_req</a></p>
+<h2 id="49-deps">49 deps</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), attohttpc::Error<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>;
+   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> attohttpc::get(s).send()<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> o.text()<span style="color:#f92672">?</span>;
+   print<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
+   Ok(())
+}
+</code></pre></div>
+<p><a href="https://crates.io/crates/attohttpc">https://crates.io/crates/attohttpc</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/101">https://programming-idioms.org/idiom/101</a></li>

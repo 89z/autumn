@@ -3,17 +3,23 @@ title: Rust
 tags: [rust]
 ---
 
+## 0 deps
+
 {{< r "a/src/main.rs" >}}
 
-28 deps
+<https://crates.io/crates/minreq>
 
-<https://crates.io/crates/h2>
+## 35 deps
 
 {{< r "b/src/main.rs" >}}
 
-0 deps
+<https://crates.io/crates/http_req>
 
-<https://crates.io/crates/minreq>
+## 49 deps
+
+{{< r "c/src/main.rs" >}}
+
+<https://crates.io/crates/attohttpc>
 
 ## References
 
