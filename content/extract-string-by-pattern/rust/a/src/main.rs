@@ -1,11 +1,7 @@
-use regex::Regex;
+use regex::{Error, Regex};
 
-fn main() -> Result<(), u8> {
-   let o_re = Regex::new("a(..)").or_else(|e| {
-      println!("{}", e);
-      Err(1)
-   })?;
-
+fn main() -> Result<(), Error> {
+   let o_re = Regex::new("a(..)")?;
    let o_cap = o_re.captures("January");
    println!("{:?}", o_cap);
    Ok(())

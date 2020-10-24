@@ -36,17 +36,30 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span>];
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">for</span> s <span style="color:#66d9ef">in</span> <span style="color:#f92672">&amp;</span>a {
+   <span style="color:#66d9ef">for</span> s <span style="color:#66d9ef">in</span> a.iter() {
       println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
    }
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">for</span> s <span style="color:#66d9ef">in</span> a.iter() {
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
-   }
-   <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">for</span> (n, s) <span style="color:#66d9ef">in</span> a.iter().enumerate() {
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/iter/index.html">https://doc.rust-lang.org/std/iter/index.html</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span>];
+   <span style="color:#66d9ef">for</span> (n, s) <span style="color:#66d9ef">in</span> a.iter().enumerate() {
       println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{} {}&#34;</span>, n, s);
+   }
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/iter/struct.Enumerate.html">https://doc.rust-lang.org/std/iter/struct.Enumerate.html</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span>];
+   <span style="color:#66d9ef">for</span> s <span style="color:#66d9ef">in</span> <span style="color:#f92672">&amp;</span>a {
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
    }
 }
 </code></pre></div>
@@ -54,9 +67,7 @@
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/rust#iterate-over-array">https://hyperpolyglot.org/rust#iterate-over-array</a></li>
-<li><a href="https://programming-idioms.org/idiom/6/iterate-over-list-val">https://programming-idioms.org/idiom/6/iterate-over-list-val</a></li>
-<li><a href="https://programming-idioms.org/idiom/7/iterate-over-list-indexes-val">https://programming-idioms.org/idiom/7/iterate-over-list-indexes-val</a></li>
-<li><a href="https://rosettacode.org/wiki/Loop_Structures">https://rosettacode.org/wiki/Loop_Structures</a></li>
+<li><a href="https://programming-idioms.org/idiom/6">https://programming-idioms.org/idiom/6</a></li>
 <li><a href="https://rosettacode.org/wiki/Loops/Foreach">https://rosettacode.org/wiki/Loops/Foreach</a></li>
 </ul>
 

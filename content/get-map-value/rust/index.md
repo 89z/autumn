@@ -9,4 +9,4 @@ tags: [rust]
 
 ## References
 
-- <https://rosettacode.org/wiki/Collections>
+<https://rosettacode.org/wiki/Collections>

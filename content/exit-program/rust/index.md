@@ -8,8 +8,7 @@ tags: [rust]
 {{< r "c.rs" >}}
 {{< r "d.rs" >}}
 
-- <https://doc.rust-lang.org/std/keyword.return.html>
-- <https://doc.rust-lang.org/std/process/fn.exit.html>
+<https://doc.rust-lang.org/std/process/fn.exit.html>
 
 ## References
 

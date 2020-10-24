@@ -1,6 +1,6 @@
-use std::{fs, io};
+use std::fs;
 
-fn main() -> io::Result<()> {
-   fs::copy("a.txt", "b.txt")?;
-   Ok(())
+fn main() {
+   let e = fs::copy("a.txt", "b.txt");
+   println!("{:?}", e);
 }

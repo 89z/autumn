@@ -1,7 +1,7 @@
-use std::{fs, io};
+use std::fs;
 
-fn main() -> io::Result<()> {
-   let s = fs::read_to_string("a.txt")?;
+fn main() {
+   let e = fs::read_to_string("index.md");
+   let s = e.unwrap_or_default();
    print!("{}", s);
-   Ok(())
 }

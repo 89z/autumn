@@ -33,14 +33,10 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> regex::Regex;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> regex::{Error, Regex};
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), <span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> o_re <span style="color:#f92672">=</span> Regex::new(<span style="color:#e6db74">&#34;a(..)&#34;</span>).or_else(<span style="color:#f92672">|</span>e<span style="color:#f92672">|</span> {
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e);
-      Err(<span style="color:#ae81ff">1</span>)
-   })<span style="color:#f92672">?</span>;
-
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Error<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> o_re <span style="color:#f92672">=</span> Regex::new(<span style="color:#e6db74">&#34;a(..)&#34;</span>)<span style="color:#f92672">?</span>;
    <span style="color:#66d9ef">let</span> o_cap <span style="color:#f92672">=</span> o_re.captures(<span style="color:#e6db74">&#34;January&#34;</span>);
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o_cap);
    Ok(())
@@ -50,18 +46,13 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> regex::Regex;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> regex::{Error, Regex};
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), <span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> o_re <span style="color:#f92672">=</span> Regex::new(<span style="color:#e6db74">&#34;a(..)&#34;</span>).or_else(<span style="color:#f92672">|</span>e<span style="color:#f92672">|</span> {
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e);
-      <span style="color:#66d9ef">return</span> Err(<span style="color:#ae81ff">1</span>);
-   })<span style="color:#f92672">?</span>;
-
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Error<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> o_re <span style="color:#f92672">=</span> Regex::new(<span style="color:#e6db74">&#34;a(..)&#34;</span>)<span style="color:#f92672">?</span>;
    <span style="color:#66d9ef">for</span> o_cap <span style="color:#66d9ef">in</span> o_re.captures_iter(<span style="color:#e6db74">&#34;January&#34;</span>) {
       println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o_cap);
    }
-
    Ok(())
 }
 </code></pre></div>

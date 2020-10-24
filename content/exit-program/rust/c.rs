@@ -1,12 +1,8 @@
-use std::process;
-
-fn main() {
-   let n = match "AB".parse::<u8>() {
-      Ok(v) => v,
-      Err(e) => {
-         println!("{}", e);
-         process::exit(1);
-      }
-   };
+fn main() -> Result<(), u8> {
+   let n = "AB".parse::<u8>().map_err(|e| {
+      println!("{}", e);
+      1
+   })?;
    println!("{}", n);
+   Ok(())
 }
