@@ -10,3 +10,4 @@ tags: [rust]
 ## References
 
 - <https://programming-idioms.org/idiom/62>
+- <https://rosettacode.org/wiki/String_matching>

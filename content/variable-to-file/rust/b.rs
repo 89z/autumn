@@ -1,5 +1,4 @@
-use std::fs::File;
-use std::io::{Error, Write};
+use std::{fs::File, io::Error, io::Write};
 
 fn main() -> Result<(), Error> {
    let y = b"May\n";

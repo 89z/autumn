@@ -13,5 +13,6 @@ tags: [rust]
 
 ## References
 
+- <https://hyperpolyglot.org/rust#array-lookup>
 - <https://programming-idioms.org/idiom/165>
 - <https://rosettacode.org/wiki/Arrays>
