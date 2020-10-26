@@ -5,8 +5,11 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.getenv>
-- <https://php.net/reserved.variables.server>
+<https://php.net/function.getenv>
+
+{{< r "b.php" >}}
+
+<https://php.net/reserved.variables.server>
 
 ## References
 

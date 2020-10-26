@@ -3,11 +3,21 @@ title: PHP
 tags: [php]
 ---
 
-{{< r "o.php" >}}
-{{< r "s.php" >}}
+{{< r "a.php" >}}
 
-- <https://php.net/function.basename>
-- <https://php.net/function.pathinfo>
+<https://php.net/function.basename>
+
+{{< r "b.php" >}}
+
+<https://php.net/function.pathinfo>
+
+{{< r "c.php" >}}
+
+<https://php.net/splfileinfo.getbasename>
+
+{{< r "d.php" >}}
+
+<https://php.net/splfileinfo.getfilename>
 
 ## References
 
