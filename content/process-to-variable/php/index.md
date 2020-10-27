@@ -5,10 +5,19 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.exec>
-- <https://php.net/function.shell-exec>
-- <https://php.net/function.stream-get-contents>
-- <https://php.net/language.operators.execution>
+<https://php.net/function.exec>
+
+{{< r "b.php" >}}
+
+<https://php.net/function.shell-exec>
+
+{{< r "c.php" >}}
+
+<https://php.net/function.stream-get-contents>
+
+{{< r "d.php" >}}
+
+<https://php.net/language.operators.execution>
 
 ## References
 

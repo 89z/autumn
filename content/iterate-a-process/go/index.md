@@ -3,11 +3,13 @@ title: Go
 tags: [go]
 ---
 
-{{< r "range.go" >}}
-{{< r "scan.go" >}}
+{{< r "a.go" >}}
 
-- <https://golang.org/pkg/bufio#NewScanner>
-- <https://golang.org/pkg/bytes#FieldsFunc>
+<https://golang.org/pkg/bufio#NewScanner>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/bytes#FieldsFunc>
 
 ## References
 

@@ -3,11 +3,13 @@ title: Go
 tags: [go]
 ---
 
-{{< r "fmt.go" >}}
-{{< r "strings.go" >}}
+{{< r "a.go" >}}
 
-- <https://golang.org/pkg/os/exec>
-- <https://golang.org/pkg/strings>
+<https://golang.org/pkg/os/exec#Cmd.Output>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/os/exec#Cmd.Stdout>
 
 ## References
 

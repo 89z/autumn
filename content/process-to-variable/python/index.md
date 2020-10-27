@@ -5,9 +5,15 @@ tags: [python]
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/library/subprocess.html#subprocess.Popen>
-- <https://docs.python.org/library/subprocess.html#subprocess.check_output>
-- <https://docs.python.org/library/subprocess.html#subprocess.run>
+<https://docs.python.org/library/subprocess.html#subprocess.Popen>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/library/subprocess.html#subprocess.check_output>
+
+{{< r "c.py" >}}
+
+<https://docs.python.org/library/subprocess.html#subprocess.run>
 
 ## References
 

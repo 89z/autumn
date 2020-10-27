@@ -5,8 +5,7 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.feof>
-- <https://php.net/function.fgets>
+<https://php.net/function.fgets>
 
 ## References
 
