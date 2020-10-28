@@ -53,15 +53,15 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> {
    http_req::request,
-   std::error::Error
+   std::error::Error,
+   std::io,
+   std::io::Write
 };
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
-   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>;
    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> a <span style="color:#f92672">=</span> Vec::new();
-   request::get(s, <span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> a)<span style="color:#f92672">?</span>;
-   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> String::from_utf8(a)<span style="color:#f92672">?</span>;
-   print<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
+   request::get(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>, <span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> a)<span style="color:#f92672">?</span>;
+   io::stdout().write(<span style="color:#f92672">&amp;</span>a)<span style="color:#f92672">?</span>;
    Ok(())
 }
 </code></pre></div>

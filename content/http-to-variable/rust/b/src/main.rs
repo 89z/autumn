@@ -1,13 +1,13 @@
 use {
    http_req::request,
-   std::error::Error
+   std::error::Error,
+   std::io,
+   std::io::Write
 };
 
 fn main() -> Result<(), Box<dyn Error>> {
-   let s = "https://speedtest.lax.hivelocity.net";
    let mut a = Vec::new();
-   request::get(s, &mut a)?;
-   let s = String::from_utf8(a)?;
-   print!("{}", s);
+   request::get("https://speedtest.lax.hivelocity.net", &mut a)?;
+   io::stdout().write(&a)?;
    Ok(())
 }

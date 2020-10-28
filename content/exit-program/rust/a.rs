@@ -1,6 +1,6 @@
-use std::error::Error;
+use std::num;
 
-fn main() -> Result<(), Box<dyn Error>> {
+fn main() -> Result<(), num::ParseIntError> {
    let n: u8 = "AB".parse()?;
    println!("{}", n);
    Ok(())

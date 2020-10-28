@@ -34,9 +34,14 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{fs::File, io::BufRead, io::BufReader, io::Error};
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{
+   fs::File,
+   io,
+   io::BufRead,
+   io::BufReader
+};
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Error<span style="color:#f92672">&gt;</span> {
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
    <span style="color:#66d9ef">let</span> e_file <span style="color:#f92672">=</span> File::open(<span style="color:#e6db74">&#34;index.md&#34;</span>)<span style="color:#f92672">?</span>;
    <span style="color:#66d9ef">for</span> e_line <span style="color:#66d9ef">in</span> BufReader::new(e_file).lines() {
       println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e_line<span style="color:#f92672">?</span>);

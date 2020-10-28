@@ -1,11 +1,7 @@
-use std::process::Command;
-use std::io::{Write, self};
- 
-fn main() {
-    let output = Command::new("/bin/cat")
-                            .arg("/etc/fstab")
-                            .output()
-                            .expect("failed to execute process");
- 
-    io::stdout().write(&output.stdout);
+use std::{io, io::Write, process::Command};
+
+fn main() -> io::Result<()> {
+   let o = Command::new("rustc").arg("-V").output()?;
+   io::stdout().write(&o.stdout)?;
+   Ok(())
 }
