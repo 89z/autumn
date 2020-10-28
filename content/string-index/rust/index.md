@@ -5,6 +5,10 @@ tags: [rust]
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/stable/std/str/struct.Bytes.html#method.position>
+
+{{< r "b.rs" >}}
+
 <https://doc.rust-lang.org/std/string/struct.String.html#method.find>
 
 ## References

@@ -1,5 +1,5 @@
 fn main() {
-   let s = "June";
-   let n = s.find("un");
+   let s = "March";
+   let n = s.chars().position(|c| c == 'a');
    println!("{}", n == Some(1));
 }
