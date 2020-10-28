@@ -3,12 +3,15 @@ title: Python
 tags: [python]
 ---
 
-{{< r "str.py" >}}
-{{< r "num.py" >}}
+{{< r "a.py" >}}
 
-- <https://docs.python.org/library/functions.html#float>
-- <https://docs.python.org/library/locale.html#locale.atof>
+<https://docs.python.org/library/functions.html#float>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/library/locale.html#locale.atof>
 
 ## References
 
-<https://programming-idioms.org/idiom/146>
+- <https://hyperpolyglot.org/scripting#str-to-num>
+- <https://programming-idioms.org/idiom/146>

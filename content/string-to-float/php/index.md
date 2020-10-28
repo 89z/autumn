@@ -3,13 +3,19 @@ title: PHP
 tags: [php]
 ---
 
-{{< r "str.php" >}}
-{{< r "num.php" >}}
+{{< r "a.php" >}}
 
-- <https://php.net/function.floatval>
-- <https://php.net/language.operators.arithmetic>
-- <https://php.net/language.types.type-juggling>
+<https://php.net/function.floatval>
+
+{{< r "b.php" >}}
+
+<https://php.net/language.operators.arithmetic>
+
+{{< r "c.php" >}}
+
+<https://php.net/language.types.type-juggling>
 
 ## References
 
-<https://programming-idioms.org/idiom/146>
+- <https://hyperpolyglot.org/scripting#str-to-num>
+- <https://programming-idioms.org/idiom/146>

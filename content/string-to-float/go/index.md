@@ -3,13 +3,17 @@ title: Go
 tags: [go]
 ---
 
-{{< r "fmt.go" >}}
-{{< r "spec.go" >}}
-{{< r "strconv.go" >}}
+{{< r "a.go" >}}
 
-- <https://golang.org/pkg/fmt#Sscan>
-- <https://golang.org/pkg/strconv#ParseFloat>
-- <https://golang.org/ref/spec#Conversions>
+<https://golang.org/pkg/fmt#Sscan>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/strconv#ParseFloat>
+
+{{< r "c.go" >}}
+
+<https://golang.org/ref/spec#Conversions>
 
 ## References
 
