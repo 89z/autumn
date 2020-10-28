@@ -1,2 +1,2 @@
-const n = 10;
+var n = 10;
 console.log(n);

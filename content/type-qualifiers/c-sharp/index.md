@@ -9,4 +9,5 @@ tags: [c-sharp]
 
 ## References
 
-<https://hyperpolyglot.org/cpp#write-once-var>
+- <https://hyperpolyglot.org/cpp#write-once-var>
+- <https://rosettacode.org/wiki/Enforced_immutability>

@@ -1,5 +1,5 @@
 package main
-const n = 10
+var n = 10
 
 func main() {
    println(n)

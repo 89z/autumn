@@ -9,4 +9,5 @@ tags: [php]
 
 ## References
 
-<https://hyperpolyglot.org/scripting#const>
+- <https://hyperpolyglot.org/scripting#const>
+- <https://rosettacode.org/wiki/Enforced_immutability>

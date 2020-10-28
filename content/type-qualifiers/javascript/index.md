@@ -5,10 +5,17 @@ tags: [javascript]
 
 {{< r "a.js" >}}
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/const>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/let>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/var>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Statements/const>
+
+{{< r "b.js" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Statements/let>
+
+{{< r "c.js" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Statements/var>
 
 ## References
 
-<https://hyperpolyglot.org/scripting#const>
+- <https://hyperpolyglot.org/scripting#const>
+- <https://rosettacode.org/wiki/Enforced_immutability>

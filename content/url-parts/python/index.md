@@ -5,8 +5,11 @@ tags: [python]
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/library/urllib.parse.html#urllib.parse.urllib.parse.SplitResult.geturl>
-- <https://docs.python.org/library/urllib.parse.html#urllib.parse.urlparse>
+<https://docs.python.org/library/urllib.parse.html#urllib.parse.urllib.parse.SplitResult.geturl>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/library/urllib.parse.html#urllib.parse.urlparse>
 
 ## References
 
