@@ -4,7 +4,7 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Join an array / Rust</title>
+   <title>Array to string / Rust</title>
 
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/main.css">
@@ -21,7 +21,7 @@
    <main class="page">
 
 <h1>
-   <a href="/autumn/join-an-array/">Join an array</a> / Rust
+   <a href="/autumn/array-to-string/">Array to string</a> / Rust
 </h1>
 <section class="page">
    <time>Mon Sep 14 2020</time>
@@ -51,6 +51,29 @@
 }
 </code></pre></div>
 <p><a href="https://doc.rust-lang.org/std/primitive.slice.html#method.join">https://doc.rust-lang.org/std/primitive.slice.html#method.join</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::string;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), string::FromUtf8Error<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> String::from(<span style="color:#e6db74">&#34;March&#34;</span>).into_bytes();
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> String::from_utf8(a)<span style="color:#f92672">?</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
+   Ok(())
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8">https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> String::from(<span style="color:#e6db74">&#34;March&#34;</span>).into_bytes();
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> String::from_utf8_lossy(<span style="color:#f92672">&amp;</span>a);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8_lossy">https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8_lossy</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/53">https://programming-idioms.org/idiom/53</a></li>

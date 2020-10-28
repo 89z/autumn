@@ -5,11 +5,7 @@ tags: [go]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/bufio>
-
-{{< r "b.go" >}}
-
-<https://golang.org/pkg/os>
+<https://golang.org/pkg/bufio#Scanner.Scan>
 
 ## References
 

@@ -4,10 +4,16 @@ tags: [php]
 ---
 
 {{< r "a.php" >}}
+
+<https://php.net/function.explode>
+
 {{< r "b.php" >}}
 
-- <https://php.net/function.explode>
-- <https://php.net/function.sscanf>
+<https://php.net/function.sscanf>
+
+{{< r "c.php" >}}
+
+<https://php.net/function.strtok>
 
 ## References
 

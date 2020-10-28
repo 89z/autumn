@@ -5,9 +5,11 @@ tags: [go]
 
 {{< r "a.go" >}}
 
-- <https://golang.org/pkg/strings#Fields>
-- <https://golang.org/pkg/strings#Split>
-- <https://golang.org/pkg/strings#SplitN>
+<https://golang.org/pkg/strings#Fields>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/strings#Split>
 
 ## References
 

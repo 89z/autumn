@@ -1,3 +1,3 @@
-s = 'May'
+s = 'March\n'
 o = open('a.txt', 'w')
-print(s, file=o)
+o.write(s)

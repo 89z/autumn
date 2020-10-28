@@ -10,9 +10,9 @@ func main() {
    if e != nil {
       os.Exit(1)
    }
-   o1 := bufio.NewScanner(o)
-   for o1.Scan() {
-      s := o1.Text()
+   o2 := bufio.NewScanner(o)
+   for o2.Scan() {
+      s := o2.Text()
       println(s)
    }
 }
