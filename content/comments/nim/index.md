@@ -5,8 +5,11 @@ tags: [nim]
 
 {{< r "a.nim" >}}
 
-- <https://nim-lang.org/docs/manual.html#lexical-analysis-comments>
-- <https://nim-lang.org/docs/manual.html#lexical-analysis-multiline-comments>
+<https://nim-lang.org/docs/manual.html#lexical-analysis-comments>
+
+{{< r "b.nim" >}}
+
+<https://nim-lang.org/docs/manual.html#lexical-analysis-multiline-comments>
 
 ## References
 

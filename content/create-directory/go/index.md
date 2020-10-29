@@ -5,8 +5,11 @@ tags: [go]
 
 {{< r "a.go" >}}
 
-- <https://golang.org/pkg/os#Mkdir>
-- <https://golang.org/pkg/os#MkdirAll>
+<https://golang.org/pkg/os#Mkdir>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/os#MkdirAll>
 
 ## References
 

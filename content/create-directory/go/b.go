@@ -2,5 +2,5 @@ package main
 import "os"
 
 func main() {
-   os.Mkdir("March", os.ModeDir)
+   os.MkdirAll("May/June", os.ModeDir)
 }

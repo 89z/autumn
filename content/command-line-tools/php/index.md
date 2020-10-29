@@ -3,10 +3,9 @@ title: PHP
 tags: [php]
 ---
 
-{{< r "php.ps1" >}}
+{{< r "a.ps1" >}}
 
-- <https://php.net/features.commandline.usage>
-- <https://php.net/language.basic-syntax.phptags>
+<https://php.net/features.commandline.usage>
 
 ## References
 
