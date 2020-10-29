@@ -38,30 +38,33 @@
 $m <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;year&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">2019</span>, <span style="color:#e6db74">&#39;month&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">12</span>];
 
 <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;example 1</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
-   $n <span style="color:#f92672">=</span> <span style="color:#a6e22e">current</span>($m);
-   <span style="color:#66d9ef">if</span> ($n <span style="color:#f92672">===</span> <span style="color:#66d9ef">false</span>) {
-      <span style="color:#66d9ef">break</span>;
-   }
-   $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">key</span>($m);
-   <span style="color:#66d9ef">echo</span> $s, <span style="color:#e6db74">&#39;:&#39;</span>, $n, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-   <span style="color:#a6e22e">next</span>($m);
-}
-
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;example 2</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 <span style="color:#66d9ef">foreach</span> ($m <span style="color:#66d9ef">as</span> $n) {
    <span style="color:#66d9ef">echo</span> $n, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 }
 
-<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;example 3</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;example 2</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 <span style="color:#66d9ef">foreach</span> ($m <span style="color:#66d9ef">as</span> $s <span style="color:#f92672">=&gt;</span> $n) {
    <span style="color:#66d9ef">echo</span> $s, <span style="color:#e6db74">&#39;:&#39;</span>, $n, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 }
 </code></pre></div>
-<ul>
-<li><a href="https://php.net/control-structures.foreach">https://php.net/control-structures.foreach</a></li>
-<li><a href="https://php.net/function.prev">https://php.net/function.prev</a></li>
-</ul>
+<p><a href="https://php.net/control-structures.foreach">https://php.net/control-structures.foreach</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$m <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;year&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">2019</span>, <span style="color:#e6db74">&#39;month&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">12</span>];
+
+<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+   $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">key</span>($m);
+   <span style="color:#66d9ef">if</span> ($s <span style="color:#f92672">===</span> <span style="color:#66d9ef">null</span>) {
+      <span style="color:#66d9ef">break</span>;
+   }
+   $n <span style="color:#f92672">=</span> <span style="color:#a6e22e">current</span>($m);
+   <span style="color:#66d9ef">echo</span> $s, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&#34;</span>, $n, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+   <span style="color:#a6e22e">next</span>($m);
+}
+</code></pre></div>
+<p><a href="https://php.net/function.next">https://php.net/function.next</a></p>
 <h2 id="references">References</h2>
 <p><a href="https://hyperpolyglot.org/scripting#dict-iter">https://hyperpolyglot.org/scripting#dict-iter</a></p>
 

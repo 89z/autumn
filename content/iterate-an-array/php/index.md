@@ -7,15 +7,15 @@ tags: [php]
 
 <https://php.net/control-structures.foreach>
 
-{{< r "a.php" >}}
+{{< r "b.php" >}}
 
 <https://php.net/function.array-walk>
 
-{{< r "a.php" >}}
+{{< r "c.php" >}}
 
 <https://php.net/function.count>
 
-{{< r "a.php" >}}
+{{< r "d.php" >}}
 
 <https://php.net/function.next>
 

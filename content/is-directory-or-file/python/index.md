@@ -3,13 +3,17 @@ title: Python
 tags: [python]
 ---
 
-{{< r "os-path.py" >}}
-{{< r "os.py" >}}
+{{< r "a.py" >}}
 
-- <https://docs.python.org/library/os.html#os.access>
-- <https://docs.python.org/library/os.path.html#os.path.exists>
-- <https://docs.python.org/library/os.path.html#os.path.isdir>
-- <https://docs.python.org/library/os.path.html#os.path.isfile>
+<https://docs.python.org/library/os.html#os.access>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/library/os.path.html#os.path.isdir>
+
+{{< r "c.py" >}}
+
+<https://docs.python.org/library/os.path.html#os.path.isfile>
 
 ## References
 

@@ -5,8 +5,11 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/control-structures.foreach>
-- <https://php.net/function.prev>
+<https://php.net/control-structures.foreach>
+
+{{< r "b.php" >}}
+
+<https://php.net/function.next>
 
 ## References
 
