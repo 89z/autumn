@@ -5,8 +5,11 @@ tags: [nim]
 
 {{< r "a.nim" >}}
 
-- <https://nim-lang.org/docs/io.html#readAll,File>
-- <https://nim-lang.org/docs/io.html#readFile,string>
+<https://nim-lang.org/docs/io.html#readAll,File>
+
+{{< r "b.nim" >}}
+
+<https://nim-lang.org/docs/io.html#readFile,string>
 
 ## References
 

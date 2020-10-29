@@ -1,3 +1,3 @@
 import os
-s = os.environ['USERPROFILE']
+s = os.getenv('USERPROFILE')
 print(s == r'C:\Users\Steven')

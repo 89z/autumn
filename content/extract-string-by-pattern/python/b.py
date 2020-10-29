@@ -1,9 +1,10 @@
 import re
 s = 'January'
 # example 1
-o = re.search('a(..)', s)
-a1 = o.groups()
+o = re.search('a.', s)
+s1 = o.group()
 # example 2
-a2 = re.findall('a(..)', s)
+o = re.search('a(..)', s)
+a2 = o.groups()
 # print
-print(a1, a2)
+print(s1, a2)

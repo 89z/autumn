@@ -5,8 +5,11 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.preg-match-all>
-- <https://php.net/function.preg-match>
+<https://php.net/function.preg-match-all>
+
+{{< r "b.php" >}}
+
+<https://php.net/function.preg-match>
 
 ## References
 

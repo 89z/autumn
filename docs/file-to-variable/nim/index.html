@@ -32,18 +32,18 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;a.txt&#34;</span>
-<span style="color:#75715e"># example 1</span>
-<span style="color:#66d9ef">var</span> s1 <span style="color:#f92672">=</span> s.readFile
-<span style="color:#75715e"># example 2</span>
-<span style="color:#66d9ef">var</span> s2 <span style="color:#f92672">=</span> s.open.readAll
-<span style="color:#75715e"># print</span>
-echo <span style="color:#f92672">[</span>s1, s2<span style="color:#f92672">]</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">var</span> o <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;index.md&#34;</span>.open
+<span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> o.readAll
+stdout.write s
 </code></pre></div>
-<ul>
-<li><a href="https://nim-lang.org/docs/io.html#readAll,File">https://nim-lang.org/docs/io.html#readAll,File</a></li>
-<li><a href="https://nim-lang.org/docs/io.html#readFile,string">https://nim-lang.org/docs/io.html#readFile,string</a></li>
-</ul>
+<p><a href="https://nim-lang.org/docs/io.html#readAll,File">https://nim-lang.org/docs/io.html#readAll,File</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;index.md&#34;</span>.readFile
+stdout.write s
+</code></pre></div>
+<p><a href="https://nim-lang.org/docs/io.html#readFile,string">https://nim-lang.org/docs/io.html#readFile,string</a></p>
 <h2 id="references">References</h2>
 <p><a href="https://rosettacode.org/wiki/Read_entire_file">https://rosettacode.org/wiki/Read_entire_file</a></p>
 

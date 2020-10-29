@@ -5,8 +5,11 @@ tags: [python]
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/library/os.html#os.environ>
-- <https://docs.python.org/library/os.html#os.getenv>
+<https://docs.python.org/library/os.html#os.environ>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/library/os.html#os.getenv>
 
 ## References
 

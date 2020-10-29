@@ -34,24 +34,32 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>);
+</span><span style="color:#75715e"></span>$a1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$r <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
-$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_contents</span>($r);
-<span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$a3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>);
-<span style="color:#75715e"># example 4
-</span><span style="color:#75715e"></span>$a4 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>, <span style="color:#a6e22e">FILE_IGNORE_NEW_LINES</span>);
-<span style="color:#75715e"># example 5
-</span><span style="color:#75715e"></span>$a5 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>, <span style="color:#a6e22e">FILE_IGNORE_NEW_LINES</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">FILE_SKIP_EMPTY_LINES</span>);
+</span><span style="color:#75715e"></span>$a2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>, <span style="color:#a6e22e">FILE_IGNORE_NEW_LINES</span>);
+<span style="color:#75715e"># exmaple 3
+</span><span style="color:#75715e"></span>$a3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>, <span style="color:#a6e22e">FILE_IGNORE_NEW_LINES</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">FILE_SKIP_EMPTY_LINES</span>);
 <span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1, $s2, $a3, $a4, $a5);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($a1, $a2, $a3);
 </code></pre></div>
-<ul>
-<li><a href="https://php.net/function.file">https://php.net/function.file</a></li>
-<li><a href="https://php.net/function.file-get-contents">https://php.net/function.file-get-contents</a></li>
-<li><a href="https://php.net/function.stream-get-contents">https://php.net/function.stream-get-contents</a></li>
-</ul>
+<p><a href="https://php.net/function.file">https://php.net/function.file</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($s);
+</code></pre></div>
+<p><a href="https://php.net/function.file-get-contents">https://php.net/function.file-get-contents</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$r <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
+$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_contents</span>($r);
+<span style="color:#a6e22e">var_dump</span>($s);
+</code></pre></div>
+<p><a href="https://php.net/function.stream-get-contents">https://php.net/function.stream-get-contents</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#read-file-str">https://hyperpolyglot.org/scripting2#read-file-str</a></li>

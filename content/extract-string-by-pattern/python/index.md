@@ -4,10 +4,12 @@ tags: [python]
 ---
 
 {{< r "a.py" >}}
+
+<https://docs.python.org/library/re.html#re.findall>
+
 {{< r "b.py" >}}
 
-- <https://docs.python.org/library/re.html#re.findall>
-- <https://docs.python.org/library/re.html#re.search>
+<https://docs.python.org/library/re.html#re.search>
 
 ## References
 

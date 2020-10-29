@@ -5,9 +5,15 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.file>
-- <https://php.net/function.file-get-contents>
-- <https://php.net/function.stream-get-contents>
+<https://php.net/function.file>
+
+{{< r "b.php" >}}
+
+<https://php.net/function.file-get-contents>
+
+{{< r "c.php" >}}
+
+<https://php.net/function.stream-get-contents>
 
 ## References
 

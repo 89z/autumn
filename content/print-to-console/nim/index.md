@@ -7,7 +7,7 @@ tags: [nim]
 
 <https://nim-lang.org/docs/system.html#echo,varargs[typed,]>
 
-{{< r "a.nim" >}}
+{{< r "b.nim" >}}
 
 <https://nim-lang.org/docs/io.html#write,File,varargs[string,]>
 
