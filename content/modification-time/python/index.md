@@ -9,4 +9,5 @@ tags: [python]
 
 ## References
 
-<https://rosettacode.org/wiki/File_modification_time>
+- <https://hyperpolyglot.org/scripting2#last-modification-time>
+- <https://rosettacode.org/wiki/File_modification_time>

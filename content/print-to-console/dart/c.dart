@@ -1,5 +1,5 @@
 import 'dart:io';
 
 void main() {
-   stdout.write('📗📕');
+   stdout.writeln('📗📕');
 }

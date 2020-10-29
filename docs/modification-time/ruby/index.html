@@ -32,22 +32,33 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;index.md&#39;</span>
-<span style="color:#75715e"># example 1</span>
-o1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>now
-<span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>utime(o1, o1, s)
-<span style="color:#75715e"># example 2</span>
-o2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>mtime(s)
-<span style="color:#75715e"># print</span>
-puts o1 <span style="color:#f92672">==</span> o2
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">o <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>mtime(<span style="color:#e6db74">&#39;index.md&#39;</span>)
 </code></pre></div>
-<ul>
-<li><a href="https://ruby-doc.org/core/File.html#method-c-mtime">https://ruby-doc.org/core/File.html#method-c-mtime</a></li>
-<li><a href="https://ruby-doc.org/core/File.html#method-i-mtime">https://ruby-doc.org/core/File.html#method-i-mtime</a></li>
-<li><a href="https://ruby-doc.org/core/File/Stat.html#method-i-mtime">https://ruby-doc.org/core/File/Stat.html#method-i-mtime</a></li>
-</ul>
+<p><a href="https://ruby-doc.org/core/File.html#method-c-mtime">https://ruby-doc.org/core/File.html#method-c-mtime</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>utime(o1, o1, s)
+o1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>now
+</code></pre></div>
+<p><a href="https://ruby-doc.org/core/File.html#method-c-utime">https://ruby-doc.org/core/File.html#method-c-utime</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">&#34;testfile&#34;</span>)<span style="color:#f92672">.</span>mtime   <span style="color:#75715e">#=&gt; Wed Apr 09 08:53:14 CDT 2003</span>
+</code></pre></div>
+<p><a href="https://ruby-doc.org/core/File.html#method-i-mtime">https://ruby-doc.org/core/File.html#method-i-mtime</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>stat(<span style="color:#e6db74">&#34;testfile&#34;</span>)<span style="color:#f92672">.</span>mtime   <span style="color:#75715e">#=&gt; Wed Apr 09 08:53:14 CDT 2003</span>
+</code></pre></div>
+<p><a href="https://ruby-doc.org/core/File/Stat.html#method-i-mtime">https://ruby-doc.org/core/File/Stat.html#method-i-mtime</a></p>
 <h2 id="references">References</h2>
-<p><a href="https://rosettacode.org/wiki/File_modification_time">https://rosettacode.org/wiki/File_modification_time</a></p>
+<ul>
+<li><a href="https://hyperpolyglot.org/scripting2#last-modification-time">https://hyperpolyglot.org/scripting2#last-modification-time</a></li>
+<li><a href="https://rosettacode.org/wiki/File_modification_time">https://rosettacode.org/wiki/File_modification_time</a></li>
+</ul>
 
 </main>
 

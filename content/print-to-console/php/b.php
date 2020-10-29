@@ -1,3 +1,3 @@
 <?php
 $s = "📗📕\n";
-echo $s;
+fwrite(STDOUT, $s);
