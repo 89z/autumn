@@ -9,4 +9,5 @@ tags: [rust]
 
 ## References
 
-<https://hyperpolyglot.org/rust#user-defined-types>
+- <https://hyperpolyglot.org/rust#user-defined-types>
+- <https://rosettacode.org/wiki/Classes>

@@ -5,8 +5,11 @@ tags: [go]
 
 {{< r "a.go" >}}
 
-- <https://golang.org/pkg/os#Getenv>
-- <https://golang.org/pkg/os#LookupEnv>
+<https://golang.org/pkg/os#Getenv>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/os#LookupEnv>
 
 ## References
 
