@@ -5,8 +5,11 @@ tags: [python]
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/library/io.html#io.BufferedIOBase.read>
-- <https://docs.python.org/library/io.html#io.IOBase.readlines>
+<https://docs.python.org/library/io.html#io.BufferedIOBase.read>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/library/io.html#io.IOBase.readlines>
 
 ## References
 

@@ -1,3 +1,3 @@
 m = {'year': 2019, 'month': 12}
-n = m.get('year')
+n = m['year']
 print(n == 2019)

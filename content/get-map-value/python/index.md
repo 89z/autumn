@@ -5,8 +5,11 @@ tags: [python]
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/library/stdtypes.html#dict>
-- <https://docs.python.org/library/stdtypes.html#dict.get>
+<https://docs.python.org/library/stdtypes.html#dict.get>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/library/stdtypes.html#dict>
 
 ## References
 

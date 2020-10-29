@@ -4,10 +4,12 @@ tags: [go]
 ---
 
 {{< r "a.go" >}}
+
+<https://golang.org/pkg/path#Base>
+
 {{< r "b.go" >}}
 
-- <https://golang.org/pkg/path#Base>
-- <https://golang.org/pkg/path/filepath#Base>
+<https://golang.org/pkg/path/filepath#Base>
 
 ## References
 

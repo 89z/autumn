@@ -32,19 +32,19 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># example 1</span>
-o <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;a.txt&#39;</span>)
-s1 <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>read()
-<span style="color:#75715e"># example 2</span>
-o <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;a.txt&#39;</span>)
-s2 <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>readlines()
-<span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(s1, s2, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">o <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;index.md&#39;</span>)
+s <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>read()
+<span style="color:#66d9ef">print</span>(s, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
 </code></pre></div>
-<ul>
-<li><a href="https://docs.python.org/library/io.html#io.BufferedIOBase.read">https://docs.python.org/library/io.html#io.BufferedIOBase.read</a></li>
-<li><a href="https://docs.python.org/library/io.html#io.IOBase.readlines">https://docs.python.org/library/io.html#io.IOBase.readlines</a></li>
-</ul>
+<p><a href="https://docs.python.org/library/io.html#io.BufferedIOBase.read">https://docs.python.org/library/io.html#io.BufferedIOBase.read</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">o <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;index.md&#39;</span>)
+a <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>readlines()
+<span style="color:#66d9ef">print</span>(a)
+</code></pre></div>
+<p><a href="https://docs.python.org/library/io.html#io.IOBase.readlines">https://docs.python.org/library/io.html#io.IOBase.readlines</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#read-file-str">https://hyperpolyglot.org/scripting2#read-file-str</a></li>

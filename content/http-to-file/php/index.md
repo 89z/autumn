@@ -4,10 +4,12 @@ tags: [php]
 ---
 
 {{< r "a.php" >}}
+
+<https://php.net/function.copy>
+
 {{< r "b.php" >}}
 
-- <https://php.net/function.copy>
-- <https://php.net/function.curl-init>
+<https://php.net/function.curl-init>
 
 ## References
 
