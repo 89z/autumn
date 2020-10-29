@@ -5,8 +5,11 @@ tags: [nim]
 
 {{< r "a.nim" >}}
 
-- <https://nim-lang.org/docs/os.html#createDir,string>
-- <https://nim-lang.org/docs/os.html#existsOrCreateDir,string>
+<https://nim-lang.org/docs/os.html#createDir,string>
+
+{{< r "b.nim" >}}
+
+<https://nim-lang.org/docs/os.html#existsOrCreateDir,string>
 
 ## References
 

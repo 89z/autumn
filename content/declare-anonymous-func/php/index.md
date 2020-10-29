@@ -5,8 +5,11 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/functions.anonymous>
-- <https://php.net/functions.arrow>
+<https://php.net/functions.anonymous>
+
+{{< r "b.php" >}}
+
+<https://php.net/functions.arrow>
 
 ## References
 

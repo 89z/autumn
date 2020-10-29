@@ -3,10 +3,13 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< r "Program.cs" >}}
+{{< r "a/Program.cs" >}}
 
-- <https://docs.microsoft.com/dotnet/csharp/programming-guide/arrays/implicitly-typed-arrays>
-- <https://docs.microsoft.com/dotnet/csharp/programming-guide/arrays>
+<https://docs.microsoft.com/dotnet/csharp/programming-guide/arrays/implicitly-typed-arrays>
+
+{{< r "b/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/csharp/programming-guide/arrays>
 
 ## References
 

@@ -5,8 +5,11 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.array>
-- <https://php.net/language.types.array>
+<https://php.net/function.array>
+
+{{< r "b.php" >}}
+
+<https://php.net/language.types.array>
 
 ## References
 
