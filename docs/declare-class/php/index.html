@@ -26,7 +26,7 @@
 <section class="page">
    <time>Mon Oct 19 2020</time>
    
-   <a href="/autumn/categories/class/">class</a>
+   <a href="/autumn/categories/reference/">reference</a>
    
 </section>
    
@@ -35,21 +35,18 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Time</span> {
-   <span style="color:#66d9ef">var</span> $hours <span style="color:#f92672">=</span> <span style="color:#ae81ff">23</span>;
-   <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">duration</span>($minutes) {
-      <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">hours</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> $minutes;
+   <span style="color:#66d9ef">public</span> $hours <span style="color:#f92672">=</span> <span style="color:#ae81ff">23</span>;
+   <span style="color:#66d9ef">var</span> $minutes <span style="color:#f92672">=</span> <span style="color:#ae81ff">59</span>;
+   <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">duration</span>($seconds) {
+      <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">hours</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">minutes</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> $seconds;
    }
 }
 
 $o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Time</span>;
 $n <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">duration</span>(<span style="color:#ae81ff">59</span>);
-<span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1439</span>);
+<span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">86399</span>);
 </code></pre></div>
-<ul>
-<li><a href="https://php.net/language.oop5.basic">https://php.net/language.oop5.basic</a></li>
-<li><a href="https://php.net/language.oop5.visibility">https://php.net/language.oop5.visibility</a></li>
-<li><a href="https://php.net/types.object#language.types.object.init">https://php.net/types.object#language.types.object.init</a></li>
-</ul>
+<p><a href="https://php.net/language.oop5.visibility">https://php.net/language.oop5.visibility</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#def-class">https://hyperpolyglot.org/scripting2#def-class</a></li>
