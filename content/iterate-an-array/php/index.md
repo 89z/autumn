@@ -5,15 +5,22 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/control-structures.foreach>
-- <https://php.net/function.array-walk>
-- <https://php.net/function.count>
-- <https://php.net/function.next>
+<https://php.net/control-structures.foreach>
+
+{{< r "a.php" >}}
+
+<https://php.net/function.array-walk>
+
+{{< r "a.php" >}}
+
+<https://php.net/function.count>
+
+{{< r "a.php" >}}
+
+<https://php.net/function.next>
 
 ## References
 
 - <https://hyperpolyglot.org/scripting#iterate-over-array>
-- <https://programming-idioms.org/idiom/6/iterate-over-list-val>
-- <https://programming-idioms.org/idiom/7/iterate-over-list-indexes-val>
-- <https://rosettacode.org/wiki/Loop_Structures>
+- <https://programming-idioms.org/idiom/6>
 - <https://rosettacode.org/wiki/Loops/Foreach>

@@ -3,6 +3,6 @@ import "regexp"
 
 func main() {
    s := "January"
-   b := regexp.MustCompile("^J").MatchString(s)
+   b := regexp.MustCompile("(?i)ja").MatchString(s)
    println(b)
 }
