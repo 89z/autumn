@@ -3,11 +3,13 @@ title: Go
 tags: [go]
 ---
 
-{{< r "map.go" >}}
-{{< r "obj.go" >}}
+{{< r "a.go" >}}
 
-- <https://golang.org/pkg/encoding/json#Unmarshal>
-- <https://golang.org/ref/spec#Exported_identifiers>
+<https://golang.org/pkg/encoding/json#Decoder.Decode>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/encoding/json#Unmarshal>
 
 ## References
 

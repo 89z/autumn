@@ -5,8 +5,11 @@ tags: [python]
 
 {{< r "a.py" >}}
 
-- <https://docs.python.org/library/json.html#json.load>
-- <https://docs.python.org/library/json.html#json.loads>
+<https://docs.python.org/library/json.html#json.load>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/library/json.html#json.loads>
 
 ## References
 

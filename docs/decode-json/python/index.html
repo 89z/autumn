@@ -33,19 +33,20 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> json
-<span style="color:#75715e"># example 1</span>
-s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{&#34;year&#34;: 2019, &#34;month&#34;: 12}&#39;</span>
-m1 <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(s)
-<span style="color:#75715e"># example 2</span>
 o <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;a.json&#39;</span>)
-m2 <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>load(o)
-<span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(m1, m2, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+m <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>load(o)
+<span style="color:#66d9ef">print</span>(m)
 </code></pre></div>
-<ul>
-<li><a href="https://docs.python.org/library/json.html#json.load">https://docs.python.org/library/json.html#json.load</a></li>
-<li><a href="https://docs.python.org/library/json.html#json.loads">https://docs.python.org/library/json.html#json.loads</a></li>
-</ul>
+<p><a href="https://docs.python.org/library/json.html#json.load">https://docs.python.org/library/json.html#json.load</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> json
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{&#34;year&#34;: 2019, &#34;month&#34;: 12}&#39;</span>
+m <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(s)
+<span style="color:#66d9ef">print</span>(m)
+</code></pre></div>
+<p><a href="https://docs.python.org/library/json.html#json.loads">https://docs.python.org/library/json.html#json.loads</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#parse-json">https://hyperpolyglot.org/scripting2#parse-json</a></li>

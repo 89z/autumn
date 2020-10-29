@@ -1,10 +1,8 @@
 <?php
 $s = '{"year": 2019, "month": 12}';
 # example 1
-$o1 = json_decode($s);
+$o = json_decode($s);
 # example 2
-$m2 = json_decode($s, true);
-# example 3
-$n3 = json_last_error();
+$m = json_decode($s, true);
 # print
-var_dump($o1, $m2, $n3 == JSON_ERROR_NONE);
+var_dump($o, $m);

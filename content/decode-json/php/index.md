@@ -5,8 +5,11 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.json-decode>
-- <https://php.net/function.json-last-error>
+<https://php.net/function.json-decode>
+
+{{< r "b.php" >}}
+
+<https://php.net/function.json-last-error>
 
 ## References
 
