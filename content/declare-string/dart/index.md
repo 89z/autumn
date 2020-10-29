@@ -9,6 +9,5 @@ tags: [dart]
 
 ## References
 
-- <https://programming-idioms.org/idiom/48>
-- <https://rosettacode.org/wiki/Here_document>
+- <https://programming-idioms.org/idiom/24>
 - <https://rosettacode.org/wiki/Literals/String>

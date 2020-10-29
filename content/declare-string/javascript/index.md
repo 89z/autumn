@@ -18,5 +18,5 @@ tags: [javascript]
 ## References
 
 - <https://hyperpolyglot.org/scripting#str-literal>
-- <https://programming-idioms.org/idiom/48>
+- <https://programming-idioms.org/idiom/24>
 - <https://rosettacode.org/wiki/Literals/String>

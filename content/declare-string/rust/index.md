@@ -12,5 +12,5 @@ tags: [rust]
 ## References
 
 - <https://hyperpolyglot.org/rust#str-literal>
-- <https://programming-idioms.org/idiom/48>
+- <https://programming-idioms.org/idiom/24>
 - <https://rosettacode.org/wiki/Literals/String>
