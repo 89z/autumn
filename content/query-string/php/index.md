@@ -5,8 +5,11 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.http-build-query>
-- <https://php.net/function.parse-str>
+<https://php.net/function.http-build-query>
+
+{{< r "b.php" >}}
+
+<https://php.net/function.parse-str>
 
 ## References
 

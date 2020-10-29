@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-   a := []int{10, 9}
-   sort.Ints(a)
+   a := []string{"May", "June"}
+   sort.Strings(a)
    fmt.Println(a)
 }

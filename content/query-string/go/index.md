@@ -5,8 +5,11 @@ tags: [go]
 
 {{< r "a.go" >}}
 
-- <https://golang.org/pkg/net/url#ParseQuery>
-- <https://golang.org/pkg/net/url#Values.Encode>
+<https://golang.org/pkg/net/url#ParseQuery>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/net/url#Values.Encode>
 
 ## References
 

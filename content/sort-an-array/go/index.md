@@ -3,12 +3,13 @@ title: Go
 tags: [go]
 ---
 
-{{< r "n.go" >}}
-{{< r "s.go" >}}
+{{< r "a.go" >}}
 
-- <https://golang.org/pkg/sort#Ints>
-- <https://golang.org/pkg/sort#Slice>
-- <https://golang.org/pkg/sort#Strings>
+<https://golang.org/pkg/sort#Slice>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/sort#Strings>
 
 ## References
 
