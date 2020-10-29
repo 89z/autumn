@@ -1,4 +1,4 @@
 <?php
 $a = ['May', 'June'];
-$n = count($a);
+$n = sizeof($a);
 var_dump($n == 2);

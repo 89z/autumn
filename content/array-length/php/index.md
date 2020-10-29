@@ -5,8 +5,11 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.count>
-- <https://php.net/function.sizeof>
+<https://php.net/function.count>
+
+{{< r "b.php" >}}
+
+<https://php.net/function.sizeof>
 
 ## References
 

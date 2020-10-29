@@ -1,4 +1,4 @@
 <?php
 $a = ['May', 'June'];
-$s = implode(',', $a);
+$s = join(',', $a);
 var_dump($s == 'May,June');

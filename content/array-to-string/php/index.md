@@ -5,8 +5,11 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.implode>
-- <https://php.net/function.join>
+<https://php.net/function.implode>
+
+{{< r "b.php" >}}
+
+<https://php.net/function.join>
 
 ## References
 

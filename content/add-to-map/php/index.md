@@ -5,8 +5,15 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/function.array-merge>
-- <https://php.net/language.types.array>
+<https://php.net/function.array-merge>
+
+{{< r "b.php" >}}
+
+<https://php.net/operators.array>
+
+{{< r "c.php" >}}
+
+<https://php.net/types.array#language.types.array.syntax.modifying>
 
 ## References
 
