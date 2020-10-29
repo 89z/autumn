@@ -5,8 +5,11 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-- <https://php.net/types.string#language.types.string.syntax.double>
-- <https://php.net/types.string#language.types.string.syntax.single>
+<https://php.net/types.string#language.types.string.syntax.double>
+
+{{< r "b.php" >}}
+
+<https://php.net/types.string#language.types.string.syntax.single>
 
 ## References
 
