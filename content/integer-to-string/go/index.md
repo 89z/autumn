@@ -3,16 +3,19 @@ title: Go
 tags: [go]
 ---
 
-{{< r "fmt.go" >}}
-{{< r "str.go" >}}
+{{< r "a.go" >}}
 
-- <https://golang.org/pkg/fmt>
-- <https://golang.org/pkg/strconv>
-- <https://pkg.go.dev/golang.org/x/text/message>
+<https://golang.org/pkg/fmt#Sprint>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/fmt#Sprintf>
+
+{{< r "c.go" >}}
+
+<https://golang.org/pkg/strconv#FormatInt>
 
 ## References
 
 - <https://hyperpolyglot.org/c#num-to-str>
-- <https://programming-idioms.org/idiom/173>
 - <https://programming-idioms.org/idiom/55>
-- <https://rosettacode.org/wiki/Commatizing_numbers>

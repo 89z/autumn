@@ -1,3 +1,3 @@
 n = 11
-s = format(n)
+s = str(n)
 print(s == '11')
