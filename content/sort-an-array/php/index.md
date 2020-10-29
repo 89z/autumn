@@ -3,11 +3,13 @@ title: PHP
 tags: [php]
 ---
 
-{{< r "n.php" >}}
-{{< r "s.php" >}}
+{{< r "a.php" >}}
 
-- <https://php.net/function.sort>
-- <https://php.net/function.usort>
+<https://php.net/function.sort>
+
+{{< r "b.php" >}}
+
+<https://php.net/function.usort>
 
 ## References
 

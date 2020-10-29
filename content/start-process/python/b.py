@@ -1,3 +1,3 @@
-import os
+import subprocess
 print('BEGIN')
-os.system('pipe')
+subprocess.call('pipe')

@@ -4,10 +4,12 @@ tags: [python]
 ---
 
 {{< r "a.py" >}}
+
+<https://docs.python.org/library/stdtypes.html#str.split>
+
 {{< r "b.py" >}}
 
-- <https://docs.python.org/library/stdtypes.html#str.split>
-- <https://docs.python.org/library/stdtypes.html#str.splitlines>
+<https://docs.python.org/library/stdtypes.html#str.splitlines>
 
 ## References
 
