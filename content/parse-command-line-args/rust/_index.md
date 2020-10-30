@@ -7,25 +7,25 @@ tags: [rust]
 
 0 deps
 
-<https://crates.io/crates/pico-args>
+<https://lib.rs/crates/pico-args>
 
 {{< r "b/src/main.rs" >}}
 
 8 deps
 
-<https://crates.io/crates/argh>
+<https://lib.rs/crates/argh>
 
 {{< r "c/src/main.rs" >}}
 
 12 deps
 
-<https://crates.io/crates/clap>
+<https://lib.rs/crates/clap>
 
 {{< r "d/src/main.rs" >}}
 
 24 deps
 
-<https://crates.io/crates/structopt>
+<https://lib.rs/crates/structopt>
 
 ## References
 

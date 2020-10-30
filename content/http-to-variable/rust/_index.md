@@ -7,19 +7,19 @@ tags: [rust]
 
 {{< r "a/src/main.rs" >}}
 
-<https://crates.io/crates/minreq>
+<https://lib.rs/crates/minreq>
 
 ## 35 deps
 
 {{< r "b/src/main.rs" >}}
 
-<https://crates.io/crates/http_req>
+<https://lib.rs/crates/http_req>
 
 ## 49 deps
 
 {{< r "c/src/main.rs" >}}
 
-<https://crates.io/crates/attohttpc>
+<https://lib.rs/crates/attohttpc>
 
 ## References
 
