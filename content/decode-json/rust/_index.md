@@ -3,11 +3,21 @@ title: Rust
 tags: [rust]
 ---
 
-~~~
-json language:rust stars:>9 pushed:>2019-10-30 size:10..100
-~~~
+{{< r "a/src/main.rs" >}}
 
-3 deps:
+0 deps
+
+<https://lib.rs/crates/tinyjson>
+
+{{< r "b/src/main.rs" >}}
+
+0 deps
+
+<https://lib.rs/crates/json>
+
+{{< r "c/src/main.rs" >}}
+
+3 deps
 
 <https://lib.rs/crates/serde_json>
 
