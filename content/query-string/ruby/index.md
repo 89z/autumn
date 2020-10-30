@@ -4,6 +4,7 @@ tags: [ruby]
 ---
 
 {{< r "a.rb" >}}
+{{< r "b.rb" >}}
 
 <https://ruby-doc.org/stdlib/libdoc/uri/rdoc>
 

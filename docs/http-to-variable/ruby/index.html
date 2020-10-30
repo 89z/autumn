@@ -4,7 +4,7 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Query string / Ruby</title>
+   <title>HTTP to variable / Ruby</title>
 
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/main.css">
@@ -21,33 +21,17 @@
    <main class="page">
 
 <h1>
-   <a href="/autumn/query-string/">Query string</a> / Ruby
+   <a href="/autumn/http-to-variable/">HTTP to variable</a> / Ruby
 </h1>
 <section class="page">
-   <time>Sat Sep 19 2020</time>
+   <time>Fri Oct 23 2020</time>
+   
+   <a href="/autumn/categories/input-output/">input-output</a>
    
    <a href="/autumn/categories/network/">network</a>
    
 </section>
-   <p>
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;uri&#39;</span>
-
-url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://google.com:80/foo?q=3#bar&#34;</span>
-up <span style="color:#f92672">=</span> <span style="color:#66d9ef">URI</span>(url)
-
-protocol <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>scheme
-hostname <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>host
-port <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>port
-path <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>path
-query_str <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>query
-fragment <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>fragment
-
-<span style="color:#75715e"># Ruby 1.9; returns array of pairs:</span>
-params <span style="color:#f92672">=</span> <span style="color:#66d9ef">URI</span><span style="color:#f92672">.</span>decode_www_form(query_str)
-</code></pre></div>
-
+   
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;cgi&#39;</span>
@@ -57,13 +41,9 @@ res <span style="color:#f92672">=</span> <span style="color:#66d9ef">Net</span><
 vars <span style="color:#f92672">=</span> <span style="color:#66d9ef">CGI</span><span style="color:#f92672">.</span>parse res
 json <span style="color:#f92672">=</span> <span style="color:#66d9ef">JSON</span><span style="color:#f92672">.</span>parse vars<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;player_response&#34;</span><span style="color:#f92672">].</span>first
 pp json<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;streamingData&#34;</span><span style="color:#f92672">][</span><span style="color:#e6db74">&#34;formats&#34;</span><span style="color:#f92672">]</span>
-</code></pre></div></p>
-<p><a href="https://ruby-doc.org/stdlib/libdoc/uri/rdoc">https://ruby-doc.org/stdlib/libdoc/uri/rdoc</a></p>
+</code></pre></div>
 <h2 id="references">References</h2>
-<ul>
-<li><a href="https://hyperpolyglot.org/scripting2#parse-url">https://hyperpolyglot.org/scripting2#parse-url</a></li>
-<li><a href="https://rosettacode.org/wiki/URL_parser">https://rosettacode.org/wiki/URL_parser</a></li>
-</ul>
+<p><a href="https://news.ycombinator.com/item?id=24876601">https://news.ycombinator.com/item?id=24876601</a></p>
 
 </main>
 
