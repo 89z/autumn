@@ -33,16 +33,18 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> Newtonsoft.Json.Linq;
-<span style="color:#66d9ef">using</span> System.IO;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System.Text.Json;
 <span style="color:#66d9ef">using</span> System;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      JObject x = JObject.Parse(File.ReadAllText(<span style="color:#e6db74">&#34;data.json&#34;</span>));
+      <span style="color:#66d9ef">var</span> s = <span style="color:#e6db74">&#34;[\&#34;sigma\&#34;, \&#34;tau\&#34;]&#34;</span>;
+      <span style="color:#66d9ef">var</span> a = JsonSerializer.Deserialize&lt;<span style="color:#66d9ef">string</span>[]&gt;(s);
+      Console.WriteLine(a);
    }
 }
 </code></pre></div>
+<p><a href="https://docs.microsoft.com/dotnet/standard/serialization/system-text-json-how-to">https://docs.microsoft.com/dotnet/standard/serialization/system-text-json-how-to</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/91">https://programming-idioms.org/idiom/91</a></li>

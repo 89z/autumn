@@ -1,9 +1,10 @@
-using Newtonsoft.Json.Linq;
-using System.IO;
+using System.Text.Json;
 using System;
 
 class Program {
    static void Main() {
-      JObject x = JObject.Parse(File.ReadAllText("data.json"));
+      var s = "[\"sigma\", \"tau\"]";
+      var a = JsonSerializer.Deserialize<string[]>(s);
+      Console.WriteLine(a);
    }
 }

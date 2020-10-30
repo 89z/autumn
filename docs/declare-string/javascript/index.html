@@ -32,23 +32,15 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> String.<span style="color:#a6e22e">raw</span><span style="color:#e6db74">`sigma</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#e6db74">tau`</span>;
-<span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> String.<span style="color:#a6e22e">raw</span><span style="color:#e6db74">`[&#34;sigma&#34;, &#34;tau&#34;]`</span>;
-<span style="color:#75715e">// print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> String.<span style="color:#a6e22e">raw</span><span style="color:#e6db74">`sigma</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#e6db74">tau`</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span>);
 </code></pre></div>
 <p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/raw">https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/raw</a></p>
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`sigma\\tau`</span>;
-<span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`[&#34;sigma&#34;, &#34;tau&#34;]`</span>;
-<span style="color:#75715e">// print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`sigma\\tau`</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span>);
 </code></pre></div>
 <p><a href="https://developer.mozilla.org/Web/JavaScript/Reference/Template_literals">https://developer.mozilla.org/Web/JavaScript/Reference/Template_literals</a></p>
 
@@ -57,13 +49,9 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// example 1
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;sigma\\tau&#39;</span>;
 <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;[&#34;sigma&#34;, &#34;tau&#34;]&#39;</span>;
-<span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s3</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;sigma\\tau&#34;</span>;
-<span style="color:#75715e">// example 4
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s4</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;[\&#34;sigma\&#34;, \&#34;tau\&#34;]&#34;</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;sigma\\tau&#34;</span>;
 <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>, <span style="color:#a6e22e">s3</span>, <span style="color:#a6e22e">s4</span>);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>, <span style="color:#a6e22e">s2</span>);
 </code></pre></div>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</a></p>
 <h2 id="references">References</h2>
