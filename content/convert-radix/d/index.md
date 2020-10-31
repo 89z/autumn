@@ -5,7 +5,7 @@ tags: [d]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/library/std/conv.html>
+<https://dlang.org/library/std/conv/to.html>
 
 ## References
 
