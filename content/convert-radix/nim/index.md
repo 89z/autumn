@@ -4,6 +4,7 @@ tags: [nim]
 ---
 
 {{< r "a.nim" >}}
+{{< r "b.nim" >}}
 
 <https://nim-lang.org/docs/strutils.html>
 

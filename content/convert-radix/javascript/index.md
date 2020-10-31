@@ -3,8 +3,17 @@ title: JavaScript
 tags: [javascript]
 ---
 
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/parseInt>
-- <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/parseInt>
+{{< r "a.js" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/parseInt>
+
+{{< r "b.js" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/toString>
+
+{{< r "c.js" >}}
+
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/parseInt>
 
 ## References
 

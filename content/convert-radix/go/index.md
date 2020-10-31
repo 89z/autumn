@@ -15,6 +15,10 @@ tags: [go]
 
 <https://golang.org/pkg/strconv#FormatInt>
 
+{{< r "d.go" >}}
+
+<https://golang.org/pkg/strconv#ParseInt>
+
 ## References
 
 - <https://programming-idioms.org/idiom/142>
