@@ -3,6 +3,8 @@ title: Go
 tags: [go]
 ---
 
+{{< r "a.go" >}}
+
 - <https://golang.org/pkg/math/big#Int.SetString>
 - <https://golang.org/pkg/math/big#Int.Text>
 
