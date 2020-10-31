@@ -4,6 +4,7 @@ tags: [python]
 ---
 
 {{< r "a.py" >}}
+{{< r "b.py" >}}
 
 ## References
 

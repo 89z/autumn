@@ -29,11 +29,40 @@
    <a href="/autumn/categories/number/">number</a>
    
 </section>
-   
+   <p>
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">int(<span style="color:#e6db74">&#39;60&#39;</span>, <span style="color:#ae81ff">7</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Radix36</span>:
+   digit <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0123456789abcdefghijklmnopqrstuvwxyz&#39;</span>
+
+   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">encode</span>(self, n):
+      <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>: <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#39;</span>
+      <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>encode(n <span style="color:#f92672">//</span> <span style="color:#ae81ff">36</span>) <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>digit[n <span style="color:#f92672">%</span> <span style="color:#ae81ff">36</span>]
+
+   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">decode</span>(self, s):
+      <span style="color:#66d9ef">return</span> int(s, <span style="color:#ae81ff">36</span>)
+
+o <span style="color:#f92672">=</span> Radix36()
+s <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>encode(<span style="color:#ae81ff">1577858399</span>)
+n <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>decode(<span style="color:#e6db74">&#39;q3ezbz&#39;</span>)
+<span style="color:#66d9ef">print</span>(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;q3ezbz&#39;</span>, n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1577858399</span>)
 </code></pre></div>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Radix36</span>:
+   digit <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0123456789abcdefghijklmnopqrstuvwxyz&#39;</span>
+
+   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">decode</span>(self, s):
+      <span style="color:#66d9ef">return</span> int(s, <span style="color:#ae81ff">36</span>)
+
+   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">encode</span>(self, n):
+      result <span style="color:#f92672">=</span> []
+      <span style="color:#66d9ef">while</span> num <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>:
+         num, d <span style="color:#f92672">=</span> divmod(num, <span style="color:#ae81ff">36</span>)
+         result <span style="color:#f92672">+=</span> digits[d]
+      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(result[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
+</code></pre></div></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting#radix">https://hyperpolyglot.org/scripting#radix</a></li>
