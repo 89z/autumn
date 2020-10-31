@@ -1,9 +1,9 @@
 ---
-title: C#
-tags: [c-sharp]
+title: Nim
+tags: [nim]
 ---
 
-{{< r "Program.cs" >}}
+{{< r "a.nim" >}}
 
 ## References
 
