@@ -4,7 +4,8 @@ tags: [python]
 ---
 
 {{< r "a.py" >}}
-{{< r "b.py" >}}
+
+<https://docs.python.org/library/functions.html#int>
 
 ## References
 

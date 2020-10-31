@@ -29,16 +29,60 @@
    <a href="/autumn/categories/number/">number</a>
    
 </section>
-   
+   <p>
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> format<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:x}&#34;</span>, n);
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;a&#34;</span>);
+    println<span style="color:#f92672">!</span>(
+        <span style="color:#e6db74">&#34;Parse from plain decimal: {}&#34;</span>,
+        <span style="color:#e6db74">&#34;123&#34;</span>.parse::<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u32</span><span style="color:#f92672">&gt;</span>().unwrap()
+    );
+    println<span style="color:#f92672">!</span>(
+        <span style="color:#e6db74">&#34;Parse with a given radix (2-36 supported): {}&#34;</span>,
+        <span style="color:#66d9ef">u32</span>::from_str_radix(<span style="color:#e6db74">&#34;deadbeef&#34;</span>, <span style="color:#ae81ff">16</span>).unwrap()
+    );
 }
 </code></pre></div>
-<p><a href="https://doc.rust-lang.org/std/fmt">https://doc.rust-lang.org/std/fmt</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">format_with_radix</span>(<span style="color:#66d9ef">mut</span> n: <span style="color:#66d9ef">u32</span>, radix: <span style="color:#66d9ef">u32</span>) -&gt; String {
+    assert<span style="color:#f92672">!</span>(<span style="color:#ae81ff">2</span> <span style="color:#f92672">&lt;=</span> radix <span style="color:#f92672">&amp;&amp;</span> radix <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">36</span>);
+ 
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> result <span style="color:#f92672">=</span> String::new();
+ 
+    <span style="color:#66d9ef">loop</span> {
+        result.push(std::char::from_digit(n <span style="color:#f92672">%</span> radix, radix).unwrap());
+        n <span style="color:#f92672">/=</span> radix;
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
+            <span style="color:#66d9ef">break</span>;
+        }
+    }
+ 
+    result.chars().rev().collect()
+}
+ 
+<span style="color:#75715e">#[cfg(test)]</span>
+<span style="color:#75715e">#[test]</span>
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">test</span>() {
+    <span style="color:#66d9ef">for</span> value <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">0</span>..<span style="color:#ae81ff">100</span><span style="color:#66d9ef">u32</span> {
+        <span style="color:#66d9ef">for</span> radix <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">2</span>..<span style="color:#f92672">=</span><span style="color:#ae81ff">36</span> {
+            <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> format_with_radix(value, radix);
+            <span style="color:#66d9ef">let</span> v <span style="color:#f92672">=</span> <span style="color:#66d9ef">u32</span>::from_str_radix(s.as_str(), radix).unwrap();
+            assert_eq<span style="color:#f92672">!</span>(value, v);
+        }
+    }
+}
+ 
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn std::error::Error<span style="color:#f92672">&gt;&gt;</span> {
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, format_with_radix(<span style="color:#ae81ff">0xdeadbeef</span>, <span style="color:#ae81ff">2</span>));
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, format_with_radix(<span style="color:#ae81ff">0xdeadbeef</span>, <span style="color:#ae81ff">36</span>));
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, format_with_radix(<span style="color:#ae81ff">0xdeadbeef</span>, <span style="color:#ae81ff">16</span>));
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, <span style="color:#66d9ef">u32</span>::from_str_radix(<span style="color:#e6db74">&#34;DeadBeef&#34;</span>, <span style="color:#ae81ff">16</span>)<span style="color:#f92672">?</span>);
+    Ok(())
+}
+</code></pre></div></p>
+<p><a href="https://doc.rust-lang.org/std/primitive.u8.html#method.from_str_radix">https://doc.rust-lang.org/std/primitive.u8.html#method.from_str_radix</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/142">https://programming-idioms.org/idiom/142</a></li>
