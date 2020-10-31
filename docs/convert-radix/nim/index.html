@@ -32,41 +32,33 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> strutils
- 
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">reverse</span>(a: <span style="color:#66d9ef">string</span>): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span>
-  result <span style="color:#f92672">=</span> newString(a.len)
-  <span style="color:#66d9ef">for</span> i, c <span style="color:#f92672">in</span> a:
-    result<span style="color:#f92672">[</span>a.high <span style="color:#f92672">-</span> i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c
- 
-<span style="color:#66d9ef">const</span> digits <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0123456789abcdefghijklmnopqrstuvwxyz&#34;</span>
- 
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">toBase</span><span style="color:#f92672">[</span>T<span style="color:#f92672">]</span>(num: T, base: <span style="color:#66d9ef">range</span><span style="color:#f92672">[</span><span style="color:#ae81ff">2</span>..<span style="color:#ae81ff">36</span><span style="color:#f92672">]</span>): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span>
-  <span style="color:#66d9ef">if</span> num <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>: <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;0&#34;</span>
-  result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
-  <span style="color:#66d9ef">if</span> num <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>: result.add <span style="color:#e6db74">&#39;-&#39;</span>
-  <span style="color:#66d9ef">var</span> tmp <span style="color:#f92672">=</span> abs(num)
-  <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
-  <span style="color:#66d9ef">while</span> tmp <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
-    s.add digits<span style="color:#f92672">[</span><span style="color:#66d9ef">int</span>(tmp <span style="color:#f92672">mod</span> base)<span style="color:#f92672">]</span>
-    tmp <span style="color:#f92672">=</span> tmp <span style="color:#f92672">div</span> base
-  result.add s.reverse
- 
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">fromBase</span>(str: <span style="color:#66d9ef">string</span>, base: <span style="color:#66d9ef">range</span><span style="color:#f92672">[</span><span style="color:#ae81ff">2</span>..<span style="color:#ae81ff">36</span><span style="color:#f92672">]</span>): BiggestInt <span style="color:#f92672">=</span>
-  <span style="color:#66d9ef">var</span> str <span style="color:#f92672">=</span> str
-  <span style="color:#66d9ef">let</span> first <span style="color:#f92672">=</span> <span style="color:#66d9ef">if</span> str<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;-&#39;</span>: <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">else</span>: <span style="color:#ae81ff">0</span>
- 
-  <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> first .. str.high:
-    <span style="color:#66d9ef">let</span> c <span style="color:#f92672">=</span> str<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>.toLower
-    assert c <span style="color:#f92672">in</span> digits<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span> .. <span style="color:#f92672">&lt;</span>base<span style="color:#f92672">]</span>
-    result <span style="color:#f92672">=</span> result <span style="color:#f92672">*</span> base <span style="color:#f92672">+</span> digits.find c
- 
-  <span style="color:#66d9ef">if</span> first <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>: result <span style="color:#f92672">*=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
- 
-echo <span style="color:#ae81ff">26.</span>toBase <span style="color:#ae81ff">16</span>
-echo <span style="color:#e6db74">&#34;1a&#34;</span>.fromBase <span style="color:#ae81ff">16</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">type</span> Radix36 <span style="color:#f92672">=</span> <span style="color:#66d9ef">object</span>
+   digit: <span style="color:#66d9ef">string</span>
+
+<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">newRadix36</span>(): Radix36 <span style="color:#f92672">=</span>
+   <span style="color:#66d9ef">return</span> Radix36(digit: <span style="color:#e6db74">&#34;0123456789abcdefghijklmnopqrstuvwxyz&#34;</span>)
+
+<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">encode</span>(o: Radix36, n: <span style="color:#66d9ef">int</span>): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span>
+   <span style="color:#66d9ef">var</span>
+      s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+      t <span style="color:#f92672">=</span> n
+   <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">true</span>:
+      s <span style="color:#f92672">=</span> o.digit<span style="color:#f92672">[</span>t <span style="color:#f92672">mod</span> <span style="color:#ae81ff">36</span><span style="color:#f92672">]</span> <span style="color:#f92672">&amp;</span> s
+      t <span style="color:#f92672">=</span> t <span style="color:#f92672">div</span> <span style="color:#ae81ff">36</span>
+      <span style="color:#66d9ef">if</span> t <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>: <span style="color:#66d9ef">break</span>
+   <span style="color:#66d9ef">return</span> s
+
+<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">decode</span>(o: Radix36, s: <span style="color:#66d9ef">string</span>): <span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span>
+   <span style="color:#66d9ef">var</span> n: <span style="color:#66d9ef">int</span>
+   <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> s: n <span style="color:#f92672">=</span> n <span style="color:#f92672">*</span> <span style="color:#ae81ff">36</span> <span style="color:#f92672">+</span> o.digit.find(c)
+   <span style="color:#66d9ef">return</span> n
+
+<span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> newRadix36()
+<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> o.encode(<span style="color:#ae81ff">1577858399</span>)
+<span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> o.decode(<span style="color:#e6db74">&#34;q3ezbz&#34;</span>)
+echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;q3ezbz&#34;</span> <span style="color:#f92672">and</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1577858399</span>
 </code></pre></div>
-<p><a href="https://nim-lang.org/docs/strutils.html">https://nim-lang.org/docs/strutils.html</a></p>
+<p><a href="https://nim-lang.org/docs/system.html#find,T,S">https://nim-lang.org/docs/system.html#find,T,S</a></p>
 <h2 id="references">References</h2>
 <p><a href="https://rosettacode.org/wiki/Non-decimal_radices/Output">https://rosettacode.org/wiki/Non-decimal_radices/Output</a></p>
 

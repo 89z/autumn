@@ -38,12 +38,16 @@
    <span style="color:#a6e22e">Hours</span> <span style="color:#66d9ef">int</span>
 }
 
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">NewTime</span>() <span style="color:#a6e22e">Time</span> {
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Time</span>{<span style="color:#ae81ff">23</span>}
+}
+
 <span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">o</span> <span style="color:#a6e22e">Time</span>) <span style="color:#a6e22e">Duration</span>(<span style="color:#a6e22e">minutes</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> {
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Hours</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">minutes</span>
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Time</span>{<span style="color:#ae81ff">23</span>}
+   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">NewTime</span>()
    <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Duration</span>(<span style="color:#ae81ff">59</span>)
    println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1439</span>)
 }

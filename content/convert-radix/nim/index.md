@@ -5,7 +5,7 @@ tags: [nim]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/strutils.html>
+<https://nim-lang.org/docs/system.html#find,T,S>
 
 ## References
 

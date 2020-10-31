@@ -32,34 +32,20 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">type</span> MyClass <span style="color:#f92672">=</span> <span style="color:#66d9ef">object</span>
-  name: <span style="color:#66d9ef">int</span>
- 
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">initMyClass</span>(): MyClass <span style="color:#f92672">=</span>
-  result.name <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
- 
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">someMethod</span>(m: <span style="color:#66d9ef">var</span> MyClass) <span style="color:#f92672">=</span>
-  m.name <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
- 
-<span style="color:#66d9ef">var</span> mc <span style="color:#f92672">=</span> initMyClass()
-mc.someMethod()
- 
-<span style="color:#66d9ef">type</span>
-  Gender <span style="color:#f92672">=</span> <span style="color:#66d9ef">enum</span> male, female, other
- 
-  MyOtherClass <span style="color:#f92672">=</span> <span style="color:#66d9ef">object</span>
-    name: <span style="color:#66d9ef">string</span>
-    gender: Gender
-    age: Natural
- 
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">initMyOtherClass</span>(name; gender <span style="color:#f92672">=</span> female; age <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>): auto <span style="color:#f92672">=</span>
-  MyOtherClass(name: name, gender: gender, age: age)
- 
-<span style="color:#66d9ef">var</span> person1 <span style="color:#f92672">=</span> initMyOtherClass(<span style="color:#e6db74">&#34;Jane&#34;</span>)
-echo person1.name, <span style="color:#e6db74">&#34; &#34;</span>, person1.gender, <span style="color:#e6db74">&#34; &#34;</span>, person1.age <span style="color:#75715e"># Jane female 50</span>
-<span style="color:#66d9ef">var</span> person2 <span style="color:#f92672">=</span> initMyOtherClass(<span style="color:#e6db74">&#34;John&#34;</span>, male, <span style="color:#ae81ff">23</span>)
-echo person2.name, <span style="color:#e6db74">&#34; &#34;</span>, person2.gender, <span style="color:#e6db74">&#34; &#34;</span>, person2.age <span style="color:#75715e"># John male 23</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">type</span> Time <span style="color:#f92672">=</span> <span style="color:#66d9ef">object</span>
+   hours: <span style="color:#66d9ef">int</span>
+
+<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">newTime</span>(): Time <span style="color:#f92672">=</span>
+   <span style="color:#66d9ef">return</span> Time(hours: <span style="color:#ae81ff">23</span>)
+
+<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">duration</span>(o: Time, minutes: <span style="color:#66d9ef">int</span>): <span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span>
+   <span style="color:#66d9ef">return</span> o.hours <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> minutes
+
+<span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> newTime()
+<span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> o.duration(<span style="color:#ae81ff">59</span>)
+echo n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1439</span>
 </code></pre></div>
+<p><a href="https://nim-lang.org/docs/manual.html#types-object-construction">https://nim-lang.org/docs/manual.html#types-object-construction</a></p>
 <h2 id="references">References</h2>
 <p><a href="https://rosettacode.org/wiki/Classes">https://rosettacode.org/wiki/Classes</a></p>
 
