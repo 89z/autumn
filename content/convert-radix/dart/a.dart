@@ -1,5 +1,5 @@
 void main() {
-   var n = 10;
-   var s = n.toRadixString(16);
-   print(s == 'a');
+   var s = 'q3ezbz';
+   var n = int.parse(s, radix: 36);
+   print(n == 1577858399);
 }

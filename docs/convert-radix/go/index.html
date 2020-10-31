@@ -24,7 +24,7 @@
    <a href="/autumn/convert-radix/">Convert radix</a> / Go
 </h1>
 <section class="page">
-   <time>Fri Oct 30 2020</time>
+   <time>Sat Oct 31 2020</time>
    
    <a href="/autumn/categories/number/">number</a>
    
@@ -35,37 +35,45 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;math/big&#34;</span>
 
-<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Radix</span> <span style="color:#66d9ef">struct</span> {
-   <span style="color:#a6e22e">n_len</span> <span style="color:#66d9ef">int</span>
-}
-
-<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">o_rad</span> <span style="color:#a6e22e">Radix</span>) <span style="color:#a6e22e">Encode</span>(<span style="color:#a6e22e">n_in</span> <span style="color:#66d9ef">int64</span>) <span style="color:#66d9ef">string</span> {
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">big</span>.<span style="color:#a6e22e">NewInt</span>(<span style="color:#a6e22e">n_in</span>).<span style="color:#a6e22e">Text</span>(<span style="color:#a6e22e">o_rad</span>.<span style="color:#a6e22e">n_len</span>)
-}
-
-<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">o_rad</span> <span style="color:#a6e22e">Radix</span>) <span style="color:#a6e22e">Decode</span>(<span style="color:#a6e22e">s_in</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">int64</span> {
-   <span style="color:#a6e22e">o_big</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">big</span>.<span style="color:#a6e22e">Int</span>{}
-   <span style="color:#a6e22e">o_big</span>.<span style="color:#a6e22e">SetString</span>(<span style="color:#a6e22e">s_in</span>, <span style="color:#a6e22e">o_rad</span>.<span style="color:#a6e22e">n_len</span>)
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">o_big</span>.<span style="color:#a6e22e">Int64</span>()
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Decode</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">n</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int64</span> {
+   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">big</span>.<span style="color:#a6e22e">Int</span>{}
+   <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">SetString</span>(<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">n</span>)
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Int64</span>()
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> int64(<span style="color:#ae81ff">1577858399</span>)
-   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Radix</span>{<span style="color:#ae81ff">62</span>}
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Encode</span>(<span style="color:#a6e22e">n</span>)
-   <span style="color:#a6e22e">n1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Decode</span>(<span style="color:#a6e22e">s1</span>)
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Encode</span>(<span style="color:#a6e22e">n</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)
-   <span style="color:#a6e22e">n2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Decode</span>(<span style="color:#a6e22e">s2</span>)
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">s1</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;1IMx31&#34;</span>, <span style="color:#a6e22e">n1</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">s2</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;1IMx30&#34;</span>, <span style="color:#a6e22e">n2</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;q3ezbz&#34;</span>
+   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Decode</span>(<span style="color:#a6e22e">s</span>, <span style="color:#ae81ff">36</span>)
+   println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1577858399</span>)
 }
 </code></pre></div>
-<ul>
-<li><a href="https://golang.org/pkg/math/big#Int.SetString">https://golang.org/pkg/math/big#Int.SetString</a></li>
-<li><a href="https://golang.org/pkg/math/big#Int.Text">https://golang.org/pkg/math/big#Int.Text</a></li>
-</ul>
+<p><a href="https://golang.org/pkg/math/big#Int.SetString">https://golang.org/pkg/math/big#Int.SetString</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;math/big&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> int64(<span style="color:#ae81ff">1577858399</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">big</span>.<span style="color:#a6e22e">NewInt</span>(<span style="color:#a6e22e">n</span>).<span style="color:#a6e22e">Text</span>(<span style="color:#ae81ff">36</span>)
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;q3ezbz&#34;</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/math/big#Int.Text">https://golang.org/pkg/math/big#Int.Text</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strconv&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> int64(<span style="color:#ae81ff">1577858399</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">FormatInt</span>(<span style="color:#a6e22e">n</span>, <span style="color:#ae81ff">36</span>)
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;q3ezbz&#34;</span>)
+}
+</code></pre></div>
+<p><a href="https://golang.org/pkg/strconv#FormatInt">https://golang.org/pkg/strconv#FormatInt</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/142">https://programming-idioms.org/idiom/142</a></li>

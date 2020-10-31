@@ -5,6 +5,10 @@ tags: [dart]
 
 {{< r "a.dart" >}}
 
+<https://api.dart.dev/dart-core/int/parse.html>
+
+{{< r "b.dart" >}}
+
 <https://api.dart.dev/dart-core/int/toRadixString.html>
 
 ## References

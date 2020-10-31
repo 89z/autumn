@@ -5,8 +5,15 @@ tags: [go]
 
 {{< r "a.go" >}}
 
-- <https://golang.org/pkg/math/big#Int.SetString>
-- <https://golang.org/pkg/math/big#Int.Text>
+<https://golang.org/pkg/math/big#Int.SetString>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/math/big#Int.Text>
+
+{{< r "c.go" >}}
+
+<https://golang.org/pkg/strconv#FormatInt>
 
 ## References
 
