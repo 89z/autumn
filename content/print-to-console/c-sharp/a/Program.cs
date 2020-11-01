@@ -2,6 +2,9 @@ using System;
 
 class Program {
    static void Main() {
-      Console.WriteLine("📗📕");
+      // example 1
+      Console.WriteLine("March");
+      // example 2
+      Console.WriteLine("{0}", "March");
    }
 }

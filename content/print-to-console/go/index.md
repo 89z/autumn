@@ -5,9 +5,17 @@ tags: [go]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/builtin#println>
+<https://golang.org/pkg/builtin#print>
 
 {{< r "b.go" >}}
+
+<https://golang.org/pkg/builtin#println>
+
+{{< r "c.go" >}}
+
+<https://golang.org/pkg/fmt#Print>
+
+{{< r "d.go" >}}
 
 <https://golang.org/pkg/fmt#Println>
 

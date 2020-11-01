@@ -1,6 +1,8 @@
 import std.stdio;
 
 void main() {
-   auto s = "📗📕";
-   s.write;
+   // example 1
+   write("March\n");
+   // example 2
+   write("March", "\n");
 }

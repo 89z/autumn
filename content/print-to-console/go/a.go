@@ -1,6 +1,8 @@
 package main
 
 func main() {
-   s := "📗📕"
-   println(s)
+   // example 1
+   print("March\n")
+   // example 2
+   print("March", "\n")
 }

@@ -1,4 +1,4 @@
 import strformat
-let n = 9
+let n = 11
 let s = "{n}".fmt
-echo s == "9"
+echo s == "11"

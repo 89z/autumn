@@ -4,7 +4,7 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Print to console / C#</title>
+   <title>Variable to console / C#</title>
 
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/main.css">
@@ -22,7 +22,7 @@
 
    
       
-<h1><a href="/autumn/print-to-console/">Print to console</a> / C#</h1>
+<h1><a href="/autumn/print-to-console/">Variable to console</a> / C#</h1>
 <section class="section">
    <time>Fri Sep 25 2020</time>
       
@@ -37,7 +37,10 @@
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      Console.WriteLine(<span style="color:#e6db74">&#34;📗📕&#34;</span>);
+      <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>      Console.WriteLine(<span style="color:#e6db74">&#34;March&#34;</span>);
+      <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>      Console.WriteLine(<span style="color:#e6db74">&#34;{0}&#34;</span>, <span style="color:#e6db74">&#34;March&#34;</span>);
    }
 }
 </code></pre></div>
@@ -49,8 +52,10 @@
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">var</span> s = <span style="color:#e6db74">&#34;May&#34;</span>;
-      Console.Write(s);
+      <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>      Console.Write(<span style="color:#e6db74">&#34;March\n&#34;</span>);
+      <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>      Console.Write(<span style="color:#e6db74">&#34;{0}&#34;</span>, <span style="color:#e6db74">&#34;March\n&#34;</span>);
    }
 }
 </code></pre></div>

@@ -7,6 +7,6 @@ tags: [nim]
 
 <https://nim-lang.org/docs/strformat.html#fmt.m,string>
 
-## References
+{{< r "b.nim" >}}
 
-<https://rosettacode.org/wiki/Commatizing_numbers>
+<https://nim-lang.org/docs/strformat.html#formatValue,string,T,string>

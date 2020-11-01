@@ -4,7 +4,7 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Print to console / D</title>
+   <title>Variable to console / D</title>
 
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/main.css">
@@ -21,7 +21,7 @@
    <main class="page">
 
 <h1>
-   <a href="/autumn/print-to-console/">Print to console</a> / D
+   <a href="/autumn/print-to-console/">Variable to console</a> / D
 </h1>
 <section class="page">
    <time>Fri Sep 25 2020</time>
@@ -35,7 +35,10 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   writeln<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;📗📕&#34;</span><span style="color:#f92672">);</span>
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   writeln<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;May&#34;</span><span style="color:#f92672">);</span>
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   writeln<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;May&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;June&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 <p><a href="https://dlang.org/library/std/stdio/writeln.html">https://dlang.org/library/std/stdio/writeln.html</a></p>
@@ -45,8 +48,10 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;📗📕&#34;</span><span style="color:#f92672">;</span>
-   s<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">;</span>
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   write<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;March\n&#34;</span><span style="color:#f92672">);</span>
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   write<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;March&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 <p><a href="https://dlang.org/library/std/stdio/write.html">https://dlang.org/library/std/stdio/write.html</a></p>

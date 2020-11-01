@@ -1,5 +1,8 @@
 import std.stdio;
 
 void main() {
-   writeln("📗📕");
+   // example 1
+   writeln("May");
+   // example 2
+   writeln("May", "June");
 }

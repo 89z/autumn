@@ -1,7 +1,8 @@
 package main
-import "fmt"
 
 func main() {
-   s := "📗📕"
-   fmt.Println(s)
+   // example 1
+   println("March")
+   // example 2
+   println("May", "June")
 }

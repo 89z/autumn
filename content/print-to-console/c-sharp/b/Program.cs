@@ -2,7 +2,9 @@ using System;
 
 class Program {
    static void Main() {
-      var s = "May";
-      Console.Write(s);
+      // example 1
+      Console.Write("March\n");
+      // example 2
+      Console.Write("{0}", "March\n");
    }
 }
