@@ -1,23 +1,22 @@
 using System;
-
 class Program {
    static void Main() {
-      string s = "minute";
-      int n;
+      int n = 46 / 10;
+      string s;
 
-      switch (s) {
-      case "hour":
-         n = 23;
+      switch (n) {
+      case 7:
+         s = "seven";
          break;
-      case "minute":
-      case "second":
-         n = 59;
+      case 6:
+      case 5:
+         s = "six or five";
          break;
       default:
-         n = -1;
+         s = n.ToString();
          break;
       }
 
-      Console.WriteLine(n == 59);
+      Console.WriteLine(s);
    }
 }

@@ -1,11 +1,9 @@
 fn main() {
-   let s = "minute";
-
-   let n = match s {
-      "hour" => 23,
-      "minute" | "second" => 59,
-      _ => -1
+   let s = match 46 / 10 {
+      7 => format!("seven"),
+      6 | 5 => format!("six or five"),
+      n => format!("{}", n)
    };
 
-   println!("{}", n == 59);
+   println!("{}", s);
 }

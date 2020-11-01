@@ -1,18 +1,18 @@
 void main() {
-   String s = 'minute';
-   int n;
+   num n = 46 / 10;
+   String s;
 
-   switch (s) {
-   case 'hour':
-      n = 23;
+   switch (n) {
+   case 7:
+      s = 'seven';
       break;
-   case 'minute':
-   case 'second':
-      n = 59;
+   case 6:
+   case 5:
+      s = 'six or five';
       break;
    default:
-      n = -1;
+      s = n.toString();
    }
 
-   print(n == 59);
+   print(s);
 }

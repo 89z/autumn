@@ -10,4 +10,5 @@ tags: [go]
 ## References
 
 - <https://hyperpolyglot.org/c#switch>
+- <https://programming-idioms.org/idiom/131>
 - <https://rosettacode.org/wiki/Conditional_structures>

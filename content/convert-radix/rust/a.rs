@@ -1,8 +1,15 @@
-use std::num;
+use std::char;
 
-fn main() -> Result<(), num::ParseIntError> {
-   let s = "q3ezbz";
-   let n = u32::from_str_radix(s, 36)?;
-   println!("{}", n == 1577858399);
-   Ok(())
+fn encode(n: u32, r: u32) -> String {
+   if n == 0 {
+      return String::new();
+   }
+   let c = char::from_digit(n % r, r).unwrap_or_default();
+   encode(n / r, r) + &String::from(c)
+}
+
+fn main() {
+   let n = 1577858399;
+   let s = encode(n, 36);
+   println!("{}", s == "q3ezbz");
 }
