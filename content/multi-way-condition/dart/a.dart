@@ -1,18 +1,18 @@
 void main() {
-   num n = 46 / 10;
+   int n = 1 + 2;
    String s;
 
    switch (n) {
-   case 6:
-      s = 'six';
-      break;
    case 5:
+      s = 'five';
+      break;
    case 4:
-      s = 'five or four';
+   case 3:
+      s = 'four or three';
       break;
    default:
       s = n.toString();
    }
 
-   print(s == '4.6');
+   print(s == 'four or three');
 }

@@ -1,15 +1,8 @@
 package main
-
-import (
-   "os"
-   "strconv"
-)
+import "fmt"
 
 func main() {
-   s := "9.9"
-   n, e := strconv.ParseFloat(s, 64)
-   if e != nil {
-      os.Exit(1)
-   }
-   println(n == 9.9)
+   var n float64
+   fmt.Sscanf("9.9", "%v", &n)
+   fmt.Println(n == 9.9)
 }

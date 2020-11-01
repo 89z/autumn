@@ -2,17 +2,17 @@ package main
 import "fmt"
 
 func main() {
-   var n = 46 / 10
+   var n = 1 + 2
    var s string
 
    switch n {
-   case 7:
-      s = "seven"
-   case 6, 5:
-      s = "six or five"
+   case 5:
+      s = "five"
+   case 4, 3:
+      s = "four or three"
    default:
       s = fmt.Sprint(n)
    }
 
-   fmt.Println(s == "4")
+   fmt.Println(s == "four or three")
 }

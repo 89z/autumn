@@ -2,7 +2,7 @@ package main
 import "fmt"
 
 func main() {
-   s := "May"
-   s2 := fmt.Sprintf("%s,June", s)
-   println(s2 == "May,June")
+   s := "March"
+   s2 := fmt.Sprintf("%s,April", s)
+   fmt.Println(s2 == "March,April")
 }

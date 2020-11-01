@@ -2,22 +2,22 @@ using System;
 
 class Program {
    static void Main() {
-      int n = 15 / 10;
+      int n = 1 + 2;
       string s;
 
       switch (n) {
-      case 3:
-         s = "three";
+      case 5:
+         s = "five";
          break;
-      case 2:
-      case 1:
-         s = "two or one";
+      case 4:
+      case 3:
+         s = "four or three";
          break;
       default:
          s = n.ToString();
          break;
       }
 
-      Console.WriteLine(s == "two or one");
+      Console.WriteLine(s == "four or three");
    }
 }

@@ -9,9 +9,17 @@ tags: [go]
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/strconv#ParseFloat>
+<https://golang.org/pkg/fmt#Sscanf>
 
 {{< r "c.go" >}}
+
+<https://golang.org/pkg/fmt#Sscanln>
+
+{{< r "d.go" >}}
+
+<https://golang.org/pkg/strconv#ParseFloat>
+
+{{< r "e.go" >}}
 
 <https://golang.org/ref/spec#Conversions>
 

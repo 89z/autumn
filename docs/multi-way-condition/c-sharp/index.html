@@ -37,23 +37,23 @@
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">int</span> n = <span style="color:#ae81ff">15</span> / <span style="color:#ae81ff">10</span>;
+      <span style="color:#66d9ef">int</span> n = <span style="color:#ae81ff">1</span> + <span style="color:#ae81ff">2</span>;
       <span style="color:#66d9ef">string</span> s;
 
       <span style="color:#66d9ef">switch</span> (n) {
-      <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">3</span>:
-         s = <span style="color:#e6db74">&#34;three&#34;</span>;
+      <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">5</span>:
+         s = <span style="color:#e6db74">&#34;five&#34;</span>;
          <span style="color:#66d9ef">break</span>;
-      <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">2</span>:
-      <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">1</span>:
-         s = <span style="color:#e6db74">&#34;two or one&#34;</span>;
+      <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">4</span>:
+      <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">3</span>:
+         s = <span style="color:#e6db74">&#34;four or three&#34;</span>;
          <span style="color:#66d9ef">break</span>;
       <span style="color:#66d9ef">default</span>:
          s = n.ToString();
          <span style="color:#66d9ef">break</span>;
       }
 
-      Console.WriteLine(s == <span style="color:#e6db74">&#34;two or one&#34;</span>);
+      Console.WriteLine(s == <span style="color:#e6db74">&#34;four or three&#34;</span>);
    }
 }
 </code></pre></div>

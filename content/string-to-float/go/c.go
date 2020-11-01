@@ -1,7 +1,8 @@
 package main
+import "fmt"
 
 func main() {
-   n := 10
-   n1 := float64(n)
-   println(n1 == 10, n1 == 10.0)
+   var n float64
+   fmt.Sscanln("9.9", &n)
+   fmt.Println(n == 9.9)
 }
