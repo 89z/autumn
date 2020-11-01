@@ -1,10 +1,8 @@
-fn main() {
-    println!(
-        "Parse from plain decimal: {}",
-        "123".parse::<u32>().unwrap()
-    );
-    println!(
-        "Parse with a given radix (2-36 supported): {}",
-        u32::from_str_radix("deadbeef", 16).unwrap()
-    );
+use std::num;
+
+fn main() -> Result<(), num::ParseIntError> {
+   let s = "q3ezbz";
+   let n = u32::from_str_radix(s, 36)?;
+   println!("{}", n == 1577858399);
+   Ok(())
 }

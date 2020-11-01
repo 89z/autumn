@@ -32,15 +32,13 @@
    <p>
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-    println<span style="color:#f92672">!</span>(
-        <span style="color:#e6db74">&#34;Parse from plain decimal: {}&#34;</span>,
-        <span style="color:#e6db74">&#34;123&#34;</span>.parse::<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u32</span><span style="color:#f92672">&gt;</span>().unwrap()
-    );
-    println<span style="color:#f92672">!</span>(
-        <span style="color:#e6db74">&#34;Parse with a given radix (2-36 supported): {}&#34;</span>,
-        <span style="color:#66d9ef">u32</span>::from_str_radix(<span style="color:#e6db74">&#34;deadbeef&#34;</span>, <span style="color:#ae81ff">16</span>).unwrap()
-    );
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::num;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), num::ParseIntError<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;q3ezbz&#34;</span>;
+   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#66d9ef">u32</span>::from_str_radix(s, <span style="color:#ae81ff">36</span>)<span style="color:#f92672">?</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1577858399</span>);
+   Ok(())
 }
 </code></pre></div>
 
@@ -82,7 +80,7 @@
     Ok(())
 }
 </code></pre></div></p>
-<p><a href="https://doc.rust-lang.org/std/primitive.u8.html#method.from_str_radix">https://doc.rust-lang.org/std/primitive.u8.html#method.from_str_radix</a></p>
+<p><a href="https://doc.rust-lang.org/std/primitive.u32.html#method.from_str_radix">https://doc.rust-lang.org/std/primitive.u32.html#method.from_str_radix</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/142">https://programming-idioms.org/idiom/142</a></li>
