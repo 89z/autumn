@@ -3,16 +3,16 @@ void main() {
    String s;
 
    switch (n) {
-   case 7:
-      s = 'seven';
-      break;
    case 6:
+      s = 'six';
+      break;
    case 5:
-      s = 'six or five';
+   case 4:
+      s = 'five or four';
       break;
    default:
       s = n.toString();
    }
 
-   print(s);
+   print(s == '4.6');
 }

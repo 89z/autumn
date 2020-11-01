@@ -1,22 +1,23 @@
 using System;
+
 class Program {
    static void Main() {
-      int n = 46 / 10;
+      int n = 15 / 10;
       string s;
 
       switch (n) {
-      case 7:
-         s = "seven";
+      case 3:
+         s = "three";
          break;
-      case 6:
-      case 5:
-         s = "six or five";
+      case 2:
+      case 1:
+         s = "two or one";
          break;
       default:
          s = n.ToString();
          break;
       }
 
-      Console.WriteLine(s);
+      Console.WriteLine(s == "two or one");
    }
 }

@@ -5,5 +5,5 @@ fn main() {
       n => format!("{}", n)
    };
 
-   println!("{}", s);
+   println!("{}", s == "4");
 }

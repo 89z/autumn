@@ -1,17 +1,18 @@
 package main
+import "fmt"
 
 func main() {
-   var s = "minute"
-   var n int
+   var n = 46 / 10
+   var s string
 
-   switch s {
-   case "hour":
-      n = 23
-   case "minute", "second":
-      n = 59
+   switch n {
+   case 7:
+      s = "seven"
+   case 6, 5:
+      s = "six or five"
    default:
-      n = -1
+      s = fmt.Sprint(n)
    }
 
-   println(n == 59)
+   fmt.Println(s == "4")
 }
