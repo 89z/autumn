@@ -1,14 +1,15 @@
-class Radix36:
-   digit = '0123456789abcdefghijklmnopqrstuvwxyz'
+class Radix:
+   sDigit = '0123456789abcdefghijklmnopqrstuvwxyz'
 
-   def encode(self, n):
-      if n == 0: return ''
-      return self.encode(n // 36) + self.digit[n % 36]
+   def decode(self, sIn, nBase):
+      return int(sIn, nBase)
 
-   def decode(self, s):
-      return int(s, 36)
+   def encode(self, nIn, nBase):
+      sChar = self.sDigit[nIn % nBase]
+      nIn //= nBase
+      return self.encode(nIn, nBase) + sChar if nIn > 0 else sChar
 
-o = Radix36()
-s = o.encode(1577858399)
-n = o.decode('q3ezbz')
+o = Radix()
+s = o.encode(1577858399, 36)
+n = o.decode('q3ezbz', 36)
 print(s == 'q3ezbz', n == 1577858399)

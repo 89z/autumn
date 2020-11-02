@@ -3,8 +3,7 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< r "a/Program.cs" >}}
-{{< r "b/Program.cs" >}}
+{{< r "Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/api/system.string.indexof>
 

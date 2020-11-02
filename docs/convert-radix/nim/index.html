@@ -24,7 +24,7 @@
    <a href="/autumn/convert-radix/">Convert radix</a> / Nim
 </h1>
 <section class="page">
-   <time>Sat Oct 31 2020</time>
+   <time>Mon Nov 2 2020</time>
    
    <a href="/autumn/categories/number/">number</a>
    
@@ -32,30 +32,25 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">type</span> Radix36 <span style="color:#f92672">=</span> <span style="color:#66d9ef">object</span>
-   digit: <span style="color:#66d9ef">string</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">type</span> Radix <span style="color:#f92672">=</span> <span style="color:#66d9ef">object</span>
+   sDigit: <span style="color:#66d9ef">string</span>
 
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">newRadix36</span>(): Radix36 <span style="color:#f92672">=</span>
-   <span style="color:#66d9ef">return</span> Radix36(digit: <span style="color:#e6db74">&#34;0123456789abcdefghijklmnopqrstuvwxyz&#34;</span>)
+<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">newRadix</span>(): Radix <span style="color:#f92672">=</span>
+   <span style="color:#66d9ef">return</span> Radix(sDigit: <span style="color:#e6db74">&#34;0123456789abcdefghijklmnopqrstuvwxyz&#34;</span>)
 
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">encode</span>(o: Radix36, n: <span style="color:#66d9ef">int</span>): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span>
-   <span style="color:#66d9ef">var</span>
-      s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
-      t <span style="color:#f92672">=</span> n
-   <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">true</span>:
-      s <span style="color:#f92672">=</span> o.digit<span style="color:#f92672">[</span>t <span style="color:#f92672">mod</span> <span style="color:#ae81ff">36</span><span style="color:#f92672">]</span> <span style="color:#f92672">&amp;</span> s
-      t <span style="color:#f92672">=</span> t <span style="color:#f92672">div</span> <span style="color:#ae81ff">36</span>
-      <span style="color:#66d9ef">if</span> t <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>: <span style="color:#66d9ef">break</span>
-   <span style="color:#66d9ef">return</span> s
+<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">encode</span>(o: Radix, nIn, nBase: <span style="color:#66d9ef">int</span>): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span>
+   <span style="color:#66d9ef">let</span> c <span style="color:#f92672">=</span> o.sDigit<span style="color:#f92672">[</span>nIn <span style="color:#f92672">mod</span> nBase<span style="color:#f92672">]</span>
+   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> nIn <span style="color:#f92672">div</span> nBase
+   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>: o.encode(n, nBase) <span style="color:#f92672">&amp;</span> c <span style="color:#66d9ef">else</span>: <span style="color:#f92672">$</span>(c)
 
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">decode</span>(o: Radix36, s: <span style="color:#66d9ef">string</span>): <span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span>
-   <span style="color:#66d9ef">var</span> n: <span style="color:#66d9ef">int</span>
-   <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> s: n <span style="color:#f92672">=</span> n <span style="color:#f92672">*</span> <span style="color:#ae81ff">36</span> <span style="color:#f92672">+</span> o.digit.find(c)
-   <span style="color:#66d9ef">return</span> n
+<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">decode</span>(o: Radix, sIn: <span style="color:#66d9ef">string</span>, nBase: <span style="color:#66d9ef">int</span>): <span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span>
+   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> o.sDigit.find(sIn<span style="color:#f92672">[</span>^<span style="color:#ae81ff">1</span><span style="color:#f92672">]</span>)
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> sIn<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span> ..<span style="color:#f92672">&lt;</span> ^<span style="color:#ae81ff">1</span><span style="color:#f92672">]</span>
+   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">if</span> s <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;&#34;</span>: o.decode(s, nBase) <span style="color:#f92672">*</span> nBase <span style="color:#f92672">+</span> n <span style="color:#66d9ef">else</span>: n
 
-<span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> newRadix36()
-<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> o.encode(<span style="color:#ae81ff">1577858399</span>)
-<span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> o.decode(<span style="color:#e6db74">&#34;q3ezbz&#34;</span>)
+<span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> newRadix()
+<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> o.encode(<span style="color:#ae81ff">1577858399</span>, <span style="color:#ae81ff">36</span>)
+<span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> o.decode(<span style="color:#e6db74">&#34;q3ezbz&#34;</span>, <span style="color:#ae81ff">36</span>)
 echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;q3ezbz&#34;</span> <span style="color:#f92672">and</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1577858399</span>
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/system.html#find,T,S">https://nim-lang.org/docs/system.html#find,T,S</a></p>

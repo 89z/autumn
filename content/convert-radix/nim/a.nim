@@ -1,25 +1,20 @@
-type Radix36 = object
-   digit: string
+type Radix = object
+   sDigit: string
 
-proc newRadix36(): Radix36 =
-   return Radix36(digit: "0123456789abcdefghijklmnopqrstuvwxyz")
+proc newRadix(): Radix =
+   return Radix(sDigit: "0123456789abcdefghijklmnopqrstuvwxyz")
 
-proc encode(o: Radix36, n: int): string =
-   var
-      s = ""
-      t = n
-   while true:
-      s = o.digit[t mod 36] & s
-      t = t div 36
-      if t == 0: break
-   return s
+proc encode(o: Radix, nIn, nBase: int): string =
+   let c = o.sDigit[nIn mod nBase]
+   let n = nIn div nBase
+   return if n > 0: o.encode(n, nBase) & c else: $(c)
 
-proc decode(o: Radix36, s: string): int =
-   var n: int
-   for c in s: n = n * 36 + o.digit.find(c)
-   return n
+proc decode(o: Radix, sIn: string, nBase: int): int =
+   let n = o.sDigit.find(sIn[^1])
+   let s = sIn[0 ..< ^1]
+   return if s != "": o.decode(s, nBase) * nBase + n else: n
 
-let o = newRadix36()
-let s = o.encode(1577858399)
-let n = o.decode("q3ezbz")
+let o = newRadix()
+let s = o.encode(1577858399, 36)
+let n = o.decode("q3ezbz", 36)
 echo s == "q3ezbz" and n == 1577858399
