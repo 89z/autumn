@@ -1,4 +1,3 @@
-import strformat
 let n = 11
-let s = "{n}".fmt
+let s = $(n)
 echo s == "11"

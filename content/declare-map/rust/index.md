@@ -5,7 +5,11 @@ tags: [rust]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/collections/struct.HashMap.html>
+<https://doc.rust-lang.org/std/collections/struct.HashMap.html#examples>
+
+{{< r "b.rs" >}}
+
+<https://doc.rust-lang.org/std/collections/struct.HashMap.html#method.new>
 
 ## References
 

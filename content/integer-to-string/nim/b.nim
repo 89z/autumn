@@ -1,5 +1,4 @@
 import strformat
-var n = 11
-var s: string
-s.formatValue(n, "")
+let n = 11
+let s = &"{n}"
 echo s == "11"

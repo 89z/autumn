@@ -32,18 +32,19 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;minute&#34;</span>
-<span style="color:#66d9ef">var</span> n: <span style="color:#66d9ef">int</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">var</span>
+   n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>
+   s: <span style="color:#66d9ef">string</span>
 
-<span style="color:#66d9ef">case</span> s
-<span style="color:#66d9ef">of</span> <span style="color:#e6db74">&#34;hour&#34;</span>:
-   n <span style="color:#f92672">=</span> <span style="color:#ae81ff">23</span>
-<span style="color:#66d9ef">of</span> <span style="color:#e6db74">&#34;minute&#34;</span>, <span style="color:#e6db74">&#34;second&#34;</span>:
-   n <span style="color:#f92672">=</span> <span style="color:#ae81ff">59</span>
+<span style="color:#66d9ef">case</span> n
+<span style="color:#66d9ef">of</span> <span style="color:#ae81ff">5</span>:
+   s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;five&#34;</span>
+<span style="color:#66d9ef">of</span> <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>:
+   s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;four or three&#34;</span>
 <span style="color:#66d9ef">else</span>:
-   n <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+   s <span style="color:#f92672">=</span> <span style="color:#f92672">$</span>(n)
 
-echo n <span style="color:#f92672">==</span> <span style="color:#ae81ff">59</span>
+echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;four or three&#34;</span>
 </code></pre></div>
 <p><a href="https://nim-lang.org/docs/manual.html#statements-and-expressions-case-statement">https://nim-lang.org/docs/manual.html#statements-and-expressions-case-statement</a></p>
 <h2 id="references">References</h2>

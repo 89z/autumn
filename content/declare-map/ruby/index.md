@@ -5,6 +5,10 @@ tags: [ruby]
 
 {{< r "a.rb" >}}
 
+<https://ruby-doc.org/core/Array.html#method-i-to_h>
+
+{{< r "b.rb" >}}
+
 <https://ruby-doc.org/core/Hash.html>
 
 ## References

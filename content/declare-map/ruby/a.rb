@@ -1,6 +1,3 @@
-# example 1
-m1 = {}
-# example 2
-m2 = {'year' => 2019, 'month' => 12}
-# print
-puts m1, m2
+a = [['year', 2019], ['month', 12]]
+m = a.to_h
+puts m

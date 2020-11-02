@@ -1,12 +1,13 @@
-var s = "minute"
-var n: int
+var
+   n = 1 + 2
+   s: string
 
-case s
-of "hour":
-   n = 23
-of "minute", "second":
-   n = 59
+case n
+of 5:
+   s = "five"
+of 4, 3:
+   s = "four or three"
 else:
-   n = -1
+   s = $(n)
 
-echo n == 59
+echo s == "four or three"

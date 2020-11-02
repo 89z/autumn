@@ -24,12 +24,33 @@
    <a href="/autumn/declare-map/">Declare map</a> / Rust
 </h1>
 <section class="page">
-   <time>Fri Sep 11 2020</time>
+   <time>Mon Nov 2 2020</time>
    
    <a href="/autumn/categories/map/">map</a>
    
 </section>
    
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::collections::HashMap;
+
+<span style="color:#66d9ef">trait</span> Hash {
+   <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">to_map</span>(<span style="color:#f92672">&amp;</span>self) -&gt; <span style="color:#a6e22e">HashMap</span><span style="color:#f92672">&lt;&amp;</span><span style="color:#66d9ef">str</span>, <span style="color:#66d9ef">u16</span><span style="color:#f92672">&gt;</span>;
+}
+
+<span style="color:#66d9ef">impl</span> Hash <span style="color:#66d9ef">for</span> [(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">str</span>, <span style="color:#66d9ef">u16</span>)] {
+   <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">to_map</span>(<span style="color:#f92672">&amp;</span>self) -&gt; <span style="color:#a6e22e">HashMap</span><span style="color:#f92672">&lt;&amp;</span><span style="color:#66d9ef">str</span>, <span style="color:#66d9ef">u16</span><span style="color:#f92672">&gt;</span> {
+      self.iter().cloned().collect()
+   }
+}
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> m <span style="color:#f92672">=</span> [(<span style="color:#e6db74">&#34;year&#34;</span>, <span style="color:#ae81ff">2019</span>), (<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">12</span>)].to_map();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, m)
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/collections/struct.HashMap.html#examples">https://doc.rust-lang.org/std/collections/struct.HashMap.html#examples</a></p>
+
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::collections::HashMap;
@@ -40,7 +61,7 @@
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, m);
 }
 </code></pre></div>
-<p><a href="https://doc.rust-lang.org/std/collections/struct.HashMap.html">https://doc.rust-lang.org/std/collections/struct.HashMap.html</a></p>
+<p><a href="https://doc.rust-lang.org/std/collections/struct.HashMap.html#method.new">https://doc.rust-lang.org/std/collections/struct.HashMap.html#method.new</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/rust#declare-dict">https://hyperpolyglot.org/rust#declare-dict</a></li>
