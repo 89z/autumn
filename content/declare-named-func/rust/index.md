@@ -7,6 +7,10 @@ tags: [rust]
 
 <https://doc.rust-lang.org/std/keyword.fn.html>
 
+{{< r "b.rs" >}}
+
+<https://doc.rust-lang.org/std/keyword.trait.html>
+
 ## References
 
 - <https://hyperpolyglot.org/rust#def-func>

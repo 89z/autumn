@@ -1,18 +1,17 @@
 package main
-import "fmt"
 
 func main() {
    var n = 1 + 2
-   var s string
+   var b bool
 
    switch n {
    case 5:
-      s = "five"
+      b = false
    case 4, 3:
-      s = "four or three"
+      b = true
    default:
-      s = fmt.Sprint(n)
+      b = n < 3
    }
 
-   fmt.Println(s == "four or three")
+   println(b)
 }

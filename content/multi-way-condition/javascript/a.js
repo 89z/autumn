@@ -1,15 +1,15 @@
-let s, n = 1 + 2;
+let b, n = 1 + 2;
 
 switch (n) {
 case 5:
-   s = 'five';
+   b = false;
    break;
 case 4:
 case 3:
-   s = 'four or three';
+   b = true;
    break;
 default:
-   s = String(n);
+   b = n < 3;
 }
 
-console.log(s == 'four or three');
+console.log(b);

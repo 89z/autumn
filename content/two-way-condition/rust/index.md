@@ -9,17 +9,21 @@ tags: [rust]
 
 {{< r "b.rs" >}}
 
-<https://doc.rust-lang.org/std/option/enum.Option.html#method.unwrap_or>
+<https://doc.rust-lang.org/std/option/enum.Option.html#method.ok_or>
 
 {{< r "c.rs" >}}
 
-<https://doc.rust-lang.org/std/option/enum.Option.html#method.unwrap_or_default>
+<https://doc.rust-lang.org/std/option/enum.Option.html#method.unwrap_or>
 
 {{< r "d.rs" >}}
 
-<https://doc.rust-lang.org/std/result/enum.Result.html#method.unwrap_or>
+<https://doc.rust-lang.org/std/option/enum.Option.html#method.unwrap_or_default>
 
 {{< r "e.rs" >}}
+
+<https://doc.rust-lang.org/std/result/enum.Result.html#method.unwrap_or>
+
+{{< r "f.rs" >}}
 
 <https://doc.rust-lang.org/std/result/enum.Result.html#method.unwrap_or_default>
 

@@ -1,18 +1,18 @@
 void main() {
    int n = 1 + 2;
-   String s;
+   bool b;
 
    switch (n) {
    case 5:
-      s = 'five';
+      b = false;
       break;
    case 4:
    case 3:
-      s = 'four or three';
+      b = true;
       break;
    default:
-      s = n.toString();
+      b = n < 3;
    }
 
-   print(s == 'four or three');
+   print(b);
 }
