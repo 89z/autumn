@@ -28,7 +28,9 @@
       
 </section>
    
-   <h2 id="c">C#</h2>
+   <pre><code>11,398,895,185,373,144	incorrect
+11,398,895,185,373,143	correct
+</code></pre><h2 id="c">C#</h2>
 
 
 
@@ -105,10 +107,63 @@
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>);
 </code></pre></div>
 <h2 id="nim">Nim</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> math
+<span style="color:#66d9ef">let</span> nX <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>
+<span style="color:#66d9ef">let</span> nY <span style="color:#f92672">=</span> <span style="color:#ae81ff">19</span>
+echo nX ^ nY
+</code></pre></div>
 <h2 id="php">PHP</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>);
+<span style="color:#a6e22e">error_reporting</span>(<span style="color:#66d9ef">E_ALL</span>);
+$nX <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>;
+$nY <span style="color:#f92672">=</span> <span style="color:#ae81ff">19</span>;
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> $nX <span style="color:#f92672">**</span> $nY;
+<span style="color:#75715e"># exmaple 2
+</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">pow</span>($nX, $nY);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1, $n2);
+</code></pre></div>
 <h2 id="python">Python</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">nX <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>
+nY <span style="color:#f92672">=</span> <span style="color:#ae81ff">19</span>
+n <span style="color:#f92672">=</span> nX <span style="color:#f92672">**</span> nY
+<span style="color:#66d9ef">print</span>(n)
+</code></pre></div>
 <h2 id="ruby">Ruby</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">nX <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>
+nY <span style="color:#f92672">=</span> <span style="color:#ae81ff">19</span>
+<span style="color:#75715e"># example 1</span>
+n1 <span style="color:#f92672">=</span> nX<span style="color:#f92672">.</span>pow(nY)
+<span style="color:#75715e"># exmaple 2</span>
+n2 <span style="color:#f92672">=</span> nX <span style="color:#f92672">**</span> nY
+<span style="color:#75715e"># print</span>
+puts n1, n2
+</code></pre></div>
 <h2 id="rust">Rust</h2>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> nx: <span style="color:#66d9ef">u64</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>;
+   <span style="color:#66d9ef">let</span> ny: <span style="color:#66d9ef">u32</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">19</span>;
+   <span style="color:#66d9ef">let</span> nz <span style="color:#f92672">=</span> nx.pow(ny);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, nz);
+}
+</code></pre></div>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="http://www3.sympatico.ca/n.rieck/docs/javascript_woes">http://www3.sympatico.ca/n.rieck/docs/javascript_woes</a></li>
