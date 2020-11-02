@@ -5,17 +5,21 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-<https://php.net/control-structures.foreach>
+<https://php.net/control-structures.for>
 
 {{< r "b.php" >}}
 
-<https://php.net/function.array-walk>
+<https://php.net/control-structures.foreach>
 
 {{< r "c.php" >}}
 
-<https://php.net/function.count>
+<https://php.net/control-structures.while>
 
 {{< r "d.php" >}}
+
+<https://php.net/function.array-walk>
+
+{{< r "e.php" >}}
 
 <https://php.net/function.next>
 

@@ -1,3 +1,2 @@
 <?php
-$s = "📗📕\n";
-print $s;
+print "March\n";

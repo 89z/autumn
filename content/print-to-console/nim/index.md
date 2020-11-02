@@ -11,7 +11,10 @@ tags: [nim]
 
 <https://nim-lang.org/docs/io.html#write,File,varargs[string,]>
 
+{{< r "c.nim" >}}
+
+<https://nim-lang.org/docs/io.html#writeLine,File,varargs[Ty,]>
+
 ## References
 
-- <https://rosettacode.org/wiki/Hello_world/Newline_omission>
-- <https://rosettacode.org/wiki/Hello_world/Text>
+<https://rosettacode.org/wiki/Hello_world/Text>

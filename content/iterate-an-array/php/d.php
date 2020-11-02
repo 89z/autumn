@@ -1,12 +1,8 @@
 <?php
 $a = ['May', 'June'];
-
-while (true) {
-   $n = key($a);
-   if ($n === null) {
-      break;
-   }
-   $s = current($a);
-   echo $n, "\t", $s, "\n";
-   next($a);
-}
+# example 1
+$f = fn ($s) => print $s . "\n";
+array_walk($a, $f);
+# exmaple 2
+$f = fn ($s, $n) => print $n . "\t" . $s . "\n";
+array_walk($a, $f);

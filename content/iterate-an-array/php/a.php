@@ -1,12 +1,10 @@
 <?php
 $a = ['May', 'June'];
-
-echo "example 1\n";
-foreach ($a as $s) {
-   echo $s, "\n";
+# example 1
+for ($n = 0; $n < count($a); $n++) {
+   echo $n, "\t", $a[$n], "\n";
 }
-
-echo "example 2\n";
-foreach ($a as $n => $s) {
-   echo $n, "\t", $s, "\n";
+# example 2
+for ($n = 0; key_exists($n, $a); $n++) {
+   echo $n, "\t", $a[$n], "\n";
 }

@@ -1,8 +1,14 @@
 <?php
 $a = ['May', 'June'];
-$n = count($a) - 1;
-
-while ($n >= 0) {
+# example 1
+$n = 0;
+while ($n < count($a)) {
    echo $n, "\t", $a[$n], "\n";
-   $n--;
+   $n++;
+}
+# example 2
+$n = 0;
+while (key_exists($n, $a)) {
+   echo $n, "\t", $a[$n], "\n";
+   $n++;
 }
