@@ -1,13 +1,13 @@
 var
    n = 1 + 2
-   s: string
+   b: bool
 
 case n
 of 5:
-   s = "five"
+   b = false
 of 4, 3:
-   s = "four or three"
+   b = true
 else:
-   s = $(n)
+   b = n < 3
 
-echo s == "four or three"
+echo b

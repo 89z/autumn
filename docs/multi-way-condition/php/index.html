@@ -37,17 +37,17 @@ $n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <sp
 
 <span style="color:#66d9ef">switch</span> ($n) {
 <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">5</span><span style="color:#f92672">:</span>
-   $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;five&#39;</span>;
+   $b <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
    <span style="color:#66d9ef">break</span>;
 <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">:</span>
 <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">:</span>
-   $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;four or three&#39;</span>;
+   $b <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
    <span style="color:#66d9ef">break</span>;
 <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
-   $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">strval</span>($n);
+   $b <span style="color:#f92672">=</span> $n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>;
 }
 
-<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;four or three&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($b);
 </code></pre></div>
 <p><a href="https://php.net/control-structures.switch">https://php.net/control-structures.switch</a></p>
 <h2 id="references">References</h2>

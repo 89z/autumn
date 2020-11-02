@@ -1,9 +1,9 @@
 fn main() {
-   let s = match 46 / 10 {
-      7 => format!("seven"),
-      6 | 5 => format!("six or five"),
-      n => format!("{}", n)
+   let b = match 1 + 2 {
+      5 => false,
+      4 | 3 => true,
+      n => n < 3
    };
 
-   println!("{}", s == "4");
+   println!("{}", b);
 }

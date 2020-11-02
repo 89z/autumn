@@ -1,11 +1,11 @@
-use std::char;
+use std::char::from_digit;
 
 fn encode(n: u32, r: u32) -> String {
-   if n == 0 {
-      return String::new();
-   }
-   let c = char::from_digit(n % r, r).unwrap_or_default();
-   encode(n / r, r) + &String::from(c)
+   let c = from_digit(n % r, r).unwrap_or('!');
+   return match n / r {
+      0 => String::new(),
+      n => encode(n, r)
+   } + &String::from(c);
 }
 
 fn main() {

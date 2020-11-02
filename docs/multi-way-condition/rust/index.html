@@ -33,13 +33,13 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> <span style="color:#ae81ff">46</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span> {
-      <span style="color:#ae81ff">7</span> <span style="color:#f92672">=&gt;</span> format<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;seven&#34;</span>),
-      <span style="color:#ae81ff">6</span> <span style="color:#f92672">|</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">=&gt;</span> format<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;six or five&#34;</span>),
-      n <span style="color:#f92672">=&gt;</span> format<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n)
+   <span style="color:#66d9ef">let</span> b <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span> {
+      <span style="color:#ae81ff">5</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">false</span>,
+      <span style="color:#ae81ff">4</span> <span style="color:#f92672">|</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>,
+      n <span style="color:#f92672">=&gt;</span> n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>
    };
 
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;4&#34;</span>);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, b);
 }
 </code></pre></div>
 <p><a href="https://doc.rust-lang.org/std/keyword.match.html">https://doc.rust-lang.org/std/keyword.match.html</a></p>

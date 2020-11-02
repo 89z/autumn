@@ -1,12 +1,12 @@
-s = 'minute'
+n = 1 + 2
 
-case s
-when 'hour'
-   n = 23
-when 'minute', 'second'
-   n = 59
+case n
+when 5
+   b = false
+when 4, 3
+   b = true
 else
-   n = -1
+   b = n < 3
 end
 
-puts n == 59
+puts b
