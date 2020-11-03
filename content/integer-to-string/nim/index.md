@@ -18,3 +18,7 @@ tags: [nim]
 {{< r "d.nim" >}}
 
 <https://nim-lang.org/docs/strformat.html#formatValue,string,T,string>
+
+## References
+
+<https://rosettacode.org/wiki/Increment_a_numerical_string>

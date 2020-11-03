@@ -1,7 +1,7 @@
 ---
 title: Start process
 categories: [system]
-date: 2020-09-21
+date: 2020-11-03
 example: //github.com/a8nj/cove/blob/master/fs-iterate/fs-iterate.php
 ---
 

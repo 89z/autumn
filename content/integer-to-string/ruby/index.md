@@ -10,6 +10,5 @@ tags: [ruby]
 ## References
 
 - <https://hyperpolyglot.org/scripting#num-to-str>
-- <https://programming-idioms.org/idiom/173>
 - <https://programming-idioms.org/idiom/55>
-- <https://rosettacode.org/wiki/Commatizing_numbers>
+- <https://rosettacode.org/wiki/Increment_a_numerical_string>
