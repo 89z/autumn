@@ -4,15 +4,15 @@ class Radix {
    string sDigit = "0123456789abcdefghijklmnopqrstuvwxyz";
 
    public string encode(int nIn, int nBase) {
+      int n = nIn / nBase;
       char c = this.sDigit[nIn % nBase];
-      nIn /= nBase;
-      return nIn > 0 ? encode(nIn, nBase) + c : c.ToString();
+      return n > 0 ? encode(n, nBase) + c : c.ToString();
    }
 
    public int decode(string sIn, int nBase) {
+      string s = sIn[..^1];
       int n = this.sDigit.IndexOf(sIn[^1]);
-      sIn = sIn[..^1];
-      return sIn != "" ? decode(sIn, nBase) * nBase + n : n;
+      return s != "" ? decode(s, nBase) * nBase + n : n;
    }
 }
 

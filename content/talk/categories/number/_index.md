@@ -4,6 +4,10 @@ title: Number
 
 ## 11,398,895,185,373,143	correct
 
+C#:
+
+{{< r "c-sharp/Program.cs" >}}
+
 D:
 
 {{< r "d/a.d" >}}
@@ -11,6 +15,14 @@ D:
 Dart:
 
 {{< r "dart/a.dart" >}}
+
+Go:
+
+{{< r "go/a.go" >}}
+
+JavaScript:
+
+{{< r "javascript/a.js" >}}
 
 Nim:
 
@@ -31,22 +43,6 @@ Ruby:
 Rust:
 
 {{< r "rust/a.rs" >}}
-
-## 11,398,895,185,373,144	incorrect
-
-C#:
-
-{{< r "c-sharp/Program.cs" >}}
-
-Go:
-
-{{< r "go/a.go" >}}
-
-<https://github.com/golang/go/issues/42352>
-
-JavaScript:
-
-{{< r "javascript/a.js" >}}
 
 ## References
 

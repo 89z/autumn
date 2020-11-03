@@ -5,9 +5,9 @@ class Radix:
       return int(sIn, nBase)
 
    def encode(self, nIn, nBase):
-      sChar = self.sDigit[nIn % nBase]
-      nIn //= nBase
-      return self.encode(nIn, nBase) + sChar if nIn > 0 else sChar
+      n = nIn // nBase
+      s = self.sDigit[nIn % nBase]
+      return self.encode(n, nBase) + s if n > 0 else s
 
 o = Radix()
 s = o.encode(1577858399, 36)

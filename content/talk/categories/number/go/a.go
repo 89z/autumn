@@ -2,10 +2,11 @@ package main
 
 import (
    "fmt"
-   "math"
+   "math/big"
 )
 
 func main() {
-   n := math.Pow(7, 19)
-   fmt.Printf("%f\n", n) // 11398895185373144.000000
+   nX, nY := big.NewInt(7), big.NewInt(19)
+   nX.Exp(nX, nY, nil)
+   fmt.Println(nX)
 }
