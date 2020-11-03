@@ -2,46 +2,51 @@
 title: Number
 ---
 
-~~~
-11,398,895,185,373,144	incorrect
-11,398,895,185,373,143	correct
-~~~
+## 11,398,895,185,373,143	correct
 
-## C#
-
-{{< r "c-sharp/Program.cs" >}}
-
-## D
+D:
 
 {{< r "d/a.d" >}}
 
-## Dart
+Dart:
 
 {{< r "dart/a.dart" >}}
 
-## JavaScript
-
-{{< r "javascript/a.js" >}}
-
-## Nim
+Nim:
 
 {{< r "nim/a.nim" >}}
 
-## PHP
+PHP:
 
 {{< r "php/a.php" >}}
 
-## Python
+Python:
 
 {{< r "python/a.py" >}}
 
-## Ruby
+Ruby:
 
 {{< r "ruby/a.rb" >}}
 
-## Rust
+Rust:
 
 {{< r "rust/a.rs" >}}
+
+## 11,398,895,185,373,144	incorrect
+
+C#:
+
+{{< r "c-sharp/Program.cs" >}}
+
+Go:
+
+{{< r "go/a.go" >}}
+
+<https://github.com/golang/go/issues/42352>
+
+JavaScript:
+
+{{< r "javascript/a.js" >}}
 
 ## References
 
