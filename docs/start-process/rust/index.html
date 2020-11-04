@@ -32,10 +32,13 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::process::Command;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{io, process::Command};
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   Command::new(<span style="color:#e6db74">&#34;cc&#34;</span>).arg(<span style="color:#e6db74">&#34;--print-search-dirs&#34;</span>);
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;BEGIN&#34;</span>);
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> o <span style="color:#f92672">=</span> Command::new(<span style="color:#e6db74">&#34;pipe&#34;</span>).spawn()<span style="color:#f92672">?</span>;
+   o.wait()<span style="color:#f92672">?</span>;
+   Ok(())
 }
 </code></pre></div>
 <p><a href="https://doc.rust-lang.org/std/process">https://doc.rust-lang.org/std/process</a></p>

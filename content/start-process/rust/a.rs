@@ -1,5 +1,8 @@
-use std::process::Command;
+use std::{io, process::Command};
 
-fn main() {
-   Command::new("cc").arg("--print-search-dirs");
+fn main() -> io::Result<()> {
+   println!("BEGIN");
+   let mut o = Command::new("pipe").spawn()?;
+   o.wait()?;
+   Ok(())
 }
