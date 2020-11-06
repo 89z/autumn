@@ -24,7 +24,7 @@
    <a href="/autumn/start-process/">Start process</a> / Rust
 </h1>
 <section class="page">
-   <time>Tue Nov 3 2020</time>
+   <time>Thu Nov 5 2020</time>
    
    <a href="/autumn/categories/system/">system</a>
    
@@ -41,7 +41,18 @@
    Ok(())
 }
 </code></pre></div>
-<p><a href="https://doc.rust-lang.org/std/process">https://doc.rust-lang.org/std/process</a></p>
+<p><a href="https://doc.rust-lang.org/std/process/struct.Child.html#method.wait">https://doc.rust-lang.org/std/process/struct.Child.html#method.wait</a></p>
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{io, process::Command};
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
+   Command::new(<span style="color:#e6db74">&#34;waterfox&#34;</span>).arg(<span style="color:#e6db74">&#34;google.com/search?q=march&#34;</span>).spawn()<span style="color:#f92672">?</span>;
+   Ok(())
+}
+</code></pre></div>
+<p><a href="https://doc.rust-lang.org/std/process/struct.Command.html#method.arg">https://doc.rust-lang.org/std/process/struct.Command.html#method.arg</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/111">https://programming-idioms.org/idiom/111</a></li>

@@ -5,7 +5,11 @@ tags: [rust]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/process>
+<https://doc.rust-lang.org/std/process/struct.Child.html#method.wait>
+
+{{< r "b.rs" >}}
+
+<https://doc.rust-lang.org/std/process/struct.Command.html#method.arg>
 
 ## References
 
