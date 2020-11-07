@@ -36,8 +36,10 @@
 **/rust/target
 *.exe
 cs/*/a/a.csproj
+cs/*/a/bin
 cs/*/a/obj
 cs/*/b/b.csproj
+cs/*/b/bin
 cs/*/b/obj
 docs/**/*.cs
 docs/**/*.d

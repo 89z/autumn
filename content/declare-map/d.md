@@ -3,7 +3,7 @@ title: D
 tags: [d]
 ---
 
-{{< r "d/a.d" >}}
+{{< s "a.d" >}}
 
 <https://dlang.org/spec/hash-map.html>
 

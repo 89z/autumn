@@ -3,7 +3,7 @@ title: Dart
 tags: [dart]
 ---
 
-{{< r "dart/a.dart" >}}
+{{< s "a.dart" >}}
 
 <https://dart.dev/guides/language/language-tour#maps>
 

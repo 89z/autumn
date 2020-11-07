@@ -3,7 +3,7 @@ title: Rust
 tags: [rust]
 ---
 
-{{< r "a/a.rs" >}}
+{{< s "a.rs" >}}
 
 <https://doc.rust-lang.org/reference/tokens.html#number-literals>
 

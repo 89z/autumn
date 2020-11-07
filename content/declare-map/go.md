@@ -3,7 +3,7 @@ title: Go
 tags: [go]
 ---
 
-{{< r "go/a.go" >}}
+{{< s "a.go" >}}
 
 <https://golang.org/ref/spec#Map_types>
 

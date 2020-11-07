@@ -3,11 +3,11 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< r "cs/a/Program.cs" >}}
+{{< s "a/Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2>
 
-{{< r "cs/b/Program.cs" >}}
+{{< s "b/Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer>
 

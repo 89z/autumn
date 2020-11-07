@@ -3,11 +3,11 @@ title: Python
 tags: [python]
 ---
 
-{{< r "py/a.py" >}}
+{{< s "a.py" >}}
 
 <https://docs.python.org/library/functions.html#func-dict>
 
-{{< r "py/b.py" >}}
+{{< s "b.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#dict>
 

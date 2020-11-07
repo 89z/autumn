@@ -3,11 +3,11 @@ title: Rust
 tags: [rust]
 ---
 
-{{< r "rs/a.rs" >}}
+{{< s "a.rs" >}}
 
 <https://doc.rust-lang.org/std/collections/struct.HashMap.html#examples>
 
-{{< r "rs/b.rs" >}}
+{{< s "b.rs" >}}
 
 <https://doc.rust-lang.org/std/collections/struct.HashMap.html#method.new>
 
