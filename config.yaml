@@ -13,13 +13,4 @@ publishDir: docs
 title: Autumn
 
 ignoreFiles:
-- /cs$
-- /d/a\.d$
-- /dart/a\.dart$
-- /go/a\.go$
-- /js$
-- /nim/a\.nim$
-- /php/a\.php$
-- /py$
-- /rb$
-- /rs$
+- /a$
