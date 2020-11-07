@@ -3,11 +3,11 @@ title: Python
 tags: [python]
 ---
 
-{{< r "a/a.py" >}}
+{{< s "a.py" >}}
 
 <https://docs.python.org/library/datetime.html#datetime.datetime.timestamp>
 
-{{< r "a/b.py" >}}
+{{< s "b.py" >}}
 
 <https://docs.python.org/library/time.html#time.time>
 

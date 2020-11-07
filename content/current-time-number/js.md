@@ -3,15 +3,15 @@ title: JavaScript
 tags: [javascript]
 ---
 
-{{< r "a/a.js" >}}
+{{< s "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/getTime>
 
-{{< r "a/b.js" >}}
+{{< s "b.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/now>
 
-{{< r "a/c.js" >}}
+{{< s "c.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/valueof>
 
