@@ -3,7 +3,7 @@ title: JavaScript
 tags: [javascript]
 ---
 
-{{< r "js/a.js" >}}
+{{< s "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array>
 

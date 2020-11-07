@@ -3,7 +3,7 @@ title: Python
 tags: [python]
 ---
 
-{{< r "py/a.py" >}}
+{{< s "a.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#list>
 

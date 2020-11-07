@@ -35,6 +35,10 @@
 **/rust/c/target
 **/rust/target
 *.exe
+cs/*/a/a.csproj
+cs/*/a/obj
+cs/*/b/b.csproj
+cs/*/b/obj
 docs/**/*.cs
 docs/**/*.d
 docs/**/*.dart

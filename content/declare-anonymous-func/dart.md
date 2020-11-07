@@ -3,7 +3,7 @@ title: Dart
 tags: [dart]
 ---
 
-{{< r "a/a.dart" >}}
+{{< s "a.dart" >}}
 
 <https://dart.dev/guides/language/language-tour#functions-as-first-class-objects>
 

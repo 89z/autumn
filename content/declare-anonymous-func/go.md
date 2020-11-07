@@ -3,7 +3,7 @@ title: Go
 tags: [go]
 ---
 
-{{< r "a/a.go" >}}
+{{< s "a.go" >}}
 
 <https://golang.org/ref/spec#Function_literals>
 

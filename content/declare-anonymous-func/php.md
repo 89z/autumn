@@ -3,11 +3,11 @@ title: PHP
 tags: [php]
 ---
 
-{{< r "a/a.php" >}}
+{{< s "a.php" >}}
 
 <https://php.net/functions.anonymous>
 
-{{< r "a/b.php" >}}
+{{< s "b.php" >}}
 
 <https://php.net/functions.arrow>
 
