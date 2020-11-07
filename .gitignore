@@ -14,8 +14,10 @@
 **/c-sharp/d/obj
 **/c-sharp/obj
 **/cs/a/a.csproj
+**/cs/a/bin
 **/cs/a/obj
 **/cs/b/b.csproj
+**/cs/b/bin
 **/cs/b/obj
 **/cs/bin
 **/cs/obj
