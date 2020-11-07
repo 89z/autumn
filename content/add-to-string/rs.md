@@ -3,11 +3,11 @@ title: Rust
 tags: [rust]
 ---
 
-{{< r "a/a.rs" >}}
+{{< s "a.rs" >}}
 
 <https://doc.rust-lang.org/std/string/struct.String.html#method.add_assign>
 
-{{< r "a/b.rs" >}}
+{{< s "b.rs" >}}
 
 <https://doc.rust-lang.org/std/string/struct.String.html#method.push_str>
 

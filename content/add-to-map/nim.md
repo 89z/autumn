@@ -3,11 +3,11 @@ title: Nim
 tags: [nim]
 ---
 
-{{< r "a/a.nim" >}}
+{{< s "a.nim" >}}
 
 <https://nim-lang.org/docs/strtabs.html#[]=,StringTableRef,string,string>
 
-{{< r "a/b.nim" >}}
+{{< s "b.nim" >}}
 
 <https://nim-lang.org/docs/tables.html#[]=,Table[A,B],A,B>
 

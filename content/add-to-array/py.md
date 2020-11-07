@@ -3,11 +3,11 @@ title: Python
 tags: [python]
 ---
 
-{{< r "a/a.py" >}}
+{{< s "a.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#typesseq-mutable>
 
-{{< r "a/b.py" >}}
+{{< s "b.py" >}}
 
 <https://docs.python.org/reference/expressions.html#expression-lists>
 
