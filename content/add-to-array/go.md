@@ -3,7 +3,7 @@ title: Go
 tags: [go]
 ---
 
-{{< r "go/a.go" >}}
+{{< r "a/a.go" >}}
 
 <https://golang.org/pkg/builtin#append>
 

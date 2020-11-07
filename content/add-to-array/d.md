@@ -3,7 +3,7 @@ title: D
 tags: [d]
 ---
 
-{{< r "d/a.d" >}}
+{{< r "a/a.d" >}}
 
 <https://dlang.org/spec/arrays.html#array-concatenation>
 

@@ -3,15 +3,15 @@ title: Ruby
 tags: [ruby]
 ---
 
-{{< r "rb/a.rb" >}}
+{{< r "a/a.rb" >}}
 
 <https://ruby-doc.org/core/Array.html#method-i-push>
 
-{{< r "rb/b.rb" >}}
+{{< r "a/b.rb" >}}
 
 <https://ruby-doc.org/core/Array.html#method-i-append>
 
-{{< r "rb/c.rb" >}}
+{{< r "a/c.rb" >}}
 
 <https://ruby-doc.org/core/Array.html#method-i-3C-3C>
 

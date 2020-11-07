@@ -3,7 +3,7 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< r "cs/Program.cs" >}}
+{{< r "a/Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.add>
 

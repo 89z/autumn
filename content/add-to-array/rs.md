@@ -3,7 +3,7 @@ title: Rust
 tags: [rust]
 ---
 
-{{< r "rs/a.rs" >}}
+{{< r "a/a.rs" >}}
 
 <https://doc.rust-lang.org/std/vec/struct.Vec.html#method.push>
 

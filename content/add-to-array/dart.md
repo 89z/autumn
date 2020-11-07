@@ -3,7 +3,7 @@ title: Dart
 tags: [dart]
 ---
 
-{{< r "dart/a.dart" >}}
+{{< r "a/a.dart" >}}
 
 <https://api.dart.dev/dart-core/List-class.html>
 
