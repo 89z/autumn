@@ -1,9 +1,7 @@
-{{ $s_file := .Get 0 -}}
-<!--get code-->
-{{ $s_path := path.Join .Page.File.Dir $s_file -}}
-{{ $s_code := readFile $s_path -}}
-<!--get language-->
-{{ $a_file := split $s_file "." -}}
-{{ $s_lang := index $a_file 1 -}}
-<!--highlight-->
-{{ highlight $s_code $s_lang "" -}}
+<!-- get filename -->
+{{ $s_file := .Get 0 }}
+<!-- get extname -->
+{{ $s_ext := index (split $s_file ".") 1 }}
+<!-- highlight -->
+{{ $s_join := path.Join .Page.File.Dir $s_file }}
+{{ highlight (readFile $s_join) $s_ext "" }}

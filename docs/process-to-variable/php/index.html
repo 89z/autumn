@@ -32,11 +32,18 @@
    
 
 
+
+
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 <span style="color:#a6e22e">exec</span>(<span style="color:#e6db74">&#39;php -v&#39;</span>, $a);
 <span style="color:#a6e22e">var_dump</span>($a);
 </code></pre></div>
+
 <p><a href="https://php.net/function.exec">https://php.net/function.exec</a></p>
+
+
+
 
 
 
@@ -44,7 +51,11 @@
 $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">shell_exec</span>(<span style="color:#e6db74">&#39;php -v&#39;</span>);
 <span style="color:#a6e22e">var_dump</span>($s);
 </code></pre></div>
+
 <p><a href="https://php.net/function.shell-exec">https://php.net/function.shell-exec</a></p>
+
+
+
 
 
 
@@ -53,7 +64,11 @@ $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">popen</span>
 $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_contents</span>($r);
 <span style="color:#a6e22e">var_dump</span>($s);
 </code></pre></div>
+
 <p><a href="https://php.net/function.stream-get-contents">https://php.net/function.stream-get-contents</a></p>
+
+
+
 
 
 
@@ -62,6 +77,7 @@ $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;php -v&
 $s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">`$s`</span>;
 <span style="color:#a6e22e">var_dump</span>($s2);
 </code></pre></div>
+
 <p><a href="https://php.net/language.operators.execution">https://php.net/language.operators.execution</a></p>
 <h2 id="references">References</h2>
 <ul>

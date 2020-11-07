@@ -32,6 +32,9 @@
    
 
 
+
+
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> os, times
 <span style="color:#66d9ef">let</span> accTime <span style="color:#f92672">=</span> getLastAccessTime(<span style="color:#e6db74">&#34;filename&#34;</span>)
 <span style="color:#66d9ef">let</span> modTime <span style="color:#f92672">=</span> getLastModificationTime(<span style="color:#e6db74">&#34;filename&#34;</span>)
@@ -49,6 +52,7 @@ unixModTime.tv_sec <span style="color:#f92672">=</span> <span style="color:#ae81
 <span style="color:#75715e"># Set the access and modification times to the current time</span>
 <span style="color:#66d9ef">discard</span> utimes(<span style="color:#e6db74">&#34;filename&#34;</span>, <span style="color:#66d9ef">nil</span>)
 </code></pre></div>
+
 <p><a href="https://nim-lang.org/docs/os.html#setLastModificationTime,string,">https://nim-lang.org/docs/os.html#setLastModificationTime,string,</a></p>
 <h2 id="references">References</h2>
 <p><a href="https://rosettacode.org/wiki/File_modification_time">https://rosettacode.org/wiki/File_modification_time</a></p>

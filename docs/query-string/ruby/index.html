@@ -32,6 +32,9 @@
    <p>
 
 
+
+
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;uri&#39;</span>
 
 url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://google.com:80/foo?q=3#bar&#34;</span>
@@ -50,6 +53,10 @@ params <span style="color:#f92672">=</span> <span style="color:#66d9ef">URI</spa
 
 
 
+
+
+
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;cgi&#39;</span>
 require <span style="color:#e6db74">&#39;json&#39;</span>
 require <span style="color:#e6db74">&#39;net/http&#39;</span>
@@ -57,7 +64,8 @@ res <span style="color:#f92672">=</span> <span style="color:#66d9ef">Net</span><
 vars <span style="color:#f92672">=</span> <span style="color:#66d9ef">CGI</span><span style="color:#f92672">.</span>parse res
 json <span style="color:#f92672">=</span> <span style="color:#66d9ef">JSON</span><span style="color:#f92672">.</span>parse vars<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;player_response&#34;</span><span style="color:#f92672">].</span>first
 pp json<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;streamingData&#34;</span><span style="color:#f92672">][</span><span style="color:#e6db74">&#34;formats&#34;</span><span style="color:#f92672">]</span>
-</code></pre></div></p>
+</code></pre></div>
+</p>
 <p><a href="https://ruby-doc.org/stdlib/libdoc/uri/rdoc">https://ruby-doc.org/stdlib/libdoc/uri/rdoc</a></p>
 <h2 id="references">References</h2>
 <ul>

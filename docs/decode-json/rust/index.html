@@ -33,6 +33,9 @@
    
 
 
+
+
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> tinyjson::JsonValue;
 
 <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">r#&#34;
@@ -50,8 +53,12 @@
 <span style="color:#66d9ef">let</span> parsed: <span style="color:#a6e22e">JsonValue</span> <span style="color:#f92672">=</span> s.parse().unwrap();
 println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Parsed: {:?}&#34;</span>, parsed);
 </code></pre></div>
+
 <p>0 deps</p>
 <p><a href="https://lib.rs/crates/tinyjson">https://lib.rs/crates/tinyjson</a></p>
+
+
+
 
 
 
@@ -86,8 +93,12 @@ println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Par
 
 assert_eq<span style="color:#f92672">!</span>(parsed, instantiated);
 </code></pre></div>
+
 <p>0 deps</p>
 <p><a href="https://lib.rs/crates/json">https://lib.rs/crates/json</a></p>
+
+
+
 
 
 
@@ -95,6 +106,7 @@ assert_eq<span style="color:#f92672">!</span>(parsed, instantiated);
     println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
 }
 </code></pre></div>
+
 <p>3 deps</p>
 <p><a href="https://lib.rs/crates/serde_json">https://lib.rs/crates/serde_json</a></p>
 <h2 id="references">References</h2>

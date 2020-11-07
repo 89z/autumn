@@ -32,11 +32,18 @@
    
 
 
+
+
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;March</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 <span style="color:#a6e22e">file_put_contents</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>, $s);
 </code></pre></div>
+
 <p><a href="https://php.net/function.file-put-contents">https://php.net/function.file-put-contents</a></p>
+
+
+
 
 
 
@@ -45,7 +52,11 @@ $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;March</
 $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>);
 <span style="color:#a6e22e">fputs</span>($r, $s);
 </code></pre></div>
+
 <p><a href="https://php.net/function.fputs">https://php.net/function.fputs</a></p>
+
+
+
 
 
 
@@ -54,6 +65,7 @@ $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;March</
 $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.txt&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>);
 <span style="color:#a6e22e">fwrite</span>($r, $s);
 </code></pre></div>
+
 <p><a href="https://php.net/function.fwrite">https://php.net/function.fwrite</a></p>
 <h2 id="references">References</h2>
 <ul>

@@ -32,6 +32,9 @@
    <p>
 
 
+
+
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::num;
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), num::ParseIntError<span style="color:#f92672">&gt;</span> {
@@ -43,6 +46,10 @@
 
 
 
+
+
+
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), String<span style="color:#f92672">&gt;</span> {
    <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;AB&#34;</span>.parse::<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u8</span><span style="color:#f92672">&gt;</span>().map_err(<span style="color:#f92672">|</span>e<span style="color:#f92672">|</span>
       e.to_string()
@@ -51,6 +58,10 @@
    Ok(())
 }
 </code></pre></div>
+
+
+
+
 
 
 
@@ -66,6 +77,10 @@
 
 
 
+
+
+
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::process;
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
@@ -78,7 +93,8 @@
    };
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
 }
-</code></pre></div></p>
+</code></pre></div>
+</p>
 <p><a href="https://doc.rust-lang.org/std/process/fn.exit.html">https://doc.rust-lang.org/std/process/fn.exit.html</a></p>
 <h2 id="references">References</h2>
 <ul>

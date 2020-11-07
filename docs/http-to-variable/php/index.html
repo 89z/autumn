@@ -34,6 +34,9 @@
    
 
 
+
+
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 <span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;curl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;curl&#39;</span>);
 <span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;openssl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;openssl&#39;</span>);
@@ -43,7 +46,11 @@ $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</s
 $s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_exec</span>($r);
 <span style="color:#66d9ef">echo</span> $s1;
 </code></pre></div>
+
 <p><a href="https://php.net/function.curl-init">https://php.net/function.curl-init</a></p>
+
+
+
 
 
 
@@ -52,7 +59,11 @@ $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https:/
 $s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>($s);
 <span style="color:#66d9ef">echo</span> $s1;
 </code></pre></div>
+
 <p><a href="https://php.net/function.file-get-contents">https://php.net/function.file-get-contents</a></p>
+
+
+
 
 
 
@@ -62,6 +73,7 @@ $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>
 $s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_get_contents</span>($r);
 <span style="color:#66d9ef">echo</span> $s1;
 </code></pre></div>
+
 <p><a href="https://php.net/function.stream-get-contents">https://php.net/function.stream-get-contents</a></p>
 <h2 id="references">References</h2>
 <ul>
