@@ -12,7 +12,14 @@ markup:
 publishDir: docs
 title: Autumn
 
-watchFiles:
-- /content/.*index\.md$
-- /layouts/_default/.*\.html$
-- /static/main.css$
+ignoreFiles:
+- /cs$
+- /d/a\.d$
+- /dart/a\.dart$
+- /go/a\.go$
+- /js$
+- /nim/a\.nim$
+- /php/a\.php$
+- /py$
+- /rb$
+- /rs$
