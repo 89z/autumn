@@ -3,19 +3,19 @@ title: Go
 tags: [go]
 ---
 
-{{< r "a/a.go" >}}
+{{< s "a.go" >}}
 
 <https://golang.org/pkg/math/big#Int.SetString>
 
-{{< r "a/b.go" >}}
+{{< s "b.go" >}}
 
 <https://golang.org/pkg/math/big#Int.Text>
 
-{{< r "a/c.go" >}}
+{{< s "c.go" >}}
 
 <https://golang.org/pkg/strconv#FormatInt>
 
-{{< r "a/d.go" >}}
+{{< s "d.go" >}}
 
 <https://golang.org/pkg/strconv#ParseInt>
 

@@ -3,11 +3,11 @@ title: Nim
 tags: [nim]
 ---
 
-{{< r "a/a.nim" >}}
+{{< s "a.nim" >}}
 
 <https://nim-lang.org/docs/os.html#createDir,string>
 
-{{< r "a/b.nim" >}}
+{{< s "b.nim" >}}
 
 <https://nim-lang.org/docs/os.html#existsOrCreateDir,string>
 

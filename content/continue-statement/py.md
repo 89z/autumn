@@ -3,7 +3,7 @@ title: Python
 tags: [python]
 ---
 
-{{< r "a/a.py" >}}
+{{< s "a.py" >}}
 
 <https://docs.python.org/release/reference/simple_stmts.html#continue>
 

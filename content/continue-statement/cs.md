@@ -3,7 +3,7 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< r "a/Program.cs" >}}
+{{< s "Program.cs" >}}
 
 ## References
 

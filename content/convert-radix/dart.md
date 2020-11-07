@@ -3,11 +3,11 @@ title: Dart
 tags: [dart]
 ---
 
-{{< r "a/a.dart" >}}
+{{< s "a.dart" >}}
 
 <https://api.dart.dev/dart-core/int/parse.html>
 
-{{< r "a/b.dart" >}}
+{{< s "b.dart" >}}
 
 <https://api.dart.dev/dart-core/int/toRadixString.html>
 

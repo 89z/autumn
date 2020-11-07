@@ -3,11 +3,11 @@ title: Ruby
 tags: [ruby]
 ---
 
-{{< r "a/a.rb" >}}
+{{< s "a.rb" >}}
 
 <https://ruby-doc.org/core/Integer.html#method-i-to_s>
 
-{{< r "a/b.rb" >}}
+{{< s "b.rb" >}}
 
 <https://ruby-doc.org/core/String.html#method-i-to_i>
 
