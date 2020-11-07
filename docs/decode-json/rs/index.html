@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Decode JSON / Rust</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/a8nj/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/decode-json/">Decode JSON</a> / Rust
+</h1>
+<section class="page">
+   <time>Fri Oct 30 2020</time>
+   
+   <a href="/autumn/categories/file-format/">file-format</a>
+   
+</section>
+   
+
+
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> tinyjson::JsonValue;
+
+<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">r#&#34;
+</span><span style="color:#e6db74">    {
+</span><span style="color:#e6db74">        &#34;bool&#34;: true,
+</span><span style="color:#e6db74">        &#34;arr&#34;: [1, null, &#34;test&#34;],
+</span><span style="color:#e6db74">        &#34;nested&#34;: {
+</span><span style="color:#e6db74">            &#34;blah&#34;: false,
+</span><span style="color:#e6db74">            &#34;blahblah&#34;: 3.14
+</span><span style="color:#e6db74">        },
+</span><span style="color:#e6db74">        &#34;unicode&#34;: &#34;\u2764&#34;
+</span><span style="color:#e6db74">    }
+</span><span style="color:#e6db74">&#34;#</span>;
+
+<span style="color:#66d9ef">let</span> parsed: <span style="color:#a6e22e">JsonValue</span> <span style="color:#f92672">=</span> s.parse().unwrap();
+println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Parsed: {:?}&#34;</span>, parsed);
+</code></pre></div>
+
+<p>0 deps</p>
+<p><a href="https://lib.rs/crates/tinyjson">https://lib.rs/crates/tinyjson</a></p>
+
+
+
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">let</span> parsed <span style="color:#f92672">=</span> json::parse(<span style="color:#e6db74">r#&#34;
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">{
+</span><span style="color:#e6db74">    &#34;code&#34;: 200,
+</span><span style="color:#e6db74">    &#34;success&#34;: true,
+</span><span style="color:#e6db74">    &#34;payload&#34;: {
+</span><span style="color:#e6db74">        &#34;features&#34;: [
+</span><span style="color:#e6db74">            &#34;awesome&#34;,
+</span><span style="color:#e6db74">            &#34;easyAPI&#34;,
+</span><span style="color:#e6db74">            &#34;lowLearningCurve&#34;
+</span><span style="color:#e6db74">        ]
+</span><span style="color:#e6db74">    }
+</span><span style="color:#e6db74">}
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">&#34;#</span>).unwrap();
+
+<span style="color:#66d9ef">let</span> instantiated <span style="color:#f92672">=</span> object<span style="color:#f92672">!</span>{
+    <span style="color:#75715e">// quotes on keys are optional
+</span><span style="color:#75715e"></span>    <span style="color:#e6db74">&#34;code&#34;</span>: <span style="color:#ae81ff">200</span>,
+    success: <span style="color:#a6e22e">true</span>,
+    payload: {
+        features: [
+            <span style="color:#e6db74">&#34;awesome&#34;</span>,
+            <span style="color:#e6db74">&#34;easyAPI&#34;</span>,
+            <span style="color:#e6db74">&#34;lowLearningCurve&#34;</span>
+        ]
+    }
+};
+
+assert_eq<span style="color:#f92672">!</span>(parsed, instantiated);
+</code></pre></div>
+
+<p>0 deps</p>
+<p><a href="https://lib.rs/crates/json">https://lib.rs/crates/json</a></p>
+
+
+
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
+}
+</code></pre></div>
+
+<p>3 deps</p>
+<p><a href="https://lib.rs/crates/serde_json">https://lib.rs/crates/serde_json</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://programming-idioms.org/idiom/91">https://programming-idioms.org/idiom/91</a></li>
+<li><a href="https://rosettacode.org/wiki/JSON">https://rosettacode.org/wiki/JSON</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>

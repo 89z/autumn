@@ -1,0 +1,14 @@
+---
+title: Ruby
+tags: [ruby]
+---
+
+{{< s "a.rb" >}}
+
+<https://ruby-doc.org/core/doc/syntax/methods_rdoc.html>
+
+## References
+
+- <https://hyperpolyglot.org/scripting#def-func>
+- <https://programming-idioms.org/idiom/4>
+- <https://rosettacode.org/wiki/Function_definition>
