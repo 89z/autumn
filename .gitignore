@@ -41,6 +41,9 @@ cs/*/a/obj
 cs/*/b/b.csproj
 cs/*/b/bin
 cs/*/b/obj
+cs/*/c/bin
+cs/*/c/c.csproj
+cs/*/c/obj
 docs/**/*.cs
 docs/**/*.d
 docs/**/*.dart
