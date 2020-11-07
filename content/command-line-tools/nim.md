@@ -3,11 +3,11 @@ title: Nim
 tags: [nim]
 ---
 
-{{< r "nim/a.ps1" >}}
+{{< s "a.ps1" >}}
 
 <https://github.com/nim-lang/nimble>
 
-{{< r "nim/b.ps1" >}}
+{{< s "b.ps1" >}}
 
 <https://nim-lang.org/docs/nimc.html#compiler-usage-command-line-switches>
 

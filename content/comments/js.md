@@ -3,7 +3,7 @@ title: JavaScript
 tags: [javascript]
 ---
 
-{{< r "a/a.js" >}}
+{{< s "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Lexical_grammar>
 

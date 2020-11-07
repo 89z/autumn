@@ -1,7 +1,9 @@
-<!-- get filename -->
-{{ $s_file := .Get 0 }}
-<!-- get extname -->
-{{ $s_ext := index (split $s_file ".") 1 }}
+<!-- dir -->
+{{ $s_dir := path.Base .Page.Permalink }}
+<!-- base -->
+{{ $s_base := .Get 0 }}
+<!-- ext -->
+{{ $s_ext := index (split $s_base ".") 1 }}
 <!-- highlight -->
-{{ $s_join := path.Join $s_ext .Page.File.Dir $s_file }}
+{{ $s_join := path.Join $s_dir .Page.File.Dir $s_base }}
 {{ highlight (readFile $s_join) $s_ext "" }}

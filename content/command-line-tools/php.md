@@ -3,7 +3,7 @@ title: PHP
 tags: [php]
 ---
 
-{{< r "php/a.ps1" >}}
+{{< s "a.ps1" >}}
 
 <https://php.net/features.commandline.usage>
 

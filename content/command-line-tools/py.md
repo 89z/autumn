@@ -3,7 +3,7 @@ title: Python
 tags: [python]
 ---
 
-{{< r "py/a.ps1" >}}
+{{< s "a.ps1" >}}
 
 <https://docs.python.org/using/cmdline.html>
 

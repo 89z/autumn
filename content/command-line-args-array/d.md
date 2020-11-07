@@ -3,7 +3,7 @@ title: D
 tags: [d]
 ---
 
-{{< r "a/a.d" >}}
+{{< s "a.d" >}}
 
 <https://dlang.org/spec/function.html#main>
 
