@@ -3,11 +3,11 @@ title: PHP
 tags: [php]
 ---
 
-{{< s "a.php" >}}
+{{< c "a.php" >}}
 
 <https://php.net/function.implode>
 
-{{< s "b.php" >}}
+{{< c "b.php" >}}
 
 <https://php.net/function.join>
 

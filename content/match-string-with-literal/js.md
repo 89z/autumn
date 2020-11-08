@@ -3,11 +3,11 @@ title: JavaScript
 tags: [javascript]
 ---
 
-{{< s "a.js" >}}
+{{< c "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/includes>
 
-{{< s "b.js" >}}
+{{< c "b.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/startsWith>
 

@@ -3,11 +3,11 @@ title: Ruby
 tags: [ruby]
 ---
 
-{{< s "a.rb" >}}
+{{< c "a.rb" >}}
 
 <https://ruby-doc.org/core/String.html#method-i-include-3F>
 
-{{< s "b.rb" >}}
+{{< c "b.rb" >}}
 
 <https://ruby-doc.org/core/String.html#method-i-start_with-3F>
 

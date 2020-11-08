@@ -3,7 +3,7 @@ title: Go
 tags: [go]
 ---
 
-{{< s "a.go" >}}
+{{< c "a.go" >}}
 
 <https://golang.org/pkg/encoding/csv#Reader.Read>
 

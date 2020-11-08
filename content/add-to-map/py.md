@@ -3,19 +3,19 @@ title: Python
 tags: [python]
 ---
 
-{{< s "a.py" >}}
+{{< c "a.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#dict>
 
-{{< s "b.py" >}}
+{{< c "b.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#dict.update>
 
-{{< s "c.py" >}}
+{{< c "c.py" >}}
 
 <https://docs.python.org/reference/expressions.html#dictionary-displays>
 
-{{< s "d.py" >}}
+{{< c "d.py" >}}
 
 <https://docs.python.org/library/functions.html#func-dict>
 

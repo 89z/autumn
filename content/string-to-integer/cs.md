@@ -3,11 +3,11 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< s "a/Program.cs" >}}
+{{< c "a/Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/api/system.convert.toint32>
 
-{{< s "b/Program.cs" >}}
+{{< c "b/Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/api/system.int32.parse>
 

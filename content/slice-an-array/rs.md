@@ -3,15 +3,15 @@ title: Rust
 tags: [rust]
 ---
 
-{{< s "a.rs" >}}
+{{< c "a.rs" >}}
 
 <https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.nth>
 
-{{< s "b.rs" >}}
+{{< c "b.rs" >}}
 
 <https://doc.rust-lang.org/std/primitive.slice.html#method.get>
 
-{{< s "c.rs" >}}
+{{< c "c.rs" >}}
 
 <https://doc.rust-lang.org/std/slice/trait.SliceIndex.html>
 

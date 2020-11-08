@@ -3,7 +3,7 @@ title: Rust
 tags: [rust]
 ---
 
-{{< s "a.rs" >}}
+{{< c "a.rs" >}}
 
 <https://doc.rust-lang.org/reference/types/closure.html>
 

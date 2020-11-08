@@ -3,19 +3,19 @@ title: Python
 tags: [python]
 ---
 
-{{< s "a.py" >}}
+{{< c "a.py" >}}
 
 <https://docs.python.org/library/os.html#os.system>
 
-{{< s "b.py" >}}
+{{< c "b.py" >}}
 
 <https://docs.python.org/library/subprocess.html#subprocess.call>
 
-{{< s "c.py" >}}
+{{< c "c.py" >}}
 
 <https://docs.python.org/library/subprocess.html#subprocess.check_call>
 
-{{< s "d.py" >}}
+{{< c "d.py" >}}
 
 <https://docs.python.org/library/subprocess.html#subprocess.run>
 

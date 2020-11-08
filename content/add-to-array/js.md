@@ -3,15 +3,15 @@ title: JavaScript
 tags: [javascript]
 ---
 
-{{< s "a.js" >}}
+{{< c "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/concat>
 
-{{< s "b.js" >}}
+{{< c "b.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/push>
 
-{{< s "c.js" >}}
+{{< c "c.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Spread_syntax>
 

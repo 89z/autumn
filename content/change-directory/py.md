@@ -3,7 +3,7 @@ title: Python
 tags: [python]
 ---
 
-{{< s "a.py" >}}
+{{< c "a.py" >}}
 
 <https://docs.python.org/library/os.html#os.chdir>
 

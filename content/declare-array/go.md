@@ -3,11 +3,11 @@ title: Go
 tags: [go]
 ---
 
-{{< s "a.go" >}}
+{{< c "a.go" >}}
 
 <https://golang.org/ref/spec#Array_types>
 
-{{< s "b.go" >}}
+{{< c "b.go" >}}
 
 <https://golang.org/ref/spec#Slice_types>
 

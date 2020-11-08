@@ -3,11 +3,11 @@ title: JavaScript
 tags: [javascript]
 ---
 
-{{< s "a.js" >}}
+{{< c "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/if...else>
 
-{{< s "b.js" >}}
+{{< c "b.js" >}}
 
 <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator>
 

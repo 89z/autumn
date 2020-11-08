@@ -3,7 +3,7 @@ title: PHP
 tags: [php]
 ---
 
-{{< s "a.php" >}}
+{{< c "a.php" >}}
 
 <https://php.net/functions.user-defined>
 

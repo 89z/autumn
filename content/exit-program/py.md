@@ -3,12 +3,12 @@ title: Python
 tags: [python]
 ---
 
-{{< s "abort.py" >}}
+{{< c "abort.py" >}}
 
 <https://docs.python.org/library/os.html#os.abort>
 
-{{< s "exit-num.py" >}}
-{{< s "exit-str.py" >}}
+{{< c "exit-num.py" >}}
+{{< c "exit-str.py" >}}
 
 <https://docs.python.org/library/sys.html#sys.exit>
 

@@ -3,9 +3,9 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< s "a/Program.cs" >}}
-{{< s "b/Program.cs" >}}
-{{< s "c/Program.cs" >}}
+{{< c "a/Program.cs" >}}
+{{< c "b/Program.cs" >}}
+{{< c "c/Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/standard/serialization/system-text-json-how-to>
 

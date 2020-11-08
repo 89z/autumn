@@ -3,11 +3,11 @@ title: Rust
 tags: [rust]
 ---
 
-{{< s "a.rs" >}}
+{{< c "a.rs" >}}
 
 <https://doc.rust-lang.org/std/fs/fn.write.html>
 
-{{< s "b.rs" >}}
+{{< c "b.rs" >}}
 
 <https://doc.rust-lang.org/std/io/trait.Write.html#tymethod.write>
 

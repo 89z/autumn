@@ -33,11 +33,6 @@
 
 
 
-
-
-
-
-
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> subprocess
 a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;python&#39;</span>, <span style="color:#e6db74">&#39;-V&#39;</span>]
 o <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>Popen(a, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE, text<span style="color:#f92672">=</span>True)
@@ -50,11 +45,6 @@ s <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>stdo
 
 
 
-
-
-
-
-
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> subprocess
 a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;python&#39;</span>, <span style="color:#e6db74">&#39;-V&#39;</span>]
 s <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>check_output(a, text<span style="color:#f92672">=</span>True)
@@ -62,11 +52,6 @@ s <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</
 </code></pre></div>
 
 <p><a href="https://docs.python.org/library/subprocess.html#subprocess.check_output">https://docs.python.org/library/subprocess.html#subprocess.check_output</a></p>
-
-
-
-
-
 
 
 

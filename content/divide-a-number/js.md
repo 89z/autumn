@@ -3,11 +3,11 @@ title: JavaScript
 tags: [javascript]
 ---
 
-{{< s "a.js" >}}
+{{< c "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division>
 
-{{< s "b.js" >}}
+{{< c "b.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder>
 

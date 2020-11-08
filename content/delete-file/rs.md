@@ -3,7 +3,7 @@ title: Rust
 tags: [rust]
 ---
 
-{{< s "a.rs" >}}
+{{< c "a.rs" >}}
 
 <https://doc.rust-lang.org/std/fs/fn.remove_file.html>
 

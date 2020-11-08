@@ -3,11 +3,11 @@ title: Ruby
 tags: [ruby]
 ---
 
-{{< s "a.rb" >}}
+{{< c "a.rb" >}}
 
 <https://ruby-doc.org/core/Array.html#method-i-5B-5D>
 
-{{< s "b.rb" >}}
+{{< c "b.rb" >}}
 
 <https://ruby-doc.org/core/Array.html#method-i-slice>
 

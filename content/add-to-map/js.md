@@ -3,19 +3,19 @@ title: JavaScript
 tags: [javascript]
 ---
 
-{{< s "a.js" >}}
+{{< c "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Map/set>
 
-{{< s "b.js" >}}
+{{< c "b.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Object/assign>
 
-{{< s "c.js" >}}
+{{< c "c.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Property_Accessors>
 
-{{< s "d.js" >}}
+{{< c "d.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals>
 

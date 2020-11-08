@@ -3,11 +3,11 @@ title: D
 tags: [d]
 ---
 
-{{< s "a.d" >}}
+{{< c "a.d" >}}
 
 <https://dlang.org/library/std/stdio/writeln.html>
 
-{{< s "b.d" >}}
+{{< c "b.d" >}}
 
 <https://dlang.org/library/std/stdio/write.html>
 

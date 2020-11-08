@@ -3,15 +3,15 @@ title: D
 tags: [d]
 ---
 
-{{< s "a.d" >}}
+{{< c "a.d" >}}
 
 <https://dlang.org/spec/lex.html#delimited_strings>
 
-{{< s "b.d" >}}
+{{< c "b.d" >}}
 
 <https://dlang.org/spec/lex.html#double_quoted_strings>
 
-{{< s "c.d" >}}
+{{< c "c.d" >}}
 
 <https://dlang.org/spec/lex.html#wysiwyg>
 

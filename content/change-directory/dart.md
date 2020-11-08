@@ -3,7 +3,7 @@ title: Dart
 tags: [dart]
 ---
 
-{{< s "a.dart" >}}
+{{< c "a.dart" >}}
 
 <https://api.dart.dev/dart-io/Directory/current.html>
 

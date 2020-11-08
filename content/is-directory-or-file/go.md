@@ -3,19 +3,19 @@ title: Go
 tags: [go]
 ---
 
-{{< s "a.go" >}}
+{{< c "a.go" >}}
 
 <https://golang.org/pkg/os#FileMode.IsDir>
 
-{{< s "b.go" >}}
+{{< c "b.go" >}}
 
 <https://golang.org/pkg/os#FileMode.IsRegular>
 
-{{< s "c.go" >}}
+{{< c "c.go" >}}
 
 <https://golang.org/pkg/os#IsNotExist>
 
-{{< s "d.go" >}}
+{{< c "d.go" >}}
 
 <https://golang.org/pkg/os#Stat>
 

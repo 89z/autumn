@@ -3,19 +3,19 @@ title: Dart
 tags: [dart]
 ---
 
-{{< s "a.dart" >}}
+{{< c "a.dart" >}}
 
 <https://api.dart.dev/dart-core/Iterable/elementAt.html>
 
-{{< s "b.dart" >}}
+{{< c "b.dart" >}}
 
 <https://api.dart.dev/dart-core/Iterable/skip.html>
 
-{{< s "c.dart" >}}
+{{< c "c.dart" >}}
 
 <https://api.dart.dev/dart-core/List/getRange.html>
 
-{{< s "d.dart" >}}
+{{< c "d.dart" >}}
 
 <https://api.dart.dev/dart-core/List/operator_get.html>
 

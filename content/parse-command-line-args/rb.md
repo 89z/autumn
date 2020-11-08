@@ -3,11 +3,11 @@ title: Ruby
 tags: [ruby]
 ---
 
-{{< s "a.rb" >}}
+{{< c "a.rb" >}}
 
 <https://ruby-doc.org/stdlib/libdoc/getoptlong/rdoc/GetoptLong.html>
 
-{{< s "b.rb" >}}
+{{< c "b.rb" >}}
 
 <https://ruby-doc.org/stdlib/libdoc/optparse/rdoc/OptionParser.html>
 

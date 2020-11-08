@@ -4,9 +4,6 @@ disableKinds:
 - RSS
 - sitemap
 
-ignoreFiles:
-- /a$
-
 markup:
    goldmark:
       extensions:

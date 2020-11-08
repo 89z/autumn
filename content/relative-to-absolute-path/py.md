@@ -3,11 +3,11 @@ title: Python
 tags: [python]
 ---
 
-{{< s "a.py" >}}
+{{< c "a.py" >}}
 
 <https://docs.python.org/library/os.path.html#os.path.abspath>
 
-{{< s "b.py" >}}
+{{< c "b.py" >}}
 
 <https://docs.python.org/library/pathlib.html#pathlib.Path.resolve>
 

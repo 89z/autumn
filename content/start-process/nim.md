@@ -3,11 +3,11 @@ title: Nim
 tags: [nim]
 ---
 
-{{< s "a.nim" >}}
+{{< c "a.nim" >}}
 
 <https://nim-lang.org/docs/osproc.html#execCmd,string>
 
-{{< s "b.nim" >}}
+{{< c "b.nim" >}}
 
 <https://nim-lang.org/docs/osproc.html#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]>
 

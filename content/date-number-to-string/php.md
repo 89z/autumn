@@ -3,19 +3,19 @@ title: PHP
 tags: [php]
 ---
 
-{{< s "a.php" >}}
+{{< c "a.php" >}}
 
 <https://php.net/datetime.format>
 
-{{< s "b.php" >}}
+{{< c "b.php" >}}
 
 <https://php.net/function.date-format>
 
-{{< s "c.php" >}}
+{{< c "c.php" >}}
 
 <https://php.net/function.date>
 
-{{< s "d.php" >}}
+{{< c "d.php" >}}
 
 <https://php.net/function.strftime>
 

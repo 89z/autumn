@@ -3,19 +3,19 @@ title: PHP
 tags: [php]
 ---
 
-{{< s "a.php" >}}
+{{< c "a.php" >}}
 
 <https://php.net/function.exec>
 
-{{< s "b.php" >}}
+{{< c "b.php" >}}
 
 <https://php.net/function.shell-exec>
 
-{{< s "c.php" >}}
+{{< c "c.php" >}}
 
 <https://php.net/function.stream-get-contents>
 
-{{< s "d.php" >}}
+{{< c "d.php" >}}
 
 <https://php.net/language.operators.execution>
 

@@ -5,19 +5,19 @@ tags: [rust]
 
 ## 0 deps
 
-{{< s "a/src/main.rs" >}}
+{{< c "a/src/main.rs" >}}
 
 <https://lib.rs/crates/minreq>
 
 ## 35 deps
 
-{{< s "b/src/main.rs" >}}
+{{< c "b/src/main.rs" >}}
 
 <https://lib.rs/crates/http_req>
 
 ## 49 deps
 
-{{< s "c/src/main.rs" >}}
+{{< c "c/src/main.rs" >}}
 
 <https://lib.rs/crates/attohttpc>
 

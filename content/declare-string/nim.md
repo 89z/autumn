@@ -3,11 +3,11 @@ title: Nim
 tags: [nim]
 ---
 
-{{< s "a.nim" >}}
+{{< c "a.nim" >}}
 
 <https://nim-lang.org/docs/manual.html#lexical-analysis-string-literals>
 
-{{< s "b.nim" >}}
+{{< c "b.nim" >}}
 
 <https://nim-lang.org/docs/manual.html#lexical-analysis-raw-string-literals>
 

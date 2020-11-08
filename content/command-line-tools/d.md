@@ -3,19 +3,19 @@ title: D
 tags: [d]
 ---
 
-{{< s "a.ps1" >}}
+{{< c "a.ps1" >}}
 
 <https://dub.pm/commandline.html#build>
 
-{{< s "b.ps1" >}}
+{{< c "b.ps1" >}}
 
 <https://dub.pm/commandline.html#init>
 
-{{< s "c.ps1" >}}
+{{< c "c.ps1" >}}
 
 <https://dub.pm/commandline.html#run>
 
-{{< s "d.ps1" >}}
+{{< c "d.ps1" >}}
 
 <https://wiki.dlang.org/Using_LDC>
 

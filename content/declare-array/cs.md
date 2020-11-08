@@ -3,8 +3,8 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< s "a/Program.cs" >}}
-{{< s "b/Program.cs" >}}
+{{< c "a/Program.cs" >}}
+{{< c "b/Program.cs" >}}
 
 - <https://docs.microsoft.com/dotnet/csharp/programming-guide/arrays/implicitly-typed-arrays>
 - <https://docs.microsoft.com/dotnet/csharp/programming-guide/arrays>

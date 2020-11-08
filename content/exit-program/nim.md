@@ -3,8 +3,8 @@ title: Nim
 tags: [nim]
 ---
 
-{{< s "a.nim" >}}
-{{< s "b.nim" >}}
+{{< c "a.nim" >}}
+{{< c "b.nim" >}}
 
 <https://nim-lang.org/docs/system.html#quit,int>
 

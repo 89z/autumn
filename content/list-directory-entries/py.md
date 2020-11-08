@@ -3,8 +3,8 @@ title: Python
 tags: [python]
 ---
 
-{{< s "os.py" >}}
-{{< s "path.py" >}}
+{{< c "os.py" >}}
+{{< c "path.py" >}}
 
 <https://docs.python.org/library/os.html#os.listdir>
 

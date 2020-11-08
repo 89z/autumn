@@ -3,11 +3,11 @@ title: Rust
 tags: [rust]
 ---
 
-{{< s "a.rs" >}}
+{{< c "a.rs" >}}
 
 <https://doc.rust-lang.org/std/string/struct.String.html#method.contains>
 
-{{< s "b.rs" >}}
+{{< c "b.rs" >}}
 
 <https://doc.rust-lang.org/std/string/struct.String.html#method.starts_with>
 

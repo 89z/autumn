@@ -3,11 +3,11 @@ title: D
 tags: [d]
 ---
 
-{{< s "a.d" >}}
+{{< c "a.d" >}}
 
 <https://dlang.org/spec/expression.html#index_expressions>
 
-{{< s "b.d" >}}
+{{< c "b.d" >}}
 
 <https://dlang.org/spec/expression.html#slice_expressions>
 

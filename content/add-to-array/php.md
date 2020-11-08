@@ -3,15 +3,15 @@ title: PHP
 tags: [php]
 ---
 
-{{< s "a.php" >}}
+{{< c "a.php" >}}
 
 <https://php.net/function.array-merge>
 
-{{< s "b.php" >}}
+{{< c "b.php" >}}
 
 <https://php.net/function.array-push>
 
-{{< s "c.php" >}}
+{{< c "c.php" >}}
 
 <https://php.net/types.array#language.types.array.syntax.modifying>
 

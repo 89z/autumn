@@ -3,14 +3,14 @@ title: Nim
 tags: [nim]
 ---
 
-{{< s "a.nim" >}}
+{{< c "a.nim" >}}
 
 <https://nim-lang.org/docs/os.html#extractFilename,string>
 
-{{< s "b.nim" >}}
+{{< c "b.nim" >}}
 
 <https://nim-lang.org/docs/os.html#lastPathPart,string>
 
-{{< s "c.nim" >}}
+{{< c "c.nim" >}}
 
 <https://nim-lang.org/docs/os.html#splitFile,string>

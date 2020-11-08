@@ -3,7 +3,7 @@ title: Rust
 tags: [rust]
 ---
 
-{{< s "main.rs" >}}
+{{< c "main.rs" >}}
 
 <https://github.com/chronotope/chrono>
 

@@ -3,7 +3,7 @@ title: D
 tags: [d]
 ---
 
-{{< s "a.d" >}}
+{{< c "a.d" >}}
 
 <https://dlang.org/spec/hash-map.html#testing_membership>
 

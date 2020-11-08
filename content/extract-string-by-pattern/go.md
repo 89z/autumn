@@ -3,19 +3,19 @@ title: Go
 tags: [go]
 ---
 
-{{< s "a.go" >}}
+{{< c "a.go" >}}
 
 <https://golang.org/pkg/regexp#Regexp.FindAllString>
 
-{{< s "b.go" >}}
+{{< c "b.go" >}}
 
 <https://golang.org/pkg/regexp#Regexp.FindAllStringSubmatch>
 
-{{< s "c.go" >}}
+{{< c "c.go" >}}
 
 <https://golang.org/pkg/regexp#Regexp.FindString>
 
-{{< s "d.go" >}}
+{{< c "d.go" >}}
 
 <https://golang.org/pkg/regexp#Regexp.FindStringSubmatch>
 

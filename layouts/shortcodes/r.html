@@ -1,7 +1,0 @@
-<!-- get filename -->
-{{ $s_file := .Get 0 }}
-<!-- get extname -->
-{{ $s_ext := index (split $s_file ".") 1 }}
-<!-- highlight -->
-{{ $s_join := path.Join .Page.File.Dir $s_file }}
-{{ highlight (readFile $s_join) $s_ext "" }}

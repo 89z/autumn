@@ -3,11 +3,11 @@ title: Dart
 tags: [dart]
 ---
 
-{{< s "a.dart" >}}
+{{< c "a.dart" >}}
 
 <https://api.dart.dev/dart-core/Iterable/reduce.html>
 
-{{< s "b.dart" >}}
+{{< c "b.dart" >}}
 
 <https://api.dart.dev/dart-core/Iterable/fold.html>
 

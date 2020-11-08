@@ -3,11 +3,11 @@ title: Go
 tags: [go]
 ---
 
-{{< s "a.go" >}}
+{{< c "a.go" >}}
 
 <https://golang.org/ref/spec#For_condition>
 
-{{< s "b.go" >}}
+{{< c "b.go" >}}
 
 <https://golang.org/ref/spec#For_clause>
 

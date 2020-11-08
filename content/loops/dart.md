@@ -3,11 +3,11 @@ title: Dart
 tags: [dart]
 ---
 
-{{< s "a.dart" >}}
+{{< c "a.dart" >}}
 
 <https://dart.dev/guides/language/language-tour#while-and-do-while>
 
-{{< s "b.dart" >}}
+{{< c "b.dart" >}}
 
 <https://dart.dev/guides/language/language-tour#for-loops>
 
