@@ -3,27 +3,27 @@ title: Go
 tags: [go]
 ---
 
-{{< d "build.ps1" >}}
+{{< r "build.ps1" >}}
 
 <https://golang.org/cmd/go#hdr-Compile_packages_and_dependencies>
 
-{{< d "install.ps1" >}}
+{{< r "install.ps1" >}}
 
 <https://golang.org/cmd/go#hdr-Compile_and_install_packages_and_dependencies>
 
-{{< d "list.ps1" >}}
+{{< r "list.ps1" >}}
 
 <https://golang.org/cmd/go#hdr-List_packages_or_modules>
 
-{{< d "mod.ps1" >}}
+{{< r "mod.ps1" >}}
 
 <https://golang.org/cmd/go#hdr-Module_maintenance>
 
-{{< d "run.ps1" >}}
+{{< r "run.ps1" >}}
 
 <https://golang.org/cmd/go#hdr-Compile_and_run_Go_program>
 
-{{< d "test.ps1" >}}
+{{< r "test.ps1" >}}
 
 <https://golang.org/cmd/go#hdr-Test_packages>
 

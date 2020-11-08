@@ -3,15 +3,15 @@ title: Go
 tags: [go]
 ---
 
-{{< d "a.go" >}}
+{{< r "a.go" >}}
 
 <https://golang.org/pkg/fmt#Fprintln>
 
-{{< d "b.go" >}}
+{{< r "b.go" >}}
 
 <https://golang.org/pkg/os#File.WriteString>
 
-{{< d "c.go" >}}
+{{< r "c.go" >}}
 
 <https://golang.org/pkg/strings#Reader.WriteTo>
 

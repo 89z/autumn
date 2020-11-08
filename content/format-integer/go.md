@@ -3,7 +3,7 @@ title: Go
 tags: [go]
 ---
 
-{{< d "a.go" >}}
+{{< r "a.go" >}}
 
 ## References
 

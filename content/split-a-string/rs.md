@@ -3,11 +3,11 @@ title: Rust
 tags: [rust]
 ---
 
-{{< d "a.rs" >}}
+{{< r "a.rs" >}}
 
 <https://doc.rust-lang.org/std/primitive.str.html#method.split>
 
-{{< d "b.rs" >}}
+{{< r "b.rs" >}}
 
 <https://doc.rust-lang.org/std/primitive.str.html#method.split_whitespace>
 

@@ -3,7 +3,7 @@ title: Ruby
 tags: [ruby]
 ---
 
-{{< d "a.rb" >}}
+{{< r "a.rb" >}}
 
 <https://ruby-doc.org/stdlib/libdoc/uri/rdoc>
 

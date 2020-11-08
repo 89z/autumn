@@ -3,7 +3,7 @@ title: D
 tags: [d]
 ---
 
-{{< d "a.d" >}}
+{{< r "a.d" >}}
 
 <https://dlang.org/library/core/thread/osthread/thread.sleep.html>
 

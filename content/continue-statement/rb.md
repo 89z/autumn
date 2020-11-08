@@ -3,7 +3,7 @@ title: Ruby
 tags: [ruby]
 ---
 
-{{< d "a.rb" >}}
+{{< r "a.rb" >}}
 
 <https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-next+Statement>
 

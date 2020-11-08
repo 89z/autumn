@@ -3,7 +3,7 @@ title: Ruby
 tags: [ruby]
 ---
 
-{{< d "a.rb" >}}
+{{< r "a.rb" >}}
 
 <https://ruby-doc.org/core/doc/syntax/methods_rdoc.html>
 

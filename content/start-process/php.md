@@ -3,8 +3,8 @@ title: PHP
 tags: [php]
 ---
 
-{{< d "a.php" >}}
-{{< d "b.php" >}}
+{{< r "a.php" >}}
+{{< r "b.php" >}}
 
 <https://php.net/function.system>
 

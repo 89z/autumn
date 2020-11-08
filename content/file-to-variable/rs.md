@@ -3,7 +3,7 @@ title: Rust
 tags: [rust]
 ---
 
-{{< d "a.rs" >}}
+{{< r "a.rs" >}}
 
 <https://doc.rust-lang.org/std/fs/fn.read_to_string.html>
 

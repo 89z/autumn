@@ -3,11 +3,11 @@ title: PHP
 tags: [php]
 ---
 
-{{< d "a.php" >}}
+{{< r "a.php" >}}
 
 <https://php.net/function.count>
 
-{{< d "b.php" >}}
+{{< r "b.php" >}}
 
 <https://php.net/function.sizeof>
 

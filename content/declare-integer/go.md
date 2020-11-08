@@ -3,11 +3,11 @@ title: Go
 tags: [go]
 ---
 
-{{< d "a.go" >}}
+{{< r "a.go" >}}
 
 <https://golang.org/ref/spec#Integer_literals>
 
-{{< d "b.go" >}}
+{{< r "b.go" >}}
 
 <https://golang.org/ref/spec#Numeric_types>
 

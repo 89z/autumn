@@ -3,11 +3,11 @@ title: Python
 tags: [python]
 ---
 
-{{< d "a.php" >}}
+{{< r "a.php" >}}
 
 <https://php.net/function.require-once>
 
-{{< d "b.php" >}}
+{{< r "b.php" >}}
 
 <https://php.net/function.require>
 

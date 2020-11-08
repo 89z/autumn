@@ -3,8 +3,8 @@ title: Rust
 tags: [rust]
 ---
 
-{{< d "a.rs" >}}
-{{< d "b.rs" >}}
+{{< r "a.rs" >}}
+{{< r "b.rs" >}}
 
 <https://doc.rust-lang.org/reference/items/use-declarations.html>
 

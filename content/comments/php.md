@@ -3,7 +3,7 @@ title: PHP
 tags: [php]
 ---
 
-{{< d "a.php" >}}
+{{< r "a.php" >}}
 
 <https://php.net/language.basic-syntax.comments>
 

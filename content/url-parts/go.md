@@ -3,8 +3,8 @@ title: Go
 tags: [go]
 ---
 
-{{< d "a.go" >}}
-{{< d "b.go" >}}
+{{< r "a.go" >}}
+{{< r "b.go" >}}
 
 <https://golang.org/pkg/net/url#Parse>
 

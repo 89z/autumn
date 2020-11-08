@@ -3,11 +3,11 @@ title: Rust
 tags: [rust]
 ---
 
-{{< d "a.rs" >}}
+{{< r "a.rs" >}}
 
 <https://doc.rust-lang.org/std/char/fn.from_digit.html>
 
-{{< d "b.rs" >}}
+{{< r "b.rs" >}}
 
 <https://doc.rust-lang.org/std/primitive.u32.html#method.from_str_radix>
 

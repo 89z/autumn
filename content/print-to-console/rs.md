@@ -3,11 +3,11 @@ title: Rust
 tags: [rust]
 ---
 
-{{< d "a.rs" >}}
+{{< r "a.rs" >}}
 
 <https://doc.rust-lang.org/std/macro.print.html>
 
-{{< d "b.rs" >}}
+{{< r "b.rs" >}}
 
 <https://doc.rust-lang.org/std/macro.println.html>
 

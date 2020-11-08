@@ -3,8 +3,8 @@ title: PHP
 tags: [php]
 ---
 
-{{< d "dec.php" >}}
-{{< d "err.php" >}}
+{{< r "dec.php" >}}
+{{< r "err.php" >}}
 
 <https://php.net/control-structures.declare>
 

@@ -3,19 +3,19 @@ title: Rust
 tags: [rust]
 ---
 
-{{< d "a.rs" >}}
+{{< r "a.rs" >}}
 
 <https://doc.rust-lang.org/std/macro.vec.html>
 
-{{< d "b.rs" >}}
+{{< r "b.rs" >}}
 
 <https://doc.rust-lang.org/std/primitive.array.html>
 
-{{< d "c.rs" >}}
+{{< r "c.rs" >}}
 
 <https://doc.rust-lang.org/std/primitive.slice.html>
 
-{{< d "d.rs" >}}
+{{< r "d.rs" >}}
 
 <https://doc.rust-lang.org/std/vec/struct.Vec.html#method.new>
 

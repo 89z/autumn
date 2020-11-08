@@ -3,11 +3,11 @@ title: Python
 tags: [python]
 ---
 
-{{< d "a.py" >}}
+{{< r "a.py" >}}
 
 <https://docs.python.org/library/re.html#re.findall>
 
-{{< d "b.py" >}}
+{{< r "b.py" >}}
 
 <https://docs.python.org/library/re.html#re.search>
 

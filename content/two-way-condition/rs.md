@@ -3,27 +3,27 @@ title: Rust
 tags: [rust]
 ---
 
-{{< d "a.rs" >}}
+{{< r "a.rs" >}}
 
 <https://doc.rust-lang.org/std/keyword.else.html>
 
-{{< d "b.rs" >}}
+{{< r "b.rs" >}}
 
 <https://doc.rust-lang.org/std/option/enum.Option.html#method.ok_or>
 
-{{< d "c.rs" >}}
+{{< r "c.rs" >}}
 
 <https://doc.rust-lang.org/std/option/enum.Option.html#method.unwrap_or>
 
-{{< d "d.rs" >}}
+{{< r "d.rs" >}}
 
 <https://doc.rust-lang.org/std/option/enum.Option.html#method.unwrap_or_default>
 
-{{< d "e.rs" >}}
+{{< r "e.rs" >}}
 
 <https://doc.rust-lang.org/std/result/enum.Result.html#method.unwrap_or>
 
-{{< d "f.rs" >}}
+{{< r "f.rs" >}}
 
 <https://doc.rust-lang.org/std/result/enum.Result.html#method.unwrap_or_default>
 

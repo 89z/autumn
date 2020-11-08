@@ -3,11 +3,11 @@ title: Python
 tags: [python]
 ---
 
-{{< d "a.py" >}}
+{{< r "a.py" >}}
 
 <https://docs.python.org/library/urllib.parse.html#urllib.parse.urllib.parse.SplitResult.geturl>
 
-{{< d "b.py" >}}
+{{< r "b.py" >}}
 
 <https://docs.python.org/library/urllib.parse.html#urllib.parse.urlparse>
 

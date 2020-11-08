@@ -3,19 +3,19 @@ title: Go
 tags: [go]
 ---
 
-{{< d "a.go" >}}
+{{< r "a.go" >}}
 
 <https://golang.org/pkg/fmt#Sprint>
 
-{{< d "b.go" >}}
+{{< r "b.go" >}}
 
 <https://golang.org/pkg/fmt#Sprintf>
 
-{{< d "c.go" >}}
+{{< r "c.go" >}}
 
 <https://golang.org/pkg/strings#Builder.WriteString>
 
-{{< d "d.go" >}}
+{{< r "d.go" >}}
 
 <https://golang.org/ref/spec#String_concatenation>
 

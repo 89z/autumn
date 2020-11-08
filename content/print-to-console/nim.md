@@ -3,15 +3,15 @@ title: Nim
 tags: [nim]
 ---
 
-{{< d "a.nim" >}}
+{{< r "a.nim" >}}
 
 <https://nim-lang.org/docs/system.html#echo,varargs[typed,]>
 
-{{< d "b.nim" >}}
+{{< r "b.nim" >}}
 
 <https://nim-lang.org/docs/io.html#write,File,varargs[string,]>
 
-{{< d "c.nim" >}}
+{{< r "c.nim" >}}
 
 <https://nim-lang.org/docs/io.html#writeLine,File,varargs[Ty,]>
 

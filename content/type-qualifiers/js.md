@@ -3,15 +3,15 @@ title: JavaScript
 tags: [javascript]
 ---
 
-{{< d "a.js" >}}
+{{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/const>
 
-{{< d "b.js" >}}
+{{< r "b.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/let>
 
-{{< d "c.js" >}}
+{{< r "c.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/var>
 

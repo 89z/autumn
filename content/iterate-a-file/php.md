@@ -3,7 +3,7 @@ title: PHP
 tags: [php]
 ---
 
-{{< d "a.php" >}}
+{{< r "a.php" >}}
 
 `feof` is triggered after `fgets`. Further, `trim` expects a string, so we
 cannot use it until we are certain that we have a string.

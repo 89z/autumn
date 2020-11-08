@@ -3,15 +3,15 @@ title: Nim
 tags: [nim]
 ---
 
-{{< d "a.nim" >}}
+{{< r "a.nim" >}}
 
 <https://nim-lang.org/docs/strtabs.html>
 
-{{< d "b.nim" >}}
+{{< r "b.nim" >}}
 
 <https://nim-lang.org/docs/tables.html#initTable>
 
-{{< d "c.nim" >}}
+{{< r "c.nim" >}}
 
 <https://nim-lang.org/docs/tables.html#toTable,openArray[]>
 

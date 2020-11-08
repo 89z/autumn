@@ -3,15 +3,15 @@ title: Nim
 tags: [nim]
 ---
 
-{{< d "a.nim" >}}
+{{< r "a.nim" >}}
 
 <https://nim-lang.org/docs/os.html#commandLineParams>
 
-{{< d "b.nim" >}}
+{{< r "b.nim" >}}
 
 <https://nim-lang.org/docs/os.html#paramCount>
 
-{{< d "c.nim" >}}
+{{< r "c.nim" >}}
 
 <https://nim-lang.org/docs/os.html#paramStr,int>
 

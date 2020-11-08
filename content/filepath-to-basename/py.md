@@ -3,15 +3,15 @@ title: Python
 tags: [python]
 ---
 
-{{< d "a.py" >}}
+{{< r "a.py" >}}
 
 <https://docs.python.org/library/os.path.html#os.path.basename>
 
-{{< d "b.py" >}}
+{{< r "b.py" >}}
 
 <https://docs.python.org/library/pathlib.html#pathlib.PurePath.name>
 
-{{< d "c.py" >}}
+{{< r "c.py" >}}
 
 <https://docs.python.org/library/pathlib.html#pathlib.PurePath.stem>
 

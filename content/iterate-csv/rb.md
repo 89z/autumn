@@ -3,19 +3,19 @@ title: Ruby
 tags: [ruby]
 ---
 
-{{< d "a.rb" >}}
+{{< r "a.rb" >}}
 
 <https://ruby-doc.org/stdlib/libdoc/csv/rdoc/CSV.html#method-c-foreach>
 
-{{< d "b.rb" >}}
+{{< r "b.rb" >}}
 
 <https://ruby-doc.org/stdlib/libdoc/csv/rdoc/CSV.html#method-c-new>
 
-{{< d "c.rb" >}}
+{{< r "c.rb" >}}
 
 <https://ruby-doc.org/stdlib/libdoc/csv/rdoc/CSV.html#method-c-parse>
 
-{{< d "d.rb" >}}
+{{< r "d.rb" >}}
 
 <https://ruby-doc.org/stdlib/libdoc/csv/rdoc/CSV.html#method-c-table>
 

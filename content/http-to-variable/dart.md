@@ -3,8 +3,8 @@ title: Dart
 tags: [dart]
 ---
 
-{{< d "a.dart" >}}
-{{< d "b.dart" >}}
+{{< r "a.dart" >}}
+{{< r "b.dart" >}}
 
 <https://api.dart.dev/dart-io/HttpClient-class.html>
 

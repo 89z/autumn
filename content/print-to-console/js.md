@@ -3,11 +3,11 @@ title: JavaScript
 tags: [javascript]
 ---
 
-{{< d "a.js" >}}
+{{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/API/Console/info>
 
-{{< d "b.js" >}}
+{{< r "b.js" >}}
 
 <https://developer.mozilla.org/Web/API/Console/log>
 

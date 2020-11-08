@@ -3,9 +3,9 @@ title: PHP
 tags: [php]
 ---
 
-{{< d "a.php" >}}
-{{< d "b.php" >}}
-{{< d "c.php" >}}
+{{< r "a.php" >}}
+{{< r "b.php" >}}
+{{< r "c.php" >}}
 
 <https://php.net/class.filesystemiterator>
 

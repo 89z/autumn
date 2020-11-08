@@ -3,23 +3,23 @@ title: PHP
 tags: [php]
 ---
 
-{{< d "a.php" >}}
+{{< r "a.php" >}}
 
 <https://php.net/control-structures.for>
 
-{{< d "b.php" >}}
+{{< r "b.php" >}}
 
 <https://php.net/control-structures.foreach>
 
-{{< d "c.php" >}}
+{{< r "c.php" >}}
 
 <https://php.net/control-structures.while>
 
-{{< d "d.php" >}}
+{{< r "d.php" >}}
 
 <https://php.net/function.array-walk>
 
-{{< d "e.php" >}}
+{{< r "e.php" >}}
 
 <https://php.net/function.next>
 

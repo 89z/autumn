@@ -3,15 +3,15 @@ title: D
 tags: [d]
 ---
 
-{{< d "a.d" >}}
+{{< r "a.d" >}}
 
 <https://dlang.org/spec/statement.html#while-statement>
 
-{{< d "b.d" >}}
+{{< r "b.d" >}}
 
 <https://dlang.org/spec/statement.html#foreach-statement>
 
-{{< d "c.d" >}}
+{{< r "c.d" >}}
 
 <https://dlang.org/spec/statement.html#for-statement>
 

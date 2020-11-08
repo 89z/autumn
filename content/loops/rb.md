@@ -3,15 +3,15 @@ title: Ruby
 tags: [ruby]
 ---
 
-{{< d "a.rb" >}}
+{{< r "a.rb" >}}
 
 <https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-while+Loop>
 
-{{< d "b.rb" >}}
+{{< r "b.rb" >}}
 
 <https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-until+Loop>
 
-{{< d "c.rb" >}}
+{{< r "c.rb" >}}
 
 <https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-for+Loop>
 

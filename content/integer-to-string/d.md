@@ -3,11 +3,11 @@ title: D
 tags: [d]
 ---
 
-{{< d "a.d" >}}
+{{< r "a.d" >}}
 
 <https://dlang.org/library/std/conv/text.html>
 
-{{< d "b.d" >}}
+{{< r "b.d" >}}
 
 <https://dlang.org/library/std/conv/to.html>
 

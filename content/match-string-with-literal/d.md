@@ -3,11 +3,11 @@ title: D
 tags: [d]
 ---
 
-{{< d "a.d" >}}
+{{< r "a.d" >}}
 
 <https://dlang.org/library/std/algorithm/searching/can_find.html>
 
-{{< d "b.d" >}}
+{{< r "b.d" >}}
 
 <https://dlang.org/library/std/algorithm/searching/starts_with.html>
 

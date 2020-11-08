@@ -3,11 +3,11 @@ title: Rust
 tags: [rust]
 ---
 
-{{< d "a/src/main.rs" >}}
+{{< r "a/src/main.rs" >}}
 
 <https://docs.rs/regex/1.4.1/regex/struct.Regex.html#method.captures>
 
-{{< d "b/src/main.rs" >}}
+{{< r "b/src/main.rs" >}}
 
 <https://docs.rs/regex/1.4.1/regex/struct.Regex.html#method.captures_iter>
 

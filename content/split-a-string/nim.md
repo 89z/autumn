@@ -3,11 +3,11 @@ title: Nim
 tags: [nim]
 ---
 
-{{< d "a.nim" >}}
+{{< r "a.nim" >}}
 
 <https://nim-lang.org/docs/strutils.html#split,string,string,int>
 
-{{< d "b.nim" >}}
+{{< r "b.nim" >}}
 
 <https://nim-lang.org/docs/strutils.html#splitLines,string>
 

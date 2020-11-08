@@ -3,7 +3,7 @@ title: Python
 tags: [python]
 ---
 
-{{< d "a.py" >}}
+{{< r "a.py" >}}
 
 <https://docs.python.org/reference/expressions.html#boolean-operations>
 

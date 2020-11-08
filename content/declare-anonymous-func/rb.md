@@ -3,15 +3,15 @@ title: Ruby
 tags: [ruby]
 ---
 
-{{< d "a.rb" >}}
+{{< r "a.rb" >}}
 
 <https://ruby-doc.org/core/Proc.html#method-c-new>
 
-{{< d "b.rb" >}}
+{{< r "b.rb" >}}
 
 <https://ruby-doc.org/core/Kernel.html#method-i-proc>
 
-{{< d "c.rb" >}}
+{{< r "c.rb" >}}
 
 <https://ruby-doc.org/core/Kernel.html#method-i-lambda>
 

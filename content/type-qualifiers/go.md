@@ -3,11 +3,11 @@ title: Go
 tags: [go]
 ---
 
-{{< d "a.go" >}}
+{{< r "a.go" >}}
 
 <https://golang.org/ref/spec#Constant_declarations>
 
-{{< d "b.go" >}}
+{{< r "b.go" >}}
 
 <https://golang.org/ref/spec#Variable_declarations>
 

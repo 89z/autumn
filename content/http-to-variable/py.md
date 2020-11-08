@@ -3,7 +3,7 @@ title: Python
 tags: [python]
 ---
 
-{{< d "a.py" >}}
+{{< r "a.py" >}}
 
 <https://docs.python.org/library/urllib.request.html#urllib.request.urlopen>
 

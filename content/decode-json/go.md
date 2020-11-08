@@ -3,11 +3,11 @@ title: Go
 tags: [go]
 ---
 
-{{< d "a.go" >}}
+{{< r "a.go" >}}
 
 <https://golang.org/pkg/encoding/json#Decoder.Decode>
 
-{{< d "b.go" >}}
+{{< r "b.go" >}}
 
 <https://golang.org/pkg/encoding/json#Unmarshal>
 

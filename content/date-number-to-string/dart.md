@@ -3,7 +3,7 @@ title: Dart
 tags: [dart]
 ---
 
-{{< d "a.dart" >}}
+{{< r "a.dart" >}}
 
 <https://github.com/dart-lang/intl>
 

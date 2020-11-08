@@ -3,19 +3,19 @@ title: JavaScript
 tags: [javascript]
 ---
 
-{{< d "a.js" >}}
+{{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/forEach>
 
-{{< d "b.js" >}}
+{{< r "b.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for...in>
 
-{{< d "c.js" >}}
+{{< r "c.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for...of>
 
-{{< d "d.js" >}}
+{{< r "d.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/for>
 

@@ -3,19 +3,19 @@ title: PHP
 tags: [php]
 ---
 
-{{< d "a.php" >}}
+{{< r "a.php" >}}
 
 <https://php.net/function.exit>
 
-{{< d "b.php" >}}
+{{< r "b.php" >}}
 
 <https://php.net/function.die>
 
-{{< d "c.php" >}}
+{{< r "c.php" >}}
 
 <https://php.net/function.trigger-error>
 
-{{< d "d.php" >}}
+{{< r "d.php" >}}
 
 <https://php.net/function.user-error>
 

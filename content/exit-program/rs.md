@@ -3,10 +3,10 @@ title: Rust
 tags: [rust]
 ---
 
-{{< d "a.rs" >}}
-{{< d "b.rs" >}}
-{{< d "c.rs" >}}
-{{< d "d.rs" >}}
+{{< r "a.rs" >}}
+{{< r "b.rs" >}}
+{{< r "c.rs" >}}
+{{< r "d.rs" >}}
 
 <https://doc.rust-lang.org/std/process/fn.exit.html>
 

@@ -3,7 +3,7 @@ title: Dart
 tags: [dart]
 ---
 
-{{< d "a.dart" >}}
+{{< r "a.dart" >}}
 
 <https://api.dart.dev/dart-io/exit.html>
 

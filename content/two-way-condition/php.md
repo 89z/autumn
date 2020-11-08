@@ -3,11 +3,11 @@ title: PHP
 tags: [php]
 ---
 
-{{< d "a.php" >}}
+{{< r "a.php" >}}
 
 <https://php.net/control-structures.elseif>
 
-{{< d "b.php" >}}
+{{< r "b.php" >}}
 
 <https://php.net/operators.comparison#language.operators.comparison.ternary>
 

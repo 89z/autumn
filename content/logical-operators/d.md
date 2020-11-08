@@ -3,7 +3,7 @@ title: D
 tags: [d]
 ---
 
-{{< d "a.d" >}}
+{{< r "a.d" >}}
 
 <https://dlang.org/spec/expression#AndAndExpression>
 

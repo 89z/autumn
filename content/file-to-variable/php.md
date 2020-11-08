@@ -3,15 +3,15 @@ title: PHP
 tags: [php]
 ---
 
-{{< d "a.php" >}}
+{{< r "a.php" >}}
 
 <https://php.net/function.file>
 
-{{< d "b.php" >}}
+{{< r "b.php" >}}
 
 <https://php.net/function.file-get-contents>
 
-{{< d "c.php" >}}
+{{< r "c.php" >}}
 
 <https://php.net/function.stream-get-contents>
 

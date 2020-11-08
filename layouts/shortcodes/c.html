@@ -1,5 +1,0 @@
-{{ $s_base := .Get 0 }}
-{{ $s_dir := path.Base .Page.Permalink }}
-{{ $s_ext := index (split $s_base ".") 1 }}
-{{ $s_join := path.Join $s_dir .Page.File.Dir $s_base }}
-{{ highlight (readFile $s_join) $s_ext "" }}

@@ -3,19 +3,19 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< d "a.ps1" >}}
+{{< r "a.ps1" >}}
 
 <https://docs.microsoft.com/dotnet/core/tools/dotnet-add-package>
 
-{{< d "b.ps1" >}}
+{{< r "b.ps1" >}}
 
 <https://docs.microsoft.com/dotnet/core/tools/dotnet-new>
 
-{{< d "c.ps1" >}}
+{{< r "c.ps1" >}}
 
 <https://docs.microsoft.com/dotnet/core/tools/dotnet-publish>
 
-{{< d "d.ps1" >}}
+{{< r "d.ps1" >}}
 
 <https://docs.microsoft.com/dotnet/core/tools/dotnet-run>
 

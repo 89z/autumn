@@ -3,11 +3,11 @@ title: D
 tags: [d]
 ---
 
-{{< d "a.d" >}}
+{{< r "a.d" >}}
 
 <https://dlang.org/spec/module.html#name_lookup>
 
-{{< d "b.d" >}}
+{{< r "b.d" >}}
 
 <https://dlang.org/spec/module.html#selective_imports>
 

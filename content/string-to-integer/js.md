@@ -3,19 +3,19 @@ title: JavaScript
 tags: [javascript]
 ---
 
-{{< d "a.js" >}}
+{{< r "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/parseInt>
 
-{{< d "b.js" >}}
+{{< r "b.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number>
 
-{{< d "c.js" >}}
+{{< r "c.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/parseInt>
 
-{{< d "d.js" >}}
+{{< r "d.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Arithmetic_Operators>
 

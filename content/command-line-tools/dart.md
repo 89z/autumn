@@ -3,19 +3,19 @@ title: Dart
 tags: [dart]
 ---
 
-{{< d "a.ps1" >}}
+{{< r "a.ps1" >}}
 
 <https://dart.dev/tools/dart-vm>
 
-{{< d "b.ps1" >}}
+{{< r "b.ps1" >}}
 
 <https://dart.dev/tools/dart2native>
 
-{{< d "c.ps1" >}}
+{{< r "c.ps1" >}}
 
 <https://dart.dev/tools/dartanalyzer>
 
-{{< d "d.ps1" >}}
+{{< r "d.ps1" >}}
 
 <https://dart.dev/tools/pub>
 

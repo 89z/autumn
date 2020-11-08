@@ -3,19 +3,19 @@ title: Nim
 tags: [nim]
 ---
 
-{{< d "a.nim" >}}
+{{< r "a.nim" >}}
 
 <https://nim-lang.org/docs/dollars.html>
 
-{{< d "b.nim" >}}
+{{< r "b.nim" >}}
 
 <https://nim-lang.org/docs/strformat.html#&.m,string>
 
-{{< d "c.nim" >}}
+{{< r "c.nim" >}}
 
 <https://nim-lang.org/docs/strformat.html#fmt.m,string>
 
-{{< d "d.nim" >}}
+{{< r "d.nim" >}}
 
 <https://nim-lang.org/docs/strformat.html#formatValue,string,T,string>
 

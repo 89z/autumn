@@ -3,11 +3,11 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< d "a/Program.cs" >}}
+{{< r "a/Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/api/system.console.writeline>
 
-{{< d "b/Program.cs" >}}
+{{< r "b/Program.cs" >}}
 
 <https://docs.microsoft.com/en-us/dotnet/api/system.console.write>
 

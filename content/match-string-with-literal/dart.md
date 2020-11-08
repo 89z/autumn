@@ -3,11 +3,11 @@ title: Dart
 tags: [dart]
 ---
 
-{{< d "a.dart" >}}
+{{< r "a.dart" >}}
 
 <https://api.dart.dev/dart-core/String/contains.html>
 
-{{< d "b.dart" >}}
+{{< r "b.dart" >}}
 
 <https://api.dart.dev/dart-core/String/startsWith.html>
 

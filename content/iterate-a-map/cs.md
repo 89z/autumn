@@ -3,7 +3,7 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< d "Program.cs" >}}
+{{< r "Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/foreach-in>
 

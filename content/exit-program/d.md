@@ -3,15 +3,15 @@ title: D
 tags: [d]
 ---
 
-{{< d "a.d" >}}
+{{< r "a.d" >}}
 
 <https://dlang.org/library/core/runtime/runtime.terminate.html>
 
-{{< d "b.d" >}}
+{{< r "b.d" >}}
 
 <https://dlang.org/library/core/stdc/stdlib/exit.html>
 
-{{< d "c.d" >}}
+{{< r "c.d" >}}
 
 <https://dlang.org/spec/statement.html#return-statement>
 

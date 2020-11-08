@@ -3,15 +3,15 @@ title: Rust
 tags: [rust]
 ---
 
-{{< d "a.rs" >}}
+{{< r "a.rs" >}}
 
 <https://doc.rust-lang.org/std/iter/index.html>
 
-{{< d "b.rs" >}}
+{{< r "b.rs" >}}
 
 <https://doc.rust-lang.org/std/iter/struct.Enumerate.html>
 
-{{< d "c.rs" >}}
+{{< r "c.rs" >}}
 
 <https://doc.rust-lang.org/std/keyword.for.html>
 

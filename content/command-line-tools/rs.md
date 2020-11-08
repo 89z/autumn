@@ -3,29 +3,29 @@ title: Rust
 tags: [rust]
 ---
 
-{{< d "Cargo.toml" >}}
+{{< r "Cargo.toml" >}}
 
 `edition` allows to omit `extern crate`.
 
 <https://doc.rust-lang.org/cargo/reference/manifest.html>
 
-{{< d "build.ps1" >}}
+{{< r "build.ps1" >}}
 
 <https://doc.rust-lang.org/cargo/commands/cargo-build.html>
 
-{{< d "init.ps1" >}}
+{{< r "init.ps1" >}}
 
 <https://doc.rust-lang.org/cargo/commands/cargo-init.html>
 
-{{< d "new.ps1" >}}
+{{< r "new.ps1" >}}
 
 <https://doc.rust-lang.org/cargo/commands/cargo-new.html>
 
-{{< d "run.ps1" >}}
+{{< r "run.ps1" >}}
 
 <https://doc.rust-lang.org/cargo/commands/cargo-run.html>
 
-{{< d "rustc.ps1" >}}
+{{< r "rustc.ps1" >}}
 
 <https://doc.rust-lang.org/rustc/what-is-rustc.html>
 
