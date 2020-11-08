@@ -1,14 +1,12 @@
 <?php
 
 if ($argc == 1) {
-   echo <<<eof
-cat.php [flags] <input>
+   echo 'cat.php [flags] <input>
 -s string
    start
 -e string
    end
-
-eof;
+';
    exit(1);
 }
 
