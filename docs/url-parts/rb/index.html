@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>URL parts / Ruby</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/a8nj/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/url-parts/">URL parts</a> / Ruby
+</h1>
+<section class="page">
+   <time>Thu Sep 10 2020</time>
+   
+   <a href="/autumn/categories/network/">network</a>
+   
+</section>
+   
+
+
+
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;uri&#39;</span>
+
+url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://google.com:80/foo?q=3#bar&#34;</span>
+up <span style="color:#f92672">=</span> <span style="color:#66d9ef">URI</span>(url)
+
+protocol <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>scheme
+hostname <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>host
+port <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>port
+path <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>path
+query_str <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>query
+fragment <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>fragment
+
+<span style="color:#75715e"># Ruby 1.9; returns array of pairs:</span>
+params <span style="color:#f92672">=</span> <span style="color:#66d9ef">URI</span><span style="color:#f92672">.</span>decode_www_form(query_str)
+</code></pre></div>
+
+<p><a href="https://ruby-doc.org/stdlib/libdoc/uri/rdoc">https://ruby-doc.org/stdlib/libdoc/uri/rdoc</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/scripting2#parse-url">https://hyperpolyglot.org/scripting2#parse-url</a></li>
+<li><a href="https://rosettacode.org/wiki/URL_parser">https://rosettacode.org/wiki/URL_parser</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>

@@ -5,5 +5,6 @@
 <!-- ext -->
 {{ $s_ext := index (split $s_base ".") 1 }}
 <!-- highlight -->
-{{ $s_join := path.Join $s_dir .Page.File.Dir $s_base }}
+{{ $s_cond := cond (hasPrefix $s_base "/") "" .Page.File.Dir }}
+{{ $s_join := path.Join $s_dir $s_cond $s_base }}
 {{ highlight (readFile $s_join) $s_ext "" }}

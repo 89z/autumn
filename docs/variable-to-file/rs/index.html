@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Variable to file / Rust</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/a8nj/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/variable-to-file/">Variable to file</a> / Rust
+</h1>
+<section class="page">
+   <time>Fri Sep 11 2020</time>
+   
+   <a href="/autumn/categories/input-output/">input-output</a>
+   
+</section>
+   
+
+
+
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::fs;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> e <span style="color:#f92672">=</span> fs::write(<span style="color:#e6db74">&#34;a.txt&#34;</span>, <span style="color:#e6db74">&#34;May\n&#34;</span>);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, e);
+}
+</code></pre></div>
+
+<p><a href="https://doc.rust-lang.org/std/fs/fn.write.html">https://doc.rust-lang.org/std/fs/fn.write.html</a></p>
+
+
+
+
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{fs::File, io, io::Write};
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> y <span style="color:#f92672">=</span> <span style="color:#e6db74">b&#34;March</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> o <span style="color:#f92672">=</span> File::create(<span style="color:#e6db74">&#34;a.txt&#34;</span>)<span style="color:#f92672">?</span>;
+   o.write(y)<span style="color:#f92672">?</span>;
+   Ok(())
+}
+</code></pre></div>
+
+<p><a href="https://doc.rust-lang.org/std/io/trait.Write.html#tymethod.write">https://doc.rust-lang.org/std/io/trait.Write.html#tymethod.write</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://rosettacode.org/wiki/Write_entire_file">https://rosettacode.org/wiki/Write_entire_file</a></li>
+<li><a href="https://rosettacode.org/wiki/Create_a_file">https://rosettacode.org/wiki/Create_a_file</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Variable to file / C#</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/a8nj/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/variable-to-file/">Variable to file</a> / C#
+</h1>
+<section class="page">
+   <time>Fri Sep 11 2020</time>
+   
+   <a href="/autumn/categories/input-output/">input-output</a>
+   
+</section>
+   
+
+
+
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">using</span> System.IO;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">var</span> o = <span style="color:#66d9ef">new</span> StreamWriter(<span style="color:#e6db74">&#34;a.txt&#34;</span>);
+      o.WriteLine(<span style="color:#e6db74">&#34;May&#34;</span>);
+      o.Close();
+   }
+}
+</code></pre></div>
+
+<p><a href="https://docs.microsoft.com/dotnet/api/system.io.streamwriter">https://docs.microsoft.com/dotnet/api/system.io.streamwriter</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/cpp#file-handles">https://hyperpolyglot.org/cpp#file-handles</a></li>
+<li><a href="https://rosettacode.org/wiki/Write_entire_file">https://rosettacode.org/wiki/Write_entire_file</a></li>
+<li><a href="https://rosettacode.org/wiki/Create_a_file">https://rosettacode.org/wiki/Create_a_file</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
