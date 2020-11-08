@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Map contains key / C#</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/a8nj/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/map-contains-key/">Map contains key</a> / C#
+</h1>
+<section class="page">
+   <time>Fri Sep 11 2020</time>
+   
+   <a href="/autumn/categories/map/">map</a>
+   
+</section>
+   
+
+
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">using</span> System.Collections.Generic;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">var</span> m = <span style="color:#66d9ef">new</span> Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;();
+      m.Add(<span style="color:#e6db74">&#34;year&#34;</span>, <span style="color:#ae81ff">2019</span>);
+      <span style="color:#66d9ef">var</span> b = m.ContainsKey(<span style="color:#e6db74">&#34;year&#34;</span>);
+      Console.WriteLine(b);
+   }
+}
+</code></pre></div>
+
+<p><a href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.containskey">https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2.containskey</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://programming-idioms.org/idiom/51">https://programming-idioms.org/idiom/51</a></li>
+<li><a href="https://rosettacode.org/wiki/Associative_array/Creation">https://rosettacode.org/wiki/Associative_array/Creation</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
