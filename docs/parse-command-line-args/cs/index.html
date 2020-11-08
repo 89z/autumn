@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Parse command line arguments / C#</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/a8nj/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/parse-command-line-args/">Parse command line arguments</a> / C#
+</h1>
+<section class="page">
+   <time>Wed Oct 21 2020</time>
+   
+   <a href="/autumn/categories/system/">system</a>
+   
+</section>
+   
+
+
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> CommandLine;
+<span style="color:#66d9ef">using</span> System;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Options</span> {
+<span style="color:#a6e22e">      [Option(&#34;start&#34;)]</span>
+      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Start { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+<span style="color:#a6e22e">      [Option(&#34;end&#34;)]</span>
+      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> End { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+<span style="color:#a6e22e">      [Value(0, MetaName = &#34;input&#34;, Required = true)]</span>
+      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Input { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+   }
+
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] a) {
+      <span style="color:#66d9ef">var</span> s_start = <span style="color:#e6db74">&#34;&#34;</span>;
+      <span style="color:#66d9ef">var</span> s_end = <span style="color:#e6db74">&#34;&#34;</span>;
+      <span style="color:#66d9ef">var</span> s_input = <span style="color:#e6db74">&#34;&#34;</span>;
+      Parser.Default.ParseArguments&lt;Options&gt;(a).WithParsed&lt;Options&gt;(o =&gt; {
+         s_start = o.Start;
+         s_end = o.End;
+         s_input = o.Input;
+      });
+      Console.WriteLine(s_start + s_input + s_end);
+   }
+}
+</code></pre></div>
+
+<p><a href="https://github.com/commandlineparser/commandline">https://github.com/commandlineparser/commandline</a></p>
+
+
+
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System.CommandLine.Invocation;
+<span style="color:#66d9ef">using</span> System.CommandLine;
+<span style="color:#66d9ef">using</span> System;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] a) {
+      <span style="color:#66d9ef">var</span> s_start = <span style="color:#e6db74">&#34;&#34;</span>;
+      <span style="color:#66d9ef">var</span> s_end = <span style="color:#e6db74">&#34;&#34;</span>;
+      <span style="color:#66d9ef">var</span> s_input = <span style="color:#e6db74">&#34;&#34;</span>;
+
+      <span style="color:#66d9ef">var</span> o = <span style="color:#66d9ef">new</span> RootCommand {
+         <span style="color:#66d9ef">new</span> Option&lt;<span style="color:#66d9ef">string</span>&gt;(<span style="color:#e6db74">&#34;-start&#34;</span>),
+         <span style="color:#66d9ef">new</span> Option&lt;<span style="color:#66d9ef">string</span>&gt;(<span style="color:#e6db74">&#34;-end&#34;</span>),
+         <span style="color:#66d9ef">new</span> Argument&lt;<span style="color:#66d9ef">string</span>&gt;(<span style="color:#e6db74">&#34;input&#34;</span>)
+      };
+
+      <span style="color:#66d9ef">void</span> Execute(<span style="color:#66d9ef">string</span> start, <span style="color:#66d9ef">string</span> end, <span style="color:#66d9ef">string</span> input) {
+         s_start = start;
+         s_end = end;
+         s_input = input;
+      }
+
+      o.Handler = CommandHandler.Create&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">string</span>&gt;(Execute);
+      o.Invoke(a);
+
+      <span style="color:#66d9ef">if</span> (s_input == <span style="color:#e6db74">&#34;&#34;</span>) {
+         Environment.Exit(<span style="color:#ae81ff">2</span>);
+      }
+
+      Console.WriteLine(s_start + s_input + s_end);
+   }
+}
+</code></pre></div>
+
+<p><a href="https://github.com/dotnet/command-line-api/wiki/Your-first-app-with-System.CommandLine">https://github.com/dotnet/command-line-api/wiki/Your-first-app-with-System.CommandLine</a></p>
+
+
+
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System.CommandLine.DragonFruit;
+<span style="color:#66d9ef">using</span> System;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span> argument, <span style="color:#66d9ef">string</span> start, <span style="color:#66d9ef">string</span> end) {
+      Console.WriteLine(start + argument + end);
+   }
+}
+</code></pre></div>
+
+<p><a href="https://github.com/dotnet/command-line-api/wiki/Your-first-app-with-System.CommandLine.DragonFruit">https://github.com/dotnet/command-line-api/wiki/Your-first-app-with-System.CommandLine.DragonFruit</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://programming-idioms.org/idiom/162">https://programming-idioms.org/idiom/162</a></li>
+<li><a href="https://rosettacode.org/wiki/Parse_command-line_arguments">https://rosettacode.org/wiki/Parse_command-line_arguments</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
