@@ -3,11 +3,11 @@ title: Nim
 tags: [nim]
 ---
 
-{{< c "a.nim" >}}
+{{< d "a.nim" >}}
 
 <https://nim-lang.org/docs/parseopt.html#getopt.i,OptParser>
 
-{{< c "b.nim" >}}
+{{< d "b.nim" >}}
 
 <https://nim-lang.org/docs/parseopt.html#next,OptParser>
 

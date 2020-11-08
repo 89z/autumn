@@ -3,11 +3,11 @@ title: Nim
 tags: [nim]
 ---
 
-{{< c "a.nim" >}}
+{{< d "a.nim" >}}
 
 <https://nim-lang.org/docs/io.html#readAll,File>
 
-{{< c "b.nim" >}}
+{{< d "b.nim" >}}
 
 <https://nim-lang.org/docs/io.html#readFile,string>
 

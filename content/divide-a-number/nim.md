@@ -3,15 +3,15 @@ title: Nim
 tags: [nim]
 ---
 
-{{< c "a.nim" >}}
+{{< d "a.nim" >}}
 
 <https://nim-lang.org/docs/system.html#/,int,int>
 
-{{< c "b.nim" >}}
+{{< d "b.nim" >}}
 
 <https://nim-lang.org/docs/system.html#div,int,int>
 
-{{< c "c.nim" >}}
+{{< d "c.nim" >}}
 
 <https://nim-lang.org/docs/system.html#mod,int,int>
 
