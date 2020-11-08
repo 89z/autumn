@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Integer to string / Rust</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/a8nj/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/integer-to-string/">Integer to string</a> / Rust
+</h1>
+<section class="page">
+   <time>Sun Nov 1 2020</time>
+   
+   <a href="/autumn/categories/number/">number</a>
+   
+</section>
+   
+
+
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">11</span>;
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> format<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;11&#34;</span>);
+}
+</code></pre></div>
+
+<p><a href="https://doc.rust-lang.org/std/macro.format.html">https://doc.rust-lang.org/std/macro.format.html</a></p>
+
+
+
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">11</span>;
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> n.to_string();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;11&#34;</span>);
+}
+</code></pre></div>
+
+<p><a href="https://doc.rust-lang.org/std/primitive.u8.html#method.to_string">https://doc.rust-lang.org/std/primitive.u8.html#method.to_string</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://programming-idioms.org/idiom/55">https://programming-idioms.org/idiom/55</a></li>
+<li><a href="https://rosettacode.org/wiki/Increment_a_numerical_string">https://rosettacode.org/wiki/Increment_a_numerical_string</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
