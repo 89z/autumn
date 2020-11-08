@@ -3,11 +3,11 @@ title: Go
 tags: [go]
 ---
 
-{{< c "a.go" >}}
+{{< d "a.go" >}}
 
 <https://golang.org/pkg/os#Getenv>
 
-{{< c "b.go" >}}
+{{< d "b.go" >}}
 
 <https://golang.org/pkg/os#LookupEnv>
 

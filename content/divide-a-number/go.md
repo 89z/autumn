@@ -3,15 +3,15 @@ title: Go
 tags: [go]
 ---
 
-{{< c "a.go" >}}
+{{< d "a.go" >}}
 
 <https://golang.org/pkg/math#Mod>
 
-{{< c "b.go" >}}
+{{< d "b.go" >}}
 
 <https://golang.org/pkg/math#Remainder>
 
-{{< c "c.go" >}}
+{{< d "c.go" >}}
 
 <https://golang.org/ref/spec#Arithmetic_operators>
 

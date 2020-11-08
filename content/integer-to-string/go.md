@@ -3,15 +3,15 @@ title: Go
 tags: [go]
 ---
 
-{{< c "a.go" >}}
+{{< d "a.go" >}}
 
 <https://golang.org/pkg/fmt#Sprint>
 
-{{< c "b.go" >}}
+{{< d "b.go" >}}
 
 <https://golang.org/pkg/fmt#Sprintf>
 
-{{< c "c.go" >}}
+{{< d "c.go" >}}
 
 <https://golang.org/pkg/strconv#FormatInt>
 

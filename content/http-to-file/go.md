@@ -3,11 +3,11 @@ title: Go
 tags: [go]
 ---
 
-{{< c "a.go" >}}
+{{< d "a.go" >}}
 
 <https://golang.org/pkg/net/http#Get>
 
-{{< c "b.go" >}}
+{{< d "b.go" >}}
 
 <https://golang.org/pkg/io#TeeReader>
 

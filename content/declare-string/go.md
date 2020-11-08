@@ -3,11 +3,11 @@ title: Go
 tags: [go]
 ---
 
-{{< c "a.go" >}}
+{{< d "a.go" >}}
 
 <https://golang.org/ref/spec#interpreted_string_lit>
 
-{{< c "b.go" >}}
+{{< d "b.go" >}}
 
 <https://golang.org/ref/spec#raw_string_lit>
 

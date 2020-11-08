@@ -3,15 +3,15 @@ title: Go
 tags: [go]
 ---
 
-{{< c "a.go" >}}
+{{< d "a.go" >}}
 
 <https://golang.org/pkg/time#Time.Format>
 
-{{< c "b.go" >}}
+{{< d "b.go" >}}
 
 <https://golang.org/pkg/time#Time.MarshalText>
 
-{{< c "c.go" >}}
+{{< d "c.go" >}}
 
 <https://golang.org/pkg/time#Time.String>
 

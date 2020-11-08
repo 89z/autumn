@@ -3,19 +3,19 @@ title: Go
 tags: [go]
 ---
 
-{{< c "a.go" >}}
+{{< d "a.go" >}}
 
 <https://golang.org/pkg/builtin#print>
 
-{{< c "b.go" >}}
+{{< d "b.go" >}}
 
 <https://golang.org/pkg/builtin#println>
 
-{{< c "c.go" >}}
+{{< d "c.go" >}}
 
 <https://golang.org/pkg/fmt#Print>
 
-{{< c "d.go" >}}
+{{< d "d.go" >}}
 
 <https://golang.org/pkg/fmt#Println>
 

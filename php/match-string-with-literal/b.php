@@ -1,6 +1,6 @@
 <?php
 
-function str_contains($s, $s2) {
+function str_contains(string $s, string $s2): bool {
    return strpos($s, $s2) !== false;
 }
 

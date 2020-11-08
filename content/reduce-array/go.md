@@ -3,8 +3,8 @@ title: Go
 tags: [go]
 ---
 
-{{< c "a.go" >}}
-{{< c "b.go" >}}
+{{< d "a.go" >}}
+{{< d "b.go" >}}
 
 <https://golang.org/ref/spec#For_range>
 

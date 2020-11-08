@@ -3,23 +3,23 @@ title: Go
 tags: [go]
 ---
 
-{{< c "a.go" >}}
+{{< d "a.go" >}}
 
 <https://golang.org/pkg/fmt#Sscan>
 
-{{< c "b.go" >}}
+{{< d "b.go" >}}
 
 <https://golang.org/pkg/fmt#Sscanf>
 
-{{< c "c.go" >}}
+{{< d "c.go" >}}
 
 <https://golang.org/pkg/fmt#Sscanln>
 
-{{< c "d.go" >}}
+{{< d "d.go" >}}
 
 <https://golang.org/pkg/strconv#ParseFloat>
 
-{{< c "e.go" >}}
+{{< d "e.go" >}}
 
 <https://golang.org/ref/spec#Conversions>
 

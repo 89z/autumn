@@ -3,15 +3,15 @@ title: Go
 tags: [go]
 ---
 
-{{< c "a.go" >}}
+{{< d "a.go" >}}
 
 <https://golang.org/pkg/log#Fatal>
 
-{{< c "b.go" >}}
+{{< d "b.go" >}}
 
 <https://golang.org/pkg/os#Exit>
 
-{{< c "c.go" >}}
+{{< d "c.go" >}}
 
 <https://golang.org/ref/spec#Return_statements>
 

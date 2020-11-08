@@ -1,6 +1,6 @@
 <?php
 
-function str_starts_with($s, $s2) {
+function str_starts_with(string $s, string $s2): bool {
    return strpos($s, $s2) === 0;
 }
 

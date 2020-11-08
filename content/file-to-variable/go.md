@@ -3,19 +3,19 @@ title: Go
 tags: [go]
 ---
 
-{{< c "a.go" >}}
+{{< d "a.go" >}}
 
 <https://golang.org/pkg/bufio#Scanner.Scan>
 
-{{< c "b.go" >}}
+{{< d "b.go" >}}
 
 <https://golang.org/pkg/io#Copy>
 
-{{< c "c.go" >}}
+{{< d "c.go" >}}
 
 <https://golang.org/pkg/io/ioutil#ReadAll>
 
-{{< c "d.go" >}}
+{{< d "d.go" >}}
 
 <https://golang.org/pkg/io/ioutil#ReadFile>
 
