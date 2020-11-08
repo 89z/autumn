@@ -1,0 +1,13 @@
+---
+title: Python
+tags: [python]
+---
+
+{{< s "a.py" >}}
+
+<https://docs.python.org/library/urllib.parse.html#urllib.parse.parse_qs>
+
+## References
+
+- <https://hyperpolyglot.org/scripting2#parse-url>
+- <https://rosettacode.org/wiki/URL_parser>
