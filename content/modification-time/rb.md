@@ -3,19 +3,19 @@ title: Ruby
 tags: [ruby]
 ---
 
-{{< c "a.rb" >}}
+{{< d "a.rb" >}}
 
 <https://ruby-doc.org/core/File.html#method-c-mtime>
 
-{{< c "b.rb" >}}
+{{< d "b.rb" >}}
 
 <https://ruby-doc.org/core/File.html#method-c-utime>
 
-{{< c "c.rb" >}}
+{{< d "c.rb" >}}
 
 <https://ruby-doc.org/core/File.html#method-i-mtime>
 
-{{< c "d.rb" >}}
+{{< d "d.rb" >}}
 
 <https://ruby-doc.org/core/File/Stat.html#method-i-mtime>
 

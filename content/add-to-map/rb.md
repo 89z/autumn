@@ -3,7 +3,7 @@ title: Ruby
 tags: [ruby]
 ---
 
-{{< c "a.rb" >}}
+{{< d "a.rb" >}}
 
 <https://ruby-doc.org/core/Hash.html#method-i-5B-5D-3D>
 

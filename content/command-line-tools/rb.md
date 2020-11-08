@@ -3,7 +3,7 @@ title: Ruby
 tags: [ruby]
 ---
 
-{{< c "a.ps1" >}}
+{{< d "a.ps1" >}}
 
 ## References
 

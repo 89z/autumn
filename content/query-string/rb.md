@@ -3,8 +3,8 @@ title: Ruby
 tags: [ruby]
 ---
 
-{{< c "a.rb" >}}
-{{< c "b.rb" >}}
+{{< d "a.rb" >}}
+{{< d "b.rb" >}}
 
 <https://ruby-doc.org/stdlib/libdoc/uri/rdoc>
 
