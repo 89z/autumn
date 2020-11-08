@@ -3,15 +3,15 @@ title: JavaScript
 tags: [javascript]
 ---
 
-{{< c "a.js" >}}
+{{< d "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/raw>
 
-{{< c "b.js" >}}
+{{< d "b.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Template_literals>
 
-{{< c "c.js" >}}
+{{< d "c.js" >}}
 
 <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String>
 

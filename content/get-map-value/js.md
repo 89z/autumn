@@ -3,7 +3,7 @@ title: JavaScript
 tags: [javascript]
 ---
 
-{{< c "a.js" >}}
+{{< d "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Property_Accessors>
 

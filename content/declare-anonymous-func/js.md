@@ -3,11 +3,11 @@ title: JavaScript
 tags: [javascript]
 ---
 
-{{< c "a.js" >}}
+{{< d "a.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Functions/Arrow_functions>
 
-{{< c "b.js" >}}
+{{< d "b.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Operators/function>
 
