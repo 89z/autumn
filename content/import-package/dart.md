@@ -3,8 +3,8 @@ title: Dart
 tags: [dart]
 ---
 
-{{< c "a.dart" >}}
-{{< c "b.dart" >}}
+{{< d "a.dart" >}}
+{{< d "b.dart" >}}
 
 <https://dart.dev/guides/language/language-tour#using-libraries>
 

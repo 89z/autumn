@@ -3,7 +3,7 @@ title: Dart
 tags: [dart]
 ---
 
-{{< c "a.dart" >}}
+{{< d "a.dart" >}}
 
 <https://api.dart.dev/dart-core/Iterable/forEach.html>
 

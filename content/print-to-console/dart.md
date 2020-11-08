@@ -3,15 +3,15 @@ title: Dart
 tags: [dart]
 ---
 
-{{< c "a.dart" >}}
+{{< d "a.dart" >}}
 
 <https://api.dart.dev/dart-core/print.html>
 
-{{< c "b.dart" >}}
+{{< d "b.dart" >}}
 
 <https://api.dart.dev/dart-io/Stdout/write.html>
 
-{{< c "c.dart" >}}
+{{< d "c.dart" >}}
 
 <https://api.dart.dev/dart-io/Stdout/writeln.html>
 
