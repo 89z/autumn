@@ -7,6 +7,6 @@ autumn/*/cs/b/obj
 autumn/*/cs/c/bin
 autumn/*/cs/c/c.csproj
 autumn/*/cs/c/obj
-rs/*/a/Cargo.lock
-rs/*/b/Cargo.lock
-rs/*/c/Cargo.lock
+autumn/*/rs/a/Cargo.lock
+autumn/*/rs/b/Cargo.lock
+autumn/*/rs/c/Cargo.lock

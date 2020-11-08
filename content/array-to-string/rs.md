@@ -3,19 +3,19 @@ title: Rust
 tags: [rust]
 ---
 
-{{< c "a.rs" >}}
+{{< d "a.rs" >}}
 
 <https://doc.rust-lang.org/std/primitive.slice.html#method.concat>
 
-{{< c "b.rs" >}}
+{{< d "b.rs" >}}
 
 <https://doc.rust-lang.org/std/primitive.slice.html#method.join>
 
-{{< c "c.rs" >}}
+{{< d "c.rs" >}}
 
 <https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8>
 
-{{< c "d.rs" >}}
+{{< d "d.rs" >}}
 
 <https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8_lossy>
 

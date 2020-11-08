@@ -3,19 +3,19 @@ title: Rust
 tags: [rust]
 ---
 
-{{< c "a/src/main.rs" >}}
+{{< d "a/src/main.rs" >}}
 
 0 deps
 
 <https://lib.rs/crates/tinyjson>
 
-{{< c "b/src/main.rs" >}}
+{{< d "b/src/main.rs" >}}
 
 0 deps
 
 <https://lib.rs/crates/json>
 
-{{< c "c/src/main.rs" >}}
+{{< d "c/src/main.rs" >}}
 
 3 deps
 

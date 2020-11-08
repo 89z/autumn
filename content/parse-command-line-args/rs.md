@@ -3,25 +3,25 @@ title: Rust
 tags: [rust]
 ---
 
-{{< c "a/src/main.rs" >}}
+{{< d "a/src/main.rs" >}}
 
 0 deps
 
 <https://lib.rs/crates/pico-args>
 
-{{< c "b/src/main.rs" >}}
+{{< d "b/src/main.rs" >}}
 
 8 deps
 
 <https://lib.rs/crates/argh>
 
-{{< c "c/src/main.rs" >}}
+{{< d "c/src/main.rs" >}}
 
 12 deps
 
 <https://lib.rs/crates/clap>
 
-{{< c "d/src/main.rs" >}}
+{{< d "d/src/main.rs" >}}
 
 24 deps
 
