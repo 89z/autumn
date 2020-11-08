@@ -58,3 +58,4 @@ docs/**/*.rs
 docs/**/*.txt
 rs/*/a/Cargo.lock
 rs/*/b/Cargo.lock
+rs/*/c/Cargo.lock
