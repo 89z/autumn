@@ -3,11 +3,11 @@ title: PHP
 tags: [php]
 ---
 
-{{< c "a.php" >}}
+{{< d "a.php" >}}
 
 <https://php.net/dateinterval.format>
 
-{{< c "b.php" >}}
+{{< d "b.php" >}}
 
 <https://php.net/function.date-interval-format>
 

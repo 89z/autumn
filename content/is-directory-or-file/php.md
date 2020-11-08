@@ -3,19 +3,19 @@ title: PHP
 tags: [php]
 ---
 
-{{< c "a.php" >}}
+{{< d "a.php" >}}
 
 <https://php.net/function.is-dir>
 
-{{< c "b.php" >}}
+{{< d "b.php" >}}
 
 <https://php.net/function.is-file>
 
-{{< c "c.php" >}}
+{{< d "c.php" >}}
 
 <https://php.net/splfileinfo.isdir>
 
-{{< c "d.php" >}}
+{{< d "d.php" >}}
 
 <https://php.net/splfileinfo.isfile>
 

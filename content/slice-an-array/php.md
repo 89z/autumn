@@ -3,11 +3,11 @@ title: PHP
 tags: [php]
 ---
 
-{{< c "a.php" >}}
+{{< d "a.php" >}}
 
 <https://php.net/function.array-slice>
 
-{{< c "b.php" >}}
+{{< d "b.php" >}}
 
 <https://php.net/types.array#language.types.array.syntax.accessing>
 

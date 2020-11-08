@@ -3,7 +3,7 @@ title: PHP
 tags: [php]
 ---
 
-{{< c "a.php" >}}
+{{< d "a.php" >}}
 
 <https://php.net/types.array#language.types.array.syntax.accessing>
 

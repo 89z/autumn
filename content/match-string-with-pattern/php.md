@@ -3,11 +3,11 @@ title: PHP
 tags: [php]
 ---
 
-{{< c "a.php" >}}
+{{< d "a.php" >}}
 
 <https://php.net/function.preg-match>
 
-{{< c "b.php" >}}
+{{< d "b.php" >}}
 
 <https://php.net/regexp.reference.internal-options>
 

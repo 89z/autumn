@@ -3,11 +3,11 @@ title: PHP
 tags: [php]
 ---
 
-{{< c "r.php" >}}
+{{< d "r.php" >}}
 
 <https://php.net/function.fgetcsv>
 
-{{< c "s.php" >}}
+{{< d "s.php" >}}
 
 <https://php.net/function.str-getcsv>
 

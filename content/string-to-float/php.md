@@ -3,15 +3,15 @@ title: PHP
 tags: [php]
 ---
 
-{{< c "a.php" >}}
+{{< d "a.php" >}}
 
 <https://php.net/function.floatval>
 
-{{< c "b.php" >}}
+{{< d "b.php" >}}
 
 <https://php.net/language.operators.arithmetic>
 
-{{< c "c.php" >}}
+{{< d "c.php" >}}
 
 <https://php.net/language.types.type-juggling>
 

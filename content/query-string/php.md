@@ -3,11 +3,11 @@ title: PHP
 tags: [php]
 ---
 
-{{< c "a.php" >}}
+{{< d "a.php" >}}
 
 <https://php.net/function.http-build-query>
 
-{{< c "b.php" >}}
+{{< d "b.php" >}}
 
 <https://php.net/function.parse-str>
 

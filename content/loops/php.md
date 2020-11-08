@@ -3,15 +3,15 @@ title: PHP
 tags: [php]
 ---
 
-{{< c "a.php" >}}
+{{< d "a.php" >}}
 
 <https://php.net/control-structures.while>
 
-{{< c "b.php" >}}
+{{< d "b.php" >}}
 
 <https://php.net/control-structures.for>
 
-{{< c "c.php" >}}
+{{< d "c.php" >}}
 
 <https://php.net/function.range>
 

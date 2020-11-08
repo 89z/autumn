@@ -3,11 +3,11 @@ title: PHP
 tags: [php]
 ---
 
-{{< c "a.php" >}}
+{{< d "a.php" >}}
 
 <https://wiki.php.net/rfc/add_str_starts_with_and_ends_with_functions>
 
-{{< c "b.php" >}}
+{{< d "b.php" >}}
 
 <https://wiki.php.net/rfc/str_contains>
 

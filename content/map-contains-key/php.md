@@ -3,11 +3,11 @@ title: PHP
 tags: [php]
 ---
 
-{{< c "a.php" >}}
+{{< d "a.php" >}}
 
 <https://php.net/function.array-key-exists>
 
-{{< c "b.php" >}}
+{{< d "b.php" >}}
 
 <https://php.net/function.key-exists>
 

@@ -3,19 +3,19 @@ title: PHP
 tags: [php]
 ---
 
-{{< c "a.php" >}}
+{{< d "a.php" >}}
 
 <https://php.net/function.basename>
 
-{{< c "b.php" >}}
+{{< d "b.php" >}}
 
 <https://php.net/function.pathinfo>
 
-{{< c "c.php" >}}
+{{< d "c.php" >}}
 
 <https://php.net/splfileinfo.getbasename>
 
-{{< c "d.php" >}}
+{{< d "d.php" >}}
 
 <https://php.net/splfileinfo.getfilename>
 

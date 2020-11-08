@@ -3,11 +3,11 @@ title: PHP
 tags: [php]
 ---
 
-{{< c "a.php" >}}
+{{< d "a.php" >}}
 
 <https://php.net/types.string#language.types.string.syntax.double>
 
-{{< c "b.php" >}}
+{{< d "b.php" >}}
 
 <https://php.net/types.string#language.types.string.syntax.single>
 

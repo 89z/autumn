@@ -3,11 +3,11 @@ title: PHP
 tags: [php]
 ---
 
-{{< c "a.php" >}}
+{{< d "a.php" >}}
 
 <https://php.net/function.intdiv>
 
-{{< c "b.php" >}}
+{{< d "b.php" >}}
 
 <https://php.net/operators.arithmetic>
 

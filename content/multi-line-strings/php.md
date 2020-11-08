@@ -3,19 +3,19 @@ title: PHP
 tags: [php]
 ---
 
-{{< c "a.php" >}}
+{{< d "a.php" >}}
 
 <https://php.net/types.string#language.types.string.syntax.double>
 
-{{< c "b.php" >}}
+{{< d "b.php" >}}
 
 <https://php.net/types.string#language.types.string.syntax.single>
 
-{{< c "c.php" >}}
+{{< d "c.php" >}}
 
 <https://php.net/types.string#language.types.string.syntax.heredoc>
 
-{{< c "d.php" >}}
+{{< d "d.php" >}}
 
 <https://php.net/types.string#language.types.string.syntax.nowdoc>
 

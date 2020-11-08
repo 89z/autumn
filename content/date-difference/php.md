@@ -3,15 +3,15 @@ title: PHP
 tags: [php]
 ---
 
-{{< c "a.php" >}}
+{{< d "a.php" >}}
 
 <https://php.net/datetime.diff>
 
-{{< c "b.php" >}}
+{{< d "b.php" >}}
 
 <https://php.net/function.date-diff>
 
-{{< c "c.php" >}}
+{{< d "c.php" >}}
 
 <https://php.net/function.strtotime>
 
