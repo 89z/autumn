@@ -1,6 +1,0 @@
-'π U+03C0 GREEK SMALL LETTER PI (Lowercase_Letter)'
-'द U+0926 DEVANAGARI LETTER DA (Other_Letter)'
-'न U+0928 DEVANAGARI LETTER NA (Other_Letter)'
-'र U+0930 DEVANAGARI LETTER RA (Other_Letter)'
-'👨‍🌾 U+1F468 U+200D U+1F33E Man Farmer'
-'🧑🏻 U+1F9D1 U+1F3FB Person: Light Skin Tone'
