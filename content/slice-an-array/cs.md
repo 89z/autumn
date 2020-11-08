@@ -3,15 +3,15 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< c "a/Program.cs" >}}
+{{< d "a/Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/api/system.index>
 
-{{< c "b/Program.cs" >}}
+{{< d "b/Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/api/system.linq.enumerable.skip>
 
-{{< c "c/Program.cs" >}}
+{{< d "c/Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/api/system.range>
 

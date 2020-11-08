@@ -1,0 +1,6 @@
+<!-- part 1 -->
+{{ $s_get := .Get 0 }}
+<!-- part 2 -->
+{{ $s_ext := index (split $s_get ".") 1 }}
+{{ $s_join := path.Join .Page.RelPermalink $s_get }}
+{{ highlight (readFile $s_join) $s_ext "" }}

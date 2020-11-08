@@ -3,15 +3,15 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< c "a/Program.cs" >}}
+{{< d "a/Program.cs" >}}
 
 <https://github.com/commandlineparser/commandline>
 
-{{< c "b/Program.cs" >}}
+{{< d "b/Program.cs" >}}
 
 <https://github.com/dotnet/command-line-api/wiki/Your-first-app-with-System.CommandLine>
 
-{{< c "c/Program.cs" >}}
+{{< d "c/Program.cs" >}}
 
 <https://github.com/dotnet/command-line-api/wiki/Your-first-app-with-System.CommandLine.DragonFruit>
 

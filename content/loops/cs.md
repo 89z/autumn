@@ -3,11 +3,11 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< c "a/Program.cs" >}}
+{{< d "a/Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/while>
 
-{{< c "b/Program.cs" >}}
+{{< d "b/Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/for>
 
