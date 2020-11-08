@@ -3,11 +3,11 @@ title: Python
 tags: [python]
 ---
 
-{{< c "a.py" >}}
+{{< d "a.py" >}}
 
 <https://docs.python.org/library/functions.html#int>
 
-{{< c "b.py" >}}
+{{< d "b.py" >}}
 
 <https://docs.python.org/library/locale.html#locale.atoi>
 

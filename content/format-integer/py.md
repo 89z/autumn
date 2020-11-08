@@ -3,7 +3,7 @@ title: Python
 tags: [python]
 ---
 
-{{< c "a.py" >}}
+{{< d "a.py" >}}
 
 ## References
 

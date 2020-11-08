@@ -3,11 +3,11 @@ title: Python
 tags: [python]
 ---
 
-{{< c "a.py" >}}
+{{< d "a.py" >}}
 
 <https://docs.python.org/reference/lexical_analysis.html#comments>
 
-{{< c "b.py" >}}
+{{< d "b.py" >}}
 
 <https://docs.python.org/reference/lexical_analysis.html#strings>
 

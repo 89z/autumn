@@ -3,11 +3,11 @@ title: Python
 tags: [python]
 ---
 
-{{< c "a.py" >}}
+{{< d "a.py" >}}
 
 <https://docs.python.org/library/datetime.html#datetime.date.isoformat>
 
-{{< c "b.py" >}}
+{{< d "b.py" >}}
 
 <https://docs.python.org/library/datetime.html#datetime.date.strftime>
 

@@ -3,15 +3,15 @@ title: Python
 tags: [python]
 ---
 
-{{< c "a.py" >}}
+{{< d "a.py" >}}
 
 <https://docs.python.org/library/csv.html#examples>
 
-{{< c "b.py" >}}
+{{< d "b.py" >}}
 
 <https://docs.python.org/library/csv.html#csv.DictReader>
 
-{{< c "c.py" >}}
+{{< d "c.py" >}}
 
 <https://docs.python.org/library/csv.html#csv.reader>
 

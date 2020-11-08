@@ -3,15 +3,15 @@ title: Python
 tags: [python]
 ---
 
-{{< c "a.py" >}}
+{{< d "a.py" >}}
 
 <https://docs.python.org/library/os.html#os.access>
 
-{{< c "b.py" >}}
+{{< d "b.py" >}}
 
 <https://docs.python.org/library/os.path.html#os.path.isdir>
 
-{{< c "c.py" >}}
+{{< d "c.py" >}}
 
 <https://docs.python.org/library/os.path.html#os.path.isfile>
 

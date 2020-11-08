@@ -1,3 +1,0 @@
-{{ $s_base := .Get 0 }}
-{{ $s_ext := index (split $s_base ".") 1 }}
-{{ highlight (readFile $s_base) $s_ext "" }}

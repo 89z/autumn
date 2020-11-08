@@ -3,11 +3,11 @@ title: Python
 tags: [python]
 ---
 
-{{< c "a.py" >}}
+{{< d "a.py" >}}
 
 <https://docs.python.org/library/os.path.html#os.path.dirname>
 
-{{< c "b.py" >}}
+{{< d "b.py" >}}
 
 <https://docs.python.org/library/pathlib.html#pathlib.PurePath.parent>
 

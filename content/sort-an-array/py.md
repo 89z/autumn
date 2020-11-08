@@ -3,8 +3,8 @@ title: Python
 tags: [python]
 ---
 
-{{< c "n.py" >}}
-{{< c "s.py" >}}
+{{< d "n.py" >}}
+{{< d "s.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#list.sort>
 
