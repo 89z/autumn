@@ -3,11 +3,11 @@ title: D
 tags: [d]
 ---
 
-{{< c "a.d" >}}
+{{< d "a.d" >}}
 
 <https://dlang.org/library/std/algorithm/iteration/reduce.html>
 
-{{< c "b.d" >}}
+{{< d "b.d" >}}
 
 <https://dlang.org/library/std/algorithm/iteration/fold.html>
 

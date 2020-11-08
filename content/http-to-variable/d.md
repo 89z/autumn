@@ -3,7 +3,7 @@ title: D
 tags: [d]
 ---
 
-{{< c "source/app.d" >}}
+{{< d "source/app.d" >}}
 
 <https://github.com/CyberShadow/ae>
 

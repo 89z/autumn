@@ -3,7 +3,7 @@ title: D
 tags: [d]
 ---
 
-{{< c "a.d" >}}
+{{< d "a.d" >}}
 
 ## References
 

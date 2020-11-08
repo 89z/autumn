@@ -3,7 +3,7 @@ title: D
 tags: [d]
 ---
 
-{{< c "a.d" >}}
+{{< d "a.d" >}}
 
 <https://dlang.org/library/std/datetime/systime/sys_time.from_unix_time.html>
 
