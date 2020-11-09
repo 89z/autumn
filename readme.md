@@ -40,7 +40,3 @@ Comparison of programming languages
 ## Author
 
 Steven Penny
-
-## Links
-
-<https://github.com/gohugoio/hugo/tree/master/docs/content/en/readfiles>

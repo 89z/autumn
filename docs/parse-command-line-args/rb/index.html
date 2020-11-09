@@ -35,18 +35,17 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;getoptlong&#39;</span>
-
 s_start <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
 s_end <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
 
 <span style="color:#66d9ef">GetoptLong</span><span style="color:#f92672">.</span>new(
-   <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;--start&#39;</span>, <span style="color:#e6db74">&#39;-s&#39;</span>, <span style="color:#66d9ef">GetoptLong</span><span style="color:#f92672">::</span><span style="color:#66d9ef">REQUIRED_ARGUMENT</span><span style="color:#f92672">]</span>,
-   <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;--end&#39;</span>, <span style="color:#e6db74">&#39;-e&#39;</span>, <span style="color:#66d9ef">GetoptLong</span><span style="color:#f92672">::</span><span style="color:#66d9ef">REQUIRED_ARGUMENT</span><span style="color:#f92672">]</span>
+   <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;-s&#39;</span>, <span style="color:#66d9ef">GetoptLong</span><span style="color:#f92672">::</span><span style="color:#66d9ef">REQUIRED_ARGUMENT</span><span style="color:#f92672">]</span>,
+   <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;-e&#39;</span>, <span style="color:#66d9ef">GetoptLong</span><span style="color:#f92672">::</span><span style="color:#66d9ef">REQUIRED_ARGUMENT</span><span style="color:#f92672">]</span>
 )<span style="color:#f92672">.</span>each { <span style="color:#f92672">|</span>s_key, s_val<span style="color:#f92672">|</span>
    <span style="color:#66d9ef">case</span> s_key
-   <span style="color:#66d9ef">when</span> <span style="color:#e6db74">&#39;--start&#39;</span>
+   <span style="color:#66d9ef">when</span> <span style="color:#e6db74">&#39;-s&#39;</span>
       s_start <span style="color:#f92672">=</span> s_val
-   <span style="color:#66d9ef">when</span> <span style="color:#e6db74">&#39;--end&#39;</span>
+   <span style="color:#66d9ef">when</span> <span style="color:#e6db74">&#39;-e&#39;</span>
       s_end <span style="color:#f92672">=</span> s_val
    <span style="color:#66d9ef">end</span>
 }

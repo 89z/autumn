@@ -1,16 +1,15 @@
 require 'getoptlong'
-
 s_start = ''
 s_end = ''
 
 GetoptLong.new(
-   ['--start', '-s', GetoptLong::REQUIRED_ARGUMENT],
-   ['--end', '-e', GetoptLong::REQUIRED_ARGUMENT]
+   ['-s', GetoptLong::REQUIRED_ARGUMENT],
+   ['-e', GetoptLong::REQUIRED_ARGUMENT]
 ).each { |s_key, s_val|
    case s_key
-   when '--start'
+   when '-s'
       s_start = s_val
-   when '--end'
+   when '-e'
       s_end = s_val
    end
 }

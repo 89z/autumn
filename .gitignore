@@ -8,5 +8,8 @@ autumn/*/cs/c/bin
 autumn/*/cs/c/c.csproj
 autumn/*/cs/c/obj
 autumn/*/rs/a/Cargo.lock
+autumn/*/rs/a/target
 autumn/*/rs/b/Cargo.lock
+autumn/*/rs/b/target
 autumn/*/rs/c/Cargo.lock
+autumn/*/rs/c/target

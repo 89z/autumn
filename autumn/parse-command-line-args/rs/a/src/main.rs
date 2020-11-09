@@ -1,5 +1,4 @@
-use pico_args::Arguments;
-use std::process;
+use {pico_args::Arguments, std::process};
 
 fn main() {
    let mut o = Arguments::from_env();

@@ -1,21 +1,21 @@
 use argh::FromArgs;
 
+/// concatenate
 #[derive(FromArgs)]
-/// Reach new heights.
-struct GoUp {
-    /// whether or not to jump
-    #[argh(switch, short = 'j')]
-    jump: bool,
-
-    /// how high to go
-    #[argh(option)]
-    height: usize,
-
-    /// an optional nickname for the pilot
-    #[argh(option)]
-    pilot_nickname: Option<String>,
+struct Args {
+   /// prefix
+   #[argh(option)]
+   start: Option<String>,
+   /// suffix
+   #[argh(option)]
+   end: Option<String>,
+   #[argh(positional)]
+   input: String
 }
 
 fn main() {
-    let up: GoUp = argh::from_env();
+   let o: Args = argh::from_env();
+   let s_start = o.start.unwrap_or_default();
+   let s_end = o.end.unwrap_or_default();
+   println!("{}", s_start + &o.input + &s_end);
 }
