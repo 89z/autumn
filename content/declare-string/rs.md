@@ -13,9 +13,13 @@ tags: [rust]
 
 {{< r "c.rs" >}}
 
-<https://doc.rust-lang.org/std/convert/trait.From.html#tymethod.from>
+<https://doc.rust-lang.org/std/borrow/enum.Cow.html#variant.Borrowed>
 
 {{< r "d.rs" >}}
+
+<https://doc.rust-lang.org/std/string/struct.String.html#method.from-2>
+
+{{< r "e.rs" >}}
 
 <https://doc.rust-lang.org/std/string/struct.String.html#method.new>
 

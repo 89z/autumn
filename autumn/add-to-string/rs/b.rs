@@ -1,5 +1,7 @@
+use std::borrow::Cow;
+
 fn main() {
-   let mut s = String::new();
-   s.push_str("May");
+   let mut s = Cow::Borrowed("March");
+   s += "April";
    println!("{}", s);
 }

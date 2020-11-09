@@ -1,4 +1,4 @@
 fn main() {
-   let s = String::new();
-   println!("{:?}", s);
+   let s = String::from("March");
+   println!("{}", s);
 }

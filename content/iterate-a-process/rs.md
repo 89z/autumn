@@ -5,7 +5,7 @@ tags: [rust]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/io/trait.BufRead.html#method.lines>
+<https://doc.rust-lang.org/std/io/struct.Cursor.html#method.lines>
 
 {{< r "b.rs" >}}
 

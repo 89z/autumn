@@ -9,7 +9,7 @@ tags: [rust]
 
 {{< r "b.rs" >}}
 
-<https://doc.rust-lang.org/std/io/trait.Write.html#tymethod.write>
+<https://doc.rust-lang.org/std/fs/struct.File.html#method.write>
 
 ## References
 

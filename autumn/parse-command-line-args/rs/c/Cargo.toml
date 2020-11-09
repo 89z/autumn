@@ -3,4 +3,4 @@ name = "c"
 version = "0.1.0"
 edition = "2018"
 [dependencies]
-clap = ""
+clap = "3.0.0-beta.2"

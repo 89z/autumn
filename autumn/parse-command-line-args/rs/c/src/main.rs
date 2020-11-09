@@ -1,21 +1,14 @@
-// (Full example with detailed comments in examples/01a_quick_example.rs)
-//
-// This example demonstrates clap's "usage strings" method of creating arguments
-// which is less verbose
-use clap::{Arg, App};
+use clap::App;
 
 fn main() {
-    let matches = App::new("myapp")
-        .version("1.0")
-        .author("Kevin K. <kbknapp@gmail.com>")
-        .about("Does awesome things")
-        .arg("-c, --config=[FILE] 'Sets a custom config file'")
-        .arg("<INPUT>              'Sets the input file to use'")
-        .arg("-v...                'Sets the level of verbosity'")
-        .subcommand(App::new("test")
-            .about("controls testing features")
-            .version("1.3")
-            .author("Someone E. <someone_else@other.com>")
-            .arg("-d, --debug 'Print debug information'"))
-        .get_matches();
+   let o = App::new("cat").
+   arg("<input> 'input file'").
+   arg("-s [string] 'start'").
+   arg("-e [string] 'end'").
+   get_matches();
+
+   let s_start = o.value_of_lossy("s").unwrap_or_default();
+   let s_end = o.value_of_lossy("e").unwrap_or_default();
+   let s_input = o.value_of_lossy("input").unwrap_or_default();
+   println!("{}", s_start + s_input + s_end);
 }

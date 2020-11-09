@@ -1,4 +1,6 @@
+use std::borrow::Cow;
+
 fn main() {
-   let s = String::from("March");
+   let s = Cow::Borrowed("March");
    println!("{}", s);
 }

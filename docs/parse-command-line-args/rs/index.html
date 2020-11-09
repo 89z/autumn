@@ -98,26 +98,19 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#75715e">// (Full example with detailed comments in examples/01a_quick_example.rs)
-</span><span style="color:#75715e">//
-</span><span style="color:#75715e">// This example demonstrates clap&#39;s &#34;usage strings&#34; method of creating arguments
-</span><span style="color:#75715e">// which is less verbose
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">use</span> clap::{Arg, App};
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> clap::App;
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-    <span style="color:#66d9ef">let</span> matches <span style="color:#f92672">=</span> App::new(<span style="color:#e6db74">&#34;myapp&#34;</span>)
-        .version(<span style="color:#e6db74">&#34;1.0&#34;</span>)
-        .author(<span style="color:#e6db74">&#34;Kevin K. &lt;kbknapp@gmail.com&gt;&#34;</span>)
-        .about(<span style="color:#e6db74">&#34;Does awesome things&#34;</span>)
-        .arg(<span style="color:#e6db74">&#34;-c, --config=[FILE] &#39;Sets a custom config file&#39;&#34;</span>)
-        .arg(<span style="color:#e6db74">&#34;&lt;INPUT&gt;              &#39;Sets the input file to use&#39;&#34;</span>)
-        .arg(<span style="color:#e6db74">&#34;-v...                &#39;Sets the level of verbosity&#39;&#34;</span>)
-        .subcommand(App::new(<span style="color:#e6db74">&#34;test&#34;</span>)
-            .about(<span style="color:#e6db74">&#34;controls testing features&#34;</span>)
-            .version(<span style="color:#e6db74">&#34;1.3&#34;</span>)
-            .author(<span style="color:#e6db74">&#34;Someone E. &lt;someone_else@other.com&gt;&#34;</span>)
-            .arg(<span style="color:#e6db74">&#34;-d, --debug &#39;Print debug information&#39;&#34;</span>))
-        .get_matches();
+   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> App::new(<span style="color:#e6db74">&#34;cat&#34;</span>).
+   arg(<span style="color:#e6db74">&#34;&lt;input&gt; &#39;input file&#39;&#34;</span>).
+   arg(<span style="color:#e6db74">&#34;-s [string] &#39;start&#39;&#34;</span>).
+   arg(<span style="color:#e6db74">&#34;-e [string] &#39;end&#39;&#34;</span>).
+   get_matches();
+
+   <span style="color:#66d9ef">let</span> s_start <span style="color:#f92672">=</span> o.value_of_lossy(<span style="color:#e6db74">&#34;s&#34;</span>).unwrap_or_default();
+   <span style="color:#66d9ef">let</span> s_end <span style="color:#f92672">=</span> o.value_of_lossy(<span style="color:#e6db74">&#34;e&#34;</span>).unwrap_or_default();
+   <span style="color:#66d9ef">let</span> s_input <span style="color:#f92672">=</span> o.value_of_lossy(<span style="color:#e6db74">&#34;input&#34;</span>).unwrap_or_default();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s_start <span style="color:#f92672">+</span> s_input <span style="color:#f92672">+</span> s_end);
 }
 </code></pre></div>
 
