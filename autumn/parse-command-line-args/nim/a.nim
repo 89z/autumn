@@ -16,7 +16,7 @@ for n_kind, s_key, s_val in o_opt.getOpt():
       s_stem = s_key
 
 if s_stem == "":
-   echo """cat [flags] <input>
+   echo """add [flags] <stem>
 -p string
    prefix
 -s string

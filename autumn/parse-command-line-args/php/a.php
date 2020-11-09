@@ -1,7 +1,7 @@
 <?php
 
 if ($argc == 1) {
-   echo 'cat.php [flags] <input>
+   echo 'add.php [flags] <stem>
 -p string
    prefix
 -s string
@@ -13,4 +13,4 @@ if ($argc == 1) {
 $m = getopt('p:s:', [], $n);
 $s_pre = key_exists('p', $m) ? $m['p'] : '';
 $s_suf = key_exists('s', $m) ? $m['s'] : '';
-echo $s_pre, $argv[$n], $s_suf, "\n";
+echo $s_pre . $argv[$n] . $s_suf, "\n";

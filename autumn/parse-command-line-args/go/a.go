@@ -11,7 +11,7 @@ func main() {
    flag.Parse()
 
    if flag.NArg() != 1 {
-      println("cat [flags] <input>")
+      println("add [flags] <stem>")
       flag.PrintDefaults()
       os.Exit(1)
    }

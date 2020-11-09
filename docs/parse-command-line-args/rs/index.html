@@ -39,25 +39,25 @@
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> o <span style="color:#f92672">=</span> Arguments::from_env();
 
-   <span style="color:#66d9ef">let</span> s_start: String <span style="color:#f92672">=</span> o.opt_value_from_str(<span style="color:#e6db74">&#34;-s&#34;</span>).
+   <span style="color:#66d9ef">let</span> s_pre: String <span style="color:#f92672">=</span> o.opt_value_from_str(<span style="color:#e6db74">&#34;-p&#34;</span>).
    unwrap_or(None).unwrap_or_default();
 
-   <span style="color:#66d9ef">let</span> s_end: String <span style="color:#f92672">=</span> o.opt_value_from_str(<span style="color:#e6db74">&#34;-e&#34;</span>).
+   <span style="color:#66d9ef">let</span> s_suf: String <span style="color:#f92672">=</span> o.opt_value_from_str(<span style="color:#e6db74">&#34;-s&#34;</span>).
    unwrap_or(None).unwrap_or_default();
 
    <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> o.free().unwrap_or_default();
 
    <span style="color:#66d9ef">if</span> a.len() <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span> {
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;cat [flags] &lt;input&gt;
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;add [flags] &lt;stem&gt;
+</span><span style="color:#e6db74">-p string
+</span><span style="color:#e6db74">   prefix
 </span><span style="color:#e6db74">-s string
-</span><span style="color:#e6db74">   start
-</span><span style="color:#e6db74">-e string
-</span><span style="color:#e6db74">   end&#34;</span>);
+</span><span style="color:#e6db74">   suffix&#34;</span>);
       process::exit(<span style="color:#ae81ff">1</span>);
    }
 
-   <span style="color:#66d9ef">let</span> s_in <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>a[<span style="color:#ae81ff">0</span>];
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s_start <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>s_in <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>s_end);
+   <span style="color:#66d9ef">let</span> s_stem <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>a[<span style="color:#ae81ff">0</span>];
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s_pre <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>s_stem <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>s_suf);
 }
 </code></pre></div>
 
@@ -70,24 +70,24 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> argh::FromArgs;
 
-<span style="color:#e6db74">/// concatenate
+<span style="color:#e6db74">/// Add
 </span><span style="color:#e6db74"></span><span style="color:#75715e">#[derive(FromArgs)]</span>
 <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Args</span> {
-   <span style="color:#e6db74">/// prefix
-</span><span style="color:#e6db74"></span>   <span style="color:#75715e">#[argh(option)]</span>
-   start: Option<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>,
-   <span style="color:#e6db74">/// suffix
-</span><span style="color:#e6db74"></span>   <span style="color:#75715e">#[argh(option)]</span>
-   end: Option<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>,
+   <span style="color:#e6db74">/// before stem
+</span><span style="color:#e6db74"></span>   <span style="color:#75715e">#[argh(option, short = &#39;p&#39;)]</span>
+   prefix: Option<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>,
+   <span style="color:#e6db74">/// after stem
+</span><span style="color:#e6db74"></span>   <span style="color:#75715e">#[argh(option, short = &#39;s&#39;)]</span>
+   suffix: Option<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>,
    <span style="color:#75715e">#[argh(positional)]</span>
-   input: String
+   stem: String
 }
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">let</span> o: <span style="color:#a6e22e">Args</span> <span style="color:#f92672">=</span> argh::from_env();
-   <span style="color:#66d9ef">let</span> s_start <span style="color:#f92672">=</span> o.start.unwrap_or_default();
-   <span style="color:#66d9ef">let</span> s_end <span style="color:#f92672">=</span> o.end.unwrap_or_default();
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s_start <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>o.input <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>s_end);
+   <span style="color:#66d9ef">let</span> s_pre <span style="color:#f92672">=</span> o.prefix.unwrap_or_default();
+   <span style="color:#66d9ef">let</span> s_suf <span style="color:#f92672">=</span> o.suffix.unwrap_or_default();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s_pre <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>o.stem <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>s_suf);
 }
 </code></pre></div>
 
@@ -102,17 +102,21 @@
 
 <span style="color:#75715e">#[derive(StructOpt)]</span>
 <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Opt</span> {
-   <span style="color:#75715e">#[structopt(short, required = false)]</span>
-   p: String,
-   <span style="color:#75715e">#[structopt(short, required = false)]</span>
-   s: String,
+   <span style="color:#e6db74">/// prefix
+</span><span style="color:#e6db74"></span>   <span style="color:#75715e">#[structopt(short)]</span>
+   p: Option<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>,
+   <span style="color:#e6db74">/// suffix
+</span><span style="color:#e6db74"></span>   <span style="color:#75715e">#[structopt(short)]</span>
+   s: Option<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>,
    <span style="color:#75715e">#[structopt()]</span>
    stem: String
 }
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> Opt::from_args();
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, o.p <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>o.stem <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>o.s);
+   <span style="color:#66d9ef">let</span> s_pre <span style="color:#f92672">=</span> o.p.unwrap_or_default();
+   <span style="color:#66d9ef">let</span> s_suf <span style="color:#f92672">=</span> o.s.unwrap_or_default();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s_pre <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>o.stem <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>s_suf);
 }
 </code></pre></div>
 

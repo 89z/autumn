@@ -19,7 +19,7 @@ while true:
       s_stem = o_opt.key
 
 if s_stem == "":
-   echo """cat [flags] <input>
+   echo """add [flags] <stem>
 -p string
    prefix
 -s string

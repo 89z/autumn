@@ -1,14 +1,14 @@
 require 'optparse'
-m = {:start => '', :end => ''}
+m = {:p => '', :s => ''}
 o = OptionParser.new
-o.on('--start string')
-o.on('--end string')
+o.on('-p string', 'prefix')
+o.on('-s string', 'suffix')
 o.parse!(into: m)
 
 if ARGV.length != 1
-   o.banner = 'cat [flags] <input>'
+   o.banner = 'add [flags] <stem>'
    puts o
    exit 1
 end
 
-puts m[:start] + ARGV[0] + m[:end]
+puts m[:p] + ARGV[0] + m[:s]

@@ -1,28 +1,28 @@
 require 'getoptlong'
-s_start = ''
-s_end = ''
+s_pre = ''
+s_suf = ''
 
 GetoptLong.new(
-   ['-s', GetoptLong::REQUIRED_ARGUMENT],
-   ['-e', GetoptLong::REQUIRED_ARGUMENT]
+   ['-p', GetoptLong::REQUIRED_ARGUMENT],
+   ['-s', GetoptLong::REQUIRED_ARGUMENT]
 ).each { |s_key, s_val|
    case s_key
+   when '-p'
+      s_pre = s_val
    when '-s'
-      s_start = s_val
-   when '-e'
-      s_end = s_val
+      s_suf = s_val
    end
 }
 
 if ARGV.length != 1
    puts <<eof
-cat [flags] <input>
+add [flags] <stem>
+-p string
+   prefix
 -s string
-   start
--e string
-   end
+   suffix
 eof
    exit 1
 end
 
-puts s_start + ARGV[0] + s_end
+puts s_pre + ARGV[0] + s_suf

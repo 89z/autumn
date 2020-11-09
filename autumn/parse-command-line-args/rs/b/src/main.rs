@@ -1,21 +1,21 @@
 use argh::FromArgs;
 
-/// concatenate
+/// Add
 #[derive(FromArgs)]
 struct Args {
-   /// prefix
-   #[argh(option)]
-   start: Option<String>,
-   /// suffix
-   #[argh(option)]
-   end: Option<String>,
+   /// before stem
+   #[argh(option, short = 'p')]
+   prefix: Option<String>,
+   /// after stem
+   #[argh(option, short = 's')]
+   suffix: Option<String>,
    #[argh(positional)]
-   input: String
+   stem: String
 }
 
 fn main() {
    let o: Args = argh::from_env();
-   let s_start = o.start.unwrap_or_default();
-   let s_end = o.end.unwrap_or_default();
-   println!("{}", s_start + &o.input + &s_end);
+   let s_pre = o.prefix.unwrap_or_default();
+   let s_suf = o.suffix.unwrap_or_default();
+   println!("{}", s_pre + &o.stem + &s_suf);
 }

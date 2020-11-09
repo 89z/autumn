@@ -9,7 +9,7 @@ int main(string[] a) {
    );
 
    if (a.length != 2) {
-      defaultGetoptPrinter("cat [flags] <stem>", o.options);
+      defaultGetoptPrinter("add [flags] <stem>", o.options);
       return 1;
    }
 

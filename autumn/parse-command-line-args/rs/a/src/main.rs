@@ -3,23 +3,23 @@ use {pico_args::Arguments, std::process};
 fn main() {
    let mut o = Arguments::from_env();
 
-   let s_start: String = o.opt_value_from_str("-s").
+   let s_pre: String = o.opt_value_from_str("-p").
    unwrap_or(None).unwrap_or_default();
 
-   let s_end: String = o.opt_value_from_str("-e").
+   let s_suf: String = o.opt_value_from_str("-s").
    unwrap_or(None).unwrap_or_default();
 
    let a = o.free().unwrap_or_default();
 
    if a.len() != 1 {
-      println!("cat [flags] <input>
+      println!("add [flags] <stem>
+-p string
+   prefix
 -s string
-   start
--e string
-   end");
+   suffix");
       process::exit(1);
    }
 
-   let s_in = &a[0];
-   println!("{}", s_start + &s_in + &s_end);
+   let s_stem = &a[0];
+   println!("{}", s_pre + &s_stem + &s_suf);
 }
