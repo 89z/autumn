@@ -1,26 +1,26 @@
 import parseopt
 
 var
-   s_start = ""
-   s_end = ""
-   s_in = ""
+   s_pre = ""
+   s_suf = ""
+   s_stem = ""
    o_opt = initOptParser()
 
 for n_kind, s_key, s_val in o_opt.getOpt():
    case o_opt.key
+   of "p":
+      s_pre = s_val
    of "s":
-      s_start = s_val
-   of "e":
-      s_end = s_val
+      s_suf = s_val
    else:
-      s_in = s_key
+      s_stem = s_key
 
-if s_in == "":
+if s_stem == "":
    echo """cat [flags] <input>
+-p string
+   prefix
 -s string
-   start
--e string
-   end"""
+   suffix"""
    quit(1)
 
-echo s_start & s_in & s_end
+echo s_pre & s_stem & s_suf

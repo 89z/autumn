@@ -1,9 +1,9 @@
 import parseopt
 
 var
-   s_start = ""
-   s_end = ""
-   s_in = ""
+   s_pre = ""
+   s_suf = ""
+   s_stem = ""
    o_opt = initOptParser()
 
 while true:
@@ -11,19 +11,19 @@ while true:
    if o_opt.kind == cmdEnd:
       break
    case o_opt.key
+   of "p":
+      s_pre = o_opt.val
    of "s":
-      s_start = o_opt.val
-   of "e":
-      s_end = o_opt.val
+      s_suf = o_opt.val
    else:
-      s_in = o_opt.key
+      s_stem = o_opt.key
 
-if s_in == "":
+if s_stem == "":
    echo """cat [flags] <input>
+-p string
+   prefix
 -s string
-   start
--e string
-   end"""
+   suffix"""
    quit(1)
 
-echo s_start & s_in & s_end
+echo s_pre & s_stem & s_suf

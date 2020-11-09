@@ -7,6 +7,9 @@ autumn/*/cs/b/obj
 autumn/*/cs/c/bin
 autumn/*/cs/c/c.csproj
 autumn/*/cs/c/obj
+autumn/*/dart/.dart_tool
+autumn/*/dart/.packages
+autumn/*/dart/pubspec.lock
 autumn/*/rs/a/Cargo.lock
 autumn/*/rs/a/target
 autumn/*/rs/b/Cargo.lock

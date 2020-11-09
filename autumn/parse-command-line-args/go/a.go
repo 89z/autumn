@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-   s_start := flag.String("s", "", "start")
-   s_end := flag.String("e", "", "end")
+   s_pre := flag.String("p", "", "prefix")
+   s_suf := flag.String("s", "", "suffix")
    flag.Parse()
 
    if flag.NArg() != 1 {
@@ -16,6 +16,6 @@ func main() {
       os.Exit(1)
    }
 
-   s_in := flag.Arg(0)
-   println(*s_start + s_in + *s_end)
+   s_stem := flag.Arg(0)
+   println(*s_pre + s_stem + *s_suf)
 }

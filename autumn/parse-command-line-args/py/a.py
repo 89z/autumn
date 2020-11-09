@@ -1,7 +1,7 @@
 import argparse
 o_in = argparse.ArgumentParser()
-o_in.add_argument('--start', default='')
-o_in.add_argument('--end', default='')
-o_in.add_argument('input')
+o_in.add_argument('-p', default='', help='prefix')
+o_in.add_argument('-s', default='', help='suffix')
+o_in.add_argument('stem')
 o_out = o_in.parse_args()
-print(o_out.start + o_out.input + o_out.end)
+print(o_out.p + o_out.stem + o_out.s)

@@ -2,15 +2,15 @@
 
 if ($argc == 1) {
    echo 'cat.php [flags] <input>
+-p string
+   prefix
 -s string
-   start
--e string
-   end
+   suffix
 ';
    exit(1);
 }
 
-$m = getopt('s:e:', [], $n);
-$s_start = key_exists('s', $m) ? $m['s'] : '';
-$s_end = key_exists('e', $m) ? $m['e'] : '';
-echo $s_start, $argv[$n], $s_end, "\n";
+$m = getopt('p:s:', [], $n);
+$s_pre = key_exists('p', $m) ? $m['p'] : '';
+$s_suf = key_exists('s', $m) ? $m['s'] : '';
+echo $s_pre, $argv[$n], $s_suf, "\n";

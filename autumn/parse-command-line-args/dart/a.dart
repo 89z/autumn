@@ -3,8 +3,8 @@ import 'package:args/args.dart';
 
 void main(a) {
    var o = ArgParser();
-   o.addOption('start', defaultsTo: '');
-   o.addOption('end', defaultsTo: '');
+   o.addOption('prefix', defaultsTo: '');
+   o.addOption('suffix', defaultsTo: '');
    var m = o.parse(a);
 
    if (m.rest.length != 1) {
@@ -12,6 +12,6 @@ void main(a) {
       exit(1);
    }
 
-   var s = m['start'] + m.rest[0] + m['end'];
+   var s = m['prefix'] + m.rest[0] + m['suffix'];
    print(s);
 }
