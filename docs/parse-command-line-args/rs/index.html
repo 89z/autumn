@@ -98,46 +98,21 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> clap::App;
-
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> App::new(<span style="color:#e6db74">&#34;cat&#34;</span>).
-   arg(<span style="color:#e6db74">&#34;&lt;input&gt; &#39;input file&#39;&#34;</span>).
-   arg(<span style="color:#e6db74">&#34;-s [string] &#39;start&#39;&#34;</span>).
-   arg(<span style="color:#e6db74">&#34;-e [string] &#39;end&#39;&#34;</span>).
-   get_matches();
-
-   <span style="color:#66d9ef">let</span> s_start <span style="color:#f92672">=</span> o.value_of_lossy(<span style="color:#e6db74">&#34;s&#34;</span>).unwrap_or_default();
-   <span style="color:#66d9ef">let</span> s_end <span style="color:#f92672">=</span> o.value_of_lossy(<span style="color:#e6db74">&#34;e&#34;</span>).unwrap_or_default();
-   <span style="color:#66d9ef">let</span> s_input <span style="color:#f92672">=</span> o.value_of_lossy(<span style="color:#e6db74">&#34;input&#34;</span>).unwrap_or_default();
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s_start <span style="color:#f92672">+</span> s_input <span style="color:#f92672">+</span> s_end);
-}
-</code></pre></div>
-
-<p>12 deps</p>
-<p><a href="https://lib.rs/crates/clap">https://lib.rs/crates/clap</a></p>
-
-
-
-
-
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> structopt::StructOpt;
- 
+
 <span style="color:#75715e">#[derive(StructOpt)]</span>
 <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Opt</span> {
-    <span style="color:#75715e">#[structopt(short)]</span>
-    b: <span style="color:#66d9ef">bool</span>,
-    <span style="color:#75715e">#[structopt(short, required = false, default_value = </span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#75715e">)]</span>
-    s: String,
-    <span style="color:#75715e">#[structopt(short, required = false, default_value = </span><span style="color:#e6db74">&#34;0&#34;</span><span style="color:#75715e">)]</span>
-    n: <span style="color:#66d9ef">i32</span>,
+   <span style="color:#75715e">#[structopt(short, required = false)]</span>
+   p: String,
+   <span style="color:#75715e">#[structopt(short, required = false)]</span>
+   s: String,
+   <span style="color:#75715e">#[structopt()]</span>
+   stem: String
 }
- 
+
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-    <span style="color:#66d9ef">let</span> opt <span style="color:#f92672">=</span> Opt::from_args();
-    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;b: {}&#34;</span>, opt.b);
-    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;s: {}&#34;</span>, opt.s);
-    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;n: {}&#34;</span>, opt.n);
+   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> Opt::from_args();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, o.p <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>o.stem <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>o.s);
 }
 </code></pre></div>
 

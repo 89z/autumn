@@ -4,29 +4,29 @@ using System;
 
 class Program {
    static void Main(string[] a) {
-      var s_start = "";
-      var s_end = "";
-      var s_input = "";
+      var s_pre = "";
+      var s_suf = "";
+      var s_stem = "";
 
       var o = new RootCommand {
-         new Option<string>("-start"),
-         new Option<string>("-end"),
-         new Argument<string>("input")
+         new Option<string>("-p", description: "prefix"),
+         new Option<string>("-s", description: "suffix"),
+         new Argument<string>("stem")
       };
 
-      void Execute(string start, string end, string input) {
-         s_start = start;
-         s_end = end;
-         s_input = input;
+      void Execute(string p, string s, string stem) {
+         s_pre = p;
+         s_suf = s;
+         s_stem = stem;
       }
 
       o.Handler = CommandHandler.Create<string, string, string>(Execute);
       o.Invoke(a);
 
-      if (s_input == "") {
-         Environment.Exit(2);
+      if (s_stem == "") {
+         Environment.Exit(1);
       }
 
-      Console.WriteLine(s_start + s_input + s_end);
+      Console.WriteLine(s_pre + s_stem + s_suf);
    }
 }

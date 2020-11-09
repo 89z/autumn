@@ -17,12 +17,6 @@ tags: [rust]
 
 {{< r "c/src/main.rs" >}}
 
-12 deps
-
-<https://lib.rs/crates/clap>
-
-{{< r "d/src/main.rs" >}}
-
 24 deps
 
 <https://lib.rs/crates/structopt>
