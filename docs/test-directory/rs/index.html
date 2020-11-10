@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Test directory / Rust</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/a8nj/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/test-directory/">Test directory</a> / Rust
+</h1>
+<section class="page">
+   <time>Tue Nov 10 2020</time>
+   
+   <a href="/autumn/categories/system/">system</a>
+   
+</section>
+   
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::path::Path;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> Path::new(<span style="color:#e6db74">&#34;index.md&#34;</span>);
+   <span style="color:#66d9ef">let</span> b <span style="color:#f92672">=</span> o.is_file();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, b);
+}
+</code></pre></div>
+
+<p><a href="https://doc.rust-lang.org/std/path/struct.Path.html#method.is_file">https://doc.rust-lang.org/std/path/struct.Path.html#method.is_file</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://programming-idioms.org/idiom/144">https://programming-idioms.org/idiom/144</a></li>
+<li><a href="https://rosettacode.org/wiki/Check_that_file_exists">https://rosettacode.org/wiki/Check_that_file_exists</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>

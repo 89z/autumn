@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Test directory / PHP</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/a8nj/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/test-directory/">Test directory</a> / PHP
+</h1>
+<section class="page">
+   <time>Tue Nov 10 2020</time>
+   
+   <a href="/autumn/categories/system/">system</a>
+   
+</section>
+   
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$b <span style="color:#f92672">=</span> <span style="color:#f92672">!</span> <span style="color:#a6e22e">is_dir</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($b);
+</code></pre></div>
+
+<p><a href="https://php.net/function.is-dir">https://php.net/function.is-dir</a></p>
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$b <span style="color:#f92672">=</span> <span style="color:#a6e22e">is_file</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($b);
+</code></pre></div>
+
+<p><a href="https://php.net/function.is-file">https://php.net/function.is-file</a></p>
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SplFileInfo</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
+$b <span style="color:#f92672">=</span> <span style="color:#f92672">!</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">isDir</span>();
+<span style="color:#a6e22e">var_dump</span>($b);
+</code></pre></div>
+
+<p><a href="https://php.net/splfileinfo.isdir">https://php.net/splfileinfo.isdir</a></p>
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SplFileInfo</span>(<span style="color:#e6db74">&#39;index.md&#39;</span>);
+$b <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">isFile</span>();
+<span style="color:#a6e22e">var_dump</span>($b);
+</code></pre></div>
+
+<p><a href="https://php.net/splfileinfo.isfile">https://php.net/splfileinfo.isfile</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/scripting2#file-test">https://hyperpolyglot.org/scripting2#file-test</a></li>
+<li><a href="https://programming-idioms.org/idiom/144">https://programming-idioms.org/idiom/144</a></li>
+<li><a href="https://rosettacode.org/wiki/Check_that_file_exists">https://rosettacode.org/wiki/Check_that_file_exists</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
