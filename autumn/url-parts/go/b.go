@@ -1,7 +1,6 @@
 package main
 
 import (
-   "fmt"
    "net/url"
    "os"
 )
@@ -11,6 +10,6 @@ func main() {
    if e != nil {
       os.Exit(1)
    }
-   m := o.Query()
-   fmt.Println(m)
+   s := o.Hostname()
+   println(s == "example.com")
 }

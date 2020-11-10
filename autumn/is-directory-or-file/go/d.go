@@ -2,10 +2,9 @@ package main
 import "os"
 
 func main() {
-   o, e := os.Stat(`C:\Windows\notepad.exe`)
+   o, e := os.Open("a.go")
    if e != nil {
       os.Exit(1)
    }
-   s := o.Name()
-   println(s == "notepad.exe")
+   o.Close()
 }

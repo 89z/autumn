@@ -3,9 +3,13 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< r "Program.cs" >}}
+{{< r "a/Program.cs" >}}
 
-<https://docs.microsoft.com/dotnet/api/system.uri>
+<https://docs.microsoft.com/dotnet/api/system.uri.host>
+
+{{< r "b/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/api/system.uri.query>
 
 ## References
 

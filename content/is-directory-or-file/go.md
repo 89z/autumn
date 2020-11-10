@@ -17,7 +17,7 @@ tags: [go]
 
 {{< r "d.go" >}}
 
-<https://golang.org/pkg/os#Stat>
+<https://golang.org/pkg/os#Open>
 
 ## References
 

@@ -10,5 +10,5 @@ func main() {
    if e != nil {
       os.Exit(1)
    }
-   println(o.Host == "example.com")
+   println(o.RawQuery == "two=even")
 }

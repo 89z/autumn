@@ -9,7 +9,7 @@ tags: [go]
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/regexp/syntax>
+<https://golang.org/pkg/regexp#Regexp.FindAllString>
 
 ## References
 
