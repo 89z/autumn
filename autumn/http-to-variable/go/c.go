@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-   o, e := http.Get("https://speedtest.lax.hivelocity.net")
+   o, e := http.Get("http://speedtest.lax.hivelocity.net")
    if e != nil {
       log.Fatal(e)
    }

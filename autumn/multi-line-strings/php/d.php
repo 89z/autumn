@@ -1,6 +1,8 @@
 <?php
+
 $s = <<<'eof'
-May
-June
+March
+April
 eof;
+
 var_dump($s);

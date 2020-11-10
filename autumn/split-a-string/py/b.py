@@ -1,4 +1,5 @@
-s = '''May
-June'''
+s = '''March
+April
+'''
 a = s.splitlines()
 print(a)

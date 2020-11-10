@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-   o_in, e := http.Get("https://speedtest.lax.hivelocity.net")
+   o_in, e := http.Get("http://speedtest.lax.hivelocity.net")
    if e != nil {
       log.Fatal(e)
    }

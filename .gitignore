@@ -4,9 +4,12 @@ autumn/*/cs/a/obj
 autumn/*/cs/b/b.csproj
 autumn/*/cs/b/bin
 autumn/*/cs/b/obj
+autumn/*/cs/bin
 autumn/*/cs/c/bin
 autumn/*/cs/c/c.csproj
 autumn/*/cs/c/obj
+autumn/*/cs/cs.csproj
+autumn/*/cs/obj
 autumn/*/dart/.dart_tool
 autumn/*/dart/.packages
 autumn/*/dart/pubspec.lock

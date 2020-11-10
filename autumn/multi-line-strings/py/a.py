@@ -1,8 +1,8 @@
 # example 1
-s1 = """May
-June"""
+s1 = """March
+April"""
 # example 2
-s2 = '''May
-June'''
+s2 = '''March
+April'''
 # print
 print(s1, s2)

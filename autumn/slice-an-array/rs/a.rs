@@ -1,5 +1,5 @@
 fn main() {
-   let a = ["May", "June"];
+   let a = ["March", "April"];
    let e = a.iter().nth(0);
-   println!("{}", e == Some(&"May"));
+   println!("{}", e == Some(&"March"));
 }

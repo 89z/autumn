@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-   s := "May"
+   s := "March"
    o, e := os.Create("a.txt")
    if e != nil {
       os.Exit(1)
