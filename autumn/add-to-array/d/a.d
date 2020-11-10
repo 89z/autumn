@@ -3,9 +3,9 @@ import std.stdio;
 void main() {
    string[] a;
    // example 1
-   a ~= "May";
+   a ~= "March";
    // example 2
-   a ~= ["Jun", "Jul"];
+   a ~= ["April", "May"];
    // print
    a.writeln;
 }

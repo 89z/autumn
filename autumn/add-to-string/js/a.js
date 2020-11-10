@@ -1,3 +1,3 @@
-let s = 'May';
-s = s.concat('June');
-console.log(s == 'MayJune');
+let s = 'March';
+s = s.concat('April');
+console.log(s == 'MarchApril');

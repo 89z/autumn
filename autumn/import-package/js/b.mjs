@@ -1,3 +1,3 @@
 import {f} from './a.mjs';
-let n = f('May');
+let n = f('March');
 console.log(n);
