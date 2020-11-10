@@ -1,9 +1,9 @@
-using System;
 using System.IO;
+using System;
 
 class Program {
    static void Main() {
-      var b = File.Exists("Program.cs");
+      var b = Directory.Exists("obj");
       Console.WriteLine(b);
    }
 }

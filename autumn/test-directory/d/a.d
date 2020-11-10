@@ -1,6 +1,6 @@
 import std.file, std.stdio;
 
 void main() {
-   auto b = "index.md".exists;
-   b.writeln;
+   auto s = `C:\Users`;
+   writeln(s.exists && s.isDir);
 }

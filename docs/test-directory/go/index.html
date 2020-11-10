@@ -29,18 +29,44 @@
    <a href="/autumn/categories/system/">system</a>
    
 </section>
-   <ul>
-<li><a href="https://golang.org/pkg/os#FileInfo">https://golang.org/pkg/os#FileInfo</a></li>
-<li><a href="https://golang.org/pkg/os#FileMode.IsDir">https://golang.org/pkg/os#FileMode.IsDir</a></li>
-<li><a href="https://golang.org/pkg/os#FileMode.IsRegular">https://golang.org/pkg/os#FileMode.IsRegular</a></li>
-<li><a href="https://golang.org/pkg/os#IsNotExist">https://golang.org/pkg/os#IsNotExist</a></li>
-<li><a href="https://golang.org/pkg/os#Open">https://golang.org/pkg/os#Open</a></li>
-<li><a href="https://golang.org/pkg/os#OpenFile">https://golang.org/pkg/os#OpenFile</a></li>
-</ul>
+   
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stat</span>(<span style="color:#e6db74">`C:\Users`</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">||</span> ! <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Mode</span>().<span style="color:#a6e22e">IsDir</span>() {
+      <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
+   }
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/os#FileMode.IsDir">https://golang.org/pkg/os#FileMode.IsDir</a></p>
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stat</span>(<span style="color:#e6db74">`C:\Users`</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">||</span> ! <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">IsDir</span>() {
+      <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
+   }
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/os#FileInfo">https://golang.org/pkg/os#FileInfo</a></p>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://hyperpolyglot.org/c#file-test">https://hyperpolyglot.org/c#file-test</a></li>
-<li><a href="https://programming-idioms.org/idiom/144">https://programming-idioms.org/idiom/144</a></li>
+<li><a href="https://hyperpolyglot.org/c#dir-test">https://hyperpolyglot.org/c#dir-test</a></li>
+<li><a href="https://programming-idioms.org/idiom/212">https://programming-idioms.org/idiom/212</a></li>
 <li><a href="https://rosettacode.org/wiki/Check_that_file_exists">https://rosettacode.org/wiki/Check_that_file_exists</a></li>
 </ul>
 

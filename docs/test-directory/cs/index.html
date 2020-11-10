@@ -34,23 +34,23 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
-<span style="color:#66d9ef">using</span> System.IO;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System.IO;
+<span style="color:#66d9ef">using</span> System;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">var</span> b = File.Exists(<span style="color:#e6db74">&#34;Program.cs&#34;</span>);
+      <span style="color:#66d9ef">var</span> b = Directory.Exists(<span style="color:#e6db74">&#34;obj&#34;</span>);
       Console.WriteLine(b);
    }
 }
 
 </code></pre></div>
 
-<p><a href="https://docs.microsoft.com/dotnet/api/system.io.file.exists">https://docs.microsoft.com/dotnet/api/system.io.file.exists</a></p>
+<p><a href="https://docs.microsoft.com/dotnet/api/system.io.directory.exists">https://docs.microsoft.com/dotnet/api/system.io.directory.exists</a></p>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://hyperpolyglot.org/cpp#file-test">https://hyperpolyglot.org/cpp#file-test</a></li>
-<li><a href="https://programming-idioms.org/idiom/144">https://programming-idioms.org/idiom/144</a></li>
+<li><a href="https://hyperpolyglot.org/cpp#dir-test">https://hyperpolyglot.org/cpp#dir-test</a></li>
+<li><a href="https://programming-idioms.org/idiom/212">https://programming-idioms.org/idiom/212</a></li>
 <li><a href="https://rosettacode.org/wiki/Check_that_file_exists">https://rosettacode.org/wiki/Check_that_file_exists</a></li>
 </ul>
 
