@@ -5,7 +5,19 @@ tags: [javascript]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/API/URL/URL>
+<https://developer.mozilla.org/Web/API/URL/host>
+
+{{< r "b.js" >}}
+
+<https://developer.mozilla.org/Web/API/URL/hostname>
+
+{{< r "c.js" >}}
+
+<https://developer.mozilla.org/Web/API/URL/search>
+
+{{< r "d.js" >}}
+
+<https://developer.mozilla.org/Web/API/URL/searchParams>
 
 ## References
 

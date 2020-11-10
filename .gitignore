@@ -10,6 +10,8 @@ autumn/*/cs/c/c.csproj
 autumn/*/cs/c/obj
 autumn/*/cs/cs.csproj
 autumn/*/cs/obj
+autumn/*/d/.gitignore
+autumn/*/d/dub.selections.json
 autumn/*/dart/.dart_tool
 autumn/*/dart/.packages
 autumn/*/dart/pubspec.lock

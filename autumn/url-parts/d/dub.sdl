@@ -1,0 +1,6 @@
+name "d"
+description "A minimal D application."
+authors "Steven"
+copyright "Copyright © 2020, Steven"
+license "proprietary"
+dependency "dlib" version="~>0.20.0"
