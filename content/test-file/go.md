@@ -3,12 +3,17 @@ title: Go
 tags: [go]
 ---
 
-- <https://golang.org/pkg/os#FileInfo>
-- <https://golang.org/pkg/os#FileMode.IsDir>
-- <https://golang.org/pkg/os#FileMode.IsRegular>
-- <https://golang.org/pkg/os#IsNotExist>
-- <https://golang.org/pkg/os#Open>
-- <https://golang.org/pkg/os#OpenFile>
+{{< r "a.go" >}}
+
+<https://golang.org/pkg/os#FileMode.IsRegular>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/os#Open>
+
+{{< r "c.go" >}}
+
+<https://golang.org/pkg/os#OpenFile>
 
 ## References
 

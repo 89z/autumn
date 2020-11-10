@@ -1,3 +1,3 @@
-import os
-b = os.access('index.md', os.F_OK)
+from os import path
+b = path.isdir(r'C:\Users')
 print(b)

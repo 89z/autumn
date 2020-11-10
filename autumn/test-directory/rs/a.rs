@@ -1,7 +1,7 @@
 use std::path::Path;
 
 fn main() {
-   let o = Path::new("index.md");
-   let b = o.is_file();
+   let o = Path::new(r"C:\Users");
+   let b = o.is_dir();
    println!("{}", b);
 }

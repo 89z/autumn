@@ -1,3 +1,4 @@
-from os import path
-b = not path.isdir('index.md')
+import pathlib
+o = pathlib.Path(r'C:\Users')
+b = o.is_dir()
 print(b)

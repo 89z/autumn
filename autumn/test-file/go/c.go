@@ -2,10 +2,9 @@ package main
 import "os"
 
 func main() {
-   o, e := os.Stat(`C:\Windows\notepad.exe`)
-   if os.IsNotExist(e) {
+   o, e := os.OpenFile("a.txt", os.O_WRONLY|os.O_CREATE|os.O_EXCL, os.ModePerm)
+   if e != nil {
       os.Exit(1)
    }
-   s := o.Name()
-   println(s == "notepad.exe")
+   o.WriteString("March\n")
 }

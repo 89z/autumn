@@ -9,6 +9,6 @@ tags: [ruby]
 
 ## References
 
-- <https://hyperpolyglot.org/scripting2#file-test>
-- <https://programming-idioms.org/idiom/144>
+- <https://hyperpolyglot.org/scripting2#dir-test>
+- <https://programming-idioms.org/idiom/212>
 - <https://rosettacode.org/wiki/Check_that_file_exists>

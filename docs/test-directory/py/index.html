@@ -34,19 +34,8 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> os
-b <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>access(<span style="color:#e6db74">&#39;index.md&#39;</span>, os<span style="color:#f92672">.</span>F_OK)
-<span style="color:#66d9ef">print</span>(b)
-</code></pre></div>
-
-<p><a href="https://docs.python.org/library/os.html#os.access">https://docs.python.org/library/os.html#os.access</a></p>
-
-
-
-
-
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> os <span style="color:#f92672">import</span> path
-b <span style="color:#f92672">=</span> <span style="color:#f92672">not</span> path<span style="color:#f92672">.</span>isdir(<span style="color:#e6db74">&#39;index.md&#39;</span>)
+b <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>isdir(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;C:\Users&#39;</span>)
 <span style="color:#66d9ef">print</span>(b)
 </code></pre></div>
 
@@ -56,16 +45,17 @@ b <span style="color:#f92672">=</span> <span style="color:#f92672">not</span> pa
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> os <span style="color:#f92672">import</span> path
-b <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>isfile(<span style="color:#e6db74">&#39;index.md&#39;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> pathlib
+o <span style="color:#f92672">=</span> pathlib<span style="color:#f92672">.</span>Path(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;C:\Users&#39;</span>)
+b <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>is_dir()
 <span style="color:#66d9ef">print</span>(b)
 </code></pre></div>
 
-<p><a href="https://docs.python.org/library/os.path.html#os.path.isfile">https://docs.python.org/library/os.path.html#os.path.isfile</a></p>
+<p><a href="https://docs.python.org/library/pathlib.html#pathlib.Path.is_dir">https://docs.python.org/library/pathlib.html#pathlib.Path.is_dir</a></p>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://hyperpolyglot.org/scripting2#file-test">https://hyperpolyglot.org/scripting2#file-test</a></li>
-<li><a href="https://programming-idioms.org/idiom/144">https://programming-idioms.org/idiom/144</a></li>
+<li><a href="https://hyperpolyglot.org/scripting2#dir-test">https://hyperpolyglot.org/scripting2#dir-test</a></li>
+<li><a href="https://programming-idioms.org/idiom/212">https://programming-idioms.org/idiom/212</a></li>
 <li><a href="https://rosettacode.org/wiki/Check_that_file_exists">https://rosettacode.org/wiki/Check_that_file_exists</a></li>
 </ul>
 

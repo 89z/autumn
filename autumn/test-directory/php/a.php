@@ -1,3 +1,3 @@
 <?php
-$b = ! is_dir('index.md');
+$b = is_dir('C:\Users');
 var_dump($b);

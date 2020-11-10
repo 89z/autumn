@@ -9,18 +9,10 @@ tags: [php]
 
 {{< r "b.php" >}}
 
-<https://php.net/function.is-file>
-
-{{< r "c.php" >}}
-
 <https://php.net/splfileinfo.isdir>
-
-{{< r "d.php" >}}
-
-<https://php.net/splfileinfo.isfile>
 
 ## References
 
-- <https://hyperpolyglot.org/scripting2#file-test>
-- <https://programming-idioms.org/idiom/144>
+- <https://hyperpolyglot.org/scripting2#dir-test>
+- <https://programming-idioms.org/idiom/212>
 - <https://rosettacode.org/wiki/Check_that_file_exists>
