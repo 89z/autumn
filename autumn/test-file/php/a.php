@@ -1,3 +1,3 @@
 <?php
-$b = ! is_dir('index.md');
+$b = is_file('a.php');
 var_dump($b);

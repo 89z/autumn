@@ -1,3 +1,2 @@
-s = 'C:\Users'
-b = File.directory?(s)
-puts b
+s = 'a.rb'
+puts File.file?(s)

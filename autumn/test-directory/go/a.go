@@ -3,7 +3,7 @@ import "os"
 
 func main() {
    o, e := os.Stat(`C:\Users`)
-   if e != nil || ! o.Mode().IsDir() {
+   if os.IsNotExist(e) || ! o.Mode().IsDir() {
       os.Exit(1)
    }
 }

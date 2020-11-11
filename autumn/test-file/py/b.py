@@ -1,3 +1,4 @@
-from os import path
-b = not path.isdir('index.md')
+import pathlib
+o = pathlib.Path('a.py')
+b = o.is_file()
 print(b)

@@ -5,7 +5,7 @@ tags: [ruby]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/File.html#method-c-directory-3F>
+<https://ruby-doc.org/core/File.html#method-c-file-3F>
 
 ## References
 

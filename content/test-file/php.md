@@ -5,17 +5,9 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-<https://php.net/function.is-dir>
-
-{{< r "b.php" >}}
-
 <https://php.net/function.is-file>
 
-{{< r "c.php" >}}
-
-<https://php.net/splfileinfo.isdir>
-
-{{< r "d.php" >}}
+{{< r "b.php" >}}
 
 <https://php.net/splfileinfo.isfile>
 

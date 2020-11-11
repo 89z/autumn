@@ -5,15 +5,11 @@ tags: [python]
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/os.html#os.access>
+<https://docs.python.org/library/os.path.html#os.path.isfile>
 
 {{< r "b.py" >}}
 
-<https://docs.python.org/library/os.path.html#os.path.isdir>
-
-{{< r "c.py" >}}
-
-<https://docs.python.org/library/os.path.html#os.path.isfile>
+<https://docs.python.org/library/pathlib.html#pathlib.Path.is_file>
 
 ## References
 

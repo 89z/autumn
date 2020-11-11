@@ -5,7 +5,7 @@ tags: [nim]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/os.html>
+<https://nim-lang.org/docs/os.html#fileExists,string>
 
 ## References
 

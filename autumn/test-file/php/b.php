@@ -1,3 +1,4 @@
 <?php
-$b = is_file('index.md');
+$o = new SplFileInfo('a.php');
+$b = $o->isFile();
 var_dump($b);

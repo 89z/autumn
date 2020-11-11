@@ -9,5 +9,6 @@ tags: [rust]
 
 ## References
 
+- <https://hyperpolyglot.org/rust#files>
 - <https://programming-idioms.org/idiom/144>
 - <https://rosettacode.org/wiki/Check_that_file_exists>

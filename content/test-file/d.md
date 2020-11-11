@@ -5,7 +5,7 @@ tags: [d]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/library/std/file/exists.html>
+<https://dlang.org/library/std/file/is_file.html>
 
 ## References
 
