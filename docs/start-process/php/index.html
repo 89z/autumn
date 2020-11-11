@@ -54,12 +54,12 @@ $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">proc_open</s
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">shell_escape</span>(<span style="color:#a6e22e">string</span> $s_in)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
-   $s_brk <span style="color:#f92672">=</span> <span style="color:#a6e22e">strpbrk</span>($s_in, <span style="color:#e6db74">&#39; &#34;&amp;-&gt;^&#39;</span>);
-   <span style="color:#66d9ef">if</span> ($s_brk <span style="color:#f92672">===</span> <span style="color:#66d9ef">false</span>) {
-      <span style="color:#66d9ef">return</span> $s_in;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">shell_escape</span>(<span style="color:#a6e22e">string</span> $in_s)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
+   $brk_s <span style="color:#f92672">=</span> <span style="color:#a6e22e">strpbrk</span>($in_s, <span style="color:#e6db74">&#39; &#34;&amp;-&gt;^&#39;</span>);
+   <span style="color:#66d9ef">if</span> ($brk_s <span style="color:#f92672">===</span> <span style="color:#66d9ef">false</span>) {
+      <span style="color:#66d9ef">return</span> $in_s;
    }
-   <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#34;&#39;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">str_replace</span>(<span style="color:#e6db74">&#39;&#34;&#39;</span>, <span style="color:#e6db74">&#39;&#34;&#34;&#39;</span>, $s_in) <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&#34;&#39;</span>;
+   <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#34;&#39;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">str_replace</span>(<span style="color:#e6db74">&#39;&#34;&#39;</span>, <span style="color:#e6db74">&#39;&#34;&#34;&#39;</span>, $in_s) <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&#34;&#39;</span>;
 }
 
 $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">shell_escape</span>(<span style="color:#e6db74">&#39;google.com/search?tbm=vid&amp;q=squarepusher&#39;</span>);

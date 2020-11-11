@@ -4,9 +4,12 @@ tags: [ruby]
 ---
 
 {{< r "a.rb" >}}
+
+<https://ruby-doc.org/stdlib/libdoc/cgi/rdoc/CGI.html#method-c-parse>
+
 {{< r "b.rb" >}}
 
-<https://ruby-doc.org/stdlib/libdoc/uri/rdoc>
+<https://ruby-doc.org/stdlib/libdoc/uri/rdoc/URI.html#method-c-decode_www_form>
 
 ## References
 

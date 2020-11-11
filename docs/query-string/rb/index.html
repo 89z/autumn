@@ -29,42 +29,30 @@
    <a href="/autumn/categories/path/">path</a>
    
 </section>
-   <p>
-
-
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;uri&#39;</span>
-
-url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://google.com:80/foo?q=3#bar&#34;</span>
-up <span style="color:#f92672">=</span> <span style="color:#66d9ef">URI</span>(url)
-
-protocol <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>scheme
-hostname <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>host
-port <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>port
-path <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>path
-query_str <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>query
-fragment <span style="color:#f92672">=</span> up<span style="color:#f92672">.</span>fragment
-
-<span style="color:#75715e"># Ruby 1.9; returns array of pairs:</span>
-params <span style="color:#f92672">=</span> <span style="color:#66d9ef">URI</span><span style="color:#f92672">.</span>decode_www_form(query_str)
-</code></pre></div>
-
-
+   
 
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;cgi&#39;</span>
-require <span style="color:#e6db74">&#39;json&#39;</span>
-require <span style="color:#e6db74">&#39;net/http&#39;</span>
-res <span style="color:#f92672">=</span> <span style="color:#66d9ef">Net</span><span style="color:#f92672">::</span><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">.</span>get <span style="color:#66d9ef">URI</span> <span style="color:#e6db74">&#39;https://www.youtube.com/get_video_info?video_id=aqz-KE-bpKQ&#39;</span>
-vars <span style="color:#f92672">=</span> <span style="color:#66d9ef">CGI</span><span style="color:#f92672">.</span>parse res
-json <span style="color:#f92672">=</span> <span style="color:#66d9ef">JSON</span><span style="color:#f92672">.</span>parse vars<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;player_response&#34;</span><span style="color:#f92672">].</span>first
-pp json<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;streamingData&#34;</span><span style="color:#f92672">][</span><span style="color:#e6db74">&#34;formats&#34;</span><span style="color:#f92672">]</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;one=odd&amp;two=even&#39;</span>
+m <span style="color:#f92672">=</span> <span style="color:#66d9ef">CGI</span><span style="color:#f92672">.</span>parse(s)
+puts m
 </code></pre></div>
-</p>
-<p><a href="https://ruby-doc.org/stdlib/libdoc/uri/rdoc">https://ruby-doc.org/stdlib/libdoc/uri/rdoc</a></p>
+
+<p><a href="https://ruby-doc.org/stdlib/libdoc/cgi/rdoc/CGI.html#method-c-parse">https://ruby-doc.org/stdlib/libdoc/cgi/rdoc/CGI.html#method-c-parse</a></p>
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;uri&#39;</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;one=odd&amp;two=even&#39;</span>
+m <span style="color:#f92672">=</span> <span style="color:#66d9ef">URI</span><span style="color:#f92672">.</span>decode_www_form(s)<span style="color:#f92672">.</span>to_h
+puts m
+</code></pre></div>
+
+<p><a href="https://ruby-doc.org/stdlib/libdoc/uri/rdoc/URI.html#method-c-decode_www_form">https://ruby-doc.org/stdlib/libdoc/uri/rdoc/URI.html#method-c-decode_www_form</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#parse-url">https://hyperpolyglot.org/scripting2#parse-url</a></li>

@@ -1,7 +1,7 @@
 import argparse
-o_in = argparse.ArgumentParser()
-o_in.add_argument('-p', default='', help='prefix')
-o_in.add_argument('-s', default='', help='suffix')
-o_in.add_argument('stem')
-o_out = o_in.parse_args()
-print(o_out.p + o_out.stem + o_out.s)
+in_o = argparse.ArgumentParser()
+in_o.add_argument('-p', default='', help='prefix')
+in_o.add_argument('-s', default='', help='suffix')
+in_o.add_argument('stem')
+out_o = in_o.parse_args()
+print(out_o.p + out_o.stem + out_o.s)

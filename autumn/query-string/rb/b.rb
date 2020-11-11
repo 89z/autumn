@@ -1,7 +1,4 @@
-require 'cgi'
-require 'json'
-require 'net/http'
-res = Net::HTTP.get URI 'https://www.youtube.com/get_video_info?video_id=aqz-KE-bpKQ'
-vars = CGI.parse res
-json = JSON.parse vars["player_response"].first
-pp json["streamingData"]["formats"]
+require 'uri'
+s = 'one=odd&two=even'
+m = URI.decode_www_form(s).to_h
+puts m

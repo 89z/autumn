@@ -1,11 +1,11 @@
 <?php
 
-function shell_escape(string $s_in): string {
-   $s_brk = strpbrk($s_in, ' "&->^');
-   if ($s_brk === false) {
-      return $s_in;
+function shell_escape(string $in_s): string {
+   $brk_s = strpbrk($in_s, ' "&->^');
+   if ($brk_s === false) {
+      return $in_s;
    }
-   return '"' . str_replace('"', '""', $s_in) . '"';
+   return '"' . str_replace('"', '""', $in_s) . '"';
 }
 
 $s = shell_escape('google.com/search?tbm=vid&q=squarepusher');

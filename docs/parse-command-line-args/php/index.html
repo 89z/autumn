@@ -47,9 +47,9 @@
 }
 
 $m <span style="color:#f92672">=</span> <span style="color:#a6e22e">getopt</span>(<span style="color:#e6db74">&#39;p:s:&#39;</span>, [], $n);
-$s_pre <span style="color:#f92672">=</span> <span style="color:#a6e22e">key_exists</span>(<span style="color:#e6db74">&#39;p&#39;</span>, $m) <span style="color:#f92672">?</span> $m[<span style="color:#e6db74">&#39;p&#39;</span>] <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>;
-$s_suf <span style="color:#f92672">=</span> <span style="color:#a6e22e">key_exists</span>(<span style="color:#e6db74">&#39;s&#39;</span>, $m) <span style="color:#f92672">?</span> $m[<span style="color:#e6db74">&#39;s&#39;</span>] <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>;
-<span style="color:#66d9ef">echo</span> $s_pre <span style="color:#f92672">.</span> $argv[$n] <span style="color:#f92672">.</span> $s_suf, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+$pre_s <span style="color:#f92672">=</span> <span style="color:#a6e22e">key_exists</span>(<span style="color:#e6db74">&#39;p&#39;</span>, $m) <span style="color:#f92672">?</span> $m[<span style="color:#e6db74">&#39;p&#39;</span>] <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>;
+$suf_s <span style="color:#f92672">=</span> <span style="color:#a6e22e">key_exists</span>(<span style="color:#e6db74">&#39;s&#39;</span>, $m) <span style="color:#f92672">?</span> $m[<span style="color:#e6db74">&#39;s&#39;</span>] <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>;
+<span style="color:#66d9ef">echo</span> $pre_s <span style="color:#f92672">.</span> $argv[$n] <span style="color:#f92672">.</span> $suf_s, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 </code></pre></div>
 
 <p><a href="https://php.net/function.getopt">https://php.net/function.getopt</a></p>

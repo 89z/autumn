@@ -14,7 +14,7 @@ struct Opt {
 
 fn main() {
    let o = Opt::from_args();
-   let s_pre = o.p.unwrap_or_default();
-   let s_suf = o.s.unwrap_or_default();
-   println!("{}", s_pre + &o.stem + &s_suf);
+   let pre_s = o.p.unwrap_or_default();
+   let suf_s = o.s.unwrap_or_default();
+   println!("{}", pre_s + &o.stem + &suf_s);
 }

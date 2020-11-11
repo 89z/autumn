@@ -35,18 +35,18 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;getoptlong&#39;</span>
-s_pre <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
-s_suf <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+pre_s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+suf_s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
 
 <span style="color:#66d9ef">GetoptLong</span><span style="color:#f92672">.</span>new(
    <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;-p&#39;</span>, <span style="color:#66d9ef">GetoptLong</span><span style="color:#f92672">::</span><span style="color:#66d9ef">REQUIRED_ARGUMENT</span><span style="color:#f92672">]</span>,
    <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;-s&#39;</span>, <span style="color:#66d9ef">GetoptLong</span><span style="color:#f92672">::</span><span style="color:#66d9ef">REQUIRED_ARGUMENT</span><span style="color:#f92672">]</span>
-)<span style="color:#f92672">.</span>each { <span style="color:#f92672">|</span>s_key, s_val<span style="color:#f92672">|</span>
-   <span style="color:#66d9ef">case</span> s_key
+)<span style="color:#f92672">.</span>each { <span style="color:#f92672">|</span>key_s, val_s<span style="color:#f92672">|</span>
+   <span style="color:#66d9ef">case</span> key_s
    <span style="color:#66d9ef">when</span> <span style="color:#e6db74">&#39;-p&#39;</span>
-      s_pre <span style="color:#f92672">=</span> s_val
+      pre_s <span style="color:#f92672">=</span> val_s
    <span style="color:#66d9ef">when</span> <span style="color:#e6db74">&#39;-s&#39;</span>
-      s_suf <span style="color:#f92672">=</span> s_val
+      suf_s <span style="color:#f92672">=</span> val_s
    <span style="color:#66d9ef">end</span>
 }
 
@@ -61,7 +61,7 @@ eof
    exit <span style="color:#ae81ff">1</span>
 <span style="color:#66d9ef">end</span>
 
-puts s_pre <span style="color:#f92672">+</span> <span style="color:#66d9ef">ARGV</span><span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span> <span style="color:#f92672">+</span> s_suf
+puts pre_s <span style="color:#f92672">+</span> <span style="color:#66d9ef">ARGV</span><span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span> <span style="color:#f92672">+</span> suf_s
 </code></pre></div>
 
 <p><a href="https://ruby-doc.org/stdlib/libdoc/getoptlong/rdoc/GetoptLong.html">https://ruby-doc.org/stdlib/libdoc/getoptlong/rdoc/GetoptLong.html</a></p>
