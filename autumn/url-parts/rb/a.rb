@@ -1,14 +1,8 @@
 require 'uri'
-
-url = "http://google.com:80/foo?q=3#bar"
-up = URI(url)
-
-protocol = up.scheme
-hostname = up.host
-port = up.port
-path = up.path
-query_str = up.query
-fragment = up.fragment
-
-# Ruby 1.9; returns array of pairs:
-params = URI.decode_www_form(query_str)
+o = URI('https://example.com/one?two=even')
+# example 1
+s1 = o.host
+# example 2
+s2 = o.query
+# print
+puts s1 == 'example.com', s2 == 'two=even'

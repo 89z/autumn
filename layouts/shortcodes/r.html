@@ -1,6 +1,6 @@
 <!-- part 1 -->
-{{ $s_get := .Get 0 }}
+{{ $get_s := .Get 0 }}
 <!-- part 2 -->
-{{ $s_ext := index (split $s_get ".") 1 }}
-{{ $s_join := path.Join .Page.RelPermalink $s_get }}
-{{ highlight (readFile $s_join) $s_ext "" }}
+{{ $ext_s := index (split $get_s ".") 1 }}
+{{ $join_s := path.Join .Page.RelPermalink $get_s }}
+{{ highlight (readFile $join_s) $ext_s "" }}
