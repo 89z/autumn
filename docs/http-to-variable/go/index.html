@@ -43,16 +43,16 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o_in</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>)
+   <span style="color:#a6e22e">in_o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">o_out</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>{}
-   <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o_out</span>.<span style="color:#a6e22e">ReadFrom</span>(<span style="color:#a6e22e">o_in</span>.<span style="color:#a6e22e">Body</span>)
+   <span style="color:#a6e22e">out_o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>{}
+   <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">out_o</span>.<span style="color:#a6e22e">ReadFrom</span>(<span style="color:#a6e22e">in_o</span>.<span style="color:#a6e22e">Body</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   print(<span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">o_out</span>.<span style="color:#a6e22e">String</span>())
+   print(<span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">out_o</span>.<span style="color:#a6e22e">String</span>())
 }
 </code></pre></div>
 
@@ -72,13 +72,13 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o_in</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>)
+   <span style="color:#a6e22e">in_o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
    }
-   <span style="color:#a6e22e">o_out</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>{}
-   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">o_out</span>, <span style="color:#a6e22e">o_in</span>.<span style="color:#a6e22e">Body</span>)
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o_out</span>.<span style="color:#a6e22e">String</span>()
+   <span style="color:#a6e22e">out_o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>{}
+   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">out_o</span>, <span style="color:#a6e22e">in_o</span>.<span style="color:#a6e22e">Body</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">out_o</span>.<span style="color:#a6e22e">String</span>()
    print(<span style="color:#a6e22e">s</span>)
 }
 </code></pre></div>

@@ -9,13 +9,17 @@ tags: [go]
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/io#Copy>
+<https://golang.org/pkg/bytes#Buffer.ReadFrom>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/io/ioutil#ReadAll>
+<https://golang.org/pkg/io#Copy>
 
 {{< r "d.go" >}}
+
+<https://golang.org/pkg/io/ioutil#ReadAll>
+
+{{< r "e.go" >}}
 
 <https://golang.org/pkg/io/ioutil#ReadFile>
 

@@ -1,10 +1,10 @@
 import 'dart:io';
 
 void main() async {
-   var o_uri = Uri.parse("https://speedtest.lax.hivelocity.net");
-   var o_http = new HttpClient();
-   var o_req = await o_http.getUrl(o_uri);
-   var o_resp = await o_req.close();
-   o_resp.pipe(stdout);
-   o_http.close();
+   var uri_o = Uri.parse("https://speedtest.lax.hivelocity.net");
+   var http_o = new HttpClient();
+   var req_o = await http_o.getUrl(uri_o);
+   var resp_o = await req_o.close();
+   resp_o.pipe(stdout);
+   http_o.close();
 }

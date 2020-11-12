@@ -1,15 +1,15 @@
-function f_date(n_ms) {
-   const o_date = new Date(n_ms);
-   const o_fmt = new Intl.DateTimeFormat('en', {
+function date_f(ms_n) {
+   const date_o = new Date(ms_n);
+   const fmt_o = new Intl.DateTimeFormat('en', {
       day: 'numeric', month: 'short', weekday: 'short', year: 'numeric'
    });
-   const f_parts = (m_acc, m_cur) => {
-      return {...m_acc, [m_cur.type]: m_cur.value};
+   const part_f = (acc_m, cur_m) => {
+      return {...acc_m, [cur_m.type]: cur_m.value};
    };
-   return o_fmt.formatToParts(o_date).reduce(f_parts, {});
+   return fmt_o.formatToParts(date_o).reduce(part_f, {});
 }
 
 let n = 1577858399;
-let m = f_date(n * 1000);
+let m = date_f(n * 1000);
 let s = [m.weekday, m.month, m.day, m.year].join(' ');
 console.log(s == 'Tue Dec 31 2019');

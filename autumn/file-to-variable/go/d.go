@@ -3,13 +3,18 @@ package main
 import (
    "fmt"
    "io/ioutil"
+   "log"
    "os"
 )
 
 func main() {
-   y, e := ioutil.ReadFile("a.txt")
+   o, e := os.Open("a.txt")
    if e != nil {
-      os.Exit(1)
+      log.Fatal(e)
+   }
+   y, e := ioutil.ReadAll(o)
+   if e != nil {
+      log.Fatal(e)
    }
    fmt.Printf("%s", y)
 }

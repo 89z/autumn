@@ -1,18 +1,20 @@
 package main
 
 import (
-   "io"
-   "os"
-   "strings"
+   "bytes"
+   "log"
+   "net/http"
 )
 
 func main() {
-   o, e := os.Open("a.txt")
+   o_in, e := http.Get("http://speedtest.lax.hivelocity.net")
    if e != nil {
-      os.Exit(1)
+      log.Fatal(e)
    }
-   o1 := strings.Builder{}
-   io.Copy(&o1, o)
-   s := o1.String()
-   print(s)
+   o_out := bytes.Buffer{}
+   n, e := o_out.ReadFrom(o_in.Body)
+   if e != nil {
+      log.Fatal(e)
+   }
+   print(n, o_out.String())
 }

@@ -1,20 +1,18 @@
 package main
 
 import (
-   "fmt"
-   "io/ioutil"
-   "log"
+   "io"
    "os"
+   "strings"
 )
 
 func main() {
    o, e := os.Open("a.txt")
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
-   y, e := ioutil.ReadAll(o)
-   if e != nil {
-      log.Fatal(e)
-   }
-   fmt.Printf("%s", y)
+   o1 := strings.Builder{}
+   io.Copy(&o1, o)
+   s := o1.String()
+   print(s)
 }

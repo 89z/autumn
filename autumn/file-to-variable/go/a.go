@@ -6,13 +6,13 @@ import (
 )
 
 func main() {
-   o_open, e := os.Open("a.go")
+   open_o, e := os.Open("a.go")
    if e != nil {
       os.Exit(1)
    }
-   o_scan := bufio.NewScanner(o_open)
-   for o_scan.Scan() {
-      s := o_scan.Text()
+   scan_o := bufio.NewScanner(open_o)
+   for scan_o.Scan() {
+      s := scan_o.Text()
       println(s)
    }
 }

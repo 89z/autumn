@@ -1,7 +1,7 @@
-let s_uri = 'https://speedtest.lax.hivelocity.net';
+let uri_s = 'http://speedtest.lax.hivelocity.net';
 
-fetch(s_uri).then(
-   o_req => o_req.text()
+fetch(uri_s).then(
+   req_o => req_o.text()
 ).then(
-   s_resp => console.log(s_resp)
+   resp_s => console.log(resp_s)
 );

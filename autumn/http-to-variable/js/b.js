@@ -1,8 +1,8 @@
 async function main() {
-   let s_uri = 'https://speedtest.lax.hivelocity.net';
-   let o_req = await fetch(s_uri);
-   let s_resp = await o_req.text();
-   console.log(s_resp);
+   let uri_s = 'https://speedtest.lax.hivelocity.net';
+   let req_o = await fetch(uri_s);
+   let resp_s = await req_o.text();
+   console.log(resp_s);
 }
 
 main();

@@ -8,12 +8,12 @@ import (
 )
 
 func main() {
-   o_in, e := http.Get("http://speedtest.lax.hivelocity.net")
+   in_o, e := http.Get("http://speedtest.lax.hivelocity.net")
    if e != nil {
       os.Exit(1)
    }
-   o_out := strings.Builder{}
-   io.Copy(&o_out, o_in.Body)
-   s := o_out.String()
+   out_o := strings.Builder{}
+   io.Copy(&out_o, in_o.Body)
+   s := out_o.String()
    print(s)
 }
