@@ -1,12 +1,12 @@
 <?php
 $r = fopen('a.csv', 'r');
-$a_head = fgetcsv($r);
+$head_a = fgetcsv($r);
 
 while (true) {
-   $a_row = fgetcsv($r);
+   $row_a = fgetcsv($r);
    if (feof($r)) {
       break;
    }
-   $m_row = array_combine($a_head, $a_row);
-   print_r($m_row);
+   $row_m = array_combine($head_a, $row_a);
+   print_r($row_m);
 }

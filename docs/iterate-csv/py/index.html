@@ -68,12 +68,12 @@ o <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;a.c
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> csv
-o_file <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;a.csv&#39;</span>)
-o_csv <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>reader(o_file)
-a_head <span style="color:#f92672">=</span> next(o_csv)
+file_o <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;a.csv&#39;</span>)
+csv_o <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>reader(file_o)
+head_a <span style="color:#f92672">=</span> next(csv_o)
 
-<span style="color:#66d9ef">for</span> a_row <span style="color:#f92672">in</span> o_csv:
-   m <span style="color:#f92672">=</span> dict(zip(a_head, a_row))
+<span style="color:#66d9ef">for</span> row_a <span style="color:#f92672">in</span> csv_o:
+   m <span style="color:#f92672">=</span> dict(zip(head_a, row_a))
    <span style="color:#66d9ef">print</span>(m)
 </code></pre></div>
 

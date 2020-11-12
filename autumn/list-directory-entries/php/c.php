@@ -1,10 +1,10 @@
 <?php
-$o_dir = new RecursiveDirectoryIterator('.');
-$o_dir->setFlags(RecursiveDirectoryIterator::SKIP_DOTS);
-$f_filter = fn ($o_info) => $o_info->getFilename() == '.git' ? false : true;
-$o_filter = new RecursiveCallbackFilterIterator($o_dir, $f_filter);
-$o_iter = new RecursiveIteratorIterator($o_filter);
+$dir_o = new RecursiveDirectoryIterator('.');
+$dir_o->setFlags(RecursiveDirectoryIterator::SKIP_DOTS);
+$filter_f = fn ($info_o) => $info_o->getFilename() == '.git' ? false : true;
+$filter_o = new RecursiveCallbackFilterIterator($dir_o, $filter_f);
+$iter_o = new RecursiveIteratorIterator($filter_o);
 
-foreach ($o_iter as $o_info) {
-   echo $o_info->getPathname(), "\n";
+foreach ($iter_o as $info_o) {
+   echo $info_o->getPathname(), "\n";
 }

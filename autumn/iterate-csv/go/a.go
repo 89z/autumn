@@ -7,22 +7,22 @@ import (
 )
 
 func main() {
-   o_str := strings.NewReader(`Month,Day
+   str_o := strings.NewReader(`Month,Day
 January,Sunday
 February,Monday`)
-   o_csv := csv.NewReader(o_str)
-   a_head, e := o_csv.Read()
+   csv_o := csv.NewReader(str_o)
+   head_a, e := csv_o.Read()
    if e != nil {
       log.Fatal(e)
    }
    for {
-      a_row, e := o_csv.Read()
+      row_a, e := csv_o.Read()
       if e != nil {
          break
       }
       m := map[string]string{}
-      for n, s := range a_head {
-         m[s] = a_row[n]
+      for n, s := range head_a {
+         m[s] = row_a[n]
       }
       log.Print(m)
    }

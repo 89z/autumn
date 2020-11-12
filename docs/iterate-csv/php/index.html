@@ -38,15 +38,15 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;a.csv&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
-$a_head <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgetcsv</span>($r);
+$head_a <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgetcsv</span>($r);
 
 <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
-   $a_row <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgetcsv</span>($r);
+   $row_a <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgetcsv</span>($r);
    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">feof</span>($r)) {
       <span style="color:#66d9ef">break</span>;
    }
-   $m_row <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_combine</span>($a_head, $a_row);
-   <span style="color:#a6e22e">print_r</span>($m_row);
+   $row_m <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_combine</span>($head_a, $row_a);
+   <span style="color:#a6e22e">print_r</span>($row_m);
 }
 </code></pre></div>
 
@@ -64,17 +64,17 @@ $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;&lt;
 </span><span style="color:#e6db74">February,Monday
 </span><span style="color:#e6db74"></span><span style="color:#e6db74">eof</span>;
 
-$s_row <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtok</span>($s, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
-$a_head <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_getcsv</span>($s_row);
+$row_s <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtok</span>($s, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+$head_a <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_getcsv</span>($row_s);
 
 <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
-   $s_row <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtok</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
-   <span style="color:#66d9ef">if</span> ($s_row <span style="color:#f92672">===</span> <span style="color:#66d9ef">false</span>) {
+   $row_s <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtok</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+   <span style="color:#66d9ef">if</span> ($row_s <span style="color:#f92672">===</span> <span style="color:#66d9ef">false</span>) {
       <span style="color:#66d9ef">break</span>;
    }
-   $a_row <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_getcsv</span>($s_row);
-   $m_row <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_combine</span>($a_head, $a_row);
-   <span style="color:#a6e22e">print_r</span>($m_row);
+   $row_a <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_getcsv</span>($row_s);
+   $row_m <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_combine</span>($head_a, $row_a);
+   <span style="color:#a6e22e">print_r</span>($row_m);
 }
 </code></pre></div>
 
