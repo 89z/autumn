@@ -40,3 +40,7 @@ Comparison of programming languages
 ## Author
 
 Steven Penny
+
+## Links
+
+<https://stackoverflow.com/questions/7610157/opposite-hungarian-notation>
