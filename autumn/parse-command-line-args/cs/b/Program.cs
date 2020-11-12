@@ -4,9 +4,9 @@ using System;
 
 class Program {
    static void Main(string[] a) {
-      var s_pre = "";
-      var s_suf = "";
-      var s_stem = "";
+      var pre_s = "";
+      var suf_s = "";
+      var stem_s = "";
 
       var o = new RootCommand {
          new Option<string>("-p", description: "prefix"),
@@ -15,18 +15,18 @@ class Program {
       };
 
       void Execute(string p, string s, string stem) {
-         s_pre = p;
-         s_suf = s;
-         s_stem = stem;
+         pre_s = p;
+         suf_s = s;
+         stem_s = stem;
       }
 
       o.Handler = CommandHandler.Create<string, string, string>(Execute);
       o.Invoke(a);
 
-      if (s_stem == "") {
+      if (stem_s == "") {
          Environment.Exit(1);
       }
 
-      Console.WriteLine(s_pre + s_stem + s_suf);
+      Console.WriteLine(pre_s + stem_s + suf_s);
    }
 }

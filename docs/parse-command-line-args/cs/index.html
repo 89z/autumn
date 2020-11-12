@@ -48,15 +48,15 @@
    }
 
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] a) {
-      <span style="color:#66d9ef">var</span> s_pre = <span style="color:#e6db74">&#34;&#34;</span>;
-      <span style="color:#66d9ef">var</span> s_suf = <span style="color:#e6db74">&#34;&#34;</span>;
-      <span style="color:#66d9ef">var</span> s_stem = <span style="color:#e6db74">&#34;&#34;</span>;
+      <span style="color:#66d9ef">var</span> pre_s = <span style="color:#e6db74">&#34;&#34;</span>;
+      <span style="color:#66d9ef">var</span> suf_s = <span style="color:#e6db74">&#34;&#34;</span>;
+      <span style="color:#66d9ef">var</span> stem_s = <span style="color:#e6db74">&#34;&#34;</span>;
       Parser.Default.ParseArguments&lt;Options&gt;(a).WithParsed&lt;Options&gt;(o =&gt; {
-         s_pre = o.Prefix;
-         s_suf = o.Suffix;
-         s_stem = o.Stem;
+         pre_s = o.Prefix;
+         suf_s = o.Suffix;
+         stem_s = o.Stem;
       });
-      Console.WriteLine(s_pre + s_stem + s_suf);
+      Console.WriteLine(pre_s + stem_s + suf_s);
    }
 }
 </code></pre></div>
@@ -73,9 +73,9 @@
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] a) {
-      <span style="color:#66d9ef">var</span> s_pre = <span style="color:#e6db74">&#34;&#34;</span>;
-      <span style="color:#66d9ef">var</span> s_suf = <span style="color:#e6db74">&#34;&#34;</span>;
-      <span style="color:#66d9ef">var</span> s_stem = <span style="color:#e6db74">&#34;&#34;</span>;
+      <span style="color:#66d9ef">var</span> pre_s = <span style="color:#e6db74">&#34;&#34;</span>;
+      <span style="color:#66d9ef">var</span> suf_s = <span style="color:#e6db74">&#34;&#34;</span>;
+      <span style="color:#66d9ef">var</span> stem_s = <span style="color:#e6db74">&#34;&#34;</span>;
 
       <span style="color:#66d9ef">var</span> o = <span style="color:#66d9ef">new</span> RootCommand {
          <span style="color:#66d9ef">new</span> Option&lt;<span style="color:#66d9ef">string</span>&gt;(<span style="color:#e6db74">&#34;-p&#34;</span>, description: <span style="color:#e6db74">&#34;prefix&#34;</span>),
@@ -84,19 +84,19 @@
       };
 
       <span style="color:#66d9ef">void</span> Execute(<span style="color:#66d9ef">string</span> p, <span style="color:#66d9ef">string</span> s, <span style="color:#66d9ef">string</span> stem) {
-         s_pre = p;
-         s_suf = s;
-         s_stem = stem;
+         pre_s = p;
+         suf_s = s;
+         stem_s = stem;
       }
 
       o.Handler = CommandHandler.Create&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">string</span>&gt;(Execute);
       o.Invoke(a);
 
-      <span style="color:#66d9ef">if</span> (s_stem == <span style="color:#e6db74">&#34;&#34;</span>) {
+      <span style="color:#66d9ef">if</span> (stem_s == <span style="color:#e6db74">&#34;&#34;</span>) {
          Environment.Exit(<span style="color:#ae81ff">1</span>);
       }
 
-      Console.WriteLine(s_pre + s_stem + s_suf);
+      Console.WriteLine(pre_s + stem_s + suf_s);
    }
 }
 </code></pre></div>

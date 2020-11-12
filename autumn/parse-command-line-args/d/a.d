@@ -1,11 +1,11 @@
 import std.getopt, std.stdio;
 
 int main(string[] a) {
-   string s_pre, s_suf;
+   string pre_s, suf_s;
 
    auto o = getopt(a,
-      'p', "prefix", &s_pre,
-      's', "suffix", &s_suf
+      'p', "prefix", &pre_s,
+      's', "suffix", &suf_s
    );
 
    if (a.length != 2) {
@@ -13,7 +13,7 @@ int main(string[] a) {
       return 1;
    }
 
-   string s_stem = a[1];
-   writeln(s_pre ~ s_stem ~ s_suf);
+   string stem_s = a[1];
+   writeln(pre_s ~ stem_s ~ suf_s);
    return 0;
 }

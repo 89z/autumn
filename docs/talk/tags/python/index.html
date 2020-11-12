@@ -32,34 +32,15 @@
 <h2 id="always-include-the-html">Always include the .html</h2>
 <p><a href="https://docs.python.org/library/email.compat32-message.html">https://docs.python.org/library/email.compat32-message.html</a></p>
 <h2 id="pip">Pip</h2>
-<p>Even if explicitly stated that the embeddable <a href="//docs.python.org/using/windows.html#windows-embeddable">version of Python does not
-support Pip</a>, it is possible with care. You need to:</p>
-<ol>
-<li>
-<p>Download and unzip Python <a href="//python.org/downloads">embeddable zip</a> file.</p>
-</li>
-<li>
-<p>In the file <code>python39._pth</code> or similar, uncomment the <code>import</code> command.
-Result should look similar to this:</p>
+<p>In the file <code>python39._pth</code> or similar, uncomment the <code>import</code> command. Result
+should look similar to this:</p>
 <pre><code>python39.zip
 .
 import site
-</code></pre></li>
-<li>
-<p><a href="//pip.pypa.io/en/stable/installing">Download get-pip.py</a> to the Python install folder</p>
-</li>
-<li>
-<p>Run <code>get-pip.py</code>. this installs Pip into the <code>Scripts</code> directory:</p>
-<pre><code>python get-pip.py
-</code></pre></li>
-<li>
-<p>Run Pip directly from command line as Pip is a executable program (this
-example is to install Pandas):</p>
-<pre><code>.\Scripts\pip install pandas
-</code></pre></li>
-</ol>
-<p>You could find more information about this in the <a href="//github.com/pypa/pip/issues/4207">Pip issue 4207</a></p>
-<p><a href="https://stackoverflow.com/questions/42666121#48906746">https://stackoverflow.com/questions/42666121#48906746</a></p>
+</code></pre><ul>
+<li><a href="https://bootstrap.pypa.io/get-pip.py">https://bootstrap.pypa.io/get-pip.py</a></li>
+<li><a href="https://stackoverflow.com/questions/42666121#48906746">https://stackoverflow.com/questions/42666121#48906746</a></li>
+</ul>
 
 </main>
 

@@ -12,14 +12,14 @@ class Program {
    }
 
    static void Main(string[] a) {
-      var s_pre = "";
-      var s_suf = "";
-      var s_stem = "";
+      var pre_s = "";
+      var suf_s = "";
+      var stem_s = "";
       Parser.Default.ParseArguments<Options>(a).WithParsed<Options>(o => {
-         s_pre = o.Prefix;
-         s_suf = o.Suffix;
-         s_stem = o.Stem;
+         pre_s = o.Prefix;
+         suf_s = o.Suffix;
+         stem_s = o.Stem;
       });
-      Console.WriteLine(s_pre + s_stem + s_suf);
+      Console.WriteLine(pre_s + stem_s + suf_s);
    }
 }
