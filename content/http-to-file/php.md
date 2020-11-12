@@ -11,6 +11,10 @@ tags: [php]
 
 <https://php.net/function.curl-init>
 
+{{< r "c.php" >}}
+
+<https://php.net/function.curl-setopt>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting2#http-get>
