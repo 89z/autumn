@@ -1,8 +1,6 @@
 <?php
 extension_loaded('curl') or die('curl');
-extension_loaded('openssl') or die('openssl');
-$s = 'https://speedtest.lax.hivelocity.net';
-$r = curl_init($s);
+$r = curl_init('http://speedtest.lax.hivelocity.net');
 curl_setopt($r, CURLOPT_RETURNTRANSFER, true);
-$s1 = curl_exec($r);
-echo $s1;
+$s = curl_exec($r);
+echo $s;

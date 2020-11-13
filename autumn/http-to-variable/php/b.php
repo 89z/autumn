@@ -1,4 +1,3 @@
 <?php
-$s = 'https://speedtest.lax.hivelocity.net';
-$s1 = file_get_contents($s);
-echo $s1;
+$s = file_get_contents('http://speedtest.lax.hivelocity.net');
+echo $s;

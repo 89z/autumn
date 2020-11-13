@@ -7,14 +7,14 @@ import (
 )
 
 func main() {
-   o_in, e := os.Open("a.txt")
+   in_o, e := os.Open("a.txt")
    if e != nil {
       log.Fatal(e)
    }
-   o_out, e := os.Create("b.txt")
+   out_o, e := os.Create("b.txt")
    if e != nil {
       log.Fatal(e)
    }
-   io.Copy(o_out, o_in)
+   io.Copy(out_o, in_o)
 }
 

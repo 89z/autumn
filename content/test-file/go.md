@@ -7,6 +7,8 @@ tags: [go]
 
 <https://golang.org/pkg/os#FileMode.IsRegular>
 
+Note that for existing files, these are four times slower:
+
 {{< r "b.go" >}}
 
 <https://golang.org/pkg/os#Open>

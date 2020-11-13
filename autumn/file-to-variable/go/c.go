@@ -7,12 +7,12 @@ import (
 )
 
 func main() {
-   o, e := os.Open("a.txt")
+   in_o, e := os.Open("a.go")
    if e != nil {
       os.Exit(1)
    }
-   o1 := strings.Builder{}
-   io.Copy(&o1, o)
-   s := o1.String()
+   out_o := strings.Builder{}
+   io.Copy(&out_o, in_o)
+   s := out_o.String()
    print(s)
 }
