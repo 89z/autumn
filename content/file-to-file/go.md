@@ -13,4 +13,5 @@ tags: [go]
 
 ## References
 
-<https://programming-idioms.org/idiom/228>
+- <https://hyperpolyglot.org/c#file-cp-rm-mv>
+- <https://programming-idioms.org/idiom/228>

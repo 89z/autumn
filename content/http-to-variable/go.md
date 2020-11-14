@@ -5,15 +5,15 @@ tags: [go]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/bytes#Buffer.ReadFrom>
+<https://golang.org/pkg/bytes#Buffer>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/io#Copy>
+<https://golang.org/pkg/io/ioutil#ReadAll>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/io/ioutil#ReadAll>
+<https://golang.org/pkg/strings#Builder>
 
 ## References
 

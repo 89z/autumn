@@ -1,20 +1,19 @@
 package main
 
 import (
-   "fmt"
-   "io/ioutil"
-   "log"
+   "io"
    "net/http"
+   "os"
+   "strings"
 )
 
 func main() {
-   o, e := http.Get("http://speedtest.lax.hivelocity.net")
+   in_o, e := http.Get("http://speedtest.lax.hivelocity.net")
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
-   y, e := ioutil.ReadAll(o.Body)
-   if e != nil {
-      log.Fatal(e)
-   }
-   fmt.Printf("%s", y)
+   out_o := strings.Builder{}
+   io.Copy(&out_o, in_o.Body)
+   s := out_o.String()
+   print(s)
 }
