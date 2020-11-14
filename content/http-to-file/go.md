@@ -5,13 +5,9 @@ tags: [go]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/bytes#Buffer>
-
-{{< r "b.go" >}}
-
 <https://golang.org/pkg/io#Writer>
 
-{{< r "c.go" >}}
+{{< r "b.go" >}}
 
 <https://golang.org/pkg/os#File.ReadFrom>
 

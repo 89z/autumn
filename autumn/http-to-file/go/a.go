@@ -1,33 +1,32 @@
 package main
 
 import (
-   "bytes"
    "io"
+   "log"
    "net/http"
    "os"
-   "path"
 )
 
-func Get(url_s string, ret_b bool) (string, error) {
-   base_s := path.Base(url_s)
-   get_o, e := http.Get(url_s)
-   if e != nil {
-      return "", e
-   }
-   create_o, e := os.Create(base_s)
-   if e != nil {
-      return "", e
-   }
-   if ! ret_b {
-      io.Copy(create_o, get_o.Body)
-      return "", nil
-   }
-   buf_o := bytes.Buffer{}
-   tee_o := io.TeeReader(get_o.Body, &buf_o)
-   io.Copy(create_o, tee_o)
-   return buf_o.String(), nil
+type Progress struct {
+   Received int
+}
+
+func (o *Progress) Write(y []byte) (int, error) {
+   n := len(y)
+   o.Received += n
+   println(o.Received)
+   return n, nil
 }
 
 func main() {
-   Get("https://speedtest.lax.hivelocity.net/index.html", false)
+   get_o, e := http.Get("http://speedtest.lax.hivelocity.net/10Mio.dat")
+   if e != nil {
+      log.Fatal(e)
+   }
+   create_o, e := os.Create(os.DevNull)
+   if e != nil {
+      log.Fatal(e)
+   }
+   tee_o := io.TeeReader(get_o.Body, &Progress{})
+   io.Copy(create_o, tee_o)
 }
