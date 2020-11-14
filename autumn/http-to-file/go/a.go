@@ -1,14 +1,13 @@
 package main
 
 import (
-   "io"
    "log"
    "net/http"
    "os"
 )
 
 func main() {
-   in_o, e := http.Get("https://speedtest.lax.hivelocity.net")
+   in_o, e := http.Get("http://speedtest.lax.hivelocity.net")
    if e != nil {
       log.Fatal(e)
    }
@@ -16,5 +15,5 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   io.Copy(out_o, in_o.Body)
+   out_o.ReadFrom(in_o.Body)
 }

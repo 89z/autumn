@@ -1,7 +1,6 @@
 package main
 
 import (
-   "io"
    "log"
    "os"
 )
@@ -15,6 +14,5 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   io.Copy(out_o, in_o)
+   out_o.ReadFrom(in_o)
 }
-
