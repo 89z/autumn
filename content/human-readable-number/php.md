@@ -3,7 +3,8 @@ title: PHP
 tags: [php]
 ---
 
-{{< r "a.php" >}}
+{{< r "for.php" >}}
+{{< r "log.php" >}}
 
 ## References
 

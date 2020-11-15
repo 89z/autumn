@@ -35,24 +35,27 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;golang.org/x/text/language&#34;</span>
-   <span style="color:#e6db74">&#34;golang.org/x/text/message&#34;</span>
-)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">HumanReadable</span>(<span style="color:#a6e22e">in_n</span> <span style="color:#66d9ef">float32</span>) <span style="color:#66d9ef">string</span> {
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34; k&#34;</span>, <span style="color:#e6db74">&#34; M&#34;</span>, <span style="color:#e6db74">&#34; G&#34;</span>}
+   <span style="color:#a6e22e">out_n</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">in_n</span> &gt; <span style="color:#ae81ff">1024</span> {
+      <span style="color:#a6e22e">in_n</span> <span style="color:#f92672">/=</span> <span style="color:#ae81ff">1024</span>
+      <span style="color:#a6e22e">out_n</span><span style="color:#f92672">++</span>
+   }
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%.3f&#34;</span>, <span style="color:#a6e22e">in_n</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">out_n</span>]
+}
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1000</span>
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">NewPrinter</span>(<span style="color:#a6e22e">language</span>.<span style="color:#a6e22e">English</span>).<span style="color:#a6e22e">Sprint</span>(<span style="color:#a6e22e">n</span>)
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;1,000&#34;</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">HumanReadable</span>(<span style="color:#ae81ff">1264</span>)
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;1.234 k&#34;</span>)
 }
 </code></pre></div>
 
+<p><a href="https://golang.org/ref/spec#For_clause">https://golang.org/ref/spec#For_clause</a></p>
 <h2 id="references">References</h2>
-<ul>
-<li><a href="https://rosettacode.org/wiki/Suffixation_of_decimal_numbers">https://rosettacode.org/wiki/Suffixation_of_decimal_numbers</a></li>
-<li><a href="https://yourbasic.org/golang/formatting-byte-size-to-human-readable-format">https://yourbasic.org/golang/formatting-byte-size-to-human-readable-format</a></li>
-</ul>
+<p><a href="https://yourbasic.org/golang/formatting-byte-size-to-human-readable-format">https://yourbasic.org/golang/formatting-byte-size-to-human-readable-format</a></p>
 
 </main>
 

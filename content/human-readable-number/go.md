@@ -3,9 +3,10 @@ title: Go
 tags: [go]
 ---
 
-{{< r "a.go" >}}
+{{< r "for.go" >}}
+
+<https://golang.org/ref/spec#For_clause>
 
 ## References
 
-- <https://rosettacode.org/wiki/Suffixation_of_decimal_numbers>
-- <https://yourbasic.org/golang/formatting-byte-size-to-human-readable-format>
+<https://yourbasic.org/golang/formatting-byte-size-to-human-readable-format>
