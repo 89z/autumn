@@ -3,9 +3,14 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< r "Program.cs" >}}
+{{< r "log/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/api/system.math.log>
+
+{{< r "while/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/while>
 
 ## References
 
-- <https://stackoverflow.com/questions/281640>
-- <https://stackoverflow.com/questions/60159459>
+<https://stackoverflow.com/questions/281640>
