@@ -1,9 +1,12 @@
 package main
 import "os"
 
+func IsFile(s string) bool {
+   o, e := os.Stat(s)
+   return e == nil && o.Mode().IsRegular()
+}
+
 func main() {
-   o, e := os.Stat("a.go")
-   if os.IsNotExist(e) || ! o.Mode().IsRegular() {
-      os.Exit(1)
-   }
+   b := IsFile("a.go")
+   println(b)
 }
