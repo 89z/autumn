@@ -2,19 +2,23 @@ package main
 
 import (
    "bytes"
-   "log"
-   "net/http"
+   "os"
 )
 
+func GetContents(s string) (string, error) {
+   open_o, e := os.Open(s)
+   if e != nil {
+      return "", e
+   }
+   buf_o := bytes.Buffer{}
+   buf_o.ReadFrom(open_o)
+   return buf_o.String(), nil
+}
+
 func main() {
-   in_o, e := http.Get("http://speedtest.lax.hivelocity.net")
+   s, e := GetContents("a.go")
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
-   out_o := bytes.Buffer{}
-   n, e := out_o.ReadFrom(in_o.Body)
-   if e != nil {
-      log.Fatal(e)
-   }
-   print(n, out_o.String())
+   print(s)
 }

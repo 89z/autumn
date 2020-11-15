@@ -3,18 +3,21 @@ package main
 import (
    "fmt"
    "io/ioutil"
-   "log"
    "os"
 )
 
-func main() {
-   o, e := os.Open("a.txt")
+func GetContents(s string) ([]byte, error) {
+   o, e := os.Open(s)
    if e != nil {
-      log.Fatal(e)
+      return []byte{}, e
    }
-   y, e := ioutil.ReadAll(o)
+   return ioutil.ReadAll(o)
+}
+
+func main() {
+   y, e := GetContents("a.go")
    if e != nil {
-      log.Fatal(e)
+      os.Exit(1)
    }
    fmt.Printf("%s", y)
 }

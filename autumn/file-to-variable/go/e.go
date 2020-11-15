@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-   y, e := ioutil.ReadFile("a.txt")
+   y, e := ioutil.ReadFile("a.go")
    if e != nil {
       os.Exit(1)
    }
