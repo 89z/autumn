@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Human readable number / Dart</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/a8nj/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/human-readable-number/">Human readable number</a> / Dart
+</h1>
+<section class="page">
+   <time>Sun Nov 15 2020</time>
+   
+   <a href="/autumn/categories/number/">number</a>
+   
+</section>
+   
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart">toHumanReadable(<span style="color:#66d9ef">int</span> size) {
+  <span style="color:#66d9ef">final</span> units <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;KMGT&#34;</span>;
+  <span style="color:#66d9ef">var</span> unit <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+  <span style="color:#66d9ef">var</span> left <span style="color:#f92672">=</span> size <span style="color:#f92672">*</span> <span style="color:#ae81ff">1.0</span>;
+  <span style="color:#66d9ef">while</span> (left <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1100</span> <span style="color:#f92672">&amp;&amp;</span> unit <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>) {
+    left <span style="color:#f92672">/=</span> <span style="color:#ae81ff">1024</span>;
+    unit<span style="color:#f92672">++</span>;
+  }
+  <span style="color:#66d9ef">if</span> (unit <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>size<span style="color:#e6db74">}</span><span style="color:#e6db74">B&#34;</span>;
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>left.toStringAsFixed(<span style="color:#ae81ff">1</span>)<span style="color:#e6db74">}${</span>units[unit]<span style="color:#e6db74">}</span><span style="color:#e6db74">iB&#34;</span>;
+  }
+}
+
+<span style="color:#66d9ef">void</span> main() {
+   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> toHumanReadable(<span style="color:#ae81ff">1264</span>);
+   print(s);
+}
+
+</code></pre></div>
+
+<h2 id="references">References</h2>
+<p><a href="https://github.com/lilydjwg/swapview-rosetta/blob/master/Dart/swapview.dart">https://github.com/lilydjwg/swapview-rosetta/blob/master/Dart/swapview.dart</a></p>
+
+</main>
+
+</body>
+</html>
