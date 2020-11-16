@@ -1,12 +1,10 @@
 <?php
-declare(strict_types = 1);
-error_reporting(E_ALL);
 
-function f($n3) {
-   $n2 = log($n3, 1024);
-   $n = floor($n2);
-   return sprintf('%.3f', $n3 / 1024 ** $n) . ['', ' k', ' M', ' G'][$n];
+function format_number($n) {
+   $n2 = log($n, 1024);
+   $n3 = floor($n2);
+   return sprintf('%.3f', $n / 1024 ** $n3) . ['', ' k', ' M', ' G'][$n3];
 }
 
-$s = f(1264);
+$s = format_number(1264);
 var_dump($s == '1.234 k');

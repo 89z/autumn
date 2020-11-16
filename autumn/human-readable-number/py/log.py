@@ -1,9 +1,9 @@
 import math
 
-def f(n2):
-   n = math.log(n2, 1024)
-   n = math.floor(n)
-   return '%.3f' % (n2 / 1024 ** n) + ('', ' k', ' M', ' G')[n]
+def number_format(n):
+   n2 = math.log(n, 1024)
+   n3 = math.floor(n2)
+   return '%.3f' % (n / 1024 ** n3) + ('', ' k', ' M', ' G')[n3]
 
-s = f(1264)
-print(s)
+s = number_format(1264)
+print(s == '1.234 k')

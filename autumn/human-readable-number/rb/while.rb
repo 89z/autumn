@@ -1,4 +1,4 @@
-def f(n)
+def number_format(n)
    n2 = 0
    while n > 1024
       n /= 1024.0
@@ -7,4 +7,5 @@ def f(n)
    return '%.3f' % n + ['', ' k', ' M', ' G'][n2]
 end
 
-puts f(1264)
+s = number_format(1264)
+puts s == '1.234 k'

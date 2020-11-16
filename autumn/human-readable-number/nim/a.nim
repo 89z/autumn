@@ -1,11 +1,13 @@
 import strformat
 
-proc filesize(size: float): string =
-   var left = size
-   var out_n = 0
-   while left > 1024:
-      left /= 1024
-      out_n += 1
-   return fmt"{left:.3f}" & ["", " k", " M", " G"][out_n]
+proc numberFormat(n: float): string =
+   var
+      n = n
+      n2 = 0
+   while n > 1024:
+      n /= 1024
+      n2 += 1
+   return fmt"{n:.3f}" & ["", " k", " M", " G"][n2]
 
-echo filesize(1264)
+let s = numberFormat(1264)
+echo s == "1.234 k"
