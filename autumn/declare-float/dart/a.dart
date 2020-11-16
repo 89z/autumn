@@ -1,10 +1,10 @@
 void main() {
    // example 1
-   num n1 = 9.9;
+   double n1 = 10;
    // example 2
-   double n2 = 9.9;
+   num n2 = 9.9;
    // example 3
-   double n3 = 1e6;
+   var n3 = 9.9;
    // print
    print([n1, n2, n3]);
 }

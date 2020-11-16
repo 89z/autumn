@@ -5,7 +5,7 @@ tags: [d]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/spec/type.html>
+<https://dlang.org/spec/lex.html#floatliteral>
 
 ## References
 
