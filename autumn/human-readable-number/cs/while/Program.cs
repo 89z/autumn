@@ -1,18 +1,18 @@
 using System;
 
 class Program {
-   static string HumanReadable(double len) {
-      int order = 0;
-      string[] s = { "", " k", " M", " G" };
-      while (len >= 1024) {
-         order++;
-         len /= 1024;
+   static string NumberFormat(double n) {
+      string[] a = { "", " k", " M", " G" };
+      int n2 = 0;
+      while (n >= 1024) {
+         n /= 1024;
+         n2++;
       }
-      return String.Format("{0:0.###}", len) + s[order];
+      return String.Format("{0:f3}", n) + a[n2];
    }
 
    static void Main() {
-      var s = HumanReadable(1264);
+      var s = NumberFormat(1264);
       Console.WriteLine(s == "1.234 k");
    }
 }

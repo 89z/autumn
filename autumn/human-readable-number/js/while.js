@@ -1,11 +1,11 @@
-function human_readable(in_n) {
-   let out_n = 0;
-   while (in_n > 1024) {
-      in_n /= 1024;
-      out_n++;
+function numberFormat(n) {
+   let n2 = 0;
+   while (n > 1024) {
+      n /= 1024;
+      n2++;
    }
-   return in_n.toFixed(3) + ['', ' k', ' M', ' G'][out_n];
+   return n.toFixed(3) + ['', ' k', ' M', ' G'][n2];
 }
 
-let s = human_readable(1264);
+let s = numberFormat(1264);
 console.log(s == '1.234 k');

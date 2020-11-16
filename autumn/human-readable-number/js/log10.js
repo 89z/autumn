@@ -1,8 +1,8 @@
-function human_readable(n3) {
-   let n = Math.log10(n3) / 3;
-   n = Math.floor(n);
-   return (n3 / 1000 ** n).toFixed(3) + ['', ' k', ' M', ' G'][n];
+function numberFormat(n) {
+   let n2 = Math.log10(n) / 3;
+   let n3 = Math.floor(n2);
+   return (n / 1000 ** n3).toFixed(3) + ['', ' k', ' M', ' G'][n3];
 }
 
-let s = human_readable(1264);
+let s = numberFormat(1264);
 console.log(s == '1.264 k');

@@ -1,17 +1,17 @@
 package main
 import "fmt"
 
-func HumanReadable(in_n float32) string {
+func NumberFormat(n float32) string {
    a := []string{"", " k", " M", " G"}
-   out_n := 0
-   for in_n > 1024 {
-      in_n /= 1024
-      out_n++
+   n2 := 0
+   for n > 1024 {
+      n /= 1024
+      n2++
    }
-   return fmt.Sprintf("%.3f", in_n) + a[out_n]
+   return fmt.Sprintf("%.3f", n) + a[n2]
 }
 
 func main() {
-   s := HumanReadable(1264)
+   s := NumberFormat(1264)
    println(s == "1.234 k")
 }

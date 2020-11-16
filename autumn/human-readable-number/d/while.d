@@ -1,15 +1,15 @@
 import std.conv, std.format, std.stdio;
 
-string filesize(double in_n) {
-   int out_n = 0;
-   while (in_n > 1024) { 
-      in_n /= 1024;
-      out_n++;
+string numberFormat(double n) {
+   int n2 = 0;
+   while (n > 1024) {
+      n /= 1024;
+      n2++;
    }
-   return format("%.3f", in_n) ~ ["", " k", " M", " G"][out_n];
+   return format("%.3f", n) ~ ["", " k", " M", " G"][n2];
 }
 
 void main() {
-   auto s = filesize(1264);
-   writeln(s);
+   auto s = numberFormat(1264);
+   writeln(s == "1.234 k");
 }
