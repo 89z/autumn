@@ -9,5 +9,5 @@ proc numberFormat(n: float): string =
       n2 += 1
    return fmt"{n:.3f}" & ["", " k", " M", " G"][n2]
 
-let s = numberFormat(901234567)
-echo s
+let s = numberFormat(9012345678'd)
+echo s == "9.012 G"

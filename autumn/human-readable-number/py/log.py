@@ -1,9 +1,8 @@
 import math
 
 def number_format(n):
-   n2 = math.log(n, 1024)
-   n3 = math.floor(n2)
-   return '%.3f' % (n / 1024 ** n3) + ('', ' k', ' M', ' G')[n3]
+   n2 = int(math.log10(n) / 3)
+   return '%.3f' % (n / 1000 ** n2) + ('', ' k', ' M', ' G')[n2]
 
-s = number_format(1264)
-print(s == '1.234 k')
+s = number_format(9012345678)
+print(s == '9.012 G')

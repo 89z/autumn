@@ -4,7 +4,7 @@ tags: [php]
 ---
 
 {{< r "for.php" >}}
-{{< r "log.php" >}}
+{{< r "log10.php" >}}
 
 ## References
 

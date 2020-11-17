@@ -3,9 +3,7 @@ title: Python
 tags: [python]
 ---
 
-{{< r "def.py" >}}
 {{< r "log.py" >}}
-{{< r "log2.py" >}}
 {{< r "while.py" >}}
 
 ## References
