@@ -1,6 +1,6 @@
 def number_format(n)
    n2 = 0
-   while n > 1000
+   while n >= 1000
       n /= 1000.0
       n2 += 1
    end

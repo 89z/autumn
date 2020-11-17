@@ -2,8 +2,8 @@ import std.format, std.stdio;
 
 string numberFormat(double n) {
    int n2 = 0;
-   while (n > 1000) {
-      n /= 1000;
+   while (n >= 1e3) {
+      n /= 1e3;
       n2++;
    }
    return format("%.3f", n) ~ ["", " k", " M", " G"][n2];

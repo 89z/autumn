@@ -3,7 +3,13 @@ title: Rust
 tags: [rust]
 ---
 
+{{< r "while.rs" >}}
+
+<https://doc.rust-lang.org/std/keyword.while.html>
+
 {{< r "log.rs" >}}
+
+<https://doc.rust-lang.org/std/primitive.f64.html#method.log>
 
 ## References
 

@@ -1,8 +1,8 @@
 <?php
 
 function format_number($n) {
-   for ($n2 = 0; $n > 1000; $n2++) {
-      $n /= 1000;
+   for ($n2 = 0; $n >= 1e3; $n2++) {
+      $n /= 1e3;
    }
    return sprintf('%.3f', $n) . ['', ' k', ' M', ' G'][$n2];
 }

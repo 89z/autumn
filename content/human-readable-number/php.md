@@ -4,7 +4,12 @@ tags: [php]
 ---
 
 {{< r "for.php" >}}
+
+<https://php.net/control-structures.for>
+
 {{< r "log10.php" >}}
+
+<https://php.net/function.log10>
 
 ## References
 

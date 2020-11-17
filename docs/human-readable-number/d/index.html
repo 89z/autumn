@@ -29,7 +29,7 @@
    <a href="/autumn/categories/number/">number</a>
    
 </section>
-   <p>
+   
 
 
 
@@ -38,7 +38,7 @@
 
 <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">numberFormat</span><span style="color:#f92672">(</span><span style="color:#66d9ef">real</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> n2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">cast</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)</span> log10<span style="color:#f92672">(</span>n<span style="color:#f92672">)</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">;</span>
-   n <span style="color:#f92672">/=</span> pow<span style="color:#f92672">(</span><span style="color:#ae81ff">1000</span><span style="color:#f92672">,</span> n2<span style="color:#f92672">);</span>
+   n <span style="color:#f92672">/=</span> pow<span style="color:#f92672">(</span><span style="color:#ae81ff">1e3</span><span style="color:#f92672">,</span> n2<span style="color:#f92672">);</span>
    <span style="color:#66d9ef">return</span> format<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;%.3f&#34;</span><span style="color:#f92672">,</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">~</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34; k&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34; M&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34; G&#34;</span><span style="color:#f92672">][</span>n2<span style="color:#f92672">];</span>
 <span style="color:#f92672">}</span>
 
@@ -48,6 +48,7 @@
 <span style="color:#f92672">}</span>
 </code></pre></div>
 
+<p><a href="https://dlang.org/library/std/math/log10.html">https://dlang.org/library/std/math/log10.html</a></p>
 
 
 
@@ -57,8 +58,8 @@
 
 <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">numberFormat</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">int</span> n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1000</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      n <span style="color:#f92672">/=</span> <span style="color:#ae81ff">1000</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1e3</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      n <span style="color:#f92672">/=</span> <span style="color:#ae81ff">1e3</span><span style="color:#f92672">;</span>
       n2<span style="color:#f92672">++;</span>
    <span style="color:#f92672">}</span>
    <span style="color:#66d9ef">return</span> format<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;%.3f&#34;</span><span style="color:#f92672">,</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">~</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34; k&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34; M&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34; G&#34;</span><span style="color:#f92672">][</span>n2<span style="color:#f92672">];</span>
@@ -69,12 +70,12 @@
    writeln<span style="color:#f92672">(</span>s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;9.012 G&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
-</p>
-<p><a href="https://github.com/lilydjwg/swapview-rosetta/blob/master/D/swapview.d">https://github.com/lilydjwg/swapview-rosetta/blob/master/D/swapview.d</a></p>
+
+<p><a href="https://dlang.org/spec/statement.html#while-statement">https://dlang.org/spec/statement.html#while-statement</a></p>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://github.com/CyberShadow/btdu/blob/master/source/btdu/browser.d">https://github.com/CyberShadow/btdu/blob/master/source/btdu/browser.d</a></li>
 <li><a href="https://github.com/Pure-D/serve-d/blob/master/http/source/served/http.d">https://github.com/Pure-D/serve-d/blob/master/http/source/served/http.d</a></li>
+<li><a href="https://github.com/lilydjwg/swapview-rosetta/blob/master/D/swapview.d">https://github.com/lilydjwg/swapview-rosetta/blob/master/D/swapview.d</a></li>
 </ul>
 
 </main>
