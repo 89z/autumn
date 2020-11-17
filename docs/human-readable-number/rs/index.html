@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Human readable number / Rust</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/a8nj/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/human-readable-number/">Human readable number</a> / Rust
+</h1>
+<section class="page">
+   <time>Sun Nov 15 2020</time>
+   
+   <a href="/autumn/categories/number/">number</a>
+   
+</section>
+   
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">number_format</span>(n: <span style="color:#66d9ef">f64</span>) -&gt; String {
+   <span style="color:#66d9ef">let</span> n2 <span style="color:#f92672">=</span> n.log(<span style="color:#ae81ff">1024</span><span style="color:#66d9ef">f64</span>);
+   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> n <span style="color:#f92672">/</span> <span style="color:#ae81ff">1024</span><span style="color:#66d9ef">f64</span>.powi(n2 <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">i32</span>);
+   format<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:.3}&#34;</span>, n) <span style="color:#f92672">+</span> [<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34; k&#34;</span>, <span style="color:#e6db74">&#34; M&#34;</span>, <span style="color:#e6db74">&#34; G&#34;</span>][n2 <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">usize</span>]
+}
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> number_format(<span style="color:#ae81ff">1264.</span>);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
+}
+</code></pre></div>
+
+<p><a href="https://github.com/ltoddy/cloc-rs/blob/master/src/util.rs">https://github.com/ltoddy/cloc-rs/blob/master/src/util.rs</a></p>
+<h2 id="references">References</h2>
+<pre><code>f64 kB MB GB TB PB EB ZB YB language:rust
+</code></pre>
+</main>
+
+</body>
+</html>

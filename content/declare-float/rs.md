@@ -5,7 +5,7 @@ tags: [rust]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/primitive.f64.html>
+<https://doc.rust-lang.org/reference/tokens.html#floating-point-literals>
 
 ## References
 
