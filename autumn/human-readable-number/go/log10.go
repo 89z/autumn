@@ -6,12 +6,12 @@ import (
 )
 
 func NumberFormat(n float64) string {
-   n2 := int(math.Log10(n) / 3)
-   n /= math.Pow(1024, float64(n2))
+   n2 := int(math.Log10(n)) / 3
+   n /= math.Pow10(n2 * 3)
    return fmt.Sprintf("%.3f", n) + []string{"", " k", " M", " G"}[n2]
 }
 
 func main() {
-   s := NumberFormat(1264)
+   s := NumberFormat(1234)
    println(s)
 }

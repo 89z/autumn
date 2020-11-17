@@ -1,4 +1,4 @@
-import std.conv, std.format, std.stdio;
+import std.format, std.stdio;
 
 string numberFormat(double n) {
    int n2 = 0;
