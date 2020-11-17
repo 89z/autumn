@@ -7,6 +7,6 @@ string numberFormat(real n) {
 }
 
 void main() {
-   auto s = numberFormat(123456);
-   s.writeln;
+   auto s = numberFormat(9012345678);
+   writeln(s == "9.012 G");
 }

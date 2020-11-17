@@ -1,8 +1,7 @@
 function numberFormat(n) {
-   let n2 = Math.log10(n) / 3;
-   let n3 = Math.floor(n2);
-   return (n / 1000 ** n3).toFixed(3) + ['', ' k', ' M', ' G'][n3];
+   let n2 = Math.trunc(Math.log10(n) / 3);
+   return (n / 1000 ** n2).toFixed(3) + ['', ' k', ' M', ' G'][n2];
 }
 
-let s = numberFormat(1264);
-console.log(s == '1.264 k');
+let s = numberFormat(9012345678);
+console.log(s == '9.012 G');

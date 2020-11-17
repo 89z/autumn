@@ -8,7 +8,7 @@ class Program {
    }
 
    static void Main() {
-      var s = NumberFormat(1234);
-      Console.WriteLine(s == "1.234 k");
+      var s = NumberFormat(9012345678);
+      Console.WriteLine(s == "9.012 G");
    }
 }

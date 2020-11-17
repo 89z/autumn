@@ -3,6 +3,7 @@ title: D
 tags: [d]
 ---
 
+{{< r "logten.d" >}}
 {{< r "while.d" >}}
 
 <https://github.com/lilydjwg/swapview-rosetta/blob/master/D/swapview.d>

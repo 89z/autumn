@@ -2,14 +2,14 @@ import std.format, std.stdio;
 
 string numberFormat(double n) {
    int n2 = 0;
-   while (n > 1024) {
-      n /= 1024;
+   while (n > 1000) {
+      n /= 1000;
       n2++;
    }
    return format("%.3f", n) ~ ["", " k", " M", " G"][n2];
 }
 
 void main() {
-   auto s = numberFormat(1264);
-   writeln(s == "1.234 k");
+   auto s = numberFormat(9012345678);
+   writeln(s == "9.012 G");
 }

@@ -11,14 +11,6 @@ tags: [javascript]
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Math/log10>
 
-{{< r "log2.js" >}}
-
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Math/log2>
-
-{{< r "log.js" >}}
-
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Math/log>
-
 {{< r "while.js" >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/while>

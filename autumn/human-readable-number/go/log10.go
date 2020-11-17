@@ -12,6 +12,6 @@ func NumberFormat(n float64) string {
 }
 
 func main() {
-   s := NumberFormat(1234)
-   println(s)
+   s := NumberFormat(9012345678)
+   println(s == "9.012 G")
 }
