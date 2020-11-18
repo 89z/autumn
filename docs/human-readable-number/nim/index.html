@@ -38,12 +38,12 @@
 
 <span style="color:#66d9ef">proc </span><span style="color:#a6e22e">numberFormat</span>(n: <span style="color:#66d9ef">float</span>): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span>
    <span style="color:#66d9ef">var</span>
-      n <span style="color:#f92672">=</span> n
-      n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-   <span style="color:#66d9ef">while</span> n <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1e3</span>:
-      n <span style="color:#f92672">/=</span> <span style="color:#ae81ff">1e3</span>
-      n2 <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-   <span style="color:#66d9ef">return</span> <span style="color:#e6db74">fmt&#34;{n:.3f}&#34;</span> <span style="color:#f92672">&amp;</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34; k&#34;</span>, <span style="color:#e6db74">&#34; M&#34;</span>, <span style="color:#e6db74">&#34; G&#34;</span><span style="color:#f92672">][</span>n2<span style="color:#f92672">]</span>
+      n2 <span style="color:#f92672">=</span> n
+      n3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+   <span style="color:#66d9ef">while</span> n2 <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1e3</span>:
+      n2 <span style="color:#f92672">/=</span> <span style="color:#ae81ff">1e3</span>
+      n3 <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+   <span style="color:#66d9ef">return</span> <span style="color:#e6db74">fmt&#34;{n2:.3f}&#34;</span> <span style="color:#f92672">&amp;</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34; k&#34;</span>, <span style="color:#e6db74">&#34; M&#34;</span>, <span style="color:#e6db74">&#34; G&#34;</span><span style="color:#f92672">][</span>n3<span style="color:#f92672">]</span>
 
 <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> numberFormat(<span style="color:#ae81ff">9012345678e0</span>)
 echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;9.012 G&#34;</span>

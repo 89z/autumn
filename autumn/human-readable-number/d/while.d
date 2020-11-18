@@ -1,12 +1,13 @@
 import std.format, std.stdio;
 
-string numberFormat(double n) {
-   int n2 = 0;
-   while (n >= 1e3) {
-      n /= 1e3;
-      n2++;
+string numberFormat(real n) {
+   real n2 = n;
+   int n3 = 0;
+   while (n2 >= 1e3) {
+      n2 /= 1e3;
+      n3++;
    }
-   return format("%.3f", n) ~ ["", " k", " M", " G"][n2];
+   return format("%.3f", n2) ~ ["", " k", " M", " G"][n3];
 }
 
 void main() {

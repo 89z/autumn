@@ -2,12 +2,13 @@ using System;
 
 class Program {
    static string NumberFormat(double n) {
-      int n2 = 0;
-      while (n >= 1000) {
-         n /= 1000;
-         n2++;
+      double n2 = n;
+      int n3 = 0;
+      while (n2 >= 1000) {
+         n2 /= 1000;
+         n3++;
       }
-      return String.Format("{0:f3}", n) + new[]{"", " k", " M", " G"}[n2];
+      return String.Format("{0:f3}", n2) + new[]{"", " k", " M", " G"}[n3];
    }
 
    static void Main() {

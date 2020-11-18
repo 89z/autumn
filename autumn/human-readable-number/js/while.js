@@ -1,10 +1,10 @@
 function numberFormat(n) {
-   let n2 = 0;
-   while (n >= 1000) {
-      n /= 1000;
-      n2++;
+   let [n2, n3] = [n, 0];
+   while (n2 >= 1000) {
+      n2 /= 1000;
+      n3++;
    }
-   return n.toFixed(3) + ['', ' k', ' M', ' G'][n2];
+   return n2.toFixed(3) + ['', ' k', ' M', ' G'][n3];
 }
 
 let s = numberFormat(9012345678);

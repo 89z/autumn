@@ -1,10 +1,11 @@
 String numberFormat(double n) {
-   int n2 = 0;
-   while (n >= 1000) {
-      n /= 1000;
-      n2++;
+   double n2 = n;
+   int n3 = 0;
+   while (n2 >= 1000) {
+      n2 /= 1000;
+      n3++;
    }
-   return n.toStringAsFixed(3) + ['', ' k', ' M', ' G'][n2];
+   return n2.toStringAsFixed(3) + ['', ' k', ' M', ' G'][n3];
 }
 
 void main() {

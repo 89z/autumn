@@ -1,10 +1,11 @@
-fn number_format(mut n: f64) -> String {
-   let mut n2 = 0;
-   while n >= 1e3 {
-      n /= 1e3;
-      n2 += 1;
+fn number_format(n: f64) -> String {
+   let mut n2 = n;
+   let mut n3 = 0;
+   while n2 >= 1e3 {
+      n2 /= 1e3;
+      n3 += 1;
    }
-   format!("{:.3}", n) + ["", " k", " M", " G"][n2]
+   format!("{:.3}", n2) + ["", " k", " M", " G"][n3]
 }
 
 fn main() {
