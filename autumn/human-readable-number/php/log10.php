@@ -1,7 +1,7 @@
 <?php
 
-function format_number($n) {
-   $n2 = (int)log10($n) / 3;
+function format_number(float $n): string {
+   $n2 = (int)(log10($n) / 3);
    return sprintf('%.3f', $n / 1e3 ** $n2) . ['', ' k', ' M', ' G'][$n2];
 }
 

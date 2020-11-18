@@ -1,6 +1,6 @@
 <?php
 
-function format_number($n) {
+function format_number(float $n): string {
    for ($n2 = 0; $n >= 1e3; $n2++) {
       $n /= 1e3;
    }

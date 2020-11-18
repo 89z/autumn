@@ -1,20 +1,33 @@
 package main
 
 import (
+   "fmt"
    "io"
+   "io/ioutil"
    "log"
+   "math"
    "net/http"
-   "os"
 )
 
-type Progress struct {
-   Received int
+func NumberFormat(n float64) string {
+   n2 := int(math.Log10(n)) / 3
+   n /= math.Pow10(n2 * 3)
+   return fmt.Sprintf("%.3f", n) + []string{"", " k", " M", " G"}[n2]
 }
 
-func (o *Progress) Write(y []byte) (int, error) {
-   n := len(y)
-   o.Received += n
-   println(o.Received)
+type Progress struct {
+   Parent io.Reader
+   Total float64
+}
+
+func (o *Progress) Read(y []byte) (int, error) {
+   n, e := o.Parent.Read(y)
+   if e != nil {
+      fmt.Println()
+      return 0, e
+   }
+   o.Total += float64(n)
+   fmt.Printf("Received %9s\r", NumberFormat(o.Total))
    return n, nil
 }
 
@@ -23,10 +36,6 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   create_o, e := os.Create(os.DevNull)
-   if e != nil {
-      log.Fatal(e)
-   }
-   tee_o := io.TeeReader(get_o.Body, &Progress{})
-   io.Copy(create_o, tee_o)
+   prog_o := Progress{get_o.Body, 0}
+   io.Copy(ioutil.Discard, &prog_o)
 }
