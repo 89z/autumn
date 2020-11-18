@@ -5,8 +5,7 @@ tags: [go]
 
 {{< r "a.go" >}}
 
-- <https://golang.org/pkg/io#Writer>
-- <https://stackoverflow.com/questions/26050380>
+<https://golang.org/pkg/io#Writer>
 
 {{< r "b.go" >}}
 

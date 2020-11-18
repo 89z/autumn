@@ -11,6 +11,10 @@ tags: [go]
 
 <https://golang.org/pkg/os#LookupEnv>
 
+{{< r "c.go" >}}
+
+<https://golang.org/pkg/os#UserCacheDir>
+
 ## References
 
 - <https://hyperpolyglot.org/c#env-var>

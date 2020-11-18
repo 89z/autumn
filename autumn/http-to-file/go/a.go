@@ -26,7 +26,7 @@ func (o *Progress) Read(y []byte) (int, error) {
       fmt.Println()
    } else {
       o.Total += float64(n)
-      fmt.Printf("Received %9s\r", NumberFormat(o.Total))
+      fmt.Printf("READ %9s\r", NumberFormat(o.Total))
    }
    return n, e
 }

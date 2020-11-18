@@ -1,11 +1,8 @@
 package main
-
-import (
-   "fmt"
-   "regexp"
-)
+import "regexp"
 
 func main() {
    a := regexp.MustCompile("a(..)").FindStringSubmatch("January")
-   fmt.Println(a)
+   s := a[1]
+   println(s == "nu")
 }
