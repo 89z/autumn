@@ -39,10 +39,10 @@
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">var</span> s = <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>;
+      <span style="color:#66d9ef">var</span> url_s = <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>;
       <span style="color:#66d9ef">var</span> o = <span style="color:#66d9ef">new</span> WebClient();
-      <span style="color:#66d9ef">var</span> s1 = o.DownloadString(s);
-      Console.Write(s1);
+      <span style="color:#66d9ef">var</span> res_s = o.DownloadString(url_s);
+      Console.Write(res_s);
    }
 }
 </code></pre></div>
