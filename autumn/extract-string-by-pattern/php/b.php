@@ -1,8 +1,8 @@
 <?php
-$s = 'January';
+$s = 'Sunday Monday';
 # example 1
-preg_match('/a./', $s, $a1);
+preg_match('/..n/', $s, $a);
+var_dump($a[0] == 'Sun');
 # example 2
-preg_match('/a(..)/', $s, $a2);
-# print
-var_dump($a1, $a2);
+preg_match('/(..)n/', $s, $a);
+var_dump($a[1] == 'Su');

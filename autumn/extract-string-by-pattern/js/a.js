@@ -1,15 +1,14 @@
-let s = 'January';
+'use strict';
+let s = 'Sunday Monday';
+
 // example 1
-let a1 = s.match(/a./);
+let a1 = s.match(/..n/);
+console.log(a1[0] == 'Sun');
+
 // example 2
-let a2 = s.match(/a./g);
+let a2 = s.match(/..n/g);
+console.log(a2[0] == 'Sun', a2[1] == 'Mon');
+
 // example 3
-let o = s.matchAll(/a./g);
-let a3 = Array.from(o);
-// example 4
-let a4 = s.match(/a(..)/);
-// example 5
-let o5 = s.matchAll(/a(..)/g);
-let a5 = Array.from(o5);
-// print
-console.log(a1, a2, a3, a4, a5);
+let a3 = s.match(/(..)n/);
+console.log(a3[1] == 'Su');

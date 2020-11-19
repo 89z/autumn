@@ -9,5 +9,4 @@ tags: [nim]
 
 ## References
 
-- <https://rosettacode.org/wiki/Loop_Structures>
-- <https://rosettacode.org/wiki/Loops/Foreach>
+<https://rosettacode.org/wiki/Loops/Foreach>

@@ -10,7 +10,5 @@ tags: [dart]
 ## References
 
 - <https://hyperpolyglot.org/web#iterate-over-array>
-- <https://programming-idioms.org/idiom/6/iterate-over-list-val>
-- <https://programming-idioms.org/idiom/7/iterate-over-list-indexes-val>
-- <https://rosettacode.org/wiki/Loop_Structures>
+- <https://programming-idioms.org/idiom/6>
 - <https://rosettacode.org/wiki/Loops/Foreach>

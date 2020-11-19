@@ -1,8 +1,8 @@
 import re
-s = 'January'
+s = 'Sunday Monday'
 # example 1
-a1 = re.findall('a.', s)
+a = re.findall('..n', s)
+print(a[0] == 'Sun', a[1] == 'Mon')
 # example 2
-a2 = re.findall('a(..)', s)
-# print
-print(a1, a2)
+a = re.findall('(..)n', s)
+print(a[0] == 'Su', a[1] == 'Mo')
