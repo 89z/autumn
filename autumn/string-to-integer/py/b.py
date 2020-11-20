@@ -1,4 +1,4 @@
 import locale
-s = '11'
+s = '100'
 n = locale.atoi(s)
-print(n == 11)
+print(n == 100)

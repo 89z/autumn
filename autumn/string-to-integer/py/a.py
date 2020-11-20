@@ -1,3 +1,3 @@
-s = '11'
+s = '100'
 n = int(s)
-print(n == 11)
+print(n == 100)

@@ -1,3 +1,3 @@
-let s = '11';
+let s = '100';
 let n = +(s);
-console.log(n === 11);
+console.log(n === 100);

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Date string to number / Python</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/a8nj/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/date-string-to-number/">Date string to number</a> / Python
+</h1>
+<section class="page">
+   <time>Fri Nov 20 2020</time>
+   
+   <a href="/autumn/categories/time/">time</a>
+   
+</section>
+   
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+o <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>strptime(<span style="color:#e6db74">&#39;2019-12-31&#39;</span>, <span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>)
+o1 <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now()
+n <span style="color:#f92672">=</span> (o1 <span style="color:#f92672">-</span> o)<span style="color:#f92672">.</span>total_seconds()
+<span style="color:#66d9ef">print</span>(n)
+</code></pre></div>
+
+<p><a href="https://docs.python.org/library/datetime.html#datetime.timedelta.total_seconds">https://docs.python.org/library/datetime.html#datetime.timedelta.total_seconds</a></p>
+<h2 id="references">References</h2>
+<p><a href="https://hyperpolyglot.org/scripting#datetime-subtraction">https://hyperpolyglot.org/scripting#datetime-subtraction</a></p>
+
+</main>
+
+</body>
+</html>
