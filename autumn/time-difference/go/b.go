@@ -9,7 +9,7 @@ func main() {
    o := time.Now()
    for {
       time.Sleep(100 * time.Millisecond)
-      s := time.Now().Sub(o).Truncate(10 * time.Millisecond)
+      s := time.Since(o).Truncate(10 * time.Millisecond)
       fmt.Printf("%10s\r", s)
    }
 }

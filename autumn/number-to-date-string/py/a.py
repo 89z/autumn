@@ -1,5 +1,4 @@
 from datetime import date
-n = 1577858399
-o = date.fromtimestamp(n)
-s = o.strftime('%a %b %#d %Y')
-print(s == 'Tue Dec 31 2019')
+o = date.fromtimestamp(1577858399)
+s = o.isoformat()
+print(s == '2019-12-31')

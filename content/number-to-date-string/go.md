@@ -13,6 +13,5 @@ tags: [go]
 
 ## References
 
-- <https://programming-idioms.org/idiom/98/epoch-seconds-to-date>
-- <https://programming-idioms.org/idiom/99/format-date>
+- <https://programming-idioms.org/idiom/99>
 - <https://rosettacode.org/wiki/Date_format>
