@@ -5,7 +5,7 @@ tags: [javascript]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString>
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/Date>
 
 ## References
 

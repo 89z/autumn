@@ -5,11 +5,11 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-<https://php.net/datetime.diff>
+<https://php.net/datetime.gettimestamp>
 
 {{< r "b.php" >}}
 
-<https://php.net/function.date-diff>
+<https://php.net/function.date-timestamp-get>
 
 {{< r "c.php" >}}
 
@@ -17,4 +17,4 @@ tags: [php]
 
 ## References
 
-<https://hyperpolyglot.org/scripting#datetime-subtraction>
+<https://hyperpolyglot.org/scripting#parse-datetime>

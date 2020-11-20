@@ -35,28 +35,24 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$o1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>(<span style="color:#e6db74">&#39;2019-12-31&#39;</span>);
-$o2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
-$o <span style="color:#f92672">=</span> $o2<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">diff</span>($o1);
-$n <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">days</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">h</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">i</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">s</span>;
-<span style="color:#a6e22e">var_dump</span>($n);
+$o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>(<span style="color:#e6db74">&#39;2019-12-31&#39;</span>);
+$n <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getTimestamp</span>();
+<span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1577750400</span>);
 </code></pre></div>
 
-<p><a href="https://php.net/datetime.diff">https://php.net/datetime.diff</a></p>
+<p><a href="https://php.net/datetime.gettimestamp">https://php.net/datetime.gettimestamp</a></p>
 
 
 
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$o1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_create</span>(<span style="color:#e6db74">&#39;2019-12-31&#39;</span>);
-$o2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_create</span>();
-$o <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_diff</span>($o2, $o1);
-$n <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">days</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">h</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">i</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">s</span>;
-<span style="color:#a6e22e">var_dump</span>($n);
+$o <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_create</span>(<span style="color:#e6db74">&#39;2019-12-31&#39;</span>);
+$n <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_timestamp_get</span>($o);
+<span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1577750400</span>);
 </code></pre></div>
 
-<p><a href="https://php.net/function.date-diff">https://php.net/function.date-diff</a></p>
+<p><a href="https://php.net/function.date-timestamp-get">https://php.net/function.date-timestamp-get</a></p>
 
 
 
@@ -64,14 +60,12 @@ $n <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</spa
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 $n <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtotime</span>(<span style="color:#e6db74">&#39;2019-12-31&#39;</span>);
-$n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">time</span>();
-$n3 <span style="color:#f92672">=</span> $n2 <span style="color:#f92672">-</span> $n;
-<span style="color:#a6e22e">var_dump</span>($n3);
+<span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1577750400</span>);
 </code></pre></div>
 
 <p><a href="https://php.net/function.strtotime">https://php.net/function.strtotime</a></p>
 <h2 id="references">References</h2>
-<p><a href="https://hyperpolyglot.org/scripting#datetime-subtraction">https://hyperpolyglot.org/scripting#datetime-subtraction</a></p>
+<p><a href="https://hyperpolyglot.org/scripting#parse-datetime">https://hyperpolyglot.org/scripting#parse-datetime</a></p>
 
 </main>
 
