@@ -24,7 +24,7 @@
    <a href="/autumn/command-line-tools/">Command line tools</a> / Go
 </h1>
 <section class="page">
-   <time>Sat Oct 10 2020</time>
+   <time>Sat Nov 21 2020</time>
    
    <a href="/autumn/categories/reference/">reference</a>
    
@@ -68,7 +68,12 @@ go build -ldflags -s
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps1" data-lang="ps1">go mod init May
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps1" data-lang="ps1"><span style="color:#75715e"># example 1</span>
+go mod init repo
+<span style="color:#75715e"># exmaple 2</span>
+go mod edit <span style="color:#f92672">-replace</span> github.com/owner/repo=github.com/owner/repo@master
+<span style="color:#75715e"># example 3</span>
+go mod edit <span style="color:#f92672">-replace</span> github.com/owner/repo=../repo
 </code></pre></div>
 
 <p><a href="https://golang.org/cmd/go#hdr-Module_maintenance">https://golang.org/cmd/go#hdr-Module_maintenance</a></p>
