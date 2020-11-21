@@ -2,12 +2,14 @@ package main
 
 func main() {
    // example 1
-   b1, n1 := true, 1
+   var s, s1 string
    // example 2
+   s2, n2 := "year", 2019
+   // example 3
    var (
-      b2 = true
-      n2 = 1
+      s3 = "year"
+      n3 = 2019
    )
    // print
-   println(b1, n1, b2, n2)
+   println(s, s1, s2, n2, s3, n3)
 }

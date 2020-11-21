@@ -5,7 +5,11 @@ tags: [d]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/spec/function.html>
+<https://tour.dlang.org/tour/en/basics/functions#functions>
+
+{{< r "b.d" >}}
+
+<https://tour.dlang.org/tour/en/basics/functions#auto-return-types>
 
 ## References
 

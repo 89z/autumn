@@ -38,25 +38,35 @@
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   Tuple<span style="color:#f92672">!(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">)</span> t <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">8</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">9</span><span style="color:#f92672">];</span>
-   writeln<span style="color:#f92672">(</span>t<span style="color:#f92672">.</span><span style="color:#a6e22e">a</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">8</span> <span style="color:#f92672">&amp;&amp;</span> t<span style="color:#f92672">.</span><span style="color:#a6e22e">b</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span><span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>   Tuple<span style="color:#f92672">!(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">)</span> c <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">9</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">8</span><span style="color:#f92672">];</span>
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   Tuple<span style="color:#f92672">!(</span><span style="color:#66d9ef">string</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">)</span> u <span style="color:#f92672">=</span> tuple<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;year&#34;</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">2019</span><span style="color:#f92672">);</span>
-   writeln<span style="color:#f92672">(</span>u<span style="color:#f92672">.</span><span style="color:#a6e22e">a</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;year&#34;</span> <span style="color:#f92672">&amp;&amp;</span> u<span style="color:#f92672">.</span><span style="color:#a6e22e">b</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">2019</span><span style="color:#f92672">);</span>
-   <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">string</span> a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;year&#34;</span><span style="color:#f92672">,</span> b <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;month&#34;</span><span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">auto</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span><span style="color:#f92672">,</span> b <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span><span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">auto</span> a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;year&#34;</span><span style="color:#f92672">,</span> b <span style="color:#f92672">=</span> <span style="color:#ae81ff">2019</span><span style="color:#f92672">;</span>
+</span><span style="color:#75715e"></span>   Tuple<span style="color:#f92672">!(</span><span style="color:#66d9ef">string</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">)</span> d <span style="color:#f92672">=</span> tuple<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;year&#34;</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">2019</span><span style="color:#f92672">);</span>
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   writeln<span style="color:#f92672">(</span>a<span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;,&#39;</span><span style="color:#f92672">,</span> b<span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>   writeln<span style="color:#f92672">(</span>c<span style="color:#f92672">.</span><span style="color:#a6e22e">a</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span> <span style="color:#f92672">&amp;&amp;</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">b</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">8</span> <span style="color:#f92672">&amp;&amp;</span> d<span style="color:#f92672">.</span><span style="color:#a6e22e">a</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;year&#34;</span> <span style="color:#f92672">&amp;&amp;</span> d<span style="color:#f92672">.</span><span style="color:#a6e22e">b</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">2019</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 
+<p><a href="https://dlang.org/library/std/typecons.html">https://dlang.org/library/std/typecons.html</a></p>
+
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">typecons</span><span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span><span style="color:#f92672">,</span> n1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span><span style="color:#f92672">;</span>
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;year&#34;</span><span style="color:#f92672">,</span> n2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">2019</span><span style="color:#f92672">;</span>
+   <span style="color:#75715e">// print
+</span><span style="color:#75715e"></span>   writeln<span style="color:#f92672">(</span>n<span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;,&#39;</span><span style="color:#f92672">,</span> n1<span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;,&#39;</span><span style="color:#f92672">,</span> s<span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;,&#39;</span><span style="color:#f92672">,</span> n2<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+
+<p><a href="https://dlang.org/spec/declaration.html">https://dlang.org/spec/declaration.html</a></p>
 <h2 id="references">References</h2>
-<ul>
-<li><a href="https://programming-idioms.org/idiom/126">https://programming-idioms.org/idiom/126</a></li>
-<li><a href="https://stackoverflow.com/questions/47046850">https://stackoverflow.com/questions/47046850</a></li>
-</ul>
+<p><a href="https://programming-idioms.org/idiom/126">https://programming-idioms.org/idiom/126</a></p>
 
 </main>
 

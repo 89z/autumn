@@ -1,6 +1,6 @@
 import std.stdio;
 
-bool f(int n, int n2) {
+auto f(int n, int n2) {
    return n > n2;
 }
 

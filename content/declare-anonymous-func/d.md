@@ -7,6 +7,10 @@ tags: [d]
 
 <https://dlang.org/spec/expression.html#FunctionLiteral>
 
+{{< r "b.d" >}}
+
+<https://dlang.org/spec/expression.html#lambdas>
+
 ## References
 
 - <https://programming-idioms.org/idiom/4>
