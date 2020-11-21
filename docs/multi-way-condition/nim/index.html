@@ -35,18 +35,18 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">var</span>
-   n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>
-   b: <span style="color:#66d9ef">bool</span>
+   n <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x63</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">0x20</span>
+   c: <span style="color:#66d9ef">char</span>
 
 <span style="color:#66d9ef">case</span> n
-<span style="color:#66d9ef">of</span> <span style="color:#ae81ff">5</span>:
-   b <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>
-<span style="color:#66d9ef">of</span> <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>:
-   b <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+<span style="color:#66d9ef">of</span> <span style="color:#ae81ff">0x41</span>:
+   c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span>
+<span style="color:#66d9ef">of</span> <span style="color:#ae81ff">0x42</span>, <span style="color:#ae81ff">0x62</span>:
+   c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;B&#39;</span>
 <span style="color:#66d9ef">else</span>:
-   b <span style="color:#f92672">=</span> n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>
+   c <span style="color:#f92672">=</span> <span style="color:#66d9ef">char</span> n
 
-echo b
+echo c <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;C&#39;</span>
 </code></pre></div>
 
 <p><a href="https://nim-lang.org/docs/manual.html#statements-and-expressions-case-statement">https://nim-lang.org/docs/manual.html#statements-and-expressions-case-statement</a></p>

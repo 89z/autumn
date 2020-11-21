@@ -38,22 +38,23 @@
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">var</span> (s, n) = (<span style="color:#e6db74">&#34;\u263A&#34;</span>, <span style="color:#ae81ff">0</span>);
+      <span style="color:#66d9ef">int</span> n = <span style="color:#ae81ff">0</span>x63 - <span style="color:#ae81ff">0</span>x20;
+      <span style="color:#66d9ef">char</span> c;
 
-      <span style="color:#66d9ef">switch</span> (s) {
-      <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;A&#34;</span>:
-         n = <span style="color:#ae81ff">1</span>;
+      <span style="color:#66d9ef">switch</span> (n) {
+      <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">0</span>x41:
+         c = <span style="color:#e6db74">&#39;A&#39;</span>;
          <span style="color:#66d9ef">break</span>;
-      <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;¡&#34;</span>:
-      <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;¢&#34;</span>:
-         n = <span style="color:#ae81ff">2</span>;
+      <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">0</span>x42:
+      <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">0</span>x62:
+         c = <span style="color:#e6db74">&#39;B&#39;</span>;
          <span style="color:#66d9ef">break</span>;
       <span style="color:#66d9ef">default</span>:
-         n = s.Length;
+         c = (<span style="color:#66d9ef">char</span>) n;
          <span style="color:#66d9ef">break</span>;
       }
 
-      Console.WriteLine(n);
+      Console.WriteLine(c == <span style="color:#e6db74">&#39;C&#39;</span>);
    }
 }
 </code></pre></div>

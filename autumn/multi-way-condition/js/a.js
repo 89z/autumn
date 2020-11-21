@@ -1,15 +1,15 @@
-let b, n = 1 + 2;
+let n = 0x63 - 0x20, s;
 
 switch (n) {
-case 5:
-   b = false;
+case 0x41:
+   s = 'A';
    break;
-case 4:
-case 3:
-   b = true;
+case 0x42:
+case 0x62:
+   s = 'B';
    break;
 default:
-   b = n < 3;
+   s = String.fromCharCode(n);
 }
 
-console.log(b);
+console.log(s == 'C');

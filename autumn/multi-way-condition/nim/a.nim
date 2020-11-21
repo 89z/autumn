@@ -1,13 +1,13 @@
 var
-   n = 1 + 2
-   b: bool
+   n = 0x63 - 0x20
+   c: char
 
 case n
-of 5:
-   b = false
-of 4, 3:
-   b = true
+of 0x41:
+   c = 'A'
+of 0x42, 0x62:
+   c = 'B'
 else:
-   b = n < 3
+   c = char n
 
-echo b
+echo c == 'C'

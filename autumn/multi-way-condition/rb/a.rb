@@ -1,12 +1,12 @@
-n = 1 + 2
+n = 0x63 - 0x20
 
 case n
-when 5
-   b = false
-when 4, 3
-   b = true
+when 0x41
+   s = 'A'
+when 0x42, 0x62
+   s = 'B'
 else
-   b = n < 3
+   s = n.chr
 end
 
-puts b
+puts s == 'C'

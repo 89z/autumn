@@ -1,9 +1,8 @@
 fn main() {
-   let b = match 1 + 2 {
-      5 => false,
-      4 | 3 => true,
-      n => n < 3
+   let c = match 0x63 - 0x20u8 {
+      0x41 => 'A',
+      0x42 | 0x62 => 'B',
+      n => n as char
    };
-
-   println!("{}", b);
+   println!("{}", c == 'C');
 }

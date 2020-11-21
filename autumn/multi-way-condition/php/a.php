@@ -1,16 +1,14 @@
 <?php
-$n = 1 + 2;
+$n = 0x63 - 0x20;
 
 switch ($n) {
-case 5:
-   $b = false;
-   break;
-case 4:
-case 3:
-   $b = true;
-   break;
+case 0x41:
+   $s = 'A';
+case 0x42:
+case 0x62:
+   $s = 'B';
 default:
-   $b = $n < 3;
+   $s = chr($n);
 }
 
-var_dump($b);
+var_dump($s == 'C');

@@ -1,18 +1,18 @@
 void main() {
-   int n = 1 + 2;
-   bool b;
+   int n = 0x63 - 0x20;
+   String s;
 
    switch (n) {
-   case 5:
-      b = false;
+   case 0x41:
+      s = 'A';
       break;
-   case 4:
-   case 3:
-      b = true;
+   case 0x42:
+   case 0x62:
+      s = 'B';
       break;
    default:
-      b = n < 3;
+      s = String.fromCharCodes([n]);
    }
 
-   print(b);
+   print(s == 'C');
 }

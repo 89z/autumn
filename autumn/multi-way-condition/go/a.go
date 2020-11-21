@@ -1,17 +1,19 @@
 package main
 
 func main() {
-   var n = 1 + 2
-   var b bool
+   var (
+      n = 0x63 - 0x20
+      r rune
+   )
 
    switch n {
-   case 5:
-      b = false
-   case 4, 3:
-      b = true
+   case 0x41:
+      r = 'A'
+   case 0x42, 0x62:
+      r = 'B'
    default:
-      b = n < 3
+      r = rune(n)
    }
 
-   println(b)
+   println(r == 'C')
 }
