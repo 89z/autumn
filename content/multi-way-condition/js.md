@@ -10,5 +10,5 @@ tags: [javascript]
 ## References
 
 - <https://hyperpolyglot.org/scripting#switch>
-- <https://programming-idioms.org/idiom/131>
+- <https://programming-idioms.org/idiom/206>
 - <https://rosettacode.org/wiki/Conditional_structures>

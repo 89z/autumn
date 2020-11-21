@@ -10,4 +10,5 @@ tags: [rust]
 ## Reference
 
 - <https://hyperpolyglot.org/rust#user-defined-types>
+- <https://programming-idioms.org/idiom/206>
 - <https://rosettacode.org/wiki/Conditional_structures>

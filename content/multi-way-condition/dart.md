@@ -10,4 +10,5 @@ tags: [dart]
 ## References
 
 - <https://hyperpolyglot.org/web#switch>
+- <https://programming-idioms.org/idiom/206>
 - <https://rosettacode.org/wiki/Conditional_structures>

@@ -10,4 +10,5 @@ tags: [c-sharp]
 ## References
 
 - <https://hyperpolyglot.org/cpp#switch>
+- <https://programming-idioms.org/idiom/206>
 - <https://rosettacode.org/wiki/Conditional_structures>
