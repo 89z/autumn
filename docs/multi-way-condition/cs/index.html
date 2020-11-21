@@ -24,7 +24,7 @@
    <a href="/autumn/multi-way-condition/">Multi-way condition</a> / C#
 </h1>
 <section class="page">
-   <time>Sun Nov 1 2020</time>
+   <time>Sat Nov 21 2020</time>
    
    <a href="/autumn/categories/control-flow/">control-flow</a>
    
@@ -38,23 +38,22 @@
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">int</span> n = <span style="color:#ae81ff">1</span> + <span style="color:#ae81ff">2</span>;
-      <span style="color:#66d9ef">bool</span> b;
+      <span style="color:#66d9ef">var</span> (s, n) = (<span style="color:#e6db74">&#34;\u263A&#34;</span>, <span style="color:#ae81ff">0</span>);
 
-      <span style="color:#66d9ef">switch</span> (n) {
-      <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">5</span>:
-         b = <span style="color:#66d9ef">false</span>;
+      <span style="color:#66d9ef">switch</span> (s) {
+      <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;A&#34;</span>:
+         n = <span style="color:#ae81ff">1</span>;
          <span style="color:#66d9ef">break</span>;
-      <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">4</span>:
-      <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">3</span>:
-         b = <span style="color:#66d9ef">true</span>;
+      <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;¡&#34;</span>:
+      <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;¢&#34;</span>:
+         n = <span style="color:#ae81ff">2</span>;
          <span style="color:#66d9ef">break</span>;
       <span style="color:#66d9ef">default</span>:
-         b = n &lt; <span style="color:#ae81ff">3</span>;
+         n = s.Length;
          <span style="color:#66d9ef">break</span>;
       }
 
-      Console.WriteLine(b);
+      Console.WriteLine(n);
    }
 }
 </code></pre></div>

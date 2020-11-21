@@ -1,2 +1,2 @@
-b, n = True, 1
-print(b, n)
+s, n = 'year', 2019
+print(s, n)

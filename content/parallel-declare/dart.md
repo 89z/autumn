@@ -7,4 +7,5 @@ tags: [dart]
 
 ## References
 
-<https://programming-idioms.org/idiom/126>
+- <https://programming-idioms.org/idiom/21>
+- <https://rosettacode.org/wiki/Generic_swap>

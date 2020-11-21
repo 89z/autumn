@@ -2,22 +2,21 @@ using System;
 
 class Program {
    static void Main() {
-      int n = 1 + 2;
-      bool b;
+      var (s, n) = ("\u263A", 0);
 
-      switch (n) {
-      case 5:
-         b = false;
+      switch (s) {
+      case "A":
+         n = 1;
          break;
-      case 4:
-      case 3:
-         b = true;
+      case "¡":
+      case "¢":
+         n = 2;
          break;
       default:
-         b = n < 3;
+         n = s.Length;
          break;
       }
 
-      Console.WriteLine(b);
+      Console.WriteLine(n);
    }
 }

@@ -1,2 +1,2 @@
-b, n = true, 1
-puts b, n
+s, n = 'year', 2019
+puts s, n
