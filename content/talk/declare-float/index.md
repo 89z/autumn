@@ -2,50 +2,66 @@
 title: Declare float
 ---
 
-Stuff to fix:
+## Bad
 
-## C#
+C#:
 
 {{< r "cs/Program.cs" >}}
 
-## D
+<https://github.com/alecthomas/chroma/blob/master/lexers/c/csharp.go>
 
-<https://github.com/alecthomas/chroma/blob/master/lexers/d/d.go>
-
-## Dart
-
-<https://github.com/alecthomas/chroma/blob/master/lexers/d/dart.go>
-
-## Go
+Go:
 
 {{< r "go/a.go" >}}
 
-## JavaScript
+<https://github.com/alecthomas/chroma/blob/master/lexers/g/go.go>
+
+JavaScript:
 
 {{< r "js/a.js" >}}
 
-## Nim
+<https://github.com/alecthomas/chroma/blob/master/lexers/j/javascript.go>
 
-<https://github.com/alecthomas/chroma/blob/master/lexers/n/nim.go>
-
-## PHP
+PHP:
 
 {{< r "php/a.php" >}}
 
-## Python
+<https://github.com/alecthomas/chroma/blob/master/lexers/circular/php.go>
 
-{{< highlight go >}}
-1_000
-{{< /highlight >}}
+Python:
 
-## Ruby
+{{< r "py/a.py" >}}
 
-{{< highlight go >}}
-1_000
-{{< /highlight >}}
+<https://github.com/alecthomas/chroma/blob/master/lexers/p/python.go>
 
-## Rust
+Ruby:
 
-{{< highlight go >}}
-1_000
-{{< /highlight >}}
+{{< r "rb/a.rb" >}}
+
+<https://github.com/alecthomas/chroma/blob/master/lexers/r/ruby.go>
+
+## Good
+
+D:
+
+{{< r "d/a.d" >}}
+
+<https://github.com/alecthomas/chroma/blob/master/lexers/d/d.go>
+
+Dart:
+
+{{< r "dart/a.dart" >}}
+
+<https://github.com/alecthomas/chroma/blob/master/lexers/d/dart.go>
+
+Nim:
+
+{{< r "nim/a.nim" >}}
+
+<https://github.com/alecthomas/chroma/blob/master/lexers/n/nim.go>
+
+Rust:
+
+{{< r "rs/a.rs" >}}
+
+<https://github.com/alecthomas/chroma/blob/master/lexers/r/rust.go>
