@@ -11,4 +11,5 @@ tags: [go]
 
 ## References
 
-<https://hyperpolyglot.org/c#date-subtraction>
+- <https://hyperpolyglot.org/c#date-subtraction>
+- <https://rosettacode.org/wiki/Convert_seconds_to_compound_duration>

@@ -1,6 +1,9 @@
 <?php
-$o = date_create('2019-12-31');
-$o2 = date_create('2019-12-31T23:59:59');
-$o3 = date_diff($o2, $o);
-$s = date_interval_format($o3, '%H:%I:%S');
-var_dump($s == '23:59:59');
+$old_o = date_create();
+
+while (true) {
+   usleep(10_000);
+   $new_o = date_create();
+   $diff_o = date_diff($new_o, $old_o);
+   printf("%d m %5.2f s\r", $diff_o->i, $diff_o->s + $diff_o->f);
+}

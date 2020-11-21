@@ -35,10 +35,14 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>(<span style="color:#e6db74">&#39;2019-12-31&#39;</span>);
-$o2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>(<span style="color:#e6db74">&#39;2019-12-31T23:59:59&#39;</span>);
-$s <span style="color:#f92672">=</span> $o2<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">diff</span>($o)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#39;%H:%I:%S&#39;</span>);
-<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;23:59:59&#39;</span>);
+$old_o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
+
+<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+   <span style="color:#a6e22e">usleep</span>(<span style="color:#ae81ff">10000</span>);
+   $new_o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
+   $diff_o <span style="color:#f92672">=</span> $new_o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">diff</span>($old_o);
+   <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d m %5.2f s</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>, $diff_o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">i</span>, $diff_o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">s</span> <span style="color:#f92672">+</span> $diff_o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">f</span>);
+}
 </code></pre></div>
 
 <p><a href="https://php.net/dateinterval.format">https://php.net/dateinterval.format</a></p>
@@ -48,16 +52,22 @@ $s <span style="color:#f92672">=</span> $o2<span style="color:#f92672">-&gt;</sp
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$o <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_create</span>(<span style="color:#e6db74">&#39;2019-12-31&#39;</span>);
-$o2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_create</span>(<span style="color:#e6db74">&#39;2019-12-31T23:59:59&#39;</span>);
-$o3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_diff</span>($o2, $o);
-$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_interval_format</span>($o3, <span style="color:#e6db74">&#39;%H:%I:%S&#39;</span>);
-<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;23:59:59&#39;</span>);
+$old_o <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_create</span>();
+
+<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+   <span style="color:#a6e22e">usleep</span>(<span style="color:#ae81ff">10</span><span style="color:#a6e22e">_000</span>);
+   $new_o <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_create</span>();
+   $diff_o <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_diff</span>($new_o, $old_o);
+   <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d m %5.2f s</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>, $diff_o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">i</span>, $diff_o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">s</span> <span style="color:#f92672">+</span> $diff_o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">f</span>);
+}
 </code></pre></div>
 
 <p><a href="https://php.net/function.date-interval-format">https://php.net/function.date-interval-format</a></p>
 <h2 id="references">References</h2>
-<p><a href="https://hyperpolyglot.org/scripting#datetime-subtraction">https://hyperpolyglot.org/scripting#datetime-subtraction</a></p>
+<ul>
+<li><a href="https://hyperpolyglot.org/scripting#datetime-subtraction">https://hyperpolyglot.org/scripting#datetime-subtraction</a></li>
+<li><a href="https://rosettacode.org/wiki/Convert_seconds_to_compound_duration">https://rosettacode.org/wiki/Convert_seconds_to_compound_duration</a></li>
+</ul>
 
 </main>
 

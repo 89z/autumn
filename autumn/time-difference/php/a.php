@@ -1,5 +1,9 @@
 <?php
-$o = new DateTime('2019-12-31');
-$o2 = new DateTime('2019-12-31T23:59:59');
-$s = $o2->diff($o)->format('%H:%I:%S');
-var_dump($s == '23:59:59');
+$old_o = new DateTime;
+
+while (true) {
+   usleep(10000);
+   $new_o = new DateTime;
+   $diff_o = $new_o->diff($old_o);
+   printf("%d m %5.2f s\r", $diff_o->i, $diff_o->s + $diff_o->f);
+}
