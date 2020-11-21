@@ -10,4 +10,5 @@ tags: [php]
 ## References
 
 - <https://hyperpolyglot.org/scripting#const>
+- <https://programming-idioms.org/idiom/157>
 - <https://rosettacode.org/wiki/Enforced_immutability>

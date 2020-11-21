@@ -7,4 +7,5 @@ tags: [d]
 
 ## References
 
-<https://stackoverflow.com/questions/47046850>
+- <https://programming-idioms.org/idiom/126>
+- <https://stackoverflow.com/questions/47046850>

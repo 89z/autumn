@@ -5,11 +5,15 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-<https://php.net/dateinterval.format>
+<https://php.net/datetime.diff>
 
 {{< r "b.php" >}}
 
-<https://php.net/function.date-interval-format>
+<https://php.net/function.date-diff>
+
+{{< r "c.php" >}}
+
+<https://php.net/function.microtime>
 
 ## References
 

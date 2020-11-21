@@ -7,4 +7,5 @@ tags: [javascript]
 
 ## References
 
-<https://hyperpolyglot.org/scripting#parallel-assignment>
+- <https://hyperpolyglot.org/scripting#parallel-assignment>
+- <https://programming-idioms.org/idiom/126>

@@ -9,4 +9,5 @@ tags: [rust]
 
 ## References
 
-<https://rosettacode.org/wiki/Enforced_immutability>
+- <https://programming-idioms.org/idiom/157>
+- <https://rosettacode.org/wiki/Enforced_immutability>

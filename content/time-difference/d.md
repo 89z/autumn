@@ -1,9 +1,9 @@
 ---
-title: C#
-tags: [c-sharp]
+title: D
+tags: [d]
 ---
 
-{{< r "Program.cs" >}}
+<https://dlang.org/library/std/datetime/stopwatch/stop_watch.html>
 
 ## References
 

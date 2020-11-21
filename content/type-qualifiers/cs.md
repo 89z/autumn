@@ -10,4 +10,5 @@ tags: [c-sharp]
 ## References
 
 - <https://hyperpolyglot.org/cpp#write-once-var>
+- <https://programming-idioms.org/idiom/157>
 - <https://rosettacode.org/wiki/Enforced_immutability>

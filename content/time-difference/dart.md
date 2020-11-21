@@ -1,9 +1,9 @@
 ---
-title: C#
-tags: [c-sharp]
+title: Dart
+tags: [dart]
 ---
 
-{{< r "Program.cs" >}}
+<https://api.dart.dev/dart-core/Stopwatch-class.html>
 
 ## References
 
