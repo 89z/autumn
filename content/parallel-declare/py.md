@@ -1,9 +1,9 @@
 ---
-title: JavaScript
-tags: [javascript]
+title: Python
+tags: [python]
 ---
 
-{{< r "a.js" >}}
+{{< r "a.py" >}}
 
 ## References
 
