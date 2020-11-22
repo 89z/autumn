@@ -1,12 +1,12 @@
-n = 0x63 - 0x20
+s = "\x43"
 
-case n
-when 0x41
-   s = 'A'
-when 0x42, 0x62
-   s = 'B'
+case s
+when 'A'
+   n = 0x41
+when 'B', 'b'
+   n = 0x42
 else
-   s = n.chr
+   n = s.ord
 end
 
-puts s == 'C'
+puts n == 0x43

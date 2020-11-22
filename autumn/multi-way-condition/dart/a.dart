@@ -1,18 +1,18 @@
 void main() {
-   int n = 0x63 - 0x20;
-   String s;
+   String s = '\x43';
+   int n;
 
-   switch (n) {
-   case 0x41:
-      s = 'A';
+   switch (s) {
+   case 'A':
+      n = 0x41;
       break;
-   case 0x42:
-   case 0x62:
-      s = 'B';
+   case 'B':
+   case 'b':
+      n = 0x42;
       break;
    default:
-      s = String.fromCharCodes([n]);
+      n = s.codeUnitAt(0);
    }
 
-   print(s == 'C');
+   print(n == 0x43);
 }

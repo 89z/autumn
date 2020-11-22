@@ -1,15 +1,15 @@
-let n = 0x63 - 0x20, s;
+let s = '\x43', n;
 
-switch (n) {
-case 0x41:
-   s = 'A';
+switch (s) {
+case 'A':
+   n = 0x41;
    break;
-case 0x42:
-case 0x62:
-   s = 'B';
+case 'B':
+case 'b':
+   n = 0x42;
    break;
 default:
-   s = String.fromCharCode(n);
+   n = s.charCodeAt();
 }
 
-console.log(s == 'C');
+console.log(n == 0x43);

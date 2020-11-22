@@ -2,22 +2,22 @@ using System;
 
 class Program {
    static void Main() {
-      int n = 0x63 - 0x20;
-      char c;
+      char c = '\x43';
+      int n;
 
-      switch (n) {
-      case 0x41:
-         c = 'A';
+      switch (c) {
+      case 'A':
+         n = 0x41;
          break;
-      case 0x42:
-      case 0x62:
-         c = 'B';
+      case 'B':
+      case 'b':
+         n = 0x42;
          break;
       default:
-         c = (char) n;
+         n = (int) c;
          break;
       }
 
-      Console.WriteLine(c == 'C');
+      Console.WriteLine(n == 0x43);
    }
 }

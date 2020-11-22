@@ -1,14 +1,16 @@
 <?php
-$n = 0x63 - 0x20;
+$s = "\x43";
 
-switch ($n) {
-case 0x41:
-   $s = 'A';
-case 0x42:
-case 0x62:
-   $s = 'B';
+switch ($s) {
+case 'A':
+   $n = 0x41;
+   break;
+case 'B':
+case 'b':
+   $n = 0x42;
+   break;
 default:
-   $s = chr($n);
+   $n = ord($s);
 }
 
-var_dump($s == 'C');
+var_dump($n == 0x43);

@@ -1,13 +1,13 @@
 var
-   n = 0x63 - 0x20
-   c: char
+   c = '\x43'
+   n: int
 
-case n
-of 0x41:
-   c = 'A'
-of 0x42, 0x62:
-   c = 'B'
+case c
+of 'A':
+   n = 0x41
+of 'B', 'b':
+   n = 0x42
 else:
-   c = char n
+   n = int c
 
-echo c == 'C'
+echo n == 0x43

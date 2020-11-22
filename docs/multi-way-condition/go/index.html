@@ -38,20 +38,20 @@
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">var</span> (
-      <span style="color:#a6e22e">n</span> = <span style="color:#ae81ff">0x63</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">0x20</span>
-      <span style="color:#a6e22e">r</span> <span style="color:#66d9ef">rune</span>
+      <span style="color:#a6e22e">r</span> = <span style="color:#e6db74">&#39;\x43&#39;</span>
+      <span style="color:#a6e22e">n</span> <span style="color:#66d9ef">int</span>
    )
 
-   <span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">n</span> {
-   <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">0x41</span>:
-      <span style="color:#a6e22e">r</span> = <span style="color:#e6db74">&#39;A&#39;</span>
-   <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">0x42</span>, <span style="color:#ae81ff">0x62</span>:
-      <span style="color:#a6e22e">r</span> = <span style="color:#e6db74">&#39;B&#39;</span>
+   <span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">r</span> {
+   <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;A&#39;</span>:
+      <span style="color:#a6e22e">n</span> = <span style="color:#ae81ff">0x41</span>
+   <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>:
+      <span style="color:#a6e22e">n</span> = <span style="color:#ae81ff">0x42</span>
    <span style="color:#66d9ef">default</span>:
-      <span style="color:#a6e22e">r</span> = rune(<span style="color:#a6e22e">n</span>)
+      <span style="color:#a6e22e">n</span> = int(<span style="color:#a6e22e">r</span>)
    }
 
-   println(<span style="color:#a6e22e">r</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;C&#39;</span>)
+   println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0x43</span>)
 }
 </code></pre></div>
 

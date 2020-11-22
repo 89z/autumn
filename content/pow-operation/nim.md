@@ -3,6 +3,8 @@ title: Nim
 tags: [nim]
 ---
 
+{{< r "a.nim" >}}
+
 <https://nim-lang.org/docs/math.html#pow,float64,float64>
 
 ## References

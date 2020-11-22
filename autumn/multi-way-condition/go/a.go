@@ -2,18 +2,18 @@ package main
 
 func main() {
    var (
-      n = 0x63 - 0x20
-      r rune
+      r = '\x43'
+      n int
    )
 
-   switch n {
-   case 0x41:
-      r = 'A'
-   case 0x42, 0x62:
-      r = 'B'
+   switch r {
+   case 'A':
+      n = 0x41
+   case 'B', 'b':
+      n = 0x42
    default:
-      r = rune(n)
+      n = int(r)
    }
 
-   println(r == 'C')
+   println(n == 0x43)
 }
