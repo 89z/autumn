@@ -3,6 +3,10 @@ title: PHP
 tags: [php]
 ---
 
+{{< r "a.php" >}}
+
+<https://php.net/function.fmod>
+
 {{< r "b.php" >}}
 
 <https://php.net/operators.arithmetic>

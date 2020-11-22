@@ -9,9 +9,13 @@ tags: [php]
 
 {{< r "b.php" >}}
 
-<https://php.net/language.operators.arithmetic>
+<https://php.net/function.sscanf>
 
 {{< r "c.php" >}}
+
+<https://php.net/language.operators.arithmetic>
+
+{{< r "d.php" >}}
 
 <https://php.net/language.types.type-juggling>
 

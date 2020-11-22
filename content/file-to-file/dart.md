@@ -11,3 +11,4 @@ tags: [dart]
 
 - <https://hyperpolyglot.org/web#file-cp-rm-mv>
 - <https://programming-idioms.org/idiom/228>
+- <https://rosettacode.org/wiki/File_input/output>

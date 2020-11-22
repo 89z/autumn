@@ -9,4 +9,5 @@ tags: [rust]
 
 ## References
 
-<https://programming-idioms.org/idiom/228>
+- <https://programming-idioms.org/idiom/228>
+- <https://rosettacode.org/wiki/File_input/output>

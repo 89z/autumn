@@ -1,8 +1,8 @@
-using System;
 using System.IO;
+using System;
 
 class Program {
    static void Main() {
-      File.Copy("a.txt", "b.txt");
+      File.Copy("Program.cs", "a.cs");
    }
 }
