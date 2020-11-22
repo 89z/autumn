@@ -3,7 +3,13 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< r "Program.cs" >}}
+{{< r "a/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types>
+
+{{< r "b/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types>
 
 ## References
 

@@ -3,9 +3,13 @@ title: Go
 tags: [go]
 ---
 
-{{< r "c.go" >}}
+{{< r "a.go" >}}
 
-<https://golang.org/ref/spec#Arithmetic_operators>
+<https://golang.org/pkg/builtin#float64>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/builtin#int>
 
 ## References
 
