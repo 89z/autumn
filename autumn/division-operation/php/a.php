@@ -1,3 +1,4 @@
 <?php
-$n = intdiv(46, 10);
-var_dump($n == 4);
+$i = 7;
+$n = intdiv($i, 2);
+var_dump($n == 3);
