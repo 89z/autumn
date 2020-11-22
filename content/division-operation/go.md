@@ -7,10 +7,6 @@ tags: [go]
 
 <https://golang.org/pkg/builtin#float64>
 
-{{< r "b.go" >}}
-
-<https://golang.org/pkg/builtin#int>
-
 ## References
 
 - <https://hyperpolyglot.org/c#arith-op>

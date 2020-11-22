@@ -1,2 +1,3 @@
-let n = 46 div 10
-echo n == 4
+let i = 7
+let n = i div 2
+echo n == 3

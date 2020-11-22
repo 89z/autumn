@@ -1,11 +1,15 @@
 package main
 
 func main() {
-   n := 7
+   f, i := 7.5, 7
    // example 1
-   n1 := n / 2
+   n1 := f / 2
    // example 2
-   n2 := float64(n) / 2
+   n2 := int(f) / 2
+   // example 3
+   n3 := i / 2
+   // example 4
+   n4 := float64(i) / 2
    // print
-   println(n1 == 3, n2 == 3.5)
+   println(n1 == 3.75, n2 == 3, n3 == 3, n4 == 3.5)
 }
