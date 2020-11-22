@@ -5,7 +5,7 @@ tags: [go]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/builtin#float64>
+<https://golang.org/ref/spec#Arithmetic_operators>
 
 ## References
 

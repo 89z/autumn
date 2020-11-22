@@ -5,7 +5,7 @@ tags: [c-sharp]
 
 {{< r "Program.cs" >}}
 
-<https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types>
+<https://docs.microsoft.com/dotnet/csharp/language-reference/operators/arithmetic-operators>
 
 ## References
 

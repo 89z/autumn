@@ -2,6 +2,6 @@ package main
 import "math"
 
 func main() {
-   n := math.Remainder(46, 10)
-   println(n == -4)
+   n, n2 := math.Modf(7.5)
+   println(n == 7, n2 == .5)
 }

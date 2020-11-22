@@ -9,9 +9,13 @@ tags: [go]
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/math#Remainder>
+<https://golang.org/pkg/math#Modf>
 
 {{< r "c.go" >}}
+
+<https://golang.org/pkg/math#Remainder>
+
+{{< r "d.go" >}}
 
 <https://golang.org/ref/spec#Arithmetic_operators>
 

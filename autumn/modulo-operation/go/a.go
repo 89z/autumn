@@ -2,6 +2,7 @@ package main
 import "math"
 
 func main() {
-   n := math.Mod(46, 10)
-   println(n == 6)
+   f := 7.5
+   n := math.Mod(f, 2)
+   println(n == 1.5)
 }

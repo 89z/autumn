@@ -1,5 +1,7 @@
 package main
+import "math"
 
 func main() {
-   n1 := 46 % 10
+   n := math.Remainder(7.5, 2)
+   println(n == -.5)
 }

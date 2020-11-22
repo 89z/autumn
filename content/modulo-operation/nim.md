@@ -3,7 +3,7 @@ title: Nim
 tags: [nim]
 ---
 
-{{< r "c.nim" >}}
+{{< r "a.nim" >}}
 
 <https://nim-lang.org/docs/system.html#mod,int,int>
 
