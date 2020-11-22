@@ -1,0 +1,10 @@
+---
+title: Nim
+tags: [nim]
+---
+
+<https://nim-lang.org/docs/math.html#pow,float64,float64>
+
+## References
+
+<https://rosettacode.org/wiki/Exponentiation_operator>
