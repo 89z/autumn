@@ -1,8 +1,7 @@
 import std.format, std.stdio;
 
 string numberFormat(real n) {
-   real n2 = n;
-   int n3 = 0;
+   auto n2 = n, n3 = 0;
    while (n2 >= 1e3) {
       n2 /= 1e3;
       n3++;

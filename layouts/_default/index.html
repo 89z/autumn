@@ -16,7 +16,7 @@ localhost:1313/autumn
       </section>
    {{ if eq hugo.Environment "example" }}
       {{ if isset .Params "example" }}
-<a href="{{ .Params.example }}">Example</a>
+<a href="{{ .Params.example }}#{{ .Title }}">Example</a>
       {{ end }}
    {{ end }}
    </article>

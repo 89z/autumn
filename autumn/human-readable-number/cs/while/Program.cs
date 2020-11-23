@@ -2,10 +2,9 @@ using System;
 
 class Program {
    static string NumberFormat(double n) {
-      double n2 = n;
-      int n3 = 0;
-      while (n2 >= 1000) {
-         n2 /= 1000;
+      var (n2, n3) = (n, 0);
+      while (n2 >= 1e3) {
+         n2 /= 1e3;
          n3++;
       }
       return String.Format("{0:f3}", n2) + new[]{"", " k", " M", " G"}[n3];

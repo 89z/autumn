@@ -1,6 +1,5 @@
 String numberFormat(double n) {
-   double n2 = n;
-   int n3 = 0;
+   var n2 = n, n3 = 0;
    while (n2 >= 1000) {
       n2 /= 1000;
       n3++;

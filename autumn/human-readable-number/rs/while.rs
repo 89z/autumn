@@ -1,6 +1,5 @@
 fn number_format(n: f64) -> String {
-   let mut n2 = n;
-   let mut n3 = 0;
+   let (mut n2, mut n3) = (n, 0);
    while n2 >= 1e3 {
       n2 /= 1e3;
       n3 += 1;
