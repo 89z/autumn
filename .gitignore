@@ -5,6 +5,7 @@ autumn/*/cs/*/obj
 autumn/*/cs/bin
 autumn/*/cs/cs.csproj
 autumn/*/cs/obj
+autumn/*/d/.dub
 autumn/*/d/.gitignore
 autumn/*/d/dub.selections.json
 autumn/*/dart/.dart_tool

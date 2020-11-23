@@ -1,7 +1,9 @@
-import ae.sys.net, std.stdio;
+import
+   ae.sys.net,
+   std.stdio;
 
 void main() {
-   auto s = "https://speedtest.lax.hivelocity.net";
-   auto y = net.getFile(s);
-   write(cast(char[])y);
+   auto url_s = "http://speedtest.lax.hivelocity.net";
+   auto get_s = cast(string) net.getFile(url_s);
+   get_s.write;
 }

@@ -1,23 +1,24 @@
 package main
 
 import (
-   "fmt"
    "os"
    "time"
 )
 
+func ModTime(s string) (time.Time, error) {
+   o, e := os.Stat(s)
+   if e != nil {
+      return time.Time{}, e
+   }
+   return o.ModTime(), nil
+}
+
 func main() {
-   s := "index.md"
-   // example 1
-   o1 := time.Now()
-   os.Chtimes(s, o1, o1)
-   // example 2
-   o2, e := os.Stat(s)
+   in_o := time.Now()
+   os.Chtimes("a.go", in_o, in_o)
+   out_o, e := ModTime("a.go")
    if e != nil {
       os.Exit(1)
    }
-   // print
-   n1 := o1.Unix()
-   n2 := o2.ModTime().Unix()
-   fmt.Println(n1 == n2)
+   println(in_o.Unix() == out_o.Unix())
 }

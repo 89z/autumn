@@ -35,12 +35,14 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> ae.sys.net<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span>
+   ae.sys.net<span style="color:#f92672">,</span>
+   std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span><span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">auto</span> y <span style="color:#f92672">=</span> net<span style="color:#f92672">.</span><span style="color:#a6e22e">getFile</span><span style="color:#f92672">(</span>s<span style="color:#f92672">);</span>
-   write<span style="color:#f92672">(</span><span style="color:#66d9ef">cast</span><span style="color:#f92672">(</span><span style="color:#66d9ef">char</span><span style="color:#f92672">[])</span>y<span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> url_s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> get_s <span style="color:#f92672">=</span> <span style="color:#66d9ef">cast</span><span style="color:#f92672">(</span><span style="color:#66d9ef">string</span><span style="color:#f92672">)</span> net<span style="color:#f92672">.</span><span style="color:#a6e22e">getFile</span><span style="color:#f92672">(</span>url_s<span style="color:#f92672">);</span>
+   get_s<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 

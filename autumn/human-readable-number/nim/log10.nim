@@ -1,4 +1,6 @@
-import math, strformat
+import
+   math,
+   strformat
 
 proc numberFormat(n: float): string =
    let n2 = int log10(n) / 3

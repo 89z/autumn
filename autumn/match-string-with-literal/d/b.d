@@ -1,7 +1,9 @@
-import std.algorithm.searching, std.stdio;
+import
+   std.algorithm.searching,
+   std.stdio;
 
 void main() {
-   auto s = "June";
-   auto b = s.startsWith("Ju");
+   auto s = "March";
+   auto b = s.startsWith("Ma");
    b.writeln;
 }

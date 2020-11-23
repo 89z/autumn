@@ -1,7 +1,9 @@
-import std.algorithm.searching, std.stdio;
+import
+   std.algorithm.searching,
+   std.stdio;
 
 void main() {
-   auto s = "June";
-   auto b = s.canFind("un");
+   auto s = "March";
+   auto b = s.canFind("ar");
    b.writeln;
 }

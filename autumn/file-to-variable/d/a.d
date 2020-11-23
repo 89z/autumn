@@ -1,6 +1,8 @@
-import std.file, std.stdio;
+import
+   std.file,
+   std.stdio;
 
 void main() {
-   auto s = "a.txt".readText;
+   auto s = readText("a.d");
    s.write;
 }
