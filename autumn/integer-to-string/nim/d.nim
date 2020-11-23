@@ -1,5 +1,5 @@
 import strformat
-var n = 11
+var n = 100
 var s: string
 s.formatValue(n, "")
-echo s == "11"
+echo s == "100"

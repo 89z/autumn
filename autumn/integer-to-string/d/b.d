@@ -1,7 +1,7 @@
 import std.conv, std.stdio;
 
 void main() {
-   auto n = 11;
+   auto n = 100;
    auto s = to!string(n);
-   writeln(s == "11");
+   writeln(s == "100");
 }

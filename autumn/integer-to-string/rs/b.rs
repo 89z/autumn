@@ -1,5 +1,5 @@
 fn main() {
-   let n = 11;
+   let n = 100;
    let s = n.to_string();
-   println!("{}", s == "11");
+   println!("{}", s == "100");
 }

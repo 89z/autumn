@@ -2,7 +2,7 @@ import std.conv: text;
 import std.stdio: writeln;
 
 void main() {
-   auto n = 11;
+   auto n = 100;
    auto s = text(n);
-   writeln(s == "11");
+   writeln(s == "100");
 }

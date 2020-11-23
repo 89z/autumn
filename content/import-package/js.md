@@ -3,8 +3,8 @@ title: JavaScript
 tags: [javascript]
 ---
 
-{{< r "a.mjs" >}}
-{{< r "b.mjs" >}}
+{{< r "a.mjs" js >}}
+{{< r "b.mjs" js >}}
 
 <https://developer.mozilla.org/Web/JavaScript/Reference/Statements/import>
 

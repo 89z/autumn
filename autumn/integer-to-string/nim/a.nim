@@ -1,3 +1,3 @@
-let n = 11
+let n = 100
 let s = $(n)
-echo s == "11"
+echo s == "100"

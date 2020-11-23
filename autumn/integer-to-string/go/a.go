@@ -2,7 +2,7 @@ package main
 import "fmt"
 
 func main() {
-   n := 11
+   n := 100
    s := fmt.Sprint(n)
-   fmt.Println(s == "11")
+   fmt.Println(s == "100")
 }

@@ -1,3 +1,3 @@
-n = 11
+n = 100
 s = repr(n)
-print(s == '11')
+print(s == '100')
