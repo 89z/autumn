@@ -36,6 +36,8 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">dependencies</span>]
 <span style="color:#a6e22e">regex</span> = <span style="color:#e6db74">&#34;&#34;</span>
+<span style="color:#a6e22e">tera</span> = { <span style="color:#a6e22e">path</span> = <span style="color:#e6db74">&#34;../tera&#34;</span> }
+<span style="color:#a6e22e">zip</span> = { <span style="color:#a6e22e">git</span> = <span style="color:#e6db74">&#34;https://github.com/zip-rs/zip&#34;</span> }
 
 [<span style="color:#a6e22e">package</span>]
 <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;may&#34;</span>
@@ -54,8 +56,15 @@
 
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps1" data-lang="ps1">$env:RUSTFLAGS = <span style="color:#e6db74">&#39;-C link-arg=-s&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps1" data-lang="ps1"><span style="color:#75715e"># exmaple 1</span>
+cargo build
+<span style="color:#75715e"># example 2</span>
+cargo build --examples
+<span style="color:#75715e"># example 3</span>
 cargo build --release
+<span style="color:#75715e"># exmaple 4</span>
+$env:RUSTFLAGS = <span style="color:#e6db74">&#39;-C link-arg=-s&#39;</span>
+cargo build
 </code></pre></div>
 
 <p><a href="https://doc.rust-lang.org/cargo/commands/cargo-build.html">https://doc.rust-lang.org/cargo/commands/cargo-build.html</a></p>
