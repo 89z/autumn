@@ -1,5 +1,4 @@
-require 'foo.rb'
-
-# searches $LOAD_PATH for foo.rb, foo.so,
-# foo.o, foo.dll:
-require 'foo'
+# example 1
+require 'year'
+# exmaple 2
+require 'year.rb'

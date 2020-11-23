@@ -1,4 +1,6 @@
-import std.array, std.stdio;
+import
+   std.array,
+   std.stdio;
 
 void main() {
    auto s = "M a r c h";

@@ -35,11 +35,17 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.file<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span>
+   std.file<span style="color:#f92672">,</span>
+   std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">testFile</span><span style="color:#f92672">(</span><span style="color:#66d9ef">string</span> s<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">return</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">exists</span> <span style="color:#f92672">&amp;&amp;</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">isFile</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;a.d&#34;</span><span style="color:#f92672">;</span>
-   writeln<span style="color:#f92672">(</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">exists</span> <span style="color:#f92672">&amp;&amp;</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">isFile</span><span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> b <span style="color:#f92672">=</span> testFile<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a.d&#34;</span><span style="color:#f92672">);</span>
+   b<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 

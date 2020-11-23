@@ -1,4 +1,6 @@
-import std.conv, std.stdio;
+import
+   std.conv,
+   std.stdio;
 
 void main() {
    auto s = "9.9";

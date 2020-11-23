@@ -1,6 +1,12 @@
-import std.file, std.stdio;
+import
+   std.file,
+   std.stdio;
+
+bool testFile(string s) {
+   return s.exists && s.isFile;
+}
 
 void main() {
-   auto s = "a.d";
-   writeln(s.exists && s.isFile);
+   auto b = testFile("a.d");
+   b.writeln;
 }

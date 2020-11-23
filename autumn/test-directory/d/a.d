@@ -1,6 +1,12 @@
-import std.file, std.stdio;
+import
+   std.file,
+   std.stdio;
+
+bool testDir(string s) {
+   return s.exists && s.isDir;
+}
 
 void main() {
-   auto s = `C:\Users`;
-   writeln(s.exists && s.isDir);
+   auto b = testDir(`C:\Users`);
+   b.writeln;
 }

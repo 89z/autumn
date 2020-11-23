@@ -1,7 +1,8 @@
-import std.conv, std.stdio;
+import
+   std.conv,
+   std.stdio;
 
 void main() {
-   auto n = 100;
-   auto s = text(n);
+   auto s = text(100);
    writeln(s == "100");
 }

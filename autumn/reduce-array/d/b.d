@@ -1,4 +1,6 @@
-import std.algorithm, std.stdio;
+import
+   std.algorithm,
+   std.stdio;
 
 void main() {
    auto a = ["May", "June"];
