@@ -4,7 +4,7 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Path to basename / C#</title>
+   <title>Path to extension / C#</title>
 
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/main.css">
@@ -21,10 +21,10 @@
    <main class="page">
 
 <h1>
-   <a href="/autumn/path-to-basename/">Path to basename</a> / C#
+   <a href="/autumn/path-to-extension/">Path to extension</a> / C#
 </h1>
 <section class="page">
-   <time>Thu Sep 10 2020</time>
+   <time>Mon Nov 23 2020</time>
    
    <a href="/autumn/categories/path/">path</a>
    
@@ -39,17 +39,16 @@
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">var</span> s = <span style="color:#e6db74">@&#34;C:\Windows\notepad.exe&#34;</span>;
-      <span style="color:#66d9ef">var</span> s1 = Path.GetFileName(s);
-      Console.WriteLine(s1 == <span style="color:#e6db74">&#34;notepad.exe&#34;</span>);
+      <span style="color:#66d9ef">var</span> s = <span style="color:#e6db74">&#34;Program.cs&#34;</span>;
+      <span style="color:#66d9ef">var</span> s2 = Path.GetExtension(s);
+      Console.WriteLine(s2 == <span style="color:#e6db74">&#34;.cs&#34;</span>);
    }
 }
 </code></pre></div>
 
-<ul>
-<li><a href="https://docs.microsoft.com/dotnet/api/system.io.path.getfilename">https://docs.microsoft.com/dotnet/api/system.io.path.getfilename</a></li>
-<li><a href="https://docs.microsoft.com/dotnet/api/system.io.path.getfilenamewithoutextension">https://docs.microsoft.com/dotnet/api/system.io.path.getfilenamewithoutextension</a></li>
-</ul>
+<p><a href="https://docs.microsoft.com/dotnet/api/system.io.path.getextension">https://docs.microsoft.com/dotnet/api/system.io.path.getextension</a></p>
+<h2 id="references">References</h2>
+<p><a href="https://rosettacode.org/wiki/Extract_file_extension">https://rosettacode.org/wiki/Extract_file_extension</a></p>
 
 </main>
 

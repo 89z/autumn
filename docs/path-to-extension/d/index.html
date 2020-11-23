@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Path to extension / D</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/a8nj/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/path-to-extension/">Path to extension</a> / D
+</h1>
+<section class="page">
+   <time>Mon Nov 23 2020</time>
+   
+   <a href="/autumn/categories/path/">path</a>
+   
+</section>
+   
+
+
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.range <span style="color:#f92672">:</span> empty<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>extension<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;file&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">empty</span><span style="color:#f92672">);</span>
+writeln<span style="color:#f92672">(</span>extension<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;file.&#34;</span><span style="color:#f92672">));</span> <span style="color:#75715e">// &#34;.&#34;
+</span><span style="color:#75715e"></span>writeln<span style="color:#f92672">(</span>extension<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;file.ext&#34;w</span><span style="color:#f92672">));</span> <span style="color:#75715e">// &#34;.ext&#34;
+</span><span style="color:#75715e"></span>writeln<span style="color:#f92672">(</span>extension<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;file.ext1.ext2&#34;d</span><span style="color:#f92672">));</span> <span style="color:#75715e">// &#34;.ext2&#34;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>extension<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;.foo&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">dup</span><span style="color:#f92672">).</span><span style="color:#a6e22e">empty</span><span style="color:#f92672">);</span>
+writeln<span style="color:#f92672">(</span>extension<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;.foo.ext&#34;w</span><span style="color:#f92672">.</span><span style="color:#a6e22e">dup</span><span style="color:#f92672">));</span> <span style="color:#75715e">// &#34;.ext&#34;
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">static</span> <span style="color:#a6e22e">assert</span><span style="color:#f92672">(</span>extension<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;file&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">empty</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">static</span> <span style="color:#a6e22e">assert</span><span style="color:#f92672">(</span>extension<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;file.ext&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;.ext&#34;</span><span style="color:#f92672">);</span>
+</code></pre></div>
+
+<p><a href="https://dlang.org/library/std/path/extension.html">https://dlang.org/library/std/path/extension.html</a></p>
+<h2 id="references">References</h2>
+<p><a href="https://rosettacode.org/wiki/Extract_file_extension">https://rosettacode.org/wiki/Extract_file_extension</a></p>
+
+</main>
+
+</body>
+</html>
