@@ -1,7 +1,5 @@
-import std.file, std.stdio;
+import std.file;
 
 void main() {
-   "..".chdir;
-   auto s = getcwd;
-   s.writeln;
+   chdir("..");
 }

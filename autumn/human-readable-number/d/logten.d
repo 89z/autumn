@@ -1,4 +1,7 @@
-import std.format, std.math, std.stdio;
+import
+   std.format,
+   std.math,
+   std.stdio;
 
 string numberFormat(real n) {
    auto n2 = cast(int)log10(n) / 3;

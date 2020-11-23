@@ -1,4 +1,6 @@
-import std.path, std.stdio;
+import
+   std.path,
+   std.stdio;
 
 void main() {
    auto s = extension("a.d");

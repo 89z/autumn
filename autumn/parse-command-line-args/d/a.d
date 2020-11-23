@@ -1,4 +1,6 @@
-import std.getopt, std.stdio;
+import
+   std.getopt,
+   std.stdio;
 
 int main(string[] a) {
    string pre_s, suf_s;

@@ -1,4 +1,6 @@
-import std.conv, std.stdio;
+import
+   std.conv,
+   std.stdio;
 
 void main() {
    // example 1

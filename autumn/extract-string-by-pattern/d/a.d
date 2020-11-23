@@ -1,4 +1,7 @@
-import std.range, std.regex, std.stdio;
+import
+   std.range,
+   std.regex,
+   std.stdio;
 
 void main() {
    auto o = regex("..n");

@@ -1,4 +1,6 @@
-import std.math, std.stdio;
+import
+   std.math,
+   std.stdio;
 
 void main() {
    auto n = pow(10, 9);

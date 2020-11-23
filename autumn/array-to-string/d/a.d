@@ -1,4 +1,6 @@
-import std.array, std.stdio;
+import
+   std.array,
+   std.stdio;
 
 void main() {
    auto a = ["May", "June"];

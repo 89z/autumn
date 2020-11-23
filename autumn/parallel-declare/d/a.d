@@ -1,4 +1,6 @@
-import std.stdio, std.typecons;
+import
+   std.stdio,
+   std.typecons;
 
 void main() {
    // example 1
