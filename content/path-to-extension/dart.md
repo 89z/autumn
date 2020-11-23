@@ -3,7 +3,9 @@ title: Dart
 tags: [dart]
 ---
 
-<https://github.com/dart-lang/path>
+{{< r "a.dart" >}}
+
+<https://pub.dev/documentation/path/latest/path/path-library.html>
 
 ## References
 

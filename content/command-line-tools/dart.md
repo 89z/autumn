@@ -15,6 +15,10 @@ tags: [dart]
 
 <https://dart.dev/tools/dartanalyzer>
 
+{{< r "pubspec.yaml" >}}
+
+<https://dart.dev/tools/pub/pubspec>
+
 {{< r "d.ps1" >}}
 
 <https://dart.dev/tools/pub>
