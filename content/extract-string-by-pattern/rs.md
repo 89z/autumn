@@ -5,11 +5,11 @@ tags: [rust]
 
 {{< r "a/src/main.rs" >}}
 
-<https://docs.rs/regex/1.4.1/regex/struct.Regex.html#method.captures>
+<https://docs.rs/regex/latest/regex/struct.Regex.html#method.captures>
 
 {{< r "b/src/main.rs" >}}
 
-<https://docs.rs/regex/1.4.1/regex/struct.Regex.html#method.captures_iter>
+<https://docs.rs/regex/latest/regex/struct.Regex.html#method.captures_iter>
 
 ## References
 

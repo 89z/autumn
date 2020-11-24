@@ -5,7 +5,7 @@ tags: [dart]
 
 {{< r "a.dart" >}}
 
-<https://api.dart.dev/stable/String/operator_plus.html>
+<https://api.dart.dev/dart-core/String/operator_plus.html>
 
 ## References
 

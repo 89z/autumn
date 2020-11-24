@@ -3,9 +3,13 @@ title: Rust
 tags: [rust]
 ---
 
-{{< r "a.rs" >}}
+{{< r "a/a.rs" >}}
 
-<https://doc.rust-lang.org/std/fs>
+<https://doc.rust-lang.org/std/fs/struct.Metadata.html#method.modified>
+
+{{< r "b/src/main.rs" >}}
+
+<https://docs.rs/filetime/latest/filetime/fn.set_file_mtime.html>
 
 ## References
 
