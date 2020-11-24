@@ -1,1 +1,2 @@
-o = File.mtime('index.md')
+o = File.mtime('a.rb')
+puts o

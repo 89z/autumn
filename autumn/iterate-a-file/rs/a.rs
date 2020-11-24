@@ -1,9 +1,14 @@
-use std::{fs::File, io, io::BufRead, io::BufReader};
+use std::{
+   fs::File,
+   io,
+   io::BufRead,
+   io::BufReader
+};
 
 fn main() -> io::Result<()> {
-   let r = File::open("a.rs")?;
-   for r in BufReader::new(r).lines() {
-      println!("{}", r?);
+   let e = File::open("a.rs")?;
+   for e in BufReader::new(e).lines() {
+      println!("{}", e?);
    }
    Ok(())
 }

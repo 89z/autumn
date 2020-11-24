@@ -1,7 +1,10 @@
-use std::time::{SystemTime, UNIX_EPOCH};
+use std::time::{
+   SystemTime,
+   UNIX_EPOCH
+};
 
 fn main() {
    let o = SystemTime::now();
-   let r = o.duration_since(UNIX_EPOCH);
-   println!("{:?}", r);
+   let e = o.duration_since(UNIX_EPOCH);
+   println!("{:?}", e);
 }

@@ -1,2 +1,2 @@
-File.utime(o1, o1, s)
-o1 = Time.now
+n = 400_000_000
+File.utime(n, n, 'a.rb')

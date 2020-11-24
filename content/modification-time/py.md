@@ -5,7 +5,11 @@ tags: [python]
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/os.html>
+<https://docs.python.org/library/os.html#os.utime>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/library/os.path.html#os.path.getmtime>
 
 ## References
 

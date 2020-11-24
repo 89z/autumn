@@ -5,6 +5,10 @@ tags: [php]
 
 {{< r "a.php" >}}
 
+<https://php.net/function.filemtime>
+
+{{< r "b.php" >}}
+
 <https://php.net/function.touch>
 
 ## References

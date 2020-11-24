@@ -36,13 +36,19 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">time</span>();
-<span style="color:#a6e22e">touch</span>(<span style="color:#e6db74">&#39;a.php&#39;</span>, $n1);
-<span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">filemtime</span>(<span style="color:#e6db74">&#39;a.php&#39;</span>);
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1 <span style="color:#f92672">==</span> $n2);
+$n <span style="color:#f92672">=</span> <span style="color:#a6e22e">filemtime</span>(<span style="color:#e6db74">&#39;a.php&#39;</span>);
+<span style="color:#66d9ef">echo</span> $n, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</code></pre></div>
+
+<p><a href="https://php.net/function.filemtime">https://php.net/function.filemtime</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">touch</span>(<span style="color:#e6db74">&#39;a.php&#39;</span>, <span style="color:#ae81ff">400_000_000</span>);
 </code></pre></div>
 
 <p><a href="https://php.net/function.touch">https://php.net/function.touch</a></p>

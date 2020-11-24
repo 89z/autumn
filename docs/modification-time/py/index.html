@@ -35,17 +35,24 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> os<span style="color:#f92672">,</span> time
-<span style="color:#75715e"># example 1</span>
-n1 <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
-os<span style="color:#f92672">.</span>utime(<span style="color:#e6db74">&#39;a.py&#39;</span>, (n1, n1))
-<span style="color:#75715e"># example 2</span>
-n2 <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>getmtime(<span style="color:#e6db74">&#39;a.py&#39;</span>)
-<span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(n1 <span style="color:#f92672">==</span> n2)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> os
+n <span style="color:#f92672">=</span> <span style="color:#ae81ff">400_000_000</span>
+os<span style="color:#f92672">.</span>utime(<span style="color:#e6db74">&#39;a.py&#39;</span>, (n, n))
 </code></pre></div>
 
-<p><a href="https://docs.python.org/library/os.html">https://docs.python.org/library/os.html</a></p>
+<p><a href="https://docs.python.org/library/os.html#os.utime">https://docs.python.org/library/os.html#os.utime</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> os <span style="color:#f92672">import</span> path
+n <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>getmtime(<span style="color:#e6db74">&#39;a.py&#39;</span>)
+<span style="color:#66d9ef">print</span>(n)
+</code></pre></div>
+
+<p><a href="https://docs.python.org/library/os.path.html#os.path.getmtime">https://docs.python.org/library/os.path.html#os.path.getmtime</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#last-modification-time">https://hyperpolyglot.org/scripting2#last-modification-time</a></li>
