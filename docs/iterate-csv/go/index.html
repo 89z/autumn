@@ -41,29 +41,47 @@
 
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;encoding/csv&#34;</span>
-   <span style="color:#e6db74">&#34;log&#34;</span>
+   <span style="color:#e6db74">&#34;io&#34;</span>
    <span style="color:#e6db74">&#34;strings&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">str_o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#e6db74">`Month,Day
-</span><span style="color:#e6db74">January,Sunday
-</span><span style="color:#e6db74">February,Monday`</span>)
-   <span style="color:#a6e22e">csv_o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">csv</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">str_o</span>)
-   <span style="color:#a6e22e">head_a</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">csv_o</span>.<span style="color:#a6e22e">Read</span>()
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Scanner</span> <span style="color:#66d9ef">struct</span> {
+   <span style="color:#a6e22e">Reader</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">csv</span>.<span style="color:#a6e22e">Reader</span>
+   <span style="color:#a6e22e">Head</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>
+   <span style="color:#a6e22e">Row</span> []<span style="color:#66d9ef">string</span>
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">o</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Reader</span>) <span style="color:#a6e22e">Scanner</span> {
+   <span style="color:#a6e22e">csv_o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">csv</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">o</span>)
+   <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">csv_o</span>.<span style="color:#a6e22e">Read</span>()
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Scanner</span>{}
    }
-   <span style="color:#66d9ef">for</span> {
-      <span style="color:#a6e22e">row_a</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">csv_o</span>.<span style="color:#a6e22e">Read</span>()
-      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-         <span style="color:#66d9ef">break</span>
-      }
-      <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{}
-      <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">head_a</span> {
-         <span style="color:#a6e22e">m</span>[<span style="color:#a6e22e">s</span>] = <span style="color:#a6e22e">row_a</span>[<span style="color:#a6e22e">n</span>]
-      }
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">m</span>)
+   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{}
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">a</span> {
+      <span style="color:#a6e22e">m</span>[<span style="color:#a6e22e">s</span>] = <span style="color:#a6e22e">n</span>
+   }
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Scanner</span>{<span style="color:#a6e22e">Reader</span>: <span style="color:#a6e22e">csv_o</span>, <span style="color:#a6e22e">Head</span>: <span style="color:#a6e22e">m</span>}
+}
+
+<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">o</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">Scanner</span>) <span style="color:#a6e22e">Scan</span>() <span style="color:#66d9ef">bool</span> {
+   <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Reader</span>.<span style="color:#a6e22e">Read</span>()
+   <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Row</span> = <span style="color:#a6e22e">a</span>
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span>
+}
+
+<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">o</span> <span style="color:#a6e22e">Scanner</span>) <span style="color:#a6e22e">Text</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Row</span>[<span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Head</span>[<span style="color:#a6e22e">s</span>]]
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`Month,Day
+</span><span style="color:#e6db74">January,Sunday
+</span><span style="color:#e6db74">February,Monday`</span>
+
+   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">s</span>))
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Scan</span>() {
+      println(<span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Text</span>(<span style="color:#e6db74">&#34;Month&#34;</span>), <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Text</span>(<span style="color:#e6db74">&#34;Day&#34;</span>))
    }
 }
 </code></pre></div>
