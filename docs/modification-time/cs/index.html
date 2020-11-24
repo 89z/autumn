@@ -53,40 +53,14 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
-<span style="color:#66d9ef">using</span> System.IO;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System.IO;
+<span style="color:#66d9ef">using</span> System;
 
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Test</span>
-{
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main()
-    {
-        <span style="color:#66d9ef">try</span>
-        {
-            <span style="color:#66d9ef">string</span> path = <span style="color:#e6db74">@&#34;c:\Temp\MyTest.txt&#34;</span>;
-            <span style="color:#66d9ef">if</span> (!File.Exists(path))
-            {
-                File.Create(path);
-            }
-            <span style="color:#66d9ef">else</span>
-            {
-                <span style="color:#75715e">// Take an action that will affect the write time.
-</span><span style="color:#75715e"></span>                File.SetLastWriteTime(path, <span style="color:#66d9ef">new</span> DateTime(<span style="color:#ae81ff">1985</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">3</span>));
-            }
-
-            <span style="color:#75715e">// Get the creation time of a well-known directory.
-</span><span style="color:#75715e"></span>            DateTime dt = File.GetLastWriteTime(path);
-            Console.WriteLine(<span style="color:#e6db74">&#34;The last write time for this file was {0}.&#34;</span>, dt);
-            
-            <span style="color:#75715e">// Update the last write time.
-</span><span style="color:#75715e"></span>            File.SetLastWriteTime(path, DateTime.Now);
-            dt = File.GetLastWriteTime(path);
-            Console.WriteLine(<span style="color:#e6db74">&#34;The last write time for this file was {0}.&#34;</span>, dt);
-        }
-        <span style="color:#66d9ef">catch</span> (Exception e)
-        {
-            Console.WriteLine(<span style="color:#e6db74">&#34;The process failed: {0}&#34;</span>, e.ToString());
-        }
-    }
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Test</span> {
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">var</span> o = <span style="color:#66d9ef">new</span> DateTime(<span style="color:#ae81ff">2000</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>);
+      File.SetLastWriteTime(<span style="color:#e6db74">&#34;Program.cs&#34;</span>, o);
+   }
 }
 </code></pre></div>
 

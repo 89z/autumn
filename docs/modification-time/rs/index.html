@@ -55,14 +55,12 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> {
-   filetime::FileTime,
-   std::io
-};
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> filetime::FileTime;
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> FileTime::from_unix_time(<span style="color:#ae81ff">400_000_000</span>, <span style="color:#ae81ff">0</span>);
-   filetime::set_file_mtime(<span style="color:#e6db74">&#34;Cargo.toml&#34;</span>, o)
+   <span style="color:#66d9ef">let</span> e <span style="color:#f92672">=</span> filetime::set_file_mtime(<span style="color:#e6db74">&#34;Cargo.toml&#34;</span>, o);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, e);
 }
 </code></pre></div>
 

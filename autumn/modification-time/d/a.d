@@ -1,11 +1,8 @@
 import
    std.datetime,
-   std.file,
-   std.stdio;
+   std.file;
 
 void main() {
-   auto in_o = Clock.currTime;
-   setTimes("a.d", in_o, in_o);
-   auto out_o = timeLastModified("a.d");
-   writeln(in_o == out_o);
+   auto o = SysTime.fromUnixTime(400_000_000);
+   setTimes("a.d", o, o);
 }
