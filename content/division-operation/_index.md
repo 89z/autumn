@@ -2,5 +2,5 @@
 title: Division operation
 categories: [number]
 date: 2020-11-21
-example: //github.com/a8nJ/sienna/blob/master/youtube/youtube.php
+example: sienna/blob/master/youtube/youtube.php
 ---
