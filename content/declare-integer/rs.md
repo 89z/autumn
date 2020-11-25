@@ -5,7 +5,7 @@ tags: [rust]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/reference/tokens.html#number-literals>
+<https://doc.rust-lang.org/reference/tokens.html#integer-literals>
 
 ## References
 

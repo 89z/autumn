@@ -1,4 +1,4 @@
 fn main() {
-   let n = 10u32.pow(5);
-   println!("{}", n == 100_000);
+   let n = 9f64.powf(0.5);
+   println!("{}", n == 3f64);
 }
