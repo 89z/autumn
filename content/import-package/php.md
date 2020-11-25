@@ -1,6 +1,6 @@
 ---
-title: Python
-tags: [python]
+title: PHP
+tags: [php]
 ---
 
 {{< r "a.php" >}}
