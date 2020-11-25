@@ -6,10 +6,9 @@ import (
 )
 
 func main() {
-   s := "index.md"
-   s1, e := filepath.Abs(s)
+   s, e := filepath.Abs("a.go")
    if e != nil {
       os.Exit(1)
    }
-   println(s1)
+   println(s)
 }

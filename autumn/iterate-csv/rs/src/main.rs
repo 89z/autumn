@@ -1,21 +1,13 @@
-use std::error::Error;
-use std::num::ParseIntError;
-use csv::{Reader, Writer};
+use {
+   csv::Reader,
+   std::collections::HashMap
+};
 
-fn main() -> Result<(), Box<dyn Error>> {
-   let mut reader = Reader::from_path("data.csv")?;
-   let mut writer = Writer::from_path("output.csv")?;
-   let mut headers = reader.headers()?.clone();
-   headers.push_field("SUM");
-   writer.write_record(headers.iter())?;
-   for row in reader.records() {
-      let mut row = row?;
-      let sum: Result<_, ParseIntError> = row.iter().try_fold(0, |accum, s| {
-         Ok(accum + s.parse::<i64>()?)
-      });
-      row.push_field(&sum?.to_string());
-      writer.write_record(row.iter())?;
+fn main() -> Result<(), csv::Error> {
+   let mut o = Reader::from_path("a.csv")?;
+   for e in o.deserialize() {
+      let m: HashMap<String, String> = e?;
+      println!("{:?}", m);
    }
-   writer.flush()?;
    Ok(())
 }

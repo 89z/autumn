@@ -1,4 +1,7 @@
-use std::{io, process::Command};
+use std::{
+   io,
+   process::Command
+};
 
 fn main() -> io::Result<()> {
    println!("BEGIN");

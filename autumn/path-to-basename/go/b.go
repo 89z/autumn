@@ -2,7 +2,7 @@ package main
 import "path/filepath"
 
 func main() {
-   s := `C:\Windows\notepad.exe`
-   s1 := filepath.Base(s)
-   println(s1 == "notepad.exe")
+   in_s := `C:\Windows\notepad.exe`
+   out_s := filepath.Base(in_s)
+   println(out_s == "notepad.exe")
 }

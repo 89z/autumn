@@ -3,6 +3,8 @@ title: Rust
 tags: [rust]
 ---
 
+{{< r "src/main.rs" >}}
+
 <https://github.com/BurntSushi/rust-csv>
 
 ## References
