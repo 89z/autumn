@@ -5,11 +5,11 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-<https://wiki.php.net/rfc/add_str_starts_with_and_ends_with_functions>
+<https://php.net/function.str-contains>
 
 {{< r "b.php" >}}
 
-<https://wiki.php.net/rfc/str_contains>
+<https://php.net/function.str-starts-with>
 
 ## References
 

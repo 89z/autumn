@@ -1,8 +1,4 @@
 <?php
-
-function str_contains(string $s, string $s2): bool {
-   return strpos($s, $s2) !== false;
-}
-
-$b = str_contains('June', 'un');
+$s = 'March';
+$b = str_starts_with($s, 'Ma');
 var_dump($b);

@@ -1,9 +1,15 @@
 <?php
-# example 1
+
+function encode36(int $n): string {
+   $s = (string) $n;
+   return base_convert($s, 10, 36);
+}
+
+function decode36(string $s): int {
+   return (int) base_convert($s, 36, 10);
+}
+
 $n = 1577858399;
-$s1 = base_convert($n, 10, 36);
-# example 2
-$s = 'q3ezbz';
-$n2 = +base_convert($s, 36, 10);
-# print
-var_dump($s1 === $s, $n2 === $n);
+$s = encode36($n);
+$n2 = decode36($s);
+var_dump($n2 === $n);
