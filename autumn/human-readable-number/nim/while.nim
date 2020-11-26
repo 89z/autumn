@@ -7,7 +7,7 @@ proc numberFormat(n: float): string =
    while n2 >= 1e3:
       n2 /= 1e3
       n3 += 1
-   return fmt"{n2:.3f}" & ["", " k", " M", " G"][n3]
+   return &"{n2:.3f}" & ["", " k", " M", " G"][n3]
 
 let s = numberFormat(9012345678e0)
 echo s == "9.012 G"

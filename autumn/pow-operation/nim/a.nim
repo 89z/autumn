@@ -1,3 +1,3 @@
 import math
-let n = pow(9, 0.5)
-echo n == 3
+let n = 10 ^ 5
+echo n == 100_000

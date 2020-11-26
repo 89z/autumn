@@ -2,46 +2,24 @@ package main
 
 import (
    "encoding/csv"
-   "io"
+   "fmt"
    "strings"
 )
 
-type Scanner struct {
-   Reader *csv.Reader
-   Head map[string]int
-   Row []string
-}
-
-func NewScanner(o io.Reader) Scanner {
-   csv_o := csv.NewReader(o)
-   a, e := csv_o.Read()
-   if e != nil {
-      return Scanner{}
-   }
-   m := map[string]int{}
-   for n, s := range a {
-      m[s] = n
-   }
-   return Scanner{Reader: csv_o, Head: m}
-}
-
-func (o *Scanner) Scan() bool {
-   a, e := o.Reader.Read()
-   o.Row = a
-   return e == nil
-}
-
-func (o Scanner) Text(s string) string {
-   return o.Row[o.Head[s]]
-}
-
 func main() {
-   s := `Month,Day
-January,Sunday
-February,Monday`
+   s := `PERFORMER "Chris Isaak"
+TITLE "Heart Shaped World"
+FILE "Chris Isaak - Heart Shaped World.flac" WAVE`
 
-   o := NewScanner(strings.NewReader(s))
-   for o.Scan() {
-      println(o.Text("Month"), o.Text("Day"))
+   o := csv.NewReader(strings.NewReader(s))
+   o.Comma = ' '
+   o.FieldsPerRecord = -1
+
+   for {
+      a, e := o.Read()
+      if e != nil {
+         break
+      }
+      fmt.Printf("%q\n", a)
    }
 }
