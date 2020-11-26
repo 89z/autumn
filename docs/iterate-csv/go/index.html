@@ -46,13 +46,15 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`PERFORMER &#34;Chris Isaak&#34;
-</span><span style="color:#e6db74">TITLE &#34;Heart Shaped World&#34;
-</span><span style="color:#e6db74">FILE &#34;Chris Isaak - Heart Shaped World.flac&#34; WAVE`</span>
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`PERFORMER &#34;Ennio Morricone&#34;
+</span><span style="color:#e6db74">TITLE &#34;Very Best of Ennio Morricone&#34;
+</span><span style="color:#e6db74">FILE &#34;Ennio Morricone - Very Best of Ennio Morricone.flac&#34; WAVE
+</span><span style="color:#e6db74">  TRACK 01 AUDIO`</span>
 
    <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">csv</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">s</span>))
    <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Comma</span> = <span style="color:#e6db74">&#39; &#39;</span>
    <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">FieldsPerRecord</span> = <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+   <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">TrimLeadingSpace</span> = <span style="color:#66d9ef">true</span>
 
    <span style="color:#66d9ef">for</span> {
       <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Read</span>()

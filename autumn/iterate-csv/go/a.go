@@ -7,13 +7,15 @@ import (
 )
 
 func main() {
-   s := `PERFORMER "Chris Isaak"
-TITLE "Heart Shaped World"
-FILE "Chris Isaak - Heart Shaped World.flac" WAVE`
+   s := `PERFORMER "Ennio Morricone"
+TITLE "Very Best of Ennio Morricone"
+FILE "Ennio Morricone - Very Best of Ennio Morricone.flac" WAVE
+  TRACK 01 AUDIO`
 
    o := csv.NewReader(strings.NewReader(s))
    o.Comma = ' '
    o.FieldsPerRecord = -1
+   o.TrimLeadingSpace = true
 
    for {
       a, e := o.Read()
