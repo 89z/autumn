@@ -1,10 +1,10 @@
-using System;
-using System.IO;
+using C = System.Console;
+using P = System.IO.Path;
 
 class Program {
    static void Main() {
-      var s = @"C:\Windows\notepad.exe";
-      var s1 = Path.GetDirectoryName(s);
-      Console.WriteLine(s1 == @"C:\Windows");
+      var path_s = @"C:\Windows\notepad.exe";
+      var dir_s = P.GetDirectoryName(path_s);
+      C.WriteLine(dir_s == @"C:\Windows");
    }
 }

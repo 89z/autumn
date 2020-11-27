@@ -1,11 +1,11 @@
-using System.Net;
-using System;
+using C = System.Console;
+using N = System.Net;
 
 class Program {
    static void Main() {
-      var url_s = "https://speedtest.lax.hivelocity.net";
-      var o = new WebClient();
+      var o = new N.WebClient();
+      var url_s = "http://speedtest.lax.hivelocity.net";
       var res_s = o.DownloadString(url_s);
-      Console.Write(res_s);
+      C.Write(res_s);
    }
 }

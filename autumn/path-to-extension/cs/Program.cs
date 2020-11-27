@@ -1,10 +1,9 @@
-using System.IO;
-using System;
+using C = System.Console;
+using P = System.IO.Path;
 
 class Program {
    static void Main() {
-      var s = "Program.cs";
-      var s2 = Path.GetExtension(s);
-      Console.WriteLine(s2 == ".cs");
+      var s = P.GetExtension("Program.cs");
+      C.WriteLine(s == ".cs");
    }
 }

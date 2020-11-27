@@ -1,6 +1,8 @@
-using System.CommandLine.Invocation;
+// dotnet add package System.CommandLine --prerelease
+using C = System.Console;
+using E = System.Environment;
+using H = System.CommandLine.Invocation.CommandHandler;
 using System.CommandLine;
-using System;
 
 class Program {
    static void Main(string[] a) {
@@ -20,13 +22,13 @@ class Program {
          stem_s = stem;
       }
 
-      o.Handler = CommandHandler.Create<string, string, string>(Execute);
+      o.Handler = H.Create<string, string, string>(Execute);
       o.Invoke(a);
 
       if (stem_s == "") {
-         Environment.Exit(1);
+         E.Exit(1);
       }
 
-      Console.WriteLine(pre_s + stem_s + suf_s);
+      C.WriteLine(pre_s + stem_s + suf_s);
    }
 }

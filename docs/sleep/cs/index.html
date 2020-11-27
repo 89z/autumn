@@ -35,13 +35,13 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
-<span style="color:#66d9ef">using</span> System.Threading;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> Co = System.Console;
+<span style="color:#66d9ef">using</span> Th = System.Threading.Thread;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      Console.WriteLine(<span style="color:#e6db74">&#34;March&#34;</span>);
-      Thread.Sleep(<span style="color:#ae81ff">5000</span>);
+      Co.WriteLine(<span style="color:#e6db74">&#34;Sleep&#34;</span>);
+      Th.Sleep(<span style="color:#ae81ff">5000</span>);
    }
 }
 </code></pre></div>

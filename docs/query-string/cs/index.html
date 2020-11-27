@@ -35,14 +35,14 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System.Web;
-<span style="color:#66d9ef">using</span> System;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> C = System.Console;
+<span style="color:#66d9ef">using</span> H = System.Web.HttpUtility;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">var</span> m = HttpUtility.ParseQueryString(<span style="color:#e6db74">&#34;one=odd&amp;two=even&#34;</span>);
+      <span style="color:#66d9ef">var</span> m = H.ParseQueryString(<span style="color:#e6db74">&#34;one=odd&amp;two=even&#34;</span>);
       <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> s <span style="color:#66d9ef">in</span> m.AllKeys) {
-         Console.WriteLine(s + <span style="color:#e6db74">&#34;: &#34;</span> + m[s]);
+         C.WriteLine(s + <span style="color:#e6db74">&#34;: &#34;</span> + m[s]);
       }
    }
 }

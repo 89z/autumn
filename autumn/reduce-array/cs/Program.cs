@@ -1,4 +1,4 @@
-using System;
+using C = System.Console;
 using System.Linq;
 
 class Program {
@@ -9,6 +9,6 @@ class Program {
       // example 2
       var s = a.Aggregate((s, s2) => s + s2);
       // print
-      Console.WriteLine(n == 7 && s == "MayJune");
+      C.WriteLine(n == 7 && s == "MayJune");
    }
 }

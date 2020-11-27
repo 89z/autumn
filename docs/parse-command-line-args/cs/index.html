@@ -36,8 +36,8 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#75715e">// dotnet add package CommandLineParser
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> CommandLine;
-<span style="color:#66d9ef">using</span> System;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> C = System.Console;
+<span style="color:#66d9ef">using</span> CommandLine;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Options</span> {
@@ -58,7 +58,7 @@
          suf_s = o.Suffix;
          stem_s = o.Stem;
       });
-      Console.WriteLine(pre_s + stem_s + suf_s);
+      C.WriteLine(pre_s + stem_s + suf_s);
    }
 }
 </code></pre></div>
@@ -70,9 +70,11 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System.CommandLine.Invocation;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#75715e">// dotnet add package System.CommandLine --prerelease
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> C = System.Console;
+<span style="color:#66d9ef">using</span> E = System.Environment;
+<span style="color:#66d9ef">using</span> H = System.CommandLine.Invocation.CommandHandler;
 <span style="color:#66d9ef">using</span> System.CommandLine;
-<span style="color:#66d9ef">using</span> System;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] a) {
@@ -92,14 +94,14 @@
          stem_s = stem;
       }
 
-      o.Handler = CommandHandler.Create&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">string</span>&gt;(Execute);
+      o.Handler = H.Create&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">string</span>&gt;(Execute);
       o.Invoke(a);
 
       <span style="color:#66d9ef">if</span> (stem_s == <span style="color:#e6db74">&#34;&#34;</span>) {
-         Environment.Exit(<span style="color:#ae81ff">1</span>);
+         E.Exit(<span style="color:#ae81ff">1</span>);
       }
 
-      Console.WriteLine(pre_s + stem_s + suf_s);
+      C.WriteLine(pre_s + stem_s + suf_s);
    }
 }
 </code></pre></div>
@@ -111,12 +113,13 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System.CommandLine.DragonFruit;
-<span style="color:#66d9ef">using</span> System;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#75715e">// dotnet add package System.CommandLine.DragonFruit --prerelease
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> C = System.Console;
+<span style="color:#66d9ef">using</span> System.CommandLine.DragonFruit;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span> argument, <span style="color:#66d9ef">string</span> prefix, <span style="color:#66d9ef">string</span> suffix) {
-      Console.WriteLine(prefix + argument + suffix);
+      C.WriteLine(prefix + argument + suffix);
    }
 }
 </code></pre></div>

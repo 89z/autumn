@@ -1,6 +1,6 @@
 // dotnet add package CommandLineParser
+using C = System.Console;
 using CommandLine;
-using System;
 
 class Program {
    class Options {
@@ -21,6 +21,6 @@ class Program {
          suf_s = o.Suffix;
          stem_s = o.Stem;
       });
-      Console.WriteLine(pre_s + stem_s + suf_s);
+      C.WriteLine(pre_s + stem_s + suf_s);
    }
 }

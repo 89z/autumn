@@ -1,11 +1,11 @@
-using System.Web;
-using System;
+using C = System.Console;
+using H = System.Web.HttpUtility;
 
 class Program {
    static void Main() {
-      var m = HttpUtility.ParseQueryString("one=odd&two=even");
+      var m = H.ParseQueryString("one=odd&two=even");
       foreach (var s in m.AllKeys) {
-         Console.WriteLine(s + ": " + m[s]);
+         C.WriteLine(s + ": " + m[s]);
       }
    }
 }

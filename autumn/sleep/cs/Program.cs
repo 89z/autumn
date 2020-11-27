@@ -1,9 +1,9 @@
-using System;
-using System.Threading;
+using Co = System.Console;
+using Th = System.Threading.Thread;
 
 class Program {
    static void Main() {
-      Console.WriteLine("March");
-      Thread.Sleep(5000);
+      Co.WriteLine("Sleep");
+      Th.Sleep(5000);
    }
 }
