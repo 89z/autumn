@@ -1,3 +1,4 @@
+// dotnet add package CommandLineParser
 using CommandLine;
 using System;
 

@@ -5,7 +5,11 @@ tags: [go]
 
 {{< r "a.go" >}}
 
-<https://golang.org/ref/spec#Function_types>
+<https://golang.org/ref/spec#Function_declarations>
+
+{{< r "b.go" >}}
+
+<https://golang.org/ref/spec#Method_declarations>
 
 ## References
 
