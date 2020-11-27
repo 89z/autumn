@@ -1,10 +1,10 @@
-using System.IO;
-using System;
+using C = System.Console;
+using D = System.IO.Directory;
 
 class Program {
    static void Main() {
-      var b = Directory.Exists("obj");
-      Console.WriteLine(b);
+      var b = D.Exists("obj");
+      C.WriteLine(b);
    }
 }
 

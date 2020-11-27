@@ -1,6 +1,6 @@
+using C = System.Console;
+using J = System.Text.Json.JsonSerializer;
 using System.Linq;
-using System;
-using static System.Text.Json.JsonSerializer;
 
 class Program {
    static void Main() {
@@ -10,6 +10,6 @@ class Program {
       // example 2
       var a2 = a.Skip(2);
       // print
-      Console.WriteLine(Serialize(a1) + Serialize(a2));
+      C.WriteLine(J.Serialize(a1) + J.Serialize(a2));
    }
 }

@@ -35,13 +35,13 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System.IO;
-<span style="color:#66d9ef">using</span> System;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> C = System.Console;
+<span style="color:#66d9ef">using</span> F = System.IO.File;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">var</span> b = File.Exists(<span style="color:#e6db74">&#34;Program.cs&#34;</span>);
-      Console.WriteLine(b);
+      <span style="color:#66d9ef">var</span> b = F.Exists(<span style="color:#e6db74">&#34;Program.cs&#34;</span>);
+      C.WriteLine(b);
    }
 }
 

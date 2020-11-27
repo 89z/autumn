@@ -1,3 +1,7 @@
 using System.Diagnostics;
-string[] args = { "a", "b"};
-Process.Start(x, string.Join(" ", args));
+
+class Program {
+   static void Main() {
+      Process.Start("waterfox", "google.com/search?q=autechre");
+   }
+}

@@ -24,7 +24,7 @@
    <a href="/autumn/time-difference/">Time difference</a> / C#
 </h1>
 <section class="page">
-   <time>Fri Nov 20 2020</time>
+   <time>Fri Nov 27 2020</time>
    
    <a href="/autumn/categories/time/">time</a>
    
@@ -35,18 +35,23 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System.Diagnostics;
-<span style="color:#66d9ef">using</span> System.Threading;
-<span style="color:#66d9ef">using</span> System;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> Co = System.Console;
+<span style="color:#66d9ef">using</span> Di = System.Diagnostics;
+<span style="color:#66d9ef">using</span> Th = System.Threading.Thread;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">var</span> o = <span style="color:#66d9ef">new</span> Stopwatch();
+      <span style="color:#66d9ef">var</span> o = <span style="color:#66d9ef">new</span> Di.Stopwatch();
       o.Start();
-      Thread.Sleep(<span style="color:#ae81ff">1234</span>);
-      Console.WriteLine(<span style="color:#e6db74">&#34;{0} {1}&#34;</span>, o.Elapsed.Seconds, o.Elapsed.Milliseconds);
-      Thread.Sleep(<span style="color:#ae81ff">1234</span>);
-      Console.WriteLine(<span style="color:#e6db74">&#34;{0} {1}&#34;</span>, o.Elapsed.Seconds, o.Elapsed.Milliseconds);
+      <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+         Th.Sleep(<span style="color:#ae81ff">10</span>);
+         Co.Write(
+            <span style="color:#e6db74">&#34;{0} m {1:00}.{2:00} s\r&#34;</span>,
+            o.Elapsed.Minutes,
+            o.Elapsed.Seconds,
+            o.Elapsed.Milliseconds / <span style="color:#ae81ff">10</span>
+         );
+      }
    }
 }
 </code></pre></div>

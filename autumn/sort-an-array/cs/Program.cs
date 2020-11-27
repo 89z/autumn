@@ -1,11 +1,11 @@
-using System.Collections;
-using System;
-using static System.Text.Json.JsonSerializer;
+using A = System.Array;
+using C = System.Console;
+using J = System.Text.Json.JsonSerializer;
 
 class Program {
    static void Main() {
       string[] a = {"May", "June"};
-      Array.Sort(a);
-      Console.WriteLine(Serialize(a));
+      A.Sort(a);
+      C.WriteLine(J.Serialize(a));
    }
 }

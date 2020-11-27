@@ -5,7 +5,6 @@ tags: [c-sharp]
 
 {{< r "a/Program.cs" >}}
 {{< r "b/Program.cs" >}}
-{{< r "c/Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using-statement>
 

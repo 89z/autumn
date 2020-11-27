@@ -1,10 +1,10 @@
-using System.IO;
-using System;
+using C = System.Console;
+using F = System.IO.File;
 
 class Program {
    static void Main() {
-      var b = File.Exists("Program.cs");
-      Console.WriteLine(b);
+      var b = F.Exists("Program.cs");
+      C.WriteLine(b);
    }
 }
 

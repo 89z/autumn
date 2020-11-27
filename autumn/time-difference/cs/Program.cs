@@ -1,14 +1,19 @@
-using System.Diagnostics;
-using System.Threading;
-using System;
+using Co = System.Console;
+using Di = System.Diagnostics;
+using Th = System.Threading.Thread;
 
 class Program {
    static void Main() {
-      var o = new Stopwatch();
+      var o = new Di.Stopwatch();
       o.Start();
-      Thread.Sleep(1234);
-      Console.WriteLine("{0} {1}", o.Elapsed.Seconds, o.Elapsed.Milliseconds);
-      Thread.Sleep(1234);
-      Console.WriteLine("{0} {1}", o.Elapsed.Seconds, o.Elapsed.Milliseconds);
+      while (true) {
+         Th.Sleep(10);
+         Co.Write(
+            "{0} m {1:00}.{2:00} s\r",
+            o.Elapsed.Minutes,
+            o.Elapsed.Seconds,
+            o.Elapsed.Milliseconds / 10
+         );
+      }
    }
 }
