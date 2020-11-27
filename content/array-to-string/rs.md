@@ -13,9 +13,13 @@ tags: [rust]
 
 {{< r "c.rs" >}}
 
-<https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8>
+<https://doc.rust-lang.org/std/str/fn.from_utf8.html>
 
 {{< r "d.rs" >}}
+
+<https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8>
+
+{{< r "e.rs" >}}
 
 <https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8_lossy>
 

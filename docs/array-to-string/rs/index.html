@@ -65,11 +65,28 @@
    
 
 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::<span style="color:#66d9ef">str</span>;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), <span style="color:#66d9ef">str</span>::Utf8Error<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> y <span style="color:#f92672">=</span> <span style="color:#e6db74">b&#34;March&#34;</span>;
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#66d9ef">str</span>::from_utf8(y)<span style="color:#f92672">?</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
+   Ok(())
+}
+</code></pre></div>
+
+<p><a href="https://doc.rust-lang.org/std/str/fn.from_utf8.html">https://doc.rust-lang.org/std/str/fn.from_utf8.html</a></p>
+
+
+
+   
+
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::string;
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), string::FromUtf8Error<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> String::from(<span style="color:#e6db74">&#34;March&#34;</span>).into_bytes();
-   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> String::from_utf8(a)<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> y <span style="color:#f92672">=</span> <span style="color:#e6db74">b&#34;March&#34;</span>.to_vec();
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> String::from_utf8(y)<span style="color:#f92672">?</span>;
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
    Ok(())
 }
@@ -83,8 +100,8 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> String::from(<span style="color:#e6db74">&#34;March&#34;</span>).into_bytes();
-   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> String::from_utf8_lossy(<span style="color:#f92672">&amp;</span>a);
+   <span style="color:#66d9ef">let</span> y <span style="color:#f92672">=</span> <span style="color:#e6db74">b&#34;March&#34;</span>.to_vec();
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> String::from_utf8_lossy(<span style="color:#f92672">&amp;</span>y);
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
 }
 </code></pre></div>

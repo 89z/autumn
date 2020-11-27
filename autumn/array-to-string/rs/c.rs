@@ -1,8 +1,8 @@
-use std::string;
+use std::str;
 
-fn main() -> Result<(), string::FromUtf8Error> {
-   let a = String::from("March").into_bytes();
-   let s = String::from_utf8(a)?;
+fn main() -> Result<(), str::Utf8Error> {
+   let y = b"March";
+   let s = str::from_utf8(y)?;
    println!("{}", s);
    Ok(())
 }

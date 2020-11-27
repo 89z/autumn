@@ -1,12 +1,13 @@
+#![allow(unused)]
+
+fn f(n: u8, n2: u8) -> bool {
+   n > n2
+}
+
+fn f2(n: u8, n2: u8) -> bool {
+   n > n2
+}
+
 fn main() {
-
-   #[derive(Debug)]
-   struct Date {
-      year: u16,
-      month: Option<u8>,
-      day: Option<u8>
-   }
-
-   let o = Date {year: 2019, month: None, day: None};
-   println!("{:?}", o);
+   println!("March");
 }

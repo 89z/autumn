@@ -5,7 +5,7 @@ tags: [rust]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/fmt/trait.Debug.html>
+<https://doc.rust-lang.org/rustc/lints/listing/warn-by-default.html>
 
 ## References
 

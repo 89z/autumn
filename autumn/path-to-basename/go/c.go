@@ -1,12 +1,15 @@
 package main
 import "strings"
 
-func File(s string) string {
-   n := strings.LastIndexByte(s, '.')
+func BaseName(s string, y byte) string {
+   n := strings.LastIndexByte(s, y)
+   if n == -1 {
+      return s
+   }
    return s[:n]
 }
 
 func main() {
-   s := File(`C:\Windows\notepad.exe`)
+   s := BaseName(`C:\Windows\notepad.exe`, '.')
    println(s == `C:\Windows\notepad`)
 }

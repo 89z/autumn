@@ -72,13 +72,16 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">File</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
-   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">LastIndexByte</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#39;.&#39;</span>)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">BaseName</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">y</span> <span style="color:#66d9ef">byte</span>) <span style="color:#66d9ef">string</span> {
+   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">LastIndexByte</span>(<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">y</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s</span>
+   }
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s</span>[:<span style="color:#a6e22e">n</span>]
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">File</span>(<span style="color:#e6db74">`C:\Windows\notepad.exe`</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">BaseName</span>(<span style="color:#e6db74">`C:\Windows\notepad.exe`</span>, <span style="color:#e6db74">&#39;.&#39;</span>)
    println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">`C:\Windows\notepad`</span>)
 }
 </code></pre></div>
