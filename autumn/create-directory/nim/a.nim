@@ -1,2 +1,2 @@
 import os
-"May/June".createDir
+createDir("May/June")

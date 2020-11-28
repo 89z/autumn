@@ -37,13 +37,14 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
 
-<span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">f</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> n2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">return</span> n <span style="color:#f92672">&gt;</span> n2<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> n2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">return</span> n <span style="color:#f92672">+</span> n2<span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> b <span style="color:#f92672">=</span> f<span style="color:#f92672">(</span><span style="color:#ae81ff">9</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">8</span><span style="color:#f92672">);</span>
-   writeln<span style="color:#f92672">(</span>b<span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> n2 <span style="color:#f92672">=</span> n<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">).</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">);</span>
+   writeln<span style="color:#f92672">(</span>n2 <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 
@@ -56,13 +57,14 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
 
-<span style="color:#66d9ef">auto</span> <span style="color:#a6e22e">f</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> n2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">return</span> n <span style="color:#f92672">&gt;</span> n2<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">auto</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> n2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">return</span> n <span style="color:#f92672">+</span> n2<span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> b <span style="color:#f92672">=</span> f<span style="color:#f92672">(</span><span style="color:#ae81ff">9</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">8</span><span style="color:#f92672">);</span>
-   writeln<span style="color:#f92672">(</span>b<span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> n2 <span style="color:#f92672">=</span> n<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">).</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">);</span>
+   writeln<span style="color:#f92672">(</span>n2 <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 

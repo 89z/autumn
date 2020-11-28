@@ -3,11 +3,7 @@ title: C#
 tags: [c-sharp]
 ---
 
-{{< r "a/Program.cs" >}}
-
-<https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/extension-methods>
-
-{{< r "b/Program.cs" >}}
+{{< r "Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/methods>
 

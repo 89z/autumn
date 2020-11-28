@@ -1,4 +1,4 @@
 import osproc
-let o = "nim -v".execCmdEx
+let o = execCmdEx("nim -v")
 let s = o.output
 stdout.write s

@@ -1,7 +1,5 @@
-use std::num;
-
-fn main() -> Result<(), num::ParseIntError> {
-   let n: u8 = "AB".parse()?;
-   println!("{}", n);
+fn main() -> Result<(), u8> {
+   Err(1)?;
+   println!("March");
    Ok(())
 }

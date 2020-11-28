@@ -1,2 +1,2 @@
-var s = "index.md".readFile
+var s = readFile("a.nim")
 stdout.write s

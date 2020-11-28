@@ -11,6 +11,10 @@ tags: [nim]
 
 <https://nim-lang.org/docs/osproc.html#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]>
 
+{{< r "c.nim" >}}
+
+<https://nim-lang.org/docs/osproc.html#waitForExit,Process,int>
+
 ## References
 
 <https://rosettacode.org/wiki/Execute_a_system_command>

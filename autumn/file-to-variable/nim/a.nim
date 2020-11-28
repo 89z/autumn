@@ -1,3 +1,3 @@
-var o = "index.md".open
+var o = open("a.nim")
 var s = o.readAll
 stdout.write s

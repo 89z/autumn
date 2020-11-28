@@ -1,3 +1,4 @@
 import osproc
 echo "BEGIN"
-discard execCmd("pipe")
+let n = execCmd("pipe")
+echo n

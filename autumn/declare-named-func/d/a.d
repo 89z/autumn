@@ -1,10 +1,11 @@
 import std.stdio;
 
-bool f(int n, int n2) {
-   return n > n2;
+int add(int n, int n2) {
+   return n + n2;
 }
 
 void main() {
-   auto b = f(9, 8);
-   writeln(b);
+   auto n = 7;
+   auto n2 = n.add(1).add(1);
+   writeln(n2 == 9);
 }

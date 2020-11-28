@@ -1,8 +1,8 @@
 fn main() -> Result<(), u8> {
-   let n = "AB".parse::<u8>().map_err(|e| {
+   Err(false).map_err(|e| {
       println!("{}", e);
       1
    })?;
-   println!("{}", n);
+   println!("March");
    Ok(())
 }

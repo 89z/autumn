@@ -37,44 +37,18 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
 
-<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> add_f(<span style="color:#66d9ef">this</span> <span style="color:#66d9ef">int</span> n, <span style="color:#66d9ef">int</span> n1) {
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> addf(<span style="color:#66d9ef">int</span> n, <span style="color:#66d9ef">int</span> n1) {
       <span style="color:#66d9ef">return</span> n + n1;
    }
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> sub_f(<span style="color:#66d9ef">this</span> <span style="color:#66d9ef">int</span> n, <span style="color:#66d9ef">int</span> n2) =&gt; n - n2;
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> subf(<span style="color:#66d9ef">int</span> n, <span style="color:#66d9ef">int</span> n2) =&gt; n - n2;
    <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span>   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">var</span> n = <span style="color:#ae81ff">7</span>;
-      <span style="color:#66d9ef">var</span> n1 = n.add_f(<span style="color:#ae81ff">1</span>).add_f(<span style="color:#ae81ff">1</span>);
-      <span style="color:#66d9ef">var</span> n2 = add_f(n,<span style="color:#ae81ff">1</span>).add_f(<span style="color:#ae81ff">1</span>);
-      Console.WriteLine(<span style="color:#e6db74">&#34;{0} {1}&#34;</span>, n1, n2);
-   }
-}
-</code></pre></div>
-
-<p><a href="https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/extension-methods">https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/extension-methods</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> f1(<span style="color:#66d9ef">int</span> n, <span style="color:#66d9ef">int</span> n1) {
-      <span style="color:#66d9ef">return</span> n &gt; n1;
-   }
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> f2(<span style="color:#66d9ef">int</span> n, <span style="color:#66d9ef">int</span> n2) =&gt; n &gt; n2;
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">var</span> b1 = f1(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>);
-      <span style="color:#66d9ef">var</span> b2 = f2(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>);
-      Console.WriteLine(b1 &amp;&amp; b2);
+      <span style="color:#66d9ef">var</span> n1 = addf(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">1</span>);
+      <span style="color:#66d9ef">var</span> n2 = subf(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">1</span>);
+      Console.WriteLine(n1 == <span style="color:#ae81ff">9</span> &amp;&amp; n2 == <span style="color:#ae81ff">7</span>);
    }
 }
 </code></pre></div>
