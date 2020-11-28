@@ -6,6 +6,7 @@ num add(num n, num n1) {
 num sub(num n, num n2) => n - n2;
 // print
 void main() {
-   var n = add(1, 2);
-   print(n);
+   var n1 = add(8, 1);
+   var n2 = sub(8, 1);
+   print(n1 == 9 && n2 == 7);
 }

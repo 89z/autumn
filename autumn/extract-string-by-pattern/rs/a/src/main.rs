@@ -1,9 +1,10 @@
 use regex::Regex;
 
-fn main() -> Result<(), regex::Error> {
-   let a = Regex::new("(..)n")?;
-   if let Some(a) = a.captures("Sunday Monday") {
-      println!("{}", &a[1] == "Su");
-   }
+fn main() -> Result<(), String> {
+   let o = Regex::new("(..)n").map_err(|e|
+      e.to_string()
+   )?;
+   let a = o.captures("Sunday Monday").ok_or("captures")?;
+   println!("{}", &a[1]);
    Ok(())
 }

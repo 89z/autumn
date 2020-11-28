@@ -1,14 +1,16 @@
 // example 1
-fn f1(n: u8, n1: u8) -> bool {
-   return n > n1;
+fn add(n: u8, n1: u8) -> u8 {
+   return n + n1;
 }
+
 // example 2
-fn f2(n: u8, n1: u8) -> bool {
-   n > n1
+fn sub(n: u8, n2: u8) -> u8 {
+   n - n2
 }
+
 // print
 fn main() {
-   let b1 = f1(9, 8);
-   let b2 = f2(9, 8);
-   println!("{}", b1 && b2);
+   let n1 = add(8, 1);
+   let n2 = sub(8, 1);
+   println!("{}", n1 == 9 && n2 == 7);
 }

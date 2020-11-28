@@ -36,13 +36,17 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#75715e"># example 1</span>
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">f1</span>(n: <span style="color:#66d9ef">int</span>, n1: <span style="color:#66d9ef">int</span>): <span style="color:#66d9ef">bool</span> <span style="color:#f92672">=</span>
-   <span style="color:#66d9ef">return</span> n <span style="color:#f92672">&gt;</span> n1
+<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">addf</span>(n: <span style="color:#66d9ef">int</span>, n1: <span style="color:#66d9ef">int</span>): <span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span>
+   <span style="color:#66d9ef">return</span> n <span style="color:#f92672">+</span> n1
+
 <span style="color:#75715e"># example 2</span>
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">f2</span>(n, n2: <span style="color:#66d9ef">int</span>): <span style="color:#66d9ef">bool</span> <span style="color:#f92672">=</span>
-   <span style="color:#66d9ef">return</span> n <span style="color:#f92672">&gt;</span> n2
+<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">subf</span>(n, n2: <span style="color:#66d9ef">int</span>): <span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span>
+   <span style="color:#66d9ef">return</span> n <span style="color:#f92672">-</span> n2
+
 <span style="color:#75715e"># print</span>
-echo f1(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>) <span style="color:#f92672">and</span> f2(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>)
+<span style="color:#66d9ef">let</span> n1 <span style="color:#f92672">=</span> addf(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">1</span>)
+<span style="color:#66d9ef">let</span> n2 <span style="color:#f92672">=</span> subf(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">1</span>)
+echo n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span> <span style="color:#f92672">and</span> n2 <span style="color:#f92672">==</span> <span style="color:#ae81ff">7</span>
 </code></pre></div>
 
 <p><a href="https://nim-lang.org/docs/manual.html#procedures">https://nim-lang.org/docs/manual.html#procedures</a></p>

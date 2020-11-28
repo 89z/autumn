@@ -1,5 +1,6 @@
-def f(n, n2)
-   return n > n2
+def add(n, n2)
+   return n + n2
 end
 
-puts f(9, 8)
+n = add(8, 1)
+puts n == 9

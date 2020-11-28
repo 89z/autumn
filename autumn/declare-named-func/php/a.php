@@ -1,13 +1,15 @@
 <?php
 # example 1
-function f1(int $n, int $n1): bool {
-   return $n > $n1;
+function add(int $n, int $n1): int {
+   return $n + $n1;
 }
+
 # example 2
-function f2($n, $n1) {
-   return $n > $n1;
+function sub($n, $n2) {
+   return $n - $n2;
 }
+
 # print
-$b1 = f1(9, 8);
-$b2 = f2(9, 8);
-var_dump($b1, $b2);
+$n1 = add(8, 1);
+$n2 = sub(8, 1);
+var_dump($n1 == 9, $n2 == 7);
