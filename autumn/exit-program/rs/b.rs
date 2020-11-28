@@ -1,7 +1,12 @@
-fn main() -> Result<(), String> {
-   Err(1).map_err(|e|
-      e.to_string()
-   )?;
-   println!("March");
-   Ok(())
+use std::process;
+
+fn main() {
+   let n: u8 = match Err(1) {
+      Ok(v) => v,
+      Err(e) => {
+         println!("{}", e);
+         process::exit(1);
+      }
+   };
+   println!("{}", n);
 }

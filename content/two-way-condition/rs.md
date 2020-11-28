@@ -21,9 +21,13 @@ tags: [rust]
 
 {{< r "e.rs" >}}
 
-<https://doc.rust-lang.org/std/result/enum.Result.html#method.unwrap_or>
+<https://doc.rust-lang.org/std/result/enum.Result.html#method.map_err>
 
 {{< r "f.rs" >}}
+
+<https://doc.rust-lang.org/std/result/enum.Result.html#method.unwrap_or>
+
+{{< r "g.rs" >}}
 
 <https://doc.rust-lang.org/std/result/enum.Result.html#method.unwrap_or_default>
 

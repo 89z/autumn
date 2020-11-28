@@ -4,9 +4,10 @@ tags: [rust]
 ---
 
 {{< r "a.rs" >}}
+
+<https://doc.rust-lang.org/std/macro.try.html>
+
 {{< r "b.rs" >}}
-{{< r "c.rs" >}}
-{{< r "d.rs" >}}
 
 <https://doc.rust-lang.org/std/process/fn.exit.html>
 
