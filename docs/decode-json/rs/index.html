@@ -24,7 +24,7 @@
    <a href="/autumn/decode-json/">Decode JSON</a> / Rust
 </h1>
 <section class="page">
-   <time>Fri Oct 30 2020</time>
+   <time>Sat Nov 28 2020</time>
    
    <a href="/autumn/categories/file-format/">file-format</a>
    
@@ -37,20 +37,23 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> tinyjson::JsonValue;
 
-<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">r#&#34;
-</span><span style="color:#e6db74">    {
-</span><span style="color:#e6db74">        &#34;bool&#34;: true,
-</span><span style="color:#e6db74">        &#34;arr&#34;: [1, null, &#34;test&#34;],
-</span><span style="color:#e6db74">        &#34;nested&#34;: {
-</span><span style="color:#e6db74">            &#34;blah&#34;: false,
-</span><span style="color:#e6db74">            &#34;blahblah&#34;: 3.14
-</span><span style="color:#e6db74">        },
-</span><span style="color:#e6db74">        &#34;unicode&#34;: &#34;\u2764&#34;
-</span><span style="color:#e6db74">    }
-</span><span style="color:#e6db74">&#34;#</span>;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">r#&#34;
+</span><span style="color:#e6db74">   {
+</span><span style="color:#e6db74">   &#34;bool&#34;: true,
+</span><span style="color:#e6db74">   &#34;arr&#34;: [1, null, &#34;test&#34;],
+</span><span style="color:#e6db74">   &#34;nested&#34;: {
+</span><span style="color:#e6db74">   &#34;blah&#34;: false,
+</span><span style="color:#e6db74">   &#34;blahblah&#34;: 3.14
+</span><span style="color:#e6db74">   },
+</span><span style="color:#e6db74">   &#34;unicode&#34;: &#34;\u2764&#34;
+</span><span style="color:#e6db74">   }
+</span><span style="color:#e6db74">   &#34;#</span>;
+   <span style="color:#66d9ef">let</span> parsed: <span style="color:#a6e22e">JsonValue</span> <span style="color:#f92672">=</span> s.parse().unwrap();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Parsed: {:?}&#34;</span>, parsed);
+}
 
-<span style="color:#66d9ef">let</span> parsed: <span style="color:#a6e22e">JsonValue</span> <span style="color:#f92672">=</span> s.parse().unwrap();
-println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Parsed: {:?}&#34;</span>, parsed);
+
 </code></pre></div>
 
 <p>0 deps</p>

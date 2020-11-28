@@ -24,7 +24,7 @@
    <a href="/autumn/parse-command-line-args/">Parse command line arguments</a> / Rust
 </h1>
 <section class="page">
-   <time>Sun Nov 8 2020</time>
+   <time>Sat Nov 28 2020</time>
    
    <a href="/autumn/categories/system/">system</a>
    
@@ -42,13 +42,8 @@
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> o <span style="color:#f92672">=</span> Arguments::from_env();
-
-   <span style="color:#66d9ef">let</span> pre_s: String <span style="color:#f92672">=</span> o.opt_value_from_str(<span style="color:#e6db74">&#34;-p&#34;</span>).
-   unwrap_or(None).unwrap_or_default();
-
-   <span style="color:#66d9ef">let</span> suf_s: String <span style="color:#f92672">=</span> o.opt_value_from_str(<span style="color:#e6db74">&#34;-s&#34;</span>).
-   unwrap_or(None).unwrap_or_default();
-
+   <span style="color:#66d9ef">let</span> pre_s: String <span style="color:#f92672">=</span> o.value_from_str(<span style="color:#e6db74">&#34;-p&#34;</span>).unwrap_or_default();
+   <span style="color:#66d9ef">let</span> suf_s: String <span style="color:#f92672">=</span> o.value_from_str(<span style="color:#e6db74">&#34;-s&#34;</span>).unwrap_or_default();
    <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> o.free().unwrap_or_default();
 
    <span style="color:#66d9ef">if</span> a.len() <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span> {
@@ -67,6 +62,38 @@
 
 <p>0 deps</p>
 <p><a href="https://lib.rs/crates/pico-args">https://lib.rs/crates/pico-args</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> climake::{Argument, CliMake, DataType};
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> args <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>[
+        Argument::new(
+            <span style="color:#f92672">&amp;</span>[<span style="color:#e6db74">&#39;o&#39;</span>],
+            <span style="color:#f92672">&amp;</span>[<span style="color:#e6db74">&#34;output&#34;</span>, <span style="color:#e6db74">&#34;out&#34;</span>],
+            Some(<span style="color:#e6db74">&#34;Example output arg&#34;</span>),
+            DataType::Files,
+        ).unwrap(),
+        Argument::new(
+            <span style="color:#f92672">&amp;</span>[<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>],
+            <span style="color:#f92672">&amp;</span>[],
+            Some(<span style="color:#e6db74">&#34;Alphabet!&#34;</span>),
+            DataType::None,
+        ).unwrap(),
+    ];
+
+    <span style="color:#66d9ef">let</span> cli <span style="color:#f92672">=</span> CliMake::new(args, Some(<span style="color:#e6db74">&#34;A showcase CLI to demonstrate climake&#34;</span>), None).unwrap();
+
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Args used: {:#?}&#34;</span>, cli.parse());
+}
+</code></pre></div>
+
+<p>0 deps</p>
+<p><a href="https://lib.rs/crates/climake">https://lib.rs/crates/climake</a></p>
 
 
 

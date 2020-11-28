@@ -11,6 +11,10 @@ tags: [python]
 
 <https://docs.python.org/library/datetime.html#datetime.date.strftime>
 
+{{< r "c.py" >}}
+
+<https://docs.python.org/library/datetime.html#datetime.datetime.isoformat>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting#fmt-datetime>
