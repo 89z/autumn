@@ -10,8 +10,8 @@ static class Program {
    // print
    static void Main() {
       var n = 7;
-      n.add_f(1).add_f(1);
-      n.sub_f(1).sub_f(1);
-      Console.WriteLine(n1 == 9 && n2 == 5);
+      var n1 = n.add_f(1).add_f(1);
+      var n2 = add_f(n,1).add_f(1);
+      Console.WriteLine("{0} {1}", n1, n2);
    }
 }

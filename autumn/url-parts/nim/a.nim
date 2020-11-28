@@ -1,5 +1,5 @@
 import uri
-let o = "https://example.com/one?two=even".parseUri
+let o = parseUri("https://example.com/one?two=even")
 # example 1
 let s1 = o.hostname
 # example 2

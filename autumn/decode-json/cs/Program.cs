@@ -1,10 +1,10 @@
-using System.Text.Json;
-using System;
+using C = System.Console;
+using J = System.Text.Json.JsonSerializer;
 
 class Program {
    static void Main() {
       var s = "[\"sigma\", \"tau\"]";
-      var a = JsonSerializer.Deserialize<string[]>(s);
-      Console.WriteLine(a);
+      var a = J.Deserialize<string[]>(s);
+      C.WriteLine(a);
    }
 }

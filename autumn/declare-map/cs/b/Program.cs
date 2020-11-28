@@ -1,11 +1,9 @@
-using System.Collections.Generic;
-using System;
+using C = System.Console;
+using G = System.Collections.Generic;
 
 class Program {
    static void Main() {
-      var m = new Dictionary<string, int> {
-         {"year", 2019}, {"month", 12}
-      };
-      Console.WriteLine(m);
+      var m = new G.Dictionary<string, int>{{"year", 2019}, {"month", 12}};
+      C.WriteLine(m);
    }
 }

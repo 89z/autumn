@@ -47,9 +47,9 @@
    <span style="color:#75715e">// print
 </span><span style="color:#75715e"></span>   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
       <span style="color:#66d9ef">var</span> n = <span style="color:#ae81ff">7</span>;
-      n.add_f(<span style="color:#ae81ff">1</span>).add_f(<span style="color:#ae81ff">1</span>);
-      n.sub_f(<span style="color:#ae81ff">1</span>).sub_f(<span style="color:#ae81ff">1</span>);
-      Console.WriteLine(n1 == <span style="color:#ae81ff">9</span> &amp;&amp; n2 == <span style="color:#ae81ff">5</span>);
+      <span style="color:#66d9ef">var</span> n1 = n.add_f(<span style="color:#ae81ff">1</span>).add_f(<span style="color:#ae81ff">1</span>);
+      <span style="color:#66d9ef">var</span> n2 = add_f(n,<span style="color:#ae81ff">1</span>).add_f(<span style="color:#ae81ff">1</span>);
+      Console.WriteLine(<span style="color:#e6db74">&#34;{0} {1}&#34;</span>, n1, n2);
    }
 }
 </code></pre></div>

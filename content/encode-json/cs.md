@@ -9,4 +9,6 @@ tags: [c-sharp]
 
 ## References
 
-<https://rosettacode.org/wiki/JSON>
+- <https://hyperpolyglot.org/cpp#file-fmt>
+- <https://programming-idioms.org/idiom/92>
+- <https://rosettacode.org/wiki/JSON>

@@ -1,10 +1,10 @@
-using System.IO;
-using System;
+using C = System.Console;
+using D = System.IO.Directory;
 
 class Program {
    static void Main() {
-      Directory.SetCurrentDirectory("..");
-      var s = Directory.GetCurrentDirectory();
-      Console.WriteLine(s);
+      D.SetCurrentDirectory("..");
+      var s = D.GetCurrentDirectory();
+      C.WriteLine(s);
    }
 }
