@@ -1,7 +1,7 @@
-let m = {year: 2019};
+let m = {month: 12, day: 31};
 // example 1
-let n1 = m['year'];
+let n1 = m['day'];
 // example 2
-let n2 = m.year;
+let n2 = m.day;
 // print
-console.log(n1 == 2019, n2 == 2019);
+console.log(n1 == 31, n2 == 31);

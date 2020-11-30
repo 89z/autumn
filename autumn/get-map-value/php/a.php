@@ -1,4 +1,4 @@
 <?php
-$m['year'] = 2019;
-$n = $m['year'];
-var_dump($n == 2019);
+$m = ['month' => 12, 'day' => 31];
+$n = $m['day'];
+var_dump($n == 31);

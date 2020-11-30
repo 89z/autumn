@@ -1,7 +1,11 @@
 import std.stdio;
 
+bool key_exists(string s, int[string] m) {
+   return (s in m) != null;
+}
+
 void main() {
-   auto m = ["year": 2019];
-   auto o = "year" in m;
-   writeln(o != null);
+   auto m = ["month": 12, "day": 31];
+   auto b = key_exists("day", m);
+   b.writeln;
 }

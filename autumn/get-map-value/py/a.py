@@ -1,3 +1,3 @@
-m = {'year': 2019, 'month': 12}
-n = m.get('year')
-print(n == 2019)
+m = {'month': 12, 'day': 31}
+n = m.get('day')
+print(n == 31)

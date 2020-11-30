@@ -42,11 +42,10 @@
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
       Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;[] a = {
-         <span style="color:#66d9ef">new</span> Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;{{<span style="color:#e6db74">&#34;year&#34;</span>, <span style="color:#ae81ff">2019</span>}, {<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">12</span>}},
-         <span style="color:#66d9ef">new</span> Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;{{<span style="color:#e6db74">&#34;year&#34;</span>, <span style="color:#ae81ff">2018</span>}, {<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">11</span>}}
+         <span style="color:#66d9ef">new</span> Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;{{<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">12</span>}, {<span style="color:#e6db74">&#34;day&#34;</span>, <span style="color:#ae81ff">31</span>}},
+         <span style="color:#66d9ef">new</span> Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;{{<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">11</span>}, {<span style="color:#e6db74">&#34;day&#34;</span>, <span style="color:#ae81ff">30</span>}},
       };
-      <span style="color:#66d9ef">var</span> s = JsonSerializer.Serialize(a);
-      Console.WriteLine(s);
+      Console.WriteLine(JsonSerializer.Serialize(a));
    }
 }
 </code></pre></div>
@@ -64,11 +63,10 @@
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
       D[] a = {
-         <span style="color:#66d9ef">new</span> D{{<span style="color:#e6db74">&#34;year&#34;</span>, <span style="color:#ae81ff">2019</span>}, {<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">12</span>}},
-         <span style="color:#66d9ef">new</span> D{{<span style="color:#e6db74">&#34;year&#34;</span>, <span style="color:#ae81ff">2018</span>}, {<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">11</span>}},
+         <span style="color:#66d9ef">new</span> D{{<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">12</span>}, {<span style="color:#e6db74">&#34;day&#34;</span>, <span style="color:#ae81ff">31</span>}},
+         <span style="color:#66d9ef">new</span> D{{<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">11</span>}, {<span style="color:#e6db74">&#34;day&#34;</span>, <span style="color:#ae81ff">30</span>}},
       };
-      <span style="color:#66d9ef">var</span> s = J.Serialize(a);
-      C.WriteLine(s);
+      C.WriteLine(J.Serialize(a));
    }
 }
 </code></pre></div>

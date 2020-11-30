@@ -37,10 +37,14 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
 
+<span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">key_exists</span><span style="color:#f92672">(</span><span style="color:#66d9ef">string</span> s<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#66d9ef">string</span><span style="color:#f92672">]</span> m<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>s <span style="color:#66d9ef">in</span> m<span style="color:#f92672">)</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> m <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;year&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2019</span><span style="color:#f92672">];</span>
-   <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;year&#34;</span> <span style="color:#66d9ef">in</span> m<span style="color:#f92672">;</span>
-   writeln<span style="color:#f92672">(</span>o <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> m <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;month&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">12</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;day&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">31</span><span style="color:#f92672">];</span>
+   <span style="color:#66d9ef">auto</span> b <span style="color:#f92672">=</span> key_exists<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;day&#34;</span><span style="color:#f92672">,</span> m<span style="color:#f92672">);</span>
+   b<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 

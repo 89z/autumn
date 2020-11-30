@@ -1,4 +1,4 @@
 import json
-s = '{"year": 2019, "month": 12}'
+s = '{"month": 12, "day": 31}'
 m = json.loads(s)
-print(m)
+print(m['day'] == 31)

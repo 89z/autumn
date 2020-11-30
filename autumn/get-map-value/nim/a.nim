@@ -1,4 +1,4 @@
 import tables
-let m = {"year": 2019}.toTable
-let n = m["year"]
-echo n == 2019
+let m = {"month": 12, "day": 31}.toTable
+let n = m["day"]
+echo n == 31

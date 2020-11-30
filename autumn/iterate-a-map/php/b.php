@@ -1,5 +1,5 @@
 <?php
-$m = ['year' => 2019, 'month' => 12];
+$m = ['month' => 12, 'day' => 31];
 
 while (true) {
    $s = key($m);

@@ -1,11 +1,11 @@
 package main
 
 func main() {
-   m := map[string]int{"year": 2019}
+   m := map[string]int{"month": 12, "day": 31}
    // example 1
-   n1, b1 := m["year"]
+   n1, b1 := m["day"]
    // example 2
-   n2 := m["year"]
+   n2 := m["day"]
    // print
-   println(b1, n1 == 2019, n2 == 2019)
+   println(b1, n1 == 31, n2 == 31)
 }

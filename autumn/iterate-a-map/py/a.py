@@ -1,4 +1,4 @@
-m = {'year': 2019, 'month': 12}
+m = {'month': 12, 'day': 31}
 # example 1
 for s in m:
    print(s)

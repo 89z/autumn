@@ -1,3 +1,3 @@
-m = {'year': 2019, 'month': 12}
-n = m['year']
-print(n == 2019)
+m = {'month': 12, 'day': 31}
+n = m['day']
+print(n == 31)
