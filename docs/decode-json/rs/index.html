@@ -37,25 +37,25 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> tinyjson::JsonValue;
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), String<span style="color:#f92672">&gt;</span> {
    <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">r#&#34;
-</span><span style="color:#e6db74">   {
-</span><span style="color:#e6db74">   &#34;bool&#34;: true,
-</span><span style="color:#e6db74">   &#34;arr&#34;: [1, null, &#34;test&#34;],
-</span><span style="color:#e6db74">   &#34;nested&#34;: {
-</span><span style="color:#e6db74">   &#34;blah&#34;: false,
-</span><span style="color:#e6db74">   &#34;blahblah&#34;: 3.14
-</span><span style="color:#e6db74">   },
-</span><span style="color:#e6db74">   &#34;unicode&#34;: &#34;\u2764&#34;
-</span><span style="color:#e6db74">   }
-</span><span style="color:#e6db74">   &#34;#</span>;
-   <span style="color:#66d9ef">let</span> parsed: <span style="color:#a6e22e">JsonValue</span> <span style="color:#f92672">=</span> s.parse().unwrap();
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Parsed: {:?}&#34;</span>, parsed);
+</span><span style="color:#e6db74">{&#34;month&#34;: 12, &#34;day&#34;: 31}
+</span><span style="color:#e6db74">&#34;#</span>;
+   <span style="color:#66d9ef">let</span> o: <span style="color:#a6e22e">JsonValue</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> s.parse() {
+      Ok(v) <span style="color:#f92672">=&gt;</span> v,
+      Err(v) <span style="color:#f92672">=&gt;</span> Err(format<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, v))<span style="color:#f92672">?</span>
+   };
+   <span style="color:#66d9ef">let</span> n: <span style="color:#66d9ef">f64</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> o[<span style="color:#e6db74">&#34;day&#34;</span>].get() {
+      Some(v) <span style="color:#f92672">=&gt;</span> <span style="color:#f92672">*</span>v,
+      None <span style="color:#f92672">=&gt;</span> Err(<span style="color:#e6db74">&#34;day&#34;</span>)<span style="color:#f92672">?</span>
+   };
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n <span style="color:#f92672">==</span> <span style="color:#ae81ff">31.0</span>);
+   Ok(())
 }
 </code></pre></div>
 
 <p>0 deps</p>
-<p><a href="https://lib.rs/crates/tinyjson">https://lib.rs/crates/tinyjson</a></p>
+<p><a href="https://docs.rs/tinyjson/latest/tinyjson/struct.JsonParser.html#method.parse">https://docs.rs/tinyjson/latest/tinyjson/struct.JsonParser.html#method.parse</a></p>
 
 
 
@@ -63,32 +63,29 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">let</span> parsed <span style="color:#f92672">=</span> json::parse(<span style="color:#e6db74">r#&#34;
-</span><span style="color:#e6db74">
 </span><span style="color:#e6db74">{
-</span><span style="color:#e6db74">    &#34;code&#34;: 200,
-</span><span style="color:#e6db74">    &#34;success&#34;: true,
-</span><span style="color:#e6db74">    &#34;payload&#34;: {
-</span><span style="color:#e6db74">        &#34;features&#34;: [
-</span><span style="color:#e6db74">            &#34;awesome&#34;,
-</span><span style="color:#e6db74">            &#34;easyAPI&#34;,
-</span><span style="color:#e6db74">            &#34;lowLearningCurve&#34;
-</span><span style="color:#e6db74">        ]
-</span><span style="color:#e6db74">    }
+</span><span style="color:#e6db74">   &#34;code&#34;: 200,
+</span><span style="color:#e6db74">   &#34;success&#34;: true,
+</span><span style="color:#e6db74">   &#34;payload&#34;: {
+</span><span style="color:#e6db74">      &#34;features&#34;: [
+</span><span style="color:#e6db74">         &#34;awesome&#34;,
+</span><span style="color:#e6db74">         &#34;easyAPI&#34;,
+</span><span style="color:#e6db74">         &#34;lowLearningCurve&#34;
+</span><span style="color:#e6db74">      ]
+</span><span style="color:#e6db74">   }
 </span><span style="color:#e6db74">}
-</span><span style="color:#e6db74">
 </span><span style="color:#e6db74">&#34;#</span>).unwrap();
 
 <span style="color:#66d9ef">let</span> instantiated <span style="color:#f92672">=</span> object<span style="color:#f92672">!</span>{
-    <span style="color:#75715e">// quotes on keys are optional
-</span><span style="color:#75715e"></span>    <span style="color:#e6db74">&#34;code&#34;</span>: <span style="color:#ae81ff">200</span>,
-    success: <span style="color:#a6e22e">true</span>,
-    payload: {
-        features: [
-            <span style="color:#e6db74">&#34;awesome&#34;</span>,
-            <span style="color:#e6db74">&#34;easyAPI&#34;</span>,
-            <span style="color:#e6db74">&#34;lowLearningCurve&#34;</span>
-        ]
-    }
+   <span style="color:#e6db74">&#34;code&#34;</span>: <span style="color:#ae81ff">200</span>,
+   success: <span style="color:#a6e22e">true</span>,
+   payload: {
+      features: [
+         <span style="color:#e6db74">&#34;awesome&#34;</span>,
+         <span style="color:#e6db74">&#34;easyAPI&#34;</span>,
+         <span style="color:#e6db74">&#34;lowLearningCurve&#34;</span>
+      ]
+   }
 };
 
 assert_eq<span style="color:#f92672">!</span>(parsed, instantiated);

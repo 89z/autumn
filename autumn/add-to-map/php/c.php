@@ -1,3 +1,3 @@
 <?php
-$m['year'] = 2019;
+$m['day'] = 31;
 print_r($m);

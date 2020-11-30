@@ -1,17 +1,17 @@
 use tinyjson::JsonValue;
 
-fn main() {
+fn main() -> Result<(), String> {
    let s = r#"
-   {
-   "bool": true,
-   "arr": [1, null, "test"],
-   "nested": {
-   "blah": false,
-   "blahblah": 3.14
-   },
-   "unicode": "\u2764"
-   }
-   "#;
-   let parsed: JsonValue = s.parse().unwrap();
-   println!("Parsed: {:?}", parsed);
+{"month": 12, "day": 31}
+"#;
+   let o: JsonValue = match s.parse() {
+      Ok(v) => v,
+      Err(v) => Err(format!("{}", v))?
+   };
+   let n: f64 = match o["day"].get() {
+      Some(v) => *v,
+      None => Err("day")?
+   };
+   println!("{}", n == 31.0);
+   Ok(())
 }

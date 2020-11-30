@@ -1,7 +1,7 @@
 m = {}
 # example 1
-m['year'] = 2019
+m['month'] = 12
 # example 2
-m |= {'month': 12}
+m |= {'day': 31}
 # print
 print(m)

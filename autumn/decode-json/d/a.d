@@ -3,7 +3,7 @@ import
    std.stdio;
 
 void main() {
-   auto a = parseJSON("[10, 11]");
-   auto n = a[0].integer;
-   writeln(n == 10);
+   auto s = `{"month": 12, "day": 31}`;
+   auto m = s.parseJSON;
+   writeln(m["day"].integer == 31);
 }

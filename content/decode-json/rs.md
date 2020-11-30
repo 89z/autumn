@@ -7,7 +7,7 @@ tags: [rust]
 
 0 deps
 
-<https://lib.rs/crates/tinyjson>
+<https://docs.rs/tinyjson/latest/tinyjson/struct.JsonParser.html#method.parse>
 
 {{< r "b/src/main.rs" >}}
 

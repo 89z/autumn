@@ -1,3 +1,3 @@
 let m = new Map;
-m.set('year', 2019);
+m.set('day', 31);
 console.log(m);

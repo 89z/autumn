@@ -1,3 +1,3 @@
-m = {'year': 2019}
-m = dict(m, month = 12)
+m = {'month': 12}
+m = dict(m, day = 31)
 print(m)

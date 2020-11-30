@@ -36,7 +36,9 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;json&#39;</span>
-d <span style="color:#f92672">=</span> <span style="color:#66d9ef">JSON</span><span style="color:#f92672">.</span>parse(<span style="color:#e6db74">&#39;{&#34;t&#34;:1,&#34;f&#34;:0}&#39;</span>)
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{&#34;month&#34;: 12, &#34;day&#34;: 31}&#39;</span>
+m <span style="color:#f92672">=</span> <span style="color:#66d9ef">JSON</span><span style="color:#f92672">.</span>parse(s)
+puts m<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;day&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">31</span>
 </code></pre></div>
 
 <p><a href="https://ruby-doc.org/stdlib/libdoc/json/rdoc">https://ruby-doc.org/stdlib/libdoc/json/rdoc</a></p>

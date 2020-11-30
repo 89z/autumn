@@ -1,4 +1,4 @@
 import tables
-var m = {"year": 2019}.toTable
-m["month"] = 12
+var m = {"month": 12}.toTable
+m["day"] = 31
 echo m

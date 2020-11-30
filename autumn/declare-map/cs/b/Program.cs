@@ -3,7 +3,7 @@ using G = System.Collections.Generic;
 
 class Program {
    static void Main() {
-      var m = new G.Dictionary<string, int>{{"year", 2019}, {"month", 12}};
+      var m = new G.Dictionary<string, int>{{"month", 12}, {"day", 31}};
       C.WriteLine(m);
    }
 }

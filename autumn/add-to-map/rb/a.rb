@@ -1,3 +1,3 @@
-m = {'year' => 2019}
-m['month'] = 12
+m = {'month' => 12}
+m['day'] = 31
 puts m

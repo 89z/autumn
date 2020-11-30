@@ -1,5 +1,5 @@
 <?php
-$m = ['year' => 2019];
-$m2 = ['month' => 12];
+$m = ['month' => 12];
+$m2 = ['day' => 31];
 $m = array_merge($m, $m2);
 print_r($m);
