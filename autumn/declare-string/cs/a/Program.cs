@@ -2,7 +2,11 @@ using System;
 
 class Program {
    static void Main() {
-      var s = "sigma\\tau";
-      Console.WriteLine(s);
+      // example 1
+      var s1 = "from\\to";
+      // example 2
+      var s2 = "[\"from\", \"to\"]";
+      // print
+      Console.WriteLine(s1 + s2);
    }
 }

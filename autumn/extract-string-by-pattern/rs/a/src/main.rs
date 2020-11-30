@@ -1,10 +1,12 @@
-use regex::Regex;
+use {
+   regex::Regex,
+   std::error::Error
+};
 
-fn main() -> Result<(), String> {
-   let o = Regex::new("(..)n").map_err(|e|
-      e.to_string()
-   )?;
-   let a = o.captures("Sunday Monday").ok_or("captures")?;
+fn main() -> Result<(), Box<dyn Error>> {
+   let o = Regex::new("(..)n")?;
+   let s = "Sunday Monday";
+   let a = o.captures(s).ok_or(s)?;
    println!("{}", &a[1]);
    Ok(())
 }

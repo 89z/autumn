@@ -1,6 +1,10 @@
 import std.stdio;
 
 void main() {
-   auto s = q"[sigma\tau]";
-   s.writeln;
+   // example 1
+   auto s1 = q"[from\to]";
+   // example 2
+   auto s2 = q"[["from", "to"]]";
+   // print
+   writeln(s1, s2);
 }

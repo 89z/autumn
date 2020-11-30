@@ -41,3 +41,11 @@ We can even do better:
 but then what about traditional errors? Yep:
 
 {{< r "h.rs" >}}
+
+Now lets combine:
+
+{{< r "i.rs" >}}
+
+If we dont like the long line, we can do this:
+
+{{< r "j.rs" >}}
