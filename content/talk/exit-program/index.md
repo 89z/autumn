@@ -21,3 +21,23 @@ but what if you have both in the same function? Normally we could use this:
 but it doesnt work for numbers:
 
 {{< r "d.rs" >}}
+
+but we could do this:
+
+{{< r "e.rs" >}}
+
+which even matches Go:
+
+{{< r "b.go" >}}
+
+Can we use `Err(format!())` for everything? Yes we can:
+
+{{< r "f.rs" >}}
+
+We can even do better:
+
+{{< r "g.rs" >}}
+
+but then what about traditional errors? Yep:
+
+{{< r "h.rs" >}}
