@@ -1,2 +1,2 @@
-s, n = 'year', 2019
+s, n = 'month', 12
 print(s, n)

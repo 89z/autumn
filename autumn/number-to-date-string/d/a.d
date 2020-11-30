@@ -5,6 +5,6 @@ import
 
 void main() {
    auto o = SysTime.fromUnixTime(1577858399);
-   auto s = format("%s %s %s %s", o.dayOfWeek, o.month, o.day, o.year);
-   writeln(s == "tue dec 31 2019");
+   auto s = format("%d-%d-%d", o.year, o.month, o.day);
+   writeln(s == "2019-12-31");
 }

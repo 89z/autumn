@@ -4,9 +4,9 @@ import
 
 void main() {
    // example 1
-   Tuple!(int, "a", int, "b") c = [9, 8];
+   Tuple!(int, "m", int, "d") o1 = [12, 31];
    // example 2
-   Tuple!(string, "a", int, "b") d = tuple("year", 2019);
+   Tuple!(string, "s", int, "n") o2 = tuple("month", 12);
    // print
-   writeln(c.a == 9 && c.b == 8 && d.a == "year" && d.b == 2019);
+   writeln(o1.m == 12 && o2.n == 12);
 }

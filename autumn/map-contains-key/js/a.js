@@ -1,3 +1,3 @@
-let m = {year: 2019, month: 12};
-let b = m.hasOwnProperty('year');
+let m = {month: 12, day: 31};
+let b = m.hasOwnProperty('day');
 console.log(b);

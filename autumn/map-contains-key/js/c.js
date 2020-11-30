@@ -1,3 +1,3 @@
-let m = {year: 2019, month: 12};
-let b = 'year' in m;
+let m = {month: 12, day: 31};
+let b = 'day' in m;
 console.log(b);

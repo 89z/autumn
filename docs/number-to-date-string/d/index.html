@@ -42,8 +42,8 @@
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> SysTime<span style="color:#f92672">.</span><span style="color:#a6e22e">fromUnixTime</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1577858399</span><span style="color:#f92672">);</span>
-   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> format<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;%s %s %s %s&#34;</span><span style="color:#f92672">,</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">dayOfWeek</span><span style="color:#f92672">,</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">month</span><span style="color:#f92672">,</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">day</span><span style="color:#f92672">,</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">year</span><span style="color:#f92672">);</span>
-   writeln<span style="color:#f92672">(</span>s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;tue dec 31 2019&#34;</span><span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> format<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;%d-%d-%d&#34;</span><span style="color:#f92672">,</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">year</span><span style="color:#f92672">,</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">month</span><span style="color:#f92672">,</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">day</span><span style="color:#f92672">);</span>
+   writeln<span style="color:#f92672">(</span>s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;2019-12-31&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 

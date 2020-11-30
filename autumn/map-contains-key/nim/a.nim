@@ -1,4 +1,4 @@
 import tables
-let m = {"year": 2019}.toTable
-let b = m.hasKey("year")
+let m = {"month": 12, "day": 31}.toTable
+let b = m.hasKey("day")
 echo b

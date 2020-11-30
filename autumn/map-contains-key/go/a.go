@@ -1,7 +1,7 @@
 package main
 
 func main() {
-   m := map[string]int{"year": 2019, "month": 12}
-   n, b := m["year"]
-   println(n == 2019, b)
+   m := map[string]int{"month": 12, "day": 31}
+   n, b := m["day"]
+   println(n == 31, b)
 }

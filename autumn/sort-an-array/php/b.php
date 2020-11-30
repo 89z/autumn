@@ -1,10 +1,10 @@
 <?php
 
 $a = [
-   ['year' => 2019, 'month' => 11],
-   ['year' => 2018, 'month' => 12]
+   ['month' => 11, 'day' => 30],
+   ['month' => 10, 'day' => 31]
 ];
 
-$f = fn ($m, $m2) => $m['year'] <=> $m2['year'];
+$f = fn ($m, $m2) => $m['month'] <=> $m2['month'];
 usort($a, $f);
 print_r($a);

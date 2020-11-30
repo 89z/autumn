@@ -1,4 +1,4 @@
 void main() {
-   var s = 'year', n = 2019;
+   var s = 'month', n = 12;
    print([s, n]);
 }
