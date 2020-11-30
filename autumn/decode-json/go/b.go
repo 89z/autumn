@@ -1,22 +1,25 @@
 package main
+import "encoding/json"
 
-import (
-   "encoding/json"
-   "fmt"
-)
-
-func main() {
-   y := []byte(`{"year": 2019, "month": 12}`)
-   // example 1
+// example 1
+func f1(s string) map[string]int {
+   y := []byte(s)
    m := map[string]int{}
    json.Unmarshal(y, &m)
-   fmt.Println(m)
-   // example 2
-   type Date struct {
-      Year, Month int
-   }
-   o := Date{}
-   json.Unmarshal(y, &o)
-   fmt.Printf("%+v\n", o)
+   return m
 }
 
+// example 2
+func f2(s string) struct{Month, Day int} {
+   y := []byte(s)
+   o := struct{Month, Day int}{}
+   json.Unmarshal(y, &o)
+   return o
+}
+
+// print
+func main() {
+   s := `{"month": 12, "day": 31}`
+   m, o := f1(s), f2(s)
+   println(m["day"] == 31, o.Day == 31)
+}

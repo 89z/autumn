@@ -39,23 +39,30 @@
 
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
    <span style="color:#e6db74">&#34;strings&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`{&#34;year&#34;: 2019, &#34;month&#34;: 12}`</span>
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{}
-   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">s</span>)).<span style="color:#a6e22e">Decode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m</span>)
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Date</span> <span style="color:#66d9ef">struct</span> {
-      <span style="color:#a6e22e">Year</span>, <span style="color:#a6e22e">Month</span> <span style="color:#66d9ef">int</span>
-   }
-   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Date</span>{}
-   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">s</span>)).<span style="color:#a6e22e">Decode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">o</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%+v\n&#34;</span>, <span style="color:#a6e22e">o</span>)
+<span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">f1</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span> {
+   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">s</span>)
+   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{}
+   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">o</span>).<span style="color:#a6e22e">Decode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m</span>)
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">m</span>
+}
+
+<span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">f2</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">struct</span>{<span style="color:#a6e22e">Month</span>, <span style="color:#a6e22e">Day</span> <span style="color:#66d9ef">int</span>} {
+   <span style="color:#a6e22e">in_o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">s</span>)
+   <span style="color:#a6e22e">out_o</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">struct</span>{<span style="color:#a6e22e">Month</span>, <span style="color:#a6e22e">Day</span> <span style="color:#66d9ef">int</span>}{}
+   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">in_o</span>).<span style="color:#a6e22e">Decode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">out_o</span>)
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">out_o</span>
+}
+
+<span style="color:#75715e">// print
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`{&#34;month&#34;: 12, &#34;day&#34;: 31}`</span>
+   <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">f1</span>(<span style="color:#a6e22e">s</span>), <span style="color:#a6e22e">f2</span>(<span style="color:#a6e22e">s</span>)
+   println(<span style="color:#a6e22e">m</span>[<span style="color:#e6db74">&#34;day&#34;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">31</span>, <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Day</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">31</span>)
 }
 </code></pre></div>
 
@@ -67,27 +74,30 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;encoding/json&#34;</span>
 
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;encoding/json&#34;</span>
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
-)
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">`{&#34;year&#34;: 2019, &#34;month&#34;: 12}`</span>)
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{}
+<span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">f1</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span> {
+   <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#a6e22e">s</span>)
+   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{}
    <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">y</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m</span>)
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Date</span> <span style="color:#66d9ef">struct</span> {
-      <span style="color:#a6e22e">Year</span>, <span style="color:#a6e22e">Month</span> <span style="color:#66d9ef">int</span>
-   }
-   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Date</span>{}
-   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">y</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">o</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%+v\n&#34;</span>, <span style="color:#a6e22e">o</span>)
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">m</span>
 }
 
+<span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">f2</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">struct</span>{<span style="color:#a6e22e">Month</span>, <span style="color:#a6e22e">Day</span> <span style="color:#66d9ef">int</span>} {
+   <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#a6e22e">s</span>)
+   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">struct</span>{<span style="color:#a6e22e">Month</span>, <span style="color:#a6e22e">Day</span> <span style="color:#66d9ef">int</span>}{}
+   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">y</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">o</span>)
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">o</span>
+}
+
+<span style="color:#75715e">// print
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`{&#34;month&#34;: 12, &#34;day&#34;: 31}`</span>
+   <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">f1</span>(<span style="color:#a6e22e">s</span>), <span style="color:#a6e22e">f2</span>(<span style="color:#a6e22e">s</span>)
+   println(<span style="color:#a6e22e">m</span>[<span style="color:#e6db74">&#34;day&#34;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">31</span>, <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Day</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">31</span>)
+}
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/encoding/json#Unmarshal">https://golang.org/pkg/encoding/json#Unmarshal</a></p>

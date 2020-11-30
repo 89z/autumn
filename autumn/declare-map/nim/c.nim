@@ -1,3 +1,3 @@
 import tables
-var m = {"year": 2019, "month": 12}.toTable
+let m = {"month": 12, "day": 31}.toTable
 echo m

@@ -11,6 +11,6 @@ impl Hash for [(&str, u16)] {
 }
 
 fn main() {
-   let m = [("year", 2019), ("month", 12)].to_map();
+   let m = [("month", 12), ("day", 31)].to_map();
    println!("{:?}", m)
 }

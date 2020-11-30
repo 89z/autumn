@@ -4,8 +4,8 @@ using J = System.Text.Json.JsonSerializer;
 
 class Program {
    static void Main() {
-      var s = "{\"year\": 2019, \"month\": 12}";
+      var s = "{\"month\": 12, \"day\": 31}";
       var m = J.Deserialize<G.Dictionary<string, int>>(s);
-      C.WriteLine(m["year"]);
+      C.WriteLine(m["day"] == 31);
    }
 }

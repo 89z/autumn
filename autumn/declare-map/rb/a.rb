@@ -1,3 +1,3 @@
-a = [['year', 2019], ['month', 12]]
+a = [['month', 12], ['day', 31]]
 m = a.to_h
 puts m

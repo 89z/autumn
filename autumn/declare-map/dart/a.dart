@@ -9,6 +9,6 @@ void main() {
    var m3 = Map<String, int>();
    print(m3);
    // example 4
-   var m4 = {'year': 2019, 'month': 12};
+   var m4 = {'month': 12, 'day': 31};
    print(m4);
 }
