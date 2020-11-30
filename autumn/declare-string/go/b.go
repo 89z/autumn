@@ -1,6 +1,6 @@
 package main
 
 func main() {
-   s := `sigma\tau`
+   s := `zero"one\two`
    println(s)
 }

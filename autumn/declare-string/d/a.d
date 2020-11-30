@@ -1,10 +1,6 @@
 import std.stdio;
 
 void main() {
-   // example 1
-   auto s1 = q"[from\to]";
-   // example 2
-   auto s2 = q"[["from", "to"]]";
-   // print
-   writeln(s1, s2);
+   auto s = q"[zero"one\two]";
+   s.writeln;
 }

@@ -1,2 +1,2 @@
-let s = `sigma\\tau`;
+let s = `zero"one\\two`;
 console.log(s);

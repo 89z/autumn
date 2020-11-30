@@ -3,8 +3,8 @@ using J = System.Text.Json.JsonSerializer;
 
 class Program {
    static void Main() {
-      var s = "[\"sigma\", \"tau\"]";
-      var a = J.Deserialize<string[]>(s);
-      C.WriteLine(a);
+      var s = "[10, 11]";
+      var a = J.Deserialize<int[]>(s);
+      C.WriteLine(a[0] == 10);
    }
 }

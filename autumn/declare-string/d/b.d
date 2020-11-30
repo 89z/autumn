@@ -1,6 +1,6 @@
 import std.stdio;
 
 void main() {
-   auto s = "sigma\\tau";
+   auto s = "zero\"one\\two";
    s.writeln;
 }

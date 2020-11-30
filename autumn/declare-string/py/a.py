@@ -1,10 +1,10 @@
 # example 1
-s1 = 'sigma\\tau'
+s1 = 'zero"one\\two'
 # example 2
-s2 = "sigma\\tau"
+s2 = "zero\"one\\two"
 # example 3
-s3 = r'sigma\tau'
+s3 = r'zero"one\two'
 # exmaple 4
-s4 = r"sigma\tau"
+s4 = r"one\two"
 # print
 print(s1, s2, s3, s4)

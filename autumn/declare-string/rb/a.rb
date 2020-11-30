@@ -1,6 +1,6 @@
 # example 1
-s1 = "sigma\\tau"
+s1 = "zero\"one\\two"
 # example 2
-s2 = 'sigma\tau'
+s2 = 'zero"one\two'
 # print
 puts s1, s2

@@ -3,7 +3,7 @@ import
    std.stdio;
 
 void main() {
-   auto s = `{"year": 2019, "month": 12}`;
-   auto m = s.parseJSON;
-   m.writeln;
+   auto a = parseJSON("[10, 11]");
+   auto n = a[0].integer;
+   writeln(n == 10);
 }

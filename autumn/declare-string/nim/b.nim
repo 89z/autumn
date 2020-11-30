@@ -1,2 +1,2 @@
-let s = r"sigma\tau"
+let s = r"one\two"
 echo s

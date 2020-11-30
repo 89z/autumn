@@ -1,2 +1,2 @@
-let s = String.raw`sigma\tau`;
+let s = String.raw`zero"one\two`;
 console.log(s);

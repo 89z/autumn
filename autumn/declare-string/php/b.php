@@ -1,3 +1,3 @@
 <?php
-$s = 'sigma\tau';
+$s = 'zero"one\two';
 echo $s, "\n";
