@@ -1,4 +1,5 @@
 require 'json'
-s = '{"month": 12, "day": 31}'
-m = JSON.parse(s)
-puts m['day'] == 31
+in_s = '{"U2": {"Boy": ["Twilight", "I Will Follow"]}}'
+m = JSON.parse(in_s)
+out_s = m['U2']['Boy'][0]
+puts out_s == 'Twilight'

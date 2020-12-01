@@ -1,4 +1,5 @@
 import json
 o = open('a.json')
 m = json.load(o)
-print(m['day'] == 31)
+s = m['U2']['Boy'][0]
+print(s == 'Twilight')

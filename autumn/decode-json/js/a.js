@@ -1,3 +1,4 @@
-let s = '{"month": 12, "day": 31}';
-let m = JSON.parse(s);
-console.log(m.day === 31);
+let in_s = '{"U2": {"Boy": ["Twilight", "I Will Follow"]}}';
+let m = JSON.parse(in_s);
+let out_s = m.U2.Boy[0];
+console.log(out_s == 'Twilight');

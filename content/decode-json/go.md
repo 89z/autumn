@@ -4,10 +4,11 @@ tags: [go]
 ---
 
 {{< r "a.go" >}}
+{{< r "b.go" >}}
 
 <https://golang.org/pkg/encoding/json#Decoder.Decode>
 
-{{< r "b.go" >}}
+{{< r "c.go" >}}
 
 <https://golang.org/pkg/encoding/json#Unmarshal>
 

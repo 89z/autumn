@@ -1,4 +1,5 @@
 import json
-s = '{"month": 12, "day": 31}'
-m = json.loads(s)
-print(m['day'] == 31)
+in_s = '{"U2": {"Boy": ["Twilight", "I Will Follow"]}}'
+m = json.loads(in_s)
+out_s = m['U2']['Boy'][0]
+print(out_s == 'Twilight')
