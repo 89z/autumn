@@ -36,6 +36,39 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">for</span> n <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">10</span> .. <span style="color:#ae81ff">20</span> {
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
+   }
+}
+</code></pre></div>
+
+<p><a href="https://doc.rust-lang.org/std/keyword.for.html">https://doc.rust-lang.org/std/keyword.for.html</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+   <span style="color:#66d9ef">loop</span> {
+      <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">19</span> {
+         <span style="color:#66d9ef">break</span>;
+      }
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
+      n <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
+   }
+}
+</code></pre></div>
+
+<p><a href="https://doc.rust-lang.org/std/keyword.loop.html">https://doc.rust-lang.org/std/keyword.loop.html</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
    <span style="color:#66d9ef">while</span> n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span> {
       println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
@@ -45,20 +78,6 @@
 </code></pre></div>
 
 <p><a href="https://doc.rust-lang.org/std/keyword.while.html">https://doc.rust-lang.org/std/keyword.while.html</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">for</span> n <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">10</span> .. <span style="color:#ae81ff">20</span> {
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
-   }
-}
-</code></pre></div>
-
-<p><a href="https://doc.rust-lang.org/std/keyword.for.html">https://doc.rust-lang.org/std/keyword.for.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/rust#while">https://hyperpolyglot.org/rust#while</a></li>

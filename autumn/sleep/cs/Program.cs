@@ -4,6 +4,6 @@ using Th = System.Threading.Thread;
 class Program {
    static void Main() {
       Co.WriteLine("Sleep");
-      Th.Sleep(5000);
+      Th.Sleep(500);
    }
 }

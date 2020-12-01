@@ -1,5 +1,9 @@
-import core.thread;
+import
+   core.thread,
+   std.stdio;
 
 void main() {
-   Thread.sleep(5.seconds);
+   auto o = seconds(5);
+   writeln("sleep");
+   Thread.sleep(o);
 }

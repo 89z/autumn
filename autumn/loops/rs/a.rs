@@ -1,7 +1,5 @@
 fn main() {
-   let mut n = 10;
-   while n < 20 {
+   for n in 10 .. 20 {
       println!("{}", n);
-      n += 1;
    }
 }

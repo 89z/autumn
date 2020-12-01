@@ -1,7 +1,10 @@
-use std::thread::sleep;
-use std::time::Duration;
+use std::{
+   thread,
+   time::Duration
+};
 
 fn main() {
    let o = Duration::from_secs(5);
-   sleep(o);
+   println!("sleep");
+   thread::sleep(o);
 }

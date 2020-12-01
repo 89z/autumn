@@ -5,11 +5,15 @@ tags: [rust]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/keyword.while.html>
+<https://doc.rust-lang.org/std/keyword.for.html>
 
 {{< r "b.rs" >}}
 
-<https://doc.rust-lang.org/std/keyword.for.html>
+<https://doc.rust-lang.org/std/keyword.loop.html>
+
+{{< r "c.rs" >}}
+
+<https://doc.rust-lang.org/std/keyword.while.html>
 
 ## References
 
