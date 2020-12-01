@@ -1,12 +1,11 @@
 ---
-title: PHP
-tags: [php]
+title: C#
+tags: [c-sharp]
 ---
 
-<https://php.net/function.filesize>
+{{< r "Program.cs" >}}
 
 ## References
 
-- <https://hyperpolyglot.org/scripting2#file-size>
 - <https://programming-idioms.org/idiom/95>
 - <https://rosettacode.org/wiki/File_size>

@@ -1,12 +1,13 @@
 ---
-title: PHP
-tags: [php]
+title: Go
+tags: [go]
 ---
 
-<https://php.net/function.filesize>
+{{< r "a.go" >}}
+
+<https://golang.org/pkg/os#Stat>
 
 ## References
 
-- <https://hyperpolyglot.org/scripting2#file-size>
 - <https://programming-idioms.org/idiom/95>
 - <https://rosettacode.org/wiki/File_size>
