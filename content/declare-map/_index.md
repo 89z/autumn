@@ -2,5 +2,5 @@
 title: Declare map
 categories: [map]
 date: 2020-11-02
-example: cove/blob/master/browse/browse-song.php
+example: sienna/blob/master/musicbrainz/musicbrainz.php
 ---

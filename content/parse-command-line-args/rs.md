@@ -9,12 +9,6 @@ tags: [rust]
 
 <https://lib.rs/crates/pico-args>
 
-{{< r "climake/src/main.rs" >}}
-
-0 deps
-
-<https://lib.rs/crates/climake>
-
 {{< r "argh/src/main.rs" >}}
 
 8 deps

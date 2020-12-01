@@ -5,6 +5,10 @@ tags: [php]
 
 {{< r "a.php" >}}
 
+<https://php.net/control-structures.match>
+
+{{< r "b.php" >}}
+
 <https://php.net/control-structures.switch>
 
 ## References
