@@ -5,7 +5,7 @@ tags: [d]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/spec/statement.html#while-statement>
+<https://dlang.org/spec/statement.html#for-statement>
 
 {{< r "b.d" >}}
 
@@ -13,7 +13,7 @@ tags: [d]
 
 {{< r "c.d" >}}
 
-<https://dlang.org/spec/statement.html#for-statement>
+<https://dlang.org/spec/statement.html#while-statement>
 
 ## References
 

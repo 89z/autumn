@@ -1,7 +1,5 @@
 void main() {
-   var n = 10;
-   while (n < 20) {
+   for (var n = 10; n < 20; n++) {
       print(n);
-      n++;
    }
 }

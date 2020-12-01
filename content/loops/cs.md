@@ -5,11 +5,11 @@ tags: [c-sharp]
 
 {{< r "a/Program.cs" >}}
 
-<https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/while>
+<https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/for>
 
 {{< r "b/Program.cs" >}}
 
-<https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/for>
+<https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/while>
 
 ## References
 

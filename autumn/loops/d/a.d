@@ -1,9 +1,7 @@
 import std.stdio;
 
 void main() {
-   auto n = 10;
-   while (n < 20) {
+   for (auto n = 10; n < 20; n++) {
       n.writeln;
-      n++;
    }
 }

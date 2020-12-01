@@ -5,11 +5,11 @@ tags: [dart]
 
 {{< r "a.dart" >}}
 
-<https://dart.dev/guides/language/language-tour#while-and-do-while>
+<https://dart.dev/guides/language/language-tour#for-loops>
 
 {{< r "b.dart" >}}
 
-<https://dart.dev/guides/language/language-tour#for-loops>
+<https://dart.dev/guides/language/language-tour#while-and-do-while>
 
 ## References
 

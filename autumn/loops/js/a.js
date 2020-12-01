@@ -1,5 +1,3 @@
-let n = 10;
-while (n < 20) {
+for (let n = 10; n < 20; n++) {
    console.log(n);
-   n++;
 }
