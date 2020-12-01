@@ -1,2 +1,8 @@
-import std.file: getSize;
-auto x = getSize(path);
+import
+   std.file,
+   std.stdio;
+
+void main() {
+   auto n = getSize("a.d");
+   writeln(n);
+}

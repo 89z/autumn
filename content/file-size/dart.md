@@ -5,6 +5,12 @@ tags: [dart]
 
 {{< r "a.dart" >}}
 
+<https://api.dart.dev/dart-io/File/lengthSync.html>
+
+{{< r "b.dart" >}}
+
+<https://api.dart.dev/dart-io/File/readAsBytes.html>
+
 ## References
 
 - <https://programming-idioms.org/idiom/95>
