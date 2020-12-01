@@ -1,32 +1,11 @@
 package main
-
-import (
-   "fmt"
-   "io/ioutil"
-   "os"
-)
-
-func printSize(path string) error {
-   info, err := os.Stat(path)
-   if err != nil {
-      return err
-   }
-   x := info.Size()
-   fmt.Println(x)
-   return nil
-}
-
-func init() {
-   buffer := []byte("Hello")
-   err := ioutil.WriteFile("file.txt", buffer, 0644)
-   if err != nil {
-      panic(err)
-   }
-}
+import "os"
 
 func main() {
-   err := printSize("file.txt")
-   if err != nil {
-      panic(err)
+   o, e := os.Stat("a.go")
+   if e != nil {
+      os.Exit(1)
    }
+   n := o.Size()
+   println(n)
 }

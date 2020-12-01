@@ -1,3 +1,3 @@
 import os
-echo getFileSize "input.txt"
-echo getFileSize "/input.txt"
+let n = getFileSize("a.nim")
+echo n

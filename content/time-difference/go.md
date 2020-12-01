@@ -12,4 +12,5 @@ tags: [go]
 ## References
 
 - <https://hyperpolyglot.org/c#date-subtraction>
+- <https://programming-idioms.org/idiom/132>
 - <https://rosettacode.org/wiki/Convert_seconds_to_compound_duration>

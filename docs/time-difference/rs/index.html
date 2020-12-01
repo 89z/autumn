@@ -4,7 +4,7 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Time difference / Dart</title>
+   <title>Time difference / Rust</title>
 
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/main.css">
@@ -21,7 +21,7 @@
    <main class="page">
 
 <h1>
-   <a href="/autumn/time-difference/">Time difference</a> / Dart
+   <a href="/autumn/time-difference/">Time difference</a> / Rust
 </h1>
 <section class="page">
    <time>Sat Nov 28 2020</time>
@@ -29,11 +29,23 @@
    <a href="/autumn/categories/time/">time</a>
    
 </section>
-   <p><a href="https://api.dart.dev/dart-core/Stopwatch-class.html">https://api.dart.dev/dart-core/Stopwatch-class.html</a></p>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::time::Instant;
+<span style="color:#66d9ef">let</span> start <span style="color:#f92672">=</span> Instant:<span style="color:#a6e22e">now</span>();
+f();
+<span style="color:#66d9ef">let</span> duration <span style="color:#f92672">=</span> start.elapsed();
+</code></pre></div>
+
+<p><a href="https://doc.rust-lang.org/std/time/struct.Instant.html">https://doc.rust-lang.org/std/time/struct.Instant.html</a></p>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://hyperpolyglot.org/rust#dates-time">https://hyperpolyglot.org/rust#dates-time</a></li>
 <li><a href="https://programming-idioms.org/idiom/132">https://programming-idioms.org/idiom/132</a></li>
-<li><a href="https://rosettacode.org/wiki/Convert_seconds_to_compound_duration">https://rosettacode.org/wiki/Convert_seconds_to_compound_duration</a></li>
 <li><a href="https://rosettacode.org/wiki/Time_a_function">https://rosettacode.org/wiki/Time_a_function</a></li>
 </ul>
 

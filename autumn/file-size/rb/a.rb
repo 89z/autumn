@@ -1,1 +1,2 @@
-File.size("/etc/hosts")
+n = File.size('a.rb')
+puts n

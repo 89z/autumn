@@ -13,5 +13,6 @@ tags: [dart]
 
 ## References
 
+- <https://hyperpolyglot.org/web#file-size>
 - <https://programming-idioms.org/idiom/95>
 - <https://rosettacode.org/wiki/File_size>
