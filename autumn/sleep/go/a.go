@@ -3,7 +3,7 @@ import "time"
 
 func main() {
    for {
-      println("March")
-      time.Sleep(1000 * time.Millisecond)
+      println("Sleep")
+      time.Sleep(500 * time.Millisecond)
    }
 }

@@ -4,7 +4,7 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Sleep / C#</title>
+   <title>Sleep / JavaScript</title>
 
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/main.css">
@@ -21,7 +21,7 @@
    <main class="page">
 
 <h1>
-   <a href="/autumn/sleep/">Sleep</a> / C#
+   <a href="/autumn/sleep/">Sleep</a> / JavaScript
 </h1>
 <section class="page">
    <time>Tue Dec 1 2020</time>
@@ -35,22 +35,14 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> Co = System.Console;
-<span style="color:#66d9ef">using</span> Th = System.Threading.Thread;
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
-   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
-         Co.WriteLine(<span style="color:#e6db74">&#34;Sleep&#34;</span>);
-         Th.Sleep(<span style="color:#ae81ff">500</span>);
-      }
-   }
-}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">f</span> <span style="color:#f92672">=</span> () =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;sleep&#39;</span>);
+<span style="color:#a6e22e">setInterval</span>(<span style="color:#a6e22e">f</span>, <span style="color:#ae81ff">500</span>);
 </code></pre></div>
 
-<p><a href="https://docs.microsoft.com/dotnet/api/system.threading.thread.sleep">https://docs.microsoft.com/dotnet/api/system.threading.thread.sleep</a></p>
+<p><a href="https://developer.mozilla.org/Web/API/WindowOrWorkerGlobalScope/setInterval">https://developer.mozilla.org/Web/API/WindowOrWorkerGlobalScope/setInterval</a></p>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://hyperpolyglot.org/scripting#sleep">https://hyperpolyglot.org/scripting#sleep</a></li>
 <li><a href="https://programming-idioms.org/idiom/45">https://programming-idioms.org/idiom/45</a></li>
 <li><a href="https://rosettacode.org/wiki/Sleep">https://rosettacode.org/wiki/Sleep</a></li>
 </ul>

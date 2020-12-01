@@ -1,2 +1,5 @@
 import os
-sleep(5000)
+
+while true:
+   echo "sleep"
+   sleep(500)

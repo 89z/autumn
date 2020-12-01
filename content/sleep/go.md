@@ -7,10 +7,6 @@ tags: [go]
 
 <https://golang.org/pkg/time#Millisecond>
 
-{{< r "b.go" >}}
-
-<https://golang.org/pkg/time#Second>
-
 ## References
 
 - <https://hyperpolyglot.org/c#sleep>

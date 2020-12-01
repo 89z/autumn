@@ -1,4 +1,6 @@
 <?php
-$n = microtime(true);
-echo "March\n";
-time_sleep_until($n + 5);
+
+while (true) {
+   echo "sleep\n";
+   usleep(500_000);
+}

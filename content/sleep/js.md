@@ -1,11 +1,11 @@
 ---
-title: PHP
-tags: [php]
+title: JavaScript
+tags: [javascript]
 ---
 
-{{< r "a.php" >}}
+{{< r "a.js" >}}
 
-<https://php.net/function.usleep>
+<https://developer.mozilla.org/Web/API/WindowOrWorkerGlobalScope/setInterval>
 
 ## References
 
