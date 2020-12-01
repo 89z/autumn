@@ -2,16 +2,16 @@ use tinyjson::JsonValue;
 
 fn main() -> Result<(), String> {
    let s = r#"
-{"month": 12, "day": 31}
+{"U2": {"Boy": ["Twilight", "I Will Follow"]}}
 "#;
-   let o: JsonValue = match s.parse() {
+   let m: JsonValue = match s.parse() {
       Ok(v) => v,
       Err(v) => Err(format!("{}", v))?
    };
-   let n: f64 = match o["day"].get() {
-      Some(v) => *v,
-      None => Err("day")?
+   let s = match &m["U2"]["Boy"][0] {
+      JsonValue::String(v) => v,
+      v => Err(format!("{:?}", v))?
    };
-   println!("{}", n == 31.0);
+   println!("{}", s == "Twilight");
    Ok(())
 }

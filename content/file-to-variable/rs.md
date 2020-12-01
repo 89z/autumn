@@ -9,5 +9,6 @@ tags: [rust]
 
 ## References
 
+- <https://hyperpolyglot.org/rust#file-handles>
 - <https://programming-idioms.org/idiom/58>
 - <https://rosettacode.org/wiki/Read_entire_file>

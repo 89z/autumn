@@ -15,12 +15,6 @@ tags: [rust]
 
 <https://lib.rs/crates/http_req>
 
-## 49 deps
-
-{{< r "c/src/main.rs" >}}
-
-<https://lib.rs/crates/attohttpc>
-
 ## References
 
 - <https://programming-idioms.org/idiom/101>

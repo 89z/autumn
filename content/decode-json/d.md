@@ -5,7 +5,7 @@ tags: [d]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/library/std/json.html>
+<https://dlang.org/library/std/json/parse_json.html>
 
 ## References
 

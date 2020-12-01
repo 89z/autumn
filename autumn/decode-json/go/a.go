@@ -1,5 +1,4 @@
 package main
-
 type Slice []interface{}
 type Map map[string]interface{}
 

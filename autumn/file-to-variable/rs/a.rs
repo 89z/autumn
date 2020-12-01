@@ -1,7 +1,10 @@
 use std::fs;
 
-fn main() {
-   let e = fs::read_to_string("index.md");
-   let s = e.unwrap_or_default();
-   print!("{}", s);
+fn main() -> Result<(), String> {
+   let s = "a.rs";
+   match fs::read_to_string(s) {
+      Ok(v) => print!("{}", v),
+      Err(v) => Err(format!("{} {}", s, v))?
+   }
+   Ok(())
 }
