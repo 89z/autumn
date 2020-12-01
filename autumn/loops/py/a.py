@@ -1,4 +1,2 @@
-n = 10
-while n < 20:
+for n in range(10, 20):
    print(n)
-   n += 1

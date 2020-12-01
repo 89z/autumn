@@ -1,6 +1,13 @@
-# example 1
-for n in 10 .. 19:
-   echo n
-# example 2
-for n in countup(10, 19):
-   echo n
+echo "example 1"
+var n1 = 10
+while n1 < 20:
+   echo n1
+   n1 += 1
+
+echo "example 2"
+var n2 = 10
+while true:
+   if n2 > 19:
+      break
+   echo n2
+   n2 += 1

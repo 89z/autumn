@@ -1,4 +1,6 @@
-var n = 10
-while n < 20:
+# example 1
+for n in 10 .. 19:
    echo n
-   n += 1
+# example 2
+for n in countup(10, 19):
+   echo n

@@ -1,12 +1,12 @@
 # example 1
 n = 10
-until n > 19 do
+while n < 20 do
    puts n
    n += 1
 end
 # example 2
 n = 10
-until n > 19
+while n < 20
    puts n
    n += 1
 end

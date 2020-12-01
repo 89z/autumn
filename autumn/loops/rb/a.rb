@@ -1,12 +1,8 @@
-# example 1
 n = 10
-while n < 20 do
-   puts n
-   n += 1
-end
-# example 2
-n = 10
-while n < 20
+loop do
+   if n > 19
+      break
+   end
    puts n
    n += 1
 end

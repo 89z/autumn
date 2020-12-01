@@ -35,21 +35,34 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#75715e"># example 1</span>
-n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
-<span style="color:#66d9ef">while</span> n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span> <span style="color:#66d9ef">do</span>
-   puts n
-   n <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-<span style="color:#66d9ef">end</span>
-<span style="color:#75715e"># example 2</span>
-n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
-<span style="color:#66d9ef">while</span> n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+<span style="color:#66d9ef">loop</span> <span style="color:#66d9ef">do</span>
+   <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">19</span>
+      <span style="color:#66d9ef">break</span>
+   <span style="color:#66d9ef">end</span>
    puts n
    n <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div>
 
-<p><a href="https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-while+Loop">https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-while+Loop</a></p>
+<p><a href="https://ruby-doc.org/core/Kernel.html#method-i-loop">https://ruby-doc.org/core/Kernel.html#method-i-loop</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#75715e"># example 1</span>
+<span style="color:#66d9ef">for</span> n <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">..</span> <span style="color:#ae81ff">19</span>
+   puts n
+<span style="color:#66d9ef">end</span>
+<span style="color:#75715e"># example 2</span>
+<span style="color:#66d9ef">for</span> n <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">...</span> <span style="color:#ae81ff">20</span>
+   puts n
+<span style="color:#66d9ef">end</span>
+</code></pre></div>
+
+<p><a href="https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-for+Loop">https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-for+Loop</a></p>
 
 
 
@@ -78,16 +91,20 @@ n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#75715e"># example 1</span>
-<span style="color:#66d9ef">for</span> n <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">..</span> <span style="color:#ae81ff">19</span>
+n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+<span style="color:#66d9ef">while</span> n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span> <span style="color:#66d9ef">do</span>
    puts n
+   n <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 <span style="color:#66d9ef">end</span>
 <span style="color:#75715e"># example 2</span>
-<span style="color:#66d9ef">for</span> n <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">...</span> <span style="color:#ae81ff">20</span>
+n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+<span style="color:#66d9ef">while</span> n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span>
    puts n
+   n <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div>
 
-<p><a href="https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-for+Loop">https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-for+Loop</a></p>
+<p><a href="https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-while+Loop">https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-while+Loop</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting#while">https://hyperpolyglot.org/scripting#while</a></li>

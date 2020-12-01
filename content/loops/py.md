@@ -5,11 +5,11 @@ tags: [python]
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/reference/compound_stmts.html#while>
+<https://docs.python.org/library/functions.html#func-range>
 
 {{< r "b.py" >}}
 
-<https://docs.python.org/library/functions.html#func-range>
+<https://docs.python.org/reference/compound_stmts.html#while>
 
 ## References
 

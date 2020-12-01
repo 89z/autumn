@@ -5,15 +5,19 @@ tags: [ruby]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-while+Loop>
+<https://ruby-doc.org/core/Kernel.html#method-i-loop>
 
 {{< r "b.rb" >}}
 
-<https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-until+Loop>
+<https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-for+Loop>
 
 {{< r "c.rb" >}}
 
-<https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-for+Loop>
+<https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-until+Loop>
+
+{{< r "d.rb" >}}
+
+<https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-while+Loop>
 
 ## References
 
