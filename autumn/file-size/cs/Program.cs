@@ -1,12 +1,10 @@
 using C = System.Console;
-using G = System.Collections.Generic;
-using J = System.Text.Json.JsonSerializer;
-using System.IO
+using IO = System.IO;
 
 class Program {
    static void Main() {
-      var filePath = "Sample.txt";
-      var fileInfo = new FileInfo(filePath);
-      var _x = fileInfo.Length;
+      var o = new IO.FileInfo("Program.cs");
+      var n = o.Length;
+      C.WriteLine(n);
    }
 }

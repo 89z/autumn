@@ -36,15 +36,13 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> C = System.Console;
-<span style="color:#66d9ef">using</span> G = System.Collections.Generic;
-<span style="color:#66d9ef">using</span> J = System.Text.Json.JsonSerializer;
-<span style="color:#66d9ef">using</span> System.IO
+<span style="color:#66d9ef">using</span> IO = System.IO;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">var</span> filePath = <span style="color:#e6db74">&#34;Sample.txt&#34;</span>;
-      <span style="color:#66d9ef">var</span> fileInfo = <span style="color:#66d9ef">new</span> FileInfo(filePath);
-      <span style="color:#66d9ef">var</span> <span style="color:#ae81ff">_</span>x = fileInfo.Length;
+      <span style="color:#66d9ef">var</span> o = <span style="color:#66d9ef">new</span> IO.FileInfo(<span style="color:#e6db74">&#34;Program.cs&#34;</span>);
+      <span style="color:#66d9ef">var</span> n = o.Length;
+      C.WriteLine(n);
    }
 }
 </code></pre></div>
