@@ -1,7 +1,11 @@
-use std::path::Path;
+use std::{
+   fs,
+   io
+};
 
-fn main() {
-   let o = Path::new("a.rs");
+fn main() -> io::Result<()> {
+   let o = fs::metadata("a.rs")?;
    let b = o.is_file();
    println!("{}", b);
+   Ok(())
 }

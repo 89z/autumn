@@ -14,19 +14,8 @@ This works for `Option`:
 
 {{< r "b.rs" >}}
 
-but what if you have both in the same function? Normally we could use this:
-
-{{< r "c.rs" >}}
-
-but it doesnt work for numbers:
-
-{{< r "d.rs" >}}
-
-but we could do this:
-
-{{< r "e.rs" >}}
-
-which even matches Go:
+but what if you have both in the same function? Need something that works for
+numbers as well. Go has an option:
 
 {{< r "b.go" >}}
 

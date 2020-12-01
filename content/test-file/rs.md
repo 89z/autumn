@@ -5,6 +5,10 @@ tags: [rust]
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/std/fs/struct.Metadata.html#method.is_file>
+
+{{< r "b.rs" >}}
+
 <https://doc.rust-lang.org/std/path/struct.Path.html#method.is_file>
 
 ## References
