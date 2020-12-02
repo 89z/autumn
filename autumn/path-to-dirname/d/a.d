@@ -1,7 +1,9 @@
-import std.path: dirName;
-import std.stdio: writeln;
+import
+   io = std.stdio,
+   path = std.path;
 
 void main() {
-   auto s = dirName(`C:\Windows\notepad.exe`);
-   writeln(s == `C:\Windows`);
+   auto in_s = `C:\Windows\notepad.exe`;
+   auto out_s = path.dirName(in_s);
+   io.writeln(out_s == `C:\Windows`);
 }

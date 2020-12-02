@@ -1,14 +1,15 @@
-import std.json: JSONOptions, JSONValue, toJSON;
-import std.stdio: writeln;
+import
+   io = std.stdio,
+   json = std.json: JSONOptions, JSONValue;
 
 void main() {
    auto o = ["/", "📗"].JSONValue;
    // example 1
-   auto s1 = toJSON(o);
+   auto s1 = json.toJSON(o);
    // example 2
-   auto s2 = toJSON(o, true);
+   auto s2 = json.toJSON(o, true);
    // example 3
-   auto s3 = toJSON(o, true, JSONOptions.doNotEscapeSlashes);
+   auto s3 = json.toJSON(o, true, JSONOptions.doNotEscapeSlashes);
    // print
-   writeln(s1, '\n', s2, '\n', s3);
+   io.writeln(s1, '\n', s2, '\n', s3);
 }

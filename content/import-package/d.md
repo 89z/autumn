@@ -9,7 +9,7 @@ tags: [d]
 
 {{< r "b.d" >}}
 
-<https://dlang.org/spec/module.html#selective_imports>
+<https://dlang.org/spec/module.html#renamed_selective_imports>
 
 ## References
 

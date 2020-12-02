@@ -1,7 +1,8 @@
-import std.path: extension;
-import std.stdio: writeln;
+import
+   io = std.stdio,
+   path = std.path;
 
 void main() {
-   auto s = extension("a.d");
-   writeln(s == ".d");
+   auto s = path.extension("a.d");
+   io.writeln(s == ".d");
 }

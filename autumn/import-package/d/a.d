@@ -1,8 +1,5 @@
-import
-   std.conv,
-   std.stdio;
+import std.stdio;
 
 void main() {
-   auto s = text(100);
-   writeln(s == "100");
+   writeln("March");
 }

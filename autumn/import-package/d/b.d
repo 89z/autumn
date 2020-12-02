@@ -1,7 +1,9 @@
-import std.conv: text;
-import std.stdio: writeln;
+import
+   io = std.stdio,
+   json = std.json: JSONValue;
 
 void main() {
-   auto s = text(100);
-   writeln(s == "100");
+   auto o = ["/", "📗"].JSONValue;
+   auto s = json.toJSON(o);
+   io.writeln(s);
 }

@@ -35,19 +35,20 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.json<span style="color:#f92672">:</span> JSONOptions<span style="color:#f92672">,</span> JSONValue<span style="color:#f92672">,</span> toJSON<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">:</span> writeln<span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span>
+   io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">,</span>
+   json <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">json</span><span style="color:#f92672">:</span> JSONOptions<span style="color:#f92672">,</span> JSONValue<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;📗&#34;</span><span style="color:#f92672">].</span><span style="color:#a6e22e">JSONValue</span><span style="color:#f92672">;</span>
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> toJSON<span style="color:#f92672">(</span>o<span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s1 <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span><span style="color:#a6e22e">toJSON</span><span style="color:#f92672">(</span>o<span style="color:#f92672">);</span>
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> toJSON<span style="color:#f92672">(</span>o<span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s2 <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span><span style="color:#a6e22e">toJSON</span><span style="color:#f92672">(</span>o<span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
    <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s3 <span style="color:#f92672">=</span> toJSON<span style="color:#f92672">(</span>o<span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">,</span> JSONOptions<span style="color:#f92672">.</span><span style="color:#a6e22e">doNotEscapeSlashes</span><span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s3 <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span><span style="color:#a6e22e">toJSON</span><span style="color:#f92672">(</span>o<span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">,</span> JSONOptions<span style="color:#f92672">.</span><span style="color:#a6e22e">doNotEscapeSlashes</span><span style="color:#f92672">);</span>
    <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   writeln<span style="color:#f92672">(</span>s1<span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;\n&#39;</span><span style="color:#f92672">,</span> s2<span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;\n&#39;</span><span style="color:#f92672">,</span> s3<span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>   io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>s1<span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;\n&#39;</span><span style="color:#f92672">,</span> s2<span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;\n&#39;</span><span style="color:#f92672">,</span> s3<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 
