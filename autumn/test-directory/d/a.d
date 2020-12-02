@@ -1,6 +1,5 @@
-import
-   std.file,
-   std.stdio;
+import std.file: exists, isDir;
+import std.stdio: writeln;
 
 bool testDir(string s) {
    return s.exists && s.isDir;

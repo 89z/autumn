@@ -1,6 +1,5 @@
-import
-   std.path,
-   std.stdio;
+import std.path: extension;
+import std.stdio: writeln;
 
 void main() {
    auto s = extension("a.d");

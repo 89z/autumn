@@ -29,7 +29,44 @@
    <a href="/autumn/categories/time/">time</a>
    
 </section>
-   <p><a href="https://dlang.org/library/std/datetime/stopwatch/stop_watch.html">https://dlang.org/library/std/datetime/stopwatch/stop_watch.html</a></p>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> core.time<span style="color:#f92672">:</span> MonoTime<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">:</span> writeln<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> MonoTime<span style="color:#f92672">.</span><span style="color:#a6e22e">currTime</span><span style="color:#f92672">;</span>
+   o<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+
+<p><a href="https://dlang.org/library/core/time/mono_time_impl.curr_time.html">https://dlang.org/library/core/time/mono_time_impl.curr_time.html</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> core.thread<span style="color:#f92672">:</span> Thread<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> std.datetime.stopwatch<span style="color:#f92672">:</span> StopWatch<span style="color:#f92672">,</span> msecs<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">:</span> write<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> dur_o <span style="color:#f92672">=</span> msecs<span style="color:#f92672">(</span><span style="color:#ae81ff">10</span><span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> time_o <span style="color:#f92672">=</span> StopWatch<span style="color:#f92672">();</span>
+   time_o<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">sleep</span><span style="color:#f92672">(</span>dur_o<span style="color:#f92672">);</span>
+      write<span style="color:#f92672">(</span>time_o<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;\r&#34;</span><span style="color:#f92672">);</span>
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+
+<p><a href="https://dlang.org/library/std/datetime/stopwatch/stop_watch.html">https://dlang.org/library/std/datetime/stopwatch/stop_watch.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/132">https://programming-idioms.org/idiom/132</a></li>

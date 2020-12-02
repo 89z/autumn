@@ -1,6 +1,5 @@
-import
-   std.getopt,
-   std.stdio;
+import std.getopt: defaultGetoptPrinter, getopt;
+import std.stdio: writeln;
 
 int main(string[] a) {
    string pre_s, suf_s;

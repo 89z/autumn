@@ -1,6 +1,5 @@
-import
-   std.stdio,
-   std.typecons;
+import std.stdio: writeln;
+import std.typecons: Tuple, tuple;
 
 void main() {
    // example 1

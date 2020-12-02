@@ -1,6 +1,5 @@
-import
-   core.thread,
-   std.stdio;
+import core.thread: Thread, msecs;
+import std.stdio: writeln;
 
 void main() {
    auto o = msecs(500);

@@ -1,6 +1,5 @@
-import
-   std.math,
-   std.stdio;
+import std.math: pow;
+import std.stdio: writeln;
 
 void main() {
    // example 1

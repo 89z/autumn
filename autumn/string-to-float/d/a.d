@@ -1,6 +1,5 @@
-import
-   std.conv,
-   std.stdio;
+import std.conv: to;
+import std.stdio: writeln;
 
 void main() {
    auto s = "9.9";

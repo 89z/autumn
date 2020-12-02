@@ -1,7 +1,6 @@
-import
-   std.datetime,
-   std.stdio,
-   std.string;
+import std.datetime: SysTime;
+import std.format: format;
+import std.stdio: writeln;
 
 void main() {
    auto o = SysTime.fromUnixTime(1577858399);

@@ -5,7 +5,7 @@ tags: [d]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/library/std/datetime/systime/sys_time.to_unix_time.html>
+<https://dlang.org/library/std/datetime/systime/clock.curr_time.html>
 
 ## References
 

@@ -1,6 +1,5 @@
-import
-   std.algorithm,
-   std.stdio;
+import std.algorithm: sort;
+import std.stdio: writeln;
 
 void main() {
    // example 1

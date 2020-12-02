@@ -3,6 +3,12 @@ title: D
 tags: [d]
 ---
 
+{{< r "a.d" >}}
+
+<https://dlang.org/library/core/time/mono_time_impl.curr_time.html>
+
+{{< r "b.d" >}}
+
 <https://dlang.org/library/std/datetime/stopwatch/stop_watch.html>
 
 ## References

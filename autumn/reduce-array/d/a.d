@@ -1,6 +1,5 @@
-import
-   std.algorithm,
-   std.stdio;
+import std.algorithm: reduce;
+import std.stdio: writeln;
 
 void main() {
    auto a = ["May", "June"];

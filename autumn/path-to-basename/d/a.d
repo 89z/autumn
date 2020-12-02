@@ -1,6 +1,5 @@
-import
-   std.path,
-   std.stdio;
+import std.path: baseName;
+import std.stdio: writeln;
 
 void main() {
    auto s = baseName(`C:\Windows\notepad.exe`);

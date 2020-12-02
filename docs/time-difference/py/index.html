@@ -39,7 +39,7 @@
 old_n <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
 
 <span style="color:#66d9ef">while</span> True:
-   time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">1e-2</span>)
+   time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>)
    new_n <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> old_n
    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%.2f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> new_n, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#39;</span>)
 </code></pre></div>

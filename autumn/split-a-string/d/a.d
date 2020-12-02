@@ -1,6 +1,5 @@
-import
-   std.array,
-   std.stdio;
+import std.array: split;
+import std.stdio: writeln;
 
 void main() {
    auto s = "M a r c h";
