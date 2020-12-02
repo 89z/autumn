@@ -1,9 +1,8 @@
 import
-   io = std.stdio,
-   json = std.json: JSONValue;
+   file = std.file,
+   io = std.stdio;
 
 void main() {
-   auto o = ["/", "📗"].JSONValue;
-   auto s = json.toJSON(o);
-   io.writeln(s);
+   auto n = file.getSize("a.d");
+   io.writeln(n);
 }

@@ -9,6 +9,10 @@ tags: [d]
 
 {{< r "b.d" >}}
 
+<https://dlang.org/spec/module.html#renamed_imports>
+
+{{< r "c.d" >}}
+
 <https://dlang.org/spec/module.html#renamed_selective_imports>
 
 ## References

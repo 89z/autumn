@@ -1,6 +1,7 @@
-import core.thread: Thread;
-import io = std.stdio;
-import time = core.time;
+import
+   io = std.stdio,
+   time = core.time,
+   core.thread: Thread;
 
 void main() {
    auto o = time.msecs(500);

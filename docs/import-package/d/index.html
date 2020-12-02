@@ -50,6 +50,23 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span>
+   file <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">file</span><span style="color:#f92672">,</span>
+   io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> n <span style="color:#f92672">=</span> file<span style="color:#f92672">.</span><span style="color:#a6e22e">getSize</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a.d&#34;</span><span style="color:#f92672">);</span>
+   io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>n<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+
+<p><a href="https://dlang.org/spec/module.html#renamed_imports">https://dlang.org/spec/module.html#renamed_imports</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span>
    io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">,</span>
    json <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">json</span><span style="color:#f92672">:</span> JSONValue<span style="color:#f92672">;</span>
 

@@ -1,8 +1,9 @@
-import std.algorithm: canFind;
-import std.stdio: writeln;
+import
+   algo = std.algorithm,
+   io = std.stdio;
 
 void main() {
    auto s = "March";
-   auto b = s.canFind("ar");
-   b.writeln;
+   auto b = algo.canFind(s, "ar");
+   io.writeln(b);
 }

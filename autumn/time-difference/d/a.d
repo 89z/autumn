@@ -1,5 +1,6 @@
-import core.time: MonoTime;
-import io = std.stdio;
+import
+   io = std.stdio,
+   core.time: MonoTime;
 
 void main() {
    auto o = MonoTime.currTime;
