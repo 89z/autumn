@@ -1,8 +1,8 @@
-import std.conv: to;
-import std.stdio: writeln;
+import
+   conv = std.conv,
+   io = std.stdio;
 
 void main() {
-   auto s = "9.9";
-   auto n = s.to!float;
-   writeln(n == 9.9f);
+   auto n = conv.to!float("9.9");
+   io.writeln(n == 9.9f);
 }

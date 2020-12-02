@@ -1,11 +1,12 @@
-import std.file: exists, isDir;
-import std.stdio: writeln;
+import
+   file = std.file,
+   io = std.stdio;
 
 bool testDir(string s) {
-   return s.exists && s.isDir;
+   return file.exists(s) && file.isDir(s);
 }
 
 void main() {
    auto b = testDir(`C:\Users`);
-   b.writeln;
+   io.writeln(b);
 }

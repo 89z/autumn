@@ -1,12 +1,13 @@
-import std.algorithm: reduce;
-import std.stdio: writeln;
+import
+   algo = std.algorithm,
+   io = std.stdio;
 
 void main() {
    auto a = ["May", "June"];
    // example 1
-   auto n = reduce!((n, s) => n + s.length)(size_t(0), a);
+   auto n = algo.reduce!((n, s) => n + s.length)(size_t(0), a);
    // example 2
-   auto s = a.reduce!((s, s2) => s ~ s2);
+   auto s = algo.reduce!((s, s2) => s ~ s2)(a);
    // print
-   writeln(n == 7 && s == "MayJune");
+   io.writeln(n == 7 && s == "MayJune");
 }

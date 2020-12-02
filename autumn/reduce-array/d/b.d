@@ -1,12 +1,13 @@
-import std.algorithm: fold;
-import std.stdio: writeln;
+import
+   algo = std.algorithm,
+   io = std.stdio;
 
 void main() {
    auto a = ["May", "June"];
    // example 1
-   auto n = a.fold!((n, s) => n + s.length)(size_t(0));
+   auto n = algo.fold!((n, s) => n + s.length)(a, size_t(0));
    // example 2
-   auto s = a.fold!((s, s2) => s ~ s2);
+   auto s = algo.fold!((s, s2) => s ~ s2)(a);
    // print
-   writeln(n == 7 && s == "MayJune");
+   io.writeln(n == 7 && s == "MayJune");
 }

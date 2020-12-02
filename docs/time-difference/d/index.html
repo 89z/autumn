@@ -36,11 +36,11 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> core.time<span style="color:#f92672">:</span> MonoTime<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">:</span> writeln<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> MonoTime<span style="color:#f92672">.</span><span style="color:#a6e22e">currTime</span><span style="color:#f92672">;</span>
-   o<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+   io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>o<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 
@@ -52,16 +52,16 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> core.thread<span style="color:#f92672">:</span> Thread<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> std.datetime.stopwatch<span style="color:#f92672">:</span> StopWatch<span style="color:#f92672">,</span> msecs<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">:</span> write<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> time <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">datetime</span><span style="color:#f92672">.</span><span style="color:#a6e22e">stopwatch</span><span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> dur_o <span style="color:#f92672">=</span> msecs<span style="color:#f92672">(</span><span style="color:#ae81ff">10</span><span style="color:#f92672">);</span>
-   <span style="color:#66d9ef">auto</span> time_o <span style="color:#f92672">=</span> StopWatch<span style="color:#f92672">();</span>
+   <span style="color:#66d9ef">auto</span> dur_o <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span><span style="color:#a6e22e">msecs</span><span style="color:#f92672">(</span><span style="color:#ae81ff">10</span><span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> time_o <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span><span style="color:#a6e22e">StopWatch</span><span style="color:#f92672">();</span>
    time_o<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">;</span>
    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
       Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">sleep</span><span style="color:#f92672">(</span>dur_o<span style="color:#f92672">);</span>
-      write<span style="color:#f92672">(</span>time_o<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;\r&#34;</span><span style="color:#f92672">);</span>
+      io<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>time_o<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;\r&#34;</span><span style="color:#f92672">);</span>
    <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>

@@ -1,7 +1,7 @@
 import core.time: MonoTime;
-import std.stdio: writeln;
+import io = std.stdio;
 
 void main() {
    auto o = MonoTime.currTime;
-   o.writeln;
+   io.writeln(o);
 }

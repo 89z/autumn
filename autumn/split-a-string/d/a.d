@@ -1,12 +1,13 @@
-import std.array: split;
-import std.stdio: writeln;
+import
+   array = std.array,
+   io = std.stdio;
 
 void main() {
    auto s = "M a r c h";
    // example 1
-   auto a1 = s.split(" ");
+   auto a1 = array.split(s, " ");
    // example 2
-   auto a2 = s.split;
+   auto a2 = array.split(s);
    // print
-   writeln(a1, a2);
+   io.writeln(a1, a2);
 }

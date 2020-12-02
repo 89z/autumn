@@ -1,13 +1,13 @@
 import core.thread: Thread;
-import std.datetime.stopwatch: StopWatch, msecs;
-import std.stdio: write;
+import io = std.stdio;
+import time = std.datetime.stopwatch;
 
 void main() {
-   auto dur_o = msecs(10);
-   auto time_o = StopWatch();
+   auto dur_o = time.msecs(10);
+   auto time_o = time.StopWatch();
    time_o.start;
    while (true) {
       Thread.sleep(dur_o);
-      write(time_o.peek, "\r");
+      io.write(time_o.peek, "\r");
    }
 }

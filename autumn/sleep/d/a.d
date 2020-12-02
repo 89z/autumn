@@ -1,10 +1,11 @@
-import core.thread: Thread, msecs;
-import std.stdio: writeln;
+import core.thread: Thread;
+import io = std.stdio;
+import time = core.time;
 
 void main() {
-   auto o = msecs(500);
+   auto o = time.msecs(500);
    while (true) {
-      writeln("sleep");
+      io.writeln("sleep");
       Thread.sleep(o);
    }
 }

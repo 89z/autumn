@@ -1,11 +1,12 @@
-import std.math: pow;
-import std.stdio: writeln;
+import
+   io = std.stdio,
+   math = std.math;
 
 void main() {
    // example 1
-   float n1 = pow(10, 5);
+   float n1 = math.pow(10, 5);
    // example 2
-   float n2 = pow(9, .5);
+   float n2 = math.pow(9, .5);
    // print
-   writeln(n1 == 1e5 && n2 == 3);
+   io.writeln(n1 == 1e5 && n2 == 3);
 }
