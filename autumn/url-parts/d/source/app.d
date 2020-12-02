@@ -1,5 +1,6 @@
-import dlib.network.url: URL;
-import io = std.stdio;
+import
+   io = std.stdio,
+   dlib.network.url: URL;
 
 void main() {
    auto s = "https://example.com/one?two=even";

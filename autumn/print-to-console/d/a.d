@@ -2,7 +2,7 @@ import std.stdio;
 
 void main() {
    // example 1
-   writeln("March");
+   write("March\n");
    // example 2
-   writeln("May", "June");
+   write("March", "\n");
 }

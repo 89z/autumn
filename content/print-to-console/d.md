@@ -5,11 +5,19 @@ tags: [d]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/library/std/stdio/writeln.html>
+<https://dlang.org/library/std/stdio/write.html>
 
 {{< r "b.d" >}}
 
-<https://dlang.org/library/std/stdio/write.html>
+<https://dlang.org/library/std/stdio/writef.html>
+
+{{< r "c.d" >}}
+
+<https://dlang.org/library/std/stdio/writefln.html>
+
+{{< r "d.d" >}}
+
+<https://dlang.org/library/std/stdio/writeln.html>
 
 ## References
 
