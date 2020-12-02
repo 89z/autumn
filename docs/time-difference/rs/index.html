@@ -36,22 +36,51 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{
-   thread,
+   io::Write,
    time::Duration,
    time::Instant
 };
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">std</span>::io::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
    <span style="color:#66d9ef">let</span> now_o <span style="color:#f92672">=</span> Instant::now();
-   <span style="color:#66d9ef">let</span> dur_o <span style="color:#f92672">=</span> Duration::from_secs(<span style="color:#ae81ff">5</span>);
+   <span style="color:#66d9ef">let</span> dur_o <span style="color:#f92672">=</span> Duration::from_millis(<span style="color:#ae81ff">10</span>);
    <span style="color:#66d9ef">loop</span> {
-      thread::sleep(o);
-      <span style="color:#66d9ef">let</span> duration <span style="color:#f92672">=</span> start.elapsed();
+      std::thread::sleep(dur_o);
+      <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> now_o.elapsed().as_secs_f32();
+      print<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:.2}\r&#34;</span>, n);
+      std::io::stdout().flush()<span style="color:#f92672">?</span>;
    }
 }
 </code></pre></div>
 
-<p><a href="https://doc.rust-lang.org/std/time/struct.Instant.html">https://doc.rust-lang.org/std/time/struct.Instant.html</a></p>
+<p><a href="https://doc.rust-lang.org/std/time/struct.Instant.html#method.elapsed">https://doc.rust-lang.org/std/time/struct.Instant.html#method.elapsed</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{
+   error::Error,
+   io::Write,
+   time::Duration,
+   time::SystemTime
+};
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), Box<span style="color:#f92672">&lt;</span>dyn Error<span style="color:#f92672">&gt;&gt;</span> {
+   <span style="color:#66d9ef">let</span> old_o <span style="color:#f92672">=</span> SystemTime::now();
+   <span style="color:#66d9ef">let</span> dur_o <span style="color:#f92672">=</span> Duration::from_millis(<span style="color:#ae81ff">10</span>);
+   <span style="color:#66d9ef">loop</span> {
+      std::thread::sleep(dur_o);
+      <span style="color:#66d9ef">let</span> new_o <span style="color:#f92672">=</span> old_o.elapsed()<span style="color:#f92672">?</span>;
+      <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> new_o.as_secs_f32();
+      print<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:.2}\r&#34;</span>, n);
+      std::io::stdout().flush()<span style="color:#f92672">?</span>;
+   }
+}
+</code></pre></div>
+
+<p><a href="https://doc.rust-lang.org/std/time/struct.SystemTime.html#method.elapsed">https://doc.rust-lang.org/std/time/struct.SystemTime.html#method.elapsed</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/rust#dates-time">https://hyperpolyglot.org/rust#dates-time</a></li>

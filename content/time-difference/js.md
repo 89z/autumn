@@ -1,11 +1,12 @@
 ---
-title: Dart
-tags: [dart]
+title: JavaScript
+tags: [javascript]
 ---
 
-<https://api.dart.dev/dart-core/Stopwatch-class.html>
+{{< r "a.js" >}}
 
 ## References
 
+- <https://hyperpolyglot.org/scripting#datetime-subtraction>
 - <https://programming-idioms.org/idiom/132>
 - <https://rosettacode.org/wiki/Time_a_function>

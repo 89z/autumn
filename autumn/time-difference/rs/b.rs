@@ -1,15 +1,17 @@
 use std::{
+   error::Error,
    io::Write,
    time::Duration,
-   time::Instant
+   time::SystemTime
 };
 
-fn main() -> std::io::Result<()> {
-   let now_o = Instant::now();
+fn main() -> Result<(), Box<dyn Error>> {
+   let old_o = SystemTime::now();
    let dur_o = Duration::from_millis(10);
    loop {
       std::thread::sleep(dur_o);
-      let n = now_o.elapsed().as_secs_f32();
+      let new_o = old_o.elapsed()?;
+      let n = new_o.as_secs_f32();
       print!("{:.2}\r", n);
       std::io::stdout().flush()?;
    }
