@@ -1,6 +1,6 @@
 ---
 title: Time difference
 categories: [time]
-date: 2020-11-28
+date: 2020-12-01
 example: cove/blob/master/stopwatch/stopwatch.php
 ---

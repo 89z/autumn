@@ -1,4 +1,4 @@
 # example 1
-puts 'March'
+print "March\n"
 # example 2
-puts 'May', 'June'
+print 'March', "\n"
