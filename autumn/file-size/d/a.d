@@ -1,8 +1,8 @@
 import
-   std.file,
-   std.stdio;
+   file = std.file,
+   io = std.stdio;
 
 void main() {
-   auto n = getSize("a.d");
-   writeln(n);
+   auto n = file.getSize("a.d");
+   io.writeln(n);
 }

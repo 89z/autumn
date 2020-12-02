@@ -1,9 +1,8 @@
-import
-   std.datetime,
-   std.stdio;
+import io = std.stdio;
+import std.datetime: Clock;
 
 void main() {
    auto o = Clock.currTime;
    auto n = o.toUnixTime;
-   n.writeln;
+   io.writeln(n);
 }

@@ -1,8 +1,7 @@
-import
-   std.process,
-   std.stdio;
+import io = std.stdio;
+import std.process: environment;
 
 void main() {
    auto s = environment.get("USERPROFILE");
-   writeln(s == `C:\Users\Steven`);
+   io.writeln(s == `C:\Users\Steven`);
 }
