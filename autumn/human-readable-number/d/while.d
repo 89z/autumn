@@ -1,6 +1,5 @@
-import
-   std.format,
-   std.stdio;
+import std.format: format;
+import std.stdio: writeln;
 
 string numberFormat(real n) {
    auto n2 = n, n3 = 0;

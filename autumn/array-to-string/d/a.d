@@ -1,13 +1,13 @@
 import
-   std.array,
-   std.stdio;
+   array = std.array,
+   io = std.stdio;
 
 void main() {
    auto a = ["May", "June"];
    // example 1
-   auto s1 = a.join(",");
+   auto s1 = array.join(a, ",");
    // example 2
-   auto s2 = a.join;
+   auto s2 = array.join(a);
    // print
-   writeln(s1 == "May,June" && s2 == "MayJune");
+   io.writeln(s1 == "May,June" && s2 == "MayJune");
 }

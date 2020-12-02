@@ -1,8 +1,8 @@
 import
-   std.file,
-   std.stdio;
+   file = std.file,
+   io = std.stdio;
 
 void main() {
-   auto o = timeLastModified("a.d");
-   o.writeln;
+   auto o = file.timeLastModified("a.d");
+   io.writeln(o);
 }

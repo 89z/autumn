@@ -1,15 +1,14 @@
 import
-   std.csv,
-   std.stdio;
+   csv = std.csv,
+   io = std.stdio;
 
-void main() {
-   auto s = "Month,Day
+auto s = "Month,Day
 January,Sunday
 February,Monday";
 
-   auto a = s.csvReader!(string[string])(null);
-
+void main() {
+   auto a = csv.csvReader!(string[string])(s, null);
    foreach (m; a) {
-      m.writeln;
+      io.writeln(m);
    }
 }

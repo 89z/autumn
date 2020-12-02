@@ -1,9 +1,8 @@
 import
-   std.conv,
-   std.stdio;
+   conv = std.conv,
+   io = std.stdio;
 
 void main() {
-   auto n = 100;
-   auto s = to!string(n);
-   writeln(s == "100");
+   auto s = conv.to!string(100);
+   io.writeln(s == "100");
 }
