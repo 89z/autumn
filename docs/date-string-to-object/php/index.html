@@ -4,7 +4,7 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Date string to number / PHP</title>
+   <title>Date string to object / PHP</title>
 
    <link rel="icon" href="/autumn/favicon.png">
    <link rel="stylesheet" href="/autumn/main.css">
@@ -21,10 +21,10 @@
    <main class="page">
 
 <h1>
-   <a href="/autumn/date-string-to-number/">Date string to number</a> / PHP
+   <a href="/autumn/date-string-to-object/">Date string to object</a> / PHP
 </h1>
 <section class="page">
-   <time>Fri Nov 20 2020</time>
+   <time>Thu Dec 3 2020</time>
    
    <a href="/autumn/categories/time/">time</a>
    
@@ -41,7 +41,35 @@ $n <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</spa
 <span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1577750400</span>);
 </code></pre></div>
 
-<p><a href="https://php.net/datetime.gettimestamp">https://php.net/datetime.gettimestamp</a></p>
+<p><a href="https://php.net/datetime.construct">https://php.net/datetime.construct</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2019-12-31&#39;</span>;
+$o <span style="color:#f92672">=</span> <span style="color:#a6e22e">DateTime</span><span style="color:#f92672">::</span><span style="color:#a6e22e">createFromFormat</span>(<span style="color:#e6db74">&#39;!Y-m-d&#39;</span>, $s);
+$n <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getTimestamp</span>();
+<span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1577750400</span>);
+</code></pre></div>
+
+<p><a href="https://php.net/datetime.createfromformat">https://php.net/datetime.createfromformat</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2019-12-31&#39;</span>;
+$o <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_create_from_format</span>(<span style="color:#e6db74">&#39;!Y-m-d&#39;</span>, $s);
+$n <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_timestamp_get</span>($o);
+<span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1577750400</span>);
+</code></pre></div>
+
+<p><a href="https://php.net/function.date-create-from-format">https://php.net/function.date-create-from-format</a></p>
 
 
 
@@ -54,7 +82,7 @@ $n <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_timesta
 <span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1577750400</span>);
 </code></pre></div>
 
-<p><a href="https://php.net/function.date-timestamp-get">https://php.net/function.date-timestamp-get</a></p>
+<p><a href="https://php.net/function.date-create">https://php.net/function.date-create</a></p>
 
 
 

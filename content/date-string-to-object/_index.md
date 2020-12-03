@@ -1,6 +1,6 @@
 ---
-title: Date string to number
+title: Date string to object
 categories: [time]
-date: 2020-11-20
+date: 2020-12-03
 example: sienna/blob/master/youtube/youtube.php
 ---
