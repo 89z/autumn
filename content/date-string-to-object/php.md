@@ -19,10 +19,6 @@ tags: [php]
 
 <https://php.net/function.date-create>
 
-{{< r "e.php" >}}
-
-<https://php.net/function.strtotime>
-
 ## References
 
 <https://hyperpolyglot.org/scripting#parse-datetime>
