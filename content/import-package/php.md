@@ -5,9 +5,13 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-<https://php.net/function.require-once>
+<https://php.net/function.extension-loaded>
 
 {{< r "b.php" >}}
+
+<https://php.net/function.require-once>
+
+{{< r "c.php" >}}
 
 <https://php.net/function.require>
 

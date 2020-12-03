@@ -36,29 +36,22 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;January&#39;</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sunday Monday&#39;</span>;
+
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/^J/&#39;</span>, $s);
+</span><span style="color:#75715e"></span>$n <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/..n/&#39;</span>, <span style="color:#e6db74">&#39;Sunday Monday&#39;</span>);
+<span style="color:#66d9ef">if</span> ($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
+   <span style="color:#66d9ef">echo</span> $s, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+}
+
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/ja/i&#39;</span>, $s);
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1 <span style="color:#f92672">!==</span> <span style="color:#ae81ff">0</span>, $n2 <span style="color:#f92672">!==</span> <span style="color:#ae81ff">0</span>);
+</span><span style="color:#75715e"></span>$n <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/..n/&#39;</span>, <span style="color:#e6db74">&#39;Sunday Monday&#39;</span>, $a);
+<span style="color:#66d9ef">if</span> ($n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
+   <span style="color:#66d9ef">echo</span> $a[<span style="color:#ae81ff">0</span>], <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+}
 </code></pre></div>
 
 <p><a href="https://php.net/function.preg-match">https://php.net/function.preg-match</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;January&#39;</span>;
-$n <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/(?i)ja/&#39;</span>, $s);
-<span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">!==</span> <span style="color:#ae81ff">0</span>);
-</code></pre></div>
-
-<p><a href="https://php.net/regexp.reference.internal-options">https://php.net/regexp.reference.internal-options</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting#case-insensitive-regex">https://hyperpolyglot.org/scripting#case-insensitive-regex</a></li>

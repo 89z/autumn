@@ -1,8 +1,14 @@
 <?php
-$s = 'January';
+$s = 'Sunday Monday';
+
 # example 1
-$n1 = preg_match('/^J/', $s);
+$n = preg_match('/..n/', 'Sunday Monday');
+if ($n == 1) {
+   echo $s, "\n";
+}
+
 # example 2
-$n2 = preg_match('/ja/i', $s);
-# print
-var_dump($n1 !== 0, $n2 !== 0);
+$n = preg_match('/..n/', 'Sunday Monday', $a);
+if ($n == 1) {
+   echo $a[0], "\n";
+}

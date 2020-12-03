@@ -7,10 +7,6 @@ tags: [go]
 
 <https://golang.org/pkg/regexp#Regexp.MatchString>
 
-{{< r "b.go" >}}
-
-<https://golang.org/pkg/regexp#Regexp.FindAllString>
-
 ## References
 
 - <https://hyperpolyglot.org/c#case-insensitive-regex>

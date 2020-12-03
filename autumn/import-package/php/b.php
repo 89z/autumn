@@ -1,2 +1,2 @@
 <?php
-require 'march.php';
+require_once 'march.php';
