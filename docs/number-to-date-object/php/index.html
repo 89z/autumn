@@ -24,7 +24,7 @@
    <a href="/autumn/number-to-date-object/">Number to date object</a> / PHP
 </h1>
 <section class="page">
-   <time>Sun Sep 13 2020</time>
+   <time>Thu Dec 3 2020</time>
    
    <a href="/autumn/categories/time/">time</a>
    
@@ -36,17 +36,10 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">timetostr</span>($n) {
-   $date_o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
-   $zone_o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTimeZone</span>(<span style="color:#e6db74">&#39;America/Chicago&#39;</span>);
-   $date_o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setTimezone</span>($zone_o);
-   $date_o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setTimestamp</span>($n);
-   <span style="color:#66d9ef">return</span> $date_o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">format</span>(<span style="color:#a6e22e">DATE_W3C</span>);
-}
-
-$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">timetostr</span>(<span style="color:#ae81ff">1577858399</span>);
-<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;2019-12-31T23:59:59-06:00&#39;</span>);
+$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1577858399</span>;
+$o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
+$o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setTimestamp</span>($n);
+<span style="color:#a6e22e">var_dump</span>($o);
 </code></pre></div>
 
 <p><a href="https://php.net/datetime.format">https://php.net/datetime.format</a></p>
@@ -57,46 +50,13 @@ $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">timetostr</s
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">timetostr</span>($n) {
-   $date_o <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_create</span>();
-   $zone_o <span style="color:#f92672">=</span> <span style="color:#a6e22e">timezone_open</span>(<span style="color:#e6db74">&#39;America/Chicago&#39;</span>);
-   <span style="color:#a6e22e">date_timezone_set</span>($date_o, $zone_o);
-   <span style="color:#a6e22e">date_timestamp_set</span>($date_o, $n);
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">date_format</span>($date_o, <span style="color:#a6e22e">DATE_W3C</span>);
-}
-
-$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">timetostr</span>(<span style="color:#ae81ff">1577858399</span>);
-<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;2019-12-31T23:59:59-06:00&#39;</span>);
+$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1577858399</span>;
+$o <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_create</span>();
+<span style="color:#a6e22e">date_timestamp_set</span>($o, $n);
+<span style="color:#a6e22e">var_dump</span>($o);
 </code></pre></div>
 
 <p><a href="https://php.net/function.date-format">https://php.net/function.date-format</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-<span style="color:#a6e22e">date_default_timezone_set</span>(<span style="color:#e6db74">&#39;America/Chicago&#39;</span>);
-$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">date</span>(<span style="color:#a6e22e">DATE_W3C</span>, <span style="color:#ae81ff">1577858399</span>);
-<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;2019-12-31T23:59:59-06:00&#39;</span>);
-</code></pre></div>
-
-<p><a href="https://php.net/function.date">https://php.net/function.date</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-<span style="color:#a6e22e">date_default_timezone_set</span>(<span style="color:#e6db74">&#39;America/Chicago&#39;</span>);
-$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">strftime</span>(<span style="color:#e6db74">&#39;%F&#39;</span>, <span style="color:#ae81ff">1577858399</span>);
-<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;2019-12-31&#39;</span>);
-</code></pre></div>
-
-<p><a href="https://php.net/function.strftime">https://php.net/function.strftime</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting#unix-epoch-to-broken-down-datetime">https://hyperpolyglot.org/scripting#unix-epoch-to-broken-down-datetime</a></li>
