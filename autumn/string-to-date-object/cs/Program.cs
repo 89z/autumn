@@ -1,9 +1,9 @@
-using System.Globalization;
 using System;
 
-class Program {
+class Example {
    static void Main() {
-      CultureInfo enUS = new CultureInfo("en-US");
-      DateTime dt2 = DateTime.ParseExact("2011-05-03 17:00:00", "yyyy-MM-dd HH:mm:ss", enUS);
+      var s = "2019-12-31";
+      var o = DateTime.Parse(s);
+      Console.WriteLine(o);
    }
 }

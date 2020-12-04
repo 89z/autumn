@@ -1,2 +1,4 @@
-let dt = parse("2000-01-01", "yyyy-MM-dd")
-echo dt.format("yyyy-MM-dd")
+import times
+let s = "2019-12-31"
+let o = parse(s, "yyyy-MM-dd")
+echo o

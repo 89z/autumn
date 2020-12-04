@@ -35,17 +35,14 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span>
-<span style="color:#f92672">{</span>
-    <span style="color:#f92672">import</span> std.datetime.systime<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">:</span> write<span style="color:#f92672">,</span> writeln<span style="color:#f92672">,</span> writef<span style="color:#f92672">,</span> writefln<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> std.datetime.date <span style="color:#f92672">:</span> DateTime<span style="color:#f92672">;</span>
-    <span style="color:#f92672">import</span> std.datetime.timezone <span style="color:#f92672">:</span> UTC<span style="color:#f92672">;</span>
-    
-    <span style="color:#66d9ef">auto</span> st <span style="color:#f92672">=</span> SysTime<span style="color:#f92672">.</span><span style="color:#a6e22e">fromISOExtString</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;2018-01-01T10:30:00Z&#34;</span><span style="color:#f92672">);</span>
-    writeln<span style="color:#f92672">(</span>st<span style="color:#f92672">);</span> <span style="color:#75715e">// SysTime(DateTime(2018, 1, 1, 10, 30, 0), UTC())
-</span><span style="color:#75715e"></span>    
-    
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span>
+   io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">,</span>
+   std<span style="color:#f92672">.</span><span style="color:#a6e22e">datetime</span><span style="color:#f92672">:</span> SysTime<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2019-12-31T23:59:59&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> SysTime<span style="color:#f92672">.</span><span style="color:#a6e22e">fromISOExtString</span><span style="color:#f92672">(</span>s<span style="color:#f92672">);</span>
+   io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>o<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 

@@ -3,9 +3,13 @@ title: Rust
 tags: [rust]
 ---
 
-{{< r "src/main.rs" >}}
+{{< r "a/src/main.rs" >}}
 
-<https://docs.rs/chrono>
+<https://docs.rs/chrono/latest/chrono/format/fn.parse.html>
+
+{{< r "b/src/main.rs" >}}
+
+<https://docs.rs/chrono/latest/chrono/offset/trait.TimeZone.html#method.datetime_from_str>
 
 ## References
 

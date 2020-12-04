@@ -1,3 +1,4 @@
 <?php
-$o = date_create('2019-12-31');
+$s = '2019-12-31';
+$o = date_create($s);
 var_dump($o);

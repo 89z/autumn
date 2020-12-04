@@ -1,3 +1,4 @@
 from datetime import datetime
-o = datetime.strptime('2019-12-31', '%Y-%m-%d')
+s = '2019-12-31'
+o = datetime.strptime(s, '%Y-%m-%d')
 print(o)

@@ -35,17 +35,18 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System.Globalization;
-<span style="color:#66d9ef">using</span> System;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
 
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Example</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      CultureInfo enUS = <span style="color:#66d9ef">new</span> CultureInfo(<span style="color:#e6db74">&#34;en-US&#34;</span>);
-      DateTime dt2 = DateTime.ParseExact(<span style="color:#e6db74">&#34;2011-05-03 17:00:00&#34;</span>, <span style="color:#e6db74">&#34;yyyy-MM-dd HH:mm:ss&#34;</span>, enUS);
+      <span style="color:#66d9ef">var</span> s = <span style="color:#e6db74">&#34;2019-12-31&#34;</span>;
+      <span style="color:#66d9ef">var</span> o = DateTime.Parse(s);
+      Console.WriteLine(o);
    }
 }
 </code></pre></div>
 
+<p><a href="https://docs.microsoft.com/dotnet/api/system.datetime.parse">https://docs.microsoft.com/dotnet/api/system.datetime.parse</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/cpp#parse-date">https://hyperpolyglot.org/cpp#parse-date</a></li>
