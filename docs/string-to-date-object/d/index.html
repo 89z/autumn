@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>String to date object / D</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/string-to-date-object/">String to date object</a> / D
+</h1>
+<section class="page">
+   <time>Thu Dec 3 2020</time>
+   
+   <a href="/autumn/categories/time/">time</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span>
+<span style="color:#f92672">{</span>
+    <span style="color:#f92672">import</span> std.datetime.systime<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">:</span> write<span style="color:#f92672">,</span> writeln<span style="color:#f92672">,</span> writef<span style="color:#f92672">,</span> writefln<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> std.datetime.date <span style="color:#f92672">:</span> DateTime<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> std.datetime.timezone <span style="color:#f92672">:</span> UTC<span style="color:#f92672">;</span>
+    
+    <span style="color:#66d9ef">auto</span> st <span style="color:#f92672">=</span> SysTime<span style="color:#f92672">.</span><span style="color:#a6e22e">fromISOExtString</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;2018-01-01T10:30:00Z&#34;</span><span style="color:#f92672">);</span>
+    writeln<span style="color:#f92672">(</span>st<span style="color:#f92672">);</span> <span style="color:#75715e">// SysTime(DateTime(2018, 1, 1, 10, 30, 0), UTC())
+</span><span style="color:#75715e"></span>    
+    
+<span style="color:#f92672">}</span>
+</code></pre></div>
+
+<p><a href="https://dlang.org/library/std/datetime/systime/sys_time.from_iso_ext_string.html">https://dlang.org/library/std/datetime/systime/sys_time.from_iso_ext_string.html</a></p>
+<h2 id="references">References</h2>
+<p><a href="https://rosettacode.org/wiki/Days_between_dates">https://rosettacode.org/wiki/Days_between_dates</a></p>
+
+</main>
+
+</body>
+</html>

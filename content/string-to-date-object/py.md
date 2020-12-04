@@ -7,4 +7,5 @@ tags: [python]
 
 ## References
 
-<https://hyperpolyglot.org/c#parse-datetime>
+- <https://hyperpolyglot.org/c#parse-datetime>
+- <https://rosettacode.org/wiki/Days_between_dates>

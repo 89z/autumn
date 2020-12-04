@@ -21,4 +21,5 @@ tags: [php]
 
 ## References
 
-<https://hyperpolyglot.org/scripting#parse-datetime>
+- <https://hyperpolyglot.org/scripting#parse-datetime>
+- <https://rosettacode.org/wiki/Days_between_dates>
