@@ -10,4 +10,4 @@ tags: [go]
 ## References
 
 - <https://hyperpolyglot.org/c#parse-datetime>
-- <https://rosettacode.org/wiki/Days_between_dates>
+- <https://rosettacode.org/wiki/Date_manipulation>

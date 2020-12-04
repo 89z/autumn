@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>String to date object / Rust</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/string-to-date-object/">String to date object</a> / Rust
+</h1>
+<section class="page">
+   <time>Thu Dec 3 2020</time>
+   
+   <a href="/autumn/categories/time/">time</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> chrono::prelude::<span style="color:#f92672">*</span>;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> dt <span style="color:#f92672">=</span> Utc.ymd(<span style="color:#ae81ff">2014</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">28</span>).and_hms(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">9</span>);
+   <span style="color:#66d9ef">let</span> fixed_dt <span style="color:#f92672">=</span> dt.with_timezone(<span style="color:#f92672">&amp;</span>FixedOffset::east(<span style="color:#ae81ff">9</span><span style="color:#f92672">*</span><span style="color:#ae81ff">3600</span>));
+   assert_eq<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;2014-11-28T12:00:09Z&#34;</span>.parse::<span style="color:#f92672">&lt;</span>DateTime<span style="color:#f92672">&lt;</span>Utc<span style="color:#f92672">&gt;&gt;</span>(), Ok(dt.clone()));
+   assert_eq<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;2014-11-28T21:00:09+09:00&#34;</span>.parse::<span style="color:#f92672">&lt;</span>DateTime<span style="color:#f92672">&lt;</span>Utc<span style="color:#f92672">&gt;&gt;</span>(), Ok(dt.clone()));
+   assert_eq<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;2014-11-28T21:00:09+09:00&#34;</span>.parse::<span style="color:#f92672">&lt;</span>DateTime<span style="color:#f92672">&lt;</span>FixedOffset<span style="color:#f92672">&gt;&gt;</span>(), Ok(fixed_dt.clone()));
+   assert_eq<span style="color:#f92672">!</span>(DateTime::parse_from_str(<span style="color:#e6db74">&#34;2014-11-28 21:00:09 +09:00&#34;</span>, <span style="color:#e6db74">&#34;%Y-%m-%d %H:%M:%S %z&#34;</span>), Ok(fixed_dt.clone()));
+   assert_eq<span style="color:#f92672">!</span>(DateTime::parse_from_rfc2822(<span style="color:#e6db74">&#34;Fri, 28 Nov 2014 21:00:09 +0900&#34;</span>), Ok(fixed_dt.clone()));
+   assert_eq<span style="color:#f92672">!</span>(DateTime::parse_from_rfc3339(<span style="color:#e6db74">&#34;2014-11-28T21:00:09+09:00&#34;</span>), Ok(fixed_dt.clone()));
+   assert_eq<span style="color:#f92672">!</span>(Utc.datetime_from_str(<span style="color:#e6db74">&#34;2014-11-28 12:00:09&#34;</span>, <span style="color:#e6db74">&#34;%Y-%m-%d %H:%M:%S&#34;</span>), Ok(dt.clone()));
+   assert_eq<span style="color:#f92672">!</span>(Utc.datetime_from_str(<span style="color:#e6db74">&#34;Fri Nov 28 12:00:09 2014&#34;</span>, <span style="color:#e6db74">&#34;%a %b %e %T %Y&#34;</span>), Ok(dt.clone()));
+   assert<span style="color:#f92672">!</span>(Utc.datetime_from_str(<span style="color:#e6db74">&#34;Fri Nov 28 12:00:09&#34;</span>, <span style="color:#e6db74">&#34;%a %b %e %T %Y&#34;</span>).is_err());
+   assert<span style="color:#f92672">!</span>(Utc.datetime_from_str(<span style="color:#e6db74">&#34;Fri Nov 28 12:00:09&#34;</span>, <span style="color:#e6db74">&#34;%a %b %e %T&#34;</span>).is_err());
+   assert<span style="color:#f92672">!</span>(Utc.datetime_from_str(<span style="color:#e6db74">&#34;Sat Nov 28 12:00:09 2014&#34;</span>, <span style="color:#e6db74">&#34;%a %b %e %T %Y&#34;</span>).is_err());
+}
+</code></pre></div>
+
+<p><a href="https://docs.rs/chrono">https://docs.rs/chrono</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/rust#dates-time">https://hyperpolyglot.org/rust#dates-time</a></li>
+<li><a href="https://rosettacode.org/wiki/Date_manipulation">https://rosettacode.org/wiki/Date_manipulation</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>

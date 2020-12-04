@@ -8,4 +8,4 @@ tags: [c-sharp]
 ## References
 
 - <https://hyperpolyglot.org/cpp#parse-date>
-- <https://rosettacode.org/wiki/Days_between_dates>
+- <https://rosettacode.org/wiki/Date_manipulation>

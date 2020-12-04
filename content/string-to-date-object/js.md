@@ -10,4 +10,4 @@ tags: [javascript]
 ## References
 
 - <https://hyperpolyglot.org/scripting#parse-datetime>
-- <https://rosettacode.org/wiki/Days_between_dates>
+- <https://rosettacode.org/wiki/Date_manipulation>

@@ -9,4 +9,5 @@ tags: [d]
 
 ## References
 
-<https://rosettacode.org/wiki/Days_between_dates>
+- <https://rosettacode.org/wiki/Days_between_dates>
+- <https://rosettacode.org/wiki/Date_manipulation>

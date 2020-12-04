@@ -1,9 +1,9 @@
 ---
-title: Python
-tags: [python]
+title: Ruby
+tags: [ruby]
 ---
 
-{{< r "a.py" >}}
+{{< r "a.rb" >}}
 
 ## References
 

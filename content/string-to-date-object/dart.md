@@ -10,4 +10,4 @@ tags: [dart]
 ## References
 
 - <https://hyperpolyglot.org/web#parse-datetime>
-- <https://rosettacode.org/wiki/Days_between_dates>
+- <https://rosettacode.org/wiki/Date_manipulation>
