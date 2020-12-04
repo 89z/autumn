@@ -13,5 +13,6 @@ tags: [rust]
 
 ## References
 
+- <https://hyperpolyglot.org/rust#dates-time>
 - <https://programming-idioms.org/idiom/99>
 - <https://rosettacode.org/wiki/Date_format>

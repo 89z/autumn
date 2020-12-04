@@ -5,6 +5,7 @@ tags: [php]
 
 - <https://php.net/datetime.add>
 - <https://php.net/datetime.modify>
+- <https://php.net/datetime.sub>
 
 ## References
 
