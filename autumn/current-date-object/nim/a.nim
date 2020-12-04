@@ -1,0 +1,2 @@
+import times
+echo(getTime())

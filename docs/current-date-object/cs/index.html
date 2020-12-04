@@ -24,12 +24,42 @@
    <a href="/autumn/current-date-object/">Current date object</a> / C#
 </h1>
 <section class="page">
-   <time>Thu Dec 3 2020</time>
+   <time>Fri Dec 4 2020</time>
    
    <a href="/autumn/categories/time/">time</a>
    
 </section>
-   <p><a href="https://docs.microsoft.com/dotnet/api/system.datetime.now">https://docs.microsoft.com/dotnet/api/system.datetime.now</a></p>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">using</span> System.Globalization;
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Example</span>
+{
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main()
+   {
+      DateTime localDate = DateTime.Now;
+      DateTime utcDate = DateTime.UtcNow;
+      String[] cultureNames = { <span style="color:#e6db74">&#34;en-US&#34;</span>, <span style="color:#e6db74">&#34;en-GB&#34;</span>, <span style="color:#e6db74">&#34;fr-FR&#34;</span>,
+                                <span style="color:#e6db74">&#34;de-DE&#34;</span>, <span style="color:#e6db74">&#34;ru-RU&#34;</span> } ;
+
+      <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> cultureName <span style="color:#66d9ef">in</span> cultureNames) {
+         <span style="color:#66d9ef">var</span> culture = <span style="color:#66d9ef">new</span> CultureInfo(cultureName);
+         Console.WriteLine(<span style="color:#e6db74">&#34;{0}:&#34;</span>, culture.NativeName);
+         Console.WriteLine(<span style="color:#e6db74">&#34;   Local date and time: {0}, {1:G}&#34;</span>,
+                           localDate.ToString(culture), localDate.Kind);
+         Console.WriteLine(<span style="color:#e6db74">&#34;   UTC date and time: {0}, {1:G}\n&#34;</span>,
+                           utcDate.ToString(culture), utcDate.Kind);
+      }
+   }
+}
+</code></pre></div>
+
+<p><a href="https://docs.microsoft.com/dotnet/api/system.datetime.now">https://docs.microsoft.com/dotnet/api/system.datetime.now</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/cpp#current-date-time">https://hyperpolyglot.org/cpp#current-date-time</a></li>
