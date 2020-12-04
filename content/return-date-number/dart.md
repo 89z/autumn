@@ -9,5 +9,6 @@ tags: [dart]
 
 ## References
 
+- <https://hyperpolyglot.org/web#current-unix-epoch>
 - <https://programming-idioms.org/idiom/61>
 - <https://rosettacode.org/wiki/System_time>

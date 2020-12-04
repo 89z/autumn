@@ -5,6 +5,8 @@ tags: [c-sharp]
 
 {{< r "Program.cs" >}}
 
+<https://docs.microsoft.com/dotnet/api/system.datetimeoffset.tounixtimeseconds>
+
 ## References
 
 - <https://hyperpolyglot.org/cpp#unix-epoch>

@@ -9,5 +9,5 @@ tags: [dart]
 
 ## References
 
-- <https://programming-idioms.org/idiom/99>
-- <https://rosettacode.org/wiki/Date_format>
+- <https://hyperpolyglot.org/web#unix-epoch-to-broken-down-datetime>
+- <https://programming-idioms.org/idiom/98>

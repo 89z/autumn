@@ -9,4 +9,4 @@ tags: [nim]
 
 ## References
 
-<https://rosettacode.org/wiki/Date_format>
+<https://programming-idioms.org/idiom/98>

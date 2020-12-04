@@ -2,5 +2,6 @@ use chrono::offset::Local;
 
 fn main() {
    let o = Local::now();
-   println!("{}", o);
+   let s = o.to_rfc2822();
+   println!("{}", s);
 }

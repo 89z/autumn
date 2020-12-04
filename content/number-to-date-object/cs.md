@@ -9,4 +9,5 @@ tags: [c-sharp]
 
 ## References
 
-<https://programming-idioms.org/idiom/99>
+- <https://hyperpolyglot.org/cpp#unix-epoch>
+- <https://programming-idioms.org/idiom/98>

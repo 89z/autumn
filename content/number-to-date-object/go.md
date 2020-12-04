@@ -9,4 +9,5 @@ tags: [go]
 
 ## References
 
-<https://programming-idioms.org/idiom/99>
+- <https://hyperpolyglot.org/c#unix-epoch-to-broken-down-datetime>
+- <https://programming-idioms.org/idiom/98>

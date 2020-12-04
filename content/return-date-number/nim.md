@@ -5,7 +5,7 @@ tags: [nim]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/times.html>
+<https://nim-lang.org/docs/times.html#toUnix,Time>
 
 ## References
 

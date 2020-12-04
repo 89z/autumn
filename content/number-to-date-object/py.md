@@ -9,5 +9,4 @@ tags: [python]
 
 ## References
 
-- <https://programming-idioms.org/idiom/99>
-- <https://rosettacode.org/wiki/Date_format>
+<https://programming-idioms.org/idiom/98>

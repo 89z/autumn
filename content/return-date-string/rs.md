@@ -3,9 +3,13 @@ title: Rust
 tags: [rust]
 ---
 
-{{< r "main.rs" >}}
+{{< r "a/src/main.rs" >}}
 
-<https://github.com/chronotope/chrono>
+<https://docs.rs/chrono/latest/chrono/struct.DateTime.html#method.to_rfc2822>
+
+{{< r "b/src/main.rs" >}}
+
+<https://docs.rs/chrono/latest/chrono/struct.DateTime.html#method.to_rfc3339>
 
 ## References
 

@@ -9,5 +9,6 @@ tags: [dart]
 
 ## References
 
+- <https://hyperpolyglot.org/web#fmt-datetime>
 - <https://programming-idioms.org/idiom/99>
 - <https://rosettacode.org/wiki/Date_format>
