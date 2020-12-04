@@ -1,2 +1,3 @@
 import times
-echo(getTime())
+let o = getTime()
+echo o

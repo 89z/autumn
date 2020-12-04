@@ -36,9 +36,17 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$t <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>(<span style="color:#e6db74">&#34;now&#34;</span>);
-$utc_tmz <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTimeZone</span>(<span style="color:#e6db74">&#34;UTC&#34;</span>);
-$utc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>(<span style="color:#e6db74">&#34;now&#34;</span>, $utc_tmz);
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$o1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
+<span style="color:#75715e"># exmaple 2
+</span><span style="color:#75715e"></span>$o2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>();
+<span style="color:#75715e"># example 3
+</span><span style="color:#75715e"></span>$o3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>(<span style="color:#e6db74">&#39;now&#39;</span>);
+<span style="color:#75715e"># exmaple 4
+</span><span style="color:#75715e"></span>$o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTimeZone</span>(<span style="color:#e6db74">&#39;America/Chicago&#39;</span>);
+$o4 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>(<span style="color:#a6e22e">timezone</span><span style="color:#f92672">:</span> $o);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($o1, $o2, $o3, $o4);
 </code></pre></div>
 
 <h2 id="references">References</h2>

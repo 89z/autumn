@@ -1,1 +1,4 @@
-var dt = new DateTime.now();
+void main() {
+   var o = new DateTime.now();
+   print(o);
+}
