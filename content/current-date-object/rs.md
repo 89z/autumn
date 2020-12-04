@@ -5,6 +5,8 @@ tags: [rust]
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/std/time>
+
 ## References
 
 - <https://hyperpolyglot.org/rust#current-date-time>

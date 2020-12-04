@@ -1,11 +1,11 @@
 ---
-title: Python
-tags: [python]
+title: Ruby
+tags: [ruby]
 ---
 
-{{< r "a.py" >}}
+{{< r "a.rb" >}}
 
-<https://docs.python.org/library/datetime.html>
+<https://ruby-doc.org/core/Time.html#method-c-at>
 
 ## References
 

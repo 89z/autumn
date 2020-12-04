@@ -1,3 +1,6 @@
-extern crate chrono;
-let dt = Local::now();
-let dt_utc = UTC::now();
+use std::time::SystemTime;
+
+fn main() {
+   let o = SystemTime::now();
+   println!("{:?}", o);
+}

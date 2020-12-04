@@ -5,6 +5,8 @@ tags: [go]
 
 {{< r "a.go" >}}
 
+<https://golang.org/pkg/time>
+
 ## References
 
 - <https://hyperpolyglot.org/c#current-datetime>

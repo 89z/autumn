@@ -5,6 +5,8 @@ tags: [php]
 
 {{< r "a.php" >}}
 
+<https://php.net/class.datetime>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting#current-datetime>

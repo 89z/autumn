@@ -5,6 +5,8 @@ tags: [ruby]
 
 {{< r "a.rb" >}}
 
+<https://ruby-doc.org/core/Time.html#method-c-now>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting#current-datetime>

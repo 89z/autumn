@@ -5,7 +5,7 @@ tags: [rust]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/stable/std/time/struct.Duration.html#method.as_secs>
+<https://doc.rust-lang.org/std/time/struct.Duration.html#method.as_secs>
 
 ## References
 
