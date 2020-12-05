@@ -5,9 +5,13 @@ tags: [php]
 
 {{< r "a.php" >}}
 
-<https://php.net/function.pow>
+<https://php.net/function.bcpow>
 
 {{< r "b.php" >}}
+
+<https://php.net/function.pow>
+
+{{< r "c.php" >}}
 
 <https://php.net/operators.arithmetic>
 
