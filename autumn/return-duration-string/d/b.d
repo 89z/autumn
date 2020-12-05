@@ -4,13 +4,10 @@ import
    core.thread: Thread;
 
 void main() {
-   auto dur_o = time.msecs(10);
-   auto sw_o = time.StopWatch();
-   sw_o.start;
-   int sec_n, mil_n;
+   auto o = time.StopWatch();
+   o.start;
    while (true) {
-      Thread.sleep(dur_o);
-      sw_o.peek.split!("seconds", "msecs")(sec_n, mil_n);
-      io.writef("\r%d s %03d ms", sec_n, mil_n);
+      Thread.sleep(time.msecs(10));
+      io.writef("\r%d s %03d ms", o.peek.split.seconds, o.peek.split.msecs);
    }
 }

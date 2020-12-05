@@ -6,10 +6,9 @@ import (
 )
 
 func main() {
-   o := time.Now()
-   for {
-      time.Sleep(100 * time.Millisecond)
-      s := time.Since(o).Truncate(10 * time.Millisecond)
-      fmt.Printf("%10s\r", s)
+   old_o := time.Now()
+   for new_o := range time.Tick(10 * time.Millisecond) {
+      n := new_o.Sub(old_o).Seconds()
+      fmt.Printf("\r%.2f", n)
    }
 }

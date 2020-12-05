@@ -4,7 +4,13 @@ tags: [go]
 ---
 
 {{< r "a.go" >}}
+
+<https://golang.org/pkg/time#Since>
+
 {{< r "b.go" >}}
+
+<https://golang.org/pkg/time#Tick>
+
 {{< r "c.go" >}}
 
 <https://golang.org/pkg/time#Time.Sub>

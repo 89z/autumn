@@ -1,13 +1,12 @@
 import core.thread: Thread;
-import core.time: MonoTime;
 import io = std.stdio;
-import time = std.datetime.stopwatch;
+import time = std.datetime: Clock;
 
 void main() {
-   auto start_o = MonoTime.currTime;
+   auto start_o = Clock.currTime;
    while (true) {
       Thread.sleep(time.msecs(10));
-      auto o = MonoTime.currTime - start_o;
+      auto o = Clock.currTime - start_o;
       io.writef("\r%d s %03d ms", o.split.seconds, o.split.msecs);
    }
 }

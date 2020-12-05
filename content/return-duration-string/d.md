@@ -11,6 +11,10 @@ tags: [d]
 
 <https://dlang.org/library/std/datetime/stopwatch/stop_watch.html>
 
+{{< r "c.d" >}}
+
+<https://dlang.org/library/std/datetime/systime/clock.curr_time.html>
+
 ## References
 
 - <https://programming-idioms.org/idiom/132>

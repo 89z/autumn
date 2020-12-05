@@ -35,13 +35,18 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span>
-   io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">,</span>
-   core<span style="color:#f92672">.</span><span style="color:#a6e22e">time</span><span style="color:#f92672">:</span> MonoTime<span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> core.thread<span style="color:#f92672">:</span> Thread<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> core.time<span style="color:#f92672">:</span> MonoTime<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> time <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">datetime</span><span style="color:#f92672">.</span><span style="color:#a6e22e">stopwatch</span><span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> MonoTime<span style="color:#f92672">.</span><span style="color:#a6e22e">currTime</span><span style="color:#f92672">;</span>
-   io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>o<span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> start_o <span style="color:#f92672">=</span> MonoTime<span style="color:#f92672">.</span><span style="color:#a6e22e">currTime</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">sleep</span><span style="color:#f92672">(</span>time<span style="color:#f92672">.</span><span style="color:#a6e22e">msecs</span><span style="color:#f92672">(</span><span style="color:#ae81ff">10</span><span style="color:#f92672">));</span>
+      <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> MonoTime<span style="color:#f92672">.</span><span style="color:#a6e22e">currTime</span> <span style="color:#f92672">-</span> start_o<span style="color:#f92672">;</span>
+      io<span style="color:#f92672">.</span><span style="color:#a6e22e">writef</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\r%d s %03d ms&#34;</span><span style="color:#f92672">,</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">.</span><span style="color:#a6e22e">seconds</span><span style="color:#f92672">,</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">.</span><span style="color:#a6e22e">msecs</span><span style="color:#f92672">);</span>
+   <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 
@@ -58,19 +63,37 @@
    core<span style="color:#f92672">.</span><span style="color:#a6e22e">thread</span><span style="color:#f92672">:</span> Thread<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> dur_o <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span><span style="color:#a6e22e">msecs</span><span style="color:#f92672">(</span><span style="color:#ae81ff">10</span><span style="color:#f92672">);</span>
-   <span style="color:#66d9ef">auto</span> sw_o <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span><span style="color:#a6e22e">StopWatch</span><span style="color:#f92672">();</span>
-   sw_o<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">int</span> sec_n<span style="color:#f92672">,</span> mil_n<span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span><span style="color:#a6e22e">StopWatch</span><span style="color:#f92672">();</span>
+   o<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">;</span>
    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">sleep</span><span style="color:#f92672">(</span>dur_o<span style="color:#f92672">);</span>
-      sw_o<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">!(</span><span style="color:#e6db74">&#34;seconds&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;msecs&#34;</span><span style="color:#f92672">)(</span>sec_n<span style="color:#f92672">,</span> mil_n<span style="color:#f92672">);</span>
-      io<span style="color:#f92672">.</span><span style="color:#a6e22e">writef</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\r%d s %03d ms&#34;</span><span style="color:#f92672">,</span> sec_n<span style="color:#f92672">,</span> mil_n<span style="color:#f92672">);</span>
+      Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">sleep</span><span style="color:#f92672">(</span>time<span style="color:#f92672">.</span><span style="color:#a6e22e">msecs</span><span style="color:#f92672">(</span><span style="color:#ae81ff">10</span><span style="color:#f92672">));</span>
+      io<span style="color:#f92672">.</span><span style="color:#a6e22e">writef</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\r%d s %03d ms&#34;</span><span style="color:#f92672">,</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">.</span><span style="color:#a6e22e">seconds</span><span style="color:#f92672">,</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">.</span><span style="color:#a6e22e">msecs</span><span style="color:#f92672">);</span>
    <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 
 <p><a href="https://dlang.org/library/std/datetime/stopwatch/stop_watch.html">https://dlang.org/library/std/datetime/stopwatch/stop_watch.html</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> core.thread<span style="color:#f92672">:</span> Thread<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> time <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">datetime</span><span style="color:#f92672">:</span> Clock<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> start_o <span style="color:#f92672">=</span> Clock<span style="color:#f92672">.</span><span style="color:#a6e22e">currTime</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">sleep</span><span style="color:#f92672">(</span>time<span style="color:#f92672">.</span><span style="color:#a6e22e">msecs</span><span style="color:#f92672">(</span><span style="color:#ae81ff">10</span><span style="color:#f92672">));</span>
+      <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> Clock<span style="color:#f92672">.</span><span style="color:#a6e22e">currTime</span> <span style="color:#f92672">-</span> start_o<span style="color:#f92672">;</span>
+      io<span style="color:#f92672">.</span><span style="color:#a6e22e">writef</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\r%d s %03d ms&#34;</span><span style="color:#f92672">,</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">.</span><span style="color:#a6e22e">seconds</span><span style="color:#f92672">,</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">.</span><span style="color:#a6e22e">msecs</span><span style="color:#f92672">);</span>
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+
+<p><a href="https://dlang.org/library/std/datetime/systime/clock.curr_time.html">https://dlang.org/library/std/datetime/systime/clock.curr_time.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/132">https://programming-idioms.org/idiom/132</a></li>
