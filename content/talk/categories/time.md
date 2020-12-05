@@ -11,18 +11,32 @@ good, as I will know what zone functions are returning:
 
 {{< r "b.php" >}}
 
-- current date object
-- date addition
-- number to date object
-- return date number
-   - from null
-   - from string
-   - from object
-- return date string
-   - from null
-   - from number
-   - from object
-- return duration number
-- return duration object
-- return duration string
-- string to date object
+~~~
+current date object
+   -> date object
+
+date modify
+   date object, duration -> date object
+
+number to date object
+   date number -> date object
+
+return date number
+   -> date number
+   date object -> date number
+   date string -> date number
+
+return date string
+   -> date string
+   date number -> date string
+   date object -> date string
+
+string to date object
+   date string -> date object
+
+return duration number
+   date object, date object -> duration number
+
+return duration string
+   -> duration string
+~~~

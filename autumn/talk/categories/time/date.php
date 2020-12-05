@@ -14,12 +14,13 @@ $a = [
 foreach ($a as $s1) {
    foreach ($a as $s2) {
       foreach ($a as $s3) {
+         # 0
          if ($s3 == '') {
             continue;
          }
          # 1
          if ($s1 == '' && $s2 == '') {
-            if (str_starts_with($s3, 'duration')) {
+            if ($s3 == 'duration number') {
                continue;
             }
             $m['-> ' . $s3] = true;
@@ -54,10 +55,7 @@ foreach ($a as $s1) {
             $m['date object, duration -> date object'] = true;
             continue;
          }
-         if (! str_starts_with($s3, 'duration')) {
-            continue;
-         }
-         $m['date object, date object -> ' . $s3] = true;
+         $m['date object, date object -> duration number'] = true;
       }
    }
 }

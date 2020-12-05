@@ -7,5 +7,4 @@ tags: [dart]
 
 ## References
 
-- <https://programming-idioms.org/idiom/132>
-- <https://rosettacode.org/wiki/Time_a_function>
+<https://rosettacode.org/wiki/Days_between_dates>

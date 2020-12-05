@@ -1,11 +1,9 @@
 ---
-title: PHP
-tags: [php]
+title: Python
+tags: [python]
 ---
 
-- <https://php.net/datetime.diff>
-- <https://php.net/function.date-diff>
-- <https://php.net/function.microtime>
+<https://docs.python.org/library/datetime.html#datetime.timedelta.total_seconds>
 
 ## References
 
