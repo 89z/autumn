@@ -1,9 +1,10 @@
-import std.datetime.date;
-import std.stdio;
+import
+   io = std.stdio,
+   std.datetime: Clock, SysTime;
 
 void main() {
-   auto fromDate = Date.fromISOExtString("2019-01-01");
-   auto toDate = Date.fromISOExtString("2019-10-07");
-   auto diff = toDate - fromDate;
-   writeln("Number of days between ", fromDate, " and ", toDate, ": ", diff.total!"days");
+   auto old_o = SysTime.fromISOExtString("2019-12-31T23:59:59");
+   auto new_o = Clock.currTime;
+   auto n = (new_o - old_o).total!"days";
+   io.writeln(n);
 }

@@ -11,6 +11,6 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   n := time.Since(o).Hours()
+   n := time.Now().Sub(o).Hours()
    fmt.Println(n)
 }

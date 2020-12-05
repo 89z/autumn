@@ -36,13 +36,13 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
- 
+
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">var</span> old_o = DateTime.Parse(<span style="color:#e6db74">&#34;2018-12-31&#34;</span>);
-      <span style="color:#66d9ef">var</span> new_o = DateTime.Parse(<span style="color:#e6db74">&#34;2019-12-31&#34;</span>);
+      <span style="color:#66d9ef">var</span> old_o = DateTime.Parse(<span style="color:#e6db74">&#34;2019-12-31&#34;</span>);
+      <span style="color:#66d9ef">var</span> new_o = DateTime.Now;
       <span style="color:#66d9ef">var</span> n = (new_o - old_o).TotalDays;
-      Console.WriteLine(n == <span style="color:#ae81ff">365</span>);
+      Console.WriteLine(n);
    }
 }
 </code></pre></div>
