@@ -1,6 +1,5 @@
-import
-   io = std.stdio,
-   json = std.json;
+import io = std.stdio;
+import json = std.json;
 
 auto in_s = `{"U2": {"Boy": ["Twilight", "I Will Follow"]}}`;
 

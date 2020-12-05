@@ -1,6 +1,5 @@
-import
-   io = std.stdio,
-   std.process: environment;
+import io = std.stdio;
+import std.process: environment;
 
 void main() {
    auto s = environment.get("USERPROFILE");

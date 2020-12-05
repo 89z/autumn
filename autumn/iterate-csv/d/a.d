@@ -1,6 +1,5 @@
-import
-   csv = std.csv,
-   io = std.stdio;
+import csv = std.csv;
+import io = std.stdio;
 
 auto s = "Month,Day
 January,Sunday

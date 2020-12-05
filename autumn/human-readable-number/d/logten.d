@@ -1,7 +1,6 @@
-import
-   fmt = std.format,
-   io = std.stdio,
-   math = std.math;
+import fmt = std.format;
+import io = std.stdio;
+import math = std.math;
 
 string numberFormat(real n) {
    auto n2 = cast(int) math.log10(n) / 3;

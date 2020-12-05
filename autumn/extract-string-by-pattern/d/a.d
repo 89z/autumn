@@ -1,7 +1,6 @@
-import
-   ar = std.array,
-   io = std.stdio,
-   re = std.regex;
+import ar = std.array;
+import io = std.stdio;
+import re = std.regex;
 
 void main() {
    auto o = re.matchAll("Sunday Monday", "..n");

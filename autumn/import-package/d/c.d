@@ -1,6 +1,5 @@
-import
-   io = std.stdio,
-   json = std.json: JSONValue;
+import io = std.stdio;
+import json = std.json: JSONValue;
 
 void main() {
    auto o = ["/", "📗"].JSONValue;

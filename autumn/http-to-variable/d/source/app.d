@@ -1,6 +1,5 @@
-import
-   io = std.stdio,
-   net = ae.sys.net;
+import io = std.stdio;
+import net = ae.sys.net;
 
 void main() {
    auto url_s = "https://speedtest.lax.hivelocity.net";

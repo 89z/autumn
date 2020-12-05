@@ -1,6 +1,5 @@
-import
-   file = std.file, io = std.stdio,
-   std.file: SpanMode;
+import file = std.file: SpanMode;
+import io = std.stdio;
 
 void main() {
    auto a = file.dirEntries(".", SpanMode.shallow);
