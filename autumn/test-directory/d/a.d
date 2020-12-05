@@ -1,6 +1,5 @@
-import
-   file = std.file,
-   io = std.stdio;
+import file = std.file;
+import io = std.stdio;
 
 bool testDir(string s) {
    return file.exists(s) && file.isDir(s);

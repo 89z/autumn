@@ -10,6 +10,6 @@ proc format(o: TimeInterval): string =
 let now_o = times.now()
 
 while true:
-   sleep 10
+   os.sleep 10
    let o = times.between(now_o, times.now())
    stdout.write format(o), "\r"

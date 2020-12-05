@@ -1,6 +1,5 @@
-import
-   conv = std.conv,
-   io = std.stdio;
+import conv = std.conv;
+import io = std.stdio;
 
 void main() {
    auto n = conv.to!float("9.9");

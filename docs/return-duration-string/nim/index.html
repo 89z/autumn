@@ -47,7 +47,7 @@
 <span style="color:#66d9ef">let</span> now_o <span style="color:#f92672">=</span> times.now()
 
 <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">true</span>:
-   sleep <span style="color:#ae81ff">10</span>
+   os.sleep <span style="color:#ae81ff">10</span>
    <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> times.between(now_o, times.now())
    stdout.write format(o), <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>
 </code></pre></div>
@@ -59,17 +59,23 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span>
-   os,
-   strformat,
-   times
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> <span style="color:#66d9ef">nil</span>
+<span style="color:#f92672">from</span> os <span style="color:#f92672">import</span> <span style="color:#66d9ef">nil</span>
+<span style="color:#f92672">from</span> strformat <span style="color:#f92672">import</span> fmt
+<span style="color:#f92672">from</span> times <span style="color:#f92672">import</span> <span style="color:#66d9ef">nil</span>
 
-<span style="color:#66d9ef">let</span> old_n <span style="color:#f92672">=</span> times.cpuTime()
+<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">format</span>(n: <span style="color:#66d9ef">float</span>): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span>
+   <span style="color:#66d9ef">let</span> mil_n <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span>(math.<span style="color:#f92672">mod</span>(n, <span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>)
+   <span style="color:#66d9ef">let</span> sec_n <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span>(n)
+   <span style="color:#66d9ef">let</span> min_n <span style="color:#f92672">=</span> sec_n <span style="color:#f92672">div</span> <span style="color:#ae81ff">60</span>
+   <span style="color:#66d9ef">return</span> <span style="color:#e6db74">fmt&#34;{min_n} m {sec_n:02} s {mil_n:03} ms&#34;</span>
+
+<span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> times.cpuTime()
 
 <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">true</span>:
    os.sleep <span style="color:#ae81ff">10</span>
-   <span style="color:#66d9ef">let</span> new_n <span style="color:#f92672">=</span> cpuTime() <span style="color:#f92672">-</span> old_n
-   stdout.write <span style="color:#f92672">&amp;</span><span style="color:#e6db74">&#34;{new_n:.2f}</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> format(times.cpuTime() <span style="color:#f92672">-</span> n)
+   stdout.write s, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>
 </code></pre></div>
 
 <p><a href="https://nim-lang.org/docs/times.html#cpuTime">https://nim-lang.org/docs/times.html#cpuTime</a></p>
