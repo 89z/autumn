@@ -5,6 +5,8 @@ tags: [javascript]
 
 {{< r "a.js" >}}
 
+<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/now>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting#datetime-subtraction>

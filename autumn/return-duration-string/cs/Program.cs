@@ -9,7 +9,10 @@ class Program {
       while (true) {
          Th.Sleep(10);
          Co.Write(
-            "{0} s {1:000} ms\r", o.Elapsed.Seconds, o.Elapsed.Milliseconds
+            "{0} m {1:00} s {2:000} ms\r",
+            o.Elapsed.Minutes,
+            o.Elapsed.Seconds,
+            o.Elapsed.Milliseconds
          );
       }
    }

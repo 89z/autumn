@@ -24,7 +24,7 @@
    <a href="/autumn/return-duration-string/">Return duration string</a> / C#
 </h1>
 <section class="page">
-   <time>Tue Dec 1 2020</time>
+   <time>Fri Dec 4 2020</time>
    
    <a href="/autumn/categories/time/">time</a>
    
@@ -46,7 +46,10 @@
       <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
          Th.Sleep(<span style="color:#ae81ff">10</span>);
          Co.Write(
-            <span style="color:#e6db74">&#34;{0} s {1:000} ms\r&#34;</span>, o.Elapsed.Seconds, o.Elapsed.Milliseconds
+            <span style="color:#e6db74">&#34;{0} m {1:00} s {2:000} ms\r&#34;</span>,
+            o.Elapsed.Minutes,
+            o.Elapsed.Seconds,
+            o.Elapsed.Milliseconds
          );
       }
    }

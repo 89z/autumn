@@ -8,6 +8,11 @@ void main() {
    while (true) {
       Thread.sleep(time.msecs(10));
       auto o = MonoTime.currTime - start_o;
-      io.writef("\r%d s %03d ms", o.split.seconds, o.split.msecs);
+      io.writef(
+         "\r%d m %02d s %03d ms",
+         o.split.minutes,
+         o.split.seconds,
+         o.split.msecs
+      );
    }
 }
