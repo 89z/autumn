@@ -3,9 +3,9 @@ title: PHP
 tags: [php]
 ---
 
-- <https://php.net/datetime.diff>
-- <https://php.net/function.date-diff>
-- <https://php.net/function.microtime>
+{{< r "a.php" >}}
+
+<https://php.net/datetime.diff>
 
 ## References
 

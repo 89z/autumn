@@ -3,7 +3,7 @@ title: C#
 tags: [c-sharp]
 ---
 
-<https://docs.microsoft.com/dotnet/api/system.diagnostics.stopwatch>
+{{< r "Program.cs" >}}
 
 ## References
 

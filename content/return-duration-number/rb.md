@@ -1,11 +1,9 @@
 ---
-title: Python
-tags: [python]
+title: Ruby
+tags: [ruby]
 ---
 
-{{< r "a.py" >}}
-
-<https://docs.python.org/library/datetime.html#datetime.timedelta.total_seconds>
+<https://ruby-doc.org/core/Time.html#method-i-2D>
 
 ## References
 
