@@ -1,7 +1,6 @@
-import
-   io = std.stdio,
-   time = std.datetime.stopwatch,
-   core.thread: Thread;
+import core.thread: Thread;
+import io = std.stdio;
+import time = std.datetime.stopwatch;
 
 void main() {
    auto o = time.StopWatch();

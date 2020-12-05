@@ -1,6 +1,5 @@
-import
-   algo = std.algorithm,
-   io = std.stdio;
+import algo = std.algorithm;
+import io = std.stdio;
 
 void main() {
    auto s = "March";

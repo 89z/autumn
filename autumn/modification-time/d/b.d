@@ -1,6 +1,5 @@
-import
-   file = std.file,
-   io = std.stdio;
+import file = std.file;
+import io = std.stdio;
 
 void main() {
    auto o = file.timeLastModified("a.d");

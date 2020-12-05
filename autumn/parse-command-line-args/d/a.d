@@ -1,6 +1,5 @@
-import
-   io = std.stdio,
-   opt = std.getopt;
+import io = std.stdio;
+import opt = std.getopt;
 
 int main(string[] a) {
    string pre_s, suf_s;

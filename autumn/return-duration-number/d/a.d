@@ -1,6 +1,5 @@
-import
-   io = std.stdio,
-   std.datetime: Clock, SysTime;
+import io = std.stdio;
+import std.datetime: Clock, SysTime;
 
 void main() {
    auto old_o = SysTime.fromISOExtString("2019-12-31T23:59:59");

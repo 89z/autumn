@@ -1,6 +1,5 @@
-import
-   io = std.stdio,
-   math = std.math;
+import io = std.stdio;
+import math = std.math;
 
 void main() {
    // example 1

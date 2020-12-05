@@ -1,6 +1,5 @@
-import
-   io = std.stdio,
-   path = std.path;
+import io = std.stdio;
+import path = std.path;
 
 void main() {
    auto s = path.extension("a.d");

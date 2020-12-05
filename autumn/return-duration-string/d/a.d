@@ -1,7 +1,6 @@
-import
-   io = std.stdio,
-   time = core.time,
-   core.thread: Thread;
+import core.thread: Thread;
+import io = std.stdio;
+import time = core.time;
 
 void main() {
    auto start_o = time.MonoTime.currTime;

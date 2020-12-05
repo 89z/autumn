@@ -1,6 +1,4 @@
-import
-   os,
-   times
+from os import nil
 
-let o = getLastModificationTime("a.nim")
+let o = os.getLastModificationTime("a.nim")
 echo o

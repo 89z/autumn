@@ -1,6 +1,5 @@
-import
-   file = std.file,
-   std.datetime: SysTime;
+import file = std.file;
+import std.datetime: SysTime;
 
 void main() {
    auto o = SysTime.fromUnixTime(400_000_000);

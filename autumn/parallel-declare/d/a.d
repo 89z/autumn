@@ -1,6 +1,5 @@
-import
-   io = std.stdio,
-   type = std.typecons: Tuple;
+import io = std.stdio;
+import type = std.typecons: Tuple;
 
 void main() {
    // example 1
