@@ -38,7 +38,7 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:math&#39;</span>;
 
 <span style="color:#66d9ef">String</span> numberFormat(<span style="color:#66d9ef">double</span> n) {
-   <span style="color:#66d9ef">var</span> n2 <span style="color:#f92672">=</span> (log(n) <span style="color:#f92672">/</span> ln10 <span style="color:#f92672">/</span> <span style="color:#ae81ff">3</span>).toInt();
+   <span style="color:#66d9ef">var</span> n2 <span style="color:#f92672">=</span> log(n) <span style="color:#f92672">/</span> ln10 <span style="color:#f92672">~/</span> <span style="color:#ae81ff">3</span>;
    <span style="color:#66d9ef">var</span> n3 <span style="color:#f92672">=</span> n <span style="color:#f92672">/</span> pow(<span style="color:#ae81ff">1000</span>, n2);
    <span style="color:#66d9ef">return</span> n3.toStringAsFixed(<span style="color:#ae81ff">3</span>) <span style="color:#f92672">+</span> [<span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#e6db74">&#39; k&#39;</span>, <span style="color:#e6db74">&#39; M&#39;</span>, <span style="color:#e6db74">&#39; G&#39;</span>][n2];
 }

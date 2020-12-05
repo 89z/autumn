@@ -37,11 +37,11 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span>
    io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">,</span>
-   dlib<span style="color:#f92672">.</span><span style="color:#a6e22e">network</span><span style="color:#f92672">.</span><span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> URL<span style="color:#f92672">;</span>
+   net <span style="color:#f92672">=</span> dlib<span style="color:#f92672">.</span><span style="color:#a6e22e">network</span><span style="color:#f92672">.</span><span style="color:#a6e22e">url</span><span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://example.com/one?two=even&#34;</span><span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> URL<span style="color:#f92672">!</span><span style="color:#66d9ef">string</span><span style="color:#f92672">(</span>s<span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> o <span style="color:#f92672">=</span> net<span style="color:#f92672">.</span><span style="color:#a6e22e">URL</span><span style="color:#f92672">!</span><span style="color:#66d9ef">string</span><span style="color:#f92672">(</span>s<span style="color:#f92672">);</span>
    io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>o<span style="color:#f92672">.</span><span style="color:#a6e22e">host</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;example.com&#34;</span> <span style="color:#f92672">&amp;&amp;</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">query</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;two=even&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>

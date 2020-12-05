@@ -5,7 +5,11 @@ tags: [dart]
 
 {{< r "a.dart" >}}
 
-<https://dart.dev/guides/language/language-tour#operators>
+<https://api.dart.dev/dart-core/num/operator_truncate_divide.html>
+
+{{< r "b.dart" >}}
+
+<https://api.dart.dev/dart-core/num/toInt.html>
 
 ## References
 

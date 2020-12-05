@@ -1,9 +1,9 @@
 import
    io = std.stdio,
-   dlib.network.url: URL;
+   net = dlib.network.url;
 
 void main() {
    auto s = "https://example.com/one?two=even";
-   auto o = URL!string(s);
+   auto o = net.URL!string(s);
    io.writeln(o.host == "example.com" && o.query == "two=even");
 }
