@@ -1,13 +1,10 @@
 using System;
-using System.Globalization;
  
-public class Program
-{
-    public static void Main() => WriteLine(DateDiff("1970-01-01", "2019-10-18"));
- 
-    public static int DateDiff(string d1, string d2) {
-        var a = DateTime.ParseExact(d1, "yyyy-MM-dd", CultureInfo.InvariantCulture);
-        var b = DateTime.ParseExact(d2, "yyyy-MM-dd", CultureInfo.InvariantCulture);
-        return (int)(b - a).TotalDays;
-    }
+class Program {
+   static void Main() {
+      var old_o = DateTime.Parse("2018-12-31");
+      var new_o = DateTime.Parse("2019-12-31");
+      var n = (new_o - old_o).TotalDays;
+      Console.WriteLine(n == 365);
+   }
 }

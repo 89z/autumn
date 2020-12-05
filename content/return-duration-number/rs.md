@@ -3,8 +3,9 @@ title: Rust
 tags: [rust]
 ---
 
-- <https://doc.rust-lang.org/std/time/struct.Instant.html#method.elapsed>
-- <https://doc.rust-lang.org/std/time/struct.SystemTime.html#method.elapsed>
+{{< r "src/main.rs" >}}
+
+<https://docs.rs/chrono/latest/chrono/struct.Date.html#method.signed_duration_since>
 
 ## References
 

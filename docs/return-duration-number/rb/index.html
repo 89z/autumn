@@ -29,7 +29,19 @@
    <a href="/autumn/categories/time/">time</a>
    
 </section>
-   <p><a href="https://ruby-doc.org/core/Time.html#method-i-2D">https://ruby-doc.org/core/Time.html#method-i-2D</a></p>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#34;date&#34;</span>
+d1, d2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">Date</span><span style="color:#f92672">.</span>parse(<span style="color:#e6db74">&#34;2019-1-1&#34;</span>), <span style="color:#66d9ef">Date</span><span style="color:#f92672">.</span>parse(<span style="color:#e6db74">&#34;2019-10-19&#34;</span>)
+p (d1 <span style="color:#f92672">-</span> d2)<span style="color:#f92672">.</span>to_i  <span style="color:#75715e"># =&gt; -291</span>
+p (d2 <span style="color:#f92672">-</span> d1)<span style="color:#f92672">.</span>to_i  <span style="color:#75715e"># =&gt; 291</span>
+</code></pre></div>
+
+<p><a href="https://ruby-doc.org/core/Time.html#method-i-2D">https://ruby-doc.org/core/Time.html#method-i-2D</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting#datetime-subtraction">https://hyperpolyglot.org/scripting#datetime-subtraction</a></li>
