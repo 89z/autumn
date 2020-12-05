@@ -7,6 +7,10 @@ tags: [nim]
 
 <https://nim-lang.org/docs/times.html#getTime>
 
+{{< r "b.nim" >}}
+
+<https://nim-lang.org/docs/times.html#now>
+
 ## References
 
 <https://rosettacode.org/wiki/System_time>
