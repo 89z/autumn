@@ -5,7 +5,7 @@ tags: [dart]
 
 {{< r "a.dart" >}}
 
-<https://api.dart.dev/dart-core/Stopwatch-class.html>
+<https://api.dart.dev/dart-core/Stopwatch/elapsedMilliseconds.html>
 
 ## References
 

@@ -37,18 +37,24 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
 
+<span style="color:#66d9ef">String</span> format(Duration o) {
+   <span style="color:#66d9ef">var</span> mil_s <span style="color:#f92672">=</span> (o.inMilliseconds <span style="color:#f92672">%</span> <span style="color:#ae81ff">1000</span>).toString().padLeft(<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;0&#39;</span>);
+   <span style="color:#66d9ef">var</span> sec_s <span style="color:#f92672">=</span> (o.inSeconds <span style="color:#f92672">%</span> <span style="color:#ae81ff">60</span>).toString().padLeft(<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;0&#39;</span>);
+   <span style="color:#66d9ef">return</span> o.inMinutes.toString() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; m &#39;</span> <span style="color:#f92672">+</span> sec_s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; s &#39;</span> <span style="color:#f92672">+</span> mil_s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; ms&#39;</span>;
+}
+
 <span style="color:#66d9ef">void</span> main() {
    <span style="color:#66d9ef">var</span> o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Stopwatch();
    o.start();
    <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
       sleep(Duration(milliseconds: <span style="color:#ae81ff">10</span>));
-      <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> o.elapsed.toString();
+      <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> format(o.elapsed);
       stdout.write(s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#39;</span>);
    }
 }
 </code></pre></div>
 
-<p><a href="https://api.dart.dev/dart-core/Stopwatch-class.html">https://api.dart.dev/dart-core/Stopwatch-class.html</a></p>
+<p><a href="https://api.dart.dev/dart-core/Stopwatch/elapsedMilliseconds.html">https://api.dart.dev/dart-core/Stopwatch/elapsedMilliseconds.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/132">https://programming-idioms.org/idiom/132</a></li>

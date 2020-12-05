@@ -78,8 +78,9 @@ $old_n <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtim
    <span style="color:#a6e22e">usleep</span>(<span style="color:#ae81ff">10_000</span>);
    $diff_n <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>) <span style="color:#f92672">-</span> $old_n;
    $min_n <span style="color:#f92672">=</span> (<span style="color:#a6e22e">int</span>)($diff_n <span style="color:#f92672">/</span> <span style="color:#ae81ff">60</span>);
-   $sec_n <span style="color:#f92672">=</span> <span style="color:#a6e22e">fmod</span>($diff_n, <span style="color:#ae81ff">60</span>);
-   <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d m %5.2f s</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>, $min_n, $sec_n);
+   $sec_n <span style="color:#f92672">=</span> $diff_n <span style="color:#f92672">%</span> <span style="color:#ae81ff">60</span>;
+   $mil_n <span style="color:#f92672">=</span> <span style="color:#a6e22e">fmod</span>($diff_n, <span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>;
+   <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">%d m %02d s %03d ms&#34;</span>, $min_n, $sec_n, $mil_n);
 }
 </code></pre></div>
 

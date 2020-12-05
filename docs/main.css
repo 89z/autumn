@@ -206,6 +206,9 @@ section.term,
 table {
    margin-top: 1rem;
 }
+pre {
+   overflow: auto;
+}
 footer > a,
 header.page,
 header.section,

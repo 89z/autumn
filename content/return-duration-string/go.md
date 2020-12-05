@@ -7,14 +7,6 @@ tags: [go]
 
 <https://golang.org/pkg/time#Since>
 
-{{< r "b.go" >}}
-
-<https://golang.org/pkg/time#Tick>
-
-{{< r "c.go" >}}
-
-<https://golang.org/pkg/time#Time.Sub>
-
 ## References
 
 - <https://hyperpolyglot.org/c#date-subtraction>
