@@ -1,6 +1,6 @@
-function add(n, n2) {
-   return n + n2;
+function f(n, n2) {
+   return n > n2;
 }
 
-let n = add(8, 1);
-console.log(n == 9);
+let b = f(9, 8);
+console.log(b);

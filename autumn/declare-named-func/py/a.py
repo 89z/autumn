@@ -1,5 +1,5 @@
-def add(n, n2):
-   return n + n2
+def f(n, n2):
+   return n > n2
 
-n = add(8, 1)
-print(n == 9)
+b = f(9, 8)
+print(b)

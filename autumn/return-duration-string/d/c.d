@@ -1,12 +1,12 @@
 import core.thread: Thread;
 import io = std.stdio;
-import time = std.datetime;
+import time = std.datetime: Clock;
 
 void main() {
-   auto start_o = time.Clock.currTime;
+   auto start_o = Clock.currTime;
    while (true) {
       Thread.sleep(time.msecs(10));
-      auto o = time.Clock.currTime - start_o;
+      auto o = Clock.currTime - start_o;
       io.writef(
          "\r%d m %02d s %03d ms",
          o.split.minutes,

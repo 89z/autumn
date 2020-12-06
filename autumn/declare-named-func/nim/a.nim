@@ -1,12 +1,12 @@
 # example 1
-proc addf(n: int, n1: int): int =
-   return n + n1
+proc f1(n: int, n1: int): bool =
+   return n > n1
 
 # example 2
-proc subf(n, n2: int): int =
-   return n - n2
+proc f2(n, n2: int): bool =
+   return n > n2
 
 # print
-let n1 = addf(8, 1)
-let n2 = subf(8, 1)
-echo n1 == 9 and n2 == 7
+let b1 = f1(9, 8)
+let b2 = f2(9, 8)
+echo b1 and b2

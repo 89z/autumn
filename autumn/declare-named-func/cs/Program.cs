@@ -2,15 +2,15 @@ using System;
 
 class Program {
    // example 1
-   static int addf(int n, int n1) {
-      return n + n1;
+   static bool f1(int n, int n1) {
+      return n > n1;
    }
    // example 2
-   static int subf(int n, int n2) => n - n2;
+   static bool f2(int n, int n2) => n > n2;
    // print
    static void Main() {
-      var n1 = addf(8, 1);
-      var n2 = subf(8, 1);
-      Console.WriteLine(n1 == 9 && n2 == 7);
+      var b1 = f1(9, 8);
+      var b2 = f2(9, 8);
+      Console.WriteLine(b1 && b2);
    }
 }
