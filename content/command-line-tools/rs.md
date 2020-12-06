@@ -1,7 +1,7 @@
----
-title: Rust
-tags: [rust]
----
++++
+title = "Rust"
+tags = [ "rust" ]
++++
 
 {{< r "Cargo.toml" >}}
 
