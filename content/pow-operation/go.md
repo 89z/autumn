@@ -13,4 +13,5 @@ tags: [go]
 
 ## References
 
-<https://rosettacode.org/wiki/Exponentiation_operator>
+- <https://hyperpolyglot.org/c#power>
+- <https://rosettacode.org/wiki/Exponentiation_operator>

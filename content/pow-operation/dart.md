@@ -9,4 +9,5 @@ tags: [dart]
 
 ## References
 
-<https://rosettacode.org/wiki/Exponentiation_operator>
+- <https://hyperpolyglot.org/web#power>
+- <https://rosettacode.org/wiki/Exponentiation_operator>

@@ -17,4 +17,5 @@ tags: [rust]
 
 ## References
 
-<https://rosettacode.org/wiki/Exponentiation_operator>
+- <https://hyperpolyglot.org/rust#power>
+- <https://rosettacode.org/wiki/Exponentiation_operator>

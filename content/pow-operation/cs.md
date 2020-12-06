@@ -9,4 +9,5 @@ tags: [c-sharp]
 
 ## References
 
-<https://rosettacode.org/wiki/Exponentiation_operator>
+- <https://hyperpolyglot.org/cpp#power>
+- <https://rosettacode.org/wiki/Exponentiation_operator>
