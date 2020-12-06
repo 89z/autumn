@@ -7,9 +7,9 @@ proc format(o: TimeInterval): string =
    let sec_s = fmt"{o.seconds:02}"
    return fmt"{o.minutes} m {sec_s} s {mil_s} ms"
 
-let now_o = times.now()
+let old_o = times.now()
 
 while true:
    os.sleep 10
-   let o = times.between(now_o, times.now())
-   stdout.write format(o), "\r"
+   let new_o = times.between(old_o, times.now())
+   stdout.write format(new_o), "\r"

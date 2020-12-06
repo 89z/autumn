@@ -44,12 +44,12 @@
    <span style="color:#66d9ef">let</span> sec_s <span style="color:#f92672">=</span> <span style="color:#e6db74">fmt&#34;{o.seconds:02}&#34;</span>
    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">fmt&#34;{o.minutes} m {sec_s} s {mil_s} ms&#34;</span>
 
-<span style="color:#66d9ef">let</span> now_o <span style="color:#f92672">=</span> times.now()
+<span style="color:#66d9ef">let</span> old_o <span style="color:#f92672">=</span> times.now()
 
 <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">true</span>:
    os.sleep <span style="color:#ae81ff">10</span>
-   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> times.between(now_o, times.now())
-   stdout.write format(o), <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>
+   <span style="color:#66d9ef">let</span> new_o <span style="color:#f92672">=</span> times.between(old_o, times.now())
+   stdout.write format(new_o), <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>
 </code></pre></div>
 
 <p><a href="https://nim-lang.org/docs/times.html#between,DateTime,DateTime">https://nim-lang.org/docs/times.html#between,DateTime,DateTime</a></p>

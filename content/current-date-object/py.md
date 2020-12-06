@@ -5,7 +5,11 @@ tags: [python]
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/datetime.html>
+<https://docs.python.org/library/datetime.html#datetime.datetime.now>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/library/datetime.html#datetime.datetime.utcnow>
 
 ## References
 
