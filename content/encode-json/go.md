@@ -5,7 +5,11 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/encoding/json>
+<https://golang.org/pkg/encoding/json#Encoder.Encode>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/encoding/json#Marshal>
 
 ## References
 

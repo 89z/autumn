@@ -3,7 +3,7 @@ title = "Reference"
 +++
 
 Letter | Type
-++++++-|++++++
+-------|-----
 `a`    | Array
 `b`    | Boolean
 `e`    | Error

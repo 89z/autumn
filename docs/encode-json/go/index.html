@@ -39,6 +39,26 @@
 
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
+   <span style="color:#e6db74">&#34;os&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;/&#34;</span>, <span style="color:#e6db74">&#34;📗&#34;</span>}
+   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewEncoder</span>(<span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>).<span style="color:#a6e22e">Encode</span>(<span style="color:#a6e22e">a</span>)
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/encoding/json#Encoder.Encode">https://golang.org/pkg/encoding/json#Encoder.Encode</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;encoding/json&#34;</span>
    <span style="color:#e6db74">&#34;fmt&#34;</span>
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
@@ -53,7 +73,7 @@
 }
 </code></pre></div>
 
-<p><a href="https://golang.org/pkg/encoding/json">https://golang.org/pkg/encoding/json</a></p>
+<p><a href="https://golang.org/pkg/encoding/json#Marshal">https://golang.org/pkg/encoding/json#Marshal</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#generate-json-note">https://hyperpolyglot.org/c#generate-json-note</a></li>

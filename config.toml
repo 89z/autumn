@@ -1,0 +1,6 @@
+baseURL = "https://89z.github.io/autumn"
+disableKinds = [ "RSS", "sitemap" ]
+markup = { goldmark = { extensions = { linkify = false } } }
+publishDir = "docs"
+resourceDir = "docs"
+title = "Autumn"
