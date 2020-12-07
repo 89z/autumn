@@ -1,7 +1,7 @@
----
-title: JavaScript
-tags: [javascript]
----
++++
+title = "JavaScript"
+tags = [ "javascript" ]
++++
 
 {{< r "a.mjs" js >}}
 {{< r "b.mjs" js >}}

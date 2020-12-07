@@ -1,8 +1,8 @@
----
-title: Haskell
-tags: [proposal]
-date: 2020-10-05
----
++++
+title = "Haskell"
+tags = [ "proposal" ]
+date = 2020-10-05
++++
 
 **Haskell platform size**:
 

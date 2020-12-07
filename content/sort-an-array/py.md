@@ -1,7 +1,7 @@
----
-title: Python
-tags: [python]
----
++++
+title = "Python"
+tags = [ "python" ]
++++
 
 {{< r "n.py" >}}
 {{< r "s.py" >}}

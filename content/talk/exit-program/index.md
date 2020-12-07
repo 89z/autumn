@@ -1,6 +1,6 @@
----
-title: Exit program
----
++++
+title = "Exit program"
++++
 
 Rust needs a single line way to exit a program. With Go, you have `Log.Fatal`:
 

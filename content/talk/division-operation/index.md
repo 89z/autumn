@@ -1,9 +1,9 @@
----
-title: Division operation
----
++++
+title = "Division operation"
++++
 
 Bin  | Dec
------|----
++++--|+++-
 .1   | .5
 .01  | .25
 .11  | .75

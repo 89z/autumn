@@ -1,6 +1,6 @@
----
-title: Two-way condition
----
++++
+title = "Two-way condition"
++++
 
 ## If statements
 

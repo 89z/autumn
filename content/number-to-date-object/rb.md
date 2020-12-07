@@ -1,7 +1,7 @@
----
-title: Ruby
-tags: [ruby]
----
++++
+title = "Ruby"
+tags = [ "ruby" ]
++++
 
 {{< r "a.rb" >}}
 

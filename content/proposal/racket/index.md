@@ -1,8 +1,8 @@
----
-title: Racket
-tags: [proposal]
-date: 2020-09-25
----
++++
+title = "Racket"
+tags = [ "proposal" ]
+date = 2020-09-25
++++
 
 **Docs**:
 

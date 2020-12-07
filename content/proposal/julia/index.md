@@ -1,8 +1,8 @@
----
-title: Julia
-tags: [proposal]
-date: 2020-10-20
----
++++
+title = "Julia"
+tags = [ "proposal" ]
+date = 2020-10-20
++++
 
 Speed of ERROR: LoadError
 

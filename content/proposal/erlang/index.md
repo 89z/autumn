@@ -1,8 +1,8 @@
----
-title: Erlang
-tags: [proposal]
-date: 2020-10-07
----
++++
+title = "Erlang"
+tags = [ "proposal" ]
+date = 2020-10-07
++++
 
 init terminating in do_boot:
 

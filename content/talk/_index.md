@@ -1,5 +1,4 @@
----
-_build:
-   list: never
-title: Talk
----
++++
+_build = { list = "never" }
+title = "Talk"
++++

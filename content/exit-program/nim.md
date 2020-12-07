@@ -1,7 +1,7 @@
----
-title: Nim
-tags: [nim]
----
++++
+title = "Nim"
+tags = [ "nim" ]
++++
 
 {{< r "a.nim" >}}
 {{< r "b.nim" >}}

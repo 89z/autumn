@@ -1,8 +1,8 @@
----
-title: Zig
-tags: [proposal]
-date: 2020-10-05
----
++++
+title = "Zig"
+tags = [ "proposal" ]
+date = 2020-10-05
++++
 
 Zig emits `NUL` file when compiling on Windows
 

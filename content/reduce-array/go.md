@@ -1,7 +1,7 @@
----
-title: Go
-tags: [go]
----
++++
+title = "Go"
+tags = [ "go" ]
++++
 
 {{< r "a.go" >}}
 {{< r "b.go" >}}

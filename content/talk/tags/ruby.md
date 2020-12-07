@@ -1,5 +1,5 @@
----
-title: Ruby
----
++++
+title = "Ruby"
++++
 
 {{< r "ruby.txt" >}}

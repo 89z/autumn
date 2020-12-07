@@ -1,6 +1,6 @@
----
-title: Python
----
++++
+title = "Python"
++++
 
 ## Python
 

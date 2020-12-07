@@ -1,7 +1,7 @@
----
-title: C#
-tags: [c-sharp]
----
++++
+title = "C#"
+tags = [ "c-sharp" ]
++++
 
 {{< r "Program.cs" >}}
 

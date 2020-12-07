@@ -1,7 +1,7 @@
----
-title: C#
-tags: [c-sharp]
----
++++
+title = "C#"
+tags = [ "c-sharp" ]
++++
 
 <https://docs.microsoft.com/dotnet/api/system.diagnostics.process.start>
 

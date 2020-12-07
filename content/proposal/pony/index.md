@@ -1,8 +1,8 @@
----
-title: Pony
-tags: [proposal]
-date: 2020-10-05
----
++++
+title = "Pony"
+tags = [ "proposal" ]
+date = 2020-10-05
++++
 
 Support GCC on windows
 

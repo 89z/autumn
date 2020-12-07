@@ -1,7 +1,7 @@
----
-title: D
-tags: [d]
----
++++
+title = "D"
+tags = [ "d" ]
++++
 
 {{< r "a.d" >}}
 

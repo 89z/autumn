@@ -1,7 +1,7 @@
----
-title: D
-tags: [d]
----
++++
+title = "D"
+tags = [ "d" ]
++++
 
 <https://dlang.org/spec/module.html#module_declaration>
 

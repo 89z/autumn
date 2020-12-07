@@ -1,6 +1,6 @@
----
-title: Tags
----
++++
+title = "Tags"
++++
 
 We can use this page to just compile problems with other languages. Avoid
 putting any links here, as we can keep sources and detailed information under
