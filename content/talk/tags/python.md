@@ -6,20 +6,15 @@ title = "Python"
 
 <https://python.org/downloads/windows>
 
+Remove the file `python39._pth` or similar. This will allow Pip to work, and
+also allow importing local files. Alternatively, you can get this:
+
+<https://nuget.org/packages/python>
+
 ## Always include the .html
 
 <https://docs.python.org/library/email.compat32-message.html>
 
 ## Pip
 
-In the file `python39._pth` or similar, uncomment the `import` command. Result
-should look similar to this:
-
-~~~
-python39.zip
-.
-import site
-~~~
-
-- <https://bootstrap.pypa.io/get-pip.py>
-- <https://stackoverflow.com/questions/42666121#48906746>
+<https://bootstrap.pypa.io/get-pip.py>
