@@ -43,6 +43,8 @@ go build
 go build -v
 <span style="color:#75715e"># example 4</span>
 go build -ldflags -s
+<span style="color:#75715e"># example 5</span>
+go build -gcflags=all=<span style="color:#e6db74">&#39;-B -l&#39;</span> -ldflags=-s
 </code></pre></div>
 
 <p><a href="https://golang.org/cmd/go#hdr-Compile_packages_and_dependencies">https://golang.org/cmd/go#hdr-Compile_packages_and_dependencies</a></p>

@@ -5,7 +5,11 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/os>
+<https://golang.org/pkg/os#Remove>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/os#RemoveAll>
 
 ## References
 
