@@ -1,11 +1,6 @@
 package main
 
-import (
-   "encoding/json"
-   "os"
-)
-
-func main() {
-   a := []string{"/", "📗"}
-   json.NewEncoder(os.Stdout).Encode(a)
+var a = []map[string]int{
+   {"month": 12, "day": 31},
+   {"month": 11, "day": 30},
 }

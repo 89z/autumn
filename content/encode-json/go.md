@@ -4,12 +4,21 @@ tags = [ "go" ]
 +++
 
 {{< r "a.go" >}}
+{{< r "b.go" >}}
 
 <https://golang.org/pkg/encoding/json#Encoder.Encode>
 
-{{< r "b.go" >}}
+{{< r "c.go" >}}
+
+<https://golang.org/pkg/encoding/json#Encoder.SetIndent>
+
+{{< r "d.go" >}}
 
 <https://golang.org/pkg/encoding/json#Marshal>
+
+{{< r "e.go" >}}
+
+<https://golang.org/pkg/encoding/json#MarshalIndent>
 
 ## References
 

@@ -36,14 +36,15 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$old_o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
 
-<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
-   <span style="color:#a6e22e">usleep</span>(<span style="color:#ae81ff">10_000</span>);
-   $new_o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
-   $diff_o <span style="color:#f92672">=</span> $new_o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">diff</span>($old_o);
-   <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d m %5.2f s</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>, $diff_o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">i</span>, $diff_o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">s</span> <span style="color:#f92672">+</span> $diff_o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">f</span>);
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">seconds</span>(<span style="color:#a6e22e">object</span> $new_o, <span style="color:#a6e22e">object</span> $old_o)<span style="color:#f92672">:</span> <span style="color:#a6e22e">float</span> {
+   $o <span style="color:#f92672">=</span> $new_o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">diff</span>($old_o);
+   <span style="color:#66d9ef">return</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">days</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">86400</span> <span style="color:#f92672">+</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">h</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">3600</span> <span style="color:#f92672">+</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">i</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">s</span> <span style="color:#f92672">+</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">f</span>;
 }
+
+$o <span style="color:#f92672">=</span> <span style="color:#a6e22e">DateTime</span><span style="color:#f92672">::</span><span style="color:#a6e22e">createFromFormat</span>(<span style="color:#e6db74">&#39;!Y-m-d&#39;</span>, <span style="color:#e6db74">&#39;2019-12-31&#39;</span>);
+$n <span style="color:#f92672">=</span> <span style="color:#a6e22e">seconds</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>, $o);
+<span style="color:#a6e22e">var_dump</span>($n);
 </code></pre></div>
 
 <p><a href="https://php.net/datetime.diff">https://php.net/datetime.diff</a></p>
