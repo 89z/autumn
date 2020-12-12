@@ -1,46 +1,31 @@
 package main
 
 import (
-   "io/ioutil"
+   "bytes"
+   "fmt"
+   "io"
    "log"
    "net/http"
-   "os"
-   "path"
 )
 
-func IsFile(s string) bool {
-   o, e := os.Stat(s)
-   return e == nil && o.Mode().IsRegular()
-}
-
-func Copy(url_s string) (int64, error) {
-   base_s := path.Base(url_s)
-   if IsFile(base_s) {
-      return 0, nil
-   }
-   get_o, e := http.Get(url_s)
+func GetContents(s string) (bytes.Buffer, error) {
+   buf_o := bytes.Buffer{}
+   get_o, e := http.Get(s)
    if e != nil {
-      return 0, e
+      return buf_o, e
    }
-   create_o, e := os.Create(base_s)
+   n, e := io.Copy(&buf_o, get_o.Body)
    if e != nil {
-      return 0, e
+      return buf_o, fmt.Errorf("%v %v", n, e)
    }
-   return create_o.ReadFrom(get_o.Body)
-}
-
-func GetContents(url_s string) ([]byte, error) {
-   base_s := path.Base(url_s)
-   if ! IsFile(base_s) {
-      Copy(url_s)
-   }
-   return ioutil.ReadFile(base_s)
+   return buf_o, nil
 }
 
 func main() {
-   y, e := GetContents("http://speedtest.lax.hivelocity.net/index.html")
+   o, e := GetContents("http://speedtest.lax.hivelocity.net")
    if e != nil {
       log.Fatal(e)
    }
-   log.Printf("%s", y)
+   s := o.String()
+   print(s)
 }

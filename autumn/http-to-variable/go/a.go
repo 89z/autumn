@@ -1,23 +1,30 @@
 package main
 
 import (
-   "io/ioutil"
+   "bytes"
+   "fmt"
    "log"
    "net/http"
 )
 
-func GetContents(s string) ([]byte, error) {
-   o, e := http.Get(s)
+func GetContents(s string) (bytes.Buffer, error) {
+   buf_o := bytes.Buffer{}
+   get_o, e := http.Get(s)
    if e != nil {
-      return []byte{}, e
+      return buf_o, e
    }
-   return ioutil.ReadAll(o.Body)
+   n, e := buf_o.ReadFrom(get_o.Body)
+   if e != nil {
+      return buf_o, fmt.Errorf("%v %v", n, e)
+   }
+   return buf_o, nil
 }
 
 func main() {
-   y, e := GetContents("http://speedtest.lax.hivelocity.net")
+   o, e := GetContents("http://speedtest.lax.hivelocity.net")
    if e != nil {
       log.Fatal(e)
    }
-   log.Printf("%s", y)
+   s := o.String()
+   print(s)
 }
