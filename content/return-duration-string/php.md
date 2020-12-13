@@ -9,7 +9,7 @@ tags = [ "php" ]
 
 {{< r "b.php" >}}
 
-<https://php.net/function.date-diff>
+<https://php.net/function.hrtime>
 
 {{< r "c.php" >}}
 
