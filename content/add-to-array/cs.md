@@ -10,6 +10,5 @@ tags = [ "c-sharp" ]
 ## References
 
 - <https://hyperpolyglot.org/cpp#resizable-array-back>
-- <https://programming-idioms.org/idiom/166/concatenate-two-lists>
-- <https://programming-idioms.org/idiom/171/add-an-element-at-the-end-of-a-list>
+- <https://programming-idioms.org/idiom/171>
 - <https://rosettacode.org/wiki/Array_concatenation>
