@@ -2,7 +2,6 @@ package main
 
 import (
    "encoding/json"
-   "log"
    "os"
 )
 
@@ -17,13 +16,4 @@ func JsonDecode(s string) (Map, error) {
       return nil, e
    }
    return m, nil
-}
-
-func main() {
-   m, e := JsonDecode("youtube.json")
-   if e != nil {
-      log.Fatal(e)
-   }
-   s := m.M("videoDetails").A("keywords")[0]
-   println(s == "Blue Wednesday")
 }

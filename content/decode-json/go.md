@@ -4,13 +4,18 @@ tags = [ "go" ]
 +++
 
 {{< r "a.go" >}}
-{{< r "b.go" >}}
 
-<https://golang.org/pkg/encoding/json#Decoder.Decode>
+1,712 KB memory:
 
 {{< r "c.go" >}}
 
 <https://golang.org/pkg/encoding/json#Unmarshal>
+
+2,048 KB memory:
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/encoding/json#Decoder.Decode>
 
 ## References
 
