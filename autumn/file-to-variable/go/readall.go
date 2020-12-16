@@ -1,9 +1,9 @@
 package main
 
 import (
-   "fmt"
    "io/ioutil"
    "os"
+   "time"
 )
 
 func GetContents(s string) ([]byte, error) {
@@ -15,9 +15,6 @@ func GetContents(s string) ([]byte, error) {
 }
 
 func main() {
-   y, e := GetContents("a.go")
-   if e != nil {
-      os.Exit(1)
-   }
-   fmt.Printf("%s", y)
+   GetContents("100mb.file")
+   time.Sleep(time.Duration(time.Minute))
 }

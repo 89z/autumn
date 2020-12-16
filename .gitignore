@@ -1,4 +1,5 @@
 *.exe
+100mb.file
 autumn/*/cs/*/*.csproj
 autumn/*/cs/*/bin
 autumn/*/cs/*/obj
