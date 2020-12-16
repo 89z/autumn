@@ -11,6 +11,10 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/net/url#Values.Encode>
 
+{{< r "c.go" >}}
+
+<https://golang.org/pkg/net/url#Values.Set>
+
 ## References
 
 <https://rosettacode.org/wiki/URL_parser>

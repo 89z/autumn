@@ -9,4 +9,5 @@ tags = [ "d" ]
 
 ## References
 
-<https://programming-idioms.org/idiom/22>
+- <https://programming-idioms.org/idiom/22>
+- <https://rosettacode.org/wiki/Increment_a_numerical_string>

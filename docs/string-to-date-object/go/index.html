@@ -43,14 +43,14 @@
    <span style="color:#e6db74">&#34;time&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">value</span> <span style="color:#66d9ef">string</span>) (<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Time</span>, <span style="color:#66d9ef">error</span>) {
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">ParseDate</span>(<span style="color:#a6e22e">value</span> <span style="color:#66d9ef">string</span>) (<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Time</span>, <span style="color:#66d9ef">error</span>) {
    <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> len(<span style="color:#a6e22e">value</span>)
    <span style="color:#a6e22e">layout</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">RFC3339</span>[:<span style="color:#a6e22e">n</span>]
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">layout</span>, <span style="color:#a6e22e">value</span>)
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Parse</span>(<span style="color:#e6db74">&#34;2019-12-31&#34;</span>)
+   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ParseDate</span>(<span style="color:#e6db74">&#34;2019-12-31&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }

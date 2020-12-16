@@ -19,3 +19,4 @@ tags = [ "php" ]
 
 - <https://hyperpolyglot.org/scripting#str-to-num>
 - <https://programming-idioms.org/idiom/22>
+- <https://rosettacode.org/wiki/Increment_a_numerical_string>

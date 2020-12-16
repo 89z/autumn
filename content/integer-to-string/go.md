@@ -13,7 +13,7 @@ tags = [ "go" ]
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/strconv#FormatInt>
+<https://golang.org/pkg/strconv#Itoa>
 
 ## References
 

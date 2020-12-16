@@ -1,8 +1,14 @@
 package main
-import "fmt"
+
+import (
+   "log"
+   "strconv"
+)
 
 func main() {
-   var n int
-   fmt.Sscanf("100", "%v", &n)
-   fmt.Println(n == 100)
+   n, e := strconv.Atoi("100")
+   if e != nil {
+      log.Fatal(e)
+   }
+   println(n == 100)
 }

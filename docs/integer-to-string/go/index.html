@@ -79,13 +79,13 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strconv&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> int64(<span style="color:#ae81ff">100</span>)
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">FormatInt</span>(<span style="color:#a6e22e">n</span>, <span style="color:#ae81ff">10</span>)
+   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">100</span>
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">Itoa</span>(<span style="color:#a6e22e">n</span>)
    println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;100&#34;</span>)
 }
 </code></pre></div>
 
-<p><a href="https://golang.org/pkg/strconv#FormatInt">https://golang.org/pkg/strconv#FormatInt</a></p>
+<p><a href="https://golang.org/pkg/strconv#Itoa">https://golang.org/pkg/strconv#Itoa</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#num-to-str">https://hyperpolyglot.org/c#num-to-str</a></li>
