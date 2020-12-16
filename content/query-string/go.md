@@ -13,6 +13,10 @@ tags = [ "go" ]
 
 {{< r "c.go" >}}
 
+<https://golang.org/pkg/net/url#Values.Get>
+
+{{< r "d.go" >}}
+
 <https://golang.org/pkg/net/url#Values.Set>
 
 ## References

@@ -5,9 +5,11 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
+{{< r "b.go" >}}
+
 <https://golang.org/pkg/time#Since>
 
-{{< r "b.go" >}}
+{{< r "c.go" >}}
 
 <https://golang.org/pkg/time#Time.Sub>
 

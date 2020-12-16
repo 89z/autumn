@@ -2,14 +2,14 @@ package main
 
 import (
    "fmt"
+   "log"
    "net/url"
-   "os"
 )
 
 func main() {
    m, e := url.ParseQuery("one=odd&two=even")
    if e != nil {
-      os.Exit(1)
+      log.Fatal(e)
    }
    fmt.Println(m)
 }

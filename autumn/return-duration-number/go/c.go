@@ -7,5 +7,5 @@ func HoursSince(value string) (float64, error) {
    if e != nil {
       return 0, e
    }
-   return time.Since(o).Hours(), nil
+   return time.Now().Sub(o).Hours(), nil
 }
