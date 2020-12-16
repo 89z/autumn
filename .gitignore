@@ -16,6 +16,4 @@ autumn/*/rs/*/Cargo.lock
 autumn/*/rs/*/target
 autumn/*/rs/Cargo.lock
 autumn/*/rs/target
-autumn/talk/*/cs/bin
-autumn/talk/*/cs/cs.csproj
-autumn/talk/*/cs/obj
+youtube.json

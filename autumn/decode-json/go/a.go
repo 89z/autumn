@@ -9,5 +9,3 @@ func (m Map) M(s string) Map {
 func (m Map) A(s string) Slice {
    return m[s].([]interface{})
 }
-
-var in_s = `{"U2": {"Boy": ["Twilight", "I Will Follow"]}}`

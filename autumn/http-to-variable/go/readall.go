@@ -2,8 +2,8 @@ package main
 
 import (
    "io/ioutil"
-   "log"
    "net/http"
+   "time"
 )
 
 func GetContents(s string) ([]byte, error) {
@@ -15,9 +15,7 @@ func GetContents(s string) ([]byte, error) {
 }
 
 func main() {
-   y, e := GetContents("http://speedtest.lax.hivelocity.net")
-   if e != nil {
-      log.Fatal(e)
-   }
-   log.Printf("%s", y)
+   GetContents("http://speedtest.lax.hivelocity.net/10Mio.dat")
+   println("Sleep")
+   time.Sleep(time.Duration(time.Minute))
 }

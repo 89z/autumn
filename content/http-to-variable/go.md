@@ -3,17 +3,27 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "a.go" >}}
+30 MB memory:
+
+{{< r "readall.go" >}}
+
+<https://golang.org/pkg/io/ioutil#ReadAll>
+
+30 MB memory:
+
+{{< r "readfrom.go" >}}
 
 <https://golang.org/pkg/bytes#Buffer.ReadFrom>
 
-{{< r "b.go" >}}
+30 MB memory:
+
+{{< r "copy-bytes.go" >}}
+
+39 MB memory:
+
+{{< r "copy-strings.go" >}}
 
 <https://golang.org/pkg/io#Copy>
-
-{{< r "c.go" >}}
-
-<https://golang.org/pkg/io/ioutil#ReadAll>
 
 ## References
 
