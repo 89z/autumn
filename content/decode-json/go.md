@@ -3,21 +3,22 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "a.go" >}}
+{{< r "readfile.go" >}}
 
-1,712 KB memory:
+1,876 KB memory:
 
-{{< r "c.go" >}}
+{{< r "unmarshal.go" >}}
 
 <https://golang.org/pkg/encoding/json#Unmarshal>
 
-2,048 KB memory:
+2,028 KB memory:
 
-{{< r "b.go" >}}
+{{< r "decode.go" >}}
 
 <https://golang.org/pkg/encoding/json#Decoder.Decode>
 
 ## References
 
+- <https://hyperpolyglot.org/c#parse-json>
 - <https://programming-idioms.org/idiom/91>
 - <https://rosettacode.org/wiki/JSON>

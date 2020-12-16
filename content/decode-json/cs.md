@@ -9,5 +9,6 @@ tags = [ "c-sharp" ]
 
 ## References
 
+- <https://hyperpolyglot.org/cpp#file-fmt>
 - <https://programming-idioms.org/idiom/91>
 - <https://rosettacode.org/wiki/JSON>

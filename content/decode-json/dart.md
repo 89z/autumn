@@ -9,5 +9,6 @@ tags = [ "dart" ]
 
 ## References
 
+- <https://hyperpolyglot.org/web#parse-json>
 - <https://programming-idioms.org/idiom/91>
 - <https://rosettacode.org/wiki/JSON>

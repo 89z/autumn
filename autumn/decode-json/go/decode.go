@@ -2,16 +2,13 @@ package main
 
 import (
    "encoding/json"
-   "os"
+   "strings"
 )
 
 func JsonDecode(s string) (Map, error) {
-   o, e := os.Open(s)
-   if e != nil {
-      return nil, e
-   }
+   o := strings.NewReader(s)
    m := Map{}
-   e = json.NewDecoder(o).Decode(&m)
+   e := json.NewDecoder(o).Decode(&m)
    if e != nil {
       return nil, e
    }
