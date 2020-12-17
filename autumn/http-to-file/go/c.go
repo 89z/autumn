@@ -1,7 +1,6 @@
 package main
 
 import (
-   "io"
    "net/http"
    "os"
 )
@@ -15,7 +14,7 @@ func Copy(source, dest string) (int64, error) {
    if e != nil {
       return 0, e
    }
-   return io.Copy(create_o, get_o.Body)
+   return create_o.ReadFrom(get_o.Body)
 }
 
 func main() {

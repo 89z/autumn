@@ -1,32 +1,40 @@
 package main
 
 import (
+   "fmt"
+   "io"
    "net/http"
    "os"
-   "path"
 )
 
-func IsFile(s string) bool {
-   o, e := os.Stat(s)
-   return e == nil && o.Mode().IsRegular()
+type Progress struct {
+   Parent io.Reader
+   Total int
 }
 
-func Copy(url_s string) (int64, error) {
-   base_s := path.Base(url_s)
-   if IsFile(base_s) {
-      return 0, nil
+func (o *Progress) Read(y []byte) (int, error) {
+   n, e := o.Parent.Read(y)
+   if e != nil {
+      fmt.Println()
+   } else {
+      o.Total += n
+      fmt.Printf("\rRead %9v", o.Total)
    }
-   get_o, e := http.Get(url_s)
+   return n, e
+}
+
+func Copy(source, dest string) (int64, error) {
+   get_o, e := http.Get(source)
    if e != nil {
       return 0, e
    }
-   create_o, e := os.Create(base_s)
+   create_o, e := os.Create(dest)
    if e != nil {
       return 0, e
    }
-   return create_o.ReadFrom(get_o.Body)
+   return io.Copy(create_o, &Progress{Parent: get_o.Body})
 }
 
 func main() {
-   Copy("http://speedtest.lax.hivelocity.net/index.html")
+   Copy("http://speedtest.lax.hivelocity.net/10Mio.dat", "10Mio.dat")
 }
