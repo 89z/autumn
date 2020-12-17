@@ -24,7 +24,7 @@
    <a href="/autumn/parse-command-line-args/">Parse command line arguments</a> / Rust
 </h1>
 <section class="page">
-   <time>Sat Nov 28 2020</time>
+   <time>Wed Dec 16 2020</time>
    
    <a href="/autumn/categories/system/">system</a>
    
@@ -69,8 +69,28 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> {
+   getopts::Options,
+   std::env
+};
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), getopts::Fail<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> a: Vec<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> env::args().collect();
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> opt_o <span style="color:#f92672">=</span> Options::new();
+   opt_o.optopt(<span style="color:#e6db74">&#34;p&#34;</span>, <span style="color:#e6db74">&#34;prefix&#34;</span>, <span style="color:#e6db74">&#34;place before&#34;</span>, <span style="color:#e6db74">&#34;STRING&#34;</span>);
+   opt_o.optopt(<span style="color:#e6db74">&#34;s&#34;</span>, <span style="color:#e6db74">&#34;suffix&#34;</span>, <span style="color:#e6db74">&#34;place after&#34;</span>, <span style="color:#e6db74">&#34;STRING&#34;</span>);
+   <span style="color:#66d9ef">let</span> match_o <span style="color:#f92672">=</span> opt_o.parse(<span style="color:#f92672">&amp;</span>a[<span style="color:#ae81ff">1</span>..])<span style="color:#f92672">?</span>;
+
+   <span style="color:#66d9ef">if</span> match_o.free.len() <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span> {
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, opt_o.usage(<span style="color:#e6db74">&#34;add [options] &lt;stem&gt;&#34;</span>));
+      <span style="color:#66d9ef">return</span> Ok(())
+   }
+
+   <span style="color:#66d9ef">let</span> pre_s <span style="color:#f92672">=</span> match_o.opt_str(<span style="color:#e6db74">&#34;p&#34;</span>).unwrap_or_default();
+   <span style="color:#66d9ef">let</span> suf_s <span style="color:#f92672">=</span> match_o.opt_str(<span style="color:#e6db74">&#34;s&#34;</span>).unwrap_or_default();
+   <span style="color:#66d9ef">let</span> stem_s <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>match_o.free[<span style="color:#ae81ff">0</span>];
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, pre_s <span style="color:#f92672">+</span> stem_s <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>suf_s);
+   Ok(())
 }
 </code></pre></div>
 
@@ -106,36 +126,6 @@
 </code></pre></div>
 
 <p><a href="https://lib.rs/crates/argh">https://lib.rs/crates/argh</a></p>
-<p>24 deps:</p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> structopt::StructOpt;
-
-<span style="color:#75715e">#[derive(StructOpt)]</span>
-<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Opt</span> {
-   <span style="color:#e6db74">/// prefix
-</span><span style="color:#e6db74"></span>   <span style="color:#75715e">#[structopt(short)]</span>
-   p: Option<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>,
-   <span style="color:#e6db74">/// suffix
-</span><span style="color:#e6db74"></span>   <span style="color:#75715e">#[structopt(short)]</span>
-   s: Option<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>,
-   <span style="color:#75715e">#[structopt()]</span>
-   stem: String
-}
-
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> Opt::from_args();
-   <span style="color:#66d9ef">let</span> pre_s <span style="color:#f92672">=</span> o.p.unwrap_or_default();
-   <span style="color:#66d9ef">let</span> suf_s <span style="color:#f92672">=</span> o.s.unwrap_or_default();
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, pre_s <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>o.stem <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>suf_s);
-}
-</code></pre></div>
-
-<p><a href="https://lib.rs/crates/structopt">https://lib.rs/crates/structopt</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/rust#getopt">https://hyperpolyglot.org/rust#getopt</a></li>

@@ -1,14 +1,8 @@
 <?php
-$s = 'Sunday Monday';
 
-# example 1
-$n = preg_match('/..n/', 'Sunday Monday');
-if ($n == 1) {
-   echo $s, "\n";
+function pattern(string $pattern, string $subject): bool {
+   return preg_match($pattern, $subject) == 1;
 }
 
-# example 2
-$n = preg_match('/..n/', 'Sunday Monday', $a);
-if ($n == 1) {
-   echo $a[0], "\n";
-}
+$b = pattern('/..n/', 'Sunday Monday');
+var_dump($b);

@@ -21,12 +21,6 @@ tags = [ "rust" ]
 
 <https://lib.rs/crates/argh>
 
-24 deps:
-
-{{< r "structopt/src/main.rs" >}}
-
-<https://lib.rs/crates/structopt>
-
 ## References
 
 - <https://hyperpolyglot.org/rust#getopt>
