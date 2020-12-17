@@ -23,3 +23,4 @@ tags = [ "javascript" ]
 
 - <https://hyperpolyglot.org/scripting#str-to-num>
 - <https://programming-idioms.org/idiom/146>
+- <https://rosettacode.org/wiki/Increment_a_numerical_string>

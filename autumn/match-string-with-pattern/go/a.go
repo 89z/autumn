@@ -1,11 +1,15 @@
 package main
 import "regexp"
 
-func main() {
-   o := regexp.MustCompile("..n")
-   in_s := "Sunday Monday"
-   if o.MatchString(in_s) {
-      out_s := o.FindString(in_s)
-      println(out_s)
+func Find(pattern, subject string) string {
+   a := regexp.MustCompile(pattern).FindStringSubmatch(subject)
+   if len(a) < 2 {
+      return ""
    }
+   return a[1]
+}
+
+func main() {
+   s := Find("(..)n", "January")
+   println(s == "Ja")
 }

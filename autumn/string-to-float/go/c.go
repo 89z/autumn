@@ -1,8 +1,6 @@
 package main
-import "fmt"
+import "strconv"
 
-func main() {
-   var n float64
-   fmt.Sscanln("9.9", &n)
-   fmt.Println(n == 9.9)
+func FloatVal(s string) (float64, error) {
+   return strconv.ParseFloat(s, 64)
 }

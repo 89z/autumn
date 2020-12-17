@@ -1,8 +1,11 @@
 package main
 import "fmt"
 
-func main() {
-   var n float64
-   fmt.Sscanf("9.9", "%v", &n)
-   fmt.Println(n == 9.9)
+func FloatVal(s string) (float64, error) {
+   var value float64
+   count, e := fmt.Sscan(s, &value)
+   if e != nil {
+      return 0, fmt.Errorf("%v %v", count, e)
+   }
+   return value, nil
 }

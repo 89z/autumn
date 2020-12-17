@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-   n, e := Hours("2019-12-31")
+   n, e := TimeHours("2019-12-31")
    if e != nil {
       log.Fatal(e)
    }

@@ -1,8 +1,14 @@
 package main
-import "fmt"
+
+import (
+   "fmt"
+   "log"
+)
 
 func main() {
-   var n float64
-   fmt.Sscan("9.9", &n)
+   n, e := FloatVal("9.9")
+   if e != nil {
+      log.Fatal(e)
+   }
    fmt.Println(n == 9.9)
 }
