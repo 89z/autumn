@@ -2,5 +2,5 @@
 title = "Get map value"
 categories = [ "map" ]
 date = 2020-10-04
-example = "sienna/youtube/youtube.php"
+example = ['winter\youtube\youtube.php', "_m['"]
 +++
