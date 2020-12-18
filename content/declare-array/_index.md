@@ -2,5 +2,5 @@
 title = "Declare array"
 categories = [ "array" ]
 date = 2020-09-11
-example = "sienna/youtube/youtube-track.php"
+example = 'winter\youtube\youtube-track\youtube-track.php'
 +++

@@ -2,5 +2,5 @@
 title = "Command line arguments array"
 categories = [ "system" ]
 date = 2020-10-12
-example = "sienna/youtube/youtube-views.php"
+example = 'winter\youtube\youtube-views\youtube-views.go'
 +++

@@ -2,5 +2,5 @@
 title = "String to integer"
 categories = [ "number", "string" ]
 date = 2020-10-12
-example = "sienna/youtube/youtube-track.php"
+example = 'winter\youtube\youtube-track\youtube-track.php'
 +++

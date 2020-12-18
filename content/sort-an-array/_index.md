@@ -2,5 +2,5 @@
 title = "Sort an array"
 categories = [ "array" ]
 date = 2020-09-22
-example = "cove/byte-year/byte-year.php"
+example = 'cove\git-tools\byte-year.php'
 +++
