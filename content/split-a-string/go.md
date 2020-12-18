@@ -5,11 +5,19 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/strings#Fields>
+<https://golang.org/pkg/bytes#Split>
 
 {{< r "b.go" >}}
 
+<https://golang.org/pkg/bytes#SplitN>
+
+{{< r "c.go" >}}
+
 <https://golang.org/pkg/strings#Split>
+
+{{< r "d.go" >}}
+
+<https://golang.org/pkg/strings#SplitN>
 
 ## References
 

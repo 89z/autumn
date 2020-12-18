@@ -2,16 +2,16 @@ package main
 
 import (
    "io/ioutil"
-   "os"
+   "log"
 )
 
 func main() {
    a, e := ioutil.ReadDir(".")
    if e != nil {
-      os.Exit(1)
+      log.Fatal(e)
    }
-   for n, o := range a {
-      s := o.Name()
-      println(n, s)
+   for n := range a {
+      s := a[n].Name()
+      println(s)
    }
 }

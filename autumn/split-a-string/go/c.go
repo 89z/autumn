@@ -10,5 +10,3 @@ func main() {
    a := strings.Split(s, " ")
    fmt.Printf("%q\n", a)
 }
-
-// golang.org/pkg/bytes#Split
