@@ -29,7 +29,35 @@
    <a href="/autumn/categories/file-format/">file-format</a>
    
 </section>
-   <p><a href="https://github.com/pelletier/go-toml">https://github.com/pelletier/go-toml</a></p>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;encoding/json&#34;</span>
+   <span style="color:#e6db74">&#34;github.com/pelletier/go-toml&#34;</span>
+   <span style="color:#e6db74">&#34;os&#34;</span>
+)
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">s</span> = <span style="color:#e6db74">`{
+</span><span style="color:#e6db74">   &#34;This is a&#34;: &#34;TOML document&#34;,
+</span><span style="color:#e6db74">   &#34;name&#34;: &#34;Tom Preston-Werner&#34;,
+</span><span style="color:#e6db74">   &#34;title&#34;: &#34;TOML Example&#34;
+</span><span style="color:#e6db74">}`</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#a6e22e">s</span>)
+   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{}
+   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">y</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m</span>)
+   <span style="color:#a6e22e">toml</span>.<span style="color:#a6e22e">NewEncoder</span>(<span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>).<span style="color:#a6e22e">QuoteMapKeys</span>(<span style="color:#66d9ef">true</span>).<span style="color:#a6e22e">Encode</span>(<span style="color:#a6e22e">m</span>)
+}
+</code></pre></div>
+
+<p><a href="https://github.com/pelletier/go-toml">https://github.com/pelletier/go-toml</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://github.com/toml-lang/toml/wiki">https://github.com/toml-lang/toml/wiki</a></li>

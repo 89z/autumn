@@ -3,8 +3,6 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "a.go" >}}
-
 <https://github.com/pelletier/go-toml>
 
 ## References
