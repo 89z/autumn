@@ -1,0 +1,4 @@
+[package]
+edition = "2018"
+name = "decode-toml"
+version = "1.0.0"

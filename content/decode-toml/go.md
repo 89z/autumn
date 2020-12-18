@@ -3,9 +3,10 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "byte.go" >}}
-{{< r "reader.go" >}}
-{{< r "string.go" >}}
+{{< r "assert/assert.go" >}}
+{{< r "byte/byte.go" >}}
+{{< r "reader/reader.go" >}}
+{{< r "string/string.go" >}}
 
 <https://pkg.go.dev/github.com/pelletier/go-toml>
 
