@@ -1,0 +1,7 @@
+{
+   "package": {
+      "edition": "2019",
+      "name": "decode-json",
+      "version": "1.0.0"
+   }
+}

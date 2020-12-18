@@ -3,7 +3,13 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-<https://github.com/pelletier/go-toml>
+{{< r "a/a.go" >}}
+
+<https://pkg.go.dev/github.com/pelletier/go-toml#Encoder.Encode>
+
+{{< r "b/a.go" >}}
+
+<https://pkg.go.dev/github.com/pelletier/go-toml#Tree.WriteTo>
 
 ## References
 

@@ -5,7 +5,7 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://github.com/pelletier/go-toml>
+https://pkg.go.dev/github.com/pelletier/go-toml#Tree.ToMap
 
 ## References
 

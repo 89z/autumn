@@ -1,5 +1,4 @@
 *.exe
-100mb.file
 autumn/*/cs/*/*.csproj
 autumn/*/cs/*/bin
 autumn/*/cs/*/obj
@@ -12,8 +11,8 @@ autumn/*/d/dub.selections.json
 autumn/*/dart/.dart_tool
 autumn/*/dart/.packages
 autumn/*/dart/pubspec.lock
+autumn/*/go/go.sum
 autumn/*/rs/*/Cargo.lock
 autumn/*/rs/*/target
 autumn/*/rs/Cargo.lock
 autumn/*/rs/target
-youtube.json
