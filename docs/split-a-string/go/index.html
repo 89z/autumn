@@ -24,7 +24,7 @@
    <a href="/autumn/split-a-string/">Split a string</a> / Go
 </h1>
 <section class="page">
-   <time>Sun Oct 18 2020</time>
+   <time>Thu Dec 17 2020</time>
    
    <a href="/autumn/categories/array/">array</a>
    
@@ -40,18 +40,16 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;bytes&#34;</span>
    <span style="color:#e6db74">&#34;fmt&#34;</span>
-   <span style="color:#e6db74">&#34;strings&#34;</span>
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;May June&#34;</span>
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+   <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;May,June,July&#34;</span>)
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#a6e22e">y</span>, []<span style="color:#66d9ef">byte</span>{<span style="color:#e6db74">&#39;,&#39;</span>})
    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, <span style="color:#a6e22e">a</span>)
 }
-
-<span style="color:#75715e">// golang.org/pkg/bytes#Split
-</span></code></pre></div>
+</code></pre></div>
 
 <p><a href="https://golang.org/pkg/bytes#Split">https://golang.org/pkg/bytes#Split</a></p>
 
@@ -61,17 +59,18 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;bytes&#34;</span>
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+)
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;May June July&#34;</span>
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">SplitN</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34; &#34;</span>, <span style="color:#ae81ff">2</span>)
-   println(<span style="color:#a6e22e">a</span>[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;June July&#34;</span>)
+   <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;May,June,July&#34;</span>)
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">SplitN</span>(<span style="color:#a6e22e">y</span>, []<span style="color:#66d9ef">byte</span>{<span style="color:#e6db74">&#39;,&#39;</span>}, <span style="color:#ae81ff">2</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, <span style="color:#a6e22e">a</span>)
 }
-
-
-<span style="color:#75715e">// golang.org/pkg/bytes#SplitN
-</span></code></pre></div>
+</code></pre></div>
 
 <p><a href="https://golang.org/pkg/bytes#SplitN">https://golang.org/pkg/bytes#SplitN</a></p>
 
@@ -88,8 +87,8 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;May June&#34;</span>
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;May,June,July&#34;</span>
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;,&#34;</span>)
    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, <span style="color:#a6e22e">a</span>)
 }
 </code></pre></div>
@@ -102,12 +101,16 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;strings&#34;</span>
+)
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;May June July&#34;</span>
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">SplitN</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34; &#34;</span>, <span style="color:#ae81ff">2</span>)
-   println(<span style="color:#a6e22e">a</span>[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;June July&#34;</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;May,June,July&#34;</span>
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">SplitN</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;,&#34;</span>, <span style="color:#ae81ff">2</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, <span style="color:#a6e22e">a</span>)
 }
 </code></pre></div>
 

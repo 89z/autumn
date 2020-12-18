@@ -24,7 +24,7 @@
    <a href="/autumn/split-a-string/">Split a string</a> / D
 </h1>
 <section class="page">
-   <time>Sun Oct 18 2020</time>
+   <time>Thu Dec 17 2020</time>
    
    <a href="/autumn/categories/array/">array</a>
    
@@ -41,13 +41,9 @@
 <span style="color:#f92672">import</span> io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;M a r c h&#34;</span><span style="color:#f92672">;</span>
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> a1 <span style="color:#f92672">=</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">(</span>s<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> a2 <span style="color:#f92672">=</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">(</span>s<span style="color:#f92672">);</span>
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>a1<span style="color:#f92672">,</span> a2<span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;May,June&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> a <span style="color:#f92672">=</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">(</span>s<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;,&#34;</span><span style="color:#f92672">);</span>
+   io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>a<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 

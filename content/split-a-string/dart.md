@@ -9,5 +9,6 @@ tags = [ "dart" ]
 
 ## References
 
+- <https://hyperpolyglot.org/web#split>
 - <https://programming-idioms.org/idiom/49>
 - <https://rosettacode.org/wiki/Tokenize_a_string>

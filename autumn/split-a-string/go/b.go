@@ -1,11 +1,12 @@
 package main
-import "strings"
+
+import (
+   "bytes"
+   "fmt"
+)
 
 func main() {
-   s := "May June July"
-   a := strings.SplitN(s, " ", 2)
-   println(a[1] == "June July")
+   y := []byte("May,June,July")
+   a := bytes.SplitN(y, []byte{','}, 2)
+   fmt.Printf("%q\n", a)
 }
-
-
-// golang.org/pkg/bytes#SplitN

@@ -1,14 +1,12 @@
 package main
 
 import (
+   "bytes"
    "fmt"
-   "strings"
 )
 
 func main() {
-   s := "May June"
-   a := strings.Split(s, " ")
+   y := []byte("May,June,July")
+   a := bytes.Split(y, []byte{','})
    fmt.Printf("%q\n", a)
 }
-
-// golang.org/pkg/bytes#Split

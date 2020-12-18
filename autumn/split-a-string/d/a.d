@@ -2,11 +2,7 @@ import array = std.array;
 import io = std.stdio;
 
 void main() {
-   auto s = "M a r c h";
-   // example 1
-   auto a1 = array.split(s, " ");
-   // example 2
-   auto a2 = array.split(s);
-   // print
-   io.writeln(a1, a2);
+   auto s = "May,June";
+   auto a = array.split(s, ",");
+   io.writeln(a);
 }

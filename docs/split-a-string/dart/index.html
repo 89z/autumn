@@ -24,7 +24,7 @@
    <a href="/autumn/split-a-string/">Split a string</a> / Dart
 </h1>
 <section class="page">
-   <time>Sun Oct 18 2020</time>
+   <time>Thu Dec 17 2020</time>
    
    <a href="/autumn/categories/array/">array</a>
    
@@ -39,10 +39,12 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
    <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> a1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;M a r c h&#39;</span>.split(<span style="color:#e6db74">&#39; &#39;</span>);
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;May,June&#39;</span>;
+   <span style="color:#66d9ef">var</span> a1 <span style="color:#f92672">=</span> s1.split(<span style="color:#e6db74">&#39;,&#39;</span>);
    print(a1);
    <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> a2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;March&#39;</span>.split(<span style="color:#e6db74">&#39;&#39;</span>);
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;March&#39;</span>;
+   <span style="color:#66d9ef">var</span> a2 <span style="color:#f92672">=</span> s2.split(<span style="color:#e6db74">&#39;&#39;</span>);
    print(a2);
 }
 </code></pre></div>
@@ -50,6 +52,7 @@
 <p><a href="https://api.dart.dev/dart-core/String/split.html">https://api.dart.dev/dart-core/String/split.html</a></p>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://hyperpolyglot.org/web#split">https://hyperpolyglot.org/web#split</a></li>
 <li><a href="https://programming-idioms.org/idiom/49">https://programming-idioms.org/idiom/49</a></li>
 <li><a href="https://rosettacode.org/wiki/Tokenize_a_string">https://rosettacode.org/wiki/Tokenize_a_string</a></li>
 </ul>

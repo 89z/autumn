@@ -24,7 +24,7 @@
    <a href="/autumn/split-a-string/">Split a string</a> / PHP
 </h1>
 <section class="page">
-   <time>Sun Oct 18 2020</time>
+   <time>Thu Dec 17 2020</time>
    
    <a href="/autumn/categories/array/">array</a>
    
@@ -38,8 +38,8 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;May June&#39;</span>;
-$a <span style="color:#f92672">=</span> <span style="color:#a6e22e">explode</span>(<span style="color:#e6db74">&#39; &#39;</span>, $s);
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;May,June&#39;</span>;
+$a <span style="color:#f92672">=</span> <span style="color:#a6e22e">explode</span>(<span style="color:#e6db74">&#39;,&#39;</span>, $s);
 <span style="color:#a6e22e">var_dump</span>($a);
 </code></pre></div>
 
@@ -68,11 +68,11 @@ $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;100,200
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;May June&#39;</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;May,June&#39;</span>;
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtok</span>($s, <span style="color:#e6db74">&#39; &#39;</span>);
+</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtok</span>($s, <span style="color:#e6db74">&#39;,&#39;</span>);
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtok</span>(<span style="color:#e6db74">&#39; &#39;</span>);
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtok</span>(<span style="color:#e6db74">&#39;,&#39;</span>);
 <span style="color:#75715e"># print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1, $s2);
 </code></pre></div>

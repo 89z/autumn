@@ -24,7 +24,7 @@
    <a href="/autumn/split-a-string/">Split a string</a> / C#
 </h1>
 <section class="page">
-   <time>Sun Oct 18 2020</time>
+   <time>Thu Dec 17 2020</time>
    
    <a href="/autumn/categories/array/">array</a>
    
@@ -42,13 +42,9 @@
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#66d9ef">var</span> s = <span style="color:#e6db74">&#34;M a r c h&#34;</span>;
-      <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> a1 = s.Split(<span style="color:#e6db74">&#34; &#34;</span>);
-      <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> a2 = s.Split();
-      <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>      C.WriteLine(J.Serialize(a1) + J.Serialize(a2));
+      <span style="color:#66d9ef">var</span> s = <span style="color:#e6db74">&#34;May,June,July&#34;</span>;
+      <span style="color:#66d9ef">var</span> a = s.Split(<span style="color:#e6db74">&#34;,&#34;</span>);
+      C.WriteLine(J.Serialize(a));
    }
 }
 </code></pre></div>
