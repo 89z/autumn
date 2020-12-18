@@ -3,9 +3,11 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "a.go" >}}
+{{< r "byte.go" >}}
+{{< r "reader.go" >}}
+{{< r "string.go" >}}
 
-https://pkg.go.dev/github.com/pelletier/go-toml#Tree.ToMap
+<https://pkg.go.dev/github.com/pelletier/go-toml>
 
 ## References
 

@@ -3,6 +3,8 @@ title = "Go"
 tags = [ "go" ]
 +++
 
+{{< r "a.go" >}}
+
 {{< r "byte.go" >}}
 
 <https://golang.org/pkg/encoding/json#Unmarshal>

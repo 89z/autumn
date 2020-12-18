@@ -2,6 +2,7 @@ package main
 
 import (
    "encoding/json"
+   "io/ioutil"
    "log"
 )
 
@@ -11,7 +12,10 @@ func JsonDecode(y []byte) (Map, error) {
 }
 
 func main() {
-   y := []byte(`{"package": {"edition": "2019"}}`)
+   y, e := ioutil.ReadFile("a.json")
+   if e != nil {
+      log.Fatal(e)
+   }
    m, e := JsonDecode(y)
    if e != nil {
       log.Fatal(e)
