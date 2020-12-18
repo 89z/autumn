@@ -7,6 +7,11 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/os#Chdir>
 
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/os/exec#Cmd.Dir>
+
 ## References
 
-<https://programming-idioms.org/idiom/106>
+- <https://hyperpolyglot.org/c#working-dir>
+- <https://programming-idioms.org/idiom/106>

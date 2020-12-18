@@ -9,4 +9,5 @@ tags = [ "c-sharp" ]
 
 ## References
 
-<https://programming-idioms.org/idiom/106>
+- <https://hyperpolyglot.org/cpp#directories>
+- <https://programming-idioms.org/idiom/106>

@@ -9,4 +9,5 @@ tags = [ "rust" ]
 
 ## References
 
-<https://programming-idioms.org/idiom/106>
+- <https://hyperpolyglot.org/rust#directories>
+- <https://programming-idioms.org/idiom/106>
