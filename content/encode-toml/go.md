@@ -3,11 +3,15 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "a/a.go" >}}
+{{< r "encode/a.go" >}}
 
 <https://pkg.go.dev/github.com/pelletier/go-toml#Encoder.Encode>
 
-{{< r "b/a.go" >}}
+{{< r "marshal/a.go" >}}
+
+<https://pkg.go.dev/github.com/pelletier/go-toml#Marshal>
+
+{{< r "writeto/a.go" >}}
 
 <https://pkg.go.dev/github.com/pelletier/go-toml#Tree.WriteTo>
 
