@@ -7,13 +7,17 @@ import (
    "log"
 )
 
-func main() {
-   y, e := ioutil.ReadFile("Cargo.toml")
+func TomlDecode(filename string) (assert.Map, error) {
+   y, e := ioutil.ReadFile(filename)
    if e != nil {
-      log.Fatal(e)
+      return nil, e
    }
    m := assert.Map{}
-   e = toml.Unmarshal(y, &m)
+   return m, toml.Unmarshal(y, &m)
+}
+
+func main() {
+   m, e := TomlDecode("Cargo.toml")
    if e != nil {
       log.Fatal(e)
    }

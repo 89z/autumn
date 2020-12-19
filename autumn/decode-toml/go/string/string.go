@@ -7,13 +7,17 @@ import (
    "strings"
 )
 
+func TomlDecode(s string) (assert.Map, error) {
+   o := strings.NewReader(s)
+   m := assert.Map{}
+   return m, toml.NewDecoder(o).Decode(&m)
+}
+
 func main() {
-   o := strings.NewReader(`[package]
+   m, e := TomlDecode(`[package]
 edition = "2018"
 name = "decode-toml"
 version = "1.0.0"`)
-   m := assert.Map{}
-   e := toml.NewDecoder(o).Decode(&m)
    if e != nil {
       log.Fatal(e)
    }

@@ -7,13 +7,17 @@ import (
    "os"
 )
 
-func main() {
-   o, e := os.Open("Cargo.toml")
+func TomlDecode(filename string) (assert.Map, error) {
+   o, e := os.Open(filename)
    if e != nil {
-      log.Fatal(e)
+      return nil, e
    }
    m := assert.Map{}
-   e = toml.NewDecoder(o).Decode(&m)
+   return m, toml.NewDecoder(o).Decode(&m)
+}
+
+func main() {
+   m, e := TomlDecode("Cargo.toml")
    if e != nil {
       log.Fatal(e)
    }

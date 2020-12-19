@@ -4,11 +4,18 @@ tags = [ "go" ]
 +++
 
 {{< r "assert/assert.go" >}}
+
 {{< r "byte/byte.go" >}}
+
+<https://pkg.go.dev/github.com/pelletier/go-toml#Unmarshal>
+
 {{< r "reader/reader.go" >}}
+
+<https://pkg.go.dev/github.com/pelletier/go-toml#NewDecoder>
+
 {{< r "string/string.go" >}}
 
-<https://pkg.go.dev/github.com/pelletier/go-toml>
+<https://golang.org/pkg/strings#NewReader>
 
 ## References
 
