@@ -8,12 +8,12 @@ import (
 
 type Map map[string]interface{}
 
-func TomlEncode(filename string, data Map) error {
-   o, e := os.Create(filename)
+func TomlEncode(s string, m Map) error {
+   o, e := os.Create(s)
    if e != nil {
       return e
    }
-   return toml.NewEncoder(o).Encode(data)
+   return toml.NewEncoder(o).Encode(m)
 }
 
 func main() {

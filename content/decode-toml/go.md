@@ -5,13 +5,17 @@ tags = [ "go" ]
 
 {{< r "assert/assert.go" >}}
 
-{{< r "load/load.go" >}}
+{{< r "byte/byte.go" >}}
 
-<https://pkg.go.dev/github.com/pelletier/go-toml#Load>
+<https://pkg.go.dev/github.com/pelletier/go-toml#LoadBytes>
 
-{{< r "loadfile/loadfile.go" >}}
+{{< r "file/file.go" >}}
 
 <https://pkg.go.dev/github.com/pelletier/go-toml#LoadFile>
+
+{{< r "string/string.go" >}}
+
+<https://pkg.go.dev/github.com/pelletier/go-toml#Load>
 
 ## References
 

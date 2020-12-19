@@ -10,6 +10,6 @@ func BaseName(s string, y byte) string {
 }
 
 func main() {
-   s := BaseName(`C:\Windows\notepad.exe`, '.')
-   println(s == `C:\Windows\notepad`)
+   s := BaseName(`C:\go\bin\go.exe`, '.')
+   println(s == `C:\go\bin\go`)
 }

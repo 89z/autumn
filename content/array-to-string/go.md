@@ -9,5 +9,6 @@ tags = [ "go" ]
 
 ## References
 
+- <https://hyperpolyglot.org/c#str-join>
 - <https://programming-idioms.org/idiom/53>
 - <https://rosettacode.org/wiki/Arrays>

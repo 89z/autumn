@@ -1,8 +1,8 @@
 <?php
 
 function find_submatch(string $pat, string $sub): string {
-   $e = preg_match($pat, $sub, $a);
-   if ($e != 1) {
+   preg_match($pat, $sub, $a);
+   if (count($a) < 2) {
       return '';
    }
    return $a[1];

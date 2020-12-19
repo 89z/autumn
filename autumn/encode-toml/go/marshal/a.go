@@ -9,12 +9,12 @@ import (
 
 type Map map[string]interface{}
 
-func TomlEncode(filename string, data Map) error {
-   y, e := toml.Marshal(data)
+func TomlEncode(s string, m Map) error {
+   y, e := toml.Marshal(m)
    if e != nil {
       return e
    }
-   o, e := os.Create(filename)
+   o, e := os.Create(s)
    if e != nil {
       return e
    }

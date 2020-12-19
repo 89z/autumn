@@ -1,7 +1,7 @@
 package main
 
 import (
-   "os"
+   "log"
    "strconv"
 )
 
@@ -9,7 +9,7 @@ func main() {
    s := "q3ezbz"
    n, e := strconv.ParseInt(s, 36, 0)
    if e != nil {
-      os.Exit(1)
+      log.Fatal(e)
    }
    println(n == 1577858399)
 }

@@ -45,12 +45,12 @@
 
 <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Map</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TomlEncode</span>(<span style="color:#a6e22e">filename</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">data</span> <span style="color:#a6e22e">Map</span>) <span style="color:#66d9ef">error</span> {
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#a6e22e">filename</span>)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TomlEncode</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">m</span> <span style="color:#a6e22e">Map</span>) <span style="color:#66d9ef">error</span> {
+   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#a6e22e">s</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span>
    }
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">toml</span>.<span style="color:#a6e22e">NewEncoder</span>(<span style="color:#a6e22e">o</span>).<span style="color:#a6e22e">Encode</span>(<span style="color:#a6e22e">data</span>)
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">toml</span>.<span style="color:#a6e22e">NewEncoder</span>(<span style="color:#a6e22e">o</span>).<span style="color:#a6e22e">Encode</span>(<span style="color:#a6e22e">m</span>)
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
@@ -80,12 +80,12 @@
 
 <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Map</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TomlEncode</span>(<span style="color:#a6e22e">filename</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">data</span> <span style="color:#a6e22e">Map</span>) <span style="color:#66d9ef">error</span> {
-   <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">toml</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">data</span>)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TomlEncode</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">m</span> <span style="color:#a6e22e">Map</span>) <span style="color:#66d9ef">error</span> {
+   <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">toml</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">m</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span>
    }
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#a6e22e">filename</span>)
+   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#a6e22e">s</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span>
    }
@@ -123,12 +123,12 @@
 
 <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Map</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TomlEncode</span>(<span style="color:#a6e22e">filename</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">data</span> <span style="color:#a6e22e">Map</span>) <span style="color:#66d9ef">error</span> {
-   <span style="color:#a6e22e">tree_o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">toml</span>.<span style="color:#a6e22e">TreeFromMap</span>(<span style="color:#a6e22e">data</span>)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TomlEncode</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">m</span> <span style="color:#a6e22e">Map</span>) <span style="color:#66d9ef">error</span> {
+   <span style="color:#a6e22e">tree_o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">toml</span>.<span style="color:#a6e22e">TreeFromMap</span>(<span style="color:#a6e22e">m</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span>
    }
-   <span style="color:#a6e22e">create_o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#a6e22e">filename</span>)
+   <span style="color:#a6e22e">create_o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#a6e22e">s</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span>
    }
