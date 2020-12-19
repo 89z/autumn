@@ -1,8 +1,8 @@
 package main
-import "strings"
+import "bytes"
 
 func main() {
-   s := "June"
-   b := strings.Contains(s, "un")
+   y := []byte("March")
+   b := bytes.Contains(y, []byte("ar"))
    println(b)
 }

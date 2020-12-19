@@ -5,14 +5,18 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/strings#Contains>
+<https://golang.org/pkg/bytes#Contains>
 
 {{< r "b.go" >}}
+
+<https://golang.org/pkg/strings#Contains>
+
+{{< r "c.go" >}}
 
 <https://golang.org/pkg/strings#HasPrefix>
 
 ## References
 
-- <https://programming-idioms.org/idiom/39/check-string-contains>
-- <https://programming-idioms.org/idiom/96/check-string-prefix>
+- <https://hyperpolyglot.org/c#strings>
+- <https://programming-idioms.org/idiom/39>
 - <https://rosettacode.org/wiki/String_matching>
