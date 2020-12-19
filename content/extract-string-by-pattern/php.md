@@ -4,9 +4,6 @@ tags = [ "php" ]
 +++
 
 {{< r "a.php" >}}
-
-<https://php.net/function.preg-match-all>
-
 {{< r "b.php" >}}
 
 <https://php.net/function.preg-match>

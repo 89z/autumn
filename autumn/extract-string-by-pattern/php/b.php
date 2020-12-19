@@ -1,8 +1,12 @@
 <?php
-$s = 'Sunday Monday';
-# example 1
-preg_match('/..n/', $s, $a);
-var_dump($a[0] == 'Sun');
-# example 2
-preg_match('/(..)n/', $s, $a);
-var_dump($a[1] == 'Su');
+
+function find_submatch(string $pat, string $sub): string {
+   $e = preg_match($pat, $sub, $a);
+   if ($e != 1) {
+      return '';
+   }
+   return $a[1];
+}
+
+$s = find_submatch('/a(..)/', 'January');
+var_dump($s == 'nu');

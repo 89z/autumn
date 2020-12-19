@@ -39,12 +39,8 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;regexp&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">in_s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;January&#34;</span>
-   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;a.&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">MatchString</span>(<span style="color:#a6e22e">in_s</span>) {
-      <span style="color:#a6e22e">out_s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">FindString</span>(<span style="color:#a6e22e">in_s</span>)
-      println(<span style="color:#a6e22e">out_s</span>)
-   }
+   <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;a..&#34;</span>).<span style="color:#a6e22e">MatchString</span>(<span style="color:#e6db74">&#34;January&#34;</span>)
+   println(<span style="color:#a6e22e">b</span>)
 }
 </code></pre></div>
 
