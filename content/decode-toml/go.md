@@ -5,17 +5,13 @@ tags = [ "go" ]
 
 {{< r "assert/assert.go" >}}
 
-{{< r "byte/byte.go" >}}
+{{< r "load/load.go" >}}
 
-<https://pkg.go.dev/github.com/pelletier/go-toml#Unmarshal>
+<https://pkg.go.dev/github.com/pelletier/go-toml#Load>
 
-{{< r "reader/reader.go" >}}
+{{< r "loadfile/loadfile.go" >}}
 
-<https://pkg.go.dev/github.com/pelletier/go-toml#NewDecoder>
-
-{{< r "string/string.go" >}}
-
-<https://golang.org/pkg/strings#NewReader>
+<https://pkg.go.dev/github.com/pelletier/go-toml#LoadFile>
 
 ## References
 

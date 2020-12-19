@@ -3,17 +3,15 @@ package main
 import (
    "decode/assert"
    "github.com/pelletier/go-toml"
-   "io/ioutil"
    "log"
 )
 
-func TomlDecode(filename string) (assert.Map, error) {
-   y, e := ioutil.ReadFile(filename)
+func TomlDecode(s string) (assert.Map, error) {
+   o, e := toml.LoadFile(s)
    if e != nil {
       return nil, e
    }
-   m := assert.Map{}
-   return m, toml.Unmarshal(y, &m)
+   return o.ToMap(), nil
 }
 
 func main() {
@@ -21,6 +19,6 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   s := m.M("package").S("edition")
-   println(s == "2018")
+   s := m.A("package").M(0).S("name")
+   println(s == "decode")
 }
