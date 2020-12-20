@@ -3,8 +3,9 @@ package main
 import (
    "bytes"
    "fmt"
+   "log"
    "net/http"
-   "time"
+   "os"
 )
 
 func GetContents(s string) (bytes.Buffer, error) {
@@ -21,7 +22,9 @@ func GetContents(s string) (bytes.Buffer, error) {
 }
 
 func main() {
-   GetContents("http://speedtest.lax.hivelocity.net/10Mio.dat")
-   println("Sleep")
-   time.Sleep(time.Duration(time.Minute))
+   o, e := GetContents("http://speedtest.lax.hivelocity.net")
+   if e != nil {
+      log.Fatal(e)
+   }
+   o.WriteTo(os.Stdout)
 }
