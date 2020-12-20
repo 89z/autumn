@@ -1,9 +1,13 @@
 package main
-import "os"
+
+import (
+   "log"
+   "os"
+)
 
 func main() {
    o, e := os.Stat(`C:\Users`)
    if os.IsNotExist(e) || ! o.Mode().IsDir() {
-      os.Exit(1)
+      log.Fatal(e)
    }
 }

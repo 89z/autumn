@@ -3,7 +3,7 @@ package main
 import (
    "bytes"
    "fmt"
-   "os"
+   "log"
    "os/exec"
 )
 
@@ -14,7 +14,7 @@ func f(r rune) bool {
 func main() {
    y, e := exec.Command("go", "env").Output()
    if e != nil {
-      os.Exit(1)
+      log.Fatal(e)
    }
    a := bytes.FieldsFunc(y, f)
    for n, y := range a {

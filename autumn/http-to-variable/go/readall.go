@@ -1,10 +1,10 @@
 package main
 
 import (
-   "fmt"
    "io/ioutil"
    "log"
    "net/http"
+   "os"
 )
 
 func GetContents(s string) ([]byte, error) {
@@ -20,5 +20,5 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   fmt.Printf("%s", y)
+   os.Stdout.Write(y)
 }

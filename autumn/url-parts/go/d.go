@@ -1,14 +1,14 @@
 package main
 
 import (
+   "log"
    "net/url"
-   "os"
 )
 
 func main() {
    o, e := url.Parse("https://example.com/one?two=even")
    if e != nil {
-      os.Exit(1)
+      log.Fatal(e)
    }
    println(o.RawQuery == "two=even")
 }

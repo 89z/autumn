@@ -2,14 +2,14 @@ package main
 
 import (
    "fmt"
-   "os"
+   "log"
    "time"
 )
 
 func main() {
    y, e := time.Now().MarshalText()
    if e != nil {
-      os.Exit(1)
+      log.Fatal(e)
    }
    fmt.Printf("%s\n", y)
 }

@@ -1,7 +1,7 @@
 package main
 
 import (
-   "fmt"
+   "log"
    "os"
    "os/exec"
 )
@@ -9,7 +9,7 @@ import (
 func main() {
    y, e := exec.Command("go", "version").Output()
    if e != nil {
-      os.Exit(1)
+      log.Fatal(e)
    }
-   fmt.Printf("%s", y)
+   os.Stdout.Write(y)
 }

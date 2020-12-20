@@ -2,17 +2,18 @@ package main
 
 import (
    "io/ioutil"
+   "log"
    "os"
 )
 
-func GetContents(s string) ([]byte, error) {
-   o, e := os.Open(s)
-   if e != nil {
-      return []byte{}, e
-   }
-   return ioutil.ReadAll(o)
-}
-
 func main() {
-   GetContents("100mb.file")
+   o, e := os.Open("readall.go")
+   if e != nil {
+      log.Fatal(e)
+   }
+   y, e := ioutil.ReadAll(o)
+   if e != nil {
+      log.Fatal(e)
+   }
+   os.Stdout.Write(y)
 }

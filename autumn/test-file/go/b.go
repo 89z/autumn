@@ -1,10 +1,14 @@
 package main
-import "os"
+
+import (
+   "log"
+   "os"
+)
 
 func main() {
    o, e := os.Open("a.go")
    if os.IsNotExist(e) {
-      os.Exit(1)
+      log.Fatal(e)
    }
    o.Close()
 }
