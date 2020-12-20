@@ -2,8 +2,8 @@ package main
 
 import (
    "encoding/json"
-   "fmt"
    "log"
+   "os"
 )
 
 func main() {
@@ -11,5 +11,6 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   fmt.Printf("%s\n", y)
+   y = append(y, '\n')
+   os.Stdout.Write(y)
 }
