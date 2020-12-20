@@ -11,10 +11,6 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/io/ioutil#ReadAll>
 
-{{< r "readfrom.go" >}}
-
-<https://golang.org/pkg/bytes#Buffer.ReadFrom>
-
 ## References
 
 - <https://hyperpolyglot.org/c#read-file-str>
