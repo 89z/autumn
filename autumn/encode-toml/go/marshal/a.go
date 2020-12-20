@@ -18,10 +18,7 @@ func TomlEncode(s string, m Map) error {
    if e != nil {
       return e
    }
-   n, e := o.Write(y)
-   if e != nil {
-      return fmt.Errorf("%v %v", n, e)
-   }
+   o.Write(y)
    return nil
 }
 

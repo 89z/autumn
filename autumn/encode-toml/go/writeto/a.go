@@ -18,10 +18,7 @@ func TomlEncode(s string, m Map) error {
    if e != nil {
       return e
    }
-   n, e := tree_o.WriteTo(create_o)
-   if e != nil {
-      return fmt.Errorf("%v %v", n, e)
-   }
+   tree_o.WriteTo(create_o)
    return nil
 }
 

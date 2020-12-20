@@ -2,8 +2,8 @@ package main
 
 import (
    "bytes"
+   "log"
    "os"
-   "time"
 )
 
 func GetContents(s string) (bytes.Buffer, error) {
@@ -17,6 +17,9 @@ func GetContents(s string) (bytes.Buffer, error) {
 }
 
 func main() {
-   GetContents("100mb.file")
-   time.Sleep(time.Duration(time.Minute))
+   o, e := GetContents("readfrom.go")
+   if e != nil {
+      log.Fatal(e)
+   }
+   o.WriteTo(os.Stdout)
 }

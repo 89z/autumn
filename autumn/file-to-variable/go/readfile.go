@@ -2,10 +2,14 @@ package main
 
 import (
    "io/ioutil"
-   "time"
+   "log"
+   "os"
 )
 
 func main() {
-   ioutil.ReadFile("100mb.file")
-   time.Sleep(time.Duration(time.Minute))
+   y, e := ioutil.ReadFile("readfile.go")
+   if e != nil {
+      log.Fatal(e)
+   }
+   os.Stdout.Write(y)
 }

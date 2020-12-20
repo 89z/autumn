@@ -3,7 +3,6 @@ package main
 import (
    "io/ioutil"
    "os"
-   "time"
 )
 
 func GetContents(s string) ([]byte, error) {
@@ -16,5 +15,4 @@ func GetContents(s string) ([]byte, error) {
 
 func main() {
    GetContents("100mb.file")
-   time.Sleep(time.Duration(time.Minute))
 }

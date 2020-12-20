@@ -89,10 +89,7 @@
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span>
    }
-   <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Write</span>(<span style="color:#a6e22e">y</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;%v %v&#34;</span>, <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">e</span>)
-   }
+   <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Write</span>(<span style="color:#a6e22e">y</span>)
    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
 }
 
@@ -132,10 +129,7 @@
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span>
    }
-   <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">tree_o</span>.<span style="color:#a6e22e">WriteTo</span>(<span style="color:#a6e22e">create_o</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;%v %v&#34;</span>, <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">e</span>)
-   }
+   <span style="color:#a6e22e">tree_o</span>.<span style="color:#a6e22e">WriteTo</span>(<span style="color:#a6e22e">create_o</span>)
    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
 }
 
