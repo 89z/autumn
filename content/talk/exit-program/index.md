@@ -15,11 +15,7 @@ This works for `Option`:
 {{< r "b.rs" >}}
 
 but what if you have both in the same function? Need something that works for
-numbers as well. Go has an option:
-
-{{< r "b.go" >}}
-
-Can we use `Err(format!())` for everything? Yes we can:
+numbers as well. Can we use `Err(format!())` for everything? Yes we can:
 
 {{< r "f.rs" >}}
 

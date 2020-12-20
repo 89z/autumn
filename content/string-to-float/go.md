@@ -5,11 +5,9 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-{{< r "b.go" >}}
-
 <https://golang.org/pkg/fmt#Sscan>
 
-{{< r "c.go" >}}
+{{< r "b.go" >}}
 
 <https://golang.org/pkg/strconv#ParseFloat>
 

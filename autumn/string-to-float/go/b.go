@@ -1,11 +1,18 @@
 package main
-import "fmt"
+
+import (
+   "log"
+   "strconv"
+)
 
 func FloatVal(s string) (float64, error) {
-   var value float64
-   count, e := fmt.Sscan(s, &value)
+   return strconv.ParseFloat(s, 64)
+}
+
+func main() {
+   n, e := FloatVal("9.9")
    if e != nil {
-      return 0, fmt.Errorf("%v %v", count, e)
+      log.Fatal(e)
    }
-   return value, nil
+   println(n == 9.9)
 }
