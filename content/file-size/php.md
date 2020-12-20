@@ -7,6 +7,10 @@ tags = [ "php" ]
 
 <https://php.net/function.filesize>
 
+{{< r "b.php" >}}
+
+<https://php.net/function.stat>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting2#file-size>

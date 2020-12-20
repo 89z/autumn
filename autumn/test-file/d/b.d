@@ -2,11 +2,7 @@ import file = std.file;
 import io = std.stdio;
 
 bool testFile(string s) {
-   if (! file.exists(s)) {
-      return false;
-   }
-   auto o = file.getAttributes(s);
-   return file.attrIsFile(o);
+   return file.exists(s) && file.isFile(s);
 }
 
 void main() {

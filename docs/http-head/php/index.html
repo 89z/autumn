@@ -26,12 +26,52 @@
 <section class="page">
    <time>Sat Dec 19 2020</time>
    
-   <a href="/autumn/categories/input-output/">input-output</a>
+   <a href="/autumn/categories/system/">system</a>
    
 </section>
-   <p><a href="https://php.net/function.get-headers">https://php.net/function.get-headers</a></p>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;curl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;curl&#39;</span>);
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">http_head</span>(<span style="color:#a6e22e">string</span> $s)<span style="color:#f92672">:</span> <span style="color:#a6e22e">bool</span> {
+   $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>($s);
+   <span style="color:#a6e22e">curl_setopt</span>($r, <span style="color:#a6e22e">CURLOPT_NOBODY</span>, <span style="color:#66d9ef">true</span>);
+   <span style="color:#a6e22e">curl_exec</span>($r);
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">curl_getinfo</span>($r)[<span style="color:#e6db74">&#39;http_code&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">200</span>;
+}
+
+$b <span style="color:#f92672">=</span> <span style="color:#a6e22e">http_head</span>(<span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net/10Mio.dat&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($b);
+</code></pre></div>
+
+<p><a href="https://php.net/function.curl-getinfo">https://php.net/function.curl-getinfo</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">http_head</span>(<span style="color:#a6e22e">string</span> $s)<span style="color:#f92672">:</span> <span style="color:#a6e22e">bool</span> {
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">get_headers</span>($s)[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;HTTP/1.1 200 OK&#39;</span>;
+}
+
+$b <span style="color:#f92672">=</span> <span style="color:#a6e22e">http_head</span>(<span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net/10Mio.dat&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($b);
+</code></pre></div>
+
+<p><a href="https://php.net/function.get-headers">https://php.net/function.get-headers</a></p>
 <h2 id="references">References</h2>
-<p><a href="https://developer.mozilla.org/Web/HTTP/Methods/HEAD">https://developer.mozilla.org/Web/HTTP/Methods/HEAD</a></p>
+<ul>
+<li><a href="https://developer.mozilla.org/Web/HTTP/Methods/HEAD">https://developer.mozilla.org/Web/HTTP/Methods/HEAD</a></li>
+<li><a href="https://github.com/89z/autumn/tree/7648dd0c/content/http-head-request">https://github.com/89z/autumn/tree/7648dd0c/content/http-head-request</a></li>
+</ul>
 
 </main>
 

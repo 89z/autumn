@@ -41,6 +41,23 @@ $n <span style="color:#f92672">=</span> <span style="color:#a6e22e">filesize</sp
 </code></pre></div>
 
 <p><a href="https://php.net/function.filesize">https://php.net/function.filesize</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$m <span style="color:#f92672">=</span> <span style="color:#a6e22e">stat</span>(<span style="color:#e6db74">&#39;a.php&#39;</span>);
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> $m[<span style="color:#ae81ff">7</span>];
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> $m[<span style="color:#e6db74">&#39;size&#39;</span>];
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1, $n2);
+</code></pre></div>
+
+<p><a href="https://php.net/function.stat">https://php.net/function.stat</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#file-size">https://hyperpolyglot.org/scripting2#file-size</a></li>

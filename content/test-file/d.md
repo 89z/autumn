@@ -5,6 +5,10 @@ tags = [ "d" ]
 
 {{< r "a.d" >}}
 
+<https://dlang.org/library/std/file/attr_is_file.html>
+
+{{< r "b.d" >}}
+
 <https://dlang.org/library/std/file/is_file.html>
 
 ## References

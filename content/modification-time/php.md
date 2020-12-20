@@ -9,6 +9,10 @@ tags = [ "php" ]
 
 {{< r "b.php" >}}
 
+<https://php.net/function.stat>
+
+{{< r "c.php" >}}
+
 <https://php.net/function.touch>
 
 ## References
