@@ -3,19 +3,18 @@ package main
 import (
    "bufio"
    "bytes"
-   "os"
+   "log"
    "os/exec"
 )
 
 func main() {
    y, e := exec.Command("go", "env").Output()
    if e != nil {
-      os.Exit(1)
+      log.Fatal(e)
    }
-   o := bytes.NewReader(y)
-   o1 := bufio.NewScanner(o)
-   for o1.Scan() {
-      s := o1.Text()
+   o := bufio.NewScanner(bytes.NewReader(y))
+   for o.Scan() {
+      s := o.Text()
       println(s)
    }
 }

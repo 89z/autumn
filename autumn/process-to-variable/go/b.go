@@ -1,15 +1,15 @@
 package main
 
 import (
+   "bytes"
+   "os"
    "os/exec"
-   "strings"
 )
 
 func main() {
-   o := exec.Command("go", "version")
-   o1 := strings.Builder{}
-   o.Stdout = &o1
-   o.Run()
-   s := o1.String()
-   print(s)
+   in_o := exec.Command("go", "version")
+   out_o := bytes.Buffer{}
+   in_o.Stdout = &out_o
+   in_o.Run()
+   out_o.WriteTo(os.Stdout)
 }

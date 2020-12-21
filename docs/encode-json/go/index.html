@@ -24,7 +24,7 @@
    <a href="/autumn/encode-json/">Encode JSON</a> / Go
 </h1>
 <section class="page">
-   <time>Sun Dec 6 2020</time>
+   <time>Sun Dec 20 2020</time>
    
    <a href="/autumn/categories/file-format/">file-format</a>
    
@@ -118,8 +118,8 @@
 
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
    <span style="color:#e6db74">&#34;log&#34;</span>
+   <span style="color:#e6db74">&#34;os&#34;</span>
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
@@ -127,7 +127,8 @@
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s\n&#34;</span>, <span style="color:#a6e22e">y</span>)
+   <span style="color:#a6e22e">y</span> = append(<span style="color:#a6e22e">y</span>, <span style="color:#e6db74">&#39;\n&#39;</span>)
+   <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>.<span style="color:#a6e22e">Write</span>(<span style="color:#a6e22e">y</span>)
 }
 </code></pre></div>
 

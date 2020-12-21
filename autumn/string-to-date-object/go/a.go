@@ -7,8 +7,7 @@ import (
 )
 
 func ParseDate(value string) (time.Time, error) {
-   n := len(value)
-   layout := time.RFC3339[:n]
+   layout := time.RFC3339[:len(value)]
    return time.Parse(layout, value)
 }
 

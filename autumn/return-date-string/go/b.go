@@ -1,8 +1,8 @@
 package main
 
 import (
-   "fmt"
    "log"
+   "os"
    "time"
 )
 
@@ -11,5 +11,6 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   fmt.Printf("%s\n", y)
+   y = append(y, '\n')
+   os.Stdout.Write(y)
 }

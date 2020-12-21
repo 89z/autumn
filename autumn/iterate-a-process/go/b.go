@@ -2,8 +2,8 @@ package main
 
 import (
    "bytes"
-   "fmt"
    "log"
+   "os"
    "os/exec"
 )
 
@@ -17,7 +17,8 @@ func main() {
       log.Fatal(e)
    }
    a := bytes.FieldsFunc(y, f)
-   for n, y := range a {
-      fmt.Printf("%v %s\n", n, y)
+   for _, y := range a {
+      y = append(y, '\n')
+      os.Stdout.Write(y)
    }
 }

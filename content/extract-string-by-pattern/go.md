@@ -11,6 +11,10 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/regexp#Regexp.FindStringSubmatch>
 
+{{< r "c.go" >}}
+
+<https://golang.org/pkg/regexp#Regexp.FindSubmatch>
+
 ## References
 
 - <https://hyperpolyglot.org/c#group-capture>
