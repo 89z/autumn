@@ -9,5 +9,5 @@ tags = [ "go" ]
 
 ## References
 
-- <https://developer.mozilla.org/Web/HTTP/Methods/HEAD>
+- <https://developer.mozilla.org/docs/Web/HTTP/Methods/HEAD>
 - <https://github.com/89z/autumn/tree/7648dd0c/content/http-head-request>
