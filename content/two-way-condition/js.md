@@ -9,7 +9,7 @@ tags = [ "javascript" ]
 
 {{< r "b.js" >}}
 
-<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Conditional_Operator>
 
 ## References
 

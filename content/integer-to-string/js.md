@@ -5,11 +5,11 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Number/toString>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toString>
 
 {{< r "b.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String>
 
 ## References
 

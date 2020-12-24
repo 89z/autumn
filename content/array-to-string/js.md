@@ -5,7 +5,7 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Array/join>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/join>
 
 ## References
 

@@ -5,11 +5,11 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/includes>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/includes>
 
 {{< r "b.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/startsWith>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith>
 
 ## References
 

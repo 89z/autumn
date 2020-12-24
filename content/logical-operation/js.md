@@ -5,7 +5,7 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Logical_Operators>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Logical_Operators>
 
 ## References
 

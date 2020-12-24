@@ -5,11 +5,11 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Functions/Arrow_functions>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions>
 
 {{< r "b.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Operators/function>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/function>
 
 ## References
 

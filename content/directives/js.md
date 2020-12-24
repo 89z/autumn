@@ -5,7 +5,7 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Strict_mode>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Strict_mode>
 
 ## References
 

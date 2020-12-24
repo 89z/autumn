@@ -5,15 +5,15 @@ tags = [ "javascript" ]
 
 {{< r "intl.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat>
 
 {{< r "log10.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Math/log10>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/log10>
 
 {{< r "while.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Statements/while>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/while>
 
 ## References
 

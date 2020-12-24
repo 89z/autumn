@@ -5,11 +5,11 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/API/WindowOrWorkerGlobalScope/fetch>
+<https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch>
 
 {{< r "b.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Operators/await>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await>
 
 ## References
 

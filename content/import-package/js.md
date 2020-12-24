@@ -6,7 +6,7 @@ tags = [ "javascript" ]
 {{< r "a.mjs" js >}}
 {{< r "b.mjs" js >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Statements/import>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import>
 
 ## References
 

@@ -5,11 +5,11 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/RegExp/test>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test>
 
 {{< r "b.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/RegExp>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp>
 
 ## References
 

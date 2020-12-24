@@ -5,7 +5,7 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators>
 
 ## References
 
