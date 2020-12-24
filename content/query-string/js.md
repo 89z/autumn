@@ -5,11 +5,11 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/API/URLSearchParams/toString>
+<https://developer.mozilla.org/docs/Web/API/URLSearchParams/toString>
 
 {{< r "b.js" >}}
 
-<https://developer.mozilla.org/Web/API/URLSearchParams/URLSearchParams>
+<https://developer.mozilla.org/docs/Web/API/URLSearchParams/URLSearchParams>
 
 ## References
 

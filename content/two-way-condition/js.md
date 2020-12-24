@@ -5,7 +5,7 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Statements/if...else>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/if...else>
 
 {{< r "b.js" >}}
 

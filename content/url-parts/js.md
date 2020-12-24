@@ -5,19 +5,19 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/API/URL/host>
+<https://developer.mozilla.org/docs/Web/API/URL/host>
 
 {{< r "b.js" >}}
 
-<https://developer.mozilla.org/Web/API/URL/hostname>
+<https://developer.mozilla.org/docs/Web/API/URL/hostname>
 
 {{< r "c.js" >}}
 
-<https://developer.mozilla.org/Web/API/URL/search>
+<https://developer.mozilla.org/docs/Web/API/URL/search>
 
 {{< r "d.js" >}}
 
-<https://developer.mozilla.org/Web/API/URL/searchParams>
+<https://developer.mozilla.org/docs/Web/API/URL/searchParams>
 
 ## References
 

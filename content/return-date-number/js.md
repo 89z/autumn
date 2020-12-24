@@ -5,15 +5,15 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/getTime>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime>
 
 {{< r "b.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/now>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/now>
 
 {{< r "c.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/valueof>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/valueof>
 
 ## References
 

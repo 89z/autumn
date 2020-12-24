@@ -5,11 +5,11 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/API/Console/info>
+<https://developer.mozilla.org/docs/Web/API/Console/info>
 
 {{< r "b.js" >}}
 
-<https://developer.mozilla.org/Web/API/Console/log>
+<https://developer.mozilla.org/docs/Web/API/Console/log>
 
 ## References
 

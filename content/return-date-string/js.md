@@ -5,11 +5,11 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Date/toISOString>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString>
 
 {{< r "b.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts>
 
 ## References
 

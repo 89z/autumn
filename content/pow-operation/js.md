@@ -5,11 +5,11 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Math/pow>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/pow>
 
 {{< r "b.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Exponentiation>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Exponentiation>
 
 ## References
 

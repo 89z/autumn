@@ -5,7 +5,7 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/JavaScript/Reference/Operators/Destructuring_assignment>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment>
 
 ## References
 

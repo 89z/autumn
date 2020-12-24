@@ -5,7 +5,7 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/Web/API/WindowOrWorkerGlobalScope/setInterval>
+<https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setInterval>
 
 ## References
 
