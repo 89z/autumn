@@ -3,6 +3,6 @@ title = "Path to basename"
 categories = [ "path" ]
 date = 2020-09-10
 example = [
-   'winter\musicbrainz\musicbrainz-release.go', 'path.Base('
+   'sienna\crop-image\crop-image.go', 'path.Base('
 ]
 +++
