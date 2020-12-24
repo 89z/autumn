@@ -1,0 +1,2 @@
+"lorem".upcase
+"LOREM".downcase

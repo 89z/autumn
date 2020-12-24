@@ -1,0 +1,2 @@
+'lorem'.toUpperCase()
+'LOREM'.toLowerCase()
