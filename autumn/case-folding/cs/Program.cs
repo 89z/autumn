@@ -1,8 +1,9 @@
-using C = System.Console;
+using System;
 
 class Program {
    static void Main() {
-      "hello".ToUpper()
-      "HELLO".ToLower()
+      var s = "March";
+      var t = s.ToUpper();
+      Console.WriteLine(t == "MARCH");
    }
 }

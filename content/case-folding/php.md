@@ -9,4 +9,6 @@ tags = [ "php" ]
 
 ## References
 
-<https://hyperpolyglot.org/scripting#translate-case>
+- <https://hyperpolyglot.org/scripting#translate-case>
+- <https://programming-idioms.org/idiom/213>
+- <https://rosettacode.org/wiki/String_case>

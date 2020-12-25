@@ -10,4 +10,6 @@ tags = [ "go" ]
 
 ## References
 
-<https://hyperpolyglot.org/c#translate-case>
+- <https://hyperpolyglot.org/c#translate-case>
+- <https://programming-idioms.org/idiom/213>
+- <https://rosettacode.org/wiki/String_case>

@@ -35,12 +35,13 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> C = System.Console;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      <span style="color:#e6db74">&#34;hello&#34;</span>.ToUpper()
-      <span style="color:#e6db74">&#34;HELLO&#34;</span>.ToLower()
+      <span style="color:#66d9ef">var</span> s = <span style="color:#e6db74">&#34;March&#34;</span>;
+      <span style="color:#66d9ef">var</span> t = s.ToUpper();
+      Console.WriteLine(t == <span style="color:#e6db74">&#34;MARCH&#34;</span>);
    }
 }
 </code></pre></div>

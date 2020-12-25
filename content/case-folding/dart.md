@@ -5,6 +5,8 @@ tags = [ "dart" ]
 
 {{< r "a.dart" >}}
 
+<https://api.dart.dev/dart-core/String/toUpperCase.html>
+
 ## References
 
 - <https://hyperpolyglot.org/web#translate-case>
