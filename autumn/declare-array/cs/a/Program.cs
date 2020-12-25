@@ -1,5 +1,5 @@
 using C = System.Console;
-using J = Newtonsoft.Json.JsonConvert;
+using J = System.Text.Json.JsonSerializer;
 
 class Program {
    static void Main() {
@@ -11,6 +11,6 @@ class Program {
          new[]{12, 13}
       };
       // print
-      C.WriteLine(J.SerializeObject(a1) + J.SerializeObject(a2));
+      C.WriteLine(J.Serialize(a1) + J.Serialize(a2));
    }
 }

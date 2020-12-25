@@ -1,5 +1,5 @@
 # example 1
-a1 = ['May', 'June']
+a1 = list()
 # example 2
 a2 = list('March')
 # print

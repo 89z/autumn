@@ -5,6 +5,10 @@ tags = [ "python" ]
 
 {{< r "a.py" >}}
 
+<https://docs.python.org/library/functions.html#func-list>
+
+{{< r "b.py" >}}
+
 <https://docs.python.org/library/stdtypes.html#list>
 
 ## References

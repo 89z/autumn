@@ -5,4 +5,4 @@ a2 = [10, 11]
 # example 3
 a3 = [[10, 11], [12, 13]]
 # print
-p a1, a2, a3
+print(a1, a2, a3)

@@ -9,13 +9,9 @@ tags = [ "rust" ]
 
 {{< r "b.rs" >}}
 
-<https://doc.rust-lang.org/std/primitive.array.html>
-
-{{< r "c.rs" >}}
-
 <https://doc.rust-lang.org/std/primitive.slice.html>
 
-{{< r "d.rs" >}}
+{{< r "c.rs" >}}
 
 <https://doc.rust-lang.org/std/vec/struct.Vec.html#method.new>
 

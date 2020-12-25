@@ -1,10 +1,10 @@
 using C = System.Console;
-using J = Newtonsoft.Json.JsonConvert;
+using J = System.Text.Json.JsonSerializer;
 
 class Program {
    static void Main() {
       var s = "March";
       var a = s.ToCharArray();
-      C.WriteLine(J.SerializeObject(a));
+      C.WriteLine(J.Serialize(a));
    }
 }
