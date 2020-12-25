@@ -38,13 +38,13 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> C = System.Console;
-<span style="color:#66d9ef">using</span> J = System.Text.Json.JsonSerializer;
+<span style="color:#66d9ef">using</span> J = Newtonsoft.Json.JsonConvert;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
       <span style="color:#66d9ef">var</span> s = <span style="color:#e6db74">&#34;May,June,July&#34;</span>;
       <span style="color:#66d9ef">var</span> a = s.Split(<span style="color:#e6db74">&#34;,&#34;</span>);
-      C.WriteLine(J.Serialize(a));
+      C.WriteLine(J.SerializeObject(a));
    }
 }
 </code></pre></div>
@@ -57,13 +57,13 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> C = System.Console;
-<span style="color:#66d9ef">using</span> J = System.Text.Json.JsonSerializer;
+<span style="color:#66d9ef">using</span> J = Newtonsoft.Json.JsonConvert;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
       <span style="color:#66d9ef">var</span> s = <span style="color:#e6db74">&#34;March&#34;</span>;
       <span style="color:#66d9ef">var</span> a = s.ToCharArray();
-      C.WriteLine(J.Serialize(a));
+      C.WriteLine(J.SerializeObject(a));
    }
 }
 </code></pre></div>

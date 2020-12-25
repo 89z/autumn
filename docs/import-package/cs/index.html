@@ -35,17 +35,11 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System.Collections.Generic;
-<span style="color:#66d9ef">using</span> System.Text.Json;
-<span style="color:#66d9ef">using</span> System;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;[] a = {
-         <span style="color:#66d9ef">new</span> Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;{{<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">12</span>}, {<span style="color:#e6db74">&#34;day&#34;</span>, <span style="color:#ae81ff">31</span>}},
-         <span style="color:#66d9ef">new</span> Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;{{<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">11</span>}, {<span style="color:#e6db74">&#34;day&#34;</span>, <span style="color:#ae81ff">30</span>}},
-      };
-      Console.WriteLine(JsonSerializer.Serialize(a));
+      Console.WriteLine(<span style="color:#e6db74">&#34;March&#34;</span>);
    }
 }
 </code></pre></div>
@@ -57,16 +51,10 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> C = System.Console;
-<span style="color:#66d9ef">using</span> D = System.Collections.Generic.Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;;
-<span style="color:#66d9ef">using</span> J = System.Text.Json.JsonSerializer;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      D[] a = {
-         <span style="color:#66d9ef">new</span> D{{<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">12</span>}, {<span style="color:#e6db74">&#34;day&#34;</span>, <span style="color:#ae81ff">31</span>}},
-         <span style="color:#66d9ef">new</span> D{{<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">11</span>}, {<span style="color:#e6db74">&#34;day&#34;</span>, <span style="color:#ae81ff">30</span>}},
-      };
-      C.WriteLine(J.Serialize(a));
+      C.WriteLine(<span style="color:#e6db74">&#34;March&#34;</span>);
    }
 }
 </code></pre></div>

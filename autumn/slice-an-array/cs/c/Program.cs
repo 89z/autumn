@@ -1,5 +1,5 @@
 using C = System.Console;
-using J = System.Text.Json.JsonSerializer;
+using J = Newtonsoft.Json.JsonConvert;
 
 class Program {
    static void Main() {
@@ -9,6 +9,6 @@ class Program {
       // example 2
       var a2 = a[2 ..];
       // print
-      C.WriteLine(J.Serialize(a1) + J.Serialize(a2));
+      C.WriteLine(J.SerializeObject(a1) + J.SerializeObject(a2));
    }
 }

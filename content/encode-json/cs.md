@@ -3,9 +3,13 @@ title = "C#"
 tags = [ "c-sharp" ]
 +++
 
-{{< r "Program.cs" >}}
+{{< r "a/Program.cs" >}}
 
-<https://docs.microsoft.com/dotnet/standard/serialization/system-text-json-how-to>
+<https://docs.microsoft.com/dotnet/api/system.text.json.jsonserializer.serialize>
+
+{{< r "b/Program.cs" >}}
+
+<https://newtonsoft.com/json/help/html/Overload_Newtonsoft_Json_JsonConvert_SerializeObject.htm>
 
 ## References
 

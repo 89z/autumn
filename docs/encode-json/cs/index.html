@@ -36,22 +36,37 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> C = System.Console;
-<span style="color:#66d9ef">using</span> D = System.Collections.Generic.Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;;
 <span style="color:#66d9ef">using</span> J = System.Text.Json.JsonSerializer;
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
-      D[] a = {
-         <span style="color:#66d9ef">new</span> D{{<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">12</span>}, {<span style="color:#e6db74">&#34;day&#34;</span>: <span style="color:#ae81ff">31</span>}},
-         <span style="color:#66d9ef">new</span> D{{<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#ae81ff">11</span>}, {<span style="color:#e6db74">&#34;day&#34;</span>: <span style="color:#ae81ff">30</span>}},
-      };
-      <span style="color:#66d9ef">var</span> s = J.Serialize(a);
+      <span style="color:#66d9ef">string</span>[] a = { <span style="color:#e6db74">&#34;one&#34;</span>, <span style="color:#e6db74">&#34;two&#34;</span> };
+      <span style="color:#66d9ef">string</span> s = J.Serialize(a);
       C.WriteLine(s);
    }
 }
 </code></pre></div>
 
-<p><a href="https://docs.microsoft.com/dotnet/standard/serialization/system-text-json-how-to">https://docs.microsoft.com/dotnet/standard/serialization/system-text-json-how-to</a></p>
+<p><a href="https://docs.microsoft.com/dotnet/api/system.text.json.jsonserializer.serialize">https://docs.microsoft.com/dotnet/api/system.text.json.jsonserializer.serialize</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> C = System.Console;
+<span style="color:#66d9ef">using</span> J = Newtonsoft.Json.JsonConvert;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">string</span>[,] a = { { <span style="color:#e6db74">&#34;one&#34;</span>, <span style="color:#e6db74">&#34;two&#34;</span> }, { <span style="color:#e6db74">&#34;three&#34;</span>, <span style="color:#e6db74">&#34;four&#34;</span> } };
+      <span style="color:#66d9ef">string</span> s = J.SerializeObject(a);
+      C.WriteLine(s);
+   }
+}
+</code></pre></div>
+
+<p><a href="https://newtonsoft.com/json/help/html/Overload_Newtonsoft_Json_JsonConvert_SerializeObject.htm">https://newtonsoft.com/json/help/html/Overload_Newtonsoft_Json_JsonConvert_SerializeObject.htm</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/cpp#file-fmt">https://hyperpolyglot.org/cpp#file-fmt</a></li>
