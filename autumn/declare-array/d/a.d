@@ -2,9 +2,11 @@ import std.stdio;
 
 void main() {
    // example 1
-   string[] a1 = ["May", "June"];
+   int[] a1 = [10, 11];
    // example 2
-   auto a2 = ["May", "June"];
+   auto a2 = [10, 11];
+   // example 3
+   auto a3 = [[10, 11], [12, 13]];
    // print
-   writeln(a1, a2);
+   writeln(a1, a2, a3);
 }

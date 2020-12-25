@@ -9,6 +9,12 @@ func main() {
    var a2 = []int{10, 11}
    // example 3
    a3 := []int{10, 11}
+   // example 4
+   type A []interface{}
+   a4 := A{
+      A{10, 11},
+      A{12, 13},
+   }
    // print
-   fmt.Println(a1, a2, a3)
+   fmt.Println(a1, a2, a3, a4)
 }

@@ -7,10 +7,6 @@ tags = [ "go" ]
 
 <https://golang.org/ref/spec#Slice_types>
 
-{{< r "b.go" >}}
-
-<https://golang.org/ref/spec#Making_slices_maps_and_channels>
-
 ## References
 
 - <https://hyperpolyglot.org/c#resizable-array-literal>
