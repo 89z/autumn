@@ -5,7 +5,11 @@ tags = [ "nim" ]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/strutils.html>
+<https://nim-lang.org/docs/strutils.html#toUpperAscii,string>
+
+{{< r "b.nim" >}}
+
+<https://nim-lang.org/docs/unicode.html#toUpper,string>
 
 ## References
 

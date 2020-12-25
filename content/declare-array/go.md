@@ -5,11 +5,11 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/ref/spec#Array_types>
+<https://golang.org/ref/spec#Slice_types>
 
 {{< r "b.go" >}}
 
-<https://golang.org/ref/spec#Slice_types>
+<https://golang.org/ref/spec#Making_slices_maps_and_channels>
 
 ## References
 

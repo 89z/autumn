@@ -5,6 +5,10 @@ tags = [ "python" ]
 
 {{< r "a.py" >}}
 
+<https://docs.python.org/library/stdtypes.html#str.casefold>
+
+{{< r "b.py" >}}
+
 <https://docs.python.org/library/stdtypes.html#str.upper>
 
 ## References

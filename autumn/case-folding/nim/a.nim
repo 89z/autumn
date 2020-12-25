@@ -1,4 +1,4 @@
 import strutils as su
 let s = "March"
-let t = su.toUpper(s)
+let t = su.toUpperAscii(s)
 echo t == "MARCH"
