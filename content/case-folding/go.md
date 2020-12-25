@@ -5,8 +5,11 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-- <https://golang.org/pkg/strings#ToUpper>
-- <https://pkg.go.dev/golang.org/x/text/cases#Fold>
+<https://golang.org/pkg/strings#ToUpper>
+
+{{< r "a.go" >}}
+
+<https://pkg.go.dev/golang.org/x/text/cases#Fold>
 
 ## References
 

@@ -35,21 +35,12 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">from</span> os <span style="color:#f92672">import</span> <span style="color:#66d9ef">nil</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#75715e"># example 1</span>
 <span style="color:#f92672">from</span> strformat <span style="color:#f92672">import</span> fmt
-<span style="color:#f92672">from</span> times <span style="color:#f92672">import</span> TimeInterval
-
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">format</span>(o: TimeInterval): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span>
-   <span style="color:#66d9ef">let</span> mil_s <span style="color:#f92672">=</span> <span style="color:#e6db74">fmt&#34;{o.milliseconds:03}&#34;</span>
-   <span style="color:#66d9ef">let</span> sec_s <span style="color:#f92672">=</span> <span style="color:#e6db74">fmt&#34;{o.seconds:02}&#34;</span>
-   <span style="color:#66d9ef">return</span> <span style="color:#e6db74">fmt&#34;{o.minutes} m {sec_s} s {mil_s} ms&#34;</span>
-
-<span style="color:#66d9ef">let</span> now_o <span style="color:#f92672">=</span> times.now()
-
-<span style="color:#66d9ef">while</span> <span style="color:#66d9ef">true</span>:
-   os.sleep <span style="color:#ae81ff">10</span>
-   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> times.between(now_o, times.now())
-   stdout.write format(o), <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>
+echo <span style="color:#e6db74">fmt&#34;{9:03}&#34;</span>
+<span style="color:#75715e"># example 2</span>
+<span style="color:#f92672">from</span> os <span style="color:#f92672">import</span> <span style="color:#66d9ef">nil</span>
+os.sleep <span style="color:#ae81ff">5</span>
 </code></pre></div>
 
 <p><a href="https://nim-lang.org/docs/manual.html#modules-from-import-statement">https://nim-lang.org/docs/manual.html#modules-from-import-statement</a></p>
@@ -59,25 +50,22 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span>
-   os,
-   strformat,
-   times
-
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">format</span>(o: TimeInterval): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span>
-   <span style="color:#66d9ef">let</span> mil_s <span style="color:#f92672">=</span> <span style="color:#e6db74">fmt&#34;{o.milliseconds:03}&#34;</span>
-   <span style="color:#66d9ef">let</span> sec_s <span style="color:#f92672">=</span> <span style="color:#e6db74">fmt&#34;{o.seconds:02}&#34;</span>
-   <span style="color:#66d9ef">return</span> <span style="color:#e6db74">fmt&#34;{o.minutes} m {sec_s} s {mil_s} ms&#34;</span>
-
-<span style="color:#66d9ef">let</span> now_o <span style="color:#f92672">=</span> now()
-
-<span style="color:#66d9ef">while</span> <span style="color:#66d9ef">true</span>:
-   sleep <span style="color:#ae81ff">10</span>
-   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> between(now_o, now())
-   stdout.write format(o), <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> os
+sleep <span style="color:#ae81ff">5</span>
 </code></pre></div>
 
 <p><a href="https://nim-lang.org/docs/manual.html#modules-import-statement">https://nim-lang.org/docs/manual.html#modules-import-statement</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> strutils <span style="color:#66d9ef">as</span> su
+echo su.toUpper(<span style="color:#e6db74">&#34;March&#34;</span>)
+</code></pre></div>
+
+<p><a href="https://nim-lang.org/docs/manual.html#modules-module-names-in-imports">https://nim-lang.org/docs/manual.html#modules-module-names-in-imports</a></p>
 <h2 id="references">References</h2>
 <p><a href="https://rosettacode.org/wiki/Include_a_file">https://rosettacode.org/wiki/Include_a_file</a></p>
 

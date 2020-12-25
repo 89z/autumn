@@ -1,2 +1,3 @@
-"lorem".upcase
-"LOREM".downcase
+s = 'March'
+t = s.upcase
+puts t == 'MARCH'

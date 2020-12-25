@@ -5,10 +5,6 @@ tags = [ "d" ]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/library/std/ascii/to_upper.html>
-
-{{< r "b.d" >}}
-
 <https://dlang.org/library/std/uni/to_upper.html>
 
 ## References

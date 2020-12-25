@@ -36,18 +36,33 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;golang.org/x/text/cases&#34;</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">cases</span>.<span style="color:#a6e22e">Fold</span>().<span style="color:#a6e22e">String</span>(<span style="color:#e6db74">&#34;March&#34;</span>)
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;march&#34;</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;March&#34;</span>
+   <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">ToUpper</span>(<span style="color:#a6e22e">s</span>)
+   println(<span style="color:#a6e22e">t</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MARCH&#34;</span>)
 }
 </code></pre></div>
 
-<ul>
-<li><a href="https://golang.org/pkg/strings#ToUpper">https://golang.org/pkg/strings#ToUpper</a></li>
-<li><a href="https://pkg.go.dev/golang.org/x/text/cases#Fold">https://pkg.go.dev/golang.org/x/text/cases#Fold</a></li>
-</ul>
+<p><a href="https://golang.org/pkg/strings#ToUpper">https://golang.org/pkg/strings#ToUpper</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;March&#34;</span>
+   <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">ToUpper</span>(<span style="color:#a6e22e">s</span>)
+   println(<span style="color:#a6e22e">t</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MARCH&#34;</span>)
+}
+</code></pre></div>
+
+<p><a href="https://pkg.go.dev/golang.org/x/text/cases#Fold">https://pkg.go.dev/golang.org/x/text/cases#Fold</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#translate-case">https://hyperpolyglot.org/c#translate-case</a></li>

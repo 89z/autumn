@@ -7,6 +7,10 @@ tags = [ "php" ]
 
 <https://php.net/function.mb-convert-case>
 
+{{< r "b.php" >}}
+
+<https://php.net/function.strtoupper>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting#translate-case>

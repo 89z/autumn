@@ -1,8 +1,8 @@
 import io = std.stdio;
-import str = std.string;
+import uni = std.uni;
 
 void main() {
    auto s = "March";
-   auto t = str.toUpper(s);
+   auto t = uni.toUpper(s);
    io.writeln(t == "MARCH");
 }
