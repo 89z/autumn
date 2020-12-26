@@ -1,2 +1,2 @@
-t = Time.now
-utc = Time.now.utc
+o = Time.now
+puts o

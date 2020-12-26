@@ -5,7 +5,7 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/time>
+<https://golang.org/pkg/time#Now>
 
 ## References
 

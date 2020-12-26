@@ -5,6 +5,7 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 {{< r "b.go" >}}
+{{< r "c.go" >}}
 
 <https://golang.org/ref/spec#Index_expressions>
 
