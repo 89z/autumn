@@ -24,7 +24,7 @@
    <a href="/autumn/modify-date-object/">Modify date object</a> / Go
 </h1>
 <section class="page">
-   <time>Fri Dec 25 2020</time>
+   <time>Sat Dec 26 2020</time>
    
    <a href="/autumn/categories/time/">time</a>
    
@@ -64,8 +64,9 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Now</span>().<span style="color:#a6e22e">AddDate</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">o</span>)
+   <span style="color:#a6e22e">now</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Now</span>()
+   <span style="color:#a6e22e">then</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">now</span>.<span style="color:#a6e22e">AddDate</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">then</span>)
 }
 </code></pre></div>
 

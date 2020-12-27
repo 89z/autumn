@@ -37,10 +37,24 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;date&#39;</span>
 s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2019-12-31&#39;</span>
+o <span style="color:#f92672">=</span> <span style="color:#66d9ef">Date</span><span style="color:#f92672">.</span>strptime(s, <span style="color:#e6db74">&#39;%Y-%m-%d&#39;</span>)
+puts o
+</code></pre></div>
+
+<p><a href="https://ruby-doc.org/stdlib/libdoc/date/rdoc/Date.html#method-c-strptime">https://ruby-doc.org/stdlib/libdoc/date/rdoc/Date.html#method-c-strptime</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;date&#39;</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2019-12-31&#39;</span>
 o <span style="color:#f92672">=</span> <span style="color:#66d9ef">DateTime</span><span style="color:#f92672">.</span>strptime(s, <span style="color:#e6db74">&#39;%Y-%m-%d&#39;</span>)
 puts o
 </code></pre></div>
 
+<p><a href="https://ruby-doc.org/stdlib/libdoc/date/rdoc/DateTime.html#method-c-strptime">https://ruby-doc.org/stdlib/libdoc/date/rdoc/DateTime.html#method-c-strptime</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting#parse-datetime">https://hyperpolyglot.org/scripting#parse-datetime</a></li>

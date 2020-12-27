@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
-   o := time.Now().AddDate(0, 0, -1)
-   fmt.Println(o)
+   now := time.Now()
+   then := now.AddDate(-1, 0, 0)
+   fmt.Println(then)
 }
