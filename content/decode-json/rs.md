@@ -3,23 +3,23 @@ title = "Rust"
 tags = [ "rust" ]
 +++
 
-{{< r "a/src/main.rs" >}}
+0 deps:
 
-0 deps
+{{< r "a/src/main.rs" >}}
 
 <https://docs.rs/tinyjson/latest/tinyjson/struct.JsonParser.html#method.parse>
 
+0 deps:
+
 {{< r "b/src/main.rs" >}}
 
-0 deps
+<https://docs.rs/json/latest/json/fn.parse.html>
 
-<https://lib.rs/crates/json>
+3 deps:
 
 {{< r "c/src/main.rs" >}}
 
-3 deps
-
-<https://lib.rs/crates/serde_json>
+<https://docs.rs/serde_json/latest/serde_json/fn.from_str.html>
 
 ## References
 

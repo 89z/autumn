@@ -4,11 +4,12 @@ import (
    "encoding/json"
    "fmt"
    "log"
+   "strings"
 )
 
 func JsonDecode(s string) ([]interface{}, error) {
-   y, a := []byte(s), []interface{}{}
-   return a, json.Unmarshal(y, &a)
+   o, a := strings.NewReader(s), []interface{}{}
+   return a, json.NewDecoder(o).Decode(&a)
 }
 
 func main() {

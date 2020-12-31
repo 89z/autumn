@@ -3,19 +3,21 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "a.go" >}}
+{{< r "readfile.go" >}}
+
+<https://golang.org/pkg/io/ioutil#ReadFile>
+
+{{< r "open.go" >}}
+
+<https://golang.org/pkg/os#Open>
+
+{{< r "newreader.go" >}}
+
+<https://golang.org/pkg/strings#NewReader>
 
 {{< r "byte.go" >}}
 
-<https://golang.org/pkg/encoding/json#Unmarshal>
-
-{{< r "reader.go" >}}
-
-<https://golang.org/pkg/encoding/json#NewDecoder>
-
-{{< r "string.go" >}}
-
-<https://golang.org/pkg/strings#NewReader>
+<https://golang.org/ref/spec#Conversions_to_and_from_a_string_type>
 
 ## References
 

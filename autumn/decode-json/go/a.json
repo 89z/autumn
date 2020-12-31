@@ -1,7 +1,4 @@
-{
-   "package": {
-      "edition": "2019",
-      "name": "decode-json",
-      "version": "1.0.0"
-   }
-}
+[
+   {"month": 12, "day": 31},
+   {"month": 11, "day": 30}
+]
