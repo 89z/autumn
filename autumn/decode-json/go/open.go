@@ -12,6 +12,7 @@ func JsonDecode(s string) ([]interface{}, error) {
    if e != nil {
       return nil, e
    }
+   defer o.Close()
    a := []interface{}{}
    return a, json.NewDecoder(o).Decode(&a)
 }
