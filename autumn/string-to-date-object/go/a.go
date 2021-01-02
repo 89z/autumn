@@ -12,7 +12,7 @@ func ParseDate(value string) (time.Time, error) {
 }
 
 func main() {
-   o, e := ParseDate("2019-12-31")
+   o, e := ParseDate("2020-12-31")
    if e != nil {
       log.Fatal(e)
    }

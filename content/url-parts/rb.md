@@ -5,7 +5,15 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/stdlib/libdoc/uri/rdoc>
+<https://docs.ruby-lang.org/en/master/URI/Generic.html#attribute-i-host>
+
+{{< r "b.rb" >}}
+
+<https://docs.ruby-lang.org/en/master/URI/Generic.html#attribute-i-path>
+
+{{< r "c.rb" >}}
+
+<https://docs.ruby-lang.org/en/master/URI/Generic.html#attribute-i-query>
 
 ## References
 

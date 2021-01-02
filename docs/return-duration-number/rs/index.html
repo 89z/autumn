@@ -41,10 +41,10 @@
 };
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> old_o <span style="color:#f92672">=</span> Utc.ymd(<span style="color:#ae81ff">2018</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">31</span>);
-   <span style="color:#66d9ef">let</span> new_o <span style="color:#f92672">=</span> Utc.ymd(<span style="color:#ae81ff">2019</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">31</span>);
-   <span style="color:#66d9ef">let</span> dur_o <span style="color:#f92672">=</span> new_o.signed_duration_since(old_o);
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, dur_o);
+   <span style="color:#66d9ef">let</span> old <span style="color:#f92672">=</span> Utc.ymd(<span style="color:#ae81ff">2019</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">31</span>);
+   <span style="color:#66d9ef">let</span> new <span style="color:#f92672">=</span> Utc.ymd(<span style="color:#ae81ff">2020</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">31</span>);
+   <span style="color:#66d9ef">let</span> dur <span style="color:#f92672">=</span> new.signed_duration_since(old);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, dur);
 }
 </code></pre></div>
 

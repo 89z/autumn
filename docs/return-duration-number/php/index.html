@@ -42,7 +42,7 @@
    <span style="color:#66d9ef">return</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">days</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">86400</span> <span style="color:#f92672">+</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">h</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">3600</span> <span style="color:#f92672">+</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">i</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">s</span> <span style="color:#f92672">+</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">f</span>;
 }
 
-$o <span style="color:#f92672">=</span> <span style="color:#a6e22e">DateTime</span><span style="color:#f92672">::</span><span style="color:#a6e22e">createFromFormat</span>(<span style="color:#e6db74">&#39;!Y-m-d&#39;</span>, <span style="color:#e6db74">&#39;2019-12-31&#39;</span>);
+$o <span style="color:#f92672">=</span> <span style="color:#a6e22e">DateTime</span><span style="color:#f92672">::</span><span style="color:#a6e22e">createFromFormat</span>(<span style="color:#e6db74">&#39;!Y-m-d&#39;</span>, <span style="color:#e6db74">&#39;2020-12-31&#39;</span>);
 $n <span style="color:#f92672">=</span> <span style="color:#a6e22e">seconds</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>, $o);
 <span style="color:#a6e22e">var_dump</span>($n);
 </code></pre></div>

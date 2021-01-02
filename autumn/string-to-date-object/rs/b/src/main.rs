@@ -1,6 +1,11 @@
-use chrono::prelude::*;
+use chrono::{
+   TimeZone,
+   Utc
+};
 
-fn main() {
-   let z  = Utc.datetime_from_str("2014-11-28 12:00:09", "%Y-%m-%d %H:%M:%S");
-   println!("{:?}", z);
+fn main() -> Result<(), chrono::ParseError> {
+   let s = "2020-12-31 23:59:59";
+   let o  = Utc.datetime_from_str(s, "%Y-%m-%d %H:%M:%S")?;
+   println!("{:?}", o);
+   Ok(())
 }

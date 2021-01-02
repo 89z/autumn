@@ -39,7 +39,7 @@
 <span style="color:#f92672">import</span> std.datetime<span style="color:#f92672">:</span> Clock<span style="color:#f92672">,</span> SysTime<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> old_o <span style="color:#f92672">=</span> SysTime<span style="color:#f92672">.</span><span style="color:#a6e22e">fromISOExtString</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;2019-12-31T23:59:59&#34;</span><span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> old_o <span style="color:#f92672">=</span> SysTime<span style="color:#f92672">.</span><span style="color:#a6e22e">fromISOExtString</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;2020-12-31T23:59:59&#34;</span><span style="color:#f92672">);</span>
    <span style="color:#66d9ef">auto</span> new_o <span style="color:#f92672">=</span> Clock<span style="color:#f92672">.</span><span style="color:#a6e22e">currTime</span><span style="color:#f92672">;</span>
    <span style="color:#66d9ef">auto</span> n <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>new_o <span style="color:#f92672">-</span> old_o<span style="color:#f92672">).</span><span style="color:#a6e22e">total</span><span style="color:#f92672">!</span><span style="color:#e6db74">&#34;days&#34;</span><span style="color:#f92672">;</span>
    io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>n<span style="color:#f92672">);</span>
