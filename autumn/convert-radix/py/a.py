@@ -10,6 +10,6 @@ class Radix:
       return self.encode(n, nBase) + s if n > 0 else s
 
 o = Radix()
-s = o.encode(1577858399, 36)
+s = o.encode(1609480799, 36)
 n = o.decode('q3ezbz', 36)
-print(s == 'q3ezbz', n == 1577858399)
+print(s == 'q3ezbz', n == 1609480799)

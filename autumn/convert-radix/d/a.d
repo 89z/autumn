@@ -3,7 +3,7 @@ import io = std.stdio;
 
 void main() {
    // example 1
-   auto n = 1577858399;
+   auto n = 1609480799;
    auto s1 = conv.to!string(n, 36);
    // example 2
    auto s = "Q3EZBZ";

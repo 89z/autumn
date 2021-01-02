@@ -19,8 +19,8 @@ class Radix {
 class Program {
    static void Main() {
       var o = new Radix();
-      var s = o.encode(1577858399, 36);
+      var s = o.encode(1609480799, 36);
       var n = o.decode("q3ezbz", 36);
-      Console.WriteLine(s == "q3ezbz" && n == 1577858399);
+      Console.WriteLine(s == "q3ezbz" && n == 1609480799);
    }
 }

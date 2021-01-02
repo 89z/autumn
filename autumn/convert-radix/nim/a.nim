@@ -15,6 +15,6 @@ proc decode(o: Radix, sIn: string, nBase: int): int =
    return if s != "": o.decode(s, nBase) * nBase + n else: n
 
 let o = newRadix()
-let s = o.encode(1577858399, 36)
+let s = o.encode(1609480799, 36)
 let n = o.decode("q3ezbz", 36)
-echo s == "q3ezbz" and n == 1577858399
+echo s == "q3ezbz" and n == 1609480799

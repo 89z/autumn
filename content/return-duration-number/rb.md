@@ -5,6 +5,10 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
+<https://docs.ruby-lang.org/en/master/DateTime.html>
+
+{{< r "b.rb" >}}
+
 <https://docs.ruby-lang.org/en/master/Time.html#method-i-2D>
 
 ## References

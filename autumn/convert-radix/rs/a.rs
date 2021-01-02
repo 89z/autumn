@@ -9,7 +9,7 @@ fn encode(n: u32, r: u32) -> String {
 }
 
 fn main() {
-   let n = 1577858399;
+   let n = 1609480799;
    let s = encode(n, 36);
    println!("{}", s == "q3ezbz");
 }

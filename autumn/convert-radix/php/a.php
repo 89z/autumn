@@ -9,7 +9,7 @@ function decode36(string $s): int {
    return (int) base_convert($s, 36, 10);
 }
 
-$n = 1577858399;
+$n = 1609480799;
 $s = encode36($n);
 $n2 = decode36($s);
 var_dump($n2 === $n);

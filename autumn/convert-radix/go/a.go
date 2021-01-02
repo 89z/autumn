@@ -10,5 +10,5 @@ func Decode(s string, n int) int64 {
 func main() {
    s := "q3ezbz"
    n := Decode(s, 36)
-   println(n == 1577858399)
+   println(n == 1609480799)
 }
