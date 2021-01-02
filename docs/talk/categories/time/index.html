@@ -35,16 +35,20 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1577836799</span>;
+$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1609459199</span>;
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">date</span>(<span style="color:#a6e22e">DATE_W3C</span>, $n);
+</span><span style="color:#75715e"></span>$date <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
+$date<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setTimestamp</span>($n);
+$s1 <span style="color:#f92672">=</span> $date<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">format</span>(<span style="color:#a6e22e">DATE_W3C</span>);
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">date_default_timezone_set</span>(<span style="color:#e6db74">&#39;America/Chicago&#39;</span>);
-$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">date</span>(<span style="color:#a6e22e">DATE_W3C</span>, $n);
+</span><span style="color:#75715e"></span>$zone <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTimeZone</span>(<span style="color:#e6db74">&#39;America/Chicago&#39;</span>);
+$date <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>(<span style="color:#a6e22e">timezone</span><span style="color:#f92672">:</span> $zone);
+$date<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setTimestamp</span>($n);
+$s2 <span style="color:#f92672">=</span> $date<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">format</span>(<span style="color:#a6e22e">DATE_W3C</span>);
 <span style="color:#75715e"># print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>(
-   $s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;2019-12-31T23:59:59+00:00&#39;</span>,
-   $s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;2019-12-31T17:59:59-06:00&#39;</span>
+   $s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;2020-12-31T23:59:59+00:00&#39;</span>,
+   $s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;2020-12-31T17:59:59-06:00&#39;</span>
 );
 </code></pre></div>
 
@@ -57,16 +61,20 @@ good, as I will know what zone functions are returning:</p>
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1577858399</span>;
+$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1609480799</span>;
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">date</span>(<span style="color:#a6e22e">DATE_W3C</span>, $n);
+</span><span style="color:#75715e"></span>$date <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
+$date<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setTimestamp</span>($n);
+$s1 <span style="color:#f92672">=</span> $date<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">format</span>(<span style="color:#a6e22e">DATE_W3C</span>);
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">date_default_timezone_set</span>(<span style="color:#e6db74">&#39;America/Chicago&#39;</span>);
-$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">date</span>(<span style="color:#a6e22e">DATE_W3C</span>, $n);
+</span><span style="color:#75715e"></span>$zone <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTimeZone</span>(<span style="color:#e6db74">&#39;America/Chicago&#39;</span>);
+$date <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>(<span style="color:#a6e22e">timezone</span><span style="color:#f92672">:</span> $zone);
+$date<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setTimestamp</span>($n);
+$s2 <span style="color:#f92672">=</span> $date<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">format</span>(<span style="color:#a6e22e">DATE_W3C</span>);
 <span style="color:#75715e"># print
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>(
-   $s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;2020-01-01T05:59:59+00:00&#39;</span>,
-   $s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;2019-12-31T23:59:59-06:00&#39;</span>
+   $s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;2021-01-01T05:59:59+00:00&#39;</span>,
+   $s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;2020-12-31T23:59:59-06:00&#39;</span>
 );
 </code></pre></div>
 

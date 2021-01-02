@@ -24,7 +24,7 @@
    <a href="/autumn/number-to-date-object/">Number to date object</a> / Go
 </h1>
 <section class="page">
-   <time>Thu Dec 3 2020</time>
+   <time>Thu Jan 2 2020</time>
    
    <a href="/autumn/categories/time/">time</a>
    
@@ -42,14 +42,45 @@
    <span style="color:#e6db74">&#34;time&#34;</span>
 )
 
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Unix</span>(<span style="color:#a6e22e">sec</span> <span style="color:#66d9ef">int</span>) <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Time</span> {
+   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> int64(<span style="color:#a6e22e">sec</span>)
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Unix</span>(<span style="color:#a6e22e">n</span>, <span style="color:#ae81ff">0</span>)
+}
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> int64(<span style="color:#ae81ff">1577858399</span>)
-   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Unix</span>(<span style="color:#a6e22e">n</span>, <span style="color:#ae81ff">0</span>)
+   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1577858399</span>
+   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Unix</span>(<span style="color:#a6e22e">n</span>)
    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">o</span>)
 }
 </code></pre></div>
 
-<p><a href="https://golang.org/pkg/time">https://golang.org/pkg/time</a></p>
+<p><a href="https://golang.org/pkg/time#Date">https://golang.org/pkg/time#Date</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;time&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Unix</span>(<span style="color:#a6e22e">sec</span> <span style="color:#66d9ef">int</span>) <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Time</span> {
+   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> int64(<span style="color:#a6e22e">sec</span>)
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Unix</span>(<span style="color:#a6e22e">n</span>, <span style="color:#ae81ff">0</span>)
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1577858399</span>
+   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Unix</span>(<span style="color:#a6e22e">n</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">o</span>)
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/time#Unix">https://golang.org/pkg/time#Unix</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#unix-epoch-to-broken-down-datetime">https://hyperpolyglot.org/c#unix-epoch-to-broken-down-datetime</a></li>

@@ -1,12 +1,16 @@
 <?php
-$n = 1577836799;
+$n = 1609459199;
 # example 1
-$s1 = date(DATE_W3C, $n);
+$date = new DateTime;
+$date->setTimestamp($n);
+$s1 = $date->format(DATE_W3C);
 # example 2
-date_default_timezone_set('America/Chicago');
-$s2 = date(DATE_W3C, $n);
+$zone = new DateTimeZone('America/Chicago');
+$date = new DateTime(timezone: $zone);
+$date->setTimestamp($n);
+$s2 = $date->format(DATE_W3C);
 # print
 var_dump(
-   $s1 == '2019-12-31T23:59:59+00:00',
-   $s2 == '2019-12-31T17:59:59-06:00'
+   $s1 == '2020-12-31T23:59:59+00:00',
+   $s2 == '2020-12-31T17:59:59-06:00'
 );

@@ -5,11 +5,11 @@ tags = [ "php" ]
 
 {{< r "a.php" >}}
 
-<https://php.net/datetime.format>
+<https://php.net/datetime.settimestamp>
 
 {{< r "b.php" >}}
 
-<https://php.net/function.date-format>
+<https://php.net/function.date-timestamp-set>
 
 ## References
 

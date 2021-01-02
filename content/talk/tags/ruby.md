@@ -2,4 +2,4 @@
 title = "Ruby"
 +++
 
-{{< r "ruby.txt" >}}
+https://rubyinstaller.org/downloads
