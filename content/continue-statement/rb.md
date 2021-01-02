@@ -5,7 +5,7 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-next+Statement>
+<https://docs.ruby-lang.org/en/master/doc/syntax/control_expressions_rdoc.html#label-next+Statement>
 
 ## References
 

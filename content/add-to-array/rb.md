@@ -5,15 +5,15 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Array.html#method-i-push>
+<https://docs.ruby-lang.org/en/master/Array.html#method-i-push>
 
 {{< r "b.rb" >}}
 
-<https://ruby-doc.org/core/Array.html#method-i-append>
+<https://docs.ruby-lang.org/en/master/Array.html#method-i-append>
 
 {{< r "c.rb" >}}
 
-<https://ruby-doc.org/core/Array.html#method-i-3C-3C>
+<https://docs.ruby-lang.org/en/master/Array.html#method-i-3C-3C>
 
 ## References
 

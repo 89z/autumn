@@ -3,7 +3,9 @@ title = "Ruby"
 tags = [ "ruby" ]
 +++
 
-<https://ruby-doc.org/core/Float.html>
+{{< r "a.rb" >}}
+
+<https://docs.ruby-lang.org/en/master/Float.html>
 
 ## References
 

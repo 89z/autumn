@@ -5,11 +5,11 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/String.html#method-i-downcase>
+<https://docs.ruby-lang.org/en/master/String.html#method-i-downcase>
 
 {{< r "b.rb" >}}
 
-<https://ruby-doc.org/core/String.html#method-i-upcase>
+<https://docs.ruby-lang.org/en/master/String.html#method-i-upcase>
 
 ## References
 

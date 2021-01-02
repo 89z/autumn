@@ -5,7 +5,7 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Hash.html#method-i-5B-5D-3D>
+<https://docs.ruby-lang.org/en/master/Hash.html#method-i-5B-5D-3D>
 
 ## References
 

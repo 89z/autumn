@@ -1,3 +1,3 @@
 require 'date'
-o = Date.today
+o = DateTime.now
 puts o

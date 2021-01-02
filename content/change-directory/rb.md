@@ -5,7 +5,7 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Dir.html#method-c-chdir>
+<https://docs.ruby-lang.org/en/master/Dir.html#method-c-chdir>
 
 ## References
 

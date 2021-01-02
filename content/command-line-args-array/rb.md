@@ -5,7 +5,7 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/doc/globals_rdoc.html>
+<https://docs.ruby-lang.org/en/master/doc/globals_rdoc.html>
 
 ## References
 

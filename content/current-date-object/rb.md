@@ -5,7 +5,15 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Time.html#method-c-now>
+<https://docs.ruby-lang.org/en/master/Date.html#method-c-today>
+
+{{< r "b.rb" >}}
+
+<https://docs.ruby-lang.org/en/master/DateTime.html#method-c-now>
+
+{{< r "c.rb" >}}
+
+<https://docs.ruby-lang.org/en/master/Time.html#method-c-now>
 
 ## References
 

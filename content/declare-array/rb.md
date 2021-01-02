@@ -5,7 +5,7 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Array.html>
+<https://docs.ruby-lang.org/en/master/Array.html>
 
 ## References
 
