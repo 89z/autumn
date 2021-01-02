@@ -5,11 +5,11 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/stdlib/libdoc/date/rdoc/Date.html#method-c-strptime>
+<https://docs.ruby-lang.org/en/master/Date.html#method-c-strptime>
 
 {{< r "b.rb" >}}
 
-<https://ruby-doc.org/stdlib/libdoc/date/rdoc/DateTime.html#method-c-strptime>
+<https://docs.ruby-lang.org/en/master/DateTime.html#method-c-strptime>
 
 ## References
 

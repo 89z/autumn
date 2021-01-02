@@ -5,11 +5,11 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/stdlib/libdoc/getoptlong/rdoc/GetoptLong.html>
+<https://docs.ruby-lang.org/en/master/GetoptLong.html>
 
 {{< r "b.rb" >}}
 
-<https://ruby-doc.org/stdlib/libdoc/optparse/rdoc/OptionParser.html>
+<https://docs.ruby-lang.org/en/master/OptionParser.html>
 
 ## References
 

@@ -5,11 +5,11 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Time.html#method-i-to_f>
+<https://docs.ruby-lang.org/en/master/Time.html#method-i-to_f>
 
 {{< r "b.rb" >}}
 
-<https://ruby-doc.org/core/Time.html#method-i-to_i>
+<https://docs.ruby-lang.org/en/master/Time.html#method-i-to_i>
 
 ## References
 

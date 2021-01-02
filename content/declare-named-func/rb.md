@@ -5,7 +5,7 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/doc/syntax/methods_rdoc.html>
+<https://docs.ruby-lang.org/en/master/doc/syntax/methods_rdoc.html>
 
 ## References
 

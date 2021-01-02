@@ -5,11 +5,11 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Integer.html#method-i-2A-2A>
+<https://docs.ruby-lang.org/en/master/Integer.html#method-i-2A-2A>
 
 {{< r "b.rb" >}}
 
-<https://ruby-doc.org/core/Integer.html#method-i-pow>
+<https://docs.ruby-lang.org/en/master/Integer.html#method-i-pow>
 
 ## References
 

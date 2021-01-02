@@ -5,11 +5,11 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Kernel.html#method-i-print>
+<https://docs.ruby-lang.org/en/master/Kernel.html#method-i-print>
 
 {{< r "b.rb" >}}
 
-<https://ruby-doc.org/core/Kernel.html#method-i-puts>
+<https://docs.ruby-lang.org/en/master/Kernel.html#method-i-puts>
 
 ## References
 

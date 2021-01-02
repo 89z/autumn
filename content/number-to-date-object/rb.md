@@ -5,7 +5,7 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Time.html#method-c-at>
+<https://docs.ruby-lang.org/en/master/Time.html#method-c-at>
 
 ## References
 

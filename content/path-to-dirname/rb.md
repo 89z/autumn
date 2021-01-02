@@ -5,8 +5,8 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/File.html#method-c-dirname>
+<https://docs.ruby-lang.org/en/master/File.html#method-c-dirname>
 
 ## References
 
-- <https://hyperpolyglot.org/scripting2#dirname-basename>
+<https://hyperpolyglot.org/scripting2#dirname-basename>

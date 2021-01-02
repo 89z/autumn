@@ -9,4 +9,5 @@ tags = [ "nim" ]
 
 ## References
 
-<https://rosettacode.org/wiki/Conditional_structures>
+- <https://programming-idioms.org/idiom/131>
+- <https://rosettacode.org/wiki/Conditional_structures>

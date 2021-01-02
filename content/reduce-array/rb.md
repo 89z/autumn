@@ -5,7 +5,7 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Enumerable.html#method-i-reduce>
+<https://docs.ruby-lang.org/en/master/Enumerable.html#method-i-reduce>
 
 ## References
 

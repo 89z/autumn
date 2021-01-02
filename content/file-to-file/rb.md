@@ -5,7 +5,7 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/stdlib/libdoc/fileutils/rdoc/FileUtils.html#method-c-copy>
+<https://docs.ruby-lang.org/en/master/FileUtils.html#method-c-copy>
 
 ## References
 

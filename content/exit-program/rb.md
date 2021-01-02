@@ -5,7 +5,7 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Process.html#method-c-exit>
+<https://docs.ruby-lang.org/en/master/Process.html#method-c-exit>
 
 ## References
 

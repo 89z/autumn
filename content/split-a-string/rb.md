@@ -5,7 +5,7 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/String.html#method-i-split>
+<https://docs.ruby-lang.org/en/master/String.html#method-i-split>
 
 ## References
 

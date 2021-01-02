@@ -5,7 +5,7 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/ENV.html>
+<https://docs.ruby-lang.org/en/master/ENV.html>
 
 ## References
 

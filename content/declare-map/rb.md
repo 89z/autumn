@@ -5,11 +5,11 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Array.html#method-i-to_h>
+<https://docs.ruby-lang.org/en/master/Array.html#method-i-to_h>
 
 {{< r "b.rb" >}}
 
-<https://ruby-doc.org/core/Hash.html>
+<https://docs.ruby-lang.org/en/master/Hash.html>
 
 ## References
 

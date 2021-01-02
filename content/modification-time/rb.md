@@ -5,19 +5,19 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/File.html#method-c-mtime>
+<https://docs.ruby-lang.org/en/master/File.html#method-c-mtime>
 
 {{< r "b.rb" >}}
 
-<https://ruby-doc.org/core/File.html#method-c-utime>
+<https://docs.ruby-lang.org/en/master/File.html#method-c-utime>
 
 {{< r "c.rb" >}}
 
-<https://ruby-doc.org/core/File.html#method-i-mtime>
+<https://docs.ruby-lang.org/en/master/File.html#method-i-mtime>
 
 {{< r "d.rb" >}}
 
-<https://ruby-doc.org/core/File/Stat.html#method-i-mtime>
+<https://docs.ruby-lang.org/en/master/File/Stat.html#method-i-mtime>
 
 ## References
 

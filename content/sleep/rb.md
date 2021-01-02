@@ -5,7 +5,7 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Kernel.html#method-i-sleep>
+<https://docs.ruby-lang.org/en/master/Kernel.html#method-i-sleep>
 
 ## References
 

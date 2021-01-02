@@ -5,8 +5,8 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Hash.html#method-i-each>
+<https://docs.ruby-lang.org/en/master/Hash.html#method-i-each>
 
 ## References
 
-- <https://hyperpolyglot.org/scripting#dict-iter>
+<https://hyperpolyglot.org/scripting#dict-iter>

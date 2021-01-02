@@ -5,11 +5,11 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Array.html#method-i-5B-5D>
+<https://docs.ruby-lang.org/en/master/Array.html#method-i-5B-5D>
 
 {{< r "b.rb" >}}
 
-<https://ruby-doc.org/core/Array.html#method-i-slice>
+<https://docs.ruby-lang.org/en/master/Array.html#method-i-slice>
 
 ## References
 

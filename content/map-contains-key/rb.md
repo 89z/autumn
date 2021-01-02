@@ -5,7 +5,7 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Hash.html#method-i-key-3F>
+<https://docs.ruby-lang.org/en/master/Hash.html#method-i-key-3F>
 
 ## References
 

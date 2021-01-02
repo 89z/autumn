@@ -5,7 +5,7 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Array.html#method-i-sort>
+<https://docs.ruby-lang.org/en/master/Array.html#method-i-sort>
 
 ## References
 

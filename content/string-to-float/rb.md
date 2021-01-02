@@ -5,7 +5,7 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/String.html#method-i-to_f>
+<https://docs.ruby-lang.org/en/master/String.html#method-i-to_f>
 
 ## References
 

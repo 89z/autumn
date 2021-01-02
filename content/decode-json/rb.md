@@ -5,7 +5,7 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/stdlib/libdoc/json/rdoc/JSON.html#method-i-parse>
+<https://docs.ruby-lang.org/en/master/JSON.html#method-i-parse>
 
 ## References
 

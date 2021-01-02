@@ -5,11 +5,11 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://ruby-doc.org/core/Array.html#method-i-each>
+<https://docs.ruby-lang.org/en/master/Array.html#method-i-each>
 
 {{< r "b.rb" >}}
 
-<https://ruby-doc.org/core/Enumerable.html#method-i-each_with_index>
+<https://docs.ruby-lang.org/en/master/Enumerable.html#method-i-each_with_index>
 
 ## References
 

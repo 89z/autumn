@@ -5,11 +5,11 @@ tags = [ "ruby" ]
 
 {{< r "log10.rb" >}}
 
-<https://ruby-doc.org/core/Math.html#method-c-log10>
+<https://docs.ruby-lang.org/en/master/Math.html#method-c-log10>
 
 {{< r "while.rb" >}}
 
-<https://ruby-doc.org/core/doc/syntax/control_expressions_rdoc.html#label-while+Loop>
+<https://docs.ruby-lang.org/en/master/doc/syntax/control_expressions_rdoc.html#label-while+Loop>
 
 ## References
 
