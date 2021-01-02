@@ -11,6 +11,14 @@ tags = [ "php" ]
 
 <https://php.net/function.date-timestamp-get>
 
+{{< r "c.php" >}}
+
+<https://php.net/function.microtime>
+
+{{< r "d.php" >}}
+
+<https://php.net/function.time>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting#current-unix-epoch>

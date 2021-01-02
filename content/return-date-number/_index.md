@@ -1,7 +1,7 @@
 +++
 title = "Return date number"
 categories = [ "time" ]
-date = 2020-12-03
+date = 2021-01-01
 example = [
    'cove\git-tools\byte-year.php', 'time()'
 ]

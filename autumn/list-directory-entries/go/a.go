@@ -10,8 +10,8 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   for n := range a {
-      s := a[n].Name()
+   for _, o := range a {
+      s := o.Name()
       println(s)
    }
 }

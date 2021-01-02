@@ -3,6 +3,6 @@ import std.datetime: Clock;
 
 void main() {
    auto o = Clock.currTime;
-   auto n = o.fracSecs.total!"msecs";
+   auto n = o.toUnixTime;
    io.writeln(n);
 }

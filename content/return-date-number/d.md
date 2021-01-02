@@ -5,7 +5,11 @@ tags = [ "d" ]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/library/std/datetime/systime/clock.curr_time.html>
+<https://dlang.org/library/std/datetime/systime/sys_time.frac_secs.html>
+
+{{< r "b.d" >}}
+
+<https://dlang.org/library/std/datetime/systime/sys_time.to_unix_time.html>
 
 ## References
 

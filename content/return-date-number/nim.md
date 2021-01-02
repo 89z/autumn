@@ -7,6 +7,11 @@ tags = [ "nim" ]
 
 <https://nim-lang.org/docs/times.html#toUnix,Time>
 
+{{< r "b.nim" >}}
+
+<https://nim-lang.org/docs/times.html#toUnixFloat,Time>
+
 ## References
 
-<https://rosettacode.org/wiki/System_time>
+- <https://programming-idioms.org/idiom/61>
+- <https://rosettacode.org/wiki/System_time>

@@ -7,6 +7,10 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/time#Time.Unix>
 
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/time#Time.UnixNano>
+
 ## References
 
 - <https://hyperpolyglot.org/c#current-unix-epoch>
