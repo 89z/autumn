@@ -5,6 +5,10 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
+<https://ruby-doc.org/core/Time.html#method-i-to_f>
+
+{{< r "b.rb" >}}
+
 <https://ruby-doc.org/core/Time.html#method-i-to_i>
 
 ## References

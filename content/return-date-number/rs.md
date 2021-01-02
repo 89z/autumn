@@ -5,6 +5,10 @@ tags = [ "rust" ]
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/std/time/struct.Duration.html#method.as_millis>
+
+{{< r "b.rs" >}}
+
 <https://doc.rust-lang.org/std/time/struct.Duration.html#method.as_secs>
 
 ## References

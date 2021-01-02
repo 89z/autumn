@@ -1,3 +1,3 @@
 o = Time.now
-n = o.to_f
+n = o.to_i
 puts n

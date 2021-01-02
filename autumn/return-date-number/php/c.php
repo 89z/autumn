@@ -1,3 +1,3 @@
 <?php
-$n = time();
+$n = microtime(true);
 var_dump($n);
