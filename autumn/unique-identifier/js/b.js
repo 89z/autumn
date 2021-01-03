@@ -1,8 +1,8 @@
-'use strict';
-
-function ID(n) {
-   return n.toString(36);
+function idEncode(year) {
+   let t = new Date(year, 0);
+   let x = (new Date - t) / 1000;
+   return Math.trunc(x).toString(36);
 }
 
-let s = ID(2021);
+let s = idEncode(2020);
 console.log(s);

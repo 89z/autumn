@@ -1,5 +1,4 @@
 <?php
-$n = 1609480799;
 $o = new DateTime;
-$o->setTimestamp($n);
+$o->setDate(2020, 12, 31);
 var_dump($o);

@@ -29,29 +29,48 @@
    <a href="/autumn/categories/number/">number</a>
    
 </section>
-   
+   <p>
 
 
    
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>);
 
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">encode36</span>(<span style="color:#a6e22e">int</span> $n)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
-   $s <span style="color:#f92672">=</span> (<span style="color:#a6e22e">string</span>) $n;
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">base_convert</span>($s, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">36</span>);
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">id_encode</span>(<span style="color:#a6e22e">int</span> $year)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
+   [$t, $u] <span style="color:#f92672">=</span> [<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>, <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>];
+   $u<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setDate</span>($year, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>);
+   $x <span style="color:#f92672">=</span> $t<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">diff</span>($u)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#39;U&#39;</span>);
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">base_convert</span>($x, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">36</span>);
 }
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decode36</span>(<span style="color:#a6e22e">string</span> $s)<span style="color:#f92672">:</span> <span style="color:#a6e22e">int</span> {
    <span style="color:#66d9ef">return</span> (<span style="color:#a6e22e">int</span>) <span style="color:#a6e22e">base_convert</span>($s, <span style="color:#ae81ff">36</span>, <span style="color:#ae81ff">10</span>);
 }
-
-$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1609480799</span>;
-$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">encode36</span>($n);
-$n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">decode36</span>($s);
-<span style="color:#a6e22e">var_dump</span>($n2 <span style="color:#f92672">===</span> $n);
 </code></pre></div>
 
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>);
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">id_encode</span>(<span style="color:#a6e22e">int</span> $year)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
+   [$t, $u] <span style="color:#f92672">=</span> [<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>, <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>];
+   $u<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setDate</span>($year, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>);
+   $x <span style="color:#f92672">=</span> $t<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">diff</span>($u)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#39;U&#39;</span>);
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">base_convert</span>($x, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">36</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decode36</span>(<span style="color:#a6e22e">string</span> $s)<span style="color:#f92672">:</span> <span style="color:#a6e22e">int</span> {
+   <span style="color:#66d9ef">return</span> (<span style="color:#a6e22e">int</span>) <span style="color:#a6e22e">base_convert</span>($s, <span style="color:#ae81ff">36</span>, <span style="color:#ae81ff">10</span>);
+}
+</code></pre></div>
+</p>
 <p><a href="https://php.net/function.base-convert">https://php.net/function.base-convert</a></p>
 
 

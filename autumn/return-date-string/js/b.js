@@ -9,6 +9,5 @@ function format(date_o) {
    return [date_m.year, date_m.month, date_m.day].join('-');
 }
 
-let o = new Date;
-let s = format(o);
+let s = format(new Date);
 console.log(s);

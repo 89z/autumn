@@ -4,10 +4,11 @@ tags = [ "php" ]
 +++
 
 {{< r "a.php" >}}
+{{< r "b.php" >}}
 
 <https://php.net/function.base-convert>
 
-{{< r "b.php" >}}
+{{< r "c.php" >}}
 
 <https://php.net/function.uniqid>
 

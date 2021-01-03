@@ -7,10 +7,6 @@ tags = [ "javascript" ]
 
 <https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/Date>
 
-{{< r "b.js" >}}
-
-<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC>
-
 ## References
 
 - <https://hyperpolyglot.org/scripting#unix-epoch-to-broken-down-datetime>
