@@ -1,8 +1,8 @@
-function idEncode(year) {
+function idDecode(s, year) {
    let t = new Date(year, 0);
-   let x = (new Date - t) / 1000;
-   return Math.trunc(x).toString(36);
+   let x = parseInt(s, 36) * 1000 + t.getTime();
+   return new Date(x);
 }
 
-let s = idEncode(2020);
-console.log(s);
+let o = idDecode('itrzz', 2020);
+console.log(o);

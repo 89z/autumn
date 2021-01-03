@@ -5,13 +5,9 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt>
-
-{{< r "b.js" >}}
-
 <https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toString>
 
-{{< r "c.js" >}}
+{{< r "b.js" >}}
 
 <https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/parseInt>
 

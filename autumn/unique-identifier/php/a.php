@@ -2,12 +2,10 @@
 declare(strict_types = 1);
 
 function id_encode(int $year): string {
-   [$t, $u] = [new DateTime, new DateTime];
-   $u->setDate($year, 1, 1);
-   $x = $t->diff($u)->format('U');
-   return base_convert($x, 10, 36);
+   $t = new DateTime;
+   $t->setDate($year, 1, 1);
+   $x = time() - $t->getTimestamp();
+   return base_convert((string) $x, 10, 36);
 }
 
-function decode36(string $s): int {
-   return (int) base_convert($s, 36, 10);
-}
+echo id_encode(2020), "\n";

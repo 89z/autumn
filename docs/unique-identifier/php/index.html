@@ -39,15 +39,13 @@
 <span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>);
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">id_encode</span>(<span style="color:#a6e22e">int</span> $year)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
-   [$t, $u] <span style="color:#f92672">=</span> [<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>, <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>];
-   $u<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setDate</span>($year, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>);
-   $x <span style="color:#f92672">=</span> $t<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">diff</span>($u)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#39;U&#39;</span>);
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">base_convert</span>($x, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">36</span>);
+   $t <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
+   $t<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setDate</span>($year, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>);
+   $x <span style="color:#f92672">=</span> <span style="color:#a6e22e">time</span>() <span style="color:#f92672">-</span> $t<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getTimestamp</span>();
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">base_convert</span>((<span style="color:#a6e22e">string</span>) $x, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">36</span>);
 }
 
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decode36</span>(<span style="color:#a6e22e">string</span> $s)<span style="color:#f92672">:</span> <span style="color:#a6e22e">int</span> {
-   <span style="color:#66d9ef">return</span> (<span style="color:#a6e22e">int</span>) <span style="color:#a6e22e">base_convert</span>($s, <span style="color:#ae81ff">36</span>, <span style="color:#ae81ff">10</span>);
-}
+<span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">id_encode</span>(<span style="color:#ae81ff">2020</span>), <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
 </code></pre></div>
 
 

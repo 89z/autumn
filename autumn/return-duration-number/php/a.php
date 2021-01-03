@@ -1,8 +1,10 @@
 <?php
 
-function seconds(object $new_o, object $old_o): float {
-   $o = $new_o->diff($old_o);
-   return $o->days * 86400 + $o->h * 3600 + $o->i * 60 + $o->s + $o->f;
+function seconds(object $t, object $u): int {
+   $d = $u->diff($t);
+   $t->setTimestamp(0);
+   $t->add($d);
+   return $t->getTimestamp();
 }
 
 $o = DateTime::createFromFormat('!Y-m-d', '2020-12-31');
