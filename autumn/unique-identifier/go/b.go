@@ -5,14 +5,13 @@ import (
    "time"
 )
 
-func ID(year int, d time.Duration) string {
-   time.Sleep(d)
+func IdEncode(year int) string {
    t := time.Date(year, 1, 1, 0, 0, 0, 0, time.UTC)
-   x := time.Since(t).Nanoseconds() / int64(d)
+   x := time.Since(t).Milliseconds()
    return big.NewInt(x).Text(62)
 }
 
 func main() {
-   s := ID(2021, time.Millisecond)
+   s := IdEncode(2021)
    println(s)
 }

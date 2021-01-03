@@ -4,6 +4,9 @@ tags = [ "php" ]
 +++
 
 {{< r "a.php" >}}
+
+<https://php.net/datetime.settimestamp>
+
 {{< r "b.php" >}}
 
 <https://php.net/function.base-convert>

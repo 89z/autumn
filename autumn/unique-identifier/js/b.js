@@ -1,6 +1,6 @@
 function idDecode(s, year) {
    let t = new Date(year, 0);
-   let x = parseInt(s, 36) * 1000 + t.getTime();
+   let x = t.getTime() + parseInt(s, 36) * 1000;
    return new Date(x);
 }
 

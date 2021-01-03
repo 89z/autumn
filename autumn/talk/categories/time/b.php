@@ -1,16 +1,8 @@
 <?php
-$n = 1609480799;
-# example 1
-$date = new DateTime;
-$date->setTimestamp($n);
-$s1 = $date->format(DATE_W3C);
-# example 2
-$zone = new DateTimeZone('America/Chicago');
-$date = new DateTime(timezone: $zone);
-$date->setTimestamp($n);
-$s2 = $date->format(DATE_W3C);
-# print
-var_dump(
-   $s1 == '2021-01-01T05:59:59+00:00',
-   $s2 == '2020-12-31T23:59:59-06:00'
-);
+declare(strict_types = 1);
+$a = new DateTime('2020-01-01');
+$b = new DateTime('2020-12-31 23:59:59');
+$c = $a->diff($b);
+$d = (string) $a->setTimestamp(0)->add($c)->getTimestamp();
+$e = base_convert($d, 10, 36);
+echo $e, "\n";

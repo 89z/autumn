@@ -1,14 +1,18 @@
 package main
-import "math/big"
 
-func Decode(s string, n int) int64 {
-   o := big.Int{}
-   o.SetString(s, n)
-   return o.Int64()
+import (
+   "math/big"
+   "time"
+   "fmt"
+)
+
+func IdDecode(s string, year int) time.Time {
+   z := big.Int{}
+   z.SetString(s, 36)
+   return time.Date(year, 1, 1, 0, 0, int(z.Int64()), 0, time.UTC)
 }
 
 func main() {
-   s := "qm8rbz"
-   n := Decode(s, 36)
-   println(n == 1609480799)
+   o := IdDecode("itrzz", 2020)
+   fmt.Println(o)
 }

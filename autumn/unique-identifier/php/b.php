@@ -1,13 +1,11 @@
 <?php
-declare(strict_types = 1);
 
-function id_encode(int $year): string {
-   [$t, $u] = [new DateTime, new DateTime];
-   $u->setDate($year, 1, 1);
-   $x = $t->diff($u)->format('U');
-   return base_convert($x, 10, 36);
+function id_decode(string $s, int $year): object {
+   $t = new DateTime;
+   $t->setDate($year, 1, 1)->setTime(0, 0);
+   $x = (int) base_convert($s, 36, 10) + $t->getTimestamp();
+   return $t->setTimestamp($x);
 }
 
-function decode36(string $s): int {
-   return (int) base_convert($s, 36, 10);
-}
+$o = id_decode('itrzz', 2020);
+var_dump($o);
