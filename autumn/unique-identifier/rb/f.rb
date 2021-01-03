@@ -1,2 +1,3 @@
 require 'securerandom'
-puts SecureRandom.alphanumeric
+s = SecureRandom.uuid
+puts s

@@ -37,7 +37,7 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1609480799</span>
 s <span style="color:#f92672">=</span> n<span style="color:#f92672">.</span>to_s(<span style="color:#ae81ff">36</span>)
-puts s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;q3ezbz&#39;</span>
+puts s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;qm8rbz&#39;</span>
 </code></pre></div>
 
 <p><a href="https://docs.ruby-lang.org/en/master/Integer.html#method-i-to_s">https://docs.ruby-lang.org/en/master/Integer.html#method-i-to_s</a></p>
@@ -48,7 +48,12 @@ puts s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;q3
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;securerandom&#39;</span>
-puts <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">.</span>alphanumeric
+<span style="color:#75715e"># example 1</span>
+s1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">.</span>alphanumeric
+<span style="color:#75715e"># example 2</span>
+s2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">.</span>alphanumeric(<span style="color:#ae81ff">10</span>)
+<span style="color:#75715e"># print</span>
+puts s1, s2
 </code></pre></div>
 
 <p><a href="https://docs.ruby-lang.org/en/master/Random/Formatter.html#method-i-alphanumeric">https://docs.ruby-lang.org/en/master/Random/Formatter.html#method-i-alphanumeric</a></p>
@@ -59,7 +64,12 @@ puts <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;securerandom&#39;</span>
-puts <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">.</span>alphanumeric
+<span style="color:#75715e"># example 1</span>
+s1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">.</span>base64
+<span style="color:#75715e"># example 2</span>
+s2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">.</span>base64(<span style="color:#ae81ff">10</span>)
+<span style="color:#75715e"># print</span>
+puts s1, s2
 </code></pre></div>
 
 <p><a href="https://docs.ruby-lang.org/en/master/Random/Formatter.html#method-i-base64">https://docs.ruby-lang.org/en/master/Random/Formatter.html#method-i-base64</a></p>
@@ -70,7 +80,12 @@ puts <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;securerandom&#39;</span>
-puts <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">.</span>alphanumeric
+<span style="color:#75715e"># example 1</span>
+s1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">.</span>hex
+<span style="color:#75715e"># example 2</span>
+s2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">.</span>hex(<span style="color:#ae81ff">10</span>)
+<span style="color:#75715e"># print</span>
+puts s1, s2
 </code></pre></div>
 
 <p><a href="https://docs.ruby-lang.org/en/master/Random/Formatter.html#method-i-hex">https://docs.ruby-lang.org/en/master/Random/Formatter.html#method-i-hex</a></p>
@@ -81,7 +96,12 @@ puts <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;securerandom&#39;</span>
-puts <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">.</span>alphanumeric
+<span style="color:#75715e"># example 1</span>
+s1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">.</span>urlsafe_base64
+<span style="color:#75715e"># example 2</span>
+s2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">.</span>urlsafe_base64(<span style="color:#ae81ff">10</span>)
+<span style="color:#75715e"># print</span>
+puts s1, s2
 </code></pre></div>
 
 <p><a href="https://docs.ruby-lang.org/en/master/Random/Formatter.html#method-i-urlsafe_base64">https://docs.ruby-lang.org/en/master/Random/Formatter.html#method-i-urlsafe_base64</a></p>
@@ -92,7 +112,8 @@ puts <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;securerandom&#39;</span>
-puts <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">.</span>alphanumeric
+s <span style="color:#f92672">=</span> <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">.</span>uuid
+puts s
 </code></pre></div>
 
 <p><a href="https://docs.ruby-lang.org/en/master/Random/Formatter.html#method-i-uuid">https://docs.ruby-lang.org/en/master/Random/Formatter.html#method-i-uuid</a></p>

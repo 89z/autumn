@@ -11,5 +11,5 @@ class Radix:
 
 o = Radix()
 s = o.encode(1609480799, 36)
-n = o.decode('q3ezbz', 36)
-print(s == 'q3ezbz', n == 1609480799)
+n = o.decode('qm8rbz', 36)
+print(s == 'qm8rbz', n == 1609480799)

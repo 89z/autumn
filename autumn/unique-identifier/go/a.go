@@ -8,7 +8,7 @@ func Decode(s string, n int) int64 {
 }
 
 func main() {
-   s := "q3ezbz"
+   s := "qm8rbz"
    n := Decode(s, 36)
    println(n == 1609480799)
 }

@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-   s := "q3ezbz"
+   s := "qm8rbz"
    n, e := strconv.ParseInt(s, 36, 0)
    if e != nil {
       log.Fatal(e)

@@ -20,7 +20,7 @@ class Program {
    static void Main() {
       var o = new Radix();
       var s = o.encode(1609480799, 36);
-      var n = o.decode("q3ezbz", 36);
-      Console.WriteLine(s == "q3ezbz" && n == 1609480799);
+      var n = o.decode("qm8rbz", 36);
+      Console.WriteLine(s == "qm8rbz" && n == 1609480799);
    }
 }

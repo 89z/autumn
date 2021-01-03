@@ -9,5 +9,5 @@ func Encode36(x int) string {
 func main() {
    n := 1609480799
    s := Encode36(n)
-   println(s == "q3ezbz")
+   println(s == "qm8rbz")
 }
