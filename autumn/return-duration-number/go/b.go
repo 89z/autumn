@@ -1,9 +1,9 @@
 package main
 import "time"
 
-func TimeHours(value string) (float64, error) {
-   layout := time.RFC3339[:len(value)]
-   o, e := time.Parse(layout, value)
+func TimeHours(left string) (float64, error) {
+   right := "1970-01-01T00:00:00Z"[len(left):]
+   o, e := time.Parse(time.RFC3339, left + right)
    if e != nil {
       return 0, e
    }

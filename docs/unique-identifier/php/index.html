@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Unique identifier / PHP</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/unique-identifier/">Unique identifier</a> / PHP
+</h1>
+<section class="page">
+   <time>Sat Jan 2 2021</time>
+   
+   <a href="/autumn/categories/number/">number</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">encode36</span>(<span style="color:#a6e22e">int</span> $n)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
+   $s <span style="color:#f92672">=</span> (<span style="color:#a6e22e">string</span>) $n;
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">base_convert</span>($s, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">36</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decode36</span>(<span style="color:#a6e22e">string</span> $s)<span style="color:#f92672">:</span> <span style="color:#a6e22e">int</span> {
+   <span style="color:#66d9ef">return</span> (<span style="color:#a6e22e">int</span>) <span style="color:#a6e22e">base_convert</span>($s, <span style="color:#ae81ff">36</span>, <span style="color:#ae81ff">10</span>);
+}
+
+$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1609480799</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">encode36</span>($n);
+$n2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">decode36</span>($s);
+<span style="color:#a6e22e">var_dump</span>($n2 <span style="color:#f92672">===</span> $n);
+</code></pre></div>
+
+<p><a href="https://php.net/function.base-convert">https://php.net/function.base-convert</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">uniqid</span>();
+<span style="color:#66d9ef">echo</span> $s, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</code></pre></div>
+
+<p><a href="https://php.net/function.uniqid">https://php.net/function.uniqid</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/scripting#radix">https://hyperpolyglot.org/scripting#radix</a></li>
+<li><a href="https://programming-idioms.org/idiom/142">https://programming-idioms.org/idiom/142</a></li>
+<li><a href="https://rosettacode.org/wiki/Non-decimal_radices/Output">https://rosettacode.org/wiki/Non-decimal_radices/Output</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
