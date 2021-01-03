@@ -1,3 +1,8 @@
-let n = 1609480799;
-let s = n.toString(36);
-console.log(s == 'qm8rbz');
+'use strict';
+
+function ID(n) {
+   return n.toString(36);
+}
+
+let s = ID(2021);
+console.log(s);

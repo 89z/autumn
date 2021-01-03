@@ -7,6 +7,10 @@ tags = [ "d" ]
 
 <https://dlang.org/library/std/conv/to.html>
 
+{{< r "b.d" >}}
+
+<https://dlang.org/library/std/uuid.html>
+
 ## References
 
 - <https://programming-idioms.org/idiom/142>

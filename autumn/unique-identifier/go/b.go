@@ -1,13 +1,18 @@
 package main
-import "math/big"
 
-func Encode36(x int) string {
-   n := int64(x)
-   return big.NewInt(n).Text(36)
+import (
+   "math/big"
+   "time"
+)
+
+func ID(year int, d time.Duration) string {
+   time.Sleep(d)
+   t := time.Date(year, 1, 1, 0, 0, 0, 0, time.UTC)
+   x := time.Since(t).Nanoseconds() / int64(d)
+   return big.NewInt(x).Text(62)
 }
 
 func main() {
-   n := 1609480799
-   s := Encode36(n)
-   println(s == "qm8rbz")
+   s := ID(2021, time.Millisecond)
+   println(s)
 }
