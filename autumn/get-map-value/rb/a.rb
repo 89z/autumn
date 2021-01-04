@@ -1,3 +1,3 @@
-m = {'month' => 12, 'day' => 31}
+m = {'month' => 5, 'day' => 4}
 n = m['day']
-puts n == 31
+puts n == 4

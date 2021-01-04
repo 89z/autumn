@@ -1,4 +1,4 @@
 <?php
-$m = ['month' => 12, 'day' => 31];
+$m = ['month' => 5, 'day' => 4];
 $n = $m['day'];
-var_dump($n == 31);
+var_dump($n == 4);

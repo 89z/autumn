@@ -1,5 +1,5 @@
 <?php
-$m = ['month' => 12, 'day' => 31];
+$m = ['month' => 5, 'day' => 4];
 
 while (true) {
    $s = key($m);

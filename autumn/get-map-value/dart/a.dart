@@ -1,5 +1,5 @@
 void main() {
-   var m = {'month': 12, 'day': 31};
+   var m = {'month': 5, 'day': 4};
    var n = m['day'];
-   print(n == 31);
+   print(n == 4);
 }

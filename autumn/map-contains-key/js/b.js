@@ -1,3 +1,3 @@
-let m = {month: 12, day: 31};
+let m = {month: 5, day: 4};
 let b = Reflect.has(m, 'day');
 console.log(b);

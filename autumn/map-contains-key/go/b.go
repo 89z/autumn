@@ -1,7 +1,7 @@
 package main
 
 func main() {
-   m := map[string]interface{}{"month": 12, "day": 31}
+   m := map[string]interface{}{"month": 5, "day": 4}
    // example 1
    n1, b := m["day"]
    if b {
