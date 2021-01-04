@@ -4,4 +4,4 @@ let n1 = m['day'];
 // example 2
 let n2 = m.day;
 // print
-console.log(n1 == 4, n2 == 31);
+console.log(n1 == 4, n2 == 4);

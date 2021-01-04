@@ -11,11 +11,11 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   u, e := time.Parse(time.RFC3339, "2020-05-04T03:02:01Z")
+   u, e := time.Parse(time.RFC3339, "2020-12-31T01:02:31Z")
    if e != nil {
       log.Fatal(e)
    }
    x := u.Sub(t).Milliseconds() / 1e3
    s := big.NewInt(x).Text(36)
-   println(s == "6dv3d")
+   println(s == "is087")
 }

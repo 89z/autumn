@@ -7,6 +7,10 @@ tags = [ "javascript" ]
 
 <https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime>
 
+{{< r "b.js" >}}
+
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/parse>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting#datetime-subtraction>

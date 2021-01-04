@@ -28,9 +28,10 @@
    
 </section>
    <p>We want reference time to be UTC. We want each number to be greater than zero.
-We want each number to be different. Avoid using <code>1</code> for the month, as number
-form <code>1</code> can be January or February. We also want short dates to be different
-in my time zone, depending on if function uses UTC or local. Result is:</p>
+We want each number to be different from the previous. Avoid using <code>1</code> for the
+month, as number form <code>1</code> can be January or February. We also want short dates
+to be different in my time zone, depending on if function uses UTC or local.
+Result is:</p>
 
 
 
@@ -45,12 +46,12 @@ in my time zone, depending on if function uses UTC or local. Result is:</p>
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">t</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">RFC3339</span>, <span style="color:#e6db74">&#34;2020-05-04T03:02:01Z&#34;</span>)
+   <span style="color:#a6e22e">t</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">RFC3339</span>, <span style="color:#e6db74">&#34;2020-12-31T01:02:31Z&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
    <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Unix</span>()
-   println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1588561321</span>)
+   println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1609376551</span>)
 }
 </code></pre></div>
 
@@ -74,13 +75,13 @@ in my time zone, depending on if function uses UTC or local. Result is:</p>
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">u</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">RFC3339</span>, <span style="color:#e6db74">&#34;2020-05-04T03:02:01Z&#34;</span>)
+   <span style="color:#a6e22e">u</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">RFC3339</span>, <span style="color:#e6db74">&#34;2020-12-31T01:02:31Z&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
    <span style="color:#a6e22e">x</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">u</span>.<span style="color:#a6e22e">Sub</span>(<span style="color:#a6e22e">t</span>).<span style="color:#a6e22e">Milliseconds</span>() <span style="color:#f92672">/</span> <span style="color:#ae81ff">1e3</span>
    <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">big</span>.<span style="color:#a6e22e">NewInt</span>(<span style="color:#a6e22e">x</span>).<span style="color:#a6e22e">Text</span>(<span style="color:#ae81ff">36</span>)
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;6dv3d&#34;</span>)
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;is087&#34;</span>)
 }
 </code></pre></div>
 
@@ -104,13 +105,13 @@ in my time zone, depending on if function uses UTC or local. Result is:</p>
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">u</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">RFC3339</span>, <span style="color:#e6db74">&#34;2020-05-04T03:02:01Z&#34;</span>)
+   <span style="color:#a6e22e">u</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">RFC3339</span>, <span style="color:#e6db74">&#34;2020-12-31T01:02:31Z&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
    <span style="color:#a6e22e">x</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">u</span>.<span style="color:#a6e22e">Sub</span>(<span style="color:#a6e22e">t</span>).<span style="color:#a6e22e">Milliseconds</span>()
    <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">big</span>.<span style="color:#a6e22e">NewInt</span>(<span style="color:#a6e22e">x</span>).<span style="color:#a6e22e">Text</span>(<span style="color:#ae81ff">62</span>)
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;bHMZPa&#34;</span>)
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;yqtA1i&#34;</span>)
 }
 </code></pre></div>
 

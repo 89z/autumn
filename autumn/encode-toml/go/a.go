@@ -3,7 +3,7 @@ import "log"
 type Map map[string]interface{}
 
 func main() {
-   m := Map{"month": 12, "day": 31}
+   m := Map{"month": 5, "day": 4}
    e := TomlEncode("a.toml", m)
    if e != nil {
       log.Fatal(e)

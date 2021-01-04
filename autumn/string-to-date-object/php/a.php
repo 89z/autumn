@@ -1,4 +1,4 @@
 <?php
-$s = '2020-05-04';
+$s = '2020-12-31';
 $o = new DateTime($s);
 var_dump($o);

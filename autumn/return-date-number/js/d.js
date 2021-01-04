@@ -1,3 +1,2 @@
-let o = new Date;
-let n = o.valueOf() / 1000;
+let n = Date.parse('2020-12-31');
 console.log(n);

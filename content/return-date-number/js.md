@@ -17,6 +17,10 @@ tags = [ "javascript" ]
 
 {{< r "d.js" >}}
 
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/parse>
+
+{{< r "e.js" >}}
+
 <https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/valueof>
 
 ## References

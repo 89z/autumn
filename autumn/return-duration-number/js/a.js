@@ -1,9 +1,9 @@
-function duration(new_o, old_o) {
-   let new_n = new_o.getTime();
-   let old_n = old_o.getTime();
+function duration(u, t) {
+   let new_n = u.getTime();
+   let old_n = t.getTime();
    return (new_n - old_n) / 1000;
 }
 
-let o = new Date('2020-05-04');
-let n = duration(new Date, o);
+let t = new Date('2020-12-31');
+let n = duration(new Date, t);
 console.log(n);
