@@ -3,11 +3,11 @@ title = "Rust"
 tags = [ "rust" ]
 +++
 
-{{< r "a.rs" >}}
+{{< r "a/src/main.rs" >}}
 
 <https://doc.rust-lang.org/std/char/fn.from_digit.html>
 
-{{< r "b.rs" >}}
+{{< r "a.rs" >}}
 
 <https://doc.rust-lang.org/std/primitive.u32.html#method.from_str_radix>
 
