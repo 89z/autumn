@@ -3,7 +3,11 @@ title = "C#"
 tags = [ "c-sharp" ]
 +++
 
-{{< r "Program.cs" >}}
+{{< r "a/Program.cs" >}}
+
+<https://docs.microsoft.com/dotnet/api/system.math.divrem>
+
+{{< r "b/Program.cs" >}}
 
 <https://docs.microsoft.com/dotnet/csharp/language-reference/operators/arithmetic-operators>
 

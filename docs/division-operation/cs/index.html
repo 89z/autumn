@@ -54,6 +54,32 @@
 }
 </code></pre></div>
 
+<p><a href="https://docs.microsoft.com/dotnet/api/system.math.divrem">https://docs.microsoft.com/dotnet/api/system.math.divrem</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> {
+   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main() {
+      <span style="color:#66d9ef">var</span> (f, i) = (<span style="color:#ae81ff">7.5</span>, <span style="color:#ae81ff">7</span>);
+      <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> n1 = f / <span style="color:#ae81ff">2</span>;
+      <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> n2 = (<span style="color:#66d9ef">int</span>) f / <span style="color:#ae81ff">2</span>;
+      <span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> n3 = i / <span style="color:#ae81ff">2</span>;
+      <span style="color:#75715e">// example 4
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> n4 = (<span style="color:#66d9ef">double</span>) i / <span style="color:#ae81ff">2</span>;
+      <span style="color:#75715e">// print
+</span><span style="color:#75715e"></span>      Console.WriteLine(n1 == <span style="color:#ae81ff">3.75</span> &amp;&amp; n2 == <span style="color:#ae81ff">3</span> &amp;&amp; n3 == <span style="color:#ae81ff">3</span> &amp;&amp; n4 == <span style="color:#ae81ff">3.5</span>);
+   }
+}
+</code></pre></div>
+
 <p><a href="https://docs.microsoft.com/dotnet/csharp/language-reference/operators/arithmetic-operators">https://docs.microsoft.com/dotnet/csharp/language-reference/operators/arithmetic-operators</a></p>
 <h2 id="references">References</h2>
 <ul>
