@@ -59,11 +59,11 @@
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">id_decode</span>(<span style="color:#a6e22e">string</span> $s, <span style="color:#a6e22e">int</span> $year)<span style="color:#f92672">:</span> <span style="color:#a6e22e">object</span> {
    $t <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
    $t<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setDate</span>($year, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setTime</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>);
-   $x <span style="color:#f92672">=</span> (<span style="color:#a6e22e">int</span>) <span style="color:#a6e22e">base_convert</span>($s, <span style="color:#ae81ff">36</span>, <span style="color:#ae81ff">10</span>) <span style="color:#f92672">+</span> $t<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getTimestamp</span>();
-   <span style="color:#66d9ef">return</span> $t<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setTimestamp</span>($x);
+   $d <span style="color:#f92672">=</span> (<span style="color:#a6e22e">int</span>) <span style="color:#a6e22e">base_convert</span>($s, <span style="color:#ae81ff">36</span>, <span style="color:#ae81ff">10</span>) <span style="color:#f92672">+</span> $t<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getTimestamp</span>();
+   <span style="color:#66d9ef">return</span> $t<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setTimestamp</span>($d);
 }
 
-$o <span style="color:#f92672">=</span> <span style="color:#a6e22e">id_decode</span>(<span style="color:#e6db74">&#39;itrzz&#39;</span>, <span style="color:#ae81ff">2020</span>);
+$o <span style="color:#f92672">=</span> <span style="color:#a6e22e">id_decode</span>(<span style="color:#e6db74">&#39;6dv3d&#39;</span>, <span style="color:#ae81ff">2020</span>);
 <span style="color:#a6e22e">var_dump</span>($o);
 </code></pre></div>
 

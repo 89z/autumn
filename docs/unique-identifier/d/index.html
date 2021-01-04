@@ -29,7 +29,26 @@
    <a href="/autumn/categories/number/">number</a>
    
 </section>
+   <p>
+
+
    
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> conv <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">conv</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">string</span> <span style="color:#a6e22e">idEncode</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> year<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+   conv<span style="color:#f92672">.</span><span style="color:#a6e22e">to</span><span style="color:#f92672">!</span><span style="color:#66d9ef">string</span><span style="color:#f92672">(</span>n<span style="color:#f92672">,</span> <span style="color:#ae81ff">36</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> idEncode<span style="color:#f92672">(</span><span style="color:#ae81ff">2021</span><span style="color:#f92672">);</span>
+   io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>s<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+
+
 
 
    
@@ -49,7 +68,7 @@
 </span><span style="color:#75715e"></span>   io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>s1 <span style="color:#f92672">==</span> s <span style="color:#f92672">&amp;&amp;</span> n2 <span style="color:#f92672">==</span> n<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
-
+</p>
 <p><a href="https://dlang.org/library/std/conv/to.html">https://dlang.org/library/std/conv/to.html</a></p>
 
 

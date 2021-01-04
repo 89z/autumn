@@ -4,5 +4,5 @@ function idEncode(year) {
    return Math.trunc(x).toString(36);
 }
 
-let s = idEncode(2020);
+let s = idEncode(2021);
 console.log(s);

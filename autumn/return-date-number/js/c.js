@@ -1,3 +1,2 @@
-let o = new Date;
-let n = o.valueOf() / 1000;
+let n = Date.now() / 1000;
 console.log(n);

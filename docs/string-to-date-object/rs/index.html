@@ -41,7 +41,7 @@
 };
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), chrono::ParseError<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2020-12-31T23:59:59Z&#34;</span>;
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2020-05-04T03:02:01Z&#34;</span>;
    <span style="color:#66d9ef">let</span> o: <span style="color:#a6e22e">DateTime</span><span style="color:#f92672">&lt;</span>offset::Utc<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> s.parse()<span style="color:#f92672">?</span>;
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, o);
    Ok(())
@@ -61,7 +61,7 @@
 };
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), chrono::ParseError<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2020-12-31 23:59:59&#34;</span>;
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2020-05-04 03:02:01&#34;</span>;
    <span style="color:#66d9ef">let</span> o  <span style="color:#f92672">=</span> Utc.datetime_from_str(s, <span style="color:#e6db74">&#34;%Y-%m-%d %H:%M:%S&#34;</span>)<span style="color:#f92672">?</span>;
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o);
    Ok(())

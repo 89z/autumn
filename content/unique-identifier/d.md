@@ -4,10 +4,11 @@ tags = [ "d" ]
 +++
 
 {{< r "a.d" >}}
+{{< r "b.d" >}}
 
 <https://dlang.org/library/std/conv/to.html>
 
-{{< r "b.d" >}}
+{{< r "c.d" >}}
 
 <https://dlang.org/library/std/uuid.html>
 

@@ -1,13 +1,11 @@
 import conv = std.conv;
 import io = std.stdio;
 
+string idEncode(int year) {
+   conv.to!string(n, 36);
+}
+
 void main() {
-   // example 1
-   auto n = 1609480799;
-   auto s1 = conv.to!string(n, 36);
-   // example 2
-   auto s = "QM8RBZ";
-   auto n2 = conv.to!int(s, 36);
-   // print
-   io.writeln(s1 == s && n2 == n);
+   auto s = idEncode(2021);
+   io.writeln(s);
 }
