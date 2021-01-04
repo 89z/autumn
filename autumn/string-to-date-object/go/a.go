@@ -20,15 +20,15 @@ func ParseDate(left string) (time.Time, error) {
 }
 
 func main() {
-   o, e := ParseDate("2020-12-31T23:59:59")
+   o, e := ParseDate("2020-05-04T03:02:01")
    check(o, e)
-   o, e = ParseDate("2020-12-31T23:59")
+   o, e = ParseDate("2020-05-04T03:02")
    check(o, e)
-   o, e = ParseDate("2020-12-31T23")
+   o, e = ParseDate("2020-05-04T03")
    check(o, e)
-   o, e = ParseDate("2020-12-31")
+   o, e = ParseDate("2020-05-04")
    check(o, e)
-   o, e = ParseDate("2020-12")
+   o, e = ParseDate("2020-05")
    check(o, e)
    o, e = ParseDate("2020")
    check(o, e)

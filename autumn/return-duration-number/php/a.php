@@ -7,6 +7,6 @@ function seconds(object $t, object $u): int {
    return $t->getTimestamp();
 }
 
-$o = DateTime::createFromFormat('!Y-m-d', '2020-12-31');
+$o = DateTime::createFromFormat('!Y-m-d', '2020-05-04');
 $n = seconds(new DateTime, $o);
 var_dump($n);

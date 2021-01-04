@@ -1,3 +1,3 @@
-let s = '2020-12-31';
+let s = '2020-05-04';
 let o = new Date(s);
 console.log(o);

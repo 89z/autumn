@@ -2,8 +2,8 @@ package main
 
 func main() {
    m := map[int]struct{Month, Day int}{
-      2020: {12, 31},
-      2019: {11, 30},
+      2020: {5, 4},
+      2019: {5, 4},
    }
    // example 1
    o, b := m[2020]
