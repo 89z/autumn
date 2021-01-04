@@ -1,5 +1,4 @@
 <?php
 $o = date_create();
-date_date_set($o, 2020, 12, 31);
-date_time_set($o, 23, 59, 59);
+date_date_set($o, 2020, 5, 4);
 var_dump($o);

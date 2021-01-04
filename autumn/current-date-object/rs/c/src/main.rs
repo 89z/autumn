@@ -1,3 +1,6 @@
+use chrono::offset::Utc;
+
 fn main() {
-    println!("Hello, world!");
+   let o = Utc::today();
+   println!("{}", o);
 }

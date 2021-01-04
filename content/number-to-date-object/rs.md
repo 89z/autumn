@@ -3,9 +3,13 @@ title = "Rust"
 tags = [ "rust" ]
 +++
 
-{{< r "src/main.rs" >}}
+{{< r "a/src/main.rs" >}}
 
 <https://docs.rs/chrono/latest/chrono/naive/struct.NaiveDateTime.html#method.from_timestamp>
+
+{{< r "b/src/main.rs" >}}
+
+<https://docs.rs/chrono/latest/chrono/offset/trait.TimeZone.html#method.ymd>
 
 ## References
 

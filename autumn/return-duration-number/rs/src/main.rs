@@ -4,8 +4,8 @@ use chrono::{
 };
 
 fn main() {
-   let old = Utc.ymd(2019, 12, 31);
-   let new = Utc.ymd(2020, 12, 31);
-   let dur = new.signed_duration_since(old);
-   println!("{}", dur);
+   let t = Utc.ymd(2020, 5, 4);
+   let u = Utc::today();
+   let d = u.signed_duration_since(t);
+   println!("{}", d);
 }

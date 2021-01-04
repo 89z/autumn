@@ -15,18 +15,25 @@ func Date(left ...int) time.Time {
 
 func main() {
    var o time.Time
-   o = Date(2020, 12, 31, 23, 59, 59)
+   // example 1
+   o = Date(2020, 5, 4, 3, 2, 1)
    fmt.Println(o)
-   o = Date(2020, 12, 31, 23, 59)
+   // example 2
+   o = Date(2020, 5, 4, 3, 2)
    fmt.Println(o)
-   o = Date(2020, 12, 31, 23)
+   // example 3
+   o = Date(2020, 5, 4, 3)
    fmt.Println(o)
-   o = Date(2020, 12, 31)
+   // example 4
+   o = Date(2020, 5, 4)
    fmt.Println(o)
-   o = Date(2020, 12)
+   // example 5
+   o = Date(2020, 5)
    fmt.Println(o)
+   // example 6
    o = Date(2020)
    fmt.Println(o)
+   // example 7
    o = Date()
    fmt.Println(o)
 }
