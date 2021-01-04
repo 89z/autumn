@@ -1,5 +1,9 @@
-var a = initDateTime(25, mMar, 2015, 12, 0, 0, utc())
-var b = initDateTime(1, mApr, 2017, 15, 0, 15, utc())
-var ti = initTimeInterval(years = 2, weeks = 1, hours = 3, seconds = 15)
-doAssert between(a, b) == ti
-doAssert between(a, b) == -between(b, a)
+import times
+
+proc sinceHours(s: string): int64 =
+   let t = parse(s, "yyyy-MM-dd")
+   let u = now()
+   return (u - t).inHours
+
+let n = sinceHours("2020-12-31")
+echo n

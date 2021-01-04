@@ -5,7 +5,7 @@ tags = [ "d" ]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/library/core/time/duration.total.html>
+<https://dlang.org/library/std/datetime/systime/sys_time.op_binary.html>
 
 ## References
 

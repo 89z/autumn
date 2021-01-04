@@ -13,16 +13,16 @@ func check(n float64, e error) {
 }
 
 func main() {
-   n, e := TimeHours("2020-12-31T01:02:31")
+   n, e := SinceHours("2020-12-31T01:02:31")
    check(n, e)
-   n, e = TimeHours("2020-12-31T01:02")
+   n, e = SinceHours("2020-12-31T01:02")
    check(n, e)
-   n, e = TimeHours("2020-12-31T01")
+   n, e = SinceHours("2020-12-31T01")
    check(n, e)
-   n, e = TimeHours("2020-12-31")
+   n, e = SinceHours("2020-12-31")
    check(n, e)
-   n, e = TimeHours("2020-12")
+   n, e = SinceHours("2020-12")
    check(n, e)
-   n, e = TimeHours("2020")
+   n, e = SinceHours("2020")
    check(n, e)
 }

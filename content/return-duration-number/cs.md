@@ -5,7 +5,7 @@ tags = [ "c-sharp" ]
 
 {{< r "Program.cs" >}}
 
-<https://docs.microsoft.com/dotnet/api/system.timespan.totaldays>
+<https://docs.microsoft.com/dotnet/api/system.timespan.totalhours>
 
 ## References
 

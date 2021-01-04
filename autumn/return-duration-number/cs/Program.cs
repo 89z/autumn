@@ -1,10 +1,12 @@
 using System;
 
 class Program {
+   static double SinceHours(string s) {
+      var t = DateTime.Parse(s);
+      return (DateTime.Now - t).TotalHours;
+   }
    static void Main() {
-      var old_o = DateTime.Parse("2020-12-31");
-      var new_o = DateTime.Now;
-      var n = (new_o - old_o).TotalDays;
+      var n = SinceHours("2020-12-31");
       Console.WriteLine(n);
    }
 }

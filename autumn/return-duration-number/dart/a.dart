@@ -1,6 +1,9 @@
+num sinceHours(String s) {
+   var t = DateTime.parse(s);
+   return DateTime.now().difference(t).inHours;
+}
+
 void main() {
-   var old_o = DateTime.parse('2020-12-31');
-   var new_o = new DateTime.now();
-   var n = new_o.difference(old_o).inDays;
+   var n = sinceHours('2020-12-31');
    print(n);
 }

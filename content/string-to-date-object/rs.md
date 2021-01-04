@@ -14,4 +14,5 @@ tags = [ "rust" ]
 ## References
 
 - <https://hyperpolyglot.org/rust#dates-time>
+- <https://programming-idioms.org/idiom/98>
 - <https://rosettacode.org/wiki/Date_manipulation>

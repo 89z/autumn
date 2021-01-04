@@ -10,4 +10,5 @@ tags = [ "dart" ]
 ## References
 
 - <https://hyperpolyglot.org/web#parse-datetime>
+- <https://programming-idioms.org/idiom/98>
 - <https://rosettacode.org/wiki/Date_manipulation>

@@ -1,9 +1,7 @@
-function duration(u, t) {
-   let new_n = u.getTime();
-   let old_n = t.getTime();
-   return (new_n - old_n) / 1000;
+function sinceHours(s) {
+   let t = new Date(s);
+   return (new Date - t) / 36e5;
 }
 
-let t = new Date('2020-12-31');
-let n = duration(new Date, t);
+let n = sinceHours('2020-12-31');
 console.log(n);

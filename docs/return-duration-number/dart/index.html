@@ -35,10 +35,13 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> old_o <span style="color:#f92672">=</span> DateTime.parse(<span style="color:#e6db74">&#39;2020-12-31&#39;</span>);
-   <span style="color:#66d9ef">var</span> new_o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DateTime.now();
-   <span style="color:#66d9ef">var</span> n <span style="color:#f92672">=</span> new_o.difference(old_o).inDays;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">num</span> sinceHours(<span style="color:#66d9ef">String</span> s) {
+   <span style="color:#66d9ef">var</span> t <span style="color:#f92672">=</span> DateTime.parse(s);
+   <span style="color:#66d9ef">return</span> DateTime.now().difference(t).inHours;
+}
+
+<span style="color:#66d9ef">void</span> main() {
+   <span style="color:#66d9ef">var</span> n <span style="color:#f92672">=</span> sinceHours(<span style="color:#e6db74">&#39;2020-12-31&#39;</span>);
    print(n);
 }
 </code></pre></div>

@@ -13,4 +13,5 @@ tags = [ "d" ]
 
 ## References
 
-<https://rosettacode.org/wiki/Date_manipulation>
+- <https://programming-idioms.org/idiom/98>
+- <https://rosettacode.org/wiki/Date_manipulation>

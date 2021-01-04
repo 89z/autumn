@@ -10,4 +10,5 @@ tags = [ "c-sharp" ]
 ## References
 
 - <https://hyperpolyglot.org/cpp#parse-date>
+- <https://programming-idioms.org/idiom/98>
 - <https://rosettacode.org/wiki/Date_manipulation>

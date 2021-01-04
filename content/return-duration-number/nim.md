@@ -5,7 +5,7 @@ tags = [ "nim" ]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/times.html#between,DateTime,DateTime>
+<https://nim-lang.org/docs/times.html#-,DateTime,DateTime>
 
 ## References
 
