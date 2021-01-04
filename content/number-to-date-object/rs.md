@@ -3,11 +3,15 @@ title = "Rust"
 tags = [ "rust" ]
 +++
 
-{{< r "a/src/main.rs" >}}
+{{< r "a/a.rs" >}}
+
+<https://doc.rust-lang.org/std/time/struct.SystemTime.html#method.checked_add>
+
+{{< r "b/src/main.rs" >}}
 
 <https://docs.rs/chrono/latest/chrono/naive/struct.NaiveDateTime.html#method.from_timestamp>
 
-{{< r "b/src/main.rs" >}}
+{{< r "c/src/main.rs" >}}
 
 <https://docs.rs/chrono/latest/chrono/offset/trait.TimeZone.html#method.ymd>
 

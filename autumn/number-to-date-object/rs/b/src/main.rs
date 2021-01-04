@@ -1,9 +1,7 @@
-use chrono::{
-   TimeZone,
-   Utc
-};
+use chrono::NaiveDateTime;
 
 fn main() {
-   let o = Utc.ymd(2020, 5, 4);
+   let n = 1609480799;
+   let o = NaiveDateTime::from_timestamp(n, 0);
    println!("{}", o);
 }
