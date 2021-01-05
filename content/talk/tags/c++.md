@@ -1,7 +1,5 @@
 +++
 title = "C++"
-tags = [ "proposal" ]
-date = 2020-09-26
 +++
 
 Unicode works now:
