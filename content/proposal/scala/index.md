@@ -4,4 +4,6 @@ tags = [ "proposal" ]
 date = 2021-01-05
 +++
 
-<https://scala-lang.org>
+Windows support
+
+<https://github.com/scala-native/scala-native/issues/113>
