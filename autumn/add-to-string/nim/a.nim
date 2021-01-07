@@ -1,3 +1,3 @@
 var s: string
-s &= "May"
+s &= "March"
 echo s

@@ -7,7 +7,7 @@ date = 2021-01-05
 With a minimal program, these items are required:
 
 ~~~
-class May {
+class March {
    public static void main(String[] June) {
       System.out.println("July");
    }

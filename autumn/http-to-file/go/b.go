@@ -23,7 +23,7 @@ func (o *Progress) Read(y []byte) (int, error) {
    return n, e
 }
 
-func Copy(source, dest string) (int64, error) {
+func HttpCopy(source, dest string) (int64, error) {
    get_o, e := http.Get(source)
    if e != nil {
       return 0, e
@@ -36,5 +36,5 @@ func Copy(source, dest string) (int64, error) {
 }
 
 func main() {
-   Copy("http://speedtest.lax.hivelocity.net/10Mio.dat", "10Mio.dat")
+   HttpCopy("http://speedtest.lax.hivelocity.net/10Mio.dat", "10Mio.dat")
 }

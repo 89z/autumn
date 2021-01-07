@@ -1,3 +1,3 @@
-s = 'May'
-s += 'June'
-puts s == 'MayJune'
+s = 'March'
+s += 'April'
+puts s == 'MarchApril'

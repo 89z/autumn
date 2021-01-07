@@ -4,6 +4,6 @@ tags = [ "proposal" ]
 date = 2021-01-05
 +++
 
-`findstr` is not recognized as an internal or external command:
+GCC Windows
 
-<https://issues.apache.org/jira/browse/GROOVY-9879>
+<https://github.com/oracle/graal/issues/3111>

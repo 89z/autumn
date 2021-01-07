@@ -9,5 +9,6 @@ tags = [ "dart" ]
 
 ## References
 
+- <https://hyperpolyglot.org/web#exit>
 - <https://programming-idioms.org/idiom/87>
 - <https://rosettacode.org/wiki/Program_termination>

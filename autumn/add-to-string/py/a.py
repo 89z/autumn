@@ -1,3 +1,3 @@
-s = 'May'
-s += 'June'
-print(s == 'MayJune')
+s = 'March'
+s += 'April'
+print(s == 'MarchApril')
