@@ -1,8 +1,8 @@
 package main
-import "golang.org/x/text/cases"
+import "strings"
 
 func main() {
    s := "March"
-   t := cases.Fold().String(s)
-   println(t == "march")
+   t := strings.ToUpper(s)
+   println(t == "MARCH")
 }

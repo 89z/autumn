@@ -2,7 +2,6 @@ package main
 import "strings"
 
 func main() {
-   s := "March"
-   t := strings.ToUpper(s)
-   println(t == "MARCH")
+   b := strings.EqualFold("march", "MARCH")
+   println(b)
 }
