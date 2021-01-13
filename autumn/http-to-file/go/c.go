@@ -14,6 +14,7 @@ func HttpCopy(source, dest string) (int64, error) {
    if e != nil {
       return 0, e
    }
+   defer create_o.Close()
    return create_o.ReadFrom(get_o.Body)
 }
 

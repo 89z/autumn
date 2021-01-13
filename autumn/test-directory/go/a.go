@@ -5,9 +5,12 @@ import (
    "os"
 )
 
+func IsDir(s string) bool {
+   o, e := os.Stat(s)
+   return e == nil && o.Mode().IsDir()
+}
+
 func main() {
-   o, e := os.Stat(`C:\Users`)
-   if os.IsNotExist(e) || ! o.Mode().IsDir() {
-      log.Fatal(e)
-   }
+   b := IsDir(`C:\Users`)
+   println(b)
 }
