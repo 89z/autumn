@@ -3,8 +3,6 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "assert/assert.go" >}}
-
 {{< r "byte/byte.go" >}}
 
 <https://pkg.go.dev/github.com/pelletier/go-toml#LoadBytes>

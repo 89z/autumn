@@ -1,12 +1,12 @@
 package main
 
 import (
-   "decode/assert"
+   "fmt"
    "github.com/pelletier/go-toml"
    "log"
 )
 
-func TomlDecode(s string) (assert.Map, error) {
+func TomlDecode(s string) (map[string]interface{}, error) {
    o, e := toml.LoadFile(s)
    if e != nil {
       return nil, e
@@ -15,10 +15,9 @@ func TomlDecode(s string) (assert.Map, error) {
 }
 
 func main() {
-   m, e := TomlDecode("Cargo.toml")
+   m, e := TomlDecode("manifest.toml")
    if e != nil {
       log.Fatal(e)
    }
-   s := m.A("package").M(0).S("name")
-   println(s == "decode")
+   fmt.Println(m)
 }

@@ -1,12 +1,12 @@
 package main
 
 import (
-   "decode/assert"
+   "fmt"
    "github.com/pelletier/go-toml"
    "log"
 )
 
-func TomlDecode(s string) (assert.Map, error) {
+func TomlDecode(s string) (map[string]interface{}, error) {
    o, e := toml.Load(s)
    if e != nil {
       return nil, e
@@ -15,12 +15,12 @@ func TomlDecode(s string) (assert.Map, error) {
 }
 
 func main() {
-   m, e := TomlDecode(`[[package]]
-name = "decode"
-version = "1.0.0"`)
+   s := `["excpt.h"]
+package = 'Microsoft.VisualC.140.CRT.Headers.Msi'
+payload = [ 'VC_CRT.Headers.msi', 'cab1.cab' ]`
+   m, e := TomlDecode(s)
    if e != nil {
       log.Fatal(e)
    }
-   s := m.A("package").M(0).S("name")
-   println(s == "decode")
+   fmt.Println(m)
 }
