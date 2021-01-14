@@ -3,15 +3,13 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "reader.go" >}}
+{{< r "http.go" >}}
 
 <https://golang.org/pkg/encoding/json#Decoder.Decode>
 
-{{< r "string-reader.go" >}}
+{{< r "file.go" >}}
 
-<https://golang.org/pkg/encoding/json#NewDecoder>
-
-{{< r "string-byte.go" >}}
+{{< r "string.go" >}}
 
 <https://golang.org/pkg/encoding/json#Unmarshal>
 

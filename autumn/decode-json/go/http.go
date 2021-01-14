@@ -7,17 +7,17 @@ import (
    "net/http"
 )
 
-func JsonDecode(s string) (map[string]string, error) {
+func JsonDecode(s string) (map[string]interface{}, error) {
    o, e := http.Get(s)
    if e != nil {
       return nil, e
    }
-   m := map[string]string{}
+   m := map[string]interface{}{}
    return m, json.NewDecoder(o.Body).Decode(&m)
 }
 
 func main() {
-   m, e := JsonDecode("https://www.digitalocean.com/page-data/app-data.json")
+   m, e := JsonDecode("https://github.com/manifest.json")
    if e != nil {
       log.Fatal(e)
    }

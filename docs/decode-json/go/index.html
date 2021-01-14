@@ -24,7 +24,7 @@
    <a href="/autumn/decode-json/">Decode JSON</a> / Go
 </h1>
 <section class="page">
-   <time>Thu Dec 31 2020</time>
+   <time>Tue Jan 5 2021</time>
    
    <a href="/autumn/categories/file-format/">file-format</a>
    
@@ -44,17 +44,17 @@
    <span style="color:#e6db74">&#34;net/http&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">JsonDecode</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">error</span>) {
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">JsonDecode</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}, <span style="color:#66d9ef">error</span>) {
    <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">s</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">e</span>
    }
-   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{}
+   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}{}
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Body</span>).<span style="color:#a6e22e">Decode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m</span>)
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">JsonDecode</span>(<span style="color:#e6db74">&#34;https://www.digitalocean.com/page-data/app-data.json&#34;</span>)
+   <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">JsonDecode</span>(<span style="color:#e6db74">&#34;https://github.com/manifest.json&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
@@ -74,25 +74,29 @@
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
    <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
    <span style="color:#e6db74">&#34;log&#34;</span>
-   <span style="color:#e6db74">&#34;strings&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">JsonDecode</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) ([]<span style="color:#66d9ef">interface</span>{}, <span style="color:#66d9ef">error</span>) {
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">s</span>), []<span style="color:#66d9ef">interface</span>{}{}
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">o</span>).<span style="color:#a6e22e">Decode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">a</span>)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">JsonDecode</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadFile</span>(<span style="color:#a6e22e">s</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">e</span>
+   }
+   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}{}
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">y</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m</span>)
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">JsonDecode</span>(<span style="color:#e6db74">`[{&#34;month&#34;:12,&#34;day&#34;:31},{&#34;month&#34;:11,&#34;day&#34;:30}]`</span>)
+   <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">JsonDecode</span>(<span style="color:#e6db74">&#34;manifest.json&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m</span>)
 }
+
 </code></pre></div>
 
-<p><a href="https://golang.org/pkg/encoding/json#NewDecoder">https://golang.org/pkg/encoding/json#NewDecoder</a></p>
 
 
 
@@ -107,17 +111,18 @@
    <span style="color:#e6db74">&#34;log&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">JsonDecode</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) ([]<span style="color:#66d9ef">interface</span>{}, <span style="color:#66d9ef">error</span>) {
-   <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#a6e22e">s</span>), []<span style="color:#66d9ef">interface</span>{}{}
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">y</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">a</span>)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">JsonDecode</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#a6e22e">s</span>)
+   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}{}
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">y</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m</span>)
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">JsonDecode</span>(<span style="color:#e6db74">`[{&#34;month&#34;:12,&#34;day&#34;:31},{&#34;month&#34;:11,&#34;day&#34;:30}]`</span>)
+   <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">JsonDecode</span>(<span style="color:#e6db74">`{&#34;name&#34;:&#34;GitHub&#34;,&#34;prefer_related_applications&#34;:true}`</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m</span>)
 }
 </code></pre></div>
 
