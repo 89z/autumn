@@ -7,7 +7,7 @@ import (
    "net/http"
 )
 
-func JsonDecode(s string) (map[string]interface{}, error) {
+func JsonFromHttp(s string) (map[string]interface{}, error) {
    o, e := http.Get(s)
    if e != nil {
       return nil, e
@@ -17,7 +17,7 @@ func JsonDecode(s string) (map[string]interface{}, error) {
 }
 
 func main() {
-   m, e := JsonDecode("https://github.com/manifest.json")
+   m, e := JsonFromHttp("https://github.com/manifest.json")
    if e != nil {
       log.Fatal(e)
    }
