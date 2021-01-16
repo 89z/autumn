@@ -6,7 +6,7 @@ import (
    "log"
 )
 
-func TomlDecode(s string) (map[string]interface{}, error) {
+func TomlFromString(s string) (map[string]interface{}, error) {
    o, e := toml.Load(s)
    if e != nil {
       return nil, e
@@ -18,7 +18,7 @@ func main() {
    s := `["excpt.h"]
 package = 'Microsoft.VisualC.140.CRT.Headers.Msi'
 payload = [ 'VC_CRT.Headers.msi', 'cab1.cab' ]`
-   m, e := TomlDecode(s)
+   m, e := TomlFromString(s)
    if e != nil {
       log.Fatal(e)
    }

@@ -6,7 +6,7 @@ import (
    "log"
 )
 
-func TomlDecode(s string) (map[string]interface{}, error) {
+func TomlFromFile(s string) (map[string]interface{}, error) {
    o, e := toml.LoadFile(s)
    if e != nil {
       return nil, e
@@ -15,7 +15,7 @@ func TomlDecode(s string) (map[string]interface{}, error) {
 }
 
 func main() {
-   m, e := TomlDecode("manifest.toml")
+   m, e := TomlFromFile("manifest.toml")
    if e != nil {
       log.Fatal(e)
    }

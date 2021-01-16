@@ -7,7 +7,7 @@ import (
    "log"
 )
 
-func TomlDecode(y []byte) (map[string]interface{}, error) {
+func TomlFromByte(y []byte) (map[string]interface{}, error) {
    o, e := toml.LoadBytes(y)
    if e != nil {
       return nil, e
@@ -20,7 +20,7 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   m, e := TomlDecode(y)
+   m, e := TomlFromByte(y)
    if e != nil {
       log.Fatal(e)
    }
