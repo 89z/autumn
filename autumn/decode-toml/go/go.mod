@@ -1,4 +1,4 @@
-module string
+module toml
 
 go 1.15
 

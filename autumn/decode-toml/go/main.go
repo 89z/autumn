@@ -2,27 +2,22 @@ package main
 
 import (
    "fmt"
-   "github.com/pelletier/go-toml"
-   "io/ioutil"
    "log"
 )
 
-func TomlFromByte(y []byte) (map[string]interface{}, error) {
-   o, e := toml.LoadBytes(y)
+type Map map[string]interface{}
+
+func check(e error) {
    if e != nil {
-      return nil, e
+      log.Fatal(e)
    }
-   return o.ToMap(), nil
 }
 
 func main() {
-   y, e := ioutil.ReadFile("manifest.toml")
-   if e != nil {
-      log.Fatal(e)
-   }
-   m, e := TomlFromByte(y)
-   if e != nil {
-      log.Fatal(e)
-   }
-   fmt.Println(m)
+   m1, e := TomlGetByte([]byte("month=12\nday=31"))
+   check(e)
+   m2, e := TomlGetFile("manifest.toml")
+   check(e)
+   m3, e := TomlGetString("month=12\nday=31")
+   fmt.Println(m1, m2, m3)
 }

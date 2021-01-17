@@ -1,6 +1,2 @@
-["excpt.h"]
-package = 'Microsoft.VisualC.140.CRT.Headers.Msi'
-payload = [
-   'VC_CRT.Headers.msi',
-   'cab1.cab',
-]
+month = 12
+day = 31

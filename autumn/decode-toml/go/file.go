@@ -1,23 +1,10 @@
 package main
+import "github.com/pelletier/go-toml"
 
-import (
-   "fmt"
-   "github.com/pelletier/go-toml"
-   "log"
-)
-
-func TomlFromFile(s string) (map[string]interface{}, error) {
+func TomlGetFile(s string) (Map, error) {
    o, e := toml.LoadFile(s)
    if e != nil {
       return nil, e
    }
    return o.ToMap(), nil
-}
-
-func main() {
-   m, e := TomlFromFile("manifest.toml")
-   if e != nil {
-      log.Fatal(e)
-   }
-   fmt.Println(m)
 }
