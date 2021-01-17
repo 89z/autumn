@@ -29,7 +29,7 @@
    <a href="/autumn/categories/file-format/">file-format</a>
    
 </section>
-   
+   <p>
 
 
    
@@ -39,62 +39,17 @@
 
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
-   <span style="color:#e6db74">&#34;log&#34;</span>
-   <span style="color:#e6db74">&#34;net/http&#34;</span>
-)
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">JsonFromHttp</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}, <span style="color:#66d9ef">error</span>) {
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">s</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">e</span>
-   }
-   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}{}
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Body</span>).<span style="color:#a6e22e">Decode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m</span>)
-}
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">JsonFromHttp</span>(<span style="color:#e6db74">&#34;https://github.com/manifest.json&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
-   }
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m</span>)
-}
-</code></pre></div>
-
-<p><a href="https://golang.org/pkg/encoding/json#Decoder.Decode">https://golang.org/pkg/encoding/json#Decoder.Decode</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;encoding/json&#34;</span>
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
    <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
-   <span style="color:#e6db74">&#34;log&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">JsonFromFile</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}, <span style="color:#66d9ef">error</span>) {
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">JsonGetFile</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) (<span style="color:#a6e22e">Map</span>, <span style="color:#66d9ef">error</span>) {
    <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadFile</span>(<span style="color:#a6e22e">s</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">e</span>
    }
-   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}{}
+   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Map</span>{}
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">y</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m</span>)
 }
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">JsonFromFile</span>(<span style="color:#e6db74">&#34;manifest.json&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
-   }
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m</span>)
-}
-
 </code></pre></div>
 
 
@@ -107,27 +62,71 @@
 
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;encoding/json&#34;</span>
+   <span style="color:#e6db74">&#34;net/http&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">JsonGetHttp</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) (<span style="color:#a6e22e">Map</span>, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">s</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">e</span>
+   }
+   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Map</span>{}
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewDecoder</span>(<span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Body</span>).<span style="color:#a6e22e">Decode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m</span>)
+}
+</code></pre></div>
+
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;encoding/json&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">JsonGetString</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) (<span style="color:#a6e22e">Map</span>, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#a6e22e">s</span>)
+   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Map</span>{}
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">y</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m</span>)
+}
+</code></pre></div>
+</p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;fmt&#34;</span>
    <span style="color:#e6db74">&#34;log&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">JsonFromString</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}, <span style="color:#66d9ef">error</span>) {
-   <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#a6e22e">s</span>)
-   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}{}
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">y</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m</span>)
-}
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Map</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`{&#34;name&#34;:&#34;GitHub&#34;,&#34;prefer_related_applications&#34;:true}`</span>
-   <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">JsonFromString</span>(<span style="color:#a6e22e">s</span>)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">e</span> <span style="color:#66d9ef">error</span>) {
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m</span>)
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">m1</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">JsonGetFile</span>(<span style="color:#e6db74">&#34;manifest.json&#34;</span>)
+   <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">e</span>)
+   <span style="color:#a6e22e">m2</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">JsonGetHttp</span>(<span style="color:#e6db74">&#34;https://github.com/manifest.json&#34;</span>)
+   <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">e</span>)
+   <span style="color:#a6e22e">m3</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">JsonGetString</span>(<span style="color:#e6db74">`{&#34;month&#34;: 12, &#34;day&#34;: 31}`</span>)
+   <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">e</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m1</span>, <span style="color:#a6e22e">m2</span>, <span style="color:#a6e22e">m3</span>)
 }
 </code></pre></div>
 
-<p><a href="https://golang.org/pkg/encoding/json#Unmarshal">https://golang.org/pkg/encoding/json#Unmarshal</a></p>
+<ul>
+<li><a href="https://golang.org/pkg/encoding/json#Unmarshal">https://golang.org/pkg/encoding/json#Unmarshal</a></li>
+<li><a href="https://golang.org/pkg/encoding/json#Decoder.Decode">https://golang.org/pkg/encoding/json#Decoder.Decode</a></li>
+</ul>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#parse-json">https://hyperpolyglot.org/c#parse-json</a></li>

@@ -3,17 +3,15 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "byte/byte.go" >}}
+{{< r "byte.go" >}}
+{{< r "file.go" >}}
+{{< r "string.go" >}}
 
-<https://pkg.go.dev/github.com/pelletier/go-toml#LoadBytes>
+{{< r "main.go" >}}
 
-{{< r "file/file.go" >}}
-
-<https://pkg.go.dev/github.com/pelletier/go-toml#LoadFile>
-
-{{< r "string/string.go" >}}
-
-<https://pkg.go.dev/github.com/pelletier/go-toml#Load>
+- <https://pkg.go.dev/github.com/pelletier/go-toml#Load>
+- <https://pkg.go.dev/github.com/pelletier/go-toml#LoadBytes>
+- <https://pkg.go.dev/github.com/pelletier/go-toml#LoadFile>
 
 ## References
 

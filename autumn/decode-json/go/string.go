@@ -1,22 +1,8 @@
 package main
+import "encoding/json"
 
-import (
-   "encoding/json"
-   "fmt"
-   "log"
-)
-
-func JsonFromString(s string) (map[string]interface{}, error) {
+func JsonGetString(s string) (Map, error) {
    y := []byte(s)
-   m := map[string]interface{}{}
+   m := Map{}
    return m, json.Unmarshal(y, &m)
-}
-
-func main() {
-   s := `{"name":"GitHub","prefer_related_applications":true}`
-   m, e := JsonFromString(s)
-   if e != nil {
-      log.Fatal(e)
-   }
-   fmt.Println(m)
 }
