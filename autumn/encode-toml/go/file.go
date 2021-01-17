@@ -9,7 +9,7 @@ import (
 
 type Map map[string]interface{}
 
-func TomlEncode(source Map, dest string) error {
+func TomlPutFile(source Map, dest string) error {
    y, e := toml.Marshal(source)
    if e != nil {
       return e
@@ -18,7 +18,7 @@ func TomlEncode(source Map, dest string) error {
 }
 
 func main() {
-   e := TomlEncode(Map{"month": 12, "day": 31}, "a.toml")
+   e := TomlPutFile(Map{"month": 12, "day": 31}, "a.toml")
    if e != nil {
       log.Fatal(e)
    }

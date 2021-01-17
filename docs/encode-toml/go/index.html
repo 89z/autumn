@@ -46,7 +46,7 @@
 
 <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Map</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TomlEncode</span>(<span style="color:#a6e22e">source</span> <span style="color:#a6e22e">Map</span>, <span style="color:#a6e22e">dest</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">error</span> {
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TomlPutFile</span>(<span style="color:#a6e22e">source</span> <span style="color:#a6e22e">Map</span>, <span style="color:#a6e22e">dest</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">error</span> {
    <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">toml</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">source</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span>
@@ -55,7 +55,7 @@
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">TomlEncode</span>(<span style="color:#a6e22e">Map</span>{<span style="color:#e6db74">&#34;month&#34;</span>: <span style="color:#ae81ff">12</span>, <span style="color:#e6db74">&#34;day&#34;</span>: <span style="color:#ae81ff">31</span>}, <span style="color:#e6db74">&#34;a.toml&#34;</span>)
+   <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">TomlPutFile</span>(<span style="color:#a6e22e">Map</span>{<span style="color:#e6db74">&#34;month&#34;</span>: <span style="color:#ae81ff">12</span>, <span style="color:#e6db74">&#34;day&#34;</span>: <span style="color:#ae81ff">31</span>}, <span style="color:#e6db74">&#34;a.toml&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
