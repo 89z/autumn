@@ -36,17 +36,19 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps1" data-lang="ps1"><span style="color:#75715e"># example 1</span>
-go build a.go
-<span style="color:#75715e"># example 2</span>
 go build
+<span style="color:#75715e"># example 2</span>
+go build -gcflags <span style="color:#e6db74">&#39;all=-B -l&#39;</span>
 <span style="color:#75715e"># example 3</span>
-go build -v
-<span style="color:#75715e"># example 4</span>
-go build -x
-<span style="color:#75715e"># example 5</span>
 go build -ldflags -s
+<span style="color:#75715e"># example 4</span>
+go build -v
+<span style="color:#75715e"># example 5</span>
+go build -x
 <span style="color:#75715e"># example 6</span>
-go build -gcflags=all=<span style="color:#e6db74">&#39;-B -l&#39;</span> -ldflags=-s
+go build ./...
+<span style="color:#75715e"># example 7</span>
+go build a.go
 </code></pre></div>
 
 <p><a href="https://golang.org/cmd/go#hdr-Compile_packages_and_dependencies">https://golang.org/cmd/go#hdr-Compile_packages_and_dependencies</a></p>
