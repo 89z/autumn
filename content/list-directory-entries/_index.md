@@ -1,7 +1,7 @@
 +++
 title = "List directory entries"
 categories = [ "system" ]
-date = 2020-10-24
+date = 2021-01-18
 example = [
    'sienna\front-matter\front-matter.go', '= ioutil.ReadDir('
 ]
