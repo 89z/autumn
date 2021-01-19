@@ -1,19 +1,15 @@
 package main
+import "regexp"
 
-import (
-   "bytes"
-   "regexp"
-)
-
-func FindSubmatch(pat string, sub []byte) []byte {
-   a := regexp.MustCompile(pat).FindSubmatch(sub)
+func FindSubmatch(pat, sub string) string {
+   a := regexp.MustCompile(pat).FindStringSubmatch(sub)
    if len(a) < 2 {
-      return []byte{}
+      return ""
    }
    return a[1]
 }
 
 func main() {
-   y := FindSubmatch("a(..)", []byte("January"))
-   println(bytes.Equal(y, []byte("nu")))
+   s := FindSubmatch("a(..)", "January")
+   println(s == "nu")
 }

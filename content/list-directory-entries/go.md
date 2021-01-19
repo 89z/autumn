@@ -13,6 +13,10 @@ tags = [ "go" ]
 
 {{< r "c.go" >}}
 
+<https://golang.org/pkg/path/filepath#Glob>
+
+{{< r "d.go" >}}
+
 <https://golang.org/pkg/path/filepath#Walk>
 
 ## References
