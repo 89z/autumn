@@ -10,4 +10,5 @@ tags = [ "dart" ]
 ## References
 
 - <https://hyperpolyglot.org/web#power>
+- <https://programming-idioms.org/idiom/64>
 - <https://rosettacode.org/wiki/Exponentiation_operator>

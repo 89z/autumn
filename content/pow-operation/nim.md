@@ -13,4 +13,5 @@ tags = [ "nim" ]
 
 ## References
 
-<https://rosettacode.org/wiki/Exponentiation_operator>
+- <https://programming-idioms.org/idiom/64>
+- <https://rosettacode.org/wiki/Exponentiation_operator>

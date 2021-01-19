@@ -5,11 +5,11 @@ import (
    "io/ioutil"
 )
 
-func JsonGetFile(s string) (Map, error) {
-   y, e := ioutil.ReadFile(s)
+func JsonLoadFile(path string) (Map, error) {
+   data, e := ioutil.ReadFile(path)
    if e != nil {
       return nil, e
    }
-   m := Map{}
-   return m, json.Unmarshal(y, &m)
+   v := Map{}
+   return v, json.Unmarshal(data, &v)
 }
