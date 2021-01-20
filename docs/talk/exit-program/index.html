@@ -27,68 +27,8 @@
    <time>Sun Oct 11 2020</time>
    
 </section>
-   <p>Rust needs a single line way to exit a program. With Go, you have <code>Log.Fatal</code>:</p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;log&#34;</span>
-   <span style="color:#e6db74">&#34;os&#34;</span>
-)
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stat</span>(<span style="color:#e6db74">&#34;a.go&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
-   }
-   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Size</span>()
-   println(<span style="color:#a6e22e">n</span>)
-}
-</code></pre></div>
-
-<p>This works for a <code>Result</code>:</p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{
-   fs,
-   io
-};
-
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> fs::metadata(<span style="color:#e6db74">&#34;a.rs&#34;</span>)<span style="color:#f92672">?</span>;
-   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> o.len();
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
-   Ok(())
-}
-</code></pre></div>
-
-<p>This works for <code>Option</code>:</p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::char;
-
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), <span style="color:#66d9ef">u32</span><span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#66d9ef">let</span> c <span style="color:#f92672">=</span> char::from_digit(n, <span style="color:#ae81ff">16</span>).ok_or(n)<span style="color:#f92672">?</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, c);
-   Ok(())
-}
-</code></pre></div>
-
-<p>but what if you have both in the same function? Need something that works for
+   <p>Rust needs a single line way to exit a program. With Go, you have <code>Log.Fatal</code>.
+What if you have both in the same function? Need something that works for
 numbers as well. Can we use <code>Err(format!())</code> for everything? Yes we can:</p>
 
 
@@ -109,40 +49,7 @@ numbers as well. Can we use <code>Err(format!())</code> for everything? Yes we c
 }
 </code></pre></div>
 
-<p>We can even do better:</p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::char;
-
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), String<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-   <span style="color:#66d9ef">let</span> c <span style="color:#f92672">=</span> char::from_digit(n, <span style="color:#ae81ff">16</span>).ok_or(format<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n))<span style="color:#f92672">?</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, c);
-   Ok(())
-}
-</code></pre></div>
-
-<p>but then what about traditional errors? Yep:</p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::fs;
-
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), String<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> fs::metadata(<span style="color:#e6db74">&#34;a.rs&#34;</span>).map_err(<span style="color:#f92672">|</span>e<span style="color:#f92672">|</span> format<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, e))<span style="color:#f92672">?</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, o.len());
-   Ok(())
-}
-</code></pre></div>
-
-<p>Now lets combine:</p>
+<p>What about traditional errors? Now lets combine:</p>
 
 
 
