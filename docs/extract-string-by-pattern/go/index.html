@@ -102,8 +102,8 @@
    <span style="color:#e6db74">&#34;regexp&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">FindSubmatch</span>(<span style="color:#a6e22e">str</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">b</span> []<span style="color:#66d9ef">byte</span>) []<span style="color:#66d9ef">byte</span> {
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#a6e22e">str</span>).<span style="color:#a6e22e">FindSubmatch</span>(<span style="color:#a6e22e">b</span>)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">findSubmatch</span>(<span style="color:#a6e22e">re</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">input</span> []<span style="color:#66d9ef">byte</span>) []<span style="color:#66d9ef">byte</span> {
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#a6e22e">re</span>).<span style="color:#a6e22e">FindSubmatch</span>(<span style="color:#a6e22e">input</span>)
    <span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">a</span>) &lt; <span style="color:#ae81ff">2</span> {
       <span style="color:#66d9ef">return</span> []<span style="color:#66d9ef">byte</span>{}
    }
@@ -111,7 +111,7 @@
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">FindSubmatch</span>(<span style="color:#e6db74">&#34;a(..)&#34;</span>, []byte(<span style="color:#e6db74">&#34;January&#34;</span>))
+   <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">findSubmatch</span>(<span style="color:#e6db74">&#34;a(..)&#34;</span>, []byte(<span style="color:#e6db74">&#34;January&#34;</span>))
    println(<span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Equal</span>(<span style="color:#a6e22e">y</span>, []byte(<span style="color:#e6db74">&#34;nu&#34;</span>)))
 }
 </code></pre></div>

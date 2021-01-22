@@ -5,8 +5,8 @@ import (
    "regexp"
 )
 
-func FindSubmatch(str string, b []byte) []byte {
-   a := regexp.MustCompile(str).FindSubmatch(b)
+func findSubmatch(re string, input []byte) []byte {
+   a := regexp.MustCompile(re).FindSubmatch(input)
    if len(a) < 2 {
       return []byte{}
    }
@@ -14,6 +14,6 @@ func FindSubmatch(str string, b []byte) []byte {
 }
 
 func main() {
-   y := FindSubmatch("a(..)", []byte("January"))
+   y := findSubmatch("a(..)", []byte("January"))
    println(bytes.Equal(y, []byte("nu")))
 }
