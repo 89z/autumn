@@ -5,6 +5,10 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
+<https://github.com/golang/go/wiki/SliceTricks#pop>
+
+{{< r "b.go" >}}
+
 <https://golang.org/ref/spec#Index_expressions>
 
 ## References

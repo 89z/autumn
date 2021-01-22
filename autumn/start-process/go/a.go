@@ -5,13 +5,13 @@ import (
    "os/exec"
 )
 
-func System(command ...string) error {
+func system(command ...string) error {
    name, arg := command[0], command[1:]
-   o := exec.Command(name, arg...)
-   o.Stdout = os.Stdout
-   return o.Run()
+   c := exec.Command(name, arg...)
+   c.Stderr, c.Stdout = os.Stderr, os.Stdout
+   return c.Run()
 }
 
 func main() {
-   System("go", "version")
+   system("go", "version")
 }

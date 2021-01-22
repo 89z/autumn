@@ -1,11 +1,12 @@
 package main
+import "regexp"
 
-import (
-   "bytes"
-   "regexp"
-)
+func find(re string, input []byte) string {
+   b := regexp.MustCompile(re).Find(input)
+   return string(b)
+}
 
 func main() {
-   y := regexp.MustCompile("a..").Find([]byte("January"))
-   println(bytes.Equal(y, []byte("anu")))
+   s := find("a..", []byte("January"))
+   println(s == "anu")
 }

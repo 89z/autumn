@@ -1,15 +1,24 @@
 package main
 
 import (
+   "bufio"
    "bytes"
-   "os"
+   "log"
    "os/exec"
 )
 
+func output(command ...string) (*bufio.Scanner, error) {
+   name, arg := command[0], command[1:]
+   b, e := exec.Command(name, arg...).Output()
+   return bufio.NewScanner(bytes.NewReader(b)), e
+}
+
 func main() {
-   in_o := exec.Command("go", "version")
-   out_o := bytes.Buffer{}
-   in_o.Stdout = &out_o
-   in_o.Run()
-   out_o.WriteTo(os.Stdout)
+   s, e := output("go", "env")
+   if e != nil {
+      log.Fatal(e)
+   }
+   for s.Scan() {
+      println(s.Text())
+   }
 }
