@@ -1,8 +1,8 @@
 package main
 import "regexp"
 
-func FindSubmatch(pat, sub string) string {
-   a := regexp.MustCompile(pat).FindStringSubmatch(sub)
+func findSubmatch(re, input string) string {
+   a := regexp.MustCompile(re).FindStringSubmatch(input)
    if len(a) < 2 {
       return ""
    }
@@ -10,6 +10,6 @@ func FindSubmatch(pat, sub string) string {
 }
 
 func main() {
-   s := FindSubmatch("a(..)", "January")
+   s := findSubmatch("a(..)", "January")
    println(s == "nu")
 }

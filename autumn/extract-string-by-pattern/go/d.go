@@ -5,8 +5,8 @@ import (
    "regexp"
 )
 
-func FindSubmatch(pat string, sub []byte) []byte {
-   a := regexp.MustCompile(pat).FindSubmatch(sub)
+func FindSubmatch(str string, b []byte) []byte {
+   a := regexp.MustCompile(str).FindSubmatch(b)
    if len(a) < 2 {
       return []byte{}
    }
