@@ -2,19 +2,26 @@ package main
 
 import (
    "bufio"
-   "bytes"
    "log"
    "os/exec"
 )
 
+func popen(command ...string) (*bufio.Scanner, error) {
+   name, arg := command[0], command[1:]
+   cmd := exec.Command(name, arg...)
+   pipe, e := cmd.StdoutPipe()
+   if e != nil {
+      return nil, e
+   }
+   return bufio.NewScanner(pipe), cmd.Start()
+}
+
 func main() {
-   y, e := exec.Command("go", "env").Output()
+   env, e := popen("go", "env")
    if e != nil {
       log.Fatal(e)
    }
-   o := bufio.NewScanner(bytes.NewReader(y))
-   for o.Scan() {
-      s := o.Text()
-      println(s)
+   for env.Scan() {
+      println(env.Text())
    }
 }

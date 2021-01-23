@@ -3,9 +3,9 @@ import "fmt"
 
 func popString(a *[]string) string {
    n := len(*a)
-   v := (*a)[n - 1]
+   s := (*a)[n - 1]
    *a = (*a)[:n - 1]
-   return v
+   return s
 }
 
 func main() {

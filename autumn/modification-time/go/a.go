@@ -5,7 +5,11 @@ import (
    "time"
 )
 
+func touch(filename string, sec int64) error {
+   t := time.Unix(sec, 0)
+   return os.Chtimes(filename, t, t)
+}
+
 func main() {
-   o := time.Unix(400_000_000, 0)
-   os.Chtimes("a.go", o, o)
+   touch("a.go", 400_000_000)
 }

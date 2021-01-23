@@ -40,9 +40,9 @@
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">popString</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">*</span>[]<span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
    <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> len(<span style="color:#f92672">*</span><span style="color:#a6e22e">a</span>)
-   <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> (<span style="color:#f92672">*</span><span style="color:#a6e22e">a</span>)[<span style="color:#a6e22e">n</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> (<span style="color:#f92672">*</span><span style="color:#a6e22e">a</span>)[<span style="color:#a6e22e">n</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]
    <span style="color:#f92672">*</span><span style="color:#a6e22e">a</span> = (<span style="color:#f92672">*</span><span style="color:#a6e22e">a</span>)[:<span style="color:#a6e22e">n</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">v</span>
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s</span>
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {

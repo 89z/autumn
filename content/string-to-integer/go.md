@@ -11,6 +11,10 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/strconv#Atoi>
 
+{{< r "c.go" >}}
+
+<https://golang.org/pkg/strconv#ParseInt>
+
 ## References
 
 - <https://hyperpolyglot.org/c#str-to-num>
