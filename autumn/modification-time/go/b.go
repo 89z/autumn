@@ -4,13 +4,21 @@ import (
    "fmt"
    "log"
    "os"
+   "time"
 )
 
+func modTime(name string) (t time.Time, e error) {
+   fi, e := os.Stat(name)
+   if e != nil {
+      return
+   }
+   return fi.ModTime(), nil
+}
+
 func main() {
-   stat_o, e := os.Stat("a.go")
+   t, e := modTime("a.go")
    if e != nil {
       log.Fatal(e)
    }
-   mod_o := stat_o.ModTime()
-   fmt.Println(mod_o)
+   fmt.Println(t)
 }

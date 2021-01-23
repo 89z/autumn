@@ -7,10 +7,9 @@ import (
 )
 
 func main() {
-   y, e := time.Now().MarshalText()
+   b, e := time.Now().MarshalText()
    if e != nil {
       log.Fatal(e)
    }
-   y = append(y, '\n')
-   os.Stdout.Write(y)
+   os.Stdout.Write(append(b, '\n'))
 }

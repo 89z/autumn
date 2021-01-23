@@ -6,9 +6,9 @@ import (
 )
 
 func system(name string, arg ...string) error {
-   c := exec.Command(name, arg...)
-   c.Stderr, c.Stdout = os.Stderr, os.Stdout
-   return c.Run()
+   cmd := exec.Command(name, arg...)
+   cmd.Stderr, cmd.Stdout = os.Stderr, os.Stdout
+   return cmd.Run()
 }
 
 func main() {

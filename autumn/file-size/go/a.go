@@ -5,11 +5,18 @@ import (
    "os"
 )
 
+func fileSize(name string) (int64, error) {
+   fi, err := os.Stat(name)
+   if err != nil {
+      return 0, err
+   }
+   return fi.Size(), nil
+}
+
 func main() {
-   o, e := os.Stat("a.go")
+   n, e := fileSize("a.go")
    if e != nil {
       log.Fatal(e)
    }
-   n := o.Size()
    println(n)
 }
