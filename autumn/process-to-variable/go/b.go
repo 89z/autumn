@@ -7,8 +7,7 @@ import (
    "os/exec"
 )
 
-func output(command ...string) (*bufio.Scanner, error) {
-   name, arg := command[0], command[1:]
+func output(name string, arg ...string) (*bufio.Scanner, error) {
    b, e := exec.Command(name, arg...).Output()
    return bufio.NewScanner(bytes.NewReader(b)), e
 }

@@ -45,8 +45,7 @@
    <span style="color:#e6db74">&#34;os/exec&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">popen</span>(<span style="color:#a6e22e">command</span> <span style="color:#f92672">...</span><span style="color:#66d9ef">string</span>) (<span style="color:#f92672">*</span><span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">Scanner</span>, <span style="color:#66d9ef">error</span>) {
-   <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">arg</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">command</span>[<span style="color:#ae81ff">0</span>], <span style="color:#a6e22e">command</span>[<span style="color:#ae81ff">1</span>:]
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">popen</span>(<span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">arg</span> <span style="color:#f92672">...</span><span style="color:#66d9ef">string</span>) (<span style="color:#f92672">*</span><span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">Scanner</span>, <span style="color:#66d9ef">error</span>) {
    <span style="color:#a6e22e">cmd</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">arg</span><span style="color:#f92672">...</span>)
    <span style="color:#a6e22e">pipe</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">StdoutPipe</span>()
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {

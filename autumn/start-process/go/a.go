@@ -5,8 +5,7 @@ import (
    "os/exec"
 )
 
-func system(command ...string) error {
-   name, arg := command[0], command[1:]
+func system(name string, arg ...string) error {
    c := exec.Command(name, arg...)
    c.Stderr, c.Stdout = os.Stderr, os.Stdout
    return c.Run()
