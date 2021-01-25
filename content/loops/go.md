@@ -11,6 +11,10 @@ tags = [ "go" ]
 
 <https://golang.org/ref/spec#For_clause>
 
+{{< r "c.go" >}}
+
+<https://golang.org/ref/spec#For_range>
+
 ## References
 
 - <https://hyperpolyglot.org/c#while>

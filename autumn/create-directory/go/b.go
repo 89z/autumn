@@ -1,6 +1,13 @@
 package main
-import "os"
+
+import (
+   "log"
+   "os"
+)
 
 func main() {
-   os.MkdirAll("May/June", os.ModeDir)
+   e := os.MkdirAll("March", os.ModeDir)
+   if e != nil {
+      log.Fatal(e)
+   }
 }
