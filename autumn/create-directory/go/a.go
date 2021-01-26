@@ -6,15 +6,11 @@ import (
 )
 
 func mkdir(path string) error {
-   err := os.Mkdir(path, os.ModeDir)
-   if err != nil {
-      dir, err1 := os.Stat(path)
-      if err1 == nil && dir.IsDir() {
-         return nil
-      }
-      return err
+   dir, err := os.Stat(path)
+   if err == nil && dir.IsDir() {
+      return nil
    }
-   return nil
+   return os.Mkdir(path, os.ModeDir)
 }
 
 func main() {

@@ -43,34 +43,29 @@
    <span style="color:#e6db74">&#34;time&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">o</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Time</span>, <span style="color:#a6e22e">e</span> <span style="color:#66d9ef">error</span>) {
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
-   }
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">o</span>)
-}
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">ParseDate</span>(<span style="color:#a6e22e">left</span> <span style="color:#66d9ef">string</span>) (<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Time</span>, <span style="color:#66d9ef">error</span>) {
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">parseDate</span>(<span style="color:#a6e22e">left</span> <span style="color:#66d9ef">string</span>) (<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Time</span>, <span style="color:#66d9ef">error</span>) {
    <span style="color:#a6e22e">start</span> <span style="color:#f92672">:=</span> len(<span style="color:#a6e22e">left</span>)
    <span style="color:#a6e22e">right</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;1970-01-01T00:00:00Z&#34;</span>[<span style="color:#a6e22e">start</span>:]
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">RFC3339</span>, <span style="color:#a6e22e">left</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">right</span>)
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ParseDate</span>(<span style="color:#e6db74">&#34;2020-05-04T03:02:01&#34;</span>)
-   <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span>)
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> = <span style="color:#a6e22e">ParseDate</span>(<span style="color:#e6db74">&#34;2020-05-04T03:02&#34;</span>)
-   <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span>)
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> = <span style="color:#a6e22e">ParseDate</span>(<span style="color:#e6db74">&#34;2020-05-04T03&#34;</span>)
-   <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span>)
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> = <span style="color:#a6e22e">ParseDate</span>(<span style="color:#e6db74">&#34;2020-05-04&#34;</span>)
-   <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span>)
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> = <span style="color:#a6e22e">ParseDate</span>(<span style="color:#e6db74">&#34;2020-05&#34;</span>)
-   <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span>)
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> = <span style="color:#a6e22e">ParseDate</span>(<span style="color:#e6db74">&#34;2020&#34;</span>)
-   <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span>)
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> = <span style="color:#a6e22e">ParseDate</span>(<span style="color:#e6db74">&#34;&#34;</span>)
-   <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span>)
+   <span style="color:#a6e22e">tests</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{
+      <span style="color:#e6db74">&#34;&#34;</span>,
+      <span style="color:#e6db74">&#34;2020&#34;</span>,
+      <span style="color:#e6db74">&#34;2020-05&#34;</span>,
+      <span style="color:#e6db74">&#34;2020-05-04&#34;</span>,
+      <span style="color:#e6db74">&#34;2020-05-04T03&#34;</span>,
+      <span style="color:#e6db74">&#34;2020-05-04T03:02&#34;</span>,
+      <span style="color:#e6db74">&#34;2020-05-04T03:02:01&#34;</span>,
+   }
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">test</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">tests</span> {
+      <span style="color:#a6e22e">t</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">parseDate</span>(<span style="color:#a6e22e">test</span>)
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+         <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+      }
+      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">t</span>)
+   }
 }
 </code></pre></div>
 

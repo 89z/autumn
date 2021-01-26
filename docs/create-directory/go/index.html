@@ -43,15 +43,11 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">mkdir</span>(<span style="color:#a6e22e">path</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">error</span> {
-   <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Mkdir</span>(<span style="color:#a6e22e">path</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">ModeDir</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">dir</span>, <span style="color:#a6e22e">err1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stat</span>(<span style="color:#a6e22e">path</span>)
-      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err1</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">dir</span>.<span style="color:#a6e22e">IsDir</span>() {
-         <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
-      }
-      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+   <span style="color:#a6e22e">dir</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stat</span>(<span style="color:#a6e22e">path</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">dir</span>.<span style="color:#a6e22e">IsDir</span>() {
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
    }
-   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Mkdir</span>(<span style="color:#a6e22e">path</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">ModeDir</span>)
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
