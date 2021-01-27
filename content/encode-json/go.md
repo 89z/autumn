@@ -5,9 +5,11 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
+<https://golang.org/pkg/encoding/json#Encoder.Encode>
+
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/encoding/json#Encoder.Encode>
+<https://golang.org/pkg/encoding/json#Encoder.SetEscapeHTML>
 
 {{< r "c.go" >}}
 

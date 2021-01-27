@@ -7,9 +7,9 @@ import (
 )
 
 func main() {
-   m, e := url.ParseQuery("one=odd&two=even")
+   v, e := url.ParseQuery("one=odd&two=even")
    if e != nil {
       log.Fatal(e)
    }
-   fmt.Println(m)
+   fmt.Println(v)
 }

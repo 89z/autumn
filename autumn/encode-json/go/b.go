@@ -2,9 +2,15 @@ package main
 
 import (
    "encoding/json"
+   "log"
    "os"
 )
 
 func main() {
-   json.NewEncoder(os.Stdout).Encode(a)
+   enc := json.NewEncoder(os.Stdout)
+   enc.SetEscapeHTML(false)
+   err := enc.Encode("May & June")
+   if err != nil {
+      log.Fatal(err)
+   }
 }

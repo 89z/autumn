@@ -1,6 +1,15 @@
 package main
 
-var a = []map[string]int{
-   {"month": 4, "day": 5},
-   {"month": 5, "day": 4},
+import (
+   "encoding/json"
+   "log"
+   "os"
+)
+
+func main() {
+   s := "May & June"
+   e := json.NewEncoder(os.Stdout).Encode(s)
+   if e != nil {
+      log.Fatal(e)
+   }
 }
