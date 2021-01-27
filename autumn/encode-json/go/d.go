@@ -7,10 +7,10 @@ import (
 )
 
 func main() {
-   y, e := json.Marshal(a)
+   s := "May & June"
+   b, e := json.Marshal(s)
    if e != nil {
       log.Fatal(e)
    }
-   y = append(y, '\n')
-   os.Stdout.Write(y)
+   os.Stdout.Write(append(b, '\n'))
 }

@@ -114,12 +114,12 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">a</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;May &amp; June&#34;</span>
+   <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">s</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">y</span> = append(<span style="color:#a6e22e">y</span>, <span style="color:#e6db74">&#39;\n&#39;</span>)
-   <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>.<span style="color:#a6e22e">Write</span>(<span style="color:#a6e22e">y</span>)
+   <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>.<span style="color:#a6e22e">Write</span>(append(<span style="color:#a6e22e">b</span>, <span style="color:#e6db74">&#39;\n&#39;</span>))
 }
 </code></pre></div>
 
@@ -139,12 +139,12 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">MarshalIndent</span>(<span style="color:#a6e22e">a</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;\t&#34;</span>)
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>}
+   <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">MarshalIndent</span>(<span style="color:#a6e22e">a</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;\t&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">y</span> = append(<span style="color:#a6e22e">y</span>, <span style="color:#e6db74">&#39;\n&#39;</span>)
-   <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>.<span style="color:#a6e22e">Write</span>(<span style="color:#a6e22e">y</span>)
+   <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>.<span style="color:#a6e22e">Write</span>(append(<span style="color:#a6e22e">b</span>, <span style="color:#e6db74">&#39;\n&#39;</span>))
 }
 </code></pre></div>
 

@@ -7,10 +7,10 @@ import (
 )
 
 func main() {
-   y, e := json.MarshalIndent(a, "", "\t")
+   a := []int{10, 11}
+   b, e := json.MarshalIndent(a, "", "\t")
    if e != nil {
       log.Fatal(e)
    }
-   y = append(y, '\n')
-   os.Stdout.Write(y)
+   os.Stdout.Write(append(b, '\n'))
 }
