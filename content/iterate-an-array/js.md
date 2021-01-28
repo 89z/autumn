@@ -5,17 +5,21 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/entries>
 
 {{< r "b.js" >}}
 
-<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...in>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach>
 
 {{< r "c.js" >}}
 
-<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...in>
 
 {{< r "d.js" >}}
+
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of>
+
+{{< r "e.js" >}}
 
 <https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for>
 

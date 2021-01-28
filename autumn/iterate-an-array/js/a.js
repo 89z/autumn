@@ -1,3 +1,5 @@
 let a = ['May', 'June'];
-let f = s => console.log(s);
-a.forEach(f);
+
+for (let [n, s] of a.entries()) {
+   console.log(n, s);
+}
