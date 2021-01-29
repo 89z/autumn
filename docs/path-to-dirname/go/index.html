@@ -39,9 +39,9 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;C:/go/bin/go.exe&#34;</span>
-   <span style="color:#a6e22e">s1</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#a6e22e">s</span>)
-   println(<span style="color:#a6e22e">s1</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;C:/go/bin&#34;</span>)
+   <span style="color:#a6e22e">file</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;C:/go/bin/go.exe&#34;</span>
+   <span style="color:#a6e22e">dir</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#a6e22e">file</span>)
+   println(<span style="color:#a6e22e">dir</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;C:/go/bin&#34;</span>)
 }
 </code></pre></div>
 
@@ -56,9 +56,9 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path/filepath&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">path_s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`C:\go\bin\go.exe`</span>
-   <span style="color:#a6e22e">dir_s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#a6e22e">path_s</span>)
-   println(<span style="color:#a6e22e">dir_s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">`C:\go\bin`</span>)
+   <span style="color:#a6e22e">file</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`C:\go\bin\go.exe`</span>
+   <span style="color:#a6e22e">dir</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#a6e22e">file</span>)
+   println(<span style="color:#a6e22e">dir</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">`C:\go\bin`</span>)
 }
 </code></pre></div>
 
