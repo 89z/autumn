@@ -1,6 +1,8 @@
 *.exe
 autumn/*/d/.dub
 autumn/*/d/.gitignore
+autumn/*/d/a/dub.selections.json
+autumn/*/d/b/dub.selections.json
 autumn/*/d/dub.selections.json
 autumn/*/dart/.dart_tool
 autumn/*/dart/.packages

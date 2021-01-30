@@ -39,9 +39,9 @@
 <span style="color:#f92672">import</span> net <span style="color:#f92672">=</span> ae<span style="color:#f92672">.</span><span style="color:#a6e22e">sys</span><span style="color:#f92672">.</span><span style="color:#a6e22e">net</span><span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> url_s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span><span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">auto</span> get_s <span style="color:#f92672">=</span> <span style="color:#66d9ef">cast</span><span style="color:#f92672">(</span><span style="color:#66d9ef">string</span><span style="color:#f92672">)</span> net<span style="color:#f92672">.</span><span style="color:#a6e22e">getFile</span><span style="color:#f92672">(</span>url_s<span style="color:#f92672">);</span>
-   io<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>get_s<span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> get <span style="color:#f92672">=</span> <span style="color:#66d9ef">cast</span><span style="color:#f92672">(</span><span style="color:#66d9ef">string</span><span style="color:#f92672">)</span> net<span style="color:#f92672">.</span><span style="color:#a6e22e">getFile</span><span style="color:#f92672">(</span>url<span style="color:#f92672">);</span>
+   io<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>get<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 

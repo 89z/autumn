@@ -1,0 +1,12 @@
+{
+	"authors": [
+		"Steven"
+	],
+	"copyright": "Copyright © 2021, Steven",
+	"dependencies": {
+		"ae:sys-net-wininet": "~>0.0.2898"
+	},
+	"description": "A minimal D application.",
+	"license": "proprietary",
+	"name": "d"
+}

@@ -4,8 +4,6 @@ tags = [ "d" ]
 date = 2020-11-10
 +++
 
-<https://github.com/huntlabs/hunt-framework/issues/171>
-
 {{< r "a/source/app.d" >}}
 
 <https://vibed.org/api/vibe.inet.webform/parseURLEncodedForm>
@@ -16,4 +14,6 @@ date = 2020-11-10
 
 ## References
 
-<https://rosettacode.org/wiki/URL_parser>
+- <https://github.com/CyberShadow/ae/issues/49>
+- <https://github.com/huntlabs/hunt-framework/issues/171>
+- <https://rosettacode.org/wiki/URL_parser>

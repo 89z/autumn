@@ -1,4 +1,4 @@
 void main() {
-   var m = Uri.splitQueryString('month=May&day=Friday');
-   print(m);
+   var u = Uri(queryParameters: {'month': 'March', 'day': 'Friday'});
+   print(u.query == 'month=March&day=Friday');
 }

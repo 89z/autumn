@@ -1,3 +1,3 @@
-let s = 'month=March&day=Friday';
-let p = new URLSearchParams(s);
+let p = new URLSearchParams;
+p.set('month', 'March');
 console.log(p);

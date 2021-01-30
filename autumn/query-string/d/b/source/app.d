@@ -1,8 +1,8 @@
 import io = std.stdio;
-import web = vibe.inet.webform: FormFields;
+import web = vibe.inet.webform;
 
 void main() {
-   FormFields m;
-   web.parseURLEncodedForm("month=March&day=Friday", m);
-   io.writeln(m);
+   auto m = ["month": "March", "day": "Friday"];
+   auto s = web.urlEncode(m);
+   io.writeln(s);
 }
