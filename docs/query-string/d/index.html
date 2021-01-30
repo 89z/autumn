@@ -29,11 +29,41 @@
    <a href="/autumn/categories/path/">path</a>
    
 </section>
-   <ul>
-<li><a href="https://github.com/gecko0307/dlib">https://github.com/gecko0307/dlib</a></li>
-<li><a href="https://github.com/huntlabs/hunt-framework">https://github.com/huntlabs/hunt-framework</a></li>
-<li><a href="https://github.com/vibe-d/vibe.d">https://github.com/vibe-d/vibe.d</a></li>
-</ul>
+   <p><a href="https://github.com/huntlabs/hunt-framework/issues/171">https://github.com/huntlabs/hunt-framework/issues/171</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> web <span style="color:#f92672">=</span> vibe<span style="color:#f92672">.</span><span style="color:#a6e22e">inet</span><span style="color:#f92672">.</span><span style="color:#a6e22e">webform</span><span style="color:#f92672">:</span> FormFields<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   FormFields m<span style="color:#f92672">;</span>
+   web<span style="color:#f92672">.</span><span style="color:#a6e22e">parseURLEncodedForm</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;month=March&amp;day=Friday&#34;</span><span style="color:#f92672">,</span> m<span style="color:#f92672">);</span>
+   io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>m<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+
+<p><a href="https://vibed.org/api/vibe.inet.webform/parseURLEncodedForm">https://vibed.org/api/vibe.inet.webform/parseURLEncodedForm</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> web <span style="color:#f92672">=</span> vibe<span style="color:#f92672">.</span><span style="color:#a6e22e">inet</span><span style="color:#f92672">.</span><span style="color:#a6e22e">webform</span><span style="color:#f92672">:</span> FormFields<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   FormFields m<span style="color:#f92672">;</span>
+   web<span style="color:#f92672">.</span><span style="color:#a6e22e">parseURLEncodedForm</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;month=March&amp;day=Friday&#34;</span><span style="color:#f92672">,</span> m<span style="color:#f92672">);</span>
+   io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>m<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+
+<p><a href="https://vibed.org/api/vibe.inet.webform/urlEncode">https://vibed.org/api/vibe.inet.webform/urlEncode</a></p>
 <h2 id="references">References</h2>
 <p><a href="https://rosettacode.org/wiki/URL_parser">https://rosettacode.org/wiki/URL_parser</a></p>
 

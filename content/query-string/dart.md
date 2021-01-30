@@ -3,7 +3,9 @@ title = "Dart"
 tags = [ "dart" ]
 +++
 
-<https://api.dart.dev/dart-core/Uri-class.html>
+{{< r "a.dart" >}}
+
+<https://api.dart.dev/dart-core/Uri/splitQueryString.html>
 
 ## References
 

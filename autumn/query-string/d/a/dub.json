@@ -1,0 +1,12 @@
+{
+	"authors": [
+		"Steven"
+	],
+	"copyright": "Copyright © 2021, Steven",
+	"dependencies": {
+		"vibe-d:inet": "~>0.9.3"
+	},
+	"description": "A minimal D application.",
+	"license": "proprietary",
+	"name": "a"
+}

@@ -19,6 +19,10 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/net/url#URL.RawQuery>
 
+{{< r "e.go" >}}
+
+<https://golang.org/pkg/net/url#URL.String>
+
 ## References
 
 - <https://github.com/golang/go/pull/24528>
