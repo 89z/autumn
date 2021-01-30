@@ -1,2 +1,2 @@
-let o = new URL('https://example.com/one?two=even');
-console.log(o.search === '?two=even');
+let u = new URL('https://example.com/one?two=even');
+console.log(u.search === '?two=even');

@@ -24,7 +24,7 @@
    <a href="/autumn/url-parts/">URL parts</a> / Go
 </h1>
 <section class="page">
-   <time>Mon Nov 9 2020</time>
+   <time>Sat Jan 30 2021</time>
    
    <a href="/autumn/categories/path/">path</a>
    
@@ -43,11 +43,11 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#e6db74">&#34;https://example.com/one?two=even&#34;</span>)
+   <span style="color:#a6e22e">u</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#e6db74">&#34;https://example.com/one?two=even&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   println(<span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Host</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;example.com&#34;</span>)
+   println(<span style="color:#a6e22e">u</span>.<span style="color:#a6e22e">Host</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;example.com&#34;</span>)
 }
 </code></pre></div>
 
@@ -66,11 +66,11 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#e6db74">&#34;https://example.com/one?two=even&#34;</span>)
+   <span style="color:#a6e22e">u</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#e6db74">&#34;https://example.com/one?two=even&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Hostname</span>()
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">u</span>.<span style="color:#a6e22e">Hostname</span>()
    println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;example.com&#34;</span>)
 }
 </code></pre></div>
@@ -90,12 +90,12 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#e6db74">&#34;https://example.com/one?two=even&#34;</span>)
+   <span style="color:#a6e22e">u</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#e6db74">&#34;https://example.com/one?two=even&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Query</span>()
-   <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">m</span>)
+   <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">u</span>.<span style="color:#a6e22e">Query</span>()
+   <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#a6e22e">v</span>)
 }
 </code></pre></div>
 
@@ -114,17 +114,21 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#e6db74">&#34;https://example.com/one?two=even&#34;</span>)
+   <span style="color:#a6e22e">u</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#e6db74">&#34;https://example.com/one?two=even&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   println(<span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">RawQuery</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;two=even&#34;</span>)
+   println(<span style="color:#a6e22e">u</span>.<span style="color:#a6e22e">RawQuery</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;two=even&#34;</span>)
 }
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/net/url#URL.RawQuery">https://golang.org/pkg/net/url#URL.RawQuery</a></p>
 <h2 id="references">References</h2>
-<p><a href="https://rosettacode.org/wiki/URL_parser">https://rosettacode.org/wiki/URL_parser</a></p>
+<ul>
+<li><a href="https://github.com/golang/go/pull/24528">https://github.com/golang/go/pull/24528</a></li>
+<li><a href="https://hyperpolyglot.org/c#net-web">https://hyperpolyglot.org/c#net-web</a></li>
+<li><a href="https://rosettacode.org/wiki/URL_parser">https://rosettacode.org/wiki/URL_parser</a></li>
+</ul>
 
 </main>
 
