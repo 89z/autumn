@@ -3,10 +3,17 @@ title = "Python"
 tags = [ "python" ]
 +++
 
-{{< r "os.py" >}}
-{{< r "path.py" >}}
+{{< r "a.py" >}}
 
 <https://docs.python.org/library/os.html#os.listdir>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/library/os.html#os.walk>
+
+{{< r "c.py" >}}
+
+<https://docs.python.org/library/pathlib.html#pathlib.Path.iterdir>
 
 ## References
 

@@ -1,7 +1,7 @@
 +++
 title = "Delete file"
 categories = [ "system" ]
-date = 2020-09-11
+date = 2021-01-29
 example = [
    'cove\git-tools\git-depart.php', ' unlink('
 ]

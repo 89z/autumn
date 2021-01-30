@@ -24,7 +24,7 @@
    <a href="/autumn/delete-file/">Delete file</a> / Python
 </h1>
 <section class="page">
-   <time>Fri Sep 11 2020</time>
+   <time>Fri Jan 29 2021</time>
    
    <a href="/autumn/categories/system/">system</a>
    
@@ -36,10 +36,59 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> os
-os<span style="color:#f92672">.</span>remove(<span style="color:#e6db74">&#39;a.txt&#39;</span>)
+os<span style="color:#f92672">.</span>remove(<span style="color:#e6db74">&#39;file.txt&#39;</span>)
+
+<span style="color:#75715e"># PermissionError</span>
+<span style="color:#75715e"># os.remove(&#39;folder&#39;)</span>
 </code></pre></div>
 
-<p><a href="https://docs.python.org/library/os.html">https://docs.python.org/library/os.html</a></p>
+<p><a href="https://docs.python.org/library/os.html#os.remove">https://docs.python.org/library/os.html#os.remove</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> os
+os<span style="color:#f92672">.</span>removedirs(<span style="color:#e6db74">&#39;folder&#39;</span>)
+
+<span style="color:#75715e"># NotADirectoryError</span>
+<span style="color:#75715e"># os.removedirs(&#39;file.txt&#39;)</span>
+</code></pre></div>
+
+<p><a href="https://docs.python.org/library/os.html#os.removedirs">https://docs.python.org/library/os.html#os.removedirs</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> os
+<span style="color:#75715e"># docs.python.org/library/os.html#os.rmdir</span>
+</code></pre></div>
+
+<p><a href="https://docs.python.org/library/os.html#os.rmdir">https://docs.python.org/library/os.html#os.rmdir</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> os
+<span style="color:#75715e"># docs.python.org/library/os.html#os.unlink</span>
+</code></pre></div>
+
+<p><a href="https://docs.python.org/library/os.html#os.unlink">https://docs.python.org/library/os.html#os.unlink</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># docs.python.org/library/shutil.html#shutil.rmtree</span>
+</code></pre></div>
+
+<p><a href="https://docs.python.org/library/shutil.html#shutil.rmtree">https://docs.python.org/library/shutil.html#shutil.rmtree</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#file-cp-rm-mv">https://hyperpolyglot.org/scripting2#file-cp-rm-mv</a></li>

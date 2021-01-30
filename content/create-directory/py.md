@@ -7,6 +7,10 @@ tags = [ "python" ]
 
 <https://docs.python.org/library/os.html#os.makedirs>
 
+{{< r "b.py" >}}
+
+<https://docs.python.org/library/os.html#os.mkdir>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting2#mkdir>

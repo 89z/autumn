@@ -1,2 +1,5 @@
 import os
-os.remove('a.txt')
+os.remove('file.txt')
+
+# PermissionError
+# os.remove('folder')

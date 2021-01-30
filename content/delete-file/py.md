@@ -5,7 +5,23 @@ tags = [ "python" ]
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/os.html>
+<https://docs.python.org/library/os.html#os.remove>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/library/os.html#os.removedirs>
+
+{{< r "c.py" >}}
+
+<https://docs.python.org/library/os.html#os.rmdir>
+
+{{< r "d.py" >}}
+
+<https://docs.python.org/library/os.html#os.unlink>
+
+{{< r "e.py" >}}
+
+<https://docs.python.org/library/shutil.html#shutil.rmtree>
 
 ## References
 
