@@ -3,13 +3,7 @@ title = "Dart"
 tags = [ "dart" ]
 +++
 
-{{< r "a.dart" >}}
-
-<https://api.dart.dev/dart-core/Uri/Uri.html>
-
-{{< r "b.dart" >}}
-
-<https://api.dart.dev/dart-core/Uri/parse.html>
+<https://api.dart.dev/dart-core/Uri-class.html>
 
 ## References
 
