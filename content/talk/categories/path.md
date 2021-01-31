@@ -22,6 +22,6 @@ title = "Path"
 
 <https://golang.org/pkg/net/url#Values.Encode>
 
-## Modify query object
+## Modify query object (good)
 
 <https://golang.org/pkg/net/url#Values.Set>
