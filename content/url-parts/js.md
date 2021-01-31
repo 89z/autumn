@@ -19,6 +19,18 @@ tags = [ "javascript" ]
 
 <https://developer.mozilla.org/docs/Web/API/URL/searchParams>
 
+{{< r "e.js" >}}
+
+<https://developer.mozilla.org/docs/Web/API/URLSearchParams/URLSearchParams>
+
+{{< r "f.js" >}}
+
+<https://developer.mozilla.org/docs/Web/API/URLSearchParams/set>
+
+{{< r "g.js" >}}
+
+<https://developer.mozilla.org/docs/Web/API/URLSearchParams/toString>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting2#parse-url>
