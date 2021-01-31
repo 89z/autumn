@@ -1,4 +1,4 @@
-require 'uri'
-o = URI('https://example.com/one?two=even')
-s1 = o.host
-puts s1 == 'example.com'
+require 'cgi'
+s = 'one=odd&two=even'
+m = CGI.parse(s)
+puts m

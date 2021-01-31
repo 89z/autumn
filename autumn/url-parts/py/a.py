@@ -1,8 +1,4 @@
 from urllib import parse
-
-u = parse.SplitResult(
-   'http', 'docs.python.org', '/library', 'month=May&day=Friday', fragment=''
-)
-
-s = u.geturl()
-print(s)
+s = 'one=odd&two=even'
+m = parse.parse_qs(s)
+print(m)
