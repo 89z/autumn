@@ -1,5 +1,5 @@
 +++
-title = "URL parts"
+title = "Path"
 +++
 
 ## String to URL object (good)
@@ -10,7 +10,7 @@ title = "URL parts"
 
 <https://golang.org/pkg/net/url#ParseQuery>
 
-## Modify URL object
+## Modify URL object (good)
 
 <https://golang.org/pkg/net/url#URL.Host>
 
