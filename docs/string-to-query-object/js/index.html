@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>String to query object / JavaScript</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/string-to-query-object/">String to query object</a> / JavaScript
+</h1>
+<section class="page">
+   <time>Sun Jan 31 2021</time>
+   
+   <a href="/autumn/categories/path/">path</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">u</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URL</span>(<span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">u</span>.<span style="color:#a6e22e">host</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;example.com&#39;</span>);
+</code></pre></div>
+
+<p><a href="https://developer.mozilla.org/docs/Web/API/URL/host">https://developer.mozilla.org/docs/Web/API/URL/host</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">u</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URL</span>(<span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">u</span>.<span style="color:#a6e22e">hostname</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;example.com&#39;</span>);
+</code></pre></div>
+
+<p><a href="https://developer.mozilla.org/docs/Web/API/URL/hostname">https://developer.mozilla.org/docs/Web/API/URL/hostname</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">u</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URL</span>(<span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">u</span>.<span style="color:#a6e22e">search</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;?two=even&#39;</span>);
+</code></pre></div>
+
+<p><a href="https://developer.mozilla.org/docs/Web/API/URL/search">https://developer.mozilla.org/docs/Web/API/URL/search</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">u</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URL</span>(<span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">u</span>.<span style="color:#a6e22e">searchParams</span>);
+</code></pre></div>
+
+<p><a href="https://developer.mozilla.org/docs/Web/API/URL/searchParams">https://developer.mozilla.org/docs/Web/API/URL/searchParams</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;month=March&amp;day=Friday&#39;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URLSearchParams</span>(<span style="color:#a6e22e">s</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">p</span>);
+</code></pre></div>
+
+<p><a href="https://developer.mozilla.org/docs/Web/API/URLSearchParams/URLSearchParams">https://developer.mozilla.org/docs/Web/API/URLSearchParams/URLSearchParams</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URLSearchParams</span>;
+<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#39;month&#39;</span>, <span style="color:#e6db74">&#39;March&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">p</span>);
+</code></pre></div>
+
+<p><a href="https://developer.mozilla.org/docs/Web/API/URLSearchParams/set">https://developer.mozilla.org/docs/Web/API/URLSearchParams/set</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URLSearchParams</span>({<span style="color:#a6e22e">month</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;March&#39;</span>, <span style="color:#a6e22e">day</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Friday&#39;</span>});
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">toString</span>();
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;month=March&amp;day=Friday&#39;</span>);
+</code></pre></div>
+
+<p><a href="https://developer.mozilla.org/docs/Web/API/URLSearchParams/toString">https://developer.mozilla.org/docs/Web/API/URLSearchParams/toString</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/scripting2#parse-url">https://hyperpolyglot.org/scripting2#parse-url</a></li>
+<li><a href="https://rosettacode.org/wiki/URL_parser">https://rosettacode.org/wiki/URL_parser</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
