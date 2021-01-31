@@ -5,7 +5,11 @@ tags = [ "nim" ]
 
 {{< r "a.nim" >}}
 
-<https://nim-lang.org/docs/uri.html>
+<https://nim-lang.org/docs/uri.html#$,Uri>
+
+{{< r "b.nim" >}}
+
+<https://nim-lang.org/docs/uri.html#parseUri,string>
 
 ## References
 
