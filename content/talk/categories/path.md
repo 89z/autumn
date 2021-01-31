@@ -14,7 +14,7 @@ title = "Path"
 
 <https://golang.org/pkg/net/url#URL.Host>
 
-## Return URL string
+## Return URL string (good)
 
 <https://golang.org/pkg/net/url#URL.String>
 
