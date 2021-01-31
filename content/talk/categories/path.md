@@ -18,7 +18,7 @@ title = "Path"
 
 <https://golang.org/pkg/net/url#URL.String>
 
-## Return query string
+## Return query string (good)
 
 <https://golang.org/pkg/net/url#Values.Encode>
 

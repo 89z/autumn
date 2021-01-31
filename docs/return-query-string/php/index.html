@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Return query string / PHP</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/return-query-string/">Return query string</a> / PHP
+</h1>
+<section class="page">
+   <time>Sun Jan 31 2021</time>
+   
+   <a href="/autumn/categories/path/">path</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$m <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;one&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;odd&#39;</span>, <span style="color:#e6db74">&#39;two&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;even&#39;</span>];
+$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">http_build_query</span>($m);
+<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;one=odd&amp;two=even&#39;</span>);
+</code></pre></div>
+
+<p><a href="https://php.net/function.http-build-query">https://php.net/function.http-build-query</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;one=odd&amp;two=even&#39;</span>;
+<span style="color:#a6e22e">parse_str</span>($s, $m);
+<span style="color:#a6e22e">var_dump</span>($m);
+</code></pre></div>
+
+<p><a href="https://php.net/function.parse-str">https://php.net/function.parse-str</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$m <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>(<span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>);
+$s1 <span style="color:#f92672">=</span> $m[<span style="color:#e6db74">&#39;host&#39;</span>];
+$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s, <span style="color:#a6e22e">PHP_URL_HOST</span>);
+$s2 <span style="color:#f92672">=</span> $m[<span style="color:#e6db74">&#39;path&#39;</span>];
+$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s, <span style="color:#a6e22e">PHP_URL_PATH</span>);
+$s3 <span style="color:#f92672">=</span> $m[<span style="color:#e6db74">&#39;query&#39;</span>];
+$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s, <span style="color:#a6e22e">PHP_URL_QUERY</span>);
+</code></pre></div>
+
+<p><a href="https://php.net/function.parse-url">https://php.net/function.parse-url</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/scripting2#parse-url">https://hyperpolyglot.org/scripting2#parse-url</a></li>
+<li><a href="https://rosettacode.org/wiki/URL_parser">https://rosettacode.org/wiki/URL_parser</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
