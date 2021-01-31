@@ -1,8 +1,8 @@
+import ae = ae.net.ietf.url;
 import io = std.stdio;
-import web = vibe.inet.webform: FormFields;
 
 void main() {
-   FormFields m;
-   web.parseURLEncodedForm("month=March&day=Friday", m);
+   auto s = "month=March&day=Friday";
+   auto m = ae.decodeUrlParameters(s);
    io.writeln(m);
 }
