@@ -1,8 +1,14 @@
 package main
-import "net/url"
+
+import (
+   "log"
+   "net/url"
+)
 
 func main() {
-   u := url.URL{Scheme:"https", Host:"musicbrainz.org", Path:"/ws/2/release"}
-   s := u.String()
-   println(s)
+   u, e := url.Parse("https://example.com/one?two=even")
+   if e != nil {
+      log.Fatal(e)
+   }
+   println(u.RawQuery == "two=even")
 }

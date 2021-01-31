@@ -10,6 +10,5 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   s := u.Hostname()
-   println(s == "example.com")
+   println(u.Host == "example.com")
 }

@@ -10,6 +10,6 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   v := u.Query()
-   log.Print(v)
+   s := u.Hostname()
+   println(s == "example.com")
 }
