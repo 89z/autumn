@@ -1,14 +1,11 @@
 package main
-
-import (
-   "log"
-   "net/url"
-)
+import "net/url"
 
 func main() {
-   u, e := url.Parse("https://example.com/one?two=even")
-   if e != nil {
-      log.Fatal(e)
+   v := url.Values{
+      "one": []string{"odd"},
+      "two": []string{"even"},
    }
-   println(u.Host == "example.com")
+   s := v.Encode()
+   println(s == "one=odd&two=even")
 }

@@ -1,4 +1,4 @@
 void main() {
-   var u = Uri.parse('https://api.dart.dev');
-   print(u);
+   var m = Uri.splitQueryString('month=May&day=Friday');
+   print(m);
 }

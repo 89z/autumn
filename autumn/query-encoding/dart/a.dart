@@ -1,4 +1,4 @@
 void main() {
-   var u = Uri(scheme: 'https', host: 'api.dart.dev');
-   print(u);
+   var u = Uri(queryParameters: {'month': 'March', 'day': 'Friday'});
+   print(u.query == 'month=March&day=Friday');
 }
