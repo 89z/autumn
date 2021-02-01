@@ -2,26 +2,25 @@
 title = "Path"
 +++
 
-## String to URL object (good)
+~~~
+URL properties DONE
+Query encoding DONE
+URL encoding DONE
 
-<https://golang.org/pkg/net/url#Parse>
+Query parameters KILL
+~~~
 
-## String to query object (good)
+## query encoding
 
-<https://golang.org/pkg/net/url#ParseQuery>
+- query object TO query string
+- query string TO query object
 
-## Modify URL object (good)
+## url encoding
 
-<https://golang.org/pkg/net/url#URL.Host>
+- url object TO url string
+- url string TO url object
 
-## Return URL string (good)
+## url properties
 
-<https://golang.org/pkg/net/url#URL.String>
-
-## Return query string (good)
-
-<https://golang.org/pkg/net/url#Values.Encode>
-
-## Modify query object (good)
-
-<https://golang.org/pkg/net/url#Values.Set>
+- properties to url
+- url to property
