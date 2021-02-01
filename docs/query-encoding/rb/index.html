@@ -55,45 +55,6 @@ puts m
 </code></pre></div>
 
 <p><a href="https://docs.ruby-lang.org/en/master/URI.html#method-c-decode_www_form">https://docs.ruby-lang.org/en/master/URI.html#method-c-decode_www_form</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;uri&#39;</span>
-o <span style="color:#f92672">=</span> <span style="color:#66d9ef">URI</span>(<span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>)
-s1 <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>host
-puts s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;example.com&#39;</span>
-</code></pre></div>
-
-<p><a href="https://docs.ruby-lang.org/en/master/URI/Generic.html#attribute-i-host">https://docs.ruby-lang.org/en/master/URI/Generic.html#attribute-i-host</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;uri&#39;</span>
-o <span style="color:#f92672">=</span> <span style="color:#66d9ef">URI</span>(<span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>)
-o<span style="color:#f92672">.</span>path
-puts s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;example.com&#39;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;two=even&#39;</span>
-</code></pre></div>
-
-<p><a href="https://docs.ruby-lang.org/en/master/URI/Generic.html#attribute-i-path">https://docs.ruby-lang.org/en/master/URI/Generic.html#attribute-i-path</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;uri&#39;</span>
-o <span style="color:#f92672">=</span> <span style="color:#66d9ef">URI</span>(<span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>)
-puts s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;example.com&#39;</span>, s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;two=even&#39;</span>
-s2 <span style="color:#f92672">=</span> o<span style="color:#f92672">.</span>query
-</code></pre></div>
-
-<p><a href="https://docs.ruby-lang.org/en/master/URI/Generic.html#attribute-i-query">https://docs.ruby-lang.org/en/master/URI/Generic.html#attribute-i-query</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#parse-url">https://hyperpolyglot.org/scripting2#parse-url</a></li>
