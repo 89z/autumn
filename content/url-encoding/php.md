@@ -5,14 +5,6 @@ tags = [ "php" ]
 
 {{< r "a.php" >}}
 
-<https://php.net/function.http-build-query>
-
-{{< r "b.php" >}}
-
-<https://php.net/function.parse-str>
-
-{{< r "c.php" >}}
-
 <https://php.net/function.parse-url>
 
 ## References

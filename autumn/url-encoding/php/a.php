@@ -1,4 +1,8 @@
 <?php
-$m = ['one' => 'odd', 'two' => 'even'];
-$s = http_build_query($m);
-var_dump($s == 'one=odd&two=even');
+$m = parse_url('https://example.com/one?two=even');
+$s1 = $m['host'];
+$s1 = parse_url($s, PHP_URL_HOST);
+$s2 = $m['path'];
+$s2 = parse_url($s, PHP_URL_PATH);
+$s3 = $m['query'];
+$s3 = parse_url($s, PHP_URL_QUERY);
