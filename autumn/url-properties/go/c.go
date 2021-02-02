@@ -1,15 +1,15 @@
 package main
-
-import (
-   "log"
-   "net/url"
-)
+import "net/url"
 
 func main() {
-   u, e := url.Parse("https://example.com/one?two=even")
-   if e != nil {
-      log.Fatal(e)
+   v := url.Values{
+      "one": []string{"odd"},
+      "two": []string{"even"},
    }
-   s := u.Hostname()
-   println(s == "example.com")
+   // example 1
+   s1 := v.Get("one")
+   // example 2
+   s2 := v["one"][0]
+   // print
+   println(s1 == "odd", s2 == "odd")
 }

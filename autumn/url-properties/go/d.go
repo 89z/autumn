@@ -1,15 +1,10 @@
 package main
-
-import (
-   "log"
-   "net/url"
-)
+import "net/url"
 
 func main() {
-   u, e := url.Parse("https://example.com/one?two=even")
-   if e != nil {
-      log.Fatal(e)
-   }
-   v := u.Query()
-   log.Print(v)
+   v := make(url.Values)
+   v.Set("one", "odd")
+   v.Set("two", "even")
+   s := v.Encode()
+   println(s == "one=odd&two=even")
 }

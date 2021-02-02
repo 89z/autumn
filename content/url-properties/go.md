@@ -5,37 +5,17 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/net/url#ParseQuery>
+<https://golang.org/pkg/net/url#URL.Host>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/net/url#URL.Host>
+<https://golang.org/pkg/net/url#URL.Query>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/net/url#URL.Hostname>
-
-{{< r "d.go" >}}
-
-<https://golang.org/pkg/net/url#URL.Query>
-
-{{< r "e.go" >}}
-
-<https://golang.org/pkg/net/url#URL.RawQuery>
-
-{{< r "f.go" >}}
-
-<https://golang.org/pkg/net/url#URL.String>
-
-{{< r "g.go" >}}
-
-<https://golang.org/pkg/net/url#Values.Encode>
-
-{{< r "h.go" >}}
-
 <https://golang.org/pkg/net/url#Values.Get>
 
-{{< r "i.go" >}}
+{{< r "d.go" >}}
 
 <https://golang.org/pkg/net/url#Values.Set>
 
