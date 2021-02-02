@@ -11,6 +11,10 @@ tags = [ "ruby" ]
 
 <https://docs.ruby-lang.org/en/master/URI.html#method-c-decode_www_form>
 
+{{< r "c.rb" >}}
+
+<https://docs.ruby-lang.org/en/master/URI.html#method-c-encode_www_form>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting2#parse-url>
