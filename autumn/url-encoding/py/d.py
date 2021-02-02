@@ -1,4 +1,13 @@
 from urllib import parse
-s = 'http://docs.python.org/library?month=May&day=Friday'
-u = parse.urlparse(s)
-print(u)
+
+u = parse.ParseResult(
+   'http',
+   'docs.python.org',
+   '/library',
+   params='',
+   query='month=May&day=Friday',
+   fragment=''
+)
+
+s = parse.urlunparse(u)
+print(s)
