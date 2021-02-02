@@ -1,8 +1,8 @@
 import io = std.stdio;
-import url = urllibparse;
+import urllibparse;
 
 void main() {
    auto s = "month=March&day=Friday";
-   auto m = url.parseQS(s);
+   auto m = parseQS(s);
    io.writeln(m);
 }

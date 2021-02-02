@@ -3,7 +3,13 @@ title = "Ruby"
 tags = [ "ruby" ]
 +++
 
-<https://docs.ruby-lang.org/en/master/URI.html>
+{{< r "a.rb" >}}
+
+<https://docs.ruby-lang.org/en/master/Kernel.html#method-c-URI>
+
+{{< r "b.rb" >}}
+
+<https://docs.ruby-lang.org/en/master/URI/Generic.html#method-i-to_s>
 
 ## References
 

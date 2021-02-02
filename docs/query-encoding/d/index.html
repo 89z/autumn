@@ -36,11 +36,11 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> url <span style="color:#f92672">=</span> urllibparse<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> urllibparse<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;month=March&amp;day=Friday&#34;</span><span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">auto</span> m <span style="color:#f92672">=</span> url<span style="color:#f92672">.</span><span style="color:#a6e22e">parseQS</span><span style="color:#f92672">(</span>s<span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> m <span style="color:#f92672">=</span> parseQS<span style="color:#f92672">(</span>s<span style="color:#f92672">);</span>
    io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>m<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
@@ -53,11 +53,11 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> url <span style="color:#f92672">=</span> urllibparse<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> urllibparse<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> m <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;month&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;May&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;day&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Friday&#34;</span><span style="color:#f92672">];</span>
-   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> url<span style="color:#f92672">.</span><span style="color:#a6e22e">urlEncode</span><span style="color:#f92672">(</span>m<span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> urlEncode<span style="color:#f92672">(</span>m<span style="color:#f92672">);</span>
    io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>s<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>

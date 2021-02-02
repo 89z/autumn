@@ -3,7 +3,13 @@ title = "JavaScript"
 tags = [ "javascript" ]
 +++
 
-<https://developer.mozilla.org/docs/Web/API/URL>
+{{< r "a.js" >}}
+
+<https://developer.mozilla.org/docs/Web/API/URL/URL>
+
+{{< r "b.js" >}}
+
+<https://developer.mozilla.org/docs/Web/API/URL/toString>
 
 ## References
 
