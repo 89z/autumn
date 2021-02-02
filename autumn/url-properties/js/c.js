@@ -1,2 +1,3 @@
-let u = new URL('https://example.com/one?two=even');
-console.log(u.search === '?two=even');
+let p = new URLSearchParams;
+p.set('month', 'March');
+console.log(p);
