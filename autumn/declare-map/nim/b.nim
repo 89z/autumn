@@ -1,3 +1,2 @@
-import tables
-let m = initTable[string, int]()
+let m = {"month": "May", "day": "Friday"}
 echo m

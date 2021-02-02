@@ -2,10 +2,10 @@ package main
 import "net/url"
 
 func main() {
-   v := url.Values{
-      "one": []string{"odd"},
-      "two": []string{"even"},
+   m := url.Values{
+      "month": []string{"March"},
+      "day": []string{"Friday"},
    }
-   s := v.Encode()
-   println(s == "one=odd&two=even")
+   s := m.Encode()
+   println(s == "day=Friday&month=March")
 }

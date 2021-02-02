@@ -1,4 +1,4 @@
 require 'uri'
-s = 'one=odd&two=even'
-m = URI.decode_www_form(s).to_h
-puts m
+o = URI('https://example.com/one?two=even')
+o.path
+puts s1 == 'example.com', s2 == 'two=even'

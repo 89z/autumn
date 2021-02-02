@@ -1,4 +1,4 @@
 require 'cgi'
-s = 'one=odd&two=even'
+s = 'month=May&day=Friday'
 m = CGI.parse(s)
 puts m

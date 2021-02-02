@@ -1,4 +1,4 @@
 from urllib import parse
-m = {'one': 'odd', 'two': 'even'}
+m = {'month': 'May', 'day': 'Friday'}
 s = parse.urlencode(m)
 print(s)

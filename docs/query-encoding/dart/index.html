@@ -35,9 +35,15 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> u <span style="color:#f92672">=</span> Uri(queryParameters: {<span style="color:#e6db74">&#39;month&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;March&#39;</span>, <span style="color:#e6db74">&#39;day&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Friday&#39;</span>});
-   print(u.query <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;month=March&amp;day=Friday&#39;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">String</span> encode(Map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span> m) {
+   <span style="color:#66d9ef">var</span> u <span style="color:#f92672">=</span> Uri(queryParameters: m);
+   <span style="color:#66d9ef">return</span> u.query;
+}
+
+<span style="color:#66d9ef">void</span> main() {
+   <span style="color:#66d9ef">var</span> m <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;month&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;March&#39;</span>, <span style="color:#e6db74">&#39;day&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Friday&#39;</span>};
+   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> encode(m);
+   print(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;month=March&amp;day=Friday&#39;</span>);
 }
 </code></pre></div>
 
@@ -49,7 +55,8 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> m <span style="color:#f92672">=</span> Uri.splitQueryString(<span style="color:#e6db74">&#39;month=May&amp;day=Friday&#39;</span>);
+   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;month=May&amp;day=Friday&#39;</span>;
+   <span style="color:#66d9ef">var</span> m <span style="color:#f92672">=</span> Uri.splitQueryString(s);
    print(m);
 }
 </code></pre></div>

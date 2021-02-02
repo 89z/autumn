@@ -36,7 +36,7 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;cgi&#39;</span>
-s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;one=odd&amp;two=even&#39;</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;month=May&amp;day=Friday&#39;</span>
 m <span style="color:#f92672">=</span> <span style="color:#66d9ef">CGI</span><span style="color:#f92672">.</span>parse(s)
 puts m
 </code></pre></div>
@@ -49,7 +49,7 @@ puts m
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;uri&#39;</span>
-s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;one=odd&amp;two=even&#39;</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;month=May&amp;day=Friday&#39;</span>
 m <span style="color:#f92672">=</span> <span style="color:#66d9ef">URI</span><span style="color:#f92672">.</span>decode_www_form(s)<span style="color:#f92672">.</span>to_h
 puts m
 </code></pre></div>

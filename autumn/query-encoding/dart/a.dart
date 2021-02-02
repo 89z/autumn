@@ -1,4 +1,10 @@
+String encode(Map<String, String> m) {
+   var u = Uri(queryParameters: m);
+   return u.query;
+}
+
 void main() {
-   var u = Uri(queryParameters: {'month': 'March', 'day': 'Friday'});
-   print(u.query == 'month=March&day=Friday');
+   var m = {'month': 'March', 'day': 'Friday'};
+   var s = encode(m);
+   print(s == 'month=March&day=Friday');
 }

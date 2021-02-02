@@ -1,4 +1,4 @@
 <?php
-$m = ['one' => 'odd', 'two' => 'even'];
+$m = ['month' => 'May', 'day' => 'Friday'];
 $s = http_build_query($m);
-var_dump($s == 'one=odd&two=even');
+var_dump($s == 'month=May&day=Friday');

@@ -44,11 +44,12 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">v</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">ParseQuery</span>(<span style="color:#e6db74">&#34;one=odd&amp;two=even&#34;</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;month=May&amp;day=Friday&#34;</span>
+   <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">ParseQuery</span>(<span style="color:#a6e22e">s</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m</span>)
 }
 </code></pre></div>
 
@@ -63,12 +64,12 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;net/url&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Values</span>{
-      <span style="color:#e6db74">&#34;one&#34;</span>: []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;odd&#34;</span>},
-      <span style="color:#e6db74">&#34;two&#34;</span>: []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;even&#34;</span>},
+   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Values</span>{
+      <span style="color:#e6db74">&#34;month&#34;</span>: []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;March&#34;</span>},
+      <span style="color:#e6db74">&#34;day&#34;</span>: []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;Friday&#34;</span>},
    }
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Encode</span>()
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;one=odd&amp;two=even&#34;</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">m</span>.<span style="color:#a6e22e">Encode</span>()
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;day=Friday&amp;month=March&#34;</span>)
 }
 </code></pre></div>
 

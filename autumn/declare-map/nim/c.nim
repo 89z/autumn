@@ -1,3 +1,3 @@
 import tables
-let m = {"month": 12, "day": 31}.toTable
+let m = initTable[string, int]()
 echo m

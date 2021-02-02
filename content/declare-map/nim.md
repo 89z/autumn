@@ -9,9 +9,13 @@ tags = [ "nim" ]
 
 {{< r "b.nim" >}}
 
-<https://nim-lang.org/docs/tables.html#initTable>
+<https://nim-lang.org/docs/system.html#openArray>
 
 {{< r "c.nim" >}}
+
+<https://nim-lang.org/docs/tables.html#initTable>
+
+{{< r "d.nim" >}}
 
 <https://nim-lang.org/docs/tables.html#toTable,openArray[]>
 
