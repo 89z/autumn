@@ -1,15 +1,12 @@
-use {
-   std::collections::HashMap,
-   url::Url
-};
+use form_urlencoded::Serializer;
 
-fn query(u: Url) -> HashMap<String, String> {
-   u.query_pairs().into_owned().collect()
+fn encode(m: &[(&str, &str)]) -> String {
+   let s = String::new();
+   Serializer::new(s).extend_pairs(m).finish()
 }
 
-fn main() -> Result<(), url::ParseError> {
-   let u = Url::parse("http://github.com?month=May&day=Friday")?;
-   let q = query(u);
-   println!("{:?}", q);
-   Ok(())
+fn main() {
+   let m = &[("month", "May"), ("day", "Friday")];
+   let s = encode(m);
+   println!("{}", s);
 }

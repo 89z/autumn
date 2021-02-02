@@ -5,11 +5,11 @@ tags = [ "rust" ]
 
 {{< r "a/src/main.rs" >}}
 
-<https://docs.rs/url/latest/url/struct.Url.html#method.query>
+<https://docs.rs/form_urlencoded/latest/form_urlencoded/struct.Serializer.html#method.extend_pairs>
 
 {{< r "b/src/main.rs" >}}
 
-<https://docs.rs/url/latest/url/struct.Url.html#method.query_pairs>
+<https://docs.rs/form_urlencoded/latest/form_urlencoded/fn.parse.html>
 
 ## References
 

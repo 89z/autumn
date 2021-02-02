@@ -1,15 +1,12 @@
-use {
-   std::collections::HashMap,
-   url::Url
-};
+use std::collections::HashMap;
 
-fn query(u: Url) -> HashMap<String, String> {
-   u.query_pairs().into_owned().collect()
+fn decode(s: &str) -> HashMap<String, String> {
+   let a = s.as_bytes();
+   form_urlencoded::parse(a).into_owned().collect()
 }
 
-fn main() -> Result<(), url::ParseError> {
-   let u = Url::parse("http://github.com?month=May&day=Friday")?;
-   let q = query(u);
-   println!("{:?}", q);
-   Ok(())
+fn main() {
+   let s = "month=May&day=Friday";
+   let m = decode(s);
+   println!("{:?}", m);
 }

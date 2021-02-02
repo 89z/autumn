@@ -5,6 +5,10 @@ tags = [ "rust" ]
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/std/primitive.str.html#method.as_bytes>
+
+{{< r "b.rs" >}}
+
 <https://doc.rust-lang.org/std/primitive.str.html#method.split>
 
 ## References

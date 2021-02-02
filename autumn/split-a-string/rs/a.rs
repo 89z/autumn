@@ -1,9 +1,5 @@
-fn split(s: &str, sep: char) -> Vec<&str> {
-   s.split(sep).collect()
-}
-
 fn main() {
-   let s = "May,June";
-   let a = split(s, ',');
+   let s = "March";
+   let a = s.as_bytes();
    println!("{:?}", a);
 }

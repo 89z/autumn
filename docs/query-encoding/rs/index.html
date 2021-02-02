@@ -35,48 +35,42 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> {
-   std::collections::HashMap,
-   url::Url
-};
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> form_urlencoded::Serializer;
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">query</span>(u: <span style="color:#a6e22e">Url</span>) -&gt; <span style="color:#a6e22e">HashMap</span><span style="color:#f92672">&lt;</span>String, String<span style="color:#f92672">&gt;</span> {
-   u.query_pairs().into_owned().collect()
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">encode</span>(m: <span style="color:#66d9ef">&amp;</span>[(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">str</span>, <span style="color:#f92672">&amp;</span><span style="color:#66d9ef">str</span>)]) -&gt; String {
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> String::new();
+   Serializer::new(s).extend_pairs(m).finish()
 }
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), url::ParseError<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> u <span style="color:#f92672">=</span> Url::parse(<span style="color:#e6db74">&#34;http://github.com?month=May&amp;day=Friday&#34;</span>)<span style="color:#f92672">?</span>;
-   <span style="color:#66d9ef">let</span> q <span style="color:#f92672">=</span> query(u);
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, q);
-   Ok(())
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> m <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>[(<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#e6db74">&#34;May&#34;</span>), (<span style="color:#e6db74">&#34;day&#34;</span>, <span style="color:#e6db74">&#34;Friday&#34;</span>)];
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> encode(m);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
 }
 </code></pre></div>
 
-<p><a href="https://docs.rs/url/latest/url/struct.Url.html#method.query">https://docs.rs/url/latest/url/struct.Url.html#method.query</a></p>
+<p><a href="https://docs.rs/form_urlencoded/latest/form_urlencoded/struct.Serializer.html#method.extend_pairs">https://docs.rs/form_urlencoded/latest/form_urlencoded/struct.Serializer.html#method.extend_pairs</a></p>
 
 
 
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> {
-   std::collections::HashMap,
-   url::Url
-};
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::collections::HashMap;
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">query</span>(u: <span style="color:#a6e22e">Url</span>) -&gt; <span style="color:#a6e22e">HashMap</span><span style="color:#f92672">&lt;</span>String, String<span style="color:#f92672">&gt;</span> {
-   u.query_pairs().into_owned().collect()
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">decode</span>(s: <span style="color:#66d9ef">&amp;</span><span style="color:#66d9ef">str</span>) -&gt; <span style="color:#a6e22e">HashMap</span><span style="color:#f92672">&lt;</span>String, String<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> s.as_bytes();
+   form_urlencoded::parse(a).into_owned().collect()
 }
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), url::ParseError<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> u <span style="color:#f92672">=</span> Url::parse(<span style="color:#e6db74">&#34;http://github.com?month=May&amp;day=Friday&#34;</span>)<span style="color:#f92672">?</span>;
-   <span style="color:#66d9ef">let</span> q <span style="color:#f92672">=</span> query(u);
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, q);
-   Ok(())
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;month=May&amp;day=Friday&#34;</span>;
+   <span style="color:#66d9ef">let</span> m <span style="color:#f92672">=</span> decode(s);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, m);
 }
 </code></pre></div>
 
-<p><a href="https://docs.rs/url/latest/url/struct.Url.html#method.query_pairs">https://docs.rs/url/latest/url/struct.Url.html#method.query_pairs</a></p>
+<p><a href="https://docs.rs/form_urlencoded/latest/form_urlencoded/fn.parse.html">https://docs.rs/form_urlencoded/latest/form_urlencoded/fn.parse.html</a></p>
 <h2 id="references">References</h2>
 <p><a href="https://rosettacode.org/wiki/URL_parser">https://rosettacode.org/wiki/URL_parser</a></p>
 
