@@ -5,7 +5,7 @@ tags = [ "d" ]
 
 {{< r "source/app.d" >}}
 
-<https://ae.dpldocs.info/ae.net.http.common.HttpRequest.url.html>
+<https://urllibparse.dpldocs.info/urllibparse.urlSplit.html>
 
 ## References
 

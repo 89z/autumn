@@ -9,17 +9,9 @@ tags = [ "python" ]
 
 {{< r "b.py" >}}
 
-<https://docs.python.org/library/urllib.parse.html#urllib.parse.urlparse>
-
-{{< r "c.py" >}}
-
 <https://docs.python.org/library/urllib.parse.html#urllib.parse.urlsplit>
 
-{{< r "d.py" >}}
-
-<https://docs.python.org/library/urllib.parse.html#urllib.parse.urlunparse>
-
-{{< r "e.py" >}}
+{{< r "c.py" >}}
 
 <https://docs.python.org/library/urllib.parse.html#urllib.parse.urlunsplit>
 

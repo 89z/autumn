@@ -1,9 +1,8 @@
-import ae.net.http.common: HttpRequest;
-import io = std.stdio;
+import std.stdio;
+import urllibparse;
 
 void main() {
-   auto u = new HttpRequest;
-   u.host = "github.com";
-   auto s = u.url();
-   io.writeln(s);
+   auto s = "http://netloc.info/path?month=May";
+   auto a = urlSplit(s);
+   writeln(a);
 }

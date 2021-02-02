@@ -4,7 +4,13 @@ tags = [ "d" ]
 date = 2020-11-10
 +++
 
-<https://urllibparse.dpldocs.info>
+{{< r "a/source/app.d" >}}
+
+<https://urllibparse.dpldocs.info/urllibparse.parseQS.html>
+
+{{< r "b/source/app.d" >}}
+
+<https://urllibparse.dpldocs.info/urllibparse.urlEncode.1.html>
 
 ## References
 
