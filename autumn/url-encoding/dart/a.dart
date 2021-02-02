@@ -1,4 +1,4 @@
 void main() {
-   var u = Uri(scheme: 'https', host: 'api.dart.dev');
+   var u = Uri.parse('https://api.dart.dev');
    print(u);
 }

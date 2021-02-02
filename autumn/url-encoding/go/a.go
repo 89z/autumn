@@ -1,15 +1,8 @@
 package main
-
-import (
-   "fmt"
-   "log"
-   "net/url"
-)
+import "net/url"
 
 func main() {
-   v, e := url.ParseQuery("one=odd&two=even")
-   if e != nil {
-      log.Fatal(e)
-   }
-   fmt.Println(v)
+   u := url.URL{Scheme:"https", Host:"musicbrainz.org", Path:"/ws/2/release"}
+   s := u.String()
+   println(s)
 }
