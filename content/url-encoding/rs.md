@@ -3,9 +3,13 @@ title = "Rust"
 tags = [ "rust" ]
 +++
 
-{{< r "src/main.rs" >}}
+{{< r "a/src/main.rs" >}}
 
-<https://docs.rs/url>
+<https://docs.rs/url/latest/url/struct.Url.html#method.into_string>
+
+{{< r "b/src/main.rs" >}}
+
+<https://docs.rs/url/latest/url/struct.Url.html#method.parse>
 
 ## References
 
