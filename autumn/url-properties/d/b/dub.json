@@ -1,0 +1,12 @@
+{
+	"authors": [
+		"Steven"
+	],
+	"copyright": "Copyright © 2021, Steven",
+	"dependencies": {
+		"urllibparse": "~>0.1.0"
+	},
+	"description": "A minimal D application.",
+	"license": "proprietary",
+	"name": "b"
+}

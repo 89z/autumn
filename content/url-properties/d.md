@@ -3,7 +3,17 @@ title = "D"
 tags = [ "d" ]
 +++
 
-<https://urllibparse.dpldocs.info>
+{{< r "a/source/app.d" >}}
+
+<https://urllibparse.dpldocs.info/urllibparse.URLSplitResult.netloc.html>
+
+{{< r "b/source/app.d" >}}
+
+<https://urllibparse.dpldocs.info/urllibparse.URLSplitResult.path.html>
+
+{{< r "c/source/app.d" >}}
+
+<https://urllibparse.dpldocs.info/urllibparse.URLSplitResult.query.html>
 
 ## References
 
