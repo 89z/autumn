@@ -24,12 +24,31 @@
    <a href="/autumn/url-properties/">URL properties</a> / PHP
 </h1>
 <section class="page">
-   <time>Sun Jan 31 2021</time>
+   <time>Tue Feb 2 2021</time>
    
    <a href="/autumn/categories/path/">path</a>
    
 </section>
-   <p><a href="https://php.net/function.parse-url">https://php.net/function.parse-url</a></p>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>);
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://php.net/function.parse-url?month=May&#39;</span>;
+<span style="color:#75715e"># example 1
+</span><span style="color:#75715e"></span>$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s, <span style="color:#a6e22e">PHP_URL_HOST</span>);
+<span style="color:#75715e"># example 2
+</span><span style="color:#75715e"></span>$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s, <span style="color:#a6e22e">PHP_URL_PATH</span>);
+<span style="color:#75715e"># example 3
+</span><span style="color:#75715e"></span>$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s, <span style="color:#a6e22e">PHP_URL_QUERY</span>);
+<span style="color:#75715e"># print
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($s1, $s2, $s3);
+</code></pre></div>
+
+<p><a href="https://php.net/function.parse-url">https://php.net/function.parse-url</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#parse-url">https://hyperpolyglot.org/scripting2#parse-url</a></li>

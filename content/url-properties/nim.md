@@ -3,7 +3,9 @@ title = "Nim"
 tags = [ "nim" ]
 +++
 
-<https://nim-lang.org/docs/uri.html>
+{{< r "a.nim" >}}
+
+<https://nim-lang.org/docs/uri.html#Uri>
 
 ## References
 

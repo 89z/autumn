@@ -3,7 +3,9 @@ title = "Python"
 tags = [ "python" ]
 +++
 
-<https://docs.python.org/library/urllib.parse.html>
+{{< r "a.py" >}}
+
+<https://docs.python.org/library/urllib.parse.html#urllib.parse.urlsplit>
 
 ## References
 

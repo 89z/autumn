@@ -1,6 +1,8 @@
-import std.stdio;
+import io = std.stdio;
+import urllibparse;
 
-void main()
-{
-	writeln("Edit source/app.d to start your project.");
+void main() {
+   URLSplitResult u;
+   u.path = "urllibparse";
+   io.writeln(u);
 }

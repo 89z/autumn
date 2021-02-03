@@ -24,7 +24,7 @@
    <a href="/autumn/url-properties/">URL properties</a> / D
 </h1>
 <section class="page">
-   <time>Sun Jan 31 2021</time>
+   <time>Tue Feb 2 2021</time>
    
    <a href="/autumn/categories/path/">path</a>
    
@@ -35,11 +35,13 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> urllibparse<span style="color:#f92672">;</span>
 
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span>
-<span style="color:#f92672">{</span>
-	writeln<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Edit source/app.d to start your project.&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   URLSplitResult u<span style="color:#f92672">;</span>
+   u<span style="color:#f92672">.</span><span style="color:#a6e22e">netloc</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;dpldocs.info&#34;</span><span style="color:#f92672">;</span>
+   io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>u<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 
@@ -50,11 +52,13 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> urllibparse<span style="color:#f92672">;</span>
 
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span>
-<span style="color:#f92672">{</span>
-	writeln<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Edit source/app.d to start your project.&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   URLSplitResult u<span style="color:#f92672">;</span>
+   u<span style="color:#f92672">.</span><span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;urllibparse&#34;</span><span style="color:#f92672">;</span>
+   io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>u<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 
@@ -65,11 +69,13 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> urllibparse<span style="color:#f92672">;</span>
 
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span>
-<span style="color:#f92672">{</span>
-	writeln<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Edit source/app.d to start your project.&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   URLSplitResult u<span style="color:#f92672">;</span>
+   u<span style="color:#f92672">.</span><span style="color:#a6e22e">query</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;month=May&amp;day=Friday&#34;</span><span style="color:#f92672">;</span>
+   io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>u<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 
