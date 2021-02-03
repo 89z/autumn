@@ -35,12 +35,58 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> url::Url;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), url::ParseError<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> u <span style="color:#f92672">=</span> Url::parse(<span style="color:#e6db74">&#34;http://docs.rs/url&#34;</span>)<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> u.path();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
+   Ok(())
 }
 </code></pre></div>
 
-<p><a href="https://docs.rs/url">https://docs.rs/url</a></p>
+<p><a href="https://docs.rs/url/latest/url/struct.Url.html#method.path">https://docs.rs/url/latest/url/struct.Url.html#method.path</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> url::Url;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), url::ParseError<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> u <span style="color:#f92672">=</span> Url::parse(<span style="color:#e6db74">&#34;http://docs.rs/url&#34;</span>)<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> u.host_str().unwrap_or_default();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
+   Ok(())
+}
+</code></pre></div>
+
+<p><a href="https://docs.rs/url/latest/url/struct.Url.html#method.host_str">https://docs.rs/url/latest/url/struct.Url.html#method.host_str</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> {
+   std::collections::HashMap,
+   url::Url
+};
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">query</span>(u: <span style="color:#a6e22e">Url</span>) -&gt; <span style="color:#a6e22e">HashMap</span><span style="color:#f92672">&lt;</span>String, String<span style="color:#f92672">&gt;</span> {
+   u.query_pairs().into_owned().collect()
+}
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), url::ParseError<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> u <span style="color:#f92672">=</span> Url::parse(<span style="color:#e6db74">&#34;http://docs.rs?month=May&amp;day=Friday&#34;</span>)<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> m <span style="color:#f92672">=</span> query(u);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, m);
+   Ok(())
+}
+</code></pre></div>
+
+<p><a href="https://docs.rs/url/latest/url/struct.Url.html#method.query_pairs">https://docs.rs/url/latest/url/struct.Url.html#method.query_pairs</a></p>
 <h2 id="references">References</h2>
 <p><a href="https://rosettacode.org/wiki/URL_parser">https://rosettacode.org/wiki/URL_parser</a></p>
 
