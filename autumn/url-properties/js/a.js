@@ -1,2 +1,3 @@
-let u = new URL('https://example.com/one?two=even');
-console.log(u.host === 'example.com');
+let u = new URL('http://mozilla.org');
+let s = u.host;
+console.log(s);

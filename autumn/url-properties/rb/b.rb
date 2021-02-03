@@ -1,4 +1,4 @@
 require 'uri'
-o = URI('https://example.com/one?two=even')
-o.path
-puts s1 == 'example.com', s2 == 'two=even'
+u = URI('http://ruby-lang.org/Generic.html')
+s = u.path
+puts s

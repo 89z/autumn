@@ -9,9 +9,17 @@ tags = [ "javascript" ]
 
 {{< r "b.js" >}}
 
-<https://developer.mozilla.org/docs/Web/API/URL/searchParams>
+<https://developer.mozilla.org/docs/Web/API/URL/pathname>
 
 {{< r "c.js" >}}
+
+<https://developer.mozilla.org/docs/Web/API/URL/searchParams>
+
+{{< r "d.js" >}}
+
+<https://developer.mozilla.org/docs/Web/API/URLSearchParams/get>
+
+{{< r "e.js" >}}
 
 <https://developer.mozilla.org/docs/Web/API/URLSearchParams/set>
 

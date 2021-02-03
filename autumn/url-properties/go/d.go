@@ -1,15 +1,15 @@
 package main
-import "net/url"
+
+import (
+   "log"
+   "net/url"
+)
 
 func main() {
-   v := url.Values{
-      "one": []string{"odd"},
-      "two": []string{"even"},
+   v, e := url.ParseQuery("month=March&day=Friday")
+   if e != nil {
+      log.Fatal(e)
    }
-   // example 1
-   s1 := v.Get("one")
-   // example 2
-   s2 := v["one"][0]
-   // print
-   println(s1 == "odd", s2 == "odd")
+   s := v.Get("day")
+   println(s)
 }

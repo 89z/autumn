@@ -1,2 +1,3 @@
-let u = new URL('https://example.com/one?two=even');
-console.log(u.searchParams);
+let u = new URL('http:/mozilla.org/docs');
+let s = u.pathname;
+console.log(s);
