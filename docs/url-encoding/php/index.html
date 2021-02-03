@@ -36,13 +36,10 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$m <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>(<span style="color:#e6db74">&#39;https://example.com/one?two=even&#39;</span>);
-$s1 <span style="color:#f92672">=</span> $m[<span style="color:#e6db74">&#39;host&#39;</span>];
-$s1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s, <span style="color:#a6e22e">PHP_URL_HOST</span>);
-$s2 <span style="color:#f92672">=</span> $m[<span style="color:#e6db74">&#39;path&#39;</span>];
-$s2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s, <span style="color:#a6e22e">PHP_URL_PATH</span>);
-$s3 <span style="color:#f92672">=</span> $m[<span style="color:#e6db74">&#39;query&#39;</span>];
-$s3 <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s, <span style="color:#a6e22e">PHP_URL_QUERY</span>);
+<span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>);
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://php.net&#39;</span>;
+$m <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_url</span>($s);
+<span style="color:#a6e22e">var_dump</span>($m);
 </code></pre></div>
 
 <p><a href="https://php.net/function.parse-url">https://php.net/function.parse-url</a></p>

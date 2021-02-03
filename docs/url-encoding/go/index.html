@@ -36,10 +36,35 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;log&#34;</span>
+   <span style="color:#e6db74">&#34;net/url&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;http://golang.org&#34;</span>
+   <span style="color:#a6e22e">u</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">s</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">u</span>)
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/net/url#Parse">https://golang.org/pkg/net/url#Parse</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;net/url&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">u</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">URL</span>{<span style="color:#a6e22e">Scheme</span>:<span style="color:#e6db74">&#34;https&#34;</span>, <span style="color:#a6e22e">Host</span>:<span style="color:#e6db74">&#34;musicbrainz.org&#34;</span>, <span style="color:#a6e22e">Path</span>:<span style="color:#e6db74">&#34;/ws/2/release&#34;</span>}
+   <span style="color:#a6e22e">u</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">URL</span>{<span style="color:#a6e22e">Host</span>: <span style="color:#e6db74">&#34;golang.org&#34;</span>}
    <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">u</span>.<span style="color:#a6e22e">String</span>()
    println(<span style="color:#a6e22e">s</span>)
 }
@@ -48,7 +73,6 @@
 <p><a href="https://golang.org/pkg/net/url#URL.String">https://golang.org/pkg/net/url#URL.String</a></p>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://github.com/golang/go/pull/24528">https://github.com/golang/go/pull/24528</a></li>
 <li><a href="https://hyperpolyglot.org/c#net-web">https://hyperpolyglot.org/c#net-web</a></li>
 <li><a href="https://rosettacode.org/wiki/URL_parser">https://rosettacode.org/wiki/URL_parser</a></li>
 </ul>

@@ -1,4 +1,5 @@
 void main() {
-   var u = Uri.parse('https://api.dart.dev');
+   var s = 'http://dart.dev';
+   var u = Uri.parse(s);
    print(u);
 }

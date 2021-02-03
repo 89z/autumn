@@ -3,7 +3,7 @@ title = "Rust"
 tags = [ "rust" ]
 +++
 
-{{< r "a.rs" >}}
+{{< r "src/main.rs" >}}
 
 <https://docs.rs/url>
 

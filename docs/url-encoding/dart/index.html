@@ -36,7 +36,8 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> u <span style="color:#f92672">=</span> Uri.parse(<span style="color:#e6db74">&#39;https://api.dart.dev&#39;</span>);
+   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://dart.dev&#39;</span>;
+   <span style="color:#66d9ef">var</span> u <span style="color:#f92672">=</span> Uri.parse(s);
    print(u);
 }
 </code></pre></div>
@@ -49,8 +50,9 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> u <span style="color:#f92672">=</span> Uri.parse(<span style="color:#e6db74">&#39;https://api.dart.dev&#39;</span>);
-   print(u);
+   <span style="color:#66d9ef">var</span> u <span style="color:#f92672">=</span> Uri(host: <span style="color:#e6db74">&#39;dart.dev&#39;</span>);
+   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> u.toString();
+   print(s);
 }
 </code></pre></div>
 
