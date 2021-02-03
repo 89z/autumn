@@ -36,12 +36,41 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> u <span style="color:#f92672">=</span> Uri(scheme: <span style="color:#e6db74">&#39;https&#39;</span>, host: <span style="color:#e6db74">&#39;api.dart.dev&#39;</span>);
-   print(u);
+   <span style="color:#66d9ef">var</span> u <span style="color:#f92672">=</span> Uri.parse(<span style="color:#e6db74">&#39;http://dart.dev&#39;</span>);
+   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> u.host;
+   print(s);
 }
 </code></pre></div>
 
-<p><a href="https://api.dart.dev/dart-core/Uri/Uri.html">https://api.dart.dev/dart-core/Uri/Uri.html</a></p>
+<p><a href="https://api.dart.dev/stable/dart-core/Uri/host.html">https://api.dart.dev/stable/dart-core/Uri/host.html</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
+   <span style="color:#66d9ef">var</span> u <span style="color:#f92672">=</span> Uri.parse(<span style="color:#e6db74">&#39;http://dart.dev/dart-core&#39;</span>);
+   <span style="color:#66d9ef">var</span> s <span style="color:#f92672">=</span> u.path;
+   print(s);
+}
+</code></pre></div>
+
+<p><a href="https://api.dart.dev/stable/dart-core/Uri/path.html">https://api.dart.dev/stable/dart-core/Uri/path.html</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() {
+   <span style="color:#66d9ef">var</span> u <span style="color:#f92672">=</span> Uri.parse(<span style="color:#e6db74">&#39;http://dart.dev?month=May&amp;day=Friday&#39;</span>);
+   <span style="color:#66d9ef">var</span> m <span style="color:#f92672">=</span> u.queryParameters;
+   print(m);
+}
+</code></pre></div>
+
+<p><a href="https://api.dart.dev/stable/dart-core/Uri/queryParameters.html">https://api.dart.dev/stable/dart-core/Uri/queryParameters.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/web#parse-url">https://hyperpolyglot.org/web#parse-url</a></li>

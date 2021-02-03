@@ -9,13 +9,17 @@ tags = [ "go" ]
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/net/url#URL.Query>
+<https://golang.org/pkg/net/url#URL.Path>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/net/url#Values.Get>
+<https://golang.org/pkg/net/url#URL.Query>
 
 {{< r "d.go" >}}
+
+<https://golang.org/pkg/net/url#Values.Get>
+
+{{< r "e.go" >}}
 
 <https://golang.org/pkg/net/url#Values.Set>
 
