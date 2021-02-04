@@ -6,8 +6,9 @@ import (
 )
 
 func main() {
-   e := os.Setenv("MSYSTEM", "MINGW64")
+   s, e := os.UserCacheDir()
    if e != nil {
       log.Fatal(e)
    }
+   println(s == `C:\Users\Steven\AppData\Local`)
 }

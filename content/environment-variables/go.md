@@ -13,6 +13,10 @@ tags = [ "go" ]
 
 {{< r "c.go" >}}
 
+<https://golang.org/pkg/os#Setenv>
+
+{{< r "d.go" >}}
+
 <https://golang.org/pkg/os#UserCacheDir>
 
 ## References

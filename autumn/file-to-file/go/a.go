@@ -6,15 +6,21 @@ import (
    "os"
 )
 
-func main() {
-   in_o, e := os.Open("b.go")
+func copyFile(source, dest string) (int64, error) {
+   open, e := os.Open(source)
    if e != nil {
-      log.Fatal(e)
+      return 0, e
    }
-   out_o, e := os.Create("c.go")
+   create, e := os.Create(dest)
    if e != nil {
-      log.Fatal(e)
+      return 0, e
    }
-   io.Copy(out_o, in_o)
+   return io.Copy(create, open)
 }
 
+func main() {
+   _, e := copyFile("b.go", "c.go")
+   if e != nil {
+      log.Fatal(e)
+   }
+}
