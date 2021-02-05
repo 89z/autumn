@@ -24,7 +24,7 @@
    <a href="/autumn/change-directory/">Change directory</a> / Go
 </h1>
 <section class="page">
-   <time>Sat Oct 10 2020</time>
+   <time>Fri Feb 5 2021</time>
    
    <a href="/autumn/categories/system/">system</a>
    
@@ -67,10 +67,10 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;git&#34;</span>, <span style="color:#e6db74">&#34;status&#34;</span>)
-   <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Dir</span> = <span style="color:#e6db74">&#34;/Git/winter&#34;</span>
-   <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Stdout</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>
-   <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Run</span>()
+   <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;git&#34;</span>, <span style="color:#e6db74">&#34;status&#34;</span>)
+   <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Dir</span> = <span style="color:#e6db74">&#34;/Git/autumn&#34;</span>
+   <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Stdout</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>
+   <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Run</span>()
 }
 </code></pre></div>
 

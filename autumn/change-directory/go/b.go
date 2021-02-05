@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-   o := exec.Command("git", "status")
-   o.Dir = "/Git/winter"
-   o.Stdout = os.Stdout
-   o.Run()
+   c := exec.Command("git", "status")
+   c.Dir = "/Git/autumn"
+   c.Stdout = os.Stdout
+   c.Run()
 }
