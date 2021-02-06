@@ -9,4 +9,6 @@ tags = [ "go" ]
 
 ## References
 
-<https://hyperpolyglot.org/c#dict-iter>
+- <https://hyperpolyglot.org/c#dict-iter>
+- <https://programming-idioms.org/idiom/13>
+- <https://rosettacode.org/wiki/Associative_array/Iteration>
