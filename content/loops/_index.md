@@ -2,7 +2,6 @@
 title = "Loops"
 categories = [ "control-flow" ]
 date = 2020-12-01
-example = [
-   'cove\git-tools\git-touch.php', 'while ('
-]
+filename = 'cove\git-tools\git-touch.php'
+substr = 'while ('
 +++
