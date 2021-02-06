@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Create file / Rust</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/create-file/">Create file</a> / Rust
+</h1>
+<section class="page">
+   <time>Sat Feb 6 2021</time>
+   
+   <a href="/autumn/categories/system/">system</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::io::{self, Write};
+<span style="color:#66d9ef">use</span> std::fs::{DirBuilder, File};
+<span style="color:#66d9ef">use</span> std::path::Path;
+<span style="color:#66d9ef">use</span> std::{process,fmt};
+ 
+<span style="color:#66d9ef">const</span> FILE_NAME: <span style="color:#66d9ef">&amp;</span>&#39;static <span style="color:#66d9ef">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;output.txt&#34;</span>;
+<span style="color:#66d9ef">const</span> DIR_NAME : <span style="color:#66d9ef">&amp;</span>&#39;static <span style="color:#66d9ef">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;docs&#34;</span>;
+ 
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    create(<span style="color:#e6db74">&#34;.&#34;</span>).and(create(<span style="color:#e6db74">&#34;/&#34;</span>))
+               .unwrap_or_else(<span style="color:#f92672">|</span>e<span style="color:#f92672">|</span> error_handler(e,<span style="color:#ae81ff">1</span>));
+}
+ 
+ 
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">create</span><span style="color:#f92672">&lt;</span>P<span style="color:#f92672">&gt;</span>(root: <span style="color:#a6e22e">P</span>) -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>File<span style="color:#f92672">&gt;</span>
+    <span style="color:#66d9ef">where</span> P: AsRef<span style="color:#f92672">&lt;</span>Path<span style="color:#f92672">&gt;</span>
+{
+    <span style="color:#66d9ef">let</span> f_path <span style="color:#f92672">=</span> root.as_ref().join(FILE_NAME);
+    <span style="color:#66d9ef">let</span> d_path <span style="color:#f92672">=</span> root.as_ref().join(DIR_NAME);
+    DirBuilder::new().create(d_path).and(File::create(f_path))
+}
+ 
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">error_handler</span><span style="color:#f92672">&lt;</span>E: <span style="color:#a6e22e">fmt</span>::Display<span style="color:#f92672">&gt;</span>(error: <span style="color:#a6e22e">E</span>, code: <span style="color:#66d9ef">i32</span>) -&gt; <span style="color:#f92672">!</span> {
+    <span style="color:#66d9ef">let</span> _ <span style="color:#f92672">=</span> writeln<span style="color:#f92672">!</span>(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> io::stderr(), <span style="color:#e6db74">&#34;Error: {}&#34;</span>, error);
+    process::exit(code)
+}
+</code></pre></div>
+
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/rust#file-handles">https://hyperpolyglot.org/rust#file-handles</a></li>
+<li><a href="https://rosettacode.org/wiki/Create_a_file">https://rosettacode.org/wiki/Create_a_file</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>

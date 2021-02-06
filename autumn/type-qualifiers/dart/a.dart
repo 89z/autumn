@@ -1,5 +1,4 @@
-import 'dart:io';
-
 void main() {
-   final x = (await File(path).readAsBytes()).length;
+   final n = 10;
+   n = 11;
 }

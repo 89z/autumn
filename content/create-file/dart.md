@@ -5,7 +5,7 @@ tags = [ "dart" ]
 
 {{< r "a.dart" >}}
 
-<https://api.dart.dev/dart-io/File-class.html>
+<https://api.dart.dev/dart-io/File/openWrite.html>
 
 ## References
 
