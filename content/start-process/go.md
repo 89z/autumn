@@ -9,21 +9,17 @@ tags = [ "go" ]
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/os/exec#Cmd.Env>
+<https://golang.org/pkg/os/exec#Cmd.Run>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/os/exec#Cmd.Run>
+<https://golang.org/pkg/os/exec#Cmd.Start>
 
 {{< r "d.go" >}}
 
-<https://golang.org/pkg/os/exec#Cmd.Start>
-
-{{< r "e.go" >}}
-
 <https://golang.org/pkg/os/exec#Cmd.Stderr>
 
-{{< r "f.go" >}}
+{{< r "e.go" >}}
 
 <https://golang.org/pkg/os/exec#Cmd.Stdout>
 

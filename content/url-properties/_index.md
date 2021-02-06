@@ -2,7 +2,6 @@
 title = "URL properties"
 categories = [ "path" ]
 date = 2021-02-02
-example = [
-   'winter\youtube\youtube-views\youtube-views.go', ' url.Parse('
-]
+filename = 'x\musicbrainz\musicbrainz.go'
+substr = '.Host = "'
 +++

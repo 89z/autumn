@@ -1,16 +1,8 @@
 package main
-
-import (
-   "os"
-   "os/exec"
-)
-
-func system(name string, arg ...string) error {
-   cmd := exec.Command(name, arg...)
-   cmd.Stderr, cmd.Stdout = os.Stderr, os.Stdout
-   return cmd.Run()
-}
+import "os/exec"
 
 func main() {
-   system("go", "version")
+   c := exec.Command("go", "mod", "init", "day")
+   c.Dir = `C:\Users\Public`
+   c.Run()
 }
