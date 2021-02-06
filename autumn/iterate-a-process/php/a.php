@@ -1,11 +1,12 @@
 <?php
-$s = 'php -v';
-$r = popen($s, 'r');
+declare(strict_types = 1);
+$command = 'php -v';
+$r = popen($command, 'r');
 
 while (true) {
-   $s1 = fgets($r);
+   $s = fgets($r);
    if (feof($r)) {
       break;
    }
-   var_dump($s1);
+   var_dump($s);
 }
