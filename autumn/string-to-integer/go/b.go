@@ -1,13 +1,24 @@
 package main
-import "fmt"
 
-func intVal(s string) int {
+import (
+   "fmt"
+   "log"
+)
+
+func intVal(s string) (int, error) {
    var n int
-   fmt.Sscan(s, &n)
-   return n
+   _, e := fmt.Sscanf(s, "%v", &n)
+   if e != nil {
+      return 0, e
+   }
+   return n, nil
 }
 
+
 func main() {
-   n := intVal("100")
-   fmt.Println(n)
+   n, e := intVal("100")
+   if e != nil {
+      log.Fatal(e)
+   }
+   fmt.Println(n == 100)
 }
