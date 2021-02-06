@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Create file / Dart</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/create-file/">Create file</a> / Dart
+</h1>
+<section class="page">
+   <time>Sat Feb 6 2021</time>
+   
+   <a href="/autumn/categories/system/">system</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
+
+<span style="color:#66d9ef">void</span> main() {
+  <span style="color:#66d9ef">final</span> filename <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;file.txt&#39;</span>;
+  <span style="color:#66d9ef">new</span> File(filename).writeAsString(<span style="color:#e6db74">&#39;some content&#39;</span>)
+    .then((File file) {
+      <span style="color:#75715e">// Do something with the file.
+</span><span style="color:#75715e"></span>    });
+}
+</code></pre></div>
+
+<p><a href="https://api.dart.dev/dart-io/File-class.html">https://api.dart.dev/dart-io/File-class.html</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/web#open-file-write">https://hyperpolyglot.org/web#open-file-write</a></li>
+<li><a href="https://rosettacode.org/wiki/Create_a_file">https://rosettacode.org/wiki/Create_a_file</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Create file / D</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/create-file/">Create file</a> / D
+</h1>
+<section class="page">
+   <time>Sat Feb 6 2021</time>
+   
+   <a href="/autumn/categories/system/">system</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#75715e">// test.d
+</span><span style="color:#75715e"></span><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span><span style="color:#66d9ef">string</span><span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">auto</span> f <span style="color:#f92672">=</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;test.txt&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;w&#34;</span><span style="color:#f92672">);</span> <span style="color:#75715e">// open for writing
+</span><span style="color:#75715e"></span>    f<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>args<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">auto</span> g <span style="color:#f92672">=</span> f<span style="color:#f92672">;</span> <span style="color:#75715e">// now g and f write to the same file
+</span><span style="color:#75715e"></span>                    <span style="color:#75715e">// internal reference count is 2
+</span><span style="color:#75715e"></span>        g<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;, &#34;</span><span style="color:#f92672">,</span> args<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]);</span>
+        <span style="color:#75715e">// g exits scope, reference count decreases to 1
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+    f<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;!&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#75715e">// f exits scope, reference count falls to zero,
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// underlying `FILE*` is closed.
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</code></pre></div>
+
+<p><a href="https://dlang.org/library/std/stdio/file.html">https://dlang.org/library/std/stdio/file.html</a></p>
+<h2 id="references">References</h2>
+<p><a href="https://rosettacode.org/wiki/Create_a_file">https://rosettacode.org/wiki/Create_a_file</a></p>
+
+</main>
+
+</body>
+</html>

@@ -1,11 +1,9 @@
 +++
-title = "PHP"
-tags = [ "php" ]
+title = "Ruby"
+tags = [ "ruby" ]
 +++
 
-{{< r "a.php" >}}
-
-<https://php.net/function.fopen>
+{{< r "a.rb" >}}
 
 ## References
 
