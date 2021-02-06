@@ -5,8 +5,12 @@ import (
    "strconv"
 )
 
+func intVal(s string) (int64, error) {
+   return strconv.ParseInt(s, 10, 64)
+}
+
 func main() {
-   n, e := strconv.Atoi("100")
+   n, e := intVal("100")
    if e != nil {
       log.Fatal(e)
    }

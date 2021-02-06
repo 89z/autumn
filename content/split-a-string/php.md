@@ -9,10 +9,6 @@ tags = [ "php" ]
 
 {{< r "b.php" >}}
 
-<https://php.net/function.sscanf>
-
-{{< r "c.php" >}}
-
 <https://php.net/function.strtok>
 
 ## References

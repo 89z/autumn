@@ -1,8 +1,8 @@
 <?php
-$s = '100,200';
+$s = 'May,June';
 # example 1
-$a1 = sscanf($s, '%d,%d');
+$s1 = strtok($s, ',');
 # example 2
-sscanf($s, '%d,%d', $n2, $n2a);
+$s2 = strtok(',');
 # print
-var_dump($a1, $n2, $n2a);
+var_dump($s1, $s2);

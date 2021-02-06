@@ -9,6 +9,10 @@ tags = [ "go" ]
 
 {{< r "b.go" >}}
 
+<https://golang.org/pkg/fmt#Sscanf>
+
+{{< r "c.go" >}}
+
 <https://golang.org/pkg/strconv#Atoi>
 
 {{< r "c.go" >}}

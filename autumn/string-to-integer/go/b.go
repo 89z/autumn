@@ -1,14 +1,13 @@
 package main
+import "fmt"
 
-import (
-   "log"
-   "strconv"
-)
+func intVal(s string) int {
+   var n int
+   fmt.Sscan(s, &n)
+   return n
+}
 
 func main() {
-   n, e := strconv.Atoi("100")
-   if e != nil {
-      log.Fatal(e)
-   }
-   println(n == 100)
+   n := intVal("100")
+   fmt.Println(n)
 }
