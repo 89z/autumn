@@ -5,10 +5,12 @@ import (
    "os"
 )
 
+func isFile(name string) bool {
+   fi, err := os.Stat(name)
+   return err == nil && ! fi.Mode().IsDir()
+}
+
 func main() {
-   o, e := os.OpenFile("d.go", os.O_CREATE | os.O_EXCL, os.ModePerm)
-   if os.IsExist(e) {
-      log.Fatal(e)
-   }
-   o.Close()
+   b := isFile("a.go")
+   println(b)
 }

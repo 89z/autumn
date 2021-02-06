@@ -1,14 +1,12 @@
 package main
+import "os"
 
-import (
-   "log"
-   "os"
-)
+func isFile(name string) bool {
+   fi, err := os.Stat(name)
+   return err == nil && fi.Mode().IsRegular()
+}
 
 func main() {
-   o, e := os.Open("a.go")
-   if os.IsNotExist(e) {
-      log.Fatal(e)
-   }
-   o.Close()
+   b := isFile("a.go")
+   println(b)
 }

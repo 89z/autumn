@@ -1,9 +1,13 @@
 package main
-import "os"
+
+import (
+   "log"
+   "os"
+)
 
 func isFile(name string) bool {
-   fi, e := os.Stat(name)
-   return e == nil && fi.Mode().IsRegular()
+   fi, err := os.Stat(name)
+   return err == nil && ! fi.IsDir()
 }
 
 func main() {

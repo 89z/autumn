@@ -5,17 +5,15 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/os#FileMode.IsRegular>
-
-Note that for existing files, these are four times slower:
+<https://golang.org/pkg/os#FileInfo>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/os#Open>
+<https://golang.org/pkg/os#FileMode.IsRegular>
 
-{{< r "c.go" >}}
+{{< r "b.go" >}}
 
-<https://golang.org/pkg/os#OpenFile>
+<https://golang.org/pkg/os#FileMode>
 
 ## References
 

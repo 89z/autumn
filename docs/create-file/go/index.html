@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Create file / Go</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/create-file/">Create file</a> / Go
+</h1>
+<section class="page">
+   <time>Sat Feb 6 2021</time>
+   
+   <a href="/autumn/categories/system/">system</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;log&#34;</span>
+   <span style="color:#e6db74">&#34;os&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">f</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">OpenFile</span>(<span style="color:#e6db74">&#34;b.go&#34;</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">O_CREATE</span> | <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">O_EXCL</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">ModePerm</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+   <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">Close</span>()
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/os#OpenFile">https://golang.org/pkg/os#OpenFile</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/c#open-file-write">https://hyperpolyglot.org/c#open-file-write</a></li>
+<li><a href="https://rosettacode.org/wiki/Create_a_file">https://rosettacode.org/wiki/Create_a_file</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
