@@ -2,7 +2,6 @@
 title = "Declare string"
 categories = [ "string" ]
 date = 2020-11-28
-example = [
-   'winter\youtube\youtube.go', '_s := "'
-]
+filename = 'winter\youtube\youtube.go'
+substr = '_s := "'
 +++
