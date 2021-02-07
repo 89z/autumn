@@ -110,10 +110,14 @@ go run .
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps1" data-lang="ps1"><span style="color:#75715e"># example 1</span>
-go test -bench .
+go test
 <span style="color:#75715e"># example 2</span>
+go test -run TestTar
+<span style="color:#75715e"># example 3</span>
+go test -bench .
+<span style="color:#75715e"># example 4</span>
 go test -bench . -benchmem
-<span style="color:#75715e"># exmaple 3</span>
+<span style="color:#75715e"># example 5</span>
 go test -bench . -benchmem -benchtime=5x
 </code></pre></div>
 
