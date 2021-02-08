@@ -1,7 +1,7 @@
 +++
 title = "Test file"
 categories = [ "system" ]
-date = 2020-11-10
-filename = 'x\x.go'
-substr = '.Mode().IsRegular()'
+date = 2021-02-08
+filename = 'sienna\git-board\board.go'
+substr = ' os.Stat('
 +++
