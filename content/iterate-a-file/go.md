@@ -7,10 +7,6 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/bufio#Scanner.Scan>
 
-{{< r "b.go" >}}
-
-<https://golang.org/pkg/bufio#Scanner.Split>
-
 ## References
 
 - <https://hyperpolyglot.org/c#file-line-iterate>
