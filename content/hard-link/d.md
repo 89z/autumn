@@ -3,7 +3,7 @@ title = "D"
 tags = [ "d" ]
 +++
 
-<https://dlang.org/library/std/file/symlink.html>
+<https://dlang.org/library/std/file.html>
 
 ## References
 
