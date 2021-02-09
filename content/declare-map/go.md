@@ -9,7 +9,7 @@ tags = [ "go" ]
 
 {{< r "b.go" >}}
 
-<https://golang.org/ref/spec#Map_types>
+<https://golang.org/ref/spec#Composite_literals>
 
 ## References
 
