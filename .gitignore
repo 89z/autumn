@@ -12,3 +12,4 @@ autumn/*/rs/*/Cargo.lock
 autumn/*/rs/*/target
 autumn/*/rs/Cargo.lock
 autumn/*/rs/target
+autumn/talk/*/go/go.sum
