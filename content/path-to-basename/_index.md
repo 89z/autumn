@@ -1,7 +1,7 @@
 +++
 title = "Path to basename"
 categories = [ "path" ]
-date = 2020-09-10
+date = 2021-02-09
 filename = 'sienna\crop-image\crop-image.go'
 substr = 'path.Base('
 +++

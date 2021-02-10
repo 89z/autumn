@@ -2,7 +2,10 @@ package main
 import "path/filepath"
 
 func main() {
-   in_s := `C:\go\bin\go.exe`
-   out_s := filepath.Base(in_s)
-   println(out_s == "go.exe")
+   // example 1
+   s1 := filepath.Base("C:/file.txt")
+   // example 2
+   s2 := filepath.Base(`C:\file.txt`)
+   // print
+   println(s1 == "file.txt", s2 == "file.txt")
 }
