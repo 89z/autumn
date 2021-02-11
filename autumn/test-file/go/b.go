@@ -2,8 +2,8 @@ package main
 import "os"
 
 func isFile(name string) bool {
-   fi, err := os.Stat(name)
-   return err == nil && fi.Mode().IsRegular()
+   info, err := os.Stat(name)
+   return err == nil && info.Mode().IsRegular()
 }
 
 func main() {

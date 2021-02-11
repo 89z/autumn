@@ -6,8 +6,8 @@ import (
 )
 
 func isFile(name string) bool {
-   fi, err := os.Stat(name)
-   return err == nil && ! fi.Mode().IsDir()
+   info, err := os.Stat(name)
+   return err == nil && ! info.Mode().IsDir()
 }
 
 func main() {

@@ -11,7 +11,7 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/os#FileMode.IsRegular>
 
-{{< r "b.go" >}}
+{{< r "c.go" >}}
 
 <https://golang.org/pkg/os#FileMode>
 
