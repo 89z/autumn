@@ -7,9 +7,9 @@ import (
    "os"
 )
 
-type Map map[string]interface{}
+type m map[string]interface{}
 
-func TomlPutFile(source Map, dest string) error {
+func TomlPutFile(source m, dest string) error {
    y, e := toml.Marshal(source)
    if e != nil {
       return e
@@ -18,7 +18,7 @@ func TomlPutFile(source Map, dest string) error {
 }
 
 func main() {
-   e := TomlPutFile(Map{"month": 12, "day": 31}, "a.toml")
+   e := TomlPutFile(m{"month": 12, "day": 31}, "a.toml")
    if e != nil {
       log.Fatal(e)
    }
