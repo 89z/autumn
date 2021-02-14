@@ -1,16 +1,16 @@
 <?php
 
 function format(float $n): string {
-   $min_n = (int)($n / 60);
-   $sec_n = $n % 60;
-   $mil_n = fmod($n, 1) * 1000;
-   return sprintf('%d m %02d s %03d ms', $min_n, $sec_n, $mil_n);
+   $min = (int)($n / 60);
+   $sec = $n % 60;
+   $mil = fmod($n, 1) * 1000;
+   return sprintf('%d m %02d s %03d ms', $min, $sec, $mil);
 }
 
-$old_n = microtime(true);
+$old = microtime(true);
 
 while (true) {
    usleep(10_000);
-   $new_n = microtime(true);
-   echo "\r", format($new_n - $old_n);
+   $new = microtime(true);
+   echo "\r", format($new - $old);
 }

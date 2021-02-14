@@ -24,7 +24,7 @@
    <a href="/autumn/return-duration-string/">Return duration string</a> / PHP
 </h1>
 <section class="page">
-   <time>Fri Dec 4 2020</time>
+   <time>Sat Feb 13 2021</time>
    
    <a href="/autumn/categories/time/">time</a>
    
@@ -91,18 +91,18 @@ $old_n <span style="color:#f92672">=</span> <span style="color:#a6e22e">hrtime</
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">format</span>(<span style="color:#a6e22e">float</span> $n)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
-   $min_n <span style="color:#f92672">=</span> (<span style="color:#a6e22e">int</span>)($n <span style="color:#f92672">/</span> <span style="color:#ae81ff">60</span>);
-   $sec_n <span style="color:#f92672">=</span> $n <span style="color:#f92672">%</span> <span style="color:#ae81ff">60</span>;
-   $mil_n <span style="color:#f92672">=</span> <span style="color:#a6e22e">fmod</span>($n, <span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>;
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sprintf</span>(<span style="color:#e6db74">&#39;%d m %02d s %03d ms&#39;</span>, $min_n, $sec_n, $mil_n);
+   $min <span style="color:#f92672">=</span> (<span style="color:#a6e22e">int</span>)($n <span style="color:#f92672">/</span> <span style="color:#ae81ff">60</span>);
+   $sec <span style="color:#f92672">=</span> $n <span style="color:#f92672">%</span> <span style="color:#ae81ff">60</span>;
+   $mil <span style="color:#f92672">=</span> <span style="color:#a6e22e">fmod</span>($n, <span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>;
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sprintf</span>(<span style="color:#e6db74">&#39;%d m %02d s %03d ms&#39;</span>, $min, $sec, $mil);
 }
 
-$old_n <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
+$old <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
 
 <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
    <span style="color:#a6e22e">usleep</span>(<span style="color:#ae81ff">10_000</span>);
-   $new_n <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
-   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>, <span style="color:#a6e22e">format</span>($new_n <span style="color:#f92672">-</span> $old_n);
+   $new <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
+   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>, <span style="color:#a6e22e">format</span>($new <span style="color:#f92672">-</span> $old);
 }
 </code></pre></div>
 
