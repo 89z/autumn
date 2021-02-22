@@ -3,15 +3,15 @@ import io = std.stdio;
 import time = core.time: MonoTime;
 
 void main() {
-   auto start_o = MonoTime.currTime;
+   auto from = MonoTime.currTime;
    while (true) {
       Thread.sleep(time.msecs(10));
-      auto o = MonoTime.currTime - start_o;
+      auto to = MonoTime.currTime - from;
       io.writef(
          "\r%d m %02d s %03d ms",
-         o.split.minutes,
-         o.split.seconds,
-         o.split.msecs
+         to.split.minutes,
+         to.split.seconds,
+         to.split.msecs
       );
    }
 }
