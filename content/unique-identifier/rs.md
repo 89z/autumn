@@ -7,7 +7,7 @@ tags = [ "rust" ]
 
 <https://doc.rust-lang.org/std/char/fn.from_digit.html>
 
-{{< r "a.rs" >}}
+{{< r "b.rs" >}}
 
 <https://doc.rust-lang.org/std/primitive.u32.html#method.from_str_radix>
 
