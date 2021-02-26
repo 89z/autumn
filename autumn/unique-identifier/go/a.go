@@ -2,18 +2,25 @@ package main
 
 import (
    "fmt"
+   "log"
    "math/big"
    "time"
 )
 
-func IdDecode(s string, year int) time.Time {
-   x := new(big.Int)
-   x.SetString(s, 36)
-   d := time.Duration(x.Int64()) * time.Second
-   return time.Date(year, 1, 1, 0, 0, 0, 0, time.UTC).Add(d)
+func idDecode(s string, year int) (time.Time, error) {
+   n, ok := new(big.Int).SetString(s, 36)
+   if ! ok {
+      return time.Time{}, fmt.Errorf("%v", s)
+   }
+   return time.Date(year, 1, 1, 0, 0, 0, 0, time.UTC).Add(
+      time.Duration(n.Int64()) * time.Second,
+   ), nil
 }
 
 func main() {
-   t := IdDecode("6dv3d", 2020)
+   t, e := idDecode("6dv3d", 2020)
+   if e != nil {
+      log.Fatal(e)
+   }
    fmt.Println(t)
 }

@@ -5,21 +5,17 @@ tags = [ "rust" ]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/primitive.slice.html#method.concat>
+<https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.collect>
 
 {{< r "b.rs" >}}
 
-<https://doc.rust-lang.org/std/primitive.slice.html#method.join>
+<https://doc.rust-lang.org/std/primitive.slice.html#method.concat>
 
 {{< r "c.rs" >}}
 
-<https://doc.rust-lang.org/std/str/fn.from_utf8.html>
+<https://doc.rust-lang.org/std/primitive.slice.html#method.join>
 
 {{< r "d.rs" >}}
-
-<https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8>
-
-{{< r "e.rs" >}}
 
 <https://doc.rust-lang.org/std/string/struct.String.html#method.from_utf8_lossy>
 

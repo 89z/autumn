@@ -1,5 +1,5 @@
 fn main() {
-   let a = ["May", "June"];
-   let s = a.concat();
-   println!("{}", s == "MayJune");
+   let a = ['M', 'a', 'r', 'c', 'h'];
+   let s: String = a.iter().collect();
+   println!("{}", s);
 }

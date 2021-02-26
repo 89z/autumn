@@ -5,8 +5,13 @@ import (
    "math/big"
 )
 
+func pow(x, y int64) *big.Int {
+   return new(big.Int).Exp(
+      big.NewInt(x), big.NewInt(y), nil,
+   )
+}
+
 func main() {
-   n := new(big.Int)
-   n.Exp(big.NewInt(10), big.NewInt(5), nil)
+   n := pow(10, 5)
    fmt.Println(n)
 }
