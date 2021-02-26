@@ -13,7 +13,7 @@ tags = [ "rust" ]
 
 {{< r "c.rs" >}}
 
-<https://doc.rust-lang.org/std/borrow/enum.Cow.html#variant.Borrowed>
+<https://doc.rust-lang.org/std/borrow/enum.Cow.html#method.from-3>
 
 {{< r "d.rs" >}}
 

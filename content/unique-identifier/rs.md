@@ -3,7 +3,7 @@ title = "Rust"
 tags = [ "rust" ]
 +++
 
-{{< r "a/src/main.rs" >}}
+{{< r "a.rs" >}}
 
 <https://doc.rust-lang.org/std/char/fn.from_digit.html>
 

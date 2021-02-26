@@ -1,6 +1,6 @@
 use std::borrow::Cow;
 
 fn main() {
-   let s = Cow::Borrowed("March");
+   let s = Cow::from("March");
    println!("{}", s);
 }

@@ -43,6 +43,20 @@
 </code></pre></div>
 
 <p><a href="https://doc.rust-lang.org/std/primitive.str.html#method.to_uppercase">https://doc.rust-lang.org/std/primitive.str.html#method.to_uppercase</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;March&#34;</span>;
+   <span style="color:#66d9ef">let</span> t <span style="color:#f92672">=</span> s.to_ascii_uppercase();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MARCH&#34;</span>);
+}
+</code></pre></div>
+
+<p><a href="https://doc.rust-lang.org/std/string/struct.String.html#method.to_ascii_uppercase">https://doc.rust-lang.org/std/string/struct.String.html#method.to_ascii_uppercase</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/rust#translate-case">https://hyperpolyglot.org/rust#translate-case</a></li>

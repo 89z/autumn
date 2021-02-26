@@ -7,6 +7,10 @@ tags = [ "rust" ]
 
 <https://doc.rust-lang.org/std/primitive.str.html#method.to_uppercase>
 
+{{< r "b.rs" >}}
+
+<https://doc.rust-lang.org/std/string/struct.String.html#method.to_ascii_uppercase>
+
 ## References
 
 - <https://hyperpolyglot.org/rust#translate-case>
