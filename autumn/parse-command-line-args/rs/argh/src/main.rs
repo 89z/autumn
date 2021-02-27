@@ -14,8 +14,8 @@ struct Args {
 }
 
 fn main() {
-   let o: Args = argh::from_env();
-   let pre_s = o.prefix.unwrap_or_default();
-   let suf_s = o.suffix.unwrap_or_default();
-   println!("{}", pre_s + &o.stem + &suf_s);
+   let arg: Args = argh::from_env();
+   let pre = arg.prefix.unwrap_or_default();
+   let suf = arg.suffix.unwrap_or_default();
+   println!("{}", pre + &arg.stem + &suf);
 }

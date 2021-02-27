@@ -56,9 +56,9 @@
 };
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> in_o <span style="color:#f92672">=</span> File::open(<span style="color:#e6db74">&#34;b.rs&#34;</span>)<span style="color:#f92672">?</span>;
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> out_o <span style="color:#f92672">=</span> File::create(<span style="color:#e6db74">&#34;c.rs&#34;</span>)<span style="color:#f92672">?</span>;
-   io::copy(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> in_o, <span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> out_o)<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> open <span style="color:#f92672">=</span> File::open(<span style="color:#e6db74">&#34;b.rs&#34;</span>)<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> create <span style="color:#f92672">=</span> File::create(<span style="color:#e6db74">&#34;c.rs&#34;</span>)<span style="color:#f92672">?</span>;
+   io::copy(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> open, <span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> create)<span style="color:#f92672">?</span>;
    Ok(())
 }
 </code></pre></div>

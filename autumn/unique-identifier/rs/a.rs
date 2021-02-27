@@ -1,15 +1,22 @@
 use std::char::from_digit;
 
-fn encode(n: u32, r: u32) -> String {
-   let c = from_digit(n % r, r).unwrap_or('!');
-   return match n / r {
-      0 => String::new(),
-      n => encode(n, r)
-   } + &String::from(c);
+fn encode(mut n: u32, r: u32) -> Option<String> {
+   let mut s = String::new();
+   loop {
+      if let Some(c) = from_digit(n % r, r) {
+         s.insert(0, c)
+      } else {
+         return None
+      }
+      n /= r;
+      if n == 0 {
+         break
+      }
+   }
+   Some(s)
 }
 
 fn main() {
-   let n = 1609480799;
-   let s = encode(n, 36);
-   println!("{}", s == "qm8rbz");
+   let s = encode(u32::MAX, 36).unwrap_or_default();
+   println!("{}", s == "1z141z3");
 }

@@ -37,18 +37,25 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::char::from_digit;
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">encode</span>(n: <span style="color:#66d9ef">u32</span>, r: <span style="color:#66d9ef">u32</span>) -&gt; String {
-   <span style="color:#66d9ef">let</span> c <span style="color:#f92672">=</span> from_digit(n <span style="color:#f92672">%</span> r, r).unwrap_or(<span style="color:#e6db74">&#39;!&#39;</span>);
-   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">match</span> n <span style="color:#f92672">/</span> r {
-      <span style="color:#ae81ff">0</span> <span style="color:#f92672">=&gt;</span> String::new(),
-      n <span style="color:#f92672">=&gt;</span> encode(n, r)
-   } <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>String::from(c);
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">encode</span>(<span style="color:#66d9ef">mut</span> n: <span style="color:#66d9ef">u32</span>, r: <span style="color:#66d9ef">u32</span>) -&gt; Option<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> s <span style="color:#f92672">=</span> String::new();
+   <span style="color:#66d9ef">loop</span> {
+      <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> Some(c) <span style="color:#f92672">=</span> from_digit(n <span style="color:#f92672">%</span> r, r) {
+         s.insert(<span style="color:#ae81ff">0</span>, c)
+      } <span style="color:#66d9ef">else</span> {
+         <span style="color:#66d9ef">return</span> None
+      }
+      n <span style="color:#f92672">/=</span> r;
+      <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
+         <span style="color:#66d9ef">break</span>
+      }
+   }
+   Some(s)
 }
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1609480799</span>;
-   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> encode(n, <span style="color:#ae81ff">36</span>);
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;qm8rbz&#34;</span>);
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> encode(<span style="color:#66d9ef">u32</span>::MAX, <span style="color:#ae81ff">36</span>).unwrap_or_default();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;1z141z3&#34;</span>);
 }
 </code></pre></div>
 
