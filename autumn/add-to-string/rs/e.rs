@@ -1,5 +1,5 @@
 fn main() {
-   let mut s = String::new();
-   s.push_str("March");
+   let mut s = String::from("March");
+   s.push('!');
    println!("{}", s);
 }

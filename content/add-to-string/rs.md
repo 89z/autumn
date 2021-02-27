@@ -5,21 +5,25 @@ tags = [ "rust" ]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/borrow/enum.Cow.html#method.add-1>
+<https://doc.rust-lang.org/std/string/struct.String.html#method.add>
 
 {{< r "b.rs" >}}
 
-<https://doc.rust-lang.org/std/borrow/enum.Cow.html#method.add_assign-1>
+<https://doc.rust-lang.org/std/string/struct.String.html#method.add_assign>
 
 {{< r "c.rs" >}}
 
-<https://doc.rust-lang.org/std/string/struct.String.html#method.add>
+<https://doc.rust-lang.org/std/string/struct.String.html#method.insert>
 
 {{< r "d.rs" >}}
 
-<https://doc.rust-lang.org/std/string/struct.String.html#method.add_assign>
+<https://doc.rust-lang.org/std/string/struct.String.html#method.insert_str>
 
 {{< r "e.rs" >}}
+
+<https://doc.rust-lang.org/std/string/struct.String.html#method.push>
+
+{{< r "f.rs" >}}
 
 <https://doc.rust-lang.org/std/string/struct.String.html#method.push_str>
 

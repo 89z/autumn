@@ -1,7 +1,6 @@
-use std::borrow::Cow;
-
 fn main() {
-   let mut s = Cow::from("March");
-   s += "April";
+   let mut s = String::from("March");
+   let t = String::from("April");
+   s += &t;
    println!("{}", s);
 }

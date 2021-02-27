@@ -1,7 +1,10 @@
-function idEncode(year) {
-   let t = new Date(year, 0);
-   let x = (new Date - t) / 1000;
-   return Math.trunc(x).toString(36);
+'use strict';
+
+function idEncode(n) {
+   let t = new Date(n, 0);
+   return Math.trunc(
+      (new Date - t) / 1000
+   ).toString(36);
 }
 
 let s = idEncode(2021);

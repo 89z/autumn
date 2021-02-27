@@ -35,10 +35,13 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">idEncode</span>(<span style="color:#a6e22e">year</span>) {
-   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">t</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#a6e22e">year</span>, <span style="color:#ae81ff">0</span>);
-   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> Date <span style="color:#f92672">-</span> <span style="color:#a6e22e">t</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">1000</span>;
-   <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">trunc</span>(<span style="color:#a6e22e">x</span>).<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">36</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#e6db74">&#39;use strict&#39;</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">idEncode</span>(<span style="color:#a6e22e">n</span>) {
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">t</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#a6e22e">n</span>, <span style="color:#ae81ff">0</span>);
+   <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">trunc</span>(
+      (<span style="color:#66d9ef">new</span> Date <span style="color:#f92672">-</span> <span style="color:#a6e22e">t</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">1000</span>
+   ).<span style="color:#a6e22e">toString</span>(<span style="color:#ae81ff">36</span>);
 }
 
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">idEncode</span>(<span style="color:#ae81ff">2021</span>);
@@ -52,13 +55,16 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">idDecode</span>(<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">year</span>) {
-   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> Date.<span style="color:#a6e22e">UTC</span>(<span style="color:#a6e22e">year</span>) <span style="color:#f92672">+</span> parseInt(<span style="color:#a6e22e">s</span>, <span style="color:#ae81ff">36</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>;
-   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#a6e22e">d</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#e6db74">&#39;use strict&#39;</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">idDecode</span>(<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">n</span>) {
+   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Date(
+      Date.<span style="color:#a6e22e">UTC</span>(<span style="color:#a6e22e">n</span>) <span style="color:#f92672">+</span> parseInt(<span style="color:#a6e22e">s</span>, <span style="color:#ae81ff">36</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>
+   );
 }
 
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">o</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">idDecode</span>(<span style="color:#e6db74">&#39;6dv3d&#39;</span>, <span style="color:#ae81ff">2020</span>);
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">o</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">t</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">idDecode</span>(<span style="color:#e6db74">&#39;6dv3d&#39;</span>, <span style="color:#ae81ff">2020</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">t</span>);
 </code></pre></div>
 
 <p><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/parseInt">https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/parseInt</a></p>

@@ -1,7 +1,10 @@
-function idDecode(s, year) {
-   let d = Date.UTC(year) + parseInt(s, 36) * 1000;
-   return new Date(d);
+'use strict';
+
+function idDecode(s, n) {
+   return new Date(
+      Date.UTC(n) + parseInt(s, 36) * 1000
+   );
 }
 
-let o = idDecode('6dv3d', 2020);
-console.log(o);
+let t = idDecode('6dv3d', 2020);
+console.log(t);
