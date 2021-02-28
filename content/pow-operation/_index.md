@@ -1,7 +1,7 @@
 +++
 title = "Pow operation"
 categories = [ "number" ]
-date = 2020-11-21
+date = 2021-02-28
 filename = 'x\youtube\youtube.go'
 substr = ' math.Pow'
 +++
