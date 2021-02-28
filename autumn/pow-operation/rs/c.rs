@@ -1,4 +1,4 @@
 fn main() {
-   let n = 10u32.pow(5);
+   let n = u32::pow(10, 5);
    println!("{}", n == 100_000);
 }

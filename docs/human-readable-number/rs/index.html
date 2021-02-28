@@ -57,14 +57,14 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">number_format</span>(n: <span style="color:#66d9ef">f64</span>) -&gt; String {
-   <span style="color:#66d9ef">let</span> n2 <span style="color:#f92672">=</span> n.log(<span style="color:#ae81ff">1e3</span>);
-   <span style="color:#66d9ef">let</span> n3 <span style="color:#f92672">=</span> n <span style="color:#f92672">/</span> <span style="color:#ae81ff">1e3</span><span style="color:#66d9ef">f64</span>.powi(n2 <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">i32</span>);
-   format<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:.3}&#34;</span>, n3) <span style="color:#f92672">+</span> [<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34; k&#34;</span>, <span style="color:#e6db74">&#34; M&#34;</span>, <span style="color:#e6db74">&#34; G&#34;</span>][n2 <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">usize</span>]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">number_format</span>(f: <span style="color:#66d9ef">f64</span>) -&gt; String {
+   <span style="color:#66d9ef">let</span> g <span style="color:#f92672">=</span> f.log(<span style="color:#ae81ff">1e3</span>);
+   <span style="color:#66d9ef">let</span> h <span style="color:#f92672">=</span> f <span style="color:#f92672">/</span> <span style="color:#66d9ef">f64</span>::powi(<span style="color:#ae81ff">1e3</span>, g <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">i32</span>);
+   format<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:.3}&#34;</span>, h) <span style="color:#f92672">+</span> [<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34; k&#34;</span>, <span style="color:#e6db74">&#34; M&#34;</span>, <span style="color:#e6db74">&#34; G&#34;</span>][g <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">usize</span>]
 }
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> number_format(<span style="color:#ae81ff">9012345678e0</span>);
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> number_format(<span style="color:#ae81ff">9012345678.0</span>);
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;9.012 G&#34;</span>);
 }
 </code></pre></div>
