@@ -1,14 +1,12 @@
 fn main() {
    // example 1
-   let d = 1234.0 as u32;
+   let d = 10;
    // example 2
-   let e = 1234;
+   let e = 1_000;
    // example 3
-   let f = 1234u32;
+   let f = 10u32;
    // example 4
-   let g = 1_234;
-   // example 5
-   let h: u32 = 1234;
+   let g = 10.0 as u32;
    // print
-   println!("{} {} {} {} {}", d, e, f, g, h);
+   println!("{} {} {} {}", d, e, f, g);
 }
