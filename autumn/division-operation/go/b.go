@@ -1,8 +1,11 @@
 package main
 import "math/bits"
 
+func divMod(x, y uint64) (uint64, uint64) {
+   return bits.Div64(0, x, y)
+}
+
 func main() {
-   n := uint64(18446744073709551615)
-   q, r := bits.Div64(0, n, 2)
-   println(q == n / 2, r == 1)
+   d, m := divMod(0xFFFF_FFFF_FFFF_FFFF, 2)
+   println(d == 0x7FFF_FFFF_FFFF_FFFF, m == 1)
 }
