@@ -7,7 +7,7 @@ void main() {
    auto s = conv.to!string(n, 36);
    // example 2
    auto s2 = "1Z141Z3";
-   auto n2 = conv.to!long(s, 36);
+   auto n2 = conv.to!uint(s, 36);
    // print
    io.writeln(s2 == s && n2 == n);
 }

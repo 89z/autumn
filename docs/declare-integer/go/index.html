@@ -24,7 +24,7 @@
    <a href="/autumn/declare-integer/">Declare integer</a> / Go
 </h1>
 <section class="page">
-   <time>Fri Sep 11 2020</time>
+   <time>Mon Mar 1 2021</time>
    
    <a href="/autumn/categories/number/">number</a>
    
@@ -57,22 +57,111 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n1</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">10</span>
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n2</span> <span style="color:#66d9ef">uint8</span> = <span style="color:#ae81ff">10</span>
-   <span style="color:#75715e">// example 3
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n3</span> <span style="color:#66d9ef">uint16</span> = <span style="color:#ae81ff">10</span>
-   <span style="color:#75715e">// example 4
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n4</span> <span style="color:#66d9ef">uint32</span> = <span style="color:#ae81ff">10</span>
-   <span style="color:#75715e">// example 5
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n5</span> <span style="color:#66d9ef">uint64</span> = <span style="color:#ae81ff">10</span>
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>, <span style="color:#a6e22e">n3</span>, <span style="color:#a6e22e">n4</span>, <span style="color:#a6e22e">n5</span>)
+   println(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>, <span style="color:#a6e22e">n3</span>, <span style="color:#a6e22e">n4</span>, <span style="color:#a6e22e">n5</span>)
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n1</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n2</span> <span style="color:#66d9ef">uint8</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n3</span> <span style="color:#66d9ef">uint16</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n4</span> <span style="color:#66d9ef">uint32</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n5</span> <span style="color:#66d9ef">uint64</span> = <span style="color:#ae81ff">10</span>
 }
 </code></pre></div>
 
-<p><a href="https://golang.org/ref/spec#Numeric_types">https://golang.org/ref/spec#Numeric_types</a></p>
+<p><a href="https://golang.org/pkg/builtin#int">https://golang.org/pkg/builtin#int</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   println(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>, <span style="color:#a6e22e">n3</span>, <span style="color:#a6e22e">n4</span>, <span style="color:#a6e22e">n5</span>)
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n1</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n2</span> <span style="color:#66d9ef">uint8</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n3</span> <span style="color:#66d9ef">uint16</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n4</span> <span style="color:#66d9ef">uint32</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n5</span> <span style="color:#66d9ef">uint64</span> = <span style="color:#ae81ff">10</span>
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/builtin#uint">https://golang.org/pkg/builtin#uint</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   println(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>, <span style="color:#a6e22e">n3</span>, <span style="color:#a6e22e">n4</span>, <span style="color:#a6e22e">n5</span>)
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n1</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n2</span> <span style="color:#66d9ef">uint8</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n3</span> <span style="color:#66d9ef">uint16</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n4</span> <span style="color:#66d9ef">uint32</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n5</span> <span style="color:#66d9ef">uint64</span> = <span style="color:#ae81ff">10</span>
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/builtin#uint8">https://golang.org/pkg/builtin#uint8</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   println(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>, <span style="color:#a6e22e">n3</span>, <span style="color:#a6e22e">n4</span>, <span style="color:#a6e22e">n5</span>)
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n1</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n2</span> <span style="color:#66d9ef">uint8</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n3</span> <span style="color:#66d9ef">uint16</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n4</span> <span style="color:#66d9ef">uint32</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n5</span> <span style="color:#66d9ef">uint64</span> = <span style="color:#ae81ff">10</span>
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/builtin#uint16">https://golang.org/pkg/builtin#uint16</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   println(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>, <span style="color:#a6e22e">n3</span>, <span style="color:#a6e22e">n4</span>, <span style="color:#a6e22e">n5</span>)
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n1</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n2</span> <span style="color:#66d9ef">uint8</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n3</span> <span style="color:#66d9ef">uint16</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n4</span> <span style="color:#66d9ef">uint32</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n5</span> <span style="color:#66d9ef">uint64</span> = <span style="color:#ae81ff">10</span>
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/builtin#uint32">https://golang.org/pkg/builtin#uint32</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   println(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>, <span style="color:#a6e22e">n3</span>, <span style="color:#a6e22e">n4</span>, <span style="color:#a6e22e">n5</span>)
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n1</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n2</span> <span style="color:#66d9ef">uint8</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n3</span> <span style="color:#66d9ef">uint16</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n4</span> <span style="color:#66d9ef">uint32</span> = <span style="color:#ae81ff">10</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n5</span> <span style="color:#66d9ef">uint64</span> = <span style="color:#ae81ff">10</span>
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/builtin#uint64">https://golang.org/pkg/builtin#uint64</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#int-type">https://hyperpolyglot.org/c#int-type</a></li>
