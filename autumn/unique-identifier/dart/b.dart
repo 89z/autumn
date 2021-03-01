@@ -1,5 +1,5 @@
 void main() {
-   var n = 1609480799;
+   var n = 0xFFFFFFFF;
    var s = n.toRadixString(36);
-   print(s == 'qm8rbz');
+   print(s == '1z141z3');
 }

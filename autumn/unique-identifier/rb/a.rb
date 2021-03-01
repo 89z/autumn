@@ -1,3 +1,3 @@
-n = 1609480799
+n = 0xFFFF_FFFF
 s = n.to_s(36)
-puts s == 'qm8rbz'
+puts s == '1z141z3'
