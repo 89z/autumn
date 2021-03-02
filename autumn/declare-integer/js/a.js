@@ -1,6 +1,8 @@
 // example 1
-let n1 = 10;
+let d = 10;
 // example 2
-let n2 = 1_000;
+let e = 1_000;
+// example 3
+let f = 0x1_0000;
 // print
-console.log(n1, n2);
+console.log(d, e, f);

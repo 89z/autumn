@@ -1,8 +1,8 @@
 void main() {
    // example 1
-   int n1 = 10;
+   int d = 10;
    // example 2
-   num n2 = 10;
+   num e = 10;
    // print
-   print([n1, n2]);
+   print([d, e]);
 }
