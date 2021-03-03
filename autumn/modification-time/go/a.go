@@ -7,12 +7,12 @@ import (
    "time"
 )
 
-func modTime(name string) (t time.Time, e error) {
-   fi, e := os.Stat(name)
+func modTime(name string) (time.Time, error) {
+   stat, e := os.Stat(name)
    if e != nil {
-      return
+      return time.Time{}, e
    }
-   return fi.ModTime(), nil
+   return stat.ModTime(), nil
 }
 
 func main() {

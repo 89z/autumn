@@ -3,9 +3,17 @@ title = "Ruby"
 tags = [ "ruby" ]
 +++
 
-- <https://docs.ruby-lang.org/en/master/File.html#method-c-mtime>
-- <https://docs.ruby-lang.org/en/master/File.html#method-i-mtime>
-- <https://docs.ruby-lang.org/en/master/File/Stat.html#method-i-mtime>
+{{< r "a.rb" >}}
+
+<https://docs.ruby-lang.org/en/master/File.html#method-c-mtime>
+
+{{< r "b.rb" >}}
+
+<https://docs.ruby-lang.org/en/master/File.html#method-i-mtime>
+
+{{< r "c.rb" >}}
+
+<https://docs.ruby-lang.org/en/master/File/Stat.html#method-i-mtime>
 
 ## References
 

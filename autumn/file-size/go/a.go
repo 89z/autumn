@@ -6,11 +6,11 @@ import (
 )
 
 func fileSize(name string) (int64, error) {
-   fi, err := os.Stat(name)
-   if err != nil {
-      return 0, err
+   info, e := os.Stat(name)
+   if e != nil {
+      return 0, e
    }
-   return fi.Size(), nil
+   return info.Size(), nil
 }
 
 func main() {

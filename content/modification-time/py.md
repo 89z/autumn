@@ -3,6 +3,8 @@ title = "Python"
 tags = [ "python" ]
 +++
 
+{{< r "a.py" >}}
+
 <https://docs.python.org/library/os.path.html#os.path.getmtime>
 
 ## References
