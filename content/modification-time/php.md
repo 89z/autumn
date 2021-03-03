@@ -3,8 +3,13 @@ title = "PHP"
 tags = [ "php" ]
 +++
 
-- <https://php.net/function.filemtime>
-- <https://php.net/function.stat>
+{{< r "a.php" >}}
+
+<https://php.net/function.filemtime>
+
+{{< r "b.php" >}}
+
+<https://php.net/function.stat>
 
 ## References
 
