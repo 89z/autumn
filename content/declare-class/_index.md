@@ -2,6 +2,6 @@
 title = "Declare class"
 categories = [ "reference" ]
 date = 2020-10-19
-filename = 'winter\musicbrainz\musicbrainz.go'
+filename = 'x\youtube\youtube.go'
 substr = ' struct {'
 +++
