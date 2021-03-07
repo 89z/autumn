@@ -3,9 +3,13 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "readall.go" >}}
+{{< r "a.go" >}}
 
-<https://golang.org/pkg/io/ioutil#ReadAll>
+<https://golang.org/pkg/net/http#Client.Do>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/net/http#Get>
 
 ## References
 
