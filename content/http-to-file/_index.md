@@ -1,7 +1,7 @@
 +++
 title = "HTTP to file"
 categories = [ "input-output" ]
-date = 2020-12-17
+date = 2021-03-07
 filename = 'sienna\msys2-manager\manager\net.go'
 substr = ' http.Get('
 +++

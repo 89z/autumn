@@ -24,7 +24,7 @@
    <a href="/autumn/http-to-file/">HTTP to file</a> / Go
 </h1>
 <section class="page">
-   <time>Thu Dec 17 2020</time>
+   <time>Sun Mar 7 2021</time>
    
    <a href="/autumn/categories/input-output/">input-output</a>
    
@@ -43,21 +43,21 @@
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">HttpCopy</span>(<span style="color:#a6e22e">source</span>, <span style="color:#a6e22e">dest</span> <span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">int64</span>, <span style="color:#66d9ef">error</span>) {
-   <span style="color:#a6e22e">get_o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">source</span>)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">httpCopy</span>(<span style="color:#a6e22e">source</span>, <span style="color:#a6e22e">dest</span> <span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">int64</span>, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#a6e22e">get</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">source</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">e</span>
    }
-   <span style="color:#a6e22e">create_o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#a6e22e">dest</span>)
+   <span style="color:#a6e22e">create</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#a6e22e">dest</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">e</span>
    }
-   <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">create_o</span>.<span style="color:#a6e22e">Close</span>()
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#a6e22e">create_o</span>, <span style="color:#a6e22e">get_o</span>.<span style="color:#a6e22e">Body</span>)
+   <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">create</span>.<span style="color:#a6e22e">Close</span>()
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#a6e22e">create</span>, <span style="color:#a6e22e">get</span>.<span style="color:#a6e22e">Body</span>)
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">HttpCopy</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>, <span style="color:#e6db74">&#34;index.html&#34;</span>)
+   <span style="color:#a6e22e">httpCopy</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>, <span style="color:#e6db74">&#34;index.html&#34;</span>)
 }
 </code></pre></div>
 
@@ -77,37 +77,37 @@
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
 
-<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Progress</span> <span style="color:#66d9ef">struct</span> {
-   <span style="color:#a6e22e">Parent</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Reader</span>
-   <span style="color:#a6e22e">Total</span> <span style="color:#66d9ef">int</span>
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">progress</span> <span style="color:#66d9ef">struct</span> {
+   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Reader</span>
+   <span style="color:#a6e22e">total</span> <span style="color:#66d9ef">int</span>
 }
 
-<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">o</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">Progress</span>) <span style="color:#a6e22e">Read</span>(<span style="color:#a6e22e">y</span> []<span style="color:#66d9ef">byte</span>) (<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">error</span>) {
-   <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Parent</span>.<span style="color:#a6e22e">Read</span>(<span style="color:#a6e22e">y</span>)
+<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">p</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">progress</span>) <span style="color:#a6e22e">Read</span>(<span style="color:#a6e22e">b</span> []<span style="color:#66d9ef">byte</span>) (<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">Reader</span>.<span style="color:#a6e22e">Read</span>(<span style="color:#a6e22e">b</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>()
    } <span style="color:#66d9ef">else</span> {
-      <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Total</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">n</span>
-      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;\rRead %9v&#34;</span>, <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">Total</span>)
+      <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">total</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">n</span>
+      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;\rRead %9v&#34;</span>, <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">total</span>)
    }
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">e</span>
 }
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">HttpCopy</span>(<span style="color:#a6e22e">source</span>, <span style="color:#a6e22e">dest</span> <span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">int64</span>, <span style="color:#66d9ef">error</span>) {
-   <span style="color:#a6e22e">get_o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">source</span>)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">httpCopy</span>(<span style="color:#a6e22e">source</span>, <span style="color:#a6e22e">dest</span> <span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">int64</span>, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#a6e22e">get</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">source</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">e</span>
    }
-   <span style="color:#a6e22e">create_o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#a6e22e">dest</span>)
+   <span style="color:#a6e22e">create</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#a6e22e">dest</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">e</span>
    }
-   <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">create_o</span>.<span style="color:#a6e22e">Close</span>()
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#a6e22e">create_o</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">Progress</span>{<span style="color:#a6e22e">Parent</span>: <span style="color:#a6e22e">get_o</span>.<span style="color:#a6e22e">Body</span>})
+   <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">create</span>.<span style="color:#a6e22e">Close</span>()
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#a6e22e">create</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">progress</span>{<span style="color:#a6e22e">Reader</span>: <span style="color:#a6e22e">get</span>.<span style="color:#a6e22e">Body</span>})
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">HttpCopy</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net/10Mio.dat&#34;</span>, <span style="color:#e6db74">&#34;10Mio.dat&#34;</span>)
+   <span style="color:#a6e22e">httpCopy</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net/10Mio.dat&#34;</span>, <span style="color:#e6db74">&#34;10Mio.dat&#34;</span>)
 }
 </code></pre></div>
 
@@ -125,21 +125,21 @@
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">HttpCopy</span>(<span style="color:#a6e22e">source</span>, <span style="color:#a6e22e">dest</span> <span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">int64</span>, <span style="color:#66d9ef">error</span>) {
-   <span style="color:#a6e22e">get_o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">source</span>)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">httpCopy</span>(<span style="color:#a6e22e">source</span>, <span style="color:#a6e22e">dest</span> <span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">int64</span>, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#a6e22e">get</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">source</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">e</span>
    }
-   <span style="color:#a6e22e">create_o</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#a6e22e">dest</span>)
+   <span style="color:#a6e22e">create</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#a6e22e">dest</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">e</span>
    }
-   <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">create_o</span>.<span style="color:#a6e22e">Close</span>()
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">create_o</span>.<span style="color:#a6e22e">ReadFrom</span>(<span style="color:#a6e22e">get_o</span>.<span style="color:#a6e22e">Body</span>)
+   <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">create</span>.<span style="color:#a6e22e">Close</span>()
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">create</span>.<span style="color:#a6e22e">ReadFrom</span>(<span style="color:#a6e22e">get</span>.<span style="color:#a6e22e">Body</span>)
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">HttpCopy</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>, <span style="color:#e6db74">&#34;index.html&#34;</span>)
+   <span style="color:#a6e22e">httpCopy</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>, <span style="color:#e6db74">&#34;index.html&#34;</span>)
 }
 </code></pre></div>
 
