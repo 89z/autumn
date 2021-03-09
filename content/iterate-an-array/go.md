@@ -5,6 +5,10 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
+<https://golang.org/ref/spec#For_clause>
+
+{{< r "b.go" >}}
+
 <https://golang.org/ref/spec#For_range>
 
 ## References
