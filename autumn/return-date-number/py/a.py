@@ -1,4 +1,4 @@
 from datetime import datetime
-o = datetime.now()
-n = o.timestamp()
+t = datetime.now()
+n = t.timestamp()
 print(n)
