@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>HTTP cookie / Ruby</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/http-cookie/">HTTP cookie</a> / Ruby
+</h1>
+<section class="page">
+   <time>Wed Mar 10 2021</time>
+   
+   <a href="/autumn/categories/network/">network</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;uri&#39;</span>
+require <span style="color:#e6db74">&#39;net/http&#39;</span>
+ 
+uri <span style="color:#f92672">=</span> <span style="color:#66d9ef">URI</span><span style="color:#f92672">.</span>parse(<span style="color:#e6db74">&#39;https://www.example.com&#39;</span>)
+pem <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>read(<span style="color:#e6db74">&#34;/path/to/my.pem&#34;</span>)
+cert <span style="color:#f92672">=</span> <span style="color:#66d9ef">OpenSSL</span><span style="color:#f92672">::</span><span style="color:#66d9ef">X509</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Certificate</span><span style="color:#f92672">.</span>new(pem)
+key <span style="color:#f92672">=</span> <span style="color:#66d9ef">OpenSSL</span><span style="color:#f92672">::</span><span style="color:#66d9ef">PKey</span><span style="color:#f92672">::</span><span style="color:#66d9ef">RSA</span><span style="color:#f92672">.</span>new(pem)
+response <span style="color:#f92672">=</span> <span style="color:#66d9ef">Net</span><span style="color:#f92672">::</span><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">.</span>start(uri<span style="color:#f92672">.</span>host, uri<span style="color:#f92672">.</span>port, <span style="color:#e6db74">use_ssl</span>: <span style="color:#66d9ef">true</span>,
+                           <span style="color:#e6db74">cert</span>: cert, <span style="color:#e6db74">key</span>: key) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>http<span style="color:#f92672">|</span>
+  request <span style="color:#f92672">=</span> <span style="color:#66d9ef">Net</span><span style="color:#f92672">::</span><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Get</span><span style="color:#f92672">.</span>new uri
+  http<span style="color:#f92672">.</span>request request
+<span style="color:#66d9ef">end</span>
+</code></pre></div>
+
+<h2 id="references">References</h2>
+<p><a href="https://rosettacode.org/wiki/HTTPS/Client-authenticated">https://rosettacode.org/wiki/HTTPS/Client-authenticated</a></p>
+
+</main>
+
+</body>
+</html>

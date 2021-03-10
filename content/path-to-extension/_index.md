@@ -1,6 +1,6 @@
 +++
 title = "Path to extension"
-categories = [ "path" ]
+categories = [ "file" ]
 date = 2020-11-23
 filename = 'visage\visage\visage.go'
 substr = 'path.Ext('

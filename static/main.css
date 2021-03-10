@@ -199,10 +199,12 @@ header > h1,
 header > h2 {
    margin-top: 0;
 }
+section.term {
+   margin-top: .5rem;
+}
 footer,
 nav.section,
 nav.taxonomy,
-section.term,
 table {
    margin-top: 1rem;
 }
