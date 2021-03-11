@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>HTTP POST / Python</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/http-post/">HTTP POST</a> / Python
+</h1>
+<section class="page">
+   <time>Thu Mar 11 2021</time>
+   
+   <a href="/autumn/categories/network/">network</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> httplib
+<span style="color:#f92672">import</span> urllib
+
+url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;www.acme.com&#39;</span>
+conn <span style="color:#f92672">=</span> httplib<span style="color:#f92672">.</span>HTTPConnection(url)
+data <span style="color:#f92672">=</span> urllib<span style="color:#f92672">.</span>urlencode({
+  <span style="color:#e6db74">&#39;item&#39;</span>: <span style="color:#e6db74">&#39;anvil&#39;</span>,
+  <span style="color:#e6db74">&#39;qty&#39;</span>: <span style="color:#ae81ff">1</span>})
+conn<span style="color:#f92672">.</span>request(<span style="color:#e6db74">&#39;POST&#39;</span>, <span style="color:#e6db74">&#39;/orders&#39;</span>, data)
+resp <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span>getresponse()
+<span style="color:#66d9ef">if</span> resp<span style="color:#f92672">.</span>status <span style="color:#f92672">==</span> httplib<span style="color:#f92672">.</span>OK:
+  s <span style="color:#f92672">=</span> resp<span style="color:#f92672">.</span>read()
+</code></pre></div>
+
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/scripting2#http-post">https://hyperpolyglot.org/scripting2#http-post</a></li>
+<li><a href="https://programming-idioms.org/idiom/174">https://programming-idioms.org/idiom/174</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
