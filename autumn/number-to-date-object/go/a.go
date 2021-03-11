@@ -5,7 +5,7 @@ import (
    "time"
 )
 
-func Date(left ...int) time.Time {
+func date(left ...int) time.Time {
    right := []int{1970, 1, 1, 0, 0, 0, 0}[len(left):]
    d := append(left, right...)
    return time.Date(
@@ -14,26 +14,26 @@ func Date(left ...int) time.Time {
 }
 
 func main() {
-   var o time.Time
+   var t time.Time
    // example 1
-   o = Date(2020, 5, 4, 3, 2, 1)
-   fmt.Println(o)
+   t = date(2020, 5, 4, 3, 2, 1)
+   fmt.Println(t)
    // example 2
-   o = Date(2020, 5, 4, 3, 2)
-   fmt.Println(o)
+   t = date(2020, 5, 4, 3, 2)
+   fmt.Println(t)
    // example 3
-   o = Date(2020, 5, 4, 3)
-   fmt.Println(o)
+   t = date(2020, 5, 4, 3)
+   fmt.Println(t)
    // example 4
-   o = Date(2020, 5, 4)
-   fmt.Println(o)
+   t = date(2020, 5, 4)
+   fmt.Println(t)
    // example 5
-   o = Date(2020, 5)
-   fmt.Println(o)
+   t = date(2020, 5)
+   fmt.Println(t)
    // example 6
-   o = Date(2020)
-   fmt.Println(o)
+   t = date(2020)
+   fmt.Println(t)
    // example 7
-   o = Date()
-   fmt.Println(o)
+   t = date()
+   fmt.Println(t)
 }
