@@ -6,11 +6,9 @@ import (
 )
 
 func main() {
-   r, e := http.Get("http://www.deezer.com")
+   r, e := http.NewRequest("GET", "http://www.deezer.com", nil)
    if e != nil {
       log.Fatal(e)
    }
-   for _, c := range r.Cookies() {
-      println(c.Name, c.Value)
-   }
+   r.Header.Set("Cookie", "month=March")
 }

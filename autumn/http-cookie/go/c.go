@@ -3,21 +3,14 @@ package main
 import (
    "log"
    "net/http"
-   "net/http/cookiejar"
 )
 
 func main() {
-   r, e := http.NewRequest("GET", "http://www.deezer.com", nil)
+   r, e := http.Get("http://www.deezer.com")
    if e != nil {
       log.Fatal(e)
    }
-   j, e := cookiejar.New(nil)
-   if e != nil {
-      log.Fatal(e)
-   }
-   c := http.Client{Jar: j}
-   c.Do(r)
-   for _, d := range j.Cookies(r.URL) {
-      println(d.Name, d.Value)
+   for _, c := range r.Cookies() {
+      println(c.Name, c.Value)
    }
 }

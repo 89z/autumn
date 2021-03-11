@@ -7,6 +7,10 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/net/http#Head>
 
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/net/http#NewRequest>
+
 ## References
 
 - <https://developer.mozilla.org/docs/Web/HTTP/Methods/HEAD>
