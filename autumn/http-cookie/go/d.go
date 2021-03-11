@@ -15,9 +15,7 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   c := http.Client{Jar: j}
-   c.Do(r)
-   for _, d := range j.Cookies(r.URL) {
-      println(d.Name, d.Value)
-   }
+   j.SetCookies(r.URL, []*http.Cookie{
+      {Name: "month", Value: "March"},
+   })
 }

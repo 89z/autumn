@@ -40,46 +40,14 @@
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;log&#34;</span>
    <span style="color:#e6db74">&#34;net/http&#34;</span>
-   <span style="color:#e6db74">&#34;net/http/cookiejar&#34;</span>
-   <span style="color:#e6db74">&#34;net/url&#34;</span>
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">u</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">URL</span>{<span style="color:#a6e22e">Scheme</span>: <span style="color:#e6db74">&#34;http&#34;</span>, <span style="color:#a6e22e">Host</span>: <span style="color:#e6db74">&#34;www.deezer.com&#34;</span>}
-   <span style="color:#a6e22e">j</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">cookiejar</span>.<span style="color:#a6e22e">New</span>(<span style="color:#66d9ef">nil</span>)
+   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#e6db74">&#34;http://www.deezer.com&#34;</span>, <span style="color:#66d9ef">nil</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">DefaultClient</span>.<span style="color:#a6e22e">Jar</span> = <span style="color:#a6e22e">j</span>
-   <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Head</span>(<span style="color:#a6e22e">u</span>.<span style="color:#a6e22e">String</span>())
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">DefaultClient</span>.<span style="color:#a6e22e">Jar</span>.<span style="color:#a6e22e">Cookies</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">u</span>) {
-      println(<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Name</span>, <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Value</span>)
-   }
-}
-</code></pre></div>
-
-<p><a href="https://golang.org/pkg/net/http#Client.Jar">https://golang.org/pkg/net/http#Client.Jar</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;log&#34;</span>
-   <span style="color:#e6db74">&#34;net/http&#34;</span>
-)
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Head</span>(<span style="color:#e6db74">&#34;http://www.deezer.com&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
-   }
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Cookies</span>() {
-      println(<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Name</span>, <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Value</span>)
-   }
+   <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">AddCookie</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Cookie</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;March&#34;</span>})
 }
 </code></pre></div>
 
@@ -98,7 +66,7 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Head</span>(<span style="color:#e6db74">&#34;http://www.deezer.com&#34;</span>)
+   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;http://www.deezer.com&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
@@ -108,7 +76,99 @@
 }
 </code></pre></div>
 
+<p><a href="https://golang.org/pkg/net/http#Request.Header">https://golang.org/pkg/net/http#Request.Header</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;log&#34;</span>
+   <span style="color:#e6db74">&#34;net/http&#34;</span>
+   <span style="color:#e6db74">&#34;net/http/cookiejar&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#e6db74">&#34;http://www.deezer.com&#34;</span>, <span style="color:#66d9ef">nil</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+   <span style="color:#a6e22e">j</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">cookiejar</span>.<span style="color:#a6e22e">New</span>(<span style="color:#66d9ef">nil</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+   <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Client</span>{<span style="color:#a6e22e">Jar</span>: <span style="color:#a6e22e">j</span>}
+   <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Do</span>(<span style="color:#a6e22e">r</span>)
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">d</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">j</span>.<span style="color:#a6e22e">Cookies</span>(<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">URL</span>) {
+      println(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">Name</span>, <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">Value</span>)
+   }
+}
+</code></pre></div>
+
 <p><a href="https://golang.org/pkg/net/http#Response.Cookies">https://golang.org/pkg/net/http#Response.Cookies</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;log&#34;</span>
+   <span style="color:#e6db74">&#34;net/http&#34;</span>
+   <span style="color:#e6db74">&#34;net/http/cookiejar&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#e6db74">&#34;http://www.deezer.com&#34;</span>, <span style="color:#66d9ef">nil</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+   <span style="color:#a6e22e">j</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">cookiejar</span>.<span style="color:#a6e22e">New</span>(<span style="color:#66d9ef">nil</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+   <span style="color:#a6e22e">j</span>.<span style="color:#a6e22e">SetCookies</span>(<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">URL</span>, []<span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Cookie</span>{
+      {<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;March&#34;</span>},
+   })
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/net/http/cookiejar#Jar.Cookies">https://golang.org/pkg/net/http/cookiejar#Jar.Cookies</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;log&#34;</span>
+   <span style="color:#e6db74">&#34;net/http&#34;</span>
+   <span style="color:#e6db74">&#34;net/http/cookiejar&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#e6db74">&#34;http://www.deezer.com&#34;</span>, <span style="color:#66d9ef">nil</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+   <span style="color:#a6e22e">j</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">cookiejar</span>.<span style="color:#a6e22e">New</span>(<span style="color:#66d9ef">nil</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+   <span style="color:#a6e22e">j</span>.<span style="color:#a6e22e">SetCookies</span>(<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">URL</span>, []<span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Cookie</span>{
+      {<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;March&#34;</span>},
+   })
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/net/http/cookiejar#Jar.SetCookies">https://golang.org/pkg/net/http/cookiejar#Jar.SetCookies</a></p>
 <h2 id="references">References</h2>
 <p><a href="https://rosettacode.org/wiki/HTTPS/Client-authenticated">https://rosettacode.org/wiki/HTTPS/Client-authenticated</a></p>
 
