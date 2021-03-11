@@ -3,7 +3,17 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-<https://golang.org/pkg/net/http/cookiejar>
+{{< r "a.go" >}}
+
+<https://golang.org/pkg/net/http#Client.Jar>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/net/http#Request.AddCookie>
+
+{{< r "c.go" >}}
+
+<https://golang.org/pkg/net/http#Response.Cookies>
 
 ## References
 
