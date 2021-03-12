@@ -1,13 +1,15 @@
 package main
 
 import (
+   "bytes"
+   "encoding/json"
    "log"
    "net/http"
-   "strings"
 )
 
 func main() {
-   b := strings.NewReader(`{"sng_id": "75498415"}`)
+   m, b := struct{SngId int}{75498415}, new(bytes.Buffer)
+   json.NewEncoder(b).Encode(m)
    r, e := http.NewRequest("POST", "http://www.deezer.com", b)
    if e != nil {
       log.Fatal(e)
