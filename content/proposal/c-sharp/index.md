@@ -4,6 +4,16 @@ tags = [ "proposal" ]
 date = 2021-01-05
 +++
 
-- <https://github.com/dotnet/sdk/issues/15162>
+## Open
+
+- <https://github.com/dotnet/templating/issues/2738>
+- <https://github.com/dotnet/templating/issues/2739>
+
+## Closed
+
 - <https://github.com/dotnet/templating/issues/2737>
-- <https://stackoverflow.com/questions/65568867>
+- <https://github.com/dotnet/templating/issues/2752>
+
+## An update for template pack is available
+
+<https://stackoverflow.com/questions/65568867>
