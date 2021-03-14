@@ -3,12 +3,19 @@ title = "Python"
 tags = [ "python" ]
 +++
 
-{{< r "abort.py" >}}
+{{< r "a.py" >}}
+
+<https://docs.python.org/library/constants.html#exit>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/library/constants.html#quit>
+
+{{< r "c.py" >}}
 
 <https://docs.python.org/library/os.html#os.abort>
 
-{{< r "exit-num.py" >}}
-{{< r "exit-str.py" >}}
+{{< r "d.py" >}}
 
 <https://docs.python.org/library/sys.html#sys.exit>
 
