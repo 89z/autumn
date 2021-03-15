@@ -1,2 +1,2 @@
 import sys
-sys.exit('March')
+sys.exit(1)

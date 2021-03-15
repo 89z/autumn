@@ -1,2 +1,1 @@
-import sys
-sys.exit(1)
+quit(1)

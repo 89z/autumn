@@ -1,2 +1,1 @@
-import os
-os.abort()
+exit(1)

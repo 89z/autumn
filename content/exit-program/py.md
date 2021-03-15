@@ -4,18 +4,17 @@ tags = [ "python" ]
 +++
 
 {{< r "a.py" >}}
+{{< r "aa.py" >}}
 
 <https://docs.python.org/library/constants.html#exit>
 
 {{< r "b.py" >}}
+{{< r "bb.py" >}}
 
 <https://docs.python.org/library/constants.html#quit>
 
 {{< r "c.py" >}}
-
-<https://docs.python.org/library/os.html#os.abort>
-
-{{< r "d.py" >}}
+{{< r "cc.py" >}}
 
 <https://docs.python.org/library/sys.html#sys.exit>
 

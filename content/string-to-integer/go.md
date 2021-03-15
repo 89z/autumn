@@ -15,7 +15,7 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/strconv#Atoi>
 
-{{< r "c.go" >}}
+{{< r "d.go" >}}
 
 <https://golang.org/pkg/strconv#ParseInt>
 

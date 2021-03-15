@@ -1,11 +1,13 @@
 package main
 
 import (
+   "bytes"
+   "encoding/json"
    "net/http"
-   "strings"
 )
 
 func main() {
-   b := strings.NewReader(`{"sng_id": "75498415"}`)
+   m, b := map[string]int{"SNG_ID": 75498415}, new(bytes.Buffer)
+   json.NewEncoder(b).Encode(m)
    http.Post("http://www.deezer.com", "application/json", b)
 }
