@@ -24,7 +24,7 @@
    <a href="/autumn/http-post/">HTTP POST</a> / Go
 </h1>
 <section class="page">
-   <time>Fri Mar 12 2021</time>
+   <time>Mon Mar 15 2021</time>
    
    <a href="/autumn/categories/network/">network</a>
    
@@ -45,7 +45,7 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">struct</span>{<span style="color:#a6e22e">SngId</span> <span style="color:#66d9ef">int</span>}{<span style="color:#ae81ff">75498415</span>}, new(<span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>)
+   <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{<span style="color:#e6db74">&#34;SNG_ID&#34;</span>: <span style="color:#ae81ff">75498415</span>}, new(<span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>)
    <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewEncoder</span>(<span style="color:#a6e22e">b</span>).<span style="color:#a6e22e">Encode</span>(<span style="color:#a6e22e">m</span>)
    <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;POST&#34;</span>, <span style="color:#e6db74">&#34;http://www.deezer.com&#34;</span>, <span style="color:#a6e22e">b</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
@@ -87,18 +87,24 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;bytes&#34;</span>
+   <span style="color:#e6db74">&#34;encoding/json&#34;</span>
    <span style="color:#e6db74">&#34;io&#34;</span>
    <span style="color:#e6db74">&#34;net/http&#34;</span>
    <span style="color:#e6db74">&#34;net/url&#34;</span>
-   <span style="color:#e6db74">&#34;strings&#34;</span>
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">r</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>
+   <span style="color:#66d9ef">var</span> (
+      <span style="color:#a6e22e">m</span> = <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{<span style="color:#e6db74">&#34;SNG_ID&#34;</span>: <span style="color:#ae81ff">75498415</span>}
+      <span style="color:#a6e22e">b</span> = new(<span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>)
+      <span style="color:#a6e22e">r</span> = new(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>)
+   )
+   <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewEncoder</span>(<span style="color:#a6e22e">b</span>).<span style="color:#a6e22e">Encode</span>(<span style="color:#a6e22e">m</span>)
    <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">URL</span> = <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">URL</span>{<span style="color:#a6e22e">Scheme</span>: <span style="color:#e6db74">&#34;http&#34;</span>, <span style="color:#a6e22e">Host</span>: <span style="color:#e6db74">&#34;www.deezer.com&#34;</span>}
    <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Method</span> = <span style="color:#e6db74">&#34;POST&#34;</span>
-   <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Body</span> = <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">NopCloser</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#e6db74">`{&#34;sng_id&#34;: &#34;75498415&#34;}`</span>))
-   <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">DefaultClient</span>.<span style="color:#a6e22e">Do</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">r</span>)
+   <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Body</span> = <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">NopCloser</span>(<span style="color:#a6e22e">b</span>)
+   <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">DefaultClient</span>.<span style="color:#a6e22e">Do</span>(<span style="color:#a6e22e">r</span>)
 }
 </code></pre></div>
 
