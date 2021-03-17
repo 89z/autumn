@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Binary to text / Go</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/binary-to-text/">Binary to text</a> / Go
+</h1>
+<section class="page">
+   <time>Wed Mar 17 2021</time>
+   
+   <a href="/autumn/categories/string/">string</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;encoding/hex&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%x&#34;</span>, []<span style="color:#66d9ef">byte</span>{<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>})
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;0a0a&#34;</span>)
+   println(<span style="color:#a6e22e">hex</span>.<span style="color:#a6e22e">EncodeToString</span>([]<span style="color:#66d9ef">byte</span>{<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">10</span>}))
+}
+</code></pre></div>
+
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://programming-idioms.org/idiom/175">https://programming-idioms.org/idiom/175</a></li>
+<li><a href="https://rosettacode.org/wiki/Base64_encode_data">https://rosettacode.org/wiki/Base64_encode_data</a></li>
+<li><a href="https://wikipedia.org/wiki/Binary-to-text_encoding">https://wikipedia.org/wiki/Binary-to-text_encoding</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>

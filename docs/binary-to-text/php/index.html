@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Binary to text / PHP</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/binary-to-text/">Binary to text</a> / PHP
+</h1>
+<section class="page">
+   <time>Wed Mar 17 2021</time>
+   
+   <a href="/autumn/categories/string/">string</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>);
+
+<span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">bin2hex</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\xa\xa</span><span style="color:#e6db74">&#34;</span>);
+<span style="color:#75715e"># 0a0a
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">print_r</span>(<span style="color:#a6e22e">unpack</span>(<span style="color:#e6db74">&#39;H*&#39;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\xa\xa</span><span style="color:#e6db74">&#34;</span>));
+<span style="color:#75715e">/*
+</span><span style="color:#75715e">Array
+</span><span style="color:#75715e">(
+</span><span style="color:#75715e">    [1] =&gt; 0a0a
+</span><span style="color:#75715e">)
+</span><span style="color:#75715e">*/</span>
+</code></pre></div>
+
+<p><a href="https://php.net/function.bin2hex">https://php.net/function.bin2hex</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/scripting2#base64">https://hyperpolyglot.org/scripting2#base64</a></li>
+<li><a href="https://programming-idioms.org/idiom/175">https://programming-idioms.org/idiom/175</a></li>
+<li><a href="https://rosettacode.org/wiki/Base64_encode_data">https://rosettacode.org/wiki/Base64_encode_data</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
