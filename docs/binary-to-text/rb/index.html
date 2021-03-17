@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Binary to text / Ruby</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/binary-to-text/">Binary to text</a> / Ruby
+</h1>
+<section class="page">
+   <time>Wed Mar 17 2021</time>
+   
+   <a href="/autumn/categories/string/">string</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;base64&#39;</span>
+s <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#34;foo.png&#34;</span>)<span style="color:#f92672">.</span>read
+b64 <span style="color:#f92672">=</span> <span style="color:#66d9ef">Base64</span><span style="color:#f92672">.</span>encode64(s)
+s2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">Base64</span><span style="color:#f92672">.</span>decode64(b64)
+</code></pre></div>
+
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/scripting2#base64">https://hyperpolyglot.org/scripting2#base64</a></li>
+<li><a href="https://programming-idioms.org/idiom/175">https://programming-idioms.org/idiom/175</a></li>
+<li><a href="https://rosettacode.org/wiki/Base64_encode_data">https://rosettacode.org/wiki/Base64_encode_data</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>

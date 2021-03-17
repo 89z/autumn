@@ -36,6 +36,19 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\xa\xb\xc</span><span style="color:#e6db74">&#34;</span>;
+$t <span style="color:#f92672">=</span> <span style="color:#a6e22e">base64_encode</span>($s);
+<span style="color:#a6e22e">var_dump</span>($t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;CgsM&#39;</span>);
+</code></pre></div>
+
+<p><a href="https://php.net/function.base64-encode">https://php.net/function.base64-encode</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 <span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>);
 
 <span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">bin2hex</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\xa\xa</span><span style="color:#e6db74">&#34;</span>);
@@ -51,6 +64,28 @@
 </code></pre></div>
 
 <p><a href="https://php.net/function.bin2hex">https://php.net/function.bin2hex</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>);
+
+<span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">bin2hex</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\xa\xa</span><span style="color:#e6db74">&#34;</span>);
+<span style="color:#75715e"># 0a0a
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">print_r</span>(<span style="color:#a6e22e">unpack</span>(<span style="color:#e6db74">&#39;H*&#39;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\xa\xa</span><span style="color:#e6db74">&#34;</span>));
+<span style="color:#75715e">/*
+</span><span style="color:#75715e">Array
+</span><span style="color:#75715e">(
+</span><span style="color:#75715e">    [1] =&gt; 0a0a
+</span><span style="color:#75715e">)
+</span><span style="color:#75715e">*/</span>
+</code></pre></div>
+
+<p><a href="https://php.net/function.unpack">https://php.net/function.unpack</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#base64">https://hyperpolyglot.org/scripting2#base64</a></li>

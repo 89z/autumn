@@ -5,7 +5,15 @@ tags = [ "php" ]
 
 {{< r "a.php" >}}
 
+<https://php.net/function.base64-encode>
+
+{{< r "b.php" >}}
+
 <https://php.net/function.bin2hex>
+
+{{< r "c.php" >}}
+
+<https://php.net/function.unpack>
 
 ## References
 
