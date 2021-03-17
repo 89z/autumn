@@ -3,4 +3,4 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-<https://golang.org/pkg/crypto/aes>
+<https://golang.org/pkg/crypto/cipher#NewCBCEncrypter>
