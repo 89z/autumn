@@ -1,7 +1,8 @@
 package main
-import "fmt"
+import "encoding/base64"
 
 func main() {
-   s := fmt.Sprintf("%x", []byte{10, 10})
-   println(s == "0a0a")
+   a := []byte{10, 11, 12}
+   s := base64.StdEncoding.EncodeToString(a)
+   println(s == "CgsM")
 }
