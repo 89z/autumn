@@ -1,11 +1,9 @@
 +++
-title = "D"
-tags = [ "d" ]
+title = "Nim"
+tags = [ "nim" ]
 +++
 
-{{< r "a.d" >}}
-
-<https://dlang.org/library-prerelease/std/digest/to_hex_string.html>
+{{< r "a.nim" >}}
 
 ## References
 

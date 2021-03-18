@@ -1,11 +1,11 @@
 +++
-title = "D"
-tags = [ "d" ]
+title = "Rust"
+tags = [ "rust" ]
 +++
 
-{{< r "a.d" >}}
+{{< r "a.rs" >}}
 
-<https://dlang.org/library-prerelease/std/digest/to_hex_string.html>
+<https://doc.rust-lang.org/std/fmt/trait.UpperHex.html>
 
 ## References
 
