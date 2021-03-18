@@ -3,13 +3,7 @@ title = "Dart"
 tags = [ "dart" ]
 +++
 
-{{< r "a.dart" >}}
-
-<https://api.dart.dev/dart-convert/base64-constant.html>
-
-{{< r "b.dart" >}}
-
-<https://api.dart.dev/dart-convert/base64Encode.html>
+<https://api.dart.dev/dart-convert/base64Decode.html>
 
 ## References
 
