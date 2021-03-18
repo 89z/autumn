@@ -5,7 +5,7 @@ tags = [ "d" ]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/library/std/base64.html>
+<https://dlang.org/library/std/base64/base64_impl.encode.html>
 
 {{< r "b.d" >}}
 

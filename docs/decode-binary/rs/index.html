@@ -35,8 +35,16 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> data_encoding::{DecodeError, HEXUPPER};
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), DecodeError<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> original <span style="color:#f92672">=</span> <span style="color:#e6db74">b&#34;The quick brown fox jumps over the lazy dog.&#34;</span>;
+   <span style="color:#66d9ef">let</span> expected <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;54686520717569636B2062726F776E20666F78206A756D7073206F76657220746865206C617A7920646F672E&#34;</span>;
+   <span style="color:#66d9ef">let</span> encoded <span style="color:#f92672">=</span> HEXUPPER.encode(original);
+   assert_eq<span style="color:#f92672">!</span>(encoded, expected);
+   <span style="color:#66d9ef">let</span> decoded <span style="color:#f92672">=</span> HEXUPPER.decode(<span style="color:#f92672">&amp;</span>encoded.into_bytes())<span style="color:#f92672">?</span>;
+   assert_eq<span style="color:#f92672">!</span>(<span style="color:#f92672">&amp;</span>decoded[..], <span style="color:#f92672">&amp;</span>original[..]);
+   Ok(())
 }
 </code></pre></div>
 

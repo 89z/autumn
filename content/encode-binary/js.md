@@ -5,6 +5,8 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
+<https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/btoa>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting2#base64>

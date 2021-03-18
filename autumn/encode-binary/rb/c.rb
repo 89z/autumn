@@ -1,3 +1,3 @@
-s = "\xa\xb\xc"
+s = "\xa\xb\xc\xd"
 t = s.unpack('H*')[0]
-puts t == '0a0b0c'
+puts t == '0a0b0c0d'

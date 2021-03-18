@@ -36,18 +36,16 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> std.base64<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> std.base64<span style="color:#f92672">:</span> Base64<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">ubyte</span><span style="color:#f92672">[]</span> data <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">0x14</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">0xfb</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">0x9c</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">0x03</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">0xd9</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">0x7e</span><span style="color:#f92672">];</span>
-   <span style="color:#66d9ef">const</span><span style="color:#f92672">(</span><span style="color:#66d9ef">char</span><span style="color:#f92672">)[]</span> encoded <span style="color:#f92672">=</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">encode</span><span style="color:#f92672">(</span>data<span style="color:#f92672">);</span>
-   <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>encoded <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;FPucA9l+&#34;</span><span style="color:#f92672">);</span>
-   <span style="color:#66d9ef">ubyte</span><span style="color:#f92672">[]</span> decoded <span style="color:#f92672">=</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">decode</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;FPucA9l+&#34;</span><span style="color:#f92672">);</span>
-   <span style="color:#66d9ef">assert</span><span style="color:#f92672">(</span>decoded <span style="color:#f92672">==</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">0x14</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">0xfb</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">0x9c</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">0x03</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">0xd9</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">0x7e</span><span style="color:#f92672">]);</span>
+   <span style="color:#66d9ef">ubyte</span><span style="color:#f92672">[]</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">10</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">11</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">12</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">13</span><span style="color:#f92672">];</span>
+   <span style="color:#66d9ef">string</span> s <span style="color:#f92672">=</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">encode</span><span style="color:#f92672">(</span>a<span style="color:#f92672">);</span>
+   io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;CgsMDQ==&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 
-<p><a href="https://dlang.org/library/std/base64.html">https://dlang.org/library/std/base64.html</a></p>
+<p><a href="https://dlang.org/library/std/base64/base64_impl.encode.html">https://dlang.org/library/std/base64/base64_impl.encode.html</a></p>
 
 
 
@@ -58,9 +56,9 @@
 <span style="color:#f92672">import</span> io <span style="color:#f92672">=</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">stdio</span><span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">ubyte</span><span style="color:#f92672">[]</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">10</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">11</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">12</span><span style="color:#f92672">];</span>
+   <span style="color:#66d9ef">ubyte</span><span style="color:#f92672">[]</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">10</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">11</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">12</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">13</span><span style="color:#f92672">];</span>
    <span style="color:#66d9ef">string</span> s <span style="color:#f92672">=</span> dig<span style="color:#f92672">.</span><span style="color:#a6e22e">toHexString</span><span style="color:#f92672">(</span>a<span style="color:#f92672">);</span>
-   io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;0A0B0C&#34;</span><span style="color:#f92672">);</span>
+   io<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">(</span>s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;0A0B0C0D&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 

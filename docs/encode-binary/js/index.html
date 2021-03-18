@@ -35,9 +35,11 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">window.<span style="color:#a6e22e">btoa</span>(<span style="color:#e6db74">&#34;String to encode, etc..&#34;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">btoa</span>(<span style="color:#e6db74">&#39;\x0a\x0b\x0c\x0d&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;CgsMDQ==&#39;</span>);
 </code></pre></div>
 
+<p><a href="https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/btoa">https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/btoa</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#base64">https://hyperpolyglot.org/scripting2#base64</a></li>
