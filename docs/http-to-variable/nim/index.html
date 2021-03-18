@@ -37,10 +37,9 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> httpclient
 <span style="color:#75715e"># -d:ssl</span>
-<span style="color:#66d9ef">let</span> in_s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>
-<span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> newHttpClient()
-<span style="color:#66d9ef">let</span> out_s <span style="color:#f92672">=</span> o.getContent(in_s)
-stdout.write out_s
+<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>
+<span style="color:#66d9ef">let</span> t <span style="color:#f92672">=</span> newHttpClient().getContent(s)
+stdout.write t
 </code></pre></div>
 
 <p><a href="https://nim-lang.org/docs/httpclient.html">https://nim-lang.org/docs/httpclient.html</a></p>

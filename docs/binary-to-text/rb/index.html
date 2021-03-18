@@ -36,11 +36,25 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;base64&#39;</span>
-s <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#34;foo.png&#34;</span>)<span style="color:#f92672">.</span>read
-b64 <span style="color:#f92672">=</span> <span style="color:#66d9ef">Base64</span><span style="color:#f92672">.</span>encode64(s)
-s2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">Base64</span><span style="color:#f92672">.</span>decode64(b64)
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\xa\xb\xc</span><span style="color:#e6db74">&#34;</span>
+t <span style="color:#f92672">=</span> <span style="color:#66d9ef">Base64</span><span style="color:#f92672">.</span>encode64(s)
+puts t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;CgsM</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
 </code></pre></div>
 
+<p><a href="https://docs.ruby-lang.org/en/master/Base64.html#method-i-encode64">https://docs.ruby-lang.org/en/master/Base64.html#method-i-encode64</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;base64&#39;</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\xa\xb\xc</span><span style="color:#e6db74">&#34;</span>
+t <span style="color:#f92672">=</span> <span style="color:#66d9ef">Base64</span><span style="color:#f92672">.</span>strict_encode64(s)
+puts t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;CgsM&#39;</span>
+</code></pre></div>
+
+<p><a href="https://docs.ruby-lang.org/en/master/Base64.html#method-i-strict_encode64">https://docs.ruby-lang.org/en/master/Base64.html#method-i-strict_encode64</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#base64">https://hyperpolyglot.org/scripting2#base64</a></li>

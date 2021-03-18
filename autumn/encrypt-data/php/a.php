@@ -1,10 +1,8 @@
 <?php
-declare(strict_types = 1);
+$s = 'January February';
 
-var_export(openssl_get_cipher_methods());
-/*
-array (
-  0 => 'aes-128-cbc',
-  8 => 'aes-128-ecb',
-)
-*/
+$t = openssl_encrypt(
+   $s, 'aes-128-ecb', '0123456789ABCDEF', OPENSSL_ZERO_PADDING
+);
+
+var_dump($t == 'rc4qAleQ6vB5rbmug1qv5g==');

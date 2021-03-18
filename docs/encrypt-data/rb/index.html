@@ -35,18 +35,16 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;openssl&#39;</span>
-
-pp <span style="color:#66d9ef">OpenSSL</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Cipher</span><span style="color:#f92672">.</span>ciphers
-<span style="color:#75715e">=begin
-</span><span style="color:#75715e">[
-</span><span style="color:#75715e"> &#34;aes-128-cbc&#34;,
-</span><span style="color:#75715e"> &#34;aes-128-ecb&#34;,
-</span><span style="color:#75715e">]
-</span><span style="color:#75715e">=end</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;base64&#39;</span>
+require <span style="color:#e6db74">&#39;openssl&#39;</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;January February&#39;</span>
+c <span style="color:#f92672">=</span> <span style="color:#66d9ef">OpenSSL</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Cipher</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">&#39;aes-128-ecb&#39;</span>)<span style="color:#f92672">.</span>encrypt
+c<span style="color:#f92672">.</span>key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0123456789ABCDEF&#39;</span>
+t <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span>update(s)
+puts <span style="color:#66d9ef">Base64</span><span style="color:#f92672">.</span>strict_encode64(t) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;rc4qAleQ6vB5rbmug1qv5g==&#39;</span>
 </code></pre></div>
 
-<p><a href="https://docs.ruby-lang.org/en/master/OpenSSL.html">https://docs.ruby-lang.org/en/master/OpenSSL.html</a></p>
+<p><a href="https://docs.ruby-lang.org/en/master/OpenSSL/Cipher.html">https://docs.ruby-lang.org/en/master/OpenSSL/Cipher.html</a></p>
 
 </main>
 
