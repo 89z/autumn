@@ -24,7 +24,7 @@
    <a href="/autumn/encrypt-data/">Encrypt data</a> / PHP
 </h1>
 <section class="page">
-   <time>Wed Mar 17 2021</time>
+   <time>Thu Mar 18 2021</time>
    
    <a href="/autumn/categories/reference/">reference</a>
    
@@ -36,13 +36,11 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;January February&#39;</span>;
+<span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;openssl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;openssl&#39;</span>);
 
-$t <span style="color:#f92672">=</span> <span style="color:#a6e22e">openssl_encrypt</span>(
-   $s, <span style="color:#e6db74">&#39;aes-128-ecb&#39;</span>, <span style="color:#e6db74">&#39;0123456789ABCDEF&#39;</span>, <span style="color:#a6e22e">OPENSSL_ZERO_PADDING</span>
-);
-
-<span style="color:#a6e22e">var_dump</span>($t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;rc4qAleQ6vB5rbmug1qv5g==&#39;</span>);
+[$data, $key] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;January February&#39;</span>, <span style="color:#e6db74">&#39;0123456789ABCDEF&#39;</span>];
+$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">openssl_encrypt</span>($data, <span style="color:#e6db74">&#39;aes-128-ecb&#39;</span>, $key, <span style="color:#a6e22e">OPENSSL_ZERO_PADDING</span>);
+<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;rc4qAleQ6vB5rbmug1qv5g==&#39;</span>);
 </code></pre></div>
 
 <p><a href="https://php.net/function.openssl-encrypt">https://php.net/function.openssl-encrypt</a></p>

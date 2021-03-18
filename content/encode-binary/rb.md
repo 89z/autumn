@@ -11,6 +11,10 @@ tags = [ "ruby" ]
 
 <https://docs.ruby-lang.org/en/master/Base64.html#method-i-strict_encode64>
 
+{{< r "c.rb" >}}
+
+<https://docs.ruby-lang.org/en/master/String.html#method-i-unpack>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting2#base64>

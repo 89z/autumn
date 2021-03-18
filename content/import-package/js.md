@@ -4,6 +4,9 @@ tags = [ "javascript" ]
 +++
 
 {{< r "a.mjs" js >}}
+
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export>
+
 {{< r "b.mjs" js >}}
 
 <https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import>

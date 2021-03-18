@@ -24,7 +24,7 @@
    <a href="/autumn/encrypt-data/">Encrypt data</a> / Ruby
 </h1>
 <section class="page">
-   <time>Wed Mar 17 2021</time>
+   <time>Thu Mar 18 2021</time>
    
    <a href="/autumn/categories/reference/">reference</a>
    
@@ -37,11 +37,15 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;base64&#39;</span>
 require <span style="color:#e6db74">&#39;openssl&#39;</span>
-s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;January February&#39;</span>
-c <span style="color:#f92672">=</span> <span style="color:#66d9ef">OpenSSL</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Cipher</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">&#39;aes-128-ecb&#39;</span>)<span style="color:#f92672">.</span>encrypt
-c<span style="color:#f92672">.</span>key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0123456789ABCDEF&#39;</span>
-t <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span>update(s)
-puts <span style="color:#66d9ef">Base64</span><span style="color:#f92672">.</span>strict_encode64(t) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;rc4qAleQ6vB5rbmug1qv5g==&#39;</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">encrypt</span>(data, key)
+   cipher <span style="color:#f92672">=</span> <span style="color:#66d9ef">OpenSSL</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Cipher</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">&#39;aes-128-ecb&#39;</span>)<span style="color:#f92672">.</span>encrypt
+   cipher<span style="color:#f92672">.</span>key <span style="color:#f92672">=</span> key
+   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">Base64</span><span style="color:#f92672">.</span>strict_encode64(cipher<span style="color:#f92672">.</span>update(data))
+<span style="color:#66d9ef">end</span>
+
+s <span style="color:#f92672">=</span> encrypt(<span style="color:#e6db74">&#39;January February&#39;</span>, <span style="color:#e6db74">&#39;0123456789ABCDEF&#39;</span>)
+puts s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;rc4qAleQ6vB5rbmug1qv5g==&#39;</span>
 </code></pre></div>
 
 <p><a href="https://docs.ruby-lang.org/en/master/OpenSSL/Cipher.html">https://docs.ruby-lang.org/en/master/OpenSSL/Cipher.html</a></p>
