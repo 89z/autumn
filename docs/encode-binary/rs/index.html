@@ -35,27 +35,29 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> core::fmt::Write;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> data_encoding::{HEXUPPER, DecodeError};
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">core</span>::fmt::Result {
-    <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> vec<span style="color:#f92672">!</span>[<span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">127</span>, <span style="color:#ae81ff">193</span>];
-    <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> a.len();
-    
-    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> s <span style="color:#f92672">=</span> String::with_capacity(<span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> n);
-    <span style="color:#66d9ef">for</span> byte <span style="color:#66d9ef">in</span> a {
-        write<span style="color:#f92672">!</span>(s, <span style="color:#e6db74">&#34;{:02X}&#34;</span>, byte)<span style="color:#f92672">?</span>;
-    }
-    
-    dbg<span style="color:#f92672">!</span>(s);
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), DecodeError<span style="color:#f92672">&gt;</span> {
+    <span style="color:#66d9ef">let</span> original <span style="color:#f92672">=</span> <span style="color:#e6db74">b&#34;The quick brown fox jumps over the lazy dog.&#34;</span>;
+    <span style="color:#66d9ef">let</span> expected <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#ae81ff">54686520717569636</span>B2062726F776E20666F78206A756D7073206F76<span style="color:#960050;background-color:#1e0010">\</span>
+        <span style="color:#ae81ff">657220746865206</span>C617A7920646F672E<span style="color:#960050;background-color:#1e0010">&#34;</span>;
+
+    <span style="color:#66d9ef">let</span> encoded <span style="color:#f92672">=</span> HEXUPPER.encode(original);
+    assert_eq<span style="color:#f92672">!</span>(encoded, expected);
+
+    <span style="color:#66d9ef">let</span> decoded <span style="color:#f92672">=</span> HEXUPPER.decode(<span style="color:#f92672">&amp;</span>encoded.into_bytes())<span style="color:#f92672">?</span>;
+    assert_eq<span style="color:#f92672">!</span>(<span style="color:#f92672">&amp;</span>decoded[..], <span style="color:#f92672">&amp;</span>original[..]);
+
     Ok(())
 }
 </code></pre></div>
 
-<p><a href="https://doc.rust-lang.org/std/fmt/trait.UpperHex.html">https://doc.rust-lang.org/std/fmt/trait.UpperHex.html</a></p>
+<p><a href="https://docs.rs/data-encoding">https://docs.rs/data-encoding</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/175">https://programming-idioms.org/idiom/175</a></li>
 <li><a href="https://rosettacode.org/wiki/Base64_encode_data">https://rosettacode.org/wiki/Base64_encode_data</a></li>
+<li><a href="https://rust-lang-nursery.github.io/rust-cookbook/encoding/strings.html">https://rust-lang-nursery.github.io/rust-cookbook/encoding/strings.html</a></li>
 </ul>
 
 </main>

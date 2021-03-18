@@ -3,6 +3,8 @@ title = "Go"
 tags = [ "go" ]
 +++
 
+{{< r "a.go" >}}
+
 <https://golang.org/pkg/encoding/base64#Encoding.DecodeString>
 
 ## References

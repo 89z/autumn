@@ -3,8 +3,6 @@ title = "Rust"
 tags = [ "rust" ]
 +++
 
-{{< r "src/main.rs" >}}
-
 <https://docs.rs/data-encoding>
 
 ## References
