@@ -3,6 +3,8 @@ title = "JavaScript"
 tags = [ "javascript" ]
 +++
 
+{{< r "a.js" >}}
+
 <https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/atob>
 
 ## References

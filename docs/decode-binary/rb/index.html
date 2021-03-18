@@ -29,7 +29,19 @@
    <a href="/autumn/categories/encoding/">encoding</a>
    
 </section>
-   <p><a href="https://docs.ruby-lang.org/en/master/Base64.html">https://docs.ruby-lang.org/en/master/Base64.html</a></p>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;base64&#39;</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;IyQl&#39;</span>
+t <span style="color:#f92672">=</span> <span style="color:#66d9ef">Base64</span><span style="color:#f92672">.</span>decode64(s)
+puts t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;#$%&#39;</span>
+</code></pre></div>
+
+<p><a href="https://docs.ruby-lang.org/en/master/Base64.html">https://docs.ruby-lang.org/en/master/Base64.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#base64">https://hyperpolyglot.org/scripting2#base64</a></li>

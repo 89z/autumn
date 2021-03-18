@@ -7,6 +7,10 @@ tags = [ "d" ]
 
 <https://dlang.org/library-prerelease/std/conv/hex_string.html>
 
+{{< r "b.d" >}}
+
+<https://dlang.org/library/std/base64.html>
+
 ## References
 
 - <https://programming-idioms.org/idiom/175>

@@ -3,9 +3,7 @@ title = "PHP"
 tags = [ "php" ]
 +++
 
-- <https://php.net/function.base64-encode>
-- <https://php.net/function.bin2hex>
-- <https://php.net/function.unpack>
+{{< r "a.php" >}}
 
 ## References
 

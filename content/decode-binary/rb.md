@@ -3,6 +3,8 @@ title = "Ruby"
 tags = [ "ruby" ]
 +++
 
+{{< r "a.rb" >}}
+
 <https://docs.ruby-lang.org/en/master/Base64.html>
 
 ## References
