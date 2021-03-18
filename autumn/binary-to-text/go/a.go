@@ -1,27 +1,13 @@
 package main
+import "encoding/ascii85"
 
-import (
-   "bytes"
-   "encoding/ascii85"
-)
+func encode(src []byte) []byte {
+   dst := make([]byte, ascii85.MaxEncodedLen(len(src)))
+   return dst[:ascii85.Encode(dst, src)]
+}
 
 func main() {
-   
    a := []byte{10, 11, 12, 13}
-   
-   
-   
-   // example 2
-   var buf bytes.Buffer
-   e := ascii85.NewEncoder(&buf)
-   e.Write(a)
-   e.Close()
-   
-   
-   
-   // print
-   println(string(b), buf.String())
-   
-   
-   
+   b := encode(a)
+   println(string(b) == "$4@7O")
 }

@@ -36,35 +36,48 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;encoding/ascii85&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">encode</span>(<span style="color:#a6e22e">src</span> []<span style="color:#66d9ef">byte</span>) []<span style="color:#66d9ef">byte</span> {
+   <span style="color:#a6e22e">dst</span> <span style="color:#f92672">:=</span> make([]<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">ascii85</span>.<span style="color:#a6e22e">MaxEncodedLen</span>(len(<span style="color:#a6e22e">src</span>)))
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">dst</span>[:<span style="color:#a6e22e">ascii85</span>.<span style="color:#a6e22e">Encode</span>(<span style="color:#a6e22e">dst</span>, <span style="color:#a6e22e">src</span>)]
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">byte</span>{<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">13</span>}
+   <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">encode</span>(<span style="color:#a6e22e">a</span>)
+   println(string(<span style="color:#a6e22e">b</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;$4@7O&#34;</span>)
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/encoding/ascii85#Encode">https://golang.org/pkg/encoding/ascii85#Encode</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;bytes&#34;</span>
    <span style="color:#e6db74">&#34;encoding/ascii85&#34;</span>
 )
 
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">encode</span>(<span style="color:#a6e22e">src</span> []<span style="color:#66d9ef">byte</span>) []<span style="color:#66d9ef">byte</span> {
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dst</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>
+   <span style="color:#a6e22e">ascii85</span>.<span style="color:#a6e22e">NewEncoder</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">dst</span>).<span style="color:#a6e22e">Write</span>(<span style="color:#a6e22e">src</span>)
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">dst</span>.<span style="color:#a6e22e">Bytes</span>()
+}
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   
    <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">byte</span>{<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">13</span>}
-   
-   
-   
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">buf</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>
-   <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ascii85</span>.<span style="color:#a6e22e">NewEncoder</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">buf</span>)
-   <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">Write</span>(<span style="color:#a6e22e">a</span>)
-   <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">Close</span>()
-   
-   
-   
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   println(string(<span style="color:#a6e22e">b</span>), <span style="color:#a6e22e">buf</span>.<span style="color:#a6e22e">String</span>())
-   
-   
-   
+   <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">encode</span>(<span style="color:#a6e22e">a</span>)
+   println(string(<span style="color:#a6e22e">b</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;$4@7O&#34;</span>)
 }
 </code></pre></div>
 
-<p><a href="https://golang.org/pkg/encoding/ascii85#Encode">https://golang.org/pkg/encoding/ascii85#Encode</a></p>
+<p><a href="https://golang.org/pkg/encoding/ascii85#NewEncoder">https://golang.org/pkg/encoding/ascii85#NewEncoder</a></p>
 
 
 
@@ -81,7 +94,7 @@
 }
 </code></pre></div>
 
-<p><a href="https://golang.org/pkg/encoding/ascii85#NewEncoder">https://golang.org/pkg/encoding/ascii85#NewEncoder</a></p>
+<p><a href="https://golang.org/pkg/encoding/base64#Encoding.EncodeToString">https://golang.org/pkg/encoding/base64#Encoding.EncodeToString</a></p>
 
 
 
@@ -94,23 +107,6 @@
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">byte</span>{<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>}
    <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">hex</span>.<span style="color:#a6e22e">EncodeToString</span>(<span style="color:#a6e22e">a</span>)
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;0a0b0c&#34;</span>)
-}
-</code></pre></div>
-
-<p><a href="https://golang.org/pkg/encoding/base64#Encoding.EncodeToString">https://golang.org/pkg/encoding/base64#Encoding.EncodeToString</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">byte</span>{<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>}
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%x&#34;</span>, <span style="color:#a6e22e">a</span>)
    println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;0a0b0c&#34;</span>)
 }
 </code></pre></div>

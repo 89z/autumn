@@ -1,8 +1,18 @@
 package main
-import "encoding/base64"
+
+import (
+   "bytes"
+   "encoding/ascii85"
+)
+
+func encode(src []byte) []byte {
+   var dst bytes.Buffer
+   ascii85.NewEncoder(&dst).Write(src)
+   return dst.Bytes()
+}
 
 func main() {
-   a := []byte{10, 11, 12}
-   s := base64.StdEncoding.EncodeToString(a)
-   println(s == "CgsM")
+   a := []byte{10, 11, 12, 13}
+   b := encode(a)
+   println(string(b) == "$4@7O")
 }

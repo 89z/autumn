@@ -1,8 +1,8 @@
 package main
-import "encoding/hex"
+import "encoding/base64"
 
 func main() {
    a := []byte{10, 11, 12}
-   s := hex.EncodeToString(a)
-   println(s == "0a0b0c")
+   s := base64.StdEncoding.EncodeToString(a)
+   println(s == "CgsM")
 }
