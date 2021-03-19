@@ -1,7 +1,8 @@
-import std.conv;
-import std.stdio: write, writeln, writef, writefln;
+import io = std.stdio;
+import std.base64: Base64;
 
 void main() {
-   auto s = hexString!"232425";
-   writeln(s == "#$%");
+   auto s = "CgsMDQ==";
+   auto a = Base64.decode(s);
+   io.writeln(a == [10, 11, 12, 13]);
 }

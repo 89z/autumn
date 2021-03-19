@@ -10,5 +10,5 @@ tags = [ "dart" ]
 ## References
 
 - <https://hyperpolyglot.org/web#base64>
-- <https://programming-idioms.org/idiom/175>
+- <https://programming-idioms.org/idiom/176>
 - <https://rosettacode.org/wiki/Base64_encode_data>

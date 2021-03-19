@@ -7,6 +7,10 @@ tags = [ "python" ]
 
 <https://docs.python.org/library/base64.html#base64.b64encode>
 
+{{< r "b.py" >}}
+
+<https://docs.python.org/library/stdtypes.html#bytes.hex>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting2#base64>

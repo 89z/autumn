@@ -3,9 +3,13 @@ title = "Rust"
 tags = [ "rust" ]
 +++
 
-{{< r "src/main.rs" >}}
+{{< r "a/src/main.rs" >}}
 
-<https://docs.rs/data-encoding>
+<https://docs.rs/data-encoding/latest/data_encoding/constant.BASE64.html>
+
+{{< r "b/src/main.rs" >}}
+
+<https://docs.rs/data-encoding/latest/data_encoding/constant.HEXUPPER.html>
 
 ## References
 

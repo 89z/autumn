@@ -35,20 +35,32 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> data_encoding::{DecodeError, HEXUPPER};
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> data_encoding::HEXUPPER;
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), DecodeError<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> original <span style="color:#f92672">=</span> <span style="color:#e6db74">b&#34;The quick brown fox jumps over the lazy dog.&#34;</span>;
-   <span style="color:#66d9ef">let</span> expected <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;54686520717569636B2062726F776E20666F78206A756D7073206F76657220746865206C617A7920646F672E&#34;</span>;
-   <span style="color:#66d9ef">let</span> encoded <span style="color:#f92672">=</span> HEXUPPER.encode(original);
-   assert_eq<span style="color:#f92672">!</span>(encoded, expected);
-   <span style="color:#66d9ef">let</span> decoded <span style="color:#f92672">=</span> HEXUPPER.decode(<span style="color:#f92672">&amp;</span>encoded.into_bytes())<span style="color:#f92672">?</span>;
-   assert_eq<span style="color:#f92672">!</span>(<span style="color:#f92672">&amp;</span>decoded[..], <span style="color:#f92672">&amp;</span>original[..]);
-   Ok(())
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">13</span>];
+   <span style="color:#66d9ef">let</span> t <span style="color:#f92672">=</span> HEXUPPER.encode(<span style="color:#f92672">&amp;</span>s);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;0A0B0C0D&#34;</span>);
 }
 </code></pre></div>
 
-<p><a href="https://docs.rs/data-encoding">https://docs.rs/data-encoding</a></p>
+<p><a href="https://docs.rs/data-encoding/latest/data_encoding/constant.BASE64.html">https://docs.rs/data-encoding/latest/data_encoding/constant.BASE64.html</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> data_encoding::HEXUPPER;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">13</span>];
+   <span style="color:#66d9ef">let</span> t <span style="color:#f92672">=</span> HEXUPPER.encode(<span style="color:#f92672">&amp;</span>s);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;0A0B0C0D&#34;</span>);
+}
+</code></pre></div>
+
+<p><a href="https://docs.rs/data-encoding/latest/data_encoding/constant.HEXUPPER.html">https://docs.rs/data-encoding/latest/data_encoding/constant.HEXUPPER.html</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/175">https://programming-idioms.org/idiom/175</a></li>

@@ -9,9 +9,9 @@ tags = [ "d" ]
 
 {{< r "b.d" >}}
 
-<https://dlang.org/library/std/base64.html>
+<https://dlang.org/library/std/base64/base64_impl.decode.html>
 
 ## References
 
-- <https://programming-idioms.org/idiom/175>
+- <https://programming-idioms.org/idiom/176>
 - <https://rosettacode.org/wiki/Base64_encode_data>

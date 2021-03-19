@@ -42,6 +42,19 @@ t <span style="color:#f92672">=</span> base64<span style="color:#f92672">.</span
 </code></pre></div>
 
 <p><a href="https://docs.python.org/library/base64.html#base64.b64encode">https://docs.python.org/library/base64.html#base64.b64encode</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> base64
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\x0a\x0b\x0c\x0d</span><span style="color:#e6db74">&#39;</span>
+t <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>hex()
+<span style="color:#66d9ef">print</span>(t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;0a0b0c0d&#39;</span>)
+</code></pre></div>
+
+<p><a href="https://docs.python.org/library/stdtypes.html#bytes.hex">https://docs.python.org/library/stdtypes.html#bytes.hex</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#base64">https://hyperpolyglot.org/scripting2#base64</a></li>
