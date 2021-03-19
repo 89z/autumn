@@ -38,7 +38,7 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> base64
 <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;CgsMDQ==&#34;</span>
 <span style="color:#66d9ef">let</span> t <span style="color:#f92672">=</span> decode(s)
-echo t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\x0a\x0b\x0c\x0d</span><span style="color:#e6db74">&#34;</span>
+echo t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n\v\f\r</span><span style="color:#e6db74">&#34;</span>
 </code></pre></div>
 
 <p><a href="https://nim-lang.org/docs/base64.html#decode,string">https://nim-lang.org/docs/base64.html#decode,string</a></p>
@@ -51,7 +51,7 @@ echo t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;</
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> strutils
 <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0A0B0C0D&#34;</span>
 <span style="color:#66d9ef">let</span> t <span style="color:#f92672">=</span> s.parseHexStr
-echo t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\x0a\x0b\x0c\x0d</span><span style="color:#e6db74">&#34;</span>
+echo t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n\v\f\r</span><span style="color:#e6db74">&#34;</span>
 </code></pre></div>
 
 <p><a href="https://nim-lang.org/docs/strutils.html#parseHexStr,string">https://nim-lang.org/docs/strutils.html#parseHexStr,string</a></p>

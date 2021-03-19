@@ -36,7 +36,7 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\xa\xb\xc\xd</span><span style="color:#e6db74">&#34;</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">\v\f</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>;
 $t <span style="color:#f92672">=</span> <span style="color:#a6e22e">base64_encode</span>($s);
 <span style="color:#a6e22e">var_dump</span>($t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;CgsMDQ==&#39;</span>);
 </code></pre></div>
@@ -49,7 +49,7 @@ $t <span style="color:#f92672">=</span> <span style="color:#a6e22e">base64_encod
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\xa\xb\xc\xd</span><span style="color:#e6db74">&#34;</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">\v\f</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>;
 $t <span style="color:#f92672">=</span> <span style="color:#a6e22e">bin2hex</span>($s);
 <span style="color:#a6e22e">var_dump</span>($t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;0a0b0c0d&#39;</span>);
 </code></pre></div>
@@ -62,7 +62,7 @@ $t <span style="color:#f92672">=</span> <span style="color:#a6e22e">bin2hex</spa
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\xa\xb\xc\xd</span><span style="color:#e6db74">&#34;</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">\v\f</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>;
 $t <span style="color:#f92672">=</span> <span style="color:#a6e22e">unpack</span>(<span style="color:#e6db74">&#39;H*&#39;</span>, $s)[<span style="color:#ae81ff">1</span>];
 <span style="color:#a6e22e">var_dump</span>($t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;0a0b0c0d&#39;</span>);
 </code></pre></div>

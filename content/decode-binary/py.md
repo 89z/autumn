@@ -5,7 +5,7 @@ tags = [ "python" ]
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/base64.html>
+<https://docs.python.org/3/library/base64.html#base64.b64decode>
 
 {{< r "b.py" >}}
 

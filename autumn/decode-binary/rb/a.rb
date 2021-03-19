@@ -1,4 +1,3 @@
-require 'base64'
-s = 'IyQl'
-t = Base64.decode64(s)
-puts t == '#$%'
+s = '0a0b0c0d'
+t = [s].pack('H*')
+puts t == "\n\v\f\r"

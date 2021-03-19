@@ -1,4 +1,4 @@
 require 'base64'
-s = "\xa\xb\xc\xd"
+s = "\n\v\f\r"
 t = Base64.strict_encode64(s)
 puts t == 'CgsMDQ=='

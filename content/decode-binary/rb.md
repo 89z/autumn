@@ -5,7 +5,11 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://docs.ruby-lang.org/en/master/Base64.html>
+<https://docs.ruby-lang.org/en/master/Array.html#method-i-pack>
+
+{{< r "b.rb" >}}
+
+<https://docs.ruby-lang.org/en/master/Base64.html#method-i-decode64>
 
 ## References
 
