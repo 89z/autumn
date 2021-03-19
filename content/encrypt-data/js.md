@@ -9,9 +9,13 @@ tags = [ "javascript" ]
 
 {{< r "b.js" >}}
 
+<https://github.com/aykxt/crypto>
+
+{{< r "c.js" >}}
+{{< r "cc.js" >}}
+
 <https://nodejs.org/api/crypto.html>
 
 ## References
 
-- <https://github.com/denosaurs/sodium>
-- <https://github.com/invisal/god_crypto>
+<https://github.com/denoland/deno/issues/1891>
