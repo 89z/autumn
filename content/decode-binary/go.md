@@ -7,6 +7,10 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/encoding/base64#Encoding.DecodeString>
 
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/encoding/hex#DecodeString>
+
 ## References
 
 - <https://programming-idioms.org/idiom/176>

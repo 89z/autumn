@@ -42,6 +42,19 @@ echo t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Cg
 </code></pre></div>
 
 <p><a href="https://nim-lang.org/docs/base64.html#encode,string">https://nim-lang.org/docs/base64.html#encode,string</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> strutils
+<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\x0a\x0b\x0c\x0d</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">let</span> t <span style="color:#f92672">=</span> s.toHex
+echo t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;0A0B0C0D&#34;</span>
+</code></pre></div>
+
+<p><a href="https://nim-lang.org/docs/strutils.html#toHex,string">https://nim-lang.org/docs/strutils.html#toHex,string</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://programming-idioms.org/idiom/175">https://programming-idioms.org/idiom/175</a></li>

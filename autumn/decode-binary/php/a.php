@@ -1,4 +1,4 @@
 <?php
-$s = 'IyQl';
+$s = 'CgsMDQ==';
 $t = base64_decode($s);
-var_dump($t == '#$%');
+var_dump($t == "\xa\xb\xc\xd");

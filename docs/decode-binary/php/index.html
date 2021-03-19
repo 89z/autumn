@@ -36,11 +36,25 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;IyQl&#39;</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;CgsMDQ==&#39;</span>;
 $t <span style="color:#f92672">=</span> <span style="color:#a6e22e">base64_decode</span>($s);
-<span style="color:#a6e22e">var_dump</span>($t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;#$%&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\xa\xb\xc\xd</span><span style="color:#e6db74">&#34;</span>);
 </code></pre></div>
 
+<p><a href="https://php.net/function.base64-decode">https://php.net/function.base64-decode</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0a0b0c0d&#39;</span>;
+$t <span style="color:#f92672">=</span> <span style="color:#a6e22e">hex2bin</span>($s);
+<span style="color:#a6e22e">var_dump</span>($t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\xa\xb\xc\xd</span><span style="color:#e6db74">&#34;</span>);
+</code></pre></div>
+
+<p><a href="https://php.net/function.hex2bin">https://php.net/function.hex2bin</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting2#base64">https://hyperpolyglot.org/scripting2#base64</a></li>

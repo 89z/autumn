@@ -7,6 +7,10 @@ tags = [ "nim" ]
 
 <https://nim-lang.org/docs/base64.html#encode,string>
 
+{{< r "b.nim" >}}
+
+<https://nim-lang.org/docs/strutils.html#toHex,string>
+
 ## References
 
 - <https://programming-idioms.org/idiom/175>

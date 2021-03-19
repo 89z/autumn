@@ -1,3 +1,4 @@
 import base64
-let decoded = decode("SGVsbG8gV29ybGQ=")
-assert decoded == "Hello World"
+let s = "CgsMDQ=="
+let t = decode(s)
+echo t == "\x0a\x0b\x0c\x0d"

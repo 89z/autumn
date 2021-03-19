@@ -1,14 +1,14 @@
 package main
 
 import (
-   "encoding/base64"
+   "encoding/hex"
    "fmt"
    "log"
 )
 
 func main() {
-   s := "CgsMDQ=="
-   a, e := base64.StdEncoding.DecodeString(s)
+   s := "0a0b0c0d"
+   a, e := hex.DecodeString(s)
    if e != nil {
       log.Fatal(e)
    }
