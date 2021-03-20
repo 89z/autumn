@@ -37,17 +37,17 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">te</span>, <span style="color:#a6e22e">cs</span>] <span style="color:#f92672">=</span> [<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">TextEncoder</span>, <span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">subtle</span>];
 
-<span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">plain</span>, <span style="color:#a6e22e">pass</span>, <span style="color:#a6e22e">iv</span>] <span style="color:#f92672">=</span> [
+<span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">plain</span>, <span style="color:#a6e22e">keyData</span>, <span style="color:#a6e22e">iv</span>] <span style="color:#f92672">=</span> [
    <span style="color:#a6e22e">te</span>.<span style="color:#a6e22e">encode</span>(<span style="color:#e6db74">&#39;January February&#39;</span>),
-   <span style="color:#a6e22e">te</span>.<span style="color:#a6e22e">encode</span>(<span style="color:#e6db74">&#39;PassPassPassPass&#39;</span>),
-   <span style="color:#a6e22e">te</span>.<span style="color:#a6e22e">encode</span>(<span style="color:#e6db74">&#39;IvIvIvIvIvIvIvIv&#39;</span>)
+   <span style="color:#a6e22e">te</span>.<span style="color:#a6e22e">encode</span>(<span style="color:#e6db74">&#39;KDKDKDKDKDKDKDKD&#39;</span>),
+   <span style="color:#a6e22e">te</span>.<span style="color:#a6e22e">encode</span>(<span style="color:#e6db74">&#39;IVIVIVIVIVIVIVIV&#39;</span>)
 ];
 
 <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">cs</span>.<span style="color:#a6e22e">importKey</span>(<span style="color:#e6db74">&#39;raw&#39;</span>, <span style="color:#a6e22e">pass</span>, <span style="color:#e6db74">&#39;AES-CBC&#39;</span>, <span style="color:#66d9ef">true</span>, [<span style="color:#e6db74">&#39;encrypt&#39;</span>]);
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">cs</span>.<span style="color:#a6e22e">importKey</span>(<span style="color:#e6db74">&#39;raw&#39;</span>, <span style="color:#a6e22e">keyData</span>, <span style="color:#e6db74">&#39;AES-CBC&#39;</span>, <span style="color:#66d9ef">true</span>, [<span style="color:#e6db74">&#39;encrypt&#39;</span>]);
    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">cipher</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">cs</span>.<span style="color:#a6e22e">encrypt</span>({<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;AES-CBC&#39;</span>, <span style="color:#a6e22e">iv</span>}, <span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">plain</span>);
    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ct</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">btoa</span>(String.<span style="color:#a6e22e">fromCharCode</span>(...<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Uint8Array</span>(<span style="color:#a6e22e">cipher</span>)));
-   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">ct</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;x2B4PSY4exW+U7x/jmOkSJmDsB0IgpsLeHSICOQnPF8=&#39;</span>);
+   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">ct</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;BvfnZp4jmCaveE6kefhumpZ0raWX9GDojfPasgSwLTM=&#39;</span>);
 }
 
 <span style="color:#a6e22e">main</span>();
@@ -64,15 +64,15 @@
 <span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Cbc</span>, <span style="color:#a6e22e">Padding</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;http://deno.land/x/crypto/block-modes.ts&#39;</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">te</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">TextEncoder</span>;
 
-<span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">plain</span>, <span style="color:#a6e22e">pass</span>, <span style="color:#a6e22e">iv</span>] <span style="color:#f92672">=</span> [
+<span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">plain</span>, <span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">iv</span>] <span style="color:#f92672">=</span> [
    <span style="color:#a6e22e">te</span>.<span style="color:#a6e22e">encode</span>(<span style="color:#e6db74">&#39;January February&#39;</span>),
-   <span style="color:#a6e22e">te</span>.<span style="color:#a6e22e">encode</span>(<span style="color:#e6db74">&#39;PassPassPassPass&#39;</span>),
-   <span style="color:#a6e22e">te</span>.<span style="color:#a6e22e">encode</span>(<span style="color:#e6db74">&#39;IvIvIvIvIvIvIvIv&#39;</span>)
+   <span style="color:#a6e22e">te</span>.<span style="color:#a6e22e">encode</span>(<span style="color:#e6db74">&#39;KDKDKDKDKDKDKDKD&#39;</span>),
+   <span style="color:#a6e22e">te</span>.<span style="color:#a6e22e">encode</span>(<span style="color:#e6db74">&#39;IVIVIVIVIVIVIVIV&#39;</span>)
 ];
 
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">cipher</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Cbc</span>(<span style="color:#a6e22e">Aes</span>, <span style="color:#a6e22e">pass</span>, <span style="color:#a6e22e">iv</span>, <span style="color:#a6e22e">Padding</span>.<span style="color:#a6e22e">PKCS7</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">cipher</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Cbc</span>(<span style="color:#a6e22e">Aes</span>, <span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">iv</span>, <span style="color:#a6e22e">Padding</span>.<span style="color:#a6e22e">PKCS7</span>);
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ct</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">btoa</span>(String.<span style="color:#a6e22e">fromCharCode</span>(...<span style="color:#a6e22e">cipher</span>.<span style="color:#a6e22e">encrypt</span>(<span style="color:#a6e22e">plain</span>)));
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">ct</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;x2B4PSY4exW+U7x/jmOkSJmDsB0IgpsLeHSICOQnPF8=&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">ct</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;BvfnZp4jmCaveE6kefhumpZ0raWX9GDojfPasgSwLTM=&#39;</span>);
 </code></pre></div>
 
 <p><a href="https://github.com/aykxt/crypto">https://github.com/aykxt/crypto</a></p>
@@ -84,13 +84,13 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">crypto</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;crypto&#39;</span>);
 
-<span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">plain</span>, <span style="color:#a6e22e">pass</span>, <span style="color:#a6e22e">iv</span>] <span style="color:#f92672">=</span> [
-   <span style="color:#e6db74">&#39;January February&#39;</span>, <span style="color:#e6db74">&#39;PassPassPassPass&#39;</span>, <span style="color:#e6db74">&#39;IvIvIvIvIvIvIvIv&#39;</span>
+<span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">plain</span>, <span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">iv</span>] <span style="color:#f92672">=</span> [
+   <span style="color:#e6db74">&#39;January February&#39;</span>, <span style="color:#e6db74">&#39;KDKDKDKDKDKDKDKD&#39;</span>, <span style="color:#e6db74">&#39;IVIVIVIVIVIVIVIV&#39;</span>
 ];
 
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">cipher</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">createCipheriv</span>(<span style="color:#e6db74">&#39;aes-128-cbc&#39;</span>, <span style="color:#a6e22e">pass</span>, <span style="color:#a6e22e">iv</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">cipher</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">createCipheriv</span>(<span style="color:#e6db74">&#39;aes-128-cbc&#39;</span>, <span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">iv</span>);
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ct</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cipher</span>.<span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">plain</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>, <span style="color:#e6db74">&#39;base64&#39;</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">cipher</span>.<span style="color:#66d9ef">final</span>(<span style="color:#e6db74">&#39;base64&#39;</span>);
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">ct</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;x2B4PSY4exW+U7x/jmOkSJmDsB0IgpsLeHSICOQnPF8=&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">ct</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;BvfnZp4jmCaveE6kefhumpZ0raWX9GDojfPasgSwLTM=&#39;</span>);
 </code></pre></div>
 
 
@@ -100,10 +100,10 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;crypto&#39;</span>);
-<span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">plain</span>, <span style="color:#a6e22e">pass</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;January February&#39;</span>, <span style="color:#e6db74">&#39;PassPassPassPass&#39;</span>];
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">cipher</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">createCipheriv</span>(<span style="color:#e6db74">&#39;aes-128-ecb&#39;</span>, <span style="color:#a6e22e">pass</span>, <span style="color:#66d9ef">null</span>).<span style="color:#a6e22e">setAutoPadding</span>(<span style="color:#66d9ef">false</span>);
+<span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">plain</span>, <span style="color:#a6e22e">key</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;January February&#39;</span>, <span style="color:#e6db74">&#39;KDKDKDKDKDKDKDKD&#39;</span>];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">cipher</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">createCipheriv</span>(<span style="color:#e6db74">&#39;aes-128-ecb&#39;</span>, <span style="color:#a6e22e">key</span>, <span style="color:#66d9ef">null</span>).<span style="color:#a6e22e">setAutoPadding</span>(<span style="color:#66d9ef">false</span>);
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ct</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cipher</span>.<span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">plain</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>, <span style="color:#e6db74">&#39;base64&#39;</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">cipher</span>.<span style="color:#66d9ef">final</span>(<span style="color:#e6db74">&#39;base64&#39;</span>);
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">ct</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;LxPTC0HIdnxnCj54rzkEjA==&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">ct</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;hr0e+xH2oi0mYHMmdGQCnQ==&#39;</span>);
 </code></pre></div>
 </p>
 <p><a href="https://nodejs.org/api/crypto.html">https://nodejs.org/api/crypto.html</a></p>

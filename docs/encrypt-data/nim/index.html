@@ -29,7 +29,48 @@
    <a href="/autumn/categories/reference/">reference</a>
    
 </section>
-   <ul>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> nimcrypto
+echo keccak_256.digest(<span style="color:#e6db74">&#34;Alice makes a hash&#34;</span>)
+</code></pre></div>
+
+<p><a href="https://github.com/cheatfate/nimcrypto/blob/master/examples/cbc.nim">https://github.com/cheatfate/nimcrypto/blob/master/examples/cbc.nim</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> nimcrypto
+<span style="color:#66d9ef">var</span> aliceKey <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Alice Key&#34;</span>
+<span style="color:#66d9ef">var</span> aliceData <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Alice hidden secret&#34;</span>
+<span style="color:#66d9ef">var</span> ectx, dctx: ECB<span style="color:#f92672">[</span>aes256<span style="color:#f92672">]</span>
+<span style="color:#66d9ef">var</span> key <span style="color:#f92672">=</span> newString(aes256.sizeKey)
+<span style="color:#66d9ef">var</span> plainText <span style="color:#f92672">=</span> newString(aes256.sizeBlock <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>)
+<span style="color:#66d9ef">var</span> encText <span style="color:#f92672">=</span> newString(aes256.sizeBlock <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>)
+<span style="color:#66d9ef">var</span> decText <span style="color:#f92672">=</span> newString(aes256.sizeBlock <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>)
+copyMem(<span style="color:#66d9ef">addr</span> plainText<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span>, <span style="color:#66d9ef">addr</span> aliceData<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span>, len(aliceData))
+copyMem(<span style="color:#66d9ef">addr</span> key<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span>, <span style="color:#66d9ef">addr</span> aliceKey<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span>, len(aliceKey))
+ectx.init(key)
+ectx.encrypt(plainText, encText)
+ectx.clear()
+dctx.init(key)
+dctx.decrypt(encText, decText)
+dctx.clear()
+echo <span style="color:#e6db74">&#34;PLAIN TEXT: &#34;</span>, <span style="color:#f92672">$</span>plainText
+echo <span style="color:#e6db74">&#34;ENCODED TEXT: &#34;</span>, <span style="color:#f92672">$</span>encText
+echo <span style="color:#e6db74">&#34;DECODED TEXT: &#34;</span>, <span style="color:#f92672">$</span>decText
+assert(equalMem(<span style="color:#66d9ef">addr</span> plainText<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span>, <span style="color:#66d9ef">addr</span> decText<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span>, len(plainText)))
+</code></pre></div>
+
+<p><a href="https://github.com/cheatfate/nimcrypto/blob/master/examples/ecb.nim">https://github.com/cheatfate/nimcrypto/blob/master/examples/ecb.nim</a></p>
+<h2 id="references">References</h2>
+<ul>
 <li><a href="https://github.com/genotrance/nimssl">https://github.com/genotrance/nimssl</a></li>
 <li><a href="https://github.com/jangko/nimAES">https://github.com/jangko/nimAES</a></li>
 <li><a href="https://github.com/nim-lang/needed-libraries/issues/100">https://github.com/nim-lang/needed-libraries/issues/100</a></li>

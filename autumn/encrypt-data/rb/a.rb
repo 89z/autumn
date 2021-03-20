@@ -1,20 +1,20 @@
 require 'base64'
 require 'openssl'
-data, key = 'January February', 'PassPassPassPass'
+plain, key = 'January February', 'KDKDKDKDKDKDKDKD'
 
 # example 1
 cipher = OpenSSL::Cipher.new('aes-128-cbc').encrypt
-cipher.iv = 'IvIvIvIvIvIvIvIv'
+cipher.iv = 'IVIVIVIVIVIVIVIV'
 cipher.key = key
-s1 = Base64.strict_encode64(cipher.update(data) + cipher.final)
+s = Base64.strict_encode64(cipher.update(plain) + cipher.final)
 
 # example 2
 cipher = OpenSSL::Cipher.new('aes-128-ecb').encrypt
 cipher.key = key
-s2 = Base64.strict_encode64(cipher.update(data))
+t = Base64.strict_encode64(cipher.update(plain))
 
 # print
 puts(
-   s1 == 'x2B4PSY4exW+U7x/jmOkSJmDsB0IgpsLeHSICOQnPF8=',
-   s2 == 'LxPTC0HIdnxnCj54rzkEjA=='
+   s == 'BvfnZp4jmCaveE6kefhumpZ0raWX9GDojfPasgSwLTM=',
+   t == 'hr0e+xH2oi0mYHMmdGQCnQ=='
 )

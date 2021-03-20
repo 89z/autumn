@@ -37,19 +37,15 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> botan.all<span style="color:#f92672">;</span>
 <span style="color:#f92672">import</span> botan.filters.b64_filt<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> botan.filters.hex_filt<span style="color:#f92672">;</span>
 <span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> p <span style="color:#f92672">=</span> Pipe<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> HexEncoder<span style="color:#f92672">);</span>
-   p<span style="color:#f92672">.</span><span style="color:#a6e22e">processMsg</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;PassPassPassPass&#34;</span><span style="color:#f92672">);</span>
-   <span style="color:#66d9ef">auto</span> key <span style="color:#f92672">=</span> p<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">.</span><span style="color:#a6e22e">SymmetricKey</span><span style="color:#f92672">;</span>
-   p<span style="color:#f92672">.</span><span style="color:#a6e22e">processMsg</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;IvIvIvIvIvIvIvIv&#34;</span><span style="color:#f92672">);</span>
-   <span style="color:#66d9ef">auto</span> iv <span style="color:#f92672">=</span> p<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">.</span><span style="color:#a6e22e">InitializationVector</span><span style="color:#f92672">;</span>
-   p <span style="color:#f92672">=</span> Pipe<span style="color:#f92672">(</span>getCipher<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;AES-128/CBC&#34;</span><span style="color:#f92672">,</span> key<span style="color:#f92672">,</span> iv<span style="color:#f92672">,</span> ENCRYPTION<span style="color:#f92672">),</span> <span style="color:#66d9ef">new</span> Base64Encoder<span style="color:#f92672">);</span>
-   <span style="color:#75715e">// The nonce is fresh for this message
-</span><span style="color:#75715e"></span>   p<span style="color:#f92672">.</span><span style="color:#a6e22e">processMsg</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;January February&#34;</span><span style="color:#f92672">);</span>
-   writeln<span style="color:#f92672">(</span>p<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> cipher <span style="color:#f92672">=</span> getCipher<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;AES-128/CBC&#34;</span><span style="color:#f92672">,</span> ENCRYPTION<span style="color:#f92672">);</span>
+   cipher<span style="color:#f92672">.</span><span style="color:#a6e22e">setKey</span><span style="color:#f92672">(</span>SymmetricKey<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;4B444B444B444B444B444B444B444B44&#34;</span><span style="color:#f92672">));</span>
+   cipher<span style="color:#f92672">.</span><span style="color:#a6e22e">setIv</span><span style="color:#f92672">(</span>InitializationVector<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;49564956495649564956495649564956&#34;</span><span style="color:#f92672">));</span>
+   <span style="color:#66d9ef">auto</span> pipe <span style="color:#f92672">=</span> Pipe<span style="color:#f92672">(</span>cipher<span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> Base64Encoder<span style="color:#f92672">);</span>
+   pipe<span style="color:#f92672">.</span><span style="color:#a6e22e">processMsg</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;January February&#34;</span><span style="color:#f92672">);</span>
+   writeln<span style="color:#f92672">(</span>pipe<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;BvfnZp4jmCaveE6kefhumpZ0raWX9GDojfPasgSwLTM=&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 
@@ -62,18 +58,14 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> botan.all<span style="color:#f92672">;</span>
 <span style="color:#f92672">import</span> botan.filters.b64_filt<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> botan.filters.hex_filt<span style="color:#f92672">;</span>
 <span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">auto</span> p <span style="color:#f92672">=</span> Pipe<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> HexEncoder<span style="color:#f92672">);</span>
-   p<span style="color:#f92672">.</span><span style="color:#a6e22e">processMsg</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;PassPassPassPass&#34;</span><span style="color:#f92672">);</span>
-   p <span style="color:#f92672">=</span> Pipe<span style="color:#f92672">(</span>
-      getCipher<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;AES-128/ECB&#34;</span><span style="color:#f92672">,</span> p<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">.</span><span style="color:#a6e22e">SymmetricKey</span><span style="color:#f92672">,</span> ENCRYPTION<span style="color:#f92672">),</span>
-      <span style="color:#66d9ef">new</span> Base64Encoder
-   <span style="color:#f92672">);</span>
-   p<span style="color:#f92672">.</span><span style="color:#a6e22e">processMsg</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;January February&#34;</span><span style="color:#f92672">);</span>
-   writeln<span style="color:#f92672">(</span>p<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;LxPTC0HIdnxnCj54rzkEjA==&#34;</span><span style="color:#f92672">);</span>
+   <span style="color:#66d9ef">auto</span> cipher <span style="color:#f92672">=</span> getCipher<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;AES-128/ECB&#34;</span><span style="color:#f92672">,</span> ENCRYPTION<span style="color:#f92672">);</span>
+   cipher<span style="color:#f92672">.</span><span style="color:#a6e22e">setKey</span><span style="color:#f92672">(</span>SymmetricKey<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;4B444B444B444B444B444B444B444B44&#34;</span><span style="color:#f92672">));</span>
+   <span style="color:#66d9ef">auto</span> pipe <span style="color:#f92672">=</span> Pipe<span style="color:#f92672">(</span>cipher<span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> Base64Encoder<span style="color:#f92672">);</span>
+   pipe<span style="color:#f92672">.</span><span style="color:#a6e22e">processMsg</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;January February&#34;</span><span style="color:#f92672">);</span>
+   writeln<span style="color:#f92672">(</span>pipe<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;hr0e+xH2oi0mYHMmdGQCnQ==&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 
