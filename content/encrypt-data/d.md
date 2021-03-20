@@ -3,6 +3,10 @@ title = "D"
 tags = [ "d" ]
 +++
 
-{{< r "source/app.d" >}}
+{{< r "a/source/app.d" >}}
 
-<https://botan.dpldocs.info>
+<https://botan.dpldocs.info/botan.algo_base.symkey.InitializationVector.html>
+
+{{< r "b/source/app.d" >}}
+
+<https://botan.dpldocs.info/botan.algo_base.symkey.SymmetricKey.html>
