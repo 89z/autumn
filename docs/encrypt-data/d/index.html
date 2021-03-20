@@ -24,15 +24,35 @@
    <a href="/autumn/encrypt-data/">Encrypt data</a> / D
 </h1>
 <section class="page">
-   <time>Fri Mar 19 2021</time>
+   <time>Sat Mar 20 2021</time>
    
    <a href="/autumn/categories/reference/">reference</a>
    
 </section>
-   <ul>
-<li><a href="https://github.com/etcimon/botan">https://github.com/etcimon/botan</a></li>
-<li><a href="https://github.com/shove70/crypto">https://github.com/shove70/crypto</a></li>
-</ul>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> botan.all<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> botan.filters.b64_filt<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> botan.filters.hex_filt<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> pipe <span style="color:#f92672">=</span> Pipe<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> HexEncoder<span style="color:#f92672">);</span>
+   pipe<span style="color:#f92672">.</span><span style="color:#a6e22e">processMsg</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;PassPassPassPass&#34;</span><span style="color:#f92672">);</span>
+   pipe <span style="color:#f92672">=</span> Pipe<span style="color:#f92672">(</span>
+      getCipher<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;AES-128/ECB&#34;</span><span style="color:#f92672">,</span> pipe<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">.</span><span style="color:#a6e22e">OctetString</span><span style="color:#f92672">,</span> ENCRYPTION<span style="color:#f92672">),</span>
+      <span style="color:#66d9ef">new</span> Base64Encoder
+   <span style="color:#f92672">);</span>
+   pipe<span style="color:#f92672">.</span><span style="color:#a6e22e">processMsg</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;January February&#34;</span><span style="color:#f92672">);</span>
+   writeln<span style="color:#f92672">(</span>pipe<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;LxPTC0HIdnxnCj54rzkEjA==&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+
+<p><a href="https://botan.dpldocs.info">https://botan.dpldocs.info</a></p>
 
 </main>
 

@@ -1,7 +1,7 @@
 +++
 title = "Split a string"
-categories = [ "array", "string" ]
-date = 2020-12-17
+categories = [ "string" ]
+date = 2021-03-20
 filename = 'winter\umber\improve.go'
 substr = ' strings.Split('
 +++
