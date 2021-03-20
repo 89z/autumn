@@ -3,13 +3,21 @@ title = "D"
 tags = [ "d" ]
 +++
 
-{{< r "a.d" >}}
+{{< r "a/source/app.d" >}}
 
-<https://dlang.org/library-prerelease/std/conv/hex_string.html>
+<https://botan.dpldocs.info/botan.filters.b64_filt.html>
 
-{{< r "b.d" >}}
+{{< r "b/source/app.d" >}}
+
+<https://botan.dpldocs.info/botan.filters.hex_filt.html>
+
+{{< r "c.d" >}}
 
 <https://dlang.org/library/std/base64/base64_impl.decode.html>
+
+{{< r "d.d" >}}
+
+<https://dlang.org/library/std/conv/hex_string.html>
 
 ## References
 
