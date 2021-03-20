@@ -7,6 +7,6 @@ import (
 
 func main() {
    y := []byte("May,June,July")
-   a := bytes.Split(y, []byte{','})
+   a := bytes.SplitN(y, []byte{','}, 2)
    fmt.Printf("%q\n", a)
 }

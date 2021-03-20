@@ -7,6 +7,10 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/strings#Join>
 
+{{< r "b.go" >}}
+
+<https://golang.org/ref/spec#Conversions>
+
 ## References
 
 - <https://hyperpolyglot.org/c#str-join>

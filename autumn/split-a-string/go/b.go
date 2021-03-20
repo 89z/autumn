@@ -1,12 +1,12 @@
 package main
 
 import (
-   "bytes"
    "fmt"
+   "strings"
 )
 
 func main() {
-   y := []byte("May,June,July")
-   a := bytes.SplitN(y, []byte{','}, 2)
+   s := "May,June,July"
+   a := strings.Split(s, ",")
    fmt.Printf("%q\n", a)
 }
