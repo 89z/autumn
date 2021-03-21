@@ -7,9 +7,9 @@ autumn/*/d/dub.selections.json
 autumn/*/dart/.dart_tool
 autumn/*/dart/.packages
 autumn/*/dart/pubspec.lock
+autumn/*/go/*/go.sum
 autumn/*/go/go.sum
 autumn/*/rs/*/Cargo.lock
 autumn/*/rs/*/target
 autumn/*/rs/Cargo.lock
 autumn/*/rs/target
-autumn/talk/*/go/go.sum

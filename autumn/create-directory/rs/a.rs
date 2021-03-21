@@ -2,9 +2,10 @@ use std::fs;
 
 fn main() {
    // example 1
-   let e1 = fs::create_dir("March");
+   let e = fs::create_dir("March");
+   println!("{:?}", e);
+
    // example 2
-   let e2 = fs::create_dir_all("May/June");
-   // print
-   println!("{:?} {:?}", e1, e2);
+   let e = fs::create_dir_all("May/June");
+   println!("{:?}", e);
 }

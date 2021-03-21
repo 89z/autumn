@@ -1,9 +1,15 @@
 <?php
+
 # example 1
-$a1 = [];
+$a = [];
+print_r($a);
+
 # example 2
-$a2 = [10, 11];
+$a = [10, 11];
+print_r($a);
+
 # example 3
-$a3 = [[10, 11], [12, 13]];
-# print
-var_dump($a1, $a2, $a3);
+$a = [
+   [10, 11], [12, 13]
+];
+print_r($a);
