@@ -1,10 +1,10 @@
 from urllib import parse
 u = parse.urlsplit('http://python.org/library?month=May')
 # example 1
-s1 = u.netloc
+n = u.netloc
 # example 2
-s2 = u.path
+p = u.path
 # example 3
-s3 = u.query
+q = u.query
 # print
-print(s1, s2, s3)
+print(n == 'python.org', p == '/library', q == 'month=May')

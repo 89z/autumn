@@ -1,9 +1,11 @@
 import algorithm
-# example 1
-var a1 = ["May", "June"]
-a1.sort
-# example 2
-var a2 = [10, 9]
-a2.sort
-# print
-echo a1, a2
+
+block: # example 1
+   var a = ["May", "June"]
+   a.sort
+   echo a
+
+block: # example 2
+   var a = [10, 9]
+   a.sort
+   echo a
