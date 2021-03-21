@@ -67,16 +67,22 @@ $n <span style="color:#f92672">=</span> <span style="color:#a6e22e">intdiv</span
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 [$f, $i] <span style="color:#f92672">=</span> [<span style="color:#ae81ff">7.5</span>, <span style="color:#ae81ff">7</span>];
+
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$n1 <span style="color:#f92672">=</span> $f <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+</span><span style="color:#75715e"></span>$n <span style="color:#f92672">=</span> $f <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+<span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">===</span> <span style="color:#ae81ff">3.75</span>);
+
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$n2 <span style="color:#f92672">=</span> (<span style="color:#a6e22e">int</span>)($f <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>);
+</span><span style="color:#75715e"></span>$n <span style="color:#f92672">=</span> (<span style="color:#a6e22e">int</span>)($f <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>);
+<span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">===</span> <span style="color:#ae81ff">3</span>);
+
 <span style="color:#75715e"># example 3
-</span><span style="color:#75715e"></span>$n3 <span style="color:#f92672">=</span> (<span style="color:#a6e22e">int</span>)($i <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>);
+</span><span style="color:#75715e"></span>$n <span style="color:#f92672">=</span> (<span style="color:#a6e22e">int</span>)($i <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>);
+<span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">===</span> <span style="color:#ae81ff">3</span>);
+
 <span style="color:#75715e"># example 4
-</span><span style="color:#75715e"></span>$n4 <span style="color:#f92672">=</span> $i <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
-<span style="color:#75715e"># print
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($n1 <span style="color:#f92672">==</span> <span style="color:#ae81ff">3.75</span>, $n2 <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>, $n3 <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>, $n4 <span style="color:#f92672">==</span> <span style="color:#ae81ff">3.5</span>);
+</span><span style="color:#75715e"></span>$n <span style="color:#f92672">=</span> $i <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+<span style="color:#a6e22e">var_dump</span>($n <span style="color:#f92672">===</span> <span style="color:#ae81ff">3.5</span>);
 </code></pre></div>
 
 <p><a href="https://php.net/operators.arithmetic">https://php.net/operators.arithmetic</a></p>
