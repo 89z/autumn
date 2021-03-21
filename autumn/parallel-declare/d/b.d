@@ -2,9 +2,9 @@ import std.stdio;
 
 void main() {
    // example 1
-   int n = 12, n1 = 12;
+   int d = 12, e = 12;
    // example 2
-   auto s = "month", n2 = 12;
+   auto s = "month", n = 12;
    // print
-   writeln(n, ',', n1, ',', s, ',', n2);
+   writeln(d, ',', e, ',', s, ',', n);
 }

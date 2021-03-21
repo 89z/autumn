@@ -1,11 +1,9 @@
-'use strict';
-
-function format(n) {
-   let mil = String(n % 1000).padStart(3, '0');
-   n = Math.trunc(n / 1000);
-   let sec = String(n % 60).padStart(2, '0');
-   n = Math.trunc(n / 60);
-   return String(n) + ' m ' + sec + ' s ' + mil + ' ms';
+function format(d) {
+   let mil = String(d % 1000).padStart(3, '0');
+   d = Math.trunc(d / 1000);
+   let sec = String(d % 60).padStart(2, '0');
+   d = Math.trunc(d / 60);
+   return String(d) + ' m ' + sec + ' s ' + mil + ' ms';
 }
 
 function main() {

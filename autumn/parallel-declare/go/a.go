@@ -2,10 +2,12 @@ package main
 import "fmt"
 
 func main() {
-   // example 1
-   s1, n1 := "year", 2021
-   // example 2
-   s2, n2 := []byte("month"), int64(12)
-   // print
-   fmt.Println(s1, n1, s2, n2)
+   { // example 1
+      s, n := "year", 2021
+      fmt.Println(s, n)
+   }
+   { // example 2
+      s, n := []byte("month"), int64(12)
+      fmt.Println(s, n)
+   }
 }
