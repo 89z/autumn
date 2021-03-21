@@ -1,13 +1,15 @@
 <?php
+
 # example 1
-$f1 = function (int $n, int $n1): bool {
-   return $n > $n1;
+$f = function (int $d, int $e): int {
+   return $d + $e;
 };
+
+var_dump($f(4, 5) == 9);
+
 # example 2
-$f2 = function ($n, $n2) {
-   return $n > $n2;
+$f = function ($d, $e) {
+   return $d + $e;
 };
-# print
-$b1 = $f1(9, 8);
-$b2 = $f2(9, 8);
-var_dump($b1, $b2);
+
+var_dump($f(4, 5) == 9);
