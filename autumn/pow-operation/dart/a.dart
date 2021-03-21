@@ -1,10 +1,12 @@
 import 'dart:math';
 
 void main() {
-   // example 1
-   var n1 = pow(10, 5);
-   // example 2
-   var n2 = pow(9, 0.5);
-   // print
-   print(n1 == 1e5 && n2 == 3);
+   { // example 1
+      var n = pow(10, 5);
+      print(n == 1e5);
+   }
+   { // example 2
+      var n = pow(9, 0.5);
+      print(n == 3);
+   }
 }

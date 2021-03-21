@@ -1,12 +1,15 @@
-# example 1
-var
-   s1 = "month"
-   n1 = 12
-# example 2
-var
-   s2 = "month"
-   n2: int
-# example 3
-var s, s3: string
-# print
-echo (s1, n1, s2, n2, s, s3)
+block: # example 1
+   var
+      s = "month"
+      n = 12
+   echo (s, n)
+
+block: # example 2
+   var
+      s = "month"
+      n: int
+   echo (s, n)
+
+block: # example 3
+   var s, t: string
+   echo (s, t)
