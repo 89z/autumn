@@ -27,7 +27,27 @@
    <time>Sun Oct 11 2020</time>
    
 </section>
-   <h2 id="cache-issue-with-gettempdir">Cache issue with getTempDir</h2>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps1" data-lang="ps1">nim c `
+<span style="color:#e6db74">&#39;--dynlibOverride:crypto-&#39;</span> `
+<span style="color:#e6db74">&#39;--dynlibOverride:ssl-&#39;</span> `
+<span style="color:#e6db74">&#39;--passl:-lssl&#39;</span> `
+<span style="color:#e6db74">&#39;--passl:-lcrypto&#39;</span> `
+<span style="color:#e6db74">&#39;--passl:-lws2_32&#39;</span> `
+<span style="color:#e6db74">&#39;--passl:-static&#39;</span> `
+<span style="color:#e6db74">&#39;-d:noOpenSSLHacks&#39;</span> `
+<span style="color:#e6db74">&#39;-d:ssl&#39;</span> `
+<span style="color:#e6db74">&#39;-d:sslVersion:(&#39;</span> `
+a.nim
+</code></pre></div>
+
+<p><a href="https://github.com/nim-lang/Nim/issues/15220">https://github.com/nim-lang/Nim/issues/15220</a></p>
+<h2 id="cache-issue-with-gettempdir">Cache issue with getTempDir</h2>
 <p><a href="https://github.com/nim-lang/Nim/issues/15279">https://github.com/nim-lang/Nim/issues/15279</a></p>
 <h2 id="setup">Setup</h2>
 <p><a href="https://nim-lang.org/install_windows.html">https://nim-lang.org/install_windows.html</a></p>
