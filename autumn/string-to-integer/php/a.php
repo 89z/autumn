@@ -1,8 +1,9 @@
 <?php
-$s = '100';
+
 # example 1
-$n1 = intval($s);
+$n = intval('100');
+var_dump($n === 100);
+
 # example 2
-$n2 = intval($s, 10);
-# print
-var_dump($n1 === 100, $n2 === 100);
+$n = intval('100', 10);
+var_dump($n === 100);

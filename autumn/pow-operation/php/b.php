@@ -1,7 +1,9 @@
 <?php
+
 # example 1
-$n1 = pow(10, 5);
+$n = pow(10, 5);
+var_dump($n === 100_000);
+
 # example 2
-$n2 = pow(9, 0.5);
-# print
-var_dump($n1 === 100_000, $n2 === 3.0);
+$n = pow(9, 0.5);
+var_dump($n === 3.0);

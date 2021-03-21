@@ -2,11 +2,14 @@ use std::num;
 
 fn main() -> Result<(), num::ParseIntError> {
    let s = "100";
+
    // example 1
-   let n1: u8 = s.parse()?;
+   let n: u8 = s.parse()?;
+   println!("{}", n == 100);
+
    // example 2
-   let n2 = s.parse::<u8>()?;
-   // print
-   println!("{}", n1 == 100 && n2 == 100);
+   let n = s.parse::<u8>()?;
+   println!("{}", n == 100);
+
    Ok(())
 }

@@ -1,8 +1,8 @@
 fn main() {
    // example 1
-   let n1 = Some(10).unwrap_or_default();
+   let n = Some(10).unwrap_or_default();
+   println!("{}", n == 10);
    // example 2
-   let n2: u8 = None.unwrap_or_default();
-   // print
-   println!("{}", n1 == 10 && n2 == 0);
+   let n: u8 = None.unwrap_or_default();
+   println!("{}", n == 0);
 }
