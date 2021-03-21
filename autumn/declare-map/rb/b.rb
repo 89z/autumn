@@ -1,8 +1,11 @@
 # example 1
-m1 = {'month' => 5, 'day' => 4}
+m = {'month' => 5, 'day' => 4}
+puts m
+
 # example 2
-m2 = {month: 5, day: 4}
+m = {month: 5, day: 4}
+puts m
+
 # example 3
-m3 = {}
-# print
-puts m1, m2, m3
+m = {}
+puts m

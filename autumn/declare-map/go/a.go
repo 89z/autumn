@@ -2,12 +2,14 @@ package main
 import "fmt"
 
 func main() {
-   // example 1
-   var m1 = make(map[string]int)
-   m1["day"] = 31
-   // example 2
-   m2 := make(map[string]int)
-   m2["day"] = 31
-   // print
-   fmt.Println(m1, m2)
+   { // example 1
+      var m = make(map[string]int)
+      m["day"] = 31
+      fmt.Println(m)
+   }
+   { // example 2
+      m := make(map[string]int)
+      m["day"] = 31
+      fmt.Println(m)
+   }
 }
