@@ -36,12 +36,14 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> strtabs
-<span style="color:#75715e"># example 1</span>
-<span style="color:#66d9ef">let</span> m1 <span style="color:#f92672">=</span> newStringTable()
-<span style="color:#75715e"># example 2</span>
-<span style="color:#66d9ef">let</span> m2 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;one&#34;</span>: <span style="color:#e6db74">&#34;even&#34;</span>, <span style="color:#e6db74">&#34;two&#34;</span>: <span style="color:#e6db74">&#34;odd&#34;</span>}.newStringTable
-<span style="color:#75715e"># print</span>
-echo m1, m2
+
+<span style="color:#66d9ef">block</span>: <span style="color:#75715e"># example 1</span>
+   <span style="color:#66d9ef">let</span> m <span style="color:#f92672">=</span> newStringTable()
+   echo m
+
+<span style="color:#66d9ef">block</span>: <span style="color:#75715e"># example 2</span>
+   <span style="color:#66d9ef">let</span> m <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;one&#34;</span>: <span style="color:#e6db74">&#34;even&#34;</span>, <span style="color:#e6db74">&#34;two&#34;</span>: <span style="color:#e6db74">&#34;odd&#34;</span>}.newStringTable
+   echo m
 </code></pre></div>
 
 <p><a href="https://nim-lang.org/docs/strtabs.html">https://nim-lang.org/docs/strtabs.html</a></p>

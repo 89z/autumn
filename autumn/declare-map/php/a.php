@@ -1,7 +1,9 @@
 <?php
+
 # example 1
-$m1 = array();
+$m = array();
+print_r($m);
+
 # example 2
-$m2 = array('month' => 12, 'day' => 31);
-# print
-var_dump($m1, $m2);
+$m = array('month' => 12, 'day' => 31);
+print_r($m);

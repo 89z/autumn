@@ -1,7 +1,11 @@
-// example 1
-let m1 = new Map;
-// example 2
-let a = [['month', 12], ['day', 31]];
-let m2 = new Map(a);
-// print
-console.log(m1, m2);
+{ // example 1
+   let m = new Map;
+   console.log(m);
+}
+{ // example 2
+   let a = [
+      ['month', 12], ['day', 31]
+   ];
+   let m = new Map(a);
+   console.log(m);
+}
