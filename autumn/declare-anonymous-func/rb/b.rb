@@ -1,8 +1,9 @@
-f = proc { |n, n0| n + n0 }
+f = proc { |d, e| d + e }
+
 # example 1
-n1 = f.call(10, 11)
+n = f.call(4, 5)
+puts n == 9
+
 # example 2
-a = [10, 11]
-n2 = a.reduce(&f)
-# print
-puts n1 == 21, n2 == 21
+n = [4, 5].reduce(&f)
+puts n == 9

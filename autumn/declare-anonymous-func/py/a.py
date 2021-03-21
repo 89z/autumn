@@ -1,3 +1,3 @@
-f = lambda n, n1: n > n1
-b = f(9, 8)
-print(b)
+f = lambda d, e: d + e
+n = f(4, 5)
+print(n == 9)

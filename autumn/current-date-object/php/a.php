@@ -1,12 +1,18 @@
 <?php
+
 # example 1
-$o1 = new DateTime;
+$t = new DateTime;
+var_dump($t);
+
 # exmaple 2
-$o2 = new DateTime();
+$t = new DateTime();
+var_dump($t);
+
 # example 3
-$o3 = new DateTime('now');
+$t = new DateTime('now');
+var_dump($t);
+
 # exmaple 4
-$o = new DateTimeZone('America/Chicago');
-$o4 = new DateTime(timezone: $o);
-# print
-var_dump($o1, $o2, $o3, $o4);
+$z = new DateTimeZone('America/Chicago');
+$t = new DateTime(timezone: $z);
+var_dump($t);

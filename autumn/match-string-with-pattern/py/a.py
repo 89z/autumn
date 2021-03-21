@@ -1,8 +1,10 @@
 import re
 s = 'January'
+
 # example 1
-o1 = re.search('ja', s, re.I)
+r = re.search('ja', s, re.I)
+print(r != None)
+
 # example 2
-o2 = re.search('(?i)ja', s)
-# print
-print(o1 != None, o2 != None)
+r = re.search('(?i)ja', s)
+print(r != None)

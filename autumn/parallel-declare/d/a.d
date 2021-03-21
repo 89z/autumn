@@ -1,11 +1,12 @@
-import io = std.stdio;
-import type = std.typecons: Tuple;
+import std.stdio, std.typecons;
 
 void main() {
-   // example 1
-   Tuple!(int, "m", int, "d") o1 = [12, 31];
-   // example 2
-   Tuple!(string, "s", int, "n") o2 = type.tuple("month", 12);
-   // print
-   io.writeln(o1.m == 12 && o2.n == 12);
+   { // example 1
+      Tuple!(int, "m", int, "d") t = [12, 31];
+      writeln(t.m == 12 && t.d == 31);
+   }
+   { // example 2
+      Tuple!(string, "s", int, "n") t = tuple("month", 12);
+      writeln(t.s == "month" && t.n == 12);
+   }
 }

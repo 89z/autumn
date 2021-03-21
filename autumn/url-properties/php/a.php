@@ -1,11 +1,14 @@
 <?php
-declare(strict_types = 1);
 $s = 'http://php.net/function.parse-url?month=May';
+
 # example 1
-$s1 = parse_url($s, PHP_URL_HOST);
+$t = parse_url($s, PHP_URL_HOST);
+var_dump($t == 'php.net');
+
 # example 2
-$s2 = parse_url($s, PHP_URL_PATH);
+$t = parse_url($s, PHP_URL_PATH);
+var_dump($t == '/function.parse-url');
+
 # example 3
-$s3 = parse_url($s, PHP_URL_QUERY);
-# print
-var_dump($s1, $s2, $s3);
+$t = parse_url($s, PHP_URL_QUERY);
+var_dump($t == 'month=May');
