@@ -2,19 +2,25 @@ package main
 import "fmt"
 
 func main() {
-   // example 1
-   var a1 []int
-   a1 = append(a1, 10, 11)
-   // example 2
-   var a2 = []int{10, 11}
-   // example 3
-   a3 := []int{10, 11}
-   // example 4
-   type A []interface{}
-   a4 := A{
-      A{10, 11},
-      A{12, 13},
+   { // example 1
+      var a []int
+      a = append(a, 10, 11)
+      fmt.Println(a)
    }
-   // print
-   fmt.Println(a1, a2, a3, a4)
+   { // example 2
+      var a = []int{10, 11}
+      fmt.Println(a)
+   }
+   { // example 3
+      a := []int{10, 11}
+      fmt.Println(a)
+   }
+   { // example 4
+      type slice []interface{}
+      a := slice{
+         slice{10, 11},
+         slice{12, 13},
+      }
+      fmt.Println(a)
+   }
 }
