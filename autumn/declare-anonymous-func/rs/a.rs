@@ -1,17 +1,20 @@
 fn main() {
+
    // example 1
-   let f1 = |n: u8, n1: u8| -> bool {
-      return n > n1;
+   let f = |d: u8, e: u8| -> u8 {
+      return d + e
    };
+
    // example 2
-   let f2 = |n, n2| {
-      return n > n2;
+   let g = |d, e| -> i32 {
+      return d + e
    };
+
    // example 3
-   let f3 = |n, n3| n > n3;
+   let h = |d, e| d + e;
+
    // print
-   let b1 = f1(9, 8);
-   let b2 = f2(9, 8);
-   let b3 = f3(9, 8);
-   println!("{}", b1 && b2 && b3);
+   println!("{}", f(4, 5) == 9);
+   println!("{}", g(4, 5) == 9);
+   println!("{}", h(4, 5) == 9);
 }

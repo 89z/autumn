@@ -7,10 +7,6 @@ tags = [ "go" ]
 
 <https://golang.org/ref/spec#Function_declarations>
 
-{{< r "b.go" >}}
-
-<https://golang.org/ref/spec#Method_declarations>
-
 ## References
 
 - <https://hyperpolyglot.org/c#def-func>

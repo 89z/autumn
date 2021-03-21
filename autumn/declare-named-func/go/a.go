@@ -1,18 +1,17 @@
 package main
 
 // example 1
-func f1(n int, n1 int) bool {
-   return n > n1
+func f(d int, e int) int {
+   return d + e
 }
 
 // example 2
-func f2(n, n2 int) bool {
-   return n > n2
+func g(d, e int) int {
+   return d + e
 }
 
 // print
 func main() {
-   b1 := f1(9, 8)
-   b2 := f2(9, 8)
-   println(b1, b2)
+   println(f(4, 5) == 9)
+   println(g(4, 5) == 9)
 }
