@@ -1,8 +1,10 @@
 <?php
 $m = stat('a.php');
+
 # example 1
-$n1 = $m[7];
+$n = $m[7];
+var_dump($n);
+
 # example 2
-$n2 = $m['size'];
-# print
-var_dump($n1, $n2);
+$n = $m['size'];
+var_dump($n);

@@ -1,20 +1,20 @@
 import std.stdio;
 
 void main() {
+   int n;
    writeln("example 1");
-   auto n1 = 10;
-   while (n1 < 20) {
-      writeln(n1);
-      n1++;
+   n = 10;
+   while (n < 20) {
+      writeln(n);
+      n++;
    }
-
    writeln("example 2");
-   auto n2 = 10;
+   n = 10;
    while (true) {
-      if (n2 > 19) {
+      if (n > 19) {
          break;
       }
-      writeln(n2);
-      n2++;
+      writeln(n);
+      n++;
    }
 }

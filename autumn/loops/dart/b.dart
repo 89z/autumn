@@ -1,18 +1,18 @@
 void main() {
+   num n;
    print('example 1');
-   var n1 = 10;
-   while (n1 < 20) {
-      print(n1);
-      n1++;
+   n = 10;
+   while (n < 20) {
+      print(n);
+      n++;
    }
-
    print('example 2');
-   var n2 = 10;
+   n = 10;
    while (true) {
-      if (n2 > 19) {
+      if (n > 19) {
          break;
       }
-      print(n2);
-      n2++;
+      print(n);
+      n++;
    }
 }
