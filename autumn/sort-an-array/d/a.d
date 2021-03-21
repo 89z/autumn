@@ -1,13 +1,14 @@
-import algo = std.algorithm;
-import io = std.stdio;
+import std.algorithm, std.stdio;
 
 void main() {
-   // example 1
-   auto a1 = ["May", "June"];
-   algo.sort(a1);
-   // example 2
-   auto a2 = [10, 9];
-   algo.sort(a2);
-   // print
-   io.writeln(a1, a2);
+   { // example 1
+      auto a = ["May", "June"];
+      a.sort;
+      a.writeln;
+   }
+   { // example 2
+      auto a = [10, 9];
+      a.sort;
+      a.writeln;
+   }
 }

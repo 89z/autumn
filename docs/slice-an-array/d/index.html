@@ -55,12 +55,14 @@
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">auto</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;M&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;r&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;h&#34;</span><span style="color:#f92672">];</span>
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> a1 <span style="color:#f92672">=</span> a<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">..</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">];</span>
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> a2 <span style="color:#f92672">=</span> a<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">..</span> $<span style="color:#f92672">];</span>
-   <span style="color:#75715e">// print
-</span><span style="color:#75715e"></span>   writeln<span style="color:#f92672">(</span>a1<span style="color:#f92672">,</span> a2<span style="color:#f92672">);</span>
+   <span style="color:#f92672">{</span> <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">auto</span> b <span style="color:#f92672">=</span> a<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">..</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">];</span>
+      b<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+   <span style="color:#f92672">{</span> <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">auto</span> b <span style="color:#f92672">=</span> a<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">..</span> $<span style="color:#f92672">];</span>
+      b<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 
