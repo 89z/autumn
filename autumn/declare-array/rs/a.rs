@@ -1,12 +1,15 @@
 fn main() {
    // example 1
-   let a1: Vec<u8> = vec![];
+   let a: Vec<u8> = vec![];
+   println!("{:?}", a);
+
    // example 2
-   let a2 = vec![10, 11];
+   let a = vec![10, 11];
+   println!("{:?}", a);
+
    // example 3
-   let a3 = vec![
+   let a = vec![
       vec![10, 11], vec![12, 13]
    ];
-   // print
-   println!("{:?} {:?} {:?}", a1,a2,a3);
+   println!("{:?}", a);
 }

@@ -1,6 +1,7 @@
 # example 1
-a1 = list()
+a = list()
+print(a)
+
 # example 2
-a2 = list('March')
-# print
-print(a1, a2)
+a = list('March')
+print(a)

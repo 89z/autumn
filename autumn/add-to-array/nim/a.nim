@@ -1,8 +1,9 @@
-# example 1
-var a1: seq[int]
-a1.add(10)
-# example 2
-var a2 = @[10, 11]
-a2.add(12)
-# print
-echo a1, a2
+block: # example 1
+   var a: seq[int]
+   a.add(10)
+   echo a
+
+block: # example 2
+   var a = @[10, 11]
+   a.add(12)
+   echo a

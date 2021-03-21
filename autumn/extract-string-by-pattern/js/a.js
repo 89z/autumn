@@ -1,4 +1,3 @@
-'use strict';
 let s = 'Sunday Monday';
 { // example 1
    let a = s.match(/..n/);
