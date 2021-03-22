@@ -1,8 +1,10 @@
 <?php
 date_default_timezone_set('America/Chicago');
+
 # example 1
-$s1 = strftime('%F');
+$s = strftime('%F');
+var_dump($s);
+
 # example 2
-$s2 = strftime('%FT%T');
-# print
-var_dump($s1, $s2);
+$s = strftime('%FT%T');
+var_dump($s);

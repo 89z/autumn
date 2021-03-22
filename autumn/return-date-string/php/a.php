@@ -1,9 +1,11 @@
 <?php
-$zone = new DateTimeZone('America/Chicago');
-$date = new DateTime(timezone: $zone);
+$z = new DateTimeZone('America/Chicago');
+$t = new DateTime(timezone: $z);
+
 # example 1
-$s1 = $date->format(DATE_W3C);
+$s = $t->format(DATE_W3C);
+var_dump($s);
+
 # example 2
-$s2 = $date->format('Y-m-d');
-# print
-var_dump($s1, $s2);
+$s = $t->format('Y-m-d');
+var_dump($s);

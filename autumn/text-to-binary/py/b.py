@@ -1,3 +1,4 @@
-s = '0a0b0c0d'
-t = bytes.fromhex(s)
+import base64
+s = 'CgsMDQ=='
+t = base64.b64decode(s)
 print(t == b'\n\v\f\r')

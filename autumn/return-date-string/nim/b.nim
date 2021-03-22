@@ -1,8 +1,9 @@
 import times
-# example 1
-let o = now()
-let s1 = getDateStr(o)
-# example 2
-let s2 = getDateStr()
-# print
-echo [s1, s2]
+
+block: # example 1
+   let s = now().getDateStr()
+   echo s
+
+block: # example 2
+   let s = getDateStr()
+   echo s

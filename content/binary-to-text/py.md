@@ -5,9 +5,13 @@ tags = [ "python" ]
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/base64.html#base64.b64encode>
+<https://docs.python.org/library/base64.html#base64.b16encode>
 
 {{< r "b.py" >}}
+
+<https://docs.python.org/library/base64.html#base64.b64encode>
+
+{{< r "c.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#bytes.hex>
 
