@@ -1,10 +1,14 @@
 import json
 a = ['/', '📗']
+
 # example 1
-s1 = json.dumps(a)
+s = json.dumps(a)
+print(s)
+
 # example 2
-s2 = json.dumps(a, ensure_ascii=False)
+s = json.dumps(a, ensure_ascii=False)
+print(s)
+
 # example 3
-s3 = json.dumps(a, indent=1)
-# print
-print(s1, s2, s3, sep='\n')
+s = json.dumps(a, indent=1)
+print(s)

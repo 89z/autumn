@@ -1,8 +1,9 @@
 import re
-s = 'Sunday Monday'
+
 # example 1
-s1 = re.search('..n', s).group()
-print(s1 == 'Sun')
+s = re.search('..n', 'Sunday Monday').group()
+print(s == 'Sun')
+
 # example 2
-a = re.search('(..)n', s).groups()
+a = re.search('(..)n', 'Sunday Monday').groups()
 print(a[0] == 'Su')

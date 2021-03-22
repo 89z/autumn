@@ -3,7 +3,8 @@ title = "Nim"
 tags = [ "nim" ]
 +++
 
-<https://github.com/theAkito/nim-quickcrypt>
+- <https://github.com/status-im/nim-bearssl>
+- <https://github.com/theAkito/nim-quickcrypt>
 
 ## References
 

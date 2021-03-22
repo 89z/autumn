@@ -3,10 +3,12 @@ import "fmt"
 
 func main() {
    n := 100
-   // example 1
-   s1 := fmt.Sprintf("%d", n)
-   // example 2
-   s2 := fmt.Sprintf("%v", n)
-   // print
-   fmt.Println(s1 == "100", s2 == "100")
+   { // example 1
+      s := fmt.Sprintf("%d", n)
+      fmt.Println(s == "100")
+   }
+   { // example 2
+      s := fmt.Sprintf("%v", n)
+      fmt.Println(s == "100")
+   }
 }
