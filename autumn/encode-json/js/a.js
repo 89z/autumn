@@ -1,7 +1,9 @@
 let a = ['/', '📗'];
-// example 1
-let s1 = JSON.stringify(a);
-// example 2
-let s2 = JSON.stringify(a, null, 3);
-// print
-console.log(s1, s2);
+{ // example 1
+   let s = JSON.stringify(a);
+   console.log(s);
+}
+{ // example 2
+   let s = JSON.stringify(a, null, 1);
+   console.log(s);
+}
