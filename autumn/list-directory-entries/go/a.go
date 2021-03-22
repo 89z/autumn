@@ -6,12 +6,11 @@ import (
 )
 
 func main() {
-   infos, e := ioutil.ReadDir(".")
+   dir, e := ioutil.ReadDir(".")
    if e != nil {
       log.Fatal(e)
    }
-   for _, info := range infos {
-      s := info.Name()
-      println(s)
+   for _, each := range dir {
+      println(each.Name())
    }
 }

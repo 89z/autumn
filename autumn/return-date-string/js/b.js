@@ -1,13 +1,14 @@
-function format(date_o) {
-   function part(acc_m, cur_m) {
-      return { ...acc_m, [cur_m.type]: cur_m.value };
+function join(t, a, s) {
+   function format(m) {
+      let f = new Intl.DateTimeFormat('en', m);
+      return f.format(t);
    }
-   let fmt_o = new Intl.DateTimeFormat('en', {
-      year: 'numeric', month: '2-digit', day: '2-digit'
-   });
-   let date_m = fmt_o.formatToParts(date_o).reduce(part, {});
-   return [date_m.year, date_m.month, date_m.day].join('-');
+   return a.map(format).join(s);
 }
 
-let s = format(new Date);
+let a = [
+   {weekday: 'short'}, {month: 'short'}, {day: 'numeric'}, {year: 'numeric'}
+];
+
+let s = join(new Date, a, ' ');
 console.log(s);

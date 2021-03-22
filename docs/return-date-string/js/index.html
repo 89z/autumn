@@ -35,8 +35,8 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">o</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">toISOString</span>();
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">t</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">toISOString</span>();
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span>);
 </code></pre></div>
 
@@ -47,18 +47,19 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">format</span>(<span style="color:#a6e22e">date_o</span>) {
-   <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">part</span>(<span style="color:#a6e22e">acc_m</span>, <span style="color:#a6e22e">cur_m</span>) {
-      <span style="color:#66d9ef">return</span> { ...<span style="color:#a6e22e">acc_m</span>, [<span style="color:#a6e22e">cur_m</span>.<span style="color:#a6e22e">type</span>]<span style="color:#f92672">:</span> <span style="color:#a6e22e">cur_m</span>.<span style="color:#a6e22e">value</span> };
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">t</span>, <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">s</span>) {
+   <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">format</span>(<span style="color:#a6e22e">m</span>) {
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">f</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Intl</span>.<span style="color:#a6e22e">DateTimeFormat</span>(<span style="color:#e6db74">&#39;en&#39;</span>, <span style="color:#a6e22e">m</span>);
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">format</span>(<span style="color:#a6e22e">t</span>);
    }
-   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">fmt_o</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Intl</span>.<span style="color:#a6e22e">DateTimeFormat</span>(<span style="color:#e6db74">&#39;en&#39;</span>, {
-      <span style="color:#a6e22e">year</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;numeric&#39;</span>, <span style="color:#a6e22e">month</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;2-digit&#39;</span>, <span style="color:#a6e22e">day</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;2-digit&#39;</span>
-   });
-   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">date_m</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fmt_o</span>.<span style="color:#a6e22e">formatToParts</span>(<span style="color:#a6e22e">date_o</span>).<span style="color:#a6e22e">reduce</span>(<span style="color:#a6e22e">part</span>, {});
-   <span style="color:#66d9ef">return</span> [<span style="color:#a6e22e">date_m</span>.<span style="color:#a6e22e">year</span>, <span style="color:#a6e22e">date_m</span>.<span style="color:#a6e22e">month</span>, <span style="color:#a6e22e">date_m</span>.<span style="color:#a6e22e">day</span>].<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;-&#39;</span>);
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">format</span>).<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">s</span>);
 }
 
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">format</span>(<span style="color:#66d9ef">new</span> Date);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> [
+   {<span style="color:#a6e22e">weekday</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;short&#39;</span>}, {<span style="color:#a6e22e">month</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;short&#39;</span>}, {<span style="color:#a6e22e">day</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;numeric&#39;</span>}, {<span style="color:#a6e22e">year</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;numeric&#39;</span>}
+];
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">join</span>(<span style="color:#66d9ef">new</span> Date, <span style="color:#a6e22e">a</span>, <span style="color:#e6db74">&#39; &#39;</span>);
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span>);
 </code></pre></div>
 

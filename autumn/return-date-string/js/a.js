@@ -1,3 +1,3 @@
-let o = new Date;
-let s = o.toISOString();
+let t = new Date;
+let s = t.toISOString();
 console.log(s);

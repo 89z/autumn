@@ -1,15 +1,16 @@
 package main
 
 import (
-   "fmt"
    "log"
-   "path/filepath"
+   "os"
 )
 
 func main() {
-   a, e := filepath.Glob(`C:\*\LICENSE.txt`)
+   dir, e := os.ReadDir(".")
    if e != nil {
       log.Fatal(e)
    }
-   fmt.Println(a)
+   for _, each := range dir {
+      println(each.Name())
+   }
 }
