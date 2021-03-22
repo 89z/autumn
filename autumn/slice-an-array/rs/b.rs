@@ -1,13 +1,19 @@
 fn main() {
    let a = ["M", "a", "r", "c", "h"];
+
    // example 1
-   let s1 = a.get(2);
+   let o = a.get(2);
+   println!("{:?}", o);
+
    // example 2
-   let a2 = a.get(2 .. 4);
+   let o = a.get(2 .. 4);
+   println!("{:?}", o);
+
    // example 3
-   let a3 = a.get(2 ..= 3);
+   let o = a.get(2 ..= 3);
+   println!("{:?}", o);
+
    // example 4
-   let a4 = a.get(2 ..);
-   // print
-   println!("{:?} {:?} {:?} {:?}", s1, a2, a3, a4);
+   let o = a.get(2 ..);
+   println!("{:?}", o);
 }
