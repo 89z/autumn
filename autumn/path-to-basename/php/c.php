@@ -1,8 +1,10 @@
 <?php
-$o = new SplFileInfo('C:\Windows\notepad.exe');
+$f = new SplFileInfo('C:\Windows\notepad.exe');
+
 # example 1
-$s1 = $o->getBasename();
+$s = $f->getBasename();
+var_dump($s == 'notepad.exe');
+
 # example 2
-$s2 = $o->getBasename('.exe');
-# print
-var_dump($s1 == 'notepad.exe', $s2 == 'notepad');
+$s = $f->getBasename('.exe');
+var_dump($s == 'notepad');

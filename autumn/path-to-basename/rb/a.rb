@@ -1,3 +1,3 @@
 s = 'C:\Windows\notepad.exe'
-s1 = File.basename(s)
-puts s1 == 'notepad.exe'
+t = File.basename(s)
+puts t == 'notepad.exe'
