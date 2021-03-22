@@ -1,6 +1,7 @@
 # example 1
-s1 = "zero\"one\\two"
+s = "zero\"one\\two"
+puts s
+
 # example 2
-s2 = 'zero"one\two'
-# print
-puts s1, s2
+s = 'zero"one\two'
+puts s

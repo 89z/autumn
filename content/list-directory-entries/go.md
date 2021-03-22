@@ -13,9 +13,13 @@ tags = [ "go" ]
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/path/filepath#Glob>
+<https://golang.org/pkg/os#ReadDir>
 
 {{< r "d.go" >}}
+
+<https://golang.org/pkg/path/filepath#Glob>
+
+{{< r "e.go" >}}
 
 <https://golang.org/pkg/path/filepath#Walk>
 
@@ -24,3 +28,7 @@ tags = [ "go" ]
 - <https://hyperpolyglot.org/c#dir-iterate>
 - <https://programming-idioms.org/idiom/180>
 - <https://rosettacode.org/wiki/Walk_a_directory/Recursively>
+
+
+
+

@@ -1,8 +1,11 @@
 fn main() {
+
    // example 1
-   let s1 = r"one\two";
+   let s = r"one\two";
+   println!("{}", s);
+
    // example 2
-   let s2 = r#"zero"one\two"#;
-   // print
-   println!("{} {}", s1, s2);
+   let s = r#"zero"one\two"#;
+   println!("{}", s);
+
 }

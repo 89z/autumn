@@ -7,11 +7,12 @@ import (
 )
 
 func ReadDir(s string) ([]string, error) {
-   o, e := os.Open(s)
+   dir, e := os.Open(s)
    if e != nil {
       return nil, e
    }
-   return o.Readdirnames(0)
+   defer dir.Close()
+   return dir.Readdirnames(0)
 }
 
 func main() {
