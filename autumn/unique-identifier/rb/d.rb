@@ -1,7 +1,9 @@
 require 'securerandom'
+
 # example 1
-s1 = SecureRandom.hex
+s = SecureRandom.hex
+puts s
+
 # example 2
-s2 = SecureRandom.hex(10)
-# print
-puts s1, s2
+s = SecureRandom.hex(10)
+puts s

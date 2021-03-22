@@ -1,18 +1,22 @@
 package main
 
 func main() {
-   n := 10
+   var (
+      n = 10
+      s string
+   )
+
    // example 1
-   s1 := ""
    if n > 0 {
-      s1 = "+"
+      s = "+"
    } else if n < 0 {
-      s1 = "-"
+      s = "-"
    } else {
-      s1 = "zero"
+      s = "zero"
    }
+   println(s == "+")
+
    // example 2
-   s2 := map[bool]string{true: "+", false: "-"}[n > 0]
-   // print
-   println(s1 == "+", s2 == "+")
+   s = map[bool]string{true: "+", false: "-"}[n > 0]
+   println(s == "+")
 }

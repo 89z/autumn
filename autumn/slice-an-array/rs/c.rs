@@ -1,13 +1,19 @@
 fn main() {
    let a = ["M", "a", "r", "c", "h"];
+
    // example 1
-   let s1 = a[2];
+   let s = a[2];
+   println!("{}", s);
+
    // example 2
-   let a2 = &a[2 .. 4];
+   let b = &a[2 .. 4];
+   println!("{:?}", b);
+
    // example 3
-   let a3 = &a[2 ..= 3];
+   let b = &a[2 ..= 3];
+   println!("{:?}", b);
+
    // example 4
-   let a4 = &a[2 ..];
-   // print
-   println!("{} {:?} {:?} {:?}", s1, a2, a3, a4);
+   let b = &a[2 ..];
+   println!("{:?}", b);
 }

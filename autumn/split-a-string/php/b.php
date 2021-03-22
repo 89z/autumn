@@ -1,8 +1,9 @@
 <?php
-$s = 'May,June';
+
 # example 1
-$s1 = strtok($s, ',');
+$s = strtok('May,June', ',');
+var_dump($s == 'May');
+
 # example 2
-$s2 = strtok(',');
-# print
-var_dump($s1, $s2);
+$s = strtok(',');
+var_dump($s == 'June');

@@ -1,7 +1,9 @@
 require 'securerandom'
+
 # example 1
-s1 = SecureRandom.alphanumeric
+s = SecureRandom.alphanumeric
+puts s
+
 # example 2
-s2 = SecureRandom.alphanumeric(10)
-# print
-puts s1, s2
+s = SecureRandom.alphanumeric(10)
+puts s

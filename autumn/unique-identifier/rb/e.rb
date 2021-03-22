@@ -1,7 +1,9 @@
 require 'securerandom'
+
 # example 1
-s1 = SecureRandom.urlsafe_base64
+s = SecureRandom.urlsafe_base64
+puts s
+
 # example 2
-s2 = SecureRandom.urlsafe_base64(10)
-# print
-puts s1, s2
+s = SecureRandom.urlsafe_base64(10)
+puts s
