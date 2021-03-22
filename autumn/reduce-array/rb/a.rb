@@ -1,9 +1,13 @@
 a = ['May', 'June']
+
 # example 1
-s1 = a.reduce(:+)
+s = a.reduce(:+)
+puts s == 'MayJune'
+
 # example 2
-s2 = a.reduce { |s, s2| s + s2 }
+s = a.reduce { |s, t| s + t }
+puts s == 'MayJune'
+
 # example 3
-n3 = a.reduce(0) { |n, s| n + s.length }
-# print
-puts s1 == 'MayJune', s2 == 'MayJune', n3 == 7
+n = a.reduce(0) { |n, s| n + s.length }
+puts n == 7

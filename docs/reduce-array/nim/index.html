@@ -36,14 +36,16 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> sequtils
-<span style="color:#66d9ef">let</span> a0 <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span><span style="color:#f92672">]</span>
-<span style="color:#75715e"># example 1</span>
-<span style="color:#66d9ef">let</span> s1 <span style="color:#f92672">=</span> foldl(a0, a <span style="color:#f92672">&amp;</span> b)
-<span style="color:#75715e"># example 2</span>
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">f</span>(s, s2: <span style="color:#66d9ef">string</span>): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> s <span style="color:#f92672">&amp;</span> s2
-<span style="color:#66d9ef">let</span> s2 <span style="color:#f92672">=</span> foldl(a0, f(a, b))
-<span style="color:#75715e"># print</span>
-echo s1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span> <span style="color:#f92672">and</span> s2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>
+<span style="color:#66d9ef">let</span> c <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;May&#34;</span>, <span style="color:#e6db74">&#34;June&#34;</span><span style="color:#f92672">]</span>
+
+<span style="color:#66d9ef">block</span>: <span style="color:#75715e"># example 1</span>
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> foldl(c, a <span style="color:#f92672">&amp;</span> b)
+   echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>
+
+<span style="color:#66d9ef">block</span>: <span style="color:#75715e"># example 2</span>
+   <span style="color:#66d9ef">proc </span><span style="color:#a6e22e">f</span>(s, t: <span style="color:#66d9ef">string</span>): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> s <span style="color:#f92672">&amp;</span> t
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> foldl(c, f(a, b))
+   echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;MayJune&#34;</span>
 </code></pre></div>
 
 <p><a href="https://nim-lang.org/docs/sequtils.html#foldl.t,untyped,untyped">https://nim-lang.org/docs/sequtils.html#foldl.t,untyped,untyped</a></p>

@@ -1,8 +1,9 @@
 <?php
-$s = 'a.php';
+
 # example 1
-$s1 = pathinfo($s, PATHINFO_EXTENSION);
+$s = pathinfo('file.php', PATHINFO_EXTENSION);
+var_dump($s == 'php');
+
 # example 2
-$s2 = pathinfo($s)['extension'];
-# print
-var_dump($s1 == 'php', $s2 == 'php');
+$s = pathinfo('file.php')['extension'];
+var_dump($s == 'php');

@@ -1,7 +1,7 @@
 +++
 title = "Path to dirname"
 categories = [ "file" ]
-date = 2021-02-09
+date = 2021-03-21
 filename = 'x\extract\zip.go'
 substr = 'path.Dir('
 +++

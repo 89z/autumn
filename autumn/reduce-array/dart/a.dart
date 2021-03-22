@@ -1,5 +1,5 @@
 void main() {
    var a = ['May', 'June'];
-   var s = a.reduce((s, s1) => s + s1);
+   var s = a.reduce((s, t) => s + t);
    print(s == 'MayJune');
 }
