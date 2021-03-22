@@ -1,10 +1,13 @@
 fn main() {
+
    // example 1
-   let s1 = "March
+   let s = "March
 April";
+   println!("{}", s);
+
    // example 2
-   let s2 = r"March
+   let s = r"March
 April";
-   // print
-   println!("{} {}", s1, s2);
+   println!("{}", s);
+
 }

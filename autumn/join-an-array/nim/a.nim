@@ -1,8 +1,10 @@
 import strutils
 let a = ["May", "June"]
-# example 1
-let s1 = a.join(",")
-# example 2
-let s2 = a.join
-# print
-echo s1 == "May,June" and s2 == "MayJune"
+
+block: # example 1
+   let s = a.join(",")
+   echo s == "May,June"
+
+block: # example 2
+   let s = a.join
+   echo s == "MayJune"

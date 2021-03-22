@@ -1,18 +1,23 @@
 # example 1
-s1 = "March
+s = "March
 April"
+puts s
+
 # example 2
-s2 = 'March
+s = 'March
 April'
+puts s
+
 # example 3
-s3 = <<eof
+s = <<eof
 March
 April
 eof
+puts s
+
 # example 4
-s4 = <<'eof'
+s = <<'eof'
 March
 April
 eof
-# print
-puts s1, s2, s3, s4
+puts s

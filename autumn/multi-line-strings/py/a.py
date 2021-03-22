@@ -1,8 +1,9 @@
 # example 1
-s1 = """March
+s = """March
 April"""
+print(s)
+
 # example 2
-s2 = '''March
+s = '''March
 April'''
-# print
-print(s1, s2)
+print(s)

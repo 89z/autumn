@@ -1,10 +1,15 @@
 void main() {
-   // example 1
-   var s1 = '''March
+
+   { // example 1
+      var s = '''March
 April''';
-   // example 2
-   var s2 = """March
+      print(s);
+   }
+
+   { // example 2
+      var s = """March
 April""";
-   // print
-   print(s1 + ',' + s2);
+      print(s);
+   }
+
 }
