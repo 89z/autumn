@@ -1,9 +1,9 @@
 import 'dart:math';
 
-String numberFormat(double n) {
-   var n2 = log(n) / ln10 ~/ 3;
-   var n3 = n / pow(1000, n2);
-   return n3.toStringAsFixed(3) + ['', ' k', ' M', ' G'][n2];
+String numberFormat(double d) {
+   var e = log(d) / ln10 ~/ 3;
+   var f = d / pow(1000, e);
+   return f.toStringAsFixed(3) + ['', ' k', ' M', ' G'][e];
 }
 
 void main() {

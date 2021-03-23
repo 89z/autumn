@@ -1,10 +1,10 @@
 import std.stdio;
 
-auto f(int n, int n2) {
-   return n > n2;
+auto f(int d, int e) {
+   return d + e;
 }
 
 void main() {
-   auto b = f(9, 8);
-   b.writeln;
+   auto n = f(4, 5);
+   writeln(n == 9);
 }

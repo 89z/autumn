@@ -1,5 +1,5 @@
-def f(n, n2):
-   return n > n2
+def f(d, e):
+   return d + e
 
-b = f(9, 8)
-print(b)
+n = f(4, 5)
+print(n == 9)

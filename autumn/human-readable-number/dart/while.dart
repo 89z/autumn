@@ -1,10 +1,10 @@
-String numberFormat(double n) {
-   var n2 = n, n3 = 0;
-   while (n2 >= 1000) {
-      n2 /= 1000;
-      n3++;
+String numberFormat(double d) {
+   var e = d, f = 0;
+   while (e >= 1000) {
+      e /= 1000;
+      f++;
    }
-   return n2.toStringAsFixed(3) + ['', ' k', ' M', ' G'][n3];
+   return e.toStringAsFixed(3) + ['', ' k', ' M', ' G'][f];
 }
 
 void main() {

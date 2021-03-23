@@ -1,6 +1,6 @@
-def f(n, n2)
-   return n > n2
+def f(d, e)
+   return d + e
 end
 
-b = f(9, 8)
-puts b
+n = f(4, 5)
+p n == 9

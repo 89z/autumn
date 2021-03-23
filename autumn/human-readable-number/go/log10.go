@@ -5,10 +5,10 @@ import (
    "math"
 )
 
-func NumberFormat(n float64) string {
-   n2 := int(math.Log10(n)) / 3
-   n3 := n / math.Pow10(n2 * 3)
-   return fmt.Sprintf("%.3f", n3) + []string{"", " k", " M", " G"}[n2]
+func NumberFormat(d float64) string {
+   e := int(math.Log10(d)) / 3
+   f := d / math.Pow10(e * 3)
+   return fmt.Sprintf("%.3f", f) + []string{"", " k", " M", " G"}[e]
 }
 
 func main() {
