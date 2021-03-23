@@ -1,8 +1,8 @@
 from datetime import datetime
 import time
-old = datetime.now()
+then = datetime.now()
 
 while True:
    time.sleep(1 / 100)
-   new = datetime.now() - old
-   print(new, end='\r')
+   now = datetime.now() - then
+   print(now, end='\r')

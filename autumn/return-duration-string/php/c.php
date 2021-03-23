@@ -7,10 +7,10 @@ function format(float $n): string {
    return sprintf('%d m %02d s %03d ms', $min, $sec, $mil);
 }
 
-$old = microtime(true);
+$then = microtime(true);
 
 while (true) {
    usleep(10_000);
-   $new = microtime(true);
-   echo "\r", format($new - $old);
+   $now = microtime(true);
+   echo "\r", format($now - $then);
 }

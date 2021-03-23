@@ -1,7 +1,7 @@
 import time
-old = time.time()
+then = time.time()
 
 while True:
    time.sleep(1 / 100)
-   new = time.time() - old
-   print('%.2f' % new, end='\r')
+   now = time.time() - then
+   print('%.2f' % now, end='\r')

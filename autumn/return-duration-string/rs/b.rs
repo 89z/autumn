@@ -6,13 +6,13 @@ use std::{
 };
 
 fn main() -> Result<(), Box<dyn Error>> {
-   let old_o = SystemTime::now();
-   let dur_o = Duration::from_millis(10);
+   let then = SystemTime::now();
+   let dur = Duration::from_millis(10);
    loop {
-      std::thread::sleep(dur_o);
-      let new_o = old_o.elapsed()?;
-      let n = new_o.as_secs_f32();
-      print!("{:.2}\r", n);
+      std::thread::sleep(dur);
+      let now = then.elapsed()?;
+      let now = now.as_secs_f32();
+      print!("\r{:.2}", now);
       std::io::stdout().flush()?;
    }
 }

@@ -1,8 +1,7 @@
-import io = std.stdio;
-import path = std.path;
+import std.path, std.stdio;
 
 void main() {
-   auto in_s = `C:\Windows\notepad.exe`;
-   auto out_s = path.baseName(in_s);
-   io.writeln(out_s == "notepad.exe");
+   auto s = `C:\Windows\notepad.exe`;
+   auto t = s.baseName;
+   writeln(t == "notepad.exe");
 }

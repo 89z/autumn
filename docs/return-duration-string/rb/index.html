@@ -35,12 +35,12 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">old_n <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>now<span style="color:#f92672">.</span>to_f
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#66d9ef">then</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>now<span style="color:#f92672">.</span>to_f
 
 <span style="color:#66d9ef">loop</span> <span style="color:#66d9ef">do</span>
    sleep(<span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>)
-   new_n <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>now<span style="color:#f92672">.</span>to_f <span style="color:#f92672">-</span> old_n
-   print <span style="color:#e6db74">&#34;%.2f</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> new_n
+   now <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>now<span style="color:#f92672">.</span>to_f <span style="color:#f92672">-</span> <span style="color:#66d9ef">then</span>
+   print <span style="color:#e6db74">&#34;%.2f</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> now
 <span style="color:#66d9ef">end</span>
 </code></pre></div>
 

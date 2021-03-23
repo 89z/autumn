@@ -1,17 +1,17 @@
 <?php
 
 function format(object $o): string {
-   $min_n = $o->i;
-   $sec_n = $o->s;
-   $mil_n = (int)($o->f * 1000);
-   return sprintf('%d m %02d s %03d ms', $min_n, $sec_n, $mil_n);
+   $min = $o->i;
+   $sec = $o->s;
+   $mil = (int)($o->f * 1000);
+   return sprintf('%d m %02d s %03d ms', $min, $sec, $mil);
 }
 
-$old_o = new DateTime;
+$then = new DateTime;
 
 while (true) {
    usleep(10_000);
-   $new_o = new DateTime;
-   $diff_o = $new_o->diff($old_o);
-   echo "\r", format($diff_o);
+   $now = new DateTime;
+   $diff = $now->diff($then);
+   echo "\r", format($diff);
 }

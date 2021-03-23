@@ -4,10 +4,10 @@ from strformat import fmt
 from times import nil
 
 proc format(n: float): string =
-   let mil_n = int(math.mod(n, 1) * 1000)
-   let sec_n = int(n)
-   let min_n = sec_n div 60
-   return fmt"{min_n} m {sec_n:02} s {mil_n:03} ms"
+   let mil = int(math.mod(n, 1) * 1000)
+   let sec = int(n)
+   let mins = sec div 60
+   return fmt"{mins} m {sec:02} s {mil:03} ms"
 
 let n = times.cpuTime()
 

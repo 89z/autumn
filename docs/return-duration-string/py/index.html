@@ -36,12 +36,12 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> time
-old <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+then <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
 
 <span style="color:#66d9ef">while</span> True:
    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>)
-   new <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> old
-   <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%.2f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> new, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#39;</span>)
+   now <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> then
+   <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%.2f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> now, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#39;</span>)
 </code></pre></div>
 
 <p><a href="https://docs.python.org/library/time.html">https://docs.python.org/library/time.html</a></p>
@@ -53,12 +53,12 @@ old <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
 <span style="color:#f92672">import</span> time
-old <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now()
+then <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now()
 
 <span style="color:#66d9ef">while</span> True:
    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>)
-   new <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now() <span style="color:#f92672">-</span> old
-   <span style="color:#66d9ef">print</span>(new, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#39;</span>)
+   now <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now() <span style="color:#f92672">-</span> then
+   <span style="color:#66d9ef">print</span>(now, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#39;</span>)
 </code></pre></div>
 
 <p><a href="https://docs.python.org/library/datetime.html">https://docs.python.org/library/datetime.html</a></p>

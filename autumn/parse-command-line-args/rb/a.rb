@@ -1,16 +1,16 @@
 require 'getoptlong'
-pre_s = ''
-suf_s = ''
+pre = ''
+suf = ''
 
 GetoptLong.new(
    ['-p', GetoptLong::REQUIRED_ARGUMENT],
    ['-s', GetoptLong::REQUIRED_ARGUMENT]
-).each { |key_s, val_s|
-   case key_s
+).each { |key, val|
+   case key
    when '-p'
-      pre_s = val_s
+      pre = val
    when '-s'
-      suf_s = val_s
+      suf = val
    end
 }
 
@@ -25,4 +25,4 @@ eof
    exit 1
 end
 
-puts pre_s + ARGV[0] + suf_s
+puts pre + ARGV[0] + suf

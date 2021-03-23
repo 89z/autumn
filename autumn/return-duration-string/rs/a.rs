@@ -5,12 +5,12 @@ use std::{
 };
 
 fn main() -> std::io::Result<()> {
-   let now = Instant::now();
+   let then = Instant::now();
    let dur = Duration::from_millis(10);
    loop {
       std::thread::sleep(dur);
-      let n = now.elapsed().as_secs_f32();
-      print!("{:.2}\r", n);
+      let now = then.elapsed().as_secs_f32();
+      print!("{:.2}\r", now);
       std::io::stdout().flush()?;
    }
 }

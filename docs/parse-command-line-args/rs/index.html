@@ -42,10 +42,10 @@
 };
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> o <span style="color:#f92672">=</span> Arguments::from_env();
-   <span style="color:#66d9ef">let</span> pre_s: String <span style="color:#f92672">=</span> o.value_from_str(<span style="color:#e6db74">&#34;-p&#34;</span>).unwrap_or_default();
-   <span style="color:#66d9ef">let</span> suf_s: String <span style="color:#f92672">=</span> o.value_from_str(<span style="color:#e6db74">&#34;-s&#34;</span>).unwrap_or_default();
-   <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> o.free().unwrap_or_default();
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> arg <span style="color:#f92672">=</span> Arguments::from_env();
+   <span style="color:#66d9ef">let</span> pre: String <span style="color:#f92672">=</span> arg.value_from_str(<span style="color:#e6db74">&#34;-p&#34;</span>).unwrap_or_default();
+   <span style="color:#66d9ef">let</span> suf: String <span style="color:#f92672">=</span> arg.value_from_str(<span style="color:#e6db74">&#34;-s&#34;</span>).unwrap_or_default();
+   <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> arg.free().unwrap_or_default();
 
    <span style="color:#66d9ef">if</span> a.len() <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span> {
       println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;add [flags] &lt;stem&gt;
@@ -56,8 +56,8 @@
       process::exit(<span style="color:#ae81ff">1</span>);
    }
 
-   <span style="color:#66d9ef">let</span> stem_s <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>a[<span style="color:#ae81ff">0</span>];
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, pre_s <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>stem_s <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>suf_s);
+   <span style="color:#66d9ef">let</span> stem <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>a[<span style="color:#ae81ff">0</span>];
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, pre <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>stem <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>suf);
 }
 </code></pre></div>
 

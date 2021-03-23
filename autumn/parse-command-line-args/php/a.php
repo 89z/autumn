@@ -11,6 +11,6 @@ if ($argc == 1) {
 }
 
 $m = getopt('p:s:', [], $n);
-$pre_s = key_exists('p', $m) ? $m['p'] : '';
-$suf_s = key_exists('s', $m) ? $m['s'] : '';
-echo $pre_s . $argv[$n] . $suf_s, "\n";
+$pre = key_exists('p', $m) ? $m['p'] : '';
+$suf = key_exists('s', $m) ? $m['s'] : '';
+echo $pre . $argv[$n] . $suf, "\n";

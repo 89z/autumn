@@ -38,19 +38,19 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">format</span>(<span style="color:#a6e22e">object</span> $o)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
-   $min_n <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">i</span>;
-   $sec_n <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">s</span>;
-   $mil_n <span style="color:#f92672">=</span> (<span style="color:#a6e22e">int</span>)($o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">f</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>);
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sprintf</span>(<span style="color:#e6db74">&#39;%d m %02d s %03d ms&#39;</span>, $min_n, $sec_n, $mil_n);
+   $min <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">i</span>;
+   $sec <span style="color:#f92672">=</span> $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">s</span>;
+   $mil <span style="color:#f92672">=</span> (<span style="color:#a6e22e">int</span>)($o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">f</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>);
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sprintf</span>(<span style="color:#e6db74">&#39;%d m %02d s %03d ms&#39;</span>, $min, $sec, $mil);
 }
 
-$old_o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
+$then <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
 
 <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
    <span style="color:#a6e22e">usleep</span>(<span style="color:#ae81ff">10_000</span>);
-   $new_o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
-   $diff_o <span style="color:#f92672">=</span> $new_o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">diff</span>($old_o);
-   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>, <span style="color:#a6e22e">format</span>($diff_o);
+   $now <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
+   $diff <span style="color:#f92672">=</span> $now<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">diff</span>($then);
+   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>, <span style="color:#a6e22e">format</span>($diff);
 }
 </code></pre></div>
 
@@ -97,12 +97,12 @@ $then <span style="color:#f92672">=</span> <span style="color:#a6e22e">hrtime</s
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sprintf</span>(<span style="color:#e6db74">&#39;%d m %02d s %03d ms&#39;</span>, $min, $sec, $mil);
 }
 
-$old <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
+$then <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
 
 <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
    <span style="color:#a6e22e">usleep</span>(<span style="color:#ae81ff">10_000</span>);
-   $new <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
-   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>, <span style="color:#a6e22e">format</span>($new <span style="color:#f92672">-</span> $old);
+   $now <span style="color:#f92672">=</span> <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>);
+   <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>, <span style="color:#a6e22e">format</span>($now <span style="color:#f92672">-</span> $then);
 }
 </code></pre></div>
 

@@ -65,10 +65,10 @@
 <span style="color:#f92672">from</span> times <span style="color:#f92672">import</span> <span style="color:#66d9ef">nil</span>
 
 <span style="color:#66d9ef">proc </span><span style="color:#a6e22e">format</span>(n: <span style="color:#66d9ef">float</span>): <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span>
-   <span style="color:#66d9ef">let</span> mil_n <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span>(math.<span style="color:#f92672">mod</span>(n, <span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>)
-   <span style="color:#66d9ef">let</span> sec_n <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span>(n)
-   <span style="color:#66d9ef">let</span> min_n <span style="color:#f92672">=</span> sec_n <span style="color:#f92672">div</span> <span style="color:#ae81ff">60</span>
-   <span style="color:#66d9ef">return</span> <span style="color:#e6db74">fmt&#34;{min_n} m {sec_n:02} s {mil_n:03} ms&#34;</span>
+   <span style="color:#66d9ef">let</span> mil <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span>(math.<span style="color:#f92672">mod</span>(n, <span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>)
+   <span style="color:#66d9ef">let</span> sec <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span>(n)
+   <span style="color:#66d9ef">let</span> mins <span style="color:#f92672">=</span> sec <span style="color:#f92672">div</span> <span style="color:#ae81ff">60</span>
+   <span style="color:#66d9ef">return</span> <span style="color:#e6db74">fmt&#34;{mins} m {sec:02} s {mil:03} ms&#34;</span>
 
 <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> times.cpuTime()
 
