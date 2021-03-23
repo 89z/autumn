@@ -1,8 +1,8 @@
 import 'dart:convert';
-var in_s = '{"U2": {"Boy": ["Twilight", "I Will Follow"]}}';
+var src = '{"U2": {"Boy": ["Twilight", "I Will Follow"]}}';
 
 void main() {
-   var m = jsonDecode(in_s);
-   var out_s = m['U2']['Boy'][0];
-   print(out_s == 'Twilight');
+   var m = jsonDecode(src);
+   var dst = m['U2']['Boy'][0];
+   print(dst == 'Twilight');
 }

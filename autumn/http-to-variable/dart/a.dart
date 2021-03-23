@@ -1,12 +1,12 @@
 import 'dart:io';
 
 void main() {
-   var uri_o = Uri.parse("https://speedtest.lax.hivelocity.net");
-   var http_o = new HttpClient();
-   http_o.getUrl(uri_o).then(
-      (req_o) => req_o.close()
+   var uri = Uri.parse("https://speedtest.lax.hivelocity.net");
+   var http = new HttpClient();
+   http.getUrl(uri).then(
+      (req) => req.close()
    ).then(
-      (resp_o) => resp_o.pipe(stdout)
+      (res) => res.pipe(stdout)
    );
-   http_o.close();
+   http.close();
 }

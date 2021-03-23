@@ -38,14 +38,14 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
 
 <span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> uri_o <span style="color:#f92672">=</span> Uri.parse(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>);
-   <span style="color:#66d9ef">var</span> http_o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HttpClient();
-   http_o.getUrl(uri_o).then(
-      (req_o) <span style="color:#f92672">=&gt;</span> req_o.close()
+   <span style="color:#66d9ef">var</span> uri <span style="color:#f92672">=</span> Uri.parse(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>);
+   <span style="color:#66d9ef">var</span> http <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HttpClient();
+   http.getUrl(uri).then(
+      (req) <span style="color:#f92672">=&gt;</span> req.close()
    ).then(
-      (resp_o) <span style="color:#f92672">=&gt;</span> resp_o.pipe(stdout)
+      (res) <span style="color:#f92672">=&gt;</span> res.pipe(stdout)
    );
-   http_o.close();
+   http.close();
 }
 </code></pre></div>
 
@@ -58,12 +58,12 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
 
 <span style="color:#66d9ef">void</span> main() <span style="color:#66d9ef">async</span> {
-   <span style="color:#66d9ef">var</span> uri_o <span style="color:#f92672">=</span> Uri.parse(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>);
-   <span style="color:#66d9ef">var</span> http_o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HttpClient();
-   <span style="color:#66d9ef">var</span> req_o <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> http_o.getUrl(uri_o);
-   <span style="color:#66d9ef">var</span> resp_o <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> req_o.close();
-   resp_o.pipe(stdout);
-   http_o.close();
+   <span style="color:#66d9ef">var</span> uri <span style="color:#f92672">=</span> Uri.parse(<span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>);
+   <span style="color:#66d9ef">var</span> http <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HttpClient();
+   <span style="color:#66d9ef">var</span> req <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> http.getUrl(uri);
+   <span style="color:#66d9ef">var</span> res <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> req.close();
+   res.pipe(stdout);
+   http.close();
 }
 </code></pre></div>
 </p>

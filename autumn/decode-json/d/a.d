@@ -1,10 +1,9 @@
-import io = std.stdio;
-import json = std.json;
+import std.json, std.stdio;
 
-auto in_s = `{"U2": {"Boy": ["Twilight", "I Will Follow"]}}`;
+auto src = `{"U2": {"Boy": ["Twilight", "I Will Follow"]}}`;
 
 void main() {
-   auto m = json.parseJSON(in_s);
-   auto out_s = m["U2"]["Boy"][0].str;
-   io.writeln(out_s == "Twilight");
+   auto m = src.parseJSON;
+   auto dst = m["U2"]["Boy"][0].str;
+   writeln(dst == "Twilight");
 }
