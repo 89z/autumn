@@ -1,10 +1,10 @@
-def number_format(n)
-   n2, n3 = n, 0
-   while n2 >= 1000
-      n2 /= 1000.0
-      n3 += 1
+def number_format(d)
+   e, f = d, 0
+   while e >= 1000
+      e /= 1000.0
+      f += 1
    end
-   return '%.3f' % n2 + ['', ' k', ' M', ' G'][n3]
+   return '%.3f' % e + ['', ' k', ' M', ' G'][f]
 end
 
 s = number_format(9012345678)

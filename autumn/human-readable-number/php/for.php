@@ -1,11 +1,11 @@
 <?php
 
-function format_number(float $n): string {
-   $n2 = 0;
-   for ($n3 = $n; $n3 >= 1e3; $n3 /= 1e3) {
-      $n2++;
+function format_number(float $d): string {
+   $e = 0;
+   for ($f = $d; $f >= 1e3; $f /= 1e3) {
+      $e++;
    }
-   return sprintf('%.3f', $n3) . ['', ' k', ' M', ' G'][$n2];
+   return sprintf('%.3f', $f) . ['', ' k', ' M', ' G'][$e];
 }
 
 $s = format_number(9012345678);

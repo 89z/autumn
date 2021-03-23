@@ -1,5 +1,5 @@
 <?php
 $m = ['month' => 12];
-$m2 = ['day' => 31];
-$m = array_merge($m, $m2);
+$d = ['day' => 31];
+$m = array_merge($m, $d);
 print_r($m);

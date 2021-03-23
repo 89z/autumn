@@ -1,8 +1,8 @@
 <?php
 
-function format_number(float $n): string {
-   $n2 = (int)(log10($n) / 3);
-   return sprintf('%.3f', $n / 1e3 ** $n2) . ['', ' k', ' M', ' G'][$n2];
+function format_number(float $d): string {
+   $e = (int)(log10($d) / 3);
+   return sprintf('%.3f', $d / 1e3 ** $e) . ['', ' k', ' M', ' G'][$e];
 }
 
 $s = format_number(9012345678);

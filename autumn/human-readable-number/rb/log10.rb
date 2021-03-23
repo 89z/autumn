@@ -1,6 +1,6 @@
-def number_format(n)
-   n2 = Math.log10(n).to_i / 3
-   return '%.3f' % (n / 1e3 ** n2) + ['', ' k', ' M', ' G'][n2]
+def number_format(d)
+   e = Math.log10(d).to_i / 3
+   return '%.3f' % (d / 1e3 ** e) + ['', ' k', ' M', ' G'][e]
 end
 
 s = number_format(9012345678)

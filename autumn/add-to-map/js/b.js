@@ -1,4 +1,4 @@
 let m = {month: 12};
-let m2 = {day: 31};
-m = Object.assign(m, m2);
+let d = {day: 31};
+m = Object.assign(m, d);
 console.log(m);

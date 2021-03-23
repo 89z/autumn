@@ -10,8 +10,8 @@ func main() {
       {"month": 4, "day": 5},
       {"month": 5, "day": 4},
    }
-   f := func (n, n2 int) bool {
-      return a[n]["day"] < a[n2]["day"]
+   f := func (d, e int) bool {
+      return a[d]["day"] < a[e]["day"]
    }
    sort.Slice(a, f)
    fmt.Println(a)

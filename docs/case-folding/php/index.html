@@ -36,16 +36,9 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-<span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;mbstring&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;mbstring&#39;</span>);
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fold</span>(<span style="color:#a6e22e">string</span> $s, <span style="color:#a6e22e">string</span> $t)<span style="color:#f92672">:</span> <span style="color:#a6e22e">bool</span> {
-   $n <span style="color:#f92672">=</span> <span style="color:#a6e22e">MB_CASE_FOLD</span>;
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">mb_convert_case</span>($s, $n) <span style="color:#f92672">==</span> <span style="color:#a6e22e">mb_convert_case</span>($t, $n);
-}
-
-$b1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fold</span>(<span style="color:#e6db74">&#34;\u{006B}&#34;</span>, <span style="color:#e6db74">&#34;\u{212A}&#34;</span>); <span style="color:#75715e"># LATIN SMALL LETTER K, KELVIN SIGN
-</span><span style="color:#75715e"></span>$b2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fold</span>(<span style="color:#e6db74">&#34;\u{00B5}&#34;</span>, <span style="color:#e6db74">&#34;\u{03BC}&#34;</span>); <span style="color:#75715e"># MICRO SIGN, GREEK SMALL LETTER MU
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>($b1, $b2);
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;March&#39;</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">mb_convert_case</span>($s, <span style="color:#a6e22e">MB_CASE_FOLD</span>);
+<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;march&#39;</span>);
 </code></pre></div>
 
 <p><a href="https://php.net/function.mb-convert-case">https://php.net/function.mb-convert-case</a></p>

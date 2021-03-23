@@ -1,4 +1,4 @@
 let m = {month: 12};
-let m2 = {day: 31};
-m = {...m, ...m2};
+let d = {day: 31};
+m = {...m, ...d};
 console.log(m);

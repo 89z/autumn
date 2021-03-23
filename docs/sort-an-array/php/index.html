@@ -55,7 +55,7 @@ $a <span style="color:#f92672">=</span> [
    [<span style="color:#e6db74">&#39;month&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;day&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">4</span>]
 ];
 
-$f <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span> ($m, $m2) <span style="color:#f92672">=&gt;</span> $m[<span style="color:#e6db74">&#39;day&#39;</span>] <span style="color:#f92672">&lt;=&gt;</span> $m2[<span style="color:#e6db74">&#39;day&#39;</span>];
+$f <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span> ($m, $n) <span style="color:#f92672">=&gt;</span> $m[<span style="color:#e6db74">&#39;day&#39;</span>] <span style="color:#f92672">&lt;=&gt;</span> $n[<span style="color:#e6db74">&#39;day&#39;</span>];
 <span style="color:#a6e22e">usort</span>($a, $f);
 <span style="color:#a6e22e">print_r</span>($a);
 </code></pre></div>
