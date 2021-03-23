@@ -1,12 +1,18 @@
 import std.stdio;
 
 void main() {
+   bool b;
+
    // example 1
-   auto b1 = ! false;
+   b = ! false;
+   b.writeln;
+
    // example 2
-   auto b2 = false || true;
+   b = false || true;
+   b.writeln;
+
    // example 3
-   auto b3 = true && true;
-   // print
-   writeln(b1 && b2 && b3);
+   b = true && true;
+   b.writeln;
+
 }
