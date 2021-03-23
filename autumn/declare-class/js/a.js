@@ -1,7 +1,7 @@
 // example 1
 let t = {
    hours: 23,
-   duration: function(minutes) {
+   duration: function (minutes) {
       return this.hours * 60 + minutes;
    }
 };
