@@ -29,7 +29,53 @@
    <a href="/autumn/categories/reference/">reference</a>
    
 </section>
-   <p><a href="https://golang.org/pkg/crypto/cipher#NewCBCEncrypter">https://golang.org/pkg/crypto/cipher#NewCBCEncrypter</a></p>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;crypto/aes&#34;</span>
+   <span style="color:#e6db74">&#34;crypto/cipher&#34;</span>
+   <span style="color:#e6db74">&#34;encoding/base64&#34;</span>
+   <span style="color:#e6db74">&#34;log&#34;</span>
+   <span style="color:#e6db74">&#34;bytes&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">PKCS5Padding</span>(<span style="color:#a6e22e">src</span> []<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">blockSize</span> <span style="color:#66d9ef">int</span>) []<span style="color:#66d9ef">byte</span> {
+   <span style="color:#a6e22e">padding</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">blockSize</span> <span style="color:#f92672">-</span> len(<span style="color:#a6e22e">src</span>)<span style="color:#f92672">%</span><span style="color:#a6e22e">blockSize</span>
+   <span style="color:#a6e22e">padtext</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Repeat</span>([]<span style="color:#66d9ef">byte</span>{byte(<span style="color:#a6e22e">padding</span>)}, <span style="color:#a6e22e">padding</span>)
+   <span style="color:#66d9ef">return</span> append(<span style="color:#a6e22e">src</span>, <span style="color:#a6e22e">padtext</span><span style="color:#f92672">...</span>)
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">iv</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;KDKDKDKDKDKDKDKD&#34;</span>), []byte(<span style="color:#e6db74">&#34;IVIVIVIVIVIVIVIV&#34;</span>)
+   <span style="color:#a6e22e">block</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">aes</span>.<span style="color:#a6e22e">NewCipher</span>(<span style="color:#a6e22e">key</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+   <span style="color:#a6e22e">pt</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;January February&#34;</span>)
+   <span style="color:#a6e22e">pt</span> = <span style="color:#a6e22e">PKCS5Padding</span>(<span style="color:#a6e22e">pt</span>, <span style="color:#ae81ff">16</span>)
+   <span style="color:#a6e22e">cipher</span>.<span style="color:#a6e22e">NewCBCEncrypter</span>(<span style="color:#a6e22e">block</span>, <span style="color:#a6e22e">iv</span>).<span style="color:#a6e22e">CryptBlocks</span>(<span style="color:#a6e22e">pt</span>, <span style="color:#a6e22e">pt</span>)
+   <span style="color:#a6e22e">ct</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">base64</span>.<span style="color:#a6e22e">StdEncoding</span>.<span style="color:#a6e22e">EncodeToString</span>(<span style="color:#a6e22e">pt</span>)
+   println(<span style="color:#a6e22e">ct</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;BvfnZp4jmCaveE6kefhumpZ0raWX9GDojfPasgSwLTM=&#34;</span>)
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/crypto/cipher#NewCBCEncrypter">https://golang.org/pkg/crypto/cipher#NewCBCEncrypter</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://github.com/cheatfate/nimcrypto/issues/50">https://github.com/cheatfate/nimcrypto/issues/50</a></li>
+<li><a href="https://github.com/jangko/nimAES/issues/10">https://github.com/jangko/nimAES/issues/10</a></li>
+<li><a href="https://stackoverflow.com/questions/41579325">https://stackoverflow.com/questions/41579325</a></li>
+<li><a href="https://stackoverflow.com/questions/63879043">https://stackoverflow.com/questions/63879043</a></li>
+<li><a href="//tools.ietf.org/html/rfc5652#section-6.3">CMS</a></li>
+<li><a href="//tools.ietf.org/html/rfc8018#appendix-B.2.5">PKCS 5</a></li>
+<li><a href="//tools.ietf.org/html/rfc2315#page-22">PKCS 7</a></li>
+</ul>
 
 </main>
 
