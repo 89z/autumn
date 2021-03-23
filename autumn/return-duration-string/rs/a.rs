@@ -5,11 +5,11 @@ use std::{
 };
 
 fn main() -> std::io::Result<()> {
-   let now_o = Instant::now();
-   let dur_o = Duration::from_millis(10);
+   let now = Instant::now();
+   let dur = Duration::from_millis(10);
    loop {
-      std::thread::sleep(dur_o);
-      let n = now_o.elapsed().as_secs_f32();
+      std::thread::sleep(dur);
+      let n = now.elapsed().as_secs_f32();
       print!("{:.2}\r", n);
       std::io::stdout().flush()?;
    }

@@ -7,11 +7,11 @@ String format(Duration d) {
 }
 
 void main() {
-   var sw = new Stopwatch();
-   sw.start();
+   var then = new Stopwatch();
+   then.start();
    while (true) {
       sleep(Duration(milliseconds: 10));
-      var elapsed = format(sw.elapsed);
-      stdout.write(elapsed + '\r');
+      var now = format(then.elapsed);
+      stdout.write(now + '\r');
    }
 }

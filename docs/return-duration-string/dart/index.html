@@ -44,12 +44,12 @@
 }
 
 <span style="color:#66d9ef">void</span> main() {
-   <span style="color:#66d9ef">var</span> sw <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Stopwatch();
-   sw.start();
+   <span style="color:#66d9ef">var</span> then <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Stopwatch();
+   then.start();
    <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
       sleep(Duration(milliseconds: <span style="color:#ae81ff">10</span>));
-      <span style="color:#66d9ef">var</span> elapsed <span style="color:#f92672">=</span> format(sw.elapsed);
-      stdout.write(elapsed <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#39;</span>);
+      <span style="color:#66d9ef">var</span> now <span style="color:#f92672">=</span> format(then.elapsed);
+      stdout.write(now <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#39;</span>);
    }
 }
 </code></pre></div>

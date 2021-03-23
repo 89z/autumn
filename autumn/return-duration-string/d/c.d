@@ -1,17 +1,15 @@
-import core.thread: Thread;
-import io = std.stdio;
-import time = std.datetime: Clock;
+import core.thread, std.datetime, std.stdio;
 
 void main() {
-   auto start_o = Clock.currTime;
+   auto then = Clock.currTime;
    while (true) {
-      Thread.sleep(time.msecs(10));
-      auto o = Clock.currTime - start_o;
-      io.writef(
+      Thread.sleep(msecs(10));
+      auto now = Clock.currTime - then;
+      writef(
          "\r%d m %02d s %03d ms",
-         o.split.minutes,
-         o.split.seconds,
-         o.split.msecs
+         now.split.minutes,
+         now.split.seconds,
+         now.split.msecs
       );
    }
 }

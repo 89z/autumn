@@ -1,17 +1,15 @@
-import core.thread: Thread;
-import io = std.stdio;
-import time = core.time: MonoTime;
+import core.thread, core.time, std.stdio;
 
 void main() {
-   auto from = MonoTime.currTime;
+   auto then = MonoTime.currTime;
    while (true) {
-      Thread.sleep(time.msecs(10));
-      auto to = MonoTime.currTime - from;
-      io.writef(
+      Thread.sleep(msecs(10));
+      auto now = MonoTime.currTime - then;
+      writef(
          "\r%d m %02d s %03d ms",
-         to.split.minutes,
-         to.split.seconds,
-         to.split.msecs
+         now.split.minutes,
+         now.split.seconds,
+         now.split.msecs
       );
    }
 }

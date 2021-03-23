@@ -1,7 +1,7 @@
-{{ $path_s := .Get 0 }}
-{{ $lang_s := .Get 1 }}
-{{ if eq $lang_s "" }}
-   {{ $lang_s = index (split $path_s ".") 1 }}
+{{ $getPath := .Get 0 }}
+{{ $getLang := .Get 1 }}
+{{ if eq $getLang "" }}
+   {{ $getLang = index (split $getPath ".") 1 }}
 {{ end }}
-{{ $join_s := path.Join .Page.RelPermalink $path_s }}
-{{ highlight (readFile $join_s) $lang_s "" }}
+{{ $join := path.Join .Page.RelPermalink $getPath }}
+{{ highlight (readFile $join) $getLang "" }}
