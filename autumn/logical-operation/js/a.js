@@ -1,8 +1,12 @@
-// example 1
-let b1 = ! false;
-// example 2
-let b2 = false || true;
-// example 3
-let b3 = true && true;
-// print
-console.log(b1, b2, b3);
+{ // example 1
+   let b = ! false;
+   console.log(b);
+}
+{ // example 2
+   let b = false || true;
+   console.log(b);
+}
+{ // example 3
+   let b = true && true;
+   console.log(b);
+}

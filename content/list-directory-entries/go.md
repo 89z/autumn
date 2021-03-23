@@ -9,17 +9,13 @@ tags = [ "go" ]
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/os#File.Readdirnames>
+<https://golang.org/pkg/os#ReadDir>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/os#ReadDir>
-
-{{< r "d.go" >}}
-
 <https://golang.org/pkg/path/filepath#Glob>
 
-{{< r "e.go" >}}
+{{< r "d.go" >}}
 
 <https://golang.org/pkg/path/filepath#Walk>
 
