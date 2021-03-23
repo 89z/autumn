@@ -35,6 +35,64 @@
    
 
 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> f <span style="color:#f92672">=</span> <span style="color:#f92672">|</span>d: <span style="color:#66d9ef">u8</span>, e: <span style="color:#66d9ef">u8</span><span style="color:#f92672">|</span> -&gt; <span style="color:#66d9ef">u8</span> {
+      <span style="color:#66d9ef">return</span> d <span style="color:#f92672">+</span> e
+   };
+
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> g <span style="color:#f92672">=</span> <span style="color:#f92672">|</span>d, e<span style="color:#f92672">|</span> -&gt; <span style="color:#66d9ef">i32</span> {
+      <span style="color:#66d9ef">return</span> d <span style="color:#f92672">+</span> e
+   };
+
+   <span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> h <span style="color:#f92672">=</span> <span style="color:#f92672">|</span>d, e<span style="color:#f92672">|</span> d <span style="color:#f92672">+</span> e;
+
+   <span style="color:#75715e">// print
+</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, f(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, g(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, h(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>);
+}
+</code></pre></div>
+
+<p><a href="https://doc.rust-lang.org/reference/types/closure.html">https://doc.rust-lang.org/reference/types/closure.html</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+
+   <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> f <span style="color:#f92672">=</span> <span style="color:#f92672">|</span>d: <span style="color:#66d9ef">u8</span>, e: <span style="color:#66d9ef">u8</span><span style="color:#f92672">|</span> -&gt; <span style="color:#66d9ef">u8</span> {
+      <span style="color:#66d9ef">return</span> d <span style="color:#f92672">+</span> e
+   };
+
+   <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> g <span style="color:#f92672">=</span> <span style="color:#f92672">|</span>d, e<span style="color:#f92672">|</span> -&gt; <span style="color:#66d9ef">i32</span> {
+      <span style="color:#66d9ef">return</span> d <span style="color:#f92672">+</span> e
+   };
+
+   <span style="color:#75715e">// example 3
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> h <span style="color:#f92672">=</span> <span style="color:#f92672">|</span>d, e<span style="color:#f92672">|</span> d <span style="color:#f92672">+</span> e;
+
+   <span style="color:#75715e">// print
+</span><span style="color:#75715e"></span>   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, f(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, g(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, h(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>);
+}
+</code></pre></div>
+
+<p><a href="https://doc.rust-lang.org/std/keyword.fn.html">https://doc.rust-lang.org/std/keyword.fn.html</a></p>
+
+
+
+   
+
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#75715e">// example 1
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">f</span>(d: <span style="color:#66d9ef">u8</span>, e: <span style="color:#66d9ef">u8</span>) -&gt; <span style="color:#66d9ef">u8</span> {
    <span style="color:#66d9ef">return</span> d <span style="color:#f92672">+</span> e
@@ -49,30 +107,6 @@
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, f(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>);
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, g(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>);
-}
-</code></pre></div>
-
-<p><a href="https://doc.rust-lang.org/std/keyword.fn.html">https://doc.rust-lang.org/std/keyword.fn.html</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">trait</span> Oper {
-   <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">add</span>(self, <span style="color:#66d9ef">u8</span>) -&gt; <span style="color:#66d9ef">u8</span>;
-}
-
-<span style="color:#66d9ef">impl</span> Oper <span style="color:#66d9ef">for</span> <span style="color:#66d9ef">u8</span> {
-   <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">add</span>(self, n: <span style="color:#66d9ef">u8</span>) -&gt; <span style="color:#66d9ef">u8</span> {
-      self <span style="color:#f92672">+</span> n
-   }
-}
-
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>;
-   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> n.add(<span style="color:#ae81ff">1</span>).add(<span style="color:#ae81ff">1</span>);
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>);
 }
 </code></pre></div>
 

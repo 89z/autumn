@@ -5,6 +5,10 @@ tags = [ "rust" ]
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/reference/types/closure.html>
+
+{{< r "a.rs" >}}
+
 <https://doc.rust-lang.org/std/keyword.fn.html>
 
 {{< r "b.rs" >}}

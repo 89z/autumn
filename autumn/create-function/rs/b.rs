@@ -1,15 +1,15 @@
-trait Oper {
-   fn add(self, u8) -> u8;
+// example 1
+fn f(d: u8, e: u8) -> u8 {
+   return d + e
 }
 
-impl Oper for u8 {
-   fn add(self, n: u8) -> u8 {
-      self + n
-   }
+// example 2
+fn g(d: u8, e: u8) -> u8 {
+   d + e
 }
 
+// print
 fn main() {
-   let n = 7;
-   let n = n.add(1).add(1);
-   println!("{}", n == 9);
+   println!("{}", f(4, 5) == 9);
+   println!("{}", g(4, 5) == 9);
 }

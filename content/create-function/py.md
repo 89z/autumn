@@ -7,6 +7,10 @@ tags = [ "python" ]
 
 <https://docs.python.org/reference/compound_stmts.html#function-definitions>
 
+{{< r "b.py" >}}
+
+<https://docs.python.org/reference/expressions.html#lambda>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting#def-func>
