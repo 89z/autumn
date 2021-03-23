@@ -1,16 +1,15 @@
-import io = std.stdio;
-import opt = std.getopt;
+import std.getopt, std.stdio;
 
 int main(string[] a) {
-   string pre_s, suf_s;
-   auto o = opt.getopt(a, 'p', "prefix", &pre_s, 's', "suffix", &suf_s);
+   string pre, suf;
+   auto opt = getopt(a, 'p', "prefix", &pre, 's', "suffix", &suf);
 
    if (a.length != 2) {
-      opt.defaultGetoptPrinter("add [flags] <stem>", o.options);
+      defaultGetoptPrinter("add [flags] <stem>", opt.options);
       return 1;
    }
 
-   string stem_s = a[1];
-   io.writeln(pre_s ~ stem_s ~ suf_s);
+   string stem = a[1];
+   writeln(pre ~ stem ~ suf);
    return 0;
 }

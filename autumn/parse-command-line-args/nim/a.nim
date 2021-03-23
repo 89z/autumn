@@ -1,19 +1,19 @@
 import parseopt
 
 var
-   o = initOptParser()
-   pre_s, stem_s, suf_s: string
+   opt = initOptParser()
+   pre, stem, suf: string
 
-for m in o.getOpt():
+for m in opt.getOpt():
    case m.key
    of "p":
-      pre_s = m.val
+      pre = m.val
    of "s":
-      suf_s = m.val
+      suf = m.val
    else:
-      stem_s = m.key
+      stem = m.key
 
-if stem_s == "":
+if stem == "":
    echo """add [flags] <stem>
 -p string
    prefix
@@ -21,4 +21,4 @@ if stem_s == "":
    suffix"""
    quit 1
 
-echo pre_s & stem_s & suf_s
+echo pre & stem & suf

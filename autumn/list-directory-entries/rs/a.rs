@@ -4,9 +4,9 @@ use std::{
 };
 
 fn main() -> io::Result<()> {
-   let iter_e = fs::read_dir(".")?;
-   for entry_e in iter_e {
-      println!("{:?}", entry_e?);
+   let iter = fs::read_dir(".")?;
+   for entry in iter {
+      println!("{:?}", entry?);
    }
    Ok(())
 }

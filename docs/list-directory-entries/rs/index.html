@@ -41,9 +41,9 @@
 };
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> iter_e <span style="color:#f92672">=</span> fs::read_dir(<span style="color:#e6db74">&#34;.&#34;</span>)<span style="color:#f92672">?</span>;
-   <span style="color:#66d9ef">for</span> entry_e <span style="color:#66d9ef">in</span> iter_e {
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, entry_e<span style="color:#f92672">?</span>);
+   <span style="color:#66d9ef">let</span> iter <span style="color:#f92672">=</span> fs::read_dir(<span style="color:#e6db74">&#34;.&#34;</span>)<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">for</span> entry <span style="color:#66d9ef">in</span> iter {
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, entry<span style="color:#f92672">?</span>);
    }
    Ok(())
 }
