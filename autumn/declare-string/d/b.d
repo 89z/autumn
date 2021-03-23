@@ -1,6 +1,19 @@
 import std.stdio;
 
 void main() {
-   auto s = "zero\"one\\two";
+   string s;
+
+   // quote
+   s = "south\"north";
    s.writeln;
+
+   // slash
+   s = "south\\north";
+   s.writeln;
+
+   // newline
+   s = "south
+north";
+   s.writeln;
+
 }

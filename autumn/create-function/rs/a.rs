@@ -4,17 +4,16 @@ fn main() {
    let f = |d: u8, e: u8| -> u8 {
       return d + e
    };
+   println!("{}", f(4, 5) == 9);
 
    // example 2
-   let g = |d, e| -> i32 {
+   let f = |d, e| -> i32 {
       return d + e
    };
+   println!("{}", f(4, 5) == 9);
 
    // example 3
-   let h = |d, e| d + e;
-
-   // print
+   let f = |d, e| d + e;
    println!("{}", f(4, 5) == 9);
-   println!("{}", g(4, 5) == 9);
-   println!("{}", h(4, 5) == 9);
+
 }
