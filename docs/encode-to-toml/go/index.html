@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Encode to TOML / Go</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/encode-to-toml/">Encode to TOML</a> / Go
+</h1>
+<section class="page">
+   <time>Fri Feb 12 2021</time>
+   
+   <a href="/autumn/categories/encoding/">encoding</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;github.com/pelletier/go-toml&#34;</span>
+   <span style="color:#e6db74">&#34;io/ioutil&#34;</span>
+   <span style="color:#e6db74">&#34;log&#34;</span>
+   <span style="color:#e6db74">&#34;os&#34;</span>
+)
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">m</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TomlPutFile</span>(<span style="color:#a6e22e">source</span> <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">dest</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">error</span> {
+   <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">toml</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">source</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span>
+   }
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">WriteFile</span>(<span style="color:#a6e22e">dest</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">ModePerm</span>)
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">TomlPutFile</span>(<span style="color:#a6e22e">m</span>{<span style="color:#e6db74">&#34;month&#34;</span>: <span style="color:#ae81ff">12</span>, <span style="color:#e6db74">&#34;day&#34;</span>: <span style="color:#ae81ff">31</span>}, <span style="color:#e6db74">&#34;a.toml&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+   }
+}
+</code></pre></div>
+
+<p><a href="https://pkg.go.dev/github.com/pelletier/go-toml#Marshal">https://pkg.go.dev/github.com/pelletier/go-toml#Marshal</a></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://github.com/toml-lang/toml/wiki">https://github.com/toml-lang/toml/wiki</a></li>
+<li><a href="https://stackoverflow.com/questions/16465705#16491396">https://stackoverflow.com/questions/16465705#16491396</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
