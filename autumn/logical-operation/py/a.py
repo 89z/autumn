@@ -1,8 +1,11 @@
 # example 1
-b1 = not False
+b = not False
+print(b)
+
 # example 2
-b2 = False or True
+b = False or True
+print(b)
+
 # example 3
-b3 = True and True
-# print
-print(b1, b2, b3)
+b = True and True
+print(b)

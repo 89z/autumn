@@ -1,14 +1,23 @@
 fn main() {
+
    // example 1
-   let b1 = ! false;
+   let b = ! false;
+   println!("{}", b);
+
    // example 2
-   let b2 = false || true;
+   let b = false || true;
+   println!("{}", b);
+
    // example 3
-   let b3 = false | true;
+   let b = false | true;
+   println!("{}", b);
+
    // example 4
-   let b4 = true && true;
+   let b = true && true;
+   println!("{}", b);
+
    // example 5
-   let b5 = true & true;
-   // print
-   println!("{}", b1 && b2 && b3 && b4 && b5);
+   let b = true & true;
+   println!("{}", b);
+
 }

@@ -1,8 +1,11 @@
 # example 1
-b1 = ! false
+b = ! false
+p b
+
 # example 2
-b2 = false || true
+b = false || true
+p b
+
 # example 3
-b3 = true && true
-# print
-puts b1, b2, b3
+b = true && true
+p b
