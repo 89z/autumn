@@ -5,13 +5,9 @@ tags = [ "d" ]
 
 {{< r "a.d" >}}
 
-<https://dlang.org/spec/lex.html#delimited_strings>
-
-{{< r "b.d" >}}
-
 <https://dlang.org/spec/lex.html#double_quoted_strings>
 
-{{< r "c.d" >}}
+{{< r "b.d" >}}
 
 <https://dlang.org/spec/lex.html#wysiwyg>
 

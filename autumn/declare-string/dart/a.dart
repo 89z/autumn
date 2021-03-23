@@ -1,18 +1,28 @@
 void main() {
-   { // example 1
-      var s = 'zero"one\\two';
-      print(s);
-   }
-   { // example 2
-      var s = "zero\"one\\two";
-      print(s);
-   }
-   { // example 3
-      var s = r'zero"one\two';
-      print(s);
-   }
-   { // example 4
-      var s = r"one\two";
-      print(s);
-   }
+   String s;
+
+   // slash
+   s = 'south\\north';
+   print(s);
+   s = r'south\north';
+   print(s);
+
+   // quote
+   s = "south'north";
+   print(s);
+   s = "south\"north";
+   print(s);
+   s = 'south"north';
+   print(s);
+   s = 'south\'north';
+   print(s);
+
+   // newline
+   s = '''south
+north''';
+   print(s);
+   s = """south
+north""";
+   print(s);
+
 }

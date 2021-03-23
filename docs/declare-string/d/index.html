@@ -40,40 +40,12 @@
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">string</span> s<span style="color:#f92672">;</span>
 
-   <span style="color:#75715e">// quote
-</span><span style="color:#75715e"></span>   s <span style="color:#f92672">=</span> <span style="color:#e6db74">q&#34;[south&#34;</span>north<span style="color:#f92672">]</span><span style="color:#e6db74">&#34;;
-</span><span style="color:#e6db74">   s.writeln;
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">   // slash
-</span><span style="color:#e6db74">   s = q&#34;</span><span style="color:#f92672">[</span>south<span style="color:#960050;background-color:#1e0010">\</span>north<span style="color:#f92672">]</span><span style="color:#e6db74">&#34;;
-</span><span style="color:#e6db74">   s.writeln;
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">   // newline
-</span><span style="color:#e6db74">   s = q&#34;</span><span style="color:#f92672">[</span>south
-north<span style="color:#f92672">]</span><span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#75715e">// slash
+</span><span style="color:#75715e"></span>   s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;south\\north&#34;</span><span style="color:#f92672">;</span>
    s<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
-
-<span style="color:#f92672">}</span>
-</code></pre></div>
-
-<p><a href="https://dlang.org/spec/lex.html#delimited_strings">https://dlang.org/spec/lex.html#delimited_strings</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">string</span> s<span style="color:#f92672">;</span>
 
    <span style="color:#75715e">// quote
 </span><span style="color:#75715e"></span>   s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;south\&#34;north&#34;</span><span style="color:#f92672">;</span>
-   s<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
-
-   <span style="color:#75715e">// slash
-</span><span style="color:#75715e"></span>   s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;south\\north&#34;</span><span style="color:#f92672">;</span>
    s<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
 
    <span style="color:#75715e">// newline
@@ -95,17 +67,22 @@ north<span style="color:#f92672">]</span><span style="color:#960050;background-c
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
    <span style="color:#66d9ef">string</span> s<span style="color:#f92672">;</span>
-   <span style="color:#75715e">// quote
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#34;one\two&#34;</span><span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">`zero&#34;one\two`</span><span style="color:#f92672">;</span>
+
    <span style="color:#75715e">// slash
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#34;one\two&#34;</span><span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">`zero&#34;one\two`</span><span style="color:#f92672">;</span>
+</span><span style="color:#75715e"></span>   s <span style="color:#f92672">=</span> <span style="color:#e6db74">`south\north`</span><span style="color:#f92672">;</span>
+   s<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+
+   <span style="color:#75715e">// quote
+</span><span style="color:#75715e"></span>   s <span style="color:#f92672">=</span> <span style="color:#e6db74">`south&#34;north`</span><span style="color:#f92672">;</span>
+   s<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+   s <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#34;south`north&#34;</span><span style="color:#f92672">;</span>
+   s<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+
    <span style="color:#75715e">// newline
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#34;March
-</span><span style="color:#e6db74">   April&#34;</span><span style="color:#f92672">;</span>
-   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">`March
-</span><span style="color:#e6db74">   April`</span><span style="color:#f92672">;</span>
+</span><span style="color:#75715e"></span>   s <span style="color:#f92672">=</span> <span style="color:#e6db74">`south
+</span><span style="color:#e6db74">north`</span><span style="color:#f92672">;</span>
+   s<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+
 <span style="color:#f92672">}</span>
 </code></pre></div>
 
