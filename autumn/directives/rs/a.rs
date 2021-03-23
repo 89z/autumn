@@ -1,7 +1,7 @@
 #![allow(unused)]
 
-fn f(n: u8, n2: u8) -> bool {
-   n > n2
+fn f(d: u8, e: u8) -> u8 {
+   d + e
 }
 
 fn main() {

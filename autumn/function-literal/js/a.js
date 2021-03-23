@@ -1,3 +1,3 @@
-let f = (n, n2) => n > n2;
-let b = f(9, 8);
-console.log(b);
+let f = (d, e) => d + e;
+let n = f(4, 5);
+console.log(n == 9);

@@ -1,13 +1,11 @@
-import fmt = std.format;
-import io = std.stdio;
-import math = std.math;
+import std.format, std.math, std.stdio;
 
-string numberFormat(real n) {
-   auto n2 = cast(int) math.log10(n) / 3;
-   return fmt.format("%.3f", n / 1e3 ^^ n2) ~ ["", " k", " M", " G"][n2];
+string numberFormat(real d) {
+   auto e = cast(int) log10(d) / 3;
+   return format("%.3f", d / 1e3 ^^ e) ~ ["", " k", " M", " G"][e];
 }
 
 void main() {
    auto s = numberFormat(9012345678);
-   io.writeln(s == "9.012 G");
+   writeln(s == "9.012 G");
 }
