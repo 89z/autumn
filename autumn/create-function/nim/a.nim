@@ -1,11 +1,13 @@
-# example 1
-proc f(d: int, e: int): int =
-   return d + e
+block: # example 1
+   let f = proc (d: int, e: int): int =
+      return d + e
+   echo f(4, 5) == 9
 
-# example 2
-proc g(d, e: int): int =
-   return d + e
+block: # example 2
+   let f = proc (d, e: int): int =
+      return d + e
+   echo f(4, 5) == 9
 
-# print
-echo f(4, 5) == 9
-echo g(4, 5) == 9
+block: # example 3
+   let f = proc (d, e: int): int = d + e
+   echo f(4, 5) == 9
