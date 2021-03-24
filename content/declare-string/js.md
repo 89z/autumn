@@ -9,11 +9,11 @@ tags = [ "javascript" ]
 
 {{< r "b.js" >}}
 
-<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Template_literals>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String>
 
 {{< r "c.js" >}}
 
-<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Template_literals>
 
 ## References
 

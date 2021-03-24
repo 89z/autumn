@@ -13,6 +13,6 @@ tags = [ "go" ]
 
 ## References
 
-- <https://hyperpolyglot.org/c#str-literal>
+- <https://hyperpolyglot.org/c#str-type>
 - <https://programming-idioms.org/idiom/24>
 - <https://rosettacode.org/wiki/Literals/String>

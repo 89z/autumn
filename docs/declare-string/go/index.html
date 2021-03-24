@@ -38,8 +38,20 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;zero\&#34;one\\two&#34;</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>
+
+   <span style="color:#75715e">// slash
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s</span> = <span style="color:#e6db74">&#34;south\\north&#34;</span>
    println(<span style="color:#a6e22e">s</span>)
+
+   <span style="color:#75715e">// quote
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s</span> = <span style="color:#e6db74">&#34;south\&#34;north&#34;</span>
+   println(<span style="color:#a6e22e">s</span>)
+
+   <span style="color:#75715e">// newline
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s</span> = <span style="color:#e6db74">&#34;south\nnorth&#34;</span>
+   println(<span style="color:#a6e22e">s</span>)
+
 }
 </code></pre></div>
 
@@ -53,15 +65,28 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`zero&#34;one\two`</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>
+
+   <span style="color:#75715e">// slash
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s</span> = <span style="color:#e6db74">`south\north`</span>
    println(<span style="color:#a6e22e">s</span>)
+
+   <span style="color:#75715e">// quote
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s</span> = <span style="color:#e6db74">`south&#34;north`</span>
+   println(<span style="color:#a6e22e">s</span>)
+
+   <span style="color:#75715e">// newline
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">s</span> = <span style="color:#e6db74">`south
+</span><span style="color:#e6db74">north`</span>
+   println(<span style="color:#a6e22e">s</span>)
+
 }
 </code></pre></div>
 
 <p><a href="https://golang.org/ref/spec#raw_string_lit">https://golang.org/ref/spec#raw_string_lit</a></p>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://hyperpolyglot.org/c#str-literal">https://hyperpolyglot.org/c#str-literal</a></li>
+<li><a href="https://hyperpolyglot.org/c#str-type">https://hyperpolyglot.org/c#str-type</a></li>
 <li><a href="https://programming-idioms.org/idiom/24">https://programming-idioms.org/idiom/24</a></li>
 <li><a href="https://rosettacode.org/wiki/Literals/String">https://rosettacode.org/wiki/Literals/String</a></li>
 </ul>

@@ -1,8 +1,16 @@
-{ // example 1
-   let s = 'zero"one\\two';
-   console.log(s);
-}
-{ // example 2
-   let s = "zero\"one\\two";
-   console.log(s);
-}
+let s;
+
+// slash
+s = `south\\north`;
+console.log(s);
+
+// quote
+s = `south"north`;
+console.log(s);
+s = `south'north`;
+console.log(s);
+
+// newline
+s = `south
+north`;
+console.log(s);
