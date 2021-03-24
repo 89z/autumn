@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Join paths / D</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/join-paths/">Join paths</a> / D
+</h1>
+<section class="page">
+   <time>Tue Mar 23 2021</time>
+   
+   <a href="/autumn/categories/path/">path</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span>
+<span style="color:#f92672">{</span>
+    <span style="color:#f92672">import</span> std.path<span style="color:#f92672">;</span>
+    <span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">:</span> write<span style="color:#f92672">,</span> writeln<span style="color:#f92672">,</span> writef<span style="color:#f92672">,</span> writefln<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">version</span> <span style="color:#f92672">(</span>Posix<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+        writeln<span style="color:#f92672">(</span>buildPath<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;foo&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;bar&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;baz&#34;</span><span style="color:#f92672">));</span> <span style="color:#75715e">// &#34;foo/bar/baz&#34;
+</span><span style="color:#75715e"></span>        writeln<span style="color:#f92672">(</span>buildPath<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/foo/&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;bar/baz&#34;</span><span style="color:#f92672">));</span> <span style="color:#75715e">// &#34;/foo/bar/baz&#34;
+</span><span style="color:#75715e"></span>        writeln<span style="color:#f92672">(</span>buildPath<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/foo&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;/bar&#34;</span><span style="color:#f92672">));</span> <span style="color:#75715e">// &#34;/bar&#34;
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+    
+    <span style="color:#66d9ef">version</span> <span style="color:#f92672">(</span>Windows<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+        writeln<span style="color:#f92672">(</span>buildPath<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;foo&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;bar&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;baz&#34;</span><span style="color:#f92672">));</span> <span style="color:#75715e">// `foo\bar\baz`
+</span><span style="color:#75715e"></span>        writeln<span style="color:#f92672">(</span>buildPath<span style="color:#f92672">(</span><span style="color:#e6db74">`c:\foo`</span><span style="color:#f92672">,</span> <span style="color:#e6db74">`bar\baz`</span><span style="color:#f92672">));</span> <span style="color:#75715e">// `c:\foo\bar\baz`
+</span><span style="color:#75715e"></span>        writeln<span style="color:#f92672">(</span>buildPath<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;foo&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">`d:\bar`</span><span style="color:#f92672">));</span> <span style="color:#75715e">// `d:\bar`
+</span><span style="color:#75715e"></span>        writeln<span style="color:#f92672">(</span>buildPath<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;foo&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">`\bar`</span><span style="color:#f92672">));</span> <span style="color:#75715e">// `\bar`
+</span><span style="color:#75715e"></span>        writeln<span style="color:#f92672">(</span>buildPath<span style="color:#f92672">(</span><span style="color:#e6db74">`c:\foo`</span><span style="color:#f92672">,</span> <span style="color:#e6db74">`\bar`</span><span style="color:#f92672">));</span> <span style="color:#75715e">// `c:\bar`
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+    
+    
+<span style="color:#f92672">}</span>
+</code></pre></div>
+
+<p><a href="https://dlang.org/library/std/path/build_path.html">https://dlang.org/library/std/path/build_path.html</a></p>
+
+</main>
+
+</body>
+</html>

@@ -3,6 +3,8 @@ title = "Dart"
 tags = [ "dart" ]
 +++
 
+{{< r "a.dart" >}}
+
 <https://pub.dev/documentation/path>
 
 ## References
