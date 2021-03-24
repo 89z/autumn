@@ -9,6 +9,14 @@ tags = [ "php" ]
 
 {{< r "b.php" >}}
 
+<https://php.net/types.string#language.types.string.syntax.heredoc>
+
+{{< r "c.php" >}}
+
+<https://php.net/types.string#language.types.string.syntax.nowdoc>
+
+{{< r "d.php" >}}
+
 <https://php.net/types.string#language.types.string.syntax.single>
 
 ## References

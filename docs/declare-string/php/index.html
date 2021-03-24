@@ -36,8 +36,21 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;zero</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">one</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">two&#34;</span>;
-<span style="color:#66d9ef">echo</span> $s, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+
+<span style="color:#75715e"># slash
+</span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;south</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">north&#34;</span>;
+<span style="color:#a6e22e">var_dump</span>($s);
+
+<span style="color:#75715e"># quote
+</span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;south&#39;north&#34;</span>;
+<span style="color:#a6e22e">var_dump</span>($s);
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;south</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">north&#34;</span>;
+<span style="color:#a6e22e">var_dump</span>($s);
+
+<span style="color:#75715e"># newline
+</span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;south
+</span><span style="color:#e6db74">north&#34;</span>;
+<span style="color:#a6e22e">var_dump</span>($s);
 </code></pre></div>
 
 <p><a href="https://php.net/types.string#language.types.string.syntax.double">https://php.net/types.string#language.types.string.syntax.double</a></p>
@@ -48,8 +61,81 @@ $s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;zero</s
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;zero&#34;one\two&#39;</span>;
-<span style="color:#66d9ef">echo</span> $s, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+
+<span style="color:#75715e"># slash
+</span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;&lt;</span><span style="color:#e6db74">eof</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">south\\north
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">eof</span>;
+<span style="color:#a6e22e">var_dump</span>($s);
+
+<span style="color:#75715e"># quote
+</span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;&lt;</span><span style="color:#e6db74">eof</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">south&#34;north
+</span><span style="color:#e6db74">south&#39;north
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">eof</span>;
+<span style="color:#a6e22e">var_dump</span>($s);
+
+<span style="color:#75715e"># newline
+</span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;&lt;</span><span style="color:#e6db74">eof</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">south
+</span><span style="color:#e6db74">north
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">eof</span>;
+<span style="color:#a6e22e">var_dump</span>($s);
+</code></pre></div>
+
+<p><a href="https://php.net/types.string#language.types.string.syntax.heredoc">https://php.net/types.string#language.types.string.syntax.heredoc</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+
+<span style="color:#75715e"># slash
+</span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;&lt;&#39;</span><span style="color:#e6db74">eof</span><span style="color:#e6db74">&#39;
+</span><span style="color:#e6db74">south\north
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">eof</span>;
+<span style="color:#a6e22e">var_dump</span>($s);
+
+<span style="color:#75715e"># quote
+</span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;&lt;&#39;</span><span style="color:#e6db74">eof</span><span style="color:#e6db74">&#39;
+</span><span style="color:#e6db74">south&#34;north
+</span><span style="color:#e6db74">south&#39;north
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">eof</span>;
+<span style="color:#a6e22e">var_dump</span>($s);
+
+<span style="color:#75715e"># newline
+</span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;&lt;&#39;</span><span style="color:#e6db74">eof</span><span style="color:#e6db74">&#39;
+</span><span style="color:#e6db74">south
+</span><span style="color:#e6db74">north
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">eof</span>;
+<span style="color:#a6e22e">var_dump</span>($s);
+</code></pre></div>
+
+<p><a href="https://php.net/types.string#language.types.string.syntax.nowdoc">https://php.net/types.string#language.types.string.syntax.nowdoc</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+
+<span style="color:#75715e"># slash
+</span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;south\north&#39;</span>;
+<span style="color:#a6e22e">var_dump</span>($s);
+
+<span style="color:#75715e"># quote
+</span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;south&#34;north&#39;</span>;
+<span style="color:#a6e22e">var_dump</span>($s);
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;south\&#39;north&#39;</span>;
+<span style="color:#a6e22e">var_dump</span>($s);
+
+<span style="color:#75715e"># newline
+</span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;south
+</span><span style="color:#e6db74">north&#39;</span>;
+<span style="color:#a6e22e">var_dump</span>($s);
 </code></pre></div>
 
 <p><a href="https://php.net/types.string#language.types.string.syntax.single">https://php.net/types.string#language.types.string.syntax.single</a></p>

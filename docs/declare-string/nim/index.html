@@ -35,7 +35,32 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;zero</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">one</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">two&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">var</span> s: <span style="color:#66d9ef">string</span>
+
+<span style="color:#75715e"># slash</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#34;south\north&#34;</span>
+echo s
+</code></pre></div>
+
+<p><a href="https://nim-lang.org/docs/manual.html#lexical-analysis-raw-string-literals">https://nim-lang.org/docs/manual.html#lexical-analysis-raw-string-literals</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">var</span> s: <span style="color:#66d9ef">string</span>
+
+<span style="color:#75715e"># slash</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;south</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">north&#34;</span>
+echo s
+
+<span style="color:#75715e"># quote</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;south</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">north&#34;</span>
+echo s
+
+<span style="color:#75715e"># newline</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;south</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">north&#34;</span>
 echo s
 </code></pre></div>
 
@@ -46,13 +71,28 @@ echo s
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#34;one\two&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">var</span> s: <span style="color:#66d9ef">string</span>
+
+<span style="color:#75715e"># slash</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;south\north&#34;&#34;&#34;</span>
+echo s
+
+<span style="color:#75715e"># quote</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;south&#34;north&#34;&#34;&#34;</span>
+echo s
+
+<span style="color:#75715e"># newline</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;south
+</span><span style="color:#e6db74">north&#34;&#34;&#34;</span>
 echo s
 </code></pre></div>
 
-<p><a href="https://nim-lang.org/docs/manual.html#lexical-analysis-raw-string-literals">https://nim-lang.org/docs/manual.html#lexical-analysis-raw-string-literals</a></p>
+<p><a href="https://nim-lang.org/docs/manual.html#lexical-analysis-triple-quoted-string-literals">https://nim-lang.org/docs/manual.html#lexical-analysis-triple-quoted-string-literals</a></p>
 <h2 id="references">References</h2>
-<p><a href="https://rosettacode.org/wiki/Literals/String">https://rosettacode.org/wiki/Literals/String</a></p>
+<ul>
+<li><a href="https://rosettacode.org/wiki/Here_document">https://rosettacode.org/wiki/Here_document</a></li>
+<li><a href="https://rosettacode.org/wiki/Literals/String">https://rosettacode.org/wiki/Literals/String</a></li>
+</ul>
 
 </main>
 

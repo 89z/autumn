@@ -1,20 +1,20 @@
 <?php
 
 # slash
-$s = <<<eof
-south\\north
+$s = <<<'eof'
+south\north
 eof;
 var_dump($s);
 
 # quote
-$s = <<<eof
+$s = <<<'eof'
 south"north
 south'north
 eof;
 var_dump($s);
 
 # newline
-$s = <<<eof
+$s = <<<'eof'
 south
 north
 eof;
