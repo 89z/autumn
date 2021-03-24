@@ -35,7 +35,8 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>join(<span style="color:#e6db74">&#34;/etc&#34;</span>, <span style="color:#e6db74">&#34;hosts&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">s <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>join(<span style="color:#e6db74">&#39;south&#39;</span>, <span style="color:#e6db74">&#39;north&#39;</span>)
+p s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;south/north&#39;</span>
 </code></pre></div>
 
 <p><a href="https://docs.ruby-lang.org/en/master/File.html#method-c-join">https://docs.ruby-lang.org/en/master/File.html#method-c-join</a></p>
@@ -45,7 +46,36 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>join(<span style="color:#e6db74">&#34;/etc&#34;</span>, <span style="color:#e6db74">&#34;hosts&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;pathname&#39;</span>
+pn <span style="color:#f92672">=</span> <span style="color:#66d9ef">Pathname</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">&#39;south&#39;</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;north&#39;</span>
+s <span style="color:#f92672">=</span> pn<span style="color:#f92672">.</span>to_s
+p s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;south/north&#39;</span>
+</code></pre></div>
+
+<p><a href="https://docs.ruby-lang.org/en/master/Pathname.html#method-i-2B">https://docs.ruby-lang.org/en/master/Pathname.html#method-i-2B</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;pathname&#39;</span>
+pn <span style="color:#f92672">=</span> <span style="color:#66d9ef">Pathname</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">&#39;south&#39;</span>) <span style="color:#f92672">/</span> <span style="color:#e6db74">&#39;north&#39;</span>
+s <span style="color:#f92672">=</span> pn<span style="color:#f92672">.</span>to_s
+p s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;south/north&#39;</span>
+</code></pre></div>
+
+<p><a href="https://docs.ruby-lang.org/en/master/Pathname.html#method-i-2F">https://docs.ruby-lang.org/en/master/Pathname.html#method-i-2F</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;pathname&#39;</span>
+pn <span style="color:#f92672">=</span> <span style="color:#66d9ef">Pathname</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">&#39;south&#39;</span>)<span style="color:#f92672">.</span>join(<span style="color:#e6db74">&#39;north&#39;</span>)
+s <span style="color:#f92672">=</span> pn<span style="color:#f92672">.</span>to_s
+p s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;south/north&#39;</span>
 </code></pre></div>
 
 <p><a href="https://docs.ruby-lang.org/en/master/Pathname.html#method-i-join">https://docs.ruby-lang.org/en/master/Pathname.html#method-i-join</a></p>

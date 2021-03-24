@@ -5,7 +5,11 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/path>
+<https://golang.org/pkg/path/filepath#Join>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/path#Join>
 
 ## References
 

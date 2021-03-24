@@ -9,6 +9,14 @@ tags = [ "ruby" ]
 
 {{< r "b.rb" >}}
 
+<https://docs.ruby-lang.org/en/master/Pathname.html#method-i-2B>
+
+{{< r "c.rb" >}}
+
+<https://docs.ruby-lang.org/en/master/Pathname.html#method-i-2F>
+
+{{< r "d.rb" >}}
+
 <https://docs.ruby-lang.org/en/master/Pathname.html#method-i-join>
 
 ## References

@@ -1,1 +1,2 @@
-File.join("/etc", "hosts")
+s = File.join('south', 'north')
+p s == 'south/north'
