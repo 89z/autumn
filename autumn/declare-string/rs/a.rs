@@ -1,11 +1,17 @@
 fn main() {
+   let mut s;
 
-   // example 1
-   let s = r"one\two";
+   // slash
+   s = r"south\north";
    println!("{}", s);
 
-   // example 2
-   let s = r#"zero"one\two"#;
+   // quote
+   s = r#"south"north"#;
+   println!("{}", s);
+
+   // newline
+   s = r"south
+north";
    println!("{}", s);
 
 }

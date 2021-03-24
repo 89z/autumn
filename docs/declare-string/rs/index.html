@@ -36,13 +36,19 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> s;
 
-   <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#34;one\two&#34;</span>;
+   <span style="color:#75715e">// slash
+</span><span style="color:#75715e"></span>   s <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#34;south\north&#34;</span>;
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
 
-   <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">r#&#34;zero&#34;one\two&#34;#</span>;
+   <span style="color:#75715e">// quote
+</span><span style="color:#75715e"></span>   s <span style="color:#f92672">=</span> <span style="color:#e6db74">r#&#34;south&#34;north&#34;#</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
+
+   <span style="color:#75715e">// newline
+</span><span style="color:#75715e"></span>   s <span style="color:#f92672">=</span> <span style="color:#e6db74">r&#34;south
+</span><span style="color:#e6db74">north&#34;</span>;
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
 
 }
@@ -56,8 +62,21 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;zero\&#34;one\\two&#34;</span>;
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> s;
+
+   <span style="color:#75715e">// slash
+</span><span style="color:#75715e"></span>   s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;south\\north&#34;</span>;
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
+
+   <span style="color:#75715e">// quote
+</span><span style="color:#75715e"></span>   s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;south\&#34;north&#34;</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
+
+   <span style="color:#75715e">// newline
+</span><span style="color:#75715e"></span>   s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;south
+</span><span style="color:#e6db74">north&#34;</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
+
 }
 </code></pre></div>
 
