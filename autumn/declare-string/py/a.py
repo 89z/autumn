@@ -1,15 +1,19 @@
-# example 1
-s = 'zero"one\\two'
+# slash
+s = '''south\\north'''
+print(s)
+s = r'''south\north'''
 print(s)
 
-# example 2
-s = "zero\"one\\two"
+# quote
+s = """south"north"""
+print(s)
+s = """south'north"""
 print(s)
 
-# example 3
-s = r'zero"one\two'
+# newline
+s = """south
+north"""
 print(s)
-
-# exmaple 4
-s = r"one\two"
+s = '''south
+north'''
 print(s)

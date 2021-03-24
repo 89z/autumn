@@ -1,7 +1,23 @@
-# example 1
-s = "zero\"one\\two"
+# slash
+s = <<eof
+south\\north
+eof
+puts s
+s = <<'eof'
+south\north
+eof
 puts s
 
-# example 2
-s = 'zero"one\two'
+# quote
+s = <<eof
+south"north
+south'north
+eof
+puts s
+
+# newline
+s = <<eof
+south
+north
+eof
 puts s

@@ -5,7 +5,11 @@ tags = [ "python" ]
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/reference/lexical_analysis.html#strings>
+<https://docs.python.org/reference/lexical_analysis.html#grammar-token-longstring>
+
+{{< r "b.py" >}}
+
+<https://docs.python.org/reference/lexical_analysis.html#grammar-token-shortstring>
 
 ## References
 

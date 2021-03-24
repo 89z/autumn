@@ -5,7 +5,11 @@ tags = [ "ruby" ]
 
 {{< r "a.rb" >}}
 
-<https://docs.ruby-lang.org/en/master/String.html>
+<https://docs.ruby-lang.org/en/master/doc/syntax/literals_rdoc.html#label-Here+Documents+-28heredocs-29>
+
+{{< r "b.rb" >}}
+
+<https://docs.ruby-lang.org/en/master/doc/syntax/literals_rdoc.html#label-Strings>
 
 ## References
 
