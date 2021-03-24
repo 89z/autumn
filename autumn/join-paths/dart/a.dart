@@ -1,6 +1,6 @@
 import 'package:path/path.dart';
 
 void main() {
-   var s = join('directory', 'file.txt');
-   print(s);
+   var s = join('south', 'north');
+   print(s == r'south\north');
 }
