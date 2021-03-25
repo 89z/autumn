@@ -2,7 +2,7 @@ package main
 import "bytes"
 
 func main() {
-   y := []byte("March")
-   b := bytes.Contains(y, []byte("ar"))
-   println(b)
+   b := []byte("March")
+   c := bytes.Contains(b, []byte("ar"))
+   println(c)
 }

@@ -3,6 +3,6 @@ import "strings"
 
 func main() {
    s := "March"
-   b := strings.Contains(s, "ar")
+   b := strings.HasPrefix(s, "Ma")
    println(b)
 }

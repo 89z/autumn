@@ -5,9 +5,9 @@ import (
    "math/big"
 )
 
-func pow(x, y int64) *big.Int {
+func pow(d, e int64) *big.Int {
    return new(big.Int).Exp(
-      big.NewInt(x), big.NewInt(y), nil,
+      big.NewInt(d), big.NewInt(e), nil,
    )
 }
 

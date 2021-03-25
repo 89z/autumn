@@ -74,9 +74,9 @@
    <span style="color:#e6db74">&#34;math/big&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">pow</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span> <span style="color:#66d9ef">int64</span>) <span style="color:#f92672">*</span><span style="color:#a6e22e">big</span>.<span style="color:#a6e22e">Int</span> {
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">pow</span>(<span style="color:#a6e22e">d</span>, <span style="color:#a6e22e">e</span> <span style="color:#66d9ef">int64</span>) <span style="color:#f92672">*</span><span style="color:#a6e22e">big</span>.<span style="color:#a6e22e">Int</span> {
    <span style="color:#66d9ef">return</span> new(<span style="color:#a6e22e">big</span>.<span style="color:#a6e22e">Int</span>).<span style="color:#a6e22e">Exp</span>(
-      <span style="color:#a6e22e">big</span>.<span style="color:#a6e22e">NewInt</span>(<span style="color:#a6e22e">x</span>), <span style="color:#a6e22e">big</span>.<span style="color:#a6e22e">NewInt</span>(<span style="color:#a6e22e">y</span>), <span style="color:#66d9ef">nil</span>,
+      <span style="color:#a6e22e">big</span>.<span style="color:#a6e22e">NewInt</span>(<span style="color:#a6e22e">d</span>), <span style="color:#a6e22e">big</span>.<span style="color:#a6e22e">NewInt</span>(<span style="color:#a6e22e">e</span>), <span style="color:#66d9ef">nil</span>,
    )
 }
 

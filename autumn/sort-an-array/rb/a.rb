@@ -1,7 +1,3 @@
-a = %w(b A a B)
-
-a.sort
+a = [10, 9]
 a.sort!
-a.sort do |x, y|
-  x.downcase <=> y.downcase
-end
+p a

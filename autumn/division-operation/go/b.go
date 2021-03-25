@@ -1,8 +1,8 @@
 package main
 import "math/bits"
 
-func divMod(x, y uint64) (uint64, uint64) {
-   return bits.Div64(0, x, y)
+func divMod(d, e uint64) (uint64, uint64) {
+   return bits.Div64(0, d, e)
 }
 
 func main() {

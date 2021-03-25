@@ -7,18 +7,14 @@ import (
    "os"
 )
 
-func GetContents(s string) ([]byte, error) {
-   o, e := http.Get(s)
-   if e != nil {
-      return []byte{}, e
-   }
-   return ioutil.ReadAll(o.Body)
-}
-
 func main() {
-   y, e := GetContents("http://speedtest.lax.hivelocity.net")
+   get, e := http.Get("http://speedtest.lax.hivelocity.net")
    if e != nil {
       log.Fatal(e)
    }
-   os.Stdout.Write(y)
+   b, e := ioutil.ReadAll(get.Body)
+   if e != nil {
+      log.Fatal(e)
+   }
+   os.Stdout.Write(b)
 }

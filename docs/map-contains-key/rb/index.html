@@ -35,10 +35,48 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">d<span style="color:#f92672">.</span>key?(<span style="color:#e6db74">&#39;y&#39;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">m <span style="color:#f92672">=</span> {<span style="color:#e6db74">month</span>: <span style="color:#ae81ff">12</span>, <span style="color:#e6db74">day</span>: <span style="color:#ae81ff">31</span>}
+b <span style="color:#f92672">=</span> m<span style="color:#f92672">.</span>has_key?(<span style="color:#e6db74">:day</span>)
+p b
+</code></pre></div>
+
+<p><a href="https://docs.ruby-lang.org/en/master/Hash.html#method-i-has_key-3F">https://docs.ruby-lang.org/en/master/Hash.html#method-i-has_key-3F</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">m <span style="color:#f92672">=</span> {<span style="color:#e6db74">month</span>: <span style="color:#ae81ff">12</span>, <span style="color:#e6db74">day</span>: <span style="color:#ae81ff">31</span>}
+b <span style="color:#f92672">=</span> m<span style="color:#f92672">.</span>include?(<span style="color:#e6db74">:day</span>)
+p b
+</code></pre></div>
+
+<p><a href="https://docs.ruby-lang.org/en/master/Hash.html#method-i-include-3F">https://docs.ruby-lang.org/en/master/Hash.html#method-i-include-3F</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">m <span style="color:#f92672">=</span> {<span style="color:#e6db74">month</span>: <span style="color:#ae81ff">12</span>, <span style="color:#e6db74">day</span>: <span style="color:#ae81ff">31</span>}
+b <span style="color:#f92672">=</span> m<span style="color:#f92672">.</span>key?(<span style="color:#e6db74">:day</span>)
+p b
 </code></pre></div>
 
 <p><a href="https://docs.ruby-lang.org/en/master/Hash.html#method-i-key-3F">https://docs.ruby-lang.org/en/master/Hash.html#method-i-key-3F</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">m <span style="color:#f92672">=</span> {<span style="color:#e6db74">month</span>: <span style="color:#ae81ff">12</span>, <span style="color:#e6db74">day</span>: <span style="color:#ae81ff">31</span>}
+b <span style="color:#f92672">=</span> m<span style="color:#f92672">.</span>member?(<span style="color:#e6db74">:day</span>)
+p b
+</code></pre></div>
+
+<p><a href="https://docs.ruby-lang.org/en/master/Hash.html#method-i-member-3F">https://docs.ruby-lang.org/en/master/Hash.html#method-i-member-3F</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/scripting#dict-key-check">https://hyperpolyglot.org/scripting#dict-key-check</a></li>
