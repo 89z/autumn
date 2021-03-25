@@ -11,11 +11,11 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   j, e := cookiejar.New(nil)
+   c, e := cookiejar.New(nil)
    if e != nil {
       log.Fatal(e)
    }
-   j.SetCookies(r.URL, []*http.Cookie{
+   c.SetCookies(r.URL, []*http.Cookie{
       {Name: "month", Value: "March"},
    })
 }

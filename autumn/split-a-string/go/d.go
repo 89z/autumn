@@ -1,8 +1,12 @@
 package main
-import "fmt"
+
+import (
+   "fmt"
+   "strings"
+)
 
 func main() {
-   s := "March"
-   a := []byte(s)
-   fmt.Println(a)
+   s := "May,June,July"
+   a := strings.SplitN(s, ",", 2)
+   fmt.Printf("%q\n", a)
 }

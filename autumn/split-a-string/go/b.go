@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-   s := "May,June,July"
-   a := strings.Split(s, ",")
+   s := "May June"
+   a := strings.Fields(s)
    fmt.Printf("%q\n", a)
 }

@@ -11,13 +11,13 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   j, e := cookiejar.New(nil)
+   c, e := cookiejar.New(nil)
    if e != nil {
       log.Fatal(e)
    }
-   c := http.Client{Jar: j}
-   c.Do(r)
-   for _, d := range j.Cookies(r.URL) {
+   h := http.Client{Jar: c}
+   h.Do(r)
+   for _, d := range c.Cookies(r.URL) {
       println(d.Name, d.Value)
    }
 }
