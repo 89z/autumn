@@ -3,7 +3,7 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "file.go" >}}
+{{< r "a.go" >}}
 
 <https://pkg.go.dev/github.com/pelletier/go-toml#Marshal>
 

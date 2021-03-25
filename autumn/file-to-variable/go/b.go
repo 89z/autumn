@@ -1,15 +1,14 @@
 package main
 
 import (
-   "io/ioutil"
    "log"
    "os"
 )
 
 func main() {
-   y, e := ioutil.ReadFile("readfile.go")
+   data, e := os.ReadFile("a.go")
    if e != nil {
       log.Fatal(e)
    }
-   os.Stdout.Write(y)
+   os.Stdout.Write(data)
 }

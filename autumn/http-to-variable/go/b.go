@@ -1,7 +1,7 @@
 package main
 
 import (
-   "io/ioutil"
+   "io"
    "log"
    "net/http"
    "os"
@@ -12,7 +12,7 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   b, e := ioutil.ReadAll(get.Body)
+   b, e := io.ReadAll(get.Body)
    if e != nil {
       log.Fatal(e)
    }

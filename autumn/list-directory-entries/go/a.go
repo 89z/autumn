@@ -1,12 +1,12 @@
 package main
 
 import (
-   "io/ioutil"
    "log"
+   "os"
 )
 
 func main() {
-   dir, e := ioutil.ReadDir(".")
+   dir, e := os.ReadDir(".")
    if e != nil {
       log.Fatal(e)
    }

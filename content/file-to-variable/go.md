@@ -3,13 +3,13 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "readfile.go" >}}
+{{< r "a.go" >}}
 
-<https://golang.org/pkg/io/ioutil#ReadFile>
+<https://golang.org/pkg/io#ReadAll>
 
-{{< r "readall.go" >}}
+{{< r "b.go" >}}
 
-<https://golang.org/pkg/io/ioutil#ReadAll>
+<https://golang.org/pkg/os#ReadFile>
 
 ## References
 
