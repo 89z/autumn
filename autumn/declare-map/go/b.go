@@ -3,7 +3,7 @@ import "fmt"
 
 func main() {
    { // example 1
-      var m = map[string]int{"month": 12, "day": 31}
+      m := map[string]int{"month": 12, "day": 31}
       fmt.Println(m)
    }
    { // example 2

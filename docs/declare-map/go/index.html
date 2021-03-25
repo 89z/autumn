@@ -40,13 +40,11 @@
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    { <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">m</span> = make(<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>)
-      <span style="color:#a6e22e">m</span>[<span style="color:#e6db74">&#34;day&#34;</span>] = <span style="color:#ae81ff">31</span>
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>)
       <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m</span>)
    }
    { <span style="color:#75715e">// example 2
 </span><span style="color:#75715e"></span>      <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>)
-      <span style="color:#a6e22e">m</span>[<span style="color:#e6db74">&#34;day&#34;</span>] = <span style="color:#ae81ff">31</span>
       <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m</span>)
    }
 }
@@ -64,7 +62,7 @@
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    { <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">m</span> = <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{<span style="color:#e6db74">&#34;month&#34;</span>: <span style="color:#ae81ff">12</span>, <span style="color:#e6db74">&#34;day&#34;</span>: <span style="color:#ae81ff">31</span>}
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{<span style="color:#e6db74">&#34;month&#34;</span>: <span style="color:#ae81ff">12</span>, <span style="color:#e6db74">&#34;day&#34;</span>: <span style="color:#ae81ff">31</span>}
       <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m</span>)
    }
    { <span style="color:#75715e">// example 2
