@@ -1,18 +1,13 @@
 <?php
-[$f, $i] = [7.5, 7];
 
-# example 1
-$n = $f / 2;
-var_dump($n === 3.75);
+# natural float
+$n = 7.0 / 2;
+var_dump($n == 3.5);
 
-# example 2
-$n = (int)($f / 2);
-var_dump($n === 3);
+# natural float
+$n = 7 / 2;
+var_dump($n == 3.5);
 
-# example 3
-$n = (int)($i / 2);
-var_dump($n === 3);
-
-# example 4
-$n = $i / 2;
-var_dump($n === 3.5);
+# force int
+$n = (int)(7 / 2);
+var_dump($n == 3);

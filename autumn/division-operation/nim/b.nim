@@ -1,3 +1,3 @@
-let i = 7
-let n = i div 2
+# natural int
+let n = 7 div 2
 echo n == 3
