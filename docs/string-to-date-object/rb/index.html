@@ -37,8 +37,8 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;date&#39;</span>
 s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2020-12-31&#39;</span>
-o <span style="color:#f92672">=</span> <span style="color:#66d9ef">Date</span><span style="color:#f92672">.</span>strptime(s, <span style="color:#e6db74">&#39;%Y-%m-%d&#39;</span>)
-puts o
+t <span style="color:#f92672">=</span> <span style="color:#66d9ef">Date</span><span style="color:#f92672">.</span>strptime(s, <span style="color:#e6db74">&#39;%Y-%m-%d&#39;</span>)
+p t
 </code></pre></div>
 
 <p><a href="https://docs.ruby-lang.org/en/master/Date.html#method-c-strptime">https://docs.ruby-lang.org/en/master/Date.html#method-c-strptime</a></p>
@@ -50,8 +50,8 @@ puts o
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;date&#39;</span>
 s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2020-12-31&#39;</span>
-o <span style="color:#f92672">=</span> <span style="color:#66d9ef">DateTime</span><span style="color:#f92672">.</span>strptime(s, <span style="color:#e6db74">&#39;%Y-%m-%d&#39;</span>)
-puts o
+d <span style="color:#f92672">=</span> <span style="color:#66d9ef">DateTime</span><span style="color:#f92672">.</span>strptime(s, <span style="color:#e6db74">&#39;%Y-%m-%d&#39;</span>)
+p d
 </code></pre></div>
 
 <p><a href="https://docs.ruby-lang.org/en/master/DateTime.html#method-c-strptime">https://docs.ruby-lang.org/en/master/DateTime.html#method-c-strptime</a></p>
@@ -63,8 +63,8 @@ puts o
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;time&#39;</span>
 s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2020-12-31&#39;</span>
-o <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>parse(s)
-puts o
+t <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>parse(s)
+p t
 </code></pre></div>
 
 <p><a href="https://docs.ruby-lang.org/en/master/Time.html#method-c-parse">https://docs.ruby-lang.org/en/master/Time.html#method-c-parse</a></p>

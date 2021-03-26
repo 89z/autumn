@@ -1,4 +1,4 @@
 require 'time'
 s = '2020-12-31'
-o = Time.parse(s)
-puts o
+t = Time.parse(s)
+p t

@@ -61,9 +61,9 @@
 };
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), chrono::ParseError<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> s<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2020-12-31 01:02:31&#34;</span>;
-   <span style="color:#66d9ef">let</span> o  <span style="color:#f92672">=</span> Utc.datetime_from_str(s, <span style="color:#e6db74">&#34;%Y-%m-%d %H:%M:%S&#34;</span>)<span style="color:#f92672">?</span>;
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o);
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2020-12-31 01:02:31&#34;</span>;
+   <span style="color:#66d9ef">let</span> t  <span style="color:#f92672">=</span> Utc.datetime_from_str(s, <span style="color:#e6db74">&#34;%Y-%m-%d %H:%M:%S&#34;</span>)<span style="color:#f92672">?</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, t);
    Ok(())
 }
 </code></pre></div>

@@ -1,15 +1,10 @@
-import file = std.file;
-import io = std.stdio;
+import std.file, std.stdio;
 
 bool testFile(string s) {
-   if (! file.exists(s)) {
-      return false;
-   }
-   auto o = file.getAttributes(s);
-   return file.attrIsFile(o);
+   return s.exists && s.getAttributes.attrIsFile;
 }
 
 void main() {
    auto b = testFile("a.d");
-   io.writeln(b);
+   b.writeln;
 }

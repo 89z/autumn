@@ -19,11 +19,11 @@ localhost:1313/autumn/match-string-with-literal
       {{ end }}
 </nav>
    {{ else }}
-      {{ $o := .Parent }}
-<h1><a href="{{ $o.RelPermalink }}">{{ $o.Title }}</a> / {{ .Title }}</h1>
+      {{ $p := .Parent }}
+<h1><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a> / {{ .Title }}</h1>
 <section class="{{ .Kind }}">
-   <time>{{ $o.Lastmod.Format "Mon Jan 2 2006" }}</time>
-      {{ range ($o.GetTerms "categories") }}
+   <time>{{ $p.Lastmod.Format "Mon Jan 2 2006" }}</time>
+      {{ range ($p.GetTerms "categories") }}
    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}
 </section>

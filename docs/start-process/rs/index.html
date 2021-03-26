@@ -41,9 +41,8 @@
 };
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;BEGIN&#34;</span>);
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> o <span style="color:#f92672">=</span> Command::new(<span style="color:#e6db74">&#34;pipe&#34;</span>).spawn()<span style="color:#f92672">?</span>;
-   o.wait()<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> c <span style="color:#f92672">=</span> Command::new(<span style="color:#e6db74">r&#34;C:\Windows\notepad&#34;</span>).spawn()<span style="color:#f92672">?</span>;
+   c.wait()<span style="color:#f92672">?</span>;
    Ok(())
 }
 </code></pre></div>

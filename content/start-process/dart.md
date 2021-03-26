@@ -4,7 +4,6 @@ tags = [ "dart" ]
 +++
 
 {{< r "a.dart" >}}
-{{< r "b.dart" >}}
 
 <https://api.dart.dev/dart-io/Process/runSync.html>
 

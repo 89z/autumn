@@ -1,7 +1,6 @@
 import 'dart:io';
 
-void main() async {
-   print('BEGIN');
-   var o = await Process.start('pipe', []);
-   o.stdout.pipe(stdout);
+void main() {
+   var a = ['google.com/search?tbm=vid&q=squarepusher'];
+   Process.runSync('waterfox', a);
 }

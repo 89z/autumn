@@ -4,8 +4,7 @@ use std::{
 };
 
 fn main() -> io::Result<()> {
-   println!("BEGIN");
-   let mut o = Command::new("pipe").spawn()?;
-   o.wait()?;
+   let mut c = Command::new(r"C:\Windows\notepad").spawn()?;
+   c.wait()?;
    Ok(())
 }
