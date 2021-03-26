@@ -1,10 +1,14 @@
 import std.stdio;
 
 void main() {
+   int n;
+
    // example 1
-   auto d = 10;
+   n = 10;
+   n.writeln;
+
    // example 2
-   auto e = 1_000;
-   // print
-   [d, e].writeln;
+   n = 1_000;
+   n.writeln;
+
 }
