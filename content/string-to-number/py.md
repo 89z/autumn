@@ -5,9 +5,17 @@ tags = [ "python" ]
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/library/functions.html#int>
+<https://docs.python.org/library/functions.html#float>
 
 {{< r "b.py" >}}
+
+<https://docs.python.org/library/functions.html#int>
+
+{{< r "c.py" >}}
+
+<https://docs.python.org/library/locale.html#locale.atof>
+
+{{< r "d.py" >}}
 
 <https://docs.python.org/library/locale.html#locale.atoi>
 

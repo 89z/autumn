@@ -1,4 +1,4 @@
 import locale
-s = '9.9'
+s = '99.9'
 n = locale.atof(s)
-print(n == 9.9)
+print(n == 99.9)

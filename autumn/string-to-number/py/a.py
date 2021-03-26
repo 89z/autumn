@@ -1,3 +1,3 @@
-s = '100'
-n = int(s)
-print(n == 100)
+s = '99.9'
+n = float(s)
+print(n == 99.9)

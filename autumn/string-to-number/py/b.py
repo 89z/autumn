@@ -1,4 +1,3 @@
-import locale
 s = '100'
-n = locale.atoi(s)
+n = int(s)
 print(n == 100)
