@@ -1,9 +1,4 @@
 <?php
-
-# example 1
-$n = intval('100');
-var_dump($n === 100);
-
-# example 2
-$n = intval('100', 10);
-var_dump($n === 100);
+$s = '99.9';
+$n = floatval($s);
+var_dump($n === 99.9);

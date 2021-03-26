@@ -1,8 +1,7 @@
 <?php
-$s = '100,200';
 # example 1
-$a = sscanf($s, '%d,%d');
+$n = intval('100');
+var_dump($n === 100);
 # example 2
-sscanf($s, '%d,%d', $d, $e);
-# print
-var_dump($a, $d, $e);
+$n = intval('100', 10);
+var_dump($n === 100);
