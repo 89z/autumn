@@ -2,7 +2,7 @@ import io = std.stdio;
 import std.datetime: Clock;
 
 void main() {
-   auto o = Clock.currTime;
-   auto s = o.toISOExtString;
+   auto t = Clock.currTime;
+   auto s = t.toISOExtString;
    io.writeln(s);
 }

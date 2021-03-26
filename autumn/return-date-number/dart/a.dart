@@ -1,5 +1,5 @@
 void main() {
-   var o = new DateTime.now();
-   var n = o.millisecondsSinceEpoch / 1000;
+   var d = new DateTime.now();
+   var n = d.millisecondsSinceEpoch / 1000;
    print(n);
 }

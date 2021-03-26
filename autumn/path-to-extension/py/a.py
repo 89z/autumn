@@ -1,4 +1,4 @@
-import pathlib
-o = pathlib.Path('a.py')
-s = o.suffix
+from pathlib import Path
+p = Path('a.py')
+s = p.suffix
 print(s == '.py')

@@ -1,4 +1,4 @@
 import times
-let o = getTime()
-let n = o.toUnix
+let t = getTime()
+let n = t.toUnix
 echo n

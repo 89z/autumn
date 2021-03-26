@@ -1,4 +1,4 @@
 import times
-let o = now()
-let s = $(o)
+let t = now()
+let s = $(t)
 echo s

@@ -1,4 +1,4 @@
 <?php
-$o = new SplFileInfo('a.php');
-$s = $o->getExtension();
+$f = new SplFileInfo('a.php');
+$s = $f->getExtension();
 var_dump($s == 'php');

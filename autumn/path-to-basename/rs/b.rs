@@ -1,7 +1,7 @@
 use std::path::Path;
 
 fn main() {
-   let o = Path::new(r"C:\Windows\notepad.exe");
-   let s = o.file_stem();
-   println!("{:?}", s);
+   let p = Path::new(r"C:\Windows\notepad.exe");
+   let s = p.file_stem().unwrap_or_default();
+   println!("{}", s == "notepad");
 }

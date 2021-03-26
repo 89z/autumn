@@ -2,7 +2,7 @@ package main
 import "time"
 
 func main() {
-   o := time.Now()
-   s := o.String()
+   t := time.Now()
+   s := t.String()
    println(s)
 }

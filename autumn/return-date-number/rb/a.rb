@@ -1,3 +1,3 @@
-o = Time.now
-n = o.to_f
-puts n
+t = Time.now
+n = t.to_f
+p n

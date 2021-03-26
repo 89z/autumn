@@ -1,4 +1,4 @@
 <?php
-$o = new DateTime;
-$n = $o->getTimestamp();
+$d = new DateTime;
+$n = $d->getTimestamp();
 var_dump($n);

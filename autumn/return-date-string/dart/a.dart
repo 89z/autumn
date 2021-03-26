@@ -1,5 +1,5 @@
 void main() {
-   var o = new DateTime.now();
-   var s = o.toString();
+   var d = new DateTime.now();
+   var s = d.toString();
    print(s);
 }

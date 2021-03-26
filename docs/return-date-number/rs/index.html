@@ -42,8 +42,8 @@
 };
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), SystemTimeError<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> SystemTime::now().duration_since(UNIX_EPOCH)<span style="color:#f92672">?</span>;
-   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> o.as_millis();
+   <span style="color:#66d9ef">let</span> t <span style="color:#f92672">=</span> SystemTime::now().duration_since(UNIX_EPOCH)<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> t.as_millis();
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
    Ok(())
 }
@@ -63,8 +63,8 @@
 };
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), SystemTimeError<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> SystemTime::now().duration_since(UNIX_EPOCH)<span style="color:#f92672">?</span>;
-   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> o.as_secs();
+   <span style="color:#66d9ef">let</span> t <span style="color:#f92672">=</span> SystemTime::now().duration_since(UNIX_EPOCH)<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> t.as_secs();
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n);
    Ok(())
 }

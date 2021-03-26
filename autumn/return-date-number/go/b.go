@@ -2,7 +2,7 @@ package main
 import "time"
 
 func main() {
-   o := time.Now()
-   n := o.UnixNano() / 1e9
+   t := time.Now()
+   n := t.UnixNano() / 1e9
    println(n)
 }

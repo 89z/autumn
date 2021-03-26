@@ -36,9 +36,9 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;date&#39;</span>
-o <span style="color:#f92672">=</span> <span style="color:#66d9ef">DateTime</span><span style="color:#f92672">.</span>parse(<span style="color:#e6db74">&#39;2020-05-04&#39;</span>)
-n <span style="color:#f92672">=</span> (<span style="color:#66d9ef">DateTime</span><span style="color:#f92672">.</span>now <span style="color:#f92672">-</span> o)<span style="color:#f92672">.</span>to_f
-puts n
+d <span style="color:#f92672">=</span> <span style="color:#66d9ef">DateTime</span><span style="color:#f92672">.</span>parse(<span style="color:#e6db74">&#39;2020-05-04&#39;</span>)
+n <span style="color:#f92672">=</span> (<span style="color:#66d9ef">DateTime</span><span style="color:#f92672">.</span>now <span style="color:#f92672">-</span> d)<span style="color:#f92672">.</span>to_f
+p n
 </code></pre></div>
 
 <p><a href="https://docs.ruby-lang.org/en/master/DateTime.html">https://docs.ruby-lang.org/en/master/DateTime.html</a></p>
@@ -49,9 +49,9 @@ puts n
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#39;time&#39;</span>
-o <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>parse(<span style="color:#e6db74">&#39;2020-05-04&#39;</span>)
-n <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>now <span style="color:#f92672">-</span> o
-puts n
+t <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>parse(<span style="color:#e6db74">&#39;2020-05-04&#39;</span>)
+n <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>now <span style="color:#f92672">-</span> t
+p n
 </code></pre></div>
 
 <p><a href="https://docs.ruby-lang.org/en/master/Time.html#method-i-2D">https://docs.ruby-lang.org/en/master/Time.html#method-i-2D</a></p>
