@@ -1,4 +1,4 @@
 from datetime import date
-o = date.today()
-s = o.isoformat()
+d = date.today()
+s = d.isoformat()
 print(s)

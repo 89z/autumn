@@ -1,4 +1,4 @@
 <?php
-$o = new SplFileInfo('a.php');
-$b = $o->isFile();
+$f = new SplFileInfo('a.php');
+$b = $f->isFile();
 var_dump($b);

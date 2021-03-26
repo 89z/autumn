@@ -1,4 +1,4 @@
-import pathlib
-o = pathlib.Path(r'C:\Users')
-b = o.is_dir()
+from pathlib import Path
+p = Path(r'C:\Users')
+b = p.is_dir()
 print(b)

@@ -1,3 +1,3 @@
-o = Time.new
-s = o.strftime('%Y-%m-%d')
+t = Time.new
+s = t.strftime('%Y-%m-%d')
 puts s

@@ -1,4 +1,4 @@
-import pathlib
-o = pathlib.Path('a.py')
-b = o.is_file()
+from pathlib import Path
+p = Path('a.py')
+b = p.is_file()
 print(b)

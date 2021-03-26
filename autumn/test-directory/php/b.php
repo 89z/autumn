@@ -1,4 +1,4 @@
 <?php
-$o = new SplFileInfo('C:\Users');
-$b = $o->isDir();
+$f = new SplFileInfo('C:\Users');
+$b = $f->isDir();
 var_dump($b);
