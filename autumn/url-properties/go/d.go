@@ -6,10 +6,10 @@ import (
 )
 
 func main() {
-   v, e := url.ParseQuery("month=March&day=Friday")
+   q, e := url.ParseQuery("month=March&day=Friday")
    if e != nil {
       log.Fatal(e)
    }
-   s := v.Get("day")
+   s := q.Get("day")
    println(s)
 }

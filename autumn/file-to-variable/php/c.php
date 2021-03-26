@@ -1,4 +1,4 @@
 <?php
-$r = fopen('index.md', 'r');
-$s = stream_get_contents($r);
+$f = fopen('a.php', 'r');
+$s = stream_get_contents($f);
 var_dump($s);

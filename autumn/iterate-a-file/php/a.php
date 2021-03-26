@@ -1,9 +1,9 @@
 <?php
-$r = fopen('a.txt', 'r');
+$f = fopen('a.php', 'r');
 
 while (true) {
-   $s = fgets($r);
-   if (feof($r)) {
+   $s = fgets($f);
+   if (feof($f)) {
       break;
    }
    var_dump($s);

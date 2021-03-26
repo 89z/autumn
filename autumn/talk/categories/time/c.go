@@ -15,7 +15,7 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   x := u.Sub(t).Milliseconds()
-   s := big.NewInt(x).Text(62)
+   n := u.Sub(t).Milliseconds()
+   s := big.NewInt(n).Text(62)
    println(s == "yqtA1i")
 }

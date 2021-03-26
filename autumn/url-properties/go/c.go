@@ -11,6 +11,6 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   v := u.Query()
-   fmt.Println(v)
+   q := u.Query()
+   fmt.Println(q)
 }

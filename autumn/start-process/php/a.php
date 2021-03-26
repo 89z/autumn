@@ -1,11 +1,9 @@
 <?php
+$a = [];
 
 # example 1
-echo "BEGIN\n";
-system('pipe');
+proc_open('C:\Windows\notepad', $a, $a);
 
 # example 2
-echo "BEGIN\n";
-$a = [];
-$r = proc_open('pipe', $a, $a);
-proc_close($r);
+$p = proc_open('C:\Windows\notepad', $a, $a);
+proc_close($p);

@@ -1,4 +1,4 @@
-let m = {month: 5, day: 4};
+let m = {month: 12, day: 31};
 
 for (let s in m) {
    let n = m[s];

@@ -1,5 +1,5 @@
 <?php
-$m = ['month' => 5, 'day' => 4];
+$m = ['month' => 12, 'day' => 31];
 
 echo "example 1\n";
 foreach ($m as $n) {

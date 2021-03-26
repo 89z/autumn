@@ -4,7 +4,14 @@ tags = [ "php" ]
 +++
 
 {{< r "a.php" >}}
+
+<https://php.net/function.proc-close>
+
 {{< r "b.php" >}}
+
+<https://php.net/function.proc-open>
+
+{{< r "c.php" >}}
 
 <https://php.net/function.system>
 

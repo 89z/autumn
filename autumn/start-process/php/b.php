@@ -1,12 +1,9 @@
 <?php
+$a = [];
 
-function shell_escape(string $in): string {
-   $brk = strpbrk($in, ' "&->^');
-   if ($brk === false) {
-      return $in;
-   }
-   return '"' . str_replace('"', '""', $in) . '"';
-}
+# example 1
+proc_open('C:\Windows\notepad', $a, $a);
 
-$s = shell_escape('google.com/search?tbm=vid&q=squarepusher');
-system('waterfox ' . $s);
+# example 2
+$p = proc_open('C:\Windows\notepad', $a, $a);
+proc_close($p);
