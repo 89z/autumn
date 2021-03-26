@@ -1,5 +1,5 @@
 require 'optparse'
-m = {:p => '', :s => ''}
+m = {p: '', s: ''}
 o = OptionParser.new
 o.on('-p string', 'prefix')
 o.on('-s string', 'suffix')

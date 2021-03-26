@@ -1,7 +1,7 @@
 use std::path::Path;
 
 fn main() {
-   let o = Path::new("a.rs");
-   let b = o.is_file();
+   let p = Path::new("a.rs");
+   let b = p.is_file();
    println!("{}", b);
 }

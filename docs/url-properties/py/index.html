@@ -37,14 +37,15 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> parse
 u <span style="color:#f92672">=</span> parse<span style="color:#f92672">.</span>urlsplit(<span style="color:#e6db74">&#39;http://python.org/library?month=May&#39;</span>)
+
 <span style="color:#75715e"># example 1</span>
-n <span style="color:#f92672">=</span> u<span style="color:#f92672">.</span>netloc
+<span style="color:#66d9ef">print</span>(u<span style="color:#f92672">.</span>netloc <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;python.org&#39;</span>)
+
 <span style="color:#75715e"># example 2</span>
-p <span style="color:#f92672">=</span> u<span style="color:#f92672">.</span>path
+<span style="color:#66d9ef">print</span>(u<span style="color:#f92672">.</span>path <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;/library&#39;</span>)
+
 <span style="color:#75715e"># example 3</span>
-q <span style="color:#f92672">=</span> u<span style="color:#f92672">.</span>query
-<span style="color:#75715e"># print</span>
-<span style="color:#66d9ef">print</span>(n <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;python.org&#39;</span>, p <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;/library&#39;</span>, q <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;month=May&#39;</span>)
+<span style="color:#66d9ef">print</span>(u<span style="color:#f92672">.</span>query <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;month=May&#39;</span>)
 </code></pre></div>
 
 <p><a href="https://docs.python.org/library/urllib.parse.html#urllib.parse.urlsplit">https://docs.python.org/library/urllib.parse.html#urllib.parse.urlsplit</a></p>

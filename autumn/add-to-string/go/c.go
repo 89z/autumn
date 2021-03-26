@@ -2,8 +2,8 @@ package main
 import "strings"
 
 func main() {
-   o := strings.Builder{}
-   o.WriteString("March")
-   s := o.String()
+   var b strings.Builder
+   b.WriteString("March")
+   s := b.String()
    println(s == "March")
 }

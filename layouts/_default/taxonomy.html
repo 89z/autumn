@@ -11,9 +11,9 @@ localhost:1313/autumn/tags/proposal
 <table>
    {{ range .Pages.ByTitle }}
    <tr>
-      {{ $o := .Parent }}{{ if isset .Params "date" }}{{ $o = . }}{{ end }}
-      <td><a href="{{ .RelPermalink }}">{{ $o.Title }}</a></td>
-      <td class="{{ .Kind }}">{{ $o.Lastmod.Format "Mon Jan 2 2006" }}</td>
+      {{ $p := .Parent }}{{ if isset .Params "date" }}{{ $p = . }}{{ end }}
+      <td><a href="{{ .RelPermalink }}">{{ $p.Title }}</a></td>
+      <td class="{{ .Kind }}">{{ $p.Lastmod.Format "Mon Jan 2 2006" }}</td>
    </tr>
    {{ end }}
 </table>

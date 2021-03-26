@@ -7,5 +7,5 @@ function id_decode(string $s, int $year): object {
    return $t->setTimestamp($d);
 }
 
-$o = id_decode('6dv3d', 2020);
-var_dump($o);
+$t = id_decode('6dv3d', 2020);
+var_dump($t);

@@ -39,10 +39,10 @@
 <span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;curl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;curl&#39;</span>);
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">http_head</span>(<span style="color:#a6e22e">string</span> $s)<span style="color:#f92672">:</span> <span style="color:#a6e22e">bool</span> {
-   $r <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>($s);
-   <span style="color:#a6e22e">curl_setopt</span>($r, <span style="color:#a6e22e">CURLOPT_NOBODY</span>, <span style="color:#66d9ef">true</span>);
-   <span style="color:#a6e22e">curl_exec</span>($r);
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">curl_getinfo</span>($r)[<span style="color:#e6db74">&#39;http_code&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">200</span>;
+   $c <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>($s);
+   <span style="color:#a6e22e">curl_setopt</span>($c, <span style="color:#a6e22e">CURLOPT_NOBODY</span>, <span style="color:#66d9ef">true</span>);
+   <span style="color:#a6e22e">curl_exec</span>($c);
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">curl_getinfo</span>($c)[<span style="color:#e6db74">&#39;http_code&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">200</span>;
 }
 
 $b <span style="color:#f92672">=</span> <span style="color:#a6e22e">http_head</span>(<span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net/10Mio.dat&#39;</span>);

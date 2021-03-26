@@ -79,9 +79,9 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>{}
-   <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#e6db74">&#34;March&#34;</span>)
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">o</span>.<span style="color:#a6e22e">String</span>()
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>
+   <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#e6db74">&#34;March&#34;</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">String</span>()
    println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;March&#34;</span>)
 }
 </code></pre></div>

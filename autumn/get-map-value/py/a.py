@@ -1,3 +1,3 @@
-m = {'month': 5, 'day': 4}
+m = {'month': 12, 'day': 31}
 n = m.get('day')
-print(n == 4)
+print(n == 31)

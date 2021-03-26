@@ -35,9 +35,15 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">m <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;month&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;day&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">4</span>}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#75715e"># example 1</span>
+m <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;month&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">12</span>, <span style="color:#e6db74">&#39;day&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">31</span>}
 n <span style="color:#f92672">=</span> m<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;day&#39;</span><span style="color:#f92672">]</span>
-puts n <span style="color:#f92672">==</span> <span style="color:#ae81ff">4</span>
+p n <span style="color:#f92672">==</span> <span style="color:#ae81ff">31</span>
+
+<span style="color:#75715e"># example 2</span>
+m <span style="color:#f92672">=</span> {<span style="color:#e6db74">month</span>: <span style="color:#ae81ff">12</span>, <span style="color:#e6db74">day</span>: <span style="color:#ae81ff">31</span>}
+n <span style="color:#f92672">=</span> m<span style="color:#f92672">[</span><span style="color:#e6db74">:day</span><span style="color:#f92672">]</span>
+p n <span style="color:#f92672">==</span> <span style="color:#ae81ff">31</span>
 </code></pre></div>
 
 <p><a href="https://docs.ruby-lang.org/en/master/Hash.html#method-i-5B-5D">https://docs.ruby-lang.org/en/master/Hash.html#method-i-5B-5D</a></p>

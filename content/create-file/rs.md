@@ -5,6 +5,8 @@ tags = [ "rust" ]
 
 {{< r "a.rs" >}}
 
+<https://doc.rust-lang.org/std/fs/struct.File.html#method.create>
+
 ## References
 
 - <https://hyperpolyglot.org/rust#file-handles>

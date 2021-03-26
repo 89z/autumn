@@ -1,7 +1,7 @@
 import std.stdio;
 
 void main() {
-   auto m = ["month": 5, "day": 4];
+   auto m = ["month": 12, "day": 31];
    auto n = m["day"];
-   writeln(n == 4);
+   writeln(n == 31);
 }
