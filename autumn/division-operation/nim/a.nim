@@ -1,19 +1,15 @@
-let
-   f = 7.5
-   i = 7
-
-block: # example 1
-   let n = f / 2
-   echo n == 3.75
-
-block: # example 2
-   let n = int(f / 2)
-   echo n == 3
-
-block: # example 3
-   let n = int(i / 2)
-   echo n == 3
-
-block: # example 4
-   let n = i / 2
+block: # natural float
+   let n = 7.0 / 2
    echo n == 3.5
+
+block: # natural float
+   let n = 7 / 2
+   echo n == 3.5
+
+block: # force int
+   let n = int(7.0 / 2)
+   echo n == 3
+
+block: # force int
+   let n = int(7 / 2)
+   echo n == 3

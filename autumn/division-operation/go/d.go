@@ -1,21 +1,20 @@
 package main
 
 func main() {
-   f, i := 7.5, 7
-   { // example 1
-      n := f / 2
-      println(n == 3.75)
-   }
-   { // example 2
-      n := int(f) / 2
+   { // natural int
+      n := 7 / 2
       println(n == 3)
    }
-   { // example 3
-      n := i / 2
+   { // natural float
+      n := 7.0 / 2
+      println(n == 3.5)
+   }
+   { // force int
+      n := int(7.0) / 2
       println(n == 3)
    }
-   { // example 4
-      n := float64(i) / 2
+   { // force float
+      n := float64(7) / 2
       println(n == 3.5)
    }
 }
