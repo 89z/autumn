@@ -1,4 +1,4 @@
 import strutils
-let s = "100"
-let n = s.parseInt
-echo n == 100
+let s = "99.9"
+let n = s.parseFloat
+echo n == 99.9

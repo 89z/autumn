@@ -5,17 +5,25 @@ tags = [ "javascript" ]
 
 {{< r "a.js" >}}
 
-<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/parseFloat>
 
 {{< r "b.js" >}}
 
-<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt>
 
 {{< r "c.js" >}}
 
-<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/parseInt>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number>
 
 {{< r "d.js" >}}
+
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/parseFloat>
+
+{{< r "e.js" >}}
+
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/parseInt>
+
+{{< r "f.js" >}}
 
 <https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators>
 

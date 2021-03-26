@@ -5,6 +5,10 @@ tags = [ "nim" ]
 
 {{< r "a.nim" >}}
 
+<https://nim-lang.org/docs/strutils.html#parseFloat,string>
+
+{{< r "b.nim" >}}
+
 <https://nim-lang.org/docs/strutils.html#parseInt,string>
 
 ## References

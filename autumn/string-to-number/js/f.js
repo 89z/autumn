@@ -1,3 +1,3 @@
 let s = '100';
-let n = Number(s);
+let n = +(s);
 console.log(n === 100);

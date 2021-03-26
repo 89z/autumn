@@ -1,3 +1,3 @@
 let s = '100';
-let n = Number(s);
+let n = parseInt(s);
 console.log(n === 100);
