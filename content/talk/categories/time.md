@@ -9,11 +9,3 @@ to be different in my time zone, depending on if function uses UTC or local.
 Result is:
 
 {{< r "a.go" >}}
-
-Get second difference from 2020, radix 36 encoded:
-
-{{< r "b.go" >}}
-
-Get millisecond difference from 2020, radix 62 encoded:
-
-{{< r "c.go" >}}

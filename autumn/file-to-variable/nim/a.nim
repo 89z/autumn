@@ -1,3 +1,3 @@
-var o = open("a.nim")
-var s = o.readAll
+let f = open("a.nim")
+let s = f.readAll
 stdout.write s

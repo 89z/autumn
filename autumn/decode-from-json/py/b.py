@@ -1,5 +1,5 @@
 import json
-src = '{"U2": {"Boy": ["Twilight", "I Will Follow"]}}'
-m = json.loads(src)
-dst = m['U2']['Boy'][0]
-print(dst == 'Twilight')
+s = '{"month": 12, "day": 31}'
+m = json.loads(s)
+n = m['day']
+print(n == 31)

@@ -1,6 +1,5 @@
 require 'json'
-
-src = '{"U2": {"Boy": ["Twilight", "I Will Follow"]}}'
-m = JSON.parse(src)
-dst = m['U2']['Boy'][0]
-p dst == 'Twilight'
+s = '{"month": 12, "day": 31}'
+m = JSON.parse(s)
+n = m['day']
+p n == 31

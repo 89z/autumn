@@ -39,13 +39,13 @@
 <span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:args/args.dart&#39;</span>;
 
 <span style="color:#66d9ef">void</span> main(a) {
-   <span style="color:#66d9ef">var</span> o <span style="color:#f92672">=</span> ArgParser();
-   o.addOption(<span style="color:#e6db74">&#39;prefix&#39;</span>, abbr: <span style="color:#e6db74">&#39;p&#39;</span>, defaultsTo: <span style="color:#e6db74">&#39;&#39;</span>);
-   o.addOption(<span style="color:#e6db74">&#39;suffix&#39;</span>, abbr: <span style="color:#e6db74">&#39;s&#39;</span>, defaultsTo: <span style="color:#e6db74">&#39;&#39;</span>);
-   <span style="color:#66d9ef">var</span> m <span style="color:#f92672">=</span> o.parse(a);
+   <span style="color:#66d9ef">var</span> p <span style="color:#f92672">=</span> ArgParser();
+   p.addOption(<span style="color:#e6db74">&#39;prefix&#39;</span>, abbr: <span style="color:#e6db74">&#39;p&#39;</span>, defaultsTo: <span style="color:#e6db74">&#39;&#39;</span>);
+   p.addOption(<span style="color:#e6db74">&#39;suffix&#39;</span>, abbr: <span style="color:#e6db74">&#39;s&#39;</span>, defaultsTo: <span style="color:#e6db74">&#39;&#39;</span>);
+   <span style="color:#66d9ef">var</span> m <span style="color:#f92672">=</span> p.parse(a);
 
    <span style="color:#66d9ef">if</span> (m.rest.length <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>) {
-      print(<span style="color:#e6db74">&#39;add [flags] &lt;stem&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">+</span> o.usage);
+      print(<span style="color:#e6db74">&#39;add [flags] &lt;stem&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">+</span> p.usage);
       exit(<span style="color:#ae81ff">1</span>);
    }
 

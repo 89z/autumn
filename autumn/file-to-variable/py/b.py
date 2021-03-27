@@ -1,3 +1,3 @@
-o = open('index.md')
-a = o.readlines()
+f = open('a.py')
+a = f.readlines()
 print(a)

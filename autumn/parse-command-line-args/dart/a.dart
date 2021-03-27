@@ -2,13 +2,13 @@ import 'dart:io';
 import 'package:args/args.dart';
 
 void main(a) {
-   var o = ArgParser();
-   o.addOption('prefix', abbr: 'p', defaultsTo: '');
-   o.addOption('suffix', abbr: 's', defaultsTo: '');
-   var m = o.parse(a);
+   var p = ArgParser();
+   p.addOption('prefix', abbr: 'p', defaultsTo: '');
+   p.addOption('suffix', abbr: 's', defaultsTo: '');
+   var m = p.parse(a);
 
    if (m.rest.length != 1) {
-      print('add [flags] <stem>\n' + o.usage);
+      print('add [flags] <stem>\n' + p.usage);
       exit(1);
    }
 

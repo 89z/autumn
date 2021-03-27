@@ -1,13 +1,13 @@
 require 'optparse'
 m = {p: '', s: ''}
-o = OptionParser.new
-o.on('-p string', 'prefix')
-o.on('-s string', 'suffix')
-o.parse!(into: m)
+p = OptionParser.new
+p.on('-p string', 'prefix')
+p.on('-s string', 'suffix')
+p.parse!(into: m)
 
 if ARGV.length != 1
-   o.banner = 'add [flags] <stem>'
-   puts o
+   p.banner = 'add [flags] <stem>'
+   puts p
    exit 1
 end
 

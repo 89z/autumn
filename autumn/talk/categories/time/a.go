@@ -1,15 +1,14 @@
 package main
 
 import (
-   "log"
+   "fmt"
    "time"
 )
 
 func main() {
-   t, e := time.Parse(time.RFC3339, "2020-12-31T01:02:31Z")
-   if e != nil {
-      log.Fatal(e)
-   }
-   n := t.Unix()
-   println(n == 1609376551)
+   t := time.Unix(0x5555_5555, 0)
+   // 2015-05-14 21:09:25 -0500 CDT
+   fmt.Println(t)
+   // 2015-05-15 02:09:25 +0000 UTC
+   fmt.Println(t.UTC())
 }
