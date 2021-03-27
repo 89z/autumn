@@ -1,9 +1,9 @@
 import json
 
-let src = """
-{"U2": {"Boy": ["Twilight", "I Will Follow"]}}
+let s = """
+{"month": 12, "day": 31}
 """
 
-let m = src.parseJson
-let dst = m["U2"]["Boy"][0].getStr
-echo dst == "Twilight"
+let m = s.parseJson
+let n = m["day"].getInt
+echo n == 31

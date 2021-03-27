@@ -1,8 +1,8 @@
 import 'dart:convert';
-var src = '{"U2": {"Boy": ["Twilight", "I Will Follow"]}}';
 
 void main() {
-   var m = jsonDecode(src);
-   var dst = m['U2']['Boy'][0];
-   print(dst == 'Twilight');
+   var s = '{"month": 12, "day": 31}';
+   var m = jsonDecode(s);
+   var n = m['day'];
+   print(n == 31);
 }

@@ -1,3 +1,3 @@
 require 'date'
-o = Date.today
-puts o
+d = Date.today
+p d

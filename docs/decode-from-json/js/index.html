@@ -24,7 +24,7 @@
    <a href="/autumn/decode-from-json/">Decode from JSON</a> / JavaScript
 </h1>
 <section class="page">
-   <time>Tue Mar 23 2021</time>
+   <time>Sat Mar 27 2021</time>
    
    <a href="/autumn/categories/encoding/">encoding</a>
    
@@ -35,10 +35,9 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{&#34;U2&#34;: {&#34;Boy&#34;: [&#34;Twilight&#34;, &#34;I Will Follow&#34;]}}&#39;</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">src</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">dst</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">m</span>.<span style="color:#a6e22e">U2</span>.<span style="color:#a6e22e">Boy</span>[<span style="color:#ae81ff">0</span>];
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">dst</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Twilight&#39;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;{&#34;month&#34;: 12, &#34;day&#34;: 31}&#39;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">s</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">m</span>.<span style="color:#a6e22e">day</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">31</span>);
 </code></pre></div>
 
 <p><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse</a></p>

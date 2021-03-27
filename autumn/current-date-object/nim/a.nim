@@ -1,3 +1,3 @@
 import times
-let o = getTime()
-echo o
+let t = getTime()
+echo t

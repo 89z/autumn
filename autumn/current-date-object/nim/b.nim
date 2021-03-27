@@ -1,3 +1,3 @@
 import times
-let o = now()
-echo o
+let t = now()
+echo t

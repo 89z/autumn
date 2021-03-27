@@ -1,6 +1,6 @@
 use chrono::offset::Utc;
 
 fn main() {
-   let o = Utc::now();
-   println!("{}", o);
+   let d = Utc::now();
+   println!("{}", d);
 }

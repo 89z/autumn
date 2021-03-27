@@ -1,7 +1,6 @@
-import io = std.stdio;
-import std.datetime: Clock;
+import std.datetime, std.stdio;
 
 void main() {
-   auto o = Clock.currTime;
-   io.writeln(d);
+   auto t = Clock.currTime;
+   t.writeln;
 }
