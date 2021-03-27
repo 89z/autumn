@@ -1,20 +1,19 @@
 fn main() {
-   let (f, i) = (7.5, 7);
 
-   // example 1
-   let n = f / 2.0;
-   println!("{}", n == 3.75);
-
-   // example 2
-   let n = f as u8 / 2;
+   // natural int
+   let n = 7 / 2;
    println!("{}", n == 3);
 
-   // example 3
-   let n = i / 2;
+   // natural float
+   let n = 7.0 / 2.0;
+   println!("{}", n == 3.5);
+
+   // force int
+   let n = 7.0 as u32 / 2;
    println!("{}", n == 3);
 
-   // example 4
-   let n = i as f32 / 2.0;
+   // force float
+   let n = 7 as f32 / 2.0;
    println!("{}", n == 3.5);
 
 }

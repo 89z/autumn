@@ -1,5 +1,5 @@
 fn main() {
-   let a = ["March", "April"];
-   let e = a.iter().nth(0);
-   println!("{}", e == Some(&"March"));
+   let a = [9, 8];
+   let n = a.iter().nth(1);
+   println!("{}", n == Some(&8));
 }

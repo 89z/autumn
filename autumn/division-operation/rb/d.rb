@@ -1,3 +1,4 @@
-f = 7.5
-n = f.div(2)
-puts n == 3
+# force int
+f = 7.0
+g = f.div(2)
+p g == 3

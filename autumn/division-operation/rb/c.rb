@@ -1,3 +1,4 @@
-i = 7
-n = i.fdiv(2)
-puts n == 3.5
+# force float
+d = 7
+e = d.fdiv(2)
+p e == 3.5

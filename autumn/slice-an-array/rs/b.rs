@@ -1,19 +1,15 @@
 fn main() {
-   let a = ["M", "a", "r", "c", "h"];
-
+   let a = [0, 10, 20, 30, 40];
    // example 1
-   let o = a.get(2);
-   println!("{:?}", o);
-
+   let n = a.get(2);
+   println!("{}", n == Some(&20));
    // example 2
-   let o = a.get(2 .. 4);
-   println!("{:?}", o);
-
+   let b = a.get(2 ..);
+   println!("{}", b == Some(&[20, 30, 40]));
    // example 3
-   let o = a.get(2 ..= 3);
-   println!("{:?}", o);
-
+   let b = a.get(2 .. 4);
+   println!("{}", b == Some(&[20, 30]));
    // example 4
-   let o = a.get(2 ..);
-   println!("{:?}", o);
+   let b = a.get(2 ..= 3);
+   println!("{}", b == Some(&[20, 30]));
 }

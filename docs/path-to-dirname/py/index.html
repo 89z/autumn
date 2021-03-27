@@ -48,9 +48,9 @@ s <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>d
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> pathlib
-o <span style="color:#f92672">=</span> pathlib<span style="color:#f92672">.</span>Path(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;C:\Windows\notepad.exe&#39;</span>)
-s <span style="color:#f92672">=</span> str(o<span style="color:#f92672">.</span>parent)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
+p <span style="color:#f92672">=</span> Path(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;C:\Windows\notepad.exe&#39;</span>)
+s <span style="color:#f92672">=</span> str(p<span style="color:#f92672">.</span>parent)
 <span style="color:#66d9ef">print</span>(s <span style="color:#f92672">==</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;C:\Windows&#39;</span>)
 </code></pre></div>
 
