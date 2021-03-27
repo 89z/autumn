@@ -1,3 +1,3 @@
 require 'date'
-o = DateTime.now
-puts o
+d = DateTime.now
+p d

@@ -3,7 +3,7 @@ title = "Rust"
 tags = [ "rust" ]
 +++
 
-{{< r "a/a.rs" >}}
+{{< r "a.rs" >}}
 
 <https://doc.rust-lang.org/stable/std/time/struct.SystemTime.html#method.now>
 

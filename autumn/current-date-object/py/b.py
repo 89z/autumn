@@ -1,3 +1,3 @@
 from datetime import datetime
-o = datetime.utcnow()
-print(o)
+d = datetime.utcnow()
+print(d)

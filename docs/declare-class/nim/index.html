@@ -39,14 +39,15 @@
    month, day: <span style="color:#66d9ef">int</span>
 
 <span style="color:#66d9ef">proc </span><span style="color:#a6e22e">newDate</span>(): date <span style="color:#f92672">=</span>
-   <span style="color:#66d9ef">return</span> date(month: <span style="color:#ae81ff">1</span>, day: <span style="color:#ae81ff">1</span>)
+   <span style="color:#66d9ef">return</span> date(month: <span style="color:#ae81ff">12</span>, day: <span style="color:#ae81ff">31</span>)
 
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">addDay</span>(d: date) <span style="color:#f92672">=</span>
-   d.day <span style="color:#f92672">=</span> d.day <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">year</span>(d: date) <span style="color:#f92672">=</span>
+   d.month <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+   d.day <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
 
 <span style="color:#66d9ef">let</span> d <span style="color:#f92672">=</span> newDate()
-d.addDay
-echo d.day <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>
+d.year
+echo d.day <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>
 </code></pre></div>
 
 <p><a href="https://nim-lang.org/docs/manual.html#types-object-construction">https://nim-lang.org/docs/manual.html#types-object-construction</a></p>

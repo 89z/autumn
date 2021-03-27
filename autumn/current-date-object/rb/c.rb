@@ -1,2 +1,2 @@
-o = Time.now
-puts o
+t = Time.now
+p t

@@ -1,13 +1,14 @@
 class Date {
-   int month = 1;
-   int day = 1;
-   add() {
-      this.day++;
+   int month = 12;
+   int day = 31;
+   year() {
+      this.month = 1;
+      this.day = 1;
    }
 }
 
 void main() {
    var d = Date();
-   d.add();
-   print(d.day == 2);
+   d.year();
+   print(d.day == 1);
 }

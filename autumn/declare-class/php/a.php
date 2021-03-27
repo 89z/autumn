@@ -1,13 +1,14 @@
 <?php
 
 class date {
-   public $month = 1;
-   public $day = 1;
-   function add() {
-      $this->day++;
+   public $month = 12;
+   public $day = 31;
+   function year() {
+      $this->month = 1;
+      $this->day = 1;
    }
 }
 
 $d = new date;
-$d->add();
-var_dump($d->day == 2);
+$d->year();
+var_dump($d->day == 1);

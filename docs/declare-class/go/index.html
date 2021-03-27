@@ -40,15 +40,18 @@
 <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">date</span> <span style="color:#66d9ef">struct</span> { <span style="color:#a6e22e">month</span>, <span style="color:#a6e22e">day</span> <span style="color:#66d9ef">int</span> }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">newDate</span>() <span style="color:#a6e22e">date</span> {
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">date</span>{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>}
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">date</span>{<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">31</span>}
 }
 
-<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">d</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">date</span>) <span style="color:#a6e22e">add</span>() { <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">day</span><span style="color:#f92672">++</span> }
+<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">d</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">date</span>) <span style="color:#a6e22e">year</span>() {
+   <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">month</span> = <span style="color:#ae81ff">1</span>
+   <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">day</span> = <span style="color:#ae81ff">1</span>
+}
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">d</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">newDate</span>()
-   <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">add</span>()
-   println(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">day</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>)
+   <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">year</span>()
+   println(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">day</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>)
 }
 </code></pre></div>
 

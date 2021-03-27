@@ -38,16 +38,17 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">date</span> {
-   <span style="color:#66d9ef">public</span> $month <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-   <span style="color:#66d9ef">public</span> $day <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-   <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">add</span>() {
-      $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">day</span><span style="color:#f92672">++</span>;
+   <span style="color:#66d9ef">public</span> $month <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>;
+   <span style="color:#66d9ef">public</span> $day <span style="color:#f92672">=</span> <span style="color:#ae81ff">31</span>;
+   <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">year</span>() {
+      $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">month</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+      $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">day</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
    }
 }
 
 $d <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">date</span>;
-$d<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">add</span>();
-<span style="color:#a6e22e">var_dump</span>($d<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">day</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>);
+$d<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">year</span>();
+<span style="color:#a6e22e">var_dump</span>($d<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">day</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>);
 </code></pre></div>
 
 <p><a href="https://php.net/language.oop5.visibility">https://php.net/language.oop5.visibility</a></p>

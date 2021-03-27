@@ -3,13 +3,16 @@ package main
 type date struct { month, day int }
 
 func newDate() date {
-   return date{1, 1}
+   return date{12, 31}
 }
 
-func (d *date) add() { d.day++ }
+func (d *date) year() {
+   d.month = 1
+   d.day = 1
+}
 
 func main() {
    d := newDate()
-   d.add()
-   println(d.day == 2)
+   d.year()
+   println(d.day == 1)
 }
