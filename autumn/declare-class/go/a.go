@@ -1,19 +1,15 @@
 package main
 
-type Time struct {
-   Hours int
+type date struct { month, day int }
+
+func newDate() date {
+   return date{1, 1}
 }
 
-func NewTime() Time {
-   return Time{23}
-}
-
-func (o Time) Duration(minutes int) int {
-   return o.Hours * 60 + minutes
-}
+func (d *date) add() { d.day++ }
 
 func main() {
-   o := NewTime()
-   n := o.Duration(59)
-   println(n == 1439)
+   d := newDate()
+   d.add()
+   println(d.day == 2)
 }

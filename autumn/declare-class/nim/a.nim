@@ -1,12 +1,12 @@
-type Time = object
-   hours: int
+type date = ref object
+   month, day: int
 
-proc newTime(): Time =
-   return Time(hours: 23)
+proc newDate(): date =
+   return date(month: 1, day: 1)
 
-proc duration(t: Time, minutes: int): int =
-   return t.hours * 60 + minutes
+proc addDay(d: date) =
+   d.day = d.day + 1
 
-let t = newTime()
-let n = t.duration(59)
-echo n == 1439
+let d = newDate()
+d.addDay
+echo d.day == 2

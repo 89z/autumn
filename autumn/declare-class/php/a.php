@@ -1,13 +1,13 @@
 <?php
 
-class Time {
-   public $hours = 23;
-   var $minutes = 59;
-   function duration($seconds) {
-      return $this->hours * 60 * 60 + $this->minutes * 60 + $seconds;
+class date {
+   public $month = 1;
+   public $day = 1;
+   function add() {
+      $this->day++;
    }
 }
 
-$t = new Time;
-$n = $t->duration(59);
-var_dump($n == 86399);
+$d = new date;
+$d->add();
+var_dump($d->day == 2);

@@ -1,23 +1,25 @@
-let t, n;
+let d;
 
 // example 1
-t = {
-   hours: 23,
-   duration: function (minutes) {
-      return this.hours * 60 + minutes;
+d = {
+   month: 1,
+   day: 1,
+   add: function () {
+      this.day++;
    }
 };
 
-n = t.duration(59);
-console.log(n == 1439);
+d.add();
+console.log(d.day == 2);
 
 // example 2
-t = {
-   hours: 23,
-   duration(minutes) {
-      return this.hours * 60 + minutes;
+d = {
+   month: 1,
+   day: 1,
+   add() {
+      this.day++;
    }
 };
 
-n = t.duration(59);
-console.log(n == 1439);
+d.add();
+console.log(d.day == 2);

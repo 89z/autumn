@@ -1,15 +1,17 @@
-struct Time {
-   hours: u16
-}
+struct Date { month: u8, day: u8 }
 
-impl Time {
-   fn duration(self, minutes: u16) -> u16 {
-      self.hours * 60 + minutes
+impl Date {
+   fn new() -> Self {
+      Self { month: 12, day: 31 }
+   }
+   fn year(&mut self) {
+      self.month = 1;
+      self.day = 1;
    }
 }
 
 fn main () {
-   let o = Time{hours: 23};
-   let n = o.duration(59);
-   println!("{}", n == 1439);
+   let mut d = Date::new();
+   d.year();
+   println!("{}", d.day == 1);
 }

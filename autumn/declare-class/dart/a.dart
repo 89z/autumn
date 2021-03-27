@@ -1,12 +1,13 @@
-class Time {
-   final hours = 23;
-   num duration(num minutes) {
-      return hours * 60 + minutes;
+class Date {
+   int month = 1;
+   int day = 1;
+   add() {
+      this.day++;
    }
 }
 
 void main() {
-   var o = new Time();
-   var n = o.duration(59);
-   print(n == 1439);
+   var d = Date();
+   d.add();
+   print(d.day == 2);
 }

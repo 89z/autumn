@@ -24,7 +24,7 @@
    <a href="/autumn/declare-class/">Declare class</a> / Rust
 </h1>
 <section class="page">
-   <time>Mon Oct 19 2020</time>
+   <time>Sat Mar 27 2021</time>
    
    <a href="/autumn/categories/reference/">reference</a>
    
@@ -35,20 +35,22 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Time</span> {
-   hours: <span style="color:#66d9ef">u16</span>
-}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Date</span> { month: <span style="color:#66d9ef">u8</span>, day: <span style="color:#66d9ef">u8</span> }
 
-<span style="color:#66d9ef">impl</span> Time {
-   <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">duration</span>(self, minutes: <span style="color:#66d9ef">u16</span>) -&gt; <span style="color:#66d9ef">u16</span> {
-      self.hours <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> minutes
+<span style="color:#66d9ef">impl</span> Date {
+   <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">new</span>() -&gt; <span style="color:#a6e22e">Self</span> {
+      Self { month: <span style="color:#ae81ff">12</span>, day: <span style="color:#ae81ff">31</span> }
+   }
+   <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">year</span>(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> self) {
+      self.month <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+      self.day <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
    }
 }
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span> () {
-   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> Time{hours: <span style="color:#ae81ff">23</span>};
-   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> o.duration(<span style="color:#ae81ff">59</span>);
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1439</span>);
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> d <span style="color:#f92672">=</span> Date::new();
+   d.year();
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, d.day <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>);
 }
 </code></pre></div>
 

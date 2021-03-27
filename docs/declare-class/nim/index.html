@@ -24,7 +24,7 @@
    <a href="/autumn/declare-class/">Declare class</a> / Nim
 </h1>
 <section class="page">
-   <time>Mon Oct 19 2020</time>
+   <time>Sat Mar 27 2021</time>
    
    <a href="/autumn/categories/reference/">reference</a>
    
@@ -35,18 +35,18 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">type</span> Time <span style="color:#f92672">=</span> <span style="color:#66d9ef">object</span>
-   hours: <span style="color:#66d9ef">int</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#66d9ef">type</span> date <span style="color:#f92672">=</span> <span style="color:#66d9ef">ref</span> <span style="color:#66d9ef">object</span>
+   month, day: <span style="color:#66d9ef">int</span>
 
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">newTime</span>(): Time <span style="color:#f92672">=</span>
-   <span style="color:#66d9ef">return</span> Time(hours: <span style="color:#ae81ff">23</span>)
+<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">newDate</span>(): date <span style="color:#f92672">=</span>
+   <span style="color:#66d9ef">return</span> date(month: <span style="color:#ae81ff">1</span>, day: <span style="color:#ae81ff">1</span>)
 
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">duration</span>(t: Time, minutes: <span style="color:#66d9ef">int</span>): <span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span>
-   <span style="color:#66d9ef">return</span> t.hours <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> minutes
+<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">addDay</span>(d: date) <span style="color:#f92672">=</span>
+   d.day <span style="color:#f92672">=</span> d.day <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
 
-<span style="color:#66d9ef">let</span> t <span style="color:#f92672">=</span> newTime()
-<span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> t.duration(<span style="color:#ae81ff">59</span>)
-echo n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1439</span>
+<span style="color:#66d9ef">let</span> d <span style="color:#f92672">=</span> newDate()
+d.addDay
+echo d.day <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>
 </code></pre></div>
 
 <p><a href="https://nim-lang.org/docs/manual.html#types-object-construction">https://nim-lang.org/docs/manual.html#types-object-construction</a></p>

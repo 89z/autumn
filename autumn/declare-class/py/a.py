@@ -1,8 +1,9 @@
-class Time:
-   hours = 23
-   def duration(self, minutes):
-      return self.hours * 60 + minutes
+class date:
+   month = 1
+   day = 1
+   def add(self):
+      self.day = self.day + 1
 
-t = Time()
-n = t.duration(59)
-print(n == 1439)
+d = date()
+d.add()
+print(d.day == 2)
