@@ -41,11 +41,11 @@
 <span style="color:#66d9ef">proc </span><span style="color:#a6e22e">newTime</span>(): Time <span style="color:#f92672">=</span>
    <span style="color:#66d9ef">return</span> Time(hours: <span style="color:#ae81ff">23</span>)
 
-<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">duration</span>(o: Time, minutes: <span style="color:#66d9ef">int</span>): <span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span>
-   <span style="color:#66d9ef">return</span> o.hours <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> minutes
+<span style="color:#66d9ef">proc </span><span style="color:#a6e22e">duration</span>(t: Time, minutes: <span style="color:#66d9ef">int</span>): <span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span>
+   <span style="color:#66d9ef">return</span> t.hours <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">+</span> minutes
 
-<span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> newTime()
-<span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> o.duration(<span style="color:#ae81ff">59</span>)
+<span style="color:#66d9ef">let</span> t <span style="color:#f92672">=</span> newTime()
+<span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> t.duration(<span style="color:#ae81ff">59</span>)
 echo n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1439</span>
 </code></pre></div>
 

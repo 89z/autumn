@@ -4,9 +4,9 @@ type Time = object
 proc newTime(): Time =
    return Time(hours: 23)
 
-proc duration(o: Time, minutes: int): int =
-   return o.hours * 60 + minutes
+proc duration(t: Time, minutes: int): int =
+   return t.hours * 60 + minutes
 
-let o = newTime()
-let n = o.duration(59)
+let t = newTime()
+let n = t.duration(59)
 echo n == 1439

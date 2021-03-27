@@ -59,8 +59,8 @@
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), regex::Error<span style="color:#f92672">&gt;</span> {
    <span style="color:#66d9ef">let</span> r <span style="color:#f92672">=</span> Regex::new(<span style="color:#e6db74">&#34;a(..)&#34;</span>)<span style="color:#f92672">?</span>;
-   <span style="color:#66d9ef">for</span> o <span style="color:#66d9ef">in</span> r.captures_iter(<span style="color:#e6db74">&#34;January&#34;</span>) {
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, o);
+   <span style="color:#66d9ef">for</span> c <span style="color:#66d9ef">in</span> r.captures_iter(<span style="color:#e6db74">&#34;January&#34;</span>) {
+      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, c);
    }
    Ok(())
 }
