@@ -1,15 +1,15 @@
 package main
 import "fmt"
 
-func popString(a *[]string) string {
-   n := len(*a)
-   s := (*a)[n - 1]
-   *a = (*a)[:n - 1]
-   return s
+func pop(a *[]int) int {
+   d := len(*a)
+   e := (*a)[d - 1]
+   *a = (*a)[:d - 1]
+   return e
 }
 
 func main() {
-   a := []string{"May", "June", "July"}
-   s := popString(&a)
-   fmt.Println(a, s)
+   a := []int{0, 10, 20}
+   n := pop(&a)
+   fmt.Println(a, n)
 }

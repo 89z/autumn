@@ -1,4 +1,4 @@
-let a = ["M", "a", "r", "c", "h"]
+let a = [0, 10, 20, 30, 40]
 
 block: # example 1
    let b = a[2]

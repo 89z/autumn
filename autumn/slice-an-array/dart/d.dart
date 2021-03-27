@@ -1,5 +1,5 @@
 void main() {
-   var a = ['M', 'a', 'r', 'c', 'h'];
-   var s = a[2];
-   print(s == 'r');
+   var a = [0, 10, 20, 30, 40];
+   var n = a[1];
+   print(n == 10);
 }

@@ -1,3 +1,3 @@
-let a = ['M', 'a', 'r', 'c', 'h'];
-let s = a[2];
-console.log(s == 'r');
+let a = [0, 10];
+let n = [1];
+console.log(n == 10);
