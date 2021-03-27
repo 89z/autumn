@@ -1,8 +1,7 @@
-import io = std.stdio;
-import json = std.json: JSONValue;
+import std.json, std.stdio;
 
 void main() {
-   auto o = ["/", "📗"].JSONValue;
-   auto s = json.toJSON(o);
-   io.writeln(s);
+   auto m = ["month": 12, "day": 31].JSONValue;
+   auto s = m.toJSON;
+   s.writeln;
 }

@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main() {
-   var o = new File('a.txt');
-   var s = o.readAsStringSync();
+   var f = new File('a.txt');
+   var s = f.readAsStringSync();
    print(s);
 }

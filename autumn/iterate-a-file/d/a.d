@@ -1,8 +1,8 @@
 import std.stdio;
 
 void main() {
-   auto o = File("a.d");
-   foreach (s; o.byLine) {
+   auto f = File("a.d");
+   foreach (s; f.byLine) {
       s.writeln;
    }
 }

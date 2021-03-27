@@ -1,8 +1,8 @@
-function addMonth(o) {
-   let n = o.getMonth();
-   o.setMonth(n + 1);
+function addMonth(d) {
+   let n = d.getMonth();
+   d.setMonth(n + 1);
 }
 
-let o = new Date;
-addMonth(o);
-console.log(o);
+let d = new Date;
+addMonth(d);
+console.log(d);

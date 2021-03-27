@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main() {
-   var o = new Directory('.');
-   var a = o.listSync();
+   var d = new Directory('.');
+   var a = d.listSync();
    print(a);
 }

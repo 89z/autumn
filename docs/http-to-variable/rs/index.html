@@ -40,8 +40,8 @@
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), minreq::Error<span style="color:#f92672">&gt;</span> {
    <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://speedtest.lax.hivelocity.net&#34;</span>;
-   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> minreq::get(s).send()<span style="color:#f92672">?</span>;
-   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> o.as_str()<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> r <span style="color:#f92672">=</span> minreq::get(s).send()<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> r.as_str()<span style="color:#f92672">?</span>;
    print<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
    Ok(())
 }

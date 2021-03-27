@@ -1,4 +1,4 @@
 import re
 s = 'January'
-o = re.search('^J', s)
-print(o != None)
+r = re.search('^J', s)
+print(r != None)

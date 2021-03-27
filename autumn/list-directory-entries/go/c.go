@@ -9,9 +9,9 @@ import (
 
 func walk(root string) ([]string, error) {
    var a []string
-   e := filepath.Walk(root, func (s string, o os.FileInfo, e error) error {
+   e := filepath.Walk(root, func (s string, f os.FileInfo, e error) error {
       if e != nil { return e }
-      if ! o.IsDir() {
+      if ! f.IsDir() {
          a = append(a, s)
       }
       return nil

@@ -1,6 +1,6 @@
 import subprocess
-a = ['ag', '-V']
-o = subprocess.Popen(a, stdout=subprocess.PIPE, text=True)
+a = ['python', '-h']
 
-for s in o.stdout:
+p = subprocess.Popen(a, stdout=subprocess.PIPE, text=True)
+for s in p.stdout:
    print(s, end='')

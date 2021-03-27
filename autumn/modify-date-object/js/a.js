@@ -1,8 +1,8 @@
-function addYear(o) {
-   let n = o.getFullYear();
-   o.setFullYear(n + 1);
+function addYear(d) {
+   let n = d.getFullYear();
+   d.setFullYear(n + 1);
 }
 
-let o = new Date;
-addYear(o);
-console.log(o);
+let d = new Date;
+addYear(d);
+console.log(d);

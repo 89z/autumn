@@ -4,6 +4,10 @@ use chrono::{
 };
 
 fn main() {
-   let o = Utc.ymd(2020, 5, 4);
-   println!("{}", o);
+   // example 1
+   let d = TimeZone::ymd(&Utc, 2020, 12, 31);
+   println!("{}", d);
+   // example 2
+   let d = Utc.ymd(2020, 12, 31);
+   println!("{}", d);
 }
