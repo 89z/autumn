@@ -41,8 +41,8 @@
 };
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> o <span style="color:#f92672">=</span> fs::metadata(<span style="color:#e6db74">&#34;a.rs&#34;</span>)<span style="color:#f92672">?</span>;
-   <span style="color:#66d9ef">let</span> b <span style="color:#f92672">=</span> o.is_file();
+   <span style="color:#66d9ef">let</span> m <span style="color:#f92672">=</span> fs::metadata(<span style="color:#e6db74">&#34;a.rs&#34;</span>)<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> b <span style="color:#f92672">=</span> m.is_file();
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, b);
    Ok(())
 }

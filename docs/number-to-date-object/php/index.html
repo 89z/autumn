@@ -24,7 +24,7 @@
    <a href="/autumn/number-to-date-object/">Number to date object</a> / PHP
 </h1>
 <section class="page">
-   <time>Thu Mar 11 2021</time>
+   <time>Fri Mar 26 2021</time>
    
    <a href="/autumn/categories/time/">time</a>
    
@@ -36,9 +36,9 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
-$o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setDate</span>(<span style="color:#ae81ff">2020</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setTime</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>);
-<span style="color:#a6e22e">var_dump</span>($o);
+$d <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
+$d<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setDate</span>(<span style="color:#ae81ff">2020</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setTime</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>);
+<span style="color:#a6e22e">var_dump</span>($d);
 </code></pre></div>
 
 <p><a href="https://php.net/datetime.setdate">https://php.net/datetime.setdate</a></p>
@@ -50,9 +50,9 @@ $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setDate</s
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 $n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1609480799</span>;
-$o <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
-$o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setTimestamp</span>($n);
-<span style="color:#a6e22e">var_dump</span>($o);
+$d <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>;
+$d<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setTimestamp</span>($n);
+<span style="color:#a6e22e">var_dump</span>($d);
 </code></pre></div>
 
 <p><a href="https://php.net/datetime.settimestamp">https://php.net/datetime.settimestamp</a></p>
@@ -63,9 +63,9 @@ $o<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setTimesta
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$o <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_create</span>();
-<span style="color:#a6e22e">date_date_set</span>($o, <span style="color:#ae81ff">2020</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>);
-<span style="color:#a6e22e">var_dump</span>($o);
+$d <span style="color:#f92672">=</span> <span style="color:#a6e22e">date_create</span>();
+<span style="color:#a6e22e">date_date_set</span>($d, <span style="color:#ae81ff">2020</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>);
+<span style="color:#a6e22e">var_dump</span>($d);
 </code></pre></div>
 
 <p><a href="https://php.net/function.date-date-set">https://php.net/function.date-date-set</a></p>

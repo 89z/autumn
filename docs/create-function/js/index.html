@@ -47,6 +47,22 @@
    
 
 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sum</span>(...<span style="color:#a6e22e">theArgs</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">theArgs</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">previous</span>, <span style="color:#a6e22e">current</span>) =&gt; {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">previous</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">current</span>;
+  });
+}
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sum</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>));
+</code></pre></div>
+
+<p><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/rest_parameters">https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/rest_parameters</a></p>
+
+
+
+   
+
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">f</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">d</span>, <span style="color:#a6e22e">e</span>) {
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">e</span>;
 };

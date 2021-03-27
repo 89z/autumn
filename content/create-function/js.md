@@ -9,9 +9,13 @@ tags = [ "javascript" ]
 
 {{< r "b.js" >}}
 
-<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/function>
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/rest_parameters>
 
 {{< r "c.js" >}}
+
+<https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/function>
+
+{{< r "d.js" >}}
 
 <https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function>
 

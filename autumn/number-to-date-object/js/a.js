@@ -1,20 +1,27 @@
-let o;
+function time(...a) {
+   if (a.length == 1) {
+      return new Date(a[0] * 1000);
+   }
+   a[1]--;
+   return new Date(...a);
+}
+
+let t;
 // example 1
-let n = 1609480799;
-o = new Date(n * 1000);
-console.log(o);
+t = time(1609480799);
+console.log(t);
 // example 2
-o = new Date(2020, 5 - 1, 4, 3, 2, 1);
-console.log(o);
+t = time(2020, 12);
+console.log(t);
 // example 3
-o = new Date(2020, 5 - 1, 4, 3, 2);
-console.log(o);
+t = time(2020, 12, 31);
+console.log(t);
 // example 4
-o = new Date(2020, 5 - 1, 4, 3);
-console.log(o);
+t = time(2020, 12, 31, 23);
+console.log(t);
 // example 5
-o = new Date(2020, 5 - 1, 4);
-console.log(o);
+t = time(2020, 12, 31, 23, 59);
+console.log(t);
 // example 6
-o = new Date(2020, 5 - 1);
-console.log(o);
+t = time(2020, 12, 31, 23, 59, 59);
+console.log(t);

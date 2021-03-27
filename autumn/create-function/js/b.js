@@ -1,6 +1,7 @@
-let f = function (d, e) {
-   return d + e;
-};
+function sum(...theArgs) {
+  return theArgs.reduce((previous, current) => {
+    return previous + current;
+  });
+}
 
-let n = f(4, 5)
-console.log(n == 9);
+console.log(sum(1, 2, 3));

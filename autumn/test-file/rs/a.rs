@@ -4,8 +4,8 @@ use std::{
 };
 
 fn main() -> io::Result<()> {
-   let o = fs::metadata("a.rs")?;
-   let b = o.is_file();
+   let m = fs::metadata("a.rs")?;
+   let b = m.is_file();
    println!("{}", b);
    Ok(())
 }

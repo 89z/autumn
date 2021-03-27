@@ -1,4 +1,3 @@
-import pathlib
-o = pathlib.Path(r'C:\Windows\notepad.exe')
-s = o.stem
-print(s == 'notepad')
+from pathlib import Path
+p = Path(r'C:\Windows\notepad.exe')
+print(p.stem == 'notepad')
