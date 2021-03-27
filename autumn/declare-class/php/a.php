@@ -8,6 +8,6 @@ class Time {
    }
 }
 
-$o = new Time;
-$n = $o->duration(59);
+$t = new Time;
+$n = $t->duration(59);
 var_dump($n == 86399);
