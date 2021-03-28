@@ -1,3 +1,3 @@
-s = 'March'
+s = 'north'
 t = s.upper()
-print(t == 'MARCH')
+print(t == 'NORTH')

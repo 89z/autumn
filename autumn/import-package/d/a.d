@@ -1,5 +1,5 @@
 import std.stdio;
 
 void main() {
-   writeln("March");
+   writeln("north");
 }

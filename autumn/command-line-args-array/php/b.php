@@ -1,3 +1,3 @@
 <?php
 $s = $argv[1];
-var_dump($s == 'March');
+var_dump($s == 'north');

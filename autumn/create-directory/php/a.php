@@ -1,5 +1,5 @@
 <?php
 # example 1
-mkdir('March');
+mkdir('north');
 # example 2
-mkdir('May\June', recursive: true);
+mkdir('west/east', recursive: true);

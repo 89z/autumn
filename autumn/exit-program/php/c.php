@@ -1,2 +1,2 @@
 <?php
-trigger_error('March', E_USER_ERROR);
+trigger_error('north', E_USER_ERROR);

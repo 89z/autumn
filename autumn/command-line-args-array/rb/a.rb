@@ -1,2 +1,2 @@
 s = ARGV[0]
-puts s == 'March'
+puts s == 'north'

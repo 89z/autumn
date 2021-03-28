@@ -1,3 +1,3 @@
-s = 'March'
+s = 'north'
 t = s.upcase
-puts t == 'MARCH'
+puts t == 'NORTH'

@@ -8,5 +8,5 @@ import (
 )
 
 func main() {
-   ft.Fprintln(os.Stderr, "March")
+   ft.Fprintln(os.Stderr, "north")
 }

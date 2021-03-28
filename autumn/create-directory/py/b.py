@@ -1,5 +1,5 @@
 import os
-os.mkdir('March')
+os.mkdir('north')
 
 # FileNotFoundError
-# os.mkdir('May/June')
+# os.mkdir('west/east')

@@ -1,3 +1,3 @@
 import os
-let b = existsOrCreateDir("March")
+let b = existsOrCreateDir("north")
 echo b

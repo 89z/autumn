@@ -5,5 +5,4 @@ fn f(d: u8, e: u8) -> u8 {
 }
 
 fn main() {
-   println!("March");
 }

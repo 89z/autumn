@@ -1,5 +1,5 @@
 import std.file;
 
 void main() {
-   mkdir("March");
+   mkdir("north");
 }

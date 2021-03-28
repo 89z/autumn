@@ -1,4 +1,4 @@
 <?php
-$s = 'March';
+$s = 'NORTH';
 $s = mb_convert_case($s, MB_CASE_FOLD);
-var_dump($s == 'march');
+var_dump($s == 'north');

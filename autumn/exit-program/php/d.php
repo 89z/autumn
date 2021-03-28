@@ -1,2 +1,2 @@
 <?php
-user_error('March', E_USER_ERROR);
+user_error('north', E_USER_ERROR);

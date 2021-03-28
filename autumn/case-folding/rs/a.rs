@@ -1,5 +1,5 @@
 fn main() {
-   let s = "March";
+   let s = "north";
    let t = s.to_uppercase();
-   println!("{}", t == "MARCH");
+   println!("{}", t == "NORTH");
 }

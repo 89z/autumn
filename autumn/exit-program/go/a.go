@@ -2,5 +2,5 @@ package main
 import "log"
 
 func main() {
-   log.Fatal("March")
+   log.Fatal("north")
 }

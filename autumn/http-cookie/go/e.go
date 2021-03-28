@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-   r, e := http.NewRequest("GET", "http://www.deezer.com", nil)
+   r, e := http.NewRequest("GET", "http://deezer.com", nil)
    if e != nil {
       log.Fatal(e)
    }
@@ -16,6 +16,6 @@ func main() {
       log.Fatal(e)
    }
    c.SetCookies(r.URL, []*http.Cookie{
-      {Name: "month", Value: "March"},
+      {Name: "west", Value: "right"}
    })
 }

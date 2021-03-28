@@ -36,9 +36,9 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;March&#39;</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;NORTH&#39;</span>;
 $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">mb_convert_case</span>($s, <span style="color:#a6e22e">MB_CASE_FOLD</span>);
-<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;march&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;north&#39;</span>);
 </code></pre></div>
 
 <p><a href="https://php.net/function.mb-convert-case">https://php.net/function.mb-convert-case</a></p>
@@ -49,9 +49,9 @@ $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">mb_convert_c
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;March&#39;</span>;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;north&#39;</span>;
 $t <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtoupper</span>($s);
-<span style="color:#a6e22e">var_dump</span>($t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;MARCH&#39;</span>);
+<span style="color:#a6e22e">var_dump</span>($t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;NORTH&#39;</span>);
 </code></pre></div>
 
 <p><a href="https://php.net/function.strtoupper">https://php.net/function.strtoupper</a></p>

@@ -14,7 +14,7 @@ func mkdir(path string) error {
 }
 
 func main() {
-   e := mkdir("March")
+   e := mkdir("north")
    if e != nil {
       log.Fatal(e)
    }

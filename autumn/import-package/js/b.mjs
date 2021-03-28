@@ -1,3 +1,3 @@
 import {f} from './a.mjs';
-let n = f('March');
-console.log(n);
+let n = f('north');
+console.log(n == 5);

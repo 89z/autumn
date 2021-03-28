@@ -3,5 +3,5 @@ a = list()
 print(a)
 
 # example 2
-a = list('March')
+a = list('north')
 print(a)

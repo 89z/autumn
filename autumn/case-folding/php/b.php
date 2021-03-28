@@ -1,4 +1,4 @@
 <?php
-$s = 'March';
+$s = 'north';
 $t = strtoupper($s);
-var_dump($t == 'MARCH');
+var_dump($t == 'NORTH');

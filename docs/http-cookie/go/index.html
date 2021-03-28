@@ -43,11 +43,11 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#e6db74">&#34;http://www.deezer.com&#34;</span>, <span style="color:#66d9ef">nil</span>)
+   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#e6db74">&#34;http://deezer.com&#34;</span>, <span style="color:#66d9ef">nil</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">AddCookie</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Cookie</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;March&#34;</span>})
+   <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">AddCookie</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Cookie</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;west&#34;</span>, <span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;left&#34;</span>})
 }
 </code></pre></div>
 
@@ -66,11 +66,11 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#e6db74">&#34;http://www.deezer.com&#34;</span>, <span style="color:#66d9ef">nil</span>)
+   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#e6db74">&#34;http://deezer.com&#34;</span>, <span style="color:#66d9ef">nil</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Header</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#e6db74">&#34;Cookie&#34;</span>, <span style="color:#e6db74">&#34;month=March&#34;</span>)
+   <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Header</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#e6db74">&#34;Cookie&#34;</span>, <span style="color:#e6db74">&#34;west=left&#34;</span>)
 }
 </code></pre></div>
 
@@ -147,7 +147,7 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#e6db74">&#34;http://www.deezer.com&#34;</span>, <span style="color:#66d9ef">nil</span>)
+   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#e6db74">&#34;http://deezer.com&#34;</span>, <span style="color:#66d9ef">nil</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
@@ -156,7 +156,7 @@
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
    <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">SetCookies</span>(<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">URL</span>, []<span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Cookie</span>{
-      {<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;March&#34;</span>},
+      {<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;west&#34;</span>, <span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;right&#34;</span>}
    })
 }
 </code></pre></div>

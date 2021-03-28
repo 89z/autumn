@@ -6,9 +6,9 @@ import (
 )
 
 func main() {
-   r, e := http.NewRequest("GET", "http://www.deezer.com", nil)
+   r, e := http.NewRequest("GET", "http://deezer.com", nil)
    if e != nil {
       log.Fatal(e)
    }
-   r.AddCookie(&http.Cookie{Name: "month", Value: "March"})
+   r.AddCookie(&http.Cookie{Name: "west", Value: "left"})
 }

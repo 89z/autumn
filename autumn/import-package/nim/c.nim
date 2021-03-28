@@ -1,2 +1,3 @@
 import strutils as su
-echo su.toUpper("March")
+let s = su.toUpper("north")
+echo s == "NORTH"

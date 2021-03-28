@@ -1,4 +1,4 @@
-import unicode as uni
-let s = "March"
-let t = uni.toUpper(s)
-echo t == "MARCH"
+import unicode
+let s = "north"
+let t = s.toUpper
+echo t == "NORTH"

@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-   e := os.MkdirAll("March", os.ModeDir)
+   e := os.MkdirAll("north", os.ModeDir)
    if e != nil {
       log.Fatal(e)
    }
