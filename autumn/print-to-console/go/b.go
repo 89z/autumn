@@ -2,7 +2,7 @@ package main
 
 func main() {
    // example 1
-   println("March")
+   println("north")
    // example 2
-   println("May", "June")
+   println("west", "east")
 }

@@ -1,4 +1,4 @@
 // example 1
-console.info('March');
+console.info('north');
 // example 2
-console.info('May', 'June');
+console.info('west', 'east');

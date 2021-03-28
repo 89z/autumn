@@ -1,4 +1,4 @@
 # example 1
-stdout.write "March\n"
+stdout.write "north\n"
 # example 2
-stdout.write "March", "\n"
+stdout.write "north", "\n"

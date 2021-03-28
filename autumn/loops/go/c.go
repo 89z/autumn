@@ -8,6 +8,6 @@ func main() {
    }
    // example 2
    for range a {
-      println("March")
+      println("north")
    }
 }

@@ -1,4 +1,4 @@
 # example 1
-puts 'March'
+puts 'north'
 # example 2
-puts 'May', 'June'
+puts 'west', 'east'

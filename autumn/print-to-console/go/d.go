@@ -3,7 +3,7 @@ import "fmt"
 
 func main() {
    // example 1
-   fmt.Println("March")
+   fmt.Println("north")
    // example 2
-   fmt.Println("May", "June")
+   fmt.Println("west", "east")
 }

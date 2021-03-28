@@ -1,7 +1,7 @@
 package main
 
 func main() {
-   a := []byte{'M', 'a', 'r', 'c', 'h'}
+   a := []byte{'w', 'e', 's', 't'}
    s := string(a)
-   println(s == "March")
+   println(s == "west")
 }

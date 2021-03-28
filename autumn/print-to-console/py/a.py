@@ -1,8 +1,10 @@
 # example 1
-print('March')
+print()
 # example 2
-print('May', 'June')
+print('north')
 # example 3
-print('March\n', end='')
+print('west', 'east')
 # example 4
-print('May', 'June\n', end='')
+print('north', end='')
+# example 5
+print('West', 'East', end='')

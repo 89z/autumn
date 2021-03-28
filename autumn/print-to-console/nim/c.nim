@@ -1,4 +1,4 @@
 # example 1
-stdout.writeLine "March"
+stdout.writeLine "north"
 # example 2
-stdout.writeLine "May", "June"
+stdout.writeLine "west", "east"

@@ -2,7 +2,7 @@ package main
 import "strings"
 
 func main() {
-   s := "March"
-   b := strings.HasPrefix(s, "Ma")
+   s := "north"
+   b := strings.HasPrefix(s, "no")
    println(b)
 }

@@ -1,4 +1,4 @@
 # example 1
-print "March\n"
+print "north\n"
 # example 2
-print 'March', "\n"
+print 'north', "\n"

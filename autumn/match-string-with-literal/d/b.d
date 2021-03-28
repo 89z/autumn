@@ -1,8 +1,7 @@
-import algo = std.algorithm;
-import io = std.stdio;
+import std.algorithm, std.stdio;
 
 void main() {
-   auto s = "March";
-   auto b = algo.startsWith(s, "Ma");
-   io.writeln(b);
+   auto s = "north";
+   auto b = s.startsWith("no");
+   b.writeln;
 }

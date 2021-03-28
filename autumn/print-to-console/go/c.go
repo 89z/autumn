@@ -3,7 +3,7 @@ import "fmt"
 
 func main() {
    // example 1
-   fmt.Print("March\n")
+   fmt.Print("north\n")
    // example 2
-   fmt.Print("March", "\n")
+   fmt.Print("north", "\n")
 }

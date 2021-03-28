@@ -1,4 +1,4 @@
 <?php
-$s = 'March';
-$b = str_contains($s, 'ar');
+$s = 'north';
+$b = str_contains($s, 'or');
 var_dump($b);

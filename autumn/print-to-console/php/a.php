@@ -1,5 +1,5 @@
 <?php
 # example 1
-echo "March\n";
+echo "north\n";
 # example 2
-echo 'March', "\n";
+echo 'north', "\n";

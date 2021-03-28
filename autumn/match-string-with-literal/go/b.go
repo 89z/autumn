@@ -2,9 +2,9 @@ package main
 import "strings"
 
 func main() {
-   s := "March"
+   s := "north"
    { // example 1
-      b := strings.Contains(s, "ar")
+      b := strings.Contains(s, "or")
       println(b)
    }
    { // example 2

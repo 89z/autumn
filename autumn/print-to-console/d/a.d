@@ -2,7 +2,7 @@ import std.stdio;
 
 void main() {
    // example 1
-   write("March\n");
+   write("north\n");
    // example 2
-   write("March", "\n");
+   write("north", "\n");
 }

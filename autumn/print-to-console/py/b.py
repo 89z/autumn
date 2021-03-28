@@ -1,2 +1,2 @@
 import sys
-sys.stdout.write('March\n')
+sys.stdout.write('north\n')

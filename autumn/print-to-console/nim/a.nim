@@ -1,4 +1,4 @@
 # example 1
-echo "March"
+echo "north"
 # example 2
-echo "May", "June"
+echo "west", "east"

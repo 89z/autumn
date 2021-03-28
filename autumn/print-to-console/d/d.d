@@ -2,7 +2,7 @@ import std.stdio;
 
 void main() {
    // example 1
-   writeln("March");
+   writeln("north");
    // example 2
-   writeln("May", "June");
+   writeln("west", "east");
 }

@@ -1,4 +1,4 @@
-let te = new TextEncoder;
-let a = te.encode('March');
+let t = new TextEncoder;
+let a = t.encode('north');
 let s = String.fromCharCode(...a);
-console.log(s == 'March')
+console.log(s == 'north')

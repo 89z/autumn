@@ -1,2 +1,2 @@
 <?php
-fwrite(STDOUT, "March\n");
+fwrite(STDOUT, "north\n");

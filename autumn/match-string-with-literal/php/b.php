@@ -1,4 +1,4 @@
 <?php
-$s = 'March';
-$b = str_starts_with($s, 'Ma');
+$s = 'north';
+$b = str_starts_with($s, 'no');
 var_dump($b);
