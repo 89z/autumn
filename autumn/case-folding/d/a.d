@@ -1,7 +1,7 @@
 import std.stdio, std.uni;
 
 void main() {
-   auto s = "March";
+   auto s = "north";
    auto t = s.toUpper;
-   writeln(t == "MARCH");
+   writeln(t == "NORTH");
 }

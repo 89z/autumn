@@ -1,7 +1,7 @@
 package main
 
 func main() {
-   var s string
-   s += "March"
-   println(s)
+   s := "West"
+   s += "East"
+   println(s == "WestEast")
 }

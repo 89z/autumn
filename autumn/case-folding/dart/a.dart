@@ -1,5 +1,5 @@
 void main() {
-   var s = 'March';
+   var s = 'north';
    var t = s.toUpperCase();
-   print(t == 'MARCH');
+   print(t == 'NORTH');
 }

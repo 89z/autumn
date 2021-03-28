@@ -1,3 +1,3 @@
-s = 'March'
-s += 'April'
-puts s == 'MarchApril'
+s = 'West'
+s += 'East'
+p s == 'WestEast'

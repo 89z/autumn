@@ -2,7 +2,7 @@ package main
 import "strings"
 
 func main() {
-   s := "March"
+   s := "north"
    t := strings.ToUpper(s)
-   println(t == "MARCH")
+   println(t == "NORTH")
 }

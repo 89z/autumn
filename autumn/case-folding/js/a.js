@@ -1,3 +1,3 @@
-let s = 'March';
+let s = 'north';
 let t = s.toUpperCase();
-console.log(t == 'MARCH');
+console.log(t == 'NORTH');

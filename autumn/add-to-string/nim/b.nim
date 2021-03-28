@@ -1,3 +1,3 @@
-var s: string
-s.add "March"
-echo s
+var s = "West"
+s.add "East"
+echo s == "WestEast"

@@ -1,3 +1,3 @@
-var s: string
-s &= "March"
-echo s
+var s = "West"
+s &= "East"
+echo s == "WestEast"

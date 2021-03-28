@@ -1,4 +1,4 @@
 <?php
-$s = 'March';
-$s .= 'April';
-var_dump($s == 'MarchApril');
+$s = 'West';
+$s .= 'East';
+var_dump($s == 'WestEast');

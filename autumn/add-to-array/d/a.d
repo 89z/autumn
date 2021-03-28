@@ -1,11 +1,11 @@
 import std.stdio;
 
 void main() {
-   string[] a;
+   auto a = [0, 10];
    // example 1
-   a ~= "March";
+   a ~= 20;
    // example 2
-   a ~= ["April", "May"];
+   a ~= [30, 40];
    // print
    a.writeln;
 }

@@ -3,7 +3,7 @@ import "strings"
 
 func main() {
    var b strings.Builder
-   b.WriteString("March")
+   b.WriteString("north")
    s := b.String()
-   println(s == "March")
+   println(s == "north")
 }

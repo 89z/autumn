@@ -2,7 +2,7 @@ package main
 import "fmt"
 
 func main() {
-   s := "March"
-   s = fmt.Sprint(s, "April")
-   fmt.Println(s == "MarchApril")
+   s := "West"
+   s = fmt.Sprint(s, "East")
+   fmt.Println(s == "WestEast")
 }

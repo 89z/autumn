@@ -1,7 +1,7 @@
 import std.stdio;
 
 void main() {
-   string s;
-   s ~= "March";
-   s.writeln;
+   auto s = "West";
+   s ~= "East";
+   writeln(s == "WestEast");
 }

@@ -1,5 +1,5 @@
 void main() {
-   var a = [];
-   a.add('March');
+   var a = [0, 10];
+   a.add(20);
    print(a);
 }

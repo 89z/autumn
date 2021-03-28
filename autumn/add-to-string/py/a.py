@@ -1,3 +1,3 @@
-s = 'March'
-s += 'April'
-print(s == 'MarchApril')
+s = 'West'
+s += 'East'
+print(s == 'WestEast')
