@@ -8,7 +8,7 @@ function time(...a) {
 
 let t;
 // example 1
-t = time(1609480799);
+t = time(0x5555_5555);
 console.log(t);
 // example 2
 t = time(2020, 12);

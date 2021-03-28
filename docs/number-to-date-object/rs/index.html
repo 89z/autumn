@@ -37,12 +37,17 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::time::{
    Duration,
+   SystemTime,
    UNIX_EPOCH
 };
 
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">unix</span>(n: <span style="color:#66d9ef">u64</span>) -&gt; Option<span style="color:#f92672">&lt;</span>SystemTime<span style="color:#f92672">&gt;</span> {
+   <span style="color:#66d9ef">let</span> d <span style="color:#f92672">=</span> Duration::new(n, <span style="color:#ae81ff">0</span>);
+   UNIX_EPOCH.checked_add(d)
+}
+
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> d <span style="color:#f92672">=</span> Duration::new(<span style="color:#ae81ff">1609376551</span>, <span style="color:#ae81ff">0</span>);
-   <span style="color:#66d9ef">let</span> t <span style="color:#f92672">=</span> UNIX_EPOCH.checked_add(d);
+   <span style="color:#66d9ef">let</span> t <span style="color:#f92672">=</span> unix(<span style="color:#ae81ff">0x5555_5555</span>);
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, t);
 }
 </code></pre></div>
@@ -57,7 +62,7 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> chrono::NaiveDateTime;
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1609480799</span>;
+   <span style="color:#66d9ef">let</span> n <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x5555_5555</span>;
    <span style="color:#66d9ef">let</span> d <span style="color:#f92672">=</span> NaiveDateTime::from_timestamp(n, <span style="color:#ae81ff">0</span>);
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, d);
 }

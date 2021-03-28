@@ -13,3 +13,7 @@ Docs:
 Download:
 
 <https://dart.dev/tools/sdk/archive>
+
+Digit separators in number literals:
+
+<https://github.com/dart-lang/language/issues/2>
