@@ -71,9 +71,9 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URLSearchParams</span>(<span style="color:#e6db74">&#39;month=March&amp;day=Friday&#39;</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;day&#39;</span>);
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URLSearchParams</span>(<span style="color:#e6db74">&#39;west=left&amp;east=right&#39;</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;west&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;left&#39;</span>);
 </code></pre></div>
 
 <p><a href="https://developer.mozilla.org/docs/Web/API/URLSearchParams/get">https://developer.mozilla.org/docs/Web/API/URLSearchParams/get</a></p>
@@ -84,7 +84,7 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URLSearchParams</span>;
-<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#39;month&#39;</span>, <span style="color:#e6db74">&#39;March&#39;</span>);
+<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#39;west&#39;</span>, <span style="color:#e6db74">&#39;left&#39;</span>);
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">p</span>);
 </code></pre></div>
 

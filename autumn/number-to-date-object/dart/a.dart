@@ -1,5 +1,5 @@
 void main() {
-   var n = 1609480799;
+   var n = 0x55555555;
    var d = new DateTime.fromMillisecondsSinceEpoch(n * 1000);
    print(d);
 }

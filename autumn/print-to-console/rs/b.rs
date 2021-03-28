@@ -1,6 +1,6 @@
 fn main() {
    // example 1
-   println!("March");
+   println!("north");
    // example 2
-   println!("{}", "March");
+   println!("{}", "north");
 }

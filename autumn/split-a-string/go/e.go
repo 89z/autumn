@@ -2,7 +2,7 @@ package main
 import "fmt"
 
 func main() {
-   s := "March"
+   s := "north"
    a := []byte(s)
    fmt.Println(a)
 }

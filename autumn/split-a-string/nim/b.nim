@@ -1,7 +1,7 @@
 import strutils
 
-let s = """March
-April"""
+let s = """south
+north"""
 
 let a = s.splitLines
 echo a

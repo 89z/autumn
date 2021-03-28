@@ -4,7 +4,7 @@ String encode(Map<String, String> m) {
 }
 
 void main() {
-   var m = {'month': 'March', 'day': 'Friday'};
+   var m = {'west': 'left', 'east': 'right'};
    var s = encode(m);
-   print(s == 'month=March&day=Friday');
+   print(s == 'west=left&east=right');
 }

@@ -3,9 +3,8 @@ import "net/url"
 
 func main() {
    m := url.Values{
-      "month": []string{"March"},
-      "day": []string{"Friday"},
+      "west": {"left"}, "east": {"right"},
    }
    s := m.Encode()
-   println(s == "day=Friday&month=March")
+   println(s)
 }

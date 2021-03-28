@@ -1,3 +1,3 @@
-let s = 'month=March&day=Friday';
+let s = 'west=left&east=right';
 let p = new URLSearchParams(s);
 console.log(p);

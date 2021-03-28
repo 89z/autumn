@@ -4,6 +4,6 @@ use std::{
 };
 
 fn main() -> io::Result<()> {
-   Command::new("waterfox").arg("google.com/search?q=march").spawn()?;
+   Command::new("waterfox").arg("google.com/search?q=north").spawn()?;
    Ok(())
 }

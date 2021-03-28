@@ -1,5 +1,5 @@
-s = '''March
-April
+s = '''south
+north
 '''
 
 a = s.splitlines()

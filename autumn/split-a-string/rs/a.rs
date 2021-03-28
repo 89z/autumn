@@ -1,5 +1,5 @@
 fn main() {
-   let s = "March";
+   let s = "north";
    let a = s.as_bytes();
    println!("{:?}", a);
 }

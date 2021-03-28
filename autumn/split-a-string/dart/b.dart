@@ -1,11 +1,11 @@
 void main() {
    { // example 1
-      var s = 'May,June';
+      var s = 'south,north';
       var a = s.split(',');
       print(a);
    }
    { // example 2
-      var s = 'March';
+      var s = 'north';
       var a = s.split('');
       print(a);
    }

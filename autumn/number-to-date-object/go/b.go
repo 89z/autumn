@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-   n := 1609480799
+   n := 0x5555_5555
    t := time.Unix(int64(n), 0)
    fmt.Println(t)
 }

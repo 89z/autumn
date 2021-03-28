@@ -65,11 +65,10 @@
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Values</span>{
-      <span style="color:#e6db74">&#34;month&#34;</span>: []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;March&#34;</span>},
-      <span style="color:#e6db74">&#34;day&#34;</span>: []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;Friday&#34;</span>},
+      <span style="color:#e6db74">&#34;west&#34;</span>: {<span style="color:#e6db74">&#34;left&#34;</span>}, <span style="color:#e6db74">&#34;east&#34;</span>: {<span style="color:#e6db74">&#34;right&#34;</span>},
    }
    <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">m</span>.<span style="color:#a6e22e">Encode</span>()
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;day=Friday&amp;month=March&#34;</span>)
+   println(<span style="color:#a6e22e">s</span>)
 }
 </code></pre></div>
 
