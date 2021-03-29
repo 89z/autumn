@@ -1,5 +1,5 @@
 fn main() {
-   let s = "June";
-   let b = s.starts_with("Ju");
+   let s = "north";
+   let b = s.starts_with("no");
    println!("{}", b);
 }

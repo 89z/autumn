@@ -1,3 +1,3 @@
-s = 'June'
-b = s.include?('un')
-puts b
+s = 'north'
+b = s.include?('or')
+p b

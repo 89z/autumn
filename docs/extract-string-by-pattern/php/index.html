@@ -36,17 +36,9 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">find_string</span>(<span style="color:#a6e22e">string</span> $pat, <span style="color:#a6e22e">string</span> $sub)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
-   $e <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_match</span>($pat, $sub, $a);
-   <span style="color:#66d9ef">if</span> ($e <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>) {
-      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#39;</span>;
-   }
-   <span style="color:#66d9ef">return</span> $a[<span style="color:#ae81ff">0</span>];
-}
-
-$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">find_string</span>(<span style="color:#e6db74">&#39;/a../&#39;</span>, <span style="color:#e6db74">&#39;January&#39;</span>);
-<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;anu&#39;</span>);
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;south north&#39;</span>;
+<span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/o../&#39;</span>, $s, $a);
+<span style="color:#a6e22e">var_dump</span>($a[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;out&#39;</span>);
 </code></pre></div>
 
 
@@ -56,17 +48,9 @@ $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">find_string<
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">find_submatch</span>(<span style="color:#a6e22e">string</span> $pat, <span style="color:#a6e22e">string</span> $sub)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
-   <span style="color:#a6e22e">preg_match</span>($pat, $sub, $a);
-   <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">count</span>($a) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2</span>) {
-      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#39;</span>;
-   }
-   <span style="color:#66d9ef">return</span> $a[<span style="color:#ae81ff">1</span>];
-}
-
-$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">find_submatch</span>(<span style="color:#e6db74">&#39;/a(..)/&#39;</span>, <span style="color:#e6db74">&#39;January&#39;</span>);
-<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;nu&#39;</span>);
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;south north&#39;</span>;
+<span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/o(..)/&#39;</span>, $s, $a);
+<span style="color:#a6e22e">var_dump</span>($a[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ut&#39;</span>);
 </code></pre></div>
 </p>
 <p><a href="https://php.net/function.preg-match">https://php.net/function.preg-match</a></p>

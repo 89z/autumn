@@ -1,11 +1,11 @@
-let s = 'Sunday Monday';
+let s = 'south north';
 { // example 1
-   let r = /..n/g;
+   let r = /o../g;
    let a = [...s.matchAll(r)];
-   console.log(a[0][0] == 'Sun', a[1][0] == 'Mon');
+   console.log(a[0][0] == 'out', a[1][0] == 'ort');
 }
 { // example 2
-   let r = /(..)n/g;
+   let r = /o(..)/g;
    let a = [...s.matchAll(r)];
-   console.log(a[0][1] == 'Su', a[1][1] == 'Mo');
+   console.log(a[0][1] == 'ut', a[1][1] == 'rt');
 }

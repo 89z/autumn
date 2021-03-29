@@ -8,5 +8,5 @@ function pattern(string $pattern, string $subject): array|bool {
    return $a;
 }
 
-$a = pattern('/..n/', 'Sunday Monday');
+$a = pattern('/o./', 'south north');
 var_dump($a);

@@ -2,6 +2,6 @@ package main
 import "regexp"
 
 func main() {
-   s := regexp.MustCompile("a..").FindString("January")
-   println(s == "anu")
+   s := regexp.MustCompile("o..").FindString("south north")
+   println(s == "out")
 }

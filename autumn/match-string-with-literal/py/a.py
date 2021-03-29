@@ -1,3 +1,3 @@
-s = 'June'
-b = s.startswith('Ju')
+s = 'north'
+b = s.startswith('no')
 print(b)

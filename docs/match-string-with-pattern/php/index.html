@@ -41,7 +41,7 @@
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">preg_match</span>($pattern, $subject) <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>;
 }
 
-$b <span style="color:#f92672">=</span> <span style="color:#a6e22e">pattern</span>(<span style="color:#e6db74">&#39;/..n/&#39;</span>, <span style="color:#e6db74">&#39;Sunday Monday&#39;</span>);
+$b <span style="color:#f92672">=</span> <span style="color:#a6e22e">pattern</span>(<span style="color:#e6db74">&#39;/n./&#39;</span>, <span style="color:#e6db74">&#39;north&#39;</span>);
 <span style="color:#a6e22e">var_dump</span>($b);
 </code></pre></div>
 
@@ -61,7 +61,7 @@ $b <span style="color:#f92672">=</span> <span style="color:#a6e22e">pattern</spa
    <span style="color:#66d9ef">return</span> $a;
 }
 
-$a <span style="color:#f92672">=</span> <span style="color:#a6e22e">pattern</span>(<span style="color:#e6db74">&#39;/..n/&#39;</span>, <span style="color:#e6db74">&#39;Sunday Monday&#39;</span>);
+$a <span style="color:#f92672">=</span> <span style="color:#a6e22e">pattern</span>(<span style="color:#e6db74">&#39;/o./&#39;</span>, <span style="color:#e6db74">&#39;south north&#39;</span>);
 <span style="color:#a6e22e">var_dump</span>($a);
 </code></pre></div>
 </p>

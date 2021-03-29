@@ -38,14 +38,10 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;regexp&#34;</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">find</span>(<span style="color:#a6e22e">re</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">input</span> []<span style="color:#66d9ef">byte</span>) <span style="color:#66d9ef">string</span> {
-   <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#a6e22e">re</span>).<span style="color:#a6e22e">Find</span>(<span style="color:#a6e22e">input</span>)
-   <span style="color:#66d9ef">return</span> string(<span style="color:#a6e22e">b</span>)
-}
-
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;a..&#34;</span>, []byte(<span style="color:#e6db74">&#34;January&#34;</span>))
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;anu&#34;</span>)
+   <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;south north&#34;</span>)
+   <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;o..&#34;</span>).<span style="color:#a6e22e">Find</span>(<span style="color:#a6e22e">b</span>)
+   println(string(<span style="color:#a6e22e">c</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;out&#34;</span>)
 }
 </code></pre></div>
 
@@ -60,8 +56,8 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;regexp&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;a..&#34;</span>).<span style="color:#a6e22e">FindString</span>(<span style="color:#e6db74">&#34;January&#34;</span>)
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;anu&#34;</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;o..&#34;</span>).<span style="color:#a6e22e">FindString</span>(<span style="color:#e6db74">&#34;south north&#34;</span>)
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;out&#34;</span>)
 }
 </code></pre></div>
 
@@ -75,17 +71,10 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;regexp&#34;</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">findSubmatch</span>(<span style="color:#a6e22e">re</span>, <span style="color:#a6e22e">input</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#a6e22e">re</span>).<span style="color:#a6e22e">FindStringSubmatch</span>(<span style="color:#a6e22e">input</span>)
-   <span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">a</span>) &lt; <span style="color:#ae81ff">2</span> {
-      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>
-   }
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>[<span style="color:#ae81ff">1</span>]
-}
-
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">findSubmatch</span>(<span style="color:#e6db74">&#34;a(..)&#34;</span>, <span style="color:#e6db74">&#34;January&#34;</span>)
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;nu&#34;</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;south north&#34;</span>
+   <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;o(..)&#34;</span>).<span style="color:#a6e22e">FindStringSubmatch</span>(<span style="color:#a6e22e">s</span>)[<span style="color:#ae81ff">1</span>]
+   println(<span style="color:#a6e22e">t</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;ut&#34;</span>)
 }
 </code></pre></div>
 
@@ -99,17 +88,10 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;regexp&#34;</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">findSubmatch</span>(<span style="color:#a6e22e">re</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">input</span> []<span style="color:#66d9ef">byte</span>) <span style="color:#66d9ef">string</span> {
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#a6e22e">re</span>).<span style="color:#a6e22e">FindSubmatch</span>(<span style="color:#a6e22e">input</span>)
-   <span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">a</span>) &lt; <span style="color:#ae81ff">2</span> {
-      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>
-   }
-   <span style="color:#66d9ef">return</span> string(<span style="color:#a6e22e">a</span>[<span style="color:#ae81ff">1</span>])
-}
-
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">findSubmatch</span>(<span style="color:#e6db74">&#34;a(..)&#34;</span>, []byte(<span style="color:#e6db74">&#34;January&#34;</span>))
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;nu&#34;</span>)
+   <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;south north&#34;</span>)
+   <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;o(..)&#34;</span>).<span style="color:#a6e22e">FindSubmatch</span>(<span style="color:#a6e22e">b</span>)[<span style="color:#ae81ff">1</span>]
+   println(string(<span style="color:#a6e22e">c</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;ut&#34;</span>)
 }
 </code></pre></div>
 

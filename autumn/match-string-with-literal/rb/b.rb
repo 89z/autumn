@@ -1,3 +1,3 @@
-s = 'June'
-b = s.start_with?('Ju')
-puts b
+s = 'north'
+b = s.start_with?('no')
+p b
