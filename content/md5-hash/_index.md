@@ -1,7 +1,7 @@
 +++
-title = "Encrypt data"
+title = "MD5 hash"
 categories = [ "crypto" ]
-date = 2021-03-20
+date = 2021-03-29
 filename = 'deezer\deezer.go'
-substr = '.Encrypt('
+substr = ' md5.Sum('
 +++
