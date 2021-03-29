@@ -1,5 +1,5 @@
 fn main() {
-   let a = ["May", "June"];
+   let a = ["west", "east"];
    let s = a.join(",");
-   println!("{}", s == "May,June");
+   println!("{}", s == "west,east");
 }

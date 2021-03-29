@@ -43,9 +43,9 @@
 }
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> m <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>[(<span style="color:#e6db74">&#34;month&#34;</span>, <span style="color:#e6db74">&#34;May&#34;</span>), (<span style="color:#e6db74">&#34;day&#34;</span>, <span style="color:#e6db74">&#34;Friday&#34;</span>)];
+   <span style="color:#66d9ef">let</span> m <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>[(<span style="color:#e6db74">&#34;west&#34;</span>, <span style="color:#e6db74">&#34;left&#34;</span>), (<span style="color:#e6db74">&#34;east&#34;</span>, <span style="color:#e6db74">&#34;right&#34;</span>)];
    <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> encode(m);
-   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s);
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;west=left&amp;east=right&#34;</span>);
 }
 </code></pre></div>
 
@@ -64,7 +64,7 @@
 }
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;month=May&amp;day=Friday&#34;</span>;
+   <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;west=left&amp;east=right&#34;</span>;
    <span style="color:#66d9ef">let</span> m <span style="color:#f92672">=</span> decode(s);
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, m);
 }

@@ -6,7 +6,7 @@ fn decode(s: &str) -> HashMap<String, String> {
 }
 
 fn main() {
-   let s = "month=May&day=Friday";
+   let s = "west=left&east=right";
    let m = decode(s);
    println!("{:?}", m);
 }

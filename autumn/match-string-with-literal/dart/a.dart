@@ -1,5 +1,5 @@
 void main() {
-   var s = 'June';
-   var b = s.contains('un');
+   var s = 'north';
+   var b = s.contains('or');
    print(b);
 }

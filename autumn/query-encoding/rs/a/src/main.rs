@@ -6,7 +6,7 @@ fn encode(m: &[(&str, &str)]) -> String {
 }
 
 fn main() {
-   let m = &[("month", "May"), ("day", "Friday")];
+   let m = &[("west", "left"), ("east", "right")];
    let s = encode(m);
-   println!("{}", s);
+   println!("{}", s == "west=left&east=right");
 }

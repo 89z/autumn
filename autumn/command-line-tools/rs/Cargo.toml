@@ -4,7 +4,7 @@ tera = { path = "../tera" }
 zip = { git = "https://github.com/zip-rs/zip" }
 
 [package]
-name = "may"
+name = "north"
 version = "1.0.0"
 edition = "2018"
 

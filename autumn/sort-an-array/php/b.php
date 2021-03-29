@@ -1,8 +1,7 @@
 <?php
 
 $a = [
-   ['month' => 4, 'day' => 5],
-   ['month' => 5, 'day' => 4]
+   ['month' => 10, 'day' => 31], ['month' => 11, 'day' => 30]
 ];
 
 $f = fn ($m, $n) => $m['day'] <=> $n['day'];

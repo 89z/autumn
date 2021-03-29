@@ -1,3 +1,4 @@
 import strutils
-let s = "June"
-echo s.startsWith("Ju")
+let s = "north"
+let b = s.startsWith("no")
+echo b

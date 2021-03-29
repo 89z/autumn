@@ -1,3 +1,4 @@
 import strutils
-let s = "June"
-echo s.contains("un")
+let s = "north"
+let b = s.contains("or")
+echo b

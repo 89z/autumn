@@ -7,8 +7,7 @@ import (
 
 func main() {
    a := []map[string]int{
-      {"month": 4, "day": 5},
-      {"month": 5, "day": 4},
+      {"month": 10, "day": 31}, {"month": 11, "day": 30},
    }
    f := func (d, e int) bool {
       return a[d]["day"] < a[e]["day"]

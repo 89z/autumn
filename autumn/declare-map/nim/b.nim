@@ -1,2 +1,2 @@
-let m = {"month": "May", "day": "Friday"}
+let m = {"west": "left", "east": "right"}
 echo m

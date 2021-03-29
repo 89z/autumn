@@ -1,5 +1,5 @@
 void main() {
-   var s = 'June';
-   var b = s.startsWith('Ju');
+   var s = 'north';
+   var b = s.startsWith('no');
    print(b);
 }

@@ -1,5 +1,5 @@
 void main() {
-   var a = ['May', 'June'];
+   var a = ['west', 'east'];
    var n = a.length;
    print(n == 2);
 }

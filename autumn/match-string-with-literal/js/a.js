@@ -1,3 +1,3 @@
-let s = 'June';
-let b = s.includes('un');
+let s = 'north';
+let b = s.includes('or');
 console.log(b);

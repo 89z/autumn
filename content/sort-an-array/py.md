@@ -3,8 +3,11 @@ title = "Python"
 tags = [ "python" ]
 +++
 
-{{< r "n.py" >}}
-{{< r "s.py" >}}
+{{< r "a.py" >}}
+
+<https://docs.python.org/library/functions.html#sorted>
+
+{{< r "b.py" >}}
 
 <https://docs.python.org/library/stdtypes.html#list.sort>
 

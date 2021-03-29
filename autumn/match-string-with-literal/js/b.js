@@ -1,3 +1,3 @@
-let s = 'June';
-let b = s.startsWith('Ju');
+let s = 'north';
+let b = s.startsWith('no');
 console.log(b);

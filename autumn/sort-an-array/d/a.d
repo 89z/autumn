@@ -2,7 +2,7 @@ import std.algorithm, std.stdio;
 
 void main() {
    { // example 1
-      auto a = ["May", "June"];
+      auto a = ["west", "east"];
       a.sort;
       a.writeln;
    }
