@@ -1,3 +1,3 @@
-let s = 'January';
-let b = RegExp(/ja/, 'i').test(s);
+let s = 'South North';
+let b = RegExp(/so/, 'i').test(s);
 console.log(b);

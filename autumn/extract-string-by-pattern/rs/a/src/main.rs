@@ -4,8 +4,8 @@ use {
 };
 
 fn main() -> Result<(), Error> {
-   let r = Regex::new("(..)n")?;
-   let c = r.captures("Sunday Monday");  
+   let r = Regex::new("o(..)")?;
+   let c = r.captures("south north");
    println!("{:?}", c);
    Ok(())
 }

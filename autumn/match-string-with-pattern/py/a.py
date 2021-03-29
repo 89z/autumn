@@ -1,10 +1,10 @@
 import re
-s = 'January'
+s = 'South North'
 
 # example 1
-r = re.search('ja', s, re.I)
+r = re.search('so', s, re.I)
 print(r != None)
 
 # example 2
-r = re.search('(?i)ja', s)
+r = re.search('(?i)so', s)
 print(r != None)

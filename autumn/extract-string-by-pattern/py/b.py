@@ -1,9 +1,10 @@
 import re
+s = 'south north'
 
 # example 1
-s = re.search('..n', 'Sunday Monday').group()
-print(s == 'Sun')
+t = re.search('o..', s).group()
+print(t == 'out')
 
 # example 2
-a = re.search('(..)n', 'Sunday Monday').groups()
-print(a[0] == 'Su')
+a = re.search('o(..)', s).groups()
+print(a[0] == 'ut')

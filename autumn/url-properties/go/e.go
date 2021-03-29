@@ -7,6 +7,6 @@ import (
 
 func main() {
    v := make(url.Values)
-   v.Set("day", "Friday")
+   v.Set("west", "left")
    fmt.Println(v)
 }

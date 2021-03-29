@@ -2,6 +2,7 @@ package main
 import "regexp"
 
 func main() {
-   b := regexp.MustCompile("a..").MatchString("January")
+   s := "south north"
+   b := regexp.MustCompile("o..").MatchString(s)
    println(b)
 }

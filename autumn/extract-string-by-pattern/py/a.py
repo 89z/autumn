@@ -1,8 +1,8 @@
 import re
-s = 'Sunday Monday'
+s = 'south north'
 # example 1
-a = re.findall('..n', s)
-print(a[0] == 'Sun', a[1] == 'Mon')
+a = re.findall('o..', s)
+print(a[0] == 'out', a[1] == 'ort')
 # example 2
-a = re.findall('(..)n', s)
-print(a[0] == 'Su', a[1] == 'Mo')
+a = re.findall('o(..)', s)
+print(a[0] == 'ut', a[1] == 'rt')

@@ -1,9 +1,9 @@
-let s = 'January';
+let s = 'South North';
 { // example 1
-   let b = /^J/.test(s);
+   let b = /^S/.test(s);
    console.log(b);
 }
 { // example 2
-   let b = /ja/i.test(s);
+   let b = /so/i.test(s);
    console.log(b);
 }

@@ -57,11 +57,11 @@
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">pt</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;January February&#34;</span>)
+   <span style="color:#a6e22e">pt</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;north east south&#34;</span>)
    <span style="color:#a6e22e">pt</span> = <span style="color:#a6e22e">PKCS5Padding</span>(<span style="color:#a6e22e">pt</span>, <span style="color:#ae81ff">16</span>)
    <span style="color:#a6e22e">cipher</span>.<span style="color:#a6e22e">NewCBCEncrypter</span>(<span style="color:#a6e22e">block</span>, <span style="color:#a6e22e">iv</span>).<span style="color:#a6e22e">CryptBlocks</span>(<span style="color:#a6e22e">pt</span>, <span style="color:#a6e22e">pt</span>)
    <span style="color:#a6e22e">ct</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">base64</span>.<span style="color:#a6e22e">StdEncoding</span>.<span style="color:#a6e22e">EncodeToString</span>(<span style="color:#a6e22e">pt</span>)
-   println(<span style="color:#a6e22e">ct</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;BvfnZp4jmCaveE6kefhumpZ0raWX9GDojfPasgSwLTM=&#34;</span>)
+   println(<span style="color:#a6e22e">ct</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;gGPdBt1qCJCbHye4HX1E9ZUhYmjPsvEi7AsIs3XOReg=&#34;</span>)
 }
 </code></pre></div>
 

@@ -1,4 +1,4 @@
 import re
-s = 'January'
-r = re.search('^J', s)
+s = 'south north'
+r = re.search('^s', s)
 print(r != None)

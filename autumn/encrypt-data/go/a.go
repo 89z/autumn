@@ -20,9 +20,9 @@ func main() {
    if e != nil {
       log.Fatal(e)
    }
-   pt := []byte("January February")
+   pt := []byte("north east south")
    pt = PKCS5Padding(pt, 16)
    cipher.NewCBCEncrypter(block, iv).CryptBlocks(pt, pt)
    ct := base64.StdEncoding.EncodeToString(pt)
-   println(ct == "BvfnZp4jmCaveE6kefhumpZ0raWX9GDojfPasgSwLTM=")
+   println(ct == "gGPdBt1qCJCbHye4HX1E9ZUhYmjPsvEi7AsIs3XOReg=")
 }
