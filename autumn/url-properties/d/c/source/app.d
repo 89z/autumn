@@ -1,8 +1,7 @@
-import io = std.stdio;
-import urllibparse;
+import std.stdio, urllibparse;
 
 void main() {
    URLSplitResult u;
-   u.query = "month=May&day=Friday";
-   io.writeln(u);
+   u.query = "west=left&east=right";
+   u.writeln;
 }

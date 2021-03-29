@@ -1,7 +1,7 @@
 import algorithm
 
 block: # example 1
-   var a = ["May", "June"]
+   var a = ["west", "east"]
    a.sort
    echo a
 

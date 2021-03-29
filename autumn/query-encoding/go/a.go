@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-   s := "month=May&day=Friday"
+   s := "west=left&east=right"
    m, e := url.ParseQuery(s)
    if e != nil {
       log.Fatal(e)

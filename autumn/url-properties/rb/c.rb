@@ -1,4 +1,4 @@
 require 'uri'
-u = URI('http://ruby-lang.org?month=May&day=Friday')
+u = URI('http://ruby-lang.org?west=left&east=right')
 s = u.query
 puts s

@@ -1,4 +1,4 @@
 import strutils
-let s = "May,June"
+let s = "west,east"
 let a = s.split(",")
 echo a

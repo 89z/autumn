@@ -1,5 +1,5 @@
 { // example 1
-   let a = ['May', 'June'];
+   let a = ['west', 'east'];
    a.sort();
    console.log(a);
 }

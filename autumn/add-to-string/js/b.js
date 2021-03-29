@@ -1,3 +1,3 @@
-let s = 'March';
-s += 'April';
-console.log(s == 'MarchApril');
+let s = 'West';
+s += 'East';
+console.log(s == 'WestEast');

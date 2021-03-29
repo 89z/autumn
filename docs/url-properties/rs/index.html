@@ -79,7 +79,7 @@
 }
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; Result<span style="color:#f92672">&lt;</span>(), url::ParseError<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> u <span style="color:#f92672">=</span> Url::parse(<span style="color:#e6db74">&#34;http://docs.rs?month=May&amp;day=Friday&#34;</span>)<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> u <span style="color:#f92672">=</span> Url::parse(<span style="color:#e6db74">&#34;http://docs.rs?west=left&amp;east=right&#34;</span>)<span style="color:#f92672">?</span>;
    <span style="color:#66d9ef">let</span> m <span style="color:#f92672">=</span> query(u);
    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, m);
    Ok(())

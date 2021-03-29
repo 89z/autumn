@@ -1,6 +1,6 @@
 void main() {
    { // example 1
-      var a = ['May', 'June'];
+      var a = ['west', 'east'];
       a.sort();
       print(a);
    }

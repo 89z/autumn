@@ -1,4 +1,4 @@
 require 'cgi'
-s = 'month=May&day=Friday'
+s = 'west=left&east=right'
 m = CGI.parse(s)
-puts m
+p m

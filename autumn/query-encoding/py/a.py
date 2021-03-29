@@ -1,4 +1,4 @@
 from urllib import parse
-s = 'month=May&day=Friday'
+s = 'west=left&east=right'
 m = parse.parse_qs(s)
 print(m)

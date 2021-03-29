@@ -1,4 +1,4 @@
 <?php
-$a = ['May', 'June'];
+$a = ['west', 'east'];
 sort($a);
 var_dump($a);

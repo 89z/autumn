@@ -5,6 +5,6 @@ u.hostname = "nim-lang.org"
 # example 2
 u.path = "docs"
 # exmaple 3
-u.query = "month=May&day=Friday"
+u.query = "west=left&east=right"
 # print
 echo u

@@ -1,5 +1,5 @@
 from urllib import parse
-u = parse.urlsplit('http://python.org/library?month=May')
+u = parse.urlsplit('http://python.org/library?west=left')
 
 # example 1
 print(u.netloc == 'python.org')
@@ -8,4 +8,4 @@ print(u.netloc == 'python.org')
 print(u.path == '/library')
 
 # example 3
-print(u.query == 'month=May')
+print(u.query == 'west=left')

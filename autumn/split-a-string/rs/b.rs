@@ -3,7 +3,7 @@ fn split(s: &str, sep: char) -> Vec<&str> {
 }
 
 fn main() {
-   let s = "May,June";
+   let s = "west,east";
    let a = split(s, ',');
    println!("{:?}", a);
 }

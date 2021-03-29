@@ -1,6 +1,6 @@
 fn main() {
    // example 1
-   let mut a = ["May", "June"];
+   let mut a = ["west", "east"];
    a.sort();
    println!("{:?}", a);
    // example 2

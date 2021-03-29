@@ -3,7 +3,7 @@ import urllibparse;
 
 void main() {
    URLSplitResult u = {
-      netloc: "netloc.info", path: "/path", query: "month=May"
+      netloc: "netloc.info", path: "/path", query: "west=left"
    };
    auto s = urlUnsplit(u);
    io.writeln(s);

@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-   u, e := url.Parse("http://golang.org?month=May&day=Friday")
+   u, e := url.Parse("http://golang.org?west=left")
    if e != nil {
       log.Fatal(e)
    }

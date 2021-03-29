@@ -36,7 +36,7 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> parse
-s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;month=May&amp;day=Friday&#39;</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;west=left&amp;east=right&#39;</span>
 m <span style="color:#f92672">=</span> parse<span style="color:#f92672">.</span>parse_qs(s)
 <span style="color:#66d9ef">print</span>(m)
 </code></pre></div>
@@ -49,9 +49,9 @@ m <span style="color:#f92672">=</span> parse<span style="color:#f92672">.</span>
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> parse
-m <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;month&#39;</span>: <span style="color:#e6db74">&#39;May&#39;</span>, <span style="color:#e6db74">&#39;day&#39;</span>: <span style="color:#e6db74">&#39;Friday&#39;</span>}
+m <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;west&#39;</span>: <span style="color:#e6db74">&#39;left&#39;</span>, <span style="color:#e6db74">&#39;east&#39;</span>: <span style="color:#e6db74">&#39;right&#39;</span>}
 s <span style="color:#f92672">=</span> parse<span style="color:#f92672">.</span>urlencode(m)
-<span style="color:#66d9ef">print</span>(s)
+<span style="color:#66d9ef">print</span>(s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;west=left&amp;east=right&#39;</span>)
 </code></pre></div>
 
 <p><a href="https://docs.python.org/library/urllib.parse.html#urllib.parse.urlencode">https://docs.python.org/library/urllib.parse.html#urllib.parse.urlencode</a></p>

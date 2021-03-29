@@ -1,8 +1,7 @@
-import array = std.array;
-import io = std.stdio;
+import std.array, std.stdio;
 
 void main() {
-   auto s = "May,June";
-   auto a = array.split(s, ",");
-   io.writeln(a);
+   auto s = "west,east";
+   auto a = s.split(",");
+   a.writeln;
 }

@@ -1,4 +1,4 @@
 from urllib import parse
-m = {'month': 'May', 'day': 'Friday'}
+m = {'west': 'left', 'east': 'right'}
 s = parse.urlencode(m)
-print(s)
+print(s == 'west=left&east=right')

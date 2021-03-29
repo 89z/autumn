@@ -8,7 +8,7 @@ fn query(u: Url) -> HashMap<String, String> {
 }
 
 fn main() -> Result<(), url::ParseError> {
-   let u = Url::parse("http://docs.rs?month=May&day=Friday")?;
+   let u = Url::parse("http://docs.rs?west=left&east=right")?;
    let m = query(u);
    println!("{:?}", m);
    Ok(())

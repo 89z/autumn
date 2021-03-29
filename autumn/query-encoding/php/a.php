@@ -1,4 +1,4 @@
 <?php
-$m = ['month' => 'May', 'day' => 'Friday'];
+$m = ['west' => 'left', 'east' => 'right'];
 $s = http_build_query($m);
-var_dump($s == 'month=May&day=Friday');
+var_dump($s == 'west=left&east=right');

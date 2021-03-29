@@ -1,5 +1,5 @@
 <?php
-$s = 'http://php.net/function.parse-url?month=May';
+$s = 'http://php.net/function.parse-url?west=left';
 
 # example 1
 $t = parse_url($s, PHP_URL_HOST);
@@ -11,4 +11,4 @@ var_dump($t == '/function.parse-url');
 
 # example 3
 $t = parse_url($s, PHP_URL_QUERY);
-var_dump($t == 'month=May');
+var_dump($t == 'west=left');

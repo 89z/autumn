@@ -1,5 +1,5 @@
 void main() {
-   var u = Uri.parse('http://dart.dev?month=May&day=Friday');
+   var u = Uri.parse('http://dart.dev?west=left');
    var m = u.queryParameters;
    print(m);
 }
