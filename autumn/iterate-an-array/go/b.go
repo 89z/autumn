@@ -1,7 +1,7 @@
 package main
 
 func main() {
-   a := []string{"May", "June"}
+   a := []string{"west", "east"}
    // example 1
    for n, s := range a {
       println(n, s)

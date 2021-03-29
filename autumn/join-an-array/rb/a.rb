@@ -1,9 +1,9 @@
-a = ['May', 'June']
+a = ['West', 'East']
 
 # example 1
 s = a.join
-puts s == 'MayJune'
+p s == 'WestEast'
 
 # example 2
 s = a.join(',')
-puts s == 'May,June'
+p s == 'West,East'

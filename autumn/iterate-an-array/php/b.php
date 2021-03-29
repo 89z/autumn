@@ -1,5 +1,5 @@
 <?php
-$a = ['May', 'June'];
+$a = ['west', 'east'];
 # example 1
 foreach ($a as $s) {
    echo $s, "\n";

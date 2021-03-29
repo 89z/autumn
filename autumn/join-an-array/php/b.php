@@ -1,4 +1,4 @@
 <?php
-$a = ['May', 'June'];
+$a = ['west', 'east'];
 $s = join(',', $a);
-var_dump($s == 'May,June');
+var_dump($s == 'west,east');

@@ -1,3 +1,3 @@
-a = ['May', 'June']
+a = ['west', 'east']
 s = ','.join(a)
-print(s == 'May,June')
+print(s == 'west,east')

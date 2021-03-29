@@ -1,11 +1,11 @@
 void main() {
-   var a = ['May', 'June'];
+   var a = ['West', 'East'];
    { // example 1
       var s = a.join(',');
-      print(s == 'May,June');
+      print(s == 'West,East');
    }
    { // example 2
       var s = a.join();
-      print(s == 'MayJune');
+      print(s == 'WestEast');
    }
 }

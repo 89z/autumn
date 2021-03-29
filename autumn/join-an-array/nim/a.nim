@@ -1,10 +1,10 @@
 import strutils
-let a = ["May", "June"]
+let a = ["West", "East"]
 
 block: # example 1
    let s = a.join(",")
-   echo s == "May,June"
+   echo s == "West,East"
 
 block: # example 2
    let s = a.join
-   echo s == "MayJune"
+   echo s == "WestEast"

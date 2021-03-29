@@ -1,5 +1,5 @@
 <?php
-$a = ['May', 'June'];
+$a = ['west', 'east'];
 # example 1
 $f = fn ($s) => print $s . "\n";
 array_walk($a, $f);

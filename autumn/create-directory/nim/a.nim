@@ -1,2 +1,2 @@
 import os
-createDir("May/June")
+createDir("west/east")

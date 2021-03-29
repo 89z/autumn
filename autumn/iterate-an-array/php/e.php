@@ -1,5 +1,5 @@
 <?php
-$a = ['May', 'June'];
+$a = ['west', 'east'];
 
 while (true) {
    $n = key($a);

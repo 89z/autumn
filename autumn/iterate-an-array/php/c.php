@@ -1,5 +1,5 @@
 <?php
-$a = ['May', 'June'];
+$a = ['west', 'east'];
 # example 1
 $n = 0;
 while ($n < count($a)) {

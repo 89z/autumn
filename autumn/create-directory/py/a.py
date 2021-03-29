@@ -1,2 +1,2 @@
 import os
-os.makedirs('May/June')
+os.makedirs('west/east')

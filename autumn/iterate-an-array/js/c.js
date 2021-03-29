@@ -1,4 +1,4 @@
-let a = ['May', 'June'];
+let a = ['west', 'east'];
 
 for (let n in a) {
    let s = a[n];

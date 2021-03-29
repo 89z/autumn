@@ -1,5 +1,5 @@
 void main() {
-   var a = ['May', 'June'];
+   var a = ['west', 'east'];
    // example 1
    for (var s in a) {
       print(s);

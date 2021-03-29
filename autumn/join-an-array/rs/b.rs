@@ -1,5 +1,5 @@
 fn main() {
-   let a = ["May", "June"];
+   let a = ["West", "East"];
    let s = a.concat();
-   println!("{}", s == "MayJune");
+   println!("{}", s == "WestEast");
 }

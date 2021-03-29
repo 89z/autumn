@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-   s := "May & June"
+   s := "west & east"
    b, e := json.Marshal(s)
    if e != nil {
       log.Fatal(e)
