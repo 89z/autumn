@@ -3,7 +3,13 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-<https://golang.org/pkg/crypto/md5>
+{{< r "a.go" >}}
+
+<https://golang.org/pkg/crypto/md5#New>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/crypto/md5#Sum>
 
 ## References
 

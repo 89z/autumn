@@ -1,1 +1,1 @@
-dartanalyzer --no-implicit-dynamic a.dart
+dartanalyzer --no-implicit-dynamic west.dart

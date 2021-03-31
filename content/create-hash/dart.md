@@ -3,7 +3,9 @@ title = "Dart"
 tags = [ "dart" ]
 +++
 
-<https://pub.dev/packages/crypto>
+{{< r "bin/dart.dart" >}}
+
+<https://pub.dev/documentation/crypto/latest/crypto/md5-constant.html>
 
 ## References
 
