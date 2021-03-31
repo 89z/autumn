@@ -60,10 +60,9 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">cmd</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;go&#34;</span>, <span style="color:#e6db74">&#34;env&#34;</span>)
-   <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">Stdout</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>
-   <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">Start</span>()
-   <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">Wait</span>()
+   <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;go&#34;</span>, <span style="color:#e6db74">&#34;env&#34;</span>)
+   <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Stdout</span> = <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>
+   <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Run</span>()
 }
 </code></pre></div>
 

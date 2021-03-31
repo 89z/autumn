@@ -4,8 +4,10 @@ autumn/*/d/*/dub.selections.json
 autumn/*/d/.dub
 autumn/*/d/.gitignore
 autumn/*/d/dub.selections.json
-autumn/*/dart/.dart_tool
-autumn/*/dart/.packages
+autumn/*/dart/.gitignore
+autumn/*/dart/CHANGELOG.md
+autumn/*/dart/README.md
+autumn/*/dart/analysis_options.yaml
 autumn/*/dart/pubspec.lock
 autumn/*/go/*/go.sum
 autumn/*/go/go.sum

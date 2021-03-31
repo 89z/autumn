@@ -3,7 +3,7 @@ title = "Dart"
 tags = [ "dart" ]
 +++
 
-{{< r "a.dart" >}}
+{{< r "bin/dart.dart" >}}
 
 <https://pub.dev/documentation/path>
 

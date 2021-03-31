@@ -9,6 +9,10 @@ tags = [ "go" ]
 
 {{< r "b.go" >}}
 
+<https://golang.org/pkg/net/url#ParseRequestURI>
+
+{{< r "c.go" >}}
+
 <https://golang.org/pkg/net/url#URL.String>
 
 ## References

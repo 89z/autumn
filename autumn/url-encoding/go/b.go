@@ -1,8 +1,16 @@
 package main
-import "net/url"
+
+import (
+   "fmt"
+   "log"
+   "net/url"
+)
 
 func main() {
-   u := url.URL{Host: "golang.org"}
-   s := u.String()
-   println(s)
+   s := "http://golang.org"
+   u, e := url.ParseRequestURI(s)
+   if e != nil {
+      log.Fatal(e)
+   }
+   fmt.Println(u)
 }

@@ -1,1 +1,1 @@
-dart2native a.dart
+dartanalyzer --no-implicit-dynamic a.dart
