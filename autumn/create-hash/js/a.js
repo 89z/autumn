@@ -1,11 +1,8 @@
-const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
-
-async function digestMessage(message) {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(message);
-  const hash = await crypto.subtle.digest('SHA-256', data);
-  return hash;
+async function main() {
+   let t = new TextEncoder;
+   let a = t.encode('south north');
+   let d = await crypto.subtle.digest('SHA-256', a);
+   console.log(d);
 }
 
-const digestBuffer = await digestMessage(text);
-console.log(digestBuffer.byteLength);
+main();

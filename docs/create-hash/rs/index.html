@@ -29,10 +29,27 @@
    <a href="/autumn/categories/crypto/">crypto</a>
    
 </section>
-   <ul>
-<li><a href="https://github.com/RustCrypto/hashes">https://github.com/RustCrypto/hashes</a></li>
-<li><a href="https://github.com/inejge/pwhash">https://github.com/inejge/pwhash</a></li>
-</ul>
+   <p>6 deps:</p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> hex_literal::hex;
+<span style="color:#66d9ef">use</span> md5::{Md5, Digest};
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> hasher <span style="color:#f92672">=</span> Md5::new();
+   hasher.update(<span style="color:#e6db74">b&#34;hello world&#34;</span>);
+   <span style="color:#66d9ef">let</span> result <span style="color:#f92672">=</span> hasher.finalize();
+   assert_eq<span style="color:#f92672">!</span>(result[..], hex<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;5eb63bbbe01eeed093cb22bb8f5acdc3&#34;</span>));
+}
+</code></pre></div>
+
+<p><a href="https://docs.rs/md-5">https://docs.rs/md-5</a></p>
+<p>22 deps:</p>
+<p><a href="https://github.com/inejge/pwhash">https://github.com/inejge/pwhash</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://arewewebyet.org/topics/crypto">https://arewewebyet.org/topics/crypto</a></li>

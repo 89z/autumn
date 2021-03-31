@@ -3,8 +3,15 @@ title = "Rust"
 tags = [ "rust" ]
 +++
 
-- <https://github.com/RustCrypto/hashes>
-- <https://github.com/inejge/pwhash>
+6 deps:
+
+{{< r "src/main.rs" >}}
+
+<https://docs.rs/md-5>
+
+22 deps:
+
+<https://github.com/inejge/pwhash>
 
 ## References
 

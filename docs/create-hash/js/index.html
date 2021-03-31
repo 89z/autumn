@@ -35,17 +35,14 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.&#39;</span>;
-
-<span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">digestMessage</span>(<span style="color:#a6e22e">message</span>) {
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">encoder</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">TextEncoder</span>();
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">encoder</span>.<span style="color:#a6e22e">encode</span>(<span style="color:#a6e22e">message</span>);
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">hash</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">subtle</span>.<span style="color:#a6e22e">digest</span>(<span style="color:#e6db74">&#39;SHA-256&#39;</span>, <span style="color:#a6e22e">data</span>);
-  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">hash</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">t</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">TextEncoder</span>;
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">encode</span>(<span style="color:#e6db74">&#39;south north&#39;</span>);
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">subtle</span>.<span style="color:#a6e22e">digest</span>(<span style="color:#e6db74">&#39;SHA-256&#39;</span>, <span style="color:#a6e22e">a</span>);
+   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">d</span>);
 }
 
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">digestBuffer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">digestMessage</span>(<span style="color:#a6e22e">text</span>);
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">digestBuffer</span>.<span style="color:#a6e22e">byteLength</span>);
+<span style="color:#a6e22e">main</span>();
 </code></pre></div>
 
 <p><a href="https://developer.mozilla.org/docs/Web/API/SubtleCrypto/digest">https://developer.mozilla.org/docs/Web/API/SubtleCrypto/digest</a></p>

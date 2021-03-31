@@ -3,12 +3,6 @@ title = "Rust"
 tags = [ "rust" ]
 +++
 
-{{< r "Cargo.toml" >}}
-
-`edition` allows to omit `extern crate`.
-
-<https://doc.rust-lang.org/cargo/reference/manifest.html>
-
 {{< r "build.ps1" >}}
 
 <https://doc.rust-lang.org/cargo/commands/cargo-build.html>
@@ -24,6 +18,10 @@ tags = [ "rust" ]
 {{< r "run.ps1" >}}
 
 <https://doc.rust-lang.org/cargo/commands/cargo-run.html>
+
+{{< r "tree.ps1" >}}
+
+<https://doc.rust-lang.org/cargo/commands/cargo-tree.html>
 
 {{< r "rustc.ps1" >}}
 

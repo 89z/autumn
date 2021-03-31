@@ -1,0 +1,1 @@
+cargo tree --prefix none

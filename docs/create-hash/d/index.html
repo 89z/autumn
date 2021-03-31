@@ -35,14 +35,17 @@
    
 
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    <span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">digest</span><span style="color:#f92672">.</span><span style="color:#a6e22e">md</span><span style="color:#f92672">;</span>
- 
-    <span style="color:#66d9ef">auto</span> txt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;The quick brown fox jumped over the lazy dog&#39;s back&#34;</span><span style="color:#f92672">;</span>
-    writefln<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;%-(%02x%)&#34;</span><span style="color:#f92672">,</span> txt<span style="color:#f92672">.</span><span style="color:#a6e22e">md5Of</span><span style="color:#f92672">);</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.digest.md<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">auto</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;south north&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">auto</span> t <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">md5Of</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toHexString</span><span style="color:#f92672">;</span>
+   writeln<span style="color:#f92672">(</span>t <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;F53B1396FE2736A7E5C44629EE1A3AF5&#34;</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
 
+<p><a href="https://dlang.org/library/std/digest/md/md5_of.html">https://dlang.org/library/std/digest/md/md5_of.html</a></p>
 <h2 id="references">References</h2>
 <p><a href="https://rosettacode.org/wiki/MD5">https://rosettacode.org/wiki/MD5</a></p>
 

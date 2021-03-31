@@ -1,6 +1,8 @@
+import std.digest.md;
+import std.stdio;
+
 void main() {
-    import std.stdio, std.digest.md;
- 
-    auto txt = "The quick brown fox jumped over the lazy dog's back";
-    writefln("%-(%02x%)", txt.md5Of);
+   auto s = "south north";
+   auto t = s.md5Of.toHexString;
+   writeln(t == "F53B1396FE2736A7E5C44629EE1A3AF5");
 }
