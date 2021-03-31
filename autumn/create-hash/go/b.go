@@ -1,14 +1,16 @@
 package main
 
 import (
-	"crypto/md5"
-	"fmt"
-	"io"
+   "crypto/md5"
+   "fmt"
 )
 
+func sum(s string) string {
+   b := md5.Sum([]byte(s))
+   return fmt.Sprintf("%x", b)
+}
+
 func main() {
-	h := md5.New()
-	io.WriteString(h, "The fog is getting thicker!")
-	io.WriteString(h, "And Leon's getting laaarger!")
-	fmt.Printf("%x", h.Sum(nil))
+   s := sum("south north")
+   fmt.Println(s)
 }

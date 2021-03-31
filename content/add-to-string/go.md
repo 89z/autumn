@@ -13,9 +13,13 @@ tags = [ "go" ]
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/strings#Builder.WriteString>
+<https://golang.org/pkg/io#WriteString>
 
 {{< r "d.go" >}}
+
+<https://golang.org/pkg/strings#Builder.WriteString>
+
+{{< r "e.go" >}}
 
 <https://golang.org/ref/spec#String_concatenation>
 

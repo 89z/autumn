@@ -24,7 +24,7 @@
    <a href="/autumn/add-to-string/">Add to string</a> / Go
 </h1>
 <section class="page">
-   <time>Fri Feb 26 2021</time>
+   <time>Wed Mar 31 2021</time>
    
    <a href="/autumn/categories/string/">string</a>
    
@@ -56,19 +56,41 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;West&#34;</span>
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;south&#34;</span>
    { <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%v East&#34;</span>, <span style="color:#a6e22e">s</span>)
-      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;West East&#34;</span>)
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%v north&#34;</span>, <span style="color:#a6e22e">s</span>)
+      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;south north&#34;</span>)
    }
    { <span style="color:#75715e">// example 2
 </span><span style="color:#75715e"></span>      <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%v %[1]v&#34;</span>, <span style="color:#a6e22e">s</span>)
-      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;West West&#34;</span>)
+      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;south south&#34;</span>)
    }
 }
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/fmt#Sprintf">https://golang.org/pkg/fmt#Sprintf</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;io&#34;</span>
+   <span style="color:#e6db74">&#34;strings&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> new(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>)
+   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#a6e22e">b</span>, <span style="color:#e6db74">&#34;north&#34;</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">String</span>()
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;north&#34;</span>)
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/io#WriteString">https://golang.org/pkg/io#WriteString</a></p>
 
 
 

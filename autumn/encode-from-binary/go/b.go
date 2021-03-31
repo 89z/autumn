@@ -1,18 +1,8 @@
 package main
-
-import (
-   "bytes"
-   "encoding/ascii85"
-)
-
-func encode(src []byte) []byte {
-   var dst bytes.Buffer
-   ascii85.NewEncoder(&dst).Write(src)
-   return dst.Bytes()
-}
+import "encoding/hex"
 
 func main() {
    a := []byte{10, 11, 12, 13}
-   b := encode(a)
-   println(string(b) == "$4@7O")
+   s := hex.EncodeToString(a)
+   println(s == "0a0b0c0d")
 }

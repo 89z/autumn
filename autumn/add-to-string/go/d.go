@@ -1,7 +1,9 @@
 package main
+import "strings"
 
 func main() {
-   s := "West"
-   s += "East"
-   println(s == "WestEast")
+   var b strings.Builder
+   b.WriteString("north")
+   s := b.String()
+   println(s == "north")
 }
