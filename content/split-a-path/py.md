@@ -19,7 +19,12 @@ tags = [ "python" ]
 
 <https://docs.python.org/library/pathlib.html#pathlib.PurePath.parent>
 
+{{< r "e.py" >}}
+
+<https://docs.python.org/library/pathlib.html#pathlib.PurePath.suffix>
+
 ## References
 
 - <https://hyperpolyglot.org/scripting2#dirname-basename>
 - <https://programming-idioms.org/idiom/107>
+- <https://rosettacode.org/wiki/Extract_file_extension>

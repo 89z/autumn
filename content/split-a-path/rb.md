@@ -11,6 +11,11 @@ tags = [ "ruby" ]
 
 <https://docs.ruby-lang.org/en/master/File.html#method-c-dirname>
 
+{{< r "c.rb" >}}
+
+<https://docs.ruby-lang.org/en/master/File.html#method-c-extname>
+
 ## References
 
-<https://hyperpolyglot.org/scripting2#dirname-basename>
+- <https://hyperpolyglot.org/scripting2#dirname-basename>
+- <https://rosettacode.org/wiki/Extract_file_extension>
