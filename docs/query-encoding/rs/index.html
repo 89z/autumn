@@ -59,8 +59,8 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::collections::HashMap;
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">decode</span>(s: <span style="color:#66d9ef">&amp;</span><span style="color:#66d9ef">str</span>) -&gt; <span style="color:#a6e22e">HashMap</span><span style="color:#f92672">&lt;</span>String, String<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> s.as_bytes();
-   form_urlencoded::parse(a).into_owned().collect()
+   <span style="color:#66d9ef">let</span> b <span style="color:#f92672">=</span> s.as_bytes();
+   form_urlencoded::parse(b).into_owned().collect()
 }
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {

@@ -7,13 +7,13 @@ import (
 )
 
 func main() {
-   open, e := os.Open("a.go")
+   file, e := os.Open("a.go")
    if e != nil {
       log.Fatal(e)
    }
-   scan := bufio.NewScanner(open)
-   for scan.Scan() {
-      s := scan.Text()
-      println(s)
+   defer file.Close()
+   buf := bufio.NewScanner(file)
+   for buf.Scan() {
+      println(buf.Text())
    }
 }

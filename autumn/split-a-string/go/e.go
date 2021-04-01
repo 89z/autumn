@@ -3,6 +3,6 @@ import "fmt"
 
 func main() {
    s := "north"
-   a := []byte(s)
-   fmt.Println(a)
+   b := []byte(s)
+   fmt.Println(b)
 }

@@ -1,7 +1,7 @@
 package main
 
 func main() {
-   a := []byte{'w', 'e', 's', 't'}
-   s := string(a)
+   b := []byte{'w', 'e', 's', 't'}
+   s := string(b)
    println(s == "west")
 }
