@@ -5,7 +5,8 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/crypto/cipher#NewCBCEncrypter>
+- <https://golang.org/pkg/crypto/cipher#NewCBCEncrypter>
+- <https://pkg.go.dev/github.com/andreburgaud/crypt2go>
 
 ## References
 
