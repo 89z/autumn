@@ -1,3 +1,4 @@
-from pathlib import Path
-p = Path(r'C:\Windows\notepad.exe')
-print(p.name == 'notepad.exe')
+from os import path
+s = r'C:\Windows\notepad.exe'
+s = path.dirname(s)
+print(s == r'C:\Windows')

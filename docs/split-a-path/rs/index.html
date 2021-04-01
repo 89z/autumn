@@ -61,6 +61,25 @@
 </code></pre></div>
 
 <p><a href="https://doc.rust-lang.org/std/path/struct.Path.html#method.file_stem">https://doc.rust-lang.org/std/path/struct.Path.html#method.file_stem</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::path::Path;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#66d9ef">let</span> p <span style="color:#f92672">=</span> Path::new(<span style="color:#e6db74">r&#34;C:\Windows\notepad.exe&#34;</span>);
+   <span style="color:#66d9ef">let</span> q <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> p.parent() {
+      Some(v) <span style="color:#f92672">=&gt;</span> v,
+      None <span style="color:#f92672">=&gt;</span> Path::new(<span style="color:#e6db74">r&#34;C:\&#34;</span>)
+   };
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{:?}&#34;</span>, q);
+}
+</code></pre></div>
+
+<p><a href="https://doc.rust-lang.org/std/path/struct.Path.html#method.parent">https://doc.rust-lang.org/std/path/struct.Path.html#method.parent</a></p>
 <h2 id="references">References</h2>
 <p><a href="https://programming-idioms.org/idiom/105">https://programming-idioms.org/idiom/105</a></p>
 
