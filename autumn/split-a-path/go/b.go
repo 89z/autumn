@@ -1,13 +1,13 @@
 package main
-import "path/filepath"
+import "path"
 
 func main() {
    { // example 1
-      s := filepath.Base("C:/file.txt")
-      println(s == "file.txt")
+      s := path.Dir("C:/go/file.txt")
+      println(s == "C:/go")
    }
    { // example 2
-      s := filepath.Base(`C:\file.txt`)
-      println(s == "file.txt")
+      s := path.Dir(`C:\go\file.txt`)
+      println(s == ".")
    }
 }

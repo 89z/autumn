@@ -3,11 +3,11 @@ import "path/filepath"
 
 func main() {
    { // example 1
-      s := filepath.Dir("C:/go/file.txt")
-      println(s == `C:\go`)
+      s := filepath.Base("C:/file.txt")
+      println(s == "file.txt")
    }
    { // example 2
-      s := filepath.Dir(`C:\go\file.txt`)
-      println(s == `C:\go`)
+      s := filepath.Base(`C:\file.txt`)
+      println(s == "file.txt")
    }
 }

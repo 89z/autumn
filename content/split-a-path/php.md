@@ -17,12 +17,17 @@ tags = [ "php" ]
 
 {{< r "d.php" >}}
 
-<https://php.net/splfileinfo.getfilename>
+<https://php.net/splfileinfo.getextension>
 
 {{< r "e.php" >}}
+
+<https://php.net/splfileinfo.getfilename>
+
+{{< r "f.php" >}}
 
 <https://php.net/splfileinfo.getpath>
 
 ## References
 
-<https://hyperpolyglot.org/scripting2#dirname-basename>
+- <https://hyperpolyglot.org/scripting2#dirname-basename>
+- <https://rosettacode.org/wiki/Extract_file_extension>

@@ -1,7 +1,4 @@
 <?php
-$s = 'C:\Windows\notepad.exe';
-
-$f = new SplFileInfo($s);
-$t = $f->getPath();
-
-var_dump($t == 'C:\Windows');
+$f = new SplFileInfo('C:\Windows\notepad.exe');
+$s = $f->getFilename();
+var_dump($s == 'notepad.exe');

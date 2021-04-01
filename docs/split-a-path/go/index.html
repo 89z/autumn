@@ -58,16 +58,16 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path/filepath&#34;</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    { <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Base</span>(<span style="color:#e6db74">&#34;C:/file.txt&#34;</span>)
-      println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;file.txt&#34;</span>)
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#e6db74">&#34;C:/go/file.txt&#34;</span>)
+      println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;C:/go&#34;</span>)
    }
    { <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Base</span>(<span style="color:#e6db74">`C:\file.txt`</span>)
-      println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;file.txt&#34;</span>)
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#e6db74">`C:\go\file.txt`</span>)
+      println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;.&#34;</span>)
    }
 }
 </code></pre></div>
@@ -83,13 +83,29 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Ext</span>(<span style="color:#e6db74">&#34;a.go&#34;</span>)
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;.go&#34;</span>)
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/path#Ext">https://golang.org/pkg/path#Ext</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path/filepath&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    { <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#e6db74">&#34;C:/go/file.txt&#34;</span>)
-      println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;C:/go&#34;</span>)
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Base</span>(<span style="color:#e6db74">&#34;C:/file.txt&#34;</span>)
+      println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;file.txt&#34;</span>)
    }
    { <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#e6db74">`C:\go\file.txt`</span>)
-      println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;.&#34;</span>)
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Base</span>(<span style="color:#e6db74">`C:\file.txt`</span>)
+      println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;file.txt&#34;</span>)
    }
 }
 </code></pre></div>
@@ -117,8 +133,27 @@
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/path/filepath#Dir">https://golang.org/pkg/path/filepath#Dir</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path/filepath&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Ext</span>(<span style="color:#e6db74">&#34;a.go&#34;</span>)
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;.go&#34;</span>)
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/path/filepath#Ext">https://golang.org/pkg/path/filepath#Ext</a></p>
 <h2 id="references">References</h2>
-<p><a href="https://hyperpolyglot.org/c#dirname-basename">https://hyperpolyglot.org/c#dirname-basename</a></p>
+<ul>
+<li><a href="https://hyperpolyglot.org/c#dirname-basename">https://hyperpolyglot.org/c#dirname-basename</a></li>
+<li><a href="https://rosettacode.org/wiki/Extract_file_extension">https://rosettacode.org/wiki/Extract_file_extension</a></li>
+</ul>
 
 </main>
 
