@@ -3,29 +3,37 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "a.go" >}}
+{{< r "path-base.go" >}}
 
 <https://golang.org/pkg/path#Base>
 
-{{< r "b.go" >}}
+{{< r "path-dir.go" >}}
 
 <https://golang.org/pkg/path#Dir>
 
-{{< r "c.go" >}}
+{{< r "path-ext.go" >}}
 
 <https://golang.org/pkg/path#Ext>
 
-{{< r "d.go" >}}
+{{< r "path-split.go" >}}
+
+<https://golang.org/pkg/path#Split>
+
+{{< r "base.go" >}}
 
 <https://golang.org/pkg/path/filepath#Base>
 
-{{< r "e.go" >}}
+{{< r "dir.go" >}}
 
 <https://golang.org/pkg/path/filepath#Dir>
 
-{{< r "f.go" >}}
+{{< r "ext.go" >}}
 
 <https://golang.org/pkg/path/filepath#Ext>
+
+{{< r "split.go" >}}
+
+<https://golang.org/pkg/path/filepath#Split>
 
 ## References
 
