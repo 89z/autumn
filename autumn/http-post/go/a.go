@@ -3,16 +3,20 @@ package main
 import (
    "bytes"
    "encoding/json"
-   "log"
+   "io"
    "net/http"
+   "net/url"
 )
 
 func main() {
-   m, b := map[string]int{"SNG_ID": 75498415}, new(bytes.Buffer)
+   var (
+      m = map[string]int{"SNG_ID": 75498415}
+      b = new(bytes.Buffer)
+      r = new(http.Request)
+   )
    json.NewEncoder(b).Encode(m)
-   r, e := http.NewRequest("POST", "http://www.deezer.com", b)
-   if e != nil {
-      log.Fatal(e)
-   }
+   r.URL = &url.URL{Scheme: "http", Host: "www.deezer.com"}
+   r.Method = "POST"
+   r.Body = io.NopCloser(b)
    http.DefaultClient.Do(r)
 }

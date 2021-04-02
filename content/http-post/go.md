@@ -5,15 +5,15 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/net/http#NewRequest>
+<https://golang.org/pkg/net/http#Client.Do>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/net/http#Post>
+<https://golang.org/pkg/net/http#NewRequest>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/net/http#Request.Method>
+<https://golang.org/pkg/net/http#Post>
 
 ## References
 

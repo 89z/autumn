@@ -1,19 +1,20 @@
 package main
 
 import (
+   "io"
    "log"
    "net/http"
-   "net/url"
    "os"
 )
 
 func main() {
-   req := &http.Request{
-      URL: &url.URL{Scheme: "http", Host: "speedtest.lax.hivelocity.net"},
-   }
-   resp, e := http.DefaultClient.Do(req)
+   get, e := http.Get("http://speedtest.lax.hivelocity.net")
    if e != nil {
       log.Fatal(e)
    }
-   os.Stdout.ReadFrom(resp.Body)
+   b, e := io.ReadAll(get.Body)
+   if e != nil {
+      log.Fatal(e)
+   }
+   os.Stdout.Write(b)
 }

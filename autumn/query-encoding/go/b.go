@@ -1,10 +1,16 @@
 package main
-import "net/url"
+
+import (
+   "fmt"
+   "net/url"
+)
+
+func decode(s string) url.Values {
+   u := url.URL{RawQuery: s}
+   return u.Query()
+}
 
 func main() {
-   m := url.Values{
-      "west": {"left"}, "east": {"right"},
-   }
-   s := m.Encode()
-   println(s)
+   m := decode("west=left&east=right")
+   fmt.Println(m)
 }

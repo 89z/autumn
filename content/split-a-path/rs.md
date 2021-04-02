@@ -21,5 +21,6 @@ tags = [ "rust" ]
 
 ## References
 
+- <https://hyperpolyglot.org/rust#directories>
 - <https://programming-idioms.org/idiom/105>
 - <https://rosettacode.org/wiki/Extract_file_extension>

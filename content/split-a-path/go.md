@@ -38,4 +38,5 @@ tags = [ "go" ]
 ## References
 
 - <https://hyperpolyglot.org/c#dirname-basename>
+- <https://programming-idioms.org/idiom/107>
 - <https://rosettacode.org/wiki/Extract_file_extension>

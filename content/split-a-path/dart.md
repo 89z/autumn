@@ -9,4 +9,6 @@ tags = [ "dart" ]
 
 ## References
 
-<https://rosettacode.org/wiki/Extract_file_extension>
+- <https://hyperpolyglot.org/web#dirname-basename>
+- <https://programming-idioms.org/idiom/107>
+- <https://rosettacode.org/wiki/Extract_file_extension>

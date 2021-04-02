@@ -5,11 +5,15 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/net/http#Client.Do>
+<https://golang.org/pkg/net/http#Get>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/net/http#Get>
+<https://golang.org/pkg/net/http#NewRequest>
+
+{{< r "c.go" >}}
+
+<https://golang.org/pkg/net/http#Response.Body>
 
 ## References
 

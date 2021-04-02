@@ -17,4 +17,5 @@ tags = [ "nim" ]
 
 ## References
 
-<https://rosettacode.org/wiki/Extract_file_extension>
+- <https://programming-idioms.org/idiom/107>
+- <https://rosettacode.org/wiki/Extract_file_extension>
