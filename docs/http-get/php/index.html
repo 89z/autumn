@@ -36,11 +36,51 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-<span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;curl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;curl&#39;</span>);
-$c <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>(<span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>);
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>;
+<span style="color:#a6e22e">copy</span>($s, <span style="color:#e6db74">&#39;index.html&#39;</span>);
+</code></pre></div>
+
+<p><a href="https://php.net/function.copy">https://php.net/function.copy</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>;
+$c <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>($s);
+<span style="color:#a6e22e">curl_setopt</span>($c, <span style="color:#a6e22e">CURLOPT_NOPROGRESS</span>, <span style="color:#66d9ef">false</span>);
+<span style="color:#a6e22e">curl_exec</span>($c);
+<span style="color:#a6e22e">curl_close</span>($c);
+</code></pre></div>
+
+<p><a href="https://php.net/function.curl-close">https://php.net/function.curl-close</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://api.github.com/rate_limit&#39;</span>;
+$c <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>($s);
+<span style="color:#a6e22e">curl_setopt</span>($c, <span style="color:#a6e22e">CURLOPT_USERAGENT</span>, <span style="color:#e6db74">&#39;anonymous&#39;</span>);
+<span style="color:#a6e22e">curl_exec</span>($c);
+</code></pre></div>
+
+<p><a href="https://php.net/function.curl-exec">https://php.net/function.curl-exec</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>;
+$c <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>($s);
 <span style="color:#a6e22e">curl_setopt</span>($c, <span style="color:#a6e22e">CURLOPT_RETURNTRANSFER</span>, <span style="color:#66d9ef">true</span>);
-$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_exec</span>($c);
-<span style="color:#66d9ef">echo</span> $s;
+<span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">curl_exec</span>($c);
 </code></pre></div>
 
 <p><a href="https://php.net/function.curl-init">https://php.net/function.curl-init</a></p>
@@ -51,13 +91,11 @@ $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_exec</s
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-<span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;curl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;curl&#39;</span>);
-<span style="color:#a6e22e">extension_loaded</span>(<span style="color:#e6db74">&#39;openssl&#39;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#39;openssl&#39;</span>);
-$c <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>(<span style="color:#e6db74">&#39;https://api.github.com/search/repositories?q=database&#39;</span>);
-<span style="color:#a6e22e">curl_setopt</span>($c, <span style="color:#a6e22e">CURLOPT_RETURNTRANSFER</span>, <span style="color:#66d9ef">true</span>);
-<span style="color:#a6e22e">curl_setopt</span>($c, <span style="color:#a6e22e">CURLOPT_USERAGENT</span>, <span style="color:#e6db74">&#39;anonymous&#39;</span>);
-$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_exec</span>($c);
-<span style="color:#66d9ef">echo</span> $s;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>;
+$f <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#39;index.html&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>);
+$c <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>($s);
+<span style="color:#a6e22e">curl_setopt</span>($c, <span style="color:#a6e22e">CURLOPT_FILE</span>, $f);
+<span style="color:#a6e22e">curl_exec</span>($c);
 </code></pre></div>
 
 <p><a href="https://php.net/function.curl-setopt">https://php.net/function.curl-setopt</a></p>
@@ -68,8 +106,8 @@ $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_exec</s
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">file_get_contents</span>(<span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>);
-<span style="color:#66d9ef">echo</span> $s;
+$s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://speedtest.lax.hivelocity.net&#39;</span>;
+<span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">file_get_contents</span>($s);
 </code></pre></div>
 
 <p><a href="https://php.net/function.file-get-contents">https://php.net/function.file-get-contents</a></p>

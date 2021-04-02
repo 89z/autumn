@@ -3,15 +3,27 @@ title = "PHP"
 tags = [ "php" ]
 +++
 
-{{< r "a.php" >}}
+{{< r "copy.php" >}}
+
+<https://php.net/function.copy>
+
+{{< r "close.php" >}}
+
+<https://php.net/function.curl-close>
+
+{{< r "exec.php" >}}
+
+<https://php.net/function.curl-exec>
+
+{{< r "init.php" >}}
 
 <https://php.net/function.curl-init>
 
-{{< r "b.php" >}}
+{{< r "setopt.php" >}}
 
 <https://php.net/function.curl-setopt>
 
-{{< r "c.php" >}}
+{{< r "get-contents.php" >}}
 
 <https://php.net/function.file-get-contents>
 
