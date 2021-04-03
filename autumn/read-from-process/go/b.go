@@ -1,24 +1,26 @@
 package main
 
 import (
-   "bufio"
    "log"
    "os/exec"
+   "strings"
+   "io"
 )
 
-func popen(name string, arg ...string) (*bufio.Scanner, error) {
+func shellExec(name string, arg ...string) (string, error) {
    cmd := exec.Command(name, arg...)
    out, err := cmd.StdoutPipe()
-   if err != nil { return nil, err }
-   return bufio.NewScanner(out), cmd.Start()
+   if err != nil { return "", err }
+   cmd.Start()
+   b := new(strings.Builder)
+   io.Copy(b, out)
+   return strings.TrimRight(b.String(), "\n"), nil
 }
 
 func main() {
-   env, err := popen("go", "env")
+   s, err := shellExec("go", "version")
    if err != nil {
       log.Fatal(err)
    }
-   for env.Scan() {
-      println(env.Text())
-   }
+   println(s)
 }

@@ -1,24 +1,21 @@
 package main
 
 import (
-   "bufio"
-   "bytes"
    "log"
    "os/exec"
+   "strings"
 )
 
 func shellExec(name string, arg ...string) (string, error) {
    out, err := exec.Command(name, arg...).Output()
-   if err != nil { return nil, err }
-   return bufio.NewScanner(bytes.NewReader(out)), nil
+   if err != nil { return "", err }
+   return strings.TrimRight(string(out), "\n"), nil
 }
 
 func main() {
-   env, err := shellExec("go", "env")
+   out, err := shellExec("go", "version")
    if err != nil {
       log.Fatal(err)
    }
-   for env.Scan() {
-      println(env.Text())
-   }
+   println(out)
 }
