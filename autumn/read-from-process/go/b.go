@@ -8,17 +8,15 @@ import (
 
 func popen(name string, arg ...string) (*bufio.Scanner, error) {
    cmd := exec.Command(name, arg...)
-   pipe, e := cmd.StdoutPipe()
-   if e != nil {
-      return nil, e
-   }
-   return bufio.NewScanner(pipe), cmd.Start()
+   out, err := cmd.StdoutPipe()
+   if err != nil { return nil, err }
+   return bufio.NewScanner(out), cmd.Start()
 }
 
 func main() {
-   env, e := popen("go", "env")
-   if e != nil {
-      log.Fatal(e)
+   env, err := popen("go", "env")
+   if err != nil {
+      log.Fatal(err)
    }
    for env.Scan() {
       println(env.Text())
