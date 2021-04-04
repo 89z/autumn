@@ -9,11 +9,11 @@ tags = [ "go" ]
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/os/exec#Cmd.StdoutPipe>
+<https://golang.org/pkg/os/exec#Cmd.Stdout>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/os/exec#Command>
+<https://golang.org/pkg/os/exec#Cmd.StdoutPipe>
 
 ## References
 

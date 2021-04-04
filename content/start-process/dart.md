@@ -7,6 +7,10 @@ tags = [ "dart" ]
 
 <https://api.dart.dev/dart-io/Process/runSync.html>
 
+{{< r "b.dart" >}}
+
+<https://api.dart.dev/dart-io/Process/start.html>
+
 ## References
 
 - <https://hyperpolyglot.org/web#external-cmd>

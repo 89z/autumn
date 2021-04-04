@@ -1,6 +1,7 @@
+import 'dart:convert';
 import 'dart:io';
 
 void main() {
-   var a = ['google.com/search?tbm=vid&q=squarepusher'];
-   Process.runSync('waterfox', a);
+   var p = Process.runSync('dust', [], stdoutEncoding: utf8);
+   stdout.write(p.stdout);
 }

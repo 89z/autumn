@@ -71,29 +71,25 @@
    <span style="color:#e6db74">&#34;log&#34;</span>
    <span style="color:#e6db74">&#34;os/exec&#34;</span>
    <span style="color:#e6db74">&#34;strings&#34;</span>
-   <span style="color:#e6db74">&#34;io&#34;</span>
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">shellExec</span>(<span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">arg</span> <span style="color:#f92672">...</span><span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">error</span>) {
-   <span style="color:#a6e22e">cmd</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">arg</span><span style="color:#f92672">...</span>)
-   <span style="color:#a6e22e">out</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">StdoutPipe</span>()
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#a6e22e">err</span> }
-   <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">Start</span>()
-   <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> new(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>)
-   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">out</span>)
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">TrimRight</span>(<span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">String</span>(), <span style="color:#e6db74">&#34;\n&#34;</span>), <span style="color:#66d9ef">nil</span>
+   <span style="color:#a6e22e">c</span>, <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">arg</span><span style="color:#f92672">...</span>), new(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>)
+   <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Stdout</span> = <span style="color:#a6e22e">b</span>
+   <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Run</span>()
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">TrimRight</span>(<span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">String</span>(), <span style="color:#e6db74">&#34;\n&#34;</span>), <span style="color:#a6e22e">e</span>
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">shellExec</span>(<span style="color:#e6db74">&#34;go&#34;</span>, <span style="color:#e6db74">&#34;version&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
+   <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">shellExec</span>(<span style="color:#e6db74">&#34;go&#34;</span>, <span style="color:#e6db74">&#34;version&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
    }
    println(<span style="color:#a6e22e">s</span>)
 }
 </code></pre></div>
 
-<p><a href="https://golang.org/pkg/os/exec#Cmd.StdoutPipe">https://golang.org/pkg/os/exec#Cmd.StdoutPipe</a></p>
+<p><a href="https://golang.org/pkg/os/exec#Cmd.Stdout">https://golang.org/pkg/os/exec#Cmd.Stdout</a></p>
 
 
 
@@ -126,7 +122,7 @@
 }
 </code></pre></div>
 
-<p><a href="https://golang.org/pkg/os/exec#Command">https://golang.org/pkg/os/exec#Command</a></p>
+<p><a href="https://golang.org/pkg/os/exec#Cmd.StdoutPipe">https://golang.org/pkg/os/exec#Cmd.StdoutPipe</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://gnu.org/software/bash/manual/html_node/Command-Substitution">https://gnu.org/software/bash/manual/html_node/Command-Substitution</a></li>
