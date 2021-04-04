@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-   r, e := http.Get("http://www.deezer.com")
+   r, e := http.Get("https://stackoverflow.com")
    if e != nil {
       log.Fatal(e)
    }

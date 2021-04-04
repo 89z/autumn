@@ -3,25 +3,21 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "a.go" >}}
+{{< r "AddCookie.go" >}}
 
 <https://golang.org/pkg/net/http#Request.AddCookie>
 
-{{< r "b.go" >}}
+{{< r "Request-Header.go" >}}
 
 <https://golang.org/pkg/net/http#Request.Header>
 
-{{< r "c.go" >}}
+{{< r "Cookies.go" >}}
 
 <https://golang.org/pkg/net/http#Response.Cookies>
 
-{{< r "d.go" >}}
+{{< r "Response-Header.go" >}}
 
-<https://golang.org/pkg/net/http/cookiejar#Jar.Cookies>
-
-{{< r "e.go" >}}
-
-<https://golang.org/pkg/net/http/cookiejar#Jar.SetCookies>
+<https://golang.org/pkg/net/http#Response.Header>
 
 ## References
 
