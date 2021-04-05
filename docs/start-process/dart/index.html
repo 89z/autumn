@@ -54,7 +54,7 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
 
 <span style="color:#66d9ef">void</span> main() <span style="color:#66d9ef">async</span> {
-   <span style="color:#66d9ef">var</span> p <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> Process.start(<span style="color:#e6db74">&#39;dust&#39;</span>, []);
+   <span style="color:#66d9ef">var</span> p <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> Process.start(<span style="color:#e6db74">&#39;dust&#39;</span>, [], workingDirectory: <span style="color:#e6db74">&#39;..&#39;</span>);
    stdout.addStream(p.stdout);
 }
 </code></pre></div>

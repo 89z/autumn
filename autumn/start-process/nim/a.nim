@@ -1,4 +1,3 @@
 import osproc
-echo "BEGIN"
-let n = execCmd("pipe")
+let n = execCmd("dust")
 echo n
