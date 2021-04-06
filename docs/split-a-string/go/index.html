@@ -85,9 +85,15 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;west,north,east&#34;</span>
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;,&#34;</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, <span style="color:#a6e22e">a</span>)
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> []<span style="color:#66d9ef">struct</span>{<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">sep</span> <span style="color:#66d9ef">string</span>} {
+      {<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>},             <span style="color:#75715e">// []
+</span><span style="color:#75715e"></span>      {<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;,&#34;</span>},            <span style="color:#75715e">// [&#34;&#34;]
+</span><span style="color:#75715e"></span>      {<span style="color:#e6db74">&#34;north&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>},        <span style="color:#75715e">// [&#34;n&#34; &#34;o&#34; &#34;r&#34; &#34;t&#34; &#34;h&#34;]
+</span><span style="color:#75715e"></span>      {<span style="color:#e6db74">&#34;south,north&#34;</span>, <span style="color:#e6db74">&#34;,&#34;</span>}, <span style="color:#75715e">// [&#34;south&#34; &#34;north&#34;]
+</span><span style="color:#75715e"></span>   } {
+      <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">sep</span>)
+      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, <span style="color:#a6e22e">a</span>)
+   }
 }
 </code></pre></div>
 

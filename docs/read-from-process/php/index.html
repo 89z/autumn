@@ -24,7 +24,7 @@
    <a href="/autumn/read-from-process/">Read from process</a> / PHP
 </h1>
 <section class="page">
-   <time>Fri Apr 2 2021</time>
+   <time>Tue Apr 6 2021</time>
    
    <a href="/autumn/categories/input-output/">input-output</a>
    
@@ -48,6 +48,20 @@ $p <span style="color:#f92672">=</span> <span style="color:#a6e22e">popen</span>
 </code></pre></div>
 
 <p><a href="https://php.net/function.fgets">https://php.net/function.fgets</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>);
+
+$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">shell_exec</span>(<span style="color:#e6db74">&#39;dust&#39;</span>);
+<span style="color:#66d9ef">echo</span> $s;
+</code></pre></div>
+
+<p><a href="https://php.net/function.shell-exec">https://php.net/function.shell-exec</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://gnu.org/software/bash/manual/html_node/Command-Substitution">https://gnu.org/software/bash/manual/html_node/Command-Substitution</a></li>

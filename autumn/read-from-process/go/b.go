@@ -1,7 +1,6 @@
 package main
 
 import (
-   "log"
    "os/exec"
    "strings"
 )
@@ -16,7 +15,7 @@ func shellExec(name string, arg ...string) (string, error) {
 func main() {
    s, e := shellExec("go", "version")
    if e != nil {
-      log.Fatal(e)
+      panic(e)
    }
    println(s)
 }

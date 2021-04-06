@@ -2,7 +2,6 @@ package main
 
 import (
    "fmt"
-   "log"
    "math/big"
    "time"
 )
@@ -20,7 +19,7 @@ func idDecode(s string, year int) (time.Time, error) {
 func main() {
    t, e := idDecode("6dv3d", 2020)
    if e != nil {
-      log.Fatal(e)
+      panic(e)
    }
    fmt.Println(t)
 }

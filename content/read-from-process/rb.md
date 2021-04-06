@@ -1,15 +1,9 @@
 +++
-title = "PHP"
-tags = [ "php" ]
+title = "Ruby"
+tags = [ "ruby" ]
 +++
 
-{{< r "a.php" >}}
-
-<https://php.net/function.fgets>
-
-{{< r "b.php" >}}
-
-<https://php.net/function.shell-exec>
+{{< r "a.rb" >}}
 
 ## References
 

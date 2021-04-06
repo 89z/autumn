@@ -1,14 +1,10 @@
 package main
-
-import (
-   "log"
-   "net/url"
-)
+import "net/url"
 
 func main() {
    q, e := url.ParseQuery("west=left&east=right")
    if e != nil {
-      log.Fatal(e)
+      panic(e)
    }
    s := q.Get("west")
    println(s == "left")

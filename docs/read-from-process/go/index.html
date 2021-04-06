@@ -24,7 +24,7 @@
    <a href="/autumn/read-from-process/">Read from process</a> / Go
 </h1>
 <section class="page">
-   <time>Fri Apr 2 2021</time>
+   <time>Tue Apr 6 2021</time>
    
    <a href="/autumn/categories/input-output/">input-output</a>
    
@@ -38,23 +38,22 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;log&#34;</span>
+   <span style="color:#e6db74">&#34;bytes&#34;</span>
    <span style="color:#e6db74">&#34;os/exec&#34;</span>
-   <span style="color:#e6db74">&#34;strings&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">shellExec</span>(<span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">arg</span> <span style="color:#f92672">...</span><span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">error</span>) {
-   <span style="color:#a6e22e">out</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">arg</span><span style="color:#f92672">...</span>).<span style="color:#a6e22e">Output</span>()
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#a6e22e">err</span> }
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">TrimRight</span>(string(<span style="color:#a6e22e">out</span>), <span style="color:#e6db74">&#34;\n&#34;</span>), <span style="color:#66d9ef">nil</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">shellExec</span>(<span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">arg</span> <span style="color:#f92672">...</span><span style="color:#66d9ef">string</span>) ([]<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">arg</span><span style="color:#f92672">...</span>).<span style="color:#a6e22e">Output</span>()
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">e</span> }
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">TrimRight</span>(<span style="color:#a6e22e">b</span>, <span style="color:#e6db74">&#34;\n&#34;</span>), <span style="color:#66d9ef">nil</span>
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">out</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">shellExec</span>(<span style="color:#e6db74">&#34;go&#34;</span>, <span style="color:#e6db74">&#34;version&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
+   <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">shellExec</span>(<span style="color:#e6db74">&#34;go&#34;</span>, <span style="color:#e6db74">&#34;version&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      panic(<span style="color:#a6e22e">e</span>)
    }
-   println(<span style="color:#a6e22e">out</span>)
+   println(string(<span style="color:#a6e22e">b</span>))
 }
 </code></pre></div>
 
@@ -68,7 +67,6 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;log&#34;</span>
    <span style="color:#e6db74">&#34;os/exec&#34;</span>
    <span style="color:#e6db74">&#34;strings&#34;</span>
 )
@@ -83,7 +81,7 @@
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">shellExec</span>(<span style="color:#e6db74">&#34;go&#34;</span>, <span style="color:#e6db74">&#34;version&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+      panic(<span style="color:#a6e22e">e</span>)
    }
    println(<span style="color:#a6e22e">s</span>)
 }
@@ -100,24 +98,23 @@
 
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;bufio&#34;</span>
-   <span style="color:#e6db74">&#34;log&#34;</span>
    <span style="color:#e6db74">&#34;os/exec&#34;</span>
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">popen</span>(<span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">arg</span> <span style="color:#f92672">...</span><span style="color:#66d9ef">string</span>) (<span style="color:#f92672">*</span><span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">Scanner</span>, <span style="color:#66d9ef">error</span>) {
-   <span style="color:#a6e22e">cmd</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">arg</span><span style="color:#f92672">...</span>)
-   <span style="color:#a6e22e">out</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">StdoutPipe</span>()
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span> }
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">out</span>), <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">Start</span>()
+   <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">arg</span><span style="color:#f92672">...</span>)
+   <span style="color:#a6e22e">p</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">StdoutPipe</span>()
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">e</span> }
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">p</span>), <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Start</span>()
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">env</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">popen</span>(<span style="color:#e6db74">&#34;go&#34;</span>, <span style="color:#e6db74">&#34;env&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
+   <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">popen</span>(<span style="color:#e6db74">&#34;go&#34;</span>, <span style="color:#e6db74">&#34;env&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      panic(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">Scan</span>() {
-      println(<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">Text</span>())
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Scan</span>() {
+      println(<span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Text</span>())
    }
 }
 </code></pre></div>

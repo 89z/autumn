@@ -1,21 +1,20 @@
 package main
 
 import (
-   "log"
+   "bytes"
    "os/exec"
-   "strings"
 )
 
-func shellExec(name string, arg ...string) (string, error) {
-   out, err := exec.Command(name, arg...).Output()
-   if err != nil { return "", err }
-   return strings.TrimRight(string(out), "\n"), nil
+func shellExec(name string, arg ...string) ([]byte, error) {
+   b, e := exec.Command(name, arg...).Output()
+   if e != nil { return nil, e }
+   return bytes.TrimRight(b, "\n"), nil
 }
 
 func main() {
-   out, err := shellExec("go", "version")
-   if err != nil {
-      log.Fatal(err)
+   b, e := shellExec("go", "version")
+   if e != nil {
+      panic(e)
    }
-   println(out)
+   println(string(b))
 }
