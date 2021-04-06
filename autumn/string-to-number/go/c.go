@@ -1,14 +1,10 @@
 package main
-
-import (
-   "log"
-   "strconv"
-)
+import "strconv"
 
 func main() {
    n, e := strconv.Atoi("100")
    if e != nil {
-      log.Fatal(e)
+      panic(e)
    }
    println(n == 100)
 }

@@ -3,7 +3,6 @@ package main
 import (
    "bytes"
    "encoding/json"
-   "log"
    "net/http"
 )
 
@@ -12,7 +11,7 @@ func main() {
    json.NewEncoder(b).Encode(m)
    r, e := http.NewRequest("POST", "http://www.deezer.com", b)
    if e != nil {
-      log.Fatal(e)
+      panic(e)
    }
    http.DefaultClient.Do(r)
 }

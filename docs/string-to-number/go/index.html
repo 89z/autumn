@@ -86,16 +86,12 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;log&#34;</span>
-   <span style="color:#e6db74">&#34;strconv&#34;</span>
-)
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strconv&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">Atoi</span>(<span style="color:#e6db74">&#34;100&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+      panic(<span style="color:#a6e22e">e</span>)
    }
    println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">100</span>)
 }
@@ -109,16 +105,12 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;log&#34;</span>
-   <span style="color:#e6db74">&#34;strconv&#34;</span>
-)
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strconv&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">ParseFloat</span>(<span style="color:#e6db74">&#34;99.9&#34;</span>, <span style="color:#ae81ff">64</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+      panic(<span style="color:#a6e22e">e</span>)
    }
    println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">99.9</span>)
 }
@@ -132,24 +124,20 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;log&#34;</span>
-   <span style="color:#e6db74">&#34;strconv&#34;</span>
-)
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strconv&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    { <span style="color:#75715e">// int
 </span><span style="color:#75715e"></span>      <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">ParseInt</span>(<span style="color:#e6db74">&#34;100&#34;</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">0</span>)
       <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-         <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+         panic(<span style="color:#a6e22e">e</span>)
       }
       println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">100</span>)
    }
    { <span style="color:#75715e">// int64
 </span><span style="color:#75715e"></span>      <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">ParseInt</span>(<span style="color:#e6db74">&#34;100&#34;</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">64</span>)
       <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-         <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+         panic(<span style="color:#a6e22e">e</span>)
       }
       println(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">100</span>)
    }

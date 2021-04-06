@@ -1,9 +1,5 @@
 package main
-
-import (
-   "fmt"
-   "log"
-)
+import "fmt"
 
 func main() {
    var tests = []string {
@@ -17,7 +13,7 @@ func main() {
    for _, test := range tests {
       n, e := sinceHours(test)
       if e != nil {
-         log.Fatal(e)
+         panic(e)
       }
       fmt.Println(n)
    }

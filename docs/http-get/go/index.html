@@ -62,21 +62,22 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;log&#34;</span>
    <span style="color:#e6db74">&#34;net/http&#34;</span>
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
 
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) (<span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Response</span>, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#a6e22e">s</span>, <span style="color:#66d9ef">nil</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">e</span> }
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">DefaultClient</span>.<span style="color:#a6e22e">Do</span>(<span style="color:#a6e22e">r</span>)
+}
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>, <span style="color:#66d9ef">nil</span>)
+   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+      panic(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">DefaultClient</span>.<span style="color:#a6e22e">Do</span>(<span style="color:#a6e22e">req</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
-   }
-   <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>.<span style="color:#a6e22e">ReadFrom</span>(<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">Body</span>)
+   <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>.<span style="color:#a6e22e">ReadFrom</span>(<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Body</span>)
 }
 </code></pre></div>
 
@@ -92,7 +93,6 @@
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;fmt&#34;</span>
    <span style="color:#e6db74">&#34;io&#34;</span>
-   <span style="color:#e6db74">&#34;log&#34;</span>
    <span style="color:#e6db74">&#34;net/http&#34;</span>
 )
 
@@ -115,7 +115,7 @@
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">get</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net/10Mio.dat&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+      panic(<span style="color:#a6e22e">e</span>)
    }
    <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">progress</span>{<span style="color:#a6e22e">Reader</span>: <span style="color:#a6e22e">get</span>.<span style="color:#a6e22e">Body</span>})
 }

@@ -1,9 +1,5 @@
 package main
-
-import (
-   "log"
-   "os"
-)
+import "os"
 
 func isDir(name string) bool {
    fi, err := os.Stat(name)

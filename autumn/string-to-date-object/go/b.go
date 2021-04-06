@@ -2,7 +2,6 @@ package main
 
 import (
    "fmt"
-   "log"
    "time"
 )
 
@@ -25,7 +24,7 @@ func main() {
    for _, test := range tests {
       t, e := parseDate(test)
       if e != nil {
-         log.Fatal(e)
+         panic(e)
       }
       fmt.Println(t)
    }

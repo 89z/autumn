@@ -1,14 +1,10 @@
 package main
-
-import (
-   "log"
-   "os"
-)
+import "os"
 
 func main() {
    dir, e := os.ReadDir(".")
    if e != nil {
-      log.Fatal(e)
+      panic(e)
    }
    for _, each := range dir {
       println(each.Name())

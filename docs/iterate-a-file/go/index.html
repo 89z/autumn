@@ -39,14 +39,13 @@
 
 <span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;bufio&#34;</span>
-   <span style="color:#e6db74">&#34;log&#34;</span>
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">file</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;a.go&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+      <span style="color:#a6e22e">panci</span>(<span style="color:#a6e22e">e</span>)
    }
    <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">Close</span>()
    <span style="color:#a6e22e">buf</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">file</span>)

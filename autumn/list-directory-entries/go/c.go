@@ -2,7 +2,6 @@ package main
 
 import (
    "fmt"
-   "log"
    "os"
    "path/filepath"
 )
@@ -22,7 +21,7 @@ func walk(root string) ([]string, error) {
 func main() {
    a, e := walk("..")
    if e != nil {
-      log.Fatal(e)
+      panic(e)
    }
    fmt.Println(a)
 }

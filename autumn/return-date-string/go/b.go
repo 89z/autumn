@@ -1,7 +1,6 @@
 package main
 
 import (
-   "log"
    "os"
    "time"
 )
@@ -9,7 +8,7 @@ import (
 func main() {
    b, e := time.Now().MarshalText()
    if e != nil {
-      log.Fatal(e)
+      panic(e)
    }
    os.Stdout.Write(append(b, '\n'))
 }
