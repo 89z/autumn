@@ -2,18 +2,19 @@ package main
 
 import (
    "io"
-   "log"
    "os"
 )
 
+func read(s string) ([]byte, error) {
+   f, e := os.Open(s)
+   if e != nil { return nil, e }
+   return io.ReadAll(f)
+}
+
 func main() {
-   open, e := os.Open("a.go")
+   b, e := read("a.go")
    if e != nil {
-      log.Fatal(e)
+      panic(e)
    }
-   data, e := io.ReadAll(open)
-   if e != nil {
-      log.Fatal(e)
-   }
-   os.Stdout.Write(data)
+   os.Stdout.Write(b)
 }

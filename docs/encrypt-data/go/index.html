@@ -41,7 +41,6 @@
    <span style="color:#e6db74">&#34;crypto/aes&#34;</span>
    <span style="color:#e6db74">&#34;crypto/cipher&#34;</span>
    <span style="color:#e6db74">&#34;encoding/base64&#34;</span>
-   <span style="color:#e6db74">&#34;log&#34;</span>
    <span style="color:#e6db74">&#34;bytes&#34;</span>
 )
 
@@ -55,7 +54,7 @@
    <span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">iv</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;KDKDKDKDKDKDKDKD&#34;</span>), []byte(<span style="color:#e6db74">&#34;IVIVIVIVIVIVIVIV&#34;</span>)
    <span style="color:#a6e22e">block</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">aes</span>.<span style="color:#a6e22e">NewCipher</span>(<span style="color:#a6e22e">key</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">e</span>)
+      panic(<span style="color:#a6e22e">e</span>)
    }
    <span style="color:#a6e22e">pt</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;north east south&#34;</span>)
    <span style="color:#a6e22e">pt</span> = <span style="color:#a6e22e">PKCS5Padding</span>(<span style="color:#a6e22e">pt</span>, <span style="color:#ae81ff">16</span>)

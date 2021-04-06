@@ -4,7 +4,6 @@ import (
    "crypto/aes"
    "crypto/cipher"
    "encoding/base64"
-   "log"
    "bytes"
 )
 
@@ -18,7 +17,7 @@ func main() {
    key, iv := []byte("KDKDKDKDKDKDKDKD"), []byte("IVIVIVIVIVIVIVIV")
    block, e := aes.NewCipher(key)
    if e != nil {
-      log.Fatal(e)
+      panic(e)
    }
    pt := []byte("north east south")
    pt = PKCS5Padding(pt, 16)

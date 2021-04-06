@@ -1,14 +1,10 @@
 package main
-
-import (
-   "log"
-   "os"
-)
+import "os"
 
 func main() {
-   data, e := os.ReadFile("a.go")
+   b, e := os.ReadFile("a.go")
    if e != nil {
-      log.Fatal(e)
+      panic(e)
    }
-   os.Stdout.Write(data)
+   os.Stdout.Write(b)
 }

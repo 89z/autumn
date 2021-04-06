@@ -1,15 +1,14 @@
 package main
 
 import (
-   "log"
    "net/http"
    "os"
 )
 
 func main() {
-   res, e := http.Get("http://speedtest.lax.hivelocity.net")
+   r, e := http.Get("http://speedtest.lax.hivelocity.net")
    if e != nil {
-      log.Fatal(e)
+      panic(e)
    }
-   os.Stdout.ReadFrom(res.Body)
+   os.Stdout.ReadFrom(r.Body)
 }

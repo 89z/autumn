@@ -1,14 +1,10 @@
 package main
-
-import (
-   "log"
-   "os"
-)
+import "os"
 
 func main() {
    s, e := os.UserCacheDir()
    if e != nil {
-      log.Fatal(e)
+      panic(e)
    }
    println(s == `C:\Users\Steven\AppData\Local`)
 }
