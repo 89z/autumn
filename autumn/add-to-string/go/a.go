@@ -1,8 +1,12 @@
 package main
-import "fmt"
+
+import (
+   "fmt"
+   "strings"
+)
 
 func main() {
-   s := "West"
-   s = fmt.Sprint(s, "East")
-   fmt.Println(s == "WestEast")
+   b := new(strings.Builder)
+   fmt.Fprintln(b, "south north")
+   print(b.String())
 }

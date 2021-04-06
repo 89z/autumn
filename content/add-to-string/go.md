@@ -5,11 +5,11 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/fmt#Sprint>
+<https://golang.org/pkg/fmt#Fprintln>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/fmt#Sprintf>
+<https://golang.org/pkg/fmt#Sprint>
 
 {{< r "c.go" >}}
 

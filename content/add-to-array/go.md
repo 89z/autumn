@@ -7,6 +7,10 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/builtin#append>
 
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/builtin#copy>
+
 ## References
 
 - <https://hyperpolyglot.org/c#resizable-array-back>
