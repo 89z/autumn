@@ -1,13 +1,9 @@
 package main
-
-import (
-   "log"
-   "os"
-)
+import "os"
 
 func main() {
    e := os.MkdirAll("north", os.ModeDir)
    if e != nil {
-      log.Fatal(e)
+      panic(e)
    }
 }

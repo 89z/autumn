@@ -3,11 +3,11 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "a/a.go" >}}
+{{< r "a.go" >}}
 
 <https://pkg.go.dev/github.com/pelletier/go-toml#LoadBytes>
 
-{{< r "b/b.go" >}}
+{{< r "b.go" >}}
 
 <https://pkg.go.dev/github.com/pelletier/go-toml#LoadFile>
 
