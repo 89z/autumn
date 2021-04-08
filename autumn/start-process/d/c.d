@@ -1,12 +1,10 @@
 import std.process;
-import std.stdio;
- 
+
 void main() {
-    auto cmd = executeShell("echo hello");
- 
-    if (cmd.status == 0) {
-        writeln("Output: ", cmd.output);
-    } else {
-        writeln("Failed to execute command, status=", cmd.status);
-    }
+   // example 1
+   spawnProcess("dust");
+   // example 2
+   spawnProcess(["dust", "-V"]);
+   // example 3
+   spawnProcess("dust", null, Config.none, "..");
 }

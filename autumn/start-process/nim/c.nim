@@ -1,4 +1,4 @@
 import osproc
-let p = startProcess(r"C:\Windows\notepad", options={poParentStreams})
-let n = p.waitForExit
-echo n
+let a = ["google.com/search?tbm=vid&q=squarepusher"]
+let p = startProcess("waterfox", args=a)
+p.close

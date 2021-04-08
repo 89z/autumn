@@ -1,6 +1,7 @@
+import 'dart:convert';
 import 'dart:io';
 
-void main() async {
-   var p = await Process.start('dust', [], workingDirectory: '..');
-   stdout.addStream(p.stdout);
+void main() {
+   var p = Process.runSync('dust', [], stdoutEncoding: utf8);
+   stdout.write(p.stdout);
 }

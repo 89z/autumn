@@ -4,11 +4,16 @@ tags = [ "d" ]
 +++
 
 {{< r "a.d" >}}
+
+<https://dlang.org/library/std/process/execute.html>
+
 {{< r "b.d" >}}
+
+<https://dlang.org/library/std/process/execute_shell.html>
+
 {{< r "c.d" >}}
 
-- <https://dlang.org/library/std/process/spawn_process.html#args>
-- <https://dlang.org/library/std/process/spawn_process.html#workDir>
+<https://dlang.org/library/std/process/spawn_process.html>
 
 ## References
 
