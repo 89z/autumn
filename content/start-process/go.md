@@ -13,14 +13,6 @@ tags = [ "go" ]
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/os/exec#Cmd.Start>
-
-{{< r "d.go" >}}
-
-<https://golang.org/pkg/os/exec#Cmd.Stderr>
-
-{{< r "e.go" >}}
-
 <https://golang.org/pkg/os/exec#Cmd.Stdout>
 
 ## References

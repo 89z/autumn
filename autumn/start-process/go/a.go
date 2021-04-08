@@ -1,8 +1,12 @@
 package main
-import "os/exec"
+
+import (
+   "os"
+   "os/exec"
+)
 
 func main() {
-   c := exec.Command("go", "mod", "init", "day")
-   c.Dir = `C:\Users\Public`
+   c := exec.Command("dust")
+   c.Dir, c.Stdout = "..", os.Stdout
    c.Run()
 }

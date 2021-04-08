@@ -6,8 +6,7 @@ import (
 )
 
 func main() {
-   cmd := exec.Command("go", "env")
-   cmd.Stdout = os.Stdout
-   cmd.Start()
-   cmd.Wait()
+   c := exec.Command("dust")
+   c.Stdout = os.Stdout
+   c.Run()
 }

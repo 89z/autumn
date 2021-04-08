@@ -24,7 +24,7 @@
    <a href="/autumn/url-encoding/">URL encoding</a> / Go
 </h1>
 <section class="page">
-   <time>Tue Mar 30 2021</time>
+   <time>Wed Apr 7 2021</time>
    
    <a href="/autumn/categories/path/">path</a>
    
@@ -43,12 +43,17 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;http://golang.org&#34;</span>
-   <span style="color:#a6e22e">u</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">s</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      panic(<span style="color:#a6e22e">e</span>)
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> []<span style="color:#66d9ef">string</span>{
+      <span style="color:#e6db74">&#34;https://golang.org/pkg&#34;</span>, <span style="color:#75715e">// &#34;https&#34; &#34;golang.org&#34; &#34;/pkg&#34;
+</span><span style="color:#75715e"></span>      <span style="color:#e6db74">&#34;//golang.org&#34;</span>,           <span style="color:#75715e">// &#34;&#34;      &#34;golang.org&#34; &#34;&#34;
+</span><span style="color:#75715e"></span>      <span style="color:#e6db74">&#34;pkg&#34;</span>,                    <span style="color:#75715e">// &#34;&#34;      &#34;&#34;           &#34;pkg&#34;
+</span><span style="color:#75715e"></span>   } {
+      <span style="color:#a6e22e">p</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">s</span>)
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+         panic(<span style="color:#a6e22e">e</span>)
+      }
+      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q %q %q\n&#34;</span>, <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">Scheme</span>, <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">Host</span>, <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">Path</span>)
    }
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">u</span>)
 }
 </code></pre></div>
 
