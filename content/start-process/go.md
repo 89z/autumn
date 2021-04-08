@@ -9,9 +9,13 @@ tags = [ "go" ]
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/os/exec#Cmd.Run>
+<https://golang.org/pkg/os/exec#Cmd.Output>
 
 {{< r "c.go" >}}
+
+<https://golang.org/pkg/os/exec#Cmd.Run>
+
+{{< r "d.go" >}}
 
 <https://golang.org/pkg/os/exec#Cmd.Stdout>
 

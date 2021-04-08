@@ -26,10 +26,10 @@
 <section class="page">
    <time>Wed Apr 7 2021</time>
    
-   <a href="/autumn/categories/system/">system</a>
+   <a href="/autumn/categories/input-output/">input-output</a>
    
 </section>
-   
+   <p>
 
 
    
@@ -45,7 +45,6 @@
 <span style="color:#f92672">}</span>
 </code></pre></div>
 
-<p><a href="https://dlang.org/library/std/process/spawn_process.html#args">https://dlang.org/library/std/process/spawn_process.html#args</a></p>
 
 
 
@@ -59,9 +58,33 @@
 <span style="color:#f92672">}</span>
 </code></pre></div>
 
-<p><a href="https://dlang.org/library/std/process/spawn_process.html#workDir">https://dlang.org/library/std/process/spawn_process.html#workDir</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.process<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">;</span>
+ 
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">auto</span> cmd <span style="color:#f92672">=</span> executeShell<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;echo hello&#34;</span><span style="color:#f92672">);</span>
+ 
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>cmd<span style="color:#f92672">.</span><span style="color:#a6e22e">status</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        writeln<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Output: &#34;</span><span style="color:#f92672">,</span> cmd<span style="color:#f92672">.</span><span style="color:#a6e22e">output</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+        writeln<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Failed to execute command, status=&#34;</span><span style="color:#f92672">,</span> cmd<span style="color:#f92672">.</span><span style="color:#a6e22e">status</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+</p>
+<ul>
+<li><a href="https://dlang.org/library/std/process/spawn_process.html#args">https://dlang.org/library/std/process/spawn_process.html#args</a></li>
+<li><a href="https://dlang.org/library/std/process/spawn_process.html#workDir">https://dlang.org/library/std/process/spawn_process.html#workDir</a></li>
+</ul>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://gnu.org/software/bash/manual/html_node/Command-Substitution">https://gnu.org/software/bash/manual/html_node/Command-Substitution</a></li>
 <li><a href="https://programming-idioms.org/idiom/111">https://programming-idioms.org/idiom/111</a></li>
 <li><a href="https://rosettacode.org/wiki/Execute_a_system_command">https://rosettacode.org/wiki/Execute_a_system_command</a></li>
 </ul>

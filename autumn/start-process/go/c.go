@@ -1,12 +1,6 @@
 package main
-
-import (
-   "os"
-   "os/exec"
-)
+import "os/exec"
 
 func main() {
-   c := exec.Command("dust")
-   c.Stdout = os.Stdout
-   c.Run()
+   exec.Command("gvim").Run()
 }
