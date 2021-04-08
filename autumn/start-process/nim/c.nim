@@ -1,4 +1,4 @@
 import osproc
-let a = ["google.com/search?tbm=vid&q=squarepusher"]
-let p = startProcess("waterfox", args=a)
-p.close
+
+let s = execProcess("dust -V")
+echo s == "Dust 0.5.4\n"

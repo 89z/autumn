@@ -3,10 +3,6 @@ title = "Python"
 tags = [ "python" ]
 +++
 
-{{< r "a.py" >}}
-
-<https://docs.python.org/library/os.html#os.system>
-
 {{< r "b.py" >}}
 
 <https://docs.python.org/library/subprocess.html#subprocess.Popen>

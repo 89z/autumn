@@ -5,21 +5,13 @@ tags = [ "php" ]
 
 {{< r "a.php" >}}
 
-<https://php.net/function.fgets>
+<https://php.net/function.proc-open>
 
 {{< r "b.php" >}}
 
-<https://php.net/function.proc-close>
-
-{{< r "c.php" >}}
-
-<https://php.net/function.proc-open>
-
-{{< r "d.php" >}}
-
 <https://php.net/function.shell-exec>
 
-{{< r "e.php" >}}
+{{< r "c.php" >}}
 
 <https://php.net/function.system>
 

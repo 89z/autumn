@@ -1,13 +1,4 @@
 import osproc
- 
-# Output string and error code
-let (lsalStr, errCode) = execCmdEx("ls -al")
- 
-echo "Error code: " & $errCode
-echo "Output: " & lsalStr
- 
- 
-# Output string only
-let lsStr = execProcess("ls")
- 
-echo "Output: " & lsStr
+
+let (s, n) = execCmdEx("dust -V")
+echo [s == "Dust 0.5.4\n", n == 0]

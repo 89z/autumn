@@ -13,7 +13,7 @@ tags = [ "nim" ]
 
 {{< r "c.nim" >}}
 
-<https://nim-lang.org/docs/osproc.html#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]>
+<https://nim-lang.org/docs/osproc.html#execProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]>
 
 ## References
 

@@ -48,18 +48,9 @@ echo n
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> osproc
- 
-<span style="color:#75715e"># Output string and error code</span>
-<span style="color:#66d9ef">let</span> (lsalStr, errCode) <span style="color:#f92672">=</span> execCmdEx(<span style="color:#e6db74">&#34;ls -al&#34;</span>)
- 
-echo <span style="color:#e6db74">&#34;Error code: &#34;</span> <span style="color:#f92672">&amp;</span> <span style="color:#f92672">$</span>errCode
-echo <span style="color:#e6db74">&#34;Output: &#34;</span> <span style="color:#f92672">&amp;</span> lsalStr
- 
- 
-<span style="color:#75715e"># Output string only</span>
-<span style="color:#66d9ef">let</span> lsStr <span style="color:#f92672">=</span> execProcess(<span style="color:#e6db74">&#34;ls&#34;</span>)
- 
-echo <span style="color:#e6db74">&#34;Output: &#34;</span> <span style="color:#f92672">&amp;</span> lsStr
+
+<span style="color:#66d9ef">let</span> (s, n) <span style="color:#f92672">=</span> execCmdEx(<span style="color:#e6db74">&#34;dust -V&#34;</span>)
+echo <span style="color:#f92672">[</span>s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Dust 0.5.4</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">]</span>
 </code></pre></div>
 
 <p><a href="https://nim-lang.org/docs/osproc.html#execCmdEx,string,set%5BProcessOption%5D,StringTableRef,string,string">https://nim-lang.org/docs/osproc.html#execCmdEx,string,set[ProcessOption],StringTableRef,string,string</a></p>
@@ -70,12 +61,12 @@ echo <span style="color:#e6db74">&#34;Output: &#34;</span> <span style="color:#f
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> osproc
-<span style="color:#66d9ef">let</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;google.com/search?tbm=vid&amp;q=squarepusher&#34;</span><span style="color:#f92672">]</span>
-<span style="color:#66d9ef">let</span> p <span style="color:#f92672">=</span> startProcess(<span style="color:#e6db74">&#34;waterfox&#34;</span>, args<span style="color:#f92672">=</span>a)
-p.close
+
+<span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> execProcess(<span style="color:#e6db74">&#34;dust -V&#34;</span>)
+echo s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Dust 0.5.4</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
 </code></pre></div>
 
-<p><a href="https://nim-lang.org/docs/osproc.html#startProcess,string,string,openArray%5Bstring%5D,StringTableRef,set%5BProcessOption%5D">https://nim-lang.org/docs/osproc.html#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]</a></p>
+<p><a href="https://nim-lang.org/docs/osproc.html#execProcess,string,string,openArray%5Bstring%5D,StringTableRef,set%5BProcessOption%5D">https://nim-lang.org/docs/osproc.html#execProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://gnu.org/software/bash/manual/html_node/Command-Substitution">https://gnu.org/software/bash/manual/html_node/Command-Substitution</a></li>

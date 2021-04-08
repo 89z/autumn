@@ -39,50 +39,16 @@
 $a <span style="color:#f92672">=</span> [];
 
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">proc_open</span>(<span style="color:#e6db74">&#39;C:\Windows\notepad&#39;</span>, $a, $a);
+</span><span style="color:#75715e"></span>$p <span style="color:#f92672">=</span> <span style="color:#a6e22e">proc_open</span>(<span style="color:#e6db74">&#39;dust -V&#39;</span>, $a, $a);
+<span style="color:#a6e22e">proc_close</span>($p);
 
 <span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$p <span style="color:#f92672">=</span> <span style="color:#a6e22e">proc_open</span>(<span style="color:#e6db74">&#39;C:\Windows\notepad&#39;</span>, $a, $a);
+</span><span style="color:#75715e"></span>$p <span style="color:#f92672">=</span> <span style="color:#a6e22e">proc_open</span>([<span style="color:#e6db74">&#39;dust&#39;</span>, <span style="color:#e6db74">&#39;-V&#39;</span>], $a, $a);
 <span style="color:#a6e22e">proc_close</span>($p);
-</code></pre></div>
 
-<p><a href="https://php.net/function.fgets">https://php.net/function.fgets</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$a <span style="color:#f92672">=</span> [];
-
-<span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">proc_open</span>(<span style="color:#e6db74">&#39;C:\Windows\notepad&#39;</span>, $a, $a);
-
-<span style="color:#75715e"># example 2
-</span><span style="color:#75715e"></span>$p <span style="color:#f92672">=</span> <span style="color:#a6e22e">proc_open</span>(<span style="color:#e6db74">&#39;C:\Windows\notepad&#39;</span>, $a, $a);
+<span style="color:#75715e"># example 3
+</span><span style="color:#75715e"></span>$p <span style="color:#f92672">=</span> <span style="color:#a6e22e">proc_open</span>(<span style="color:#e6db74">&#39;dust&#39;</span>, $a, $a, <span style="color:#e6db74">&#39;..&#39;</span>);
 <span style="color:#a6e22e">proc_close</span>($p);
-</code></pre></div>
-
-<p><a href="https://php.net/function.proc-close">https://php.net/function.proc-close</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">shell_escape</span>(<span style="color:#a6e22e">string</span> $in)<span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span> {
-   $brk <span style="color:#f92672">=</span> <span style="color:#a6e22e">strpbrk</span>($in, <span style="color:#e6db74">&#39; &#34;&amp;-&gt;^&#39;</span>);
-   <span style="color:#66d9ef">if</span> ($brk <span style="color:#f92672">===</span> <span style="color:#66d9ef">false</span>) {
-      <span style="color:#66d9ef">return</span> $in;
-   }
-   <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#34;&#39;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">str_replace</span>(<span style="color:#e6db74">&#39;&#34;&#39;</span>, <span style="color:#e6db74">&#39;&#34;&#34;&#39;</span>, $in) <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&#34;&#39;</span>;
-}
-
-$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">shell_escape</span>(<span style="color:#e6db74">&#39;google.com/search?tbm=vid&amp;q=squarepusher&#39;</span>);
-<span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#39;waterfox &#39;</span> <span style="color:#f92672">.</span> $s);
 </code></pre></div>
 
 <p><a href="https://php.net/function.proc-open">https://php.net/function.proc-open</a></p>
@@ -93,15 +59,8 @@ $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">shell_escape
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$p <span style="color:#f92672">=</span> <span style="color:#a6e22e">popen</span>(<span style="color:#e6db74">&#39;php -v&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
-
-<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
-   $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgets</span>($p);
-   <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">feof</span>($p)) {
-      <span style="color:#66d9ef">break</span>;
-   }
-   <span style="color:#a6e22e">var_dump</span>($s);
-}
+$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">shell_exec</span>(<span style="color:#e6db74">&#39;dust -V&#39;</span>);
+<span style="color:#66d9ef">echo</span> $s;
 </code></pre></div>
 
 <p><a href="https://php.net/function.shell-exec">https://php.net/function.shell-exec</a></p>
@@ -112,10 +71,7 @@ $p <span style="color:#f92672">=</span> <span style="color:#a6e22e">popen</span>
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-<span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>);
-
-$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">shell_exec</span>(<span style="color:#e6db74">&#39;dust&#39;</span>);
-<span style="color:#66d9ef">echo</span> $s;
+<span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#39;dust -V&#39;</span>);
 </code></pre></div>
 
 <p><a href="https://php.net/function.system">https://php.net/function.system</a></p>
