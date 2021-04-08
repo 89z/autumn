@@ -29,7 +29,7 @@
    <a href="/autumn/categories/input-output/">input-output</a>
    
 </section>
-   
+   <p>
 
 
    
@@ -40,7 +40,6 @@
 echo n
 </code></pre></div>
 
-<p><a href="https://nim-lang.org/docs/osproc.html#execCmd,string">https://nim-lang.org/docs/osproc.html#execCmd,string</a></p>
 
 
 
@@ -53,7 +52,6 @@ echo n
 p.close
 </code></pre></div>
 
-<p><a href="https://nim-lang.org/docs/osproc.html#startProcess,string,string,openArray%5Bstring%5D,StringTableRef,set%5BProcessOption%5D">https://nim-lang.org/docs/osproc.html#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]</a></p>
 
 
 
@@ -66,9 +64,38 @@ p.close
 echo n
 </code></pre></div>
 
-<p><a href="https://nim-lang.org/docs/osproc.html#waitForExit,Process,int">https://nim-lang.org/docs/osproc.html#waitForExit,Process,int</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nim" data-lang="nim"><span style="color:#f92672">import</span> osproc
+ 
+<span style="color:#75715e"># Output string and error code</span>
+<span style="color:#66d9ef">let</span> (lsalStr, errCode) <span style="color:#f92672">=</span> execCmdEx(<span style="color:#e6db74">&#34;ls -al&#34;</span>)
+ 
+echo <span style="color:#e6db74">&#34;Error code: &#34;</span> <span style="color:#f92672">&amp;</span> <span style="color:#f92672">$</span>errCode
+echo <span style="color:#e6db74">&#34;Output: &#34;</span> <span style="color:#f92672">&amp;</span> lsalStr
+ 
+ 
+<span style="color:#75715e"># Output string only</span>
+<span style="color:#66d9ef">let</span> lsStr <span style="color:#f92672">=</span> execProcess(<span style="color:#e6db74">&#34;ls&#34;</span>)
+ 
+echo <span style="color:#e6db74">&#34;Output: &#34;</span> <span style="color:#f92672">&amp;</span> lsStr
+</code></pre></div>
+</p>
+<ul>
+<li><a href="https://nim-lang.org/docs/osproc.html#execCmd,string">https://nim-lang.org/docs/osproc.html#execCmd,string</a></li>
+<li><a href="https://nim-lang.org/docs/osproc.html#startProcess,string,string,openArray%5Bstring%5D,StringTableRef,set%5BProcessOption%5D">https://nim-lang.org/docs/osproc.html#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]</a></li>
+<li><a href="https://nim-lang.org/docs/osproc.html#waitForExit,Process,int">https://nim-lang.org/docs/osproc.html#waitForExit,Process,int</a></li>
+</ul>
 <h2 id="references">References</h2>
-<p><a href="https://rosettacode.org/wiki/Execute_a_system_command">https://rosettacode.org/wiki/Execute_a_system_command</a></p>
+<ul>
+<li><a href="https://gnu.org/software/bash/manual/html_node/Command-Substitution">https://gnu.org/software/bash/manual/html_node/Command-Substitution</a></li>
+<li><a href="https://programming-idioms.org/idiom/111">https://programming-idioms.org/idiom/111</a></li>
+<li><a href="https://rosettacode.org/wiki/Execute_a_system_command">https://rosettacode.org/wiki/Execute_a_system_command</a></li>
+</ul>
 
 </main>
 

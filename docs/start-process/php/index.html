@@ -46,7 +46,7 @@ $a <span style="color:#f92672">=</span> [];
 <span style="color:#a6e22e">proc_close</span>($p);
 </code></pre></div>
 
-<p><a href="https://php.net/function.proc-close">https://php.net/function.proc-close</a></p>
+<p><a href="https://php.net/function.fgets">https://php.net/function.fgets</a></p>
 
 
 
@@ -64,7 +64,7 @@ $a <span style="color:#f92672">=</span> [];
 <span style="color:#a6e22e">proc_close</span>($p);
 </code></pre></div>
 
-<p><a href="https://php.net/function.proc-open">https://php.net/function.proc-open</a></p>
+<p><a href="https://php.net/function.proc-close">https://php.net/function.proc-close</a></p>
 
 
 
@@ -85,11 +85,44 @@ $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">shell_escape
 <span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#39;waterfox &#39;</span> <span style="color:#f92672">.</span> $s);
 </code></pre></div>
 
+<p><a href="https://php.net/function.proc-open">https://php.net/function.proc-open</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$p <span style="color:#f92672">=</span> <span style="color:#a6e22e">popen</span>(<span style="color:#e6db74">&#39;php -v&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>);
+
+<span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+   $s <span style="color:#f92672">=</span> <span style="color:#a6e22e">fgets</span>($p);
+   <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">feof</span>($p)) {
+      <span style="color:#66d9ef">break</span>;
+   }
+   <span style="color:#a6e22e">var_dump</span>($s);
+}
+</code></pre></div>
+
+<p><a href="https://php.net/function.shell-exec">https://php.net/function.shell-exec</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>);
+
+$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">shell_exec</span>(<span style="color:#e6db74">&#39;dust&#39;</span>);
+<span style="color:#66d9ef">echo</span> $s;
+</code></pre></div>
+
 <p><a href="https://php.net/function.system">https://php.net/function.system</a></p>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://hyperpolyglot.org/scripting2#external-cmd">https://hyperpolyglot.org/scripting2#external-cmd</a></li>
-<li><a href="https://programming-idioms.org/idiom/111/launch-other-program">https://programming-idioms.org/idiom/111/launch-other-program</a></li>
+<li><a href="https://hyperpolyglot.org/scripting2#cmd-subst">https://hyperpolyglot.org/scripting2#cmd-subst</a></li>
+<li><a href="https://programming-idioms.org/idiom/111">https://programming-idioms.org/idiom/111</a></li>
 <li><a href="https://rosettacode.org/wiki/Execute_a_system_command">https://rosettacode.org/wiki/Execute_a_system_command</a></li>
 </ul>
 
