@@ -5,7 +5,7 @@ tags = [ "dart" ]
 
 {{< r "a.dart" >}}
 
-<https://api.dart.dev/dart-io/Process/stdout.html>
+<https://api.dart.dev/dart-io/ProcessResult/stdout.html>
 
 ## References
 
