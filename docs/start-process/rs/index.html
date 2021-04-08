@@ -41,13 +41,12 @@
 };
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> c <span style="color:#f92672">=</span> Command::new(<span style="color:#e6db74">r&#34;C:\Windows\notepad&#34;</span>).spawn()<span style="color:#f92672">?</span>;
-   c.wait()<span style="color:#f92672">?</span>;
+   Command::new(<span style="color:#e6db74">&#34;dust&#34;</span>).arg(<span style="color:#e6db74">&#34;-V&#34;</span>).status()<span style="color:#f92672">?</span>;
    Ok(())
 }
 </code></pre></div>
 
-<p><a href="https://doc.rust-lang.org/std/io/struct.Cursor.html#method.lines">https://doc.rust-lang.org/std/io/struct.Cursor.html#method.lines</a></p>
+<p><a href="https://doc.rust-lang.org/std/process/struct.Command.html#method.arg">https://doc.rust-lang.org/std/process/struct.Command.html#method.arg</a></p>
 
 
 
@@ -60,12 +59,13 @@
 };
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
-   Command::new(<span style="color:#e6db74">&#34;waterfox&#34;</span>).arg(<span style="color:#e6db74">&#34;google.com/search?q=north&#34;</span>).spawn()<span style="color:#f92672">?</span>;
+   <span style="color:#66d9ef">let</span> c <span style="color:#f92672">=</span> Command::new(<span style="color:#e6db74">&#34;dust&#34;</span>).arg(<span style="color:#e6db74">&#34;-V&#34;</span>).output()<span style="color:#f92672">?</span>;
+   println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, c.stdout <span style="color:#f92672">==</span> <span style="color:#e6db74">b&#34;Dust 0.5.4</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
    Ok(())
 }
 </code></pre></div>
 
-<p><a href="https://doc.rust-lang.org/std/process/struct.Child.html#method.wait">https://doc.rust-lang.org/std/process/struct.Child.html#method.wait</a></p>
+<p><a href="https://doc.rust-lang.org/std/process/struct.Command.html#method.output">https://doc.rust-lang.org/std/process/struct.Command.html#method.output</a></p>
 
 
 
@@ -73,21 +73,17 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> std::{
-   io::BufRead,
-   io::Cursor,
+   io,
    process::Command
 };
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">std</span>::io::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
-   <span style="color:#66d9ef">let</span> cmd <span style="color:#f92672">=</span> Command::new(<span style="color:#e6db74">&#34;cc&#34;</span>).arg(<span style="color:#e6db74">&#34;--print-search-dirs&#34;</span>).output()<span style="color:#f92672">?</span>;
-   <span style="color:#66d9ef">for</span> each <span style="color:#66d9ef">in</span> Cursor::new(cmd.stdout).lines() {
-      println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, each<span style="color:#f92672">?</span>);
-   }
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() -&gt; <span style="color:#a6e22e">io</span>::Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
+   Command::new(<span style="color:#e6db74">&#34;dust&#34;</span>).status()<span style="color:#f92672">?</span>;
    Ok(())
 }
 </code></pre></div>
 
-<p><a href="https://doc.rust-lang.org/std/process/struct.Command.html#method.arg">https://doc.rust-lang.org/std/process/struct.Command.html#method.arg</a></p>
+<p><a href="https://doc.rust-lang.org/std/process/struct.Command.html#method.status">https://doc.rust-lang.org/std/process/struct.Command.html#method.status</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/rust#processes-environment">https://hyperpolyglot.org/rust#processes-environment</a></li>

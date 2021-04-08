@@ -13,10 +13,6 @@ tags = [ "go" ]
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/os/exec#Cmd.Run>
-
-{{< r "d.go" >}}
-
 <https://golang.org/pkg/os/exec#Cmd.Stdout>
 
 ## References

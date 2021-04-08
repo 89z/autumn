@@ -5,15 +5,15 @@ tags = [ "rust" ]
 
 {{< r "a.rs" >}}
 
-<https://doc.rust-lang.org/std/io/struct.Cursor.html#method.lines>
+<https://doc.rust-lang.org/std/process/struct.Command.html#method.arg>
 
 {{< r "b.rs" >}}
 
-<https://doc.rust-lang.org/std/process/struct.Child.html#method.wait>
+<https://doc.rust-lang.org/std/process/struct.Command.html#method.output>
 
 {{< r "c.rs" >}}
 
-<https://doc.rust-lang.org/std/process/struct.Command.html#method.arg>
+<https://doc.rust-lang.org/std/process/struct.Command.html#method.status>
 
 ## References
 

@@ -36,20 +36,7 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> subprocess
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;BEGIN&#39;</span>)
-subprocess<span style="color:#f92672">.</span>call(<span style="color:#e6db74">&#39;pipe&#39;</span>)
-</code></pre></div>
-
-<p><a href="https://docs.python.org/library/subprocess.html#subprocess.Popen">https://docs.python.org/library/subprocess.html#subprocess.Popen</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> subprocess
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;BEGIN&#39;</span>)
-subprocess<span style="color:#f92672">.</span>check_call(<span style="color:#e6db74">&#39;pipe&#39;</span>)
+subprocess<span style="color:#f92672">.</span>call(<span style="color:#e6db74">&#39;dust&#39;</span>)
 </code></pre></div>
 
 <p><a href="https://docs.python.org/library/subprocess.html#subprocess.call">https://docs.python.org/library/subprocess.html#subprocess.call</a></p>
@@ -60,12 +47,7 @@ subprocess<span style="color:#f92672">.</span>check_call(<span style="color:#e6d
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> subprocess
-<span style="color:#75715e"># example 1</span>
-a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;waterfox&#39;</span>, <span style="color:#e6db74">&#39;google.com/search?tbm=vid&amp;q=squarepusher&#39;</span>]
-subprocess<span style="color:#f92672">.</span>run(a)
-<span style="color:#75715e"># example 2</span>
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;BEGIN&#39;</span>)
-subprocess<span style="color:#f92672">.</span>run(<span style="color:#e6db74">&#39;pipe&#39;</span>)
+subprocess<span style="color:#f92672">.</span>check_call(<span style="color:#e6db74">&#39;dust&#39;</span>)
 </code></pre></div>
 
 <p><a href="https://docs.python.org/library/subprocess.html#subprocess.check_call">https://docs.python.org/library/subprocess.html#subprocess.check_call</a></p>
@@ -76,11 +58,16 @@ subprocess<span style="color:#f92672">.</span>run(<span style="color:#e6db74">&#
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> subprocess
-a <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;python&#39;</span>, <span style="color:#e6db74">&#39;-h&#39;</span>]
 
-p <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>Popen(a, stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>PIPE, text<span style="color:#f92672">=</span>True)
-<span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> p<span style="color:#f92672">.</span>stdout:
-   <span style="color:#66d9ef">print</span>(s, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+<span style="color:#75715e"># example 1</span>
+subprocess<span style="color:#f92672">.</span>run(<span style="color:#e6db74">&#39;dust -V&#39;</span>)
+
+<span style="color:#75715e"># example 2</span>
+subprocess<span style="color:#f92672">.</span>run([<span style="color:#e6db74">&#39;dust&#39;</span>, <span style="color:#e6db74">&#39;-V&#39;</span>])
+
+<span style="color:#75715e"># example 3</span>
+p <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>run(<span style="color:#e6db74">&#39;dust -V&#39;</span>, capture_output<span style="color:#f92672">=</span>True)
+<span style="color:#66d9ef">print</span>(p<span style="color:#f92672">.</span>stdout)
 </code></pre></div>
 
 <p><a href="https://docs.python.org/library/subprocess.html#subprocess.run">https://docs.python.org/library/subprocess.html#subprocess.run</a></p>

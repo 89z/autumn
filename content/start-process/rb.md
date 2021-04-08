@@ -4,7 +4,12 @@ tags = [ "rb" ]
 +++
 
 {{< r "a.rb" >}}
+
+<https://docs.ruby-lang.org/en/master/IO.html#method-c-popen>
+
 {{< r "b.rb" >}}
+
+<https://docs.ruby-lang.org/en/master/Kernel.html#method-i-system>
 
 ## References
 

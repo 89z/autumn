@@ -3,19 +3,15 @@ title = "Python"
 tags = [ "python" ]
 +++
 
-{{< r "b.py" >}}
-
-<https://docs.python.org/library/subprocess.html#subprocess.Popen>
-
-{{< r "c.py" >}}
+{{< r "a.py" >}}
 
 <https://docs.python.org/library/subprocess.html#subprocess.call>
 
-{{< r "d.py" >}}
+{{< r "b.py" >}}
 
 <https://docs.python.org/library/subprocess.html#subprocess.check_call>
 
-{{< r "e.py" >}}
+{{< r "c.py" >}}
 
 <https://docs.python.org/library/subprocess.html#subprocess.run>
 

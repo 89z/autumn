@@ -4,6 +4,7 @@ use std::{
 };
 
 fn main() -> io::Result<()> {
-   Command::new("waterfox").arg("google.com/search?q=north").spawn()?;
+   let c = Command::new("dust").arg("-V").output()?;
+   println!("{}", c.stdout == b"Dust 0.5.4\n");
    Ok(())
 }

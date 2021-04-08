@@ -1,3 +1,1 @@
-p = IO.popen('dust')
-s = p.read
-puts s
+system('dust -V')

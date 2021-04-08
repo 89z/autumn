@@ -4,7 +4,6 @@ use std::{
 };
 
 fn main() -> io::Result<()> {
-   let mut c = Command::new(r"C:\Windows\notepad").spawn()?;
-   c.wait()?;
+   Command::new("dust").arg("-V").status()?;
    Ok(())
 }

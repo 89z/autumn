@@ -1,3 +1,2 @@
 import subprocess
-print('BEGIN')
-subprocess.call('pipe')
+subprocess.check_call('dust')

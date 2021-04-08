@@ -1,3 +1,3 @@
-unless system("ls -l /tmp")
-  raise "ls failed"
-end
+p = IO.popen('dust')
+s = p.read
+puts s
