@@ -1,17 +1,10 @@
 package main
-
-import (
-   "bytes"
-   "os/exec"
-)
+import "os/exec"
 
 func main() {
-   b, e := exec.Command(name, arg...).Output()
-   if e != nil { return nil, e }
-   return bytes.TrimRight(b, "\n"), nil
-   b, e := shellExec("go", "version")
+   b, e := exec.Command("dust", "-V").Output()
    if e != nil {
       panic(e)
    }
-   println(string(b))
+   println(string(b) == "Dust 0.5.4\n")
 }
