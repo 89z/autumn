@@ -55,7 +55,7 @@
    <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">URL</span> = <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">URL</span>{<span style="color:#a6e22e">Scheme</span>: <span style="color:#e6db74">&#34;http&#34;</span>, <span style="color:#a6e22e">Host</span>: <span style="color:#e6db74">&#34;www.deezer.com&#34;</span>}
    <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Method</span> = <span style="color:#e6db74">&#34;POST&#34;</span>
    <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Body</span> = <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">NopCloser</span>(<span style="color:#a6e22e">b</span>)
-   <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">DefaultClient</span>.<span style="color:#a6e22e">Do</span>(<span style="color:#a6e22e">r</span>)
+   new(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Client</span>).<span style="color:#a6e22e">Do</span>(<span style="color:#a6e22e">r</span>)
 }
 </code></pre></div>
 
@@ -81,7 +81,7 @@
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       panic(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">DefaultClient</span>.<span style="color:#a6e22e">Do</span>(<span style="color:#a6e22e">r</span>)
+   new(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Client</span>).<span style="color:#a6e22e">Do</span>(<span style="color:#a6e22e">r</span>)
 }
 </code></pre></div>
 

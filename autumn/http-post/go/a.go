@@ -18,5 +18,5 @@ func main() {
    r.URL = &url.URL{Scheme: "http", Host: "www.deezer.com"}
    r.Method = "POST"
    r.Body = io.NopCloser(b)
-   http.DefaultClient.Do(r)
+   new(http.Client).Do(r)
 }

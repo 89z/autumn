@@ -13,5 +13,5 @@ func main() {
    if e != nil {
       panic(e)
    }
-   http.DefaultClient.Do(r)
+   new(http.Client).Do(r)
 }
