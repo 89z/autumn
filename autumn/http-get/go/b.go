@@ -5,16 +5,14 @@ import (
    "os"
 )
 
-func get(s string) (*http.Response, error) {
-   r, e := http.NewRequest("GET", s, nil)
-   if e != nil { return nil, e }
-   return http.DefaultClient.Do(r)
-}
-
 func main() {
-   r, e := get("http://speedtest.lax.hivelocity.net")
+   req, e := http.NewRequest("GET", "http://speedtest.lax.hivelocity.net", nil)
    if e != nil {
       panic(e)
    }
-   os.Stdout.ReadFrom(r.Body)
+   res, e := new(http.Client).Do(req)
+   if e != nil {
+      panic(e)
+   }
+   os.Stdout.ReadFrom(res.Body)
 }
