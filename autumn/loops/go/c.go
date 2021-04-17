@@ -1,7 +1,7 @@
 package main
 
 func main() {
-   a := [12]string{}
+   var a [12]string
    // example 1
    for n := range a {
       println(n)
