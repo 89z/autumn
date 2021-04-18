@@ -7,7 +7,7 @@ import (
 
 func main() {
    a := []int{10, 11}
-   b, e := json.MarshalIndent(a, "", "\t")
+   b, e := json.MarshalIndent(a, "", " ")
    if e != nil {
       panic(e)
    }

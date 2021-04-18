@@ -7,6 +7,6 @@ import (
 
 func main() {
    enc := json.NewEncoder(os.Stdout)
-   enc.SetIndent("", "\t")
+   enc.SetIndent("", " ")
    enc.Encode([]int{10, 11})
 }

@@ -24,7 +24,7 @@
    <a href="/autumn/query-encoding/">Query encoding</a> / Go
 </h1>
 <section class="page">
-   <time>Thu Apr 1 2021</time>
+   <time>Sat Apr 17 2021</time>
    
    <a href="/autumn/categories/path/">path</a>
    
@@ -43,12 +43,20 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;west=left&amp;east=right&#34;</span>
-   <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">ParseQuery</span>(<span style="color:#a6e22e">s</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      panic(<span style="color:#a6e22e">e</span>)
-   }
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m</span>)
+   { <span style="color:#75715e">// example 1
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">q</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">ParseQuery</span>(<span style="color:#e6db74">&#34;west=left&amp;east=right&#34;</span>)
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+         panic(<span style="color:#a6e22e">e</span>)
+      }
+      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">q</span>) <span style="color:#75715e">// map[east:[right] west:[left]]
+</span><span style="color:#75715e"></span>   }
+   { <span style="color:#75715e">// example 2
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">q</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">ParseQuery</span>(<span style="color:#e6db74">&#34;http://youtube.com/watch?v=GvvRUKKXilg&#34;</span>)
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+         panic(<span style="color:#a6e22e">e</span>)
+      }
+      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">q</span>) <span style="color:#75715e">// map[http://youtube.com/watch?v:[GvvRUKKXilg]]
+</span><span style="color:#75715e"></span>   }
 }
 </code></pre></div>
 
