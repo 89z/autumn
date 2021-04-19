@@ -6,13 +6,7 @@ import (
 )
 
 func main() {
-   for _, t := range []struct{s, sep string} {
-      {"", ""},             // []
-      {"", ","},            // [""]
-      {"north", ""},        // ["n" "o" "r" "t" "h"]
-      {"south,north", ","}, // ["south" "north"]
-   } {
-      a := strings.Split(t.s, t.sep)
-      fmt.Printf("%q\n", a)
-   }
+   s := "west east"
+   a := strings.Fields(s)
+   fmt.Printf("%q\n", a)
 }

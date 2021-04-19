@@ -1,12 +1,12 @@
 package main
 
 import (
+   "bytes"
    "fmt"
-   "strings"
 )
 
 func main() {
-   s := "west east"
-   a := strings.Fields(s)
+   b := []byte("west,north,east")
+   a := bytes.SplitN(b, []byte{','}, 2)
    fmt.Printf("%q\n", a)
 }
