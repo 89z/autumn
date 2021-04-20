@@ -1,12 +1,16 @@
 package main
 
 import (
+   "encoding/csv"
    "fmt"
    "strings"
 )
 
 func main() {
-   s := "west east"
-   a := strings.Fields(s)
-   fmt.Printf("%q\n", a)
+   s := "north,east,south,west"
+   r, e := csv.NewReader(strings.NewReader(s)).Read()
+   if e != nil {
+      panic(e)
+   }
+   fmt.Printf("%q\n", r)
 }

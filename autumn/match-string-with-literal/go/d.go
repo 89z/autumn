@@ -14,8 +14,4 @@ func main() {
       b := strings.HasPrefix("", "")
       println(b) // true
    }
-   {
-      b := strings.HasPrefix("", "north")
-      println(b) // false
-   }
 }

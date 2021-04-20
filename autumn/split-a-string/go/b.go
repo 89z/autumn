@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-   b := []byte("west,north,east")
-   a := bytes.SplitN(b, []byte{','}, 2)
-   fmt.Printf("%q\n", a)
+   s, sep := []byte("west,north,east"), []byte{','}
+   sub := bytes.SplitN(s, sep, 2)
+   fmt.Printf("%q\n", sub) // ["west" "north,east"]
 }

@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-   s := "west,north,east"
-   a := strings.SplitN(s, ",", 2)
-   fmt.Printf("%q\n", a)
+   s, sep := "west,north,east", ","
+   a := strings.SplitN(s, sep, 2)
+   fmt.Printf("%q\n", a) // ["west" "north,east"]
 }

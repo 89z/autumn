@@ -13,7 +13,7 @@ tags = [ "go" ]
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/strings#Fields>
+<https://golang.org/pkg/encoding/csv>
 
 {{< r "d.go" >}}
 
