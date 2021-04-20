@@ -9,7 +9,10 @@ import (
 func main() {
    s := "Have You Ever Really Loved A Woman?"
    {
-      t := regexp.MustCompile(`["*/:<>?\|]`).ReplaceAllString(s, "+")
+      t := s
+      for _, r := range `"*/:<>?\|` {
+         t = strings.ReplaceAll(t, string(r), "+")
+      }
       println(t == "Have You Ever Really Loved A Woman+")
    }
 }
