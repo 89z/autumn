@@ -29,7 +29,49 @@
    <a href="/autumn/categories/string/">string</a>
    
 </section>
-   <p><a href="https://golang.org/pkg/strings#ReplaceAll">https://golang.org/pkg/strings#ReplaceAll</a></p>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;net/url&#34;</span>
+   <span style="color:#e6db74">&#34;regexp&#34;</span>
+   <span style="color:#e6db74">&#34;strings&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Have You Ever Really Loved A Woman?&#34;</span>
+   {
+      <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">QueryEscape</span>(<span style="color:#a6e22e">s</span>)
+      println(<span style="color:#a6e22e">t</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Have+You+Ever+Really+Loved+A+Woman%3F&#34;</span>)
+   }
+   {
+      <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s</span>
+      <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#e6db74">`&#34;*/:&lt;&gt;?\|`</span> {
+         <span style="color:#a6e22e">t</span> = <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">ReplaceAll</span>(<span style="color:#a6e22e">t</span>, string(<span style="color:#a6e22e">r</span>), <span style="color:#e6db74">&#34;+&#34;</span>)
+      }
+      println(<span style="color:#a6e22e">t</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Have You Ever Really Loved A Woman+&#34;</span>)
+   }
+   {
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> []<span style="color:#66d9ef">string</span>
+      <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#e6db74">`&#34;*/:&lt;&gt;?\|`</span> {
+         <span style="color:#a6e22e">a</span> = append(<span style="color:#a6e22e">a</span>, string(<span style="color:#a6e22e">r</span>), <span style="color:#e6db74">&#34;+&#34;</span>)
+      }
+      <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReplacer</span>(<span style="color:#a6e22e">a</span><span style="color:#f92672">...</span>).<span style="color:#a6e22e">Replace</span>(<span style="color:#a6e22e">s</span>)
+      println(<span style="color:#a6e22e">t</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Have You Ever Really Loved A Woman+&#34;</span>)
+   }
+   {
+      <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">`[&#34;*/:&lt;&gt;?\|]`</span>).<span style="color:#a6e22e">ReplaceAllString</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;+&#34;</span>)
+      println(<span style="color:#a6e22e">t</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Have You Ever Really Loved A Woman+&#34;</span>)
+   }
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/strings#ReplaceAll">https://golang.org/pkg/strings#ReplaceAll</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#subst">https://hyperpolyglot.org/c#subst</a></li>

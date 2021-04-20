@@ -1,14 +1,12 @@
 +++
-title = "Go"
-tags = [ "go" ]
+title = "Dart"
+tags = [ "dart" ]
 +++
 
-{{< r "a.go" >}}
-
-<https://golang.org/pkg/strings#ReplaceAll>
+{{< r "a.dart" >}}
 
 ## References
 
-- <https://hyperpolyglot.org/c#subst>
+- <https://hyperpolyglot.org/web#subst>
 - <https://programming-idioms.org/idiom/63>
 - <https://rosettacode.org/wiki/Strip_a_set_of_characters_from_a_string>
