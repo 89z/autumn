@@ -13,6 +13,14 @@ tags = [ "go" ]
 
 {{< r "c.go" >}}
 
+<https://golang.org/pkg/strings#ContainsAny>
+
+{{< r "d.go" >}}
+
+<https://golang.org/pkg/strings#ContainsRune>
+
+{{< r "e.go" >}}
+
 <https://golang.org/pkg/strings#HasPrefix>
 
 ## References

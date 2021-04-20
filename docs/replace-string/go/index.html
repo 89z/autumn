@@ -124,13 +124,7 @@
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Have You Ever Really Loved A Woman?&#34;</span>
-   {
-      <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s</span>
-      <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#e6db74">`&#34;*/:&lt;&gt;?\|`</span> {
-         <span style="color:#a6e22e">t</span> = <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">ReplaceAll</span>(<span style="color:#a6e22e">t</span>, string(<span style="color:#a6e22e">r</span>), <span style="color:#e6db74">&#34;+&#34;</span>)
-      }
-      println(<span style="color:#a6e22e">t</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Have You Ever Really Loved A Woman+&#34;</span>)
-   }
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#e6db74">`&#34;*/:&lt;&gt;?\|`</span> {
 }
 </code></pre></div>
 

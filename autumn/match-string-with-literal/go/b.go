@@ -2,13 +2,16 @@ package main
 import "strings"
 
 func main() {
-   s := "north"
-   { // example 1
-      b := strings.Contains(s, "or")
-      println(b)
+   {
+      b := strings.Contains("", "")
+      println(b) // true
    }
-   { // example 2
-      b := strings.Contains(s, "")
-      println(b)
+   {
+      b := strings.Contains("north", "")
+      println(b) // true
+   }
+   {
+      b := strings.Contains("north", "or")
+      println(b) // true
    }
 }

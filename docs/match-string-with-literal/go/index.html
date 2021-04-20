@@ -24,7 +24,7 @@
    <a href="/autumn/match-string-with-literal/">Match string with literal</a> / Go
 </h1>
 <section class="page">
-   <time>Sun Apr 11 2021</time>
+   <time>Mon Apr 19 2021</time>
    
    <a href="/autumn/categories/string/">string</a>
    
@@ -39,9 +39,18 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;bytes&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;north&#34;</span>)
-   <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Contains</span>(<span style="color:#a6e22e">b</span>, []byte(<span style="color:#e6db74">&#34;or&#34;</span>))
-   println(<span style="color:#a6e22e">c</span>)
+   {
+      <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Contains</span>([]<span style="color:#66d9ef">byte</span>{}, []<span style="color:#66d9ef">byte</span>{})
+      println(<span style="color:#a6e22e">b</span>) <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>   }
+   {
+      <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Contains</span>([]byte(<span style="color:#e6db74">&#34;north&#34;</span>), []<span style="color:#66d9ef">byte</span>{})
+      println(<span style="color:#a6e22e">b</span>) <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>   }
+   {
+      <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Contains</span>([]byte(<span style="color:#e6db74">&#34;north&#34;</span>), []byte(<span style="color:#e6db74">&#34;or&#34;</span>))
+      println(<span style="color:#a6e22e">b</span>) <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>   }
 }
 </code></pre></div>
 
@@ -56,19 +65,82 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;north&#34;</span>
-   { <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Contains</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;or&#34;</span>)
-      println(<span style="color:#a6e22e">b</span>)
-   }
-   { <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Contains</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;&#34;</span>)
-      println(<span style="color:#a6e22e">b</span>)
-   }
+   {
+      <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Contains</span>(<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+      println(<span style="color:#a6e22e">b</span>) <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>   }
+   {
+      <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Contains</span>(<span style="color:#e6db74">&#34;north&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+      println(<span style="color:#a6e22e">b</span>) <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>   }
+   {
+      <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Contains</span>(<span style="color:#e6db74">&#34;north&#34;</span>, <span style="color:#e6db74">&#34;or&#34;</span>)
+      println(<span style="color:#a6e22e">b</span>) <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>   }
 }
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/strings#Contains">https://golang.org/pkg/strings#Contains</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   {
+      <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">HasPrefix</span>(<span style="color:#e6db74">&#34;north&#34;</span>, <span style="color:#e6db74">&#34;no&#34;</span>)
+      println(<span style="color:#a6e22e">b</span>) <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>   }
+   {
+      <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">HasPrefix</span>(<span style="color:#e6db74">&#34;north&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+      println(<span style="color:#a6e22e">b</span>) <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>   }
+   {
+      <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">HasPrefix</span>(<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+      println(<span style="color:#a6e22e">b</span>) <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>   }
+   {
+      <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">HasPrefix</span>(<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;north&#34;</span>)
+      println(<span style="color:#a6e22e">b</span>) <span style="color:#75715e">// false
+</span><span style="color:#75715e"></span>   }
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/strings#ContainsAny">https://golang.org/pkg/strings#ContainsAny</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   {
+      <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">HasPrefix</span>(<span style="color:#e6db74">&#34;north&#34;</span>, <span style="color:#e6db74">&#34;no&#34;</span>)
+      println(<span style="color:#a6e22e">b</span>) <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>   }
+   {
+      <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">HasPrefix</span>(<span style="color:#e6db74">&#34;north&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+      println(<span style="color:#a6e22e">b</span>) <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>   }
+   {
+      <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">HasPrefix</span>(<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+      println(<span style="color:#a6e22e">b</span>) <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>   }
+   {
+      <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">HasPrefix</span>(<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;north&#34;</span>)
+      println(<span style="color:#a6e22e">b</span>) <span style="color:#75715e">// false
+</span><span style="color:#75715e"></span>   }
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/strings#ContainsRune">https://golang.org/pkg/strings#ContainsRune</a></p>
 
 
 
