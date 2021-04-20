@@ -1,18 +1,11 @@
 package main
-
-import (
-   "net/url"
-   "regexp"
-   "strings"
-)
+import "strings"
 
 func main() {
-   s := "Have You Ever Really Loved A Woman?"
-   {
-      t := s
-      for _, r := range `"*/:<>?\|` {
-         t = strings.ReplaceAll(t, string(r), "+")
-      }
-      println(t == "Have You Ever Really Loved A Woman+")
-   }
+   s := "west? east.txt"
+   s = strings.Map(func(r rune) rune {
+      if strings.ContainsRune(`"*/:<>?\|`, r) { return -1 }
+      return r
+   }, s)
+   println(s == "west east.txt")
 }

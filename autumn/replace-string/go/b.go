@@ -1,19 +1,12 @@
 package main
-
-import (
-   "net/url"
-   "regexp"
-   "strings"
-)
+import "strings"
 
 func main() {
-   s := "Have You Ever Really Loved A Woman?"
-   {
-      var a []string
-      for _, r := range `"*/:<>?\|` {
-         a = append(a, string(r), "+")
-      }
-      t := strings.NewReplacer(a...).Replace(s)
-      println(t == "Have You Ever Really Loved A Woman+")
+   s := "west? east.txt"
+   var a []string
+   for _, r := range `"*/:<>?\|` {
+      a = append(a, string(r), "")
    }
+   s = strings.NewReplacer(a...).Replace(s)
+   println(s == "west east.txt")
 }

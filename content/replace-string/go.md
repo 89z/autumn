@@ -27,5 +27,4 @@ tags = [ "go" ]
 
 - <https://hyperpolyglot.org/c#subst>
 - <https://programming-idioms.org/idiom/63>
-- <https://rosettacode.org/wiki/Remove_vowels_from_a_string>
 - <https://rosettacode.org/wiki/Strip_a_set_of_characters_from_a_string>

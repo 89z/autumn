@@ -2,7 +2,7 @@ package main
 import "regexp"
 
 func main() {
-   s := "north?.txt"
-   t := regexp.MustCompile(`["*/:<>?\|]`).ReplaceAllString(s, "+")
-   println(t == "north+.txt")
+   s := "west? east.txt"
+   s = regexp.MustCompile(`["*/:<>?\|]`).ReplaceAllString(s, "")
+   println(s == "west east.txt")
 }

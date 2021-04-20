@@ -1,12 +1,12 @@
 package main
-
-import (
-   "net/url"
-   "regexp"
-   "strings"
-)
+import "strings"
 
 func main() {
-   s := "Have You Ever Really Loved A Woman?"
-   for _, r := range `"*/:<>?\|` {
+   var b strings.Builder
+   for _, r := range "west? east.txt" {
+      if ! strings.ContainsRune(`"*/:<>?\|`, r) {
+         b.WriteRune(r)
+      }
+   }
+   println(b.String() == "west east.txt")
 }

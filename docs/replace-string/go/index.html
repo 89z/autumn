@@ -39,9 +39,9 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;regexp&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;north?.txt&#34;</span>
-   <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">`[&#34;*/:&lt;&gt;?\|]`</span>).<span style="color:#a6e22e">ReplaceAllString</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;+&#34;</span>)
-   println(<span style="color:#a6e22e">t</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;north+.txt&#34;</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;west? east.txt&#34;</span>
+   <span style="color:#a6e22e">s</span> = <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">`[&#34;*/:&lt;&gt;?\|]`</span>).<span style="color:#a6e22e">ReplaceAllString</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;west east.txt&#34;</span>)
 }
 </code></pre></div>
 
@@ -53,23 +53,16 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;net/url&#34;</span>
-   <span style="color:#e6db74">&#34;regexp&#34;</span>
-   <span style="color:#e6db74">&#34;strings&#34;</span>
-)
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Have You Ever Really Loved A Woman?&#34;</span>
-   {
-      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> []<span style="color:#66d9ef">string</span>
-      <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#e6db74">`&#34;*/:&lt;&gt;?\|`</span> {
-         <span style="color:#a6e22e">a</span> = append(<span style="color:#a6e22e">a</span>, string(<span style="color:#a6e22e">r</span>), <span style="color:#e6db74">&#34;+&#34;</span>)
-      }
-      <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReplacer</span>(<span style="color:#a6e22e">a</span><span style="color:#f92672">...</span>).<span style="color:#a6e22e">Replace</span>(<span style="color:#a6e22e">s</span>)
-      println(<span style="color:#a6e22e">t</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Have You Ever Really Loved A Woman+&#34;</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;west? east.txt&#34;</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> []<span style="color:#66d9ef">string</span>
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#e6db74">`&#34;*/:&lt;&gt;?\|`</span> {
+      <span style="color:#a6e22e">a</span> = append(<span style="color:#a6e22e">a</span>, string(<span style="color:#a6e22e">r</span>), <span style="color:#e6db74">&#34;&#34;</span>)
    }
+   <span style="color:#a6e22e">s</span> = <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReplacer</span>(<span style="color:#a6e22e">a</span><span style="color:#f92672">...</span>).<span style="color:#a6e22e">Replace</span>(<span style="color:#a6e22e">s</span>)
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;west east.txt&#34;</span>)
 }
 </code></pre></div>
 
@@ -81,22 +74,14 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;net/url&#34;</span>
-   <span style="color:#e6db74">&#34;regexp&#34;</span>
-   <span style="color:#e6db74">&#34;strings&#34;</span>
-)
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Have You Ever Really Loved A Woman?&#34;</span>
-   {
-      <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s</span>
-      <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#e6db74">`&#34;*/:&lt;&gt;?\|`</span> {
-         <span style="color:#a6e22e">t</span> = <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">ReplaceAll</span>(<span style="color:#a6e22e">t</span>, string(<span style="color:#a6e22e">r</span>), <span style="color:#e6db74">&#34;+&#34;</span>)
-      }
-      println(<span style="color:#a6e22e">t</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Have You Ever Really Loved A Woman+&#34;</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;west? east.txt&#34;</span>
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#e6db74">`&#34;*/:&lt;&gt;?\|`</span> {
+      <span style="color:#a6e22e">s</span> = <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">ReplaceAll</span>(<span style="color:#a6e22e">s</span>, string(<span style="color:#a6e22e">r</span>), <span style="color:#e6db74">&#34;&#34;</span>)
    }
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;west east.txt&#34;</span>)
 }
 </code></pre></div>
 
@@ -108,16 +93,16 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;net/url&#34;</span>
-   <span style="color:#e6db74">&#34;regexp&#34;</span>
-   <span style="color:#e6db74">&#34;strings&#34;</span>
-)
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Have You Ever Really Loved A Woman?&#34;</span>
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#e6db74">`&#34;*/:&lt;&gt;?\|`</span> {
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#e6db74">&#34;west? east.txt&#34;</span> {
+      <span style="color:#66d9ef">if</span> ! <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">ContainsRune</span>(<span style="color:#e6db74">`&#34;*/:&lt;&gt;?\|`</span>, <span style="color:#a6e22e">r</span>) {
+         <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">WriteRune</span>(<span style="color:#a6e22e">r</span>)
+      }
+   }
+   println(<span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">String</span>() <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;west east.txt&#34;</span>)
 }
 </code></pre></div>
 
@@ -129,22 +114,15 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;net/url&#34;</span>
-   <span style="color:#e6db74">&#34;regexp&#34;</span>
-   <span style="color:#e6db74">&#34;strings&#34;</span>
-)
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Have You Ever Really Loved A Woman?&#34;</span>
-   {
-      <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s</span>
-      <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#e6db74">`&#34;*/:&lt;&gt;?\|`</span> {
-         <span style="color:#a6e22e">t</span> = <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">ReplaceAll</span>(<span style="color:#a6e22e">t</span>, string(<span style="color:#a6e22e">r</span>), <span style="color:#e6db74">&#34;+&#34;</span>)
-      }
-      println(<span style="color:#a6e22e">t</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Have You Ever Really Loved A Woman+&#34;</span>)
-   }
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;west? east.txt&#34;</span>
+   <span style="color:#a6e22e">s</span> = <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Map</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">r</span> <span style="color:#66d9ef">rune</span>) <span style="color:#66d9ef">rune</span> {
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">ContainsRune</span>(<span style="color:#e6db74">`&#34;*/:&lt;&gt;?\|`</span>, <span style="color:#a6e22e">r</span>) { <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> }
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">r</span>
+   }, <span style="color:#a6e22e">s</span>)
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;west east.txt&#34;</span>)
 }
 </code></pre></div>
 
@@ -153,7 +131,6 @@
 <ul>
 <li><a href="https://hyperpolyglot.org/c#subst">https://hyperpolyglot.org/c#subst</a></li>
 <li><a href="https://programming-idioms.org/idiom/63">https://programming-idioms.org/idiom/63</a></li>
-<li><a href="https://rosettacode.org/wiki/Remove_vowels_from_a_string">https://rosettacode.org/wiki/Remove_vowels_from_a_string</a></li>
 <li><a href="https://rosettacode.org/wiki/Strip_a_set_of_characters_from_a_string">https://rosettacode.org/wiki/Strip_a_set_of_characters_from_a_string</a></li>
 </ul>
 
