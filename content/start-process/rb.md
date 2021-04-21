@@ -1,6 +1,6 @@
 +++
 title = "Ruby"
-tags = [ "rb" ]
+tags = [ "ruby" ]
 +++
 
 {{< r "a.rb" >}}
