@@ -82,6 +82,22 @@
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/builtin#copy">https://golang.org/pkg/builtin#copy</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">int</span>, <span style="color:#ae81ff">2</span>)
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">10</span>
+   println(<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">a</span>)
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/ref/spec#Send_statements">https://golang.org/ref/spec#Send_statements</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#resizable-array-back">https://hyperpolyglot.org/c#resizable-array-back</a></li>

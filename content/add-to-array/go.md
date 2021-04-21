@@ -11,6 +11,10 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/builtin#copy>
 
+{{< r "c.go" >}}
+
+<https://golang.org/ref/spec#Send_statements>
+
 ## References
 
 - <https://hyperpolyglot.org/c#resizable-array-back>
