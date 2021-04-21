@@ -2,7 +2,6 @@ package main
 import "strconv"
 
 func main() {
-   n := 100
-   s := strconv.Itoa(n)
-   println(s == "100")
+   b := strconv.AppendInt(nil, 100, 10)
+   println(string(b) == "100")
 }

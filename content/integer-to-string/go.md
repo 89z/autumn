@@ -13,6 +13,10 @@ tags = [ "go" ]
 
 {{< r "c.go" >}}
 
+<https://golang.org/pkg/strconv#AppendInt>
+
+{{< r "d.go" >}}
+
 <https://golang.org/pkg/strconv#Itoa>
 
 ## References

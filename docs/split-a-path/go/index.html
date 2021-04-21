@@ -24,44 +24,12 @@
    <a href="/autumn/split-a-path/">Split a path</a> / Go
 </h1>
 <section class="page">
-   <time>Thu Apr 1 2021</time>
+   <time>Tue Apr 20 2021</time>
    
    <a href="/autumn/categories/path/">path</a>
    
 </section>
    
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path&#34;</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Base</span>(<span style="color:#e6db74">&#34;C:/go/README.md&#34;</span>)
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;README.md&#34;</span>)
-}
-</code></pre></div>
-
-<p><a href="https://golang.org/pkg/path#Base">https://golang.org/pkg/path#Base</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path&#34;</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#e6db74">&#34;C:/go/README.md&#34;</span>)
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;C:/go&#34;</span>)
-}
-</code></pre></div>
-
-<p><a href="https://golang.org/pkg/path#Dir">https://golang.org/pkg/path#Dir</a></p>
-
 
 
    
@@ -132,31 +100,25 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path/filepath&#34;</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;os&#34;</span>
+   <span style="color:#e6db74">&#34;strings&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">split</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">string</span>) {
+   <span style="color:#a6e22e">f</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">LastIndexByte</span>
+   <span style="color:#a6e22e">d</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">f</span>(<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">PathSeparator</span>), <span style="color:#a6e22e">f</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#39;.&#39;</span>)
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s</span>[<span style="color:#a6e22e">d</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>:<span style="color:#a6e22e">e</span>], <span style="color:#a6e22e">s</span>[<span style="color:#a6e22e">e</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>:]
+}
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Ext</span>(<span style="color:#e6db74">`C:\go\README.md`</span>)
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;.md&#34;</span>)
+   <span style="color:#a6e22e">stem</span>, <span style="color:#a6e22e">ext</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">split</span>(<span style="color:#e6db74">`C:\go\README.md`</span>)
+   println(<span style="color:#a6e22e">stem</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;README&#34;</span>, <span style="color:#a6e22e">ext</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;md&#34;</span>)
 }
 </code></pre></div>
 
-<p><a href="https://golang.org/pkg/path/filepath#Ext">https://golang.org/pkg/path/filepath#Ext</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path/filepath&#34;</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#e6db74">`C:\go\README.md`</span>)
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">`C:\go\`</span>, <span style="color:#a6e22e">t</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;README.md&#34;</span>)
-}
-</code></pre></div>
-
-<p><a href="https://golang.org/pkg/path/filepath#Split">https://golang.org/pkg/path/filepath#Split</a></p>
+<p><a href="https://golang.org/pkg/strings#LastIndexByte">https://golang.org/pkg/strings#LastIndexByte</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#dirname-basename">https://hyperpolyglot.org/c#dirname-basename</a></li>
