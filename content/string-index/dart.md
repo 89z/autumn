@@ -5,6 +5,8 @@ tags = [ "dart" ]
 
 {{< r "a.dart" >}}
 
+<https://api.dart.dev/dart-core/String/indexOf.html>
+
 ## References
 
 - <https://hyperpolyglot.org/web#index-substr>

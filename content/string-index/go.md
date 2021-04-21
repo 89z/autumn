@@ -3,7 +3,21 @@ title = "Go"
 tags = [ "go" ]
 +++
 
+{{< r "a.go" >}}
+
 <https://golang.org/pkg/strings#Index>
+
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/strings#IndexAny>
+
+{{< r "c.go" >}}
+
+<https://golang.org/pkg/strings#IndexByte>
+
+{{< r "d.go" >}}
+
+<https://golang.org/pkg/strings#LastIndexByte>
 
 ## References
 

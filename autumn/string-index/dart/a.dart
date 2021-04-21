@@ -1,1 +1,3 @@
-"hello".indexOf("ll")
+void main() {
+   "hello".indexOf("ll")
+}
