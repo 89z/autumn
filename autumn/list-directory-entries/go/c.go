@@ -1,27 +1,18 @@
 package main
 
 import (
-   "fmt"
-   "os"
+   "io/fs"
    "path/filepath"
 )
 
-func walk(root string) ([]string, error) {
-   var a []string
-   e := filepath.Walk(root, func(s string, f os.FileInfo, e error) error {
-      if e != nil { return e }
-      if ! f.IsDir() {
-         a = append(a, s)
-      }
-      return nil
-   })
-   return a, e
+func walk(s string, d fs.DirEntry, e error) error {
+   if e != nil { return e }
+   if ! d.IsDir() {
+      println(s)
+   }
+   return nil
 }
 
 func main() {
-   a, e := walk("..")
-   if e != nil {
-      panic(e)
-   }
-   fmt.Println(a)
+   filepath.WalkDir("..", walk)
 }
