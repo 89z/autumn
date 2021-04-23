@@ -24,7 +24,7 @@
    <a href="/autumn/split-a-string/">Split a string</a> / Go
 </h1>
 <section class="page">
-   <time>Sun Apr 18 2021</time>
+   <time>Fri Apr 23 2021</time>
    
    <a href="/autumn/categories/string/">string</a>
    
@@ -148,9 +148,8 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">sep</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;west,north,east&#34;</span>, <span style="color:#e6db74">&#34;,&#34;</span>
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">SplitN</span>(<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">sep</span>, <span style="color:#ae81ff">2</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, <span style="color:#a6e22e">a</span>) <span style="color:#75715e">// [&#34;west&#34; &#34;north,east&#34;]
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">SplitN</span>(<span style="color:#e6db74">&#34;west,north,east&#34;</span>, <span style="color:#e6db74">&#34;,&#34;</span>, <span style="color:#ae81ff">2</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, <span style="color:#a6e22e">s</span>) <span style="color:#75715e">// [&#34;west&#34; &#34;north,east&#34;]
 </span><span style="color:#75715e"></span>}
 </code></pre></div>
 
