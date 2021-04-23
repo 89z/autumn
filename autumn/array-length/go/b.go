@@ -2,14 +2,14 @@ package main
 
 func main() {
    { // example 1
-      a := []string{"west", "east"}
-      n := len(a)
+      s := []string{"west", "east"}
+      n := len(s)
       println(n == 2)
    }
    { // example 2
-      a := make(chan string, 9)
-      a <- "west"
-      n := len(a)
+      s := make(chan string, 9)
+      s <- "west"
+      n := len(s)
       println(n == 1)
    }
 }

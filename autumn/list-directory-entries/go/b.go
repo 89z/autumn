@@ -6,9 +6,9 @@ import (
 )
 
 func main() {
-   a, e := filepath.Glob(`C:\*\LICENSE.txt`)
+   s, e := filepath.Glob(`C:\*\LICENSE.txt`)
    if e != nil {
       panic(e)
    }
-   fmt.Println(a)
+   fmt.Println(s)
 }

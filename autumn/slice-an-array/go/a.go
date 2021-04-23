@@ -1,15 +1,15 @@
 package main
 import "fmt"
 
-func pop(a *[]int) int {
-   d := len(*a)
-   e := (*a)[d - 1]
-   *a = (*a)[:d - 1]
+func pop(s *[]int) int {
+   d := len(*s)
+   e := (*s)[d - 1]
+   *s = (*s)[:d - 1]
    return e
 }
 
 func main() {
-   a := []int{0, 10, 20}
-   n := pop(&a)
-   fmt.Println(a, n)
+   s := []int{0, 10, 20}
+   n := pop(&s)
+   fmt.Println(s, n)
 }

@@ -3,13 +3,13 @@ import "strings"
 
 func main() {
    { // example 1
-      a := []string{"west", "east"}
-      s := strings.Join(a, ",")
-      println(s == "west,east")
+      s := []string{"west", "east"}
+      st := strings.Join(s, ",")
+      println(st == "west,east")
    }
    { // example 2
-      a := []string{"north"}
-      s := strings.Join(a, ",")
-      println(s == "north")
+      s := []string{"north"}
+      st := strings.Join(s, ",")
+      println(st == "north")
    }
 }

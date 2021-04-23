@@ -43,14 +43,14 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{
       {<span style="color:#e6db74">&#34;month&#34;</span>: <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;day&#34;</span>: <span style="color:#ae81ff">31</span>}, {<span style="color:#e6db74">&#34;month&#34;</span>: <span style="color:#ae81ff">11</span>, <span style="color:#e6db74">&#34;day&#34;</span>: <span style="color:#ae81ff">30</span>},
    }
    <span style="color:#a6e22e">f</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">d</span>, <span style="color:#a6e22e">e</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">bool</span> {
-      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">d</span>][<span style="color:#e6db74">&#34;day&#34;</span>] &lt; <span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">e</span>][<span style="color:#e6db74">&#34;day&#34;</span>]
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s</span>[<span style="color:#a6e22e">d</span>][<span style="color:#e6db74">&#34;day&#34;</span>] &lt; <span style="color:#a6e22e">s</span>[<span style="color:#a6e22e">e</span>][<span style="color:#e6db74">&#34;day&#34;</span>]
    }
-   <span style="color:#a6e22e">sort</span>.<span style="color:#a6e22e">Slice</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">f</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span>)
+   <span style="color:#a6e22e">sort</span>.<span style="color:#a6e22e">Slice</span>(<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">f</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">s</span>)
 }
 </code></pre></div>
 

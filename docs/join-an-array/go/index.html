@@ -40,14 +40,14 @@
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
    { <span style="color:#75715e">// example 1
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;west&#34;</span>, <span style="color:#e6db74">&#34;east&#34;</span>}
-      <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Join</span>(<span style="color:#a6e22e">a</span>, <span style="color:#e6db74">&#34;,&#34;</span>)
-      println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;west,east&#34;</span>)
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;west&#34;</span>, <span style="color:#e6db74">&#34;east&#34;</span>}
+      <span style="color:#a6e22e">st</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Join</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;,&#34;</span>)
+      println(<span style="color:#a6e22e">st</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;west,east&#34;</span>)
    }
    { <span style="color:#75715e">// example 2
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;north&#34;</span>}
-      <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Join</span>(<span style="color:#a6e22e">a</span>, <span style="color:#e6db74">&#34;,&#34;</span>)
-      println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;north&#34;</span>)
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;north&#34;</span>}
+      <span style="color:#a6e22e">st</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Join</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;,&#34;</span>)
+      println(<span style="color:#a6e22e">st</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;north&#34;</span>)
    }
 }
 </code></pre></div>

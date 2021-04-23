@@ -2,11 +2,10 @@ package main
 import "strings"
 
 func main() {
-   s := "west? east.txt"
-   var a []string
+   var s []string
    for _, r := range `"*/:<>?\|` {
-      a = append(a, string(r), "")
+      s = append(s, string(r), "")
    }
-   s = strings.NewReplacer(a...).Replace(s)
-   println(s == "west east.txt")
+   st := strings.NewReplacer(s...).Replace("west? east.txt")
+   println(st == "west east.txt")
 }

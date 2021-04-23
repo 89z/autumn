@@ -3,24 +3,24 @@ import "fmt"
 
 func main() {
    { // example 1
-      var a []int
-      a = append(a, 10, 11)
-      fmt.Println(a)
+      var s []int
+      s = append(s, 10, 11)
+      fmt.Println(s)
    }
    { // example 2
-      var a = []int{10, 11}
-      fmt.Println(a)
+      var s = []int{10, 11}
+      fmt.Println(s)
    }
    { // example 3
-      a := []int{10, 11}
-      fmt.Println(a)
+      s := []int{10, 11}
+      fmt.Println(s)
    }
    { // example 4
       type slice []interface{}
-      a := slice{
+      s := slice{
          slice{10, 11},
          slice{12, 13},
       }
-      fmt.Println(a)
+      fmt.Println(s)
    }
 }

@@ -1,14 +1,14 @@
 package main
 
 func main() {
-   a := []string{"west", "east"}
+   s := []string{"west", "east"}
    // example 1
-   for n, s := range a {
-      println(n, s)
+   for n, st := range s {
+      println(n, st)
    }
    // example 2
-   for n := range a {
-      s := a[n]
-      println(n, s)
+   for n := range s {
+      st := s[n]
+      println(n, st)
    }
 }
