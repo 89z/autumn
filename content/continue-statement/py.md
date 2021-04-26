@@ -5,7 +5,7 @@ tags = [ "python" ]
 
 {{< r "a.py" >}}
 
-<https://docs.python.org/release/reference/simple_stmts.html#continue>
+<https://docs.python.org/reference/simple_stmts.html#continue>
 
 ## References
 
