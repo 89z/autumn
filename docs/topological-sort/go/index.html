@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Topological sort / Go</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/topological-sort/">Topological sort</a> / Go
+</h1>
+<section class="page">
+   <time>Wed Apr 28 2021</time>
+   
+   <a href="/autumn/categories/array/">array</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">tertiary</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>][]<span style="color:#66d9ef">string</span>{
+      <span style="color:#e6db74">&#34;citron&#34;</span>: {<span style="color:#e6db74">&#34;green&#34;</span>, <span style="color:#e6db74">&#34;orange&#34;</span>},
+      <span style="color:#e6db74">&#34;green&#34;</span>: {<span style="color:#e6db74">&#34;blue&#34;</span>, <span style="color:#e6db74">&#34;yellow&#34;</span>},
+      <span style="color:#e6db74">&#34;orange&#34;</span>: {<span style="color:#e6db74">&#34;red&#34;</span>, <span style="color:#e6db74">&#34;yellow&#34;</span>},
+      <span style="color:#e6db74">&#34;purple&#34;</span>: {<span style="color:#e6db74">&#34;red&#34;</span>, <span style="color:#e6db74">&#34;blue&#34;</span>},
+      <span style="color:#e6db74">&#34;russet&#34;</span>: {<span style="color:#e6db74">&#34;orange&#34;</span>, <span style="color:#e6db74">&#34;purple&#34;</span>},
+      <span style="color:#e6db74">&#34;slate&#34;</span>: {<span style="color:#e6db74">&#34;green&#34;</span>, <span style="color:#e6db74">&#34;purple&#34;</span>},
+   }
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprint</span>(<span style="color:#a6e22e">tsort</span>(<span style="color:#a6e22e">tertiary</span>, <span style="color:#e6db74">&#34;slate&#34;</span>))
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;[blue red purple yellow green slate]&#34;</span> {
+      println(<span style="color:#66d9ef">true</span>)
+   } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;[blue yellow green red purple slate]&#34;</span> {
+      println(<span style="color:#66d9ef">true</span>)
+   } <span style="color:#66d9ef">else</span> {
+      println(<span style="color:#a6e22e">s</span>)
+   }
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">tsort</span>(<span style="color:#a6e22e">graph</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>][]<span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">end</span> <span style="color:#66d9ef">string</span>) []<span style="color:#66d9ef">string</span> {
+   <span style="color:#66d9ef">var</span> (
+      <span style="color:#a6e22e">b</span> = make(<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">bool</span>)
+      <span style="color:#a6e22e">l</span> []<span style="color:#66d9ef">string</span>
+      <span style="color:#a6e22e">s</span> = []<span style="color:#66d9ef">string</span>{<span style="color:#a6e22e">end</span>}
+   )
+   <span style="color:#66d9ef">for</span> len(<span style="color:#a6e22e">s</span>) &gt; <span style="color:#ae81ff">0</span> {
+      <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s</span>[len(<span style="color:#a6e22e">s</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]
+      <span style="color:#a6e22e">b</span>[<span style="color:#a6e22e">n</span>] = <span style="color:#66d9ef">true</span>
+      <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">graph</span>[<span style="color:#a6e22e">n</span>] {
+         <span style="color:#66d9ef">if</span> ! <span style="color:#a6e22e">b</span>[<span style="color:#a6e22e">m</span>] {
+            <span style="color:#a6e22e">s</span> = append(<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">m</span>)
+         }
+      }
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">s</span>[len(<span style="color:#a6e22e">s</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> <span style="color:#a6e22e">n</span> {
+         <span style="color:#a6e22e">s</span> = <span style="color:#a6e22e">s</span>[:len(<span style="color:#a6e22e">s</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]
+         <span style="color:#a6e22e">l</span> = append(<span style="color:#a6e22e">l</span>, <span style="color:#a6e22e">n</span>)
+      }
+   }
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">l</span>
+}
+</code></pre></div>
+
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://rosettacode.org/wiki/Topological_sort">https://rosettacode.org/wiki/Topological_sort</a></li>
+<li><a href="https://wikipedia.org/wiki/Topological_sorting">https://wikipedia.org/wiki/Topological_sorting</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
