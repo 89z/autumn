@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Topological sort / D</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/topological-sort/">Topological sort</a> / D
+</h1>
+<section class="page">
+   <time>Wed Apr 28 2021</time>
+   
+   <a href="/autumn/categories/array/">array</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-d" data-lang="d"><span style="color:#f92672">import</span> std.stdio<span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">string</span><span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">algorithm</span><span style="color:#f92672">,</span> std<span style="color:#f92672">.</span><span style="color:#a6e22e">range</span><span style="color:#f92672">;</span>
+ 
+<span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ArgumentException</span> <span style="color:#f92672">:</span> Exception <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">(</span><span style="color:#66d9ef">string</span> text<span style="color:#f92672">)</span> <span style="color:#66d9ef">pure</span> <span style="color:#66d9ef">nothrow</span> <span style="color:#a6e22e">@safe</span> <span style="color:#75715e">/*@nogc*/</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>text<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+ 
+<span style="color:#66d9ef">alias</span> TDependencies <span style="color:#f92672">=</span> <span style="color:#66d9ef">string</span><span style="color:#f92672">[][</span><span style="color:#66d9ef">string</span><span style="color:#f92672">];</span>
+ 
+<span style="color:#66d9ef">string</span><span style="color:#f92672">[][]</span> <span style="color:#a6e22e">topoSort</span><span style="color:#f92672">(</span>TDependencies d<span style="color:#f92672">)</span> <span style="color:#66d9ef">pure</span> <span style="color:#75715e">/*nothrow @safe*/</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">foreach</span> <span style="color:#f92672">(</span>immutable k<span style="color:#f92672">,</span> v<span style="color:#f92672">;</span> d<span style="color:#f92672">)</span>
+        d<span style="color:#f92672">[</span>k<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> v<span style="color:#f92672">.</span><span style="color:#a6e22e">sort</span><span style="color:#f92672">().</span><span style="color:#a6e22e">uniq</span><span style="color:#f92672">.</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">!(</span>s <span style="color:#f92672">=&gt;</span> s <span style="color:#f92672">!=</span> k<span style="color:#f92672">).</span><span style="color:#a6e22e">array</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">foreach</span> <span style="color:#f92672">(</span>immutable s<span style="color:#f92672">;</span> d<span style="color:#f92672">.</span><span style="color:#a6e22e">byValue</span><span style="color:#f92672">.</span><span style="color:#a6e22e">join</span><span style="color:#f92672">.</span><span style="color:#a6e22e">sort</span><span style="color:#f92672">().</span><span style="color:#a6e22e">uniq</span><span style="color:#f92672">)</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>s <span style="color:#f92672">!</span><span style="color:#66d9ef">in</span> d<span style="color:#f92672">)</span>
+            d<span style="color:#f92672">[</span>s<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#f92672">[];</span>
+ 
+    <span style="color:#66d9ef">string</span><span style="color:#f92672">[][]</span> sorted<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">string</span><span style="color:#f92672">[]</span> ordered<span style="color:#f92672">;</span>
+ 
+        <span style="color:#66d9ef">foreach</span> <span style="color:#f92672">(</span>immutable item<span style="color:#f92672">,</span> <span style="color:#66d9ef">const</span> dep<span style="color:#f92672">;</span> d<span style="color:#f92672">)</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>dep<span style="color:#f92672">.</span><span style="color:#a6e22e">empty</span><span style="color:#f92672">)</span>
+                ordered <span style="color:#f92672">~=</span> item<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>ordered<span style="color:#f92672">.</span><span style="color:#a6e22e">empty</span><span style="color:#f92672">)</span>
+            sorted <span style="color:#f92672">~=</span> ordered<span style="color:#f92672">.</span><span style="color:#a6e22e">sort</span><span style="color:#f92672">().</span><span style="color:#a6e22e">release</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">else</span>
+            <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+ 
+        TDependencies dd<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">foreach</span> <span style="color:#f92672">(</span>immutable item<span style="color:#f92672">,</span> <span style="color:#66d9ef">const</span> dep<span style="color:#f92672">;</span> d<span style="color:#f92672">)</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>ordered<span style="color:#f92672">.</span><span style="color:#a6e22e">canFind</span><span style="color:#f92672">(</span>item<span style="color:#f92672">))</span>
+                dd<span style="color:#f92672">[</span>item<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> dep<span style="color:#f92672">.</span><span style="color:#a6e22e">dup</span><span style="color:#f92672">.</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">!(</span>s <span style="color:#f92672">=&gt;</span> <span style="color:#f92672">!</span>ordered<span style="color:#f92672">.</span><span style="color:#a6e22e">canFind</span><span style="color:#f92672">(</span>s<span style="color:#f92672">)).</span><span style="color:#a6e22e">array</span><span style="color:#f92672">;</span>
+        d <span style="color:#f92672">=</span> dd<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+ 
+    <span style="color:#75715e">//if (!d.empty)
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>d<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span>
+        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> ArgumentException<span style="color:#f92672">(</span>format<span style="color:#f92672">(</span>
+            <span style="color:#e6db74">&#34;A cyclic dependency exists amongst:\n%s&#34;</span><span style="color:#f92672">,</span> d<span style="color:#f92672">));</span>
+ 
+    <span style="color:#66d9ef">return</span> sorted<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+ 
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    immutable data <span style="color:#f92672">=</span>
+<span style="color:#e6db74">&#34;des_system_lib std synopsys std_cell_lib des_system_lib dw02 dw01 ramlib ieee
+</span><span style="color:#e6db74">dw01           ieee dw01 dware gtech
+</span><span style="color:#e6db74">dw02           ieee dw02 dware
+</span><span style="color:#e6db74">dw03           std synopsys dware dw03 dw02 dw01 ieee gtech
+</span><span style="color:#e6db74">dw04           dw04 ieee dw01 dware gtech
+</span><span style="color:#e6db74">dw05           dw05 ieee dware
+</span><span style="color:#e6db74">dw06           dw06 ieee dware
+</span><span style="color:#e6db74">dw07           ieee dware
+</span><span style="color:#e6db74">dware          ieee dware
+</span><span style="color:#e6db74">gtech          ieee gtech
+</span><span style="color:#e6db74">ramlib         std ieee
+</span><span style="color:#e6db74">std_cell_lib   ieee std_cell_lib
+</span><span style="color:#e6db74">synopsys&#34;</span><span style="color:#f92672">;</span>
+ 
+    TDependencies deps<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">foreach</span> <span style="color:#f92672">(</span>immutable line<span style="color:#f92672">;</span> data<span style="color:#f92672">.</span><span style="color:#a6e22e">splitLines</span><span style="color:#f92672">)</span>
+        deps<span style="color:#f92672">[</span>line<span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]]</span> <span style="color:#f92672">=</span> line<span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">[</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">..</span> $<span style="color:#f92672">];</span>
+ 
+    <span style="color:#66d9ef">auto</span> depw <span style="color:#f92672">=</span> deps<span style="color:#f92672">.</span><span style="color:#a6e22e">dup</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">foreach</span> <span style="color:#f92672">(</span>immutable idx<span style="color:#f92672">,</span> <span style="color:#66d9ef">const</span> subOrder<span style="color:#f92672">;</span> depw<span style="color:#f92672">.</span><span style="color:#a6e22e">topoSort</span><span style="color:#f92672">)</span>
+        writefln<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;#%d : %s&#34;</span><span style="color:#f92672">,</span> idx <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">,</span>  subOrder<span style="color:#f92672">);</span>
+ 
+    writeln<span style="color:#f92672">;</span>
+    depw <span style="color:#f92672">=</span> deps<span style="color:#f92672">.</span><span style="color:#a6e22e">dup</span><span style="color:#f92672">;</span>
+    depw<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;dw01&#34;</span><span style="color:#f92672">]</span> <span style="color:#f92672">~=</span> <span style="color:#e6db74">&#34;dw04&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">foreach</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">const</span> subOrder<span style="color:#f92672">;</span> depw<span style="color:#f92672">.</span><span style="color:#a6e22e">topoSort</span><span style="color:#f92672">)</span> <span style="color:#75715e">// Should throw.
+</span><span style="color:#75715e"></span>        subOrder<span style="color:#f92672">.</span><span style="color:#a6e22e">writeln</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://rosettacode.org/wiki/Topological_sort">https://rosettacode.org/wiki/Topological_sort</a></li>
+<li><a href="https://wikipedia.org/wiki/Topological_sorting">https://wikipedia.org/wiki/Topological_sorting</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
