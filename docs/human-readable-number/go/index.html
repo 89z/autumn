@@ -24,7 +24,7 @@
    <a href="/autumn/human-readable-number/">Human readable number</a> / Go
 </h1>
 <section class="page">
-   <time>Sun Nov 15 2020</time>
+   <time>Sun May 2 2021</time>
    
    <a href="/autumn/categories/number/">number</a>
    
@@ -65,12 +65,12 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">numberFormat</span>(<span style="color:#a6e22e">d</span> <span style="color:#66d9ef">float64</span>) <span style="color:#66d9ef">string</span> {
-   <span style="color:#a6e22e">e</span>, <span style="color:#a6e22e">f</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">d</span>, <span style="color:#ae81ff">0</span>
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1e3</span> {
-      <span style="color:#a6e22e">e</span> <span style="color:#f92672">/=</span> <span style="color:#ae81ff">1e3</span>
-      <span style="color:#a6e22e">f</span><span style="color:#f92672">++</span>
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">e</span> <span style="color:#66d9ef">int</span>
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1000</span> {
+      <span style="color:#a6e22e">d</span> <span style="color:#f92672">/=</span> <span style="color:#ae81ff">1000</span>
+      <span style="color:#a6e22e">e</span><span style="color:#f92672">++</span>
    }
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%.3f&#34;</span>, <span style="color:#a6e22e">e</span>) <span style="color:#f92672">+</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34; k&#34;</span>, <span style="color:#e6db74">&#34; M&#34;</span>, <span style="color:#e6db74">&#34; G&#34;</span>}[<span style="color:#a6e22e">f</span>]
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%.3f&#34;</span>, <span style="color:#a6e22e">d</span>) <span style="color:#f92672">+</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34; k&#34;</span>, <span style="color:#e6db74">&#34; M&#34;</span>, <span style="color:#e6db74">&#34; G&#34;</span>}[<span style="color:#a6e22e">e</span>]
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {

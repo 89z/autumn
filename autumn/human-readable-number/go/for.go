@@ -2,12 +2,12 @@ package main
 import "fmt"
 
 func numberFormat(d float64) string {
-   e, f := d, 0
-   for e >= 1e3 {
-      e /= 1e3
-      f++
+   var e int
+   for d >= 1000 {
+      d /= 1000
+      e++
    }
-   return fmt.Sprintf("%.3f", e) + []string{"", " k", " M", " G"}[f]
+   return fmt.Sprintf("%.3f", d) + []string{"", " k", " M", " G"}[e]
 }
 
 func main() {
