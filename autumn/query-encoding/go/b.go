@@ -12,5 +12,5 @@ func decode(s string) url.Values {
 
 func main() {
    m := decode("west=left&east=right")
-   fmt.Println(m)
+   fmt.Println(m) // map[east:[right] west:[left]]
 }

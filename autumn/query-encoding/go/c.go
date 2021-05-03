@@ -6,5 +6,5 @@ func main() {
       "west": {"left"}, "east": {"right"},
    }
    s := m.Encode()
-   println(s)
+   println(s == "east=right&west=left")
 }
