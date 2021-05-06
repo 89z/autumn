@@ -24,7 +24,7 @@
    <a href="/autumn/extract-string-by-pattern/">Extract string by pattern</a> / Go
 </h1>
 <section class="page">
-   <time>Thu Jan 21 2021</time>
+   <time>Thu May 6 2021</time>
    
    <a href="/autumn/categories/string/">string</a>
    
@@ -39,9 +39,14 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;regexp&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;south north&#34;</span>)
-   <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;o..&#34;</span>).<span style="color:#a6e22e">Find</span>(<span style="color:#a6e22e">b</span>)
-   println(string(<span style="color:#a6e22e">c</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;out&#34;</span>)
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;o..&#34;</span>, <span style="color:#e6db74">&#34;p..&#34;</span>} {
+      <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;south north&#34;</span>)
+      <span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#a6e22e">s</span>)
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Match</span>(<span style="color:#a6e22e">b</span>) {
+         <span style="color:#a6e22e">b</span> = <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#a6e22e">b</span>)
+         println(string(<span style="color:#a6e22e">b</span>))
+      }
+   }
 }
 </code></pre></div>
 

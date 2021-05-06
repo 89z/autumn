@@ -2,7 +2,12 @@ package main
 import "regexp"
 
 func main() {
-   b := []byte("south north")
-   c := regexp.MustCompile("o..").Find(b)
-   println(string(c) == "out")
+   for _, s := range []string{"o..", "p.."} {
+      b := []byte("south north")
+      r := regexp.MustCompile(s)
+      if r.Match(b) {
+         b = r.Find(b)
+         println(string(b))
+      }
+   }
 }
