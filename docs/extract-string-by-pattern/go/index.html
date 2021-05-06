@@ -36,18 +36,29 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;regexp&#34;</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;regexp&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">find</span>(<span style="color:#a6e22e">pat</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">sub</span> []<span style="color:#66d9ef">byte</span>) ([]<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">Compile</span>(<span style="color:#a6e22e">pat</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">e</span> }
+   <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#a6e22e">sub</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;Find %v&#34;</span>, <span style="color:#a6e22e">pat</span>)
+   }
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">b</span>, <span style="color:#66d9ef">nil</span>
+}
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> []<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;o..&#34;</span>, <span style="color:#e6db74">&#34;p..&#34;</span>} {
-      <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;south north&#34;</span>)
-      <span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#a6e22e">s</span>)
-      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Match</span>(<span style="color:#a6e22e">b</span>) {
-         <span style="color:#a6e22e">b</span> = <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#a6e22e">b</span>)
-         println(string(<span style="color:#a6e22e">b</span>))
-      }
+   <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;o..&#34;</span>, []byte(<span style="color:#e6db74">&#34;south north&#34;</span>))
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      panic(<span style="color:#a6e22e">e</span>)
    }
-}
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%c\n&#34;</span>, <span style="color:#a6e22e">b</span>) <span style="color:#75715e">// [o u t]
+</span><span style="color:#75715e"></span>}
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/regexp#Regexp.Find">https://golang.org/pkg/regexp#Regexp.Find</a></p>
@@ -58,12 +69,29 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;regexp&#34;</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;regexp&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">findString</span>(<span style="color:#a6e22e">pat</span>, <span style="color:#a6e22e">sub</span> <span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">Compile</span>(<span style="color:#a6e22e">pat</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#a6e22e">e</span> }
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">FindString</span>(<span style="color:#a6e22e">sub</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;FindString %v&#34;</span>, <span style="color:#a6e22e">pat</span>)
+   }
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s</span>, <span style="color:#66d9ef">nil</span>
+}
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;o..&#34;</span>).<span style="color:#a6e22e">FindString</span>(<span style="color:#e6db74">&#34;south north&#34;</span>)
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;out&#34;</span>)
-}
+   <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">findString</span>(<span style="color:#e6db74">&#34;o..&#34;</span>, <span style="color:#e6db74">&#34;south north&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      panic(<span style="color:#a6e22e">e</span>)
+   }
+   println(<span style="color:#a6e22e">s</span>) <span style="color:#75715e">// out
+</span><span style="color:#75715e"></span>}
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/regexp#Regexp.FindString">https://golang.org/pkg/regexp#Regexp.FindString</a></p>
@@ -74,13 +102,29 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;regexp&#34;</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;regexp&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">findStringSubmatch</span>(<span style="color:#a6e22e">pat</span>, <span style="color:#a6e22e">sub</span> <span style="color:#66d9ef">string</span>) ([]<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">Compile</span>(<span style="color:#a6e22e">pat</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">e</span> }
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">FindStringSubmatch</span>(<span style="color:#a6e22e">sub</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;FindStringSubmatch %v&#34;</span>, <span style="color:#a6e22e">pat</span>)
+   }
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>, <span style="color:#66d9ef">nil</span>
+}
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;south north&#34;</span>
-   <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;o(..)&#34;</span>).<span style="color:#a6e22e">FindStringSubmatch</span>(<span style="color:#a6e22e">s</span>)[<span style="color:#ae81ff">1</span>]
-   println(<span style="color:#a6e22e">t</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;ut&#34;</span>)
-}
+   <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">findStringSubmatch</span>(<span style="color:#e6db74">&#34;o(..)&#34;</span>, <span style="color:#e6db74">&#34;south north&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      panic(<span style="color:#a6e22e">e</span>)
+   }
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span>) <span style="color:#75715e">// [out, ut]
+</span><span style="color:#75715e"></span>}
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/regexp#Regexp.FindStringSubmatch">https://golang.org/pkg/regexp#Regexp.FindStringSubmatch</a></p>
@@ -91,13 +135,29 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;regexp&#34;</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;regexp&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">findSubmatch</span>(<span style="color:#a6e22e">pat</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">sub</span> []<span style="color:#66d9ef">byte</span>) ([][]<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">Compile</span>(<span style="color:#a6e22e">pat</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">e</span> }
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">FindSubmatch</span>(<span style="color:#a6e22e">sub</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;FindSubmatch %v&#34;</span>, <span style="color:#a6e22e">pat</span>)
+   }
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>, <span style="color:#66d9ef">nil</span>
+}
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;south north&#34;</span>)
-   <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;o(..)&#34;</span>).<span style="color:#a6e22e">FindSubmatch</span>(<span style="color:#a6e22e">b</span>)[<span style="color:#ae81ff">1</span>]
-   println(string(<span style="color:#a6e22e">c</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;ut&#34;</span>)
-}
+   <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">findSubmatch</span>(<span style="color:#e6db74">&#34;o(..)&#34;</span>, []byte(<span style="color:#e6db74">&#34;south north&#34;</span>))
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      panic(<span style="color:#a6e22e">e</span>)
+   }
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%c\n&#34;</span>, <span style="color:#a6e22e">a</span>) <span style="color:#75715e">// [[o u t] [u t]]
+</span><span style="color:#75715e"></span>}
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/regexp#Regexp.FindSubmatch">https://golang.org/pkg/regexp#Regexp.FindSubmatch</a></p>

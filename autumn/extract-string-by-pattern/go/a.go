@@ -1,13 +1,24 @@
 package main
-import "regexp"
+
+import (
+   "fmt"
+   "regexp"
+)
+
+func find(pat string, sub []byte) ([]byte, error) {
+   r, e := regexp.Compile(pat)
+   if e != nil { return nil, e }
+   b := r.Find(sub)
+   if b == nil {
+      return nil, fmt.Errorf("Find %v", pat)
+   }
+   return b, nil
+}
 
 func main() {
-   for _, s := range []string{"o..", "p.."} {
-      b := []byte("south north")
-      r := regexp.MustCompile(s)
-      if r.Match(b) {
-         b = r.Find(b)
-         println(string(b))
-      }
+   b, e := find("o..", []byte("south north"))
+   if e != nil {
+      panic(e)
    }
+   fmt.Printf("%c\n", b) // [o u t]
 }

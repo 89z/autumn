@@ -1,8 +1,24 @@
 package main
-import "regexp"
+
+import (
+   "fmt"
+   "regexp"
+)
+
+func findStringSubmatch(pat, sub string) ([]string, error) {
+   r, e := regexp.Compile(pat)
+   if e != nil { return nil, e }
+   a := r.FindStringSubmatch(sub)
+   if a == nil {
+      return nil, fmt.Errorf("FindStringSubmatch %v", pat)
+   }
+   return a, nil
+}
 
 func main() {
-   s := "south north"
-   t := regexp.MustCompile("o(..)").FindStringSubmatch(s)[1]
-   println(t == "ut")
+   a, e := findStringSubmatch("o(..)", "south north")
+   if e != nil {
+      panic(e)
+   }
+   fmt.Println(a) // [out, ut]
 }
