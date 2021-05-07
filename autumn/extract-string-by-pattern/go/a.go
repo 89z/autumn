@@ -6,19 +6,19 @@ import (
 )
 
 func find(pat string, sub []byte) ([]byte, error) {
-   r, e := regexp.Compile(pat)
-   if e != nil { return nil, e }
-   b := r.Find(sub)
-   if b == nil {
+   re, err := regexp.Compile(pat)
+   if err != nil { return nil, err }
+   match := re.Find(sub)
+   if match == nil {
       return nil, fmt.Errorf("Find %v", pat)
    }
-   return b, nil
+   return match, nil
 }
 
 func main() {
-   b, e := find("o..", []byte("south north"))
-   if e != nil {
-      panic(e)
+   match, err := find("o..", []byte("south north"))
+   if err != nil {
+      panic(err)
    }
-   fmt.Printf("%c\n", b) // [o u t]
+   fmt.Printf("%c\n", match) // [o u t]
 }

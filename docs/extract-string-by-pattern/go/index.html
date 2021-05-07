@@ -43,21 +43,21 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">find</span>(<span style="color:#a6e22e">pat</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">sub</span> []<span style="color:#66d9ef">byte</span>) ([]<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>) {
-   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">Compile</span>(<span style="color:#a6e22e">pat</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">e</span> }
-   <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#a6e22e">sub</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+   <span style="color:#a6e22e">re</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">Compile</span>(<span style="color:#a6e22e">pat</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span> }
+   <span style="color:#a6e22e">match</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">re</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#a6e22e">sub</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">match</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;Find %v&#34;</span>, <span style="color:#a6e22e">pat</span>)
    }
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">b</span>, <span style="color:#66d9ef">nil</span>
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">match</span>, <span style="color:#66d9ef">nil</span>
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;o..&#34;</span>, []byte(<span style="color:#e6db74">&#34;south north&#34;</span>))
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      panic(<span style="color:#a6e22e">e</span>)
+   <span style="color:#a6e22e">match</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;o..&#34;</span>, []byte(<span style="color:#e6db74">&#34;south north&#34;</span>))
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      panic(<span style="color:#a6e22e">err</span>)
    }
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%c\n&#34;</span>, <span style="color:#a6e22e">b</span>) <span style="color:#75715e">// [o u t]
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%c\n&#34;</span>, <span style="color:#a6e22e">match</span>) <span style="color:#75715e">// [o u t]
 </span><span style="color:#75715e"></span>}
 </code></pre></div>
 
@@ -76,21 +76,21 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">findString</span>(<span style="color:#a6e22e">pat</span>, <span style="color:#a6e22e">sub</span> <span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">error</span>) {
-   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">Compile</span>(<span style="color:#a6e22e">pat</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#a6e22e">e</span> }
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">FindString</span>(<span style="color:#a6e22e">sub</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> {
+   <span style="color:#a6e22e">re</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">Compile</span>(<span style="color:#a6e22e">pat</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#a6e22e">err</span> }
+   <span style="color:#a6e22e">match</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">re</span>.<span style="color:#a6e22e">FindString</span>(<span style="color:#a6e22e">sub</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">match</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;FindString %v&#34;</span>, <span style="color:#a6e22e">pat</span>)
    }
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s</span>, <span style="color:#66d9ef">nil</span>
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">match</span>, <span style="color:#66d9ef">nil</span>
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">findString</span>(<span style="color:#e6db74">&#34;o..&#34;</span>, <span style="color:#e6db74">&#34;south north&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      panic(<span style="color:#a6e22e">e</span>)
+   <span style="color:#a6e22e">match</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">findString</span>(<span style="color:#e6db74">&#34;o..&#34;</span>, <span style="color:#e6db74">&#34;south north&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      panic(<span style="color:#a6e22e">err</span>)
    }
-   println(<span style="color:#a6e22e">s</span>) <span style="color:#75715e">// out
+   println(<span style="color:#a6e22e">match</span>) <span style="color:#75715e">// out
 </span><span style="color:#75715e"></span>}
 </code></pre></div>
 
@@ -109,21 +109,21 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">findStringSubmatch</span>(<span style="color:#a6e22e">pat</span>, <span style="color:#a6e22e">sub</span> <span style="color:#66d9ef">string</span>) ([]<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">error</span>) {
-   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">Compile</span>(<span style="color:#a6e22e">pat</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">e</span> }
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">FindStringSubmatch</span>(<span style="color:#a6e22e">sub</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+   <span style="color:#a6e22e">re</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">Compile</span>(<span style="color:#a6e22e">pat</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span> }
+   <span style="color:#a6e22e">match</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">re</span>.<span style="color:#a6e22e">FindStringSubmatch</span>(<span style="color:#a6e22e">sub</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">match</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;FindStringSubmatch %v&#34;</span>, <span style="color:#a6e22e">pat</span>)
    }
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>, <span style="color:#66d9ef">nil</span>
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">match</span>, <span style="color:#66d9ef">nil</span>
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">findStringSubmatch</span>(<span style="color:#e6db74">&#34;o(..)&#34;</span>, <span style="color:#e6db74">&#34;south north&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      panic(<span style="color:#a6e22e">e</span>)
+   <span style="color:#a6e22e">match</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">findStringSubmatch</span>(<span style="color:#e6db74">&#34;o(..)&#34;</span>, <span style="color:#e6db74">&#34;south north&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      panic(<span style="color:#a6e22e">err</span>)
    }
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span>) <span style="color:#75715e">// [out, ut]
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">match</span>) <span style="color:#75715e">// [out, ut]
 </span><span style="color:#75715e"></span>}
 </code></pre></div>
 
@@ -142,21 +142,21 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">findSubmatch</span>(<span style="color:#a6e22e">pat</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">sub</span> []<span style="color:#66d9ef">byte</span>) ([][]<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>) {
-   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">Compile</span>(<span style="color:#a6e22e">pat</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">e</span> }
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">FindSubmatch</span>(<span style="color:#a6e22e">sub</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+   <span style="color:#a6e22e">re</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">Compile</span>(<span style="color:#a6e22e">pat</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span> }
+   <span style="color:#a6e22e">match</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">re</span>.<span style="color:#a6e22e">FindSubmatch</span>(<span style="color:#a6e22e">sub</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">match</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;FindSubmatch %v&#34;</span>, <span style="color:#a6e22e">pat</span>)
    }
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>, <span style="color:#66d9ef">nil</span>
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">match</span>, <span style="color:#66d9ef">nil</span>
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">findSubmatch</span>(<span style="color:#e6db74">&#34;o(..)&#34;</span>, []byte(<span style="color:#e6db74">&#34;south north&#34;</span>))
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      panic(<span style="color:#a6e22e">e</span>)
+   <span style="color:#a6e22e">match</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">findSubmatch</span>(<span style="color:#e6db74">&#34;o(..)&#34;</span>, []byte(<span style="color:#e6db74">&#34;south north&#34;</span>))
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      panic(<span style="color:#a6e22e">err</span>)
    }
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%c\n&#34;</span>, <span style="color:#a6e22e">a</span>) <span style="color:#75715e">// [[o u t] [u t]]
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%c\n&#34;</span>, <span style="color:#a6e22e">match</span>) <span style="color:#75715e">// [[o u t] [u t]]
 </span><span style="color:#75715e"></span>}
 </code></pre></div>
 

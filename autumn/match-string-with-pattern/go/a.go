@@ -1,8 +1,11 @@
 package main
-import "regexp"
+
+import (
+   "fmt"
+   "regexp"
+)
 
 func main() {
-   s := "south north"
-   b := regexp.MustCompile("o..").MatchString(s)
-   println(b)
+   b, e := regexp.MatchString("o..", "south north")
+   fmt.Println(b, e)
 }

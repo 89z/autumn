@@ -5,6 +5,10 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
+<https://golang.org/pkg/regexp#MatchString>
+
+{{< r "b.go" >}}
+
 <https://golang.org/pkg/regexp#Regexp.MatchString>
 
 ## References
