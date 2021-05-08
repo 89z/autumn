@@ -1,10 +1,18 @@
 package main
 
 import (
+   "fmt"
    "strings"
 )
 
 func main() {
-   s := strings.SplitN("west,north,east", ",", 2)
-   fmt.Printf("%q\n", s) // ["west" "north,east"]
+   for _, t := range []struct{s, sep string} {
+      {"", ""},             // []
+      {"", ","},            // [""]
+      {"north", ""},        // ["n" "o" "r" "t" "h"]
+      {"south,north", ","}, // ["south" "north"]
+   } {
+      a := strings.Split(t.s, t.sep)
+      fmt.Printf("%q\n", a)
+   }
 }

@@ -2,16 +2,15 @@ package main
 
 import (
    "fmt"
+   "strings"
 )
 
 func main() {
-   for _, t := range []struct{st, sep string} {
-      {"", ""},             // []
-      {"", ","},            // [""]
-      {"north", ""},        // ["n" "o" "r" "t" "h"]
-      {"south,north", ","}, // ["south" "north"]
-   } {
-      s := strings.Split(t.st, t.sep)
-      fmt.Printf("%q\n", s)
+   r := strings.NewReader("north east\nsouth west\n")
+   for {
+      var s, t string
+      _, e := fmt.Fscanln(r, &s, &t)
+      if e != nil { break }
+      fmt.Printf("%q %q\n", s, t)
    }
 }
