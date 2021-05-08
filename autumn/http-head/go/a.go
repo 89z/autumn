@@ -1,12 +1,17 @@
 package main
-import "net/http"
 
-func head(s string) bool {
-   r, e := http.Head(s)
-   return e == nil && r.StatusCode == 200
-}
+import (
+   "fmt"
+   "net/http"
+)
 
 func main() {
-   b := head("http://speedtest.lax.hivelocity.net")
-   println(b)
+   {
+      r, e := http.Head("http://speedtest.lax.hivelocity.net")
+      println(r.StatusCode == 200, e == nil)
+   }
+   {
+      r, e := http.Head("http://speedtest.lax.hivelocity.net/404")
+      println(r.StatusCode == 404, e == nil)
+   }
 }

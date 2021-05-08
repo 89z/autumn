@@ -5,8 +5,8 @@ import (
    "net/http"
 )
 
-func head(s string) error {
-   req, e := http.NewRequest("HEAD", s, nil)
+func head(addr string) error {
+   req, e := http.NewRequest("HEAD", addr, nil)
    if e != nil { return e }
    res, e := new(http.Client).Do(req)
    if e != nil { return e }

@@ -15,6 +15,10 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/os/exec#Cmd.Stdout>
 
+{{< r "d.go" >}}
+
+<https://golang.org/pkg/os/exec#Cmd.StdoutPipe>
+
 ## References
 
 - <https://hyperpolyglot.org/c#processes-environment>

@@ -15,6 +15,10 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/math/big#Int.Exp>
 
+{{< r "d.go" >}}
+
+<https://golang.org/ref/spec#Operators>
+
 ## References
 
 - <https://hyperpolyglot.org/c#power>

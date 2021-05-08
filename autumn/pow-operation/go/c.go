@@ -5,13 +5,12 @@ import (
    "math/big"
 )
 
-func pow(d, e int64) *big.Int {
-   return new(big.Int).Exp(
-      big.NewInt(d), big.NewInt(e), nil,
-   )
+func pow(a, b int64) *big.Int {
+   c, d := big.NewInt(a), big.NewInt(b)
+   return new(big.Int).Exp(c, d, nil)
 }
 
 func main() {
    n := pow(10, 5)
-   fmt.Println(n)
+   fmt.Println(n) // 100000
 }

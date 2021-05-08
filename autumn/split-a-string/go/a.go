@@ -6,7 +6,7 @@ import (
 )
 
 func comma(s []byte, b bool) (int, []byte, error) {
-   n := bytes.IndexRune(s, ',')
+   n := bytes.IndexByte(s, ',')
    switch {
    case b:     return 0,      nil,   nil
    case n < 0: return len(s), s,     nil

@@ -7,10 +7,21 @@ import (
 )
 
 func main() {
-   s := "north,east,south,west"
-   r, e := csv.NewReader(strings.NewReader(s)).Read()
-   if e != nil {
-      panic(e)
+   {
+      r := csv.NewReader(strings.NewReader("west,north,east"))
+      s, e := r.Read()
+      if e != nil {
+         panic(e)
+      }
+      fmt.Println(s)
    }
-   fmt.Printf("%q\n", r)
+   {
+      r := csv.NewReader(strings.NewReader("west north east"))
+      r.Comma = ' '
+      s, e := r.Read()
+      if e != nil {
+         panic(e)
+      }
+      fmt.Println(s)
+   }
 }

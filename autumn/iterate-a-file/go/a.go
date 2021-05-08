@@ -8,7 +8,7 @@ import (
 func main() {
    file, e := os.Open("a.go")
    if e != nil {
-      panci(e)
+      panic(e)
    }
    defer file.Close()
    buf := bufio.NewScanner(file)

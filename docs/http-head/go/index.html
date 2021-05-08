@@ -24,7 +24,7 @@
    <a href="/autumn/http-head/">HTTP HEAD</a> / Go
 </h1>
 <section class="page">
-   <time>Sat Dec 19 2020</time>
+   <time>Fri May 7 2021</time>
    
    <a href="/autumn/categories/network/">network</a>
    
@@ -36,16 +36,21 @@
 
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;net/http&#34;</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">head</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">bool</span> {
-   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Head</span>(<span style="color:#a6e22e">s</span>)
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">StatusCode</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">200</span>
-}
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;net/http&#34;</span>
+)
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">head</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>)
-   println(<span style="color:#a6e22e">b</span>)
+   {
+      <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Head</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>)
+      println(<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">StatusCode</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">200</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span>)
+   }
+   {
+      <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Head</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net/404&#34;</span>)
+      println(<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">StatusCode</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">404</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span>)
+   }
 }
 </code></pre></div>
 
@@ -63,8 +68,8 @@
    <span style="color:#e6db74">&#34;net/http&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">head</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">error</span> {
-   <span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;HEAD&#34;</span>, <span style="color:#a6e22e">s</span>, <span style="color:#66d9ef">nil</span>)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">head</span>(<span style="color:#a6e22e">addr</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">error</span> {
+   <span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;HEAD&#34;</span>, <span style="color:#a6e22e">addr</span>, <span style="color:#66d9ef">nil</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span> }
    <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> new(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Client</span>).<span style="color:#a6e22e">Do</span>(<span style="color:#a6e22e">req</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span> }
