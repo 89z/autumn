@@ -2,6 +2,6 @@ package main
 import "path"
 
 func main() {
-   s := path.Dir("C:/go/README.md")
-   println(s == "C:/go")
+   dir, base := path.Split("C:/go/README.md")
+   println(dir == "C:/go/", base == "README.md")
 }

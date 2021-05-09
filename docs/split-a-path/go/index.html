@@ -24,7 +24,7 @@
    <a href="/autumn/split-a-path/">Split a path</a> / Go
 </h1>
 <section class="page">
-   <time>Tue Apr 20 2021</time>
+   <time>Sat May 8 2021</time>
    
    <a href="/autumn/categories/path/">path</a>
    
@@ -55,8 +55,8 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;path&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Dir</span>(<span style="color:#e6db74">&#34;C:/go/README.md&#34;</span>)
-   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;C:/go&#34;</span>)
+   <span style="color:#a6e22e">dir</span>, <span style="color:#a6e22e">base</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#e6db74">&#34;C:/go/README.md&#34;</span>)
+   println(<span style="color:#a6e22e">dir</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;C:/go/&#34;</span>, <span style="color:#a6e22e">base</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;README.md&#34;</span>)
 }
 </code></pre></div>
 

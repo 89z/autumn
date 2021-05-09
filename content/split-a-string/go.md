@@ -3,13 +3,17 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "fmt.go" >}}
+{{< r "a.go" >}}
 
-<https://golang.org/pkg/fmt>
+<https://golang.org/pkg/bufio>
 
-{{< r "strconv.go" >}}
+{{< r "b.go" >}}
 
-<https://golang.org/pkg/strconv>
+<https://golang.org/pkg/strings#IndexByte>
+
+{{< r "c.go" >}}
+
+<https://golang.org/pkg/strings#Split>
 
 ## References
 
