@@ -15,6 +15,10 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/strings#Split>
 
+{{< r "d.go" >}}
+
+<https://golang.org/pkg/strings#SplitN>
+
 ## References
 
 - <https://hyperpolyglot.org/c#split>
