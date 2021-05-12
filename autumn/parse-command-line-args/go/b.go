@@ -14,7 +14,7 @@ func main() {
    if flag.NArg() != 1 {
       println("add [flags] <stem>")
       flag.PrintDefaults()
-      os.Exit(1)
+      return
    }
 
    stem := flag.Arg(0)

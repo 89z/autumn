@@ -24,7 +24,7 @@
    <a href="/autumn/parse-command-line-args/">Parse command line arguments</a> / Go
 </h1>
 <section class="page">
-   <time>Wed Dec 16 2020</time>
+   <time>Tue May 11 2021</time>
    
    <a href="/autumn/categories/system/">system</a>
    
@@ -50,7 +50,7 @@
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">NArg</span>() <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span> {
       println(<span style="color:#e6db74">&#34;add [flags] &lt;stem&gt;&#34;</span>)
       <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">PrintDefaults</span>()
-      <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
+      <span style="color:#66d9ef">return</span>
    }
 
    <span style="color:#a6e22e">stem</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Arg</span>(<span style="color:#ae81ff">0</span>)
@@ -81,7 +81,7 @@
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">NArg</span>() <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span> {
       println(<span style="color:#e6db74">&#34;add [flags] &lt;stem&gt;&#34;</span>)
       <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">PrintDefaults</span>()
-      <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#ae81ff">1</span>)
+      <span style="color:#66d9ef">return</span>
    }
 
    <span style="color:#a6e22e">stem</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Arg</span>(<span style="color:#ae81ff">0</span>)
