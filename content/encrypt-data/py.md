@@ -3,4 +3,4 @@ title = "Python"
 tags = [ "python" ]
 +++
 
-<https://docs.python.org/library/crypto.html>
+<https://github.com/pyca/cryptography>
