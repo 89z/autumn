@@ -2,30 +2,35 @@ package main
 
 import (
    "fmt"
-   "io"
    "net/http"
+   "os"
 )
 
-type progress struct {
-   io.Reader
-   total int
-}
-
-func (p *progress) Read(b []byte) (int, error) {
-   n, e := p.Reader.Read(b)
-   if e != nil {
-      fmt.Println()
-   } else {
-      p.total += n
-      fmt.Printf("\rRead %9v", p.total)
-   }
-   return n, e
+func netrc() (string, string, error) {
+   home, e := os.UserHomeDir()
+   if e != nil { return "", "", e }
+   f, e := os.Open(home + "/_netrc")
+   if e != nil { return "", "", e }
+   defer f.Close()
+   var login, pass string
+   fmt.Fscanf(f, "default login %v password %v", &login, &pass)
+   return login, pass, nil
 }
 
 func main() {
-   get, e := http.Get("http://speedtest.lax.hivelocity.net/10Mio.dat")
+   login, pass, e := netrc()
    if e != nil {
       panic(e)
    }
-   io.ReadAll(&progress{Reader: get.Body})
+   req, e := http.NewRequest("GET", "https://api.github.com/rate_limit", nil)
+   if e != nil {
+      panic(e)
+   }
+   req.SetBasicAuth(login, pass)
+   res, e := new(http.Client).Do(req)
+   if e != nil {
+      panic(e)
+   }
+   defer res.Body.Close()
+   fmt.Println(res)
 }

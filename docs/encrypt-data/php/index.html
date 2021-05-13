@@ -39,14 +39,10 @@
 [$plain, $key] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;north east south&#39;</span>, <span style="color:#e6db74">&#39;KDKDKDKDKDKDKDKD&#39;</span>];
 
 <span style="color:#75715e"># example 1
-</span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">openssl_encrypt</span>($plain, <span style="color:#e6db74">&#39;aes-128-cbc&#39;</span>, $key, <span style="color:#a6e22e">iv</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;IVIVIVIVIVIVIVIV&#39;</span>);
-<span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;gGPdBt1qCJCbHye4HX1E9ZUhYmjPsvEi7AsIs3XOReg=&#39;</span>);
-
-<span style="color:#75715e"># example 2
 </span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">openssl_encrypt</span>($plain, <span style="color:#e6db74">&#39;aes-128-ecb&#39;</span>, $key, <span style="color:#a6e22e">OPENSSL_ZERO_PADDING</span>);
 <span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;4HbK4aRsiiLXEtT99V2Xgg==&#39;</span>);
 
-<span style="color:#75715e"># example 3
+<span style="color:#75715e"># example 2
 </span><span style="color:#75715e"></span>$s <span style="color:#f92672">=</span> <span style="color:#a6e22e">openssl_encrypt</span>($plain, <span style="color:#e6db74">&#39;bf-cbc&#39;</span>, $key, <span style="color:#a6e22e">iv</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;IVIVIVIV&#39;</span>);
 <span style="color:#a6e22e">var_dump</span>($s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;KQCQKBh5gosLsrIXqvB5tASOMDv4jVpM&#39;</span>);
 </code></pre></div>

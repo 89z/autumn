@@ -3,4 +3,4 @@ title = "Dart"
 tags = [ "dart" ]
 +++
 
-<https://github.com/dart-lang/crypto>
+<https://github.com/leocavalcante/encrypt/issues/211>
