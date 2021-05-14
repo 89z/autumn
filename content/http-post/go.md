@@ -5,7 +5,7 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/net/http#Client.Do>
+<https://golang.org/pkg/io#Pipe>
 
 {{< r "b.go" >}}
 
