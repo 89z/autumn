@@ -1,7 +1,0 @@
-[package]
-name = "pico-args"
-version = "0.1.0"
-authors = ["Steven"]
-edition = "2018"
-[dependencies]
-pico-args = ""

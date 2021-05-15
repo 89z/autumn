@@ -7,7 +7,7 @@ if ($argc == 1) {
 -s string
    suffix
 ';
-   exit(1);
+   exit;
 }
 
 $m = getopt('p:s:', [], $n);

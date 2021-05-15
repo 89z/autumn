@@ -3,12 +3,6 @@ title = "Rust"
 tags = [ "rust" ]
 +++
 
-0 deps:
-
-{{< r "pico-args/src/main.rs" >}}
-
-<https://lib.rs/crates/pico-args>
-
 1 dep:
 
 {{< r "getopts/src/main.rs" >}}

@@ -9,7 +9,7 @@ void main(a) {
 
    if (m.rest.length != 1) {
       print('add [flags] <stem>\n' + p.usage);
-      exit(1);
+      return;
    }
 
    var s = m['prefix'] + m.rest[0] + m['suffix'];
