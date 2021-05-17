@@ -6,30 +6,24 @@ import (
    "os"
 )
 
-func netrc() (string, string, error) {
-   home, e := os.UserHomeDir()
-   if e != nil { return "", "", e }
-   f, e := os.Open(home + "/_netrc")
-   if e != nil { return "", "", e }
-   defer f.Close()
+func get(addr string) (*http.Response, error) {
+   home, err := os.UserHomeDir()
+   if err != nil { return nil, err }
+   file, err := os.Open(home + "/_netrc")
+   if err != nil { return nil, err }
+   defer file.Close()
    var login, pass string
-   fmt.Fscanf(f, "default login %v password %v", &login, &pass)
-   return login, pass, nil
+   fmt.Fscanf(file, "default login %v password %v", &login, &pass)
+   req, err := http.NewRequest("GET", addr, nil)
+   if err != nil { return nil, err }
+   req.SetBasicAuth(login, pass)
+   return new(http.Client).Do(req)
 }
 
 func main() {
-   login, pass, e := netrc()
-   if e != nil {
-      panic(e)
-   }
-   req, e := http.NewRequest("GET", "https://api.github.com/rate_limit", nil)
-   if e != nil {
-      panic(e)
-   }
-   req.SetBasicAuth(login, pass)
-   res, e := new(http.Client).Do(req)
-   if e != nil {
-      panic(e)
+   res, err := get("https://api.github.com/rate_limit")
+   if err != nil {
+      panic(err)
    }
    defer res.Body.Close()
    fmt.Println(res)
