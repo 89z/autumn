@@ -6,7 +6,7 @@ import (
    "os"
 )
 
-func get(addr string) (*http.Response, error) {
+func netrc(addr string) (*http.Request, error) {
    home, err := os.UserHomeDir()
    if err != nil { return nil, err }
    file, err := os.Open(home + "/_netrc")
@@ -17,14 +17,17 @@ func get(addr string) (*http.Response, error) {
    req, err := http.NewRequest("GET", addr, nil)
    if err != nil { return nil, err }
    req.SetBasicAuth(login, pass)
-   return new(http.Client).Do(req)
+   return req, nil
 }
 
 func main() {
-   res, err := get("https://api.github.com/rate_limit")
+   req, err := netrc("https://api.github.com/rate_limit")
    if err != nil {
       panic(err)
    }
-   defer res.Body.Close()
+   res, err := new(http.Client).Do(req)
+   if err != nil {
+      panic(err)
+   }
    fmt.Println(res)
 }

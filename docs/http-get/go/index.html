@@ -93,7 +93,7 @@
    <span style="color:#e6db74">&#34;os&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">addr</span> <span style="color:#66d9ef">string</span>) (<span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Response</span>, <span style="color:#66d9ef">error</span>) {
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">netrc</span>(<span style="color:#a6e22e">addr</span> <span style="color:#66d9ef">string</span>) (<span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>, <span style="color:#66d9ef">error</span>) {
    <span style="color:#a6e22e">home</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">UserHomeDir</span>()
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span> }
    <span style="color:#a6e22e">file</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#a6e22e">home</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/_netrc&#34;</span>)
@@ -104,15 +104,18 @@
    <span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#a6e22e">addr</span>, <span style="color:#66d9ef">nil</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span> }
    <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">SetBasicAuth</span>(<span style="color:#a6e22e">login</span>, <span style="color:#a6e22e">pass</span>)
-   <span style="color:#66d9ef">return</span> new(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Client</span>).<span style="color:#a6e22e">Do</span>(<span style="color:#a6e22e">req</span>)
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">req</span>, <span style="color:#66d9ef">nil</span>
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;https://api.github.com/rate_limit&#34;</span>)
+   <span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">netrc</span>(<span style="color:#e6db74">&#34;https://api.github.com/rate_limit&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       panic(<span style="color:#a6e22e">err</span>)
    }
-   <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">Body</span>.<span style="color:#a6e22e">Close</span>()
+   <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> new(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Client</span>).<span style="color:#a6e22e">Do</span>(<span style="color:#a6e22e">req</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      panic(<span style="color:#a6e22e">err</span>)
+   }
    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">res</span>)
 }
 </code></pre></div>
