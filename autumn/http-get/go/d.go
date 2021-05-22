@@ -23,9 +23,10 @@ func (p *progress) Read(b []byte) (int, error) {
 }
 
 func main() {
-   get, e := http.Get("http://speedtest.lax.hivelocity.net/10Mio.dat")
+   r, e := http.Get("http://speedtest.lax.hivelocity.net/10Mio.dat")
    if e != nil {
       panic(e)
    }
-   io.ReadAll(&progress{Reader: get.Body})
+   defer r.Body.Close()
+   io.ReadAll(&progress{Reader: r.Body})
 }

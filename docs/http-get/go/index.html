@@ -24,7 +24,7 @@
    <a href="/autumn/http-get/">HTTP GET</a> / Go
 </h1>
 <section class="page">
-   <time>Mon May 17 2021</time>
+   <time>Sat May 22 2021</time>
    
    <a href="/autumn/categories/network/">network</a>
    
@@ -152,11 +152,12 @@
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">get</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net/10Mio.dat&#34;</span>)
+   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net/10Mio.dat&#34;</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       panic(<span style="color:#a6e22e">e</span>)
    }
-   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">progress</span>{<span style="color:#a6e22e">Reader</span>: <span style="color:#a6e22e">get</span>.<span style="color:#a6e22e">Body</span>})
+   <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Body</span>.<span style="color:#a6e22e">Close</span>()
+   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">progress</span>{<span style="color:#a6e22e">Reader</span>: <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Body</span>})
 }
 </code></pre></div>
 
