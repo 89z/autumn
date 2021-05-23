@@ -8,7 +8,7 @@ import (
 func numberFormat(d float64) string {
    e := int(math.Log10(d)) / 3
    f := d / math.Pow10(e * 3)
-   return fmt.Sprintf("%.3f", f) + []string{"", " k", " M", " G"}[e]
+   return fmt.Sprintf("%.3f", f) + []string{1: " k", " M", " G"}[e]
 }
 
 func main() {
