@@ -2,6 +2,8 @@ package main
 import "os"
 
 func main() {
-   s := os.Getenv("USERPROFILE")
-   println(s == `C:\Users\Steven`)
+   a := os.Environ()
+   for _, s := range a {
+      println(s)
+   }
 }
