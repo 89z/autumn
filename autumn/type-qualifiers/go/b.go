@@ -1,6 +1,6 @@
 package main
-var n = 10
 
 func main() {
+   var n = 10
    println(n)
 }

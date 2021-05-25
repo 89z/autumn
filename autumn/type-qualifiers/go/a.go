@@ -1,6 +1,6 @@
 package main
-const n = 10
 
 func main() {
+   const n = 10
    println(n)
 }

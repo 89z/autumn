@@ -1,7 +1,7 @@
 +++
 title = "Type qualifiers"
 categories = [ "reference" ]
-date = 2020-09-11
+date = 2021-05-25
 filename = "umber/js/youtube.js"
 substr = ' const '
 +++
