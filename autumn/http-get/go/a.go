@@ -10,5 +10,6 @@ func main() {
    if e != nil {
       panic(e)
    }
+   defer r.Body.Close()
    os.Stdout.ReadFrom(r.Body)
 }
