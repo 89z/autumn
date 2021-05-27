@@ -24,7 +24,7 @@
    <a href="/autumn/split-a-string/">Split a string</a> / Go
 </h1>
 <section class="page">
-   <time>Fri May 21 2021</time>
+   <time>Thu May 27 2021</time>
    
    <a href="/autumn/categories/string/">string</a>
    
@@ -57,6 +57,45 @@
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/bufio">https://golang.org/pkg/bufio</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strings&#34;</span>
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">scanner</span> <span style="color:#66d9ef">struct</span> {
+   <span style="color:#a6e22e">sep</span> <span style="color:#66d9ef">byte</span>
+   <span style="color:#a6e22e">done</span> <span style="color:#66d9ef">bool</span>
+   <span style="color:#a6e22e">text</span>, <span style="color:#a6e22e">todo</span> <span style="color:#66d9ef">string</span>
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">newScanner</span>(<span style="color:#a6e22e">todo</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">sep</span> <span style="color:#66d9ef">byte</span>) <span style="color:#a6e22e">scanner</span> {
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">scanner</span>{<span style="color:#a6e22e">todo</span>: <span style="color:#a6e22e">todo</span>, <span style="color:#a6e22e">sep</span>: <span style="color:#a6e22e">sep</span>}
+}
+
+<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">s</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">scanner</span>) <span style="color:#a6e22e">scan</span>() <span style="color:#66d9ef">bool</span> {
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">done</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span> }
+   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">IndexByte</span>(<span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">todo</span>, <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">sep</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> {
+      <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">text</span>, <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">done</span> = <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">todo</span>, <span style="color:#66d9ef">true</span>
+   } <span style="color:#66d9ef">else</span> {
+      <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">text</span>, <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">todo</span> = <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">todo</span>[:<span style="color:#a6e22e">n</span>], <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">todo</span>[<span style="color:#a6e22e">n</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>:]
+   }
+   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">newScanner</span>(<span style="color:#e6db74">&#34;north,east,south,west&#34;</span>, <span style="color:#e6db74">&#39;,&#39;</span>)
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">scan</span>() {
+      println(<span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">text</span>)
+   }
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/fmt">https://golang.org/pkg/fmt</a></p>
 
 
 

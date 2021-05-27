@@ -9,13 +9,17 @@ tags = [ "go" ]
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/strings#IndexByte>
+<https://golang.org/pkg/fmt>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/strings#Split>
+<https://golang.org/pkg/strings#IndexByte>
 
 {{< r "d.go" >}}
+
+<https://golang.org/pkg/strings#Split>
+
+{{< r "e.go" >}}
 
 <https://golang.org/pkg/strings#SplitN>
 
