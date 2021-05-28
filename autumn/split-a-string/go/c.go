@@ -1,30 +1,30 @@
 package main
-import "strings"
 
-type scanner struct {
-   sep byte
-   done bool
-   text, todo string
-}
+import (
+   "fmt"
+   "strings"
+)
 
-func newScanner(todo string, sep byte) scanner {
-   return scanner{todo: todo, sep: sep}
-}
+type comma struct { tok string }
 
-func (s *scanner) scan() bool {
-   if s.done { return false }
-   n := strings.IndexByte(s.todo, s.sep)
-   if n == -1 {
-      s.text, s.done = s.todo, true
-   } else {
-      s.text, s.todo = s.todo[:n], s.todo[n + 1:]
+func (c *comma) Scan(state fmt.ScanState, verb rune) error {
+   tok, err := state.Token(false, func(r rune) bool {
+      return r != ','
+   })
+   if err != nil { return err }
+   if _, _, err := state.ReadRune(); err != nil {
+      if len(tok) == 0 { return err }
    }
-   return true
+   c.tok = string(tok)
+   return nil
 }
 
 func main() {
-   s := newScanner("north,east,south,west", ',')
-   for s.scan() {
-      println(s.text)
+   r := strings.NewReader("north,east,south,west")
+   for {
+      var c comma
+      _, err := fmt.Fscan(r, &c)
+      if err != nil { break }
+      println(c.tok)
    }
 }

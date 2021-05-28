@@ -5,15 +5,10 @@ import (
    "strings"
 )
 
-const s = `north
-east
-south
-west
-`
-
 func main() {
-   b := bufio.NewScanner(strings.NewReader(s))
-   for b.Scan() {
-      println(b.Text())
+   r := strings.NewReader("North\nEast\nSouth\nWest")
+   s := bufio.NewScanner(r)
+   for s.Scan() {
+      println(s.Text())
    }
 }

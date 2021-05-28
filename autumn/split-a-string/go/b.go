@@ -1,30 +1,25 @@
 package main
-import "strings"
 
-type scanner struct {
-   sep byte
-   done bool
-   text, todo string
-}
+import (
+   "bufio"
+   "strings"
+)
 
-func newScanner(todo string, sep byte) scanner {
-   return scanner{todo: todo, sep: sep}
-}
-
-func (s *scanner) scan() bool {
-   if s.done { return false }
-   n := strings.IndexByte(s.todo, s.sep)
-   if n == -1 {
-      s.text, s.done = s.todo, true
-   } else {
-      s.text, s.todo = s.todo[:n], s.todo[n + 1:]
+func comma(b []byte, eof bool) (int, []byte, error) {
+   if eof { return 0, nil, nil }
+   for n := range b {
+      if b[n] == ',' {
+         return n+1, b[:n], nil
+      }
    }
-   return true
+   return len(b), b, nil
 }
 
 func main() {
-   s := newScanner("north,east,south,west", ',')
-   for s.scan() {
-      println(s.text)
+   r := strings.NewReader("north,east,south,west")
+   s := bufio.NewScanner(r)
+   s.Split(comma)
+   for s.Scan() {
+      println(s.Text())
    }
 }
