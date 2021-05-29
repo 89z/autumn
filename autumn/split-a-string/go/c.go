@@ -11,9 +11,13 @@ func (c *comma) Scan(state fmt.ScanState, verb rune) error {
    tok, err := state.Token(false, func(r rune) bool {
       return r != ','
    })
-   if err != nil { return err }
+   if err != nil {
+      return err
+   }
    if _, _, err := state.ReadRune(); err != nil {
-      if len(tok) == 0 { return err }
+      if len(tok) == 0 {
+         return err
+      }
    }
    c.tok = string(tok)
    return nil
