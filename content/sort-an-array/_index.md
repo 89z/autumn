@@ -1,7 +1,7 @@
 +++
 title = "Sort an array"
 categories = [ "array" ]
-date = 2020-09-22
+date = 2021-05-30
 filename = 'x\musicbrainz\musicbrainz.go'
 substr = ' sort.Slice('
 +++
