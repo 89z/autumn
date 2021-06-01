@@ -1,19 +1,24 @@
 package main
+import "os"
 
 func main() {
-   var (
-      r = '\x43'
-      n int
-   )
-
-   switch r {
-   case 'A':
-      n = 0x41
-   case 'B', 'b':
-      n = 0x42
+   n := len(os.Args)
+   // example 1
+   switch n {
+   case 1:
+      println("one")
+   case 2, 3:
+      println("some")
    default:
-      n = int(r)
+      println("more")
    }
-
-   println(n == 0x43)
+   // example 2
+   switch {
+   case n == 1:
+      println("one")
+   case n == 2, n == 3:
+      println("some")
+   default:
+      println("more")
+   }
 }
