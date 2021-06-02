@@ -24,7 +24,7 @@
    <a href="/autumn/file-to-variable/">File to variable</a> / Go
 </h1>
 <section class="page">
-   <time>Tue Dec 15 2020</time>
+   <time>Wed Jun 2 2021</time>
    
    <a href="/autumn/categories/input-output/">input-output</a>
    
@@ -45,6 +45,7 @@
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">read</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) ([]<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>) {
    <span style="color:#a6e22e">f</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#a6e22e">s</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">e</span> }
+   <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">Close</span>()
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#a6e22e">f</span>)
 }
 

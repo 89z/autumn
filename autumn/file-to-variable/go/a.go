@@ -8,6 +8,7 @@ import (
 func read(s string) ([]byte, error) {
    f, e := os.Open(s)
    if e != nil { return nil, e }
+   defer f.Close()
    return io.ReadAll(f)
 }
 
