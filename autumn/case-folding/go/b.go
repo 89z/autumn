@@ -3,6 +3,6 @@ import "strings"
 
 func main() {
    s := "north"
-   t := strings.ToUpper(s)
-   println(t == "NORTH")
+   s = strings.ToUpper(s)
+   println(s == "NORTH")
 }
