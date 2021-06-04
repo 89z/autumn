@@ -7,6 +7,10 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/time#Now>
 
+{{< r "b.go" >}}
+
+<https://golang.org/pkg/time#Time.UTC>
+
 ## References
 
 - <https://hyperpolyglot.org/c#current-datetime>
