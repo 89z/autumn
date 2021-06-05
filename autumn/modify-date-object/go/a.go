@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-   today := time.Now()
-   tomorrow := today.Add(24 * time.Hour)
-   fmt.Println(tomorrow)
+   t := time.Now()
+   t = t.Add(24 * time.Hour)
+   fmt.Println(t)
 }
