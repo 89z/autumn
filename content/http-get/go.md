@@ -13,9 +13,13 @@ tags = [ "go" ]
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/net/http#Request.SetBasicAuth>
+<https://golang.org/pkg/net/http#ReadRequest>
 
 {{< r "d.go" >}}
+
+<https://golang.org/pkg/net/http#Request.SetBasicAuth>
+
+{{< r "e.go" >}}
 
 <https://golang.org/pkg/net/http#Response.Body>
 

@@ -89,6 +89,45 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;bufio&#34;</span>
+   <span style="color:#e6db74">&#34;net/http&#34;</span>
+   <span style="color:#e6db74">&#34;strings&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">readRequest</span>(<span style="color:#a6e22e">raw</span>, <span style="color:#a6e22e">scheme</span> <span style="color:#66d9ef">string</span>) (<span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ReadRequest</span>(<span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">raw</span>)))
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span> }
+   <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">RequestURI</span>, <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">Scheme</span>, <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">Host</span> = <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#a6e22e">scheme</span>, <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Host</span>
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">r</span>, <span style="color:#66d9ef">nil</span>
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">raw</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">`GET /images HTTP/1.1
+</span><span style="color:#e6db74">Host: example.com
+</span><span style="color:#e6db74">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+</span><span style="color:#e6db74">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif
+</span><span style="color:#e6db74">Accept-Encoding: gzip, deflate
+</span><span style="color:#e6db74">Connection: close
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">`</span>
+   <span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">readRequest</span>(<span style="color:#a6e22e">raw</span>, <span style="color:#e6db74">&#34;http&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      panic(<span style="color:#a6e22e">err</span>)
+   }
+   new(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Client</span>).<span style="color:#a6e22e">Do</span>(<span style="color:#a6e22e">req</span>)
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/net/http#ReadRequest">https://golang.org/pkg/net/http#ReadRequest</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
    <span style="color:#e6db74">&#34;fmt&#34;</span>
    <span style="color:#e6db74">&#34;net/http&#34;</span>
    <span style="color:#e6db74">&#34;os&#34;</span>

@@ -1,33 +1,30 @@
 package main
 
 import (
-   "fmt"
+   "bufio"
    "net/http"
-   "os"
+   "strings"
 )
 
-func netrc(addr string) (*http.Request, error) {
-   home, err := os.UserHomeDir()
+func readRequest(raw, scheme string) (*http.Request, error) {
+   r, err := http.ReadRequest(bufio.NewReader(strings.NewReader(raw)))
    if err != nil { return nil, err }
-   file, err := os.Open(home + "/_netrc")
-   if err != nil { return nil, err }
-   defer file.Close()
-   var login, pass string
-   fmt.Fscanf(file, "default login %v password %v", &login, &pass)
-   req, err := http.NewRequest("GET", addr, nil)
-   if err != nil { return nil, err }
-   req.SetBasicAuth(login, pass)
-   return req, nil
+   r.RequestURI, r.URL.Scheme, r.URL.Host = "", scheme, r.Host
+   return r, nil
 }
 
 func main() {
-   req, err := netrc("https://api.github.com/rate_limit")
+   raw := `GET /images HTTP/1.1
+Host: example.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif
+Accept-Encoding: gzip, deflate
+Connection: close
+
+`
+   req, err := readRequest(raw, "http")
    if err != nil {
       panic(err)
    }
-   res, err := new(http.Client).Do(req)
-   if err != nil {
-      panic(err)
-   }
-   fmt.Println(res)
+   new(http.Client).Do(req)
 }
