@@ -8,7 +8,7 @@ import (
 
 type progress struct {
    io.Reader
-   total int
+   read int
 }
 
 func (p *progress) Read(b []byte) (int, error) {
@@ -16,8 +16,8 @@ func (p *progress) Read(b []byte) (int, error) {
    if e != nil {
       fmt.Println()
    } else {
-      p.total += n
-      fmt.Printf("\rRead %9v", p.total)
+      p.read += n
+      fmt.Printf("\rRead %9v", p.read)
    }
    return n, e
 }

@@ -24,7 +24,7 @@
    <a href="/autumn/http-get/">HTTP GET</a> / Go
 </h1>
 <section class="page">
-   <time>Wed May 26 2021</time>
+   <time>Sun Jun 6 2021</time>
    
    <a href="/autumn/categories/network/">network</a>
    
@@ -138,7 +138,7 @@
 
 <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">progress</span> <span style="color:#66d9ef">struct</span> {
    <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Reader</span>
-   <span style="color:#a6e22e">total</span> <span style="color:#66d9ef">int</span>
+   <span style="color:#a6e22e">read</span> <span style="color:#66d9ef">int</span>
 }
 
 <span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">p</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">progress</span>) <span style="color:#a6e22e">Read</span>(<span style="color:#a6e22e">b</span> []<span style="color:#66d9ef">byte</span>) (<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">error</span>) {
@@ -146,8 +146,8 @@
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>()
    } <span style="color:#66d9ef">else</span> {
-      <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">total</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">n</span>
-      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;\rRead %9v&#34;</span>, <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">total</span>)
+      <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">read</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">n</span>
+      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;\rRead %9v&#34;</span>, <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">read</span>)
    }
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">e</span>
 }
