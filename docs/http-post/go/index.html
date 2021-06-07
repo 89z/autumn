@@ -24,7 +24,7 @@
    <a href="/autumn/http-post/">HTTP POST</a> / Go
 </h1>
 <section class="page">
-   <time>Thu May 13 2021</time>
+   <time>Sun Jun 6 2021</time>
    
    <a href="/autumn/categories/network/">network</a>
    
@@ -38,23 +38,44 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;encoding/json&#34;</span>
+   <span style="color:#e6db74">&#34;bytes&#34;</span>
    <span style="color:#e6db74">&#34;io&#34;</span>
+   <span style="color:#e6db74">&#34;mime/multipart&#34;</span>
    <span style="color:#e6db74">&#34;net/http&#34;</span>
+   <span style="color:#e6db74">&#34;os&#34;</span>
+   <span style="color:#e6db74">&#34;strings&#34;</span>
 )
 
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">createForm</span>(<span style="color:#a6e22e">form</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Reader</span>, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#a6e22e">body</span> <span style="color:#f92672">:=</span> new(<span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>)
+   <span style="color:#a6e22e">mp</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">multipart</span>.<span style="color:#a6e22e">NewWriter</span>(<span style="color:#a6e22e">body</span>)
+   <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">mp</span>.<span style="color:#a6e22e">Close</span>()
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">val</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">form</span> {
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">HasPrefix</span>(<span style="color:#a6e22e">val</span>, <span style="color:#e6db74">&#34;@&#34;</span>) {
+         <span style="color:#a6e22e">val</span> = <span style="color:#a6e22e">val</span>[<span style="color:#ae81ff">1</span>:]
+         <span style="color:#a6e22e">file</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#a6e22e">val</span>)
+         <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span> }
+         <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">Close</span>()
+         <span style="color:#a6e22e">part</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">mp</span>.<span style="color:#a6e22e">CreateFormFile</span>(<span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">val</span>)
+         <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#a6e22e">part</span>, <span style="color:#a6e22e">file</span>)
+      } <span style="color:#66d9ef">else</span> {
+         <span style="color:#a6e22e">mp</span>.<span style="color:#a6e22e">WriteField</span>(<span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">val</span>)
+      }
+   }
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">mp</span>.<span style="color:#a6e22e">FormDataContentType</span>(), <span style="color:#a6e22e">body</span>, <span style="color:#66d9ef">nil</span>
+}
+
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{<span style="color:#e6db74">&#34;SNG_ID&#34;</span>: <span style="color:#ae81ff">75498415</span>}
-   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">w</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Pipe</span>()
-   <span style="color:#66d9ef">go</span> <span style="color:#66d9ef">func</span>() {
-      <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewEncoder</span>(<span style="color:#a6e22e">w</span>).<span style="color:#a6e22e">Encode</span>(<span style="color:#a6e22e">m</span>)
-      <span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">Close</span>()
-   }()
-   <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Post</span>(<span style="color:#e6db74">&#34;http://www.deezer.com&#34;</span>, <span style="color:#e6db74">&#34;application/json&#34;</span>, <span style="color:#a6e22e">r</span>)
+   <span style="color:#a6e22e">form</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{<span style="color:#e6db74">&#34;file&#34;</span>: <span style="color:#e6db74">&#34;@a.go&#34;</span>, <span style="color:#e6db74">&#34;account&#34;</span>: <span style="color:#e6db74">&#34;5555555555&#34;</span>}
+   <span style="color:#a6e22e">ct</span>, <span style="color:#a6e22e">body</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">createForm</span>(<span style="color:#a6e22e">form</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      panic(<span style="color:#a6e22e">err</span>)
+   }
+   <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Post</span>(<span style="color:#e6db74">&#34;https://github.com&#34;</span>, <span style="color:#a6e22e">ct</span>, <span style="color:#a6e22e">body</span>)
 }
 </code></pre></div>
 
-<p><a href="https://golang.org/pkg/io#Pipe">https://golang.org/pkg/io#Pipe</a></p>
+<p><a href="https://golang.org/pkg/mime/multipart">https://golang.org/pkg/mime/multipart</a></p>
 
 
 

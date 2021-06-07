@@ -1,17 +1,38 @@
 package main
 
 import (
-   "encoding/json"
+   "bytes"
    "io"
+   "mime/multipart"
    "net/http"
+   "os"
+   "strings"
 )
 
+func createForm(form map[string]string) (string, io.Reader, error) {
+   body := new(bytes.Buffer)
+   mp := multipart.NewWriter(body)
+   defer mp.Close()
+   for key, val := range form {
+      if strings.HasPrefix(val, "@") {
+         val = val[1:]
+         file, err := os.Open(val)
+         if err != nil { return "", nil, err }
+         defer file.Close()
+         part, err := mp.CreateFormFile(key, val)
+         io.Copy(part, file)
+      } else {
+         mp.WriteField(key, val)
+      }
+   }
+   return mp.FormDataContentType(), body, nil
+}
+
 func main() {
-   m := map[string]int{"SNG_ID": 75498415}
-   r, w := io.Pipe()
-   go func() {
-      json.NewEncoder(w).Encode(m)
-      w.Close()
-   }()
-   http.Post("http://www.deezer.com", "application/json", r)
+   form := map[string]string{"file": "@a.go", "account": "5555555555"}
+   ct, body, err := createForm(form)
+   if err != nil {
+      panic(err)
+   }
+   http.Post("https://github.com", ct, body)
 }

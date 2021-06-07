@@ -5,7 +5,7 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/io#Pipe>
+<https://golang.org/pkg/mime/multipart>
 
 {{< r "b.go" >}}
 
