@@ -3,15 +3,15 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "a.go" >}}
-
-{{< r "b.go" >}}
+{{< r "since.go" >}}
 
 <https://golang.org/pkg/time#Since>
 
-{{< r "c.go" >}}
+{{< r "sub.go" >}}
 
 <https://golang.org/pkg/time#Time.Sub>
+
+{{< r "dur_test.go" >}}
 
 ## References
 
