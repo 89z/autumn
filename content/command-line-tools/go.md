@@ -3,7 +3,16 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-{{< r "build.ps1" >}}
+size      | command
+----------|--------
+2,093,568 | `go build`
+2,046,976 | `go build -gcflags all=-B`
+1,925,120 | `go build -gcflags all=-l`
+1,885,696 | `go build -gcflags 'all=-B -l'`
+1,495,040 | `go build -ldflags -s`
+1,461,248 | `go build -ldflags -s -gcflags all=-B`
+1,420,800 | `go build -ldflags -s -gcflags all=-l`
+1,390,080 | `go build -ldflags -s -gcflags 'all=-B -l'`
 
 <https://golang.org/cmd/go#hdr-Compile_packages_and_dependencies>
 

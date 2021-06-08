@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Proposal / Julia</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/proposal/">Proposal</a> / Julia
+</h1>
+<section class="page">
+   <time>Tue Jun 8 2021</time>
+   
+</section>
+   <h2 id="speed-of-error-loaderror">Speed of ERROR: LoadError</h2>
+<p>If I have a file like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jl" data-lang="jl">println(<span style="color:#e6db74">&#34;Sunday&#34;</span>)
+</code></pre></div><p>Julia works fine:</p>
+<pre><code>$ time julia a.jl
+Sunday
+
+real    0m0.170s
+</code></pre><p>With a file like this:</p>
+<pre><code>a()
+</code></pre><p>The error process seems to be very slow:</p>
+<pre><code>$ time julia b.jl
+ERROR: LoadError: UndefVarError: a not defined
+Stacktrace:
+ [1] top-level scope at D:\Desktop\etc\b.jl:1
+ [2] include(::Module, ::String) at .\Base.jl:377
+ [3] exec_options(::Base.JLOptions) at .\client.jl:288
+ [4] _start() at .\client.jl:484
+in expression starting at D:\Desktop\etc\b.jl:1
+
+real    0m0.990s
+</code></pre><p>The <code>--compile</code> flag helps significantly:</p>
+<pre><code>$ time julia --compile=min b.jl
+ERROR: LoadError: UndefVarError: a not defined
+Stacktrace:
+ [1] top-level scope at D:\Desktop\etc\b.jl:1
+ [2] include(::Module, ::String) at .\Base.jl:377
+ [3] exec_options(::Base.JLOptions) at .\client.jl:288
+ [4] _start() at .\client.jl:484
+in expression starting at D:\Desktop\etc\b.jl:1
+
+real    0m0.290s
+</code></pre><p>but still seems to be quite slow compared to other options, like Python:</p>
+<pre><code>$ cat a.py
+a()
+
+$ time python a.py
+Traceback (most recent call last):
+  File &quot;a.py&quot;, line 1, in &lt;module&gt;
+    a()
+NameError: name 'a' is not defined
+
+real    0m0.060s
+</code></pre><p>PHP:</p>
+<pre><code>$ cat a.php
+&lt;?php
+a();
+
+$ time php a.php
+Fatal error: Uncaught Error: Call to undefined function a() in C:\a.php:2
+Stack trace:
+#0 {main}
+  thrown in C:\a.php on line 2
+
+real    0m0.060s
+</code></pre><p>Dart:</p>
+<pre><code>$ cat a.dart
+main() {
+   a();
+}
+
+$ time dart a.dart
+a.dart:2:4: Error: Method not found: 'a'.
+   a();
+   ^
+
+real    0m0.160s
+</code></pre><ul>
+<li><a href="https://github.com/JuliaLang/julia/issues/17285">https://github.com/JuliaLang/julia/issues/17285</a></li>
+<li><a href="https://lwn.net/Articles/856819">https://lwn.net/Articles/856819</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
