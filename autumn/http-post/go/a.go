@@ -20,6 +20,7 @@ func createForm(form map[string]string) (string, io.Reader, error) {
          if err != nil { return "", nil, err }
          defer file.Close()
          part, err := mp.CreateFormFile(key, val)
+         if err != nil { return "", nil, err }
          io.Copy(part, file)
       } else {
          mp.WriteField(key, val)
