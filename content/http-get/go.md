@@ -17,11 +17,11 @@ tags = [ "go" ]
 
 {{< r "d.go" >}}
 
-<https://golang.org/pkg/net/http#Request.SetBasicAuth>
+<https://golang.org/pkg/net/http#Response.Body>
 
 {{< r "e.go" >}}
 
-<https://golang.org/pkg/net/http#Response.Body>
+<https://golang.org/pkg/net/http#Transport.RoundTrip>
 
 ## References
 
