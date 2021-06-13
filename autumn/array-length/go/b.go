@@ -8,7 +8,7 @@ func main() {
    }
    { // example 2
       s := make(chan string, 9)
-      s <- "west"
+      s <- "north"
       n := len(s)
       println(n == 1)
    }
