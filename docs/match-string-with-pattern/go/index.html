@@ -24,7 +24,7 @@
    <a href="/autumn/match-string-with-pattern/">Match string with pattern</a> / Go
 </h1>
 <section class="page">
-   <time>Thu Dec 17 2020</time>
+   <time>Mon Jun 14 2021</time>
    
    <a href="/autumn/categories/string/">string</a>
    
@@ -43,8 +43,9 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MatchString</span>(<span style="color:#e6db74">&#34;o..&#34;</span>, <span style="color:#e6db74">&#34;south north&#34;</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">e</span>)
+   <span style="color:#a6e22e">pattern</span>, <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;o..&#34;</span>, <span style="color:#e6db74">&#34;north south&#34;</span>
+   <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MatchString</span>(<span style="color:#a6e22e">pattern</span>, <span style="color:#a6e22e">s</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">err</span>)
 }
 </code></pre></div>
 
