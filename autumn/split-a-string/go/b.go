@@ -16,7 +16,7 @@ func (c *comma) Scan(state fmt.ScanState, verb rune) error {
    }
    if _, _, err := state.ReadRune(); err != nil {
       if len(tok) == 0 {
-         return err
+         panic(err)
       }
    }
    c.tok = string(tok)
@@ -29,6 +29,6 @@ func main() {
       var c comma
       _, err := fmt.Fscan(r, &c)
       if err != nil { break }
-      println(c.tok)
+      fmt.Println(c.tok)
    }
 }

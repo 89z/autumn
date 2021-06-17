@@ -87,7 +87,7 @@
    }
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">ReadRune</span>(); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">tok</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
-         <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+         panic(<span style="color:#a6e22e">err</span>)
       }
    }
    <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">tok</span> = string(<span style="color:#a6e22e">tok</span>)
@@ -100,7 +100,7 @@
       <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">c</span> <span style="color:#a6e22e">comma</span>
       <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fscan</span>(<span style="color:#a6e22e">r</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">c</span>)
       <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">break</span> }
-      println(<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">tok</span>)
+      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">tok</span>)
    }
 }
 </code></pre></div>
