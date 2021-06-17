@@ -5,15 +5,15 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/bufio#NewScanner>
+<https://golang.org/pkg/bufio#Scanner.Split>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/bufio#Scanner.Split>
+<https://golang.org/pkg/fmt>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/fmt>
+<https://golang.org/pkg/strings#IndexByte>
 
 {{< r "d.go" >}}
 

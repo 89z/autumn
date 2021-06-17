@@ -1,25 +1,34 @@
 package main
 
 import (
-   "bufio"
+   "fmt"
    "strings"
 )
 
-func comma(b []byte, eof bool) (int, []byte, error) {
-   if eof { return 0, nil, nil }
-   for n := range b {
-      if b[n] == ',' {
-         return n+1, b[:n], nil
+type comma struct { tok string }
+
+func (c *comma) Scan(state fmt.ScanState, verb rune) error {
+   tok, err := state.Token(false, func(r rune) bool {
+      return r != ','
+   })
+   if err != nil {
+      return err
+   }
+   if _, _, err := state.ReadRune(); err != nil {
+      if len(tok) == 0 {
+         return err
       }
    }
-   return len(b), b, nil
+   c.tok = string(tok)
+   return nil
 }
 
 func main() {
    r := strings.NewReader("north,east,south,west")
-   s := bufio.NewScanner(r)
-   s.Split(comma)
-   for s.Scan() {
-      println(s.Text())
+   for {
+      var c comma
+      _, err := fmt.Fscan(r, &c)
+      if err != nil { break }
+      println(c.tok)
    }
 }
