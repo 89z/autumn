@@ -2,11 +2,11 @@ package main
 
 import "strings"
 
-func comma(r *strings.Reader) (string, error) {
+func scan(r *strings.Reader, sep byte) (string, error) {
 	var s string
 	for {
 		b, e := r.ReadByte()
-		if b == ',' {
+		if b == sep {
 			break
 		}
 		if e != nil {
@@ -23,7 +23,7 @@ func comma(r *strings.Reader) (string, error) {
 func main() {
 	r := strings.NewReader("north,east,south,west")
 	for {
-		s, e := comma(r)
+		s, e := scan(r, ',')
 		if e != nil {
 			break
 		}

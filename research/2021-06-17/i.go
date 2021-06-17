@@ -5,10 +5,10 @@ import (
 	"strings"
 )
 
-func scan(b *bufio.Scanner) string {
+func scan(b *bufio.Scanner, sep string) string {
 	var s string
 	for b.Scan() {
-		if b.Text() == "," {
+		if b.Text() == sep {
 			if s == "" {
 				continue
 			}
@@ -23,7 +23,7 @@ func main() {
 	b := bufio.NewScanner(strings.NewReader("north,east,south,west"))
 	b.Split(bufio.ScanRunes)
 	for {
-		s := scan(b)
+		s := scan(b, ",")
 		if s == "" {
 			break
 		}

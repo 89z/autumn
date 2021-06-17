@@ -3,7 +3,8 @@ package main
 import "strings"
 
 func scan(s, sep string) (string, string) {
-	switch a := strings.SplitN(s, sep, 2); len(a) {
+	a := strings.SplitN(s, sep, 2)
+	switch len(a) {
 	case 0:
 		return "", ""
 	case 1:
