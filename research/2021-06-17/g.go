@@ -1,31 +1,32 @@
 package main
+
 import "strings"
 
-func scan(r *strings.Reader, sep byte) ([]byte, error) {
-   var b []byte
-   for {
-      c, e := r.ReadByte()
-      if c == sep && b != nil {
-         break
-      }
-      if e != nil && b != nil {
-         break
-      }
-      if e != nil && b == nil {
-         return nil, e
-      }
-      b = append(b, c)
-   }
-   return b, nil
+func comma(r *strings.Reader) (string, error) {
+	var s string
+	for {
+		b, e := r.ReadByte()
+		if b == ',' {
+			break
+		}
+		if e != nil {
+			if s != "" {
+				break
+			}
+			return "", e
+		}
+		s += string(b)
+	}
+	return s, nil
 }
 
 func main() {
-   r := strings.NewReader("north,east,south,west")
-   for {
-      b, e := scan(r, ',')
-      if e != nil {
-         break
-      }
-      println(string(b))
-   }
+	r := strings.NewReader("north,east,south,west")
+	for {
+		s, e := comma(r)
+		if e != nil {
+			break
+		}
+		println(s)
+	}
 }
