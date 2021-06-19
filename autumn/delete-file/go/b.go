@@ -2,5 +2,5 @@ package main
 import "os"
 
 func main() {
-   os.RemoveAll("a.txt")
+   os.RemoveAll("file.txt")
 }

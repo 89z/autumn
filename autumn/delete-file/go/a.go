@@ -2,5 +2,8 @@ package main
 import "os"
 
 func main() {
-   os.Remove("a.txt")
+   e := os.Remove("file.txt")
+   if e != nil {
+      panic(e)
+   }
 }
