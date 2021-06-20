@@ -24,7 +24,7 @@
    <a href="/autumn/create-file/">Create file</a> / Go
 </h1>
 <section class="page">
-   <time>Sat Feb 6 2021</time>
+   <time>Sun Jun 20 2021</time>
    
    <a href="/autumn/categories/system/">system</a>
    
@@ -39,7 +39,7 @@
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;os&#34;</span>
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">f</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">OpenFile</span>(<span style="color:#e6db74">&#34;b.go&#34;</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">O_CREATE</span> | <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">O_EXCL</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">ModePerm</span>)
+   <span style="color:#a6e22e">f</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">OpenFile</span>(<span style="color:#e6db74">&#34;file.txt&#34;</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">O_CREATE</span>|<span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">O_EXCL</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">ModePerm</span>)
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       panic(<span style="color:#a6e22e">e</span>)
    }

@@ -1,7 +1,7 @@
 +++
 title = "Create file"
 categories = [ "system" ]
-date = 2021-02-06
+date = 2021-06-20
 filename = 'x\x.go'
 substr = ' os.Create('
 +++
