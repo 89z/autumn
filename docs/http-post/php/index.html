@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>HTTP POST / PHP</title>
+
+   <link rel="icon" href="/autumn/favicon.png">
+   <link rel="stylesheet" href="/autumn/main.css">
+</head>
+<body>
+   <header class="page">
+
+      <h2><a href="/autumn">Autumn</a></h2>
+
+      <a href="/autumn/categories">Categories</a>
+      <a href="/autumn/tags">Tags</a>
+      <a href="https://github.com/89z/autumn">Repository</a>
+   </header>
+   <main class="page">
+
+<h1>
+   <a href="/autumn/http-post/">HTTP POST</a> / PHP
+</h1>
+<section class="page">
+   <time>Mon Jun 21 2021</time>
+   
+   <a href="/autumn/categories/network/">network</a>
+   
+</section>
+   
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$http[<span style="color:#e6db74">&#39;method&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;POST&#39;</span>;
+$http[<span style="color:#e6db74">&#39;header&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span>;
+
+$http[<span style="color:#e6db74">&#39;content&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;&lt;</span><span style="color:#e6db74">eof</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">{
+</span><span style="color:#e6db74">   &#34;videoId&#34;: &#34;lTGjFpjOIP8&#34;, &#34;context&#34;: {
+</span><span style="color:#e6db74">      &#34;client&#34;: {&#34;clientName&#34;: &#34;WEB&#34;, &#34;clientVersion&#34;: &#34;1.19700101&#34;}
+</span><span style="color:#e6db74">   }
+</span><span style="color:#e6db74">}
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">eof</span>;
+
+$con <span style="color:#f92672">=</span> <span style="color:#a6e22e">stream_context_create</span>([<span style="color:#e6db74">&#39;http&#39;</span> <span style="color:#f92672">=&gt;</span> $http]);
+$key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;?key=AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8&#39;</span>;
+
+<span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">file_get_contents</span>(
+   <span style="color:#e6db74">&#39;https://www.youtube.com/youtubei/v1/player&#39;</span> <span style="color:#f92672">.</span> $key, <span style="color:#a6e22e">context</span><span style="color:#f92672">:</span> $con
+);
+</code></pre></div>
+
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/scripting2#http-post">https://hyperpolyglot.org/scripting2#http-post</a></li>
+<li><a href="https://programming-idioms.org/idiom/174">https://programming-idioms.org/idiom/174</a></li>
+</ul>
+
+</main>
+
+</body>
+</html>
