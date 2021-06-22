@@ -24,7 +24,7 @@
    <a href="/autumn/encode-to-json/">Encode to JSON</a> / Go
 </h1>
 <section class="page">
-   <time>Tue Mar 16 2021</time>
+   <time>Tue Jun 22 2021</time>
    
    <a href="/autumn/categories/encoding/">encoding</a>
    
@@ -64,9 +64,9 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">encode</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">w</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Writer</span>) <span style="color:#66d9ef">error</span> {
-   <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewEncoder</span>(<span style="color:#a6e22e">w</span>)
-   <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">SetEscapeHTML</span>(<span style="color:#66d9ef">false</span>)
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">Encode</span>(<span style="color:#a6e22e">s</span>)
+   <span style="color:#a6e22e">enc</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">NewEncoder</span>(<span style="color:#a6e22e">w</span>)
+   <span style="color:#a6e22e">enc</span>.<span style="color:#a6e22e">SetEscapeHTML</span>(<span style="color:#66d9ef">false</span>)
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">enc</span>.<span style="color:#a6e22e">Encode</span>(<span style="color:#a6e22e">s</span>)
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {

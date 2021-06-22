@@ -7,9 +7,9 @@ import (
 )
 
 func encode(s string, w io.Writer) error {
-   e := json.NewEncoder(w)
-   e.SetEscapeHTML(false)
-   return e.Encode(s)
+   enc := json.NewEncoder(w)
+   enc.SetEscapeHTML(false)
+   return enc.Encode(s)
 }
 
 func main() {
