@@ -6,27 +6,27 @@ import (
    "net/http"
 )
 
-type progress struct {
+type body struct {
    io.Reader
    read int
 }
 
-func (p *progress) Read(b []byte) (int, error) {
-   n, e := p.Reader.Read(b)
-   if e != nil {
+func (b *body) Read(p []byte) (int, error) {
+   n, err := b.Reader.Read(p)
+   if err != nil {
       fmt.Println()
    } else {
-      p.read += n
-      fmt.Printf("\rRead %9v", p.read)
+      b.read += n
+      fmt.Printf("\rRead %9v", b.read)
    }
-   return n, e
+   return n, err
 }
 
 func main() {
-   r, e := http.Get("http://speedtest.lax.hivelocity.net/10Mio.dat")
-   if e != nil {
-      panic(e)
+   r, err := http.Get("http://speedtest.lax.hivelocity.net/10Mio.dat")
+   if err != nil {
+      panic(err)
    }
    defer r.Body.Close()
-   io.ReadAll(&progress{Reader: r.Body})
+   io.ReadAll(&body{Reader: r.Body})
 }

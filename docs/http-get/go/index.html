@@ -133,29 +133,29 @@
    <span style="color:#e6db74">&#34;net/http&#34;</span>
 )
 
-<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">progress</span> <span style="color:#66d9ef">struct</span> {
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">body</span> <span style="color:#66d9ef">struct</span> {
    <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Reader</span>
    <span style="color:#a6e22e">read</span> <span style="color:#66d9ef">int</span>
 }
 
-<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">p</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">progress</span>) <span style="color:#a6e22e">Read</span>(<span style="color:#a6e22e">b</span> []<span style="color:#66d9ef">byte</span>) (<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">error</span>) {
-   <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">Reader</span>.<span style="color:#a6e22e">Read</span>(<span style="color:#a6e22e">b</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">b</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">body</span>) <span style="color:#a6e22e">Read</span>(<span style="color:#a6e22e">p</span> []<span style="color:#66d9ef">byte</span>) (<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">Reader</span>.<span style="color:#a6e22e">Read</span>(<span style="color:#a6e22e">p</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>()
    } <span style="color:#66d9ef">else</span> {
-      <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">read</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">n</span>
-      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;\rRead %9v&#34;</span>, <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">read</span>)
+      <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">read</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">n</span>
+      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;\rRead %9v&#34;</span>, <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">read</span>)
    }
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">e</span>
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">err</span>
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net/10Mio.dat&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      panic(<span style="color:#a6e22e">e</span>)
+   <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net/10Mio.dat&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      panic(<span style="color:#a6e22e">err</span>)
    }
    <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Body</span>.<span style="color:#a6e22e">Close</span>()
-   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">progress</span>{<span style="color:#a6e22e">Reader</span>: <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Body</span>})
+   <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">body</span>{<span style="color:#a6e22e">Reader</span>: <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Body</span>})
 }
 </code></pre></div>
 

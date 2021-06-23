@@ -2,16 +2,18 @@ package main
 
 import (
    "encoding/json"
-   "io"
-   "os"
+   "strings"
 )
 
-func encode(s string, w io.Writer) error {
-   enc := json.NewEncoder(w)
+func encode(s string) string {
+   b := new(strings.Builder)
+   enc := json.NewEncoder(b)
    enc.SetEscapeHTML(false)
-   return enc.Encode(s)
+   enc.Encode(s)
+   return b.String()
 }
 
 func main() {
-   encode("west & east", os.Stdout)
+   s := encode("west & east")
+   println(s == "\"west & east\"\n")
 }
