@@ -5,7 +5,9 @@ import (
    "strings"
 )
 
-type comma struct { tok string }
+type comma struct {
+   tok string
+}
 
 func (c *comma) Scan(state fmt.ScanState, verb rune) error {
    tok, err := state.Token(false, func(r rune) bool {
@@ -28,7 +30,9 @@ func main() {
    for {
       var c comma
       _, err := fmt.Fscan(r, &c)
-      if err != nil { break }
+      if err != nil {
+         break
+      }
       fmt.Println(c.tok)
    }
 }

@@ -69,10 +69,14 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">head</span>(<span style="color:#a6e22e">addr</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">error</span> {
-   <span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;HEAD&#34;</span>, <span style="color:#a6e22e">addr</span>, <span style="color:#66d9ef">nil</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span> }
-   <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> new(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Client</span>).<span style="color:#a6e22e">Do</span>(<span style="color:#a6e22e">req</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span> }
+   <span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;HEAD&#34;</span>, <span style="color:#a6e22e">addr</span>, <span style="color:#66d9ef">nil</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+   }
+   <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> new(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Client</span>).<span style="color:#a6e22e">Do</span>(<span style="color:#a6e22e">req</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+   }
    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">StatusCode</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">200</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;StatusCode %v&#34;</span>, <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">StatusCode</span>)
    }
@@ -80,9 +84,9 @@
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">head</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      panic(<span style="color:#a6e22e">e</span>)
+   <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">head</span>(<span style="color:#e6db74">&#34;http://speedtest.lax.hivelocity.net&#34;</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      panic(<span style="color:#a6e22e">err</span>)
    }
 }
 </code></pre></div>

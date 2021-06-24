@@ -7,10 +7,12 @@ import (
 
 func findString(pat, sub string) (string, error) {
    re, err := regexp.Compile(pat)
-   if err != nil { return "", err }
+   if err != nil {
+      return "", err
+   }
    match := re.FindString(sub)
    if match == "" {
-      return "", fmt.Errorf("FindString %v", pat)
+      return "", fmt.Errorf("findString %v", pat)
    }
    return match, nil
 }

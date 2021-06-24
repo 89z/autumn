@@ -7,10 +7,12 @@ import (
 
 func findSubmatch(pat string, sub []byte) ([][]byte, error) {
    re, err := regexp.Compile(pat)
-   if err != nil { return nil, err }
+   if err != nil {
+      return nil, err
+   }
    match := re.FindSubmatch(sub)
    if match == nil {
-      return nil, fmt.Errorf("FindSubmatch %v", pat)
+      return nil, fmt.Errorf("findSubmatch %v", pat)
    }
    return match, nil
 }

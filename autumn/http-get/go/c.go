@@ -8,7 +8,9 @@ import (
 
 func readRequest(raw, scheme string) (*http.Request, error) {
    r, err := http.ReadRequest(bufio.NewReader(strings.NewReader(raw)))
-   if err != nil { return nil, err }
+   if err != nil {
+      return nil, err
+   }
    r.RequestURI, r.URL.Scheme, r.URL.Host = "", scheme, r.Host
    return r, nil
 }

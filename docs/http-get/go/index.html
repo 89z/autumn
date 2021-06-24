@@ -96,7 +96,9 @@
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">readRequest</span>(<span style="color:#a6e22e">raw</span>, <span style="color:#a6e22e">scheme</span> <span style="color:#66d9ef">string</span>) (<span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>, <span style="color:#66d9ef">error</span>) {
    <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ReadRequest</span>(<span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">raw</span>)))
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span> }
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span>
+   }
    <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">RequestURI</span>, <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">Scheme</span>, <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">Host</span> = <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#a6e22e">scheme</span>, <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Host</span>
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">r</span>, <span style="color:#66d9ef">nil</span>
 }

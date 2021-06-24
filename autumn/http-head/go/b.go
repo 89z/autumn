@@ -6,10 +6,14 @@ import (
 )
 
 func head(addr string) error {
-   req, e := http.NewRequest("HEAD", addr, nil)
-   if e != nil { return e }
-   res, e := new(http.Client).Do(req)
-   if e != nil { return e }
+   req, err := http.NewRequest("HEAD", addr, nil)
+   if err != nil {
+      return err
+   }
+   res, err := new(http.Client).Do(req)
+   if err != nil {
+      return err
+   }
    if res.StatusCode != 200 {
       return fmt.Errorf("StatusCode %v", res.StatusCode)
    }
@@ -17,8 +21,8 @@ func head(addr string) error {
 }
 
 func main() {
-   e := head("http://speedtest.lax.hivelocity.net")
-   if e != nil {
-      panic(e)
+   err := head("http://speedtest.lax.hivelocity.net")
+   if err != nil {
+      panic(err)
    }
 }

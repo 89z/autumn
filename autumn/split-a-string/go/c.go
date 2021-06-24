@@ -1,13 +1,18 @@
 package main
 import "strings"
-type scanner struct { s, sep, text string }
+
+type scanner struct {
+   s, sep, text string
+}
 
 func newScanner(s, sep string) scanner {
    return scanner{s: s, sep: sep}
 }
 
 func (s *scanner) scan() bool {
-   if s.s == "" { return false }
+   if s.s == "" {
+      return false
+   }
    a := strings.SplitN(s.s, s.sep, 2)
    s.text, s.s = a[0], ""
    if len(a) > 1 {

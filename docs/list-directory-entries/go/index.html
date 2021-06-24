@@ -86,8 +86,10 @@
    <span style="color:#e6db74">&#34;path/filepath&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">walk</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">d</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">DirEntry</span>, <span style="color:#a6e22e">e</span> <span style="color:#66d9ef">error</span>) <span style="color:#66d9ef">error</span> {
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span> }
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">walk</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">d</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">DirEntry</span>, <span style="color:#a6e22e">err</span> <span style="color:#66d9ef">error</span>) <span style="color:#66d9ef">error</span> {
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+   }
    <span style="color:#66d9ef">if</span> ! <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">IsDir</span>() {
       println(<span style="color:#a6e22e">s</span>)
    }

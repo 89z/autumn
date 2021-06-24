@@ -5,8 +5,10 @@ import (
    "path/filepath"
 )
 
-func walk(s string, d fs.DirEntry, e error) error {
-   if e != nil { return e }
+func walk(s string, d fs.DirEntry, err error) error {
+   if err != nil {
+      return err
+   }
    if ! d.IsDir() {
       println(s)
    }

@@ -6,16 +6,18 @@ import (
 )
 
 func read(s string) ([]byte, error) {
-   f, e := os.Open(s)
-   if e != nil { return nil, e }
+   f, err := os.Open(s)
+   if err != nil {
+      return nil, err
+   }
    defer f.Close()
    return io.ReadAll(f)
 }
 
 func main() {
-   b, e := read("a.go")
-   if e != nil {
-      panic(e)
+   b, err := read("a.go")
+   if err != nil {
+      panic(err)
    }
    os.Stdout.Write(b)
 }

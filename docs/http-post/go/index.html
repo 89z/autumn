@@ -54,10 +54,14 @@
       <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">HasPrefix</span>(<span style="color:#a6e22e">val</span>, <span style="color:#e6db74">&#34;@&#34;</span>) {
          <span style="color:#a6e22e">val</span> = <span style="color:#a6e22e">val</span>[<span style="color:#ae81ff">1</span>:]
          <span style="color:#a6e22e">file</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#a6e22e">val</span>)
-         <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span> }
+         <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span>
+         }
          <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">Close</span>()
          <span style="color:#a6e22e">part</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">mp</span>.<span style="color:#a6e22e">CreateFormFile</span>(<span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">val</span>)
-         <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> { <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span> }
+         <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span>
+         }
          <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#a6e22e">part</span>, <span style="color:#a6e22e">file</span>)
       } <span style="color:#66d9ef">else</span> {
          <span style="color:#a6e22e">mp</span>.<span style="color:#a6e22e">WriteField</span>(<span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">val</span>)

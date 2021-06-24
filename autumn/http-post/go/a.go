@@ -17,10 +17,14 @@ func createForm(form map[string]string) (string, io.Reader, error) {
       if strings.HasPrefix(val, "@") {
          val = val[1:]
          file, err := os.Open(val)
-         if err != nil { return "", nil, err }
+         if err != nil {
+            return "", nil, err
+         }
          defer file.Close()
          part, err := mp.CreateFormFile(key, val)
-         if err != nil { return "", nil, err }
+         if err != nil {
+            return "", nil, err
+         }
          io.Copy(part, file)
       } else {
          mp.WriteField(key, val)
