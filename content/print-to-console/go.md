@@ -19,6 +19,10 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/fmt#Println>
 
+{{< r "e.go" >}}
+
+<https://golang.org/pkg/os>
+
 ## References
 
 - <https://hyperpolyglot.org/c#write-line-stdout>
