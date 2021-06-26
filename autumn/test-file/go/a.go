@@ -7,6 +7,6 @@ func isFile(name string) bool {
 }
 
 func main() {
-   b := isFile("a.go")
+   b := isFile("file.txt")
    println(b)
 }
