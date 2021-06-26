@@ -24,7 +24,7 @@
    <a href="/autumn/sort-an-array/">Sort an array</a> / Go
 </h1>
 <section class="page">
-   <time>Sun May 30 2021</time>
+   <time>Sat Jun 26 2021</time>
    
    <a href="/autumn/categories/array/">array</a>
    
@@ -55,6 +55,32 @@
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/sort#Slice">https://golang.org/pkg/sort#Slice</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;sort&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">struct</span>{<span style="color:#a6e22e">month</span>, <span style="color:#a6e22e">day</span> <span style="color:#66d9ef">int</span>}{
+      {<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">31</span>}, {<span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">30</span>},
+   }
+   <span style="color:#a6e22e">f</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">d</span>, <span style="color:#a6e22e">e</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">bool</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s</span>[<span style="color:#a6e22e">d</span>].<span style="color:#a6e22e">day</span> &lt; <span style="color:#a6e22e">s</span>[<span style="color:#a6e22e">e</span>].<span style="color:#a6e22e">day</span>
+   }
+   <span style="color:#a6e22e">sort</span>.<span style="color:#a6e22e">SliceStable</span>(<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">f</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">s</span>)
+}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/sort#SliceStable">https://golang.org/pkg/sort#SliceStable</a></p>
 
 
 

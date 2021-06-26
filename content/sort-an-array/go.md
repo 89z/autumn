@@ -9,6 +9,10 @@ tags = [ "go" ]
 
 {{< r "b.go" >}}
 
+<https://golang.org/pkg/sort#SliceStable>
+
+{{< r "c.go" >}}
+
 <https://golang.org/pkg/sort#Strings>
 
 ## References

@@ -1,29 +1,38 @@
 package main
-import "strings"
 
-type scanner struct {
-   s, sep, text string
+import (
+   "fmt"
+   "strings"
+)
+
+type comma struct {
+   tok string
 }
 
-func newScanner(s, sep string) scanner {
-   return scanner{s: s, sep: sep}
-}
-
-func (s *scanner) scan() bool {
-   if s.s == "" {
-      return false
+func (c *comma) Scan(state fmt.ScanState, verb rune) error {
+   tok, err := state.Token(false, func(r rune) bool {
+      return r != ','
+   })
+   if err != nil {
+      return err
    }
-   a := strings.SplitN(s.s, s.sep, 2)
-   s.text, s.s = a[0], ""
-   if len(a) > 1 {
-      s.s = a[1]
+   if _, _, err := state.ReadRune(); err != nil {
+      if len(tok) == 0 {
+         panic(err)
+      }
    }
-   return true
+   c.tok = string(tok)
+   return nil
 }
 
 func main() {
-   s := newScanner("north,east,south,west", ",")
-   for s.scan() {
-      println(s.text)
+   r := strings.NewReader("north,east,south,west")
+   for {
+      var c comma
+      _, err := fmt.Fscan(r, &c)
+      if err != nil {
+         break
+      }
+      fmt.Println(c.tok)
    }
 }
