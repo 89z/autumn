@@ -24,7 +24,7 @@
    <a href="/autumn/split-a-string/">Split a string</a> / Go
 </h1>
 <section class="page">
-   <time>Sat Jun 26 2021</time>
+   <time>Sun Jun 27 2021</time>
    
    <a href="/autumn/categories/string/">string</a>
    
@@ -42,21 +42,20 @@
    <span style="color:#e6db74">&#34;strings&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">comma</span>(<span style="color:#a6e22e">b</span> []<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">eof</span> <span style="color:#66d9ef">bool</span>) (<span style="color:#66d9ef">int</span>, []<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>) {
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">eof</span> {
-      <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">nil</span>, <span style="color:#66d9ef">nil</span>
-   }
-   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">b</span> {
-      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">b</span>[<span style="color:#a6e22e">n</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;,&#39;</span> {
-         <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">b</span>[:<span style="color:#a6e22e">n</span>], <span style="color:#66d9ef">nil</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">comma</span>(<span style="color:#a6e22e">data</span> []<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">eof</span> <span style="color:#66d9ef">bool</span>) (<span style="color:#66d9ef">int</span>, []<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tok</span> []<span style="color:#66d9ef">byte</span>
+   <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">data</span> {
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">t</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;,&#39;</span> {
+         <span style="color:#a6e22e">tok</span> = append(<span style="color:#a6e22e">tok</span>, <span style="color:#a6e22e">t</span>)
+      } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">tok</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+         <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">tok</span>, <span style="color:#66d9ef">nil</span>
       }
    }
-   <span style="color:#66d9ef">return</span> len(<span style="color:#a6e22e">b</span>), <span style="color:#a6e22e">b</span>, <span style="color:#66d9ef">nil</span>
+   <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">nil</span>, <span style="color:#66d9ef">nil</span>
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#e6db74">&#34;north,east,south,west&#34;</span>)
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">r</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#e6db74">&#34;,north,,south,&#34;</span>))
    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#a6e22e">comma</span>)
    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Scan</span>() {
       println(<span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Text</span>())
@@ -74,30 +73,42 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> (
-	<span style="color:#e6db74">&#34;bufio&#34;</span>
-	<span style="color:#e6db74">&#34;bytes&#34;</span>
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;io&#34;</span>
+   <span style="color:#e6db74">&#34;strings&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">comma</span>(<span style="color:#a6e22e">b</span> []<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">eof</span> <span style="color:#66d9ef">bool</span>) (<span style="color:#66d9ef">int</span>, []<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>) {
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">eof</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">nil</span>, <span style="color:#66d9ef">nil</span>
-	}
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">IndexByte</span>(<span style="color:#a6e22e">b</span>, <span style="color:#e6db74">&#39;,&#39;</span>); <span style="color:#a6e22e">n</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">b</span>[:<span style="color:#a6e22e">n</span>], <span style="color:#66d9ef">nil</span>
-	}
-	<span style="color:#66d9ef">return</span> len(<span style="color:#a6e22e">b</span>), <span style="color:#a6e22e">b</span>, <span style="color:#66d9ef">nil</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">scan</span>(<span style="color:#a6e22e">s</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Reader</span>, <span style="color:#a6e22e">sep</span> <span style="color:#66d9ef">rune</span>) []<span style="color:#66d9ef">rune</span> {
+   <span style="color:#66d9ef">var</span> (
+      <span style="color:#a6e22e">a</span> <span style="color:#66d9ef">rune</span>
+      <span style="color:#a6e22e">b</span> []<span style="color:#66d9ef">rune</span>
+   )
+   <span style="color:#66d9ef">for</span> {
+      <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fscanf</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;%c&#34;</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">a</span>)
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+         <span style="color:#66d9ef">break</span>
+      } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">sep</span> {
+         <span style="color:#a6e22e">b</span> = append(<span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">a</span>)
+      } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+         <span style="color:#66d9ef">break</span>
+      }
+   }
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">b</span>
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-	<span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewScanner</span>(<span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">NewBufferString</span>(<span style="color:#e6db74">&#34;north,east,south,west&#34;</span>))
-	<span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#a6e22e">comma</span>)
-	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Scan</span>() {
-		println(<span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Text</span>())
-	}
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#e6db74">&#34;,north,,south,&#34;</span>)
+   <span style="color:#66d9ef">for</span> {
+      <span style="color:#a6e22e">text</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">scan</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#39;,&#39;</span>)
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+         <span style="color:#66d9ef">break</span>
+      }
+      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%c\n&#34;</span>, <span style="color:#a6e22e">text</span>)
+   }
 }
 </code></pre></div>
 
-<p><a href="https://golang.org/pkg/bytes">https://golang.org/pkg/bytes</a></p>
+<p><a href="https://golang.org/pkg/fmt">https://golang.org/pkg/fmt</a></p>
 
 
 
@@ -107,44 +118,41 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;io&#34;</span>
    <span style="color:#e6db74">&#34;strings&#34;</span>
 )
 
-<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">comma</span> <span style="color:#66d9ef">struct</span> {
-   <span style="color:#a6e22e">tok</span> <span style="color:#66d9ef">string</span>
-}
-
-<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">c</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">comma</span>) <span style="color:#a6e22e">Scan</span>(<span style="color:#a6e22e">state</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">ScanState</span>, <span style="color:#a6e22e">verb</span> <span style="color:#66d9ef">rune</span>) <span style="color:#66d9ef">error</span> {
-   <span style="color:#a6e22e">tok</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">Token</span>(<span style="color:#66d9ef">false</span>, <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">r</span> <span style="color:#66d9ef">rune</span>) <span style="color:#66d9ef">bool</span> {
-      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">r</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;,&#39;</span>
-   })
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
-   }
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">ReadRune</span>(); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">tok</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
-         panic(<span style="color:#a6e22e">err</span>)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">scan</span>(<span style="color:#a6e22e">s</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Reader</span>, <span style="color:#a6e22e">sep</span> <span style="color:#66d9ef">byte</span>) []<span style="color:#66d9ef">byte</span> {
+   <span style="color:#66d9ef">var</span> (
+      <span style="color:#a6e22e">a</span> [<span style="color:#ae81ff">1</span>]<span style="color:#66d9ef">byte</span>
+      <span style="color:#a6e22e">b</span> []<span style="color:#66d9ef">byte</span>
+   )
+   <span style="color:#66d9ef">for</span> {
+      <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Read</span>(<span style="color:#a6e22e">a</span>[:])
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+         <span style="color:#66d9ef">break</span>
+      } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">a</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">!=</span> <span style="color:#a6e22e">sep</span> {
+         <span style="color:#a6e22e">b</span> = append(<span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">a</span>[<span style="color:#ae81ff">0</span>])
+      } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+         <span style="color:#66d9ef">break</span>
       }
    }
-   <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">tok</span> = string(<span style="color:#a6e22e">tok</span>)
-   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">b</span>
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#e6db74">&#34;north,east,south,west&#34;</span>)
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#e6db74">&#34;,north,,south,&#34;</span>)
    <span style="color:#66d9ef">for</span> {
-      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">c</span> <span style="color:#a6e22e">comma</span>
-      <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fscan</span>(<span style="color:#a6e22e">r</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">c</span>)
-      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#a6e22e">text</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">scan</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#39;,&#39;</span>)
+      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
          <span style="color:#66d9ef">break</span>
       }
-      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">tok</span>)
+      println(string(<span style="color:#a6e22e">text</span>))
    }
 }
 </code></pre></div>
 
-<p><a href="https://golang.org/pkg/fmt">https://golang.org/pkg/fmt</a></p>
+<p><a href="https://golang.org/pkg/io#Reader">https://golang.org/pkg/io#Reader</a></p>
 
 
 

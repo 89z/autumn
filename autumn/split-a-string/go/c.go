@@ -1,38 +1,35 @@
 package main
 
 import (
-   "fmt"
+   "io"
    "strings"
 )
 
-type comma struct {
-   tok string
-}
-
-func (c *comma) Scan(state fmt.ScanState, verb rune) error {
-   tok, err := state.Token(false, func(r rune) bool {
-      return r != ','
-   })
-   if err != nil {
-      return err
-   }
-   if _, _, err := state.ReadRune(); err != nil {
-      if len(tok) == 0 {
-         panic(err)
+func scan(s io.Reader, sep byte) []byte {
+   var (
+      a [1]byte
+      b []byte
+   )
+   for {
+      _, err := s.Read(a[:])
+      if err != nil {
+         break
+      } else if a[0] != sep {
+         b = append(b, a[0])
+      } else if b != nil {
+         break
       }
    }
-   c.tok = string(tok)
-   return nil
+   return b
 }
 
 func main() {
-   r := strings.NewReader("north,east,south,west")
+   s := strings.NewReader(",north,,south,")
    for {
-      var c comma
-      _, err := fmt.Fscan(r, &c)
-      if err != nil {
+      text := scan(s, ',')
+      if text == nil {
          break
       }
-      fmt.Println(c.tok)
+      println(string(text))
    }
 }

@@ -1,24 +1,36 @@
 package main
 
 import (
-	"bufio"
-	"bytes"
+   "fmt"
+   "io"
+   "strings"
 )
 
-func comma(b []byte, eof bool) (int, []byte, error) {
-	if eof {
-		return 0, nil, nil
-	}
-	if n := bytes.IndexByte(b, ','); n >= 0 {
-		return n + 1, b[:n], nil
-	}
-	return len(b), b, nil
+func scan(s io.Reader, sep rune) []rune {
+   var (
+      a rune
+      b []rune
+   )
+   for {
+      _, err := fmt.Fscanf(s, "%c", &a)
+      if err != nil {
+         break
+      } else if a != sep {
+         b = append(b, a)
+      } else if b != nil {
+         break
+      }
+   }
+   return b
 }
 
 func main() {
-	s := bufio.NewScanner(bytes.NewBufferString("north,east,south,west"))
-	s.Split(comma)
-	for s.Scan() {
-		println(s.Text())
-	}
+   s := strings.NewReader(",north,,south,")
+   for {
+      text := scan(s, ',')
+      if text == nil {
+         break
+      }
+      fmt.Printf("%c\n", text)
+   }
 }

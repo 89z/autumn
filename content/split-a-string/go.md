@@ -9,11 +9,11 @@ tags = [ "go" ]
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/bytes>
+<https://golang.org/pkg/fmt>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/fmt>
+<https://golang.org/pkg/io#Reader>
 
 {{< r "d.go" >}}
 
