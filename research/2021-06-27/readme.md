@@ -4,7 +4,6 @@ bytes | file | functions
 ------|------|--------------------------------
 310   | j.go | strings#IndexByte
 321   | f.go | text/scanner#Scanner.Whitespace
-342   | a.go | strings#SplitN
 372   | c.go | bufio#Scanner.Split, n:=range
 372   | d.go | bufio#Scanner.Split, n,r:=range
 373   | e.go | bufio#Scanner.Split, bytes#IndexByte
