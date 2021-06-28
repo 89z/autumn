@@ -17,6 +17,10 @@ tags = [ "go" ]
 
 {{< r "d.go" >}}
 
+<https://golang.org/pkg/strconv#FormatInt>
+
+{{< r "e.go" >}}
+
 <https://golang.org/pkg/strconv#Itoa>
 
 ## References
