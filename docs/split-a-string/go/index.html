@@ -24,12 +24,33 @@
    <a href="/autumn/split-a-string/">Split a string</a> / Go
 </h1>
 <section class="page">
-   <time>Sun Jun 27 2021</time>
+   <time>Tue Jun 29 2021</time>
    
    <a href="/autumn/categories/string/">string</a>
    
 </section>
-   <p>101.1 ns/op:</p>
+   <p>55.90 ns/op:</p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;strings&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">SplitN</span>(<span style="color:#e6db74">&#34;,north,,south,&#34;</span>, <span style="color:#e6db74">&#34;,&#34;</span>, <span style="color:#ae81ff">2</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, <span style="color:#a6e22e">a</span>) <span style="color:#75715e">// [&#34;&#34; &#34;north,,south,&#34;]
+</span><span style="color:#75715e"></span>}
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/strings#SplitN">https://golang.org/pkg/strings#SplitN</a></p>
+<p>102.6 ns/op:</p>
 
 
 
@@ -50,7 +71,7 @@
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/strings#Fields">https://golang.org/pkg/strings#Fields</a></p>
-<p>142.6 ns/op:</p>
+<p>136.8 ns/op:</p>
 
 
 
@@ -71,7 +92,7 @@
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/strings#Split">https://golang.org/pkg/strings#Split</a></p>
-<p>253.1 ns/op:</p>
+<p>250.0 ns/op:</p>
 
 
 
@@ -96,7 +117,7 @@
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/strings#FieldsFunc">https://golang.org/pkg/strings#FieldsFunc</a></p>
-<p>678.0 ns/op:</p>
+<p>682.9 ns/op:</p>
 
 
 
@@ -132,26 +153,6 @@
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/bufio#Scanner.Split">https://golang.org/pkg/bufio#Scanner.Split</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
-   <span style="color:#e6db74">&#34;strings&#34;</span>
-)
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">SplitN</span>(<span style="color:#e6db74">&#34;,north,,south,&#34;</span>, <span style="color:#e6db74">&#34;,&#34;</span>, <span style="color:#ae81ff">2</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, <span style="color:#a6e22e">a</span>) <span style="color:#75715e">// [&#34;&#34; &#34;north,,south,&#34;]
-</span><span style="color:#75715e"></span>}
-</code></pre></div>
-
-<p><a href="https://golang.org/pkg/strings#SplitN">https://golang.org/pkg/strings#SplitN</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#split">https://hyperpolyglot.org/c#split</a></li>

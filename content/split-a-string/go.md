@@ -3,33 +3,35 @@ title = "Go"
 tags = [ "go" ]
 +++
 
-101.1 ns/op:
+55.90 ns/op:
+
+{{< r "a.go" >}}
+
+<https://golang.org/pkg/strings#SplitN>
+
+102.6 ns/op:
 
 {{< r "b.go" >}}
 
 <https://golang.org/pkg/strings#Fields>
 
-142.6 ns/op:
-
-{{< r "d.go" >}}
-
-<https://golang.org/pkg/strings#Split>
-
-253.1 ns/op:
+136.8 ns/op:
 
 {{< r "c.go" >}}
 
+<https://golang.org/pkg/strings#Split>
+
+250.0 ns/op:
+
+{{< r "d.go" >}}
+
 <https://golang.org/pkg/strings#FieldsFunc>
 
-678.0 ns/op:
-
-{{< r "a.go" >}}
-
-<https://golang.org/pkg/bufio#Scanner.Split>
+682.9 ns/op:
 
 {{< r "e.go" >}}
 
-<https://golang.org/pkg/strings#SplitN>
+<https://golang.org/pkg/bufio#Scanner.Split>
 
 ## References
 
