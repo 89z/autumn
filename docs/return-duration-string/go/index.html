@@ -24,7 +24,7 @@
    <a href="/autumn/return-duration-string/">Return duration string</a> / Go
 </h1>
 <section class="page">
-   <time>Sat Feb 13 2021</time>
+   <time>Wed Jun 30 2021</time>
    
    <a href="/autumn/categories/time/">time</a>
    
@@ -43,11 +43,9 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">format</span>(<span style="color:#a6e22e">d</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Duration</span>) <span style="color:#66d9ef">string</span> {
+   <span style="color:#a6e22e">m</span>, <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">ms</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">Minutes</span>(), <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">Seconds</span>(), <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">Milliseconds</span>()
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(
-      <span style="color:#e6db74">&#34;%v m %02v s %03v ms&#34;</span>,
-      int(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">Minutes</span>()),
-      int(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">Seconds</span>()) <span style="color:#f92672">%</span> <span style="color:#ae81ff">60</span>,
-      <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">Milliseconds</span>() <span style="color:#f92672">%</span> <span style="color:#ae81ff">1000</span>,
+      <span style="color:#e6db74">&#34;%v m %02v s %03v ms&#34;</span>, int(<span style="color:#a6e22e">m</span>), int(<span style="color:#a6e22e">s</span>) <span style="color:#f92672">%</span> <span style="color:#ae81ff">60</span>, <span style="color:#a6e22e">ms</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">1000</span>,
    )
 }
 
@@ -55,8 +53,9 @@
    <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Now</span>()
    <span style="color:#66d9ef">for</span> {
       <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Sleep</span>(<span style="color:#ae81ff">10</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Millisecond</span>)
+      <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Since</span>(<span style="color:#a6e22e">t</span>)
       <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(
-         <span style="color:#e6db74">&#34;\r&#34;</span>, <span style="color:#a6e22e">format</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Since</span>(<span style="color:#a6e22e">t</span>)),
+         <span style="color:#e6db74">&#34;\r&#34;</span>, <span style="color:#a6e22e">format</span>(<span style="color:#a6e22e">s</span>),
       )
    }
 }
