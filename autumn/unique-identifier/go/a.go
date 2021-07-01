@@ -6,20 +6,19 @@ import (
    "time"
 )
 
-func idDecode(s string, year int) (time.Time, error) {
-   n, ok := new(big.Int).SetString(s, 36)
+func idDecode(s string, year int) (*time.Time, error) {
+   z, ok := new(big.Int).SetString(s, 36)
    if ! ok {
-      return time.Time{}, fmt.Errorf("%v", s)
+      return nil, fmt.Errorf("%q invalid", s)
    }
-   return time.Date(year, 1, 1, 0, 0, 0, 0, time.UTC).Add(
-      time.Duration(n.Int64()) * time.Second,
-   ), nil
+   t := time.Date(year, 1, 1, 0, 0, int(z.Int64()), 0, time.UTC)
+   return &t, nil
 }
 
 func main() {
-   t, e := idDecode("6dv3d", 2020)
-   if e != nil {
-      panic(e)
+   t, err := idDecode("6dv3d", 2020)
+   if err != nil {
+      panic(err)
    }
    fmt.Println(t)
 }
