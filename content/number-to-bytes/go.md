@@ -15,7 +15,7 @@ tags = [ "go" ]
 
 <https://golang.org/pkg/math/big#Int.Bytes>
 
-other:
+{{< r "d.go" >}}
 
 <https://golang.org/pkg/strconv#AppendInt>
 
