@@ -6,12 +6,14 @@ import (
 )
 
 func comma(data []byte, eof bool) (int, []byte, error) {
-   var tok []byte
-   for i, t := range data {
-      if t != ',' {
-         tok = append(tok, t)
-      } else if tok != nil {
-         return i+1, tok, nil
+   a := -1
+   for b, c := range data {
+      if c == ',' {
+         if a >= 0 {
+            return b+1, data[a:b], nil
+         }
+      } else if a < 0 {
+         a = b
       }
    }
    return 0, nil, nil
