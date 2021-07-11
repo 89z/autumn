@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
-   a := strings.Fields(" north  south ")
-   fmt.Printf("%q\n", a) // ["north" "south"]
+   s := strings.Repeat("west east\n", 48)
+   a := strings.Split(s, "\n")
+   fmt.Println(a)
 }

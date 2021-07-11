@@ -29,8 +29,7 @@
    <a href="/autumn/categories/string/">string</a>
    
 </section>
-   <p>55.90 ns/op:</p>
-
+   
 
 
    
@@ -44,13 +43,13 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">SplitN</span>(<span style="color:#e6db74">&#34;,north,,south,&#34;</span>, <span style="color:#e6db74">&#34;,&#34;</span>, <span style="color:#ae81ff">2</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, <span style="color:#a6e22e">a</span>) <span style="color:#75715e">// [&#34;&#34; &#34;north,,south,&#34;]
-</span><span style="color:#75715e"></span>}
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Repeat</span>(<span style="color:#e6db74">&#34;west east\n&#34;</span>, <span style="color:#ae81ff">999</span>)
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">SplitN</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;\n&#34;</span>, <span style="color:#ae81ff">2</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span>)
+}
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/strings#SplitN">https://golang.org/pkg/strings#SplitN</a></p>
-<p>102.6 ns/op:</p>
 
 
 
@@ -65,34 +64,13 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Fields</span>(<span style="color:#e6db74">&#34; north  south &#34;</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, <span style="color:#a6e22e">a</span>) <span style="color:#75715e">// [&#34;north&#34; &#34;south&#34;]
-</span><span style="color:#75715e"></span>}
-</code></pre></div>
-
-<p><a href="https://golang.org/pkg/strings#Fields">https://golang.org/pkg/strings#Fields</a></p>
-<p>136.8 ns/op:</p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-   <span style="color:#e6db74">&#34;fmt&#34;</span>
-   <span style="color:#e6db74">&#34;strings&#34;</span>
-)
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#e6db74">&#34;,north,,south,&#34;</span>, <span style="color:#e6db74">&#34;,&#34;</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, <span style="color:#a6e22e">a</span>) <span style="color:#75715e">// [&#34;&#34; &#34;north&#34; &#34;&#34; &#34;south&#34; &#34;&#34;]
-</span><span style="color:#75715e"></span>}
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Repeat</span>(<span style="color:#e6db74">&#34;west east\n&#34;</span>, <span style="color:#ae81ff">48</span>)
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#a6e22e">s</span>, <span style="color:#e6db74">&#34;\n&#34;</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span>)
+}
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/strings#Split">https://golang.org/pkg/strings#Split</a></p>
-<p>250.0 ns/op:</p>
 
 
 
@@ -106,18 +84,37 @@
    <span style="color:#e6db74">&#34;strings&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">comma</span>(<span style="color:#a6e22e">r</span> <span style="color:#66d9ef">rune</span>) <span style="color:#66d9ef">bool</span> {
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">r</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;,&#39;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Repeat</span>(<span style="color:#e6db74">&#34;west east\n&#34;</span>, <span style="color:#ae81ff">24</span>)
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Fields</span>(<span style="color:#a6e22e">s</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span>)
 }
+</code></pre></div>
+
+<p><a href="https://golang.org/pkg/strings#Fields">https://golang.org/pkg/strings#Fields</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;strings&#34;</span>
+)
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">FieldsFunc</span>(<span style="color:#e6db74">&#34;,north,,south,&#34;</span>, <span style="color:#a6e22e">comma</span>)
-   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%q\n&#34;</span>, <span style="color:#a6e22e">a</span>) <span style="color:#75715e">// [&#34;north&#34; &#34;south&#34;]
-</span><span style="color:#75715e"></span>}
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Repeat</span>(<span style="color:#e6db74">&#34;west east\n&#34;</span>, <span style="color:#ae81ff">17</span>)
+   <span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">FieldsFunc</span>(<span style="color:#a6e22e">s</span>, <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">r</span> <span style="color:#66d9ef">rune</span>) <span style="color:#66d9ef">bool</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">r</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;\n&#39;</span>
+   })
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span>)
+}
 </code></pre></div>
 
 <p><a href="https://golang.org/pkg/strings#FieldsFunc">https://golang.org/pkg/strings#FieldsFunc</a></p>
-<p>682.9 ns/op:</p>
 
 
 

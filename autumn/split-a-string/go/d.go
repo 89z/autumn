@@ -5,11 +5,10 @@ import (
    "strings"
 )
 
-func comma(r rune) bool {
-   return r == ','
-}
-
 func main() {
-   a := strings.FieldsFunc(",north,,south,", comma)
-   fmt.Printf("%q\n", a) // ["north" "south"]
+   s := strings.Repeat("west east\n", 17)
+   a := strings.FieldsFunc(s, func(r rune) bool {
+      return r == '\n'
+   })
+   fmt.Println(a)
 }
