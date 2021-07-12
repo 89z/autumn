@@ -6,6 +6,9 @@ import (
 )
 
 func comma(data []byte, eof bool) (int, []byte, error) {
+   if eof {
+      return 0, nil, nil
+   }
    a := -1
    for b, c := range data {
       if c == ',' {
@@ -16,7 +19,7 @@ func comma(data []byte, eof bool) (int, []byte, error) {
          a = b
       }
    }
-   return 0, nil, nil
+   return len(data), data[a:], nil
 }
 
 func main() {
