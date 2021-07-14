@@ -5,11 +5,11 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/builtin#append>
+<https://pkg.go.dev/builtin#append>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/builtin#copy>
+<https://pkg.go.dev/builtin#copy>
 
 {{< r "c.go" >}}
 
