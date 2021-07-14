@@ -5,15 +5,15 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/math#Pow10>
+<https://pkg.go.dev/math#Pow10>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/math#Pow>
+<https://pkg.go.dev/math#Pow>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/math/big#Int.Exp>
+<https://pkg.go.dev/math/big#Int.Exp>
 
 {{< r "d.go" >}}
 

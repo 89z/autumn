@@ -5,15 +5,15 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/os#ReadDir>
+<https://pkg.go.dev/os#ReadDir>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/path/filepath#Glob>
+<https://pkg.go.dev/path/filepath#Glob>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/path/filepath#WalkDir>
+<https://pkg.go.dev/path/filepath#WalkDir>
 
 ## References
 

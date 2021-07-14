@@ -5,7 +5,7 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/time#Millisecond>
+<https://pkg.go.dev/time#Millisecond>
 
 ## References
 

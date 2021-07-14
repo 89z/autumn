@@ -5,7 +5,7 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/os#pkg-variables>
+<https://pkg.go.dev/os#pkg-variables>
 
 ## References
 

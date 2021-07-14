@@ -5,23 +5,23 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/path#Ext>
+<https://pkg.go.dev/path#Ext>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/path#Split>
+<https://pkg.go.dev/path#Split>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/path/filepath#Base>
+<https://pkg.go.dev/path/filepath#Base>
 
 {{< r "d.go" >}}
 
-<https://golang.org/pkg/path/filepath#Dir>
+<https://pkg.go.dev/path/filepath#Dir>
 
 {{< r "e.go" >}}
 
-<https://golang.org/pkg/strings#LastIndexByte>
+<https://pkg.go.dev/strings#LastIndexByte>
 
 ## References
 

@@ -5,19 +5,19 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/os/exec#Cmd.Dir>
+<https://pkg.go.dev/os/exec#Cmd.Dir>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/os/exec#Cmd.Output>
+<https://pkg.go.dev/os/exec#Cmd.Output>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/os/exec#Cmd.Stdout>
+<https://pkg.go.dev/os/exec#Cmd.Stdout>
 
 {{< r "d.go" >}}
 
-<https://golang.org/pkg/os/exec#Cmd.StdoutPipe>
+<https://pkg.go.dev/os/exec#Cmd.StdoutPipe>
 
 ## References
 

@@ -5,23 +5,23 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/strings#SplitN>
+<https://pkg.go.dev/strings#SplitN>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/strings#Split>
+<https://pkg.go.dev/strings#Split>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/strings#Fields>
+<https://pkg.go.dev/strings#Fields>
 
 {{< r "d.go" >}}
 
-<https://golang.org/pkg/strings#FieldsFunc>
+<https://pkg.go.dev/strings#FieldsFunc>
 
 {{< r "e.go" >}}
 
-<https://golang.org/pkg/bufio#Scanner.Split>
+<https://pkg.go.dev/bufio#Scanner.Split>
 
 ## References
 

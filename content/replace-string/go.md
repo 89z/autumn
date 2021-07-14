@@ -5,23 +5,23 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/regexp>
+<https://pkg.go.dev/regexp>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/strings#NewReplacer>
+<https://pkg.go.dev/strings#NewReplacer>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/strings#ReplaceAll>
+<https://pkg.go.dev/strings#ReplaceAll>
 
 {{< r "d.go" >}}
 
-<https://golang.org/pkg/strings#Builder>
+<https://pkg.go.dev/strings#Builder>
 
 {{< r "e.go" >}}
 
-<https://golang.org/pkg/strings#Map>
+<https://pkg.go.dev/strings#Map>
 
 ## References
 

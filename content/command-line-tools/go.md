@@ -14,27 +14,27 @@ size      | command
 1,420,800 | `go build -ldflags -s -gcflags all=-l`
 1,390,080 | `go build -ldflags -s -gcflags 'all=-B -l'`
 
-<https://golang.org/cmd/go#hdr-Compile_packages_and_dependencies>
+<https://pkg.go.dev/cmd/go#hdr-Compile_packages_and_dependencies>
 
 {{< r "install.ps1" >}}
 
-<https://golang.org/cmd/go#hdr-Compile_and_install_packages_and_dependencies>
+<https://pkg.go.dev/cmd/go#hdr-Compile_and_install_packages_and_dependencies>
 
 {{< r "list.ps1" >}}
 
-<https://golang.org/cmd/go#hdr-List_packages_or_modules>
+<https://pkg.go.dev/cmd/go#hdr-List_packages_or_modules>
 
 {{< r "mod.ps1" >}}
 
-<https://golang.org/cmd/go#hdr-Module_maintenance>
+<https://pkg.go.dev/cmd/go#hdr-Module_maintenance>
 
 {{< r "run.ps1" >}}
 
-<https://golang.org/cmd/go#hdr-Compile_and_run_Go_program>
+<https://pkg.go.dev/cmd/go#hdr-Compile_and_run_Go_program>
 
 {{< r "test.ps1" >}}
 
-<https://golang.org/cmd/go#hdr-Test_packages>
+<https://pkg.go.dev/cmd/go#hdr-Test_packages>
 
 ## References
 

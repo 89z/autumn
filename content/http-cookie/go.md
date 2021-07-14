@@ -5,19 +5,19 @@ tags = [ "go" ]
 
 {{< r "AddCookie.go" >}}
 
-<https://golang.org/pkg/net/http#Request.AddCookie>
+<https://pkg.go.dev/net/http#Request.AddCookie>
 
 {{< r "Request-Header.go" >}}
 
-<https://golang.org/pkg/net/http#Request.Header>
+<https://pkg.go.dev/net/http#Request.Header>
 
 {{< r "Cookies.go" >}}
 
-<https://golang.org/pkg/net/http#Response.Cookies>
+<https://pkg.go.dev/net/http#Response.Cookies>
 
 {{< r "Response-Header.go" >}}
 
-<https://golang.org/pkg/net/http#Response.Header>
+<https://pkg.go.dev/net/http#Response.Header>
 
 ## References
 

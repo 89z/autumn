@@ -5,15 +5,15 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/encoding/base64#Encoding.EncodeToString>
+<https://pkg.go.dev/encoding/base64#Encoding.EncodeToString>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/encoding/hex#EncodeToString>
+<https://pkg.go.dev/encoding/hex#EncodeToString>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/fmt#Sprintf>
+<https://pkg.go.dev/fmt#Sprintf>
 
 ## References
 

@@ -24,7 +24,7 @@
    <a href="/autumn/integer-to-string/">Integer to string</a> / Go
 </h1>
 <section class="page">
-   <time>Sun Jun 27 2021</time>
+   <time>Wed Jul 14 2021</time>
    
    <a href="/autumn/categories/number/">number</a>
    
@@ -47,7 +47,7 @@
 }
 </code></pre></div>
 
-<p><a href="https://golang.org/pkg/fmt#Sprint">https://golang.org/pkg/fmt#Sprint</a></p>
+<p><a href="https://pkg.go.dev/fmt#Sprint">https://pkg.go.dev/fmt#Sprint</a></p>
 
 
 
@@ -70,23 +70,7 @@
 }
 </code></pre></div>
 
-<p><a href="https://golang.org/pkg/fmt#Sprintf">https://golang.org/pkg/fmt#Sprintf</a></p>
-
-
-
-   
-
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;strconv&#34;</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">AppendInt</span>(<span style="color:#66d9ef">nil</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">10</span>)
-   println(string(<span style="color:#a6e22e">b</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;100&#34;</span>)
-}
-</code></pre></div>
-
-<p><a href="https://golang.org/pkg/strconv#AppendInt">https://golang.org/pkg/strconv#AppendInt</a></p>
+<p><a href="https://pkg.go.dev/fmt#Sprintf">https://pkg.go.dev/fmt#Sprintf</a></p>
 
 
 
@@ -103,7 +87,7 @@
 }
 </code></pre></div>
 
-<p><a href="https://golang.org/pkg/strconv#FormatInt">https://golang.org/pkg/strconv#FormatInt</a></p>
+<p><a href="https://pkg.go.dev/strconv#FormatInt">https://pkg.go.dev/strconv#FormatInt</a></p>
 
 
 
@@ -120,7 +104,38 @@
 }
 </code></pre></div>
 
-<p><a href="https://golang.org/pkg/strconv#Itoa">https://golang.org/pkg/strconv#Itoa</a></p>
+<p><a href="https://pkg.go.dev/strconv#Itoa">https://pkg.go.dev/strconv#Itoa</a></p>
+
+
+
+   
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;text/template&#34;</span>
+   <span style="color:#e6db74">&#34;strings&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">format</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">v</span> <span style="color:#66d9ef">interface</span>{}) <span style="color:#66d9ef">string</span> {
+   <span style="color:#a6e22e">t</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> new(<span style="color:#a6e22e">template</span>.<span style="color:#a6e22e">Template</span>).<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">s</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>
+   }
+   <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> new(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>)
+   <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Execute</span>(<span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">v</span>)
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">String</span>()
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">struct</span>{<span style="color:#a6e22e">N</span> <span style="color:#66d9ef">int</span>}{<span style="color:#ae81ff">100</span>}
+   <span style="color:#a6e22e">f</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#34;{{.N}}&#34;</span>, <span style="color:#a6e22e">s</span>)
+   println(<span style="color:#a6e22e">f</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;100&#34;</span>)
+}
+</code></pre></div>
+
+<p><a href="https://pkg.go.dev/text/template">https://pkg.go.dev/text/template</a></p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://hyperpolyglot.org/c#num-to-str">https://hyperpolyglot.org/c#num-to-str</a></li>

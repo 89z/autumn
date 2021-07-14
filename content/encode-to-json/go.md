@@ -5,23 +5,23 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/encoding/json#Encoder.Encode>
+<https://pkg.go.dev/encoding/json#Encoder.Encode>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/encoding/json#Encoder.SetEscapeHTML>
+<https://pkg.go.dev/encoding/json#Encoder.SetEscapeHTML>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/encoding/json#Encoder.SetIndent>
+<https://pkg.go.dev/encoding/json#Encoder.SetIndent>
 
 {{< r "d.go" >}}
 
-<https://golang.org/pkg/encoding/json#Marshal>
+<https://pkg.go.dev/encoding/json#Marshal>
 
 {{< r "e.go" >}}
 
-<https://golang.org/pkg/encoding/json#MarshalIndent>
+<https://pkg.go.dev/encoding/json#MarshalIndent>
 
 ## References
 

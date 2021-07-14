@@ -5,7 +5,7 @@ tags = [ "go" ]
 
 {{< r "log10.go" >}}
 
-<https://golang.org/pkg/math>
+<https://pkg.go.dev/math>
 
 {{< r "for.go" >}}
 

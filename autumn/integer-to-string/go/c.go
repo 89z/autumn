@@ -2,6 +2,7 @@ package main
 import "strconv"
 
 func main() {
-   b := strconv.AppendInt(nil, 100, 10)
-   println(string(b) == "100")
+   var n int64 = 100
+   s := strconv.FormatInt(n, 10)
+   println(s == "100")
 }

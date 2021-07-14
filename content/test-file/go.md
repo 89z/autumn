@@ -5,15 +5,15 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/os#FileInfo>
+<https://pkg.go.dev/os#FileInfo>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/os#FileMode.IsRegular>
+<https://pkg.go.dev/os#FileMode.IsRegular>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/os#FileMode>
+<https://pkg.go.dev/os#FileMode>
 
 ## References
 

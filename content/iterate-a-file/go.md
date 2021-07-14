@@ -5,7 +5,7 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/bufio#Scanner.Scan>
+<https://pkg.go.dev/bufio#Scanner.Scan>
 
 ## References
 

@@ -5,11 +5,11 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/log#Fatal>
+<https://pkg.go.dev/log#Fatal>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/os#Exit>
+<https://pkg.go.dev/os#Exit>
 
 {{< r "c.go" >}}
 

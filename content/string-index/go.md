@@ -5,19 +5,19 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/strings#Index>
+<https://pkg.go.dev/strings#Index>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/strings#IndexAny>
+<https://pkg.go.dev/strings#IndexAny>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/strings#IndexByte>
+<https://pkg.go.dev/strings#IndexByte>
 
 {{< r "d.go" >}}
 
-<https://golang.org/pkg/strings#LastIndexByte>
+<https://pkg.go.dev/strings#LastIndexByte>
 
 ## References
 

@@ -5,15 +5,15 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/time#Time.Format>
+<https://pkg.go.dev/time#Time.Format>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/time#Time.MarshalText>
+<https://pkg.go.dev/time#Time.MarshalText>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/time#Time.String>
+<https://pkg.go.dev/time#Time.String>
 
 ## References
 

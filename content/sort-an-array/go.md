@@ -5,15 +5,15 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/sort#Slice>
+<https://pkg.go.dev/sort#Slice>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/sort#SliceStable>
+<https://pkg.go.dev/sort#SliceStable>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/sort#Strings>
+<https://pkg.go.dev/sort#Strings>
 
 ## References
 

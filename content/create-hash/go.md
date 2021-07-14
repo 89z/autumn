@@ -5,11 +5,11 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/crypto/md5#New>
+<https://pkg.go.dev/crypto/md5#New>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/crypto/md5#Sum>
+<https://pkg.go.dev/crypto/md5#Sum>
 
 ## References
 

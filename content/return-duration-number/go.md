@@ -5,11 +5,11 @@ tags = [ "go" ]
 
 {{< r "since.go" >}}
 
-<https://golang.org/pkg/time#Since>
+<https://pkg.go.dev/time#Since>
 
 {{< r "sub.go" >}}
 
-<https://golang.org/pkg/time#Time.Sub>
+<https://pkg.go.dev/time#Time.Sub>
 
 {{< r "dur_test.go" >}}
 

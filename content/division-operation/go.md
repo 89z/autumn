@@ -5,15 +5,15 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/math/bits#Div32>
+<https://pkg.go.dev/math/bits#Div32>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/math/bits#Div64>
+<https://pkg.go.dev/math/bits#Div64>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/math/bits#Div>
+<https://pkg.go.dev/math/bits#Div>
 
 {{< r "d.go" >}}
 

@@ -5,19 +5,19 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/encoding/binary#ByteOrder>
+<https://pkg.go.dev/encoding/binary#ByteOrder>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/encoding/binary#Write>
+<https://pkg.go.dev/encoding/binary#Write>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/math/big#Int.Bytes>
+<https://pkg.go.dev/math/big#Int.Bytes>
 
 {{< r "d.go" >}}
 
-<https://golang.org/pkg/strconv#AppendInt>
+<https://pkg.go.dev/strconv#AppendInt>
 
 ## References
 

@@ -5,19 +5,19 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/math/big#Int.SetString>
+<https://pkg.go.dev/math/big#Int.SetString>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/math/big#Int.Text>
+<https://pkg.go.dev/math/big#Int.Text>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/strconv#FormatInt>
+<https://pkg.go.dev/strconv#FormatInt>
 
 {{< r "d.go" >}}
 
-<https://golang.org/pkg/strconv#ParseInt>
+<https://pkg.go.dev/strconv#ParseInt>
 
 ## References
 

@@ -5,11 +5,11 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/os#Mkdir>
+<https://pkg.go.dev/os#Mkdir>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/os#MkdirAll>
+<https://pkg.go.dev/os#MkdirAll>
 
 ## References
 

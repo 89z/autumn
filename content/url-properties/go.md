@@ -5,23 +5,23 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/net/url#URL.Host>
+<https://pkg.go.dev/net/url#URL.Host>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/net/url#URL.Path>
+<https://pkg.go.dev/net/url#URL.Path>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/net/url#URL.Query>
+<https://pkg.go.dev/net/url#URL.Query>
 
 {{< r "d.go" >}}
 
-<https://golang.org/pkg/net/url#Values.Get>
+<https://pkg.go.dev/net/url#Values.Get>
 
 {{< r "e.go" >}}
 
-<https://golang.org/pkg/net/url#Values.Set>
+<https://pkg.go.dev/net/url#Values.Set>
 
 ## References
 

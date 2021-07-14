@@ -7,9 +7,9 @@ import (
 
 func main() {
    for _, s := range []string{
-      "https://golang.org/pkg", // "https" "golang.org" "/pkg"
-      "//golang.org",           // ""      "golang.org" ""
-      "pkg",                    // ""      ""           "pkg"
+      "https://pkg.go.dev/std", // "https" "pkg.go.dev" "/std"
+      "//pkg.go.dev",           // ""      "pkg.go.dev" ""
+      "std",                    // ""      ""           "std"
    } {
       p, e := url.Parse(s)
       if e != nil {

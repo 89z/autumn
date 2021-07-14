@@ -5,19 +5,19 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/bytes#Contains>
+<https://pkg.go.dev/bytes#Contains>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/strings#Contains>
+<https://pkg.go.dev/strings#Contains>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/strings#ContainsRune>
+<https://pkg.go.dev/strings#ContainsRune>
 
 {{< r "d.go" >}}
 
-<https://golang.org/pkg/strings#HasPrefix>
+<https://pkg.go.dev/strings#HasPrefix>
 
 ## References
 

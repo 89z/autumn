@@ -5,11 +5,11 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/builtin#cap>
+<https://pkg.go.dev/builtin#cap>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/builtin#len>
+<https://pkg.go.dev/builtin#len>
 
 ## References
 

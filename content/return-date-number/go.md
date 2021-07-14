@@ -5,11 +5,11 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/time#Time.Unix>
+<https://pkg.go.dev/time#Time.Unix>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/time#Time.UnixNano>
+<https://pkg.go.dev/time#Time.UnixNano>
 
 ## References
 

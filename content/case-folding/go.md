@@ -5,11 +5,11 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/strings#EqualFold>
+<https://pkg.go.dev/strings#EqualFold>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/strings#ToUpper>
+<https://pkg.go.dev/strings#ToUpper>
 
 {{< r "c.go" >}}
 

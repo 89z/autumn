@@ -5,7 +5,7 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/embed>
+<https://pkg.go.dev/embed>
 
 ## References
 

@@ -5,23 +5,23 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/os#Environ>
+<https://pkg.go.dev/os#Environ>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/os#Getenv>
+<https://pkg.go.dev/os#Getenv>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/os#LookupEnv>
+<https://pkg.go.dev/os#LookupEnv>
 
 {{< r "d.go" >}}
 
-<https://golang.org/pkg/os#Setenv>
+<https://pkg.go.dev/os#Setenv>
 
 {{< r "e.go" >}}
 
-<https://golang.org/pkg/os#UserCacheDir>
+<https://pkg.go.dev/os#UserCacheDir>
 
 ## References
 

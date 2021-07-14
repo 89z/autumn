@@ -5,23 +5,23 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/fmt#Sprint>
+<https://pkg.go.dev/fmt#Sprint>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/fmt#Sprintf>
+<https://pkg.go.dev/fmt#Sprintf>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/strconv#AppendInt>
+<https://pkg.go.dev/strconv#FormatInt>
 
 {{< r "d.go" >}}
 
-<https://golang.org/pkg/strconv#FormatInt>
+<https://pkg.go.dev/strconv#Itoa>
 
 {{< r "e.go" >}}
 
-<https://golang.org/pkg/strconv#Itoa>
+<https://pkg.go.dev/text/template>
 
 ## References
 

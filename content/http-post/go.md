@@ -5,15 +5,15 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/mime/multipart>
+<https://pkg.go.dev/mime/multipart>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/net/http#NewRequest>
+<https://pkg.go.dev/net/http#NewRequest>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/net/http#Post>
+<https://pkg.go.dev/net/http#Post>
 
 ## References
 

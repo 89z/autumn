@@ -5,11 +5,11 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/os#FileMode.IsDir>
+<https://pkg.go.dev/os#FileMode.IsDir>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/os#FileInfo>
+<https://pkg.go.dev/os#FileInfo>
 
 ## References
 

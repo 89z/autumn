@@ -9,27 +9,27 @@ tags = [ "go" ]
 
 {{< r "i.go" >}}
 
-<https://golang.org/pkg/builtin#int>
+<https://pkg.go.dev/builtin#int>
 
 {{< r "u.go" >}}
 
-<https://golang.org/pkg/builtin#uint>
+<https://pkg.go.dev/builtin#uint>
 
 {{< r "u8.go" >}}
 
-<https://golang.org/pkg/builtin#uint8>
+<https://pkg.go.dev/builtin#uint8>
 
 {{< r "u16.go" >}}
 
-<https://golang.org/pkg/builtin#uint16>
+<https://pkg.go.dev/builtin#uint16>
 
 {{< r "u32.go" >}}
 
-<https://golang.org/pkg/builtin#uint32>
+<https://pkg.go.dev/builtin#uint32>
 
 {{< r "u64.go" >}}
 
-<https://golang.org/pkg/builtin#uint64>
+<https://pkg.go.dev/builtin#uint64>
 
 ## References
 

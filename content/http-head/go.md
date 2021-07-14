@@ -5,11 +5,11 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/net/http#Head>
+<https://pkg.go.dev/net/http#Head>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/net/http#NewRequest>
+<https://pkg.go.dev/net/http#NewRequest>
 
 ## References
 

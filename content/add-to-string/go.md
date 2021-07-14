@@ -5,19 +5,19 @@ tags = [ "go" ]
 
 {{< r "a.go" >}}
 
-<https://golang.org/pkg/fmt#Fprintln>
+<https://pkg.go.dev/fmt#Fprintln>
 
 {{< r "b.go" >}}
 
-<https://golang.org/pkg/fmt#Sprint>
+<https://pkg.go.dev/fmt#Sprint>
 
 {{< r "c.go" >}}
 
-<https://golang.org/pkg/io#WriteString>
+<https://pkg.go.dev/io#WriteString>
 
 {{< r "d.go" >}}
 
-<https://golang.org/pkg/strings#Builder.WriteString>
+<https://pkg.go.dev/strings#Builder.WriteString>
 
 {{< r "e.go" >}}
 
