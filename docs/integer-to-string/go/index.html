@@ -24,7 +24,7 @@
    <a href="/autumn/integer-to-string/">Integer to string</a> / Go
 </h1>
 <section class="page">
-   <time>Wed Jul 14 2021</time>
+   <time>Thu Jul 15 2021</time>
    
    <a href="/autumn/categories/number/">number</a>
    
@@ -119,19 +119,15 @@
 )
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">format</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">v</span> <span style="color:#66d9ef">interface</span>{}) <span style="color:#66d9ef">string</span> {
-   <span style="color:#a6e22e">t</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> new(<span style="color:#a6e22e">template</span>.<span style="color:#a6e22e">Template</span>).<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">s</span>)
-   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>
-   }
-   <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> new(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>)
-   <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Execute</span>(<span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">v</span>)
+   <span style="color:#a6e22e">t</span>, <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> new(<span style="color:#a6e22e">template</span>.<span style="color:#a6e22e">Template</span>), new(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Builder</span>)
+   <span style="color:#a6e22e">template</span>.<span style="color:#a6e22e">Must</span>(<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#a6e22e">s</span>)).<span style="color:#a6e22e">Execute</span>(<span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">v</span>)
    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">String</span>()
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">struct</span>{<span style="color:#a6e22e">N</span> <span style="color:#66d9ef">int</span>}{<span style="color:#ae81ff">100</span>}
-   <span style="color:#a6e22e">f</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#34;{{.N}}&#34;</span>, <span style="color:#a6e22e">s</span>)
-   println(<span style="color:#a6e22e">f</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;100&#34;</span>)
+   <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">999</span>
+   <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#34;{{.}}&#34;</span>, <span style="color:#a6e22e">n</span>)
+   println(<span style="color:#a6e22e">s</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;999&#34;</span>)
 }
 </code></pre></div>
 
